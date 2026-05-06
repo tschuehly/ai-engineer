@@ -35,6 +35,7 @@ Domain skills can act as node-level controls by supplying expert handling for sp
 - [Hackable agent runtimes need tight safety boundaries](../concepts/hackable-agent-runtimes-need-tight-safety-boundaries.md) - executable editor or browser access needs stricter controls than ordinary shape or API tools.
 - [Route high-impact agent actions through explicit human approval gates](../concepts/route-high-impact-agent-actions-through-explicit-human-approval-gates.md) - approval steps keep sensitive tool execution outside model-only control.
 - [Use tool names and descriptions as operational prompts](../concepts/use-tool-names-and-descriptions-as-operational-prompts.md) - clear tool metadata improves selection and enables local tool-specific guidance.
+- [Expose explicit control signals for generative media models](../concepts/expose-explicit-control-signals-for-generative-media-models.md) - image and video tools should expose structured controls when text alone is too imprecise.
 - [Split large automation surfaces into specialized subagents and subworkflows](../concepts/split-large-automation-surfaces-into-specialized-subagents-and-subworkflows.md) - subworkflows and specialist agents keep large tool surfaces manageable.
 - [Delegate complex voice-agent tasks through specialist tools and handoffs](../concepts/delegate-complex-voice-agent-tasks-through-specialist-tools-and-handoffs.md) - voice systems should route harder tool or policy decisions to specialists while preserving context.
 - [Agent experience prioritizes APIs, CLIs, and MCP over dashboards](../concepts/agent-experience-prioritizes-apis-clis-and-mcp-over-dashboards.md) - agent-facing products need machine-friendly control surfaces, not only human dashboards.
@@ -78,6 +79,7 @@ Domain skills can act as node-level controls by supplying expert handling for sp
 - Which tool calls should be collapsed into intent-level server tools instead of exposed as separate low-level operations?
 - When should a large API prefer CLI discovery, tool search, typed code mode, or hand-authored MCP tools?
 - Which generated-code actions are safe enough for code mode, and which require a fixed tool or approval gate?
+- Which image and video controls should appear as explicit user-facing tool parameters rather than hidden prompt instructions?
 
 ## Sources
 
@@ -100,6 +102,7 @@ Domain skills can act as node-level controls by supplying expert handling for sp
 - [Scaling GitHub for your Agents — Sam Morrow, GitHub](../sources/20260427_0n3MKk7r60w.md)
 - [Gateways are All You Need - Karan Sampath, Anthropic](../sources/20260427_CD6R4Wf3jnY.md)
 - [MCP = Mega Context Problem - Matt Carey](../sources/20260425_YBYUvGOuotE.md)
+- [Building Generative Image & Video models at Scale - Sander Dieleman, Google DeepMind](../sources/20260421_xOP1PM8fwnk.md)
 - [The End of Apps - Kitze, Sizzy.co](../sources/20260423_4fntwuOoedA.md)
 - [Agents need more than a chat - Jacob Lauritzen, CTO Legora](../sources/20260422_XNtkiQJ49Ps.md)
 - [How AI is changing Software Engineering: A Conversation with Gergely Orosz, @pragmaticengineer](../sources/20260421_CS5Cmz5FssI.md)

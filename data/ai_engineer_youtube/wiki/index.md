@@ -30,6 +30,8 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Discover large API tool surfaces progressively](concepts/discover-large-api-tool-surfaces-progressively.md) - broad API surfaces should be discovered on demand instead of eagerly loading every endpoint as MCP context.
 - [Run agent-written API code inside programmable sandboxes](concepts/run-agent-written-api-code-inside-programmable-sandboxes.md) - code-mode tools need isolation, network controls, secret boundaries, and rate limits.
 - [Compare models by task, thinking budget, cost, and latency](concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - model routing should account for task fit, reasoning depth, speed, and cost instead of defaulting to the largest model.
+- [Train image and video diffusion models in learned latent spaces](concepts/train-image-and-video-diffusion-models-in-learned-latent-spaces.md) - learned autoencoder latents make high-resolution and video diffusion tractable while preserving useful media topology.
+- [Use guidance to trade diffusion sample diversity for conditional quality](concepts/use-guidance-to-trade-diffusion-sample-diversity-for-conditional-quality.md) - diffusion sampling settings can improve conditional adherence and perceived quality at the cost of diversity and artifact risk.
 - [Evaluate whether models reject impossible or nonsensical premises](concepts/evaluate-whether-models-reject-impossible-or-nonsensical-premises.md) - reliable models and agents should stop or reframe invalid requests instead of confidently accommodating them.
 - [Track user dissatisfaction alongside pairwise model preference](concepts/track-user-dissatisfaction-alongside-pairwise-model-preference.md) - "both bad" feedback reveals absolute model failure rates that leaderboards can hide.
 - [Route Gemma 4 model variants by deployment and workflow shape](concepts/route-gemma-4-model-variants-by-deployment-and-workflow-shape.md) - Gemma 4's effective, MoE, and dense variants map to different local, hosted, reasoning, coding, and agentic workloads.
@@ -58,6 +60,7 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Context Engineering](topics/context-engineering.md) - engineering prompts, skills, memory, retrieval, and documentation into reusable task context.
 - [Edge Inference](topics/edge-inference.md) - on-device inference decisions, model sizing, deployment, and fleet validation.
 - [Evaluation](topics/evaluation.md) - task-level validation of models, tools, retrieval, and agent workflows.
+- [Generative Media](topics/generative-media.md) - image and video generation models, latent representations, diffusion sampling, distillation, and controls.
 - [Inference](topics/inference.md) - production serving patterns for model runtimes, batching, routing, autoscaling, and resource use.
 - [Infrastructure](topics/infrastructure.md) - deployment runtimes, conversion paths, compilation choices, and operational validation.
 - [Models](topics/models.md) - model architecture, tokenizer, training, adaptation, and sizing choices under practical constraints.

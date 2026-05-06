@@ -311,3 +311,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
 - Updated concepts: [AI-Amplified Shipping Speed Needs Stronger Product Taste](concepts/ai-amplified-shipping-speed-needs-stronger-product-taste.md), [Quality Wednesdays Train Engineers to Notice Small Regressions](concepts/quality-wednesdays-train-engineers-to-notice-small-regressions.md), [Zero-Bug Policies Turn Bug Inflow Into Immediate Work](concepts/zero-bug-policies-turn-bug-inflow-into-immediate-work.md), [Product Engineers Need Direct Customer Context](concepts/product-engineers-need-direct-customer-context.md), [AI Agents Still Need Human Taste for Interaction Quality](concepts/ai-agents-still-need-human-taste-for-interaction-quality.md)
 - Notes: Added Linear's product-taste and quality-system patterns for AI-assisted engineering, including customer-context exposure, quality rituals, and immediate bug triage.
+
+## [2026-05-06] ingest | Building Generative Image & Video models at Scale - Sander Dieleman, Google DeepMind
+
+- Source: [Building Generative Image & Video models at Scale - Sander Dieleman, Google DeepMind](sources/20260421_xOP1PM8fwnk.md)
+- Processed: `xOP1PM8fwnk`
+- Updated topics: [Generative Media](topics/generative-media.md), [Models](topics/models.md), [Inference](topics/inference.md), [Tools](topics/tools.md)
+- Updated concepts: [Curate Generative-Media Data Before Tuning Model Internals](concepts/curate-generative-media-data-before-tuning-model-internals.md), [Train Image and Video Diffusion Models in Learned Latent Spaces](concepts/train-image-and-video-diffusion-models-in-learned-latent-spaces.md), [Use Guidance to Trade Diffusion Sample Diversity for Conditional Quality](concepts/use-guidance-to-trade-diffusion-sample-diversity-for-conditional-quality.md), [Distill Diffusion Models to Reduce Sampling Steps](concepts/distill-diffusion-models-to-reduce-sampling-steps.md), [Expose Explicit Control Signals for Generative Media Models](concepts/expose-explicit-control-signals-for-generative-media-models.md)
+- Notes: Added a generative-media slice covering data curation, learned latent diffusion representations, sampling guidance, distillation for latency, and explicit image/video controls.

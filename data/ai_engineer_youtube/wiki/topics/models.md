@@ -2,11 +2,16 @@
 
 ## Overview
 
-Model work in this wiki covers how AI engineers choose, train, adapt, and deploy model architectures under real constraints. The current sources show two complementary views: small or edge models make deployment practical when memory, latency, privacy, and accelerator access matter, while from-scratch local training exposes the tokenizer, architecture, training-loop, and inference choices that are often hidden behind high-level APIs. Edge-scale models should be treated as their own architecture class, profiled on target hardware, and post-trained for narrow capabilities rather than judged as miniature general-purpose chatbots. Model choice should also account for behavioral reliability: some models improve on public leaderboards while still accepting nonsensical premises, overusing reasoning, or underperforming on fuzzy expert work. Gemma 4 adds a concrete routing pattern inside one open-weight family: effective on-device variants, sparse MoE efficiency, and dense long-context reasoning variants serve different deployment and workflow shapes. Tiny models add a third pattern: specialize and fine-tune narrow components, then compose them into a product workflow.
+Model work in this wiki covers how AI engineers choose, train, adapt, and deploy model architectures under real constraints. The current sources show complementary views: small or edge models make deployment practical when memory, latency, privacy, and accelerator access matter; from-scratch local training exposes the tokenizer, architecture, training-loop, and inference choices that are often hidden behind high-level APIs; and generative-media models need data curation, learned latent representations, denoising architectures, and sampling controls suited to image and video topology. Edge-scale models should be treated as their own architecture class, profiled on target hardware, and post-trained for narrow capabilities rather than judged as miniature general-purpose chatbots. Model choice should also account for behavioral reliability: some models improve on public leaderboards while still accepting nonsensical premises, overusing reasoning, or underperforming on fuzzy expert work. Gemma 4 adds a concrete routing pattern inside one open-weight family: effective on-device variants, sparse MoE efficiency, and dense long-context reasoning variants serve different deployment and workflow shapes. Tiny models add another pattern: specialize and fine-tune narrow components, then compose them into a product workflow.
 
 ## Key Concepts
 
 - [Compare models by task, thinking budget, cost, and latency](../concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - model choice should be routed by workload constraints rather than by size alone.
+- [Curate generative-media data before tuning model internals](../concepts/curate-generative-media-data-before-tuning-model-internals.md) - data quality can be a stronger lever than model or optimizer changes for image and video models.
+- [Train image and video diffusion models in learned latent spaces](../concepts/train-image-and-video-diffusion-models-in-learned-latent-spaces.md) - learned latents reduce media tensor size while preserving spatial or temporal topology.
+- [Use guidance to trade diffusion sample diversity for conditional quality](../concepts/use-guidance-to-trade-diffusion-sample-diversity-for-conditional-quality.md) - diffusion sampling settings are part of model behavior, not a cosmetic afterthought.
+- [Distill diffusion models to reduce sampling steps](../concepts/distill-diffusion-models-to-reduce-sampling-steps.md) - diffusion distillation targets latency by shortening the denoising path.
+- [Expose explicit control signals for generative media models](../concepts/expose-explicit-control-signals-for-generative-media-models.md) - text prompts should be complemented by structured controls when users need predictable media outputs.
 - [Evaluate whether models reject impossible or nonsensical premises](../concepts/evaluate-whether-models-reject-impossible-or-nonsensical-premises.md) - model reliability includes knowing when not to answer a malformed request.
 - [Benchmark narrow slices separately from real expert work](../concepts/benchmark-narrow-slices-separately-from-real-expert-work.md) - public benchmark progress should be interpreted alongside real prompt distributions and expert dissatisfaction.
 - [Route Gemma 4 model variants by deployment and workflow shape](../concepts/route-gemma-4-model-variants-by-deployment-and-workflow-shape.md) - Gemma 4's effective, MoE, and dense variants map to different local, hosted, reasoning, coding, and agentic workloads.
@@ -32,6 +37,7 @@ Model work in this wiki covers how AI engineers choose, train, adapt, and deploy
 - Which small-model failures should be fixed with architecture, post-training data, runtime tools, or product task narrowing?
 - How should teams evaluate sparse MoE, effective on-device, and dense long-context models against the same agent workflow without hiding deployment cost differences?
 - When does adding reasoning effort improve model judgment, and when does it simply make accommodation of a bad premise longer?
+- Which media-generation failures should be fixed through data curation, latent representation design, sampling settings, distillation, or explicit controls?
 
 ## Sources
 
@@ -43,3 +49,4 @@ Model work in this wiki covers how AI engineers choose, train, adapt, and deploy
 - [Training an LLM from Scratch, Locally - Angelos Perivolaropoulos, ElevenLabs](../sources/20260504_UsB70Tf5zcE.md)
 - [TLMs: Tiny LLMs and Agents on Edge Devices with LiteRT-LM - Cormac Brick, Google](../sources/20260503_BKWpYIWvAo4.md)
 - [What Do Models Still Suck At? - Peter Gostev, Arena.ai, BullshitBench](../sources/20260424_R7A8rX-09Zw.md)
+- [Building Generative Image & Video models at Scale - Sander Dieleman, Google DeepMind](../sources/20260421_xOP1PM8fwnk.md)
