@@ -12,6 +12,8 @@ Details:
 - The 31B dense model is positioned for advanced reasoning with a 256K context length plus native thinking, function calling, and structured JSON outputs for autonomous workflows. (02:25-02:56)
 - The effective 2B and 4B models support vision, text, and audio inputs with text output while being optimized for phones and laptops rather than remote API-only deployment. (03:30-03:47, 08:11-08:24)
 - The suggested adoption paths are self-hosting through Hugging Face, Kaggle, and Ollama for downloadable models, or hosted access through AI Studio and Vertex for the larger models. (18:06-18:34)
+- A second Gemma overview presents the same routing pattern as a product menu: the smallest variants target Android, iOS, Raspberry Pi, and on-device agentic workflows; the MoE variant targets low latency; and the 31B dense model targets the highest raw capability while still fitting a consumer GPU. (01:26-02:25)
+- Local demos included airplane-mode phone execution with no API calls, parallel llama.cpp instances on a laptop, and offline coding or Android development examples, reinforcing that deployment target should shape model choice. (02:38-03:35, 10:07-10:40)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -22,7 +24,9 @@ Related topics:
 Related concepts:
 - [Compare models by task, thinking budget, cost, and latency](compare-models-by-task-thinking-budget-cost-and-latency.md)
 - [Match Gemma edge model size to device memory and interaction class](match-gemma-edge-model-size-to-device-memory-and-interaction-class.md)
+- [Open Model Families Need Ecosystem-Compatible Tooling](open-model-families-need-ecosystem-compatible-tooling.md)
 - [Use hosted model playgrounds to prototype before owning infrastructure](use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md)
 
 Sources:
 - [Gemma 4 Deep Dive - Cassidy Hardin, Researcher, Google DeepMind](../sources/20260427__A367W_qvc8.md), 00:51-03:47, 18:06-18:34
+- [Gemma, DeepMind's Family of Open Models - Omar Sanseviero, Google DeepMind](../sources/20260420__gVFUEdhCyI.md), 01:26-03:35, 10:07-10:40

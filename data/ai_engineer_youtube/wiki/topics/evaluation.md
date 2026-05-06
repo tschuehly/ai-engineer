@@ -44,6 +44,7 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - [Quality Wednesdays train engineers to notice small regressions](../concepts/quality-wednesdays-train-engineers-to-notice-small-regressions.md) - quality rituals create human detection signals for polish issues that metrics may miss.
 - [AI agents still need human taste for interaction quality](../concepts/ai-agents-still-need-human-taste-for-interaction-quality.md) - UI eval needs human judgment when generated interactions are functional but feel wrong.
 - [Calibrate LLM judges like binary classifiers](../concepts/calibrate-llm-judges-like-binary-classifiers.md) - judge prompts need dev/test validation before they gate workflow quality.
+- [Domain Gemma variants package specialized policy and task behavior](../concepts/domain-gemma-variants-package-specialized-policy-and-task-behavior.md) - safety and domain variants still need validation against the policies or specialist tasks they claim to support.
 
 ## Open Questions
 
@@ -69,6 +70,7 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - Which AI adoption metrics distinguish useful agent leverage from performative token generation?
 - Which product-quality regressions can be detected mechanically, and which still require trained human taste?
 - Which LLM judge labels are safe to automate, and which still require domain-expert review before calibration?
+- Which domain-specific model variants are reliable enough to replace prompting a general model, and which still need expert review or lab validation?
 
 ## Sources
 
@@ -96,3 +98,4 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - [How AI is changing Software Engineering: A Conversation with Gergely Orosz, @pragmaticengineer](../sources/20260421_CS5Cmz5FssI.md)
 - [Taste & Craft: A Conversation with Tuomas Artman, CTO Linear & Gergely Orosz, @pragmaticengineer](../sources/20260421_wjk0ulMAkbc.md)
 - [Full Workshop: Build Your Own Deep Research Agents - Louis-François Bouchard, Paul Iusztin, Samridhi](../sources/20260420_mYSRn6PC1mc.md)
+- [Gemma, DeepMind's Family of Open Models - Omar Sanseviero, Google DeepMind](../sources/20260420__gVFUEdhCyI.md)

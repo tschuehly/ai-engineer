@@ -12,6 +12,8 @@ Details:
 - Per-layer embeddings add a dedicated embedding table for each model layer while preserving the ordinary token embedding table. (08:25-09:26)
 - The PLE table is stored in flash memory rather than VRAM, which matters because VRAM is a primary constraint for phones and laptops. (09:28-09:49)
 - PLE uses a smaller 256-dimensional embedding and projects it up to the full embedding size expected by the model at each layer. (09:57-10:48)
+- Omar Sanseviero describes E2B as effectively 2B parameters even though the model has more total parameters, because PLE lookup data does not need the same GPU-resident matrix multiplication path as ordinary transformer weights. (05:28-06:44)
+- The same talk notes that llama.cpp can move per-layer embeddings to CPU or disk with an override tensor flag, which is a concrete runtime implementation path for the memory tradeoff. (06:45-06:55)
 
 Related topics:
 - [Edge Inference](../topics/edge-inference.md)
@@ -24,3 +26,4 @@ Related concepts:
 
 Sources:
 - [Gemma 4 Deep Dive - Cassidy Hardin, Researcher, Google DeepMind](../sources/20260427__A367W_qvc8.md), 07:42-10:56
+- [Gemma, DeepMind's Family of Open Models - Omar Sanseviero, Google DeepMind](../sources/20260420__gVFUEdhCyI.md), 05:28-06:55

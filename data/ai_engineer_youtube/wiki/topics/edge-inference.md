@@ -2,7 +2,7 @@
 
 ## Overview
 
-Edge inference is most useful when latency, privacy, offline access, or cloud-token cost dominate the product constraint. The practical design pattern is hybrid: push suitable workloads onto the device, size the model to the target hardware, and keep cloud calls for tasks that exceed local capability. Edge models are not just smaller cloud models: memory-bound architectures, embedding-layer overhead, operator choice, and post-training targets all need to be optimized against local hardware and narrow product jobs. Gemma 4's effective models add concrete examples of this pressure: per-layer embeddings trade flash storage for lower VRAM pressure, and multimodal token budgets let developers spend image/audio context only where the task needs it. For agentic edge workflows, the context and tool surface must also be compressed: expose skill descriptions first, load details on demand, and use runtime constraints when small models generate tool calls.
+Edge inference is most useful when latency, privacy, offline access, or cloud-token cost dominate the product constraint. The practical design pattern is hybrid: push suitable workloads onto the device, size the model to the target hardware, and keep cloud calls for tasks that exceed local capability. Edge models are not just smaller cloud models: memory-bound architectures, embedding-layer overhead, operator choice, and post-training targets all need to be optimized against local hardware and narrow product jobs. Gemma 4's effective models add concrete examples of this pressure: per-layer embeddings trade flash storage for lower VRAM pressure, and multimodal token budgets let developers spend image/audio context only where the task needs it. Local demos in airplane mode and through llama.cpp reinforce that the target runtime, device class, and offline requirement should drive model selection. For agentic edge workflows, the context and tool surface must also be compressed: expose skill descriptions first, load details on demand, and use runtime constraints when small models generate tool calls.
 
 ## Key Concepts
 
@@ -31,3 +31,4 @@ Edge inference is most useful when latency, privacy, offline access, or cloud-to
 - [TLMs: Tiny LLMs and Agents on Edge Devices with LiteRT-LM - Cormac Brick, Google](../sources/20260503_BKWpYIWvAo4.md)
 - [Gemma 4 Deep Dive - Cassidy Hardin, Researcher, Google DeepMind](../sources/20260427__A367W_qvc8.md)
 - [Everything I Learned Training Frontier Small Models - Maxime Labonne, Liquid AI](../sources/20260429_fLUtUkqYHnQ.md)
+- [Gemma, DeepMind's Family of Open Models - Omar Sanseviero, Google DeepMind](../sources/20260420__gVFUEdhCyI.md)

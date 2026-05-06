@@ -8,7 +8,7 @@ Agent tools are most useful when their execution surface is paired with clear co
 
 Domain skills can act as node-level controls by supplying expert handling for specific work-tree contingencies after the agent discovers them. Persistent artifacts such as documents, comments, and tables can also be tool surfaces because they let the user scope an instruction to the exact clause, row, or review finding instead of relying on a linear chat correction. Research agents especially need tool and artifact discipline: source gathering, YouTube analysis, compilation, and writing can be split into explicit tools or files so downstream workflows consume grounded evidence instead of hidden conversation state.
 
-Agent-facing products should treat APIs and CLIs as primary interfaces once agents become meaningful users. Dashboards still matter for humans, but agent experience asks whether a feature can be automated, called from a CLI, or used through a stable machine surface.
+Agent-facing products should treat APIs and CLIs as primary interfaces once agents become meaningful users. Dashboards still matter for humans, but agent experience asks whether a feature can be automated, called from a CLI, or used through a stable machine surface. Open model families add a model-tooling version of the same rule: release success depends on meeting developers in their existing runtimes, fine-tuning libraries, quantization paths, and product integrations.
 
 ## Key Concepts
 
@@ -17,6 +17,7 @@ Agent-facing products should treat APIs and CLIs as primary interfaces once agen
 - [Collaborate with complex agents through high-bandwidth artifacts](../concepts/collaborate-with-complex-agents-through-high-bandwidth-artifacts.md) - documents, tables, and comments can be tool surfaces for precise human-agent collaboration.
 - [Encode domain judgment in node-level agent skills](../concepts/encode-domain-judgment-in-node-level-agent-skills.md) - skills can provide contextual guidance at the work node where a special case appears.
 - [Use hosted model playgrounds to prototype before owning infrastructure](../concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md) - playgrounds can be a temporary integration surface before production runtime ownership.
+- [Open model families need ecosystem-compatible tooling](../concepts/open-model-families-need-ecosystem-compatible-tooling.md) - open models need toolchain support where developers already run, fine-tune, and integrate them.
 - [Realtime multimodal models should plan over specialized local actuators](../concepts/realtime-multimodal-models-should-plan-over-specialized-local-actuators.md) - embodied tool use should separate conversational planning from local action execution.
 - [Use skills for workflow guidance and MCP for integrations](../concepts/use-skills-for-workflow-guidance-and-mcp-for-integrations.md) - separates the integration layer from the contextual guidance layer.
 - [Customize subagents by task, model, tools, and permissions](../concepts/customize-subagents-by-task-model-tools-and-permissions.md) - specialist agents should receive scoped tool and MCP access that matches their role.
@@ -86,6 +87,7 @@ Agent-facing products should treat APIs and CLIs as primary interfaces once agen
 - Which generated-code actions are safe enough for code mode, and which require a fixed tool or approval gate?
 - Which image and video controls should appear as explicit user-facing tool parameters rather than hidden prompt instructions?
 - Which research artifacts should be preserved as files so later tools can audit provenance?
+- Which open-model runtimes and fine-tuning tools need first-class support before a model release is usable by the target developer community?
 
 ## Sources
 
@@ -114,3 +116,4 @@ Agent-facing products should treat APIs and CLIs as primary interfaces once agen
 - [How AI is changing Software Engineering: A Conversation with Gergely Orosz, @pragmaticengineer](../sources/20260421_CS5Cmz5FssI.md)
 - [Full Workshop: Build Your Own Deep Research Agents - Louis-François Bouchard, Paul Iusztin, Samridhi](../sources/20260420_mYSRn6PC1mc.md)
 - [The New Application Layer - Malte Ubl, CTO Vercel](../sources/20260420_XKup1pj-34M.md)
+- [Gemma, DeepMind's Family of Open Models - Omar Sanseviero, Google DeepMind](../sources/20260420__gVFUEdhCyI.md)
