@@ -24,6 +24,8 @@ Platform workflows should be shaped for agent loops as well as human onboarding.
 
 For AI app reliability work, build evals at the start of the workflow rather than after a demo already feels good. A practical loop is to define scenario-level criteria from user outcomes, generate realistic persona and wording variants, inspect failures one by one, and then use the benchmark to compare model, prompt, RAG, logic, or agentic changes while watching for regressions and cost or latency tradeoffs.
 
+DSPy-style workflows separate program shape from prompt shape: teams can define signatures and modules, route inputs through ordinary control flow, select adapters for model-facing format, and then optimize the resulting program with datasets and metrics. This is most useful when the task has known examples and quality criteria, not when the workflow is too open-ended to score.
+
 ## Key Concepts
 
 - [Bootstrap RL with targeted SFT before reinforcement learning](../concepts/bootstrap-rl-with-targeted-sft-before-reinforcement-learning.md) - interactive post-training can teach protocol first, then optimize outcomes through RL.
@@ -41,6 +43,9 @@ For AI app reliability work, build evals at the start of the workflow rather tha
 - [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](../concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md) - explicit role handoffs turn validation from a reminder into a workflow path.
 - [Reverse-engineer AI app evals from user outcomes](../concepts/reverse-engineer-ai-app-evals-from-user-outcomes.md) - reliability workflows should start from what users and the business need the app to accomplish.
 - [Build AI app benchmarks before optimization](../concepts/build-ai-app-benchmarks-before-optimization.md) - benchmark-first workflows catch regressions while teams optimize prompts, models, retrieval, and guardrails.
+- [DSPy programs keep LLM intent separate from prompt strings](../concepts/dspy-programs-keep-llm-intent-separate-from-prompt-strings.md) - program-first LLM workflows keep control flow stable while model prompts evolve.
+- [Optimize LLM programs with metrics and teacher feedback](../concepts/optimize-llm-programs-with-metrics-and-teacher-feedback.md) - known examples and metrics can drive DSPy optimizer loops.
+- [Route heterogeneous documents through multimodal LLM pipelines](../concepts/route-heterogeneous-documents-through-multimodal-llm-pipelines.md) - mixed document workflows can classify file type and branch to specialized modules.
 - [Reusable Routines Turn Prompts Into Operational Agent Workflows](../concepts/reusable-routines-turn-prompts-into-operational-agent-workflows.md) - repeated prompts can become scheduled or manually triggered routines with variables and skills.
 - [Repository skills and AGENTS.md encode repeatable web-agent workflows](../concepts/repository-skills-and-agents-md-encode-repeatable-web-agent-workflows.md) - web feature work can include local QA, preview sharing, and handoff rules by default.
 - [Grow Agent Organizations Incrementally By Role Quality and Cost](../concepts/grow-agent-organizations-incrementally-by-role-quality-and-cost.md) - workflow fan-out should follow observed quality and cost fit.
@@ -172,6 +177,7 @@ For AI app reliability work, build evals at the start of the workflow rather tha
 - Which multi-agent workflows need saga-style compensation because partial side effects are unacceptable?
 - How should teams decide when an RL run is slow-but-healthy versus stuck and worth interrupting?
 - Which after-call voice fields should be reviewed by the operator versus routed directly into analytics-only data stores?
+- Which LLM workflows have enough labeled examples and metrics to justify DSPy optimization instead of manual prompt iteration?
 
 ## Sources
 
@@ -217,3 +223,4 @@ For AI app reliability work, build evals at the start of the workflow rather tha
 - [Platforms for Humans and Machines: Engineering for the Age of Agents - Juan Herreros Elorza](../sources/20260408_cCRO3ChaYhM.md)
 - [Cognitive Exhaust Fumes, or: Read-Only AI Is Underrated - Simon Podhajsky, Head of AI, Waypoint](../sources/20260408_u0TOSBbAw7c.md)
 - [Practical tactics to build reliable AI apps — Dmitry Kuchin, Multinear](../sources/20250803_-T6uZYYzkWw.md)
+- [DSPy: The End of Prompt Engineering - Kevin Madura, AlixPartners](../sources/20260108_-cKUW6n8hBU.md)

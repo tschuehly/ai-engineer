@@ -14,6 +14,8 @@ MCP is one part of the agent connectivity stack, not a universal replacement for
 
 RAG stacks are another tool surface when their internals are inspectable and editable. OpenRAG's LangFlow layer exposes ingestion, retrieval, guardrails, parsers, URL ingestion, calculators, prompt templates, and OpenSearch tools as flow components; its API keys and MCP server let other applications or agents call the same retrieval system instead of duplicating it.
 
+LLM programming frameworks can make prompt format itself a tool layer. DSPy signatures and modules describe the workflow intent, while adapters choose how that intent is rendered to the model, so teams can compare JSON, BAML, compressed formats, or model-specific formatting without rewriting the program.
+
 Open-source agent tools need extension points as well as integrations. Plugin architecture can keep memory, wiki, dreaming, and other experimental capabilities installable without forcing every idea into core or overloading maintainers with unrelated pull requests. Ordinary package-manager distribution can be enough for harness extensions when extensions are just code modules that add tools, commands, events, providers, or compaction behavior. Routine systems are another tool layer: they package repeated prompts as scheduled or manually parameterized workflows, often invoking skills for specialized domain guidance while keeping the trigger, variables, and project or agent ownership explicit.
 
 Tool metadata is also a security boundary. MCP and function-calling systems should treat full tool descriptions, hidden parameters, and approval summaries as prompt and policy surfaces, because a model may act on instructions the reviewer never saw. High-risk tools need approval UI that exposes the effective action and guardrails that inspect the full model-visible metadata.
@@ -29,6 +31,9 @@ Internal platform tools should be designed so agents can call the same intended 
 - [Build RL environments as software artifacts](../concepts/build-rl-environments-as-software-artifacts.md) - Verifiers-style packages combine parsers, rewards, rollout execution, and trainer integration for model environments.
 - [Optimize Judge Prompts With Diagnostic Feedback](../concepts/optimize-judge-prompts-with-diagnostic-feedback.md) - prompt-optimization tools such as GEPA need evaluator diagnostics and ground-truth annotations to improve judge rubrics.
 - [Sandboxed code execution turns model reasoning into inspectable computation](../concepts/sandboxed-code-execution-turns-model-reasoning-into-inspectable-computation.md) - sandboxed execution gives models computation tools while limiting local side effects.
+- [DSPy programs keep LLM intent separate from prompt strings](../concepts/dspy-programs-keep-llm-intent-separate-from-prompt-strings.md) - typed LLM-backed functions keep workflow logic in code instead of hand-managed prompt strings.
+- [DSPy adapters make prompt format a swappable runtime layer](../concepts/dspy-adapters-make-prompt-format-a-swappable-runtime-layer.md) - adapters make JSON, BAML, and compressed model-facing formats testable implementation choices.
+- [Route heterogeneous documents through multimodal LLM pipelines](../concepts/route-heterogeneous-documents-through-multimodal-llm-pipelines.md) - multimodal document classifiers and page-image tools can route mixed files through specialized processing paths.
 - [Reusable Routines Turn Prompts Into Operational Agent Workflows](../concepts/reusable-routines-turn-prompts-into-operational-agent-workflows.md) - routines turn repeated prompts into explicit tool workflows with schedules, variables, and skill references.
 - [Repository skills and AGENTS.md encode repeatable web-agent workflows](../concepts/repository-skills-and-agents-md-encode-repeatable-web-agent-workflows.md) - repo-local instructions can make browser proof, preview sharing, and confirmation gates part of every web-agent change.
 - [Browser DevTools MCP turns runtime debugging into agent tools](../concepts/browser-devtools-mcp-turns-runtime-debugging-into-agent-tools.md) - DevTools MCP turns live browser state, traces, and diagnostics into agent-callable tools.
@@ -148,6 +153,7 @@ Internal platform tools should be designed so agents can call the same intended 
 - Which lint messages or CI comments are important enough to be treated as first-class prompt surfaces?
 - Which registry metadata fields should be mandatory before an MCP server or A2A agent can be discovered by production agents?
 - Which RAG internals should be editable in visual flows, and which should remain fixed behind a stable API or MCP server?
+- Which prompt-format decisions belong in DSPy adapters versus task signatures or higher-level program logic?
 
 ## Sources
 
@@ -195,3 +201,4 @@ Internal platform tools should be designed so agents can call the same intended 
 - [Bending a Public MCP Server Without Breaking It — Nimrod Hauser, Baz](../sources/20260408_U00AOI1eJUE.md)
 - [Platforms for Humans and Machines: Engineering for the Age of Agents - Juan Herreros Elorza](../sources/20260408_cCRO3ChaYhM.md)
 - [Cognitive Exhaust Fumes, or: Read-Only AI Is Underrated - Simon Podhajsky, Head of AI, Waypoint](../sources/20260408_u0TOSBbAw7c.md)
+- [DSPy: The End of Prompt Engineering - Kevin Madura, AlixPartners](../sources/20260108_-cKUW6n8hBU.md)

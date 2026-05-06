@@ -535,3 +535,11 @@
 - Updated topics: [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Reverse-engineer AI app evals from user outcomes](concepts/reverse-engineer-ai-app-evals-from-user-outcomes.md), [Build AI app benchmarks before optimization](concepts/build-ai-app-benchmarks-before-optimization.md)
 - Notes: Added reliability tactics for deriving evals from product outcomes, building early benchmarks, and using case-level failures to guide prompt, model, retrieval, logic, and guardrail experiments.
+
+## [2026-05-06] ingest | DSPy: The End of Prompt Engineering - Kevin Madura, AlixPartners
+
+- Source: [DSPy: The End of Prompt Engineering - Kevin Madura, AlixPartners](sources/20260108_-cKUW6n8hBU.md)
+- Processed: `-cKUW6n8hBU`
+- Updated topics: [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [DSPy Programs Keep LLM Intent Separate From Prompt Strings](concepts/dspy-programs-keep-llm-intent-separate-from-prompt-strings.md), [DSPy Adapters Make Prompt Format a Swappable Runtime Layer](concepts/dspy-adapters-make-prompt-format-a-swappable-runtime-layer.md), [Optimize LLM Programs With Metrics and Teacher Feedback](concepts/optimize-llm-programs-with-metrics-and-teacher-feedback.md), [Route Heterogeneous Documents Through Multimodal LLM Pipelines](concepts/route-heterogeneous-documents-through-multimodal-llm-pipelines.md)
+- Notes: Added DSPy guidance covering program-first LLM workflows, adapter-swappable prompt formats, metric-driven optimization, compiled reusable modules, and multimodal document routing.

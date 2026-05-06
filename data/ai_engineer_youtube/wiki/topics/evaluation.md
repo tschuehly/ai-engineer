@@ -16,6 +16,8 @@ Contact-center voice evaluation should inspect each pipeline stage, not only the
 
 RL environments add an evaluation shape for interactive model behavior: the same environment can generate rollouts, compute deterministic or weighted rewards, and become the training loop. That makes the environment itself part of the eval artifact. Teams should control environment noise, inspect trajectories, check for hidden opponent or simulator bias, and try the trained model in the real task before trusting reward curves or benchmark scores.
 
+LLM program optimization adds another eval loop: define known inputs and outputs, write metrics that reflect the desired behavior, evaluate the base program, then let an optimizer propose improved prompts or modules. Metric breakdowns should be inspected after optimization because a gain can mean the metric is useful, the data is underspecified, or the program needs decomposition.
+
 ## Key Concepts
 
 - [Compare models by task, thinking budget, cost, and latency](../concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - side-by-side model comparisons help choose enough reasoning at acceptable speed and cost.
@@ -54,6 +56,7 @@ RL environments add an evaluation shape for interactive model behavior: the same
 - [Use golden data sets and mixed scoring functions for AI application confidence](../concepts/use-golden-data-sets-and-mixed-scoring-functions-for-ai-application-confidence.md) - curated edge cases plus deterministic and judge-model scores create a repeatable release gate.
 - [Reverse-engineer AI app evals from user outcomes](../concepts/reverse-engineer-ai-app-evals-from-user-outcomes.md) - product and business outcomes should define the eval criteria before generic AI quality metrics.
 - [Build AI app benchmarks before optimization](../concepts/build-ai-app-benchmarks-before-optimization.md) - early benchmarks let teams compare prompts, models, retrieval, logic, and guardrails while catching regressions.
+- [Optimize LLM programs with metrics and teacher feedback](../concepts/optimize-llm-programs-with-metrics-and-teacher-feedback.md) - DSPy optimizers turn prompt improvement into a dataset-backed loop with metric and teacher-feedback signals.
 - [Apply online scoring to production traces with cost-aware sampling](../concepts/apply-online-scoring-to-production-traces-with-cost-aware-sampling.md) - production monitoring should score live traces while sampling expensive model-based judges deliberately.
 - [Replay production failures before promoting prompt fixes](../concepts/replay-production-failures-before-promoting-prompt-fixes.md) - production failures should become replayable regression cases before a prompt patch is trusted.
 - [Realtime multimodal agents use stateful streams for audio, vision, and tools](../concepts/realtime-multimodal-agents-use-stateful-streams-for-audio-vision-and-tools.md) - realtime evals may need to inspect streamed audio, visual context, tool events, and latency together.
@@ -117,6 +120,7 @@ RL environments add an evaluation shape for interactive model behavior: the same
 - Which RL environment scores should require manual rollout review before they are allowed to drive training decisions?
 - How should contact-center systems measure whether operator edits are correcting model errors, STT errors, schema mapping errors, or policy preferences?
 - Which user-outcome metrics are strong enough to replace generic AI quality scores as release gates for each product workflow?
+- Which DSPy optimization metrics are stable enough to drive prompt changes automatically, and which should only surface diagnostics for human review?
 
 ## Sources
 
@@ -158,3 +162,4 @@ RL environments add an evaluation shape for interactive model behavior: the same
 - [Let LLMs Wander: Engineering RL Environments - Stefano Fiorucci](../sources/20260408_71V3fTaUp2Q.md)
 - [Contact Center Voice AI: Low-Latency Intelligence Extraction from Messy Audio Streams - Dippu Singh](../sources/20260408_IEF842ZEU5A.md)
 - [Practical tactics to build reliable AI apps — Dmitry Kuchin, Multinear](../sources/20250803_-T6uZYYzkWw.md)
+- [DSPy: The End of Prompt Engineering - Kevin Madura, AlixPartners](../sources/20260108_-cKUW6n8hBU.md)
