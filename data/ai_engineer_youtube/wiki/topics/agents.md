@@ -8,7 +8,7 @@ Agent workflows depend on both model capability and the context substrate around
 
 Code mode pushes tool-surface constraints into execution architecture. Model-written code can compress broad APIs and multi-step tool loops, but generated code should be treated as untrusted code even when it came from a helpful model. The harness should start generated code with no ambient authority, grant task-scoped capabilities with observable execution, choose isolates for short constrained functions, and choose containers only when the task needs a full filesystem, package manager, processes, or preview server.
 
-Agentic engineering adds a pragmatic coding-agent stance: treat the agent as a fast, well-read junior collaborator whose output is only as good as the human direction, context, and review around it. Research-plan-implement loops, fresh task-specific sessions, AGENTS.md rules, scoped modes, worktrees, and explicit permission settings keep speed from turning into context pollution or large unreviewable diffs.
+Agentic engineering adds a pragmatic coding-agent stance: treat the agent as a fast, well-read junior collaborator whose output is only as good as the human direction, context, and review around it. Research-plan-implement loops, fresh task-specific sessions, AGENTS.md rules, scoped modes, worktrees, and explicit permission settings keep speed from turning into context pollution or large unreviewable diffs. Agent prompt improvement should also be treated as a learning loop: collect output traces, capture explanations for missed instructions or context failures, and validate evaluator feedback before letting automated prompt updates steer future behavior.
 
 Harness engineering treats the agent runtime, repository, documentation, lints, reviewer agents, and tests as the control plane for abundant agent capacity. If implementation becomes cheap, agent work still needs durable team knowledge and distributed prompt surfaces that keep context refreshed as long-running work pages information in and out of the model context window. Human control planes extend that idea beyond coding by making role hierarchies, projects, tasks, memories, budgets, and live handoff state visible so many heterogeneous agents can be supervised without scattering work across independent chat tabs.
 
@@ -158,6 +158,8 @@ Internal developer platforms are another agent surface. Practices that already h
 - [Deep research agents need planning, grounded evidence, and pivot loops](../concepts/deep-research-agents-need-planning-grounded-evidence-and-pivot-loops.md) - research agents should search, inspect, cite, pivot, and synthesize rather than only answer from priors.
 - [Split exploratory research agents from constrained writing workflows](../concepts/split-exploratory-research-agents-from-constrained-writing-workflows.md) - adjacent tasks can communicate through artifacts when they need different autonomy levels.
 - [Agentic retrieval lets models plan search steps](../concepts/agentic-retrieval-lets-models-plan-search-steps.md) - retrieval agents can decide which searches to perform and how to use the results.
+- [Use explanatory feedback to optimize prompts](../concepts/use-explanatory-feedback-to-optimize-prompts.md) - agent prompts improve from failure explanations that identify what the agent missed.
+- [Evaluator quality is a dependency of prompt optimization](../concepts/evaluator-quality-is-a-dependency-of-prompt-optimization.md) - automated agent prompt updates need trustworthy eval signals.
 
 ## Open Questions
 
@@ -198,6 +200,7 @@ Internal developer platforms are another agent surface. Practices that already h
 - Which agent-card fields are sufficient for safe runtime discovery by other internal agents?
 - Which agent coordination paths should be centralized in an orchestrator, and which are safe enough for event-driven choreography?
 - Which LLM calls and tool calls are safe to replay, and which require durable result recording before production use?
+- Which agent failures should update prompts automatically, and which should first become human-reviewed feedback examples?
 
 ## Sources
 
@@ -218,6 +221,7 @@ Internal developer platforms are another agent surface. Practices that already h
 - [Shipping complex AI applications - Braintrust & Trainline](../sources/20260501_ZdheJTfLu-s.md)
 - [Agents for Everything Else - swyx](../sources/20260501_zepu8Kk6FBQ.md)
 - [Agents on the Canvas in tldraw - Steve Ruiz, tldraw](../sources/20260501_sPUjIBH5Cwg.md)
+- [Build a Prompt Learning Loop - SallyAnn DeLucia & Fuad Ali, Arize](../sources/20260106_SbcQYbrvAfI.md)
 - [Replacing 12K LoC with a 200 LoC Skill - David Gomes, Cursor](../sources/20260430_WE_Gnowy3uw.md)
 - [Building Conversational Agents - Thor Schaeff and Philipp Schmid, Google DeepMind](../sources/20260430_cVzf49yg0D8.md)
 - [LLM codegen fails and how to stop 'em - Danilo Campos, PostHog](../sources/20260430_juoNbJiZUi0.md)

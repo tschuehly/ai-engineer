@@ -11,6 +11,8 @@
 - [Treat Long Waits as Logical Workflow State](../concepts/treat-long-waits-as-logical-workflow-state.md)
 - [Build RL environments as software artifacts](../concepts/build-rl-environments-as-software-artifacts.md)
 - [Optimize LLM Programs With Metrics and Teacher Feedback](../concepts/optimize-llm-programs-with-metrics-and-teacher-feedback.md)
+- [Use Explanatory Feedback to Optimize Prompts](../concepts/use-explanatory-feedback-to-optimize-prompts.md)
+- [Evaluator Quality Is a Dependency of Prompt Optimization](../concepts/evaluator-quality-is-a-dependency-of-prompt-optimization.md)
 - [Choose Choreography Or Orchestration By Complexity and Autonomy](../concepts/choose-choreography-or-orchestration-by-complexity-and-autonomy.md)
 - [Use Immutable Versioned State For Agent Handoffs](../concepts/use-immutable-versioned-state-for-agent-handoffs.md)
 - [Wrap Agent Calls With Circuit Breakers and Compensation](../concepts/wrap-agent-calls-with-circuit-breakers-and-compensation.md)
@@ -261,6 +263,7 @@
 - [Maintain ubiquitous language for AI coding](../concepts/maintain-ubiquitous-language-for-ai-coding.md)
 - [Retire completed planning docs before they become agent doc rot](../concepts/retire-completed-planning-docs-before-they-become-agent-doc-rot.md)
 - [Guard AI-assisted platform contributions with policy and context](../concepts/guard-ai-assisted-platform-contributions-with-policy-and-context.md)
+- [Use Explanatory Feedback to Optimize Prompts](../concepts/use-explanatory-feedback-to-optimize-prompts.md)
 
 ## Edge Inference
 
@@ -422,6 +425,9 @@
 - [Reverse-engineer AI app evals from user outcomes](../concepts/reverse-engineer-ai-app-evals-from-user-outcomes.md)
 - [Build AI app benchmarks before optimization](../concepts/build-ai-app-benchmarks-before-optimization.md)
 - [Optimize LLM Programs With Metrics and Teacher Feedback](../concepts/optimize-llm-programs-with-metrics-and-teacher-feedback.md)
+- [Use Explanatory Feedback to Optimize Prompts](../concepts/use-explanatory-feedback-to-optimize-prompts.md)
+- [Structure Prompt-Learning Experiments With Train/Test Splits and Loop Budgets](../concepts/structure-prompt-learning-experiments-with-train-test-splits-and-loop-budgets.md)
+- [Evaluator Quality Is a Dependency of Prompt Optimization](../concepts/evaluator-quality-is-a-dependency-of-prompt-optimization.md)
 - [Apply online scoring to production traces with cost-aware sampling](../concepts/apply-online-scoring-to-production-traces-with-cost-aware-sampling.md)
 - [Replay production failures before promoting prompt fixes](../concepts/replay-production-failures-before-promoting-prompt-fixes.md)
 - [Track user dissatisfaction alongside pairwise model preference](../concepts/track-user-dissatisfaction-alongside-pairwise-model-preference.md)
@@ -695,6 +701,9 @@
 - [Stage complex AI applications into inspectable deterministic and agentic steps](../concepts/stage-complex-ai-applications-into-inspectable-deterministic-and-agentic-steps.md)
 - [Reverse-engineer AI app evals from user outcomes](../concepts/reverse-engineer-ai-app-evals-from-user-outcomes.md)
 - [Build AI app benchmarks before optimization](../concepts/build-ai-app-benchmarks-before-optimization.md)
+- [Use Explanatory Feedback to Optimize Prompts](../concepts/use-explanatory-feedback-to-optimize-prompts.md)
+- [Structure Prompt-Learning Experiments With Train/Test Splits and Loop Budgets](../concepts/structure-prompt-learning-experiments-with-train-test-splits-and-loop-budgets.md)
+- [Evaluator Quality Is a Dependency of Prompt Optimization](../concepts/evaluator-quality-is-a-dependency-of-prompt-optimization.md)
 - [Replay production failures before promoting prompt fixes](../concepts/replay-production-failures-before-promoting-prompt-fixes.md)
 - [Agents reduce dependency-chain chores through parallel execution](../concepts/agents-reduce-dependency-chain-chores-through-parallel-execution.md)
 - [Non-technical collaborators can steer agents with natural work artifacts](../concepts/non-technical-collaborators-can-steer-agents-with-natural-work-artifacts.md)

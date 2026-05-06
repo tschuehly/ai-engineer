@@ -26,7 +26,7 @@ Platform workflows should be shaped for agent loops as well as human onboarding.
 
 For AI app reliability work, build evals at the start of the workflow rather than after a demo already feels good. A practical loop is to define scenario-level criteria from user outcomes, generate realistic persona and wording variants, inspect failures one by one, and then use the benchmark to compare model, prompt, RAG, logic, or agentic changes while watching for regressions and cost or latency tradeoffs.
 
-DSPy-style workflows separate program shape from prompt shape: teams can define signatures and modules, route inputs through ordinary control flow, select adapters for model-facing format, and then optimize the resulting program with datasets and metrics. This is most useful when the task has known examples and quality criteria, not when the workflow is too open-ended to score.
+DSPy-style workflows separate program shape from prompt shape: teams can define signatures and modules, route inputs through ordinary control flow, select adapters for model-facing format, and then optimize the resulting program with datasets and metrics. This is most useful when the task has known examples and quality criteria, not when the workflow is too open-ended to score. Prompt-learning workflows should likewise be made explicit: start from examples with feedback, choose sample size and train/test split, run bounded generate/evaluate/refine loops, and review whether evaluator feedback is trustworthy enough to drive the next prompt.
 
 ## Key Concepts
 
@@ -49,6 +49,9 @@ DSPy-style workflows separate program shape from prompt shape: teams can define 
 - [Build AI app benchmarks before optimization](../concepts/build-ai-app-benchmarks-before-optimization.md) - benchmark-first workflows catch regressions while teams optimize prompts, models, retrieval, and guardrails.
 - [DSPy programs keep LLM intent separate from prompt strings](../concepts/dspy-programs-keep-llm-intent-separate-from-prompt-strings.md) - program-first LLM workflows keep control flow stable while model prompts evolve.
 - [Optimize LLM programs with metrics and teacher feedback](../concepts/optimize-llm-programs-with-metrics-and-teacher-feedback.md) - known examples and metrics can drive DSPy optimizer loops.
+- [Use explanatory feedback to optimize prompts](../concepts/use-explanatory-feedback-to-optimize-prompts.md) - feedback-rich examples turn prompt editing into a repeatable improvement loop.
+- [Structure prompt-learning experiments with train/test splits and loop budgets](../concepts/structure-prompt-learning-experiments-with-train-test-splits-and-loop-budgets.md) - sample, split, evaluator, and iteration controls make prompt-learning runs comparable.
+- [Evaluator quality is a dependency of prompt optimization](../concepts/evaluator-quality-is-a-dependency-of-prompt-optimization.md) - workflow automation should not let weak judges steer prompt changes unchecked.
 - [Route heterogeneous documents through multimodal LLM pipelines](../concepts/route-heterogeneous-documents-through-multimodal-llm-pipelines.md) - mixed document workflows can classify file type and branch to specialized modules.
 - [Reusable Routines Turn Prompts Into Operational Agent Workflows](../concepts/reusable-routines-turn-prompts-into-operational-agent-workflows.md) - repeated prompts can become scheduled or manually triggered routines with variables and skills.
 - [Repository skills and AGENTS.md encode repeatable web-agent workflows](../concepts/repository-skills-and-agents-md-encode-repeatable-web-agent-workflows.md) - web feature work can include local QA, preview sharing, and handoff rules by default.
@@ -192,6 +195,7 @@ DSPy-style workflows separate program shape from prompt shape: teams can define 
 - How should teams decide when an RL run is slow-but-healthy versus stuck and worth interrupting?
 - Which after-call voice fields should be reviewed by the operator versus routed directly into analytics-only data stores?
 - Which LLM workflows have enough labeled examples and metrics to justify DSPy optimization instead of manual prompt iteration?
+- Which prompt-learning loops need human explanations before automated optimization is safe?
 - Which large-refactor batches should wait for upstream merges, and which can safely proceed speculatively in parallel?
 
 ## Sources
@@ -242,4 +246,5 @@ DSPy-style workflows separate program shape from prompt shape: teams can define 
 - [Practical tactics to build reliable AI apps — Dmitry Kuchin, Multinear](../sources/20250803_-T6uZYYzkWw.md)
 - [DSPy: The End of Prompt Engineering - Kevin Madura, AlixPartners](../sources/20260108_-cKUW6n8hBU.md)
 - [Automating Large Scale Refactors with Parallel Agents - Robert Brennan, OpenHands](../sources/20260108_rcsliSIy_YU.md)
+- [Build a Prompt Learning Loop - SallyAnn DeLucia & Fuad Ali, Arize](../sources/20260106_SbcQYbrvAfI.md)
 - [OpenAI + @Temporalio : Building Durable, Production Ready Agents - Cornelia Davis, Temporal](../sources/20260112_k8cnVCMYmNc.md)

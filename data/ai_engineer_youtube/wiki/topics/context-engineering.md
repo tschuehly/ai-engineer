@@ -8,6 +8,8 @@ Context engineering treats prompts, skills, memory, retrieval, and documentation
 
 Product engineering adds a customer-context layer to this problem. If AI handles more of the mechanical implementation, engineers need searchable customer conversations, tagged feedback, recorded calls, and direct customer channels so product judgment is grounded in real needs rather than abstract feature requests.
 
+Prompt-learning workflows show a narrower context loop: when traces or datasets include explanatory feedback from subject-matter experts or evaluators, that text becomes context for improving the next system prompt. Bare labels are less reusable because they do not identify the missed instruction, missing context, or rule violation that future prompts should address.
+
 ## Key Concepts
 
 - [Keep agent context small, fresh, and task-specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md) - context should be externalized, selected, summarized, and isolated so stale or excessive history does not degrade agent work.
@@ -48,6 +50,7 @@ Product engineering adds a customer-context layer to this problem. If AI handles
 - [Maintain ubiquitous language for AI coding](../concepts/maintain-ubiquitous-language-for-ai-coding.md) - a shared glossary is compact context for domain terms used by humans, code, and agents.
 - [Retire completed planning docs before they become agent doc rot](../concepts/retire-completed-planning-docs-before-they-become-agent-doc-rot.md) - stale planning artifacts can become harmful context for later agents.
 - [Surface existing company information before redesigning processes](../concepts/surface-existing-company-information-before-redesigning-processes.md) - scattered Slack, meeting, issue, and update signals can be made usable as agent context.
+- [Use explanatory feedback to optimize prompts](../concepts/use-explanatory-feedback-to-optimize-prompts.md) - failure explanations become context for prompt revisions.
 
 ## Open Questions
 
@@ -66,6 +69,7 @@ Product engineering adds a customer-context layer to this problem. If AI handles
 - Which customer conversations are durable enough to become agent-visible product context without overfitting to one account?
 - How should repositories distinguish current implementation guidance from historical planning artifacts?
 - Which non-functional requirements are durable enough to become default context for every coding-agent run?
+- Which failure explanations should become durable prompt context instead of staying as one-off annotations?
 
 ## Sources
 
@@ -90,3 +94,4 @@ Product engineering adds a customer-context layer to this problem. If AI handles
 - [Harness Engineering: How to Build Software When Humans Steer, Agents Execute - Ryan Lopopolo, OpenAI](../sources/20260417_am_oeAoUhew.md)
 - [Platforms for Humans and Machines: Engineering for the Age of Agents - Juan Herreros Elorza](../sources/20260408_cCRO3ChaYhM.md)
 - [Cognitive Exhaust Fumes, or: Read-Only AI Is Underrated - Simon Podhajsky, Head of AI, Waypoint](../sources/20260408_u0TOSBbAw7c.md)
+- [Build a Prompt Learning Loop - SallyAnn DeLucia & Fuad Ali, Arize](../sources/20260106_SbcQYbrvAfI.md)

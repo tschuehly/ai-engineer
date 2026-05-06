@@ -599,3 +599,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Decompose large refactors into dependency-aware agent batches](concepts/decompose-large-refactors-into-dependency-aware-agent-batches.md), [Run verify-fix-review loops for agentic refactors](concepts/run-verify-fix-review-loops-for-agentic-refactors.md), [Run parallel issue agents in sandboxes with review and merge loops](concepts/run-parallel-issue-agents-in-sandboxes-with-review-and-merge-loops.md), [Parallel coding-agent queues need focus-preserving review interfaces](concepts/parallel-coding-agent-queues-need-focus-preserving-review-interfaces.md)
 - Notes: Added OpenHands guidance for large refactor orchestration using dependency-aware batches, isolated parallel agents, verifier/fixer loops, and human-reviewed PR-sized outputs.
+
+## [2026-05-06] ingest | Build a Prompt Learning Loop - SallyAnn DeLucia & Fuad Ali, Arize
+
+- Source: [Build a Prompt Learning Loop - SallyAnn DeLucia & Fuad Ali, Arize](sources/20260106_SbcQYbrvAfI.md)
+- Processed: `SbcQYbrvAfI`
+- Updated topics: [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Use Explanatory Feedback to Optimize Prompts](concepts/use-explanatory-feedback-to-optimize-prompts.md), [Structure Prompt-Learning Experiments With Train/Test Splits and Loop Budgets](concepts/structure-prompt-learning-experiments-with-train-test-splits-and-loop-budgets.md), [Evaluator Quality Is a Dependency of Prompt Optimization](concepts/evaluator-quality-is-a-dependency-of-prompt-optimization.md)
+- Notes: Added Arize prompt-learning guidance covering feedback-rich prompt optimization, experiment controls, and evaluator quality as a prerequisite for automated prompt updates.
