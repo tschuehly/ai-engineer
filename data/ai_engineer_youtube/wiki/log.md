@@ -439,3 +439,11 @@
 - Updated topics: [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Calibrate LLM Judges Like Binary Classifiers](concepts/calibrate-llm-judges-like-binary-classifiers.md), [Split LLM Judges Into Narrow Binary Metrics](concepts/split-llm-judges-into-narrow-binary-metrics.md), [Optimize Judge Prompts With Diagnostic Feedback](concepts/optimize-judge-prompts-with-diagnostic-feedback.md)
 - Notes: Added judge-calibration workflow guidance covering human-labeled trace error analysis, narrow binary judge metrics, GEPA prompt optimization, diagnostic feedback, and annotation-quality caveats.
+
+## [2026-05-06] ingest | Running LLMs locally: Practical LLM Performance on DGX Spark - Mozhgan Kabiri chimeh, NVIDIA
+
+- Source: [Running LLMs locally: Practical LLM Performance on DGX Spark - Mozhgan Kabiri chimeh, NVIDIA](sources/20260410_c5-kx2bwoCk.md)
+- Processed: `c5-kx2bwoCk`
+- Updated topics: [Inference](topics/inference.md), [Infrastructure](topics/infrastructure.md), [Evaluation](topics/evaluation.md), [Models](topics/models.md)
+- Updated concepts: [Use Local AI Workstations When Iteration, Privacy, or Latency Dominate](concepts/use-local-ai-workstations-when-iteration-privacy-or-latency-dominate.md), [Make Local Inference Benchmarks Reproducible Artifacts](concepts/make-local-inference-benchmarks-reproducible-artifacts.md), [Treat Quantization as a Memory-Bandwidth Lever](concepts/treat-quantization-as-a-memory-bandwidth-lever.md)
+- Notes: Added local LLM serving guidance covering workstation/cloud tradeoffs, vLLM benchmark reproducibility, time-to-first-token measurement, and quantization-driven bandwidth effects.
