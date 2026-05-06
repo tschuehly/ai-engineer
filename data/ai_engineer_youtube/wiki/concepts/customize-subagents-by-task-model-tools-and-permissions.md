@@ -12,6 +12,7 @@ Details:
 - Custom subagents can define model, reasoning effort, sandbox mode, MCP access, and skills. 41:40-43:58
 - Review and security subagents should usually run read-only; docs-writing or bug-reporting agents may need write access. 42:32-43:09
 - External tool access should be role-specific: the source gives examples such as Sentry access for vulnerability/report inspection and Linear access for backlog triage. 43:14-43:46
+- Amp adds context isolation as another reason to specialize subagents: finder, oracle, librarian, and codemod agents each do context-heavy work in their own window and return compact results to the main agent. 06:42-09:06
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -23,6 +24,8 @@ Related concepts:
 - [Use parent agents to compare and merge parallel subagent outputs](use-parent-agents-to-compare-and-merge-parallel-subagent-outputs.md)
 - [Use independent validation contexts to reduce agent confirmation bias](use-independent-validation-contexts-to-reduce-agent-confirmation-bias.md)
 - [Split large automation surfaces into specialized subagents and subworkflows](split-large-automation-surfaces-into-specialized-subagents-and-subworkflows.md)
+- [Use subagents to isolate context-heavy subtasks](use-subagents-to-isolate-context-heavy-subtasks.md)
 
 Sources:
 - [OpenAI Codex Masterclass  - Vaibhav Srivastav & Katia Gil Guzman](../sources/20260429_MhHEGMFCEB0.md), 32:39-35:24, 41:40-43:58
+- [Amp Code: Next Generation AI Coding - Beyang Liu, Amp Code](../sources/20251222_gvIAkmZUEZY.md), 06:42-09:06

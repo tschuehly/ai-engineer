@@ -14,6 +14,7 @@ Details:
 - Interfaces should avoid pulling humans between tasks every thirty seconds; they should let agents run long enough to produce reviewable output and then yield back with the right context for QA, code review, and deployment shepherding. (11:47-14:01)
 - A parent-agent comparison flow can make parallel work more reviewable by running model-specific subagents in isolated worktrees, summarizing differences, and helping the user combine preferred pieces instead of choosing one run blindly. 06:18-12:13
 - Large-refactor orchestration needs an explicit human-input loop before scaling concurrency: the OpenHands guidance suggests starting with roughly three to five concurrent agents, then expanding only once review and merge paths are reliable. (17:28-18:01)
+- Amp shows the same bottleneck inside the editor: when the developer mostly reviews agent output, a custom diff viewer, editable diffs, code navigation, arbitrary commit ranges, and guided change tours become core interface primitives. 02:48-03:18, 11:21-12:35
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -25,8 +26,10 @@ Related concepts:
 - [Use independent validation contexts to reduce agent confirmation bias](use-independent-validation-contexts-to-reduce-agent-confirmation-bias.md)
 - [Use parent agents to compare and merge parallel subagent outputs](use-parent-agents-to-compare-and-merge-parallel-subagent-outputs.md)
 - [Decompose large refactors into dependency-aware agent batches](decompose-large-refactors-into-dependency-aware-agent-batches.md)
+- [Design coding-agent editors as review surfaces](design-coding-agent-editors-as-review-surfaces.md)
 
 Sources:
 - [Software Engineering Is Becoming Plan and Review - Louis Knight-Webb, Vibe Kanban](../sources/20260502_W76woOYHlvY.md), 07:26-15:28
 - [Replacing 12K LoC with a 200 LoC Skill - David Gomes, Cursor](../sources/20260430_WE_Gnowy3uw.md), 06:18-12:13
 - [Automating Large Scale Refactors with Parallel Agents - Robert Brennan, OpenHands](../sources/20260108_rcsliSIy_YU.md), 17:28-18:01
+- [Amp Code: Next Generation AI Coding - Beyang Liu, Amp Code](../sources/20251222_gvIAkmZUEZY.md), 02:48-03:18, 11:21-12:35

@@ -14,9 +14,12 @@ For coding agents, the same loop can target repository or agent rule files direc
 
 Long context should be treated as temporary working memory, not durable knowledge. Large prompts can keep a model from outright lacking a document, but attention cost, latency, and context-rot behavior mean "fits in the window" is weaker than "the model can reason over it reliably." For stable long-tail knowledge, the design choice may move from prompt stuffing to retrieval, contextual embeddings, or model adaptation.
 
+Coding-agent subagents are another context-management lever. Instead of forcing one agent to spend its main window on broad repository search, deep reasoning, dependency lookup, or codemod planning, a specialist can consume context in a separate window and return only the useful result.
+
 ## Key Concepts
 
 - [Keep agent context small, fresh, and task-specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md) - context should be externalized, selected, summarized, and isolated so stale or excessive history does not degrade agent work.
+- [Use subagents to isolate context-heavy subtasks](../concepts/use-subagents-to-isolate-context-heavy-subtasks.md) - separate context windows can preserve the main agent's working memory.
 - [Enterprise agent failures often expose missing institutional knowledge](../concepts/enterprise-agent-failures-expose-missing-institutional-knowledge.md) - agent failures can indicate missing or stale enterprise knowledge rather than weak model reasoning.
 - [Encode domain judgment in node-level agent skills](../concepts/encode-domain-judgment-in-node-level-agent-skills.md) - skills can carry expert contingencies into the specific work-tree node where they apply.
 - [Demand-driven context pulls knowledge from failed work rather than pushing a complete knowledge base upfront](../concepts/demand-driven-context-pulls-knowledge-from-failed-work.md) - real tasks reveal the exact context that needs to be documented.
@@ -109,3 +112,4 @@ Long context should be treated as temporary working memory, not durable knowledg
 - [The Unreasonable Effectiveness of Prompt Learning - Aparna Dhinakaran, Arize](../sources/20251223_pP_dSNz_EdQ.md)
 - [Claude Agent SDK [Full Workshop] - Thariq Shihipar, Anthropic](../sources/20260105_TqC1qOfiVcQ.md)
 - [Jack Morris: Stuffing Context is not Memory, Updating Weights is](../sources/20251229_Jty4s9-Jb78.md)
+- [Amp Code: Next Generation AI Coding - Beyang Liu, Amp Code](../sources/20251222_gvIAkmZUEZY.md)

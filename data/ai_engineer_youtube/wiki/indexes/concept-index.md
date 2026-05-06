@@ -186,6 +186,9 @@
 ## Coding Agents
 
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md)
+- [Task-tuned tool sets beat generic integration surfaces for core coding loops](../concepts/task-tuned-tool-sets-beat-generic-integration-surfaces-for-core-coding-loops.md)
+- [Use subagents to isolate context-heavy subtasks](../concepts/use-subagents-to-isolate-context-heavy-subtasks.md)
+- [Design coding-agent editors as review surfaces](../concepts/design-coding-agent-editors-as-review-surfaces.md)
 - [Run Coding Agents Through a Simple Master Loop](../concepts/run-coding-agents-through-a-simple-master-loop.md)
 - [Use Prompt-Enforced Todos as Lightweight Agent State](../concepts/use-prompt-enforced-todos-as-lightweight-agent-state.md)
 - [Put Brittle Edge Cases Behind Rigorous Tools](../concepts/put-brittle-edge-cases-behind-rigorous-tools.md)
@@ -275,6 +278,7 @@
 ## Context Engineering
 
 - [Keep Agent Context Small, Fresh, and Task-Specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md)
+- [Use subagents to isolate context-heavy subtasks](../concepts/use-subagents-to-isolate-context-heavy-subtasks.md)
 - [Filter untrusted context before it reaches the agent](../concepts/filter-untrusted-context-before-it-reaches-the-agent.md)
 - [Aggregated personal context creates mosaic and exfiltration risk](../concepts/aggregated-personal-context-creates-mosaic-and-exfiltration-risk.md)
 - [Encode domain judgment in node-level agent skills](../concepts/encode-domain-judgment-in-node-level-agent-skills.md)
@@ -598,6 +602,9 @@
 ## Tools
 
 - [Run Coding Agents Through a Simple Master Loop](../concepts/run-coding-agents-through-a-simple-master-loop.md)
+- [Task-tuned tool sets beat generic integration surfaces for core coding loops](../concepts/task-tuned-tool-sets-beat-generic-integration-surfaces-for-core-coding-loops.md)
+- [Use subagents to isolate context-heavy subtasks](../concepts/use-subagents-to-isolate-context-heavy-subtasks.md)
+- [Design coding-agent editors as review surfaces](../concepts/design-coding-agent-editors-as-review-surfaces.md)
 - [Put Brittle Edge Cases Behind Rigorous Tools](../concepts/put-brittle-edge-cases-behind-rigorous-tools.md)
 - [Use Bash as a composable code-mode tool for agents](../concepts/use-bash-as-a-composable-code-mode-tool-for-agents.md)
 - [Layer agent permissions across model behavior, harness parsing, and sandboxing](../concepts/layer-agent-permissions-across-model-behavior-harness-parsing-and-sandboxing.md)

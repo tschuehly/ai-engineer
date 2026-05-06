@@ -719,3 +719,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Treat slop as a quality failure, not an AI provenance label](concepts/treat-slop-as-a-quality-failure-not-an-ai-provenance-label.md), [Do not report agent autonomy without quality accountability](concepts/do-not-report-agent-autonomy-without-quality-accountability.md), [Use AI to scale codebase understanding against code slop](concepts/use-ai-to-scale-codebase-understanding-against-code-slop.md)
 - Notes: Added swyx's anti-slop framing for judging output quality by evidence, accountability, and codebase understanding rather than by AI provenance, line count, or autonomous runtime.
+
+## [2026-05-07] ingest | Amp Code: Next Generation AI Coding - Beyang Liu, Amp Code
+
+- Source: [Amp Code: Next Generation AI Coding - Beyang Liu, Amp Code](sources/20251222_gvIAkmZUEZY.md)
+- Processed: `gvIAkmZUEZY`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Tools](topics/tools.md)
+- Updated concepts: [Task-tuned tool sets beat generic integration surfaces for core coding loops](concepts/task-tuned-tool-sets-beat-generic-integration-surfaces-for-core-coding-loops.md), [Use subagents to isolate context-heavy subtasks](concepts/use-subagents-to-isolate-context-heavy-subtasks.md), [Design coding-agent editors as review surfaces](concepts/design-coding-agent-editors-as-review-surfaces.md), [MCP tool surfaces need default context budgets](concepts/mcp-tool-surfaces-need-default-context-budgets.md), [Parallel coding-agent queues need focus-preserving review interfaces](concepts/parallel-coding-agent-queues-need-focus-preserving-review-interfaces.md), [Customize subagents by task, model, tools, and permissions](concepts/customize-subagents-by-task-model-tools-and-permissions.md)
+- Notes: Added Amp Code's coding-agent architecture guidance around task-tuned tools, context-isolating subagents, and editor/terminal surfaces optimized for reviewing agent-generated changes.
