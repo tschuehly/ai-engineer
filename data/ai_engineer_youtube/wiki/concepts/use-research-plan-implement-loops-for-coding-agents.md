@@ -13,6 +13,8 @@ Details:
 - The plan should list files to create or change, verification commands or tests, and the expected system impact; code snippets can be included only when they clarify rather than overconstrain the implementation. (15:04-15:56)
 - A reviewed plan can make implementation cheap enough for a smaller, faster, or cheaper model because the hard thinking has already happened in the research and planning phases. (15:56-16:10)
 - Implementation can start in a fresh low-context session that receives only the plan, making changes easier to review and commit incrementally. (16:11-16:40)
+- Nations frames the same loop as a way to prevent long conversational coding sessions from accumulating abandoned approaches, conflicting patterns, and dead code; the three outputs are research, plan, and implementation, each validated before proceeding. (10:32-13:47)
+- For heavily tangled systems, the research phase may need a manually produced migration seed before agents can plan safely, because hidden invariants and service dependencies may only appear when a human changes the code and sees what breaks. (14:29-16:09)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -23,6 +25,9 @@ Related concepts:
 - [Choose plan-heavy or review-heavy agent workflows by task shape](choose-plan-heavy-or-review-heavy-agent-workflows-by-task-shape.md)
 - [Use PRDs to align agents on the design concept](use-prds-to-align-agents-on-the-design-concept.md)
 - [Limit agent change size by feedback speed](limit-agent-change-size-by-feedback-speed.md)
+- [Long AI coding conversations compound accidental complexity](long-ai-coding-conversations-compound-accidental-complexity.md)
+- [Manual migration seeds teach agents the hidden constraints](manual-migration-seeds-teach-agents-the-hidden-constraints.md)
 
 Sources:
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md), 11:36-16:40
+- [The Infinite Software Crisis - Jake Nations, Netflix](../sources/20251220_eIoohUmYpGI.md), 10:32-16:09

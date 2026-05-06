@@ -10,6 +10,8 @@ System-prompt learning adds a way to update coding-agent behavior without changi
 
 Amp Code adds a product-architecture version of the same discipline. Its guidance is to keep the agent loop simple but tune the surrounding pieces aggressively: make core tools task-specific, use subagents to isolate context-heavy search or reasoning, and design editor surfaces around reviewing agent output rather than typing every change manually.
 
+The Infinite Software Crisis framing adds a caution about conversational coding itself. A long AI chat can feel productive while it accumulates accidental complexity: abandoned approaches, fixed-to-pass tests, overwritten architecture, and preserved technical debt. Research-plan-implement workflows help because they compress understanding into reviewable artifacts before code generation; when the system is too tangled, one manual migration may be the only way to expose the hidden constraints that agents need.
+
 ## Key Concepts
 
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md) - coding-agent SDKs package reusable runtime pieces around the model.
@@ -34,6 +36,8 @@ Amp Code adds a product-architecture version of the same discipline. Its guidanc
 - [Self-reported task duration is a weak productivity signal](../concepts/self-reported-task-duration-is-a-weak-productivity-signal.md) - developer speedup studies should avoid relying on recalled task times.
 - [Keep agent context small, fresh, and task-specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md) - context overload and stale history can make coding agents worse.
 - [Use research-plan-implement loops for coding agents](../concepts/use-research-plan-implement-loops-for-coding-agents.md) - research and planning reduce wrong assumptions before code generation.
+- [Long AI coding conversations compound accidental complexity](../concepts/long-ai-coding-conversations-compound-accidental-complexity.md) - passing tests after many conversational pivots can hide architectural drift.
+- [Manual migration seeds teach agents the hidden constraints](../concepts/manual-migration-seeds-teach-agents-the-hidden-constraints.md) - one hand-done migration can reveal invariants and seams before broader agentic refactoring.
 - [Spec-driven development turns prompts into requirements, design, and tasks](../concepts/spec-driven-development-turns-prompts-into-requirements-design-and-tasks.md) - spec artifacts make coding-agent work reviewable before implementation.
 - [Translate structured requirements into property-based tests](../concepts/translate-structured-requirements-into-property-based-tests.md) - acceptance criteria can become executable invariants for agent-generated code.
 - [Keep spec artifacts feature-scoped, mutable, and context-backed](../concepts/keep-spec-artifacts-feature-scoped-mutable-and-context-backed.md) - spec folders should stay current, scoped, and enriched with the right context.
@@ -132,10 +136,12 @@ Amp Code adds a product-architecture version of the same discipline. Its guidanc
 - Which development-tool customizations produce enough human value to justify reduced coding-agent reliability?
 - Which review-routing and apprenticeship mechanisms scale PR volume without turning review into rubber stamping?
 - Which validation gaps should agents remediate first because they most constrain reliable single-task execution?
+- When should a tangled migration pause agent implementation until a human has produced a seed example by hand?
 
 ## Sources
 
 - [Making Codebases Agent Ready - Eno Reyes, Factory AI](../sources/20251222_ShuJ_CN6zr4.md)
+- [The Infinite Software Crisis - Jake Nations, Netflix](../sources/20251220_eIoohUmYpGI.md)
 - [How Claude Code Works - Jared Zoneraich, PromptLayer](../sources/20251226_RFKCzGlAU6Q.md)
 - [Why Agent Hype can fall short of reality - Joel Becker, METR](../sources/20251224_RhfqQKe22ZA.md)
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md)

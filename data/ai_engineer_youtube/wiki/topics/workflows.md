@@ -40,6 +40,8 @@ Agent-native organizational workflows start with supervision, dispatch, and revi
 
 Enterprise AI research workflows can be made fundable by turning each uncertain phase into a small productizable bet. For GenBI, the useful pattern is to work with production-like but controlled data, involve expert users early, ship six-week deliverables such as metadata enrichment or report discovery, and preserve stop/go decision points so leadership can keep funding tied to measurable value instead of sunk cost.
 
+AI coding workflows should also separate easy generation from simple system design. Nations' three-phase approach turns one long coding conversation into research, planning, and implementation artifacts with human checkpoints between them. That structure keeps review at the speed of generation: humans validate the research and plan before the agent produces a diff, then review implementation against a known plan rather than reverse-engineering whatever the chat invented.
+
 ## Key Concepts
 
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - simple loops can replace over-specified DAGs when exploration is the work.
@@ -90,6 +92,8 @@ Enterprise AI research workflows can be made fundable by turning each uncertain 
 - [Treat coding agents as fast junior collaborators](../concepts/treat-coding-agents-as-fast-junior-collaborators.md) - workflow design should preserve human direction around agent execution.
 - [Keep agent context small, fresh, and task-specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md) - session hygiene prevents old or irrelevant context from steering later work.
 - [Use research-plan-implement loops for coding agents](../concepts/use-research-plan-implement-loops-for-coding-agents.md) - separate phases make coding-agent work more reviewable.
+- [Long AI coding conversations compound accidental complexity](../concepts/long-ai-coding-conversations-compound-accidental-complexity.md) - workflows should avoid letting conversational pivots become architecture.
+- [Manual migration seeds teach agents the hidden constraints](../concepts/manual-migration-seeds-teach-agents-the-hidden-constraints.md) - exploratory manual work can seed later agentic migration workflows.
 - [Spec-driven development turns prompts into requirements, design, and tasks](../concepts/spec-driven-development-turns-prompts-into-requirements-design-and-tasks.md) - coding-agent workflows can route from prompt to spec artifacts to task execution.
 - [Translate structured requirements into property-based tests](../concepts/translate-structured-requirements-into-property-based-tests.md) - workflow completion can be tied to tests derived from acceptance criteria.
 - [Keep spec artifacts feature-scoped, mutable, and context-backed](../concepts/keep-spec-artifacts-feature-scoped-mutable-and-context-backed.md) - spec workflows should amend or prune artifacts as the system evolves.
@@ -218,6 +222,7 @@ Enterprise AI research workflows can be made fundable by turning each uncertain 
 - Which lifecycle hooks should be mandatory for auditability, and which should stay opt-in to avoid surprising users?
 - Which domain workflows are ready for team-owned MCP servers once a gateway supplies the shared controls?
 - How much team conversation should become agent-visible context, and what should remain private?
+- Which workflow phases should require human validation before a coding agent is allowed to continue into implementation?
 - When does PRD optimization stop adding value compared with investing the same effort in tests and QA?
 - Which feedback loops are fast enough to let an agent continue autonomously, and which require human review before the next change?
 - Which agent uncertainties should be logged as reversible decisions, and which should block for immediate human input?
@@ -290,6 +295,7 @@ Enterprise AI research workflows can be made fundable by turning each uncertain 
 - [Building durable Agents with Workflow DevKit & AI SDK - Peter Wielander, Vercel](../sources/20260106_kmV-qg4uoNI.md)
 - [Developer Experience in the Age of AI Coding Agents - Max Kanat-Alexander, Capital One](../sources/20251223_rT2Del5pwg4.md)
 - [Making Codebases Agent Ready - Eno Reyes, Factory AI](../sources/20251222_ShuJ_CN6zr4.md)
+- [The Infinite Software Crisis - Jake Nations, Netflix](../sources/20251220_eIoohUmYpGI.md)
 - [Claude Agent SDK [Full Workshop] - Thariq Shihipar, Anthropic](../sources/20260105_TqC1qOfiVcQ.md)
 - [Building Intelligent Research Agents with Manus - Ivan Leo, Manus AI (now Meta Superintelligence)](../sources/20251230_xz0-brt56L8.md)
 - [OpenAI + @Temporalio : Building Durable, Production Ready Agents - Cornelia Davis, Temporal](../sources/20260112_k8cnVCMYmNc.md)

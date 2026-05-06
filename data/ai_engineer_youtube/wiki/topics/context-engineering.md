@@ -16,6 +16,8 @@ Long context should be treated as temporary working memory, not durable knowledg
 
 Coding-agent subagents are another context-management lever. Instead of forcing one agent to spend its main window on broad repository search, deep reasoning, dependency lookup, or codemod planning, a specialist can consume context in a separate window and return only the useful result.
 
+Context compression for coding agents is not just about fitting files into a smaller prompt. Nations' Netflix example shows that a multi-million-token codebase can be reduced into a research document and implementation plan only after humans select relevant architecture, diagrams, interfaces, requirements, and sometimes a manual migration seed. The goal is to distinguish intended design constraints from accidental local patterns before generation preserves both as if they were requirements.
+
 ## Key Concepts
 
 - [Keep agent context small, fresh, and task-specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md) - context should be externalized, selected, summarized, and isolated so stale or excessive history does not degrade agent work.
@@ -63,6 +65,8 @@ Coding-agent subagents are another context-management lever. Instead of forcing 
 - [Use explanatory feedback to optimize prompts](../concepts/use-explanatory-feedback-to-optimize-prompts.md) - failure explanations become context for prompt revisions.
 - [System prompt learning updates agent rules from eval explanations](../concepts/system-prompt-learning-updates-agent-rules-from-eval-explanations.md) - eval explanations can become durable agent-visible rules.
 - [Do not treat long context as durable model memory](../concepts/do-not-treat-long-context-as-durable-model-memory.md) - full-context prompting has latency and reasoning limits even when the window is large enough.
+- [Long AI coding conversations compound accidental complexity](../concepts/long-ai-coding-conversations-compound-accidental-complexity.md) - stale conversational history can carry wrong architectural turns into later code.
+- [Manual migration seeds teach agents the hidden constraints](../concepts/manual-migration-seeds-teach-agents-the-hidden-constraints.md) - manual examples can become high-signal context for later agent research.
 - [Treat embeddings as recoverable sensitive data](../concepts/treat-embeddings-as-recoverable-sensitive-data.md) - embeddings are derived context artifacts that still need data-protection controls.
 - [Train long-tail knowledge into weights with curated synthetic data](../concepts/train-long-tail-knowledge-into-weights-with-curated-synthetic-data.md) - stable niche knowledge may belong in model adaptation rather than repeated prompt context.
 
@@ -85,6 +89,7 @@ Coding-agent subagents are another context-management lever. Instead of forcing 
 - Which non-functional requirements are durable enough to become default context for every coding-agent run?
 - Which failure explanations should become durable prompt context instead of staying as one-off annotations?
 - When should stable long-tail knowledge move from context or retrieval into model weights?
+- Which architectural seams require human-written context because raw code makes technical debt look like intended convention?
 
 ## Sources
 
@@ -115,3 +120,4 @@ Coding-agent subagents are another context-management lever. Instead of forcing 
 - [Jack Morris: Stuffing Context is not Memory, Updating Weights is](../sources/20251229_Jty4s9-Jb78.md)
 - [Amp Code: Next Generation AI Coding - Beyang Liu, Amp Code](../sources/20251222_gvIAkmZUEZY.md)
 - [The 3 Pillars of Autonomy - Michele Catasta, Replit](../sources/20251222_MLhAA9yguwM.md)
+- [The Infinite Software Crisis - Jake Nations, Netflix](../sources/20251220_eIoohUmYpGI.md)

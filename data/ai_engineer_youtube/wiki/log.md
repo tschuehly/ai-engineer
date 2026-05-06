@@ -743,3 +743,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Treat agent readiness as verification infrastructure](concepts/treat-agent-readiness-as-verification-infrastructure.md), [Use agent readiness flywheels to improve the development environment](concepts/use-agent-readiness-flywheels-to-improve-the-development-environment.md), [Make validation fast, local, deterministic, and actionable](concepts/make-validation-fast-local-deterministic-and-actionable.md)
 - Notes: Added Factory AI's agent-readiness framing covering validation as the bottleneck for reliable coding-agent autonomy and environment-improvement flywheels.
+
+## [2026-05-07] ingest | The Infinite Software Crisis - Jake Nations, Netflix
+
+- Source: [The Infinite Software Crisis - Jake Nations, Netflix](sources/20251220_eIoohUmYpGI.md)
+- Processed: `eIoohUmYpGI`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Long AI coding conversations compound accidental complexity](concepts/long-ai-coding-conversations-compound-accidental-complexity.md), [Manual migration seeds teach agents the hidden constraints](concepts/manual-migration-seeds-teach-agents-the-hidden-constraints.md), [Use research-plan-implement loops for coding agents](concepts/use-research-plan-implement-loops-for-coding-agents.md)
+- Notes: Added Netflix's Infinite Software Crisis framing around simple-versus-easy tradeoffs, conversational code complexity, validated research-plan-implementation phases, and manual migration seeds for tangled refactors.
