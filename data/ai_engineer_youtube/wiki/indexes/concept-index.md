@@ -38,6 +38,7 @@
 - [Make agent work more trustworthy by making it verifiable](../concepts/make-agent-work-more-trustworthy-by-making-it-verifiable.md)
 - [LLM attack surfaces span prompts, context, retrieval, tools, and actions](../concepts/llm-attack-surfaces-span-prompts-context-retrieval-tools-and-actions.md)
 - [LLM guardrails need checkpoints at every untrusted boundary](../concepts/llm-guardrails-need-checkpoints-at-every-untrusted-boundary.md)
+- [Browser agents sit in the prompt-injection lethal trifecta](../concepts/browser-agents-sit-in-the-prompt-injection-lethal-trifecta.md)
 - [Separate Watched and Unwatched Agent Time Horizons](../concepts/separate-watched-and-unwatched-agent-time-horizons.md)
 - [Aggregated personal context creates mosaic and exfiltration risk](../concepts/aggregated-personal-context-creates-mosaic-and-exfiltration-risk.md)
 - [Human approval can hide tool-description and parameter risk](../concepts/human-approval-can-hide-tool-description-and-parameter-risk.md)
@@ -107,6 +108,7 @@
 - [Visual agent workflows make tool use observable and adjustable](../concepts/visual-agent-workflows-make-tool-use-observable-and-adjustable.md)
 - [Route high-impact agent actions through explicit human approval gates](../concepts/route-high-impact-agent-actions-through-explicit-human-approval-gates.md)
 - [Use tool names and descriptions as operational prompts](../concepts/use-tool-names-and-descriptions-as-operational-prompts.md)
+- [Build AI product iteration tools into the product context](../concepts/build-ai-product-iteration-tools-into-the-product-context.md)
 - [Split large automation surfaces into specialized subagents and subworkflows](../concepts/split-large-automation-surfaces-into-specialized-subagents-and-subworkflows.md)
 - [Choose voice-agent architecture by latency, accuracy, and semantics](../concepts/choose-voice-agent-architecture-by-latency-accuracy-and-semantics.md)
 - [Delegate complex voice-agent tasks through specialist tools and handoffs](../concepts/delegate-complex-voice-agent-tasks-through-specialist-tools-and-handoffs.md)
@@ -330,6 +332,8 @@
 - [Make Validation Fast, Local, Deterministic, and Actionable](../concepts/make-validation-fast-local-deterministic-and-actionable.md)
 - [Autonomous browser verification finds painted-door failures](../concepts/autonomous-browser-verification-finds-painted-door-failures.md)
 - [Use Explanatory Feedback to Optimize Prompts](../concepts/use-explanatory-feedback-to-optimize-prompts.md)
+- [Treat model behavior as a product craft](../concepts/treat-model-behavior-as-a-product-craft.md)
+- [Use prompt mutation loops to hill-climb product behavior](../concepts/use-prompt-mutation-loops-to-hill-climb-product-behavior.md)
 - [System Prompt Learning Updates Agent Rules From Eval Explanations](../concepts/system-prompt-learning-updates-agent-rules-from-eval-explanations.md)
 
 ## Edge Inference

@@ -775,3 +775,11 @@
 - Updated topics: [Workflows](topics/workflows.md)
 - Updated concepts: [Use cross-segment convenings to calibrate AI transformation roadmaps](concepts/use-cross-segment-convenings-to-calibrate-ai-transformation-roadmaps.md)
 - Notes: Added a narrow leadership-learning workflow from the AIE LEAD opening remarks, focused on calibrating AI transformation roadmaps across frontier labs, startups, academia, consultants, and large enterprises.
+
+## [2026-05-07] ingest | From Arc to Dia: Lessons learned building AI Browsers - Samir Mody, The Browser Company of New York
+
+- Source: [From Arc to Dia: Lessons learned building AI Browsers - Samir Mody, The Browser Company of New York](sources/20251219_o4scJaQgnFA.md)
+- Processed: `o4scJaQgnFA`
+- Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Build AI product iteration tools into the product context](concepts/build-ai-product-iteration-tools-into-the-product-context.md), [Treat model behavior as a product craft](concepts/treat-model-behavior-as-a-product-craft.md), [Use prompt mutation loops to hill-climb product behavior](concepts/use-prompt-mutation-loops-to-hill-climb-product-behavior.md), [Browser agents sit in the prompt-injection lethal trifecta](concepts/browser-agents-sit-in-the-prompt-injection-lethal-trifecta.md)
+- Notes: Added The Browser Company's Dia lessons on in-product AI iteration tooling, model-behavior ownership, prompt-mutation hill climbing, and browser-specific prompt-injection safety design.
