@@ -22,6 +22,8 @@ Durable workflow engines also address the single-agent production loop. Agent fr
 
 Workflow-backed TypeScript agents should keep orchestration deterministic and put LLM calls, sandbox commands, and external APIs behind step boundaries. That makes the running agent easier to inspect through step spans, easier to connect to a resumable UI stream, and easier to control through scheduling, cancellation, and run-version operations when it waits beyond one request.
 
+API-backed agent workflows should be hardened only after their task shape is understood. A practical path is to prototype the repeated work in the provider's web UI, observe which context, files, connectors, and permissions make the run succeed, then encode that stable shape as an API task lifecycle with polling or webhooks. When the workflow starts in a channel such as Slack, store the thread-to-task mapping explicitly so follow-up messages continue the same task and final results return to the user's original conversation.
+
 Contact-center voice workflows show a concrete human-in-the-loop automation pattern: shift after-call documentation from manual memory work into a streamed extraction pipeline, but keep operators responsible for quick validation before the generated summary updates CRM fields. The workflow is only as strong as the early audio and transcript stages; speaker separation, domain STT, masking, grounded JSON extraction, and schema mapping all happen before the final human confirmation.
 
 Platform workflows should be shaped for agent loops as well as human onboarding. Agents need local validation, clear task and success definitions, and callable platform feedback so they can iterate before remote CI or deployment; when agents contribute back to platform code, policy guardrails and repository instructions should separate hard safety boundaries from workflow guidance.
@@ -42,6 +44,9 @@ DSPy-style workflows separate program shape from prompt shape: teams can define 
 - [Keep workflow orchestration deterministic and put side effects in steps](../concepts/keep-workflow-orchestration-deterministic-and-put-side-effects-in-steps.md) - rerunnable workflow code needs side-effecting agent work isolated in steps.
 - [Control long-running workflow agents through run lifecycle operations](../concepts/control-long-running-workflow-agents-through-run-lifecycle-operations.md) - recurring and waiting agents need cancellation, scheduling, and version controls.
 - [Treat long waits as logical workflow state](../concepts/treat-long-waits-as-logical-workflow-state.md) - long human waits should be resumable workflow state rather than live process occupancy.
+- [Treat agent APIs as asynchronous task lifecycles](../concepts/treat-agent-apis-as-asynchronous-task-lifecycles.md) - API integrations need task IDs, statuses, polling, webhooks, continuation, and errors.
+- [Map external conversation threads to agent task IDs](../concepts/map-external-conversation-threads-to-agent-task-ids.md) - external collaboration threads should correlate to the agent task that owns their context.
+- [Prototype agent workflows in the UI before hardening the API path](../concepts/prototype-agent-workflows-in-the-ui-before-hardening-the-api-path.md) - prove the repeated work in a richer UI before freezing an integration contract.
 - [Choose choreography or orchestration by complexity and autonomy](../concepts/choose-choreography-or-orchestration-by-complexity-and-autonomy.md) - workflow control should be selected by dependency complexity, autonomy need, and auditability.
 - [Use immutable versioned state for agent handoffs](../concepts/use-immutable-versioned-state-for-agent-handoffs.md) - workflows become debuggable when each handoff records a sealed state version and contract check.
 - [Wrap agent calls with circuit breakers and compensation](../concepts/wrap-agent-calls-with-circuit-breakers-and-compensation.md) - retry, fail-fast, degradation, and rollback behavior should be planned before production.
@@ -255,4 +260,5 @@ DSPy-style workflows separate program shape from prompt shape: teams can define 
 - [Build a Prompt Learning Loop - SallyAnn DeLucia & Fuad Ali, Arize](../sources/20260106_SbcQYbrvAfI.md)
 - [Building durable Agents with Workflow DevKit & AI SDK - Peter Wielander, Vercel](../sources/20260106_kmV-qg4uoNI.md)
 - [Claude Agent SDK [Full Workshop] - Thariq Shihipar, Anthropic](../sources/20260105_TqC1qOfiVcQ.md)
+- [Building Intelligent Research Agents with Manus - Ivan Leo, Manus AI (now Meta Superintelligence)](../sources/20251230_xz0-brt56L8.md)
 - [OpenAI + @Temporalio : Building Durable, Production Ready Agents - Cornelia Davis, Temporal](../sources/20260112_k8cnVCMYmNc.md)

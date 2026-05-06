@@ -8,6 +8,8 @@ Retrieval is also an LLM security boundary. Poisoned chunks can steer an answer 
 
 RAG systems benefit from reusable baselines, but not from a single fixed recipe. Document parsing, chunking, embedding choice, hybrid lexical/vector search, metadata filters, and query-time agent loops all need to be tuned against the actual corpus and user questions. Structure-aware ingestion is especially important for messy source formats: preserving document hierarchy, tables, images, OCR output, and modality-specific extraction gives retrieval cleaner chunks than plain text extraction. Hybrid indexes add another control point by combining vector similarity, keyword search, filters, aggregations, and embedding-model migration paths.
 
+Private research agents can treat connectors and uploads as complementary retrieval inputs. A connector such as Notion or Microsoft 365 provides durable organizational context, while uploaded receipts, PDFs, screenshots, or task files provide local evidence for the current run. The workflow becomes more useful when the agent can compare both layers and write results back to the right internal page or record.
+
 ## Key Concepts
 
 - [Context blocks turn monolithic enterprise knowledge into reusable agent context](../concepts/context-blocks-turn-monolithic-enterprise-knowledge-into-reusable-agent-context.md) - decomposed context units give retrieval systems cleaner targets than broad documentation monoliths.
@@ -30,6 +32,7 @@ RAG systems benefit from reusable baselines, but not from a single fixed recipe.
 - [Structure-aware document parsing improves RAG chunk quality](../concepts/structure-aware-document-parsing-improves-rag-chunk-quality.md) - preserving hierarchy, tables, OCR, and images gives retrieval better chunk boundaries.
 - [Hybrid retrieval should support filters and embedding migration](../concepts/hybrid-retrieval-should-support-filters-and-embedding-migration.md) - vector search should be paired with lexical search, metadata scope, and migration paths.
 - [Agentic retrieval lets models plan search steps](../concepts/agentic-retrieval-lets-models-plan-search-steps.md) - retrieval tools can let the model decompose and repeat searches instead of relying on one top-k query.
+- [Use connectors and uploads as private research context](../concepts/use-connectors-and-uploads-as-private-research-context.md) - internal agents can combine organizational systems and task files as source context.
 
 ## Open Questions
 
@@ -53,3 +56,4 @@ RAG systems benefit from reusable baselines, but not from a single fixed recipe.
 - [$1 AI Guardrails: The Unreasonable Effectiveness of Finetuned ModernBERTs - Diego Carpentero](../sources/20260416_YZHPEkfy2kc.md)
 - [OpenRAG: An open-source stack for RAG - Phil Nash](../sources/20260408_4TxOBhDRRCM.md)
 - [Cognitive Exhaust Fumes, or: Read-Only AI Is Underrated - Simon Podhajsky, Head of AI, Waypoint](../sources/20260408_u0TOSBbAw7c.md)
+- [Building Intelligent Research Agents with Manus - Ivan Leo, Manus AI (now Meta Superintelligence)](../sources/20251230_xz0-brt56L8.md)

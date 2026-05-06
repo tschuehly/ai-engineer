@@ -631,3 +631,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md)
 - Updated concepts: [Treat AI coding as a central applied-AI problem](concepts/treat-ai-coding-as-a-central-applied-ai-problem.md)
 - Notes: Added a compact source-backed framing that AI coding is the applied-AI focus where patterns, systems, and products turn model capability into software practice.
+
+## [2026-05-06] ingest | Building Intelligent Research Agents with Manus - Ivan Leo, Manus AI (now Meta Superintelligence)
+
+- Source: [Building Intelligent Research Agents with Manus - Ivan Leo, Manus AI (now Meta Superintelligence)](sources/20251230_xz0-brt56L8.md)
+- Processed: `xz0-brt56L8`
+- Updated topics: [Agents](topics/agents.md), [Retrieval](topics/retrieval.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Treat Agent APIs as Asynchronous Task Lifecycles](concepts/treat-agent-apis-as-asynchronous-task-lifecycles.md), [Map External Conversation Threads to Agent Task IDs](concepts/map-external-conversation-threads-to-agent-task-ids.md), [Use Connectors and Uploads as Private Research Context](concepts/use-connectors-and-uploads-as-private-research-context.md), [Prototype Agent Workflows in the UI Before Hardening the API Path](concepts/prototype-agent-workflows-in-the-ui-before-hardening-the-api-path.md)
+- Notes: Added Manus API guidance for long-running agent task lifecycles, Slack-backed continuation, private connector/file context, and web-UI-to-API workflow hardening.

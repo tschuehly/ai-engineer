@@ -26,6 +26,8 @@ Durable execution is the production version of that distributed-systems stance f
 
 TypeScript agent products add a concrete implementation constraint to this durability story: workflow orchestration should be deterministic, while LLM calls, sandbox operations, and external tools become explicit steps whose inputs and outputs can be cached, retried, observed, canceled, and upgraded across deployment versions.
 
+Agent APIs need a similar task-lifecycle contract even when the workflow engine is hidden behind a provider API. A long-running agent task should return a stable task ID and task URL, expose states such as running, pending, completed, and error, support polling or webhooks, and let external products continue the same task rather than losing context in a new run. Chat integrations need a correlation layer: Slack thread IDs, users, channels, and statuses should map back to provider task IDs so follow-up messages and final replies land in the visible conversation while deeper execution state stays with the agent service.
+
 The web itself is also becoming an agent surface. Sites can publish `llms.txt` or `llms-full.txt` to guide agents toward the right documentation, and WebMCP-style proposals can expose intended app operations directly so agents do not have to infer every action from screenshots, DOM text, or coordinates.
 
 Internal developer platforms are another agent surface. Practices that already helped human developers, such as self-service provisioning, API-first workflows, local validation, clear documentation, and observable runtime feedback, become prerequisites when coding agents need to deploy, debug, and verify work without tribal human handoffs.
@@ -40,6 +42,8 @@ Internal developer platforms are another agent surface. Practices that already h
 - [Human Control Planes Turn Agent Swarms Into Manageable Organizations](../concepts/human-control-planes-turn-agent-swarms-into-manageable-organizations.md) - org-chart, project, task, budget, and memory surfaces make large agent organizations supervisable.
 - [Treat multi-agent systems as distributed systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md) - multi-agent scale introduces coordination, stale state, and failure-propagation problems.
 - [Use durable execution for production agent loops](../concepts/use-durable-execution-for-production-agent-loops.md) - production loops should persist LLM calls, tool outputs, and state across crashes and retries.
+- [Treat agent APIs as asynchronous task lifecycles](../concepts/treat-agent-apis-as-asynchronous-task-lifecycles.md) - long-running agent APIs need stable handles, status, continuation, and result delivery.
+- [Map external conversation threads to agent task IDs](../concepts/map-external-conversation-threads-to-agent-task-ids.md) - Slack, email, and ticket integrations should correlate visible threads with provider-owned task state.
 - [Keep workflow orchestration deterministic and put side effects in steps](../concepts/keep-workflow-orchestration-deterministic-and-put-side-effects-in-steps.md) - durable workflow reruns require side effects to live behind step boundaries.
 - [Use resumable streams as the UI boundary for durable agents](../concepts/use-resumable-streams-as-the-ui-boundary-for-durable-agents.md) - frontend progress can stay stream-oriented while backend execution becomes observable and resumable.
 - [Control long-running workflow agents through run lifecycle operations](../concepts/control-long-running-workflow-agents-through-run-lifecycle-operations.md) - scheduled or waiting agents need cancellation, stream naming, and deployment-version controls.
@@ -273,3 +277,4 @@ Internal developer platforms are another agent surface. Practices that already h
 - [OpenAI + @Temporalio : Building Durable, Production Ready Agents - Cornelia Davis, Temporal](../sources/20260112_k8cnVCMYmNc.md)
 - [Building durable Agents with Workflow DevKit & AI SDK - Peter Wielander, Vercel](../sources/20260106_kmV-qg4uoNI.md)
 - [Claude Agent SDK [Full Workshop] - Thariq Shihipar, Anthropic](../sources/20260105_TqC1qOfiVcQ.md)
+- [Building Intelligent Research Agents with Manus - Ivan Leo, Manus AI (now Meta Superintelligence)](../sources/20251230_xz0-brt56L8.md)
