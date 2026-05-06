@@ -679,3 +679,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Run coding agents through a simple master loop](concepts/run-coding-agents-through-a-simple-master-loop.md), [Use prompt-enforced todos as lightweight agent state](concepts/use-prompt-enforced-todos-as-lightweight-agent-state.md), [Put brittle edge cases behind rigorous tools](concepts/put-brittle-edge-cases-behind-rigorous-tools.md), [Evaluate agent trajectories with backtests and smell metrics](concepts/evaluate-agent-trajectories-with-backtests-and-smell-metrics.md)
 - Notes: Added Claude Code architecture guidance covering simple master loops, prompt-visible todos, rigorous tool boundaries, and trajectory-level eval patterns.
+
+## [2026-05-07] ingest | Why Agent Hype can fall short of reality - Joel Becker, METR
+
+- Source: [Why Agent Hype can fall short of reality - Joel Becker, METR](sources/20251224_RhfqQKe22ZA.md)
+- Processed: `RhfqQKe22ZA`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md)
+- Updated concepts: [Benchmark Saturation Pushes Capability Evals Toward Human Time Horizons](concepts/benchmark-saturation-pushes-capability-evals-toward-human-time-horizons.md), [Reliability Thresholds Determine Whether Coding Agents Save Time](concepts/reliability-thresholds-determine-whether-coding-agents-save-time.md), [Measure AI Developer Productivity With Field Experiments, Not Benchmark Extrapolation Alone](concepts/measure-ai-developer-productivity-with-field-experiments-not-benchmark-extrapolation-alone.md)
+- Notes: Added METR's benchmark-versus-field-study reconciliation covering time-horizon evals, expert-maintainer slowdown results, reliability thresholds, mergeability gaps, and task-interdependence caveats.
