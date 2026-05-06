@@ -71,3 +71,11 @@
 - Updated topics: [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Context Development Lifecycle Treats Context as an Engineered Artifact](concepts/context-development-lifecycle-treats-context-as-an-engineered-artifact.md), [Evaluate Context Changes with Lint, Task Scenarios, and Probabilistic Budgets](concepts/evaluate-context-changes-with-lint-task-scenarios-and-probabilistic-budgets.md), [Package Reusable Context as Skills, Libraries, and Registries](concepts/package-reusable-context-as-skills-libraries-and-registries.md), [Use Agent Logs and Review Feedback as Context Observability Signals](concepts/use-agent-logs-and-review-feedback-as-context-observability-signals.md), [Filter Untrusted Context Before It Reaches the Agent](concepts/filter-untrusted-context-before-it-reaches-the-agent.md)
 - Notes: Added a lifecycle view of context engineering that connects skill packaging, context evals, observability, and context-layer security controls.
+
+## [2026-05-06] ingest | Software Engineering Is Becoming Plan and Review - Louis Knight-Webb, Vibe Kanban
+
+- Source: [Software Engineering Is Becoming Plan and Review - Louis Knight-Webb, Vibe Kanban](sources/20260502_W76woOYHlvY.md)
+- Processed: `W76woOYHlvY`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Coding agents shift engineering work toward planning and review](concepts/coding-agents-shift-engineering-work-toward-planning-and-review.md), [Choose plan-heavy or review-heavy agent workflows by task shape](concepts/choose-plan-heavy-or-review-heavy-agent-workflows-by-task-shape.md), [Parallel coding-agent queues need focus-preserving review interfaces](concepts/parallel-coding-agent-queues-need-focus-preserving-review-interfaces.md)
+- Notes: Added a coding-agent workflow slice covering planning/review tradeoffs, task-shape-specific prompting depth, and parallel review interfaces for longer agent runs.

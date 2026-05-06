@@ -2,7 +2,7 @@
 
 ## Overview
 
-Evaluation for AI engineering should measure whether models, tools, retrieval layers, skills, context packages, and agent workflows solve the intended task under real constraints. For enterprise context systems, a working connector or non-empty answer is not enough; the retrieved context must close the actual knowledge gap that blocks delivery. For coding-agent loops, checks must verify both deterministic correctness and whether an independent reviewer can see failures the producing agent missed. For skills and context files, useful evals compare behavior with and without the context, validate package format and clarity, and use repeated runs or error budgets when results are nondeterministic. For model training, basic train and validation loss curves are an early diagnostic layer before generated samples or downstream task evals are trusted.
+Evaluation for AI engineering should measure whether models, tools, retrieval layers, skills, context packages, and agent workflows solve the intended task under real constraints. For enterprise context systems, a working connector or non-empty answer is not enough; the retrieved context must close the actual knowledge gap that blocks delivery. For coding-agent loops, checks must verify both deterministic correctness and whether an independent reviewer can see failures the producing agent missed. Planning depth is also an evaluation lever: tasks that can be specified and tested should reduce later review churn, while exploratory front-end work may need interactive QA. For skills and context files, useful evals compare behavior with and without the context, validate package format and clarity, and use repeated runs or error budgets when results are nondeterministic. For model training, basic train and validation loss curves are an early diagnostic layer before generated samples or downstream task evals are trusted.
 
 ## Key Concepts
 
@@ -10,6 +10,7 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - [Demand-driven context pulls knowledge from failed work rather than pushing a complete knowledge base upfront](../concepts/demand-driven-context-pulls-knowledge-from-failed-work.md) - agent failures provide concrete test cases for missing context.
 - [Feedback turns coding-agent loops into prompt and skill improvement cycles](../concepts/feedback-turns-coding-agent-loops-into-prompt-and-skill-improvement-cycles.md) - tests, review, and generated critiques should improve later loop runs.
 - [Use independent validation contexts to reduce agent confirmation bias](../concepts/use-independent-validation-contexts-to-reduce-agent-confirmation-bias.md) - separate review agents can reduce self-affirming validation.
+- [Choose plan-heavy or review-heavy agent workflows by task shape](../concepts/choose-plan-heavy-or-review-heavy-agent-workflows-by-task-shape.md) - task shape determines whether upfront specification or review iteration is the more efficient validation path.
 - [Evaluate agent skills with task scenarios and comparative conditions](../concepts/evaluate-agent-skills-with-task-scenarios-and-comparative-conditions.md) - task scenarios and with/without comparisons reveal whether a skill changes behavior.
 - [Validate eval harnesses before trusting skill scores](../concepts/validate-eval-harnesses-before-trusting-skill-scores.md) - incorrect assertions or judges can misreport skill impact.
 - [Use loss curves to debug local model training](../concepts/use-loss-curves-to-debug-local-model-training.md) - train and validation loss patterns separate non-learning, overfitting, and instability.
@@ -24,6 +25,7 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - What mix of deterministic assertions and LLM-as-judge grading is reliable enough for skill evaluation?
 - Which generated-sample checks add signal after a tiny model's loss curves look healthy?
 - How should CI present nondeterministic context-eval results so teams can act on trend and error-budget changes without chasing noise?
+- How should teams measure whether extra planning actually reduces review rounds for a class of coding-agent tasks?
 
 ## Sources
 
@@ -33,3 +35,4 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - [Training an LLM from Scratch, Locally - Angelos Perivolaropoulos, ElevenLabs](../sources/20260504_UsB70Tf5zcE.md)
 - [TLMs: Tiny LLMs and Agents on Edge Devices with LiteRT-LM - Cormac Brick, Google](../sources/20260503_BKWpYIWvAo4.md)
 - [Context Is the New Code - Patrick Debois, Tessl](../sources/20260503_bSG9wUYaHWU.md)
+- [Software Engineering Is Becoming Plan and Review - Louis Knight-Webb, Vibe Kanban](../sources/20260502_W76woOYHlvY.md)
