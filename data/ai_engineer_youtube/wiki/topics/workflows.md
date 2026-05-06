@@ -2,7 +2,7 @@
 
 ## Overview
 
-Agent workflows become more reliable when they expose a tight loop between work execution, failure observation, missing-context discovery, and documentation updates. Demand-driven context uses that loop to grow enterprise context from real tasks rather than from speculative upfront curation. Personal-agent workflows apply the same idea to permissions and trust: start from one recurring pain, add one simple workflow, watch it fail or succeed, then add guardrails before expanding autonomy. Human-in-the-loop automations make those guardrails concrete by pausing sensitive actions for explicit approval, keeping credentials scoped, and logging waiting or resumed executions. Coding-agent loops apply the same principle to implementation work: keep each run small, make progress observable, and feed defects or process lessons into the next prompt or skill. For agentic software work, workflow design should deliberately trade upfront planning against later review effort, and should use parallel queues only when the interface preserves human focus around completed work. Context-engine workflows should also surface unresolved source conflicts, recompute from current sources when answers may be stale, and route clarification back into durable context. Skill and context-package workflows should be developed like library workflows: define expected behavior, package guidance, evaluate changes, distribute reusable context, observe use through logs and review, then update shared packages when the workflow changes. Ambient-agent workflows add a maintenance loop: overnight indexing, backups, memory refreshes, update validation, cleanup, and notification filtering keep the system ready without forcing the user to watch every operation.
+Agent workflows become more reliable when they expose a tight loop between work execution, failure observation, missing-context discovery, and documentation updates. Demand-driven context uses that loop to grow enterprise context from real tasks rather than from speculative upfront curation. Personal-agent workflows apply the same idea to permissions and trust: start from one recurring pain, add one simple workflow, watch it fail or succeed, then add guardrails before expanding autonomy. Human-in-the-loop automations make those guardrails concrete by pausing sensitive actions for explicit approval, keeping credentials scoped, and logging waiting or resumed executions. Voice-agent workflows need a similar staged design: start with a narrow realtime conversation path, add tools sparingly, preserve context across handoffs, and validate both transcript behavior and audio delivery before expanding coverage. Coding-agent loops apply the same principle to implementation work: keep each run small, make progress observable, and feed defects or process lessons into the next prompt or skill. For agentic software work, workflow design should deliberately trade upfront planning against later review effort, and should use parallel queues only when the interface preserves human focus around completed work. Context-engine workflows should also surface unresolved source conflicts, recompute from current sources when answers may be stale, and route clarification back into durable context. Skill and context-package workflows should be developed like library workflows: define expected behavior, package guidance, evaluate changes, distribute reusable context, observe use through logs and review, then update shared packages when the workflow changes. Ambient-agent workflows add a maintenance loop: overnight indexing, backups, memory refreshes, update validation, cleanup, and notification filtering keep the system ready without forcing the user to watch every operation.
 
 ## Key Concepts
 
@@ -25,6 +25,7 @@ Agent workflows become more reliable when they expose a tight loop between work 
 - [Route high-impact agent actions through explicit human approval gates](../concepts/route-high-impact-agent-actions-through-explicit-human-approval-gates.md) - review steps should be implemented as workflow control points, not model self-approval.
 - [Use tool names and descriptions as operational prompts](../concepts/use-tool-names-and-descriptions-as-operational-prompts.md) - workflow tuning includes improving the prompt-like metadata attached to each tool.
 - [Split large automation surfaces into specialized subagents and subworkflows](../concepts/split-large-automation-surfaces-into-specialized-subagents-and-subworkflows.md) - reusable subflows and specialist agents reduce complexity as automations expand.
+- [Prompt voice agents for persona, prosody, and brand fit](../concepts/prompt-voice-agents-for-persona-prosody-and-brand-fit.md) - voice workflows need spoken delivery guidance in addition to task instructions.
 
 ## Open Questions
 
@@ -36,6 +37,7 @@ Agent workflows become more reliable when they expose a tight loop between work 
 - When does parallel agent execution improve throughput, and when does it merely create review backlog?
 - What evidence is enough to promote a personal-agent workflow from playground testing into daily ambient operation?
 - Which actions should require a hard approval gate even when the user has already granted the agent broad tool access?
+- How should synthetic voice conversations be promoted from exploratory testing into durable workflow eval cases?
 
 ## Sources
 
@@ -47,3 +49,4 @@ Agent workflows become more reliable when they expose a tight loop between work 
 - [Software Engineering Is Becoming Plan and Review - Louis Knight-Webb, Vibe Kanban](../sources/20260502_W76woOYHlvY.md)
 - [I Gave an AI Agent the Keys to My Life (Here's What Happened) - Radek Sienkiewicz (@velvetshark-com)](../sources/20260502_sJ2jc7leKBk.md)
 - [Human-in-the-Loop Automation with n8n - Liam McGarrigle](../sources/20260502_tDArkCqjA-c.md)
+- [Building Effective Voice Agents - Toki Sherbakov + Anoop Kotha, OpenAI](../sources/20250720_-OXiljTJxQU.md)

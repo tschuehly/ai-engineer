@@ -103,3 +103,11 @@
 - Updated topics: [AI Monetization](topics/ai-monetization.md), [Infrastructure](topics/infrastructure.md)
 - Updated concepts: [Treat AI Pricing as a Fast-Moving Product Hypothesis](concepts/treat-ai-pricing-as-a-fast-moving-product-hypothesis.md), [Map AI Charge Metrics to Customer-Perceived Value](concepts/map-ai-charge-metrics-to-customer-perceived-value.md), [Use Hybrid AI Pricing to Balance Predictable Revenue and Margin Protection](concepts/use-hybrid-ai-pricing-to-balance-predictable-revenue-and-margin-protection.md), [Prevent AI Billing Surprises With Caps, Notifications, and Rate Limits](concepts/prevent-ai-billing-surprises-with-caps-notifications-and-rate-limits.md)
 - Notes: Added AI monetization patterns for value-aligned charge metrics, hybrid pricing, credit abstraction, and usage-billing guardrails.
+
+## [2026-05-06] ingest | Building Effective Voice Agents - Toki Sherbakov + Anoop Kotha, OpenAI
+
+- Source: [Building Effective Voice Agents - Toki Sherbakov + Anoop Kotha, OpenAI](sources/20250720_-OXiljTJxQU.md)
+- Processed: `-OXiljTJxQU`
+- Updated topics: [Voice Agents](topics/voice-agents.md), [Agents](topics/agents.md), [Tools](topics/tools.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Choose Voice-Agent Architecture by Latency, Accuracy, and Semantics](concepts/choose-voice-agent-architecture-by-latency-accuracy-and-semantics.md), [Delegate Complex Voice-Agent Tasks Through Specialist Tools and Handoffs](concepts/delegate-complex-voice-agent-tasks-through-specialist-tools-and-handoffs.md), [Prompt Voice Agents for Persona, Prosody, and Brand Fit](concepts/prompt-voice-agents-for-persona-prosody-and-brand-fit.md), [Evaluate Voice Agents With Traces, Transcripts, Audio Checks, and Simulations](concepts/evaluate-voice-agents-with-traces-transcripts-audio-checks-and-simulations.md)
+- Notes: Added a voice-agent topic covering realtime speech architecture, tool delegation, persona prompting, and audio-specific eval and guardrail patterns.
