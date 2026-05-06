@@ -551,3 +551,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Treat Coding Agents as Fast Junior Collaborators](concepts/treat-coding-agents-as-fast-junior-collaborators.md), [Keep Agent Context Small, Fresh, and Task-Specific](concepts/keep-agent-context-small-fresh-and-task-specific.md), [Use Research-Plan-Implement Loops for Coding Agents](concepts/use-research-plan-implement-loops-for-coding-agents.md), [Configure Agent Modes, Rules, and Permissions as the Workflow Evolves](concepts/configure-agent-modes-rules-and-permissions-as-the-workflow-evolves.md)
 - Notes: Added agentic engineering guidance covering junior-collaborator framing, context hygiene, phased research-plan-implement workflows, and evolving agent configuration controls.
+
+## [2026-05-06] ingest | How METR measures Long Tasks and Experienced Open Source Dev Productivity - Joel Becker, METR
+
+- Source: [How METR measures Long Tasks and Experienced Open Source Dev Productivity - Joel Becker, METR](sources/20260119_k1t2xyWMUdY.md)
+- Processed: `k1t2xyWMUdY`
+- Updated topics: [Evaluation](topics/evaluation.md), [Coding Agents](topics/coding-agents.md), [Agents](topics/agents.md)
+- Updated concepts: [Measure AI Developer Productivity With Field Experiments, Not Benchmark Extrapolation Alone](concepts/measure-ai-developer-productivity-with-field-experiments-not-benchmark-extrapolation-alone.md), [Self-Reported Task Duration Is a Weak Productivity Signal](concepts/self-reported-task-duration-is-a-weak-productivity-signal.md), [Separate Watched and Unwatched Agent Time Horizons](concepts/separate-watched-and-unwatched-agent-time-horizons.md)
+- Notes: Added METR field-measurement guidance covering benchmark-to-productivity gaps, timing-measurement caveats, and supervision-dependent long-task autonomy.
