@@ -12,6 +12,8 @@ Agent-facing products should treat APIs and CLIs as primary interfaces once agen
 
 MCP is one part of the agent connectivity stack, not a universal replacement for every surface. Skills carry reusable domain knowledge, CLIs and computer use fit local sandboxed environments, and MCP fits remote semantics, authorization, governance, resources, long-running tasks, and cross-client application surfaces. MCP applications and skills over MCP point to a richer server-authored surface where an integration can ship UI, tools, and current usage guidance together.
 
+Open-source agent tools need extension points as well as integrations. Plugin architecture can keep memory, wiki, dreaming, and other experimental capabilities installable without forcing every idea into core or overloading maintainers with unrelated pull requests.
+
 ## Key Concepts
 
 - [Sandboxed code execution turns model reasoning into inspectable computation](../concepts/sandboxed-code-execution-turns-model-reasoning-into-inspectable-computation.md) - sandboxed execution gives models computation tools while limiting local side effects.
@@ -32,6 +34,8 @@ MCP is one part of the agent connectivity stack, not a universal replacement for
 - [Package reusable context as skills, libraries, and registries](../concepts/package-reusable-context-as-skills-libraries-and-registries.md) - tool guidance can be shared as installable context packages.
 - [Filter untrusted context before it reaches the agent](../concepts/filter-untrusted-context-before-it-reaches-the-agent.md) - tool and skill ecosystems need controls for unsafe context before execution sandboxes apply.
 - [Ambient agents need self-maintenance and memory hygiene](../concepts/ambient-agents-need-self-maintenance-and-memory-hygiene.md) - operational jobs and deterministic scripts keep always-on agent systems reliable.
+- [Scope personal and team agents by reachable authority](../concepts/scope-personal-and-team-agents-by-reachable-authority.md) - shared agent tools need authority boundaries tied to who can invoke them.
+- [Plugin architectures let agent systems absorb experiments](../concepts/plugin-architectures-let-agent-systems-absorb-experiments.md) - plugins let agent capabilities evolve without bloating the core tool surface.
 - [Personal knowledge bases become agent context substrates](../concepts/personal-knowledge-bases-become-agent-context-substrates.md) - note search, memory, tagging, and link ingestion are tool surfaces for personal context.
 - [Purpose-built agent workspaces make orchestration visible](../concepts/purpose-built-agent-workspaces-make-orchestration-visible.md) - visible tool calls, cron labels, stop controls, and capability panels make personal-agent tool use easier to supervise.
 - [Explicit context attachments can outperform opaque agent memory](../concepts/explicit-context-attachments-can-outperform-opaque-agent-memory.md) - explicit document, skill, and knowledge-base mentions make task context a user-controlled tool surface.
@@ -132,3 +136,4 @@ MCP is one part of the agent connectivity stack, not a universal replacement for
 - [The Future of MCP - David Soria Parra, Anthropic](../sources/20260419_v3Fr2JR47KA.md)
 - [Code Mode: Let the Code do the Talking - Sunil Pai, Cloudflare](../sources/20260419_8txf05vVVl4.md)
 - [Harness Engineering: How to Build Software When Humans Steer, Agents Execute - Ryan Lopopolo, OpenAI](../sources/20260417_am_oeAoUhew.md)
+- [State of the Claw - Peter Steinberger](../sources/20260417_zgNvts_2TUE.md)

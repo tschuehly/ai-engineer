@@ -92,6 +92,8 @@
 - [Split exploratory research agents from constrained writing workflows](../concepts/split-exploratory-research-agents-from-constrained-writing-workflows.md)
 - [Use omnimodal embeddings for cross-modal retrieval and comparison](../concepts/use-omnimodal-embeddings-for-cross-modal-retrieval-and-comparison.md)
 - [Interactive world models need memory, control, and live prompting](../concepts/interactive-world-models-need-memory-control-and-live-prompting.md)
+- [Scope personal and team agents by reachable authority](../concepts/scope-personal-and-team-agents-by-reachable-authority.md)
+- [Plugin architectures let agent systems absorb experiments](../concepts/plugin-architectures-let-agent-systems-absorb-experiments.md)
 
 ## AI Monetization
 
@@ -159,6 +161,7 @@
 - [Retire completed planning docs before they become agent doc rot](../concepts/retire-completed-planning-docs-before-they-become-agent-doc-rot.md)
 - [Delegate implementations behind reviewed module interfaces](../concepts/delegate-implementations-behind-reviewed-module-interfaces.md)
 - [Run parallel issue agents in sandboxes with review and merge loops](../concepts/run-parallel-issue-agents-in-sandboxes-with-review-and-merge-loops.md)
+- [Human taste limits fully dark coding factories](../concepts/human-taste-limits-fully-dark-coding-factories.md)
 
 ## Context Engineering
 
@@ -242,6 +245,7 @@
 - [Capability-Based Sandboxes Start With No Authority](../concepts/capability-based-sandboxes-start-with-no-authority.md)
 - [Adapt embedding dimensions with Matryoshka representation learning](../concepts/adapt-embedding-dimensions-with-matryoshka-representation-learning.md)
 - [Neural weather models can target operational forecast variables directly](../concepts/neural-weather-models-can-target-operational-forecast-variables-directly.md)
+- [AI-generated security reports need maintainer triage](../concepts/ai-generated-security-reports-need-maintainer-triage.md)
 
 ## Inference
 
@@ -311,6 +315,9 @@
 - [Use human judgment gates for high-risk agent code changes](../concepts/use-human-judgment-gates-for-high-risk-agent-code-changes.md)
 - [Use deep modules to make agent work testable](../concepts/use-deep-modules-to-make-agent-work-testable.md)
 - [Calibrate LLM judges like binary classifiers](../concepts/calibrate-llm-judges-like-binary-classifiers.md)
+- [AI-generated security reports need maintainer triage](../concepts/ai-generated-security-reports-need-maintainer-triage.md)
+- [Human taste limits fully dark coding factories](../concepts/human-taste-limits-fully-dark-coding-factories.md)
+- [Plugin architectures let agent systems absorb experiments](../concepts/plugin-architectures-let-agent-systems-absorb-experiments.md)
 - [Domain Gemma variants package specialized policy and task behavior](../concepts/domain-gemma-variants-package-specialized-policy-and-task-behavior.md)
 - [Neural weather models can target operational forecast variables directly](../concepts/neural-weather-models-can-target-operational-forecast-variables-directly.md)
 
@@ -421,6 +428,8 @@
 - [Filter MCP tools by scopes and step-up authorization](../concepts/filter-mcp-tools-by-scopes-and-step-up-authorization.md)
 - [Stateless remote MCP servers rebuild allowed tools per request](../concepts/stateless-remote-mcp-servers-rebuild-allowed-tools-per-request.md)
 - [Treat prompts as distributed harness surfaces](../concepts/treat-prompts-as-distributed-harness-surfaces.md)
+- [Scope personal and team agents by reachable authority](../concepts/scope-personal-and-team-agents-by-reachable-authority.md)
+- [Plugin architectures let agent systems absorb experiments](../concepts/plugin-architectures-let-agent-systems-absorb-experiments.md)
 - [Deep research agents need planning, grounded evidence, and pivot loops](../concepts/deep-research-agents-need-planning-grounded-evidence-and-pivot-loops.md)
 - [Split exploratory research agents from constrained writing workflows](../concepts/split-exploratory-research-agents-from-constrained-writing-workflows.md)
 

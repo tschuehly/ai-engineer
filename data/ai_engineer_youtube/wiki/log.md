@@ -391,3 +391,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Harness Engineering Shifts Scarcity From Code Production to Control Surfaces](concepts/harness-engineering-shifts-scarcity-from-code-production-to-control-surfaces.md), [Encode Non-Functional Requirements as Agent-Visible Context](concepts/encode-non-functional-requirements-as-agent-visible-context.md), [Use Reviewer Agents and Lints to Turn Review Lessons Into Guardrails](concepts/use-reviewer-agents-and-lints-to-turn-review-lessons-into-guardrails.md), [Treat Prompts as Distributed Harness Surfaces](concepts/treat-prompts-as-distributed-harness-surfaces.md)
 - Notes: Added harness-engineering patterns for steering abundant coding-agent output through durable context, distributed prompt surfaces, reviewer agents, lints, and CI guardrails.
+
+## [2026-05-06] ingest | State of the Claw - Peter Steinberger
+
+- Source: [State of the Claw - Peter Steinberger](sources/20260417_zgNvts_2TUE.md)
+- Processed: `zgNvts_2TUE`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [AI-Generated Security Reports Need Maintainer Triage](concepts/ai-generated-security-reports-need-maintainer-triage.md), [Scope Personal and Team Agents By Reachable Authority](concepts/scope-personal-and-team-agents-by-reachable-authority.md), [Human Taste Limits Fully Dark Coding Factories](concepts/human-taste-limits-fully-dark-coding-factories.md), [Plugin Architectures Let Agent Systems Absorb Experiments](concepts/plugin-architectures-let-agent-systems-absorb-experiments.md)
+- Notes: Added OpenClaw patterns for maintainer-scale security triage, authority-scoped personal and team agents, human taste in coding-agent workflows, and plugin-based agent experimentation.

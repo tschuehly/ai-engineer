@@ -10,6 +10,8 @@ Complex vertical workflows add another design dimension: make ambiguous work mor
 
 Compressed research is a lower-risk operations pattern: keep the business event and human decision in place, but let an agent gather, classify, route, or summarize the evidence that made the work slow. This is especially useful when the source information already exists in company systems but is not available in the right place at decision time.
 
+Open-source agent workflows have their own bottleneck: AI can generate more reports, PRs, and fixes than maintainers can safely absorb. Projects need triage loops, contribution boundaries, foundation or company support for sustained maintenance, and extension points so experiments can happen without turning every idea into core-review load.
+
 ## Key Concepts
 
 - [Use hosted model playgrounds to prototype before owning infrastructure](../concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md) - hosted playgrounds can compress the path from idea to model, API, app, and cloud deployment experiment.
@@ -95,6 +97,9 @@ Compressed research is a lower-risk operations pattern: keep the business event 
 - [Agents expand the economically viable software surface](../concepts/agents-expand-the-economically-viable-software-surface.md) - cheaper automation changes which workflows are worth software investment.
 - [Split exploratory research agents from constrained writing workflows](../concepts/split-exploratory-research-agents-from-constrained-writing-workflows.md) - artifact handoff keeps different workflow phases appropriately constrained.
 - [Calibrate LLM judges like binary classifiers](../concepts/calibrate-llm-judges-like-binary-classifiers.md) - workflow judges need their own labeled validation loop.
+- [AI-generated security reports need maintainer triage](../concepts/ai-generated-security-reports-need-maintainer-triage.md) - workflow throughput should include maintainer capacity for automated reports.
+- [Human taste limits fully dark coding factories](../concepts/human-taste-limits-fully-dark-coding-factories.md) - iterative product work should keep human judgment in the loop.
+- [Plugin architectures let agent systems absorb experiments](../concepts/plugin-architectures-let-agent-systems-absorb-experiments.md) - extension workflows let experiments proceed without overloading core maintainers.
 
 ## Open Questions
 
@@ -160,3 +165,4 @@ Compressed research is a lower-risk operations pattern: keep the business event 
 - [The New Application Layer - Malte Ubl, CTO Vercel](../sources/20260420_XKup1pj-34M.md)
 - [The Friction is Your Judgment - Armin Ronacher & Cristina Poncela Cubeiro, Earendil](../sources/20260418__Zcw_sVF6hU.md)
 - [Harness Engineering: How to Build Software When Humans Steer, Agents Execute - Ryan Lopopolo, OpenAI](../sources/20260417_am_oeAoUhew.md)
+- [State of the Claw - Peter Steinberger](../sources/20260417_zgNvts_2TUE.md)
