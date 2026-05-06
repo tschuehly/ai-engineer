@@ -10,7 +10,7 @@ Product engineering adds a customer-context layer to this problem. If AI handles
 
 Prompt-learning workflows show a narrower context loop: when traces or datasets include explanatory feedback from subject-matter experts or evaluators, that text becomes context for improving the next system prompt. Bare labels are less reusable because they do not identify the missed instruction, missing context, or rule violation that future prompts should address.
 
-For coding agents, the same loop can target repository or agent rule files directly: benchmark traces, unit-test results, and judge explanations can be fed into a meta-prompt that writes learned instructions for the next run.
+For coding agents, the same loop can target repository or agent rule files directly: benchmark traces, unit-test results, and judge explanations can be fed into a meta-prompt that writes learned instructions for the next run. AI-native company workflows add a team-level version of the context loop. Lessons from delegated agent work can be codified into `CLAUDE.md`-style files, subagents, slash commands, prompt libraries, and onboarding guidance so tacit conventions become reusable agent-readable context rather than private memory.
 
 Long context should be treated as temporary working memory, not durable knowledge. Large prompts can keep a model from outright lacking a document, but attention cost, latency, and context-rot behavior mean "fits in the window" is weaker than "the model can reason over it reliably." For stable long-tail knowledge, the design choice may move from prompt stuffing to retrieval, contextual embeddings, or model adaptation.
 
@@ -64,6 +64,7 @@ Context compression for coding agents is not just about fitting files into a sma
 - [Surface existing company information before redesigning processes](../concepts/surface-existing-company-information-before-redesigning-processes.md) - scattered Slack, meeting, issue, and update signals can be made usable as agent context.
 - [Use explanatory feedback to optimize prompts](../concepts/use-explanatory-feedback-to-optimize-prompts.md) - failure explanations become context for prompt revisions.
 - [System prompt learning updates agent rules from eval explanations](../concepts/system-prompt-learning-updates-agent-rules-from-eval-explanations.md) - eval explanations can become durable agent-visible rules.
+- [Use Compounding Engineering Loops](../concepts/use-compounding-engineering-loops.md) - agent-work lessons should be captured into files, commands, subagents, and onboarding context.
 - [Do not treat long context as durable model memory](../concepts/do-not-treat-long-context-as-durable-model-memory.md) - full-context prompting has latency and reasoning limits even when the window is large enough.
 - [Long AI coding conversations compound accidental complexity](../concepts/long-ai-coding-conversations-compound-accidental-complexity.md) - stale conversational history can carry wrong architectural turns into later code.
 - [Manual migration seeds teach agents the hidden constraints](../concepts/manual-migration-seeds-teach-agents-the-hidden-constraints.md) - manual examples can become high-signal context for later agent research.
@@ -121,3 +122,4 @@ Context compression for coding agents is not just about fitting files into a sma
 - [Amp Code: Next Generation AI Coding - Beyang Liu, Amp Code](../sources/20251222_gvIAkmZUEZY.md)
 - [The 3 Pillars of Autonomy - Michele Catasta, Replit](../sources/20251222_MLhAA9yguwM.md)
 - [The Infinite Software Crisis - Jake Nations, Netflix](../sources/20251220_eIoohUmYpGI.md)
+- [Dispatch from the Future: building an AI-native Company - Dan Shipper, Every, AI & I](../sources/20251218_MGzymaYBiss.md)

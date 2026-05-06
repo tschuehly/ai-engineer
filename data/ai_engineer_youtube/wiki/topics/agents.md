@@ -34,7 +34,7 @@ The web itself is also becoming an agent surface. Sites can publish `llms.txt` o
 
 Internal developer platforms are another agent surface. Practices that already helped human developers, such as self-service provisioning, API-first workflows, local validation, clear documentation, and observable runtime feedback, become prerequisites when coding agents need to deploy, debug, and verify work without tribal human handoffs.
 
-Agent-native company design shifts the unit of adoption from a tool to an operating model. When agents are embedded in product, support, operations, and culture, humans increasingly supervise and route asynchronous agent work while the organization hires for people who can apply domain expertise through agent counterparts.
+Agent-native company design shifts the unit of adoption from a tool to an operating model. When agents are embedded in product, support, operations, and culture, humans increasingly supervise and route asynchronous agent work while the organization hires for people who can apply domain expertise through agent counterparts. Full-team agent adoption changes the coordination shape of engineering work: if one cohort still works primarily in editor-centric loops, the whole group can be pulled back into traditional handoffs; when everyone can delegate to terminal-style coding agents such as Claude Code and Codex, work can move through parallel agent panes, cross-product fixes, and reviewable artifacts instead of only through manual typing.
 
 Leadership matters because agent and AI-assistant rollouts can produce either leverage or performative compliance. Organizations need policies, psychological safety, enablement time, impact measurement, and maintained prompt-rule ownership so agent behavior improves with feedback instead of drifting through unmanaged system prompts and local rule files.
 
@@ -45,6 +45,8 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - agent loops can stay flexible while the runtime validates tool execution.
 - [Use prompt-enforced todos as lightweight agent state](../concepts/use-prompt-enforced-todos-as-lightweight-agent-state.md) - prompt-visible state can guide model planning without full orchestration.
 - [Agent-native companies embed agents into product, operations, and culture](../concepts/agent-native-companies-embed-agents-into-product-operations-and-culture.md) - distinguishes core agent infrastructure from occasional AI assistance.
+- [Universal AI Adoption Changes Engineering Coordination](../concepts/universal-ai-adoption-changes-engineering-coordination.md) - full-team adoption lets engineering coordination move from editor-centric handoffs toward delegated agent work.
+- [Fractured Attention Becomes Usable With Delegated Agents](../concepts/fractured-attention-becomes-usable-with-delegated-agents.md) - agent delegation can turn short attention windows into productive investigation and fix loops.
 - [Govern agent rules through feedback gatekeepers](../concepts/govern-agent-rules-through-feedback-gatekeepers.md) - organization-wide agent behavior needs maintained prompts and rule ownership.
 - [Start GenBI with certified assets before autonomous SQL](../concepts/start-genbi-with-certified-assets-before-autonomous-sql.md) - analytics agents can earn trust by retrieving governed BI assets before generating new queries.
 - [Start the workday by reviewing and dispatching agent work](../concepts/start-the-workday-by-reviewing-and-dispatching-agent-work.md) - treats agents as asynchronous coworkers whose work is reviewed, approved, and redirected.
@@ -303,6 +305,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Claude Agent SDK [Full Workshop] - Thariq Shihipar, Anthropic](../sources/20260105_TqC1qOfiVcQ.md)
 - [Building Intelligent Research Agents with Manus - Ivan Leo, Manus AI (now Meta Superintelligence)](../sources/20251230_xz0-brt56L8.md)
 - [AGI: The Path Forward - Jason Warner & Eiso Kant, Poolside](../sources/20251227_OGCG_QkCcZo.md)
+- [Dispatch from the Future: building an AI-native Company - Dan Shipper, Every, AI & I](../sources/20251218_MGzymaYBiss.md)
 - [The Agent Native Company — Rick Blalock, Agentuity](../sources/20250603_0ZPAvzhpGjw.md)
 - [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](../sources/20251223_LU9KgcZDRfY.md)
 - [The 3 Pillars of Autonomy - Michele Catasta, Replit](../sources/20251222_MLhAA9yguwM.md)

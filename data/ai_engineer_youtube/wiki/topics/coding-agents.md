@@ -14,7 +14,7 @@ The Infinite Software Crisis framing adds a caution about conversational coding 
 
 AI adoption inside engineering teams is also an incentive design problem. If compensation and recognition reward time, headcount, or vague annual goals, engineers may have little direct reason to keep pushing unfamiliar agent workflows. Output-linked compensation can encourage tool leverage, but it needs independent scoping, acceptance checks, QA, and customer or strategist counterweights so agent-assisted speed does not become inflated story points or rushed code.
 
-Leadership-owned AI adoption adds another constraint: do not confuse adoption mandates with capability building. Teams need clear policy, time to learn, psychological safety, and examples of high-value use cases; otherwise engineers can satisfy usage targets without improving delivery. Rollouts should also look beyond code generation because stack-trace analysis, onboarding, legacy-spec generation, incident context gathering, and other interpretive or operational workflows may be the real bottleneck.
+Leadership-owned AI adoption adds another constraint: do not confuse adoption mandates with capability building. Teams need clear policy, time to learn, psychological safety, and examples of high-value use cases; otherwise engineers can satisfy usage targets without improving delivery. Rollouts should also look beyond code generation because stack-trace analysis, onboarding, legacy-spec generation, incident context gathering, and other interpretive or operational workflows may be the real bottleneck. AI-native engineering teams can also treat the coding agent as the default implementation surface. Every's operating model frames this as a move from writing code by hand to planning, delegating, assessing, and codifying agent work; the quality loop depends on tests, direct product trial, code review, agent review, and prompt files or commands that preserve what the team learned.
 
 ## Key Concepts
 
@@ -99,6 +99,10 @@ Leadership-owned AI adoption adds another constraint: do not confuse adoption ma
 - [Guard AI-assisted platform contributions with policy and context](../concepts/guard-ai-assisted-platform-contributions-with-policy-and-context.md) - broader agent-assisted platform contributions need hard rules and clear instructions.
 - [Agent rules should emerge from observed off-rail behavior](../concepts/agent-rules-should-emerge-from-observed-off-rail-behavior.md) - repository rules should encode concrete repeated failures and sensitive boundaries.
 - [Cloud agents turn coding work into asynchronous VM-backed queues](../concepts/cloud-agents-turn-coding-work-into-asynchronous-vm-backed-queues.md) - VM-backed agents turn implementation into background work that still needs review and context routing.
+- [Universal AI Adoption Changes Engineering Coordination](../concepts/universal-ai-adoption-changes-engineering-coordination.md) - terminal-style coding agents change team coordination most when everyone can use them.
+- [Use Compounding Engineering Loops](../concepts/use-compounding-engineering-loops.md) - plan, delegate, assess, and codify loops turn agent work into reusable engineering leverage.
+- [Demo Culture Replaces Memo-First Product Persuasion](../concepts/demo-culture-replaces-memo-first-product-persuasion.md) - cheap prototypes let product arguments move from abstract persuasion to concrete trials.
+- [Fractured Attention Becomes Usable With Delegated Agents](../concepts/fractured-attention-becomes-usable-with-delegated-agents.md) - coding agents can make small time slices useful for investigation and production fixes.
 - [Align teams before agents implement](../concepts/align-teams-before-agents-implement.md) - unaligned agentic speed can create wrong features, duplicated work, and late PR rejection.
 - [Shared cloud workspaces make agent sessions collaborative](../concepts/shared-cloud-workspaces-make-agent-sessions-collaborative.md) - shared micro-VM sessions let teammates inspect and continue agent work without local checkout friction.
 - [Collaborative plans become executable agent context](../concepts/collaborative-plans-become-executable-agent-context.md) - plan mode should be shareable and editable before the coding agent starts implementation.
@@ -190,3 +194,4 @@ Leadership-owned AI adoption adds another constraint: do not confuse adoption ma
 - [No More Slop - swyx](../sources/20251222_IoiHI7p12Ao.md)
 - [Amp Code: Next Generation AI Coding - Beyang Liu, Amp Code](../sources/20251222_gvIAkmZUEZY.md)
 - [The 3 Pillars of Autonomy - Michele Catasta, Replit](../sources/20251222_MLhAA9yguwM.md)
+- [Dispatch from the Future: building an AI-native Company - Dan Shipper, Every, AI & I](../sources/20251218_MGzymaYBiss.md)

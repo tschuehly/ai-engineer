@@ -783,3 +783,11 @@
 - Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Build AI product iteration tools into the product context](concepts/build-ai-product-iteration-tools-into-the-product-context.md), [Treat model behavior as a product craft](concepts/treat-model-behavior-as-a-product-craft.md), [Use prompt mutation loops to hill-climb product behavior](concepts/use-prompt-mutation-loops-to-hill-climb-product-behavior.md), [Browser agents sit in the prompt-injection lethal trifecta](concepts/browser-agents-sit-in-the-prompt-injection-lethal-trifecta.md)
 - Notes: Added The Browser Company's Dia lessons on in-product AI iteration tooling, model-behavior ownership, prompt-mutation hill climbing, and browser-specific prompt-injection safety design.
+
+## [2026-05-07] ingest | Dispatch from the Future: building an AI-native Company - Dan Shipper, Every, AI & I
+
+- Source: [Dispatch from the Future: building an AI-native Company - Dan Shipper, Every, AI & I](sources/20251218_MGzymaYBiss.md)
+- Processed: `MGzymaYBiss`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Universal AI Adoption Changes Engineering Coordination](concepts/universal-ai-adoption-changes-engineering-coordination.md), [Use Compounding Engineering Loops](concepts/use-compounding-engineering-loops.md), [Demo Culture Replaces Memo-First Product Persuasion](concepts/demo-culture-replaces-memo-first-product-persuasion.md), [Fractured Attention Becomes Usable With Delegated Agents](concepts/fractured-attention-becomes-usable-with-delegated-agents.md)
+- Notes: Added Every's AI-native company operating model around universal agent adoption, delegated parallel work, demo culture, and compounding engineering through codified agent context.
