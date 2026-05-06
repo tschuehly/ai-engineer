@@ -12,6 +12,8 @@ Details:
 - In his own workflow, Figma was useful less as a dashboard destination than as an artifact handed into an agentic workflow that produced implementation output. (13:29-13:38)
 - Ubl gives the direct Vercel observation behind this pattern: more than 60% of Vercel page views over the prior seven days were AI agents, and platform usage is shifting from dashboard clicking toward APIs and CLIs. (13:00-13:26)
 - He says feature proposals should answer how the feature is automated and how an agent uses it, treating CLI design as a first-class product question rather than an afterthought to UI. (13:27-13:38)
+- Kanat-Alexander frames CLIs and APIs as accuracy infrastructure for agents: browser or computer-use automation can work, but text-native action surfaces better match how agents operate and reduce unnecessary orchestration risk (04:36-05:07).
+- Agent-facing CLIs and APIs should run during development when they are part of the coding loop; CI-only feedback with long latency weakens iterative agent workflows (16:37-17:18).
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -22,7 +24,10 @@ Related concepts:
 - [Use skills for workflow guidance and MCP for integrations](use-skills-for-workflow-guidance-and-mcp-for-integrations.md)
 - [Use tool names and descriptions as operational prompts](use-tool-names-and-descriptions-as-operational-prompts.md)
 - [Separate agent harnesses from generated-code execution](separate-agent-harnesses-from-generated-code-execution.md)
+- [Standardize development environments around common model priors](standardize-development-environments-around-common-model-priors.md)
+- [Make validation fast, local, deterministic, and actionable](make-validation-fast-local-deterministic-and-actionable.md)
 
 Sources:
 - [Agents for Everything Else - swyx](../sources/20260501_zepu8Kk6FBQ.md), 12:48-13:38
 - [The New Application Layer - Malte Ubl, CTO Vercel](../sources/20260420_XKup1pj-34M.md), 13:00-13:38
+- [Developer Experience in the Age of AI Coding Agents - Max Kanat-Alexander, Capital One](../sources/20251223_rT2Del5pwg4.md), 04:36-05:07, 16:37-17:18

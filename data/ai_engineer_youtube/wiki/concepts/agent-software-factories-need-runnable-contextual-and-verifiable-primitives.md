@@ -11,6 +11,8 @@ Details:
 - Usage patterns such as authentication helpers, startup scripts, and test conventions should exist as reproducible references the agent can follow instead of rediscovering each workflow (05:50-06:17).
 - The factory readiness checklist includes whether the project is runnable, whether required context is accessible, whether agents can interface with systems such as Linear, Notion, Datadog, or Slack, and whether the work is verifiable (09:24-10:10).
 - Verifiability should cover unit tests, integration tests, and UI tests; front-end work may require actual DOM interaction and user-flow checks rather than only backend contracts (07:51-10:42).
+- Developer environments are also an agent input: conventional tools, local package managers, linters, and workflows reduce setup friction because models already have stronger priors for common development patterns (02:50-04:34).
+- External context that is not encoded in code, such as requirements, intent, data shape, or meeting decisions, should be written where agents can access it; agents cannot infer why a system exists from source structure alone (08:00-09:40).
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -20,6 +22,9 @@ Related topics:
 Related concepts:
 - [Unified coding-agent harnesses combine models, tools, environments, and safety](unified-coding-agent-harnesses-combine-models-tools-environments-and-safety.md)
 - [Choose plan-heavy or review-heavy agent workflows by task shape](choose-plan-heavy-or-review-heavy-agent-workflows-by-task-shape.md)
+- [Standardize development environments around common model priors](standardize-development-environments-around-common-model-priors.md)
+- [Make validation fast, local, deterministic, and actionable](make-validation-fast-local-deterministic-and-actionable.md)
 
 Sources:
 - [Building your own software factory — Eric Zakariasson, Cursor](../sources/20260428_rnDm57Py54A.md), 05:02-10:42
+- [Developer Experience in the Age of AI Coding Agents - Max Kanat-Alexander, Capital One](../sources/20251223_rT2Del5pwg4.md), 02:50-04:34, 08:00-09:40

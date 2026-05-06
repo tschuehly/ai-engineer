@@ -30,7 +30,7 @@ Enterprise tool ecosystems also need registry metadata once many teams publish M
 
 Internal platform tools should be designed so agents can call the same intended paths humans use. APIs are the base layer, while CLIs or MCP servers can wrap those APIs for agent use; logs, metrics, traces, and relevant documentation should also be exposed through machine-friendly surfaces instead of only dashboards or full HTML pages.
 
-For coding agents, tool boundaries should be chosen by what needs hard semantics. Read tools can control token load, grep/glob can support exact codebase search, edit tools can enforce read-before-write and diff-shaped changes, Bash can compose project commands inside a sandbox, and brittle edge cases can be moved into versioned tools that are easier to evaluate than broad prompt guidance.
+For coding agents, tool boundaries should be chosen by what needs hard semantics. Read tools can control token load, grep/glob can support exact codebase search, edit tools can enforce read-before-write and diff-shaped changes, Bash can compose project commands inside a sandbox, and brittle edge cases can be moved into versioned tools that are easier to evaluate than broad prompt guidance. When an action can be exposed as a CLI or API, that text-native surface is usually a better agent tool than browser automation, especially when accuracy matters.
 
 ## Key Concepts
 
@@ -144,6 +144,8 @@ For coding agents, tool boundaries should be chosen by what needs hard semantics
 - [Split exploratory research agents from constrained writing workflows](../concepts/split-exploratory-research-agents-from-constrained-writing-workflows.md) - Markdown artifacts can be the tool boundary between agentic and deterministic phases.
 - [Agentic retrieval lets models plan search steps](../concepts/agentic-retrieval-lets-models-plan-search-steps.md) - retrieval can be exposed as tools an agent chooses and sequences.
 - [Structure-aware document parsing improves RAG chunk quality](../concepts/structure-aware-document-parsing-improves-rag-chunk-quality.md) - document parsing settings are practical tool controls for retrieval quality.
+- [Standardize development environments around common model priors](../concepts/standardize-development-environments-around-common-model-priors.md) - conventional toolchains give agents more reliable operational patterns.
+- [Make validation fast, local, deterministic, and actionable](../concepts/make-validation-fast-local-deterministic-and-actionable.md) - validation commands are agent tools when they produce fast repairable feedback.
 
 ## Open Questions
 
@@ -175,6 +177,7 @@ For coding agents, tool boundaries should be chosen by what needs hard semantics
 - Which MCP applications need web-client rendering support before they are useful, and which should remain tool-only integrations?
 - Which guidance belongs in server-authored skills over MCP instead of client-local skills?
 - Which lint messages or CI comments are important enough to be treated as first-class prompt surfaces?
+- Which browser-controlled workflows should be replaced by direct CLIs or APIs for agent accuracy?
 - Which registry metadata fields should be mandatory before an MCP server or A2A agent can be discovered by production agents?
 - Which RAG internals should be editable in visual flows, and which should remain fixed behind a stable API or MCP server?
 - Which prompt-format decisions belong in DSPy adapters versus task signatures or higher-level program logic?
@@ -218,6 +221,7 @@ For coding agents, tool boundaries should be chosen by what needs hard semantics
 - [$1 AI Guardrails: The Unreasonable Effectiveness of Finetuned ModernBERTs - Diego Carpentero](../sources/20260416_YZHPEkfy2kc.md)
 - [Paperclip: Open Source Human Control Plane for AI Labor - Dotta Bippa](../sources/20260415_h403btjldDQ.md)
 - [One Registry to Rule them All - Sonny Merla, Mauro Luchetti, & Mattia Redaelli, Quantyca](../sources/20260410_VXfRt_H-V08.md)
+- [Developer Experience in the Age of AI Coding Agents - Max Kanat-Alexander, Capital One](../sources/20251223_rT2Del5pwg4.md)
 - [Judge the Judge: Building LLM Evaluators That Actually Work with GEPA - Mahmoud Mabrouk, Agenta AI](../sources/20260410_X4dEHRzBLmc.md)
 - [AI Didn't Kill the Web, It Moved in! - Olivier Leplus (AWS) & Yohan Lasorsa (Microsoft)](../sources/20260410_XZ0boOjtbNo.md)
 - [OpenRAG: An open-source stack for RAG - Phil Nash](../sources/20260408_4TxOBhDRRCM.md)

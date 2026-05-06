@@ -12,6 +12,8 @@ Details:
 - The speakers distinguish libraries from products: libraries tend to have clearer problems, APIs, and tight constraints, while product code mixes UI, APIs, permissions, feature flags, billing, and other interacting concerns that can exceed an agent's context. (09:16-10:24)
 - Agent-legible structure includes modular components and modularized code flow, such as explicit steps from user message to agent loop to output handling, because agents tend to add fuzz between unclear flow boundaries. (10:52-11:50)
 - Mechanical enforcement can include no bare catch rules, centralized SQL query interfaces, one UI primitive component library, no dynamic imports, unique function names for search and token efficiency, and TypeScript modes that avoid transpilation confusion. (12:17-14:08)
+- Legacy systems that humans cannot reason about also reduce agent capability: if required information is missing from the codebase and structure obscures behavior, the agent falls back to slow trial-and-error instead of direct reasoning (06:47-07:57).
+- Long-lived systems need review processes that can reject harmful generated changes; otherwise agentic coding can make the codebase harder for future humans and agents to work with (13:29-14:09).
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -22,6 +24,9 @@ Related concepts:
 - [Use deep modules to make agent work testable](use-deep-modules-to-make-agent-work-testable.md)
 - [Agent software factories need runnable, contextual, and verifiable primitives](agent-software-factories-need-runnable-contextual-and-verifiable-primitives.md)
 - [Constrain sensitive file access with purpose-built tools](constrain-sensitive-file-access-with-purpose-built-tools.md)
+- [Standardize development environments around common model priors](standardize-development-environments-around-common-model-priors.md)
+- [Make validation fast, local, deterministic, and actionable](make-validation-fast-local-deterministic-and-actionable.md)
 
 Sources:
 - [The Friction is Your Judgment - Armin Ronacher & Cristina Poncela Cubeiro, Earendil](../sources/20260418__Zcw_sVF6hU.md), 07:13-14:08
+- [Developer Experience in the Age of AI Coding Agents - Max Kanat-Alexander, Capital One](../sources/20251223_rT2Del5pwg4.md), 06:47-07:57, 13:29-14:09

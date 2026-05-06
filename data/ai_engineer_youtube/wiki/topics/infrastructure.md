@@ -30,7 +30,7 @@ Durable execution infrastructure can wrap even a single agentic loop. Treat LLM 
 
 Durable agent infrastructure also needs a deterministic orchestration boundary. Workflow code should be rerunnable and side-effect-free, while steps perform LLM calls, tool calls, sandbox commands, and external API work; observability then attaches to the step/event log, and lifecycle controls manage cancellation, scheduling, and deployment-version changes for in-flight runs.
 
-Developer-platform infrastructure also needs to be consumable by agents. Self-service provisioning, API/CLI/MCP access, local validation, machine-readable observability, and layered contribution guardrails let agents work against internal platforms without relying on informal human escalation paths.
+Developer-platform infrastructure also needs to be consumable by agents. Self-service provisioning, API/CLI/MCP access, standardized development environments, local validation, machine-readable observability, and layered contribution guardrails let agents work against internal platforms without relying on informal human escalation paths. Agent-ready infrastructure should prefer fast local checks over slow CI-only loops because agents will repeatedly run whatever feedback path is available.
 
 ## Key Concepts
 
@@ -106,6 +106,8 @@ Developer-platform infrastructure also needs to be consumable by agents. Self-se
 - [Expose observability as agent-readable feedback](../concepts/expose-observability-as-agent-readable-feedback.md) - infrastructure should provide verification signals through machine-friendly interfaces.
 - [Local-first platform workflows shorten agent feedback loops](../concepts/local-first-platform-workflows-shorten-agent-feedback-loops.md) - local validation keeps agent iteration from waiting on slow remote pipelines.
 - [Guard AI-assisted platform contributions with policy and context](../concepts/guard-ai-assisted-platform-contributions-with-policy-and-context.md) - platform contribution paths need both hard policy and agent-readable conventions.
+- [Standardize development environments around common model priors](../concepts/standardize-development-environments-around-common-model-priors.md) - standardized local toolchains are infrastructure for both human and agent productivity.
+- [Make validation fast, local, deterministic, and actionable](../concepts/make-validation-fast-local-deterministic-and-actionable.md) - fast local validation gives agents useful repair feedback before CI.
 
 ## Open Questions
 
@@ -131,6 +133,7 @@ Developer-platform infrastructure also needs to be consumable by agents. Self-se
 - Which AI asset registry fields should be enforced by CI/CD rather than manually maintained after deployment?
 - Which BI catalog and semantic-layer metadata should be mandatory before an analytics agent can generate or execute SQL?
 - Which local workstation workloads should stay local because privacy, queueing, or latency matter more than elastic scale?
+- Which CI-only checks should be converted into development-time commands before agents rely on them repeatedly?
 - Which agent handoff contracts, state versions, and recovery transitions should be persisted for audit and replay?
 - Which agent loops need durable result recording to avoid duplicate LLM spend or repeated side effects after crash recovery?
 - How much PII masking and operator verification can voice infrastructure add before latency undermines the realtime workflow?
@@ -175,3 +178,4 @@ Developer-platform infrastructure also needs to be consumable by agents. Self-se
 - [OpenAI + @Temporalio : Building Durable, Production Ready Agents - Cornelia Davis, Temporal](../sources/20260112_k8cnVCMYmNc.md)
 - [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](../sources/20251223_LU9KgcZDRfY.md)
 - [Building durable Agents with Workflow DevKit & AI SDK - Peter Wielander, Vercel](../sources/20260106_kmV-qg4uoNI.md)
+- [Developer Experience in the Age of AI Coding Agents - Max Kanat-Alexander, Capital One](../sources/20251223_rT2Del5pwg4.md)

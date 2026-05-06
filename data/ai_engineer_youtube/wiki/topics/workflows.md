@@ -32,7 +32,7 @@ For AI app reliability work, build evals at the start of the workflow rather tha
 
 DSPy-style workflows separate program shape from prompt shape: teams can define signatures and modules, route inputs through ordinary control flow, select adapters for model-facing format, and then optimize the resulting program with datasets and metrics. This is most useful when the task has known examples and quality criteria, not when the workflow is too open-ended to score. Prompt-learning workflows should likewise be made explicit: start from examples with feedback, choose sample size and train/test split, run bounded generate/evaluate/refine loops, and review whether evaluator feedback is trustworthy enough to drive the next prompt.
 
-For coding agents, this workflow can be attached directly to rule files: run the agent on benchmark issues, collect test and judge feedback, use a meta-prompt to draft rule changes, diff the resulting prompt context, and rerun the benchmark before adopting the rules.
+For coding agents, this workflow can be attached directly to rule files: run the agent on benchmark issues, collect test and judge feedback, use a meta-prompt to draft rule changes, diff the resulting prompt context, and rerun the benchmark before adopting the rules. The same workflow pressure applies to DevEx basics: fast local validation, written external context, clear turn-taking in review, and assigned review ownership keep agent iteration from becoming slow CI loops and rubber-stamped PRs.
 
 Agent-native organizational workflows start with supervision, dispatch, and review of agent work as a normal daily rhythm. This only works when the organization also adapts hiring and onboarding: employees need enough AI fluency to turn domain expertise into agent instructions, review artifacts, and role-specific agent setup.
 
@@ -185,6 +185,8 @@ Enterprise AI research workflows can be made fundable by turning each uncertain 
 - [Human taste limits fully dark coding factories](../concepts/human-taste-limits-fully-dark-coding-factories.md) - iterative product work should keep human judgment in the loop.
 - [Plugin architectures let agent systems absorb experiments](../concepts/plugin-architectures-let-agent-systems-absorb-experiments.md) - extension workflows let experiments proceed without overloading core maintainers.
 - [Let agent harnesses extend through ordinary code packages](../concepts/let-agent-harnesses-extend-through-ordinary-code-packages.md) - package-based extension workflows keep optional harness behavior out of core.
+- [Make validation fast, local, deterministic, and actionable](../concepts/make-validation-fast-local-deterministic-and-actionable.md) - coding-agent workflows need quick checks that can guide the next iteration.
+- [Standardize development environments around common model priors](../concepts/standardize-development-environments-around-common-model-priors.md) - workflow reliability improves when agents operate in conventional local environments.
 
 ## Open Questions
 
@@ -216,6 +218,7 @@ Enterprise AI research workflows can be made fundable by turning each uncertain 
 - Which recurring quality rituals remain useful when agents can generate most of the underlying fix?
 - Which workflow phases should communicate through durable artifacts instead of sharing one long agent context?
 - Which prompt surfaces should be refreshed during long-running agent work as context gets compacted or paged out?
+- Which code-review workflow signals should explicitly mark whose turn it is to act after comments, replies, or new commits?
 - Which enterprise AI research stages produce enough standalone business value to justify continued funding even if the full agent vision changes?
 - Which multi-agent workflows need saga-style compensation because partial side effects are unacceptable?
 - Which human-in-the-loop waits should be durable workflow state instead of application-owned queues or ad hoc jobs?
@@ -278,6 +281,7 @@ Enterprise AI research workflows can be made fundable by turning each uncertain 
 - [Build a Prompt Learning Loop - SallyAnn DeLucia & Fuad Ali, Arize](../sources/20260106_SbcQYbrvAfI.md)
 - [The Unreasonable Effectiveness of Prompt Learning - Aparna Dhinakaran, Arize](../sources/20251223_pP_dSNz_EdQ.md)
 - [Building durable Agents with Workflow DevKit & AI SDK - Peter Wielander, Vercel](../sources/20260106_kmV-qg4uoNI.md)
+- [Developer Experience in the Age of AI Coding Agents - Max Kanat-Alexander, Capital One](../sources/20251223_rT2Del5pwg4.md)
 - [Claude Agent SDK [Full Workshop] - Thariq Shihipar, Anthropic](../sources/20260105_TqC1qOfiVcQ.md)
 - [Building Intelligent Research Agents with Manus - Ivan Leo, Manus AI (now Meta Superintelligence)](../sources/20251230_xz0-brt56L8.md)
 - [OpenAI + @Temporalio : Building Durable, Production Ready Agents - Cornelia Davis, Temporal](../sources/20260112_k8cnVCMYmNc.md)
