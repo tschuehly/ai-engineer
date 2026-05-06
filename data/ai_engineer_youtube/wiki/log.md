@@ -319,3 +319,11 @@
 - Updated topics: [Generative Media](topics/generative-media.md), [Models](topics/models.md), [Inference](topics/inference.md), [Tools](topics/tools.md)
 - Updated concepts: [Curate Generative-Media Data Before Tuning Model Internals](concepts/curate-generative-media-data-before-tuning-model-internals.md), [Train Image and Video Diffusion Models in Learned Latent Spaces](concepts/train-image-and-video-diffusion-models-in-learned-latent-spaces.md), [Use Guidance to Trade Diffusion Sample Diversity for Conditional Quality](concepts/use-guidance-to-trade-diffusion-sample-diversity-for-conditional-quality.md), [Distill Diffusion Models to Reduce Sampling Steps](concepts/distill-diffusion-models-to-reduce-sampling-steps.md), [Expose Explicit Control Signals for Generative Media Models](concepts/expose-explicit-control-signals-for-generative-media-models.md)
 - Notes: Added a generative-media slice covering data curation, learned latent diffusion representations, sampling guidance, distillation for latency, and explicit image/video controls.
+
+## [2026-05-06] ingest | Full Workshop: Build Your Own Deep Research Agents - Louis-François Bouchard, Paul Iusztin, Samridhi
+
+- Source: [Full Workshop: Build Your Own Deep Research Agents - Louis-François Bouchard, Paul Iusztin, Samridhi](sources/20260420_mYSRn6PC1mc.md)
+- Processed: `mYSRn6PC1mc`
+- Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Choose Autonomy Level by Task Uncertainty and Control Needs](concepts/choose-autonomy-level-by-task-uncertainty-and-control-needs.md), [Deep Research Agents Need Planning, Grounded Evidence, and Pivot Loops](concepts/deep-research-agents-need-planning-grounded-evidence-and-pivot-loops.md), [Split Exploratory Research Agents From Constrained Writing Workflows](concepts/split-exploratory-research-agents-from-constrained-writing-workflows.md), [Calibrate LLM Judges Like Binary Classifiers](concepts/calibrate-llm-judges-like-binary-classifiers.md)
+- Notes: Added deep-research architecture patterns for choosing autonomy level, grounding research with cited pivot loops, separating research from writing through artifacts, and validating LLM judges with labeled splits.

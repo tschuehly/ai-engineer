@@ -1,0 +1,25 @@
+# Calibrate LLM Judges Like Binary Classifiers
+
+Summary: LLM judges should be treated as evaluators that need their own validation. For pass/fail rubrics, align the judge with domain-expert labels, tune it on a development split, and validate it on a held-out test split with precision/recall-aware metrics.
+
+Use when:
+- Building an LLM-as-judge evaluator for generated content, workflow outputs, or agent traces.
+- Deciding whether a judge prompt is reliable enough to gate workflow changes.
+
+Details:
+- The workshop treats an LLM judge as a binary classifier that outputs pass/fail labels rather than as an inherently trustworthy oracle. 01:43:43-01:44:15
+- Judge reliability is defined as alignment with a domain expert, measured against labeled dev/test data splits. 01:44:15-01:44:33
+- The development loop runs the judge on the dev split, computes F1 score, adjusts the judge prompt and examples, and repeats until performance converges. 01:44:44-01:45:28
+- The held-out test split is used only after calibration as the final validation step, analogous to ordinary binary-classifier evaluation. 01:45:31-01:45:45
+- F1 is used because it combines precision and recall, which matters for pass/fail judges where both false approvals and false rejections can distort workflow quality. 01:44:47-01:44:58
+
+Related topics:
+- [Evaluation](../topics/evaluation.md)
+- [Workflows](../topics/workflows.md)
+
+Related concepts:
+- [Validate eval harnesses before trusting skill scores](validate-eval-harnesses-before-trusting-skill-scores.md)
+- [Use golden data sets and mixed scoring functions for AI application confidence](use-golden-data-sets-and-mixed-scoring-functions-for-ai-application-confidence.md)
+
+Sources:
+- [Full Workshop: Build Your Own Deep Research Agents - Louis-François Bouchard, Paul Iusztin, Samridhi](../sources/20260420_mYSRn6PC1mc.md), 01:43:43-01:45:45
