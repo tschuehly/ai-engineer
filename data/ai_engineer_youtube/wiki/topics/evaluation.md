@@ -24,6 +24,8 @@ LLM program optimization adds another eval loop: define known inputs and outputs
 
 Coding-agent prompt learning turns that evaluation loop into a system-prompt update path: baseline the agent on tasks such as SWE-bench Lite, run generated patches through tests, ask judges for explanatory diagnoses, synthesize rules from the diagnoses, and rerun the benchmark to check whether agent behavior actually improved without weight changes.
 
+Anti-slop evaluation should be provenance-neutral. Human and AI outputs can both be low-quality, inauthentic, inaccurate, insecure, or unmaintainable, so the release question is whether the artifact meets the bar. Agent autonomy claims need the same discipline: unattended runtime is only meaningful when paired with tests, review findings, security evidence, maintainability judgment, and human ownership.
+
 ## Key Concepts
 
 - [Evaluate agent trajectories with backtests and smell metrics](../concepts/evaluate-agent-trajectories-with-backtests-and-smell-metrics.md) - flexible tool-loop agents need historical and trajectory-level checks.
@@ -32,6 +34,8 @@ Coding-agent prompt learning turns that evaluation loop into a system-prompt upd
 - [Measure AI developer productivity with field experiments, not benchmark extrapolation alone](../concepts/measure-ai-developer-productivity-with-field-experiments-not-benchmark-extrapolation-alone.md) - real experienced-developer work can diverge from lab capability curves.
 - [Benchmark saturation pushes capability evals toward human time horizons](../concepts/benchmark-saturation-pushes-capability-evals-toward-human-time-horizons.md) - benchmark scores become less informative as task sets saturate.
 - [Reliability thresholds determine whether coding agents save time](../concepts/reliability-thresholds-determine-whether-coding-agents-save-time.md) - productivity depends on total prompting, review, correction, and handoff cost.
+- [Treat slop as a quality failure, not an AI provenance label](../concepts/treat-slop-as-a-quality-failure-not-an-ai-provenance-label.md) - quality gates should inspect the output rather than treating origin as the whole judgment.
+- [Do not report agent autonomy without quality accountability](../concepts/do-not-report-agent-autonomy-without-quality-accountability.md) - long autonomous runs need quality evidence before they count as capability.
 - [Self-reported task duration is a weak productivity signal](../concepts/self-reported-task-duration-is-a-weak-productivity-signal.md) - speedup estimates should not rest on recalled elapsed time.
 - [Separate watched and unwatched agent time horizons](../concepts/separate-watched-and-unwatched-agent-time-horizons.md) - autonomy evals should record whether close monitoring is part of the result.
 - [Make agent work more trustworthy by making it verifiable](../concepts/make-agent-work-more-trustworthy-by-making-it-verifiable.md) - agent autonomy depends on whether tasks have direct checks, proxy checks, or safe constraints.
@@ -89,6 +93,7 @@ Coding-agent prompt learning turns that evaluation loop into a system-prompt upd
 - [AI output speed can overwhelm review capacity](../concepts/ai-output-speed-can-overwhelm-review-capacity.md) - generated-code throughput should be evaluated against the team's ability to inspect and own the resulting changes.
 - [Keep critical code inside human understanding and review capacity](../concepts/keep-critical-code-inside-human-understanding-and-review-capacity.md) - agent evals should account for whether humans can still read and own critical changes.
 - [Agent-legible codebases reduce generated-code entropy](../concepts/agent-legible-codebases-reduce-generated-code-entropy.md) - structural constraints and lint rules make agent output easier to check and less likely to hide accidental behavior.
+- [Use AI to scale codebase understanding against code slop](../concepts/use-ai-to-scale-codebase-understanding-against-code-slop.md) - code maps and related AI tools can improve the evidence available for review.
 - [Use reviewer agents and lints to turn review lessons into guardrails](../concepts/use-reviewer-agents-and-lints-to-turn-review-lessons-into-guardrails.md) - recurring findings can become automatic reliability, security, and interface-quality checks.
 - [AI-generated security reports need maintainer triage](../concepts/ai-generated-security-reports-need-maintainer-triage.md) - automated vulnerability reports and fixes still require human review before action.
 - [Gate AI-generated open-source contributions through human-effort filters](../concepts/gate-ai-generated-open-source-contributions-through-human-effort-filters.md) - short human-authored issue requirements can filter low-signal generated submissions.
@@ -201,3 +206,4 @@ Coding-agent prompt learning turns that evaluation loop into a system-prompt upd
 - [AGI: The Path Forward - Jason Warner & Eiso Kant, Poolside](../sources/20251227_OGCG_QkCcZo.md)
 - [Shipping AI That Works: An Evaluation Framework for PMs - Aman Khan, Arize](../sources/20251226_2HNSG990Ew8.md)
 - [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](../sources/20251223_LU9KgcZDRfY.md)
+- [No More Slop - swyx](../sources/20251222_IoiHI7p12Ao.md)

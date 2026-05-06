@@ -34,6 +34,8 @@ DSPy-style workflows separate program shape from prompt shape: teams can define 
 
 For coding agents, this workflow can be attached directly to rule files: run the agent on benchmark issues, collect test and judge feedback, use a meta-prompt to draft rule changes, diff the resulting prompt context, and rerun the benchmark before adopting the rules. The same workflow pressure applies to DevEx basics: fast local validation, written external context, clear turn-taking in review, and assigned review ownership keep agent iteration from becoming slow CI loops and rubber-stamped PRs.
 
+Anti-slop workflows should separate quality from provenance. Human and AI work can both be low-quality, inaccurate, or insecure, so the workflow should ask for evidence instead of accepting line count, engagement, or autonomous runtime as progress. AI can still be part of the anti-slop loop when it helps curate what is worth attention, creates code maps that improve codebase understanding, operates development tools through computer use, or sends commoditized work through asynchronous agents while humans keep clear design boundaries.
+
 Agent-native organizational workflows start with supervision, dispatch, and review of agent work as a normal daily rhythm. This only works when the organization also adapts hiring and onboarding: employees need enough AI fluency to turn domain expertise into agent instructions, review artifacts, and role-specific agent setup.
 
 Enterprise AI research workflows can be made fundable by turning each uncertain phase into a small productizable bet. For GenBI, the useful pattern is to work with production-like but controlled data, involve expert users early, ship six-week deliverables such as metadata enrichment or report discovery, and preserve stop/go decision points so leadership can keep funding tied to measurable value instead of sunk cost.
@@ -151,6 +153,8 @@ Enterprise AI research workflows can be made fundable by turning each uncertain 
 - [Maintain ubiquitous language for AI coding](../concepts/maintain-ubiquitous-language-for-ai-coding.md) - workflow artifacts should reuse shared domain terms across prompts, code, and tests.
 - [Limit agent change size by feedback speed](../concepts/limit-agent-change-size-by-feedback-speed.md) - workflow gates should keep agent changes small enough for available checks.
 - [AI output speed can overwhelm review capacity](../concepts/ai-output-speed-can-overwhelm-review-capacity.md) - workflow throughput should be limited by responsible review, not only by how fast agents can produce code.
+- [Treat slop as a quality failure, not an AI provenance label](../concepts/treat-slop-as-a-quality-failure-not-an-ai-provenance-label.md) - anti-slop workflows judge output quality rather than origin.
+- [Do not report agent autonomy without quality accountability](../concepts/do-not-report-agent-autonomy-without-quality-accountability.md) - autonomous workflow duration needs review, safety, and maintainability evidence.
 - [Keep critical code inside human understanding and review capacity](../concepts/keep-critical-code-inside-human-understanding-and-review-capacity.md) - critical workflow output should remain small enough for direct human ownership.
 - [Agent-legible codebases reduce generated-code entropy](../concepts/agent-legible-codebases-reduce-generated-code-entropy.md) - workflow reliability improves when the codebase exposes clear flow, primitives, and search targets to agents.
 - [Use human judgment gates for high-risk agent code changes](../concepts/use-human-judgment-gates-for-high-risk-agent-code-changes.md) - review systems should route mechanical fixes to agents while pausing risk-bearing changes for human judgment.
@@ -187,6 +191,7 @@ Enterprise AI research workflows can be made fundable by turning each uncertain 
 - [Let agent harnesses extend through ordinary code packages](../concepts/let-agent-harnesses-extend-through-ordinary-code-packages.md) - package-based extension workflows keep optional harness behavior out of core.
 - [Make validation fast, local, deterministic, and actionable](../concepts/make-validation-fast-local-deterministic-and-actionable.md) - coding-agent workflows need quick checks that can guide the next iteration.
 - [Standardize development environments around common model priors](../concepts/standardize-development-environments-around-common-model-priors.md) - workflow reliability improves when agents operate in conventional local environments.
+- [Use AI to scale codebase understanding against code slop](../concepts/use-ai-to-scale-codebase-understanding-against-code-slop.md) - workflows can use AI for mapping, inspecting, and routing code work instead of only generating more code.
 
 ## Open Questions
 
@@ -288,4 +293,5 @@ Enterprise AI research workflows can be made fundable by turning each uncertain 
 - [AGI: The Path Forward - Jason Warner & Eiso Kant, Poolside](../sources/20251227_OGCG_QkCcZo.md)
 - [Shipping AI That Works: An Evaluation Framework for PMs - Aman Khan, Arize](../sources/20251226_2HNSG990Ew8.md)
 - [The Agent Native Company — Rick Blalock, Agentuity](../sources/20250603_0ZPAvzhpGjw.md)
+- [No More Slop - swyx](../sources/20251222_IoiHI7p12Ao.md)
 - [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](../sources/20251223_LU9KgcZDRfY.md)

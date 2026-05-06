@@ -711,3 +711,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Standardize Development Environments Around Common Model Priors](concepts/standardize-development-environments-around-common-model-priors.md), [Make Validation Fast, Local, Deterministic, and Actionable](concepts/make-validation-fast-local-deterministic-and-actionable.md), [Agent Software Factories Need Runnable, Contextual, and Verifiable Primitives](concepts/agent-software-factories-need-runnable-contextual-and-verifiable-primitives.md), [Agent-Legible Codebases Reduce Generated-Code Entropy](concepts/agent-legible-codebases-reduce-generated-code-entropy.md), [Agent experience prioritizes APIs, CLIs, and MCP over dashboards](concepts/agent-experience-prioritizes-apis-clis-and-mcp-over-dashboards.md), [AI Output Speed Can Overwhelm Review Capacity](concepts/ai-output-speed-can-overwhelm-review-capacity.md)
 - Notes: Added a DevEx readiness slice that treats conventional toolchains, direct agent action surfaces, local validation, written intent, and review apprenticeship as agent-productivity infrastructure.
+
+## [2026-05-07] ingest | No More Slop - swyx
+
+- Source: [No More Slop - swyx](sources/20251222_IoiHI7p12Ao.md)
+- Processed: `IoiHI7p12Ao`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Treat slop as a quality failure, not an AI provenance label](concepts/treat-slop-as-a-quality-failure-not-an-ai-provenance-label.md), [Do not report agent autonomy without quality accountability](concepts/do-not-report-agent-autonomy-without-quality-accountability.md), [Use AI to scale codebase understanding against code slop](concepts/use-ai-to-scale-codebase-understanding-against-code-slop.md)
+- Notes: Added swyx's anti-slop framing for judging output quality by evidence, accountability, and codebase understanding rather than by AI provenance, line count, or autonomous runtime.
