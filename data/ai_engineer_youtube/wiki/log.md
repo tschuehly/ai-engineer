@@ -503,3 +503,11 @@
 - Updated topics: [Voice Agents](topics/voice-agents.md), [Workflows](topics/workflows.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md)
 - Updated concepts: [Preserve Speaker Channels Before Voice-Agent Transcription](concepts/preserve-speaker-channels-before-voice-agent-transcription.md), [Extract Contact-Center Intelligence as Structured JSON](concepts/extract-contact-center-intelligence-as-structured-json.md), [Verify AI Call Summaries Before CRM Sync](concepts/verify-ai-call-summaries-before-crm-sync.md)
 - Notes: Added contact-center voice intelligence guidance covering channel-preserving audio capture, STT preparation, grounded structured JSON extraction, PII masking, operator verification, and CRM sync.
+
+## [2026-05-06] ingest | Bending a Public MCP Server Without Breaking It — Nimrod Hauser, Baz
+
+- Source: [Bending a Public MCP Server Without Breaking It — Nimrod Hauser, Baz](sources/20260408_U00AOI1eJUE.md)
+- Processed: `U00AOI1eJUE`
+- Updated topics: [Tools](topics/tools.md), [Infrastructure](topics/infrastructure.md), [Agents](topics/agents.md)
+- Updated concepts: [Adapt Third-Party MCP Servers to the Agent Workflow](concepts/adapt-third-party-mcp-servers-to-the-agent-workflow.md), [Wrap Generic Tool Descriptions With Use-Case Guidance](concepts/wrap-generic-tool-descriptions-with-use-case-guidance.md), [Enforce Deterministic Guardrails Around Sensitive Tool Calls](concepts/enforce-deterministic-guardrails-around-sensitive-tool-calls.md), [Move Mandatory Brittle Tool Steps Outside the Agent Loop](concepts/move-mandatory-brittle-tool-steps-outside-the-agent-loop.md)
+- Notes: Added production MCP adaptation guidance covering public-tool curation, task-specific descriptions, pre-invocation guardrails, composed evidence tools, and deterministic setup steps.
