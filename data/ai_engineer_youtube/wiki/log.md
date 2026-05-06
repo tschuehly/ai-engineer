@@ -167,3 +167,11 @@
 - Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Models](topics/models.md), [Tools](topics/tools.md), [Voice Agents](topics/voice-agents.md), [Workflows](topics/workflows.md), [Evaluation](topics/evaluation.md)
 - Updated concepts: [Use Hosted Model Playgrounds to Prototype Before Owning Infrastructure](concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md), [Compare Models by Task, Thinking Budget, Cost, and Latency](concepts/compare-models-by-task-thinking-budget-cost-and-latency.md), [Sandboxed Code Execution Turns Model Reasoning Into Inspectable Computation](concepts/sandboxed-code-execution-turns-model-reasoning-into-inspectable-computation.md), [Realtime Multimodal Models Should Plan Over Specialized Local Actuators](concepts/realtime-multimodal-models-should-plan-over-specialized-local-actuators.md)
 - Notes: Added Google AI Studio and Gemini/Gemma workflow patterns for fast prototyping, empirical model routing, sandboxed computation, and realtime multimodal planning over specialized execution components.
+
+## [2026-05-06] ingest | OpenAI Codex Masterclass  - Vaibhav Srivastav & Katia Gil Guzman
+
+- Source: [OpenAI Codex Masterclass  - Vaibhav Srivastav & Katia Gil Guzman](sources/20260429_MhHEGMFCEB0.md)
+- Processed: `MhHEGMFCEB0`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Unified Coding-Agent Harnesses Combine Models, Tools, Environments, and Safety](concepts/unified-coding-agent-harnesses-combine-models-tools-environments-and-safety.md), [Isolate Parallel Coding Work With Project Worktrees](concepts/isolate-parallel-coding-work-with-project-worktrees.md), [Customize Subagents by Task, Model, Tools, and Permissions](concepts/customize-subagents-by-task-model-tools-and-permissions.md), [Use Agent Hooks to Automate Session Rituals](concepts/use-agent-hooks-to-automate-session-rituals.md), [Route High-Impact Agent Actions Through Explicit Human Approval Gates](concepts/route-high-impact-agent-actions-through-explicit-human-approval-gates.md)
+- Notes: Added Codex platform patterns for harness design, isolated parallel work, scoped subagents, privilege approval, and lifecycle hooks.
