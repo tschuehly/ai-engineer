@@ -207,3 +207,11 @@
 - Updated topics: [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md)
 - Updated concepts: [Mature Eval Platforms From Spreadsheets Into Experiment Systems](concepts/mature-eval-platforms-from-spreadsheets-into-experiment-systems.md), [Connect Production Observability to Offline Eval Loops](concepts/connect-production-observability-to-offline-eval-loops.md), [Agent Traces Require Specialized Eval Infrastructure](concepts/agent-traces-require-specialized-eval-infrastructure.md)
 - Notes: Added Braintrust eval-platform patterns for collaborative experiment systems, production trace feedback loops, and trace infrastructure constraints.
+
+## [2026-05-06] ingest | Scaling GitHub for your Agents — Sam Morrow, GitHub
+
+- Source: [Scaling GitHub for your Agents — Sam Morrow, GitHub](sources/20260427_0n3MKk7r60w.md)
+- Processed: `0n3MKk7r60w`
+- Updated topics: [Agents](topics/agents.md), [Tools](topics/tools.md), [Infrastructure](topics/infrastructure.md), [Evaluation](topics/evaluation.md)
+- Updated concepts: [MCP tool surfaces need default context budgets](concepts/mcp-tool-surfaces-need-default-context-budgets.md), [Encode agent intent into server-side tools](concepts/encode-agent-intent-into-server-side-tools.md), [Filter MCP tools by scopes and step-up authorization](concepts/filter-mcp-tools-by-scopes-and-step-up-authorization.md), [Stateless remote MCP servers rebuild allowed tools per request](concepts/stateless-remote-mcp-servers-rebuild-allowed-tools-per-request.md)
+- Notes: Added GitHub MCP production-server patterns for context-budgeted tool defaults, intent-level tool design, OAuth and scope-shaped access, and stateless horizontal scaling.

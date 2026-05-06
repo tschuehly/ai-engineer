@@ -2,7 +2,7 @@
 
 ## Overview
 
-AI infrastructure spans local training environments, edge deployment, server-side inference operations, observability systems, identity systems, and the product systems that meter expensive AI usage. Edge AI needs a path from model conversion through quantization, runtime integration, accelerator selection, and fleet validation; CPU/GPU deployment can use a shared artifact, while NPU deployment may require ahead-of-time vendor compilation behind a consistent app API. Server-side small-model inference needs model-aware runtimes plus routing, queueing, autoscaling, observability, and GPU provisioning so many specialized models can run efficiently in production. Production AI applications also need managed prompts, tools, scoring functions, trace metadata, and online scoring automation so local prototypes can become monitored systems. Eval and observability infrastructure for agents must handle production traces that are text-heavy, semi-structured, large, and high velocity, then make those traces usable for offline replay and online scoring. Local training work adds a smaller-scale infrastructure lesson: choose a setup that can run on MPS, CUDA, CPU, or Colab, and keep the model, tokenizer, and batch sizing proportional to the available memory. AI monetization adds a billing-infrastructure lesson: usage caps, threshold notifications, top-ups, rate limits, and detailed metering protect customers and providers when AI calls can burn spend unexpectedly. Enterprise MCP deployments need identity infrastructure as well: centrally managed cross-app trust can reduce local standing credentials and make agent tool access revocable through SSO.
+AI infrastructure spans local training environments, edge deployment, server-side inference operations, observability systems, identity systems, and the product systems that meter expensive AI usage. Edge AI needs a path from model conversion through quantization, runtime integration, accelerator selection, and fleet validation; CPU/GPU deployment can use a shared artifact, while NPU deployment may require ahead-of-time vendor compilation behind a consistent app API. Server-side small-model inference needs model-aware runtimes plus routing, queueing, autoscaling, observability, and GPU provisioning so many specialized models can run efficiently in production. Production AI applications also need managed prompts, tools, scoring functions, trace metadata, and online scoring automation so local prototypes can become monitored systems. Eval and observability infrastructure for agents must handle production traces that are text-heavy, semi-structured, large, and high velocity, then make those traces usable for offline replay and online scoring. Local training work adds a smaller-scale infrastructure lesson: choose a setup that can run on MPS, CUDA, CPU, or Colab, and keep the model, tokenizer, and batch sizing proportional to the available memory. AI monetization adds a billing-infrastructure lesson: usage caps, threshold notifications, top-ups, rate limits, and detailed metering protect customers and providers when AI calls can burn spend unexpectedly. Enterprise MCP deployments need identity infrastructure as well: centrally managed cross-app trust can reduce local standing credentials and make agent tool access revocable through SSO. Remote MCP infrastructure also needs ordinary horizontal-scaling discipline: session storage, observability, policy-derived tool surfaces, and stateless request handling keep large tool-call volumes from depending on one stateful server process.
 
 ## Key Concepts
 
@@ -25,6 +25,8 @@ AI infrastructure spans local training environments, edge deployment, server-sid
 - [Cloud agents turn coding work into asynchronous VM-backed queues](../concepts/cloud-agents-turn-coding-work-into-asynchronous-vm-backed-queues.md) - VM-backed environments can isolate and parallelize coding-agent execution.
 - [Cross-app access centralizes MCP authentication through the identity provider](../concepts/cross-app-access-centralizes-mcp-authentication-through-the-identity-provider.md) - IdP-managed trust bridges MCP clients and servers across enterprise applications.
 - [Short-lived IdP-derived tokens reduce standing MCP access](../concepts/short-lived-idp-derived-tokens-reduce-standing-mcp-access.md) - short-lived access tokens improve revocation behavior for MCP tools.
+- [Stateless remote MCP servers rebuild allowed tools per request](../concepts/stateless-remote-mcp-servers-rebuild-allowed-tools-per-request.md) - stateless request handling and shared session storage let remote MCP servers scale horizontally.
+- [Filter MCP tools by scopes and step-up authorization](../concepts/filter-mcp-tools-by-scopes-and-step-up-authorization.md) - authorization state should shape the runtime tool surface exposed to agents.
 
 ## Open Questions
 
@@ -36,6 +38,7 @@ AI infrastructure spans local training environments, edge deployment, server-sid
 - Which agent trace fields should be normalized versus stored as text blobs so replay and scoring remain performant?
 - Which operational data belongs in code-backed infrastructure when agents are responsible for maintaining it?
 - Which MCP credentials should be replaced by IdP-backed exchanges so offboarding and compromise response flow through SSO policy?
+- Which MCP session fields are worth storing centrally when request routing should remain stateless?
 
 ## Sources
 
@@ -51,3 +54,4 @@ AI infrastructure spans local training environments, edge deployment, server-sid
 - [OpenAI Codex Masterclass  - Vaibhav Srivastav & Katia Gil Guzman](../sources/20260429_MhHEGMFCEB0.md)
 - [Building your own software factory — Eric Zakariasson, Cursor](../sources/20260428_rnDm57Py54A.md)
 - [One Login to Rule Them All: Cross-App Access for MCP - Garrett Galow, WorkOS](../sources/20260428_EmhRyw6xeT0.md)
+- [Scaling GitHub for your Agents — Sam Morrow, GitHub](../sources/20260427_0n3MKk7r60w.md)
