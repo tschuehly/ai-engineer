@@ -12,13 +12,14 @@ Agent-facing products should treat APIs and CLIs as primary interfaces once agen
 
 MCP is one part of the agent connectivity stack, not a universal replacement for every surface. Skills carry reusable domain knowledge, CLIs and computer use fit local sandboxed environments, and MCP fits remote semantics, authorization, governance, resources, long-running tasks, and cross-client application surfaces. MCP applications and skills over MCP point to a richer server-authored surface where an integration can ship UI, tools, and current usage guidance together.
 
-Open-source agent tools need extension points as well as integrations. Plugin architecture can keep memory, wiki, dreaming, and other experimental capabilities installable without forcing every idea into core or overloading maintainers with unrelated pull requests. Ordinary package-manager distribution can be enough for harness extensions when extensions are just code modules that add tools, commands, events, providers, or compaction behavior.
+Open-source agent tools need extension points as well as integrations. Plugin architecture can keep memory, wiki, dreaming, and other experimental capabilities installable without forcing every idea into core or overloading maintainers with unrelated pull requests. Ordinary package-manager distribution can be enough for harness extensions when extensions are just code modules that add tools, commands, events, providers, or compaction behavior. Routine systems are another tool layer: they package repeated prompts as scheduled or manually parameterized workflows, often invoking skills for specialized domain guidance while keeping the trigger, variables, and project or agent ownership explicit.
 
 Tool metadata is also a security boundary. MCP and function-calling systems should treat full tool descriptions, hidden parameters, and approval summaries as prompt and policy surfaces, because a model may act on instructions the reviewer never saw. High-risk tools need approval UI that exposes the effective action and guardrails that inspect the full model-visible metadata.
 
 ## Key Concepts
 
 - [Sandboxed code execution turns model reasoning into inspectable computation](../concepts/sandboxed-code-execution-turns-model-reasoning-into-inspectable-computation.md) - sandboxed execution gives models computation tools while limiting local side effects.
+- [Reusable Routines Turn Prompts Into Operational Agent Workflows](../concepts/reusable-routines-turn-prompts-into-operational-agent-workflows.md) - routines turn repeated prompts into explicit tool workflows with schedules, variables, and skill references.
 - [Build internal AI engineering platforms when off-the-shelf tools lack enterprise context](../concepts/build-internal-ai-engineering-platforms-when-off-the-shelf-tools-lack-enterprise-context.md) - enterprise tool platforms may need custom context and integrations around existing engineering systems.
 - [Collaborate with complex agents through high-bandwidth artifacts](../concepts/collaborate-with-complex-agents-through-high-bandwidth-artifacts.md) - documents, tables, and comments can be tool surfaces for precise human-agent collaboration.
 - [Encode domain judgment in node-level agent skills](../concepts/encode-domain-judgment-in-node-level-agent-skills.md) - skills can provide contextual guidance at the work node where a special case appears.
@@ -146,3 +147,4 @@ Tool metadata is also a security boundary. MCP and function-calling systems shou
 - [State of the Claw - Peter Steinberger](../sources/20260417_zgNvts_2TUE.md)
 - [Building pi in a World of Slop - Mario Zechner](../sources/20260416_RjfbvDXpFls.md)
 - [$1 AI Guardrails: The Unreasonable Effectiveness of Finetuned ModernBERTs - Diego Carpentero](../sources/20260416_YZHPEkfy2kc.md)
+- [Paperclip: Open Source Human Control Plane for AI Labor - Dotta Bippa](../sources/20260415_h403btjldDQ.md)

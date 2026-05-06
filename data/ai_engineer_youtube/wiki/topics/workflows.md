@@ -12,9 +12,15 @@ Compressed research is a lower-risk operations pattern: keep the business event 
 
 Open-source agent workflows have their own bottleneck: AI can generate more reports, PRs, and fixes than maintainers can safely absorb. Projects need triage loops, contribution boundaries, foundation or company support for sustained maintenance, extension points so experiments can happen without turning every idea into core-review load, and human-effort filters that require concise contributor context before maintainers spend review time.
 
+Org-chart agent workflows add a business-operations control surface: assign work through roles, keep plans and tasks visible, route completion through reviewer and approver agents, and convert repeated prompts into scheduled or manually parameterized routines. They should grow from the smallest useful agent set because role behavior, skill use, budgets, model cost, and concurrency all need validation before fan-out.
+
 ## Key Concepts
 
 - [Use hosted model playgrounds to prototype before owning infrastructure](../concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md) - hosted playgrounds can compress the path from idea to model, API, app, and cloud deployment experiment.
+- [Human Control Planes Turn Agent Swarms Into Manageable Organizations](../concepts/human-control-planes-turn-agent-swarms-into-manageable-organizations.md) - workflows need visible organizational state when many agents work in parallel.
+- [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](../concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md) - explicit role handoffs turn validation from a reminder into a workflow path.
+- [Reusable Routines Turn Prompts Into Operational Agent Workflows](../concepts/reusable-routines-turn-prompts-into-operational-agent-workflows.md) - repeated prompts can become scheduled or manually triggered routines with variables and skills.
+- [Grow Agent Organizations Incrementally By Role Quality and Cost](../concepts/grow-agent-organizations-incrementally-by-role-quality-and-cost.md) - workflow fan-out should follow observed quality and cost fit.
 - [Do not use token volume as a developer productivity metric](../concepts/do-not-use-token-volume-as-a-developer-productivity-metric.md) - workflow metrics should not reward token generation over useful delivery.
 - [AI-amplified shipping speed needs stronger product taste](../concepts/ai-amplified-shipping-speed-needs-stronger-product-taste.md) - AI-assisted workflows need explicit no-saying and root-problem discovery before implementation.
 - [Quality Wednesdays train engineers to notice small regressions](../concepts/quality-wednesdays-train-engineers-to-notice-small-regressions.md) - recurring quality review turns product polish into team practice.
@@ -170,3 +176,4 @@ Open-source agent workflows have their own bottleneck: AI can generate more repo
 - [Harness Engineering: How to Build Software When Humans Steer, Agents Execute - Ryan Lopopolo, OpenAI](../sources/20260417_am_oeAoUhew.md)
 - [State of the Claw - Peter Steinberger](../sources/20260417_zgNvts_2TUE.md)
 - [Building pi in a World of Slop - Mario Zechner](../sources/20260416_RjfbvDXpFls.md)
+- [Paperclip: Open Source Human Control Plane for AI Labor - Dotta Bippa](../sources/20260415_h403btjldDQ.md)

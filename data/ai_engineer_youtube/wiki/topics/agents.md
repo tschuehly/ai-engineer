@@ -8,7 +8,7 @@ Agent workflows depend on both model capability and the context substrate around
 
 Code mode pushes tool-surface constraints into execution architecture. Model-written code can compress broad APIs and multi-step tool loops, but the harness should start generated code with no ambient authority and grant task-scoped capabilities with observable execution.
 
-Harness engineering treats the agent runtime, repository, documentation, lints, reviewer agents, and tests as the control plane for abundant agent capacity. If implementation becomes cheap, agent work still needs durable team knowledge and distributed prompt surfaces that keep context refreshed as long-running work pages information in and out of the model context window.
+Harness engineering treats the agent runtime, repository, documentation, lints, reviewer agents, and tests as the control plane for abundant agent capacity. If implementation becomes cheap, agent work still needs durable team knowledge and distributed prompt surfaces that keep context refreshed as long-running work pages information in and out of the model context window. Human control planes extend that idea beyond coding by making role hierarchies, projects, tasks, memories, budgets, and live handoff state visible so many heterogeneous agents can be supervised without scattering work across independent chat tabs.
 
 Vertical agents need a trust/control design around complex work trees. Make subwork verifiable where possible through tests, proxy checks, decomposition, and guardrails; encode domain judgment in skills at the relevant work-tree node; and use persistent artifacts such as documents or tabular reviews when humans need to inspect or steer only the affected part of the work. The human operator's role is closer to tech-lead orchestration than people management: agents can multiply parallel action, but useful leverage still depends on task framing, review, product judgment, and workflow-specific practice.
 
@@ -19,6 +19,9 @@ Agent security has to treat autonomy as an attack multiplier. Prompt injection, 
 ## Key Concepts
 
 - [Sandboxed code execution turns model reasoning into inspectable computation](../concepts/sandboxed-code-execution-turns-model-reasoning-into-inspectable-computation.md) - executable sandboxes let agents compute and verify without touching the user's environment.
+- [Human Control Planes Turn Agent Swarms Into Manageable Organizations](../concepts/human-control-planes-turn-agent-swarms-into-manageable-organizations.md) - org-chart, project, task, budget, and memory surfaces make large agent organizations supervisable.
+- [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](../concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md) - explicit review and approval roles enforce quality gates better than prompt-only reminders.
+- [Grow Agent Organizations Incrementally By Role Quality and Cost](../concepts/grow-agent-organizations-incrementally-by-role-quality-and-cost.md) - start with needed roles, tune behavior, and route model cost by job importance before fanning out.
 - [Harness engineering shifts scarcity from code production to control surfaces](../concepts/harness-engineering-shifts-scarcity-from-code-production-to-control-surfaces.md) - agent abundance increases the importance of systems for steering and validating work.
 - [Treat prompts as distributed harness surfaces](../concepts/treat-prompts-as-distributed-harness-surfaces.md) - harnesses can refresh instructions through rules, skills, lints, tests, and review comments.
 - [AI pushes software engineers toward broader product and operations ownership](../concepts/ai-pushes-software-engineers-toward-broader-product-and-operations-ownership.md) - agent-augmented engineers need broader ownership and orchestration skills.
@@ -197,3 +200,4 @@ Agent security has to treat autonomy as an attack multiplier. Prompt injection, 
 - [State of the Claw - Peter Steinberger](../sources/20260417_zgNvts_2TUE.md)
 - [Building pi in a World of Slop - Mario Zechner](../sources/20260416_RjfbvDXpFls.md)
 - [$1 AI Guardrails: The Unreasonable Effectiveness of Finetuned ModernBERTs - Diego Carpentero](../sources/20260416_YZHPEkfy2kc.md)
+- [Paperclip: Open Source Human Control Plane for AI Labor - Dotta Bippa](../sources/20260415_h403btjldDQ.md)

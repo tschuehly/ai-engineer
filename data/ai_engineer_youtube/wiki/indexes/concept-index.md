@@ -2,6 +2,9 @@
 
 ## Agents
 
+- [Human Control Planes Turn Agent Swarms Into Manageable Organizations](../concepts/human-control-planes-turn-agent-swarms-into-manageable-organizations.md)
+- [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](../concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md)
+- [Grow Agent Organizations Incrementally By Role Quality and Cost](../concepts/grow-agent-organizations-incrementally-by-role-quality-and-cost.md)
 - [Make agent work more trustworthy by making it verifiable](../concepts/make-agent-work-more-trustworthy-by-making-it-verifiable.md)
 - [LLM attack surfaces span prompts, context, retrieval, tools, and actions](../concepts/llm-attack-surfaces-span-prompts-context-retrieval-tools-and-actions.md)
 - [LLM guardrails need checkpoints at every untrusted boundary](../concepts/llm-guardrails-need-checkpoints-at-every-untrusted-boundary.md)
@@ -116,6 +119,8 @@
 ## Coding Agents
 
 - [Ralph loops process one ticket at a time with fresh context](../concepts/ralph-loops-process-one-ticket-at-a-time-with-fresh-context.md)
+- [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](../concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md)
+- [Reusable Routines Turn Prompts Into Operational Agent Workflows](../concepts/reusable-routines-turn-prompts-into-operational-agent-workflows.md)
 - [Practice-driven AI tool fluency beats theory-only adoption](../concepts/practice-driven-ai-tool-fluency-beats-theory-only-adoption.md)
 - [AI pushes software engineers toward broader product and operations ownership](../concepts/ai-pushes-software-engineers-toward-broader-product-and-operations-ownership.md)
 - [Harness engineering shifts scarcity from code production to control surfaces](../concepts/harness-engineering-shifts-scarcity-from-code-production-to-control-surfaces.md)
@@ -286,6 +291,7 @@
 
 ## Evaluation
 
+- [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](../concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md)
 - [Fine-tuned encoder discriminators make low-latency guardrails practical](../concepts/fine-tuned-encoder-discriminators-make-low-latency-guardrails-practical.md)
 - [LLM guardrails need checkpoints at every untrusted boundary](../concepts/llm-guardrails-need-checkpoints-at-every-untrusted-boundary.md)
 - [Human approval can hide tool-description and parameter risk](../concepts/human-approval-can-hide-tool-description-and-parameter-risk.md)
@@ -345,6 +351,7 @@
 
 ## Models
 
+- [Grow Agent Organizations Incrementally By Role Quality and Cost](../concepts/grow-agent-organizations-incrementally-by-role-quality-and-cost.md)
 - [Fine-tuned encoder discriminators make low-latency guardrails practical](../concepts/fine-tuned-encoder-discriminators-make-low-latency-guardrails-practical.md)
 - [Treat edge models as their own architecture class](../concepts/treat-edge-models-as-their-own-architecture-class.md)
 - [Route Gemma 4 model variants by deployment and workflow shape](../concepts/route-gemma-4-model-variants-by-deployment-and-workflow-shape.md)
@@ -400,6 +407,7 @@
 
 ## Tools
 
+- [Reusable Routines Turn Prompts Into Operational Agent Workflows](../concepts/reusable-routines-turn-prompts-into-operational-agent-workflows.md)
 - [Human approval can hide tool-description and parameter risk](../concepts/human-approval-can-hide-tool-description-and-parameter-risk.md)
 - [LLM guardrails need checkpoints at every untrusted boundary](../concepts/llm-guardrails-need-checkpoints-at-every-untrusted-boundary.md)
 - [Build internal AI engineering platforms when off-the-shelf tools lack enterprise context](../concepts/build-internal-ai-engineering-platforms-when-off-the-shelf-tools-lack-enterprise-context.md)
@@ -471,6 +479,10 @@
 
 ## Workflows
 
+- [Human Control Planes Turn Agent Swarms Into Manageable Organizations](../concepts/human-control-planes-turn-agent-swarms-into-manageable-organizations.md)
+- [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](../concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md)
+- [Reusable Routines Turn Prompts Into Operational Agent Workflows](../concepts/reusable-routines-turn-prompts-into-operational-agent-workflows.md)
+- [Grow Agent Organizations Incrementally By Role Quality and Cost](../concepts/grow-agent-organizations-incrementally-by-role-quality-and-cost.md)
 - [Make agent work more trustworthy by making it verifiable](../concepts/make-agent-work-more-trustworthy-by-making-it-verifiable.md)
 - [Do not use token volume as a developer productivity metric](../concepts/do-not-use-token-volume-as-a-developer-productivity-metric.md)
 - [Practice-driven AI tool fluency beats theory-only adoption](../concepts/practice-driven-ai-tool-fluency-beats-theory-only-adoption.md)

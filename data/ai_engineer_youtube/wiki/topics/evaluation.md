@@ -6,7 +6,7 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 
 Incoming AI-generated work needs evaluation too: automated security reports, issues, pull requests, and fixes can be high-volume and plausible, but maintainers still need to triage them because false reports, low-context fixes, and rushed patches can consume review capacity or break the product. Contribution gates that demand concise human context can be a practical first-pass evaluator before maintainers inspect a generated diff.
 
-Guardrail evaluation is also part of production AI evaluation. Safety layers should be tested at the same boundaries where attacks enter: direct prompts, external context, RAG chunks, MCP tool descriptions, memory, agent plans, and model responses. For latency-sensitive paths, a fine-tuned encoder discriminator can be evaluated as a binary classifier and compared against slower LLM-as-judge checks, while human approval flows should be tested for whether reviewers see the effective action and hidden parameters they are approving.
+Guardrail evaluation is also part of production AI evaluation. Safety layers should be tested at the same boundaries where attacks enter: direct prompts, external context, RAG chunks, MCP tool descriptions, memory, agent plans, and model responses. For latency-sensitive paths, a fine-tuned encoder discriminator can be evaluated as a binary classifier and compared against slower LLM-as-judge checks, while human approval flows should be tested for whether reviewers see the effective action and hidden parameters they are approving. Multi-agent organizations add another evaluation question: does the workflow actually force review, approval, and role-specific quality checks, or are those still best-effort prompt instructions?
 
 ## Key Concepts
 
@@ -24,6 +24,7 @@ Guardrail evaluation is also part of production AI evaluation. Safety layers sho
 - [Demand-driven context pulls knowledge from failed work rather than pushing a complete knowledge base upfront](../concepts/demand-driven-context-pulls-knowledge-from-failed-work.md) - agent failures provide concrete test cases for missing context.
 - [Feedback turns coding-agent loops into prompt and skill improvement cycles](../concepts/feedback-turns-coding-agent-loops-into-prompt-and-skill-improvement-cycles.md) - tests, review, and generated critiques should improve later loop runs.
 - [Use independent validation contexts to reduce agent confirmation bias](../concepts/use-independent-validation-contexts-to-reduce-agent-confirmation-bias.md) - separate review agents can reduce self-affirming validation.
+- [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](../concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md) - review and approval roles make validation an enforceable workflow stage.
 - [Choose plan-heavy or review-heavy agent workflows by task shape](../concepts/choose-plan-heavy-or-review-heavy-agent-workflows-by-task-shape.md) - task shape determines whether upfront specification or review iteration is the more efficient validation path.
 - [Evaluate agent skills with task scenarios and comparative conditions](../concepts/evaluate-agent-skills-with-task-scenarios-and-comparative-conditions.md) - task scenarios and with/without comparisons reveal whether a skill changes behavior.
 - [Evaluate workspace isolation with positive and negative filesystem scorers](../concepts/evaluate-workspace-isolation-with-positive-and-negative-filesystem-scorers.md) - workspace evals should check both intended isolated edits and forbidden primary-checkout edits.
@@ -122,3 +123,4 @@ Guardrail evaluation is also part of production AI evaluation. Safety layers sho
 - [State of the Claw - Peter Steinberger](../sources/20260417_zgNvts_2TUE.md)
 - [Building pi in a World of Slop - Mario Zechner](../sources/20260416_RjfbvDXpFls.md)
 - [$1 AI Guardrails: The Unreasonable Effectiveness of Finetuned ModernBERTs - Diego Carpentero](../sources/20260416_YZHPEkfy2kc.md)
+- [Paperclip: Open Source Human Control Plane for AI Labor - Dotta Bippa](../sources/20260415_h403btjldDQ.md)
