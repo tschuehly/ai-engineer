@@ -175,3 +175,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Unified Coding-Agent Harnesses Combine Models, Tools, Environments, and Safety](concepts/unified-coding-agent-harnesses-combine-models-tools-environments-and-safety.md), [Isolate Parallel Coding Work With Project Worktrees](concepts/isolate-parallel-coding-work-with-project-worktrees.md), [Customize Subagents by Task, Model, Tools, and Permissions](concepts/customize-subagents-by-task-model-tools-and-permissions.md), [Use Agent Hooks to Automate Session Rituals](concepts/use-agent-hooks-to-automate-session-rituals.md), [Route High-Impact Agent Actions Through Explicit Human Approval Gates](concepts/route-high-impact-agent-actions-through-explicit-human-approval-gates.md)
 - Notes: Added Codex platform patterns for harness design, isolated parallel work, scoped subagents, privilege approval, and lifecycle hooks.
+
+## [2026-05-06] ingest | Everything I Learned Training Frontier Small Models - Maxime Labonne, Liquid AI
+
+- Source: [Everything I Learned Training Frontier Small Models - Maxime Labonne, Liquid AI](sources/20260429_fLUtUkqYHnQ.md)
+- Processed: `fLUtUkqYHnQ`
+- Updated topics: [Agents](topics/agents.md), [Edge Inference](topics/edge-inference.md), [Evaluation](topics/evaluation.md), [Inference](topics/inference.md), [Models](topics/models.md)
+- Updated concepts: [Treat Edge Models as Their Own Architecture Class](concepts/treat-edge-models-as-their-own-architecture-class.md), [Profile Small-Model Architectures on Target Hardware](concepts/profile-small-model-architectures-on-target-hardware.md), [Post-Train Small Models for Narrow Capabilities](concepts/post-train-small-models-for-narrow-capabilities.md), [Mitigate Small-Model Doom Loops During Preference Alignment and RL](concepts/mitigate-small-model-doom-loops-during-preference-alignment-and-rl.md)
+- Notes: Added Liquid AI small-model training patterns for edge-specific architecture, target-device profiling, focused post-training, and doom-loop mitigation.

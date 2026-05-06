@@ -13,6 +13,7 @@ Agent workflows depend on both model capability and the context substrate around
 - [Customize subagents by task, model, tools, and permissions](../concepts/customize-subagents-by-task-model-tools-and-permissions.md) - specialist subagents should match role, model, tools, and authority to the task.
 - [Enterprise agent failures often expose missing institutional knowledge](../concepts/enterprise-agent-failures-expose-missing-institutional-knowledge.md) - task failures can reveal missing enterprise knowledge rather than insufficient model capability.
 - [Use small models as context-management tools before agent reasoning](../concepts/use-small-models-as-context-management-tools-before-agent-reasoning.md) - narrow models can filter, classify, retrieve, or extract context before the main agent reasons.
+- [Post-train small models for narrow capabilities](../concepts/post-train-small-models-for-narrow-capabilities.md) - small models should be tuned for focused tasks such as extraction and tool use instead of broad chatbot behavior.
 - [Ralph loops process one ticket at a time with fresh context](../concepts/ralph-loops-process-one-ticket-at-a-time-with-fresh-context.md) - coding agents can be constrained to one work item, one validation cycle, and a clean handoff.
 - [Use independent validation contexts to reduce agent confirmation bias](../concepts/use-independent-validation-contexts-to-reduce-agent-confirmation-bias.md) - separate review contexts can catch failures the producing agent rationalizes away.
 - [Coding agents shift engineering work toward planning and review](../concepts/coding-agents-shift-engineering-work-toward-planning-and-review.md) - code generation moves human leverage toward task definition, QA, review, and deployment follow-through.
@@ -54,6 +55,7 @@ Agent workflows depend on both model capability and the context substrate around
 ## Open Questions
 
 - Which classes of tool calls are reliable enough for small on-device models without cloud fallback?
+- Which agentic tools best compensate for small models' weak knowledge and long-context capacity?
 - How should agents distinguish missing institutional knowledge from ambiguous task instructions?
 - When is a small-model preprocessing step worth its latency and operational complexity compared with giving the main agent more raw context?
 - How much autonomy should coding agents receive before independent validation and permission boundaries become mandatory?
@@ -77,6 +79,7 @@ Agent workflows depend on both model capability and the context substrate around
 ## Sources
 
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md)
+- [Everything I Learned Training Frontier Small Models - Maxime Labonne, Liquid AI](../sources/20260429_fLUtUkqYHnQ.md)
 - [Accelerating AI on Edge - Chintan Parikh and Weiyi Wang, Google DeepMind](../sources/20260505_Lm8BLHkxiAo.md)
 - [Demand-Driven Context: A Methodology for Coherent Knowledge Bases Through Agent Failure](../sources/20260505__QAVExf_1uw.md)
 - [The Small Model Infrastructure Nobody Built (So We Did) - Filip Makraduli, Superlinked](../sources/20260505_qdh_x-uRs9g.md)

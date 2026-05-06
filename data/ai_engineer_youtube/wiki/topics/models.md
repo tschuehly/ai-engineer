@@ -2,11 +2,15 @@
 
 ## Overview
 
-Model work in this wiki covers how AI engineers choose, train, adapt, and deploy model architectures under real constraints. The current sources show two complementary views: small or edge models make deployment practical when memory, latency, privacy, and accelerator access matter, while from-scratch local training exposes the tokenizer, architecture, training-loop, and inference choices that are often hidden behind high-level APIs. Tiny models add a third pattern: specialize and fine-tune narrow components, then compose them into a product workflow.
+Model work in this wiki covers how AI engineers choose, train, adapt, and deploy model architectures under real constraints. The current sources show two complementary views: small or edge models make deployment practical when memory, latency, privacy, and accelerator access matter, while from-scratch local training exposes the tokenizer, architecture, training-loop, and inference choices that are often hidden behind high-level APIs. Edge-scale models should be treated as their own architecture class, profiled on target hardware, and post-trained for narrow capabilities rather than judged as miniature general-purpose chatbots. Tiny models add a third pattern: specialize and fine-tune narrow components, then compose them into a product workflow.
 
 ## Key Concepts
 
 - [Compare models by task, thinking budget, cost, and latency](../concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - model choice should be routed by workload constraints rather than by size alone.
+- [Treat edge models as their own architecture class](../concepts/treat-edge-models-as-their-own-architecture-class.md) - memory-bound edge models need architecture and training choices optimized for local latency and limited effective parameters.
+- [Profile small-model architectures on target hardware](../concepts/profile-small-model-architectures-on-target-hardware.md) - operator choices should be validated on the CPUs, phones, GPUs, and accelerators that will run the model.
+- [Post-train small models for narrow capabilities](../concepts/post-train-small-models-for-narrow-capabilities.md) - data extraction, tool use, and other focused tasks are better targets than average performance across every benchmark.
+- [Mitigate small-model doom loops during preference alignment and RL](../concepts/mitigate-small-model-doom-loops-during-preference-alignment-and-rl.md) - tiny reasoning models need post-training checks for repetitive loops that SFT may not remove.
 - [Match Gemma edge model size to device memory and interaction class](../concepts/match-gemma-edge-model-size-to-device-memory-and-interaction-class.md) - model size is an engineering decision tied to device capability and product interaction.
 - [Use small models as context-management tools before agent reasoning](../concepts/use-small-models-as-context-management-tools-before-agent-reasoning.md) - specialized small models can prepare context before a larger reasoning model is invoked.
 - [Local LLM training exposes the core model-building stack](../concepts/local-llm-training-exposes-the-core-model-building-stack.md) - local from-scratch training clarifies the core pieces behind model behavior.
@@ -19,10 +23,12 @@ Model work in this wiki covers how AI engineers choose, train, adapt, and deploy
 - How should tokenizer decisions change when a model must support mixed modalities or mixed domains rather than a single constrained corpus?
 - Which lightweight generated-sample checks complement train/validation loss for tiny local model runs?
 - When is a modular set of fine-tuned tiny models preferable to one larger model with prompting or skills?
+- Which small-model failures should be fixed with architecture, post-training data, runtime tools, or product task narrowing?
 
 ## Sources
 
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md)
+- [Everything I Learned Training Frontier Small Models - Maxime Labonne, Liquid AI](../sources/20260429_fLUtUkqYHnQ.md)
 - [Accelerating AI on Edge - Chintan Parikh and Weiyi Wang, Google DeepMind](../sources/20260505_Lm8BLHkxiAo.md)
 - [The Small Model Infrastructure Nobody Built (So We Did) - Filip Makraduli, Superlinked](../sources/20260505_qdh_x-uRs9g.md)
 - [Training an LLM from Scratch, Locally - Angelos Perivolaropoulos, ElevenLabs](../sources/20260504_UsB70Tf5zcE.md)
