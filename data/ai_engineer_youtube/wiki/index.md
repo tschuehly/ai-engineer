@@ -40,6 +40,8 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Shared cloud workspaces make agent sessions collaborative](concepts/shared-cloud-workspaces-make-agent-sessions-collaborative.md) - cloud-backed sessions let teammates and agents share prompts, code, terminals, previews, and PR context.
 - [Spatial agent maps expose filesystem-level lineage and collisions](concepts/spatial-agent-maps-expose-filesystem-level-lineage-and-collisions.md) - parallel agent work becomes easier to supervise when file activity, changelists, and likely collisions are visible.
 - [Use PRDs to align agents on the design concept](concepts/use-prds-to-align-agents-on-the-design-concept.md) - planning artifacts should capture shared intent, implementation decisions, and testing decisions before agent coding.
+- [Limit agent change size by feedback speed](concepts/limit-agent-change-size-by-feedback-speed.md) - generated code volume should stay inside the available test, type-check, and review loop.
+- [Use deep modules to make agent work testable](concepts/use-deep-modules-to-make-agent-work-testable.md) - simple module interfaces help humans validate agent-written internals from outside.
 - [Retire completed planning docs before they become agent doc rot](concepts/retire-completed-planning-docs-before-they-become-agent-doc-rot.md) - historical PRDs can mislead agents after code and requirements diverge.
 
 ## Topics

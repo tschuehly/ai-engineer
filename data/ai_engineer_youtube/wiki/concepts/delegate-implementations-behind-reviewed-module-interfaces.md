@@ -11,6 +11,8 @@ Details:
 - The proposed mitigation is to design module interfaces and behavioral contracts, then delegate implementation details behind those interfaces. (01:20:19-01:20:38)
 - Review can focus on whether a module behaves under specified conditions instead of inspecting every internal detail. (01:20:36-01:21:07)
 - End-to-end module tests can expose a complete flow to the agent; the example wraps browser video-editor behavior so the agent can see, change, and test the whole path. (01:22:16-01:23:02)
+- A later source frames the same tradeoff through deep modules: humans should design the interface, test from outside, and delegate internals only where the module is not critical enough to demand close implementation review. (15:40-16:31)
+- Module maps should become part of planning context so PRDs specify affected modules, interface changes, and design responsibilities before the agent writes code. (16:32-16:57)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -21,7 +23,8 @@ Related concepts:
 - [Agent software factories need runnable, contextual, and verifiable primitives](agent-software-factories-need-runnable-contextual-and-verifiable-primitives.md)
 - [Use golden data sets and mixed scoring functions for AI application confidence](use-golden-data-sets-and-mixed-scoring-functions-for-ai-application-confidence.md)
 - [Choose plan-heavy or review-heavy agent workflows by task shape](choose-plan-heavy-or-review-heavy-agent-workflows-by-task-shape.md)
+- [Use deep modules to make agent work testable](use-deep-modules-to-make-agent-work-testable.md)
 
 Sources:
 - [Full Walkthrough: Workflow for AI Coding - Matt Pocock](../sources/20260424_-QFHIoCo-Ko.md), 01:19:43-01:23:02
-
+- ["Software Fundamentals Matter More Than Ever" - Matt Pocock](../sources/20260423_v4F1gFy-hqg.md), 15:40-16:57

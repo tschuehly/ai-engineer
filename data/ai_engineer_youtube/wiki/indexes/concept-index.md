@@ -114,6 +114,9 @@
 - [Collaborative plans become executable agent context](../concepts/collaborative-plans-become-executable-agent-context.md)
 - [Social context dashboards keep agentic teams oriented](../concepts/social-context-dashboards-keep-agentic-teams-oriented.md)
 - [Use PRDs to align agents on the design concept](../concepts/use-prds-to-align-agents-on-the-design-concept.md)
+- [Maintain ubiquitous language for AI coding](../concepts/maintain-ubiquitous-language-for-ai-coding.md)
+- [Limit agent change size by feedback speed](../concepts/limit-agent-change-size-by-feedback-speed.md)
+- [Use deep modules to make agent work testable](../concepts/use-deep-modules-to-make-agent-work-testable.md)
 - [Retire completed planning docs before they become agent doc rot](../concepts/retire-completed-planning-docs-before-they-become-agent-doc-rot.md)
 - [Delegate implementations behind reviewed module interfaces](../concepts/delegate-implementations-behind-reviewed-module-interfaces.md)
 - [Run parallel issue agents in sandboxes with review and merge loops](../concepts/run-parallel-issue-agents-in-sandboxes-with-review-and-merge-loops.md)
@@ -140,6 +143,7 @@
 - [Collaborative plans become executable agent context](../concepts/collaborative-plans-become-executable-agent-context.md)
 - [Social context dashboards keep agentic teams oriented](../concepts/social-context-dashboards-keep-agentic-teams-oriented.md)
 - [Use PRDs to align agents on the design concept](../concepts/use-prds-to-align-agents-on-the-design-concept.md)
+- [Maintain ubiquitous language for AI coding](../concepts/maintain-ubiquitous-language-for-ai-coding.md)
 - [Retire completed planning docs before they become agent doc rot](../concepts/retire-completed-planning-docs-before-they-become-agent-doc-rot.md)
 
 ## Edge Inference
@@ -231,6 +235,8 @@
 - [Automation loops convert repeated review and triage into factory improvements](../concepts/automation-loops-convert-repeated-review-and-triage-into-factory-improvements.md)
 - [Encode agent intent into server-side tools](../concepts/encode-agent-intent-into-server-side-tools.md)
 - [Delegate implementations behind reviewed module interfaces](../concepts/delegate-implementations-behind-reviewed-module-interfaces.md)
+- [Limit agent change size by feedback speed](../concepts/limit-agent-change-size-by-feedback-speed.md)
+- [Use deep modules to make agent work testable](../concepts/use-deep-modules-to-make-agent-work-testable.md)
 
 ## Models
 
@@ -378,5 +384,8 @@
 - [Use hosted model playgrounds to prototype before owning infrastructure](../concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md)
 - [Compare models by task, thinking budget, cost, and latency](../concepts/compare-models-by-task-thinking-budget-cost-and-latency.md)
 - [Use PRDs to align agents on the design concept](../concepts/use-prds-to-align-agents-on-the-design-concept.md)
+- [Maintain ubiquitous language for AI coding](../concepts/maintain-ubiquitous-language-for-ai-coding.md)
+- [Limit agent change size by feedback speed](../concepts/limit-agent-change-size-by-feedback-speed.md)
+- [Use deep modules to make agent work testable](../concepts/use-deep-modules-to-make-agent-work-testable.md)
 - [Delegate implementations behind reviewed module interfaces](../concepts/delegate-implementations-behind-reviewed-module-interfaces.md)
 - [Run parallel issue agents in sandboxes with review and merge loops](../concepts/run-parallel-issue-agents-in-sandboxes-with-review-and-merge-loops.md)

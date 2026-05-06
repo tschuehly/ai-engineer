@@ -279,3 +279,11 @@
 - Updated topics: [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Single-Chat Personal Agents Collapse Mixed Life Domains](concepts/single-chat-personal-agents-collapse-mixed-life-domains.md), [Purpose-Built Agent Workspaces Make Orchestration Visible](concepts/purpose-built-agent-workspaces-make-orchestration-visible.md), [Explicit Context Attachments Can Outperform Opaque Agent Memory](concepts/explicit-context-attachments-can-outperform-opaque-agent-memory.md), [Local OS Agents Can Invert the Prompt Flow](concepts/local-os-agents-can-invert-the-prompt-flow.md)
 - Notes: Added personal-agent workspace patterns for domain separation, visible orchestration, explicit context attachment, and local OS-level proactive task flow.
+
+## [2026-05-06] ingest | "Software Fundamentals Matter More Than Ever" - Matt Pocock
+
+- Source: ["Software Fundamentals Matter More Than Ever" - Matt Pocock](sources/20260423_v4F1gFy-hqg.md)
+- Processed: `v4F1gFy-hqg`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Use PRDs to Align Agents on the Design Concept](concepts/use-prds-to-align-agents-on-the-design-concept.md), [Maintain Ubiquitous Language for AI Coding](concepts/maintain-ubiquitous-language-for-ai-coding.md), [Limit Agent Change Size by Feedback Speed](concepts/limit-agent-change-size-by-feedback-speed.md), [Use Deep Modules to Make Agent Work Testable](concepts/use-deep-modules-to-make-agent-work-testable.md), [Delegate Implementations Behind Reviewed Module Interfaces](concepts/delegate-implementations-behind-reviewed-module-interfaces.md)
+- Notes: Added Matt Pocock's software-fundamentals frame for AI coding: specs-to-code entropy caveats, shared design interviews, domain language, feedback-speed limits, TDD, and deep module boundaries.
