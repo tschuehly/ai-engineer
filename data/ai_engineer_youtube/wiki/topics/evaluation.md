@@ -16,6 +16,8 @@ Contact-center voice evaluation should inspect each pipeline stage, not only the
 
 RL environments add an evaluation shape for interactive model behavior: the same environment can generate rollouts, compute deterministic or weighted rewards, and become the training loop. That makes the environment itself part of the eval artifact. Teams should control environment noise, inspect trajectories, check for hidden opponent or simulator bias, and try the trained model in the real task before trusting reward curves or benchmark scores.
 
+Long-horizon coding demos should be evaluated as workflows, not as one impressive final answer. Poolside's Ada-to-Rust demo includes visible diffs, build output, generated test commands, Bash scripts, manual reruns, and feature-level checks; those surfaces are the evidence that a multi-step coding agent did useful work rather than only producing a convincing summary.
+
 LLM program optimization adds another eval loop: define known inputs and outputs, write metrics that reflect the desired behavior, evaluate the base program, then let an optimizer propose improved prompts or modules. Metric breakdowns should be inspected after optimization because a gain can mean the metric is useful, the data is underspecified, or the program needs decomposition. Prompt-learning loops add a related requirement: labels and scalar scores are weaker than feedback that explains why an output failed and points to violated instructions, missing context, or rule-level noncompliance. The optimizer also inherits evaluator quality, so prompt-improvement systems should test their LLM judges, rule checkers, data splits, and loop budgets before trusting apparent prompt gains.
 
 ## Key Concepts
@@ -46,6 +48,7 @@ LLM program optimization adds another eval loop: define known inputs and outputs
 - [Validate eval harnesses before trusting skill scores](../concepts/validate-eval-harnesses-before-trusting-skill-scores.md) - incorrect assertions or judges can misreport skill impact.
 - [Use loss curves to debug local model training](../concepts/use-loss-curves-to-debug-local-model-training.md) - train and validation loss patterns separate non-learning, overfitting, and instability.
 - [Build RL environments as software artifacts](../concepts/build-rl-environments-as-software-artifacts.md) - stateful environments can evaluate interactive tasks that static datasets do not capture.
+- [Pair next-token prediction with reinforcement learning for long-horizon work](../concepts/pair-next-token-prediction-with-reinforcement-learning-for-long-horizon-work.md) - agentic capability claims should be checked against task completion and rollout behavior.
 - [Use verifiable rewards for language-model RL](../concepts/use-verifiable-rewards-for-language-model-rl.md) - deterministic rewards make environment outcomes usable as eval and training signals.
 - [Control environment noise for group-based RL](../concepts/control-environment-noise-for-group-based-rl.md) - grouped rollout evals need differences to come from model behavior rather than simulator randomness.
 - [Inspect rollouts before trusting RL environment scores](../concepts/inspect-rollouts-before-trusting-rl-environment-scores.md) - strong environment scores can hide biased setup logic or memorized strategies.
@@ -81,6 +84,7 @@ LLM program optimization adds another eval loop: define known inputs and outputs
 - [AI-generated security reports need maintainer triage](../concepts/ai-generated-security-reports-need-maintainer-triage.md) - automated vulnerability reports and fixes still require human review before action.
 - [Gate AI-generated open-source contributions through human-effort filters](../concepts/gate-ai-generated-open-source-contributions-through-human-effort-filters.md) - short human-authored issue requirements can filter low-signal generated submissions.
 - [Use human judgment gates for high-risk agent code changes](../concepts/use-human-judgment-gates-for-high-risk-agent-code-changes.md) - high-impact changes need explicit review gates because local test success may not capture production risk.
+- [Ratchet agent permissions down in high-consequence code environments](../concepts/ratchet-agent-permissions-down-in-high-consequence-code-environments.md) - high-risk coding-agent evaluation should include permission scope and visible verification surfaces.
 - [Use deep modules to make agent work testable](../concepts/use-deep-modules-to-make-agent-work-testable.md) - module interface tests can validate agent-written internals without full-line-by-line review.
 - [Quality Wednesdays train engineers to notice small regressions](../concepts/quality-wednesdays-train-engineers-to-notice-small-regressions.md) - quality rituals create human detection signals for polish issues that metrics may miss.
 - [AI agents still need human taste for interaction quality](../concepts/ai-agents-still-need-human-taste-for-interaction-quality.md) - UI eval needs human judgment when generated interactions are functional but feel wrong.
@@ -178,3 +182,4 @@ LLM program optimization adds another eval loop: define known inputs and outputs
 - [Practical tactics to build reliable AI apps — Dmitry Kuchin, Multinear](../sources/20250803_-T6uZYYzkWw.md)
 - [DSPy: The End of Prompt Engineering - Kevin Madura, AlixPartners](../sources/20260108_-cKUW6n8hBU.md)
 - [Build a Prompt Learning Loop - SallyAnn DeLucia & Fuad Ali, Arize](../sources/20260106_SbcQYbrvAfI.md)
+- [AGI: The Path Forward - Jason Warner & Eiso Kant, Poolside](../sources/20251227_OGCG_QkCcZo.md)

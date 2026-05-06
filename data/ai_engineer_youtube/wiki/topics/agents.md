@@ -28,6 +28,8 @@ TypeScript agent products add a concrete implementation constraint to this durab
 
 Agent APIs need a similar task-lifecycle contract even when the workflow engine is hidden behind a provider API. A long-running agent task should return a stable task ID and task URL, expose states such as running, pending, completed, and error, support polling or webhooks, and let external products continue the same task rather than losing context in a new run. Chat integrations need a correlation layer: Slack thread IDs, users, channels, and statuses should map back to provider task IDs so follow-up messages and final replies land in the visible conversation while deeper execution state stays with the agent service.
 
+As model capability stretches the work horizon, agent interfaces should increasingly treat agents as asynchronous workers. Poolside's demo shows one version inside VS Code, but the same platform is described as having web and downloadable local-agent surfaces; the relevant design lesson is that hour-long and future day-long tasks need visible progress, diff, test, and handoff surfaces rather than a single synchronous response.
+
 The web itself is also becoming an agent surface. Sites can publish `llms.txt` or `llms-full.txt` to guide agents toward the right documentation, and WebMCP-style proposals can expose intended app operations directly so agents do not have to infer every action from screenshots, DOM text, or coordinates.
 
 Internal developer platforms are another agent surface. Practices that already helped human developers, such as self-service provisioning, API-first workflows, local validation, clear documentation, and observable runtime feedback, become prerequisites when coding agents need to deploy, debug, and verify work without tribal human handoffs.
@@ -43,6 +45,7 @@ Internal developer platforms are another agent surface. Practices that already h
 - [Treat multi-agent systems as distributed systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md) - multi-agent scale introduces coordination, stale state, and failure-propagation problems.
 - [Use durable execution for production agent loops](../concepts/use-durable-execution-for-production-agent-loops.md) - production loops should persist LLM calls, tool outputs, and state across crashes and retries.
 - [Treat agent APIs as asynchronous task lifecycles](../concepts/treat-agent-apis-as-asynchronous-task-lifecycles.md) - long-running agent APIs need stable handles, status, continuation, and result delivery.
+- [Treat long-horizon agents as asynchronous workers with evolving interfaces](../concepts/treat-long-horizon-agents-as-asynchronous-workers-with-evolving-interfaces.md) - longer task horizons need visible progress, artifacts, and review surfaces.
 - [Map external conversation threads to agent task IDs](../concepts/map-external-conversation-threads-to-agent-task-ids.md) - Slack, email, and ticket integrations should correlate visible threads with provider-owned task state.
 - [Keep workflow orchestration deterministic and put side effects in steps](../concepts/keep-workflow-orchestration-deterministic-and-put-side-effects-in-steps.md) - durable workflow reruns require side effects to live behind step boundaries.
 - [Use resumable streams as the UI boundary for durable agents](../concepts/use-resumable-streams-as-the-ui-boundary-for-durable-agents.md) - frontend progress can stay stream-oriented while backend execution becomes observable and resumable.
@@ -101,6 +104,7 @@ Internal developer platforms are another agent surface. Practices that already h
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md) - agent products need reusable runtime primitives around the model call.
 - [Use Bash as a composable code-mode tool for agents](../concepts/use-bash-as-a-composable-code-mode-tool-for-agents.md) - shell access can let agents compose local programs and verification steps when authority is controlled.
 - [Layer agent permissions across model behavior, harness parsing, and sandboxing](../concepts/layer-agent-permissions-across-model-behavior-harness-parsing-and-sandboxing.md) - broad shell and filesystem power needs multiple independent guardrail layers.
+- [Ratchet agent permissions down in high-consequence code environments](../concepts/ratchet-agent-permissions-down-in-high-consequence-code-environments.md) - critical data and code environments require narrowly scoped agent authority.
 - [Agent skills should point to current docs instead of embedding every API detail](../concepts/agent-skills-should-point-to-current-docs-instead-of-embedding-every-api-detail.md) - skills should orient agents without making volatile API facts stale.
 - [Realtime multimodal agents use stateful streams for audio, vision, and tools](../concepts/realtime-multimodal-agents-use-stateful-streams-for-audio-vision-and-tools.md) - live agents combine streaming audio, visual context, events, and tools in one stateful session.
 - [Prompt-coded product behavior reduces code but weakens hard guarantees](../concepts/prompt-coded-product-behavior-reduces-code-but-weakens-hard-guarantees.md) - advanced agent workflows can move into prompts, but runtime guarantees may become instruction-following problems.
@@ -278,3 +282,4 @@ Internal developer platforms are another agent surface. Practices that already h
 - [Building durable Agents with Workflow DevKit & AI SDK - Peter Wielander, Vercel](../sources/20260106_kmV-qg4uoNI.md)
 - [Claude Agent SDK [Full Workshop] - Thariq Shihipar, Anthropic](../sources/20260105_TqC1qOfiVcQ.md)
 - [Building Intelligent Research Agents with Manus - Ivan Leo, Manus AI (now Meta Superintelligence)](../sources/20251230_xz0-brt56L8.md)
+- [AGI: The Path Forward - Jason Warner & Eiso Kant, Poolside](../sources/20251227_OGCG_QkCcZo.md)

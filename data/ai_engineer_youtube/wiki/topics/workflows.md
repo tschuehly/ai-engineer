@@ -45,6 +45,7 @@ DSPy-style workflows separate program shape from prompt shape: teams can define 
 - [Control long-running workflow agents through run lifecycle operations](../concepts/control-long-running-workflow-agents-through-run-lifecycle-operations.md) - recurring and waiting agents need cancellation, scheduling, and version controls.
 - [Treat long waits as logical workflow state](../concepts/treat-long-waits-as-logical-workflow-state.md) - long human waits should be resumable workflow state rather than live process occupancy.
 - [Treat agent APIs as asynchronous task lifecycles](../concepts/treat-agent-apis-as-asynchronous-task-lifecycles.md) - API integrations need task IDs, statuses, polling, webhooks, continuation, and errors.
+- [Treat long-horizon agents as asynchronous workers with evolving interfaces](../concepts/treat-long-horizon-agents-as-asynchronous-workers-with-evolving-interfaces.md) - longer work horizons need progress, artifact, and review surfaces around the agent loop.
 - [Map external conversation threads to agent task IDs](../concepts/map-external-conversation-threads-to-agent-task-ids.md) - external collaboration threads should correlate to the agent task that owns their context.
 - [Prototype agent workflows in the UI before hardening the API path](../concepts/prototype-agent-workflows-in-the-ui-before-hardening-the-api-path.md) - prove the repeated work in a richer UI before freezing an integration contract.
 - [Choose choreography or orchestration by complexity and autonomy](../concepts/choose-choreography-or-orchestration-by-complexity-and-autonomy.md) - workflow control should be selected by dependency complexity, autonomy need, and auditability.
@@ -262,3 +263,4 @@ DSPy-style workflows separate program shape from prompt shape: teams can define 
 - [Claude Agent SDK [Full Workshop] - Thariq Shihipar, Anthropic](../sources/20260105_TqC1qOfiVcQ.md)
 - [Building Intelligent Research Agents with Manus - Ivan Leo, Manus AI (now Meta Superintelligence)](../sources/20251230_xz0-brt56L8.md)
 - [OpenAI + @Temporalio : Building Durable, Production Ready Agents - Cornelia Davis, Temporal](../sources/20260112_k8cnVCMYmNc.md)
+- [AGI: The Path Forward - Jason Warner & Eiso Kant, Poolside](../sources/20251227_OGCG_QkCcZo.md)

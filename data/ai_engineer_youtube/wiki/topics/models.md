@@ -8,6 +8,8 @@ Encoder models add a guardrail-specific model pattern. When the job is to classi
 
 Long-tail knowledge adaptation adds a memory-oriented model pattern. When a domain is too private, too new, or too underrepresented for a base model, teams can choose between spending at inference time through context, RAG, or deep-research loops and spending at training time by turning source facts into a model update. The source-backed caveat is that naive fine-tuning can memorize and damage general behavior; useful weight updates need curated data generation, selective update strategies, and regression evaluation.
 
+Long-horizon agent models add a post-training pressure: fluent next-token continuation is not the same as sustained task completion. Poolside's public demo frames reinforcement learning as the missing ingredient for moving from completions and chat toward autonomous software-development and knowledge-work agents, especially when the target behavior spans codebase inspection, translation, testing, feature addition, and iterative verification.
+
 ## Key Concepts
 
 - [Compare models by task, thinking budget, cost, and latency](../concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - model choice should be routed by workload constraints rather than by size alone.
@@ -32,6 +34,7 @@ Long-tail knowledge adaptation adds a memory-oriented model pattern. When a doma
 - [Treat quantization as a memory-bandwidth lever](../concepts/treat-quantization-as-a-memory-bandwidth-lever.md) - precision choices affect throughput and time to first token, not only whether a model fits.
 - [Post-train small models for narrow capabilities](../concepts/post-train-small-models-for-narrow-capabilities.md) - data extraction, tool use, and other focused tasks are better targets than average performance across every benchmark.
 - [Build RL environments as software artifacts](../concepts/build-rl-environments-as-software-artifacts.md) - interactive post-training tasks need runnable environments, parsers, state, and rewards rather than only static examples.
+- [Pair next-token prediction with reinforcement learning for long-horizon work](../concepts/pair-next-token-prediction-with-reinforcement-learning-for-long-horizon-work.md) - long-horizon model behavior needs task-completion feedback beyond fluent continuations.
 - [Use verifiable rewards for language-model RL](../concepts/use-verifiable-rewards-for-language-model-rl.md) - automatic outcome checks can turn task success, format compliance, and action validity into training signals.
 - [Bootstrap RL with targeted SFT before reinforcement learning](../concepts/bootstrap-rl-with-targeted-sft-before-reinforcement-learning.md) - small models may need a syntax and valid-action warm-up before RL can improve strategy.
 - [Control environment noise for group-based RL](../concepts/control-environment-noise-for-group-based-rl.md) - grouped rollout methods need comparable environments, controlled difficulty, and stable batch sizing.
@@ -84,3 +87,4 @@ Long-tail knowledge adaptation adds a memory-oriented model pattern. When a doma
 - [Running LLMs locally: Practical LLM Performance on DGX Spark - Mozhgan Kabiri chimeh, NVIDIA](../sources/20260410_c5-kx2bwoCk.md)
 - [Let LLMs Wander: Engineering RL Environments - Stefano Fiorucci](../sources/20260408_71V3fTaUp2Q.md)
 - [Jack Morris: Stuffing Context is not Memory, Updating Weights is](../sources/20251229_Jty4s9-Jb78.md)
+- [AGI: The Path Forward - Jason Warner & Eiso Kant, Poolside](../sources/20251227_OGCG_QkCcZo.md)

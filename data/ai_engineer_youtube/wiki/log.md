@@ -647,3 +647,11 @@
 - Updated topics: [Context Engineering](topics/context-engineering.md), [Inference](topics/inference.md), [Models](topics/models.md), [Retrieval](topics/retrieval.md)
 - Updated concepts: [Do not treat long context as durable model memory](concepts/do-not-treat-long-context-as-durable-model-memory.md), [Treat embeddings as recoverable sensitive data](concepts/treat-embeddings-as-recoverable-sensitive-data.md), [Train long-tail knowledge into weights with curated synthetic data](concepts/train-long-tail-knowledge-into-weights-with-curated-synthetic-data.md)
 - Notes: Added memory-layer guidance contrasting full context, RAG, embeddings, and weight updates for long-tail private knowledge.
+
+## [2026-05-07] ingest | AGI: The Path Forward - Jason Warner & Eiso Kant, Poolside
+
+- Source: [AGI: The Path Forward - Jason Warner & Eiso Kant, Poolside](sources/20251227_OGCG_QkCcZo.md)
+- Processed: `OGCG_QkCcZo`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Models](topics/models.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Pair next-token prediction with reinforcement learning for long-horizon work](concepts/pair-next-token-prediction-with-reinforcement-learning-for-long-horizon-work.md), [Ratchet agent permissions down in high-consequence code environments](concepts/ratchet-agent-permissions-down-in-high-consequence-code-environments.md), [Treat long-horizon agents as asynchronous workers with evolving interfaces](concepts/treat-long-horizon-agents-as-asynchronous-workers-with-evolving-interfaces.md)
+- Notes: Added Poolside's long-horizon agent framing around RL-backed model training, controlled high-consequence coding environments, and asynchronous agent interfaces with visible verification surfaces.
