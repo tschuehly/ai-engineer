@@ -567,3 +567,11 @@
 - Updated topics: [Agents](topics/agents.md), [Tools](topics/tools.md)
 - Updated concepts: [Identify the Human Subject Behind Agent Actions](concepts/identify-the-human-subject-behind-agent-actions.md), [Route High-Impact Agent Actions Through Explicit Human Approval Gates](concepts/route-high-impact-agent-actions-through-explicit-human-approval-gates.md), [Vault and Exchange Tokens for Scoped Upstream Agent Access](concepts/vault-and-exchange-tokens-for-scoped-upstream-agent-access.md), [Model MCP Servers as OAuth Clients in Downstream API Chains](concepts/model-mcp-servers-as-oauth-clients-in-downstream-api-chains.md)
 - Notes: Added Auth0 identity patterns for user-scoped agent authority, async approval, token-vault scope exchange, and MCP server OAuth client chains.
+
+## [2026-05-06] ingest | Your MCP Server is Bad (and you should feel bad) - Jeremiah Lowin, Prefect
+
+- Source: [Your MCP Server is Bad (and you should feel bad) - Jeremiah Lowin, Prefect](sources/20260112_96G7FLab8xc.md)
+- Processed: `96G7FLab8xc`
+- Updated topics: [Agents](topics/agents.md), [Tools](topics/tools.md)
+- Updated concepts: [Design MCP Servers as Agent Products](concepts/design-mcp-servers-as-agent-products.md), [Translate API Endpoints Into Agent Stories](concepts/translate-api-endpoints-into-agent-stories.md), [MCP Tool Surfaces Need Default Context Budgets](concepts/mcp-tool-surfaces-need-default-context-budgets.md), [Secure MCP Servers by Shrinking the Agent-Visible Surface](concepts/secure-mcp-servers-by-shrinking-the-agent-visible-surface.md)
+- Notes: Added Prefect's MCP design guidance that agent-facing servers should be curated product surfaces built around workflow outcomes, context budgets, and limited model orchestration.
