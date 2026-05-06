@@ -8,6 +8,8 @@ Agent workflows depend on both model capability and the context substrate around
 
 Code mode pushes tool-surface constraints into execution architecture. Model-written code can compress broad APIs and multi-step tool loops, but the harness should start generated code with no ambient authority and grant task-scoped capabilities with observable execution.
 
+Harness engineering treats the agent runtime, repository, documentation, lints, reviewer agents, and tests as the control plane for abundant agent capacity. If implementation becomes cheap, agent work still needs durable team knowledge and distributed prompt surfaces that keep context refreshed as long-running work pages information in and out of the model context window.
+
 Vertical agents need a trust/control design around complex work trees. Make subwork verifiable where possible through tests, proxy checks, decomposition, and guardrails; encode domain judgment in skills at the relevant work-tree node; and use persistent artifacts such as documents or tabular reviews when humans need to inspect or steer only the affected part of the work. The human operator's role is closer to tech-lead orchestration than people management: agents can multiply parallel action, but useful leverage still depends on task framing, review, product judgment, and workflow-specific practice.
 
 The new application layer also changes the economic boundary for automation. Agents make some software viable where traditional applications would have required too much hand-coded business logic, so near-term agent opportunities often come from compressed research, surfacing information already present in company systems, and removing repetitive toil while humans retain final decisions. As agents become users of software, products and infrastructure need agent-facing control surfaces and runtime isolation, not only dashboards and conventional production assumptions. General knowledge-worker agents also need a broader connectivity stack than coding agents: skills, MCP, CLIs, and computer use each carry different assumptions about local execution, sandboxing, remote semantics, governance, and domain guidance.
@@ -15,6 +17,8 @@ The new application layer also changes the economic boundary for automation. Age
 ## Key Concepts
 
 - [Sandboxed code execution turns model reasoning into inspectable computation](../concepts/sandboxed-code-execution-turns-model-reasoning-into-inspectable-computation.md) - executable sandboxes let agents compute and verify without touching the user's environment.
+- [Harness engineering shifts scarcity from code production to control surfaces](../concepts/harness-engineering-shifts-scarcity-from-code-production-to-control-surfaces.md) - agent abundance increases the importance of systems for steering and validating work.
+- [Treat prompts as distributed harness surfaces](../concepts/treat-prompts-as-distributed-harness-surfaces.md) - harnesses can refresh instructions through rules, skills, lints, tests, and review comments.
 - [AI pushes software engineers toward broader product and operations ownership](../concepts/ai-pushes-software-engineers-toward-broader-product-and-operations-ownership.md) - agent-augmented engineers need broader ownership and orchestration skills.
 - [Agents expand the economically viable software surface](../concepts/agents-expand-the-economically-viable-software-surface.md) - cheaper agent-based automation can make more useful software worth building.
 - [Compressed research agents preserve human decision points](../concepts/compressed-research-agents-preserve-human-decision-points.md) - agents can accelerate research while leaving final judgment with humans.
@@ -179,3 +183,4 @@ The new application layer also changes the economic boundary for automation. Age
 - [The Future of MCP - David Soria Parra, Anthropic](../sources/20260419_v3Fr2JR47KA.md)
 - [Code Mode: Let the Code do the Talking - Sunil Pai, Cloudflare](../sources/20260419_8txf05vVVl4.md)
 - [How Google DeepMind is researching the next Frontier of AI for Gemini - Raia Hadsell, VP of Research](../sources/20260418_zZsTVBXcbow.md)
+- [Harness Engineering: How to Build Software When Humans Steer, Agents Execute - Ryan Lopopolo, OpenAI](../sources/20260417_am_oeAoUhew.md)

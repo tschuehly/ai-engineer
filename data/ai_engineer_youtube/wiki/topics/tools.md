@@ -68,6 +68,7 @@ MCP is one part of the agent connectivity stack, not a universal replacement for
 - [Encode agent intent into server-side tools](../concepts/encode-agent-intent-into-server-side-tools.md) - tools can hide multi-call service choreography behind a more reliable agent intent.
 - [Filter MCP tools by scopes and step-up authorization](../concepts/filter-mcp-tools-by-scopes-and-step-up-authorization.md) - scopes and OAuth challenges can shrink tool exposure while preserving workflow continuity.
 - [Stateless remote MCP servers rebuild allowed tools per request](../concepts/stateless-remote-mcp-servers-rebuild-allowed-tools-per-request.md) - remote MCP servers can scale by deriving the allowed tool set on each request.
+- [Treat prompts as distributed harness surfaces](../concepts/treat-prompts-as-distributed-harness-surfaces.md) - rules, skills, lints, PR comments, and tests can act as agent-steering tool surfaces.
 - [Deep research agents need planning, grounded evidence, and pivot loops](../concepts/deep-research-agents-need-planning-grounded-evidence-and-pivot-loops.md) - research tools should support search, inspection, citation, and synthesis.
 - [Split exploratory research agents from constrained writing workflows](../concepts/split-exploratory-research-agents-from-constrained-writing-workflows.md) - Markdown artifacts can be the tool boundary between agentic and deterministic phases.
 
@@ -97,6 +98,7 @@ MCP is one part of the agent connectivity stack, not a universal replacement for
 - Which open-model runtimes and fine-tuning tools need first-class support before a model release is usable by the target developer community?
 - Which MCP applications need web-client rendering support before they are useful, and which should remain tool-only integrations?
 - Which guidance belongs in server-authored skills over MCP instead of client-local skills?
+- Which lint messages or CI comments are important enough to be treated as first-class prompt surfaces?
 
 ## Sources
 
@@ -129,3 +131,4 @@ MCP is one part of the agent connectivity stack, not a universal replacement for
 - [Running LLMs on your iPhone: 40 tok/s Gemma 4 with MLX - Adrien Grondin, Locally AI](../sources/20260420_a2muGkT4WD4.md)
 - [The Future of MCP - David Soria Parra, Anthropic](../sources/20260419_v3Fr2JR47KA.md)
 - [Code Mode: Let the Code do the Talking - Sunil Pai, Cloudflare](../sources/20260419_8txf05vVVl4.md)
+- [Harness Engineering: How to Build Software When Humans Steer, Agents Execute - Ryan Lopopolo, OpenAI](../sources/20260417_am_oeAoUhew.md)

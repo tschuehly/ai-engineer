@@ -42,6 +42,7 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - [Limit agent change size by feedback speed](../concepts/limit-agent-change-size-by-feedback-speed.md) - agent diffs should be constrained by how quickly tests, type checks, and review can provide signal.
 - [AI output speed can overwhelm review capacity](../concepts/ai-output-speed-can-overwhelm-review-capacity.md) - generated-code throughput should be evaluated against the team's ability to inspect and own the resulting changes.
 - [Agent-legible codebases reduce generated-code entropy](../concepts/agent-legible-codebases-reduce-generated-code-entropy.md) - structural constraints and lint rules make agent output easier to check and less likely to hide accidental behavior.
+- [Use reviewer agents and lints to turn review lessons into guardrails](../concepts/use-reviewer-agents-and-lints-to-turn-review-lessons-into-guardrails.md) - recurring findings can become automatic reliability, security, and interface-quality checks.
 - [Use human judgment gates for high-risk agent code changes](../concepts/use-human-judgment-gates-for-high-risk-agent-code-changes.md) - high-impact changes need explicit review gates because local test success may not capture production risk.
 - [Use deep modules to make agent work testable](../concepts/use-deep-modules-to-make-agent-work-testable.md) - module interface tests can validate agent-written internals without full-line-by-line review.
 - [Quality Wednesdays train engineers to notice small regressions](../concepts/quality-wednesdays-train-engineers-to-notice-small-regressions.md) - quality rituals create human detection signals for polish issues that metrics may miss.
@@ -76,6 +77,7 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - Which LLM judge labels are safe to automate, and which still require domain-expert review before calibration?
 - Which domain-specific model variants are reliable enough to replace prompting a general model, and which still need expert review or lab validation?
 - Which generated-world checks best measure memory, consistency, and controllability under long interactive sessions?
+- Which reviewer-agent findings are stable enough to gate CI, and which should remain advisory comments?
 
 ## Sources
 
@@ -106,3 +108,4 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - [Gemma, DeepMind's Family of Open Models - Omar Sanseviero, Google DeepMind](../sources/20260420__gVFUEdhCyI.md)
 - [The Friction is Your Judgment - Armin Ronacher & Cristina Poncela Cubeiro, Earendil](../sources/20260418__Zcw_sVF6hU.md)
 - [How Google DeepMind is researching the next Frontier of AI for Gemini - Raia Hadsell, VP of Research](../sources/20260418_zZsTVBXcbow.md)
+- [Harness Engineering: How to Build Software When Humans Steer, Agents Execute - Ryan Lopopolo, OpenAI](../sources/20260417_am_oeAoUhew.md)

@@ -34,6 +34,8 @@ Product engineering adds a customer-context layer to this problem. If AI handles
 - [Agent skills should point to current docs instead of embedding every API detail](../concepts/agent-skills-should-point-to-current-docs-instead-of-embedding-every-api-detail.md) - skills should avoid stale copies of fast-changing documentation.
 - [Fresh Markdown context mitigates model rot in codegen](../concepts/fresh-markdown-context-mitigates-model-rot-in-codegen.md) - runtime-selected documentation can update model knowledge without retraining.
 - [Model airplanes give coding agents token-efficient exemplars](../concepts/model-airplanes-give-coding-agents-token-efficient-exemplars.md) - flattened reference projects can act as reusable, searchable skill context.
+- [Encode non-functional requirements as agent-visible context](../concepts/encode-non-functional-requirements-as-agent-visible-context.md) - durable quality expectations help agents reproduce team judgment.
+- [Treat prompts as distributed harness surfaces](../concepts/treat-prompts-as-distributed-harness-surfaces.md) - long-running work needs context refreshed through multiple instruction channels.
 - [Collaborative plans become executable agent context](../concepts/collaborative-plans-become-executable-agent-context.md) - shared plans and discussion can become prompt context once teammates agree on intent.
 - [Social context dashboards keep agentic teams oriented](../concepts/social-context-dashboards-keep-agentic-teams-oriented.md) - code-adjacent conversations and teammate activity can orient agents and humans.
 - [Use PRDs to align agents on the design concept](../concepts/use-prds-to-align-agents-on-the-design-concept.md) - generated plans are useful when they capture current shared intent and decisions.
@@ -57,6 +59,7 @@ Product engineering adds a customer-context layer to this problem. If AI handles
 - Which team conversations are durable enough to preserve as agent context rather than transient chat?
 - Which customer conversations are durable enough to become agent-visible product context without overfitting to one account?
 - How should repositories distinguish current implementation guidance from historical planning artifacts?
+- Which non-functional requirements are durable enough to become default context for every coding-agent run?
 
 ## Sources
 
@@ -76,3 +79,4 @@ Product engineering adds a customer-context layer to this problem. If AI handles
 - [Agents need more than a chat - Jacob Lauritzen, CTO Legora](../sources/20260422_XNtkiQJ49Ps.md)
 - [Taste & Craft: A Conversation with Tuomas Artman, CTO Linear & Gergely Orosz, @pragmaticengineer](../sources/20260421_wjk0ulMAkbc.md)
 - [The New Application Layer - Malte Ubl, CTO Vercel](../sources/20260420_XKup1pj-34M.md)
+- [Harness Engineering: How to Build Software When Humans Steer, Agents Execute - Ryan Lopopolo, OpenAI](../sources/20260417_am_oeAoUhew.md)

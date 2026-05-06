@@ -383,3 +383,11 @@
 - Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Generative Media](topics/generative-media.md), [Infrastructure](topics/infrastructure.md), [Models](topics/models.md), [Retrieval](topics/retrieval.md)
 - Updated concepts: [Use Omnimodal Embeddings for Cross-Modal Retrieval and Comparison](concepts/use-omnimodal-embeddings-for-cross-modal-retrieval-and-comparison.md), [Adapt Embedding Dimensions With Matryoshka Representation Learning](concepts/adapt-embedding-dimensions-with-matryoshka-representation-learning.md), [Neural Weather Models Can Target Operational Forecast Variables Directly](concepts/neural-weather-models-can-target-operational-forecast-variables-directly.md), [Interactive World Models Need Memory, Control, and Live Prompting](concepts/interactive-world-models-need-memory-control-and-live-prompting.md)
 - Notes: Added frontier-AI patterns beyond standard language models: omnimodal retrieval embeddings, adaptive embedding dimensions, neural weather forecasting, and interactive generated worlds.
+
+## [2026-05-06] ingest | Harness Engineering: How to Build Software When Humans Steer, Agents Execute - Ryan Lopopolo, OpenAI
+
+- Source: [Harness Engineering: How to Build Software When Humans Steer, Agents Execute - Ryan Lopopolo, OpenAI](sources/20260417_am_oeAoUhew.md)
+- Processed: `am_oeAoUhew`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Harness Engineering Shifts Scarcity From Code Production to Control Surfaces](concepts/harness-engineering-shifts-scarcity-from-code-production-to-control-surfaces.md), [Encode Non-Functional Requirements as Agent-Visible Context](concepts/encode-non-functional-requirements-as-agent-visible-context.md), [Use Reviewer Agents and Lints to Turn Review Lessons Into Guardrails](concepts/use-reviewer-agents-and-lints-to-turn-review-lessons-into-guardrails.md), [Treat Prompts as Distributed Harness Surfaces](concepts/treat-prompts-as-distributed-harness-surfaces.md)
+- Notes: Added harness-engineering patterns for steering abundant coding-agent output through durable context, distributed prompt surfaces, reviewer agents, lints, and CI guardrails.
