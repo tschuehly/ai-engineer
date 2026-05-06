@@ -22,6 +22,8 @@ Voice infrastructure has an upstream data-quality layer before any model call. C
 
 Enterprise AI registries are another infrastructure layer between experimentation and production. A model gateway can centralize model access, authentication, budget erosion, and request analytics, while registries track MCP servers, A2A agents, models, ownership, environments, costs, and use-case lineage. The practical deployment pattern is to give teams template repositories and CI/CD flows that publish both runtime artifacts and registry metadata, so governance stays aligned with what is actually deployed.
 
+Enterprise analytics infrastructure needs a governed data and metadata layer before an agent writes or executes arbitrary queries. A GenBI stack can separate metadata understanding, certified-report retrieval, SQL expansion, business-answer synthesis, orchestration, trust controls, and contextual UI. That lets teams package the report finder, metadata enrichment, and data-pivoting pieces independently while retaining the benchmarks and catalog improvements even if the end-to-end agent changes.
+
 Multi-agent orchestration is also infrastructure once workflows leave the demo stage. A production system needs a workflow engine, state store, contract registry, serving layer, observability layer, and recovery controls around agent calls. Immutable append-only state versions make handoffs replayable; schema contracts catch malformed or low-confidence outputs at boundaries; circuit breakers, timeouts, rate limits, and compensation methods keep one failing agent or API from cascading through the full workflow.
 
 Durable execution infrastructure can wrap even a single agentic loop. Treat LLM calls, tool invocations, and external APIs as workflow activities with configured retry and timeout behavior, and persist successful results so crash recovery does not repeat token spend or side effects. For human-in-the-loop agents, the infrastructure should support logical waits that can leave active memory and later rehydrate state when approval or clarification arrives.
@@ -74,6 +76,8 @@ Developer-platform infrastructure also needs to be consumable by agents. Self-se
 - [MCP gateways create an enterprise root of trust](../concepts/mcp-gateways-create-an-enterprise-root-of-trust.md) - gateway infrastructure centralizes trust, routing, observability, and deployment for many MCP servers.
 - [Gateway platform primitives let teams focus on MCP business logic](../concepts/gateway-platform-primitives-let-teams-focus-on-mcp-business-logic.md) - platform primitives prevent every domain MCP server from rebuilding common infrastructure.
 - [Enterprise AI asset registries connect governance to runtime lineage](../concepts/enterprise-ai-asset-registries-connect-governance-to-runtime-lineage.md) - registry metadata makes deployed AI assets auditable and traceable to business use cases.
+- [Start GenBI with certified assets before autonomous SQL](../concepts/start-genbi-with-certified-assets-before-autonomous-sql.md) - governed BI infrastructure should expose certified reports and metadata before agent-generated SQL.
+- [Evaluate BI agents with real metadata and expert feedback](../concepts/evaluate-bi-agents-with-real-metadata-and-expert-feedback.md) - metadata enrichment should be validated against real question sets and expert feedback.
 - [Blueprint repositories standardize MCP and A2A service delivery](../concepts/blueprint-repositories-standardize-mcp-and-a2a-service-delivery.md) - blueprints provide reusable platform scaffolding and CI/CD metadata publication.
 - [A2A agent registries make deployed agents discoverable through agent cards](../concepts/a2a-agent-registries-make-deployed-agents-discoverable-through-agent-cards.md) - agent-card registries make internal agent services discoverable without bespoke integration knowledge.
 - [Decouple agent harnesses from enterprise data layers](../concepts/decouple-agent-harnesses-from-enterprise-data-layers.md) - a stable gateway boundary lets agent surfaces change without coupling directly to internal data layout.
@@ -125,6 +129,7 @@ Developer-platform infrastructure also needs to be consumable by agents. Self-se
 - Which enterprise-specific context and workflow integrations justify custom internal agent platforms instead of vendor tools?
 - When should infrastructure expose adaptive embedding dimensions as a product knob rather than a fixed model configuration?
 - Which AI asset registry fields should be enforced by CI/CD rather than manually maintained after deployment?
+- Which BI catalog and semantic-layer metadata should be mandatory before an analytics agent can generate or execute SQL?
 - Which local workstation workloads should stay local because privacy, queueing, or latency matter more than elastic scale?
 - Which agent handoff contracts, state versions, and recovery transitions should be persisted for audit and replay?
 - Which agent loops need durable result recording to avoid duplicate LLM spend or repeated side effects after crash recovery?
@@ -168,4 +173,5 @@ Developer-platform infrastructure also needs to be consumable by agents. Self-se
 - [Contact Center Voice AI: Low-Latency Intelligence Extraction from Messy Audio Streams - Dippu Singh](../sources/20260408_IEF842ZEU5A.md)
 - [Platforms for Humans and Machines: Engineering for the Age of Agents - Juan Herreros Elorza](../sources/20260408_cCRO3ChaYhM.md)
 - [OpenAI + @Temporalio : Building Durable, Production Ready Agents - Cornelia Davis, Temporal](../sources/20260112_k8cnVCMYmNc.md)
+- [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](../sources/20251223_LU9KgcZDRfY.md)
 - [Building durable Agents with Workflow DevKit & AI SDK - Peter Wielander, Vercel](../sources/20260106_kmV-qg4uoNI.md)

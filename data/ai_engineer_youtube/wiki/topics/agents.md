@@ -36,11 +36,14 @@ Internal developer platforms are another agent surface. Practices that already h
 
 Agent-native company design shifts the unit of adoption from a tool to an operating model. When agents are embedded in product, support, operations, and culture, humans increasingly supervise and route asynchronous agent work while the organization hires for people who can apply domain expertise through agent counterparts.
 
+Enterprise analytics agents need especially careful autonomy staging. A GenBI copilot can start by routing users to certified dashboards and reports, then use those governed assets as context or SQL seeds before it attempts broader query generation. Splitting the pipeline into metadata, RAG/report-finding, SQL, and BI-answer agents keeps retrieval, query expansion, answer synthesis, orchestration, and governance as separately inspectable responsibilities.
+
 ## Key Concepts
 
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - agent loops can stay flexible while the runtime validates tool execution.
 - [Use prompt-enforced todos as lightweight agent state](../concepts/use-prompt-enforced-todos-as-lightweight-agent-state.md) - prompt-visible state can guide model planning without full orchestration.
 - [Agent-native companies embed agents into product, operations, and culture](../concepts/agent-native-companies-embed-agents-into-product-operations-and-culture.md) - distinguishes core agent infrastructure from occasional AI assistance.
+- [Start GenBI with certified assets before autonomous SQL](../concepts/start-genbi-with-certified-assets-before-autonomous-sql.md) - analytics agents can earn trust by retrieving governed BI assets before generating new queries.
 - [Start the workday by reviewing and dispatching agent work](../concepts/start-the-workday-by-reviewing-and-dispatching-agent-work.md) - treats agents as asynchronous coworkers whose work is reviewed, approved, and redirected.
 - [Hire for AI fluency and agent orchestration ability](../concepts/hire-for-ai-fluency-and-agent-orchestration-ability.md) - makes agent guidance a hiring and onboarding criterion.
 - [Identify the human subject behind agent actions](../concepts/identify-the-human-subject-behind-agent-actions.md) - authorization needs to know which human or enterprise subject the agent represents.
@@ -218,6 +221,7 @@ Agent-native company design shifts the unit of adoption from a tool to an operat
 - Which parallel agent tasks are independent enough for sandboxed execution without creating integration debt?
 - Which vertical-agent artifacts give humans enough control without recreating a long planning meeting before every run?
 - Which agent-orchestration patterns deserve tech-lead training rather than ordinary management analogies?
+- Which analytics-agent tasks are safe to answer from certified assets, and which require expert review before generated SQL or joined data reaches business users?
 - Which research tasks need open-ended agentic search, and which can be reduced to a known workflow over curated sources?
 - Which agent workflows need MCP's richer remote semantics instead of a CLI or local computer-use path?
 - Which agent-card fields are sufficient for safe runtime discovery by other internal agents?
@@ -293,3 +297,4 @@ Agent-native company design shifts the unit of adoption from a tool to an operat
 - [Building Intelligent Research Agents with Manus - Ivan Leo, Manus AI (now Meta Superintelligence)](../sources/20251230_xz0-brt56L8.md)
 - [AGI: The Path Forward - Jason Warner & Eiso Kant, Poolside](../sources/20251227_OGCG_QkCcZo.md)
 - [The Agent Native Company — Rick Blalock, Agentuity](../sources/20250603_0ZPAvzhpGjw.md)
+- [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](../sources/20251223_LU9KgcZDRfY.md)

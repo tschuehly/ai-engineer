@@ -3,6 +3,7 @@
 ## Agents
 
 - [Agent-native companies embed agents into product, operations, and culture](../concepts/agent-native-companies-embed-agents-into-product-operations-and-culture.md)
+- [Start GenBI with certified assets before autonomous SQL](../concepts/start-genbi-with-certified-assets-before-autonomous-sql.md)
 - [Start the workday by reviewing and dispatching agent work](../concepts/start-the-workday-by-reviewing-and-dispatching-agent-work.md)
 - [Hire for AI fluency and agent orchestration ability](../concepts/hire-for-ai-fluency-and-agent-orchestration-ability.md)
 - [Treat Coding Agents as Fast Junior Collaborators](../concepts/treat-coding-agents-as-fast-junior-collaborators.md)
@@ -172,6 +173,12 @@
 - [Map AI charge metrics to customer-perceived value](../concepts/map-ai-charge-metrics-to-customer-perceived-value.md)
 - [Use hybrid AI pricing to balance predictable revenue and margin protection](../concepts/use-hybrid-ai-pricing-to-balance-predictable-revenue-and-margin-protection.md)
 - [Prevent AI billing surprises with caps, notifications, and rate limits](../concepts/prevent-ai-billing-surprises-with-caps-notifications-and-rate-limits.md)
+
+## Business Intelligence
+
+- [Fund enterprise AI through incremental productizable bets](../concepts/fund-enterprise-ai-through-incremental-productizable-bets.md)
+- [Start GenBI with certified assets before autonomous SQL](../concepts/start-genbi-with-certified-assets-before-autonomous-sql.md)
+- [Evaluate BI agents with real metadata and expert feedback](../concepts/evaluate-bi-agents-with-real-metadata-and-expert-feedback.md)
 
 ## Coding Agents
 

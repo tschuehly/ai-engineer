@@ -22,6 +22,8 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Keep workflow orchestration deterministic and put side effects in steps](concepts/keep-workflow-orchestration-deterministic-and-put-side-effects-in-steps.md) - durable agent recovery depends on rerunnable orchestration and explicit side-effect boundaries.
 - [Use Bash as a composable code-mode tool for agents](concepts/use-bash-as-a-composable-code-mode-tool-for-agents.md) - shell access can replace many bespoke tools when paired with parsing, permissions, and sandboxing.
 - [Use hybrid AI pricing to balance predictable revenue and margin protection](concepts/use-hybrid-ai-pricing-to-balance-predictable-revenue-and-margin-protection.md) - AI products often need base fees plus scaling fees because pure subscription and pure usage models each fail under AI cost dynamics.
+- [Fund enterprise AI through incremental productizable bets](concepts/fund-enterprise-ai-through-incremental-productizable-bets.md) - risk-averse organizations can keep AI research fundable by producing measurable value at each stage.
+- [Start GenBI with certified assets before autonomous SQL](concepts/start-genbi-with-certified-assets-before-autonomous-sql.md) - governed analytics agents should retrieve trusted reports before expanding into generated queries.
 - [Grow personal-agent permissions incrementally from recurring pain](concepts/grow-personal-agent-permissions-incrementally-from-recurring-pain.md) - high-access personal agents should earn autonomy through small reversible workflows.
 - [Read-only personal AI observers are a distinct product category](concepts/read-only-personal-ai-observers-are-a-distinct-product-category.md) - personal AI can deliver reflection and pattern discovery without write authority.
 - [Cognitive exhaust gains value through cross-source synthesis](concepts/cognitive-exhaust-gains-value-through-cross-source-synthesis.md) - emails, journals, tasks, browser history, notes, and relationship data become more useful when synthesized as read-only signals.
@@ -130,6 +132,7 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 - [Agents](topics/agents.md) - agent workflows that combine reasoning, tools, APIs, and local state.
 - [AI Monetization](topics/ai-monetization.md) - pricing, charge metrics, billing guardrails, and monetization infrastructure for AI products.
+- [Business Intelligence](topics/business-intelligence.md) - governed analytics agents, certified BI assets, metadata quality, and GenBI adoption workflows.
 - [Coding Agents](topics/coding-agents.md) - coding-agent loops, tickets, validation, and feedback-driven prompt or skill improvement.
 - [Context Engineering](topics/context-engineering.md) - engineering prompts, skills, memory, retrieval, and documentation into reusable task context.
 - [Edge Inference](topics/edge-inference.md) - on-device inference decisions, model sizing, deployment, and fleet validation.

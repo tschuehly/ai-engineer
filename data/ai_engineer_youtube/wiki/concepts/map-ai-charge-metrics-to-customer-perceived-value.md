@@ -11,6 +11,7 @@ Details:
 - Charge metrics can be consumption-based, workflow-based, or outcome-based: API calls align with provider cost, generated images or summarized documents align with product use, and hires or qualified leads align with customer ROI.
 - Outcome-based pricing is easier to sell but harder to attribute; consumption pricing is easier to implement but farther from customer value, so teams need data to justify where they land.
 - Credits can abstract multiple features into a customer-facing currency while allowing internal mappings to evolve as model costs and feature value change.
+- GenAI productivity can weaken seat count as a proxy for value: if one employee can do far more work with AI, pricing by employees may diverge from the work or business value produced. (21:20-22:24)
 
 Related topics:
 - [AI Monetization](../topics/ai-monetization.md)
@@ -21,3 +22,4 @@ Related concepts:
 
 Sources:
 - [Mastering AI Pricing: Flexible & Agile Monetization - Mayank Pant, Stripe](../sources/20260501_CrqPcIZOOXA.md), 02:32-03:17, 06:24-11:34
+- [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](../sources/20251223_LU9KgcZDRfY.md), 21:20-22:24

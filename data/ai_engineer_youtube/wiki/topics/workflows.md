@@ -34,11 +34,14 @@ DSPy-style workflows separate program shape from prompt shape: teams can define 
 
 Agent-native organizational workflows start with supervision, dispatch, and review of agent work as a normal daily rhythm. This only works when the organization also adapts hiring and onboarding: employees need enough AI fluency to turn domain expertise into agent instructions, review artifacts, and role-specific agent setup.
 
+Enterprise AI research workflows can be made fundable by turning each uncertain phase into a small productizable bet. For GenBI, the useful pattern is to work with production-like but controlled data, involve expert users early, ship six-week deliverables such as metadata enrichment or report discovery, and preserve stop/go decision points so leadership can keep funding tied to measurable value instead of sunk cost.
+
 ## Key Concepts
 
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - simple loops can replace over-specified DAGs when exploration is the work.
 - [Use prompt-enforced todos as lightweight agent state](../concepts/use-prompt-enforced-todos-as-lightweight-agent-state.md) - lightweight task state can keep a run oriented without a full workflow graph.
 - [Agent-native companies embed agents into product, operations, and culture](../concepts/agent-native-companies-embed-agents-into-product-operations-and-culture.md) - pushes workflow design beyond one-off assistant use.
+- [Fund enterprise AI through incremental productizable bets](../concepts/fund-enterprise-ai-through-incremental-productizable-bets.md) - breaks uncertain enterprise AI research into short value-producing stages.
 - [Start the workday by reviewing and dispatching agent work](../concepts/start-the-workday-by-reviewing-and-dispatching-agent-work.md) - provides a daily operating loop for asynchronous agent output.
 - [Hire for AI fluency and agent orchestration ability](../concepts/hire-for-ai-fluency-and-agent-orchestration-ability.md) - makes candidate evaluation and onboarding part of the agent workflow.
 - [Bootstrap RL with targeted SFT before reinforcement learning](../concepts/bootstrap-rl-with-targeted-sft-before-reinforcement-learning.md) - interactive post-training can teach protocol first, then optimize outcomes through RL.
@@ -210,6 +213,7 @@ Agent-native organizational workflows start with supervision, dispatch, and revi
 - Which recurring quality rituals remain useful when agents can generate most of the underlying fix?
 - Which workflow phases should communicate through durable artifacts instead of sharing one long agent context?
 - Which prompt surfaces should be refreshed during long-running agent work as context gets compacted or paged out?
+- Which enterprise AI research stages produce enough standalone business value to justify continued funding even if the full agent vision changes?
 - Which multi-agent workflows need saga-style compensation because partial side effects are unacceptable?
 - Which human-in-the-loop waits should be durable workflow state instead of application-owned queues or ad hoc jobs?
 - How should teams decide when an RL run is slow-but-healthy versus stuck and worth interrupting?
@@ -276,3 +280,4 @@ Agent-native organizational workflows start with supervision, dispatch, and revi
 - [AGI: The Path Forward - Jason Warner & Eiso Kant, Poolside](../sources/20251227_OGCG_QkCcZo.md)
 - [Shipping AI That Works: An Evaluation Framework for PMs - Aman Khan, Arize](../sources/20251226_2HNSG990Ew8.md)
 - [The Agent Native Company — Rick Blalock, Agentuity](../sources/20250603_0ZPAvzhpGjw.md)
+- [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](../sources/20251223_LU9KgcZDRfY.md)

@@ -687,3 +687,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md)
 - Updated concepts: [Benchmark Saturation Pushes Capability Evals Toward Human Time Horizons](concepts/benchmark-saturation-pushes-capability-evals-toward-human-time-horizons.md), [Reliability Thresholds Determine Whether Coding Agents Save Time](concepts/reliability-thresholds-determine-whether-coding-agents-save-time.md), [Measure AI Developer Productivity With Field Experiments, Not Benchmark Extrapolation Alone](concepts/measure-ai-developer-productivity-with-field-experiments-not-benchmark-extrapolation-alone.md)
 - Notes: Added METR's benchmark-versus-field-study reconciliation covering time-horizon evals, expert-maintainer slowdown results, reliability thresholds, mergeability gaps, and task-interdependence caveats.
+
+## [2026-05-07] ingest | Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual
+
+- Source: [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](sources/20251223_LU9KgcZDRfY.md)
+- Processed: `LU9KgcZDRfY`
+- Updated topics: [Agents](topics/agents.md), [AI Monetization](topics/ai-monetization.md), [Business Intelligence](topics/business-intelligence.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Fund Enterprise AI Through Incremental Productizable Bets](concepts/fund-enterprise-ai-through-incremental-productizable-bets.md), [Start GenBI With Certified Assets Before Autonomous SQL](concepts/start-genbi-with-certified-assets-before-autonomous-sql.md), [Evaluate BI Agents With Real Metadata and Expert Feedback](concepts/evaluate-bi-agents-with-real-metadata-and-expert-feedback.md), [Map AI Charge Metrics to Customer-Perceived Value](concepts/map-ai-charge-metrics-to-customer-perceived-value.md)
+- Notes: Added Northwestern Mutual's GenBI approach covering staged enterprise funding, certified-report-first analytics agents, metadata and expert-feedback evals, modular BI-agent architecture, and AI pressure on seat-based SaaS pricing.

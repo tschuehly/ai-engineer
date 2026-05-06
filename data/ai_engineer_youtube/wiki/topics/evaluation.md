@@ -12,6 +12,8 @@ Guardrail evaluation is also part of production AI evaluation. Safety layers sho
 
 RAG evaluation should treat the pipeline as a set of changeable components, not a solved top-k pattern. Parsing quality, chunk hierarchy, OCR, image descriptions, embedding models, hybrid lexical/vector scoring, metadata filters, and agentic search decisions can each change the answer. Agentic retrieval adds a trace-level evaluation requirement: teams should inspect which searches the model chose, not only whether the final answer sounded plausible.
 
+Enterprise analytics agents add a metadata-specific evaluation layer. GenBI systems should be tested against messy production-like schemas and real user questions, with BI experts reviewing outputs before business users or executives depend on them. Metadata quality can be evaluated directly by running the same question set against better- and worse-documented data sources, then measuring whether the LLM finds the right context, report, or query path more reliably.
+
 Contact-center voice evaluation should inspect each pipeline stage, not only the final summary. Speaker-channel preservation, STT accuracy under accents and poor audio, domain vocabulary, numeric normalization, grounded JSON extraction, hallucination checks, operator edits, and CRM-field mappings each create a failure point that can corrupt business records or analytics.
 
 RL environments add an evaluation shape for interactive model behavior: the same environment can generate rollouts, compute deterministic or weighted rewards, and become the training loop. That makes the environment itself part of the eval artifact. Teams should control environment noise, inspect trajectories, check for hidden opponent or simulator bias, and try the trained model in the real task before trusting reward curves or benchmark scores.
@@ -36,6 +38,7 @@ LLM program optimization adds another eval loop: define known inputs and outputs
 - [Benchmark narrow slices separately from real expert work](../concepts/benchmark-narrow-slices-separately-from-real-expert-work.md) - benchmark gains should be checked against open-ended expert prompts and shifting user expectations.
 - [Sandboxed code execution turns model reasoning into inspectable computation](../concepts/sandboxed-code-execution-turns-model-reasoning-into-inspectable-computation.md) - executable computation can make some model outputs easier to inspect and verify.
 - [Mature eval platforms from spreadsheets into experiment systems](../concepts/mature-eval-platforms-from-spreadsheets-into-experiment-systems.md) - credible eval infrastructure should support comparison, collaboration, and scoring beyond documented output tables.
+- [Evaluate BI agents with real metadata and expert feedback](../concepts/evaluate-bi-agents-with-real-metadata-and-expert-feedback.md) - analytics copilots need production-like data complexity, expert reviewers, and metadata A/B tests.
 - [Connect production observability to offline eval loops](../concepts/connect-production-observability-to-offline-eval-loops.md) - real traces expose failure modes and should become replayable offline examples.
 - [Agent traces require specialized eval infrastructure](../concepts/agent-traces-require-specialized-eval-infrastructure.md) - agent observability data can be too large, text-heavy, and semi-structured for naive trace storage.
 - [Evaluate retrieval and MCP layers by task value, not only response availability](../concepts/evaluate-retrieval-and-mcp-layers-by-task-value.md) - retrieval quality is demonstrated by improved task outcomes, not by connector availability alone.
@@ -137,6 +140,7 @@ LLM program optimization adds another eval loop: define known inputs and outputs
 - How much human annotation quality and distribution coverage is enough before judge-prompt optimization becomes trustworthy?
 - Which local inference metrics beyond time to first token and throughput best predict real user-perceived responsiveness?
 - How should retrieval evals isolate whether failures came from parsing, chunking, embedding choice, hybrid scoring, filters, or agent search planning?
+- Which metadata fields most improve BI-agent accuracy, and which only make catalog documentation look better without changing task outcomes?
 - Which RL environment scores should require manual rollout review before they are allowed to drive training decisions?
 - How should contact-center systems measure whether operator edits are correcting model errors, STT errors, schema mapping errors, or policy preferences?
 - Which user-outcome metrics are strong enough to replace generic AI quality scores as release gates for each product workflow?
@@ -192,3 +196,4 @@ LLM program optimization adds another eval loop: define known inputs and outputs
 - [Build a Prompt Learning Loop - SallyAnn DeLucia & Fuad Ali, Arize](../sources/20260106_SbcQYbrvAfI.md)
 - [AGI: The Path Forward - Jason Warner & Eiso Kant, Poolside](../sources/20251227_OGCG_QkCcZo.md)
 - [Shipping AI That Works: An Evaluation Framework for PMs - Aman Khan, Arize](../sources/20251226_2HNSG990Ew8.md)
+- [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](../sources/20251223_LU9KgcZDRfY.md)
