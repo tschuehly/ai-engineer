@@ -199,3 +199,11 @@
 - Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md)
 - Updated concepts: [Cross-App Access Centralizes MCP Authentication Through the Identity Provider](concepts/cross-app-access-centralizes-mcp-authentication-through-the-identity-provider.md), [Short-Lived IdP-Derived Tokens Reduce Standing MCP Access](concepts/short-lived-idp-derived-tokens-reduce-standing-mcp-access.md), [Cross-App Access Does Not Replace Authorization Policy](concepts/cross-app-access-does-not-replace-authorization-policy.md)
 - Notes: Added WorkOS XAA patterns for SSO-backed MCP authentication, short-lived token exchange, and authorization-scope caveats.
+
+## [2026-05-06] ingest | Why building eval platforms is hard - Phil Hetzel, Braintrust
+
+- Source: [Why building eval platforms is hard - Phil Hetzel, Braintrust](sources/20260428__fQ7Z_Wfouk.md)
+- Processed: `_fQ7Z_Wfouk`
+- Updated topics: [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md)
+- Updated concepts: [Mature Eval Platforms From Spreadsheets Into Experiment Systems](concepts/mature-eval-platforms-from-spreadsheets-into-experiment-systems.md), [Connect Production Observability to Offline Eval Loops](concepts/connect-production-observability-to-offline-eval-loops.md), [Agent Traces Require Specialized Eval Infrastructure](concepts/agent-traces-require-specialized-eval-infrastructure.md)
+- Notes: Added Braintrust eval-platform patterns for collaborative experiment systems, production trace feedback loops, and trace infrastructure constraints.
