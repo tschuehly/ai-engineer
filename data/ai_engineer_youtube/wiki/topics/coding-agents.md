@@ -25,6 +25,9 @@ Coding agents work best when their autonomy is constrained by small work items, 
 - [Use social and expert graphs to personalize coding-agent context](../concepts/use-social-and-expert-graphs-to-personalize-coding-agent-context.md) - reviewer and ownership graphs can tell agents whose conventions and decisions matter for a change.
 - [Context engines select task-specific organizational context](../concepts/context-engines-select-task-specific-organizational-context.md) - context engines reduce irrelevant exploration before a coding task.
 - [Agent tool loops turn model-required actions into executable results](../concepts/agent-tool-loops-turn-model-required-actions-into-executable-results.md) - coding-agent file and shell access needs validated tool execution and loop termination.
+- [Agent software factories need runnable, contextual, and verifiable primitives](../concepts/agent-software-factories-need-runnable-contextual-and-verifiable-primitives.md) - autonomous coding work depends on repository structure, setup commands, external context, and validation.
+- [Agent rules should emerge from observed off-rail behavior](../concepts/agent-rules-should-emerge-from-observed-off-rail-behavior.md) - repository rules should encode concrete repeated failures and sensitive boundaries.
+- [Cloud agents turn coding work into asynchronous VM-backed queues](../concepts/cloud-agents-turn-coding-work-into-asynchronous-vm-backed-queues.md) - VM-backed agents turn implementation into background work that still needs review and context routing.
 
 ## Open Questions
 
@@ -36,6 +39,7 @@ Coding agents work best when their autonomy is constrained by small work items, 
 - Which front-end QA capabilities are strong enough to move visual and interaction review out of human back-and-forth?
 - Which file or shell operations should a minimal coding-agent runtime refuse even when the user prompt asks for them?
 - Which session hooks are useful enough to automate, and which create hidden agent behavior that should remain explicit?
+- Which repository-readiness checks predict whether a cloud agent can run without human setup intervention?
 
 ## Sources
 
@@ -46,3 +50,4 @@ Coding agents work best when their autonomy is constrained by small work items, 
 - [Building Conversational Agents - Thor Schaeff and Philipp Schmid, Google DeepMind](../sources/20260430_cVzf49yg0D8.md)
 - [LLM codegen fails and how to stop 'em - Danilo Campos, PostHog](../sources/20260430_juoNbJiZUi0.md)
 - [OpenAI Codex Masterclass  - Vaibhav Srivastav & Katia Gil Guzman](../sources/20260429_MhHEGMFCEB0.md)
+- [Building your own software factory — Eric Zakariasson, Cursor](../sources/20260428_rnDm57Py54A.md)

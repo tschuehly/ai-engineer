@@ -183,3 +183,11 @@
 - Updated topics: [Agents](topics/agents.md), [Edge Inference](topics/edge-inference.md), [Evaluation](topics/evaluation.md), [Inference](topics/inference.md), [Models](topics/models.md)
 - Updated concepts: [Treat Edge Models as Their Own Architecture Class](concepts/treat-edge-models-as-their-own-architecture-class.md), [Profile Small-Model Architectures on Target Hardware](concepts/profile-small-model-architectures-on-target-hardware.md), [Post-Train Small Models for Narrow Capabilities](concepts/post-train-small-models-for-narrow-capabilities.md), [Mitigate Small-Model Doom Loops During Preference Alignment and RL](concepts/mitigate-small-model-doom-loops-during-preference-alignment-and-rl.md)
 - Notes: Added Liquid AI small-model training patterns for edge-specific architecture, target-device profiling, focused post-training, and doom-loop mitigation.
+
+## [2026-05-06] ingest | Building your own software factory — Eric Zakariasson, Cursor
+
+- Source: [Building your own software factory — Eric Zakariasson, Cursor](sources/20260428_rnDm57Py54A.md)
+- Processed: `rnDm57Py54A`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Agent Software Factories Need Runnable, Contextual, and Verifiable Primitives](concepts/agent-software-factories-need-runnable-contextual-and-verifiable-primitives.md), [Agent Rules Should Emerge From Observed Off-Rail Behavior](concepts/agent-rules-should-emerge-from-observed-off-rail-behavior.md), [Cloud Agents Turn Coding Work Into Asynchronous VM-Backed Queues](concepts/cloud-agents-turn-coding-work-into-asynchronous-vm-backed-queues.md), [Automation Loops Convert Repeated Review and Triage Into Factory Improvements](concepts/automation-loops-convert-repeated-review-and-triage-into-factory-improvements.md)
+- Notes: Added Cursor software-factory patterns for preparing repositories, evolving rules, running asynchronous cloud agents, and converting repeated review work into feedback loops.
