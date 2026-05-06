@@ -15,3 +15,11 @@
 - Updated topics: [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Retrieval](topics/retrieval.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Enterprise agent failures often expose missing institutional knowledge](concepts/enterprise-agent-failures-expose-missing-institutional-knowledge.md), [Demand-driven context pulls knowledge from failed work rather than pushing a complete knowledge base upfront](concepts/demand-driven-context-pulls-knowledge-from-failed-work.md), [Context blocks turn monolithic enterprise knowledge into reusable agent context](concepts/context-blocks-turn-monolithic-enterprise-knowledge-into-reusable-agent-context.md), [Evaluate retrieval and MCP layers by task value, not only response availability](concepts/evaluate-retrieval-and-mcp-layers-by-task-value.md)
 - Notes: Added a context-engineering workflow where agent task failures reveal missing institutional knowledge and drive reusable context-block curation.
+
+## [2026-05-06] ingest | The Small Model Infrastructure Nobody Built (So We Did) - Filip Makraduli, Superlinked
+
+- Source: [The Small Model Infrastructure Nobody Built (So We Did) - Filip Makraduli, Superlinked](sources/20260505_qdh_x-uRs9g.md)
+- Processed: `qdh_x-uRs9g`
+- Updated topics: [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Inference](topics/inference.md), [Infrastructure](topics/infrastructure.md), [Retrieval](topics/retrieval.md)
+- Updated concepts: [Use small models as context-management tools before agent reasoning](concepts/use-small-models-as-context-management-tools-before-agent-reasoning.md), [Hot-swap small models to avoid one-model-per-GPU waste](concepts/hot-swap-small-models-to-avoid-one-model-per-gpu-waste.md), [Production inference combines model support with cluster operations](concepts/production-inference-combines-model-support-with-cluster-operations.md)
+- Notes: Added a small-model inference layer for agent context management, dynamic GPU utilization, and production serving operations.
