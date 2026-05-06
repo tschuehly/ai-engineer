@@ -295,3 +295,11 @@
 - Updated topics: [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Make Agent Work More Trustworthy by Making It Verifiable](concepts/make-agent-work-more-trustworthy-by-making-it-verifiable.md), [Use Decision Logs to Keep Uncertain Agents Moving](concepts/use-decision-logs-to-keep-uncertain-agents-moving.md), [Collaborate With Complex Agents Through High-Bandwidth Artifacts](concepts/collaborate-with-complex-agents-through-high-bandwidth-artifacts.md), [Encode Domain Judgment in Node-Level Agent Skills](concepts/encode-domain-judgment-in-node-level-agent-skills.md)
 - Notes: Added Legora's vertical-agent trust/control framing around verifiability, domain skills, reversible decision logs, and artifact-native collaboration beyond chat.
+
+## [2026-05-06] ingest | How AI is changing Software Engineering: A Conversation with Gergely Orosz, @pragmaticengineer
+
+- Source: [How AI is changing Software Engineering: A Conversation with Gergely Orosz, @pragmaticengineer](sources/20260421_CS5Cmz5FssI.md)
+- Processed: `CS5Cmz5FssI`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Do Not Use Token Volume as a Developer Productivity Metric](concepts/do-not-use-token-volume-as-a-developer-productivity-metric.md), [Practice-Driven AI Tool Fluency Beats Theory-Only Adoption](concepts/practice-driven-ai-tool-fluency-beats-theory-only-adoption.md), [AI Pushes Software Engineers Toward Broader Product and Operations Ownership](concepts/ai-pushes-software-engineers-toward-broader-product-and-operations-ownership.md), [Build Internal AI Engineering Platforms When Off-the-Shelf Tools Lack Enterprise Context](concepts/build-internal-ai-engineering-platforms-when-off-the-shelf-tools-lack-enterprise-context.md)
+- Notes: Added Gergely Orosz's sociotechnical AI adoption patterns around token metric failure, practical fluency, changing software-engineer scope, and enterprise internal AI platforms.
