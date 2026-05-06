@@ -751,3 +751,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Long AI coding conversations compound accidental complexity](concepts/long-ai-coding-conversations-compound-accidental-complexity.md), [Manual migration seeds teach agents the hidden constraints](concepts/manual-migration-seeds-teach-agents-the-hidden-constraints.md), [Use research-plan-implement loops for coding agents](concepts/use-research-plan-implement-loops-for-coding-agents.md)
 - Notes: Added Netflix's Infinite Software Crisis framing around simple-versus-easy tradeoffs, conversational code complexity, validated research-plan-implementation phases, and manual migration seeds for tangled refactors.
+
+## [2026-05-07] ingest | Paying Engineers like Salespeople - Arman Hezarkhani, Tenex
+
+- Source: [Paying Engineers like Salespeople - Arman Hezarkhani, Tenex](sources/20251219_4mRekpZpBZs.md)
+- Processed: `4mRekpZpBZs`
+- Updated topics: [AI Monetization](topics/ai-monetization.md), [Coding Agents](topics/coding-agents.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Outcome-based engineering compensation uses accepted story points](concepts/outcome-based-engineering-compensation-uses-accepted-story-points.md), [Counterbalance output incentives with independent scoping and QA](concepts/counterbalance-output-incentives-with-independent-scoping-and-qa.md), [AI adoption depends on incentive design as much as tool access](concepts/ai-adoption-depends-on-incentive-design-as-much-as-tool-access.md)
+- Notes: Added Tenex's output-based engineering compensation workflow, including story-point pay, incentive-driven AI adoption, roadmapping-to-ticket execution, and controls against inflated or low-quality output.

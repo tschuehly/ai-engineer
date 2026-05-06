@@ -175,6 +175,7 @@
 
 - [Treat AI pricing as a fast-moving product hypothesis](../concepts/treat-ai-pricing-as-a-fast-moving-product-hypothesis.md)
 - [Map AI charge metrics to customer-perceived value](../concepts/map-ai-charge-metrics-to-customer-perceived-value.md)
+- [Outcome-based engineering compensation uses accepted story points](../concepts/outcome-based-engineering-compensation-uses-accepted-story-points.md)
 - [Use hybrid AI pricing to balance predictable revenue and margin protection](../concepts/use-hybrid-ai-pricing-to-balance-predictable-revenue-and-margin-protection.md)
 - [Prevent AI billing surprises with caps, notifications, and rate limits](../concepts/prevent-ai-billing-surprises-with-caps-notifications-and-rate-limits.md)
 
@@ -257,6 +258,8 @@
 - [Model airplanes give coding agents token-efficient exemplars](../concepts/model-airplanes-give-coding-agents-token-efficient-exemplars.md)
 - [Breadcrumb coding agents through staged discovery and implementation](../concepts/breadcrumb-coding-agents-through-staged-discovery-and-implementation.md)
 - [Agent software factories need runnable, contextual, and verifiable primitives](../concepts/agent-software-factories-need-runnable-contextual-and-verifiable-primitives.md)
+- [AI adoption depends on incentive design as much as tool access](../concepts/ai-adoption-depends-on-incentive-design-as-much-as-tool-access.md)
+- [Counterbalance output incentives with independent scoping and QA](../concepts/counterbalance-output-incentives-with-independent-scoping-and-qa.md)
 - [Treat agent readiness as verification infrastructure](../concepts/treat-agent-readiness-as-verification-infrastructure.md)
 - [Use agent readiness flywheels to improve the development environment](../concepts/use-agent-readiness-flywheels-to-improve-the-development-environment.md)
 - [Local-first platform workflows shorten agent feedback loops](../concepts/local-first-platform-workflows-shorten-agent-feedback-loops.md)

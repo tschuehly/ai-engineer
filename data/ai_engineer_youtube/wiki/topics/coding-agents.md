@@ -12,6 +12,8 @@ Amp Code adds a product-architecture version of the same discipline. Its guidanc
 
 The Infinite Software Crisis framing adds a caution about conversational coding itself. A long AI chat can feel productive while it accumulates accidental complexity: abandoned approaches, fixed-to-pass tests, overwritten architecture, and preserved technical debt. Research-plan-implement workflows help because they compress understanding into reviewable artifacts before code generation; when the system is too tangled, one manual migration may be the only way to expose the hidden constraints that agents need.
 
+AI adoption inside engineering teams is also an incentive design problem. If compensation and recognition reward time, headcount, or vague annual goals, engineers may have little direct reason to keep pushing unfamiliar agent workflows. Output-linked compensation can encourage tool leverage, but it needs independent scoping, acceptance checks, QA, and customer or strategist counterweights so agent-assisted speed does not become inflated story points or rushed code.
+
 ## Key Concepts
 
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md) - coding-agent SDKs package reusable runtime pieces around the model.
@@ -84,6 +86,8 @@ The Infinite Software Crisis framing adds a caution about conversational coding 
 - [Agent tool loops turn model-required actions into executable results](../concepts/agent-tool-loops-turn-model-required-actions-into-executable-results.md) - coding-agent file and shell access needs validated tool execution and loop termination.
 - [Browser DevTools MCP turns runtime debugging into agent tools](../concepts/browser-devtools-mcp-turns-runtime-debugging-into-agent-tools.md) - front-end agents can inspect live runtime evidence through browser tooling.
 - [Agent software factories need runnable, contextual, and verifiable primitives](../concepts/agent-software-factories-need-runnable-contextual-and-verifiable-primitives.md) - autonomous coding work depends on repository structure, setup commands, external context, and validation.
+- [AI adoption depends on incentive design as much as tool access](../concepts/ai-adoption-depends-on-incentive-design-as-much-as-tool-access.md) - direct upside from output gains can change whether engineers invest in AI tooling.
+- [Counterbalance output incentives with independent scoping and QA](../concepts/counterbalance-output-incentives-with-independent-scoping-and-qa.md) - throughput incentives need quality, acceptance, and collaboration controls.
 - [Treat agent readiness as verification infrastructure](../concepts/treat-agent-readiness-as-verification-infrastructure.md) - production coding-agent capability is bounded by explicit, scalable validation signals.
 - [Use agent readiness flywheels to improve the development environment](../concepts/use-agent-readiness-flywheels-to-improve-the-development-environment.md) - agents can help harden the tests, linters, docs, and instructions that future agents need.
 - [Local-first platform workflows shorten agent feedback loops](../concepts/local-first-platform-workflows-shorten-agent-feedback-loops.md) - agents should be able to validate platform work locally before remote pipelines.
@@ -128,6 +132,7 @@ The Infinite Software Crisis framing adds a caution about conversational coding 
 - Which AI-tool practice routines help skeptical experienced engineers find real leverage on existing codebases?
 - Which experienced-developer tasks are most likely to show positive field-study speedups rather than benchmark-only gains?
 - Which mature-repository tasks are independent enough for agent delegation without losing the maintainer context needed for follow-up work?
+- Which compensation or recognition systems encourage durable AI leverage without turning story points or line count into Goodharted targets?
 - Which product-taste checks can be made explicit enough for agents to assist without reducing design judgment to shallow style rules?
 - Which non-functional requirements should become documentation, lints, reviewer agents, or hard CI gates?
 - Which refactor-batching strategy best balances semantic cohesion, dependency ordering, agent success rate, and human PR review size?
@@ -142,6 +147,7 @@ The Infinite Software Crisis framing adds a caution about conversational coding 
 
 - [Making Codebases Agent Ready - Eno Reyes, Factory AI](../sources/20251222_ShuJ_CN6zr4.md)
 - [The Infinite Software Crisis - Jake Nations, Netflix](../sources/20251220_eIoohUmYpGI.md)
+- [Paying Engineers like Salespeople - Arman Hezarkhani, Tenex](../sources/20251219_4mRekpZpBZs.md)
 - [How Claude Code Works - Jared Zoneraich, PromptLayer](../sources/20251226_RFKCzGlAU6Q.md)
 - [Why Agent Hype can fall short of reality - Joel Becker, METR](../sources/20251224_RhfqQKe22ZA.md)
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md)
