@@ -111,3 +111,11 @@
 - Updated topics: [Voice Agents](topics/voice-agents.md), [Agents](topics/agents.md), [Tools](topics/tools.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Choose Voice-Agent Architecture by Latency, Accuracy, and Semantics](concepts/choose-voice-agent-architecture-by-latency-accuracy-and-semantics.md), [Delegate Complex Voice-Agent Tasks Through Specialist Tools and Handoffs](concepts/delegate-complex-voice-agent-tasks-through-specialist-tools-and-handoffs.md), [Prompt Voice Agents for Persona, Prosody, and Brand Fit](concepts/prompt-voice-agents-for-persona-prosody-and-brand-fit.md), [Evaluate Voice Agents With Traces, Transcripts, Audio Checks, and Simulations](concepts/evaluate-voice-agents-with-traces-transcripts-audio-checks-and-simulations.md)
 - Notes: Added a voice-agent topic covering realtime speech architecture, tool delegation, persona prompting, and audio-specific eval and guardrail patterns.
+
+## [2026-05-06] ingest | Shipping complex AI applications - Braintrust & Trainline
+
+- Source: [Shipping complex AI applications - Braintrust & Trainline](sources/20260501_ZdheJTfLu-s.md)
+- Processed: `ZdheJTfLu-s`
+- Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Stage Complex AI Applications Into Inspectable Deterministic and Agentic Steps](concepts/stage-complex-ai-applications-into-inspectable-deterministic-and-agentic-steps.md), [Use Golden Data Sets and Mixed Scoring Functions for AI Application Confidence](concepts/use-golden-data-sets-and-mixed-scoring-functions-for-ai-application-confidence.md), [Apply Online Scoring to Production Traces With Cost-Aware Sampling](concepts/apply-online-scoring-to-production-traces-with-cost-aware-sampling.md), [Replay Production Failures Before Promoting Prompt Fixes](concepts/replay-production-failures-before-promoting-prompt-fixes.md)
+- Notes: Added production AI application patterns for staged agent workflows, golden data sets, online scoring, managed traces, and failure replay remediation.

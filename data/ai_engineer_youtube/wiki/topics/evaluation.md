@@ -2,7 +2,7 @@
 
 ## Overview
 
-Evaluation for AI engineering should measure whether models, tools, retrieval layers, skills, context packages, and agent workflows solve the intended task under real constraints. For enterprise context systems, a working connector or non-empty answer is not enough; the retrieved context must close the actual knowledge gap that blocks delivery. For coding-agent loops, checks must verify both deterministic correctness and whether an independent reviewer can see failures the producing agent missed. Voice-agent evals add realtime and audio-specific concerns: traces, labeled conversations, transcript rubrics, function-call checks, tone and pacing judgments, synthetic conversations, and asynchronous guardrails all contribute different signals. Planning depth is also an evaluation lever: tasks that can be specified and tested should reduce later review churn, while exploratory front-end work may need interactive QA. For skills and context files, useful evals compare behavior with and without the context, validate package format and clarity, and use repeated runs or error budgets when results are nondeterministic. For model training, basic train and validation loss curves are an early diagnostic layer before generated samples or downstream task evals are trusted.
+Evaluation for AI engineering should measure whether models, tools, retrieval layers, skills, context packages, and agent workflows solve the intended task under real constraints. For enterprise context systems, a working connector or non-empty answer is not enough; the retrieved context must close the actual knowledge gap that blocks delivery. For production AI applications, evaluation should connect offline golden data sets, deterministic scores, LLM-as-judge checks, online production scoring, and failure replay so prompt or workflow fixes are measured against both the triggering trace and the broader regression set. For coding-agent loops, checks must verify both deterministic correctness and whether an independent reviewer can see failures the producing agent missed. Voice-agent evals add realtime and audio-specific concerns: traces, labeled conversations, transcript rubrics, function-call checks, tone and pacing judgments, synthetic conversations, and asynchronous guardrails all contribute different signals. Planning depth is also an evaluation lever: tasks that can be specified and tested should reduce later review churn, while exploratory front-end work may need interactive QA. For skills and context files, useful evals compare behavior with and without the context, validate package format and clarity, and use repeated runs or error budgets when results are nondeterministic. For model training, basic train and validation loss curves are an early diagnostic layer before generated samples or downstream task evals are trusted.
 
 ## Key Concepts
 
@@ -18,6 +18,9 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - [Evaluate context changes with lint, task scenarios, and probabilistic budgets](../concepts/evaluate-context-changes-with-lint-task-scenarios-and-probabilistic-budgets.md) - context evals need structural checks, behavioral scenarios, and repeated-run thresholds.
 - [Use agent logs and review feedback as context observability signals](../concepts/use-agent-logs-and-review-feedback-as-context-observability-signals.md) - production and review feedback should become test cases or context improvements.
 - [Evaluate voice agents with traces, transcripts, audio checks, and simulations](../concepts/evaluate-voice-agents-with-traces-transcripts-audio-checks-and-simulations.md) - voice evals need observability, transcript checks, audio judgments, simulations, and latency-aware guardrails.
+- [Use golden data sets and mixed scoring functions for AI application confidence](../concepts/use-golden-data-sets-and-mixed-scoring-functions-for-ai-application-confidence.md) - curated edge cases plus deterministic and judge-model scores create a repeatable release gate.
+- [Apply online scoring to production traces with cost-aware sampling](../concepts/apply-online-scoring-to-production-traces-with-cost-aware-sampling.md) - production monitoring should score live traces while sampling expensive model-based judges deliberately.
+- [Replay production failures before promoting prompt fixes](../concepts/replay-production-failures-before-promoting-prompt-fixes.md) - production failures should become replayable regression cases before a prompt patch is trusted.
 
 ## Open Questions
 
@@ -28,6 +31,8 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - How should CI present nondeterministic context-eval results so teams can act on trend and error-budget changes without chasing noise?
 - How should teams measure whether extra planning actually reduces review rounds for a class of coding-agent tasks?
 - Which audio-specific judgments add enough signal beyond transcript evals to justify their extra cost?
+- How much live traffic should receive LLM-as-judge scoring before teams have enough baseline confidence to lower sampling?
+- What metadata is necessary to replay a production trace without leaking sensitive user data into eval infrastructure?
 
 ## Sources
 
@@ -39,3 +44,4 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - [Context Is the New Code - Patrick Debois, Tessl](../sources/20260503_bSG9wUYaHWU.md)
 - [Software Engineering Is Becoming Plan and Review - Louis Knight-Webb, Vibe Kanban](../sources/20260502_W76woOYHlvY.md)
 - [Building Effective Voice Agents - Toki Sherbakov + Anoop Kotha, OpenAI](../sources/20250720_-OXiljTJxQU.md)
+- [Shipping complex AI applications - Braintrust & Trainline](../sources/20260501_ZdheJTfLu-s.md)
