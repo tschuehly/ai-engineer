@@ -14,6 +14,7 @@ Retrieval gives agents access to institutional systems such as Confluence, Jira,
 - [Do not cache context-engine answers as durable truth](../concepts/do-not-cache-context-engine-answers-as-durable-truth.md) - answer reuse can preserve stale code, docs, or model mistakes.
 - [Use social and expert graphs to personalize coding-agent context](../concepts/use-social-and-expert-graphs-to-personalize-coding-agent-context.md) - contribution and review signals can bias retrieval toward relevant repositories and experts.
 - [Personal knowledge bases become agent context substrates](../concepts/personal-knowledge-bases-become-agent-context-substrates.md) - personal retrieval becomes more useful when ingestion adds context and links to existing notes.
+- [Retire completed planning docs before they become agent doc rot](../concepts/retire-completed-planning-docs-before-they-become-agent-doc-rot.md) - retrieval systems should avoid presenting stale plans as current implementation truth.
 
 ## Open Questions
 
@@ -21,6 +22,7 @@ Retrieval gives agents access to institutional systems such as Confluence, Jira,
 - Which retrieval steps benefit from hot-swappable small models rather than a single general embedding or reranking service?
 - How should Graph RAG or graph summarization systems preserve permission boundaries when summaries cross source scopes?
 - How should personal retrieval distinguish durable notes from stale bookmarks and noisy saved material?
+- What status metadata should retrieval systems use to demote closed PRDs and historical planning artifacts?
 
 ## Sources
 
@@ -28,3 +30,4 @@ Retrieval gives agents access to institutional systems such as Confluence, Jira,
 - [The Small Model Infrastructure Nobody Built (So We Did) - Filip Makraduli, Superlinked](../sources/20260505_qdh_x-uRs9g.md)
 - [Mergeable by default: Building the context engine to save time and tokens — Peter Werry, Unblocked](../sources/20260503_5ID22ACI7IM.md)
 - [I Gave an AI Agent the Keys to My Life (Here's What Happened) - Radek Sienkiewicz (@velvetshark-com)](../sources/20260502_sJ2jc7leKBk.md)
+- [Full Walkthrough: Workflow for AI Coding - Matt Pocock](../sources/20260424_-QFHIoCo-Ko.md)

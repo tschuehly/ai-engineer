@@ -35,6 +35,10 @@ Coding agents work best when their autonomy is constrained by small work items, 
 - [Shared cloud workspaces make agent sessions collaborative](../concepts/shared-cloud-workspaces-make-agent-sessions-collaborative.md) - shared micro-VM sessions let teammates inspect and continue agent work without local checkout friction.
 - [Collaborative plans become executable agent context](../concepts/collaborative-plans-become-executable-agent-context.md) - plan mode should be shareable and editable before the coding agent starts implementation.
 - [Social context dashboards keep agentic teams oriented](../concepts/social-context-dashboards-keep-agentic-teams-oriented.md) - team summaries help reviewers and collaborators keep up with high-volume agentic work.
+- [Use PRDs to align agents on the design concept](../concepts/use-prds-to-align-agents-on-the-design-concept.md) - PRDs are most useful as shared destination and decision artifacts before implementation.
+- [Retire completed planning docs before they become agent doc rot](../concepts/retire-completed-planning-docs-before-they-become-agent-doc-rot.md) - stale plans should not stay in default agent context after the implementation diverges.
+- [Delegate implementations behind reviewed module interfaces](../concepts/delegate-implementations-behind-reviewed-module-interfaces.md) - humans can keep system shape while agents fill in bounded internals.
+- [Run parallel issue agents in sandboxes with review and merge loops](../concepts/run-parallel-issue-agents-in-sandboxes-with-review-and-merge-loops.md) - parallel issue work needs dependency planning, isolation, review, and integration repair.
 
 ## Open Questions
 
@@ -49,6 +53,7 @@ Coding agents work best when their autonomy is constrained by small work items, 
 - Which repository-readiness checks predict whether a cloud agent can run without human setup intervention?
 - What shared planning artifact is sufficient before multiple teammates or agents start related work?
 - How should agent-suggested work queues be prioritized so they create useful leverage rather than review backlog?
+- Which completed planning artifacts should be closed, deleted, archived, or converted into durable documentation?
 
 ## Sources
 
@@ -62,3 +67,4 @@ Coding agents work best when their autonomy is constrained by small work items, 
 - [Building your own software factory — Eric Zakariasson, Cursor](../sources/20260428_rnDm57Py54A.md)
 - [Collaborative AI Engineering: One Dev, Two Dozen Agents, Zero Alignment - Maggie Appleton, GitHub](../sources/20260426_ClWD8OEYgp8.md)
 - [AgentCraft: Putting the Orc in Orchestration - Ido Salomon](../sources/20260425_kR64LOqBBCU.md)
+- [Full Walkthrough: Workflow for AI Coding - Matt Pocock](../sources/20260424_-QFHIoCo-Ko.md)

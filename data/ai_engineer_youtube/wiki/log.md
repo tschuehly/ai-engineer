@@ -255,3 +255,11 @@
 - Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md)
 - Updated concepts: [Discover Large API Tool Surfaces Progressively](concepts/discover-large-api-tool-surfaces-progressively.md), [Expose Large APIs Through Typed Code Mode](concepts/expose-large-apis-through-typed-code-mode.md), [Run Agent-Written API Code Inside Programmable Sandboxes](concepts/run-agent-written-api-code-inside-programmable-sandboxes.md)
 - Notes: Added Cloudflare MCP patterns for progressive API discovery, typed code-mode access, sandboxed generated-code execution, and service hardening for agent callers.
+
+## [2026-05-06] ingest | Full Walkthrough: Workflow for AI Coding - Matt Pocock
+
+- Source: [Full Walkthrough: Workflow for AI Coding - Matt Pocock](sources/20260424_-QFHIoCo-Ko.md)
+- Processed: `-QFHIoCo-Ko`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Retrieval](topics/retrieval.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Use PRDs to Align Agents on the Design Concept](concepts/use-prds-to-align-agents-on-the-design-concept.md), [Retire Completed Planning Docs Before They Become Agent Doc Rot](concepts/retire-completed-planning-docs-before-they-become-agent-doc-rot.md), [Delegate Implementations Behind Reviewed Module Interfaces](concepts/delegate-implementations-behind-reviewed-module-interfaces.md), [Run Parallel Issue Agents in Sandboxes With Review and Merge Loops](concepts/run-parallel-issue-agents-in-sandboxes-with-review-and-merge-loops.md)
+- Notes: Added Matt Pocock's AI coding workflow patterns for PRD alignment, stale planning-context control, module-interface delegation, and sandboxed parallel issue execution.

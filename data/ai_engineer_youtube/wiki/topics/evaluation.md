@@ -33,6 +33,7 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - [Agent software factories need runnable, contextual, and verifiable primitives](../concepts/agent-software-factories-need-runnable-contextual-and-verifiable-primitives.md) - agent readiness should be validated through runnable setup, tests, and user-flow checks.
 - [Automation loops convert repeated review and triage into factory improvements](../concepts/automation-loops-convert-repeated-review-and-triage-into-factory-improvements.md) - review and triage outputs should feed evals, rules, or process changes.
 - [Encode agent intent into server-side tools](../concepts/encode-agent-intent-into-server-side-tools.md) - tool descriptions should be evaluated in relation to competing tools, not only optimized individually.
+- [Delegate implementations behind reviewed module interfaces](../concepts/delegate-implementations-behind-reviewed-module-interfaces.md) - module interfaces and tests let reviewers validate agent work without reading every internal line.
 
 ## Open Questions
 
@@ -51,6 +52,7 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - How should doom-loop metrics be weighted against ordinary task accuracy for small reasoning models?
 - Which trace storage model best supports replay, scoring, privacy controls, and query performance for large semi-structured agent traces?
 - How should tool-selection evals detect both over-eager tools and tools that are hidden when they should be called?
+- Which module-level tests are strong enough to let reviewers delegate internals without losing system control?
 
 ## Sources
 
@@ -71,3 +73,4 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - [LLM codegen fails and how to stop 'em - Danilo Campos, PostHog](../sources/20260430_juoNbJiZUi0.md)
 - [Building your own software factory — Eric Zakariasson, Cursor](../sources/20260428_rnDm57Py54A.md)
 - [Scaling GitHub for your Agents — Sam Morrow, GitHub](../sources/20260427_0n3MKk7r60w.md)
+- [Full Walkthrough: Workflow for AI Coding - Matt Pocock](../sources/20260424_-QFHIoCo-Ko.md)

@@ -70,6 +70,7 @@ Agent workflows depend on both model capability and the context substrate around
 - [Run agent-written API code inside programmable sandboxes](../concepts/run-agent-written-api-code-inside-programmable-sandboxes.md) - generated code gives agents flexible API access but needs hard runtime boundaries.
 - [Encode agent intent into server-side tools](../concepts/encode-agent-intent-into-server-side-tools.md) - server-side tool composition can make common workflows more reliable than exposing every low-level API step.
 - [Filter MCP tools by scopes and step-up authorization](../concepts/filter-mcp-tools-by-scopes-and-step-up-authorization.md) - MCP servers should expose tools according to actual authorization and request additional scope only when needed.
+- [Run parallel issue agents in sandboxes with review and merge loops](../concepts/run-parallel-issue-agents-in-sandboxes-with-review-and-merge-loops.md) - parallel agent execution needs issue planning, isolation, review, and integration repair.
 
 ## Open Questions
 
@@ -100,6 +101,7 @@ Agent workflows depend on both model capability and the context substrate around
 - Which agent surfaces should connect through an MCP gateway instead of directly to internal servers?
 - Which MCP tool groups belong in default context, and which should be discovered or enabled only when a task needs them?
 - Which agent plans need explicit team agreement before implementation begins?
+- Which parallel agent tasks are independent enough for sandboxed execution without creating integration debt?
 
 ## Sources
 
@@ -132,3 +134,4 @@ Agent workflows depend on both model capability and the context substrate around
 - [Collaborative AI Engineering: One Dev, Two Dozen Agents, Zero Alignment - Maggie Appleton, GitHub](../sources/20260426_ClWD8OEYgp8.md)
 - [AgentCraft: Putting the Orc in Orchestration - Ido Salomon](../sources/20260425_kR64LOqBBCU.md)
 - [MCP = Mega Context Problem - Matt Carey](../sources/20260425_YBYUvGOuotE.md)
+- [Full Walkthrough: Workflow for AI Coding - Matt Pocock](../sources/20260424_-QFHIoCo-Ko.md)

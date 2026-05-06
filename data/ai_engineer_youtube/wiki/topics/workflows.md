@@ -58,6 +58,8 @@ Agent workflows become more reliable when they expose a tight loop between work 
 - [Social context dashboards keep agentic teams oriented](../concepts/social-context-dashboards-keep-agentic-teams-oriented.md) - summarized work streams help teams resume, review, and coordinate agentic work.
 - [Automation loops convert repeated review and triage into factory improvements](../concepts/automation-loops-convert-repeated-review-and-triage-into-factory-improvements.md) - repeated Slack, PR, transcript, and review work can become process feedback.
 - [Gateway platform primitives let teams focus on MCP business logic](../concepts/gateway-platform-primitives-let-teams-focus-on-mcp-business-logic.md) - workflow teams can build domain-specific MCP behavior on shared platform controls.
+- [Use PRDs to align agents on the design concept](../concepts/use-prds-to-align-agents-on-the-design-concept.md) - planning artifacts turn ambiguous requirements into shared agent-ready intent.
+- [Run parallel issue agents in sandboxes with review and merge loops](../concepts/run-parallel-issue-agents-in-sandboxes-with-review-and-merge-loops.md) - parallel workflow needs explicit isolation, review, and integration stages.
 
 ## Open Questions
 
@@ -80,6 +82,7 @@ Agent workflows become more reliable when they expose a tight loop between work 
 - Which lifecycle hooks should be mandatory for auditability, and which should stay opt-in to avoid surprising users?
 - Which domain workflows are ready for team-owned MCP servers once a gateway supplies the shared controls?
 - How much team conversation should become agent-visible context, and what should remain private?
+- When does PRD optimization stop adding value compared with investing the same effort in tests and QA?
 
 ## Sources
 
@@ -104,3 +107,4 @@ Agent workflows become more reliable when they expose a tight loop between work 
 - [Gateways are All You Need - Karan Sampath, Anthropic](../sources/20260427_CD6R4Wf3jnY.md)
 - [Collaborative AI Engineering: One Dev, Two Dozen Agents, Zero Alignment - Maggie Appleton, GitHub](../sources/20260426_ClWD8OEYgp8.md)
 - [AgentCraft: Putting the Orc in Orchestration - Ido Salomon](../sources/20260425_kR64LOqBBCU.md)
+- [Full Walkthrough: Workflow for AI Coding - Matt Pocock](../sources/20260424_-QFHIoCo-Ko.md)
