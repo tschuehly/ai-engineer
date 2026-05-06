@@ -158,6 +158,9 @@
 - [Self-Reported Task Duration Is a Weak Productivity Signal](../concepts/self-reported-task-duration-is-a-weak-productivity-signal.md)
 - [Keep Agent Context Small, Fresh, and Task-Specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md)
 - [Use Research-Plan-Implement Loops for Coding Agents](../concepts/use-research-plan-implement-loops-for-coding-agents.md)
+- [Spec-driven development turns prompts into requirements, design, and tasks](../concepts/spec-driven-development-turns-prompts-into-requirements-design-and-tasks.md)
+- [Translate structured requirements into property-based tests](../concepts/translate-structured-requirements-into-property-based-tests.md)
+- [Keep spec artifacts feature-scoped, mutable, and context-backed](../concepts/keep-spec-artifacts-feature-scoped-mutable-and-context-backed.md)
 - [Ralph loops process one ticket at a time with fresh context](../concepts/ralph-loops-process-one-ticket-at-a-time-with-fresh-context.md)
 - [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](../concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md)
 - [Reusable Routines Turn Prompts Into Operational Agent Workflows](../concepts/reusable-routines-turn-prompts-into-operational-agent-workflows.md)
@@ -210,6 +213,8 @@
 - [Collaborative plans become executable agent context](../concepts/collaborative-plans-become-executable-agent-context.md)
 - [Social context dashboards keep agentic teams oriented](../concepts/social-context-dashboards-keep-agentic-teams-oriented.md)
 - [Use PRDs to align agents on the design concept](../concepts/use-prds-to-align-agents-on-the-design-concept.md)
+- [Spec-driven development turns prompts into requirements, design, and tasks](../concepts/spec-driven-development-turns-prompts-into-requirements-design-and-tasks.md)
+- [Keep spec artifacts feature-scoped, mutable, and context-backed](../concepts/keep-spec-artifacts-feature-scoped-mutable-and-context-backed.md)
 - [Maintain ubiquitous language for AI coding](../concepts/maintain-ubiquitous-language-for-ai-coding.md)
 - [Limit agent change size by feedback speed](../concepts/limit-agent-change-size-by-feedback-speed.md)
 - [Use deep modules to make agent work testable](../concepts/use-deep-modules-to-make-agent-work-testable.md)
@@ -371,6 +376,7 @@
 ## Evaluation
 
 - [Use Research-Plan-Implement Loops for Coding Agents](../concepts/use-research-plan-implement-loops-for-coding-agents.md)
+- [Translate structured requirements into property-based tests](../concepts/translate-structured-requirements-into-property-based-tests.md)
 - [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](../concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md)
 - [Fine-tuned encoder discriminators make low-latency guardrails practical](../concepts/fine-tuned-encoder-discriminators-make-low-latency-guardrails-practical.md)
 - [LLM guardrails need checkpoints at every untrusted boundary](../concepts/llm-guardrails-need-checkpoints-at-every-untrusted-boundary.md)
@@ -516,6 +522,7 @@
 ## Tools
 
 - [Configure Agent Modes, Rules, and Permissions as the Workflow Evolves](../concepts/configure-agent-modes-rules-and-permissions-as-the-workflow-evolves.md)
+- [Keep spec artifacts feature-scoped, mutable, and context-backed](../concepts/keep-spec-artifacts-feature-scoped-mutable-and-context-backed.md)
 - [Reusable Routines Turn Prompts Into Operational Agent Workflows](../concepts/reusable-routines-turn-prompts-into-operational-agent-workflows.md)
 - [DSPy programs keep LLM intent separate from prompt strings](../concepts/dspy-programs-keep-llm-intent-separate-from-prompt-strings.md)
 - [DSPy adapters make prompt format a swappable runtime layer](../concepts/dspy-adapters-make-prompt-format-a-swappable-runtime-layer.md)
@@ -625,6 +632,9 @@
 - [Treat Coding Agents as Fast Junior Collaborators](../concepts/treat-coding-agents-as-fast-junior-collaborators.md)
 - [Keep Agent Context Small, Fresh, and Task-Specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md)
 - [Use Research-Plan-Implement Loops for Coding Agents](../concepts/use-research-plan-implement-loops-for-coding-agents.md)
+- [Spec-driven development turns prompts into requirements, design, and tasks](../concepts/spec-driven-development-turns-prompts-into-requirements-design-and-tasks.md)
+- [Translate structured requirements into property-based tests](../concepts/translate-structured-requirements-into-property-based-tests.md)
+- [Keep spec artifacts feature-scoped, mutable, and context-backed](../concepts/keep-spec-artifacts-feature-scoped-mutable-and-context-backed.md)
 - [Configure Agent Modes, Rules, and Permissions as the Workflow Evolves](../concepts/configure-agent-modes-rules-and-permissions-as-the-workflow-evolves.md)
 - [Treat Multi-Agent Systems As Distributed Systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md)
 - [Use Durable Execution for Production Agent Loops](../concepts/use-durable-execution-for-production-agent-loops.md)

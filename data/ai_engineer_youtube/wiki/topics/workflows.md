@@ -62,6 +62,9 @@ DSPy-style workflows separate program shape from prompt shape: teams can define 
 - [Treat coding agents as fast junior collaborators](../concepts/treat-coding-agents-as-fast-junior-collaborators.md) - workflow design should preserve human direction around agent execution.
 - [Keep agent context small, fresh, and task-specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md) - session hygiene prevents old or irrelevant context from steering later work.
 - [Use research-plan-implement loops for coding agents](../concepts/use-research-plan-implement-loops-for-coding-agents.md) - separate phases make coding-agent work more reviewable.
+- [Spec-driven development turns prompts into requirements, design, and tasks](../concepts/spec-driven-development-turns-prompts-into-requirements-design-and-tasks.md) - coding-agent workflows can route from prompt to spec artifacts to task execution.
+- [Translate structured requirements into property-based tests](../concepts/translate-structured-requirements-into-property-based-tests.md) - workflow completion can be tied to tests derived from acceptance criteria.
+- [Keep spec artifacts feature-scoped, mutable, and context-backed](../concepts/keep-spec-artifacts-feature-scoped-mutable-and-context-backed.md) - spec workflows should amend or prune artifacts as the system evolves.
 - [Configure agent modes, rules, and permissions as the workflow evolves](../concepts/configure-agent-modes-rules-and-permissions-as-the-workflow-evolves.md) - workflow configuration should adapt as the team learns what agents can do safely.
 - [Make agent work more trustworthy by making it verifiable](../concepts/make-agent-work-more-trustworthy-by-making-it-verifiable.md) - workflow design should turn hard-to-review autonomy into checked or constrained subwork.
 - [Harness engineering shifts scarcity from code production to control surfaces](../concepts/harness-engineering-shifts-scarcity-from-code-production-to-control-surfaces.md) - workflow leverage moves to structures that steer abundant implementation capacity.
@@ -191,6 +194,7 @@ DSPy-style workflows separate program shape from prompt shape: teams can define 
 ## Sources
 
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md)
+- [Spec-Driven Development: Agentic Coding at FAANG Scale and Quality - Al Harris, Amazon Kiro](../sources/20260109_HY_JyxAZsiE.md)
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md)
 - [OpenAI Codex Masterclass  - Vaibhav Srivastav & Katia Gil Guzman](../sources/20260429_MhHEGMFCEB0.md)
 - [Demand-Driven Context: A Methodology for Coherent Knowledge Bases Through Agent Failure](../sources/20260505__QAVExf_1uw.md)

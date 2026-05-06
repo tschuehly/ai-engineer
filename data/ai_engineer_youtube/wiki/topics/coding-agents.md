@@ -11,6 +11,9 @@ Coding agents work best when their autonomy is constrained by small work items, 
 - [Self-reported task duration is a weak productivity signal](../concepts/self-reported-task-duration-is-a-weak-productivity-signal.md) - developer speedup studies should avoid relying on recalled task times.
 - [Keep agent context small, fresh, and task-specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md) - context overload and stale history can make coding agents worse.
 - [Use research-plan-implement loops for coding agents](../concepts/use-research-plan-implement-loops-for-coding-agents.md) - research and planning reduce wrong assumptions before code generation.
+- [Spec-driven development turns prompts into requirements, design, and tasks](../concepts/spec-driven-development-turns-prompts-into-requirements-design-and-tasks.md) - spec artifacts make coding-agent work reviewable before implementation.
+- [Translate structured requirements into property-based tests](../concepts/translate-structured-requirements-into-property-based-tests.md) - acceptance criteria can become executable invariants for agent-generated code.
+- [Keep spec artifacts feature-scoped, mutable, and context-backed](../concepts/keep-spec-artifacts-feature-scoped-mutable-and-context-backed.md) - spec folders should stay current, scoped, and enriched with the right context.
 - [Ralph loops process one ticket at a time with fresh context](../concepts/ralph-loops-process-one-ticket-at-a-time-with-fresh-context.md) - simple repeated ticket execution can ship more reliably than broad multi-agent plans.
 - [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](../concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md) - coding workflows need enforced QA and approval paths when prompt-only validation is skipped.
 - [Reusable Routines Turn Prompts Into Operational Agent Workflows](../concepts/reusable-routines-turn-prompts-into-operational-agent-workflows.md) - recurring PR and release workflows can be encoded as parameterized routines.
@@ -94,6 +97,7 @@ Coding agents work best when their autonomy is constrained by small work items, 
 ## Sources
 
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md)
+- [Spec-Driven Development: Agentic Coding at FAANG Scale and Quality - Al Harris, Amazon Kiro](../sources/20260109_HY_JyxAZsiE.md)
 - [How METR measures Long Tasks and Experienced Open Source Dev Productivity - Joel Becker, METR](../sources/20260119_k1t2xyWMUdY.md)
 - [Ralph Loops: Build Dumb AI Loops That Ship - Chris Parsons, Cherrypick](../sources/20260504_2TLXsxkz0zI.md)
 - [Mergeable by default: Building the context engine to save time and tokens — Peter Werry, Unblocked](../sources/20260503_5ID22ACI7IM.md)

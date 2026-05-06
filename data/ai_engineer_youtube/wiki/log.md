@@ -583,3 +583,11 @@
 - Updated topics: [Agents](topics/agents.md), [Workflows](topics/workflows.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md)
 - Updated concepts: [Use Durable Execution for Production Agent Loops](concepts/use-durable-execution-for-production-agent-loops.md), [Model LLM Calls and Tools as Durable Activities](concepts/model-llm-calls-and-tools-as-durable-activities.md), [Treat Long Waits as Logical Workflow State](concepts/treat-long-waits-as-logical-workflow-state.md)
 - Notes: Added Temporal-backed production-agent guidance covering durable agent loops, activity-wrapped LLM and tool calls, retry policy, crash recovery, and long human waits as resumable workflow state.
+
+## [2026-05-06] ingest | Spec-Driven Development: Agentic Coding at FAANG Scale and Quality - Al Harris, Amazon Kiro
+
+- Source: [Spec-Driven Development: Agentic Coding at FAANG Scale and Quality - Al Harris, Amazon Kiro](sources/20260109_HY_JyxAZsiE.md)
+- Processed: `HY_JyxAZsiE`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Spec-driven development turns prompts into requirements, design, and tasks](concepts/spec-driven-development-turns-prompts-into-requirements-design-and-tasks.md), [Translate structured requirements into property-based tests](concepts/translate-structured-requirements-into-property-based-tests.md), [Keep spec artifacts feature-scoped, mutable, and context-backed](concepts/keep-spec-artifacts-feature-scoped-mutable-and-context-backed.md)
+- Notes: Added Kiro spec-driven development guidance covering requirements/design/task artifacts, EARS acceptance criteria, property-based verification, MCP-backed context, feature-scoped specs, and steering files.

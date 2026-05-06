@@ -43,6 +43,8 @@ Product engineering adds a customer-context layer to this problem. If AI handles
 - [Collaborative plans become executable agent context](../concepts/collaborative-plans-become-executable-agent-context.md) - shared plans and discussion can become prompt context once teammates agree on intent.
 - [Social context dashboards keep agentic teams oriented](../concepts/social-context-dashboards-keep-agentic-teams-oriented.md) - code-adjacent conversations and teammate activity can orient agents and humans.
 - [Use PRDs to align agents on the design concept](../concepts/use-prds-to-align-agents-on-the-design-concept.md) - generated plans are useful when they capture current shared intent and decisions.
+- [Spec-driven development turns prompts into requirements, design, and tasks](../concepts/spec-driven-development-turns-prompts-into-requirements-design-and-tasks.md) - structured spec artifacts can become compact task context for coding agents.
+- [Keep spec artifacts feature-scoped, mutable, and context-backed](../concepts/keep-spec-artifacts-feature-scoped-mutable-and-context-backed.md) - specs should be scoped and refreshed so they do not become stale context.
 - [Maintain ubiquitous language for AI coding](../concepts/maintain-ubiquitous-language-for-ai-coding.md) - a shared glossary is compact context for domain terms used by humans, code, and agents.
 - [Retire completed planning docs before they become agent doc rot](../concepts/retire-completed-planning-docs-before-they-become-agent-doc-rot.md) - stale planning artifacts can become harmful context for later agents.
 - [Surface existing company information before redesigning processes](../concepts/surface-existing-company-information-before-redesigning-processes.md) - scattered Slack, meeting, issue, and update signals can be made usable as agent context.
@@ -68,6 +70,7 @@ Product engineering adds a customer-context layer to this problem. If AI handles
 ## Sources
 
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md)
+- [Spec-Driven Development: Agentic Coding at FAANG Scale and Quality - Al Harris, Amazon Kiro](../sources/20260109_HY_JyxAZsiE.md)
 - [Demand-Driven Context: A Methodology for Coherent Knowledge Bases Through Agent Failure](../sources/20260505__QAVExf_1uw.md)
 - [The Small Model Infrastructure Nobody Built (So We Did) - Filip Makraduli, Superlinked](../sources/20260505_qdh_x-uRs9g.md)
 - [Skill Issue: How We Used AI to Make Agents Actually Good at Supabase - Pedro Rodrigues, Supabase](../sources/20260504_GmAQKINjv1E.md)
