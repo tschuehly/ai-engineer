@@ -30,8 +30,12 @@ Enterprise tool ecosystems also need registry metadata once many teams publish M
 
 Internal platform tools should be designed so agents can call the same intended paths humans use. APIs are the base layer, while CLIs or MCP servers can wrap those APIs for agent use; logs, metrics, traces, and relevant documentation should also be exposed through machine-friendly surfaces instead of only dashboards or full HTML pages.
 
+For coding agents, tool boundaries should be chosen by what needs hard semantics. Read tools can control token load, grep/glob can support exact codebase search, edit tools can enforce read-before-write and diff-shaped changes, Bash can compose project commands inside a sandbox, and brittle edge cases can be moved into versioned tools that are easier to evaluate than broad prompt guidance.
+
 ## Key Concepts
 
+- [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - compact tool loops can be the core architecture for coding agents.
+- [Put brittle edge cases behind rigorous tools](../concepts/put-brittle-edge-cases-behind-rigorous-tools.md) - high-risk or specific behaviors should become testable tool boundaries.
 - [Build RL environments as software artifacts](../concepts/build-rl-environments-as-software-artifacts.md) - Verifiers-style packages combine parsers, rewards, rollout execution, and trainer integration for model environments.
 - [Optimize Judge Prompts With Diagnostic Feedback](../concepts/optimize-judge-prompts-with-diagnostic-feedback.md) - prompt-optimization tools such as GEPA need evaluator diagnostics and ground-truth annotations to improve judge rubrics.
 - [Sandboxed code execution turns model reasoning into inspectable computation](../concepts/sandboxed-code-execution-turns-model-reasoning-into-inspectable-computation.md) - sandboxed execution gives models computation tools while limiting local side effects.
@@ -177,6 +181,7 @@ Internal platform tools should be designed so agents can call the same intended 
 
 ## Sources
 
+- [How Claude Code Works - Jared Zoneraich, PromptLayer](../sources/20251226_RFKCzGlAU6Q.md)
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md)
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md)
 - [Skill Issue: How We Used AI to Make Agents Actually Good at Supabase - Pedro Rodrigues, Supabase](../sources/20260504_GmAQKINjv1E.md)

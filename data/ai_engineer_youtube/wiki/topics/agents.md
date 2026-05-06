@@ -38,6 +38,8 @@ Agent-native company design shifts the unit of adoption from a tool to an operat
 
 ## Key Concepts
 
+- [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - agent loops can stay flexible while the runtime validates tool execution.
+- [Use prompt-enforced todos as lightweight agent state](../concepts/use-prompt-enforced-todos-as-lightweight-agent-state.md) - prompt-visible state can guide model planning without full orchestration.
 - [Agent-native companies embed agents into product, operations, and culture](../concepts/agent-native-companies-embed-agents-into-product-operations-and-culture.md) - distinguishes core agent infrastructure from occasional AI assistance.
 - [Start the workday by reviewing and dispatching agent work](../concepts/start-the-workday-by-reviewing-and-dispatching-agent-work.md) - treats agents as asynchronous coworkers whose work is reviewed, approved, and redirected.
 - [Hire for AI fluency and agent orchestration ability](../concepts/hire-for-ai-fluency-and-agent-orchestration-ability.md) - makes agent guidance a hiring and onboarding criterion.
@@ -226,6 +228,7 @@ Agent-native company design shifts the unit of adoption from a tool to an operat
 
 ## Sources
 
+- [How Claude Code Works - Jared Zoneraich, PromptLayer](../sources/20251226_RFKCzGlAU6Q.md)
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md)
 - [Everything I Learned Training Frontier Small Models - Maxime Labonne, Liquid AI](../sources/20260429_fLUtUkqYHnQ.md)
 - [Accelerating AI on Edge - Chintan Parikh and Weiyi Wang, Google DeepMind](../sources/20260505_Lm8BLHkxiAo.md)

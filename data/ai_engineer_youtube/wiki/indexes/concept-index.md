@@ -11,6 +11,8 @@
 - [Treat Multi-Agent Systems As Distributed Systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md)
 - [Use Durable Execution for Production Agent Loops](../concepts/use-durable-execution-for-production-agent-loops.md)
 - [Treat Agent APIs as Asynchronous Task Lifecycles](../concepts/treat-agent-apis-as-asynchronous-task-lifecycles.md)
+- [Run Coding Agents Through a Simple Master Loop](../concepts/run-coding-agents-through-a-simple-master-loop.md)
+- [Use Prompt-Enforced Todos as Lightweight Agent State](../concepts/use-prompt-enforced-todos-as-lightweight-agent-state.md)
 - [Treat Long-Horizon Agents as Asynchronous Workers With Evolving Interfaces](../concepts/treat-long-horizon-agents-as-asynchronous-workers-with-evolving-interfaces.md)
 - [Map External Conversation Threads to Agent Task IDs](../concepts/map-external-conversation-threads-to-agent-task-ids.md)
 - [Keep Workflow Orchestration Deterministic and Put Side Effects in Steps](../concepts/keep-workflow-orchestration-deterministic-and-put-side-effects-in-steps.md)
@@ -173,6 +175,10 @@
 ## Coding Agents
 
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md)
+- [Run Coding Agents Through a Simple Master Loop](../concepts/run-coding-agents-through-a-simple-master-loop.md)
+- [Use Prompt-Enforced Todos as Lightweight Agent State](../concepts/use-prompt-enforced-todos-as-lightweight-agent-state.md)
+- [Put Brittle Edge Cases Behind Rigorous Tools](../concepts/put-brittle-edge-cases-behind-rigorous-tools.md)
+- [Evaluate Agent Trajectories With Backtests and Smell Metrics](../concepts/evaluate-agent-trajectories-with-backtests-and-smell-metrics.md)
 - [Treat AI Coding as a Central Applied-AI Problem](../concepts/treat-ai-coding-as-a-central-applied-ai-problem.md)
 - [Use Bash as a composable code-mode tool for agents](../concepts/use-bash-as-a-composable-code-mode-tool-for-agents.md)
 - [Treat Coding Agents as Fast Junior Collaborators](../concepts/treat-coding-agents-as-fast-junior-collaborators.md)
@@ -402,6 +408,7 @@
 
 ## Evaluation
 
+- [Evaluate Agent Trajectories With Backtests and Smell Metrics](../concepts/evaluate-agent-trajectories-with-backtests-and-smell-metrics.md)
 - [Use Research-Plan-Implement Loops for Coding Agents](../concepts/use-research-plan-implement-loops-for-coding-agents.md)
 - [Translate structured requirements into property-based tests](../concepts/translate-structured-requirements-into-property-based-tests.md)
 - [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](../concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md)
@@ -560,6 +567,8 @@
 
 ## Tools
 
+- [Run Coding Agents Through a Simple Master Loop](../concepts/run-coding-agents-through-a-simple-master-loop.md)
+- [Put Brittle Edge Cases Behind Rigorous Tools](../concepts/put-brittle-edge-cases-behind-rigorous-tools.md)
 - [Use Bash as a composable code-mode tool for agents](../concepts/use-bash-as-a-composable-code-mode-tool-for-agents.md)
 - [Layer agent permissions across model behavior, harness parsing, and sandboxing](../concepts/layer-agent-permissions-across-model-behavior-harness-parsing-and-sandboxing.md)
 - [Use hooks for deterministic agent verification and live context injection](../concepts/use-hooks-for-deterministic-agent-verification-and-live-context-injection.md)

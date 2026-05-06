@@ -22,6 +22,7 @@ LLM program optimization adds another eval loop: define known inputs and outputs
 
 ## Key Concepts
 
+- [Evaluate agent trajectories with backtests and smell metrics](../concepts/evaluate-agent-trajectories-with-backtests-and-smell-metrics.md) - flexible tool-loop agents need historical and trajectory-level checks.
 - [Compare models by task, thinking budget, cost, and latency](../concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - side-by-side model comparisons help choose enough reasoning at acceptable speed and cost.
 - [Do not use token volume as a developer productivity metric](../concepts/do-not-use-token-volume-as-a-developer-productivity-metric.md) - adoption dashboards should avoid rewarding visible token spend over task impact.
 - [Measure AI developer productivity with field experiments, not benchmark extrapolation alone](../concepts/measure-ai-developer-productivity-with-field-experiments-not-benchmark-extrapolation-alone.md) - real experienced-developer work can diverge from lab capability curves.
@@ -140,6 +141,7 @@ LLM program optimization adds another eval loop: define known inputs and outputs
 
 ## Sources
 
+- [How Claude Code Works - Jared Zoneraich, PromptLayer](../sources/20251226_RFKCzGlAU6Q.md)
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md)
 - [Spec-Driven Development: Agentic Coding at FAANG Scale and Quality - Al Harris, Amazon Kiro](../sources/20260109_HY_JyxAZsiE.md)
 - [How METR measures Long Tasks and Experienced Open Source Dev Productivity - Joel Becker, METR](../sources/20260119_k1t2xyWMUdY.md)

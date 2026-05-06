@@ -671,3 +671,11 @@
 - Updated topics: [Agents](topics/agents.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Agent-native companies embed agents into product, operations, and culture](concepts/agent-native-companies-embed-agents-into-product-operations-and-culture.md), [Start the workday by reviewing and dispatching agent work](concepts/start-the-workday-by-reviewing-and-dispatching-agent-work.md), [Hire for AI fluency and agent orchestration ability](concepts/hire-for-ai-fluency-and-agent-orchestration-ability.md)
 - Notes: Added Agentuity's agent-native operating model covering agents as core company infrastructure, daily agent supervision loops, AI fluency hiring, and role-specific agent onboarding.
+
+## [2026-05-07] ingest | How Claude Code Works - Jared Zoneraich, PromptLayer
+
+- Source: [How Claude Code Works - Jared Zoneraich, PromptLayer](sources/20251226_RFKCzGlAU6Q.md)
+- Processed: `RFKCzGlAU6Q`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Run coding agents through a simple master loop](concepts/run-coding-agents-through-a-simple-master-loop.md), [Use prompt-enforced todos as lightweight agent state](concepts/use-prompt-enforced-todos-as-lightweight-agent-state.md), [Put brittle edge cases behind rigorous tools](concepts/put-brittle-edge-cases-behind-rigorous-tools.md), [Evaluate agent trajectories with backtests and smell metrics](concepts/evaluate-agent-trajectories-with-backtests-and-smell-metrics.md)
+- Notes: Added Claude Code architecture guidance covering simple master loops, prompt-visible todos, rigorous tool boundaries, and trajectory-level eval patterns.

@@ -36,6 +36,8 @@ Agent-native organizational workflows start with supervision, dispatch, and revi
 
 ## Key Concepts
 
+- [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - simple loops can replace over-specified DAGs when exploration is the work.
+- [Use prompt-enforced todos as lightweight agent state](../concepts/use-prompt-enforced-todos-as-lightweight-agent-state.md) - lightweight task state can keep a run oriented without a full workflow graph.
 - [Agent-native companies embed agents into product, operations, and culture](../concepts/agent-native-companies-embed-agents-into-product-operations-and-culture.md) - pushes workflow design beyond one-off assistant use.
 - [Start the workday by reviewing and dispatching agent work](../concepts/start-the-workday-by-reviewing-and-dispatching-agent-work.md) - provides a daily operating loop for asynchronous agent output.
 - [Hire for AI fluency and agent orchestration ability](../concepts/hire-for-ai-fluency-and-agent-orchestration-ability.md) - makes candidate evaluation and onboarding part of the agent workflow.
@@ -219,6 +221,7 @@ Agent-native organizational workflows start with supervision, dispatch, and revi
 
 ## Sources
 
+- [How Claude Code Works - Jared Zoneraich, PromptLayer](../sources/20251226_RFKCzGlAU6Q.md)
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md)
 - [Spec-Driven Development: Agentic Coding at FAANG Scale and Quality - Al Harris, Amazon Kiro](../sources/20260109_HY_JyxAZsiE.md)
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md)
