@@ -17,6 +17,7 @@ AI infrastructure spans local training environments, edge deployment, server-sid
 - [Tokenizer size must match data and compute budget](../concepts/tokenizer-size-must-match-data-and-compute-budget.md) - tokenizer capacity has direct implications for memory, convergence, and required training data.
 - [Modular tiny-model pipelines reuse specialized models across mobile app workflows](../concepts/modular-tiny-model-pipelines-reuse-specialized-models-across-mobile-app-workflows.md) - app infrastructure can combine LiteRT and LiteRT-LM components instead of treating the LLM as the whole application.
 - [Prevent AI billing surprises with caps, notifications, and rate limits](../concepts/prevent-ai-billing-surprises-with-caps-notifications-and-rate-limits.md) - AI billing infrastructure should prevent runaway usage and unexpected invoices.
+- [Shared cloud workspaces make agent sessions collaborative](../concepts/shared-cloud-workspaces-make-agent-sessions-collaborative.md) - cloud micro-VM sessions can host shared terminals, previews, branches, and agent history for multiplayer coding work.
 - [Apply online scoring to production traces with cost-aware sampling](../concepts/apply-online-scoring-to-production-traces-with-cost-aware-sampling.md) - production eval infrastructure should distinguish always-on cheap checks from sampled expensive judge-model scoring.
 - [Connect production observability to offline eval loops](../concepts/connect-production-observability-to-offline-eval-loops.md) - observability systems should feed real production examples back into offline agent improvement.
 - [Agent traces require specialized eval infrastructure](../concepts/agent-traces-require-specialized-eval-infrastructure.md) - trace storage and query systems need to account for large, semi-structured, text-heavy agent data.
@@ -63,3 +64,4 @@ AI infrastructure spans local training environments, edge deployment, server-sid
 - [One Login to Rule Them All: Cross-App Access for MCP - Garrett Galow, WorkOS](../sources/20260428_EmhRyw6xeT0.md)
 - [Scaling GitHub for your Agents — Sam Morrow, GitHub](../sources/20260427_0n3MKk7r60w.md)
 - [Gateways are All You Need - Karan Sampath, Anthropic](../sources/20260427_CD6R4Wf3jnY.md)
+- [Collaborative AI Engineering: One Dev, Two Dozen Agents, Zero Alignment - Maggie Appleton, GitHub](../sources/20260426_ClWD8OEYgp8.md)

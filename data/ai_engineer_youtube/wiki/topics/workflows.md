@@ -49,6 +49,10 @@ Agent workflows become more reliable when they expose a tight loop between work 
 - [Ask agents after each run what blocked their success](../concepts/ask-agents-after-each-run-what-blocked-their-success.md) - post-run feedback helps turn failures into workflow and context fixes.
 - [Agent software factories need runnable, contextual, and verifiable primitives](../concepts/agent-software-factories-need-runnable-contextual-and-verifiable-primitives.md) - workflow readiness starts with runnable projects, accessible context, and agent-executable checks.
 - [Cloud agents turn coding work into asynchronous VM-backed queues](../concepts/cloud-agents-turn-coding-work-into-asynchronous-vm-backed-queues.md) - synchronous planning and asynchronous execution can increase throughput when review remains focused.
+- [Align teams before agents implement](../concepts/align-teams-before-agents-implement.md) - workflow design should prevent agentic speed from bypassing shared direction.
+- [Shared cloud workspaces make agent sessions collaborative](../concepts/shared-cloud-workspaces-make-agent-sessions-collaborative.md) - shared sessions combine execution, review, and collaboration surfaces.
+- [Collaborative plans become executable agent context](../concepts/collaborative-plans-become-executable-agent-context.md) - team-edited plans turn discussion into prompt context.
+- [Social context dashboards keep agentic teams oriented](../concepts/social-context-dashboards-keep-agentic-teams-oriented.md) - summarized work streams help teams resume, review, and coordinate agentic work.
 - [Automation loops convert repeated review and triage into factory improvements](../concepts/automation-loops-convert-repeated-review-and-triage-into-factory-improvements.md) - repeated Slack, PR, transcript, and review work can become process feedback.
 - [Gateway platform primitives let teams focus on MCP business logic](../concepts/gateway-platform-primitives-let-teams-focus-on-mcp-business-logic.md) - workflow teams can build domain-specific MCP behavior on shared platform controls.
 
@@ -71,6 +75,7 @@ Agent workflows become more reliable when they expose a tight loop between work 
 - Which codegen steps should be breadcrumbs in the workflow, and which should remain flexible local agent judgment?
 - Which lifecycle hooks should be mandatory for auditability, and which should stay opt-in to avoid surprising users?
 - Which domain workflows are ready for team-owned MCP servers once a gateway supplies the shared controls?
+- How much team conversation should become agent-visible context, and what should remain private?
 
 ## Sources
 
@@ -93,3 +98,4 @@ Agent workflows become more reliable when they expose a tight loop between work 
 - [LLM codegen fails and how to stop 'em - Danilo Campos, PostHog](../sources/20260430_juoNbJiZUi0.md)
 - [Building your own software factory — Eric Zakariasson, Cursor](../sources/20260428_rnDm57Py54A.md)
 - [Gateways are All You Need - Karan Sampath, Anthropic](../sources/20260427_CD6R4Wf3jnY.md)
+- [Collaborative AI Engineering: One Dev, Two Dozen Agents, Zero Alignment - Maggie Appleton, GitHub](../sources/20260426_ClWD8OEYgp8.md)

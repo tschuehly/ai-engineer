@@ -28,6 +28,10 @@ Coding agents work best when their autonomy is constrained by small work items, 
 - [Agent software factories need runnable, contextual, and verifiable primitives](../concepts/agent-software-factories-need-runnable-contextual-and-verifiable-primitives.md) - autonomous coding work depends on repository structure, setup commands, external context, and validation.
 - [Agent rules should emerge from observed off-rail behavior](../concepts/agent-rules-should-emerge-from-observed-off-rail-behavior.md) - repository rules should encode concrete repeated failures and sensitive boundaries.
 - [Cloud agents turn coding work into asynchronous VM-backed queues](../concepts/cloud-agents-turn-coding-work-into-asynchronous-vm-backed-queues.md) - VM-backed agents turn implementation into background work that still needs review and context routing.
+- [Align teams before agents implement](../concepts/align-teams-before-agents-implement.md) - unaligned agentic speed can create wrong features, duplicated work, and late PR rejection.
+- [Shared cloud workspaces make agent sessions collaborative](../concepts/shared-cloud-workspaces-make-agent-sessions-collaborative.md) - shared micro-VM sessions let teammates inspect and continue agent work without local checkout friction.
+- [Collaborative plans become executable agent context](../concepts/collaborative-plans-become-executable-agent-context.md) - plan mode should be shareable and editable before the coding agent starts implementation.
+- [Social context dashboards keep agentic teams oriented](../concepts/social-context-dashboards-keep-agentic-teams-oriented.md) - team summaries help reviewers and collaborators keep up with high-volume agentic work.
 
 ## Open Questions
 
@@ -40,6 +44,7 @@ Coding agents work best when their autonomy is constrained by small work items, 
 - Which file or shell operations should a minimal coding-agent runtime refuse even when the user prompt asks for them?
 - Which session hooks are useful enough to automate, and which create hidden agent behavior that should remain explicit?
 - Which repository-readiness checks predict whether a cloud agent can run without human setup intervention?
+- What shared planning artifact is sufficient before multiple teammates or agents start related work?
 
 ## Sources
 
@@ -51,3 +56,4 @@ Coding agents work best when their autonomy is constrained by small work items, 
 - [LLM codegen fails and how to stop 'em - Danilo Campos, PostHog](../sources/20260430_juoNbJiZUi0.md)
 - [OpenAI Codex Masterclass  - Vaibhav Srivastav & Katia Gil Guzman](../sources/20260429_MhHEGMFCEB0.md)
 - [Building your own software factory — Eric Zakariasson, Cursor](../sources/20260428_rnDm57Py54A.md)
+- [Collaborative AI Engineering: One Dev, Two Dozen Agents, Zero Alignment - Maggie Appleton, GitHub](../sources/20260426_ClWD8OEYgp8.md)

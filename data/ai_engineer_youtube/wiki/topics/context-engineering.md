@@ -27,6 +27,8 @@ Context engineering treats prompts, skills, memory, retrieval, and documentation
 - [Agent skills should point to current docs instead of embedding every API detail](../concepts/agent-skills-should-point-to-current-docs-instead-of-embedding-every-api-detail.md) - skills should avoid stale copies of fast-changing documentation.
 - [Fresh Markdown context mitigates model rot in codegen](../concepts/fresh-markdown-context-mitigates-model-rot-in-codegen.md) - runtime-selected documentation can update model knowledge without retraining.
 - [Model airplanes give coding agents token-efficient exemplars](../concepts/model-airplanes-give-coding-agents-token-efficient-exemplars.md) - flattened reference projects can act as reusable, searchable skill context.
+- [Collaborative plans become executable agent context](../concepts/collaborative-plans-become-executable-agent-context.md) - shared plans and discussion can become prompt context once teammates agree on intent.
+- [Social context dashboards keep agentic teams oriented](../concepts/social-context-dashboards-keep-agentic-teams-oriented.md) - code-adjacent conversations and teammate activity can orient agents and humans.
 
 ## Open Questions
 
@@ -40,6 +42,7 @@ Context engineering treats prompts, skills, memory, retrieval, and documentation
 - When should operational content be moved from a CMS into code so agents can manage it with diffs and review?
 - What conversation state should be summarized into durable memory before server-side interaction records expire?
 - How should context services decide which examples belong in a generated skill reference versus separate documentation?
+- Which team conversations are durable enough to preserve as agent context rather than transient chat?
 
 ## Sources
 
@@ -52,3 +55,4 @@ Context engineering treats prompts, skills, memory, retrieval, and documentation
 - [Agents for Everything Else - swyx](../sources/20260501_zepu8Kk6FBQ.md)
 - [Building Conversational Agents - Thor Schaeff and Philipp Schmid, Google DeepMind](../sources/20260430_cVzf49yg0D8.md)
 - [LLM codegen fails and how to stop 'em - Danilo Campos, PostHog](../sources/20260430_juoNbJiZUi0.md)
+- [Collaborative AI Engineering: One Dev, Two Dozen Agents, Zero Alignment - Maggie Appleton, GitHub](../sources/20260426_ClWD8OEYgp8.md)

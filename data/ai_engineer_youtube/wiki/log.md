@@ -231,3 +231,11 @@
 - Updated topics: [Agents](topics/agents.md), [Edge Inference](topics/edge-inference.md), [Inference](topics/inference.md), [Infrastructure](topics/infrastructure.md), [Models](topics/models.md)
 - Updated concepts: [Route Gemma 4 model variants by deployment and workflow shape](concepts/route-gemma-4-model-variants-by-deployment-and-workflow-shape.md), [Interleave local and global attention to trade context for efficiency](concepts/interleave-local-and-global-attention-to-trade-context-for-efficiency.md), [Per-layer embeddings move effective-model capacity out of VRAM](concepts/per-layer-embeddings-move-effective-model-capacity-out-of-vram.md), [Tune multimodal token budgets by visual or audio task](concepts/tune-multimodal-token-budgets-by-visual-or-audio-task.md)
 - Notes: Added Gemma 4 model-family routing, attention efficiency, PLE memory tradeoffs, and multimodal input-budget controls.
+
+## [2026-05-06] ingest | Collaborative AI Engineering: One Dev, Two Dozen Agents, Zero Alignment - Maggie Appleton, GitHub
+
+- Source: [Collaborative AI Engineering: One Dev, Two Dozen Agents, Zero Alignment - Maggie Appleton, GitHub](sources/20260426_ClWD8OEYgp8.md)
+- Processed: `ClWD8OEYgp8`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Align teams before agents implement](concepts/align-teams-before-agents-implement.md), [Shared cloud workspaces make agent sessions collaborative](concepts/shared-cloud-workspaces-make-agent-sessions-collaborative.md), [Collaborative plans become executable agent context](concepts/collaborative-plans-become-executable-agent-context.md), [Social context dashboards keep agentic teams oriented](concepts/social-context-dashboards-keep-agentic-teams-oriented.md)
+- Notes: Added GitHub Next ACE patterns for multiplayer agent alignment, shared cloud sessions, collaborative planning, and summarized social context around agentic work.

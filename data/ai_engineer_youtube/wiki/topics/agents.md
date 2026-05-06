@@ -19,6 +19,10 @@ Agent workflows depend on both model capability and the context substrate around
 - [Use independent validation contexts to reduce agent confirmation bias](../concepts/use-independent-validation-contexts-to-reduce-agent-confirmation-bias.md) - separate review contexts can catch failures the producing agent rationalizes away.
 - [Coding agents shift engineering work toward planning and review](../concepts/coding-agents-shift-engineering-work-toward-planning-and-review.md) - code generation moves human leverage toward task definition, QA, review, and deployment follow-through.
 - [Parallel coding-agent queues need focus-preserving review interfaces](../concepts/parallel-coding-agent-queues-need-focus-preserving-review-interfaces.md) - longer agent runs need interfaces that batch human attention around completed work.
+- [Align teams before agents implement](../concepts/align-teams-before-agents-implement.md) - cheap implementation makes shared product and architecture direction more important.
+- [Shared cloud workspaces make agent sessions collaborative](../concepts/shared-cloud-workspaces-make-agent-sessions-collaborative.md) - multiplayer cloud sessions let humans and agents share code, terminals, previews, diffs, prompts, and PRs.
+- [Collaborative plans become executable agent context](../concepts/collaborative-plans-become-executable-agent-context.md) - shared plan editing keeps team intent visible before an agent implements.
+- [Social context dashboards keep agentic teams oriented](../concepts/social-context-dashboards-keep-agentic-teams-oriented.md) - summarized teammate activity and session context reduce orientation cost as agent output grows.
 - [Agent skills package progressive-disclosure context for repeatable workflows](../concepts/agent-skills-package-progressive-disclosure-context-for-repeatable-workflows.md) - skills can make domain workflows available without loading all instructions upfront.
 - [Server-side interaction state simplifies branching conversational agents](../concepts/server-side-interaction-state-simplifies-branching-conversational-agents.md) - interaction IDs can simplify continuation, retrieval, and branching without pretending context is infinite.
 - [Agent tool loops turn model-required actions into executable results](../concepts/agent-tool-loops-turn-model-required-actions-into-executable-results.md) - tool-using agents need a runtime loop that validates and executes model-requested actions.
@@ -89,6 +93,7 @@ Agent workflows depend on both model capability and the context substrate around
 - Which MCP clients should be allowed to request access to which enterprise applications through the identity provider?
 - Which agent surfaces should connect through an MCP gateway instead of directly to internal servers?
 - Which MCP tool groups belong in default context, and which should be discovered or enabled only when a task needs them?
+- Which agent plans need explicit team agreement before implementation begins?
 
 ## Sources
 
@@ -118,3 +123,4 @@ Agent workflows depend on both model capability and the context substrate around
 - [Scaling GitHub for your Agents — Sam Morrow, GitHub](../sources/20260427_0n3MKk7r60w.md)
 - [Gateways are All You Need - Karan Sampath, Anthropic](../sources/20260427_CD6R4Wf3jnY.md)
 - [Gemma 4 Deep Dive - Cassidy Hardin, Researcher, Google DeepMind](../sources/20260427__A367W_qvc8.md)
+- [Collaborative AI Engineering: One Dev, Two Dozen Agents, Zero Alignment - Maggie Appleton, GitHub](../sources/20260426_ClWD8OEYgp8.md)
