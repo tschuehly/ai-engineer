@@ -359,3 +359,11 @@
 - Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md)
 - Updated concepts: [Agent Connectivity Stack Combines Skills, MCP, CLIs, and Computer Use](concepts/agent-connectivity-stack-combines-skills-mcp-clis-and-computer-use.md), [MCP Applications Ship UI and Tools Together](concepts/mcp-applications-ship-ui-and-tools-together.md), [Ship Skills Over MCP for Server-Authored Tool Guidance](concepts/ship-skills-over-mcp-for-server-authored-tool-guidance.md), [Discover Large API Tool Surfaces Progressively](concepts/discover-large-api-tool-surfaces-progressively.md), [Expose Large APIs Through Typed Code Mode](concepts/expose-large-apis-through-typed-code-mode.md), [Stateless Remote MCP Servers Rebuild Allowed Tools Per Request](concepts/stateless-remote-mcp-servers-rebuild-allowed-tools-per-request.md)
 - Notes: Added Anthropic's MCP roadmap framing around mixed connectivity surfaces, progressive discovery, programmatic tool composition, MCP applications, skills over MCP, and production protocol primitives.
+
+## [2026-05-06] ingest | Code Mode: Let the Code do the Talking - Sunil Pai, Cloudflare
+
+- Source: [Code Mode: Let the Code do the Talking - Sunil Pai, Cloudflare](sources/20260419_8txf05vVVl4.md)
+- Processed: `8txf05vVVl4`
+- Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md)
+- Updated concepts: [Expose Large APIs Through Typed Code Mode](concepts/expose-large-apis-through-typed-code-mode.md), [Run Agent-Written API Code Inside Programmable Sandboxes](concepts/run-agent-written-api-code-inside-programmable-sandboxes.md), [Capability-Based Sandboxes Start With No Authority](concepts/capability-based-sandboxes-start-with-no-authority.md)
+- Notes: Added Sunil Pai's code-mode framing around executable API workflows, token and round-trip reduction, task-scoped capability grants, and observability for generated-code runtimes.

@@ -7,6 +7,9 @@ Use when:
 - The agent can generate code and the runtime can execute it with controlled credentials and policy.
 
 Details:
+- Pai frames code mode as replacing slow JSON tool-call loops with model-generated JavaScript that can use typed APIs, syntax checking, loops, state, sequencing, and parallelism inside one execution. (01:31-03:00)
+- Cloudflare's example exposed a large API through two code-accepting operations, search and execute, reducing a roughly 1.2-1.5 million-token API surface to about 1,000 tokens for the initial tool interface. (03:09-04:05)
+- The same DDoS-response workflow that would need many ordinary MCP round trips can be generated as one code string and executed next to the API surface. (04:21-05:18)
 - Cloudflare's code-mode pattern generates TypeScript or SDK types from API specifications and asks the model to write code against those types. (07:20-08:20)
 - The talk frames types as a concise representation of inputs and outputs that can make an entire API accessible in far fewer tokens than endpoint-by-endpoint tool descriptions. (07:42-08:20)
 - Generated code can compose operations such as listing workers, deploying a worker, and adding Cloudflare Access protection while keeping the API spec as the source of truth. (08:20-09:06)
@@ -23,5 +26,6 @@ Related concepts:
 - [Run Agent-Written API Code Inside Programmable Sandboxes](run-agent-written-api-code-inside-programmable-sandboxes.md)
 
 Sources:
+- [Code Mode: Let the Code do the Talking - Sunil Pai, Cloudflare](../sources/20260419_8txf05vVVl4.md), 01:31-05:18
 - [MCP = Mega Context Problem - Matt Carey](../sources/20260425_YBYUvGOuotE.md), 07:20-10:08
 - [The Future of MCP - David Soria Parra, Anthropic](../sources/20260419_v3Fr2JR47KA.md), 09:39-11:49

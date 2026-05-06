@@ -6,6 +6,8 @@ AI infrastructure spans local training environments, edge deployment, server-sid
 
 Agent-built applications add a deployment boundary: the harness that plans and controls work should not be treated as the same trust domain as generated code. Infrastructure for the new application layer needs sandboxes and execution separation so agent-written software can run without giving that code direct authority over the agent runtime.
 
+Code-mode infrastructure should also treat capability grants as part of the runtime contract. Generated programs should start with no authority, receive only the APIs or network paths required for the task, and leave enough execution trace to explain high-impact actions later.
+
 Emerging MCP protocol work adds production-infrastructure concerns beyond ordinary tool schemas. Stateless transport can make MCP servers easier to deploy like ordinary stateless services, server discovery through well-known URLs can make agent-facing services easier to find, and asynchronous tasks plus extension mechanisms can support richer long-running or UI-backed agent interactions.
 
 ## Key Concepts
@@ -43,6 +45,7 @@ Emerging MCP protocol work adds production-infrastructure concerns beyond ordina
 - [Filter MCP tools by scopes and step-up authorization](../concepts/filter-mcp-tools-by-scopes-and-step-up-authorization.md) - authorization state should shape the runtime tool surface exposed to agents.
 - [Expose large APIs through typed code mode](../concepts/expose-large-apis-through-typed-code-mode.md) - generated types can expose broad APIs without loading every endpoint as tool context.
 - [Run agent-written API code inside programmable sandboxes](../concepts/run-agent-written-api-code-inside-programmable-sandboxes.md) - generated-code execution needs infrastructure-level isolation and abuse controls.
+- [Capability-based sandboxes start with no authority](../concepts/capability-based-sandboxes-start-with-no-authority.md) - generated-code infrastructure should grant explicit task capabilities rather than ambient access.
 - [Separate agent harnesses from generated-code execution](../concepts/separate-agent-harnesses-from-generated-code-execution.md) - agent control planes and generated-code runtimes should be separate trust domains.
 
 ## Open Questions
@@ -87,3 +90,4 @@ Emerging MCP protocol work adds production-infrastructure concerns beyond ordina
 - [Gemma, DeepMind's Family of Open Models - Omar Sanseviero, Google DeepMind](../sources/20260420__gVFUEdhCyI.md)
 - [Running LLMs on your iPhone: 40 tok/s Gemma 4 with MLX - Adrien Grondin, Locally AI](../sources/20260420_a2muGkT4WD4.md)
 - [The Future of MCP - David Soria Parra, Anthropic](../sources/20260419_v3Fr2JR47KA.md)
+- [Code Mode: Let the Code do the Talking - Sunil Pai, Cloudflare](../sources/20260419_8txf05vVVl4.md)

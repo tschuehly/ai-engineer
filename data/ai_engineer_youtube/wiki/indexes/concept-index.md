@@ -79,6 +79,7 @@
 - [MCP applications ship UI and tools together](../concepts/mcp-applications-ship-ui-and-tools-together.md)
 - [Discover large API tool surfaces progressively](../concepts/discover-large-api-tool-surfaces-progressively.md)
 - [Run agent-written API code inside programmable sandboxes](../concepts/run-agent-written-api-code-inside-programmable-sandboxes.md)
+- [Capability-Based Sandboxes Start With No Authority](../concepts/capability-based-sandboxes-start-with-no-authority.md)
 - [Encode agent intent into server-side tools](../concepts/encode-agent-intent-into-server-side-tools.md)
 - [Filter MCP tools by scopes and step-up authorization](../concepts/filter-mcp-tools-by-scopes-and-step-up-authorization.md)
 - [Run parallel issue agents in sandboxes with review and merge loops](../concepts/run-parallel-issue-agents-in-sandboxes-with-review-and-merge-loops.md)
@@ -225,6 +226,7 @@
 - [Filter MCP tools by scopes and step-up authorization](../concepts/filter-mcp-tools-by-scopes-and-step-up-authorization.md)
 - [Expose large APIs through typed code mode](../concepts/expose-large-apis-through-typed-code-mode.md)
 - [Run agent-written API code inside programmable sandboxes](../concepts/run-agent-written-api-code-inside-programmable-sandboxes.md)
+- [Capability-Based Sandboxes Start With No Authority](../concepts/capability-based-sandboxes-start-with-no-authority.md)
 
 ## Inference
 
@@ -387,6 +389,7 @@
 - [Discover large API tool surfaces progressively](../concepts/discover-large-api-tool-surfaces-progressively.md)
 - [Expose large APIs through typed code mode](../concepts/expose-large-apis-through-typed-code-mode.md)
 - [Run agent-written API code inside programmable sandboxes](../concepts/run-agent-written-api-code-inside-programmable-sandboxes.md)
+- [Capability-Based Sandboxes Start With No Authority](../concepts/capability-based-sandboxes-start-with-no-authority.md)
 - [Encode agent intent into server-side tools](../concepts/encode-agent-intent-into-server-side-tools.md)
 - [Filter MCP tools by scopes and step-up authorization](../concepts/filter-mcp-tools-by-scopes-and-step-up-authorization.md)
 - [Stateless remote MCP servers rebuild allowed tools per request](../concepts/stateless-remote-mcp-servers-rebuild-allowed-tools-per-request.md)
