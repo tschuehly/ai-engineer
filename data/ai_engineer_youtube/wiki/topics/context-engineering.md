@@ -6,6 +6,8 @@ Personal-agent context can be made visible through nested topic descriptions and
 
 Context engineering treats prompts, skills, memory, retrieval, and documentation as an engineered substrate for agent work. It needs a lifecycle similar to software delivery: generate context, evaluate it, distribute it, observe its use, and adapt it from feedback. Demand-driven context adds a practical enterprise workflow: rather than predicting every context need upfront, assign real work to agents, observe failures, and convert missing institutional knowledge into reusable context blocks. Personal knowledge bases show the same pattern at individual scale: Markdown notes, bookmarks, project records, search, and memory become useful agent context when ingestion flows add tags, connections, and surfacing rather than merely storing links. A context engine is the selection and reasoning layer for this substrate: it should combine task relevance, user and team signals, source relationships, permissions, and conflict handling rather than relying on generic RAG, many MCP servers, or larger context windows alone. For productized codegen, current Markdown docs, shared domain glossaries, and compact exemplar projects can offset stale model knowledge and weak architectural priors; context can be generated from a service into skill references and loaded only when the task requires it. Conversational-agent state adds a related context-management concern: server-side interaction IDs can simplify continuation and branching, but retention, retrieval, and compaction limits remain part of the application design. Small-model preprocessing can further manage context by filtering, classifying, extracting, or reranking data before it reaches the agent. Skills and context packages distribute reusable workflow guidance, but package-like reuse also creates versioning, dependency, quality, and security concerns; volatile API facts should often stay in current documentation that skills point to rather than being copied into every skill.
 
+Product engineering adds a customer-context layer to this problem. If AI handles more of the mechanical implementation, engineers need searchable customer conversations, tagged feedback, recorded calls, and direct customer channels so product judgment is grounded in real needs rather than abstract feature requests.
+
 ## Key Concepts
 
 - [Enterprise agent failures often expose missing institutional knowledge](../concepts/enterprise-agent-failures-expose-missing-institutional-knowledge.md) - agent failures can indicate missing or stale enterprise knowledge rather than weak model reasoning.
@@ -19,6 +21,7 @@ Context engineering treats prompts, skills, memory, retrieval, and documentation
 - [Surface unresolved context conflicts to agents and users](../concepts/surface-unresolved-context-conflicts-to-agents-and-users.md) - unresolved contradictions should become explicit handoff points rather than hidden guesses.
 - [Do not cache context-engine answers as durable truth](../concepts/do-not-cache-context-engine-answers-as-durable-truth.md) - generated answers can become stale or self-reinforcing if reused as canonical context.
 - [Use social and expert graphs to personalize coding-agent context](../concepts/use-social-and-expert-graphs-to-personalize-coding-agent-context.md) - reviewer and contribution graphs can help route context to likely owners and experts.
+- [Product engineers need direct customer context](../concepts/product-engineers-need-direct-customer-context.md) - customer feedback, calls, and channels are product context for AI-assisted engineering decisions.
 - [Context development lifecycle treats context as an engineered artifact](../concepts/context-development-lifecycle-treats-context-as-an-engineered-artifact.md) - context should move through generate, evaluate, distribute, observe, and adapt loops.
 - [Evaluate context changes with lint, task scenarios, and probabilistic budgets](../concepts/evaluate-context-changes-with-lint-task-scenarios-and-probabilistic-budgets.md) - prompt and skill changes need validation because small context edits can change generated behavior.
 - [Package reusable context as skills, libraries, and registries](../concepts/package-reusable-context-as-skills-libraries-and-registries.md) - shared context needs package, registry, dependency, and security practices.
@@ -51,6 +54,7 @@ Context engineering treats prompts, skills, memory, retrieval, and documentation
 - What conversation state should be summarized into durable memory before server-side interaction records expire?
 - How should context services decide which examples belong in a generated skill reference versus separate documentation?
 - Which team conversations are durable enough to preserve as agent context rather than transient chat?
+- Which customer conversations are durable enough to become agent-visible product context without overfitting to one account?
 - How should repositories distinguish current implementation guidance from historical planning artifacts?
 
 ## Sources
@@ -69,3 +73,4 @@ Context engineering treats prompts, skills, memory, retrieval, and documentation
 - [The End of Apps - Kitze, Sizzy.co](../sources/20260423_4fntwuOoedA.md)
 - ["Software Fundamentals Matter More Than Ever" - Matt Pocock](../sources/20260423_v4F1gFy-hqg.md)
 - [Agents need more than a chat - Jacob Lauritzen, CTO Legora](../sources/20260422_XNtkiQJ49Ps.md)
+- [Taste & Craft: A Conversation with Tuomas Artman, CTO Linear & Gergely Orosz, @pragmaticengineer](../sources/20260421_wjk0ulMAkbc.md)
