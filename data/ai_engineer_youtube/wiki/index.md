@@ -5,6 +5,7 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 ## Topics
 
 - [Agents](topics/agents.md) - agent workflows that combine reasoning, tools, APIs, and local state.
+- [Coding Agents](topics/coding-agents.md) - coding-agent loops, tickets, validation, and feedback-driven prompt or skill improvement.
 - [Context Engineering](topics/context-engineering.md) - engineering prompts, skills, memory, retrieval, and documentation into reusable task context.
 - [Edge Inference](topics/edge-inference.md) - on-device inference decisions, model sizing, deployment, and fleet validation.
 - [Evaluation](topics/evaluation.md) - task-level validation of models, tools, retrieval, and agent workflows.

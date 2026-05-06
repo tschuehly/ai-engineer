@@ -23,3 +23,11 @@
 - Updated topics: [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Inference](topics/inference.md), [Infrastructure](topics/infrastructure.md), [Retrieval](topics/retrieval.md)
 - Updated concepts: [Use small models as context-management tools before agent reasoning](concepts/use-small-models-as-context-management-tools-before-agent-reasoning.md), [Hot-swap small models to avoid one-model-per-GPU waste](concepts/hot-swap-small-models-to-avoid-one-model-per-gpu-waste.md), [Production inference combines model support with cluster operations](concepts/production-inference-combines-model-support-with-cluster-operations.md)
 - Notes: Added a small-model inference layer for agent context management, dynamic GPU utilization, and production serving operations.
+
+## [2026-05-06] ingest | Ralph Loops: Build Dumb AI Loops That Ship - Chris Parsons, Cherrypick
+
+- Source: [Ralph Loops: Build Dumb AI Loops That Ship - Chris Parsons, Cherrypick](sources/20260504_2TLXsxkz0zI.md)
+- Processed: `2TLXsxkz0zI`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Ralph loops process one ticket at a time with fresh context](concepts/ralph-loops-process-one-ticket-at-a-time-with-fresh-context.md), [Feedback turns coding-agent loops into prompt and skill improvement cycles](concepts/feedback-turns-coding-agent-loops-into-prompt-and-skill-improvement-cycles.md), [Use independent validation contexts to reduce agent confirmation bias](concepts/use-independent-validation-contexts-to-reduce-agent-confirmation-bias.md)
+- Notes: Added a coding-agent loop topic covering ticket-by-ticket execution, feedback-driven skill improvement, and independent validation for agent work.
