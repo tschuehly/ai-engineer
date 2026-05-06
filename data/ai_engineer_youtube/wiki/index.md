@@ -19,6 +19,7 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Evaluate voice agents with traces, transcripts, audio checks, and simulations](concepts/evaluate-voice-agents-with-traces-transcripts-audio-checks-and-simulations.md) - voice systems need both transcript-level task checks and audio-specific validation for tone, pacing, and guardrail timing.
 - [Replay production failures before promoting prompt fixes](concepts/replay-production-failures-before-promoting-prompt-fixes.md) - prompt changes should be validated against the triggering trace and the broader regression suite before release.
 - [Fresh Markdown context mitigates model rot in codegen](concepts/fresh-markdown-context-mitigates-model-rot-in-codegen.md) - productized coding agents need current docs when model training snapshots lag fast-moving APIs.
+- [Compare models by task, thinking budget, cost, and latency](concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - model routing should account for task fit, reasoning depth, speed, and cost instead of defaulting to the largest model.
 
 ## Topics
 

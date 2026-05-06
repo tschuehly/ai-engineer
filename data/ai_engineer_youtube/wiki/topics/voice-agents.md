@@ -6,6 +6,7 @@ Voice agents add realtime audio constraints to the usual agent stack of model, i
 
 ## Key Concepts
 
+- [Realtime multimodal models should plan over specialized local actuators](../concepts/realtime-multimodal-models-should-plan-over-specialized-local-actuators.md) - realtime multimodal models can interpret speech or vision while specialized components execute embodied actions.
 - [Choose voice-agent architecture by latency, accuracy, and semantics](../concepts/choose-voice-agent-architecture-by-latency-accuracy-and-semantics.md) - architecture should match whether the product prioritizes responsiveness, semantic preservation, deterministic control, or system integration.
 - [Delegate complex voice-agent tasks through specialist tools and handoffs](../concepts/delegate-complex-voice-agent-tasks-through-specialist-tools-and-handoffs.md) - realtime voice agents can stay conversational while specialist agents handle harder tool and policy decisions.
 - [Prompt voice agents for persona, prosody, and brand fit](../concepts/prompt-voice-agents-for-persona-prosody-and-brand-fit.md) - voice prompts shape spoken demeanor, tone, pacing, and brand realism.
@@ -20,5 +21,6 @@ Voice agents add realtime audio constraints to the usual agent stack of model, i
 
 ## Sources
 
+- [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md)
 - [Building Effective Voice Agents - Toki Sherbakov + Anoop Kotha, OpenAI](../sources/20250720_-OXiljTJxQU.md)
 - [Building Conversational Agents - Thor Schaeff and Philipp Schmid, Google DeepMind](../sources/20260430_cVzf49yg0D8.md)
