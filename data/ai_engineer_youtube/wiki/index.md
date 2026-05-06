@@ -5,6 +5,7 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 ## Current Emphasis
 
 - [Context development lifecycle treats context as an engineered artifact](concepts/context-development-lifecycle-treats-context-as-an-engineered-artifact.md) - context should move through generate, evaluate, distribute, observe, and adapt loops.
+- [Treat AI coding as a central applied-AI problem](concepts/treat-ai-coding-as-a-central-applied-ai-problem.md) - code-facing systems are where model capability becomes usable software and workflow leverage.
 - [Route high-impact agent actions through explicit human approval gates](concepts/route-high-impact-agent-actions-through-explicit-human-approval-gates.md) - sensitive automations should pause at review boundaries the model cannot bypass.
 - [Use durable execution for production agent loops](concepts/use-durable-execution-for-production-agent-loops.md) - long-running agent loops need persisted LLM calls, tool outputs, and workflow state across crashes and retries.
 - [Keep workflow orchestration deterministic and put side effects in steps](concepts/keep-workflow-orchestration-deterministic-and-put-side-effects-in-steps.md) - durable agent recovery depends on rerunnable orchestration and explicit side-effect boundaries.

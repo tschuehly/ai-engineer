@@ -165,6 +165,7 @@
 ## Coding Agents
 
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md)
+- [Treat AI Coding as a Central Applied-AI Problem](../concepts/treat-ai-coding-as-a-central-applied-ai-problem.md)
 - [Use Bash as a composable code-mode tool for agents](../concepts/use-bash-as-a-composable-code-mode-tool-for-agents.md)
 - [Treat Coding Agents as Fast Junior Collaborators](../concepts/treat-coding-agents-as-fast-junior-collaborators.md)
 - [Measure AI Developer Productivity With Field Experiments, Not Benchmark Extrapolation Alone](../concepts/measure-ai-developer-productivity-with-field-experiments-not-benchmark-extrapolation-alone.md)

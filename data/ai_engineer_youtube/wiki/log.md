@@ -623,3 +623,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md), [Use Bash as a composable code-mode tool for agents](concepts/use-bash-as-a-composable-code-mode-tool-for-agents.md), [Layer agent permissions across model behavior, harness parsing, and sandboxing](concepts/layer-agent-permissions-across-model-behavior-harness-parsing-and-sandboxing.md), [Use hooks for deterministic agent verification and live context injection](concepts/use-hooks-for-deterministic-agent-verification-and-live-context-injection.md)
 - Notes: Added Claude Agent SDK guidance covering harness composition, filesystem context, Bash/code-mode composability, layered security controls, and hooks as deterministic workflow/context events.
+
+## [2026-05-06] ingest | Welcome to AIE CODE - Jed Borovik, Google DeepMind
+
+- Source: [Welcome to AIE CODE - Jed Borovik, Google DeepMind](sources/20260105_mdEh4lBO_R0.md)
+- Processed: `mdEh4lBO_R0`
+- Updated topics: [Coding Agents](topics/coding-agents.md)
+- Updated concepts: [Treat AI coding as a central applied-AI problem](concepts/treat-ai-coding-as-a-central-applied-ai-problem.md)
+- Notes: Added a compact source-backed framing that AI coding is the applied-AI focus where patterns, systems, and products turn model capability into software practice.
