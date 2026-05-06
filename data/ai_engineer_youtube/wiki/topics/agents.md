@@ -8,10 +8,15 @@ Agent workflows depend on both model capability and the context substrate around
 
 Vertical agents need a trust/control design around complex work trees. Make subwork verifiable where possible through tests, proxy checks, decomposition, and guardrails; encode domain judgment in skills at the relevant work-tree node; and use persistent artifacts such as documents or tabular reviews when humans need to inspect or steer only the affected part of the work. The human operator's role is closer to tech-lead orchestration than people management: agents can multiply parallel action, but useful leverage still depends on task framing, review, product judgment, and workflow-specific practice.
 
+The new application layer also changes the economic boundary for automation. Agents make some software viable where traditional applications would have required too much hand-coded business logic, so near-term agent opportunities often come from compressed research, surfacing information already present in company systems, and removing repetitive toil while humans retain final decisions. As agents become users of software, products and infrastructure need agent-facing control surfaces and runtime isolation, not only dashboards and conventional production assumptions.
+
 ## Key Concepts
 
 - [Sandboxed code execution turns model reasoning into inspectable computation](../concepts/sandboxed-code-execution-turns-model-reasoning-into-inspectable-computation.md) - executable sandboxes let agents compute and verify without touching the user's environment.
 - [AI pushes software engineers toward broader product and operations ownership](../concepts/ai-pushes-software-engineers-toward-broader-product-and-operations-ownership.md) - agent-augmented engineers need broader ownership and orchestration skills.
+- [Agents expand the economically viable software surface](../concepts/agents-expand-the-economically-viable-software-surface.md) - cheaper agent-based automation can make more useful software worth building.
+- [Compressed research agents preserve human decision points](../concepts/compressed-research-agents-preserve-human-decision-points.md) - agents can accelerate research while leaving final judgment with humans.
+- [Surface existing company information before redesigning processes](../concepts/surface-existing-company-information-before-redesigning-processes.md) - agents can turn scattered internal knowledge into usable operational context.
 - [Build internal AI engineering platforms when off-the-shelf tools lack enterprise context](../concepts/build-internal-ai-engineering-platforms-when-off-the-shelf-tools-lack-enterprise-context.md) - enterprise agents may need custom monorepo, service, review, and on-call integration.
 - [Make agent work more trustworthy by making it verifiable](../concepts/make-agent-work-more-trustworthy-by-making-it-verifiable.md) - agents become more reliable when tasks are decomposed into checked, proxied, or constrained steps.
 - [Collaborate with complex agents through high-bandwidth artifacts](../concepts/collaborate-with-complex-agents-through-high-bandwidth-artifacts.md) - persistent documents, tables, comments, and domain primitives can give humans more control than linear chat.
@@ -84,12 +89,14 @@ Vertical agents need a trust/control design around complex work trees. Make subw
 - [Encode agent intent into server-side tools](../concepts/encode-agent-intent-into-server-side-tools.md) - server-side tool composition can make common workflows more reliable than exposing every low-level API step.
 - [Filter MCP tools by scopes and step-up authorization](../concepts/filter-mcp-tools-by-scopes-and-step-up-authorization.md) - MCP servers should expose tools according to actual authorization and request additional scope only when needed.
 - [Run parallel issue agents in sandboxes with review and merge loops](../concepts/run-parallel-issue-agents-in-sandboxes-with-review-and-merge-loops.md) - parallel agent execution needs issue planning, isolation, review, and integration repair.
+- [Separate agent harnesses from generated-code execution](../concepts/separate-agent-harnesses-from-generated-code-execution.md) - agent runtimes need isolation between control logic and generated-code execution.
 - [Choose autonomy level by task uncertainty and control needs](../concepts/choose-autonomy-level-by-task-uncertainty-and-control-needs.md) - not every agent request needs open-ended autonomy.
 - [Deep research agents need planning, grounded evidence, and pivot loops](../concepts/deep-research-agents-need-planning-grounded-evidence-and-pivot-loops.md) - research agents should search, inspect, cite, pivot, and synthesize rather than only answer from priors.
 - [Split exploratory research agents from constrained writing workflows](../concepts/split-exploratory-research-agents-from-constrained-writing-workflows.md) - adjacent tasks can communicate through artifacts when they need different autonomy levels.
 
 ## Open Questions
 
+- Which existing-information workflows are valuable enough for agents before the organization redesigns the underlying process?
 - Which classes of tool calls are reliable enough for small on-device models without cloud fallback?
 - Which agent workflows need dense long-context reasoning, and which can use sparse or on-device model variants with narrower tool surfaces?
 - Which agentic tools best compensate for small models' weak knowledge and long-context capacity?
@@ -159,3 +166,4 @@ Vertical agents need a trust/control design around complex work trees. Make subw
 - [Agents need more than a chat - Jacob Lauritzen, CTO Legora](../sources/20260422_XNtkiQJ49Ps.md)
 - [How AI is changing Software Engineering: A Conversation with Gergely Orosz, @pragmaticengineer](../sources/20260421_CS5Cmz5FssI.md)
 - [Full Workshop: Build Your Own Deep Research Agents - Louis-François Bouchard, Paul Iusztin, Samridhi](../sources/20260420_mYSRn6PC1mc.md)
+- [The New Application Layer - Malte Ubl, CTO Vercel](../sources/20260420_XKup1pj-34M.md)

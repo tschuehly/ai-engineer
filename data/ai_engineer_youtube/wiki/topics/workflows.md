@@ -8,6 +8,8 @@ Agent workflows become more reliable when they expose a tight loop between work 
 
 Complex vertical workflows add another design dimension: make ambiguous work more verifiable through decomposition, proxy checks, and guardrails; when uncertainty remains, let agents record reversible decisions instead of blocking on low-context chat questions. Artifact-native surfaces help humans review the specific branch of the work tree where their judgment is needed. Deep-research-to-writing pipelines show the same principle in a content workflow: keep exploratory evidence gathering agentic, then hand a `research.md` artifact to a tighter writing workflow with guidelines, few-shot examples, reviewer loops, and versioned drafts. AI adoption workflows should also avoid Goodharted usage goals: visible token counts and spend leaderboards can reward performative usage, while effective adoption requires hands-on experimentation against real work.
 
+Compressed research is a lower-risk operations pattern: keep the business event and human decision in place, but let an agent gather, classify, route, or summarize the evidence that made the work slow. This is especially useful when the source information already exists in company systems but is not available in the right place at decision time.
+
 ## Key Concepts
 
 - [Use hosted model playgrounds to prototype before owning infrastructure](../concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md) - hosted playgrounds can compress the path from idea to model, API, app, and cloud deployment experiment.
@@ -81,11 +83,15 @@ Complex vertical workflows add another design dimension: make ambiguous work mor
 - [Run parallel issue agents in sandboxes with review and merge loops](../concepts/run-parallel-issue-agents-in-sandboxes-with-review-and-merge-loops.md) - parallel workflow needs explicit isolation, review, and integration stages.
 - [Choose autonomy level by task uncertainty and control needs](../concepts/choose-autonomy-level-by-task-uncertainty-and-control-needs.md) - workflows should absorb known steps before teams add agentic planning.
 - [Deep research agents need planning, grounded evidence, and pivot loops](../concepts/deep-research-agents-need-planning-grounded-evidence-and-pivot-loops.md) - open-ended research workflows need source-backed iteration.
+- [Compressed research agents preserve human decision points](../concepts/compressed-research-agents-preserve-human-decision-points.md) - research automation can preserve the process's human decision boundary.
+- [Surface existing company information before redesigning processes](../concepts/surface-existing-company-information-before-redesigning-processes.md) - existing internal signals can power workflow improvements before process redesign.
+- [Agents expand the economically viable software surface](../concepts/agents-expand-the-economically-viable-software-surface.md) - cheaper automation changes which workflows are worth software investment.
 - [Split exploratory research agents from constrained writing workflows](../concepts/split-exploratory-research-agents-from-constrained-writing-workflows.md) - artifact handoff keeps different workflow phases appropriately constrained.
 - [Calibrate LLM judges like binary classifiers](../concepts/calibrate-llm-judges-like-binary-classifiers.md) - workflow judges need their own labeled validation loop.
 
 ## Open Questions
 
+- Which repeated research phases can be compressed without changing the human decision owner?
 - How should teams decide when a failure-driven context update is durable enough to enter the shared knowledge base?
 - How should a loop decide when to stop, ask for human review, or continue to the next ticket?
 - How should teams retire or rewrite skills that are no longer loaded or no longer match the current workflow?
@@ -143,3 +149,4 @@ Complex vertical workflows add another design dimension: make ambiguous work mor
 - [How AI is changing Software Engineering: A Conversation with Gergely Orosz, @pragmaticengineer](../sources/20260421_CS5Cmz5FssI.md)
 - [Taste & Craft: A Conversation with Tuomas Artman, CTO Linear & Gergely Orosz, @pragmaticengineer](../sources/20260421_wjk0ulMAkbc.md)
 - [Full Workshop: Build Your Own Deep Research Agents - Louis-François Bouchard, Paul Iusztin, Samridhi](../sources/20260420_mYSRn6PC1mc.md)
+- [The New Application Layer - Malte Ubl, CTO Vercel](../sources/20260420_XKup1pj-34M.md)

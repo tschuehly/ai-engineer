@@ -327,3 +327,11 @@
 - Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Choose Autonomy Level by Task Uncertainty and Control Needs](concepts/choose-autonomy-level-by-task-uncertainty-and-control-needs.md), [Deep Research Agents Need Planning, Grounded Evidence, and Pivot Loops](concepts/deep-research-agents-need-planning-grounded-evidence-and-pivot-loops.md), [Split Exploratory Research Agents From Constrained Writing Workflows](concepts/split-exploratory-research-agents-from-constrained-writing-workflows.md), [Calibrate LLM Judges Like Binary Classifiers](concepts/calibrate-llm-judges-like-binary-classifiers.md)
 - Notes: Added deep-research architecture patterns for choosing autonomy level, grounding research with cited pivot loops, separating research from writing through artifacts, and validating LLM judges with labeled splits.
+
+## [2026-05-06] ingest | The New Application Layer - Malte Ubl, CTO Vercel
+
+- Source: [The New Application Layer - Malte Ubl, CTO Vercel](sources/20260420_XKup1pj-34M.md)
+- Processed: `XKup1pj-34M`
+- Updated topics: [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Infrastructure](topics/infrastructure.md), [Retrieval](topics/retrieval.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Agents Expand the Economically Viable Software Surface](concepts/agents-expand-the-economically-viable-software-surface.md), [Compressed Research Agents Preserve Human Decision Points](concepts/compressed-research-agents-preserve-human-decision-points.md), [Surface Existing Company Information Before Redesigning Processes](concepts/surface-existing-company-information-before-redesigning-processes.md), [Agent Experience Prioritizes APIs, CLIs, and MCP Over Dashboards](concepts/agent-experience-prioritizes-apis-clis-and-mcp-over-dashboards.md), [Separate Agent Harnesses From Generated-Code Execution](concepts/separate-agent-harnesses-from-generated-code-execution.md)
+- Notes: Added Vercel's new-application-layer framing around agent software economics, low-risk compressed research workflows, internal-information surfacing, agent-facing product surfaces, and harness/runtime separation.
