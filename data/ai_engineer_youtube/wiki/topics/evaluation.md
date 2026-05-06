@@ -6,6 +6,8 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 
 Incoming AI-generated work needs evaluation too: automated security reports, issues, pull requests, and fixes can be high-volume and plausible, but maintainers still need to triage them because false reports, low-context fixes, and rushed patches can consume review capacity or break the product. Contribution gates that demand concise human context can be a practical first-pass evaluator before maintainers inspect a generated diff.
 
+Reliable AI app evals should also be reverse-engineered from user-visible outcomes before optimization begins. Generic measures such as groundedness, factuality, or bias can miss whether the product actually resolved the user's task, so teams should define scenario-specific answer criteria, include persona and wording variants, inspect individual failures, and use the benchmark as the baseline for prompt, model, retrieval, logic, and guardrail experiments.
+
 Guardrail evaluation is also part of production AI evaluation. Safety layers should be tested at the same boundaries where attacks enter: direct prompts, external context, RAG chunks, MCP tool descriptions, memory, agent plans, and model responses. For latency-sensitive paths, a fine-tuned encoder discriminator can be evaluated as a binary classifier and compared against slower LLM-as-judge checks, while human approval flows should be tested for whether reviewers see the effective action and hidden parameters they are approving. Multi-agent organizations add another evaluation question: does the workflow actually force review, approval, and role-specific quality checks, or are those still best-effort prompt instructions?
 
 RAG evaluation should treat the pipeline as a set of changeable components, not a solved top-k pattern. Parsing quality, chunk hierarchy, OCR, image descriptions, embedding models, hybrid lexical/vector scoring, metadata filters, and agentic search decisions can each change the answer. Agentic retrieval adds a trace-level evaluation requirement: teams should inspect which searches the model chose, not only whether the final answer sounded plausible.
@@ -50,6 +52,8 @@ RL environments add an evaluation shape for interactive model behavior: the same
 - [Extract contact-center intelligence as structured JSON](../concepts/extract-contact-center-intelligence-as-structured-json.md) - structured outputs make call-intent, entity, sentiment, and CRM-field checks more explicit than narrative summary review.
 - [Verify AI call summaries before CRM sync](../concepts/verify-ai-call-summaries-before-crm-sync.md) - operator edits provide a production signal for extraction accuracy and schema-mapping failures.
 - [Use golden data sets and mixed scoring functions for AI application confidence](../concepts/use-golden-data-sets-and-mixed-scoring-functions-for-ai-application-confidence.md) - curated edge cases plus deterministic and judge-model scores create a repeatable release gate.
+- [Reverse-engineer AI app evals from user outcomes](../concepts/reverse-engineer-ai-app-evals-from-user-outcomes.md) - product and business outcomes should define the eval criteria before generic AI quality metrics.
+- [Build AI app benchmarks before optimization](../concepts/build-ai-app-benchmarks-before-optimization.md) - early benchmarks let teams compare prompts, models, retrieval, logic, and guardrails while catching regressions.
 - [Apply online scoring to production traces with cost-aware sampling](../concepts/apply-online-scoring-to-production-traces-with-cost-aware-sampling.md) - production monitoring should score live traces while sampling expensive model-based judges deliberately.
 - [Replay production failures before promoting prompt fixes](../concepts/replay-production-failures-before-promoting-prompt-fixes.md) - production failures should become replayable regression cases before a prompt patch is trusted.
 - [Realtime multimodal agents use stateful streams for audio, vision, and tools](../concepts/realtime-multimodal-agents-use-stateful-streams-for-audio-vision-and-tools.md) - realtime evals may need to inspect streamed audio, visual context, tool events, and latency together.
@@ -112,6 +116,7 @@ RL environments add an evaluation shape for interactive model behavior: the same
 - How should retrieval evals isolate whether failures came from parsing, chunking, embedding choice, hybrid scoring, filters, or agent search planning?
 - Which RL environment scores should require manual rollout review before they are allowed to drive training decisions?
 - How should contact-center systems measure whether operator edits are correcting model errors, STT errors, schema mapping errors, or policy preferences?
+- Which user-outcome metrics are strong enough to replace generic AI quality scores as release gates for each product workflow?
 
 ## Sources
 
@@ -152,3 +157,4 @@ RL environments add an evaluation shape for interactive model behavior: the same
 - [OpenRAG: An open-source stack for RAG - Phil Nash](../sources/20260408_4TxOBhDRRCM.md)
 - [Let LLMs Wander: Engineering RL Environments - Stefano Fiorucci](../sources/20260408_71V3fTaUp2Q.md)
 - [Contact Center Voice AI: Low-Latency Intelligence Extraction from Messy Audio Streams - Dippu Singh](../sources/20260408_IEF842ZEU5A.md)
+- [Practical tactics to build reliable AI apps — Dmitry Kuchin, Multinear](../sources/20250803_-T6uZYYzkWw.md)

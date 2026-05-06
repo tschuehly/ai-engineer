@@ -527,3 +527,11 @@
 - Updated topics: [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Retrieval](topics/retrieval.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Read-only personal AI observers are a distinct product category](concepts/read-only-personal-ai-observers-are-a-distinct-product-category.md), [Cognitive exhaust gains value through cross-source synthesis](concepts/cognitive-exhaust-gains-value-through-cross-source-synthesis.md), [Aggregated personal context creates mosaic and exfiltration risk](concepts/aggregated-personal-context-creates-mosaic-and-exfiltration-risk.md)
 - Notes: Added read-only personal intelligence guidance covering observer-style systems, cross-source personal synthesis, and the remaining privacy and exfiltration risks.
+
+## [2026-05-06] ingest | Practical tactics to build reliable AI apps — Dmitry Kuchin, Multinear
+
+- Source: [Practical tactics to build reliable AI apps — Dmitry Kuchin, Multinear](sources/20250803_-T6uZYYzkWw.md)
+- Processed: `-T6uZYYzkWw`
+- Updated topics: [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Reverse-engineer AI app evals from user outcomes](concepts/reverse-engineer-ai-app-evals-from-user-outcomes.md), [Build AI app benchmarks before optimization](concepts/build-ai-app-benchmarks-before-optimization.md)
+- Notes: Added reliability tactics for deriving evals from product outcomes, building early benchmarks, and using case-level failures to guide prompt, model, retrieval, logic, and guardrail experiments.
