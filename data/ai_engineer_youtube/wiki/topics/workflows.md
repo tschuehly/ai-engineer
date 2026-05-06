@@ -44,7 +44,7 @@ AI coding workflows should also separate easy generation from simple system desi
 
 Outcome-based delivery workflows add an organizational layer around AI-accelerated engineering. A roadmapping phase can turn client goals into product requirements, architecture design documents, and story-pointed tickets, while acceptance gates determine when output becomes compensable. This creates a workflow incentive for AI leverage only if scoping, QA, and customer approval remain separate from the person paid for implementation throughput.
 
-Leadership-led AI workflows should start from the actual SDLC constraint. Code completion is not automatically the highest-leverage target if reverse engineering, onboarding, incidents, context switching, meetings, compliance uncertainty, or missing runbook context dominate delivery. Useful rollouts identify that bottleneck, choose AI use cases that reduce it, then measure whether system outcomes changed.
+Leadership-led AI workflows should start from the actual SDLC constraint. Code completion is not automatically the highest-leverage target if reverse engineering, onboarding, incidents, context switching, meetings, compliance uncertainty, or missing runbook context dominate delivery. Useful rollouts identify that bottleneck, choose AI use cases that reduce it, then measure whether system outcomes changed. Leadership learning workflows should also avoid learning from only one segment of the market: a cross-segment convening can help AI transformation leaders compare frontier lab direction, startup product velocity, academic framing, consulting patterns, and large-enterprise deployment evidence before turning strategy into a tactical roadmap for their own company.
 
 ## Key Concepts
 
@@ -208,6 +208,7 @@ Leadership-led AI workflows should start from the actual SDLC constraint. Code c
 - [Use AI to scale codebase understanding against code slop](../concepts/use-ai-to-scale-codebase-understanding-against-code-slop.md) - workflows can use AI for mapping, inspecting, and routing code work instead of only generating more code.
 - [Outcome-based engineering compensation uses accepted story points](../concepts/outcome-based-engineering-compensation-uses-accepted-story-points.md) - roadmapping, architecture docs, tickets, acceptance, and quarterly compensation form a repeatable output-paid delivery workflow.
 - [Counterbalance output incentives with independent scoping and QA](../concepts/counterbalance-output-incentives-with-independent-scoping-and-qa.md) - output-paid workflows need independent controls before story points become payment.
+- [Use cross-segment convenings to calibrate AI transformation roadmaps](../concepts/use-cross-segment-convenings-to-calibrate-ai-transformation-roadmaps.md) - leadership learning should combine frontier, startup, academic, consulting, and enterprise deployment evidence.
 
 ## Open Questions
 
@@ -309,6 +310,7 @@ Leadership-led AI workflows should start from the actual SDLC constraint. Code c
 - [The Infinite Software Crisis - Jake Nations, Netflix](../sources/20251220_eIoohUmYpGI.md)
 - [Paying Engineers like Salespeople - Arman Hezarkhani, Tenex](../sources/20251219_4mRekpZpBZs.md)
 - [Leadership in AI Assisted Engineering - Justin Reock, DX (acq. Atlassian)](../sources/20251219_PmZDupFP3UM.md)
+- [Welcome to AIE LEAD - Alex Lieberman, Tenex](../sources/20251219_RQ5Jt8zDBp8.md)
 - [Claude Agent SDK [Full Workshop] - Thariq Shihipar, Anthropic](../sources/20260105_TqC1qOfiVcQ.md)
 - [Building Intelligent Research Agents with Manus - Ivan Leo, Manus AI (now Meta Superintelligence)](../sources/20251230_xz0-brt56L8.md)
 - [OpenAI + @Temporalio : Building Durable, Production Ready Agents - Cornelia Davis, Temporal](../sources/20260112_k8cnVCMYmNc.md)

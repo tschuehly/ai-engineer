@@ -263,6 +263,7 @@
 - [Target AI rollouts at SDLC bottlenecks](../concepts/target-ai-rollouts-at-sdlc-bottlenecks.md)
 - [Govern agent rules through feedback gatekeepers](../concepts/govern-agent-rules-through-feedback-gatekeepers.md)
 - [Counterbalance output incentives with independent scoping and QA](../concepts/counterbalance-output-incentives-with-independent-scoping-and-qa.md)
+- [Use cross-segment convenings to calibrate AI transformation roadmaps](../concepts/use-cross-segment-convenings-to-calibrate-ai-transformation-roadmaps.md)
 - [Treat agent readiness as verification infrastructure](../concepts/treat-agent-readiness-as-verification-infrastructure.md)
 - [Use agent readiness flywheels to improve the development environment](../concepts/use-agent-readiness-flywheels-to-improve-the-development-environment.md)
 - [Local-first platform workflows shorten agent feedback loops](../concepts/local-first-platform-workflows-shorten-agent-feedback-loops.md)

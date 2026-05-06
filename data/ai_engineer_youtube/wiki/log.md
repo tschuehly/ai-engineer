@@ -767,3 +767,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Measure AI engineering impact across utilization, impact, and cost](concepts/measure-ai-engineering-impact-across-utilization-impact-and-cost.md), [Create psychological safety for AI adoption](concepts/create-psychological-safety-for-ai-adoption.md), [Target AI rollouts at SDLC bottlenecks](concepts/target-ai-rollouts-at-sdlc-bottlenecks.md), [Govern agent rules through feedback gatekeepers](concepts/govern-agent-rules-through-feedback-gatekeepers.md)
 - Notes: Added DX's leadership playbook for AI-assisted engineering rollouts, covering impact measurement, enablement safety, bottleneck selection, and maintained prompt-rule feedback loops.
+
+## [2026-05-07] ingest | Welcome to AIE LEAD - Alex Lieberman, Tenex
+
+- Source: [Welcome to AIE LEAD - Alex Lieberman, Tenex](sources/20251219_RQ5Jt8zDBp8.md)
+- Processed: `RQ5Jt8zDBp8`
+- Updated topics: [Workflows](topics/workflows.md)
+- Updated concepts: [Use cross-segment convenings to calibrate AI transformation roadmaps](concepts/use-cross-segment-convenings-to-calibrate-ai-transformation-roadmaps.md)
+- Notes: Added a narrow leadership-learning workflow from the AIE LEAD opening remarks, focused on calibrating AI transformation roadmaps across frontier labs, startups, academia, consultants, and large enterprises.
