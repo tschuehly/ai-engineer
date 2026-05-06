@@ -43,6 +43,8 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Limit agent change size by feedback speed](concepts/limit-agent-change-size-by-feedback-speed.md) - generated code volume should stay inside the available test, type-check, and review loop.
 - [Use deep modules to make agent work testable](concepts/use-deep-modules-to-make-agent-work-testable.md) - simple module interfaces help humans validate agent-written internals from outside.
 - [Retire completed planning docs before they become agent doc rot](concepts/retire-completed-planning-docs-before-they-become-agent-doc-rot.md) - historical PRDs can mislead agents after code and requirements diverge.
+- [Collaborate with complex agents through high-bandwidth artifacts](concepts/collaborate-with-complex-agents-through-high-bandwidth-artifacts.md) - vertical agents often need documents, tables, comments, and review primitives as their main collaboration surface.
+- [Use decision logs to keep uncertain agents moving](concepts/use-decision-logs-to-keep-uncertain-agents-moving.md) - reversible assumptions can preserve progress while keeping human review targeted.
 
 ## Topics
 

@@ -287,3 +287,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Use PRDs to Align Agents on the Design Concept](concepts/use-prds-to-align-agents-on-the-design-concept.md), [Maintain Ubiquitous Language for AI Coding](concepts/maintain-ubiquitous-language-for-ai-coding.md), [Limit Agent Change Size by Feedback Speed](concepts/limit-agent-change-size-by-feedback-speed.md), [Use Deep Modules to Make Agent Work Testable](concepts/use-deep-modules-to-make-agent-work-testable.md), [Delegate Implementations Behind Reviewed Module Interfaces](concepts/delegate-implementations-behind-reviewed-module-interfaces.md)
 - Notes: Added Matt Pocock's software-fundamentals frame for AI coding: specs-to-code entropy caveats, shared design interviews, domain language, feedback-speed limits, TDD, and deep module boundaries.
+
+## [2026-05-06] ingest | Agents need more than a chat - Jacob Lauritzen, CTO Legora
+
+- Source: [Agents need more than a chat - Jacob Lauritzen, CTO Legora](sources/20260422_XNtkiQJ49Ps.md)
+- Processed: `XNtkiQJ49Ps`
+- Updated topics: [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Make Agent Work More Trustworthy by Making It Verifiable](concepts/make-agent-work-more-trustworthy-by-making-it-verifiable.md), [Use Decision Logs to Keep Uncertain Agents Moving](concepts/use-decision-logs-to-keep-uncertain-agents-moving.md), [Collaborate With Complex Agents Through High-Bandwidth Artifacts](concepts/collaborate-with-complex-agents-through-high-bandwidth-artifacts.md), [Encode Domain Judgment in Node-Level Agent Skills](concepts/encode-domain-judgment-in-node-level-agent-skills.md)
+- Notes: Added Legora's vertical-agent trust/control framing around verifiability, domain skills, reversible decision logs, and artifact-native collaboration beyond chat.

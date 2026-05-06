@@ -7,6 +7,7 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 ## Key Concepts
 
 - [Compare models by task, thinking budget, cost, and latency](../concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - side-by-side model comparisons help choose enough reasoning at acceptable speed and cost.
+- [Make agent work more trustworthy by making it verifiable](../concepts/make-agent-work-more-trustworthy-by-making-it-verifiable.md) - agent autonomy depends on whether tasks have direct checks, proxy checks, or safe constraints.
 - [Evaluate whether models reject impossible or nonsensical premises](../concepts/evaluate-whether-models-reject-impossible-or-nonsensical-premises.md) - models should be judged on when they stop, clarify, or reject bad premises, not only on how well they solve valid tasks.
 - [Track user dissatisfaction alongside pairwise model preference](../concepts/track-user-dissatisfaction-alongside-pairwise-model-preference.md) - "both bad" feedback exposes absolute failure rates that winner-only model comparisons hide.
 - [Benchmark narrow slices separately from real expert work](../concepts/benchmark-narrow-slices-separately-from-real-expert-work.md) - benchmark gains should be checked against open-ended expert prompts and shifting user expectations.
@@ -60,6 +61,7 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - Which module-level tests are strong enough to let reviewers delegate internals without losing system control?
 - Which premise-rejection evals are reliable enough to run before deploying high-autonomy agents?
 - How should dissatisfaction rates be normalized when users ask harder prompts as models improve?
+- Which proxy checks are strong enough to stand in for delayed human or legal verification?
 
 ## Sources
 
@@ -83,3 +85,4 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - [Full Walkthrough: Workflow for AI Coding - Matt Pocock](../sources/20260424_-QFHIoCo-Ko.md)
 - [What Do Models Still Suck At? - Peter Gostev, Arena.ai, BullshitBench](../sources/20260424_R7A8rX-09Zw.md)
 - ["Software Fundamentals Matter More Than Ever" - Matt Pocock](../sources/20260423_v4F1gFy-hqg.md)
+- [Agents need more than a chat - Jacob Lauritzen, CTO Legora](../sources/20260422_XNtkiQJ49Ps.md)

@@ -2,6 +2,10 @@
 
 ## Agents
 
+- [Make agent work more trustworthy by making it verifiable](../concepts/make-agent-work-more-trustworthy-by-making-it-verifiable.md)
+- [Use decision logs to keep uncertain agents moving](../concepts/use-decision-logs-to-keep-uncertain-agents-moving.md)
+- [Collaborate with complex agents through high-bandwidth artifacts](../concepts/collaborate-with-complex-agents-through-high-bandwidth-artifacts.md)
+- [Encode domain judgment in node-level agent skills](../concepts/encode-domain-judgment-in-node-level-agent-skills.md)
 - [On-device agents can combine local reasoning with tool and API calls](../concepts/on-device-agents-can-combine-local-reasoning-with-tool-and-api-calls.md)
 - [Route Gemma 4 model variants by deployment and workflow shape](../concepts/route-gemma-4-model-variants-by-deployment-and-workflow-shape.md)
 - [Unified coding-agent harnesses combine models, tools, environments, and safety](../concepts/unified-coding-agent-harnesses-combine-models-tools-environments-and-safety.md)
@@ -123,6 +127,7 @@
 
 ## Context Engineering
 
+- [Encode domain judgment in node-level agent skills](../concepts/encode-domain-judgment-in-node-level-agent-skills.md)
 - [Enterprise agent failures often expose missing institutional knowledge](../concepts/enterprise-agent-failures-expose-missing-institutional-knowledge.md)
 - [Demand-driven context pulls knowledge from failed work rather than pushing a complete knowledge base upfront](../concepts/demand-driven-context-pulls-knowledge-from-failed-work.md)
 - [Context blocks turn monolithic enterprise knowledge into reusable agent context](../concepts/context-blocks-turn-monolithic-enterprise-knowledge-into-reusable-agent-context.md)
@@ -204,6 +209,7 @@
 
 ## Evaluation
 
+- [Make agent work more trustworthy by making it verifiable](../concepts/make-agent-work-more-trustworthy-by-making-it-verifiable.md)
 - [Mature eval platforms from spreadsheets into experiment systems](../concepts/mature-eval-platforms-from-spreadsheets-into-experiment-systems.md)
 - [Connect production observability to offline eval loops](../concepts/connect-production-observability-to-offline-eval-loops.md)
 - [Agent traces require specialized eval infrastructure](../concepts/agent-traces-require-specialized-eval-infrastructure.md)
@@ -276,6 +282,8 @@
 
 ## Tools
 
+- [Collaborate with complex agents through high-bandwidth artifacts](../concepts/collaborate-with-complex-agents-through-high-bandwidth-artifacts.md)
+- [Encode domain judgment in node-level agent skills](../concepts/encode-domain-judgment-in-node-level-agent-skills.md)
 - [Use skills for workflow guidance and MCP for integrations](../concepts/use-skills-for-workflow-guidance-and-mcp-for-integrations.md)
 - [Customize subagents by task, model, tools, and permissions](../concepts/customize-subagents-by-task-model-tools-and-permissions.md)
 - [Use agent hooks to automate session rituals](../concepts/use-agent-hooks-to-automate-session-rituals.md)
@@ -330,6 +338,9 @@
 
 ## Workflows
 
+- [Make agent work more trustworthy by making it verifiable](../concepts/make-agent-work-more-trustworthy-by-making-it-verifiable.md)
+- [Use decision logs to keep uncertain agents moving](../concepts/use-decision-logs-to-keep-uncertain-agents-moving.md)
+- [Collaborate with complex agents through high-bandwidth artifacts](../concepts/collaborate-with-complex-agents-through-high-bandwidth-artifacts.md)
 - [Demand-driven context pulls knowledge from failed work rather than pushing a complete knowledge base upfront](../concepts/demand-driven-context-pulls-knowledge-from-failed-work.md)
 - [Isolate parallel coding work with project worktrees](../concepts/isolate-parallel-coding-work-with-project-worktrees.md)
 - [Customize subagents by task, model, tools, and permissions](../concepts/customize-subagents-by-task-model-tools-and-permissions.md)
