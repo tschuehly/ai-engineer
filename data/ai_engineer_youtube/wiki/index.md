@@ -32,6 +32,7 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Customize subagents by task, model, tools, and permissions](concepts/customize-subagents-by-task-model-tools-and-permissions.md) - subagents should be scoped to their role instead of inheriting unnecessary authority.
 - [Align teams before agents implement](concepts/align-teams-before-agents-implement.md) - fast coding agents make shared direction the scarce resource.
 - [Shared cloud workspaces make agent sessions collaborative](concepts/shared-cloud-workspaces-make-agent-sessions-collaborative.md) - cloud-backed sessions let teammates and agents share prompts, code, terminals, previews, and PR context.
+- [Spatial agent maps expose filesystem-level lineage and collisions](concepts/spatial-agent-maps-expose-filesystem-level-lineage-and-collisions.md) - parallel agent work becomes easier to supervise when file activity, changelists, and likely collisions are visible.
 
 ## Topics
 

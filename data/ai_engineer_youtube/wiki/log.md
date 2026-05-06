@@ -239,3 +239,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Align teams before agents implement](concepts/align-teams-before-agents-implement.md), [Shared cloud workspaces make agent sessions collaborative](concepts/shared-cloud-workspaces-make-agent-sessions-collaborative.md), [Collaborative plans become executable agent context](concepts/collaborative-plans-become-executable-agent-context.md), [Social context dashboards keep agentic teams oriented](concepts/social-context-dashboards-keep-agentic-teams-oriented.md)
 - Notes: Added GitHub Next ACE patterns for multiplayer agent alignment, shared cloud sessions, collaborative planning, and summarized social context around agentic work.
+
+## [2026-05-06] ingest | AgentCraft: Putting the Orc in Orchestration - Ido Salomon
+
+- Source: [AgentCraft: Putting the Orc in Orchestration - Ido Salomon](sources/20260425_kR64LOqBBCU.md)
+- Processed: `kR64LOqBBCU`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Spatial Agent Maps Expose Filesystem-Level Lineage and Collisions](concepts/spatial-agent-maps-expose-filesystem-level-lineage-and-collisions.md), [Let Agents Propose Quest Queues for Parallel Work](concepts/let-agents-propose-quest-queues-for-parallel-work.md), [Review Bundles Compress Parallel Agent Output Into Evidence](concepts/review-bundles-compress-parallel-agent-output-into-evidence.md)
+- Notes: Added AgentCraft patterns for game-inspired multi-agent orchestration, repository activity visibility, agent-suggested work queues, and evidence-backed review of parallel agent output.
