@@ -655,3 +655,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Models](topics/models.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Pair next-token prediction with reinforcement learning for long-horizon work](concepts/pair-next-token-prediction-with-reinforcement-learning-for-long-horizon-work.md), [Ratchet agent permissions down in high-consequence code environments](concepts/ratchet-agent-permissions-down-in-high-consequence-code-environments.md), [Treat long-horizon agents as asynchronous workers with evolving interfaces](concepts/treat-long-horizon-agents-as-asynchronous-workers-with-evolving-interfaces.md)
 - Notes: Added Poolside's long-horizon agent framing around RL-backed model training, controlled high-consequence coding environments, and asynchronous agent interfaces with visible verification surfaces.
+
+## [2026-05-07] ingest | Shipping AI That Works: An Evaluation Framework for PMs - Aman Khan, Arize
+
+- Source: [Shipping AI That Works: An Evaluation Framework for PMs - Aman Khan, Arize](sources/20251226_2HNSG990Ew8.md)
+- Processed: `2HNSG990Ew8`
+- Updated topics: [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Label LLM Judge Outputs Before Mapping Them to Scores](concepts/label-llm-judge-outputs-before-mapping-them-to-scores.md), [Calibrate LLM Judges Like Binary Classifiers](concepts/calibrate-llm-judges-like-binary-classifiers.md), [Connect Production Observability to Offline Eval Loops](concepts/connect-production-observability-to-offline-eval-loops.md)
+- Notes: Added Arize's PM-facing eval framework covering label-first judge scoring and trace-backed prompt, dataset, and experiment workflows for production AI features.
