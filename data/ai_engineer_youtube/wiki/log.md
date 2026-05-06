@@ -367,3 +367,11 @@
 - Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md)
 - Updated concepts: [Expose Large APIs Through Typed Code Mode](concepts/expose-large-apis-through-typed-code-mode.md), [Run Agent-Written API Code Inside Programmable Sandboxes](concepts/run-agent-written-api-code-inside-programmable-sandboxes.md), [Capability-Based Sandboxes Start With No Authority](concepts/capability-based-sandboxes-start-with-no-authority.md)
 - Notes: Added Sunil Pai's code-mode framing around executable API workflows, token and round-trip reduction, task-scoped capability grants, and observability for generated-code runtimes.
+
+## [2026-05-06] ingest | The Friction is Your Judgment - Armin Ronacher & Cristina Poncela Cubeiro, Earendil
+
+- Source: [The Friction is Your Judgment - Armin Ronacher & Cristina Poncela Cubeiro, Earendil](sources/20260418__Zcw_sVF6hU.md)
+- Processed: `_Zcw_sVF6hU`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
+- Updated concepts: [AI Output Speed Can Overwhelm Review Capacity](concepts/ai-output-speed-can-overwhelm-review-capacity.md), [Agent-Legible Codebases Reduce Generated-Code Entropy](concepts/agent-legible-codebases-reduce-generated-code-entropy.md), [Use Human Judgment Gates for High-Risk Agent Code Changes](concepts/use-human-judgment-gates-for-high-risk-agent-code-changes.md)
+- Notes: Added Earendil's friction-as-judgment framing for coding-agent workflows, including review-capacity limits, codebase legibility, mechanical enforcement, and explicit human gates for risky changes.

@@ -59,6 +59,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Choose autonomy level by task uncertainty and control needs](concepts/choose-autonomy-level-by-task-uncertainty-and-control-needs.md) - many requested agents should remain workflows when the steps are knowable and control matters.
 - [Compressed research agents preserve human decision points](concepts/compressed-research-agents-preserve-human-decision-points.md) - agents can accelerate repeated research without changing the final decision owner.
 - [Calibrate LLM judges like binary classifiers](concepts/calibrate-llm-judges-like-binary-classifiers.md) - judge prompts need domain labels, dev/test splits, and precision/recall-aware validation before they gate quality.
+- [AI output speed can overwhelm review capacity](concepts/ai-output-speed-can-overwhelm-review-capacity.md) - generated-code volume should be constrained by responsible review, not only by agent throughput.
+- [Agent-legible codebases reduce generated-code entropy](concepts/agent-legible-codebases-reduce-generated-code-entropy.md) - modular flow, explicit primitives, and lint-enforced rules make codebases easier for agents to modify safely.
+- [Use human judgment gates for high-risk agent code changes](concepts/use-human-judgment-gates-for-high-risk-agent-code-changes.md) - migrations, permissions, dependencies, architecture, and reliability work need explicit human review friction.
 
 ## Topics
 

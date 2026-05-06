@@ -1,0 +1,27 @@
+# Agent-Legible Codebases Reduce Generated-Code Entropy
+
+Summary: Codebases should be structured so agents can see the intended path, constraints, and source of truth. Modular flow, explicit interfaces, mechanical lint rules, and minimal hidden magic reduce duplicate work, brittle fallbacks, and behavior the team did not mean to support.
+
+Use when:
+- Refactoring a product codebase so coding agents can work safely inside it.
+- Choosing lint rules, module boundaries, and source-of-truth conventions for agent-heavy development.
+
+Details:
+- Agents are optimized to produce runnable progress, so they may add forgiving fallbacks or local recovery behavior that passes immediate checks while creating brittle systems and hidden failure conditions. (07:13-08:40)
+- As generated code accumulates, agents can make a codebase too large or complex for themselves to read properly, leading to duplicate implementations, missed files, and more entropy than a human-paced workflow would normally create. (08:40-09:08)
+- The speakers distinguish libraries from products: libraries tend to have clearer problems, APIs, and tight constraints, while product code mixes UI, APIs, permissions, feature flags, billing, and other interacting concerns that can exceed an agent's context. (09:16-10:24)
+- Agent-legible structure includes modular components and modularized code flow, such as explicit steps from user message to agent loop to output handling, because agents tend to add fuzz between unclear flow boundaries. (10:52-11:50)
+- Mechanical enforcement can include no bare catch rules, centralized SQL query interfaces, one UI primitive component library, no dynamic imports, unique function names for search and token efficiency, and TypeScript modes that avoid transpilation confusion. (12:17-14:08)
+
+Related topics:
+- [Coding Agents](../topics/coding-agents.md)
+- [Evaluation](../topics/evaluation.md)
+- [Workflows](../topics/workflows.md)
+
+Related concepts:
+- [Use deep modules to make agent work testable](use-deep-modules-to-make-agent-work-testable.md)
+- [Agent software factories need runnable, contextual, and verifiable primitives](agent-software-factories-need-runnable-contextual-and-verifiable-primitives.md)
+- [Constrain sensitive file access with purpose-built tools](constrain-sensitive-file-access-with-purpose-built-tools.md)
+
+Sources:
+- [The Friction is Your Judgment - Armin Ronacher & Cristina Poncela Cubeiro, Earendil](../sources/20260418__Zcw_sVF6hU.md), 07:13-14:08
