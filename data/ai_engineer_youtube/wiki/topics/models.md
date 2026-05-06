@@ -6,6 +6,8 @@ Model work in this wiki covers how AI engineers choose, train, adapt, and deploy
 
 Encoder models add a guardrail-specific model pattern. When the job is to classify whether an input, retrieved chunk, tool description, model response, or agent plan is safe, a bidirectional encoder with a classification head can be a better production fit than a generative judge because it can inspect the full sequence in one forward pass and return a compact binary or policy label. Agent organizations add a model-routing layer: not every role needs frontier-model cost, so teams should choose models by role intelligence needs, quality bar, budget, and latency.
 
+Long-tail knowledge adaptation adds a memory-oriented model pattern. When a domain is too private, too new, or too underrepresented for a base model, teams can choose between spending at inference time through context, RAG, or deep-research loops and spending at training time by turning source facts into a model update. The source-backed caveat is that naive fine-tuning can memorize and damage general behavior; useful weight updates need curated data generation, selective update strategies, and regression evaluation.
+
 ## Key Concepts
 
 - [Compare models by task, thinking budget, cost, and latency](../concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - model choice should be routed by workload constraints rather than by size alone.
@@ -43,6 +45,8 @@ Encoder models add a guardrail-specific model pattern. When the job is to classi
 - [Modular tiny-model pipelines reuse specialized models across mobile app workflows](../concepts/modular-tiny-model-pipelines-reuse-specialized-models-across-mobile-app-workflows.md) - narrow fine-tuned models can be composed into mobile app pipelines and reused across features.
 - [Use omnimodal embeddings for cross-modal retrieval and comparison](../concepts/use-omnimodal-embeddings-for-cross-modal-retrieval-and-comparison.md) - embedding models are companion models for retrieval, recognition, and comparison across modalities.
 - [Adapt embedding dimensions with Matryoshka representation learning](../concepts/adapt-embedding-dimensions-with-matryoshka-representation-learning.md) - one embedding model can expose different dimensionalities for cost and quality tradeoffs.
+- [Do not treat long context as durable model memory](../concepts/do-not-treat-long-context-as-durable-model-memory.md) - model memory should not be conflated with transient prompt activations.
+- [Train long-tail knowledge into weights with curated synthetic data](../concepts/train-long-tail-knowledge-into-weights-with-curated-synthetic-data.md) - specialized knowledge can be trained into weights when raw fine-tuning is converted into a safer data and update process.
 - [Neural weather models can target operational forecast variables directly](../concepts/neural-weather-models-can-target-operational-forecast-variables-directly.md) - forecasting models should match architecture and target variables to operational use.
 - [Interactive world models need memory, control, and live prompting](../concepts/interactive-world-models-need-memory-control-and-live-prompting.md) - generated environments need stateful interaction, not only plausible frames.
 
@@ -55,6 +59,7 @@ Encoder models add a guardrail-specific model pattern. When the job is to classi
 - Which interactive tasks have reward signals clear enough to justify building an RL environment rather than collecting more SFT examples?
 - How should teams evaluate sparse MoE, effective on-device, and dense long-context models against the same agent workflow without hiding deployment cost differences?
 - When should a team fine-tune an open model directly, start from a domain variant, or rely on a hosted API model for maximum raw capability?
+- What evaluation suite is sufficient before promoting a weight-updated long-tail model over RAG or full-context prompting?
 - When does adding reasoning effort improve model judgment, and when does it simply make accommodation of a bad premise longer?
 - Which media-generation failures should be fixed through data curation, latent representation design, sampling settings, distillation, or explicit controls?
 - Which non-language tasks should be handled by specialized frontier models instead of routed through a general LLM?
@@ -78,3 +83,4 @@ Encoder models add a guardrail-specific model pattern. When the job is to classi
 - [Paperclip: Open Source Human Control Plane for AI Labor - Dotta Bippa](../sources/20260415_h403btjldDQ.md)
 - [Running LLMs locally: Practical LLM Performance on DGX Spark - Mozhgan Kabiri chimeh, NVIDIA](../sources/20260410_c5-kx2bwoCk.md)
 - [Let LLMs Wander: Engineering RL Environments - Stefano Fiorucci](../sources/20260408_71V3fTaUp2Q.md)
+- [Jack Morris: Stuffing Context is not Memory, Updating Weights is](../sources/20251229_Jty4s9-Jb78.md)

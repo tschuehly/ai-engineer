@@ -10,6 +10,8 @@ Product engineering adds a customer-context layer to this problem. If AI handles
 
 Prompt-learning workflows show a narrower context loop: when traces or datasets include explanatory feedback from subject-matter experts or evaluators, that text becomes context for improving the next system prompt. Bare labels are less reusable because they do not identify the missed instruction, missing context, or rule violation that future prompts should address.
 
+Long context should be treated as temporary working memory, not durable knowledge. Large prompts can keep a model from outright lacking a document, but attention cost, latency, and context-rot behavior mean "fits in the window" is weaker than "the model can reason over it reliably." For stable long-tail knowledge, the design choice may move from prompt stuffing to retrieval, contextual embeddings, or model adaptation.
+
 ## Key Concepts
 
 - [Keep agent context small, fresh, and task-specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md) - context should be externalized, selected, summarized, and isolated so stale or excessive history does not degrade agent work.
@@ -53,6 +55,9 @@ Prompt-learning workflows show a narrower context loop: when traces or datasets 
 - [Retire completed planning docs before they become agent doc rot](../concepts/retire-completed-planning-docs-before-they-become-agent-doc-rot.md) - stale planning artifacts can become harmful context for later agents.
 - [Surface existing company information before redesigning processes](../concepts/surface-existing-company-information-before-redesigning-processes.md) - scattered Slack, meeting, issue, and update signals can be made usable as agent context.
 - [Use explanatory feedback to optimize prompts](../concepts/use-explanatory-feedback-to-optimize-prompts.md) - failure explanations become context for prompt revisions.
+- [Do not treat long context as durable model memory](../concepts/do-not-treat-long-context-as-durable-model-memory.md) - full-context prompting has latency and reasoning limits even when the window is large enough.
+- [Treat embeddings as recoverable sensitive data](../concepts/treat-embeddings-as-recoverable-sensitive-data.md) - embeddings are derived context artifacts that still need data-protection controls.
+- [Train long-tail knowledge into weights with curated synthetic data](../concepts/train-long-tail-knowledge-into-weights-with-curated-synthetic-data.md) - stable niche knowledge may belong in model adaptation rather than repeated prompt context.
 
 ## Open Questions
 
@@ -72,6 +77,7 @@ Prompt-learning workflows show a narrower context loop: when traces or datasets 
 - How should repositories distinguish current implementation guidance from historical planning artifacts?
 - Which non-functional requirements are durable enough to become default context for every coding-agent run?
 - Which failure explanations should become durable prompt context instead of staying as one-off annotations?
+- When should stable long-tail knowledge move from context or retrieval into model weights?
 
 ## Sources
 
@@ -98,3 +104,4 @@ Prompt-learning workflows show a narrower context loop: when traces or datasets 
 - [Cognitive Exhaust Fumes, or: Read-Only AI Is Underrated - Simon Podhajsky, Head of AI, Waypoint](../sources/20260408_u0TOSBbAw7c.md)
 - [Build a Prompt Learning Loop - SallyAnn DeLucia & Fuad Ali, Arize](../sources/20260106_SbcQYbrvAfI.md)
 - [Claude Agent SDK [Full Workshop] - Thariq Shihipar, Anthropic](../sources/20260105_TqC1qOfiVcQ.md)
+- [Jack Morris: Stuffing Context is not Memory, Updating Weights is](../sources/20251229_Jty4s9-Jb78.md)

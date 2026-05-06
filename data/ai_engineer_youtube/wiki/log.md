@@ -639,3 +639,11 @@
 - Updated topics: [Agents](topics/agents.md), [Retrieval](topics/retrieval.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Treat Agent APIs as Asynchronous Task Lifecycles](concepts/treat-agent-apis-as-asynchronous-task-lifecycles.md), [Map External Conversation Threads to Agent Task IDs](concepts/map-external-conversation-threads-to-agent-task-ids.md), [Use Connectors and Uploads as Private Research Context](concepts/use-connectors-and-uploads-as-private-research-context.md), [Prototype Agent Workflows in the UI Before Hardening the API Path](concepts/prototype-agent-workflows-in-the-ui-before-hardening-the-api-path.md)
 - Notes: Added Manus API guidance for long-running agent task lifecycles, Slack-backed continuation, private connector/file context, and web-UI-to-API workflow hardening.
+
+## [2026-05-06] ingest | Jack Morris: Stuffing Context is not Memory, Updating Weights is
+
+- Source: [Jack Morris: Stuffing Context is not Memory, Updating Weights is](sources/20251229_Jty4s9-Jb78.md)
+- Processed: `Jty4s9-Jb78`
+- Updated topics: [Context Engineering](topics/context-engineering.md), [Inference](topics/inference.md), [Models](topics/models.md), [Retrieval](topics/retrieval.md)
+- Updated concepts: [Do not treat long context as durable model memory](concepts/do-not-treat-long-context-as-durable-model-memory.md), [Treat embeddings as recoverable sensitive data](concepts/treat-embeddings-as-recoverable-sensitive-data.md), [Train long-tail knowledge into weights with curated synthetic data](concepts/train-long-tail-knowledge-into-weights-with-curated-synthetic-data.md)
+- Notes: Added memory-layer guidance contrasting full context, RAG, embeddings, and weight updates for long-tail private knowledge.

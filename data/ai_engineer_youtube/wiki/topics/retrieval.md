@@ -4,9 +4,9 @@
 
 Retrieval gives agents access to institutional systems such as Confluence, Jira, SharePoint, GitHub, Slack, knowledge graphs, and file-backed knowledge bases. The useful retrieval layer is not the one with the most connectors, but the one that provides accurate, task-relevant context and exposes gaps when the source knowledge is missing, stale, contradictory, or unavailable to the current user. Personal Markdown knowledge bases can play the same role at individual scale when saved links, notes, tasks, and project records are indexed, tagged, connected, and resurfaced when relevant. Read-only personal retrieval can also synthesize emails, journals, tasks, browser history, notes, and relationship records into reflection without granting mutation rights. Context engines add a reasoning layer over retrieval by personalizing results to the task, team, permissions, and source relationships. Small models can improve this layer by embedding, reranking, extracting entities, filtering inputs, or building structured knowledge targets. Omnimodal embeddings extend the retrieval target beyond text: one semantic vector can represent text, audio, video, and documents so agents can retrieve, query, and compare concepts without lossy modality handoffs. Dimension-adaptive embeddings add an infrastructure lever by letting retrieval start with cheaper coarse vectors and expand when higher expressiveness is needed.
 
-Retrieval is also an LLM security boundary. Poisoned chunks can steer an answer when they are retrieved for the target query and ranked high enough to look useful, so retrieval systems need provenance, corpus hygiene, and safety checks before retrieved text becomes model context.
+Retrieval is also an LLM security boundary. Poisoned chunks can steer an answer when they are retrieved for the target query and ranked high enough to look useful, so retrieval systems need provenance, corpus hygiene, and safety checks before retrieved text becomes model context. Embeddings themselves should also be protected as sensitive derived data: storing vectors without source text does not make the corpus safe to expose if a reconstruction model can recover source-like content.
 
-RAG systems benefit from reusable baselines, but not from a single fixed recipe. Document parsing, chunking, embedding choice, hybrid lexical/vector search, metadata filters, and query-time agent loops all need to be tuned against the actual corpus and user questions. Structure-aware ingestion is especially important for messy source formats: preserving document hierarchy, tables, images, OCR output, and modality-specific extraction gives retrieval cleaner chunks than plain text extraction. Hybrid indexes add another control point by combining vector similarity, keyword search, filters, aggregations, and embedding-model migration paths.
+RAG systems benefit from reusable baselines, but not from a single fixed recipe. Document parsing, chunking, embedding choice, hybrid lexical/vector search, metadata filters, and query-time agent loops all need to be tuned against the actual corpus and user questions. Generic embeddings can be too global for a specialized corpus, so contextual or domain-adaptive embedding approaches may improve retrieval before a team reaches for model weight updates. Structure-aware ingestion is especially important for messy source formats: preserving document hierarchy, tables, images, OCR output, and modality-specific extraction gives retrieval cleaner chunks than plain text extraction. Hybrid indexes add another control point by combining vector similarity, keyword search, filters, aggregations, and embedding-model migration paths.
 
 Private research agents can treat connectors and uploads as complementary retrieval inputs. A connector such as Notion or Microsoft 365 provides durable organizational context, while uploaded receipts, PDFs, screenshots, or task files provide local evidence for the current run. The workflow becomes more useful when the agent can compare both layers and write results back to the right internal page or record.
 
@@ -33,6 +33,8 @@ Private research agents can treat connectors and uploads as complementary retrie
 - [Hybrid retrieval should support filters and embedding migration](../concepts/hybrid-retrieval-should-support-filters-and-embedding-migration.md) - vector search should be paired with lexical search, metadata scope, and migration paths.
 - [Agentic retrieval lets models plan search steps](../concepts/agentic-retrieval-lets-models-plan-search-steps.md) - retrieval tools can let the model decompose and repeat searches instead of relying on one top-k query.
 - [Use connectors and uploads as private research context](../concepts/use-connectors-and-uploads-as-private-research-context.md) - internal agents can combine organizational systems and task files as source context.
+- [Treat embeddings as recoverable sensitive data](../concepts/treat-embeddings-as-recoverable-sensitive-data.md) - vector stores should be secured like source-derived data, not treated as anonymized storage.
+- [Train long-tail knowledge into weights with curated synthetic data](../concepts/train-long-tail-knowledge-into-weights-with-curated-synthetic-data.md) - weight updates become an alternative when RAG cannot combine or adapt niche knowledge well enough.
 
 ## Open Questions
 
@@ -43,6 +45,7 @@ Private research agents can treat connectors and uploads as complementary retrie
 - What status metadata should retrieval systems use to demote closed PRDs and historical planning artifacts?
 - When should cross-modal retrieval use one omnimodal embedding space instead of separate modality-specific indexes plus fusion?
 - Which RAG pipeline changes should be exposed as user-facing filters, operator settings, or internal LangFlow-style flow edits?
+- Which private corpora are too sensitive to expose through third-party or loosely protected embedding stores?
 
 ## Sources
 
@@ -57,3 +60,4 @@ Private research agents can treat connectors and uploads as complementary retrie
 - [OpenRAG: An open-source stack for RAG - Phil Nash](../sources/20260408_4TxOBhDRRCM.md)
 - [Cognitive Exhaust Fumes, or: Read-Only AI Is Underrated - Simon Podhajsky, Head of AI, Waypoint](../sources/20260408_u0TOSBbAw7c.md)
 - [Building Intelligent Research Agents with Manus - Ivan Leo, Manus AI (now Meta Superintelligence)](../sources/20251230_xz0-brt56L8.md)
+- [Jack Morris: Stuffing Context is not Memory, Updating Weights is](../sources/20251229_Jty4s9-Jb78.md)
