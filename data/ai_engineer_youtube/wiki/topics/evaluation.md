@@ -22,6 +22,7 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - [Use golden data sets and mixed scoring functions for AI application confidence](../concepts/use-golden-data-sets-and-mixed-scoring-functions-for-ai-application-confidence.md) - curated edge cases plus deterministic and judge-model scores create a repeatable release gate.
 - [Apply online scoring to production traces with cost-aware sampling](../concepts/apply-online-scoring-to-production-traces-with-cost-aware-sampling.md) - production monitoring should score live traces while sampling expensive model-based judges deliberately.
 - [Replay production failures before promoting prompt fixes](../concepts/replay-production-failures-before-promoting-prompt-fixes.md) - production failures should become replayable regression cases before a prompt patch is trusted.
+- [Realtime multimodal agents use stateful streams for audio, vision, and tools](../concepts/realtime-multimodal-agents-use-stateful-streams-for-audio-vision-and-tools.md) - realtime evals may need to inspect streamed audio, visual context, tool events, and latency together.
 
 ## Open Questions
 
@@ -35,6 +36,7 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - Which audio-specific judgments add enough signal beyond transcript evals to justify their extra cost?
 - How much live traffic should receive LLM-as-judge scoring before teams have enough baseline confidence to lower sampling?
 - What metadata is necessary to replay a production trace without leaking sensitive user data into eval infrastructure?
+- How should evaluators score realtime multimodal sessions when the model's answer depends on both live audio and low-frame-rate visual context?
 
 ## Sources
 
@@ -48,3 +50,4 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - [Building Effective Voice Agents - Toki Sherbakov + Anoop Kotha, OpenAI](../sources/20250720_-OXiljTJxQU.md)
 - [Shipping complex AI applications - Braintrust & Trainline](../sources/20260501_ZdheJTfLu-s.md)
 - [Replacing 12K LoC with a 200 LoC Skill - David Gomes, Cursor](../sources/20260430_WE_Gnowy3uw.md)
+- [Building Conversational Agents - Thor Schaeff and Philipp Schmid, Google DeepMind](../sources/20260430_cVzf49yg0D8.md)

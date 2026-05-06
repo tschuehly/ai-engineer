@@ -37,6 +37,9 @@ Agent workflows become more reliable when they expose a tight loop between work 
 - [Shared canvases expose multi-agent state and coordination](../concepts/shared-canvases-expose-multi-agent-state-and-coordination.md) - shared visual state makes delegation, progress, and overlap visible during parallel agent work.
 - [Hackable agent runtimes need tight safety boundaries](../concepts/hackable-agent-runtimes-need-tight-safety-boundaries.md) - richer runtime workflows need sandboxing before they can safely affect user artifacts.
 - [Code-backed content can replace fragile CMS workflows for agents](../concepts/code-backed-content-can-replace-fragile-cms-workflows-for-agents.md) - repository-backed structured content lets agents make reviewable operational updates.
+- [Server-side interaction state simplifies branching conversational agents](../concepts/server-side-interaction-state-simplifies-branching-conversational-agents.md) - workflow branches can reuse prior interaction state without duplicating full history client-side.
+- [Agent tool loops turn model-required actions into executable results](../concepts/agent-tool-loops-turn-model-required-actions-into-executable-results.md) - tool workflows should explicitly execute required actions and loop until final output.
+- [Agent skills should point to current docs instead of embedding every API detail](../concepts/agent-skills-should-point-to-current-docs-instead-of-embedding-every-api-detail.md) - reusable workflow guidance should avoid stale copies of fast-moving API docs.
 
 ## Open Questions
 
@@ -53,6 +56,7 @@ Agent workflows become more reliable when they expose a tight loop between work 
 - When should a production AI workflow add another stage, and when does the extra stage add more operational risk than debugging value?
 - Which non-engineering workflows become better when agents accept natural artifacts, and which need stricter data-entry constraints?
 - How should shared-canvas agents prevent duplicate or conflicting edits while still letting multiple agents work in parallel?
+- How should interaction-state retention, retrieval, and compaction be built into long-running conversational workflows?
 
 ## Sources
 
@@ -69,3 +73,4 @@ Agent workflows become more reliable when they expose a tight loop between work 
 - [Agents for Everything Else - swyx](../sources/20260501_zepu8Kk6FBQ.md)
 - [Agents on the Canvas in tldraw - Steve Ruiz, tldraw](../sources/20260501_sPUjIBH5Cwg.md)
 - [Replacing 12K LoC with a 200 LoC Skill - David Gomes, Cursor](../sources/20260430_WE_Gnowy3uw.md)
+- [Building Conversational Agents - Thor Schaeff and Philipp Schmid, Google DeepMind](../sources/20260430_cVzf49yg0D8.md)
