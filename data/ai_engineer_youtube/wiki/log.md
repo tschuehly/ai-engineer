@@ -487,3 +487,11 @@
 - Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md)
 - Updated concepts: [Treat AI-generated code as untrusted code](concepts/treat-ai-generated-code-as-untrusted-code.md), [Choose isolates or containers by generated-code workload](concepts/choose-isolates-or-containers-by-generated-code-workload.md), [Capability-Based Sandboxes Start With No Authority](concepts/capability-based-sandboxes-start-with-no-authority.md), [Run Agent-Written API Code Inside Programmable Sandboxes](concepts/run-agent-written-api-code-inside-programmable-sandboxes.md)
 - Notes: Added generated-code sandboxing guidance covering LLM-specific threat modes, capability allow-lists, isolate/container runtime selection, per-user isolation, secret proxying, cleanup, logging, and validation.
+
+## [2026-05-06] ingest | Your Insecure MCP Server Won't Survive Production - Tun Shwe, Lenses
+
+- Source: [Your Insecure MCP Server Won't Survive Production - Tun Shwe, Lenses](sources/20260408_BurJvbqFr4c.md)
+- Processed: `BurJvbqFr4c`
+- Updated topics: [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md)
+- Updated concepts: [Secure MCP Servers by Shrinking the Agent-Visible Surface](concepts/secure-mcp-servers-by-shrinking-the-agent-visible-surface.md), [Move Production MCP From API Keys to Scoped OAuth Token Flows](concepts/move-production-mcp-from-api-keys-to-scoped-oauth-token-flows.md), [Govern MCP Tool Calls With Tool-Level Policy and End-to-End Traces](concepts/govern-mcp-tool-calls-with-tool-level-policy-and-end-to-end-traces.md)
+- Notes: Added production MCP security guidance covering agent-visible surface minimization, remote OAuth 2.1/CIMD authorization, and enterprise tool-call governance.

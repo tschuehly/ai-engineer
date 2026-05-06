@@ -18,6 +18,8 @@ Open-source agent tools need extension points as well as integrations. Plugin ar
 
 Tool metadata is also a security boundary. MCP and function-calling systems should treat full tool descriptions, hidden parameters, and approval summaries as prompt and policy surfaces, because a model may act on instructions the reviewer never saw. High-risk tools need approval UI that exposes the effective action and guardrails that inspect the full model-visible metadata.
 
+Production MCP servers should be designed as agent-facing interfaces, not as dumps of existing API endpoints. Fewer outcome-oriented tools, constrained schemas, unambiguous descriptions, minimal response payloads, read-only annotations, and resource-level scoping all reduce prompt-injection and oversharing risk before OAuth enters the picture. Remote MCP also changes tool authorization: long-lived API keys in config files or headers are weak production credentials, while OAuth 2.1 flows, PKCE, token exchange, and CIMD-based client identity give shared MCP servers a path toward short-lived scoped access. Governance still needs per-tool policy and traces that show which agent called which tool, which parameters were used, and what data came back.
+
 Enterprise tool ecosystems also need registry metadata once many teams publish MCP servers and A2A agents. A private registry can start from public MCP catalog conventions, add approved internal and public servers, and enrich each entry with owner, environment, authentication, cost attribution, and use-case links. A paired A2A registry can use agent cards as the discoverable contract for agent identity, endpoint, capabilities, modalities, and auth requirements. These registries should be connected to DevOps pipelines so publishing an MCP server or agent updates both the runtime artifact and the governance catalog.
 
 ## Key Concepts
@@ -83,6 +85,9 @@ Enterprise tool ecosystems also need registry metadata once many teams publish M
 - [Gateway platform primitives let teams focus on MCP business logic](../concepts/gateway-platform-primitives-let-teams-focus-on-mcp-business-logic.md) - shared platform primitives let domain teams build workflow-specific servers without reimplementing the control plane.
 - [Decouple agent harnesses from enterprise data layers](../concepts/decouple-agent-harnesses-from-enterprise-data-layers.md) - gateways keep new agent clients from binding directly to every internal MCP server and data source.
 - [MCP tool surfaces need default context budgets](../concepts/mcp-tool-surfaces-need-default-context-budgets.md) - broad tool catalogs need context-aware defaults and compact outputs.
+- [Secure MCP servers by shrinking the agent-visible surface](../concepts/secure-mcp-servers-by-shrinking-the-agent-visible-surface.md) - production MCP security starts with fewer tools, constrained inputs, clear descriptions, minimal outputs, and scoped permissions.
+- [Move production MCP from API keys to scoped OAuth token flows](../concepts/move-production-mcp-from-api-keys-to-scoped-oauth-token-flows.md) - remote MCP should move away from long-lived unscoped API keys toward OAuth 2.1, PKCE, token exchange, and CIMD.
+- [Govern MCP tool calls with tool-level policy and end-to-end traces](../concepts/govern-mcp-tool-calls-with-tool-level-policy-and-end-to-end-traces.md) - enterprise MCP needs tool/resource-level policy, masking, interaction logs, and traces across the full request path.
 - [Agent connectivity stack combines skills, MCP, CLIs, and computer use](../concepts/agent-connectivity-stack-combines-skills-mcp-clis-and-computer-use.md) - agent connectivity choices should match local execution, remote semantics, governance, and guidance needs.
 - [MCP applications ship UI and tools together](../concepts/mcp-applications-ship-ui-and-tools-together.md) - MCP can expose both human-rendered interfaces and model-callable tools from the same server.
 - [Ship skills over MCP for server-authored tool guidance](../concepts/ship-skills-over-mcp-for-server-authored-tool-guidance.md) - large MCP servers can ship updatable usage guidance with the integration.
@@ -119,6 +124,9 @@ Enterprise tool ecosystems also need registry metadata once many teams publish M
 - Which plugin bundles are coherent enough to install as a unit, and which should remain separate skills, apps, or MCP servers?
 - Which MCP servers need IdP-mediated cross-app access before they are safe to roll out across an enterprise team?
 - Which gateway primitives should be mandatory before an enterprise lets teams publish their own MCP servers?
+- Which agent-facing MCP tools should be collapsed into coarse-grained outcome operations before the server is exposed remotely?
+- Which MCP deployments should prefer DCR, CIMD, or an enterprise gateway for client identity management?
+- Which fields in MCP tool responses should be masked, summarized, or withheld from model context by default?
 - Which tool calls should be collapsed into intent-level server tools instead of exposed as separate low-level operations?
 - When should a large API prefer CLI discovery, tool search, typed code mode, or hand-authored MCP tools?
 - Which generated-code actions are safe enough for code mode, and which require a fixed tool or approval gate?
@@ -173,3 +181,4 @@ Enterprise tool ecosystems also need registry metadata once many teams publish M
 - [OpenRAG: An open-source stack for RAG - Phil Nash](../sources/20260408_4TxOBhDRRCM.md)
 - [Let LLMs Wander: Engineering RL Environments - Stefano Fiorucci](../sources/20260408_71V3fTaUp2Q.md)
 - [Why, and how you need to sandbox AI-Generated Code? - Harshil Agrawal, Cloudflare](../sources/20260408_AHtGAgQ0Q_Q.md)
+- [Your Insecure MCP Server Won't Survive Production - Tun Shwe, Lenses](../sources/20260408_BurJvbqFr4c.md)

@@ -14,6 +14,8 @@ Sandbox technology should match the workload. V8-style isolates are useful for s
 
 Emerging MCP protocol work adds production-infrastructure concerns beyond ordinary tool schemas. Stateless transport can make MCP servers easier to deploy like ordinary stateless services, server discovery through well-known URLs can make agent-facing services easier to find, and asynchronous tasks plus extension mechanisms can support richer long-running or UI-backed agent interactions.
 
+Production MCP deployment has a sharp security cliff between local stdio and remote streamable HTTP. Local stdio works as a single-user development surface, but shared remote servers need OAuth, token lifecycle management, TLS, CORS, rate limits, governance, and horizontal-scaling discipline. API-key passthrough is a weak bridge because keys are often long-lived, unscoped, rarely rotated, shared, and vulnerable to confused-deputy patterns. OAuth 2.1 with PKCE, token exchange, and CIMD moves remote MCP toward short-lived scoped access and stronger client identity, but enterprise readiness still requires tool/resource-level RBAC, data masking, interaction logging, and end-to-end traces.
+
 Guardrails are an infrastructure layer, not just a prompt. Production systems need low-latency classifiers or policy checks at input, output, retrieval, MCP, memory, and plan boundaries, and the serving path must account for added latency. ModernBERT-style encoder discriminators are one concrete option when a self-hosted safety layer needs millisecond-scale classification rather than seconds of LLM-as-judge delay.
 
 Enterprise AI registries are another infrastructure layer between experimentation and production. A model gateway can centralize model access, authentication, budget erosion, and request analytics, while registries track MCP servers, A2A agents, models, ownership, environments, costs, and use-case lineage. The practical deployment pattern is to give teams template repositories and CI/CD flows that publish both runtime artifacts and registry metadata, so governance stays aligned with what is actually deployed.
@@ -63,6 +65,9 @@ Multi-agent orchestration is also infrastructure once workflows leave the demo s
 - [A2A agent registries make deployed agents discoverable through agent cards](../concepts/a2a-agent-registries-make-deployed-agents-discoverable-through-agent-cards.md) - agent-card registries make internal agent services discoverable without bespoke integration knowledge.
 - [Decouple agent harnesses from enterprise data layers](../concepts/decouple-agent-harnesses-from-enterprise-data-layers.md) - a stable gateway boundary lets agent surfaces change without coupling directly to internal data layout.
 - [Stateless remote MCP servers rebuild allowed tools per request](../concepts/stateless-remote-mcp-servers-rebuild-allowed-tools-per-request.md) - stateless request handling and shared session storage let remote MCP servers scale horizontally.
+- [Secure MCP servers by shrinking the agent-visible surface](../concepts/secure-mcp-servers-by-shrinking-the-agent-visible-surface.md) - infrastructure risk is reduced when the server exposes only the agent-visible tools, schemas, and fields needed for the task.
+- [Move production MCP from API keys to scoped OAuth token flows](../concepts/move-production-mcp-from-api-keys-to-scoped-oauth-token-flows.md) - remote MCP infrastructure needs short-lived scoped authorization instead of long-lived local credentials.
+- [Govern MCP tool calls with tool-level policy and end-to-end traces](../concepts/govern-mcp-tool-calls-with-tool-level-policy-and-end-to-end-traces.md) - MCP governance depends on RBAC, masking, logs, and traces around each autonomous tool call.
 - [Agent connectivity stack combines skills, MCP, CLIs, and computer use](../concepts/agent-connectivity-stack-combines-skills-mcp-clis-and-computer-use.md) - infrastructure choices should match whether connectivity needs local execution, remote protocol semantics, or governance.
 - [Filter MCP tools by scopes and step-up authorization](../concepts/filter-mcp-tools-by-scopes-and-step-up-authorization.md) - authorization state should shape the runtime tool surface exposed to agents.
 - [Expose large APIs through typed code mode](../concepts/expose-large-apis-through-typed-code-mode.md) - generated types can expose broad APIs without loading every endpoint as tool context.
@@ -90,6 +95,8 @@ Multi-agent orchestration is also infrastructure once workflows leave the demo s
 - Which operational data belongs in code-backed infrastructure when agents are responsible for maintaining it?
 - Which MCP credentials should be replaced by IdP-backed exchanges so offboarding and compromise response flow through SSO policy?
 - Which MCP controls belong in a shared gateway, and which should remain inside each domain server's business logic?
+- Which remote MCP servers are still relying on long-lived unscoped API keys after they cross from local stdio into shared production use?
+- Which MCP tool calls need tool/resource-level RBAC, response masking, and trace retention before they can satisfy enterprise audit needs?
 - Which MCP session fields are worth storing centrally when request routing should remain stateless?
 - Which MCP servers should support stateless transport or well-known server discovery before broad production rollout?
 - Which sandbox and rate-limit policies are required before a platform lets agents run generated code against its APIs?
@@ -133,3 +140,4 @@ Multi-agent orchestration is also infrastructure once workflows leave the demo s
 - [From Chaos to Choreography: Multi-Agent Orchestration Patterns That Actually Work - Sandipan Bhaumik](../sources/20260408_2czYyrTzILg.md)
 - [OpenRAG: An open-source stack for RAG - Phil Nash](../sources/20260408_4TxOBhDRRCM.md)
 - [Why, and how you need to sandbox AI-Generated Code? - Harshil Agrawal, Cloudflare](../sources/20260408_AHtGAgQ0Q_Q.md)
+- [Your Insecure MCP Server Won't Survive Production - Tun Shwe, Lenses](../sources/20260408_BurJvbqFr4c.md)
