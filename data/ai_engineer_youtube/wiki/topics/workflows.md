@@ -104,6 +104,8 @@ Org-chart agent workflows add a business-operations control surface: assign work
 - [Agents expand the economically viable software surface](../concepts/agents-expand-the-economically-viable-software-surface.md) - cheaper automation changes which workflows are worth software investment.
 - [Split exploratory research agents from constrained writing workflows](../concepts/split-exploratory-research-agents-from-constrained-writing-workflows.md) - artifact handoff keeps different workflow phases appropriately constrained.
 - [Calibrate LLM judges like binary classifiers](../concepts/calibrate-llm-judges-like-binary-classifiers.md) - workflow judges need their own labeled validation loop.
+- [Split LLM Judges Into Narrow Binary Metrics](../concepts/split-llm-judges-into-narrow-binary-metrics.md) - judge workflows should start from trace error analysis and one pass/fail metric per failure mode.
+- [Optimize Judge Prompts With Diagnostic Feedback](../concepts/optimize-judge-prompts-with-diagnostic-feedback.md) - judge-optimization workflows need diagnostic feedback, not only aggregate scores.
 - [AI-generated security reports need maintainer triage](../concepts/ai-generated-security-reports-need-maintainer-triage.md) - workflow throughput should include maintainer capacity for automated reports.
 - [Gate AI-generated open-source contributions through human-effort filters](../concepts/gate-ai-generated-open-source-contributions-through-human-effort-filters.md) - contribution workflows can require a short human-authored issue before accepting agent-generated PRs.
 - [Human taste limits fully dark coding factories](../concepts/human-taste-limits-fully-dark-coding-factories.md) - iterative product work should keep human judgment in the loop.
@@ -177,3 +179,4 @@ Org-chart agent workflows add a business-operations control surface: assign work
 - [State of the Claw - Peter Steinberger](../sources/20260417_zgNvts_2TUE.md)
 - [Building pi in a World of Slop - Mario Zechner](../sources/20260416_RjfbvDXpFls.md)
 - [Paperclip: Open Source Human Control Plane for AI Labor - Dotta Bippa](../sources/20260415_h403btjldDQ.md)
+- [Judge the Judge: Building LLM Evaluators That Actually Work with GEPA - Mahmoud Mabrouk, Agenta AI](../sources/20260410_X4dEHRzBLmc.md)

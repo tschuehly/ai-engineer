@@ -431,3 +431,11 @@
 - Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md)
 - Updated concepts: [Enterprise AI asset registries connect governance to runtime lineage](concepts/enterprise-ai-asset-registries-connect-governance-to-runtime-lineage.md), [A2A agent registries make deployed agents discoverable through agent cards](concepts/a2a-agent-registries-make-deployed-agents-discoverable-through-agent-cards.md), [Blueprint repositories standardize MCP and A2A service delivery](concepts/blueprint-repositories-standardize-mcp-and-a2a-service-delivery.md)
 - Notes: Added registry-centered enterprise AI platform patterns for MCP tools, A2A agents, use-case lineage, and CI/CD-backed metadata publication.
+
+## [2026-05-06] ingest | Judge the Judge: Building LLM Evaluators That Actually Work with GEPA - Mahmoud Mabrouk, Agenta AI
+
+- Source: [Judge the Judge: Building LLM Evaluators That Actually Work with GEPA - Mahmoud Mabrouk, Agenta AI](sources/20260410_X4dEHRzBLmc.md)
+- Processed: `X4dEHRzBLmc`
+- Updated topics: [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Calibrate LLM Judges Like Binary Classifiers](concepts/calibrate-llm-judges-like-binary-classifiers.md), [Split LLM Judges Into Narrow Binary Metrics](concepts/split-llm-judges-into-narrow-binary-metrics.md), [Optimize Judge Prompts With Diagnostic Feedback](concepts/optimize-judge-prompts-with-diagnostic-feedback.md)
+- Notes: Added judge-calibration workflow guidance covering human-labeled trace error analysis, narrow binary judge metrics, GEPA prompt optimization, diagnostic feedback, and annotation-quality caveats.
