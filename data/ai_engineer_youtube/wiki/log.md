@@ -455,3 +455,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Repository skills and AGENTS.md encode repeatable web-agent workflows](concepts/repository-skills-and-agents-md-encode-repeatable-web-agent-workflows.md), [Browser DevTools MCP turns runtime debugging into agent tools](concepts/browser-devtools-mcp-turns-runtime-debugging-into-agent-tools.md), [Browser-native AI APIs bring local models into web apps](concepts/browser-native-ai-apis-bring-local-models-into-web-apps.md), [Agent-readable web surfaces guide browsing agents](concepts/agent-readable-web-surfaces-guide-browsing-agents.md)
 - Notes: Added the web-as-agent-runtime slice covering repository skills, Chrome DevTools MCP, browser-local Web AI APIs, and agent-readable site surfaces.
+
+## [2026-05-06] ingest | From Chaos to Choreography: Multi-Agent Orchestration Patterns That Actually Work - Sandipan Bhaumik
+
+- Source: [From Chaos to Choreography: Multi-Agent Orchestration Patterns That Actually Work - Sandipan Bhaumik](sources/20260408_2czYyrTzILg.md)
+- Processed: `2czYyrTzILg`
+- Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Treat Multi-Agent Systems As Distributed Systems](concepts/treat-multi-agent-systems-as-distributed-systems.md), [Choose Choreography Or Orchestration By Complexity and Autonomy](concepts/choose-choreography-or-orchestration-by-complexity-and-autonomy.md), [Use Immutable Versioned State For Agent Handoffs](concepts/use-immutable-versioned-state-for-agent-handoffs.md), [Wrap Agent Calls With Circuit Breakers and Compensation](concepts/wrap-agent-calls-with-circuit-breakers-and-compensation.md)
+- Notes: Added multi-agent production patterns covering distributed-systems failure modes, coordination pattern choice, append-only state handoffs, boundary contracts, circuit breakers, and saga compensation.

@@ -18,12 +18,18 @@ Agent security has to treat autonomy as an attack multiplier. Prompt injection, 
 
 Agent-to-agent systems need their own discovery contract as they spread across teams. An A2A registry can publish agent cards that describe each agent's identity, endpoint, capabilities, supported modalities, and authentication requirements, while a use-case registry links those agents to MCP tools, models, owners, and lifecycle status. That makes agent reuse and runtime discovery practical without losing governance and impact analysis.
 
+Multi-agent production systems also inherit ordinary distributed-systems failure modes. Moving from one agent to several agents creates coordination paths, shared-state races, stale cache reads, partial workflow failures, and debugging gaps that better prompts do not fix. Choreography can preserve autonomy when agents coordinate through events, but it needs traceable event delivery; orchestration gives a central execution graph, state store, retries, logs, and rollback path when complex dependencies or regulated decisions require stronger control. Handoffs should use immutable versioned state and explicit data contracts so each agent receives a sealed input and produces a new auditable output rather than mutating shared records.
+
 The web itself is also becoming an agent surface. Sites can publish `llms.txt` or `llms-full.txt` to guide agents toward the right documentation, and WebMCP-style proposals can expose intended app operations directly so agents do not have to infer every action from screenshots, DOM text, or coordinates.
 
 ## Key Concepts
 
 - [Sandboxed code execution turns model reasoning into inspectable computation](../concepts/sandboxed-code-execution-turns-model-reasoning-into-inspectable-computation.md) - executable sandboxes let agents compute and verify without touching the user's environment.
 - [Human Control Planes Turn Agent Swarms Into Manageable Organizations](../concepts/human-control-planes-turn-agent-swarms-into-manageable-organizations.md) - org-chart, project, task, budget, and memory surfaces make large agent organizations supervisable.
+- [Treat multi-agent systems as distributed systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md) - multi-agent scale introduces coordination, stale state, and failure-propagation problems.
+- [Choose choreography or orchestration by complexity and autonomy](../concepts/choose-choreography-or-orchestration-by-complexity-and-autonomy.md) - coordination style should match autonomy needs, dependency complexity, and audit requirements.
+- [Use immutable versioned state for agent handoffs](../concepts/use-immutable-versioned-state-for-agent-handoffs.md) - append-only state versions and data contracts make handoffs traceable and safer than shared mutable records.
+- [Wrap agent calls with circuit breakers and compensation](../concepts/wrap-agent-calls-with-circuit-breakers-and-compensation.md) - failure isolation and rollback paths prevent one failed agent from collapsing the workflow.
 - [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](../concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md) - explicit review and approval roles enforce quality gates better than prompt-only reminders.
 - [Grow Agent Organizations Incrementally By Role Quality and Cost](../concepts/grow-agent-organizations-incrementally-by-role-quality-and-cost.md) - start with needed roles, tune behavior, and route model cost by job importance before fanning out.
 - [Harness engineering shifts scarcity from code production to control surfaces](../concepts/harness-engineering-shifts-scarcity-from-code-production-to-control-surfaces.md) - agent abundance increases the importance of systems for steering and validating work.
@@ -163,6 +169,7 @@ The web itself is also becoming an agent surface. Sites can publish `llms.txt` o
 - Which research tasks need open-ended agentic search, and which can be reduced to a known workflow over curated sources?
 - Which agent workflows need MCP's richer remote semantics instead of a CLI or local computer-use path?
 - Which agent-card fields are sufficient for safe runtime discovery by other internal agents?
+- Which agent coordination paths should be centralized in an orchestrator, and which are safe enough for event-driven choreography?
 
 ## Sources
 
@@ -212,3 +219,4 @@ The web itself is also becoming an agent surface. Sites can publish `llms.txt` o
 - [Paperclip: Open Source Human Control Plane for AI Labor - Dotta Bippa](../sources/20260415_h403btjldDQ.md)
 - [One Registry to Rule them All - Sonny Merla, Mauro Luchetti, & Mattia Redaelli, Quantyca](../sources/20260410_VXfRt_H-V08.md)
 - [AI Didn't Kill the Web, It Moved in! - Olivier Leplus (AWS) & Yohan Lasorsa (Microsoft)](../sources/20260410_XZ0boOjtbNo.md)
+- [From Chaos to Choreography: Multi-Agent Orchestration Patterns That Actually Work - Sandipan Bhaumik](../sources/20260408_2czYyrTzILg.md)

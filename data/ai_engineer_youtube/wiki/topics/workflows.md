@@ -16,10 +16,16 @@ Org-chart agent workflows add a business-operations control surface: assign work
 
 Repository-local web-agent workflows can make implementation, verification, preview sharing, and handoff rules part of the repeatable routine. Skills can teach the agent how to inspect issues, run browser QA, record evidence, create a public preview tunnel, notify a reviewer, and wait for confirmation before closing work.
 
+Multi-agent workflows need explicit coordination and recovery choices. Event-driven choreography works when agents can act independently and the system can trace every event; centralized orchestration works when dependencies, state, rollback, or auditability matter more than autonomy. Durable workflows should pass immutable state versions through data-contract validation and wrap agent calls with circuit breakers, graceful degradation, and compensation so partial failures do not leave hidden side effects.
+
 ## Key Concepts
 
 - [Use hosted model playgrounds to prototype before owning infrastructure](../concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md) - hosted playgrounds can compress the path from idea to model, API, app, and cloud deployment experiment.
 - [Human Control Planes Turn Agent Swarms Into Manageable Organizations](../concepts/human-control-planes-turn-agent-swarms-into-manageable-organizations.md) - workflows need visible organizational state when many agents work in parallel.
+- [Treat multi-agent systems as distributed systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md) - workflow design must account for coordination complexity and shared-state failure modes.
+- [Choose choreography or orchestration by complexity and autonomy](../concepts/choose-choreography-or-orchestration-by-complexity-and-autonomy.md) - workflow control should be selected by dependency complexity, autonomy need, and auditability.
+- [Use immutable versioned state for agent handoffs](../concepts/use-immutable-versioned-state-for-agent-handoffs.md) - workflows become debuggable when each handoff records a sealed state version and contract check.
+- [Wrap agent calls with circuit breakers and compensation](../concepts/wrap-agent-calls-with-circuit-breakers-and-compensation.md) - retry, fail-fast, degradation, and rollback behavior should be planned before production.
 - [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](../concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md) - explicit role handoffs turn validation from a reminder into a workflow path.
 - [Reusable Routines Turn Prompts Into Operational Agent Workflows](../concepts/reusable-routines-turn-prompts-into-operational-agent-workflows.md) - repeated prompts can become scheduled or manually triggered routines with variables and skills.
 - [Repository skills and AGENTS.md encode repeatable web-agent workflows](../concepts/repository-skills-and-agents-md-encode-repeatable-web-agent-workflows.md) - web feature work can include local QA, preview sharing, and handoff rules by default.
@@ -145,6 +151,7 @@ Repository-local web-agent workflows can make implementation, verification, prev
 - Which recurring quality rituals remain useful when agents can generate most of the underlying fix?
 - Which workflow phases should communicate through durable artifacts instead of sharing one long agent context?
 - Which prompt surfaces should be refreshed during long-running agent work as context gets compacted or paged out?
+- Which multi-agent workflows need saga-style compensation because partial side effects are unacceptable?
 
 ## Sources
 
@@ -184,3 +191,4 @@ Repository-local web-agent workflows can make implementation, verification, prev
 - [AI Didn't Kill the Web, It Moved in! - Olivier Leplus (AWS) & Yohan Lasorsa (Microsoft)](../sources/20260410_XZ0boOjtbNo.md)
 - [Paperclip: Open Source Human Control Plane for AI Labor - Dotta Bippa](../sources/20260415_h403btjldDQ.md)
 - [Judge the Judge: Building LLM Evaluators That Actually Work with GEPA - Mahmoud Mabrouk, Agenta AI](../sources/20260410_X4dEHRzBLmc.md)
+- [From Chaos to Choreography: Multi-Agent Orchestration Patterns That Actually Work - Sandipan Bhaumik](../sources/20260408_2czYyrTzILg.md)

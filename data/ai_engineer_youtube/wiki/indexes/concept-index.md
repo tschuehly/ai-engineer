@@ -3,6 +3,10 @@
 ## Agents
 
 - [Human Control Planes Turn Agent Swarms Into Manageable Organizations](../concepts/human-control-planes-turn-agent-swarms-into-manageable-organizations.md)
+- [Treat Multi-Agent Systems As Distributed Systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md)
+- [Choose Choreography Or Orchestration By Complexity and Autonomy](../concepts/choose-choreography-or-orchestration-by-complexity-and-autonomy.md)
+- [Use Immutable Versioned State For Agent Handoffs](../concepts/use-immutable-versioned-state-for-agent-handoffs.md)
+- [Wrap Agent Calls With Circuit Breakers and Compensation](../concepts/wrap-agent-calls-with-circuit-breakers-and-compensation.md)
 - [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](../concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md)
 - [Grow Agent Organizations Incrementally By Role Quality and Cost](../concepts/grow-agent-organizations-incrementally-by-role-quality-and-cost.md)
 - [Make agent work more trustworthy by making it verifiable](../concepts/make-agent-work-more-trustworthy-by-making-it-verifiable.md)
@@ -233,6 +237,10 @@
 
 ## Infrastructure
 
+- [Treat Multi-Agent Systems As Distributed Systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md)
+- [Choose Choreography Or Orchestration By Complexity and Autonomy](../concepts/choose-choreography-or-orchestration-by-complexity-and-autonomy.md)
+- [Use Immutable Versioned State For Agent Handoffs](../concepts/use-immutable-versioned-state-for-agent-handoffs.md)
+- [Wrap Agent Calls With Circuit Breakers and Compensation](../concepts/wrap-agent-calls-with-circuit-breakers-and-compensation.md)
 - [Fine-tuned encoder discriminators make low-latency guardrails practical](../concepts/fine-tuned-encoder-discriminators-make-low-latency-guardrails-practical.md)
 - [LLM guardrails need checkpoints at every untrusted boundary](../concepts/llm-guardrails-need-checkpoints-at-every-untrusted-boundary.md)
 - [Build internal AI engineering platforms when off-the-shelf tools lack enterprise context](../concepts/build-internal-ai-engineering-platforms-when-off-the-shelf-tools-lack-enterprise-context.md)
@@ -508,6 +516,10 @@
 
 ## Workflows
 
+- [Treat Multi-Agent Systems As Distributed Systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md)
+- [Choose Choreography Or Orchestration By Complexity and Autonomy](../concepts/choose-choreography-or-orchestration-by-complexity-and-autonomy.md)
+- [Use Immutable Versioned State For Agent Handoffs](../concepts/use-immutable-versioned-state-for-agent-handoffs.md)
+- [Wrap Agent Calls With Circuit Breakers and Compensation](../concepts/wrap-agent-calls-with-circuit-breakers-and-compensation.md)
 - [Human Control Planes Turn Agent Swarms Into Manageable Organizations](../concepts/human-control-planes-turn-agent-swarms-into-manageable-organizations.md)
 - [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](../concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md)
 - [Reusable Routines Turn Prompts Into Operational Agent Workflows](../concepts/reusable-routines-turn-prompts-into-operational-agent-workflows.md)

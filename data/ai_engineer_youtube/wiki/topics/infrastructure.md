@@ -16,9 +16,15 @@ Guardrails are an infrastructure layer, not just a prompt. Production systems ne
 
 Enterprise AI registries are another infrastructure layer between experimentation and production. A model gateway can centralize model access, authentication, budget erosion, and request analytics, while registries track MCP servers, A2A agents, models, ownership, environments, costs, and use-case lineage. The practical deployment pattern is to give teams template repositories and CI/CD flows that publish both runtime artifacts and registry metadata, so governance stays aligned with what is actually deployed.
 
+Multi-agent orchestration is also infrastructure once workflows leave the demo stage. A production system needs a workflow engine, state store, contract registry, serving layer, observability layer, and recovery controls around agent calls. Immutable append-only state versions make handoffs replayable; schema contracts catch malformed or low-confidence outputs at boundaries; circuit breakers, timeouts, rate limits, and compensation methods keep one failing agent or API from cascading through the full workflow.
+
 ## Key Concepts
 
 - [Use hosted model playgrounds to prototype before owning infrastructure](../concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md) - hosted tools can validate model and deployment choices before teams own the runtime.
+- [Treat multi-agent systems as distributed systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md) - agent infrastructure needs distributed-systems controls once multiple agents share state and dependencies.
+- [Use immutable versioned state for agent handoffs](../concepts/use-immutable-versioned-state-for-agent-handoffs.md) - append-only handoff state supports rollback, replay, and root-cause analysis.
+- [Wrap agent calls with circuit breakers and compensation](../concepts/wrap-agent-calls-with-circuit-breakers-and-compensation.md) - serving-layer failure controls and rollback contracts are part of production agent infrastructure.
+- [Choose choreography or orchestration by complexity and autonomy](../concepts/choose-choreography-or-orchestration-by-complexity-and-autonomy.md) - infrastructure shape depends on whether event-driven autonomy or centralized control is the stronger requirement.
 - [Use local AI workstations when iteration, privacy, or latency dominate](../concepts/use-local-ai-workstations-when-iteration-privacy-or-latency-dominate.md) - local workstations can move development closer to the engineer while preserving a later scale-out path.
 - [Make local inference benchmarks reproducible artifacts](../concepts/make-local-inference-benchmarks-reproducible-artifacts.md) - reproducible local serving tests need container isolation, warmups, hardware metrics, and stored run outputs.
 - [Browser-native AI APIs bring local models into web apps](../concepts/browser-native-ai-apis-bring-local-models-into-web-apps.md) - client browsers can host local model downloads behind experimental AI APIs.
@@ -86,6 +92,7 @@ Enterprise AI registries are another infrastructure layer between experimentatio
 - When should infrastructure expose adaptive embedding dimensions as a product knob rather than a fixed model configuration?
 - Which AI asset registry fields should be enforced by CI/CD rather than manually maintained after deployment?
 - Which local workstation workloads should stay local because privacy, queueing, or latency matter more than elastic scale?
+- Which agent handoff contracts, state versions, and recovery transitions should be persisted for audit and replay?
 
 ## Sources
 
@@ -117,3 +124,4 @@ Enterprise AI registries are another infrastructure layer between experimentatio
 - [One Registry to Rule them All - Sonny Merla, Mauro Luchetti, & Mattia Redaelli, Quantyca](../sources/20260410_VXfRt_H-V08.md)
 - [Running LLMs locally: Practical LLM Performance on DGX Spark - Mozhgan Kabiri chimeh, NVIDIA](../sources/20260410_c5-kx2bwoCk.md)
 - [AI Didn't Kill the Web, It Moved in! - Olivier Leplus (AWS) & Yohan Lasorsa (Microsoft)](../sources/20260410_XZ0boOjtbNo.md)
+- [From Chaos to Choreography: Multi-Agent Orchestration Patterns That Actually Work - Sandipan Bhaumik](../sources/20260408_2czYyrTzILg.md)
