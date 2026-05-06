@@ -615,3 +615,11 @@
 - Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Use Durable Execution for Production Agent Loops](concepts/use-durable-execution-for-production-agent-loops.md), [Keep Workflow Orchestration Deterministic and Put Side Effects in Steps](concepts/keep-workflow-orchestration-deterministic-and-put-side-effects-in-steps.md), [Use Resumable Streams as the UI Boundary for Durable Agents](concepts/use-resumable-streams-as-the-ui-boundary-for-durable-agents.md), [Control Long-Running Workflow Agents Through Run Lifecycle Operations](concepts/control-long-running-workflow-agents-through-run-lifecycle-operations.md)
 - Notes: Added Vercel Workflow DevKit guidance covering durable TypeScript agent loops, deterministic orchestration, step observability, resumable streams, cancellation, scheduling, and deployment-version handling.
+
+## [2026-05-06] ingest | Claude Agent SDK [Full Workshop] - Thariq Shihipar, Anthropic
+
+- Source: [Claude Agent SDK [Full Workshop] - Thariq Shihipar, Anthropic](sources/20260105_TqC1qOfiVcQ.md)
+- Processed: `TqC1qOfiVcQ`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md), [Use Bash as a composable code-mode tool for agents](concepts/use-bash-as-a-composable-code-mode-tool-for-agents.md), [Layer agent permissions across model behavior, harness parsing, and sandboxing](concepts/layer-agent-permissions-across-model-behavior-harness-parsing-and-sandboxing.md), [Use hooks for deterministic agent verification and live context injection](concepts/use-hooks-for-deterministic-agent-verification-and-live-context-injection.md)
+- Notes: Added Claude Agent SDK guidance covering harness composition, filesystem context, Bash/code-mode composability, layered security controls, and hooks as deterministic workflow/context events.
