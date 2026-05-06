@@ -2,7 +2,7 @@
 
 ## Overview
 
-Context engineering treats prompts, skills, memory, retrieval, and documentation as an engineered substrate for agent work. It needs a lifecycle similar to software delivery: generate context, evaluate it, distribute it, observe its use, and adapt it from feedback. Demand-driven context adds a practical enterprise workflow: rather than predicting every context need upfront, assign real work to agents, observe failures, and convert missing institutional knowledge into reusable context blocks. Personal knowledge bases show the same pattern at individual scale: Markdown notes, bookmarks, project records, search, and memory become useful agent context when ingestion flows add tags, connections, and surfacing rather than merely storing links. A context engine is the selection and reasoning layer for this substrate: it should combine task relevance, user and team signals, source relationships, permissions, and conflict handling rather than relying on generic RAG, many MCP servers, or larger context windows alone. Conversational-agent state adds a related context-management concern: server-side interaction IDs can simplify continuation and branching, but retention, retrieval, and compaction limits remain part of the application design. Small-model preprocessing can further manage context by filtering, classifying, extracting, or reranking data before it reaches the agent. Skills and context packages distribute reusable workflow guidance, but package-like reuse also creates versioning, dependency, quality, and security concerns; volatile API facts should often stay in current documentation that skills point to rather than being copied into every skill.
+Context engineering treats prompts, skills, memory, retrieval, and documentation as an engineered substrate for agent work. It needs a lifecycle similar to software delivery: generate context, evaluate it, distribute it, observe its use, and adapt it from feedback. Demand-driven context adds a practical enterprise workflow: rather than predicting every context need upfront, assign real work to agents, observe failures, and convert missing institutional knowledge into reusable context blocks. Personal knowledge bases show the same pattern at individual scale: Markdown notes, bookmarks, project records, search, and memory become useful agent context when ingestion flows add tags, connections, and surfacing rather than merely storing links. A context engine is the selection and reasoning layer for this substrate: it should combine task relevance, user and team signals, source relationships, permissions, and conflict handling rather than relying on generic RAG, many MCP servers, or larger context windows alone. For productized codegen, current Markdown docs and compact exemplar projects can offset stale model knowledge and weak architectural priors; context can be generated from a service into skill references and loaded only when the task requires it. Conversational-agent state adds a related context-management concern: server-side interaction IDs can simplify continuation and branching, but retention, retrieval, and compaction limits remain part of the application design. Small-model preprocessing can further manage context by filtering, classifying, extracting, or reranking data before it reaches the agent. Skills and context packages distribute reusable workflow guidance, but package-like reuse also creates versioning, dependency, quality, and security concerns; volatile API facts should often stay in current documentation that skills point to rather than being copied into every skill.
 
 ## Key Concepts
 
@@ -25,6 +25,8 @@ Context engineering treats prompts, skills, memory, retrieval, and documentation
 - [Code-backed content can replace fragile CMS workflows for agents](../concepts/code-backed-content-can-replace-fragile-cms-workflows-for-agents.md) - structured content in code can give agents a reviewable operational source of truth.
 - [Server-side interaction state simplifies branching conversational agents](../concepts/server-side-interaction-state-simplifies-branching-conversational-agents.md) - state APIs can reduce context plumbing while preserving explicit retention and compaction responsibilities.
 - [Agent skills should point to current docs instead of embedding every API detail](../concepts/agent-skills-should-point-to-current-docs-instead-of-embedding-every-api-detail.md) - skills should avoid stale copies of fast-changing documentation.
+- [Fresh Markdown context mitigates model rot in codegen](../concepts/fresh-markdown-context-mitigates-model-rot-in-codegen.md) - runtime-selected documentation can update model knowledge without retraining.
+- [Model airplanes give coding agents token-efficient exemplars](../concepts/model-airplanes-give-coding-agents-token-efficient-exemplars.md) - flattened reference projects can act as reusable, searchable skill context.
 
 ## Open Questions
 
@@ -37,6 +39,7 @@ Context engineering treats prompts, skills, memory, retrieval, and documentation
 - How should personal knowledge-base agents avoid amplifying stale notes or noisy bookmarks into future context?
 - When should operational content be moved from a CMS into code so agents can manage it with diffs and review?
 - What conversation state should be summarized into durable memory before server-side interaction records expire?
+- How should context services decide which examples belong in a generated skill reference versus separate documentation?
 
 ## Sources
 
@@ -48,3 +51,4 @@ Context engineering treats prompts, skills, memory, retrieval, and documentation
 - [I Gave an AI Agent the Keys to My Life (Here's What Happened) - Radek Sienkiewicz (@velvetshark-com)](../sources/20260502_sJ2jc7leKBk.md)
 - [Agents for Everything Else - swyx](../sources/20260501_zepu8Kk6FBQ.md)
 - [Building Conversational Agents - Thor Schaeff and Philipp Schmid, Google DeepMind](../sources/20260430_cVzf49yg0D8.md)
+- [LLM codegen fails and how to stop 'em - Danilo Campos, PostHog](../sources/20260430_juoNbJiZUi0.md)
