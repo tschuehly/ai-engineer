@@ -87,6 +87,7 @@ Anti-slop evaluation should be provenance-neutral. Human and AI outputs can both
 - [Realtime multimodal agents use stateful streams for audio, vision, and tools](../concepts/realtime-multimodal-agents-use-stateful-streams-for-audio-vision-and-tools.md) - realtime evals may need to inspect streamed audio, visual context, tool events, and latency together.
 - [Ask agents after each run what blocked their success](../concepts/ask-agents-after-each-run-what-blocked-their-success.md) - post-run self-reporting can expose setup and context failures.
 - [Agent software factories need runnable, contextual, and verifiable primitives](../concepts/agent-software-factories-need-runnable-contextual-and-verifiable-primitives.md) - agent readiness should be validated through runnable setup, tests, and user-flow checks.
+- [Treat agent readiness as verification infrastructure](../concepts/treat-agent-readiness-as-verification-infrastructure.md) - repository readiness depends on validation signals agents can use during solution search.
 - [Automation loops convert repeated review and triage into factory improvements](../concepts/automation-loops-convert-repeated-review-and-triage-into-factory-improvements.md) - review and triage outputs should feed evals, rules, or process changes.
 - [Encode agent intent into server-side tools](../concepts/encode-agent-intent-into-server-side-tools.md) - tool descriptions should be evaluated in relation to competing tools, not only optimized individually.
 - [Delegate implementations behind reviewed module interfaces](../concepts/delegate-implementations-behind-reviewed-module-interfaces.md) - module interfaces and tests let reviewers validate agent work without reading every internal line.
@@ -207,5 +208,6 @@ Anti-slop evaluation should be provenance-neutral. Human and AI outputs can both
 - [AGI: The Path Forward - Jason Warner & Eiso Kant, Poolside](../sources/20251227_OGCG_QkCcZo.md)
 - [Shipping AI That Works: An Evaluation Framework for PMs - Aman Khan, Arize](../sources/20251226_2HNSG990Ew8.md)
 - [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](../sources/20251223_LU9KgcZDRfY.md)
+- [Making Codebases Agent Ready - Eno Reyes, Factory AI](../sources/20251222_ShuJ_CN6zr4.md)
 - [No More Slop - swyx](../sources/20251222_IoiHI7p12Ao.md)
 - [The 3 Pillars of Autonomy - Michele Catasta, Replit](../sources/20251222_MLhAA9yguwM.md)

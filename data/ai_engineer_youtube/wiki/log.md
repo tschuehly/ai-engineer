@@ -735,3 +735,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Scope coding-agent autonomy by user decision authority](concepts/scope-coding-agent-autonomy-by-user-decision-authority.md), [Autonomous browser verification finds painted-door failures](concepts/autonomous-browser-verification-finds-painted-door-failures.md), [Offload long-horizon agent state outside the context window](concepts/offload-long-horizon-agent-state-outside-the-context-window.md), [Let the core agent loop orchestrate parallel subtasks](concepts/let-the-core-agent-loop-orchestrate-parallel-subtasks.md)
 - Notes: Added Replit's autonomy framing for non-technical coding-agent users, covering technical-decision scope, browser verification, context offload, and agent-led parallel decomposition.
+
+## [2026-05-07] ingest | Making Codebases Agent Ready - Eno Reyes, Factory AI
+
+- Source: [Making Codebases Agent Ready - Eno Reyes, Factory AI](sources/20251222_ShuJ_CN6zr4.md)
+- Processed: `ShuJ_CN6zr4`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Treat agent readiness as verification infrastructure](concepts/treat-agent-readiness-as-verification-infrastructure.md), [Use agent readiness flywheels to improve the development environment](concepts/use-agent-readiness-flywheels-to-improve-the-development-environment.md), [Make validation fast, local, deterministic, and actionable](concepts/make-validation-fast-local-deterministic-and-actionable.md)
+- Notes: Added Factory AI's agent-readiness framing covering validation as the bottleneck for reliable coding-agent autonomy and environment-improvement flywheels.

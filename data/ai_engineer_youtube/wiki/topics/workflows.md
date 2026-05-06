@@ -162,6 +162,7 @@ Enterprise AI research workflows can be made fundable by turning each uncertain 
 - [Use deep modules to make agent work testable](../concepts/use-deep-modules-to-make-agent-work-testable.md) - module boundaries let humans validate agent work through stable interfaces.
 - [Ask agents after each run what blocked their success](../concepts/ask-agents-after-each-run-what-blocked-their-success.md) - post-run feedback helps turn failures into workflow and context fixes.
 - [Agent software factories need runnable, contextual, and verifiable primitives](../concepts/agent-software-factories-need-runnable-contextual-and-verifiable-primitives.md) - workflow readiness starts with runnable projects, accessible context, and agent-executable checks.
+- [Use agent readiness flywheels to improve the development environment](../concepts/use-agent-readiness-flywheels-to-improve-the-development-environment.md) - better agent work should feed back into stronger validation and instructions.
 - [Local-first platform workflows shorten agent feedback loops](../concepts/local-first-platform-workflows-shorten-agent-feedback-loops.md) - platform workflows should fail early in the agent's local workspace.
 - [Guard AI-assisted platform contributions with policy and context](../concepts/guard-ai-assisted-platform-contributions-with-policy-and-context.md) - contribution workflows need hard policies plus Markdown guidance.
 - [Cloud agents turn coding work into asynchronous VM-backed queues](../concepts/cloud-agents-turn-coding-work-into-asynchronous-vm-backed-queues.md) - synchronous planning and asynchronous execution can increase throughput when review remains focused.
@@ -288,6 +289,7 @@ Enterprise AI research workflows can be made fundable by turning each uncertain 
 - [The Unreasonable Effectiveness of Prompt Learning - Aparna Dhinakaran, Arize](../sources/20251223_pP_dSNz_EdQ.md)
 - [Building durable Agents with Workflow DevKit & AI SDK - Peter Wielander, Vercel](../sources/20260106_kmV-qg4uoNI.md)
 - [Developer Experience in the Age of AI Coding Agents - Max Kanat-Alexander, Capital One](../sources/20251223_rT2Del5pwg4.md)
+- [Making Codebases Agent Ready - Eno Reyes, Factory AI](../sources/20251222_ShuJ_CN6zr4.md)
 - [Claude Agent SDK [Full Workshop] - Thariq Shihipar, Anthropic](../sources/20260105_TqC1qOfiVcQ.md)
 - [Building Intelligent Research Agents with Manus - Ivan Leo, Manus AI (now Meta Superintelligence)](../sources/20251230_xz0-brt56L8.md)
 - [OpenAI + @Temporalio : Building Durable, Production Ready Agents - Cornelia Davis, Temporal](../sources/20260112_k8cnVCMYmNc.md)

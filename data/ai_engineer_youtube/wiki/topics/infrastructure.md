@@ -70,6 +70,8 @@ Developer-platform infrastructure also needs to be consumable by agents. Self-se
 - [Agent experience prioritizes APIs, CLIs, and MCP over dashboards](../concepts/agent-experience-prioritizes-apis-clis-and-mcp-over-dashboards.md) - infrastructure should include machine-friendly surfaces for agent users.
 - [Browser DevTools MCP turns runtime debugging into agent tools](../concepts/browser-devtools-mcp-turns-runtime-debugging-into-agent-tools.md) - browser automation and DevTools traces become part of the agent infrastructure for web apps.
 - [Agent software factories need runnable, contextual, and verifiable primitives](../concepts/agent-software-factories-need-runnable-contextual-and-verifiable-primitives.md) - infrastructure for agents includes reproducible dev setup and executable checks, not only model hosting.
+- [Treat agent readiness as verification infrastructure](../concepts/treat-agent-readiness-as-verification-infrastructure.md) - tests, linters, specs, and review criteria are infrastructure that determines how much agent autonomy is safe.
+- [Use agent readiness flywheels to improve the development environment](../concepts/use-agent-readiness-flywheels-to-improve-the-development-environment.md) - readiness investment compounds when agents help improve the validation environment.
 - [Cloud agents turn coding work into asynchronous VM-backed queues](../concepts/cloud-agents-turn-coding-work-into-asynchronous-vm-backed-queues.md) - VM-backed environments can isolate and parallelize coding-agent execution.
 - [Cross-app access centralizes MCP authentication through the identity provider](../concepts/cross-app-access-centralizes-mcp-authentication-through-the-identity-provider.md) - IdP-managed trust bridges MCP clients and servers across enterprise applications.
 - [Short-lived IdP-derived tokens reduce standing MCP access](../concepts/short-lived-idp-derived-tokens-reduce-standing-mcp-access.md) - short-lived access tokens improve revocation behavior for MCP tools.
@@ -179,3 +181,4 @@ Developer-platform infrastructure also needs to be consumable by agents. Self-se
 - [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](../sources/20251223_LU9KgcZDRfY.md)
 - [Building durable Agents with Workflow DevKit & AI SDK - Peter Wielander, Vercel](../sources/20260106_kmV-qg4uoNI.md)
 - [Developer Experience in the Age of AI Coding Agents - Max Kanat-Alexander, Capital One](../sources/20251223_rT2Del5pwg4.md)
+- [Making Codebases Agent Ready - Eno Reyes, Factory AI](../sources/20251222_ShuJ_CN6zr4.md)
