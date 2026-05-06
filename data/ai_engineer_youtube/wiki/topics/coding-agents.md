@@ -15,6 +15,9 @@ Amp Code adds a product-architecture version of the same discipline. Its guidanc
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md) - coding-agent SDKs package reusable runtime pieces around the model.
 - [Task-tuned tool sets beat generic integration surfaces for core coding loops](../concepts/task-tuned-tool-sets-beat-generic-integration-surfaces-for-core-coding-loops.md) - core coding-agent tools should be optimized for local feedback loops rather than inherited from generic integrations.
 - [Use subagents to isolate context-heavy subtasks](../concepts/use-subagents-to-isolate-context-heavy-subtasks.md) - specialists can search, reason, fetch dependency context, or prepare codemods without exhausting the main agent's context.
+- [Scope coding-agent autonomy by user decision authority](../concepts/scope-coding-agent-autonomy-by-user-decision-authority.md) - autonomy should cover the technical decisions the user cannot make or verify.
+- [Autonomous browser verification finds painted-door failures](../concepts/autonomous-browser-verification-finds-painted-door-failures.md) - generated web apps need environment feedback for UI paths that only look complete.
+- [Let the core agent loop orchestrate parallel subtasks](../concepts/let-the-core-agent-loop-orchestrate-parallel-subtasks.md) - the main loop can choose parallel subtasks dynamically instead of requiring manual thread dispatch.
 - [Design coding-agent editors as review surfaces](../concepts/design-coding-agent-editors-as-review-surfaces.md) - editor UX should help humans inspect generated diffs, commands, diagnostics, and change structure.
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - tool-loop architecture can replace large DAGs for exploratory coding work.
 - [Use prompt-enforced todos as lightweight agent state](../concepts/use-prompt-enforced-todos-as-lightweight-agent-state.md) - todos orient the model without turning every step into hard orchestration.
@@ -163,3 +166,4 @@ Amp Code adds a product-architecture version of the same discipline. Its guidanc
 - [Developer Experience in the Age of AI Coding Agents - Max Kanat-Alexander, Capital One](../sources/20251223_rT2Del5pwg4.md)
 - [No More Slop - swyx](../sources/20251222_IoiHI7p12Ao.md)
 - [Amp Code: Next Generation AI Coding - Beyang Liu, Amp Code](../sources/20251222_gvIAkmZUEZY.md)
+- [The 3 Pillars of Autonomy - Michele Catasta, Replit](../sources/20251222_MLhAA9yguwM.md)

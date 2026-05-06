@@ -24,7 +24,7 @@ LLM program optimization adds another eval loop: define known inputs and outputs
 
 Coding-agent prompt learning turns that evaluation loop into a system-prompt update path: baseline the agent on tasks such as SWE-bench Lite, run generated patches through tests, ask judges for explanatory diagnoses, synthesize rules from the diagnoses, and rerun the benchmark to check whether agent behavior actually improved without weight changes.
 
-Anti-slop evaluation should be provenance-neutral. Human and AI outputs can both be low-quality, inauthentic, inaccurate, insecure, or unmaintainable, so the release question is whether the artifact meets the bar. Agent autonomy claims need the same discipline: unattended runtime is only meaningful when paired with tests, review findings, security evidence, maintainability judgment, and human ownership.
+Anti-slop evaluation should be provenance-neutral. Human and AI outputs can both be low-quality, inauthentic, inaccurate, insecure, or unmaintainable, so the release question is whether the artifact meets the bar. Agent autonomy claims need the same discipline: unattended runtime is only meaningful when paired with tests, review findings, security evidence, maintainability judgment, and human ownership. For generated web apps, browser-level verification is a specific autonomy test because visible UI can hide missing handlers, mock data, or other painted-door failures that non-technical users will not systematically inspect.
 
 ## Key Concepts
 
@@ -36,6 +36,7 @@ Anti-slop evaluation should be provenance-neutral. Human and AI outputs can both
 - [Reliability thresholds determine whether coding agents save time](../concepts/reliability-thresholds-determine-whether-coding-agents-save-time.md) - productivity depends on total prompting, review, correction, and handoff cost.
 - [Treat slop as a quality failure, not an AI provenance label](../concepts/treat-slop-as-a-quality-failure-not-an-ai-provenance-label.md) - quality gates should inspect the output rather than treating origin as the whole judgment.
 - [Do not report agent autonomy without quality accountability](../concepts/do-not-report-agent-autonomy-without-quality-accountability.md) - long autonomous runs need quality evidence before they count as capability.
+- [Autonomous browser verification finds painted-door failures](../concepts/autonomous-browser-verification-finds-painted-door-failures.md) - browser checks gather the technical feedback needed to validate generated web-app behavior.
 - [Self-reported task duration is a weak productivity signal](../concepts/self-reported-task-duration-is-a-weak-productivity-signal.md) - speedup estimates should not rest on recalled elapsed time.
 - [Separate watched and unwatched agent time horizons](../concepts/separate-watched-and-unwatched-agent-time-horizons.md) - autonomy evals should record whether close monitoring is part of the result.
 - [Make agent work more trustworthy by making it verifiable](../concepts/make-agent-work-more-trustworthy-by-making-it-verifiable.md) - agent autonomy depends on whether tasks have direct checks, proxy checks, or safe constraints.
@@ -207,3 +208,4 @@ Anti-slop evaluation should be provenance-neutral. Human and AI outputs can both
 - [Shipping AI That Works: An Evaluation Framework for PMs - Aman Khan, Arize](../sources/20251226_2HNSG990Ew8.md)
 - [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](../sources/20251223_LU9KgcZDRfY.md)
 - [No More Slop - swyx](../sources/20251222_IoiHI7p12Ao.md)
+- [The 3 Pillars of Autonomy - Michele Catasta, Replit](../sources/20251222_MLhAA9yguwM.md)

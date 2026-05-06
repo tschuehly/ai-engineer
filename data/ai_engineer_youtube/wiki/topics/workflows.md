@@ -110,6 +110,7 @@ Enterprise AI research workflows can be made fundable by turning each uncertain 
 - [Feedback turns coding-agent loops into prompt and skill improvement cycles](../concepts/feedback-turns-coding-agent-loops-into-prompt-and-skill-improvement-cycles.md) - each run can improve the instructions that shape later runs.
 - [Choose plan-heavy or review-heavy agent workflows by task shape](../concepts/choose-plan-heavy-or-review-heavy-agent-workflows-by-task-shape.md) - workflow design should match planning depth to whether a task can be specified and tested.
 - [Parallel coding-agent queues need focus-preserving review interfaces](../concepts/parallel-coding-agent-queues-need-focus-preserving-review-interfaces.md) - long-running agent workflows need queueing and review handoffs that reduce context switching.
+- [Let the core agent loop orchestrate parallel subtasks](../concepts/let-the-core-agent-loop-orchestrate-parallel-subtasks.md) - agent-led decomposition can use parallelism without making the user reconcile thread outputs.
 - [Spatial agent maps expose filesystem-level lineage and collisions](../concepts/spatial-agent-maps-expose-filesystem-level-lineage-and-collisions.md) - spatial activity maps help operators understand where parallel agents are acting.
 - [Let agents propose quest queues for parallel work](../concepts/let-agents-propose-quest-queues-for-parallel-work.md) - queues of agent-suggested missions can move ideation and maintenance discovery into the workflow.
 - [Review bundles compress parallel agent output into evidence](../concepts/review-bundles-compress-parallel-agent-output-into-evidence.md) - compact evidence artifacts keep parallel work reviewable.
@@ -295,3 +296,4 @@ Enterprise AI research workflows can be made fundable by turning each uncertain 
 - [The Agent Native Company — Rick Blalock, Agentuity](../sources/20250603_0ZPAvzhpGjw.md)
 - [No More Slop - swyx](../sources/20251222_IoiHI7p12Ao.md)
 - [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](../sources/20251223_LU9KgcZDRfY.md)
+- [The 3 Pillars of Autonomy - Michele Catasta, Replit](../sources/20251222_MLhAA9yguwM.md)

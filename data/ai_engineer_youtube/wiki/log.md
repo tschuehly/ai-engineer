@@ -727,3 +727,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Tools](topics/tools.md)
 - Updated concepts: [Task-tuned tool sets beat generic integration surfaces for core coding loops](concepts/task-tuned-tool-sets-beat-generic-integration-surfaces-for-core-coding-loops.md), [Use subagents to isolate context-heavy subtasks](concepts/use-subagents-to-isolate-context-heavy-subtasks.md), [Design coding-agent editors as review surfaces](concepts/design-coding-agent-editors-as-review-surfaces.md), [MCP tool surfaces need default context budgets](concepts/mcp-tool-surfaces-need-default-context-budgets.md), [Parallel coding-agent queues need focus-preserving review interfaces](concepts/parallel-coding-agent-queues-need-focus-preserving-review-interfaces.md), [Customize subagents by task, model, tools, and permissions](concepts/customize-subagents-by-task-model-tools-and-permissions.md)
 - Notes: Added Amp Code's coding-agent architecture guidance around task-tuned tools, context-isolating subagents, and editor/terminal surfaces optimized for reviewing agent-generated changes.
+
+## [2026-05-07] ingest | The 3 Pillars of Autonomy - Michele Catasta, Replit
+
+- Source: [The 3 Pillars of Autonomy - Michele Catasta, Replit](sources/20251222_MLhAA9yguwM.md)
+- Processed: `MLhAA9yguwM`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Scope coding-agent autonomy by user decision authority](concepts/scope-coding-agent-autonomy-by-user-decision-authority.md), [Autonomous browser verification finds painted-door failures](concepts/autonomous-browser-verification-finds-painted-door-failures.md), [Offload long-horizon agent state outside the context window](concepts/offload-long-horizon-agent-state-outside-the-context-window.md), [Let the core agent loop orchestrate parallel subtasks](concepts/let-the-core-agent-loop-orchestrate-parallel-subtasks.md)
+- Notes: Added Replit's autonomy framing for non-technical coding-agent users, covering technical-decision scope, browser verification, context offload, and agent-led parallel decomposition.
