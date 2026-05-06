@@ -47,6 +47,8 @@ Emerging MCP protocol work adds production-infrastructure concerns beyond ordina
 - [Run agent-written API code inside programmable sandboxes](../concepts/run-agent-written-api-code-inside-programmable-sandboxes.md) - generated-code execution needs infrastructure-level isolation and abuse controls.
 - [Capability-based sandboxes start with no authority](../concepts/capability-based-sandboxes-start-with-no-authority.md) - generated-code infrastructure should grant explicit task capabilities rather than ambient access.
 - [Separate agent harnesses from generated-code execution](../concepts/separate-agent-harnesses-from-generated-code-execution.md) - agent control planes and generated-code runtimes should be separate trust domains.
+- [Adapt embedding dimensions with Matryoshka representation learning](../concepts/adapt-embedding-dimensions-with-matryoshka-representation-learning.md) - embedding infrastructure can tune vector dimensionality for index cost, latency, and semantic expressiveness.
+- [Neural weather models can target operational forecast variables directly](../concepts/neural-weather-models-can-target-operational-forecast-variables-directly.md) - operational AI systems should choose model targets and hardware paths around the variables users actually need.
 
 ## Open Questions
 
@@ -65,6 +67,7 @@ Emerging MCP protocol work adds production-infrastructure concerns beyond ordina
 - Which MCP servers should support stateless transport or well-known server discovery before broad production rollout?
 - Which sandbox and rate-limit policies are required before a platform lets agents run generated code against its APIs?
 - Which enterprise-specific context and workflow integrations justify custom internal agent platforms instead of vendor tools?
+- When should infrastructure expose adaptive embedding dimensions as a product knob rather than a fixed model configuration?
 
 ## Sources
 
@@ -91,3 +94,4 @@ Emerging MCP protocol work adds production-infrastructure concerns beyond ordina
 - [Running LLMs on your iPhone: 40 tok/s Gemma 4 with MLX - Adrien Grondin, Locally AI](../sources/20260420_a2muGkT4WD4.md)
 - [The Future of MCP - David Soria Parra, Anthropic](../sources/20260419_v3Fr2JR47KA.md)
 - [Code Mode: Let the Code do the Talking - Sunil Pai, Cloudflare](../sources/20260419_8txf05vVVl4.md)
+- [How Google DeepMind is researching the next Frontier of AI for Gemini - Raia Hadsell, VP of Research](../sources/20260418_zZsTVBXcbow.md)

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Retrieval gives agents access to institutional systems such as Confluence, Jira, SharePoint, GitHub, Slack, knowledge graphs, and file-backed knowledge bases. The useful retrieval layer is not the one with the most connectors, but the one that provides accurate, task-relevant context and exposes gaps when the source knowledge is missing, stale, contradictory, or unavailable to the current user. Personal Markdown knowledge bases can play the same role at individual scale when saved links, notes, tasks, and project records are indexed, tagged, connected, and resurfaced when relevant. Context engines add a reasoning layer over retrieval by personalizing results to the task, team, permissions, and source relationships. Small models can improve this layer by embedding, reranking, extracting entities, filtering inputs, or building structured knowledge targets.
+Retrieval gives agents access to institutional systems such as Confluence, Jira, SharePoint, GitHub, Slack, knowledge graphs, and file-backed knowledge bases. The useful retrieval layer is not the one with the most connectors, but the one that provides accurate, task-relevant context and exposes gaps when the source knowledge is missing, stale, contradictory, or unavailable to the current user. Personal Markdown knowledge bases can play the same role at individual scale when saved links, notes, tasks, and project records are indexed, tagged, connected, and resurfaced when relevant. Context engines add a reasoning layer over retrieval by personalizing results to the task, team, permissions, and source relationships. Small models can improve this layer by embedding, reranking, extracting entities, filtering inputs, or building structured knowledge targets. Omnimodal embeddings extend the retrieval target beyond text: one semantic vector can represent text, audio, video, and documents so agents can retrieve, query, and compare concepts without lossy modality handoffs. Dimension-adaptive embeddings add an infrastructure lever by letting retrieval start with cheaper coarse vectors and expand when higher expressiveness is needed.
 
 ## Key Concepts
 
@@ -16,6 +16,8 @@ Retrieval gives agents access to institutional systems such as Confluence, Jira,
 - [Personal knowledge bases become agent context substrates](../concepts/personal-knowledge-bases-become-agent-context-substrates.md) - personal retrieval becomes more useful when ingestion adds context and links to existing notes.
 - [Retire completed planning docs before they become agent doc rot](../concepts/retire-completed-planning-docs-before-they-become-agent-doc-rot.md) - retrieval systems should avoid presenting stale plans as current implementation truth.
 - [Surface existing company information before redesigning processes](../concepts/surface-existing-company-information-before-redesigning-processes.md) - agents can retrieve and synthesize information that already exists outside the system of record.
+- [Use omnimodal embeddings for cross-modal retrieval and comparison](../concepts/use-omnimodal-embeddings-for-cross-modal-retrieval-and-comparison.md) - cross-modal retrieval needs semantic representations that preserve concepts across text, audio, video, and documents.
+- [Adapt embedding dimensions with Matryoshka representation learning](../concepts/adapt-embedding-dimensions-with-matryoshka-representation-learning.md) - retrieval systems can trade index cost and expressiveness without changing embedding models.
 
 ## Open Questions
 
@@ -24,6 +26,7 @@ Retrieval gives agents access to institutional systems such as Confluence, Jira,
 - How should Graph RAG or graph summarization systems preserve permission boundaries when summaries cross source scopes?
 - How should personal retrieval distinguish durable notes from stale bookmarks and noisy saved material?
 - What status metadata should retrieval systems use to demote closed PRDs and historical planning artifacts?
+- When should cross-modal retrieval use one omnimodal embedding space instead of separate modality-specific indexes plus fusion?
 
 ## Sources
 
@@ -33,3 +36,4 @@ Retrieval gives agents access to institutional systems such as Confluence, Jira,
 - [I Gave an AI Agent the Keys to My Life (Here's What Happened) - Radek Sienkiewicz (@velvetshark-com)](../sources/20260502_sJ2jc7leKBk.md)
 - [Full Walkthrough: Workflow for AI Coding - Matt Pocock](../sources/20260424_-QFHIoCo-Ko.md)
 - [The New Application Layer - Malte Ubl, CTO Vercel](../sources/20260420_XKup1pj-34M.md)
+- [How Google DeepMind is researching the next Frontier of AI for Gemini - Raia Hadsell, VP of Research](../sources/20260418_zZsTVBXcbow.md)

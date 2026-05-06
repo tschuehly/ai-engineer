@@ -25,6 +25,8 @@ The new application layer also changes the economic boundary for automation. Age
 - [Use decision logs to keep uncertain agents moving](../concepts/use-decision-logs-to-keep-uncertain-agents-moving.md) - reversible assumptions keep long runs moving while preserving later review.
 - [Encode domain judgment in node-level agent skills](../concepts/encode-domain-judgment-in-node-level-agent-skills.md) - skills can add expert contingencies at the moment a work-tree node needs them.
 - [Realtime multimodal models should plan over specialized local actuators](../concepts/realtime-multimodal-models-should-plan-over-specialized-local-actuators.md) - realtime models can plan from speech and vision while local components handle low-level physical control.
+- [Use omnimodal embeddings for cross-modal retrieval and comparison](../concepts/use-omnimodal-embeddings-for-cross-modal-retrieval-and-comparison.md) - agents that work over mixed media need retrieval representations that preserve concepts across modalities.
+- [Interactive world models need memory, control, and live prompting](../concepts/interactive-world-models-need-memory-control-and-live-prompting.md) - agents and users need generated environments that remain consistent under action and live changes.
 - [On-device agents can combine local reasoning with tool and API calls](../concepts/on-device-agents-can-combine-local-reasoning-with-tool-and-api-calls.md) - local inference can still support function calling, JSON output, and selected API-backed skills.
 - [Route Gemma 4 model variants by deployment and workflow shape](../concepts/route-gemma-4-model-variants-by-deployment-and-workflow-shape.md) - open-weight model families can split agent work across on-device, sparse, and dense long-context variants.
 - [Unified coding-agent harnesses combine models, tools, environments, and safety](../concepts/unified-coding-agent-harnesses-combine-models-tools-environments-and-safety.md) - agent products need runtime harnesses around model capability.
@@ -176,3 +178,4 @@ The new application layer also changes the economic boundary for automation. Age
 - [Gemma, DeepMind's Family of Open Models - Omar Sanseviero, Google DeepMind](../sources/20260420__gVFUEdhCyI.md)
 - [The Future of MCP - David Soria Parra, Anthropic](../sources/20260419_v3Fr2JR47KA.md)
 - [Code Mode: Let the Code do the Talking - Sunil Pai, Cloudflare](../sources/20260419_8txf05vVVl4.md)
+- [How Google DeepMind is researching the next Frontier of AI for Gemini - Raia Hadsell, VP of Research](../sources/20260418_zZsTVBXcbow.md)

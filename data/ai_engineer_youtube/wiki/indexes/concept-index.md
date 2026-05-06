@@ -88,6 +88,8 @@
 - [Compressed research agents preserve human decision points](../concepts/compressed-research-agents-preserve-human-decision-points.md)
 - [Deep research agents need planning, grounded evidence, and pivot loops](../concepts/deep-research-agents-need-planning-grounded-evidence-and-pivot-loops.md)
 - [Split exploratory research agents from constrained writing workflows](../concepts/split-exploratory-research-agents-from-constrained-writing-workflows.md)
+- [Use omnimodal embeddings for cross-modal retrieval and comparison](../concepts/use-omnimodal-embeddings-for-cross-modal-retrieval-and-comparison.md)
+- [Interactive world models need memory, control, and live prompting](../concepts/interactive-world-models-need-memory-control-and-live-prompting.md)
 
 ## AI Monetization
 
@@ -230,6 +232,8 @@
 - [Expose large APIs through typed code mode](../concepts/expose-large-apis-through-typed-code-mode.md)
 - [Run agent-written API code inside programmable sandboxes](../concepts/run-agent-written-api-code-inside-programmable-sandboxes.md)
 - [Capability-Based Sandboxes Start With No Authority](../concepts/capability-based-sandboxes-start-with-no-authority.md)
+- [Adapt embedding dimensions with Matryoshka representation learning](../concepts/adapt-embedding-dimensions-with-matryoshka-representation-learning.md)
+- [Neural weather models can target operational forecast variables directly](../concepts/neural-weather-models-can-target-operational-forecast-variables-directly.md)
 
 ## Inference
 
@@ -251,6 +255,7 @@
 - [Use guidance to trade diffusion sample diversity for conditional quality](../concepts/use-guidance-to-trade-diffusion-sample-diversity-for-conditional-quality.md)
 - [Distill diffusion models to reduce sampling steps](../concepts/distill-diffusion-models-to-reduce-sampling-steps.md)
 - [Expose explicit control signals for generative media models](../concepts/expose-explicit-control-signals-for-generative-media-models.md)
+- [Interactive world models need memory, control, and live prompting](../concepts/interactive-world-models-need-memory-control-and-live-prompting.md)
 
 ## Evaluation
 
@@ -298,6 +303,7 @@
 - [Use deep modules to make agent work testable](../concepts/use-deep-modules-to-make-agent-work-testable.md)
 - [Calibrate LLM judges like binary classifiers](../concepts/calibrate-llm-judges-like-binary-classifiers.md)
 - [Domain Gemma variants package specialized policy and task behavior](../concepts/domain-gemma-variants-package-specialized-policy-and-task-behavior.md)
+- [Neural weather models can target operational forecast variables directly](../concepts/neural-weather-models-can-target-operational-forecast-variables-directly.md)
 
 ## Models
 
@@ -328,6 +334,10 @@
 - [Use guidance to trade diffusion sample diversity for conditional quality](../concepts/use-guidance-to-trade-diffusion-sample-diversity-for-conditional-quality.md)
 - [Distill diffusion models to reduce sampling steps](../concepts/distill-diffusion-models-to-reduce-sampling-steps.md)
 - [Expose explicit control signals for generative media models](../concepts/expose-explicit-control-signals-for-generative-media-models.md)
+- [Use omnimodal embeddings for cross-modal retrieval and comparison](../concepts/use-omnimodal-embeddings-for-cross-modal-retrieval-and-comparison.md)
+- [Adapt embedding dimensions with Matryoshka representation learning](../concepts/adapt-embedding-dimensions-with-matryoshka-representation-learning.md)
+- [Neural weather models can target operational forecast variables directly](../concepts/neural-weather-models-can-target-operational-forecast-variables-directly.md)
+- [Interactive world models need memory, control, and live prompting](../concepts/interactive-world-models-need-memory-control-and-live-prompting.md)
 
 ## Retrieval
 
@@ -344,6 +354,8 @@
 - [Personal knowledge bases become agent context substrates](../concepts/personal-knowledge-bases-become-agent-context-substrates.md)
 - [Explicit context attachments can outperform opaque agent memory](../concepts/explicit-context-attachments-can-outperform-opaque-agent-memory.md)
 - [Retire completed planning docs before they become agent doc rot](../concepts/retire-completed-planning-docs-before-they-become-agent-doc-rot.md)
+- [Use omnimodal embeddings for cross-modal retrieval and comparison](../concepts/use-omnimodal-embeddings-for-cross-modal-retrieval-and-comparison.md)
+- [Adapt embedding dimensions with Matryoshka representation learning](../concepts/adapt-embedding-dimensions-with-matryoshka-representation-learning.md)
 
 ## Tools
 

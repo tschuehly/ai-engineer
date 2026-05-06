@@ -62,6 +62,8 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [AI output speed can overwhelm review capacity](concepts/ai-output-speed-can-overwhelm-review-capacity.md) - generated-code volume should be constrained by responsible review, not only by agent throughput.
 - [Agent-legible codebases reduce generated-code entropy](concepts/agent-legible-codebases-reduce-generated-code-entropy.md) - modular flow, explicit primitives, and lint-enforced rules make codebases easier for agents to modify safely.
 - [Use human judgment gates for high-risk agent code changes](concepts/use-human-judgment-gates-for-high-risk-agent-code-changes.md) - migrations, permissions, dependencies, architecture, and reliability work need explicit human review friction.
+- [Use omnimodal embeddings for cross-modal retrieval and comparison](concepts/use-omnimodal-embeddings-for-cross-modal-retrieval-and-comparison.md) - retrieval and agent context can preserve concepts across text, audio, video, and documents.
+- [Interactive world models need memory, control, and live prompting](concepts/interactive-world-models-need-memory-control-and-live-prompting.md) - generated environments require consistency and controllability when users act inside them.
 
 ## Topics
 

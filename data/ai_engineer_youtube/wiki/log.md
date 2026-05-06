@@ -375,3 +375,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
 - Updated concepts: [AI Output Speed Can Overwhelm Review Capacity](concepts/ai-output-speed-can-overwhelm-review-capacity.md), [Agent-Legible Codebases Reduce Generated-Code Entropy](concepts/agent-legible-codebases-reduce-generated-code-entropy.md), [Use Human Judgment Gates for High-Risk Agent Code Changes](concepts/use-human-judgment-gates-for-high-risk-agent-code-changes.md)
 - Notes: Added Earendil's friction-as-judgment framing for coding-agent workflows, including review-capacity limits, codebase legibility, mechanical enforcement, and explicit human gates for risky changes.
+
+## [2026-05-06] ingest | How Google DeepMind is researching the next Frontier of AI for Gemini - Raia Hadsell, VP of Research
+
+- Source: [How Google DeepMind is researching the next Frontier of AI for Gemini - Raia Hadsell, VP of Research](sources/20260418_zZsTVBXcbow.md)
+- Processed: `zZsTVBXcbow`
+- Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Generative Media](topics/generative-media.md), [Infrastructure](topics/infrastructure.md), [Models](topics/models.md), [Retrieval](topics/retrieval.md)
+- Updated concepts: [Use Omnimodal Embeddings for Cross-Modal Retrieval and Comparison](concepts/use-omnimodal-embeddings-for-cross-modal-retrieval-and-comparison.md), [Adapt Embedding Dimensions With Matryoshka Representation Learning](concepts/adapt-embedding-dimensions-with-matryoshka-representation-learning.md), [Neural Weather Models Can Target Operational Forecast Variables Directly](concepts/neural-weather-models-can-target-operational-forecast-variables-directly.md), [Interactive World Models Need Memory, Control, and Live Prompting](concepts/interactive-world-models-need-memory-control-and-live-prompting.md)
+- Notes: Added frontier-AI patterns beyond standard language models: omnimodal retrieval embeddings, adaptive embedding dimensions, neural weather forecasting, and interactive generated worlds.

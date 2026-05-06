@@ -48,6 +48,7 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - [AI agents still need human taste for interaction quality](../concepts/ai-agents-still-need-human-taste-for-interaction-quality.md) - UI eval needs human judgment when generated interactions are functional but feel wrong.
 - [Calibrate LLM judges like binary classifiers](../concepts/calibrate-llm-judges-like-binary-classifiers.md) - judge prompts need dev/test validation before they gate workflow quality.
 - [Domain Gemma variants package specialized policy and task behavior](../concepts/domain-gemma-variants-package-specialized-policy-and-task-behavior.md) - safety and domain variants still need validation against the policies or specialist tasks they claim to support.
+- [Neural weather models can target operational forecast variables directly](../concepts/neural-weather-models-can-target-operational-forecast-variables-directly.md) - domain models should be evaluated against operational targets such as forecast lead time, tail risk, and phenomenon-specific prediction.
 
 ## Open Questions
 
@@ -74,6 +75,7 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - Which product-quality regressions can be detected mechanically, and which still require trained human taste?
 - Which LLM judge labels are safe to automate, and which still require domain-expert review before calibration?
 - Which domain-specific model variants are reliable enough to replace prompting a general model, and which still need expert review or lab validation?
+- Which generated-world checks best measure memory, consistency, and controllability under long interactive sessions?
 
 ## Sources
 
@@ -103,3 +105,4 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - [Full Workshop: Build Your Own Deep Research Agents - Louis-François Bouchard, Paul Iusztin, Samridhi](../sources/20260420_mYSRn6PC1mc.md)
 - [Gemma, DeepMind's Family of Open Models - Omar Sanseviero, Google DeepMind](../sources/20260420__gVFUEdhCyI.md)
 - [The Friction is Your Judgment - Armin Ronacher & Cristina Poncela Cubeiro, Earendil](../sources/20260418__Zcw_sVF6hU.md)
+- [How Google DeepMind is researching the next Frontier of AI for Gemini - Raia Hadsell, VP of Research](../sources/20260418_zZsTVBXcbow.md)
