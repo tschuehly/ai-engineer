@@ -47,3 +47,11 @@
 - Updated topics: [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Models](topics/models.md)
 - Updated concepts: [Local LLM training exposes the core model-building stack](concepts/local-llm-training-exposes-the-core-model-building-stack.md), [Tokenizer size must match data and compute budget](concepts/tokenizer-size-must-match-data-and-compute-budget.md), [Use loss curves to debug local model training](concepts/use-loss-curves-to-debug-local-model-training.md)
 - Notes: Added a local model-training slice covering tokenizer/data/compute tradeoffs, training stack decomposition, and loss-curve diagnostics.
+
+## [2026-05-06] ingest | Mergeable by default: Building the context engine to save time and tokens — Peter Werry, Unblocked
+
+- Source: [Mergeable by default: Building the context engine to save time and tokens — Peter Werry, Unblocked](sources/20260503_5ID22ACI7IM.md)
+- Processed: `5ID22ACI7IM`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Retrieval](topics/retrieval.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Context engines select task-specific organizational context](concepts/context-engines-select-task-specific-organizational-context.md), [Surface unresolved context conflicts to agents and users](concepts/surface-unresolved-context-conflicts-to-agents-and-users.md), [Do not cache context-engine answers as durable truth](concepts/do-not-cache-context-engine-answers-as-durable-truth.md), [Use social and expert graphs to personalize coding-agent context](concepts/use-social-and-expert-graphs-to-personalize-coding-agent-context.md)
+- Notes: Added a context-engine slice covering personalized organizational retrieval, conflict surfacing, stale-answer risks, and social/expert graphs for coding agents.
