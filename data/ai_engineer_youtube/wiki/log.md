@@ -95,3 +95,11 @@
 - Updated topics: [Agents](topics/agents.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Visual Agent Workflows Make Tool Use Observable and Adjustable](concepts/visual-agent-workflows-make-tool-use-observable-and-adjustable.md), [Route High-Impact Agent Actions Through Explicit Human Approval Gates](concepts/route-high-impact-agent-actions-through-explicit-human-approval-gates.md), [Use Tool Names and Descriptions as Operational Prompts](concepts/use-tool-names-and-descriptions-as-operational-prompts.md), [Split Large Automation Surfaces Into Specialized Subagents and Subworkflows](concepts/split-large-automation-surfaces-into-specialized-subagents-and-subworkflows.md)
 - Notes: Added n8n workflow mechanics for observable agent orchestration, scoped tool access, hard approval boundaries, and modular automation growth.
+
+## [2026-05-06] ingest | Mastering AI Pricing: Flexible & Agile Monetization - Mayank Pant, Stripe
+
+- Source: [Mastering AI Pricing: Flexible & Agile Monetization - Mayank Pant, Stripe](sources/20260501_CrqPcIZOOXA.md)
+- Processed: `CrqPcIZOOXA`
+- Updated topics: [AI Monetization](topics/ai-monetization.md), [Infrastructure](topics/infrastructure.md)
+- Updated concepts: [Treat AI Pricing as a Fast-Moving Product Hypothesis](concepts/treat-ai-pricing-as-a-fast-moving-product-hypothesis.md), [Map AI Charge Metrics to Customer-Perceived Value](concepts/map-ai-charge-metrics-to-customer-perceived-value.md), [Use Hybrid AI Pricing to Balance Predictable Revenue and Margin Protection](concepts/use-hybrid-ai-pricing-to-balance-predictable-revenue-and-margin-protection.md), [Prevent AI Billing Surprises With Caps, Notifications, and Rate Limits](concepts/prevent-ai-billing-surprises-with-caps-notifications-and-rate-limits.md)
+- Notes: Added AI monetization patterns for value-aligned charge metrics, hybrid pricing, credit abstraction, and usage-billing guardrails.

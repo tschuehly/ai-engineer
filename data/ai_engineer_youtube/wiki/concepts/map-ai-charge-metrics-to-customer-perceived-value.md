@@ -1,0 +1,23 @@
+# Map AI Charge Metrics to Customer-Perceived Value
+
+Summary: AI pricing should expose charge metrics that customers understand as value, not only technical units such as tokens or API calls. The right billable unit depends on whether the product automates work, augments quality, provides enhanced access, or produces business outcomes.
+
+Use when:
+- Choosing between token/API pricing, workflow units, credits, and outcome-based pricing.
+- Translating product capabilities into packaging that sales, finance, and customers can reason about.
+
+Details:
+- Technical units are easiest for infrastructure providers but can overwhelm product customers; a presentation tool customer may care about decks or slides produced, not underlying API calls.
+- Charge metrics can be consumption-based, workflow-based, or outcome-based: API calls align with provider cost, generated images or summarized documents align with product use, and hires or qualified leads align with customer ROI.
+- Outcome-based pricing is easier to sell but harder to attribute; consumption pricing is easier to implement but farther from customer value, so teams need data to justify where they land.
+- Credits can abstract multiple features into a customer-facing currency while allowing internal mappings to evolve as model costs and feature value change.
+
+Related topics:
+- [AI Monetization](../topics/ai-monetization.md)
+
+Related concepts:
+- [Treat AI pricing as a fast-moving product hypothesis](treat-ai-pricing-as-a-fast-moving-product-hypothesis.md)
+- [Use hybrid AI pricing to balance predictable revenue and margin protection](use-hybrid-ai-pricing-to-balance-predictable-revenue-and-margin-protection.md)
+
+Sources:
+- [Mastering AI Pricing: Flexible & Agile Monetization - Mayank Pant, Stripe](../sources/20260501_CrqPcIZOOXA.md), 02:32-03:17, 06:24-11:34
