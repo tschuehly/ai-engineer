@@ -191,3 +191,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Agent Software Factories Need Runnable, Contextual, and Verifiable Primitives](concepts/agent-software-factories-need-runnable-contextual-and-verifiable-primitives.md), [Agent Rules Should Emerge From Observed Off-Rail Behavior](concepts/agent-rules-should-emerge-from-observed-off-rail-behavior.md), [Cloud Agents Turn Coding Work Into Asynchronous VM-Backed Queues](concepts/cloud-agents-turn-coding-work-into-asynchronous-vm-backed-queues.md), [Automation Loops Convert Repeated Review and Triage Into Factory Improvements](concepts/automation-loops-convert-repeated-review-and-triage-into-factory-improvements.md)
 - Notes: Added Cursor software-factory patterns for preparing repositories, evolving rules, running asynchronous cloud agents, and converting repeated review work into feedback loops.
+
+## [2026-05-06] ingest | One Login to Rule Them All: Cross-App Access for MCP - Garrett Galow, WorkOS
+
+- Source: [One Login to Rule Them All: Cross-App Access for MCP - Garrett Galow, WorkOS](sources/20260428_EmhRyw6xeT0.md)
+- Processed: `EmhRyw6xeT0`
+- Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md)
+- Updated concepts: [Cross-App Access Centralizes MCP Authentication Through the Identity Provider](concepts/cross-app-access-centralizes-mcp-authentication-through-the-identity-provider.md), [Short-Lived IdP-Derived Tokens Reduce Standing MCP Access](concepts/short-lived-idp-derived-tokens-reduce-standing-mcp-access.md), [Cross-App Access Does Not Replace Authorization Policy](concepts/cross-app-access-does-not-replace-authorization-policy.md)
+- Notes: Added WorkOS XAA patterns for SSO-backed MCP authentication, short-lived token exchange, and authorization-scope caveats.

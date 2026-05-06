@@ -2,7 +2,7 @@
 
 ## Overview
 
-AI infrastructure spans local training environments, edge deployment, server-side inference operations, observability systems, and the product systems that meter expensive AI usage. Edge AI needs a path from model conversion through quantization, runtime integration, accelerator selection, and fleet validation; CPU/GPU deployment can use a shared artifact, while NPU deployment may require ahead-of-time vendor compilation behind a consistent app API. Server-side small-model inference needs model-aware runtimes plus routing, queueing, autoscaling, observability, and GPU provisioning so many specialized models can run efficiently in production. Production AI applications also need managed prompts, tools, scoring functions, trace metadata, and online scoring automation so local prototypes can become monitored systems. Local training work adds a smaller-scale infrastructure lesson: choose a setup that can run on MPS, CUDA, CPU, or Colab, and keep the model, tokenizer, and batch sizing proportional to the available memory. AI monetization adds a billing-infrastructure lesson: usage caps, threshold notifications, top-ups, rate limits, and detailed metering protect customers and providers when AI calls can burn spend unexpectedly.
+AI infrastructure spans local training environments, edge deployment, server-side inference operations, observability systems, identity systems, and the product systems that meter expensive AI usage. Edge AI needs a path from model conversion through quantization, runtime integration, accelerator selection, and fleet validation; CPU/GPU deployment can use a shared artifact, while NPU deployment may require ahead-of-time vendor compilation behind a consistent app API. Server-side small-model inference needs model-aware runtimes plus routing, queueing, autoscaling, observability, and GPU provisioning so many specialized models can run efficiently in production. Production AI applications also need managed prompts, tools, scoring functions, trace metadata, and online scoring automation so local prototypes can become monitored systems. Local training work adds a smaller-scale infrastructure lesson: choose a setup that can run on MPS, CUDA, CPU, or Colab, and keep the model, tokenizer, and batch sizing proportional to the available memory. AI monetization adds a billing-infrastructure lesson: usage caps, threshold notifications, top-ups, rate limits, and detailed metering protect customers and providers when AI calls can burn spend unexpectedly. Enterprise MCP deployments need identity infrastructure as well: centrally managed cross-app trust can reduce local standing credentials and make agent tool access revocable through SSO.
 
 ## Key Concepts
 
@@ -21,6 +21,8 @@ AI infrastructure spans local training environments, edge deployment, server-sid
 - [Agent experience prioritizes APIs, CLIs, and MCP over dashboards](../concepts/agent-experience-prioritizes-apis-clis-and-mcp-over-dashboards.md) - infrastructure should include machine-friendly surfaces for agent users.
 - [Agent software factories need runnable, contextual, and verifiable primitives](../concepts/agent-software-factories-need-runnable-contextual-and-verifiable-primitives.md) - infrastructure for agents includes reproducible dev setup and executable checks, not only model hosting.
 - [Cloud agents turn coding work into asynchronous VM-backed queues](../concepts/cloud-agents-turn-coding-work-into-asynchronous-vm-backed-queues.md) - VM-backed environments can isolate and parallelize coding-agent execution.
+- [Cross-app access centralizes MCP authentication through the identity provider](../concepts/cross-app-access-centralizes-mcp-authentication-through-the-identity-provider.md) - IdP-managed trust bridges MCP clients and servers across enterprise applications.
+- [Short-lived IdP-derived tokens reduce standing MCP access](../concepts/short-lived-idp-derived-tokens-reduce-standing-mcp-access.md) - short-lived access tokens improve revocation behavior for MCP tools.
 
 ## Open Questions
 
@@ -30,6 +32,7 @@ AI infrastructure spans local training environments, edge deployment, server-sid
 - Which billing events and dimensions should be metered so AI invoices are explainable without exposing implementation noise?
 - Which prompt, tool, score, and trace artifacts should be promoted from local code into managed production infrastructure?
 - Which operational data belongs in code-backed infrastructure when agents are responsible for maintaining it?
+- Which MCP credentials should be replaced by IdP-backed exchanges so offboarding and compromise response flow through SSO policy?
 
 ## Sources
 
@@ -43,3 +46,4 @@ AI infrastructure spans local training environments, edge deployment, server-sid
 - [Agents for Everything Else - swyx](../sources/20260501_zepu8Kk6FBQ.md)
 - [OpenAI Codex Masterclass  - Vaibhav Srivastav & Katia Gil Guzman](../sources/20260429_MhHEGMFCEB0.md)
 - [Building your own software factory — Eric Zakariasson, Cursor](../sources/20260428_rnDm57Py54A.md)
+- [One Login to Rule Them All: Cross-App Access for MCP - Garrett Galow, WorkOS](../sources/20260428_EmhRyw6xeT0.md)
