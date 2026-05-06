@@ -12,6 +12,7 @@ Details:
 - A review step inspects created commits before they are passed to a merger agent. (01:31:47-01:31:59)
 - The merger agent takes the created branches and issues, merges them, and resolves integration problems such as type and test failures. (01:31:58-01:32:15)
 - The speaker routes coding standards into the reviewer and allows the implementer to pull relevant context, with a stronger model used for review than implementation. (01:32:23-01:32:44)
+- Large refactors add a dependency-graph variant of the same pattern: start from shared migration context, split the codebase into PR-sized batches, run agents in dependency order, and merge reviewed outputs as they unblock later batches. (16:37-29:00)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -22,7 +23,9 @@ Related concepts:
 - [Parallel coding-agent queues need focus-preserving review interfaces](parallel-coding-agent-queues-need-focus-preserving-review-interfaces.md)
 - [Use parent agents to compare and merge parallel subagent outputs](use-parent-agents-to-compare-and-merge-parallel-subagent-outputs.md)
 - [Isolate parallel coding work with project worktrees](isolate-parallel-coding-work-with-project-worktrees.md)
+- [Decompose large refactors into dependency-aware agent batches](decompose-large-refactors-into-dependency-aware-agent-batches.md)
+- [Run verify-fix-review loops for agentic refactors](run-verify-fix-review-loops-for-agentic-refactors.md)
 
 Sources:
 - [Full Walkthrough: Workflow for AI Coding - Matt Pocock](../sources/20260424_-QFHIoCo-Ko.md), 01:30:58-01:32:44
-
+- [Automating Large Scale Refactors with Parallel Agents - Robert Brennan, OpenHands](../sources/20260108_rcsliSIy_YU.md), 16:37-29:00

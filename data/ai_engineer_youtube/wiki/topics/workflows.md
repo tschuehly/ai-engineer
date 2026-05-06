@@ -16,7 +16,7 @@ Org-chart agent workflows add a business-operations control surface: assign work
 
 Repository-local web-agent workflows can make implementation, verification, preview sharing, and handoff rules part of the repeatable routine. Skills can teach the agent how to inspect issues, run browser QA, record evidence, create a public preview tunnel, notify a reviewer, and wait for confirmation before closing work.
 
-Multi-agent workflows need explicit coordination and recovery choices. Event-driven choreography works when agents can act independently and the system can trace every event; centralized orchestration works when dependencies, state, rollback, or auditability matter more than autonomy. Durable workflows should pass immutable state versions through data-contract validation and wrap agent calls with circuit breakers, graceful degradation, and compensation so partial failures do not leave hidden side effects.
+Multi-agent workflows need explicit coordination and recovery choices. Event-driven choreography works when agents can act independently and the system can trace every event; centralized orchestration works when dependencies, state, rollback, or auditability matter more than autonomy. Large refactor workflows make the dependency problem concrete: scan or visualize the code graph, form PR-sized batches, dispatch fixers only when upstream dependencies are ready, review and merge small outputs, then repeat as new batches unblock. Durable workflows should pass immutable state versions through data-contract validation and wrap agent calls with circuit breakers, graceful degradation, and compensation so partial failures do not leave hidden side effects.
 
 Durable workflow engines also address the single-agent production loop. Agent frameworks may provide the fixed loop that calls the LLM, executes requested tools, and feeds results back, but production workflows need persisted turns, retry policy, timeout behavior, and resumable waits around that loop. Human-in-the-loop steps are a useful stress test: the workflow should pause as logical state, release active process resources when needed, and resume when a human response arrives.
 
@@ -140,6 +140,8 @@ DSPy-style workflows separate program shape from prompt shape: teams can define 
 - [Gateway platform primitives let teams focus on MCP business logic](../concepts/gateway-platform-primitives-let-teams-focus-on-mcp-business-logic.md) - workflow teams can build domain-specific MCP behavior on shared platform controls.
 - [Use PRDs to align agents on the design concept](../concepts/use-prds-to-align-agents-on-the-design-concept.md) - planning artifacts turn ambiguous requirements into shared agent-ready intent.
 - [Run parallel issue agents in sandboxes with review and merge loops](../concepts/run-parallel-issue-agents-in-sandboxes-with-review-and-merge-loops.md) - parallel workflow needs explicit isolation, review, and integration stages.
+- [Decompose large refactors into dependency-aware agent batches](../concepts/decompose-large-refactors-into-dependency-aware-agent-batches.md) - graph- or directory-shaped batches keep large code changes reviewable and parallelizable.
+- [Run verify-fix-review loops for agentic refactors](../concepts/run-verify-fix-review-loops-for-agentic-refactors.md) - refactor workflows need verifier, fixer, human review, and unblock-repeat stages.
 - [Choose autonomy level by task uncertainty and control needs](../concepts/choose-autonomy-level-by-task-uncertainty-and-control-needs.md) - workflows should absorb known steps before teams add agentic planning.
 - [Deep research agents need planning, grounded evidence, and pivot loops](../concepts/deep-research-agents-need-planning-grounded-evidence-and-pivot-loops.md) - open-ended research workflows need source-backed iteration.
 - [Compressed research agents preserve human decision points](../concepts/compressed-research-agents-preserve-human-decision-points.md) - research automation can preserve the process's human decision boundary.
@@ -190,6 +192,7 @@ DSPy-style workflows separate program shape from prompt shape: teams can define 
 - How should teams decide when an RL run is slow-but-healthy versus stuck and worth interrupting?
 - Which after-call voice fields should be reviewed by the operator versus routed directly into analytics-only data stores?
 - Which LLM workflows have enough labeled examples and metrics to justify DSPy optimization instead of manual prompt iteration?
+- Which large-refactor batches should wait for upstream merges, and which can safely proceed speculatively in parallel?
 
 ## Sources
 
@@ -238,4 +241,5 @@ DSPy-style workflows separate program shape from prompt shape: teams can define 
 - [Cognitive Exhaust Fumes, or: Read-Only AI Is Underrated - Simon Podhajsky, Head of AI, Waypoint](../sources/20260408_u0TOSBbAw7c.md)
 - [Practical tactics to build reliable AI apps — Dmitry Kuchin, Multinear](../sources/20250803_-T6uZYYzkWw.md)
 - [DSPy: The End of Prompt Engineering - Kevin Madura, AlixPartners](../sources/20260108_-cKUW6n8hBU.md)
+- [Automating Large Scale Refactors with Parallel Agents - Robert Brennan, OpenHands](../sources/20260108_rcsliSIy_YU.md)
 - [OpenAI + @Temporalio : Building Durable, Production Ready Agents - Cornelia Davis, Temporal](../sources/20260112_k8cnVCMYmNc.md)

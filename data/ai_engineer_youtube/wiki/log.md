@@ -591,3 +591,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Spec-driven development turns prompts into requirements, design, and tasks](concepts/spec-driven-development-turns-prompts-into-requirements-design-and-tasks.md), [Translate structured requirements into property-based tests](concepts/translate-structured-requirements-into-property-based-tests.md), [Keep spec artifacts feature-scoped, mutable, and context-backed](concepts/keep-spec-artifacts-feature-scoped-mutable-and-context-backed.md)
 - Notes: Added Kiro spec-driven development guidance covering requirements/design/task artifacts, EARS acceptance criteria, property-based verification, MCP-backed context, feature-scoped specs, and steering files.
+
+## [2026-05-06] ingest | Automating Large Scale Refactors with Parallel Agents - Robert Brennan, OpenHands
+
+- Source: [Automating Large Scale Refactors with Parallel Agents - Robert Brennan, OpenHands](sources/20260108_rcsliSIy_YU.md)
+- Processed: `rcsliSIy_YU`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Decompose large refactors into dependency-aware agent batches](concepts/decompose-large-refactors-into-dependency-aware-agent-batches.md), [Run verify-fix-review loops for agentic refactors](concepts/run-verify-fix-review-loops-for-agentic-refactors.md), [Run parallel issue agents in sandboxes with review and merge loops](concepts/run-parallel-issue-agents-in-sandboxes-with-review-and-merge-loops.md), [Parallel coding-agent queues need focus-preserving review interfaces](concepts/parallel-coding-agent-queues-need-focus-preserving-review-interfaces.md)
+- Notes: Added OpenHands guidance for large refactor orchestration using dependency-aware batches, isolated parallel agents, verifier/fixer loops, and human-reviewed PR-sized outputs.
