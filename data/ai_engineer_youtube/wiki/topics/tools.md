@@ -16,6 +16,8 @@ Open-source agent tools need extension points as well as integrations. Plugin ar
 
 Tool metadata is also a security boundary. MCP and function-calling systems should treat full tool descriptions, hidden parameters, and approval summaries as prompt and policy surfaces, because a model may act on instructions the reviewer never saw. High-risk tools need approval UI that exposes the effective action and guardrails that inspect the full model-visible metadata.
 
+Enterprise tool ecosystems also need registry metadata once many teams publish MCP servers and A2A agents. A private registry can start from public MCP catalog conventions, add approved internal and public servers, and enrich each entry with owner, environment, authentication, cost attribution, and use-case links. A paired A2A registry can use agent cards as the discoverable contract for agent identity, endpoint, capabilities, modalities, and auth requirements. These registries should be connected to DevOps pipelines so publishing an MCP server or agent updates both the runtime artifact and the governance catalog.
+
 ## Key Concepts
 
 - [Sandboxed code execution turns model reasoning into inspectable computation](../concepts/sandboxed-code-execution-turns-model-reasoning-into-inspectable-computation.md) - sandboxed execution gives models computation tools while limiting local side effects.
@@ -67,6 +69,9 @@ Tool metadata is also a security boundary. MCP and function-calling systems shou
 - [Short-lived IdP-derived tokens reduce standing MCP access](../concepts/short-lived-idp-derived-tokens-reduce-standing-mcp-access.md) - short token lifetimes tie MCP access to active SSO sessions.
 - [Cross-app access does not replace authorization policy](../concepts/cross-app-access-does-not-replace-authorization-policy.md) - authentication centralization should not be mistaken for fine-grained tool authorization.
 - [MCP gateways create an enterprise root of trust](../concepts/mcp-gateways-create-an-enterprise-root-of-trust.md) - a gateway gives enterprise MCP a shared auth, authorization, observability, connectivity, and deployment layer.
+- [Enterprise AI asset registries connect governance to runtime lineage](../concepts/enterprise-ai-asset-registries-connect-governance-to-runtime-lineage.md) - registries link use cases to MCP servers, A2A agents, models, owners, environments, auth, and cost.
+- [A2A agent registries make deployed agents discoverable through agent cards](../concepts/a2a-agent-registries-make-deployed-agents-discoverable-through-agent-cards.md) - agent cards provide a standard discovery contract for reusable deployed agents.
+- [Blueprint repositories standardize MCP and A2A service delivery](../concepts/blueprint-repositories-standardize-mcp-and-a2a-service-delivery.md) - templates and CI/CD can package platform requirements while publishing registry metadata.
 - [Gateway platform primitives let teams focus on MCP business logic](../concepts/gateway-platform-primitives-let-teams-focus-on-mcp-business-logic.md) - shared platform primitives let domain teams build workflow-specific servers without reimplementing the control plane.
 - [Decouple agent harnesses from enterprise data layers](../concepts/decouple-agent-harnesses-from-enterprise-data-layers.md) - gateways keep new agent clients from binding directly to every internal MCP server and data source.
 - [MCP tool surfaces need default context budgets](../concepts/mcp-tool-surfaces-need-default-context-budgets.md) - broad tool catalogs need context-aware defaults and compact outputs.
@@ -111,6 +116,7 @@ Tool metadata is also a security boundary. MCP and function-calling systems shou
 - Which MCP applications need web-client rendering support before they are useful, and which should remain tool-only integrations?
 - Which guidance belongs in server-authored skills over MCP instead of client-local skills?
 - Which lint messages or CI comments are important enough to be treated as first-class prompt surfaces?
+- Which registry metadata fields should be mandatory before an MCP server or A2A agent can be discovered by production agents?
 
 ## Sources
 
@@ -148,3 +154,4 @@ Tool metadata is also a security boundary. MCP and function-calling systems shou
 - [Building pi in a World of Slop - Mario Zechner](../sources/20260416_RjfbvDXpFls.md)
 - [$1 AI Guardrails: The Unreasonable Effectiveness of Finetuned ModernBERTs - Diego Carpentero](../sources/20260416_YZHPEkfy2kc.md)
 - [Paperclip: Open Source Human Control Plane for AI Labor - Dotta Bippa](../sources/20260415_h403btjldDQ.md)
+- [One Registry to Rule them All - Sonny Merla, Mauro Luchetti, & Mattia Redaelli, Quantyca](../sources/20260410_VXfRt_H-V08.md)

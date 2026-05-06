@@ -16,6 +16,8 @@ The new application layer also changes the economic boundary for automation. Age
 
 Agent security has to treat autonomy as an attack multiplier. Prompt injection, indirect context injection, RAG poisoning, MCP tool-description exploits, and model-internals jailbreaks all become more consequential when the model can fetch context, call tools, click links, install packages, or continue a self-escalation path. Guardrails therefore need checkpoints around the inputs, retrieved context, tool metadata, memory, plans, outputs, and high-impact actions rather than only one policy prompt at the edge of the system.
 
+Agent-to-agent systems need their own discovery contract as they spread across teams. An A2A registry can publish agent cards that describe each agent's identity, endpoint, capabilities, supported modalities, and authentication requirements, while a use-case registry links those agents to MCP tools, models, owners, and lifecycle status. That makes agent reuse and runtime discovery practical without losing governance and impact analysis.
+
 ## Key Concepts
 
 - [Sandboxed code execution turns model reasoning into inspectable computation](../concepts/sandboxed-code-execution-turns-model-reasoning-into-inspectable-computation.md) - executable sandboxes let agents compute and verify without touching the user's environment.
@@ -101,6 +103,9 @@ Agent security has to treat autonomy as an attack multiplier. Prompt injection, 
 - [Cross-app access centralizes MCP authentication through the identity provider](../concepts/cross-app-access-centralizes-mcp-authentication-through-the-identity-provider.md) - enterprise agents need governed authentication across MCP clients and resource servers.
 - [Cross-app access does not replace authorization policy](../concepts/cross-app-access-does-not-replace-authorization-policy.md) - SSO-backed access still needs role, scope, and tool policy boundaries.
 - [MCP gateways create an enterprise root of trust](../concepts/mcp-gateways-create-an-enterprise-root-of-trust.md) - many agents and MCP servers need a trusted enterprise control plane.
+- [Enterprise AI asset registries connect governance to runtime lineage](../concepts/enterprise-ai-asset-registries-connect-governance-to-runtime-lineage.md) - agent deployments need lineage back to use cases, tools, models, and owners.
+- [A2A agent registries make deployed agents discoverable through agent cards](../concepts/a2a-agent-registries-make-deployed-agents-discoverable-through-agent-cards.md) - agent cards make deployed agents discoverable by other agents and developers.
+- [Blueprint repositories standardize MCP and A2A service delivery](../concepts/blueprint-repositories-standardize-mcp-and-a2a-service-delivery.md) - standard templates let teams build agents behind shared interfaces and platform controls.
 - [Decouple agent harnesses from enterprise data layers](../concepts/decouple-agent-harnesses-from-enterprise-data-layers.md) - gateways let agent clients evolve without binding each one to every internal data source.
 - [MCP tool surfaces need default context budgets](../concepts/mcp-tool-surfaces-need-default-context-budgets.md) - large tool catalogs need defaults that preserve agent context and selection reliability.
 - [Agent connectivity stack combines skills, MCP, CLIs, and computer use](../concepts/agent-connectivity-stack-combines-skills-mcp-clis-and-computer-use.md) - production agents should combine connectivity methods instead of treating MCP, CLIs, computer use, or skills as universal replacements.
@@ -154,6 +159,7 @@ Agent security has to treat autonomy as an attack multiplier. Prompt injection, 
 - Which agent-orchestration patterns deserve tech-lead training rather than ordinary management analogies?
 - Which research tasks need open-ended agentic search, and which can be reduced to a known workflow over curated sources?
 - Which agent workflows need MCP's richer remote semantics instead of a CLI or local computer-use path?
+- Which agent-card fields are sufficient for safe runtime discovery by other internal agents?
 
 ## Sources
 
@@ -201,3 +207,4 @@ Agent security has to treat autonomy as an attack multiplier. Prompt injection, 
 - [Building pi in a World of Slop - Mario Zechner](../sources/20260416_RjfbvDXpFls.md)
 - [$1 AI Guardrails: The Unreasonable Effectiveness of Finetuned ModernBERTs - Diego Carpentero](../sources/20260416_YZHPEkfy2kc.md)
 - [Paperclip: Open Source Human Control Plane for AI Labor - Dotta Bippa](../sources/20260415_h403btjldDQ.md)
+- [One Registry to Rule them All - Sonny Merla, Mauro Luchetti, & Mattia Redaelli, Quantyca](../sources/20260410_VXfRt_H-V08.md)

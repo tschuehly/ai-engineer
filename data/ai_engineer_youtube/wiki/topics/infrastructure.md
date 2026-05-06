@@ -12,6 +12,8 @@ Emerging MCP protocol work adds production-infrastructure concerns beyond ordina
 
 Guardrails are an infrastructure layer, not just a prompt. Production systems need low-latency classifiers or policy checks at input, output, retrieval, MCP, memory, and plan boundaries, and the serving path must account for added latency. ModernBERT-style encoder discriminators are one concrete option when a self-hosted safety layer needs millisecond-scale classification rather than seconds of LLM-as-judge delay.
 
+Enterprise AI registries are another infrastructure layer between experimentation and production. A model gateway can centralize model access, authentication, budget erosion, and request analytics, while registries track MCP servers, A2A agents, models, ownership, environments, costs, and use-case lineage. The practical deployment pattern is to give teams template repositories and CI/CD flows that publish both runtime artifacts and registry metadata, so governance stays aligned with what is actually deployed.
+
 ## Key Concepts
 
 - [Use hosted model playgrounds to prototype before owning infrastructure](../concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md) - hosted tools can validate model and deployment choices before teams own the runtime.
@@ -41,6 +43,9 @@ Guardrails are an infrastructure layer, not just a prompt. Production systems ne
 - [Short-lived IdP-derived tokens reduce standing MCP access](../concepts/short-lived-idp-derived-tokens-reduce-standing-mcp-access.md) - short-lived access tokens improve revocation behavior for MCP tools.
 - [MCP gateways create an enterprise root of trust](../concepts/mcp-gateways-create-an-enterprise-root-of-trust.md) - gateway infrastructure centralizes trust, routing, observability, and deployment for many MCP servers.
 - [Gateway platform primitives let teams focus on MCP business logic](../concepts/gateway-platform-primitives-let-teams-focus-on-mcp-business-logic.md) - platform primitives prevent every domain MCP server from rebuilding common infrastructure.
+- [Enterprise AI asset registries connect governance to runtime lineage](../concepts/enterprise-ai-asset-registries-connect-governance-to-runtime-lineage.md) - registry metadata makes deployed AI assets auditable and traceable to business use cases.
+- [Blueprint repositories standardize MCP and A2A service delivery](../concepts/blueprint-repositories-standardize-mcp-and-a2a-service-delivery.md) - blueprints provide reusable platform scaffolding and CI/CD metadata publication.
+- [A2A agent registries make deployed agents discoverable through agent cards](../concepts/a2a-agent-registries-make-deployed-agents-discoverable-through-agent-cards.md) - agent-card registries make internal agent services discoverable without bespoke integration knowledge.
 - [Decouple agent harnesses from enterprise data layers](../concepts/decouple-agent-harnesses-from-enterprise-data-layers.md) - a stable gateway boundary lets agent surfaces change without coupling directly to internal data layout.
 - [Stateless remote MCP servers rebuild allowed tools per request](../concepts/stateless-remote-mcp-servers-rebuild-allowed-tools-per-request.md) - stateless request handling and shared session storage let remote MCP servers scale horizontally.
 - [Agent connectivity stack combines skills, MCP, CLIs, and computer use](../concepts/agent-connectivity-stack-combines-skills-mcp-clis-and-computer-use.md) - infrastructure choices should match whether connectivity needs local execution, remote protocol semantics, or governance.
@@ -72,6 +77,7 @@ Guardrails are an infrastructure layer, not just a prompt. Production systems ne
 - Which sandbox and rate-limit policies are required before a platform lets agents run generated code against its APIs?
 - Which enterprise-specific context and workflow integrations justify custom internal agent platforms instead of vendor tools?
 - When should infrastructure expose adaptive embedding dimensions as a product knob rather than a fixed model configuration?
+- Which AI asset registry fields should be enforced by CI/CD rather than manually maintained after deployment?
 
 ## Sources
 
@@ -100,3 +106,4 @@ Guardrails are an infrastructure layer, not just a prompt. Production systems ne
 - [Code Mode: Let the Code do the Talking - Sunil Pai, Cloudflare](../sources/20260419_8txf05vVVl4.md)
 - [How Google DeepMind is researching the next Frontier of AI for Gemini - Raia Hadsell, VP of Research](../sources/20260418_zZsTVBXcbow.md)
 - [$1 AI Guardrails: The Unreasonable Effectiveness of Finetuned ModernBERTs - Diego Carpentero](../sources/20260416_YZHPEkfy2kc.md)
+- [One Registry to Rule them All - Sonny Merla, Mauro Luchetti, & Mattia Redaelli, Quantyca](../sources/20260410_VXfRt_H-V08.md)

@@ -423,3 +423,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Models](topics/models.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Human Control Planes Turn Agent Swarms Into Manageable Organizations](concepts/human-control-planes-turn-agent-swarms-into-manageable-organizations.md), [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md), [Reusable Routines Turn Prompts Into Operational Agent Workflows](concepts/reusable-routines-turn-prompts-into-operational-agent-workflows.md), [Grow Agent Organizations Incrementally By Role Quality and Cost](concepts/grow-agent-organizations-incrementally-by-role-quality-and-cost.md)
 - Notes: Added Paperclip's control-plane pattern for supervising heterogeneous agent organizations through roles, plans, skills, routines, review gates, budgets, and incremental fan-out.
+
+## [2026-05-06] ingest | One Registry to Rule them All - Sonny Merla, Mauro Luchetti, & Mattia Redaelli, Quantyca
+
+- Source: [One Registry to Rule them All - Sonny Merla, Mauro Luchetti, & Mattia Redaelli, Quantyca](sources/20260410_VXfRt_H-V08.md)
+- Processed: `VXfRt_H-V08`
+- Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md)
+- Updated concepts: [Enterprise AI asset registries connect governance to runtime lineage](concepts/enterprise-ai-asset-registries-connect-governance-to-runtime-lineage.md), [A2A agent registries make deployed agents discoverable through agent cards](concepts/a2a-agent-registries-make-deployed-agents-discoverable-through-agent-cards.md), [Blueprint repositories standardize MCP and A2A service delivery](concepts/blueprint-repositories-standardize-mcp-and-a2a-service-delivery.md)
+- Notes: Added registry-centered enterprise AI platform patterns for MCP tools, A2A agents, use-case lineage, and CI/CD-backed metadata publication.
