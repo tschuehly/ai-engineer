@@ -55,3 +55,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Retrieval](topics/retrieval.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Context engines select task-specific organizational context](concepts/context-engines-select-task-specific-organizational-context.md), [Surface unresolved context conflicts to agents and users](concepts/surface-unresolved-context-conflicts-to-agents-and-users.md), [Do not cache context-engine answers as durable truth](concepts/do-not-cache-context-engine-answers-as-durable-truth.md), [Use social and expert graphs to personalize coding-agent context](concepts/use-social-and-expert-graphs-to-personalize-coding-agent-context.md)
 - Notes: Added a context-engine slice covering personalized organizational retrieval, conflict surfacing, stale-answer risks, and social/expert graphs for coding agents.
+
+## [2026-05-06] ingest | TLMs: Tiny LLMs and Agents on Edge Devices with LiteRT-LM - Cormac Brick, Google
+
+- Source: [TLMs: Tiny LLMs and Agents on Edge Devices with LiteRT-LM - Cormac Brick, Google](sources/20260503_BKWpYIWvAo4.md)
+- Processed: `BKWpYIWvAo4`
+- Updated topics: [Agents](topics/agents.md), [Edge Inference](topics/edge-inference.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Models](topics/models.md), [Tools](topics/tools.md)
+- Updated concepts: [Edge agent skills need progressive disclosure to preserve small-model reliability](concepts/edge-agent-skills-need-progressive-disclosure-to-preserve-small-model-reliability.md), [Constrained decoding makes small-model tool calls production-usable](concepts/constrained-decoding-makes-small-model-tool-calls-production-usable.md), [Modular tiny-model pipelines reuse specialized models across mobile app workflows](concepts/modular-tiny-model-pipelines-reuse-specialized-models-across-mobile-app-workflows.md)
+- Notes: Added LiteRT-LM workshop material on edge skill context control, constrained tool-call decoding, and modular tiny-model app pipelines.

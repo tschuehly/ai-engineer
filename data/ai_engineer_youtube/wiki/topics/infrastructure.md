@@ -2,7 +2,7 @@
 
 ## Overview
 
-AI infrastructure spans local training environments, edge deployment, and server-side inference operations. Edge AI needs a path from model conversion through quantization, runtime integration, accelerator selection, and fleet validation. Server-side small-model inference needs model-aware runtimes plus routing, queueing, autoscaling, observability, and GPU provisioning so many specialized models can run efficiently in production. Local training work adds a smaller-scale infrastructure lesson: choose a setup that can run on MPS, CUDA, CPU, or Colab, and keep the model, tokenizer, and batch sizing proportional to the available memory.
+AI infrastructure spans local training environments, edge deployment, and server-side inference operations. Edge AI needs a path from model conversion through quantization, runtime integration, accelerator selection, and fleet validation; CPU/GPU deployment can use a shared artifact, while NPU deployment may require ahead-of-time vendor compilation behind a consistent app API. Server-side small-model inference needs model-aware runtimes plus routing, queueing, autoscaling, observability, and GPU provisioning so many specialized models can run efficiently in production. Local training work adds a smaller-scale infrastructure lesson: choose a setup that can run on MPS, CUDA, CPU, or Colab, and keep the model, tokenizer, and batch sizing proportional to the available memory.
 
 ## Key Concepts
 
@@ -12,6 +12,7 @@ AI infrastructure spans local training environments, edge deployment, and server
 - [Production inference combines model support with cluster operations](../concepts/production-inference-combines-model-support-with-cluster-operations.md) - runtime support and infrastructure operations have to be designed together.
 - [Local LLM training exposes the core model-building stack](../concepts/local-llm-training-exposes-the-core-model-building-stack.md) - local model training makes tokenizer, architecture, training, and inference decisions explicit.
 - [Tokenizer size must match data and compute budget](../concepts/tokenizer-size-must-match-data-and-compute-budget.md) - tokenizer capacity has direct implications for memory, convergence, and required training data.
+- [Modular tiny-model pipelines reuse specialized models across mobile app workflows](../concepts/modular-tiny-model-pipelines-reuse-specialized-models-across-mobile-app-workflows.md) - app infrastructure can combine LiteRT and LiteRT-LM components instead of treating the LLM as the whole application.
 
 ## Open Questions
 
@@ -24,3 +25,4 @@ AI infrastructure spans local training environments, edge deployment, and server
 - [Accelerating AI on Edge - Chintan Parikh and Weiyi Wang, Google DeepMind](../sources/20260505_Lm8BLHkxiAo.md)
 - [The Small Model Infrastructure Nobody Built (So We Did) - Filip Makraduli, Superlinked](../sources/20260505_qdh_x-uRs9g.md)
 - [Training an LLM from Scratch, Locally - Angelos Perivolaropoulos, ElevenLabs](../sources/20260504_UsB70Tf5zcE.md)
+- [TLMs: Tiny LLMs and Agents on Edge Devices with LiteRT-LM - Cormac Brick, Google](../sources/20260503_BKWpYIWvAo4.md)

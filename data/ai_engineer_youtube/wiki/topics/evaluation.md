@@ -13,6 +13,7 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - [Evaluate agent skills with task scenarios and comparative conditions](../concepts/evaluate-agent-skills-with-task-scenarios-and-comparative-conditions.md) - task scenarios and with/without comparisons reveal whether a skill changes behavior.
 - [Validate eval harnesses before trusting skill scores](../concepts/validate-eval-harnesses-before-trusting-skill-scores.md) - incorrect assertions or judges can misreport skill impact.
 - [Use loss curves to debug local model training](../concepts/use-loss-curves-to-debug-local-model-training.md) - train and validation loss patterns separate non-learning, overfitting, and instability.
+- [Constrained decoding makes small-model tool calls production-usable](../concepts/constrained-decoding-makes-small-model-tool-calls-production-usable.md) - production evaluation of edge agents should account for runtime guardrails, not only raw model output.
 
 ## Open Questions
 
@@ -27,3 +28,4 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - [Ralph Loops: Build Dumb AI Loops That Ship - Chris Parsons, Cherrypick](../sources/20260504_2TLXsxkz0zI.md)
 - [Skill Issue: How We Used AI to Make Agents Actually Good at Supabase - Pedro Rodrigues, Supabase](../sources/20260504_GmAQKINjv1E.md)
 - [Training an LLM from Scratch, Locally - Angelos Perivolaropoulos, ElevenLabs](../sources/20260504_UsB70Tf5zcE.md)
+- [TLMs: Tiny LLMs and Agents on Edge Devices with LiteRT-LM - Cormac Brick, Google](../sources/20260503_BKWpYIWvAo4.md)
