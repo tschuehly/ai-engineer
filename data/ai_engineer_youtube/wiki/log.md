@@ -87,3 +87,11 @@
 - Updated topics: [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Retrieval](topics/retrieval.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Grow Personal-Agent Permissions Incrementally From Recurring Pain](concepts/grow-personal-agent-permissions-incrementally-from-recurring-pain.md), [Personal Knowledge Bases Become Agent Context Substrates](concepts/personal-knowledge-bases-become-agent-context-substrates.md), [Ambient Agents Need Self-Maintenance and Memory Hygiene](concepts/ambient-agents-need-self-maintenance-and-memory-hygiene.md)
 - Notes: Added personal-agent trust growth, Markdown knowledge-base context, and always-on maintenance patterns to the compiled wiki.
+
+## [2026-05-06] ingest | Human-in-the-Loop Automation with n8n - Liam McGarrigle
+
+- Source: [Human-in-the-Loop Automation with n8n - Liam McGarrigle](sources/20260502_tDArkCqjA-c.md)
+- Processed: `tDArkCqjA-c`
+- Updated topics: [Agents](topics/agents.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Visual Agent Workflows Make Tool Use Observable and Adjustable](concepts/visual-agent-workflows-make-tool-use-observable-and-adjustable.md), [Route High-Impact Agent Actions Through Explicit Human Approval Gates](concepts/route-high-impact-agent-actions-through-explicit-human-approval-gates.md), [Use Tool Names and Descriptions as Operational Prompts](concepts/use-tool-names-and-descriptions-as-operational-prompts.md), [Split Large Automation Surfaces Into Specialized Subagents and Subworkflows](concepts/split-large-automation-surfaces-into-specialized-subagents-and-subworkflows.md)
+- Notes: Added n8n workflow mechanics for observable agent orchestration, scoped tool access, hard approval boundaries, and modular automation growth.
