@@ -8,7 +8,7 @@ Agent workflows depend on both model capability and the context substrate around
 
 Vertical agents need a trust/control design around complex work trees. Make subwork verifiable where possible through tests, proxy checks, decomposition, and guardrails; encode domain judgment in skills at the relevant work-tree node; and use persistent artifacts such as documents or tabular reviews when humans need to inspect or steer only the affected part of the work. The human operator's role is closer to tech-lead orchestration than people management: agents can multiply parallel action, but useful leverage still depends on task framing, review, product judgment, and workflow-specific practice.
 
-The new application layer also changes the economic boundary for automation. Agents make some software viable where traditional applications would have required too much hand-coded business logic, so near-term agent opportunities often come from compressed research, surfacing information already present in company systems, and removing repetitive toil while humans retain final decisions. As agents become users of software, products and infrastructure need agent-facing control surfaces and runtime isolation, not only dashboards and conventional production assumptions.
+The new application layer also changes the economic boundary for automation. Agents make some software viable where traditional applications would have required too much hand-coded business logic, so near-term agent opportunities often come from compressed research, surfacing information already present in company systems, and removing repetitive toil while humans retain final decisions. As agents become users of software, products and infrastructure need agent-facing control surfaces and runtime isolation, not only dashboards and conventional production assumptions. General knowledge-worker agents also need a broader connectivity stack than coding agents: skills, MCP, CLIs, and computer use each carry different assumptions about local execution, sandboxing, remote semantics, governance, and domain guidance.
 
 ## Key Concepts
 
@@ -84,6 +84,8 @@ The new application layer also changes the economic boundary for automation. Age
 - [MCP gateways create an enterprise root of trust](../concepts/mcp-gateways-create-an-enterprise-root-of-trust.md) - many agents and MCP servers need a trusted enterprise control plane.
 - [Decouple agent harnesses from enterprise data layers](../concepts/decouple-agent-harnesses-from-enterprise-data-layers.md) - gateways let agent clients evolve without binding each one to every internal data source.
 - [MCP tool surfaces need default context budgets](../concepts/mcp-tool-surfaces-need-default-context-budgets.md) - large tool catalogs need defaults that preserve agent context and selection reliability.
+- [Agent connectivity stack combines skills, MCP, CLIs, and computer use](../concepts/agent-connectivity-stack-combines-skills-mcp-clis-and-computer-use.md) - production agents should combine connectivity methods instead of treating MCP, CLIs, computer use, or skills as universal replacements.
+- [MCP applications ship UI and tools together](../concepts/mcp-applications-ship-ui-and-tools-together.md) - MCP can let an agent server provide both a human-facing interface and model-facing tools.
 - [Discover large API tool surfaces progressively](../concepts/discover-large-api-tool-surfaces-progressively.md) - agents need broad APIs to be discoverable without loading every endpoint upfront.
 - [Run agent-written API code inside programmable sandboxes](../concepts/run-agent-written-api-code-inside-programmable-sandboxes.md) - generated code gives agents flexible API access but needs hard runtime boundaries.
 - [Encode agent intent into server-side tools](../concepts/encode-agent-intent-into-server-side-tools.md) - server-side tool composition can make common workflows more reliable than exposing every low-level API step.
@@ -129,6 +131,7 @@ The new application layer also changes the economic boundary for automation. Age
 - Which vertical-agent artifacts give humans enough control without recreating a long planning meeting before every run?
 - Which agent-orchestration patterns deserve tech-lead training rather than ordinary management analogies?
 - Which research tasks need open-ended agentic search, and which can be reduced to a known workflow over curated sources?
+- Which agent workflows need MCP's richer remote semantics instead of a CLI or local computer-use path?
 
 ## Sources
 
@@ -168,3 +171,4 @@ The new application layer also changes the economic boundary for automation. Age
 - [Full Workshop: Build Your Own Deep Research Agents - Louis-François Bouchard, Paul Iusztin, Samridhi](../sources/20260420_mYSRn6PC1mc.md)
 - [The New Application Layer - Malte Ubl, CTO Vercel](../sources/20260420_XKup1pj-34M.md)
 - [Gemma, DeepMind's Family of Open Models - Omar Sanseviero, Google DeepMind](../sources/20260420__gVFUEdhCyI.md)
+- [The Future of MCP - David Soria Parra, Anthropic](../sources/20260419_v3Fr2JR47KA.md)

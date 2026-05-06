@@ -12,6 +12,7 @@ Details:
 - MCP is not the core failure; the failure is dumping too many tools, prompts, resources, or skills into context at once instead of letting capabilities be discovered only when needed. (04:47-05:25)
 - CLIs provide progressive discovery through command lists and `--help`, but they require shell access and may not suit hosted agent clients. (05:27-06:36)
 - Tool search can select a small top-k set of relevant tools for a request, but irrelevant selected tools still occupy context after the model chooses the one it needs. (06:37-07:20)
+- Progressive discovery is also a client-harness responsibility: MCP can move information across the wire, but clients decide whether to load every tool into context or give the model a search/load mechanism for tools it needs later. (07:47-09:18)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -23,3 +24,4 @@ Related concepts:
 
 Sources:
 - [MCP = Mega Context Problem - Matt Carey](../sources/20260425_YBYUvGOuotE.md), 02:37-07:20
+- [The Future of MCP - David Soria Parra, Anthropic](../sources/20260419_v3Fr2JR47KA.md), 07:47-09:18

@@ -11,6 +11,8 @@ Details:
 - The talk frames types as a concise representation of inputs and outputs that can make an entire API accessible in far fewer tokens than endpoint-by-endpoint tool descriptions. (07:42-08:20)
 - Generated code can compose operations such as listing workers, deploying a worker, and adding Cloudflare Access protection while keeping the API spec as the source of truth. (08:20-09:06)
 - The approach depends on MCP clients or agent runtimes supporting code execution; Cloudflare found client support lagged because running untrusted model-written code is an obvious security concern. (09:06-10:08)
+- Programmatic tool calling can also compose MCP tool results inside a REPL-like execution environment instead of spending a latency-sensitive inference turn after every low-level tool call. (09:39-10:56)
+- MCP structured output can give the model return-value type information, making code-mode composition more reliable than parsing opaque natural-language tool results. (10:56-11:49)
 
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
@@ -22,3 +24,4 @@ Related concepts:
 
 Sources:
 - [MCP = Mega Context Problem - Matt Carey](../sources/20260425_YBYUvGOuotE.md), 07:20-10:08
+- [The Future of MCP - David Soria Parra, Anthropic](../sources/20260419_v3Fr2JR47KA.md), 09:39-11:49

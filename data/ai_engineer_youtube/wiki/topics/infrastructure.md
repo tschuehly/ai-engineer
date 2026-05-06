@@ -6,6 +6,8 @@ AI infrastructure spans local training environments, edge deployment, server-sid
 
 Agent-built applications add a deployment boundary: the harness that plans and controls work should not be treated as the same trust domain as generated code. Infrastructure for the new application layer needs sandboxes and execution separation so agent-written software can run without giving that code direct authority over the agent runtime.
 
+Emerging MCP protocol work adds production-infrastructure concerns beyond ordinary tool schemas. Stateless transport can make MCP servers easier to deploy like ordinary stateless services, server discovery through well-known URLs can make agent-facing services easier to find, and asynchronous tasks plus extension mechanisms can support richer long-running or UI-backed agent interactions.
+
 ## Key Concepts
 
 - [Use hosted model playgrounds to prototype before owning infrastructure](../concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md) - hosted tools can validate model and deployment choices before teams own the runtime.
@@ -37,6 +39,7 @@ Agent-built applications add a deployment boundary: the harness that plans and c
 - [Gateway platform primitives let teams focus on MCP business logic](../concepts/gateway-platform-primitives-let-teams-focus-on-mcp-business-logic.md) - platform primitives prevent every domain MCP server from rebuilding common infrastructure.
 - [Decouple agent harnesses from enterprise data layers](../concepts/decouple-agent-harnesses-from-enterprise-data-layers.md) - a stable gateway boundary lets agent surfaces change without coupling directly to internal data layout.
 - [Stateless remote MCP servers rebuild allowed tools per request](../concepts/stateless-remote-mcp-servers-rebuild-allowed-tools-per-request.md) - stateless request handling and shared session storage let remote MCP servers scale horizontally.
+- [Agent connectivity stack combines skills, MCP, CLIs, and computer use](../concepts/agent-connectivity-stack-combines-skills-mcp-clis-and-computer-use.md) - infrastructure choices should match whether connectivity needs local execution, remote protocol semantics, or governance.
 - [Filter MCP tools by scopes and step-up authorization](../concepts/filter-mcp-tools-by-scopes-and-step-up-authorization.md) - authorization state should shape the runtime tool surface exposed to agents.
 - [Expose large APIs through typed code mode](../concepts/expose-large-apis-through-typed-code-mode.md) - generated types can expose broad APIs without loading every endpoint as tool context.
 - [Run agent-written API code inside programmable sandboxes](../concepts/run-agent-written-api-code-inside-programmable-sandboxes.md) - generated-code execution needs infrastructure-level isolation and abuse controls.
@@ -56,6 +59,7 @@ Agent-built applications add a deployment boundary: the harness that plans and c
 - Which MCP credentials should be replaced by IdP-backed exchanges so offboarding and compromise response flow through SSO policy?
 - Which MCP controls belong in a shared gateway, and which should remain inside each domain server's business logic?
 - Which MCP session fields are worth storing centrally when request routing should remain stateless?
+- Which MCP servers should support stateless transport or well-known server discovery before broad production rollout?
 - Which sandbox and rate-limit policies are required before a platform lets agents run generated code against its APIs?
 - Which enterprise-specific context and workflow integrations justify custom internal agent platforms instead of vendor tools?
 
@@ -82,3 +86,4 @@ Agent-built applications add a deployment boundary: the harness that plans and c
 - [The New Application Layer - Malte Ubl, CTO Vercel](../sources/20260420_XKup1pj-34M.md)
 - [Gemma, DeepMind's Family of Open Models - Omar Sanseviero, Google DeepMind](../sources/20260420__gVFUEdhCyI.md)
 - [Running LLMs on your iPhone: 40 tok/s Gemma 4 with MLX - Adrien Grondin, Locally AI](../sources/20260420_a2muGkT4WD4.md)
+- [The Future of MCP - David Soria Parra, Anthropic](../sources/20260419_v3Fr2JR47KA.md)

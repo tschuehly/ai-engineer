@@ -351,3 +351,11 @@
 - Updated topics: [Edge Inference](topics/edge-inference.md), [Inference](topics/inference.md), [Infrastructure](topics/infrastructure.md), [Models](topics/models.md), [Tools](topics/tools.md)
 - Updated concepts: [Use MLX Swift LM For Apple Local Model Integration](concepts/use-mlx-swift-lm-for-apple-local-model-integration.md), [Profile Small-Model Architectures on Target Hardware](concepts/profile-small-model-architectures-on-target-hardware.md), [Match Gemma Edge Model Size To Device Memory And Interaction Class](concepts/match-gemma-edge-model-size-to-device-memory-and-interaction-class.md), [Open Model Families Need Ecosystem-Compatible Tooling](concepts/open-model-families-need-ecosystem-compatible-tooling.md)
 - Notes: Added an Apple local-inference path covering MLX Swift LM, Hugging Face MLX quantized weights, iPhone throughput, download-size constraints, curated model catalogs, and MLX tool-calling caveats.
+
+## [2026-05-06] ingest | The Future of MCP - David Soria Parra, Anthropic
+
+- Source: [The Future of MCP - David Soria Parra, Anthropic](sources/20260419_v3Fr2JR47KA.md)
+- Processed: `v3Fr2JR47KA`
+- Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md)
+- Updated concepts: [Agent Connectivity Stack Combines Skills, MCP, CLIs, and Computer Use](concepts/agent-connectivity-stack-combines-skills-mcp-clis-and-computer-use.md), [MCP Applications Ship UI and Tools Together](concepts/mcp-applications-ship-ui-and-tools-together.md), [Ship Skills Over MCP for Server-Authored Tool Guidance](concepts/ship-skills-over-mcp-for-server-authored-tool-guidance.md), [Discover Large API Tool Surfaces Progressively](concepts/discover-large-api-tool-surfaces-progressively.md), [Expose Large APIs Through Typed Code Mode](concepts/expose-large-apis-through-typed-code-mode.md), [Stateless Remote MCP Servers Rebuild Allowed Tools Per Request](concepts/stateless-remote-mcp-servers-rebuild-allowed-tools-per-request.md)
+- Notes: Added Anthropic's MCP roadmap framing around mixed connectivity surfaces, progressive discovery, programmatic tool composition, MCP applications, skills over MCP, and production protocol primitives.

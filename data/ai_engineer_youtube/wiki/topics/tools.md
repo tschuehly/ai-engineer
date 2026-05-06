@@ -10,6 +10,8 @@ Domain skills can act as node-level controls by supplying expert handling for sp
 
 Agent-facing products should treat APIs and CLIs as primary interfaces once agents become meaningful users. Dashboards still matter for humans, but agent experience asks whether a feature can be automated, called from a CLI, or used through a stable machine surface. Open model families add a model-tooling version of the same rule: release success depends on meeting developers in their existing runtimes, fine-tuning libraries, quantization paths, and product integrations. For Apple local apps, MLX Swift LM and Hugging Face model IDs form a compact tooling path, while curated app model catalogs prevent users from selecting weights that are available but poor on the target phone.
 
+MCP is one part of the agent connectivity stack, not a universal replacement for every surface. Skills carry reusable domain knowledge, CLIs and computer use fit local sandboxed environments, and MCP fits remote semantics, authorization, governance, resources, long-running tasks, and cross-client application surfaces. MCP applications and skills over MCP point to a richer server-authored surface where an integration can ship UI, tools, and current usage guidance together.
+
 ## Key Concepts
 
 - [Sandboxed code execution turns model reasoning into inspectable computation](../concepts/sandboxed-code-execution-turns-model-reasoning-into-inspectable-computation.md) - sandboxed execution gives models computation tools while limiting local side effects.
@@ -56,6 +58,9 @@ Agent-facing products should treat APIs and CLIs as primary interfaces once agen
 - [Gateway platform primitives let teams focus on MCP business logic](../concepts/gateway-platform-primitives-let-teams-focus-on-mcp-business-logic.md) - shared platform primitives let domain teams build workflow-specific servers without reimplementing the control plane.
 - [Decouple agent harnesses from enterprise data layers](../concepts/decouple-agent-harnesses-from-enterprise-data-layers.md) - gateways keep new agent clients from binding directly to every internal MCP server and data source.
 - [MCP tool surfaces need default context budgets](../concepts/mcp-tool-surfaces-need-default-context-budgets.md) - broad tool catalogs need context-aware defaults and compact outputs.
+- [Agent connectivity stack combines skills, MCP, CLIs, and computer use](../concepts/agent-connectivity-stack-combines-skills-mcp-clis-and-computer-use.md) - agent connectivity choices should match local execution, remote semantics, governance, and guidance needs.
+- [MCP applications ship UI and tools together](../concepts/mcp-applications-ship-ui-and-tools-together.md) - MCP can expose both human-rendered interfaces and model-callable tools from the same server.
+- [Ship skills over MCP for server-authored tool guidance](../concepts/ship-skills-over-mcp-for-server-authored-tool-guidance.md) - large MCP servers can ship updatable usage guidance with the integration.
 - [Discover large API tool surfaces progressively](../concepts/discover-large-api-tool-surfaces-progressively.md) - broad API surfaces should be discovered on demand instead of loaded as one huge MCP context payload.
 - [Expose large APIs through typed code mode](../concepts/expose-large-apis-through-typed-code-mode.md) - generated SDK types can make many endpoints available through compact code-oriented context.
 - [Run agent-written API code inside programmable sandboxes](../concepts/run-agent-written-api-code-inside-programmable-sandboxes.md) - code-mode tools need isolation, network controls, secret boundaries, and rate limits.
@@ -89,6 +94,8 @@ Agent-facing products should treat APIs and CLIs as primary interfaces once agen
 - Which image and video controls should appear as explicit user-facing tool parameters rather than hidden prompt instructions?
 - Which research artifacts should be preserved as files so later tools can audit provenance?
 - Which open-model runtimes and fine-tuning tools need first-class support before a model release is usable by the target developer community?
+- Which MCP applications need web-client rendering support before they are useful, and which should remain tool-only integrations?
+- Which guidance belongs in server-authored skills over MCP instead of client-local skills?
 
 ## Sources
 
@@ -119,3 +126,4 @@ Agent-facing products should treat APIs and CLIs as primary interfaces once agen
 - [The New Application Layer - Malte Ubl, CTO Vercel](../sources/20260420_XKup1pj-34M.md)
 - [Gemma, DeepMind's Family of Open Models - Omar Sanseviero, Google DeepMind](../sources/20260420__gVFUEdhCyI.md)
 - [Running LLMs on your iPhone: 40 tok/s Gemma 4 with MLX - Adrien Grondin, Locally AI](../sources/20260420_a2muGkT4WD4.md)
+- [The Future of MCP - David Soria Parra, Anthropic](../sources/20260419_v3Fr2JR47KA.md)
