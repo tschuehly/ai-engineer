@@ -26,7 +26,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [MCP gateways create an enterprise root of trust](concepts/mcp-gateways-create-an-enterprise-root-of-trust.md) - gateway infrastructure centralizes MCP auth, authorization, observability, secure connectivity, routing, and deployment controls.
 - [MCP tool surfaces need default context budgets](concepts/mcp-tool-surfaces-need-default-context-budgets.md) - production MCP servers need defaults, outputs, and discovery paths that keep broad tool catalogs from overwhelming agents.
 - [Compare models by task, thinking budget, cost, and latency](concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - model routing should account for task fit, reasoning depth, speed, and cost instead of defaulting to the largest model.
+- [Route Gemma 4 model variants by deployment and workflow shape](concepts/route-gemma-4-model-variants-by-deployment-and-workflow-shape.md) - Gemma 4's effective, MoE, and dense variants map to different local, hosted, reasoning, coding, and agentic workloads.
 - [Treat edge models as their own architecture class](concepts/treat-edge-models-as-their-own-architecture-class.md) - edge-scale models need memory, latency, architecture, and post-training choices that differ from scaled-down large-model defaults.
+- [Per-layer embeddings move effective-model capacity out of VRAM](concepts/per-layer-embeddings-move-effective-model-capacity-out-of-vram.md) - Gemma 4 effective models use PLE to add representational capacity while reducing on-device VRAM pressure.
 - [Customize subagents by task, model, tools, and permissions](concepts/customize-subagents-by-task-model-tools-and-permissions.md) - subagents should be scoped to their role instead of inheriting unnecessary authority.
 
 ## Topics

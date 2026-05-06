@@ -223,3 +223,11 @@
 - Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [MCP gateways create an enterprise root of trust](concepts/mcp-gateways-create-an-enterprise-root-of-trust.md), [Gateway platform primitives let teams focus on MCP business logic](concepts/gateway-platform-primitives-let-teams-focus-on-mcp-business-logic.md), [Decouple agent harnesses from enterprise data layers](concepts/decouple-agent-harnesses-from-enterprise-data-layers.md)
 - Notes: Added Anthropic's MCP gateway pattern for centralizing enterprise trust, shared platform primitives, and future-proof agent/data-layer boundaries.
+
+## [2026-05-06] ingest | Gemma 4 Deep Dive - Cassidy Hardin, Researcher, Google DeepMind
+
+- Source: [Gemma 4 Deep Dive - Cassidy Hardin, Researcher, Google DeepMind](sources/20260427__A367W_qvc8.md)
+- Processed: `_A367W_qvc8`
+- Updated topics: [Agents](topics/agents.md), [Edge Inference](topics/edge-inference.md), [Inference](topics/inference.md), [Infrastructure](topics/infrastructure.md), [Models](topics/models.md)
+- Updated concepts: [Route Gemma 4 model variants by deployment and workflow shape](concepts/route-gemma-4-model-variants-by-deployment-and-workflow-shape.md), [Interleave local and global attention to trade context for efficiency](concepts/interleave-local-and-global-attention-to-trade-context-for-efficiency.md), [Per-layer embeddings move effective-model capacity out of VRAM](concepts/per-layer-embeddings-move-effective-model-capacity-out-of-vram.md), [Tune multimodal token budgets by visual or audio task](concepts/tune-multimodal-token-budgets-by-visual-or-audio-task.md)
+- Notes: Added Gemma 4 model-family routing, attention efficiency, PLE memory tradeoffs, and multimodal input-budget controls.
