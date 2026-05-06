@@ -2,7 +2,7 @@
 
 ## Overview
 
-Agent workflows become more reliable when they expose a tight loop between work execution, failure observation, missing-context discovery, and documentation updates. Demand-driven context uses that loop to grow enterprise context from real tasks rather than from speculative upfront curation. Coding-agent loops apply the same principle to implementation work: keep each run small, make progress observable, and feed defects or process lessons into the next prompt or skill. For agentic software work, workflow design should deliberately trade upfront planning against later review effort, and should use parallel queues only when the interface preserves human focus around completed work. Context-engine workflows should also surface unresolved source conflicts, recompute from current sources when answers may be stale, and route clarification back into durable context. Skill and context-package workflows should be developed like library workflows: define expected behavior, package guidance, evaluate changes, distribute reusable context, observe use through logs and review, then update shared packages when the workflow changes.
+Agent workflows become more reliable when they expose a tight loop between work execution, failure observation, missing-context discovery, and documentation updates. Demand-driven context uses that loop to grow enterprise context from real tasks rather than from speculative upfront curation. Personal-agent workflows apply the same idea to permissions and trust: start from one recurring pain, add one simple workflow, watch it fail or succeed, then add guardrails before expanding autonomy. Coding-agent loops apply the same principle to implementation work: keep each run small, make progress observable, and feed defects or process lessons into the next prompt or skill. For agentic software work, workflow design should deliberately trade upfront planning against later review effort, and should use parallel queues only when the interface preserves human focus around completed work. Context-engine workflows should also surface unresolved source conflicts, recompute from current sources when answers may be stale, and route clarification back into durable context. Skill and context-package workflows should be developed like library workflows: define expected behavior, package guidance, evaluate changes, distribute reusable context, observe use through logs and review, then update shared packages when the workflow changes. Ambient-agent workflows add a maintenance loop: overnight indexing, backups, memory refreshes, update validation, cleanup, and notification filtering keep the system ready without forcing the user to watch every operation.
 
 ## Key Concepts
 
@@ -19,6 +19,8 @@ Agent workflows become more reliable when they expose a tight loop between work 
 - [Context development lifecycle treats context as an engineered artifact](../concepts/context-development-lifecycle-treats-context-as-an-engineered-artifact.md) - context work should follow a generate, evaluate, distribute, observe, and adapt loop.
 - [Use agent logs and review feedback as context observability signals](../concepts/use-agent-logs-and-review-feedback-as-context-observability-signals.md) - workflow failures should feed shared context updates rather than repeated local fixes.
 - [Package reusable context as skills, libraries, and registries](../concepts/package-reusable-context-as-skills-libraries-and-registries.md) - reusable workflow context can be installed and maintained across projects.
+- [Grow personal-agent permissions incrementally from recurring pain](../concepts/grow-personal-agent-permissions-incrementally-from-recurring-pain.md) - personal automation should expand through small, trusted, reversible steps.
+- [Ambient agents need self-maintenance and memory hygiene](../concepts/ambient-agents-need-self-maintenance-and-memory-hygiene.md) - recurring maintenance jobs keep always-on workflows reliable.
 
 ## Open Questions
 
@@ -28,6 +30,7 @@ Agent workflows become more reliable when they expose a tight loop between work 
 - How should context-engine clarification from users be converted into durable, source-backed memory without preserving bad generated answers?
 - How should organizations decide when an individual prompt improvement is mature enough to publish as shared team context?
 - When does parallel agent execution improve throughput, and when does it merely create review backlog?
+- What evidence is enough to promote a personal-agent workflow from playground testing into daily ambient operation?
 
 ## Sources
 
@@ -37,3 +40,4 @@ Agent workflows become more reliable when they expose a tight loop between work 
 - [Mergeable by default: Building the context engine to save time and tokens — Peter Werry, Unblocked](../sources/20260503_5ID22ACI7IM.md)
 - [Context Is the New Code - Patrick Debois, Tessl](../sources/20260503_bSG9wUYaHWU.md)
 - [Software Engineering Is Becoming Plan and Review - Louis Knight-Webb, Vibe Kanban](../sources/20260502_W76woOYHlvY.md)
+- [I Gave an AI Agent the Keys to My Life (Here's What Happened) - Radek Sienkiewicz (@velvetshark-com)](../sources/20260502_sJ2jc7leKBk.md)

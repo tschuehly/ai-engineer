@@ -2,7 +2,7 @@
 
 ## Overview
 
-Agent workflows depend on both model capability and the context substrate around the model. On-device agents can keep core inference local while invoking selected tools, APIs, and structured outputs; because small edge models are context-sensitive, tool and skill systems should expose compact descriptions first and load details only when needed. Enterprise agents also need institutional knowledge that is accurate enough to move real work through delivery systems. Context engines can supply that knowledge by selecting task-specific organizational context, resolving or surfacing conflicts, and using team or expert signals to personalize what the agent sees. Small models can sit in front of the main agent as retrieval, extraction, classification, or reranking tools that reduce context rot. For coding work, simple loops can give agents enough structure to process one ticket at a time while avoiding the coordination failure modes of large multi-agent plans. As agents take on longer implementation runs, human leverage shifts toward planning, review, QA, and change shepherding, so agent interfaces need to preserve focus across multiple streams rather than constantly interrupting the developer. Skills add another packaging layer: they can expose product-specific workflow guidance through progressive disclosure while leaving service integrations to tools such as MCP. As context becomes packageable, agents also need filters and provenance checks because unsafe instructions may be loaded before execution sandboxes can constrain behavior.
+Agent workflows depend on both model capability and the context substrate around the model. On-device agents can keep core inference local while invoking selected tools, APIs, and structured outputs; because small edge models are context-sensitive, tool and skill systems should expose compact descriptions first and load details only when needed. Personal agents need the same restraint at a permission level: broad access to email, files, calendars, operating-system automation, and memory should grow from small reversible workflows rather than from an immediate all-access launch. Enterprise agents also need institutional knowledge that is accurate enough to move real work through delivery systems. Context engines can supply that knowledge by selecting task-specific organizational context, resolving or surfacing conflicts, and using team or expert signals to personalize what the agent sees. Small models can sit in front of the main agent as retrieval, extraction, classification, or reranking tools that reduce context rot. For coding work, simple loops can give agents enough structure to process one ticket at a time while avoiding the coordination failure modes of large multi-agent plans. As agents take on longer implementation runs, human leverage shifts toward planning, review, QA, and change shepherding, so agent interfaces need to preserve focus across multiple streams rather than constantly interrupting the developer. Always-on agents add an operational layer: indexing, backups, update checks, memory hygiene, and cleanup keep the agent substrate reliable while scripts handle deterministic cases that do not need LLM judgment. Skills add another packaging layer: they can expose product-specific workflow guidance through progressive disclosure while leaving service integrations to tools such as MCP. As context becomes packageable, agents also need filters and provenance checks because unsafe instructions may be loaded before execution sandboxes can constrain behavior.
 
 ## Key Concepts
 
@@ -21,6 +21,8 @@ Agent workflows depend on both model capability and the context substrate around
 - [Edge agent skills need progressive disclosure to preserve small-model reliability](../concepts/edge-agent-skills-need-progressive-disclosure-to-preserve-small-model-reliability.md) - on-device agents need compressed skill context to keep small-model tool use reliable.
 - [Constrained decoding makes small-model tool calls production-usable](../concepts/constrained-decoding-makes-small-model-tool-calls-production-usable.md) - runtime constraints can make local function calling less dependent on open-ended generation.
 - [Filter untrusted context before it reaches the agent](../concepts/filter-untrusted-context-before-it-reaches-the-agent.md) - agents need context-layer security in addition to execution sandboxes.
+- [Grow personal-agent permissions incrementally from recurring pain](../concepts/grow-personal-agent-permissions-incrementally-from-recurring-pain.md) - personal-agent autonomy should expand through small trusted workflows with rollback paths.
+- [Ambient agents need self-maintenance and memory hygiene](../concepts/ambient-agents-need-self-maintenance-and-memory-hygiene.md) - always-on agents need indexing, backups, update checks, memory cleanup, and guardrails.
 
 ## Open Questions
 
@@ -32,6 +34,7 @@ Agent workflows depend on both model capability and the context substrate around
 - Which product workflows should become reusable skills rather than prompt snippets, documentation pages, or MCP tool descriptions?
 - When should a coding agent ask a context engine for more organizational context instead of exploring the repository itself?
 - Which context sources should be trusted enough to auto-load, and which should require filtering, provenance checks, or user approval?
+- Which personal-agent permissions should require explicit review even after adjacent workflows have become reliable?
 
 ## Sources
 
@@ -44,3 +47,4 @@ Agent workflows depend on both model capability and the context substrate around
 - [TLMs: Tiny LLMs and Agents on Edge Devices with LiteRT-LM - Cormac Brick, Google](../sources/20260503_BKWpYIWvAo4.md)
 - [Context Is the New Code - Patrick Debois, Tessl](../sources/20260503_bSG9wUYaHWU.md)
 - [Software Engineering Is Becoming Plan and Review - Louis Knight-Webb, Vibe Kanban](../sources/20260502_W76woOYHlvY.md)
+- [I Gave an AI Agent the Keys to My Life (Here's What Happened) - Radek Sienkiewicz (@velvetshark-com)](../sources/20260502_sJ2jc7leKBk.md)

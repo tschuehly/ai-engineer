@@ -79,3 +79,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Coding agents shift engineering work toward planning and review](concepts/coding-agents-shift-engineering-work-toward-planning-and-review.md), [Choose plan-heavy or review-heavy agent workflows by task shape](concepts/choose-plan-heavy-or-review-heavy-agent-workflows-by-task-shape.md), [Parallel coding-agent queues need focus-preserving review interfaces](concepts/parallel-coding-agent-queues-need-focus-preserving-review-interfaces.md)
 - Notes: Added a coding-agent workflow slice covering planning/review tradeoffs, task-shape-specific prompting depth, and parallel review interfaces for longer agent runs.
+
+## [2026-05-06] ingest | I Gave an AI Agent the Keys to My Life (Here's What Happened) - Radek Sienkiewicz (@velvetshark-com)
+
+- Source: [I Gave an AI Agent the Keys to My Life (Here's What Happened) - Radek Sienkiewicz (@velvetshark-com)](sources/20260502_sJ2jc7leKBk.md)
+- Processed: `sJ2jc7leKBk`
+- Updated topics: [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Retrieval](topics/retrieval.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Grow Personal-Agent Permissions Incrementally From Recurring Pain](concepts/grow-personal-agent-permissions-incrementally-from-recurring-pain.md), [Personal Knowledge Bases Become Agent Context Substrates](concepts/personal-knowledge-bases-become-agent-context-substrates.md), [Ambient Agents Need Self-Maintenance and Memory Hygiene](concepts/ambient-agents-need-self-maintenance-and-memory-hygiene.md)
+- Notes: Added personal-agent trust growth, Markdown knowledge-base context, and always-on maintenance patterns to the compiled wiki.

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Agent tools are most useful when their execution surface is paired with clear context about when and how to use them. MCP can expose service-backed integrations and remote actions, while skills can package the workflow guidance, domain instructions, references, and scripts that help an agent choose and use those integrations correctly. On edge devices, that guidance must be especially compact: a skill registry can expose short descriptions first, then load full instructions, JavaScript, native intents, or API calls only when needed. Context packages can also be distributed through libraries and registries, which makes tool guidance reusable across projects but requires evaluation, provenance, dependency management, and context filtering before installation. A context engine can be exposed through MCP, CLI, API, dashboard, or messaging surfaces; the tool surface is the access path, while the engine still needs source relationships, personalization, permissions, and conflict handling behind it.
+Agent tools are most useful when their execution surface is paired with clear context about when and how to use them. MCP can expose service-backed integrations and remote actions, while skills can package the workflow guidance, domain instructions, references, and scripts that help an agent choose and use those integrations correctly. Some workflows should bypass LLM judgment entirely: deterministic scripts are a better fit for known conditional actions, while the LLM handles judgment-heavy interpretation and connection-making. On edge devices, guidance must be especially compact: a skill registry can expose short descriptions first, then load full instructions, JavaScript, native intents, or API calls only when needed. Context packages can also be distributed through libraries and registries, which makes tool guidance reusable across projects but requires evaluation, provenance, dependency management, and context filtering before installation. A context engine can be exposed through MCP, CLI, API, dashboard, or messaging surfaces; the tool surface is the access path, while the engine still needs source relationships, personalization, permissions, and conflict handling behind it.
 
 ## Key Concepts
 
@@ -12,6 +12,8 @@ Agent tools are most useful when their execution surface is paired with clear co
 - [Constrained decoding makes small-model tool calls production-usable](../concepts/constrained-decoding-makes-small-model-tool-calls-production-usable.md) - tool runtimes can improve small-model reliability by constraining calls to valid tools.
 - [Package reusable context as skills, libraries, and registries](../concepts/package-reusable-context-as-skills-libraries-and-registries.md) - tool guidance can be shared as installable context packages.
 - [Filter untrusted context before it reaches the agent](../concepts/filter-untrusted-context-before-it-reaches-the-agent.md) - tool and skill ecosystems need controls for unsafe context before execution sandboxes apply.
+- [Ambient agents need self-maintenance and memory hygiene](../concepts/ambient-agents-need-self-maintenance-and-memory-hygiene.md) - operational jobs and deterministic scripts keep always-on agent systems reliable.
+- [Personal knowledge bases become agent context substrates](../concepts/personal-knowledge-bases-become-agent-context-substrates.md) - note search, memory, tagging, and link ingestion are tool surfaces for personal context.
 
 ## Open Questions
 
@@ -19,6 +21,7 @@ Agent tools are most useful when their execution surface is paired with clear co
 - What telemetry is needed to decide that a skill or tool is unused, stale, or actively harmful?
 - When should a context engine expose the same capability through MCP, CLI, API, or a messaging integration?
 - What security checks should run before a registry skill or context package is loaded by an agent?
+- Which agent operations should be implemented as deterministic scripts rather than LLM tool calls?
 
 ## Sources
 
@@ -26,3 +29,4 @@ Agent tools are most useful when their execution surface is paired with clear co
 - [Mergeable by default: Building the context engine to save time and tokens — Peter Werry, Unblocked](../sources/20260503_5ID22ACI7IM.md)
 - [TLMs: Tiny LLMs and Agents on Edge Devices with LiteRT-LM - Cormac Brick, Google](../sources/20260503_BKWpYIWvAo4.md)
 - [Context Is the New Code - Patrick Debois, Tessl](../sources/20260503_bSG9wUYaHWU.md)
+- [I Gave an AI Agent the Keys to My Life (Here's What Happened) - Radek Sienkiewicz (@velvetshark-com)](../sources/20260502_sJ2jc7leKBk.md)

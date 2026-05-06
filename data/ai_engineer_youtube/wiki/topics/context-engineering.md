@@ -2,7 +2,7 @@
 
 ## Overview
 
-Context engineering treats prompts, skills, memory, retrieval, and documentation as an engineered substrate for agent work. It needs a lifecycle similar to software delivery: generate context, evaluate it, distribute it, observe its use, and adapt it from feedback. Demand-driven context adds a practical enterprise workflow: rather than predicting every context need upfront, assign real work to agents, observe failures, and convert missing institutional knowledge into reusable context blocks. A context engine is the selection and reasoning layer for this substrate: it should combine task relevance, user and team signals, source relationships, permissions, and conflict handling rather than relying on generic RAG, many MCP servers, or larger context windows alone. Small-model preprocessing can further manage context by filtering, classifying, extracting, or reranking data before it reaches the agent. Skills and context packages distribute reusable workflow guidance, but package-like reuse also creates versioning, dependency, quality, and security concerns.
+Context engineering treats prompts, skills, memory, retrieval, and documentation as an engineered substrate for agent work. It needs a lifecycle similar to software delivery: generate context, evaluate it, distribute it, observe its use, and adapt it from feedback. Demand-driven context adds a practical enterprise workflow: rather than predicting every context need upfront, assign real work to agents, observe failures, and convert missing institutional knowledge into reusable context blocks. Personal knowledge bases show the same pattern at individual scale: Markdown notes, bookmarks, project records, search, and memory become useful agent context when ingestion flows add tags, connections, and surfacing rather than merely storing links. A context engine is the selection and reasoning layer for this substrate: it should combine task relevance, user and team signals, source relationships, permissions, and conflict handling rather than relying on generic RAG, many MCP servers, or larger context windows alone. Small-model preprocessing can further manage context by filtering, classifying, extracting, or reranking data before it reaches the agent. Skills and context packages distribute reusable workflow guidance, but package-like reuse also creates versioning, dependency, quality, and security concerns.
 
 ## Key Concepts
 
@@ -21,6 +21,7 @@ Context engineering treats prompts, skills, memory, retrieval, and documentation
 - [Package reusable context as skills, libraries, and registries](../concepts/package-reusable-context-as-skills-libraries-and-registries.md) - shared context needs package, registry, dependency, and security practices.
 - [Use agent logs and review feedback as context observability signals](../concepts/use-agent-logs-and-review-feedback-as-context-observability-signals.md) - logs, reviews, and production failures should feed durable context improvements.
 - [Filter untrusted context before it reaches the agent](../concepts/filter-untrusted-context-before-it-reaches-the-agent.md) - repository and marketplace context needs screening before model ingestion.
+- [Personal knowledge bases become agent context substrates](../concepts/personal-knowledge-bases-become-agent-context-substrates.md) - personal notes and saved links become active context when agents connect them to current work.
 
 ## Open Questions
 
@@ -30,6 +31,7 @@ Context engineering treats prompts, skills, memory, retrieval, and documentation
 - How should teams decide what belongs in `SKILL.md` versus referenced files or tool descriptions?
 - Which parts of a context engine can be cached safely as source-backed structure, and which generated answers must be recomputed from current sources?
 - What metadata should context packages expose so teams can evaluate provenance, version compatibility, dependencies, and security risk before installation?
+- How should personal knowledge-base agents avoid amplifying stale notes or noisy bookmarks into future context?
 
 ## Sources
 
@@ -38,3 +40,4 @@ Context engineering treats prompts, skills, memory, retrieval, and documentation
 - [Skill Issue: How We Used AI to Make Agents Actually Good at Supabase - Pedro Rodrigues, Supabase](../sources/20260504_GmAQKINjv1E.md)
 - [Mergeable by default: Building the context engine to save time and tokens — Peter Werry, Unblocked](../sources/20260503_5ID22ACI7IM.md)
 - [Context Is the New Code - Patrick Debois, Tessl](../sources/20260503_bSG9wUYaHWU.md)
+- [I Gave an AI Agent the Keys to My Life (Here's What Happened) - Radek Sienkiewicz (@velvetshark-com)](../sources/20260502_sJ2jc7leKBk.md)
