@@ -55,6 +55,8 @@ Agent workflows depend on both model capability and the context substrate around
 - [Automation loops convert repeated review and triage into factory improvements](../concepts/automation-loops-convert-repeated-review-and-triage-into-factory-improvements.md) - recurring human review and triage can become feedback for future agent behavior.
 - [Cross-app access centralizes MCP authentication through the identity provider](../concepts/cross-app-access-centralizes-mcp-authentication-through-the-identity-provider.md) - enterprise agents need governed authentication across MCP clients and resource servers.
 - [Cross-app access does not replace authorization policy](../concepts/cross-app-access-does-not-replace-authorization-policy.md) - SSO-backed access still needs role, scope, and tool policy boundaries.
+- [MCP gateways create an enterprise root of trust](../concepts/mcp-gateways-create-an-enterprise-root-of-trust.md) - many agents and MCP servers need a trusted enterprise control plane.
+- [Decouple agent harnesses from enterprise data layers](../concepts/decouple-agent-harnesses-from-enterprise-data-layers.md) - gateways let agent clients evolve without binding each one to every internal data source.
 - [MCP tool surfaces need default context budgets](../concepts/mcp-tool-surfaces-need-default-context-budgets.md) - large tool catalogs need defaults that preserve agent context and selection reliability.
 - [Encode agent intent into server-side tools](../concepts/encode-agent-intent-into-server-side-tools.md) - server-side tool composition can make common workflows more reliable than exposing every low-level API step.
 - [Filter MCP tools by scopes and step-up authorization](../concepts/filter-mcp-tools-by-scopes-and-step-up-authorization.md) - MCP servers should expose tools according to actual authorization and request additional scope only when needed.
@@ -83,6 +85,7 @@ Agent workflows depend on both model capability and the context substrate around
 - Which sensitive file operations should be modeled as narrow tools before a codegen agent is allowed to run on customer machines?
 - Which agent tasks deserve specialist subagents, and which are too coupled to split safely?
 - Which MCP clients should be allowed to request access to which enterprise applications through the identity provider?
+- Which agent surfaces should connect through an MCP gateway instead of directly to internal servers?
 - Which MCP tool groups belong in default context, and which should be discovered or enabled only when a task needs them?
 
 ## Sources
@@ -111,3 +114,4 @@ Agent workflows depend on both model capability and the context substrate around
 - [Building your own software factory — Eric Zakariasson, Cursor](../sources/20260428_rnDm57Py54A.md)
 - [One Login to Rule Them All: Cross-App Access for MCP - Garrett Galow, WorkOS](../sources/20260428_EmhRyw6xeT0.md)
 - [Scaling GitHub for your Agents — Sam Morrow, GitHub](../sources/20260427_0n3MKk7r60w.md)
+- [Gateways are All You Need - Karan Sampath, Anthropic](../sources/20260427_CD6R4Wf3jnY.md)

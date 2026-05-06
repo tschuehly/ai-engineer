@@ -50,6 +50,7 @@ Agent workflows become more reliable when they expose a tight loop between work 
 - [Agent software factories need runnable, contextual, and verifiable primitives](../concepts/agent-software-factories-need-runnable-contextual-and-verifiable-primitives.md) - workflow readiness starts with runnable projects, accessible context, and agent-executable checks.
 - [Cloud agents turn coding work into asynchronous VM-backed queues](../concepts/cloud-agents-turn-coding-work-into-asynchronous-vm-backed-queues.md) - synchronous planning and asynchronous execution can increase throughput when review remains focused.
 - [Automation loops convert repeated review and triage into factory improvements](../concepts/automation-loops-convert-repeated-review-and-triage-into-factory-improvements.md) - repeated Slack, PR, transcript, and review work can become process feedback.
+- [Gateway platform primitives let teams focus on MCP business logic](../concepts/gateway-platform-primitives-let-teams-focus-on-mcp-business-logic.md) - workflow teams can build domain-specific MCP behavior on shared platform controls.
 
 ## Open Questions
 
@@ -69,6 +70,7 @@ Agent workflows become more reliable when they expose a tight loop between work 
 - How should interaction-state retention, retrieval, and compaction be built into long-running conversational workflows?
 - Which codegen steps should be breadcrumbs in the workflow, and which should remain flexible local agent judgment?
 - Which lifecycle hooks should be mandatory for auditability, and which should stay opt-in to avoid surprising users?
+- Which domain workflows are ready for team-owned MCP servers once a gateway supplies the shared controls?
 
 ## Sources
 
@@ -90,3 +92,4 @@ Agent workflows become more reliable when they expose a tight loop between work 
 - [Building Conversational Agents - Thor Schaeff and Philipp Schmid, Google DeepMind](../sources/20260430_cVzf49yg0D8.md)
 - [LLM codegen fails and how to stop 'em - Danilo Campos, PostHog](../sources/20260430_juoNbJiZUi0.md)
 - [Building your own software factory — Eric Zakariasson, Cursor](../sources/20260428_rnDm57Py54A.md)
+- [Gateways are All You Need - Karan Sampath, Anthropic](../sources/20260427_CD6R4Wf3jnY.md)

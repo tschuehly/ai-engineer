@@ -215,3 +215,11 @@
 - Updated topics: [Agents](topics/agents.md), [Tools](topics/tools.md), [Infrastructure](topics/infrastructure.md), [Evaluation](topics/evaluation.md)
 - Updated concepts: [MCP tool surfaces need default context budgets](concepts/mcp-tool-surfaces-need-default-context-budgets.md), [Encode agent intent into server-side tools](concepts/encode-agent-intent-into-server-side-tools.md), [Filter MCP tools by scopes and step-up authorization](concepts/filter-mcp-tools-by-scopes-and-step-up-authorization.md), [Stateless remote MCP servers rebuild allowed tools per request](concepts/stateless-remote-mcp-servers-rebuild-allowed-tools-per-request.md)
 - Notes: Added GitHub MCP production-server patterns for context-budgeted tool defaults, intent-level tool design, OAuth and scope-shaped access, and stateless horizontal scaling.
+
+## [2026-05-06] ingest | Gateways are All You Need - Karan Sampath, Anthropic
+
+- Source: [Gateways are All You Need - Karan Sampath, Anthropic](sources/20260427_CD6R4Wf3jnY.md)
+- Processed: `CD6R4Wf3jnY`
+- Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [MCP gateways create an enterprise root of trust](concepts/mcp-gateways-create-an-enterprise-root-of-trust.md), [Gateway platform primitives let teams focus on MCP business logic](concepts/gateway-platform-primitives-let-teams-focus-on-mcp-business-logic.md), [Decouple agent harnesses from enterprise data layers](concepts/decouple-agent-harnesses-from-enterprise-data-layers.md)
+- Notes: Added Anthropic's MCP gateway pattern for centralizing enterprise trust, shared platform primitives, and future-proof agent/data-layer boundaries.
