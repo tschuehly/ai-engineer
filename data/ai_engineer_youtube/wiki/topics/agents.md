@@ -24,6 +24,8 @@ Multi-agent production systems also inherit ordinary distributed-systems failure
 
 Durable execution is the production version of that distributed-systems stance for a single agent loop as well as for multi-agent systems. LLM calls, tool invocations, and external API calls should be persisted around workflow boundaries so process crashes, rate limits, or downstream outages do not force the agent to repeat completed turns or re-trigger side effects. Long waits, including human approvals and clarifications, should also be modeled as durable workflow state rather than as a live process that must stay pinned until the human returns.
 
+TypeScript agent products add a concrete implementation constraint to this durability story: workflow orchestration should be deterministic, while LLM calls, sandbox operations, and external tools become explicit steps whose inputs and outputs can be cached, retried, observed, canceled, and upgraded across deployment versions.
+
 The web itself is also becoming an agent surface. Sites can publish `llms.txt` or `llms-full.txt` to guide agents toward the right documentation, and WebMCP-style proposals can expose intended app operations directly so agents do not have to infer every action from screenshots, DOM text, or coordinates.
 
 Internal developer platforms are another agent surface. Practices that already helped human developers, such as self-service provisioning, API-first workflows, local validation, clear documentation, and observable runtime feedback, become prerequisites when coding agents need to deploy, debug, and verify work without tribal human handoffs.
@@ -38,6 +40,9 @@ Internal developer platforms are another agent surface. Practices that already h
 - [Human Control Planes Turn Agent Swarms Into Manageable Organizations](../concepts/human-control-planes-turn-agent-swarms-into-manageable-organizations.md) - org-chart, project, task, budget, and memory surfaces make large agent organizations supervisable.
 - [Treat multi-agent systems as distributed systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md) - multi-agent scale introduces coordination, stale state, and failure-propagation problems.
 - [Use durable execution for production agent loops](../concepts/use-durable-execution-for-production-agent-loops.md) - production loops should persist LLM calls, tool outputs, and state across crashes and retries.
+- [Keep workflow orchestration deterministic and put side effects in steps](../concepts/keep-workflow-orchestration-deterministic-and-put-side-effects-in-steps.md) - durable workflow reruns require side effects to live behind step boundaries.
+- [Use resumable streams as the UI boundary for durable agents](../concepts/use-resumable-streams-as-the-ui-boundary-for-durable-agents.md) - frontend progress can stay stream-oriented while backend execution becomes observable and resumable.
+- [Control long-running workflow agents through run lifecycle operations](../concepts/control-long-running-workflow-agents-through-run-lifecycle-operations.md) - scheduled or waiting agents need cancellation, stream naming, and deployment-version controls.
 - [Model LLM calls and tools as durable activities](../concepts/model-llm-calls-and-tools-as-durable-activities.md) - external work in an agent loop can receive retry, timeout, and persistence behavior through workflow activities.
 - [Treat long waits as logical workflow state](../concepts/treat-long-waits-as-logical-workflow-state.md) - agent approvals and clarifications should resume from durable state after long human waits.
 - [Choose choreography or orchestration by complexity and autonomy](../concepts/choose-choreography-or-orchestration-by-complexity-and-autonomy.md) - coordination style should match autonomy needs, dependency complexity, and audit requirements.
@@ -263,3 +268,4 @@ Internal developer platforms are another agent surface. Practices that already h
 - [Identity for AI Agents - Patrick Riley & Carlos Galan, Auth0](../sources/20260114_VSdV-AdSlis.md)
 - [Your MCP Server is Bad (and you should feel bad) - Jeremiah Lowin, Prefect](../sources/20260112_96G7FLab8xc.md)
 - [OpenAI + @Temporalio : Building Durable, Production Ready Agents - Cornelia Davis, Temporal](../sources/20260112_k8cnVCMYmNc.md)
+- [Building durable Agents with Workflow DevKit & AI SDK - Peter Wielander, Vercel](../sources/20260106_kmV-qg4uoNI.md)

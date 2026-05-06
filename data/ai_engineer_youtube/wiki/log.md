@@ -607,3 +607,11 @@
 - Updated topics: [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Use Explanatory Feedback to Optimize Prompts](concepts/use-explanatory-feedback-to-optimize-prompts.md), [Structure Prompt-Learning Experiments With Train/Test Splits and Loop Budgets](concepts/structure-prompt-learning-experiments-with-train-test-splits-and-loop-budgets.md), [Evaluator Quality Is a Dependency of Prompt Optimization](concepts/evaluator-quality-is-a-dependency-of-prompt-optimization.md)
 - Notes: Added Arize prompt-learning guidance covering feedback-rich prompt optimization, experiment controls, and evaluator quality as a prerequisite for automated prompt updates.
+
+## [2026-05-06] ingest | Building durable Agents with Workflow DevKit & AI SDK - Peter Wielander, Vercel
+
+- Source: [Building durable Agents with Workflow DevKit & AI SDK - Peter Wielander, Vercel](sources/20260106_kmV-qg4uoNI.md)
+- Processed: `kmV-qg4uoNI`
+- Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Use Durable Execution for Production Agent Loops](concepts/use-durable-execution-for-production-agent-loops.md), [Keep Workflow Orchestration Deterministic and Put Side Effects in Steps](concepts/keep-workflow-orchestration-deterministic-and-put-side-effects-in-steps.md), [Use Resumable Streams as the UI Boundary for Durable Agents](concepts/use-resumable-streams-as-the-ui-boundary-for-durable-agents.md), [Control Long-Running Workflow Agents Through Run Lifecycle Operations](concepts/control-long-running-workflow-agents-through-run-lifecycle-operations.md)
+- Notes: Added Vercel Workflow DevKit guidance covering durable TypeScript agent loops, deterministic orchestration, step observability, resumable streams, cancellation, scheduling, and deployment-version handling.

@@ -26,6 +26,8 @@ Multi-agent orchestration is also infrastructure once workflows leave the demo s
 
 Durable execution infrastructure can wrap even a single agentic loop. Treat LLM calls, tool invocations, and external APIs as workflow activities with configured retry and timeout behavior, and persist successful results so crash recovery does not repeat token spend or side effects. For human-in-the-loop agents, the infrastructure should support logical waits that can leave active memory and later rehydrate state when approval or clarification arrives.
 
+Durable agent infrastructure also needs a deterministic orchestration boundary. Workflow code should be rerunnable and side-effect-free, while steps perform LLM calls, tool calls, sandbox commands, and external API work; observability then attaches to the step/event log, and lifecycle controls manage cancellation, scheduling, and deployment-version changes for in-flight runs.
+
 Developer-platform infrastructure also needs to be consumable by agents. Self-service provisioning, API/CLI/MCP access, local validation, machine-readable observability, and layered contribution guardrails let agents work against internal platforms without relying on informal human escalation paths.
 
 ## Key Concepts
@@ -33,6 +35,8 @@ Developer-platform infrastructure also needs to be consumable by agents. Self-se
 - [Use hosted model playgrounds to prototype before owning infrastructure](../concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md) - hosted tools can validate model and deployment choices before teams own the runtime.
 - [Treat multi-agent systems as distributed systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md) - agent infrastructure needs distributed-systems controls once multiple agents share state and dependencies.
 - [Use durable execution for production agent loops](../concepts/use-durable-execution-for-production-agent-loops.md) - durable execution records completed LLM and tool steps so production agent loops can resume.
+- [Keep workflow orchestration deterministic and put side effects in steps](../concepts/keep-workflow-orchestration-deterministic-and-put-side-effects-in-steps.md) - deterministic orchestration and step boundaries prevent recovery from replaying unsafe effects.
+- [Control long-running workflow agents through run lifecycle operations](../concepts/control-long-running-workflow-agents-through-run-lifecycle-operations.md) - infrastructure should expose cancellation, scheduling, and version handling for long-lived agent runs.
 - [Model LLM calls and tools as durable activities](../concepts/model-llm-calls-and-tools-as-durable-activities.md) - activities are an infrastructure boundary for retries, timeouts, and persisted external work.
 - [Treat long waits as logical workflow state](../concepts/treat-long-waits-as-logical-workflow-state.md) - infrastructure should rehydrate paused agent workflows after long waits instead of pinning processes.
 - [Use immutable versioned state for agent handoffs](../concepts/use-immutable-versioned-state-for-agent-handoffs.md) - append-only handoff state supports rollback, replay, and root-cause analysis.
@@ -164,3 +168,4 @@ Developer-platform infrastructure also needs to be consumable by agents. Self-se
 - [Contact Center Voice AI: Low-Latency Intelligence Extraction from Messy Audio Streams - Dippu Singh](../sources/20260408_IEF842ZEU5A.md)
 - [Platforms for Humans and Machines: Engineering for the Age of Agents - Juan Herreros Elorza](../sources/20260408_cCRO3ChaYhM.md)
 - [OpenAI + @Temporalio : Building Durable, Production Ready Agents - Cornelia Davis, Temporal](../sources/20260112_k8cnVCMYmNc.md)
+- [Building durable Agents with Workflow DevKit & AI SDK - Peter Wielander, Vercel](../sources/20260106_kmV-qg4uoNI.md)
