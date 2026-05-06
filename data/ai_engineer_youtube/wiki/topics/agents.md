@@ -66,6 +66,8 @@ Agent workflows depend on both model capability and the context substrate around
 - [MCP gateways create an enterprise root of trust](../concepts/mcp-gateways-create-an-enterprise-root-of-trust.md) - many agents and MCP servers need a trusted enterprise control plane.
 - [Decouple agent harnesses from enterprise data layers](../concepts/decouple-agent-harnesses-from-enterprise-data-layers.md) - gateways let agent clients evolve without binding each one to every internal data source.
 - [MCP tool surfaces need default context budgets](../concepts/mcp-tool-surfaces-need-default-context-budgets.md) - large tool catalogs need defaults that preserve agent context and selection reliability.
+- [Discover large API tool surfaces progressively](../concepts/discover-large-api-tool-surfaces-progressively.md) - agents need broad APIs to be discoverable without loading every endpoint upfront.
+- [Run agent-written API code inside programmable sandboxes](../concepts/run-agent-written-api-code-inside-programmable-sandboxes.md) - generated code gives agents flexible API access but needs hard runtime boundaries.
 - [Encode agent intent into server-side tools](../concepts/encode-agent-intent-into-server-side-tools.md) - server-side tool composition can make common workflows more reliable than exposing every low-level API step.
 - [Filter MCP tools by scopes and step-up authorization](../concepts/filter-mcp-tools-by-scopes-and-step-up-authorization.md) - MCP servers should expose tools according to actual authorization and request additional scope only when needed.
 
@@ -129,3 +131,4 @@ Agent workflows depend on both model capability and the context substrate around
 - [Gemma 4 Deep Dive - Cassidy Hardin, Researcher, Google DeepMind](../sources/20260427__A367W_qvc8.md)
 - [Collaborative AI Engineering: One Dev, Two Dozen Agents, Zero Alignment - Maggie Appleton, GitHub](../sources/20260426_ClWD8OEYgp8.md)
 - [AgentCraft: Putting the Orc in Orchestration - Ido Salomon](../sources/20260425_kR64LOqBBCU.md)
+- [MCP = Mega Context Problem - Matt Carey](../sources/20260425_YBYUvGOuotE.md)

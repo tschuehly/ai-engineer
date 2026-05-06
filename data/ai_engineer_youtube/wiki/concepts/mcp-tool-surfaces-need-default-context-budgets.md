@@ -11,6 +11,7 @@ Details:
 - Configurable tool sets and dynamic discovery were not enough because most users stayed on default settings rather than editing JSON configuration. (03:21-04:15)
 - GitHub reduced initial context load by focusing defaults for common use cases and grouping CRUD tools; the default configuration still allowed expansion or contraction for users who needed it. (05:10-05:48)
 - Output payloads count against the same budget as tool descriptions: tailoring a pull-request listing output cut more than 75% of its output tokens. (05:53-06:13)
+- Cloudflare hit the same context-budget wall at API scale: a 2.3 million-token OpenAPI spec became roughly 1.1 million tokens when naively converted into endpoint tools, making progressive discovery necessary. (02:37-03:30)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -19,6 +20,8 @@ Related topics:
 Related concepts:
 - [Use tool names and descriptions as operational prompts](use-tool-names-and-descriptions-as-operational-prompts.md)
 - [Agent tool loops turn model-required actions into executable results](agent-tool-loops-turn-model-required-actions-into-executable-results.md)
+- [Discover large API tool surfaces progressively](discover-large-api-tool-surfaces-progressively.md)
 
 Sources:
 - [Scaling GitHub for your Agents — Sam Morrow, GitHub](../sources/20260427_0n3MKk7r60w.md), 02:06-06:13
+- [MCP = Mega Context Problem - Matt Carey](../sources/20260425_YBYUvGOuotE.md), 02:37-03:30

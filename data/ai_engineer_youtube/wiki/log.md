@@ -247,3 +247,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Spatial Agent Maps Expose Filesystem-Level Lineage and Collisions](concepts/spatial-agent-maps-expose-filesystem-level-lineage-and-collisions.md), [Let Agents Propose Quest Queues for Parallel Work](concepts/let-agents-propose-quest-queues-for-parallel-work.md), [Review Bundles Compress Parallel Agent Output Into Evidence](concepts/review-bundles-compress-parallel-agent-output-into-evidence.md)
 - Notes: Added AgentCraft patterns for game-inspired multi-agent orchestration, repository activity visibility, agent-suggested work queues, and evidence-backed review of parallel agent output.
+
+## [2026-05-06] ingest | MCP = Mega Context Problem - Matt Carey
+
+- Source: [MCP = Mega Context Problem - Matt Carey](sources/20260425_YBYUvGOuotE.md)
+- Processed: `YBYUvGOuotE`
+- Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md)
+- Updated concepts: [Discover Large API Tool Surfaces Progressively](concepts/discover-large-api-tool-surfaces-progressively.md), [Expose Large APIs Through Typed Code Mode](concepts/expose-large-apis-through-typed-code-mode.md), [Run Agent-Written API Code Inside Programmable Sandboxes](concepts/run-agent-written-api-code-inside-programmable-sandboxes.md)
+- Notes: Added Cloudflare MCP patterns for progressive API discovery, typed code-mode access, sandboxed generated-code execution, and service hardening for agent callers.
