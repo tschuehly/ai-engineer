@@ -65,6 +65,8 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Scope personal and team agents by reachable authority](concepts/scope-personal-and-team-agents-by-reachable-authority.md) - shared and personal agents need data and action boundaries based on who can invoke them.
 - [Use reviewer agents and lints to turn review lessons into guardrails](concepts/use-reviewer-agents-and-lints-to-turn-review-lessons-into-guardrails.md) - repeated review findings should become automatic checks where possible.
 - [Use human judgment gates for high-risk agent code changes](concepts/use-human-judgment-gates-for-high-risk-agent-code-changes.md) - migrations, permissions, dependencies, architecture, and reliability work need explicit human review friction.
+- [Own agent context instead of accepting hidden harness mutation](concepts/own-agent-context-instead-of-accepting-hidden-harness-mutation.md) - agent behavior can change when harnesses silently mutate prompts, tools, reminders, compaction, or tool outputs.
+- [Keep critical code inside human understanding and review capacity](concepts/keep-critical-code-inside-human-understanding-and-review-capacity.md) - agent throughput should not outrun the human ability to read, evaluate, and own important code.
 - [Use omnimodal embeddings for cross-modal retrieval and comparison](concepts/use-omnimodal-embeddings-for-cross-modal-retrieval-and-comparison.md) - retrieval and agent context can preserve concepts across text, audio, video, and documents.
 - [Interactive world models need memory, control, and live prompting](concepts/interactive-world-models-need-memory-control-and-live-prompting.md) - generated environments require consistency and controllability when users act inside them.
 

@@ -399,3 +399,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [AI-Generated Security Reports Need Maintainer Triage](concepts/ai-generated-security-reports-need-maintainer-triage.md), [Scope Personal and Team Agents By Reachable Authority](concepts/scope-personal-and-team-agents-by-reachable-authority.md), [Human Taste Limits Fully Dark Coding Factories](concepts/human-taste-limits-fully-dark-coding-factories.md), [Plugin Architectures Let Agent Systems Absorb Experiments](concepts/plugin-architectures-let-agent-systems-absorb-experiments.md)
 - Notes: Added OpenClaw patterns for maintainer-scale security triage, authority-scoped personal and team agents, human taste in coding-agent workflows, and plugin-based agent experimentation.
+
+## [2026-05-06] ingest | Building pi in a World of Slop - Mario Zechner
+
+- Source: [Building pi in a World of Slop - Mario Zechner](sources/20260416_RjfbvDXpFls.md)
+- Processed: `RjfbvDXpFls`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Own Agent Context Instead of Accepting Hidden Harness Mutation](concepts/own-agent-context-instead-of-accepting-hidden-harness-mutation.md), [Minimal Coding-Agent Harnesses Can Outperform Feature-Heavy Surfaces](concepts/minimal-coding-agent-harnesses-can-outperform-feature-heavy-surfaces.md), [Let Agent Harnesses Extend Through Ordinary Code Packages](concepts/let-agent-harnesses-extend-through-ordinary-code-packages.md), [Gate AI-Generated Open-Source Contributions Through Human-Effort Filters](concepts/gate-ai-generated-open-source-contributions-through-human-effort-filters.md), [Keep Critical Code Inside Human Understanding and Review Capacity](concepts/keep-critical-code-inside-human-understanding-and-review-capacity.md)
+- Notes: Added pi's harness-design lessons around context ownership, minimal tool surfaces, TypeScript package extensions, OSS contribution filters, and human review limits for critical code.

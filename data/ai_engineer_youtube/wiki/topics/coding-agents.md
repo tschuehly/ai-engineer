@@ -17,8 +17,11 @@ Coding agents work best when their autonomy is constrained by small work items, 
 - [Zero-bug policies turn bug inflow into immediate work](../concepts/zero-bug-policies-turn-bug-inflow-into-immediate-work.md) - AI-assisted triage and repair can keep bugs from becoming passive backlog.
 - [AI agents still need human taste for interaction quality](../concepts/ai-agents-still-need-human-taste-for-interaction-quality.md) - agent-generated UI still needs review for timing, feel, and interaction quality.
 - [Human taste limits fully dark coding factories](../concepts/human-taste-limits-fully-dark-coding-factories.md) - exploratory coding-agent work still needs iterative product judgment before merging.
+- [Keep critical code inside human understanding and review capacity](../concepts/keep-critical-code-inside-human-understanding-and-review-capacity.md) - important code should not be delegated beyond what humans can read, evaluate, and own.
 - [Product engineers need direct customer context](../concepts/product-engineers-need-direct-customer-context.md) - engineers need direct customer feedback to make useful product decisions as AI handles more implementation.
 - [Unified coding-agent harnesses combine models, tools, environments, and safety](../concepts/unified-coding-agent-harnesses-combine-models-tools-environments-and-safety.md) - model capability needs an execution harness that manages tools, environments, and safety.
+- [Own agent context instead of accepting hidden harness mutation](../concepts/own-agent-context-instead-of-accepting-hidden-harness-mutation.md) - hidden prompt, tool, and compaction changes can break coding-agent workflows.
+- [Minimal coding-agent harnesses can outperform feature-heavy surfaces](../concepts/minimal-coding-agent-harnesses-can-outperform-feature-heavy-surfaces.md) - small execution contracts can beat large default tool surfaces.
 - [Isolate parallel coding work with project worktrees](../concepts/isolate-parallel-coding-work-with-project-worktrees.md) - separate work streams reduce interference between concurrent feature, bugfix, and investigation tasks.
 - [Customize subagents by task, model, tools, and permissions](../concepts/customize-subagents-by-task-model-tools-and-permissions.md) - specialist subagents should receive only the capabilities their role needs.
 - [Use agent hooks to automate session rituals](../concepts/use-agent-hooks-to-automate-session-rituals.md) - lifecycle hooks can automate setup, logging, and final validation passes.
@@ -95,3 +98,4 @@ Coding agents work best when their autonomy is constrained by small work items, 
 - [The Friction is Your Judgment - Armin Ronacher & Cristina Poncela Cubeiro, Earendil](../sources/20260418__Zcw_sVF6hU.md)
 - [Harness Engineering: How to Build Software When Humans Steer, Agents Execute - Ryan Lopopolo, OpenAI](../sources/20260417_am_oeAoUhew.md)
 - [State of the Claw - Peter Steinberger](../sources/20260417_zgNvts_2TUE.md)
+- [Building pi in a World of Slop - Mario Zechner](../sources/20260416_RjfbvDXpFls.md)

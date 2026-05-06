@@ -12,7 +12,7 @@ Agent-facing products should treat APIs and CLIs as primary interfaces once agen
 
 MCP is one part of the agent connectivity stack, not a universal replacement for every surface. Skills carry reusable domain knowledge, CLIs and computer use fit local sandboxed environments, and MCP fits remote semantics, authorization, governance, resources, long-running tasks, and cross-client application surfaces. MCP applications and skills over MCP point to a richer server-authored surface where an integration can ship UI, tools, and current usage guidance together.
 
-Open-source agent tools need extension points as well as integrations. Plugin architecture can keep memory, wiki, dreaming, and other experimental capabilities installable without forcing every idea into core or overloading maintainers with unrelated pull requests.
+Open-source agent tools need extension points as well as integrations. Plugin architecture can keep memory, wiki, dreaming, and other experimental capabilities installable without forcing every idea into core or overloading maintainers with unrelated pull requests. Ordinary package-manager distribution can be enough for harness extensions when extensions are just code modules that add tools, commands, events, providers, or compaction behavior.
 
 ## Key Concepts
 
@@ -36,6 +36,9 @@ Open-source agent tools need extension points as well as integrations. Plugin ar
 - [Ambient agents need self-maintenance and memory hygiene](../concepts/ambient-agents-need-self-maintenance-and-memory-hygiene.md) - operational jobs and deterministic scripts keep always-on agent systems reliable.
 - [Scope personal and team agents by reachable authority](../concepts/scope-personal-and-team-agents-by-reachable-authority.md) - shared agent tools need authority boundaries tied to who can invoke them.
 - [Plugin architectures let agent systems absorb experiments](../concepts/plugin-architectures-let-agent-systems-absorb-experiments.md) - plugins let agent capabilities evolve without bloating the core tool surface.
+- [Let agent harnesses extend through ordinary code packages](../concepts/let-agent-harnesses-extend-through-ordinary-code-packages.md) - package-manager extensions can add harness capabilities without core forks or bespoke marketplaces.
+- [Own agent context instead of accepting hidden harness mutation](../concepts/own-agent-context-instead-of-accepting-hidden-harness-mutation.md) - tool and prompt surfaces should be inspectable when they affect agent behavior.
+- [Minimal coding-agent harnesses can outperform feature-heavy surfaces](../concepts/minimal-coding-agent-harnesses-can-outperform-feature-heavy-surfaces.md) - the default tool surface should stay small unless extra capability proves useful.
 - [Personal knowledge bases become agent context substrates](../concepts/personal-knowledge-bases-become-agent-context-substrates.md) - note search, memory, tagging, and link ingestion are tool surfaces for personal context.
 - [Purpose-built agent workspaces make orchestration visible](../concepts/purpose-built-agent-workspaces-make-orchestration-visible.md) - visible tool calls, cron labels, stop controls, and capability panels make personal-agent tool use easier to supervise.
 - [Explicit context attachments can outperform opaque agent memory](../concepts/explicit-context-attachments-can-outperform-opaque-agent-memory.md) - explicit document, skill, and knowledge-base mentions make task context a user-controlled tool surface.
@@ -137,3 +140,4 @@ Open-source agent tools need extension points as well as integrations. Plugin ar
 - [Code Mode: Let the Code do the Talking - Sunil Pai, Cloudflare](../sources/20260419_8txf05vVVl4.md)
 - [Harness Engineering: How to Build Software When Humans Steer, Agents Execute - Ryan Lopopolo, OpenAI](../sources/20260417_am_oeAoUhew.md)
 - [State of the Claw - Peter Steinberger](../sources/20260417_zgNvts_2TUE.md)
+- [Building pi in a World of Slop - Mario Zechner](../sources/20260416_RjfbvDXpFls.md)

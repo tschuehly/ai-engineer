@@ -10,7 +10,7 @@ Complex vertical workflows add another design dimension: make ambiguous work mor
 
 Compressed research is a lower-risk operations pattern: keep the business event and human decision in place, but let an agent gather, classify, route, or summarize the evidence that made the work slow. This is especially useful when the source information already exists in company systems but is not available in the right place at decision time.
 
-Open-source agent workflows have their own bottleneck: AI can generate more reports, PRs, and fixes than maintainers can safely absorb. Projects need triage loops, contribution boundaries, foundation or company support for sustained maintenance, and extension points so experiments can happen without turning every idea into core-review load.
+Open-source agent workflows have their own bottleneck: AI can generate more reports, PRs, and fixes than maintainers can safely absorb. Projects need triage loops, contribution boundaries, foundation or company support for sustained maintenance, extension points so experiments can happen without turning every idea into core-review load, and human-effort filters that require concise contributor context before maintainers spend review time.
 
 ## Key Concepts
 
@@ -76,6 +76,7 @@ Open-source agent workflows have their own bottleneck: AI can generate more repo
 - [Maintain ubiquitous language for AI coding](../concepts/maintain-ubiquitous-language-for-ai-coding.md) - workflow artifacts should reuse shared domain terms across prompts, code, and tests.
 - [Limit agent change size by feedback speed](../concepts/limit-agent-change-size-by-feedback-speed.md) - workflow gates should keep agent changes small enough for available checks.
 - [AI output speed can overwhelm review capacity](../concepts/ai-output-speed-can-overwhelm-review-capacity.md) - workflow throughput should be limited by responsible review, not only by how fast agents can produce code.
+- [Keep critical code inside human understanding and review capacity](../concepts/keep-critical-code-inside-human-understanding-and-review-capacity.md) - critical workflow output should remain small enough for direct human ownership.
 - [Agent-legible codebases reduce generated-code entropy](../concepts/agent-legible-codebases-reduce-generated-code-entropy.md) - workflow reliability improves when the codebase exposes clear flow, primitives, and search targets to agents.
 - [Use human judgment gates for high-risk agent code changes](../concepts/use-human-judgment-gates-for-high-risk-agent-code-changes.md) - review systems should route mechanical fixes to agents while pausing risk-bearing changes for human judgment.
 - [Use deep modules to make agent work testable](../concepts/use-deep-modules-to-make-agent-work-testable.md) - module boundaries let humans validate agent work through stable interfaces.
@@ -98,8 +99,10 @@ Open-source agent workflows have their own bottleneck: AI can generate more repo
 - [Split exploratory research agents from constrained writing workflows](../concepts/split-exploratory-research-agents-from-constrained-writing-workflows.md) - artifact handoff keeps different workflow phases appropriately constrained.
 - [Calibrate LLM judges like binary classifiers](../concepts/calibrate-llm-judges-like-binary-classifiers.md) - workflow judges need their own labeled validation loop.
 - [AI-generated security reports need maintainer triage](../concepts/ai-generated-security-reports-need-maintainer-triage.md) - workflow throughput should include maintainer capacity for automated reports.
+- [Gate AI-generated open-source contributions through human-effort filters](../concepts/gate-ai-generated-open-source-contributions-through-human-effort-filters.md) - contribution workflows can require a short human-authored issue before accepting agent-generated PRs.
 - [Human taste limits fully dark coding factories](../concepts/human-taste-limits-fully-dark-coding-factories.md) - iterative product work should keep human judgment in the loop.
 - [Plugin architectures let agent systems absorb experiments](../concepts/plugin-architectures-let-agent-systems-absorb-experiments.md) - extension workflows let experiments proceed without overloading core maintainers.
+- [Let agent harnesses extend through ordinary code packages](../concepts/let-agent-harnesses-extend-through-ordinary-code-packages.md) - package-based extension workflows keep optional harness behavior out of core.
 
 ## Open Questions
 
@@ -166,3 +169,4 @@ Open-source agent workflows have their own bottleneck: AI can generate more repo
 - [The Friction is Your Judgment - Armin Ronacher & Cristina Poncela Cubeiro, Earendil](../sources/20260418__Zcw_sVF6hU.md)
 - [Harness Engineering: How to Build Software When Humans Steer, Agents Execute - Ryan Lopopolo, OpenAI](../sources/20260417_am_oeAoUhew.md)
 - [State of the Claw - Peter Steinberger](../sources/20260417_zgNvts_2TUE.md)
+- [Building pi in a World of Slop - Mario Zechner](../sources/20260416_RjfbvDXpFls.md)
