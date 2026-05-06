@@ -519,3 +519,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Make internal platforms self-service for agent users](concepts/make-internal-platforms-self-service-for-agent-users.md), [Expose observability as agent-readable feedback](concepts/expose-observability-as-agent-readable-feedback.md), [Local-first platform workflows shorten agent feedback loops](concepts/local-first-platform-workflows-shorten-agent-feedback-loops.md), [Guard AI-assisted platform contributions with policy and context](concepts/guard-ai-assisted-platform-contributions-with-policy-and-context.md)
 - Notes: Added platform-engineering practices that make internal developer platforms usable by both humans and coding agents.
+
+## [2026-05-06] ingest | Cognitive Exhaust Fumes, or: Read-Only AI Is Underrated - Simon Podhajsky, Head of AI, Waypoint
+
+- Source: [Cognitive Exhaust Fumes, or: Read-Only AI Is Underrated - Simon Podhajsky, Head of AI, Waypoint](sources/20260408_u0TOSBbAw7c.md)
+- Processed: `u0TOSBbAw7c`
+- Updated topics: [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Retrieval](topics/retrieval.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Read-only personal AI observers are a distinct product category](concepts/read-only-personal-ai-observers-are-a-distinct-product-category.md), [Cognitive exhaust gains value through cross-source synthesis](concepts/cognitive-exhaust-gains-value-through-cross-source-synthesis.md), [Aggregated personal context creates mosaic and exfiltration risk](concepts/aggregated-personal-context-creates-mosaic-and-exfiltration-risk.md)
+- Notes: Added read-only personal intelligence guidance covering observer-style systems, cross-source personal synthesis, and the remaining privacy and exfiltration risks.
