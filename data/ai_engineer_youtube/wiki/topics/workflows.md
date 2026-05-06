@@ -20,6 +20,8 @@ Multi-agent workflows need explicit coordination and recovery choices. Event-dri
 
 Contact-center voice workflows show a concrete human-in-the-loop automation pattern: shift after-call documentation from manual memory work into a streamed extraction pipeline, but keep operators responsible for quick validation before the generated summary updates CRM fields. The workflow is only as strong as the early audio and transcript stages; speaker separation, domain STT, masking, grounded JSON extraction, and schema mapping all happen before the final human confirmation.
 
+Platform workflows should be shaped for agent loops as well as human onboarding. Agents need local validation, clear task and success definitions, and callable platform feedback so they can iterate before remote CI or deployment; when agents contribute back to platform code, policy guardrails and repository instructions should separate hard safety boundaries from workflow guidance.
+
 ## Key Concepts
 
 - [Bootstrap RL with targeted SFT before reinforcement learning](../concepts/bootstrap-rl-with-targeted-sft-before-reinforcement-learning.md) - interactive post-training can teach protocol first, then optimize outcomes through RL.
@@ -105,6 +107,8 @@ Contact-center voice workflows show a concrete human-in-the-loop automation patt
 - [Use deep modules to make agent work testable](../concepts/use-deep-modules-to-make-agent-work-testable.md) - module boundaries let humans validate agent work through stable interfaces.
 - [Ask agents after each run what blocked their success](../concepts/ask-agents-after-each-run-what-blocked-their-success.md) - post-run feedback helps turn failures into workflow and context fixes.
 - [Agent software factories need runnable, contextual, and verifiable primitives](../concepts/agent-software-factories-need-runnable-contextual-and-verifiable-primitives.md) - workflow readiness starts with runnable projects, accessible context, and agent-executable checks.
+- [Local-first platform workflows shorten agent feedback loops](../concepts/local-first-platform-workflows-shorten-agent-feedback-loops.md) - platform workflows should fail early in the agent's local workspace.
+- [Guard AI-assisted platform contributions with policy and context](../concepts/guard-ai-assisted-platform-contributions-with-policy-and-context.md) - contribution workflows need hard policies plus Markdown guidance.
 - [Cloud agents turn coding work into asynchronous VM-backed queues](../concepts/cloud-agents-turn-coding-work-into-asynchronous-vm-backed-queues.md) - synchronous planning and asynchronous execution can increase throughput when review remains focused.
 - [Align teams before agents implement](../concepts/align-teams-before-agents-implement.md) - workflow design should prevent agentic speed from bypassing shared direction.
 - [Shared cloud workspaces make agent sessions collaborative](../concepts/shared-cloud-workspaces-make-agent-sessions-collaborative.md) - shared sessions combine execution, review, and collaboration surfaces.
@@ -204,3 +208,4 @@ Contact-center voice workflows show a concrete human-in-the-loop automation patt
 - [From Chaos to Choreography: Multi-Agent Orchestration Patterns That Actually Work - Sandipan Bhaumik](../sources/20260408_2czYyrTzILg.md)
 - [Let LLMs Wander: Engineering RL Environments - Stefano Fiorucci](../sources/20260408_71V3fTaUp2Q.md)
 - [Contact Center Voice AI: Low-Latency Intelligence Extraction from Messy Audio Streams - Dippu Singh](../sources/20260408_IEF842ZEU5A.md)
+- [Platforms for Humans and Machines: Engineering for the Age of Agents - Juan Herreros Elorza](../sources/20260408_cCRO3ChaYhM.md)

@@ -22,6 +22,8 @@ Multi-agent production systems also inherit ordinary distributed-systems failure
 
 The web itself is also becoming an agent surface. Sites can publish `llms.txt` or `llms-full.txt` to guide agents toward the right documentation, and WebMCP-style proposals can expose intended app operations directly so agents do not have to infer every action from screenshots, DOM text, or coordinates.
 
+Internal developer platforms are another agent surface. Practices that already helped human developers, such as self-service provisioning, API-first workflows, local validation, clear documentation, and observable runtime feedback, become prerequisites when coding agents need to deploy, debug, and verify work without tribal human handoffs.
+
 ## Key Concepts
 
 - [Build RL environments as software artifacts](../concepts/build-rl-environments-as-software-artifacts.md) - agent gyms make tool, code, and multi-step behavior evaluable and trainable through rollouts.
@@ -118,6 +120,8 @@ The web itself is also becoming an agent surface. Sites can publish `llms.txt` o
 - [Blueprint repositories standardize MCP and A2A service delivery](../concepts/blueprint-repositories-standardize-mcp-and-a2a-service-delivery.md) - standard templates let teams build agents behind shared interfaces and platform controls.
 - [Decouple agent harnesses from enterprise data layers](../concepts/decouple-agent-harnesses-from-enterprise-data-layers.md) - gateways let agent clients evolve without binding each one to every internal data source.
 - [MCP tool surfaces need default context budgets](../concepts/mcp-tool-surfaces-need-default-context-budgets.md) - large tool catalogs need defaults that preserve agent context and selection reliability.
+- [Make internal platforms self-service for agent users](../concepts/make-internal-platforms-self-service-for-agent-users.md) - coding agents cannot depend on person-specific deployment and provisioning knowledge.
+- [Expose observability as agent-readable feedback](../concepts/expose-observability-as-agent-readable-feedback.md) - agents need machine-readable verification signals to close their own loops.
 - [Adapt third-party MCP servers to the agent workflow](../concepts/adapt-third-party-mcp-servers-to-the-agent-workflow.md) - public tool servers should be adapted to the agent's task before production use.
 - [Enforce deterministic guardrails around sensitive tool calls](../concepts/enforce-deterministic-guardrails-around-sensitive-tool-calls.md) - agents should not be trusted to follow prompt-only boundaries for sensitive operations.
 - [Move mandatory brittle tool steps outside the agent loop](../concepts/move-mandatory-brittle-tool-steps-outside-the-agent-loop.md) - fixed setup steps can be handled before the agent receives control.
@@ -231,3 +235,4 @@ The web itself is also becoming an agent surface. Sites can publish `llms.txt` o
 - [Why, and how you need to sandbox AI-Generated Code? - Harshil Agrawal, Cloudflare](../sources/20260408_AHtGAgQ0Q_Q.md)
 - [Let LLMs Wander: Engineering RL Environments - Stefano Fiorucci](../sources/20260408_71V3fTaUp2Q.md)
 - [Bending a Public MCP Server Without Breaking It — Nimrod Hauser, Baz](../sources/20260408_U00AOI1eJUE.md)
+- [Platforms for Humans and Machines: Engineering for the Age of Agents - Juan Herreros Elorza](../sources/20260408_cCRO3ChaYhM.md)

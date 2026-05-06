@@ -511,3 +511,11 @@
 - Updated topics: [Tools](topics/tools.md), [Infrastructure](topics/infrastructure.md), [Agents](topics/agents.md)
 - Updated concepts: [Adapt Third-Party MCP Servers to the Agent Workflow](concepts/adapt-third-party-mcp-servers-to-the-agent-workflow.md), [Wrap Generic Tool Descriptions With Use-Case Guidance](concepts/wrap-generic-tool-descriptions-with-use-case-guidance.md), [Enforce Deterministic Guardrails Around Sensitive Tool Calls](concepts/enforce-deterministic-guardrails-around-sensitive-tool-calls.md), [Move Mandatory Brittle Tool Steps Outside the Agent Loop](concepts/move-mandatory-brittle-tool-steps-outside-the-agent-loop.md)
 - Notes: Added production MCP adaptation guidance covering public-tool curation, task-specific descriptions, pre-invocation guardrails, composed evidence tools, and deterministic setup steps.
+
+## [2026-05-06] ingest | Platforms for Humans and Machines: Engineering for the Age of Agents - Juan Herreros Elorza
+
+- Source: [Platforms for Humans and Machines: Engineering for the Age of Agents - Juan Herreros Elorza](sources/20260408_cCRO3ChaYhM.md)
+- Processed: `cCRO3ChaYhM`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Make internal platforms self-service for agent users](concepts/make-internal-platforms-self-service-for-agent-users.md), [Expose observability as agent-readable feedback](concepts/expose-observability-as-agent-readable-feedback.md), [Local-first platform workflows shorten agent feedback loops](concepts/local-first-platform-workflows-shorten-agent-feedback-loops.md), [Guard AI-assisted platform contributions with policy and context](concepts/guard-ai-assisted-platform-contributions-with-policy-and-context.md)
+- Notes: Added platform-engineering practices that make internal developer platforms usable by both humans and coding agents.

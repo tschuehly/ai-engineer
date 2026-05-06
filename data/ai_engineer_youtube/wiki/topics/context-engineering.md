@@ -36,6 +36,7 @@ Product engineering adds a customer-context layer to this problem. If AI handles
 - [Model airplanes give coding agents token-efficient exemplars](../concepts/model-airplanes-give-coding-agents-token-efficient-exemplars.md) - flattened reference projects can act as reusable, searchable skill context.
 - [Encode non-functional requirements as agent-visible context](../concepts/encode-non-functional-requirements-as-agent-visible-context.md) - durable quality expectations help agents reproduce team judgment.
 - [Treat prompts as distributed harness surfaces](../concepts/treat-prompts-as-distributed-harness-surfaces.md) - long-running work needs context refreshed through multiple instruction channels.
+- [Guard AI-assisted platform contributions with policy and context](../concepts/guard-ai-assisted-platform-contributions-with-policy-and-context.md) - platform contribution guidance belongs in agent-readable Markdown when hard policy alone is not enough.
 - [Collaborative plans become executable agent context](../concepts/collaborative-plans-become-executable-agent-context.md) - shared plans and discussion can become prompt context once teammates agree on intent.
 - [Social context dashboards keep agentic teams oriented](../concepts/social-context-dashboards-keep-agentic-teams-oriented.md) - code-adjacent conversations and teammate activity can orient agents and humans.
 - [Use PRDs to align agents on the design concept](../concepts/use-prds-to-align-agents-on-the-design-concept.md) - generated plans are useful when they capture current shared intent and decisions.
@@ -80,3 +81,4 @@ Product engineering adds a customer-context layer to this problem. If AI handles
 - [Taste & Craft: A Conversation with Tuomas Artman, CTO Linear & Gergely Orosz, @pragmaticengineer](../sources/20260421_wjk0ulMAkbc.md)
 - [The New Application Layer - Malte Ubl, CTO Vercel](../sources/20260420_XKup1pj-34M.md)
 - [Harness Engineering: How to Build Software When Humans Steer, Agents Execute - Ryan Lopopolo, OpenAI](../sources/20260417_am_oeAoUhew.md)
+- [Platforms for Humans and Machines: Engineering for the Age of Agents - Juan Herreros Elorza](../sources/20260408_cCRO3ChaYhM.md)

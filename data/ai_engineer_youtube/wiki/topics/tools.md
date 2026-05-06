@@ -22,6 +22,8 @@ Production MCP servers should be designed as agent-facing interfaces, not as dum
 
 Enterprise tool ecosystems also need registry metadata once many teams publish MCP servers and A2A agents. A private registry can start from public MCP catalog conventions, add approved internal and public servers, and enrich each entry with owner, environment, authentication, cost attribution, and use-case links. A paired A2A registry can use agent cards as the discoverable contract for agent identity, endpoint, capabilities, modalities, and auth requirements. These registries should be connected to DevOps pipelines so publishing an MCP server or agent updates both the runtime artifact and the governance catalog.
 
+Internal platform tools should be designed so agents can call the same intended paths humans use. APIs are the base layer, while CLIs or MCP servers can wrap those APIs for agent use; logs, metrics, traces, and relevant documentation should also be exposed through machine-friendly surfaces instead of only dashboards or full HTML pages.
+
 ## Key Concepts
 
 - [Build RL environments as software artifacts](../concepts/build-rl-environments-as-software-artifacts.md) - Verifiers-style packages combine parsers, rewards, rollout execution, and trainer integration for model environments.
@@ -33,6 +35,8 @@ Enterprise tool ecosystems also need registry metadata once many teams publish M
 - [Browser-native AI APIs bring local models into web apps](../concepts/browser-native-ai-apis-bring-local-models-into-web-apps.md) - browser-managed local models can become product APIs for summarization, proofreading, and multimodal prompts.
 - [Agent-readable web surfaces guide browsing agents](../concepts/agent-readable-web-surfaces-guide-browsing-agents.md) - `llms.txt` and WebMCP-style surfaces make sites easier for agents to read and operate.
 - [Build internal AI engineering platforms when off-the-shelf tools lack enterprise context](../concepts/build-internal-ai-engineering-platforms-when-off-the-shelf-tools-lack-enterprise-context.md) - enterprise tool platforms may need custom context and integrations around existing engineering systems.
+- [Make internal platforms self-service for agent users](../concepts/make-internal-platforms-self-service-for-agent-users.md) - platform tools should remove person-dependent handoffs from agent workflows.
+- [Expose observability as agent-readable feedback](../concepts/expose-observability-as-agent-readable-feedback.md) - operational signals should be available through APIs, CLIs, or MCP.
 - [Collaborate with complex agents through high-bandwidth artifacts](../concepts/collaborate-with-complex-agents-through-high-bandwidth-artifacts.md) - documents, tables, and comments can be tool surfaces for precise human-agent collaboration.
 - [Encode domain judgment in node-level agent skills](../concepts/encode-domain-judgment-in-node-level-agent-skills.md) - skills can provide contextual guidance at the work node where a special case appears.
 - [Use hosted model playgrounds to prototype before owning infrastructure](../concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md) - playgrounds can be a temporary integration surface before production runtime ownership.
@@ -187,3 +191,4 @@ Enterprise tool ecosystems also need registry metadata once many teams publish M
 - [Why, and how you need to sandbox AI-Generated Code? - Harshil Agrawal, Cloudflare](../sources/20260408_AHtGAgQ0Q_Q.md)
 - [Your Insecure MCP Server Won't Survive Production - Tun Shwe, Lenses](../sources/20260408_BurJvbqFr4c.md)
 - [Bending a Public MCP Server Without Breaking It — Nimrod Hauser, Baz](../sources/20260408_U00AOI1eJUE.md)
+- [Platforms for Humans and Machines: Engineering for the Age of Agents - Juan Herreros Elorza](../sources/20260408_cCRO3ChaYhM.md)

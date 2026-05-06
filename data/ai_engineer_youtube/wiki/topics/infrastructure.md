@@ -24,6 +24,8 @@ Enterprise AI registries are another infrastructure layer between experimentatio
 
 Multi-agent orchestration is also infrastructure once workflows leave the demo stage. A production system needs a workflow engine, state store, contract registry, serving layer, observability layer, and recovery controls around agent calls. Immutable append-only state versions make handoffs replayable; schema contracts catch malformed or low-confidence outputs at boundaries; circuit breakers, timeouts, rate limits, and compensation methods keep one failing agent or API from cascading through the full workflow.
 
+Developer-platform infrastructure also needs to be consumable by agents. Self-service provisioning, API/CLI/MCP access, local validation, machine-readable observability, and layered contribution guardrails let agents work against internal platforms without relying on informal human escalation paths.
+
 ## Key Concepts
 
 - [Use hosted model playgrounds to prototype before owning infrastructure](../concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md) - hosted tools can validate model and deployment choices before teams own the runtime.
@@ -87,6 +89,10 @@ Multi-agent orchestration is also infrastructure once workflows leave the demo s
 - [Extract contact-center intelligence as structured JSON](../concepts/extract-contact-center-intelligence-as-structured-json.md) - low-latency voice infrastructure can turn transcripts into CRM-ready structured records through prompt templates, STT tuning, and schema mapping.
 - [LLM guardrails need checkpoints at every untrusted boundary](../concepts/llm-guardrails-need-checkpoints-at-every-untrusted-boundary.md) - guardrail infrastructure should be placed around all untrusted context and action boundaries.
 - [Hybrid retrieval should support filters and embedding migration](../concepts/hybrid-retrieval-should-support-filters-and-embedding-migration.md) - retrieval infrastructure needs lexical/vector search, filters, and migration paths for changing embedding models.
+- [Make internal platforms self-service for agent users](../concepts/make-internal-platforms-self-service-for-agent-users.md) - agent-ready infrastructure removes person-dependent operational handoffs.
+- [Expose observability as agent-readable feedback](../concepts/expose-observability-as-agent-readable-feedback.md) - infrastructure should provide verification signals through machine-friendly interfaces.
+- [Local-first platform workflows shorten agent feedback loops](../concepts/local-first-platform-workflows-shorten-agent-feedback-loops.md) - local validation keeps agent iteration from waiting on slow remote pipelines.
+- [Guard AI-assisted platform contributions with policy and context](../concepts/guard-ai-assisted-platform-contributions-with-policy-and-context.md) - platform contribution paths need both hard policy and agent-readable conventions.
 
 ## Open Questions
 
@@ -150,3 +156,4 @@ Multi-agent orchestration is also infrastructure once workflows leave the demo s
 - [Your Insecure MCP Server Won't Survive Production - Tun Shwe, Lenses](../sources/20260408_BurJvbqFr4c.md)
 - [Bending a Public MCP Server Without Breaking It — Nimrod Hauser, Baz](../sources/20260408_U00AOI1eJUE.md)
 - [Contact Center Voice AI: Low-Latency Intelligence Extraction from Messy Audio Streams - Dippu Singh](../sources/20260408_IEF842ZEU5A.md)
+- [Platforms for Humans and Machines: Engineering for the Age of Agents - Juan Herreros Elorza](../sources/20260408_cCRO3ChaYhM.md)

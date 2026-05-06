@@ -48,6 +48,8 @@ Coding agents work best when their autonomy is constrained by small work items, 
 - [Agent tool loops turn model-required actions into executable results](../concepts/agent-tool-loops-turn-model-required-actions-into-executable-results.md) - coding-agent file and shell access needs validated tool execution and loop termination.
 - [Browser DevTools MCP turns runtime debugging into agent tools](../concepts/browser-devtools-mcp-turns-runtime-debugging-into-agent-tools.md) - front-end agents can inspect live runtime evidence through browser tooling.
 - [Agent software factories need runnable, contextual, and verifiable primitives](../concepts/agent-software-factories-need-runnable-contextual-and-verifiable-primitives.md) - autonomous coding work depends on repository structure, setup commands, external context, and validation.
+- [Local-first platform workflows shorten agent feedback loops](../concepts/local-first-platform-workflows-shorten-agent-feedback-loops.md) - agents should be able to validate platform work locally before remote pipelines.
+- [Guard AI-assisted platform contributions with policy and context](../concepts/guard-ai-assisted-platform-contributions-with-policy-and-context.md) - broader agent-assisted platform contributions need hard rules and clear instructions.
 - [Agent rules should emerge from observed off-rail behavior](../concepts/agent-rules-should-emerge-from-observed-off-rail-behavior.md) - repository rules should encode concrete repeated failures and sensitive boundaries.
 - [Cloud agents turn coding work into asynchronous VM-backed queues](../concepts/cloud-agents-turn-coding-work-into-asynchronous-vm-backed-queues.md) - VM-backed agents turn implementation into background work that still needs review and context routing.
 - [Align teams before agents implement](../concepts/align-teams-before-agents-implement.md) - unaligned agentic speed can create wrong features, duplicated work, and late PR rejection.
@@ -105,3 +107,4 @@ Coding agents work best when their autonomy is constrained by small work items, 
 - [Building pi in a World of Slop - Mario Zechner](../sources/20260416_RjfbvDXpFls.md)
 - [Paperclip: Open Source Human Control Plane for AI Labor - Dotta Bippa](../sources/20260415_h403btjldDQ.md)
 - [AI Didn't Kill the Web, It Moved in! - Olivier Leplus (AWS) & Yohan Lasorsa (Microsoft)](../sources/20260410_XZ0boOjtbNo.md)
+- [Platforms for Humans and Machines: Engineering for the Age of Agents - Juan Herreros Elorza](../sources/20260408_cCRO3ChaYhM.md)
