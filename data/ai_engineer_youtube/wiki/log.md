@@ -559,3 +559,11 @@
 - Updated topics: [Evaluation](topics/evaluation.md), [Coding Agents](topics/coding-agents.md), [Agents](topics/agents.md)
 - Updated concepts: [Measure AI Developer Productivity With Field Experiments, Not Benchmark Extrapolation Alone](concepts/measure-ai-developer-productivity-with-field-experiments-not-benchmark-extrapolation-alone.md), [Self-Reported Task Duration Is a Weak Productivity Signal](concepts/self-reported-task-duration-is-a-weak-productivity-signal.md), [Separate Watched and Unwatched Agent Time Horizons](concepts/separate-watched-and-unwatched-agent-time-horizons.md)
 - Notes: Added METR field-measurement guidance covering benchmark-to-productivity gaps, timing-measurement caveats, and supervision-dependent long-task autonomy.
+
+## [2026-05-06] ingest | Identity for AI Agents - Patrick Riley & Carlos Galan, Auth0
+
+- Source: [Identity for AI Agents - Patrick Riley & Carlos Galan, Auth0](sources/20260114_VSdV-AdSlis.md)
+- Processed: `VSdV-AdSlis`
+- Updated topics: [Agents](topics/agents.md), [Tools](topics/tools.md)
+- Updated concepts: [Identify the Human Subject Behind Agent Actions](concepts/identify-the-human-subject-behind-agent-actions.md), [Route High-Impact Agent Actions Through Explicit Human Approval Gates](concepts/route-high-impact-agent-actions-through-explicit-human-approval-gates.md), [Vault and Exchange Tokens for Scoped Upstream Agent Access](concepts/vault-and-exchange-tokens-for-scoped-upstream-agent-access.md), [Model MCP Servers as OAuth Clients in Downstream API Chains](concepts/model-mcp-servers-as-oauth-clients-in-downstream-api-chains.md)
+- Notes: Added Auth0 identity patterns for user-scoped agent authority, async approval, token-vault scope exchange, and MCP server OAuth client chains.

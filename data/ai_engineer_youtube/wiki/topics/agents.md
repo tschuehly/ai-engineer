@@ -28,6 +28,9 @@ Internal developer platforms are another agent surface. Practices that already h
 
 ## Key Concepts
 
+- [Identify the human subject behind agent actions](../concepts/identify-the-human-subject-behind-agent-actions.md) - authorization needs to know which human or enterprise subject the agent represents.
+- [Vault and exchange tokens for scoped upstream agent access](../concepts/vault-and-exchange-tokens-for-scoped-upstream-agent-access.md) - delegated API access should be scope-bound and token-managed outside the model loop.
+- [Model MCP servers as OAuth clients in downstream API chains](../concepts/model-mcp-servers-as-oauth-clients-in-downstream-api-chains.md) - MCP servers may need first-class client identity when they call upstream APIs.
 - [Build RL environments as software artifacts](../concepts/build-rl-environments-as-software-artifacts.md) - agent gyms make tool, code, and multi-step behavior evaluable and trainable through rollouts.
 - [Sandboxed code execution turns model reasoning into inspectable computation](../concepts/sandboxed-code-execution-turns-model-reasoning-into-inspectable-computation.md) - executable sandboxes let agents compute and verify without touching the user's environment.
 - [Human Control Planes Turn Agent Swarms Into Manageable Organizations](../concepts/human-control-planes-turn-agent-swarms-into-manageable-organizations.md) - org-chart, project, task, budget, and memory surfaces make large agent organizations supervisable.
@@ -245,3 +248,4 @@ Internal developer platforms are another agent surface. Practices that already h
 - [Cognitive Exhaust Fumes, or: Read-Only AI Is Underrated - Simon Podhajsky, Head of AI, Waypoint](../sources/20260408_u0TOSBbAw7c.md)
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md)
 - [How METR measures Long Tasks and Experienced Open Source Dev Productivity - Joel Becker, METR](../sources/20260119_k1t2xyWMUdY.md)
+- [Identity for AI Agents - Patrick Riley & Carlos Galan, Auth0](../sources/20260114_VSdV-AdSlis.md)
