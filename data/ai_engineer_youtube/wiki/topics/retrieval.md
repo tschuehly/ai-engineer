@@ -4,6 +4,8 @@
 
 Retrieval gives agents access to institutional systems such as Confluence, Jira, SharePoint, GitHub, Slack, knowledge graphs, and file-backed knowledge bases. The useful retrieval layer is not the one with the most connectors, but the one that provides accurate, task-relevant context and exposes gaps when the source knowledge is missing, stale, contradictory, or unavailable to the current user. Personal Markdown knowledge bases can play the same role at individual scale when saved links, notes, tasks, and project records are indexed, tagged, connected, and resurfaced when relevant. Context engines add a reasoning layer over retrieval by personalizing results to the task, team, permissions, and source relationships. Small models can improve this layer by embedding, reranking, extracting entities, filtering inputs, or building structured knowledge targets. Omnimodal embeddings extend the retrieval target beyond text: one semantic vector can represent text, audio, video, and documents so agents can retrieve, query, and compare concepts without lossy modality handoffs. Dimension-adaptive embeddings add an infrastructure lever by letting retrieval start with cheaper coarse vectors and expand when higher expressiveness is needed.
 
+Retrieval is also an LLM security boundary. Poisoned chunks can steer an answer when they are retrieved for the target query and ranked high enough to look useful, so retrieval systems need provenance, corpus hygiene, and safety checks before retrieved text becomes model context.
+
 ## Key Concepts
 
 - [Context blocks turn monolithic enterprise knowledge into reusable agent context](../concepts/context-blocks-turn-monolithic-enterprise-knowledge-into-reusable-agent-context.md) - decomposed context units give retrieval systems cleaner targets than broad documentation monoliths.
@@ -18,6 +20,8 @@ Retrieval gives agents access to institutional systems such as Confluence, Jira,
 - [Surface existing company information before redesigning processes](../concepts/surface-existing-company-information-before-redesigning-processes.md) - agents can retrieve and synthesize information that already exists outside the system of record.
 - [Use omnimodal embeddings for cross-modal retrieval and comparison](../concepts/use-omnimodal-embeddings-for-cross-modal-retrieval-and-comparison.md) - cross-modal retrieval needs semantic representations that preserve concepts across text, audio, video, and documents.
 - [Adapt embedding dimensions with Matryoshka representation learning](../concepts/adapt-embedding-dimensions-with-matryoshka-representation-learning.md) - retrieval systems can trade index cost and expressiveness without changing embedding models.
+- [LLM attack surfaces span prompts, context, retrieval, tools, and actions](../concepts/llm-attack-surfaces-span-prompts-context-retrieval-tools-and-actions.md) - RAG poisoning makes retrieved chunks part of the threat model.
+- [Filter untrusted context before it reaches the agent](../concepts/filter-untrusted-context-before-it-reaches-the-agent.md) - retrieved context should be screened before it becomes agent instructions.
 
 ## Open Questions
 
@@ -37,3 +41,4 @@ Retrieval gives agents access to institutional systems such as Confluence, Jira,
 - [Full Walkthrough: Workflow for AI Coding - Matt Pocock](../sources/20260424_-QFHIoCo-Ko.md)
 - [The New Application Layer - Malte Ubl, CTO Vercel](../sources/20260420_XKup1pj-34M.md)
 - [How Google DeepMind is researching the next Frontier of AI for Gemini - Raia Hadsell, VP of Research](../sources/20260418_zZsTVBXcbow.md)
+- [$1 AI Guardrails: The Unreasonable Effectiveness of Finetuned ModernBERTs - Diego Carpentero](../sources/20260416_YZHPEkfy2kc.md)
