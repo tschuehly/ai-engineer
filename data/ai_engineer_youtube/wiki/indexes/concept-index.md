@@ -2,6 +2,8 @@
 
 ## Agents
 
+- [Treat Coding Agents as Fast Junior Collaborators](../concepts/treat-coding-agents-as-fast-junior-collaborators.md)
+- [Configure Agent Modes, Rules, and Permissions as the Workflow Evolves](../concepts/configure-agent-modes-rules-and-permissions-as-the-workflow-evolves.md)
 - [Human Control Planes Turn Agent Swarms Into Manageable Organizations](../concepts/human-control-planes-turn-agent-swarms-into-manageable-organizations.md)
 - [Treat Multi-Agent Systems As Distributed Systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md)
 - [Build RL environments as software artifacts](../concepts/build-rl-environments-as-software-artifacts.md)
@@ -142,6 +144,9 @@
 
 ## Coding Agents
 
+- [Treat Coding Agents as Fast Junior Collaborators](../concepts/treat-coding-agents-as-fast-junior-collaborators.md)
+- [Keep Agent Context Small, Fresh, and Task-Specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md)
+- [Use Research-Plan-Implement Loops for Coding Agents](../concepts/use-research-plan-implement-loops-for-coding-agents.md)
 - [Ralph loops process one ticket at a time with fresh context](../concepts/ralph-loops-process-one-ticket-at-a-time-with-fresh-context.md)
 - [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](../concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md)
 - [Reusable Routines Turn Prompts Into Operational Agent Workflows](../concepts/reusable-routines-turn-prompts-into-operational-agent-workflows.md)
@@ -208,6 +213,7 @@
 
 ## Context Engineering
 
+- [Keep Agent Context Small, Fresh, and Task-Specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md)
 - [Filter untrusted context before it reaches the agent](../concepts/filter-untrusted-context-before-it-reaches-the-agent.md)
 - [Aggregated personal context creates mosaic and exfiltration risk](../concepts/aggregated-personal-context-creates-mosaic-and-exfiltration-risk.md)
 - [Encode domain judgment in node-level agent skills](../concepts/encode-domain-judgment-in-node-level-agent-skills.md)
@@ -348,6 +354,7 @@
 
 ## Evaluation
 
+- [Use Research-Plan-Implement Loops for Coding Agents](../concepts/use-research-plan-implement-loops-for-coding-agents.md)
 - [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](../concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md)
 - [Fine-tuned encoder discriminators make low-latency guardrails practical](../concepts/fine-tuned-encoder-discriminators-make-low-latency-guardrails-practical.md)
 - [LLM guardrails need checkpoints at every untrusted boundary](../concepts/llm-guardrails-need-checkpoints-at-every-untrusted-boundary.md)
@@ -489,6 +496,7 @@
 
 ## Tools
 
+- [Configure Agent Modes, Rules, and Permissions as the Workflow Evolves](../concepts/configure-agent-modes-rules-and-permissions-as-the-workflow-evolves.md)
 - [Reusable Routines Turn Prompts Into Operational Agent Workflows](../concepts/reusable-routines-turn-prompts-into-operational-agent-workflows.md)
 - [DSPy programs keep LLM intent separate from prompt strings](../concepts/dspy-programs-keep-llm-intent-separate-from-prompt-strings.md)
 - [DSPy adapters make prompt format a swappable runtime layer](../concepts/dspy-adapters-make-prompt-format-a-swappable-runtime-layer.md)
@@ -591,6 +599,10 @@
 
 ## Workflows
 
+- [Treat Coding Agents as Fast Junior Collaborators](../concepts/treat-coding-agents-as-fast-junior-collaborators.md)
+- [Keep Agent Context Small, Fresh, and Task-Specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md)
+- [Use Research-Plan-Implement Loops for Coding Agents](../concepts/use-research-plan-implement-loops-for-coding-agents.md)
+- [Configure Agent Modes, Rules, and Permissions as the Workflow Evolves](../concepts/configure-agent-modes-rules-and-permissions-as-the-workflow-evolves.md)
 - [Treat Multi-Agent Systems As Distributed Systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md)
 - [Choose Choreography Or Orchestration By Complexity and Autonomy](../concepts/choose-choreography-or-orchestration-by-complexity-and-autonomy.md)
 - [Use Immutable Versioned State For Agent Handoffs](../concepts/use-immutable-versioned-state-for-agent-handoffs.md)

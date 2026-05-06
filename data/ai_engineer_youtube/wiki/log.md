@@ -543,3 +543,11 @@
 - Updated topics: [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [DSPy Programs Keep LLM Intent Separate From Prompt Strings](concepts/dspy-programs-keep-llm-intent-separate-from-prompt-strings.md), [DSPy Adapters Make Prompt Format a Swappable Runtime Layer](concepts/dspy-adapters-make-prompt-format-a-swappable-runtime-layer.md), [Optimize LLM Programs With Metrics and Teacher Feedback](concepts/optimize-llm-programs-with-metrics-and-teacher-feedback.md), [Route Heterogeneous Documents Through Multimodal LLM Pipelines](concepts/route-heterogeneous-documents-through-multimodal-llm-pipelines.md)
 - Notes: Added DSPy guidance covering program-first LLM workflows, adapter-swappable prompt formats, metric-driven optimization, compiled reusable modules, and multimodal document routing.
+
+## [2026-05-06] ingest | Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary
+
+- Source: [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](sources/20260407_BEKc4P87XKo.md)
+- Processed: `BEKc4P87XKo`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Treat Coding Agents as Fast Junior Collaborators](concepts/treat-coding-agents-as-fast-junior-collaborators.md), [Keep Agent Context Small, Fresh, and Task-Specific](concepts/keep-agent-context-small-fresh-and-task-specific.md), [Use Research-Plan-Implement Loops for Coding Agents](concepts/use-research-plan-implement-loops-for-coding-agents.md), [Configure Agent Modes, Rules, and Permissions as the Workflow Evolves](concepts/configure-agent-modes-rules-and-permissions-as-the-workflow-evolves.md)
+- Notes: Added agentic engineering guidance covering junior-collaborator framing, context hygiene, phased research-plan-implement workflows, and evolving agent configuration controls.

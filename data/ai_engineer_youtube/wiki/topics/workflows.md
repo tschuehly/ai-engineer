@@ -55,6 +55,10 @@ DSPy-style workflows separate program shape from prompt shape: teams can define 
 - [Zero-bug policies turn bug inflow into immediate work](../concepts/zero-bug-policies-turn-bug-inflow-into-immediate-work.md) - bug workflow should prevent passive backlog accumulation.
 - [Product engineers need direct customer context](../concepts/product-engineers-need-direct-customer-context.md) - customer feedback surfaces help engineers steer AI-assisted product work.
 - [Practice-driven AI tool fluency beats theory-only adoption](../concepts/practice-driven-ai-tool-fluency-beats-theory-only-adoption.md) - AI workflow competence comes from repeated real-use experimentation.
+- [Treat coding agents as fast junior collaborators](../concepts/treat-coding-agents-as-fast-junior-collaborators.md) - workflow design should preserve human direction around agent execution.
+- [Keep agent context small, fresh, and task-specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md) - session hygiene prevents old or irrelevant context from steering later work.
+- [Use research-plan-implement loops for coding agents](../concepts/use-research-plan-implement-loops-for-coding-agents.md) - separate phases make coding-agent work more reviewable.
+- [Configure agent modes, rules, and permissions as the workflow evolves](../concepts/configure-agent-modes-rules-and-permissions-as-the-workflow-evolves.md) - workflow configuration should adapt as the team learns what agents can do safely.
 - [Make agent work more trustworthy by making it verifiable](../concepts/make-agent-work-more-trustworthy-by-making-it-verifiable.md) - workflow design should turn hard-to-review autonomy into checked or constrained subwork.
 - [Harness engineering shifts scarcity from code production to control surfaces](../concepts/harness-engineering-shifts-scarcity-from-code-production-to-control-surfaces.md) - workflow leverage moves to structures that steer abundant implementation capacity.
 - [Encode non-functional requirements as agent-visible context](../concepts/encode-non-functional-requirements-as-agent-visible-context.md) - team quality expectations need durable workflow artifacts.
@@ -181,6 +185,7 @@ DSPy-style workflows separate program shape from prompt shape: teams can define 
 
 ## Sources
 
+- [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md)
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md)
 - [OpenAI Codex Masterclass  - Vaibhav Srivastav & Katia Gil Guzman](../sources/20260429_MhHEGMFCEB0.md)
 - [Demand-Driven Context: A Methodology for Coherent Knowledge Bases Through Agent Failure](../sources/20260505__QAVExf_1uw.md)
