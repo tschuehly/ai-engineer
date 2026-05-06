@@ -271,3 +271,11 @@
 - Updated topics: [Evaluation](topics/evaluation.md), [Models](topics/models.md)
 - Updated concepts: [Evaluate Whether Models Reject Impossible or Nonsensical Premises](concepts/evaluate-whether-models-reject-impossible-or-nonsensical-premises.md), [Track User Dissatisfaction Alongside Pairwise Model Preference](concepts/track-user-dissatisfaction-alongside-pairwise-model-preference.md), [Benchmark Narrow Slices Separately From Real Expert Work](concepts/benchmark-narrow-slices-separately-from-real-expert-work.md)
 - Notes: Added BullshitBench and Arena-derived evaluation patterns for premise rejection, dissatisfaction tracking, and benchmark blind spots.
+
+## [2026-05-06] ingest | The End of Apps - Kitze, Sizzy.co
+
+- Source: [The End of Apps - Kitze, Sizzy.co](sources/20260423_4fntwuOoedA.md)
+- Processed: `4fntwuOoedA`
+- Updated topics: [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Single-Chat Personal Agents Collapse Mixed Life Domains](concepts/single-chat-personal-agents-collapse-mixed-life-domains.md), [Purpose-Built Agent Workspaces Make Orchestration Visible](concepts/purpose-built-agent-workspaces-make-orchestration-visible.md), [Explicit Context Attachments Can Outperform Opaque Agent Memory](concepts/explicit-context-attachments-can-outperform-opaque-agent-memory.md), [Local OS Agents Can Invert the Prompt Flow](concepts/local-os-agents-can-invert-the-prompt-flow.md)
+- Notes: Added personal-agent workspace patterns for domain separation, visible orchestration, explicit context attachment, and local OS-level proactive task flow.
