@@ -8,7 +8,9 @@ Browsers are becoming an infrastructure layer for both development and runtime A
 
 Agent-built applications add a deployment boundary: the harness that plans and controls work should not be treated as the same trust domain as generated code. Infrastructure for the new application layer needs sandboxes and execution separation so agent-written software can run without giving that code direct authority over the agent runtime.
 
-Code-mode infrastructure should also treat capability grants as part of the runtime contract. Generated programs should start with no authority, receive only the APIs or network paths required for the task, and leave enough execution trace to explain high-impact actions later.
+Code-mode infrastructure should also treat capability grants as part of the runtime contract. Generated programs should start with no authority, receive only the APIs or network paths required for the task, and leave enough execution trace to explain high-impact actions later. AI-generated code is still untrusted code: it can crash through hallucinated loops, expose secrets through over-helpful environment inspection, or exfiltrate data after prompt injection. Infrastructure should default-deny network access, proxy authenticated calls through trusted application code, isolate tenants by sandbox, cap CPU and memory, clean up idle sandboxes, and log what ran.
+
+Sandbox technology should match the workload. V8-style isolates are useful for short-lived tool calls, plugins, skills, data transformations, and code interpreters when filesystem, process, and arbitrary-binary access are intentionally absent. Containers are heavier, but they are the right shape when generated work must clone repositories, install packages, run builds, start dev servers, expose preview URLs, or otherwise need real operating-system features.
 
 Emerging MCP protocol work adds production-infrastructure concerns beyond ordinary tool schemas. Stateless transport can make MCP servers easier to deploy like ordinary stateless services, server discovery through well-known URLs can make agent-facing services easier to find, and asynchronous tasks plus extension mechanisms can support richer long-running or UI-backed agent interactions.
 
@@ -64,8 +66,10 @@ Multi-agent orchestration is also infrastructure once workflows leave the demo s
 - [Agent connectivity stack combines skills, MCP, CLIs, and computer use](../concepts/agent-connectivity-stack-combines-skills-mcp-clis-and-computer-use.md) - infrastructure choices should match whether connectivity needs local execution, remote protocol semantics, or governance.
 - [Filter MCP tools by scopes and step-up authorization](../concepts/filter-mcp-tools-by-scopes-and-step-up-authorization.md) - authorization state should shape the runtime tool surface exposed to agents.
 - [Expose large APIs through typed code mode](../concepts/expose-large-apis-through-typed-code-mode.md) - generated types can expose broad APIs without loading every endpoint as tool context.
+- [Treat AI-generated code as untrusted code](../concepts/treat-ai-generated-code-as-untrusted-code.md) - generated-code infrastructure needs threat modeling around hallucination, over-helpfulness, and prompt injection.
 - [Run agent-written API code inside programmable sandboxes](../concepts/run-agent-written-api-code-inside-programmable-sandboxes.md) - generated-code execution needs infrastructure-level isolation and abuse controls.
 - [Capability-based sandboxes start with no authority](../concepts/capability-based-sandboxes-start-with-no-authority.md) - generated-code infrastructure should grant explicit task capabilities rather than ambient access.
+- [Choose isolates or containers by generated-code workload](../concepts/choose-isolates-or-containers-by-generated-code-workload.md) - isolates and containers solve different generated-code infrastructure problems.
 - [Separate agent harnesses from generated-code execution](../concepts/separate-agent-harnesses-from-generated-code-execution.md) - agent control planes and generated-code runtimes should be separate trust domains.
 - [Adapt embedding dimensions with Matryoshka representation learning](../concepts/adapt-embedding-dimensions-with-matryoshka-representation-learning.md) - embedding infrastructure can tune vector dimensionality for index cost, latency, and semantic expressiveness.
 - [Neural weather models can target operational forecast variables directly](../concepts/neural-weather-models-can-target-operational-forecast-variables-directly.md) - operational AI systems should choose model targets and hardware paths around the variables users actually need.
@@ -89,6 +93,7 @@ Multi-agent orchestration is also infrastructure once workflows leave the demo s
 - Which MCP session fields are worth storing centrally when request routing should remain stateless?
 - Which MCP servers should support stateless transport or well-known server discovery before broad production rollout?
 - Which sandbox and rate-limit policies are required before a platform lets agents run generated code against its APIs?
+- Which generated-code workloads can stay in isolate-style runtimes, and which require container lifecycle, filesystem, and process controls?
 - Which enterprise-specific context and workflow integrations justify custom internal agent platforms instead of vendor tools?
 - When should infrastructure expose adaptive embedding dimensions as a product knob rather than a fixed model configuration?
 - Which AI asset registry fields should be enforced by CI/CD rather than manually maintained after deployment?
@@ -127,3 +132,4 @@ Multi-agent orchestration is also infrastructure once workflows leave the demo s
 - [AI Didn't Kill the Web, It Moved in! - Olivier Leplus (AWS) & Yohan Lasorsa (Microsoft)](../sources/20260410_XZ0boOjtbNo.md)
 - [From Chaos to Choreography: Multi-Agent Orchestration Patterns That Actually Work - Sandipan Bhaumik](../sources/20260408_2czYyrTzILg.md)
 - [OpenRAG: An open-source stack for RAG - Phil Nash](../sources/20260408_4TxOBhDRRCM.md)
+- [Why, and how you need to sandbox AI-Generated Code? - Harshil Agrawal, Cloudflare](../sources/20260408_AHtGAgQ0Q_Q.md)

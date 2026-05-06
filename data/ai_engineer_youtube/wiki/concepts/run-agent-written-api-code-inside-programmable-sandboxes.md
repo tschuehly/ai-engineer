@@ -15,6 +15,9 @@ Details:
 - The sandbox can expose policy as configuration, such as enabling or disabling node compatibility, allowing or blocking outbound network access, and restricting access to specific domains. (12:00-13:00)
 - Service APIs need rate limits and abuse protection because agent-written code can loop across many sandboxes and hammer endpoints faster than ordinary interactive users. (17:02-17:31)
 - Saved mini-scripts turn generated code into reusable automation such as scheduled scraping jobs, but they introduce maintenance duties because agents may need to repair brittle scripts and resave them when the target changes. (19:04-19:44)
+- Agrawal expands the threat model to five sandbox questions: can generated code read secrets, make outbound requests, read files or other tenants' data, affect other users' execution, or consume unbounded CPU and memory. (11:38-12:58)
+- When generated code needs authenticated APIs, proxy the request through trusted application code that adds credentials and returns the response; do not pass API keys into the sandbox environment. (27:13-28:37)
+- Container sandboxes need lifecycle controls such as `try finally` cleanup, maximum lifetimes, and execution logs because idle sandboxes cost money and remain a security surface. (28:40-35:09)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -25,7 +28,10 @@ Related concepts:
 - [Sandboxed Code Execution Turns Model Reasoning Into Inspectable Computation](sandboxed-code-execution-turns-model-reasoning-into-inspectable-computation.md)
 - [Expose Large APIs Through Typed Code Mode](expose-large-apis-through-typed-code-mode.md)
 - [Capability-Based Sandboxes Start With No Authority](capability-based-sandboxes-start-with-no-authority.md)
+- [Treat AI-generated code as untrusted code](treat-ai-generated-code-as-untrusted-code.md)
+- [Choose isolates or containers by generated-code workload](choose-isolates-or-containers-by-generated-code-workload.md)
 
 Sources:
 - [Code Mode: Let the Code do the Talking - Sunil Pai, Cloudflare](../sources/20260419_8txf05vVVl4.md), 02:04-14:38
 - [MCP = Mega Context Problem - Matt Carey](../sources/20260425_YBYUvGOuotE.md), 09:40-19:44
+- [Why, and how you need to sandbox AI-Generated Code? - Harshil Agrawal, Cloudflare](../sources/20260408_AHtGAgQ0Q_Q.md), 11:38-12:58, 27:13-35:09

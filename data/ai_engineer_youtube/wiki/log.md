@@ -479,3 +479,11 @@
 - Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Models](topics/models.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Build RL Environments as Software Artifacts](concepts/build-rl-environments-as-software-artifacts.md), [Use Verifiable Rewards for Language-Model RL](concepts/use-verifiable-rewards-for-language-model-rl.md), [Control Environment Noise for Group-Based RL](concepts/control-environment-noise-for-group-based-rl.md), [Bootstrap RL With Targeted SFT Before Reinforcement Learning](concepts/bootstrap-rl-with-targeted-sft-before-reinforcement-learning.md), [Inspect Rollouts Before Trusting RL Environment Scores](concepts/inspect-rollouts-before-trusting-rl-environment-scores.md)
 - Notes: Added Verifiers-backed RL environment guidance covering environment packaging, deterministic rewards, grouped rollout controls, synthetic SFT warm-up, and rollout inspection before trusting scores.
+
+## [2026-05-06] ingest | Why, and how you need to sandbox AI-Generated Code? - Harshil Agrawal, Cloudflare
+
+- Source: [Why, and how you need to sandbox AI-Generated Code? - Harshil Agrawal, Cloudflare](sources/20260408_AHtGAgQ0Q_Q.md)
+- Processed: `AHtGAgQ0Q_Q`
+- Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md)
+- Updated concepts: [Treat AI-generated code as untrusted code](concepts/treat-ai-generated-code-as-untrusted-code.md), [Choose isolates or containers by generated-code workload](concepts/choose-isolates-or-containers-by-generated-code-workload.md), [Capability-Based Sandboxes Start With No Authority](concepts/capability-based-sandboxes-start-with-no-authority.md), [Run Agent-Written API Code Inside Programmable Sandboxes](concepts/run-agent-written-api-code-inside-programmable-sandboxes.md)
+- Notes: Added generated-code sandboxing guidance covering LLM-specific threat modes, capability allow-lists, isolate/container runtime selection, per-user isolation, secret proxying, cleanup, logging, and validation.
