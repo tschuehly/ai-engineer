@@ -12,6 +12,8 @@ Agent-facing products should treat APIs and CLIs as primary interfaces once agen
 
 MCP is one part of the agent connectivity stack, not a universal replacement for every surface. Skills carry reusable domain knowledge, CLIs and computer use fit local sandboxed environments, and MCP fits remote semantics, authorization, governance, resources, long-running tasks, and cross-client application surfaces. MCP applications and skills over MCP point to a richer server-authored surface where an integration can ship UI, tools, and current usage guidance together.
 
+RAG stacks are another tool surface when their internals are inspectable and editable. OpenRAG's LangFlow layer exposes ingestion, retrieval, guardrails, parsers, URL ingestion, calculators, prompt templates, and OpenSearch tools as flow components; its API keys and MCP server let other applications or agents call the same retrieval system instead of duplicating it.
+
 Open-source agent tools need extension points as well as integrations. Plugin architecture can keep memory, wiki, dreaming, and other experimental capabilities installable without forcing every idea into core or overloading maintainers with unrelated pull requests. Ordinary package-manager distribution can be enough for harness extensions when extensions are just code modules that add tools, commands, events, providers, or compaction behavior. Routine systems are another tool layer: they package repeated prompts as scheduled or manually parameterized workflows, often invoking skills for specialized domain guidance while keeping the trigger, variables, and project or agent ownership explicit.
 
 Tool metadata is also a security boundary. MCP and function-calling systems should treat full tool descriptions, hidden parameters, and approval summaries as prompt and policy surfaces, because a model may act on instructions the reviewer never saw. High-risk tools need approval UI that exposes the effective action and guardrails that inspect the full model-visible metadata.
@@ -93,6 +95,8 @@ Enterprise tool ecosystems also need registry metadata once many teams publish M
 - [Treat prompts as distributed harness surfaces](../concepts/treat-prompts-as-distributed-harness-surfaces.md) - rules, skills, lints, PR comments, and tests can act as agent-steering tool surfaces.
 - [Deep research agents need planning, grounded evidence, and pivot loops](../concepts/deep-research-agents-need-planning-grounded-evidence-and-pivot-loops.md) - research tools should support search, inspection, citation, and synthesis.
 - [Split exploratory research agents from constrained writing workflows](../concepts/split-exploratory-research-agents-from-constrained-writing-workflows.md) - Markdown artifacts can be the tool boundary between agentic and deterministic phases.
+- [Agentic retrieval lets models plan search steps](../concepts/agentic-retrieval-lets-models-plan-search-steps.md) - retrieval can be exposed as tools an agent chooses and sequences.
+- [Structure-aware document parsing improves RAG chunk quality](../concepts/structure-aware-document-parsing-improves-rag-chunk-quality.md) - document parsing settings are practical tool controls for retrieval quality.
 
 ## Open Questions
 
@@ -122,6 +126,7 @@ Enterprise tool ecosystems also need registry metadata once many teams publish M
 - Which guidance belongs in server-authored skills over MCP instead of client-local skills?
 - Which lint messages or CI comments are important enough to be treated as first-class prompt surfaces?
 - Which registry metadata fields should be mandatory before an MCP server or A2A agent can be discovered by production agents?
+- Which RAG internals should be editable in visual flows, and which should remain fixed behind a stable API or MCP server?
 
 ## Sources
 
@@ -162,3 +167,4 @@ Enterprise tool ecosystems also need registry metadata once many teams publish M
 - [One Registry to Rule them All - Sonny Merla, Mauro Luchetti, & Mattia Redaelli, Quantyca](../sources/20260410_VXfRt_H-V08.md)
 - [Judge the Judge: Building LLM Evaluators That Actually Work with GEPA - Mahmoud Mabrouk, Agenta AI](../sources/20260410_X4dEHRzBLmc.md)
 - [AI Didn't Kill the Web, It Moved in! - Olivier Leplus (AWS) & Yohan Lasorsa (Microsoft)](../sources/20260410_XZ0boOjtbNo.md)
+- [OpenRAG: An open-source stack for RAG - Phil Nash](../sources/20260408_4TxOBhDRRCM.md)

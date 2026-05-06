@@ -6,6 +6,8 @@ Retrieval gives agents access to institutional systems such as Confluence, Jira,
 
 Retrieval is also an LLM security boundary. Poisoned chunks can steer an answer when they are retrieved for the target query and ranked high enough to look useful, so retrieval systems need provenance, corpus hygiene, and safety checks before retrieved text becomes model context.
 
+RAG systems benefit from reusable baselines, but not from a single fixed recipe. Document parsing, chunking, embedding choice, hybrid lexical/vector search, metadata filters, and query-time agent loops all need to be tuned against the actual corpus and user questions. Structure-aware ingestion is especially important for messy source formats: preserving document hierarchy, tables, images, OCR output, and modality-specific extraction gives retrieval cleaner chunks than plain text extraction. Hybrid indexes add another control point by combining vector similarity, keyword search, filters, aggregations, and embedding-model migration paths.
+
 ## Key Concepts
 
 - [Context blocks turn monolithic enterprise knowledge into reusable agent context](../concepts/context-blocks-turn-monolithic-enterprise-knowledge-into-reusable-agent-context.md) - decomposed context units give retrieval systems cleaner targets than broad documentation monoliths.
@@ -22,6 +24,10 @@ Retrieval is also an LLM security boundary. Poisoned chunks can steer an answer 
 - [Adapt embedding dimensions with Matryoshka representation learning](../concepts/adapt-embedding-dimensions-with-matryoshka-representation-learning.md) - retrieval systems can trade index cost and expressiveness without changing embedding models.
 - [LLM attack surfaces span prompts, context, retrieval, tools, and actions](../concepts/llm-attack-surfaces-span-prompts-context-retrieval-tools-and-actions.md) - RAG poisoning makes retrieved chunks part of the threat model.
 - [Filter untrusted context before it reaches the agent](../concepts/filter-untrusted-context-before-it-reaches-the-agent.md) - retrieved context should be screened before it becomes agent instructions.
+- [RAG stacks need modular baselines instead of one fixed recipe](../concepts/rag-stacks-need-modular-baselines-instead-of-one-fixed-recipe.md) - shared RAG components should remain tunable for the source corpus and user workflow.
+- [Structure-aware document parsing improves RAG chunk quality](../concepts/structure-aware-document-parsing-improves-rag-chunk-quality.md) - preserving hierarchy, tables, OCR, and images gives retrieval better chunk boundaries.
+- [Hybrid retrieval should support filters and embedding migration](../concepts/hybrid-retrieval-should-support-filters-and-embedding-migration.md) - vector search should be paired with lexical search, metadata scope, and migration paths.
+- [Agentic retrieval lets models plan search steps](../concepts/agentic-retrieval-lets-models-plan-search-steps.md) - retrieval tools can let the model decompose and repeat searches instead of relying on one top-k query.
 
 ## Open Questions
 
@@ -31,6 +37,7 @@ Retrieval is also an LLM security boundary. Poisoned chunks can steer an answer 
 - How should personal retrieval distinguish durable notes from stale bookmarks and noisy saved material?
 - What status metadata should retrieval systems use to demote closed PRDs and historical planning artifacts?
 - When should cross-modal retrieval use one omnimodal embedding space instead of separate modality-specific indexes plus fusion?
+- Which RAG pipeline changes should be exposed as user-facing filters, operator settings, or internal LangFlow-style flow edits?
 
 ## Sources
 
@@ -42,3 +49,4 @@ Retrieval is also an LLM security boundary. Poisoned chunks can steer an answer 
 - [The New Application Layer - Malte Ubl, CTO Vercel](../sources/20260420_XKup1pj-34M.md)
 - [How Google DeepMind is researching the next Frontier of AI for Gemini - Raia Hadsell, VP of Research](../sources/20260418_zZsTVBXcbow.md)
 - [$1 AI Guardrails: The Unreasonable Effectiveness of Finetuned ModernBERTs - Diego Carpentero](../sources/20260416_YZHPEkfy2kc.md)
+- [OpenRAG: An open-source stack for RAG - Phil Nash](../sources/20260408_4TxOBhDRRCM.md)

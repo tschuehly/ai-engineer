@@ -71,6 +71,7 @@ Multi-agent orchestration is also infrastructure once workflows leave the demo s
 - [Neural weather models can target operational forecast variables directly](../concepts/neural-weather-models-can-target-operational-forecast-variables-directly.md) - operational AI systems should choose model targets and hardware paths around the variables users actually need.
 - [Fine-tuned encoder discriminators make low-latency guardrails practical](../concepts/fine-tuned-encoder-discriminators-make-low-latency-guardrails-practical.md) - guardrail serving can use encoder classifiers where generative judges are too slow.
 - [LLM guardrails need checkpoints at every untrusted boundary](../concepts/llm-guardrails-need-checkpoints-at-every-untrusted-boundary.md) - guardrail infrastructure should be placed around all untrusted context and action boundaries.
+- [Hybrid retrieval should support filters and embedding migration](../concepts/hybrid-retrieval-should-support-filters-and-embedding-migration.md) - retrieval infrastructure needs lexical/vector search, filters, and migration paths for changing embedding models.
 
 ## Open Questions
 
@@ -125,3 +126,4 @@ Multi-agent orchestration is also infrastructure once workflows leave the demo s
 - [Running LLMs locally: Practical LLM Performance on DGX Spark - Mozhgan Kabiri chimeh, NVIDIA](../sources/20260410_c5-kx2bwoCk.md)
 - [AI Didn't Kill the Web, It Moved in! - Olivier Leplus (AWS) & Yohan Lasorsa (Microsoft)](../sources/20260410_XZ0boOjtbNo.md)
 - [From Chaos to Choreography: Multi-Agent Orchestration Patterns That Actually Work - Sandipan Bhaumik](../sources/20260408_2czYyrTzILg.md)
+- [OpenRAG: An open-source stack for RAG - Phil Nash](../sources/20260408_4TxOBhDRRCM.md)

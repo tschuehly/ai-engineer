@@ -8,6 +8,8 @@ Incoming AI-generated work needs evaluation too: automated security reports, iss
 
 Guardrail evaluation is also part of production AI evaluation. Safety layers should be tested at the same boundaries where attacks enter: direct prompts, external context, RAG chunks, MCP tool descriptions, memory, agent plans, and model responses. For latency-sensitive paths, a fine-tuned encoder discriminator can be evaluated as a binary classifier and compared against slower LLM-as-judge checks, while human approval flows should be tested for whether reviewers see the effective action and hidden parameters they are approving. Multi-agent organizations add another evaluation question: does the workflow actually force review, approval, and role-specific quality checks, or are those still best-effort prompt instructions?
 
+RAG evaluation should treat the pipeline as a set of changeable components, not a solved top-k pattern. Parsing quality, chunk hierarchy, OCR, image descriptions, embedding models, hybrid lexical/vector scoring, metadata filters, and agentic search decisions can each change the answer. Agentic retrieval adds a trace-level evaluation requirement: teams should inspect which searches the model chose, not only whether the final answer sounded plausible.
+
 ## Key Concepts
 
 - [Compare models by task, thinking budget, cost, and latency](../concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - side-by-side model comparisons help choose enough reasoning at acceptable speed and cost.
@@ -64,6 +66,8 @@ Guardrail evaluation is also part of production AI evaluation. Safety layers sho
 - [Human approval can hide tool-description and parameter risk](../concepts/human-approval-can-hide-tool-description-and-parameter-risk.md) - approval UX needs evals for whether it exposes enough detail to support real review.
 - [Domain Gemma variants package specialized policy and task behavior](../concepts/domain-gemma-variants-package-specialized-policy-and-task-behavior.md) - safety and domain variants still need validation against the policies or specialist tasks they claim to support.
 - [Neural weather models can target operational forecast variables directly](../concepts/neural-weather-models-can-target-operational-forecast-variables-directly.md) - domain models should be evaluated against operational targets such as forecast lead time, tail risk, and phenomenon-specific prediction.
+- [RAG stacks need modular baselines instead of one fixed recipe](../concepts/rag-stacks-need-modular-baselines-instead-of-one-fixed-recipe.md) - RAG quality depends on tuning shared components to the corpus and user task.
+- [Agentic retrieval lets models plan search steps](../concepts/agentic-retrieval-lets-models-plan-search-steps.md) - evals should inspect model-selected search actions and final answers.
 
 ## Open Questions
 
@@ -94,6 +98,7 @@ Guardrail evaluation is also part of production AI evaluation. Safety layers sho
 - Which reviewer-agent findings are stable enough to gate CI, and which should remain advisory comments?
 - How much human annotation quality and distribution coverage is enough before judge-prompt optimization becomes trustworthy?
 - Which local inference metrics beyond time to first token and throughput best predict real user-perceived responsiveness?
+- How should retrieval evals isolate whether failures came from parsing, chunking, embedding choice, hybrid scoring, filters, or agent search planning?
 
 ## Sources
 
@@ -131,3 +136,4 @@ Guardrail evaluation is also part of production AI evaluation. Safety layers sho
 - [Paperclip: Open Source Human Control Plane for AI Labor - Dotta Bippa](../sources/20260415_h403btjldDQ.md)
 - [Judge the Judge: Building LLM Evaluators That Actually Work with GEPA - Mahmoud Mabrouk, Agenta AI](../sources/20260410_X4dEHRzBLmc.md)
 - [Running LLMs locally: Practical LLM Performance on DGX Spark - Mozhgan Kabiri chimeh, NVIDIA](../sources/20260410_c5-kx2bwoCk.md)
+- [OpenRAG: An open-source stack for RAG - Phil Nash](../sources/20260408_4TxOBhDRRCM.md)

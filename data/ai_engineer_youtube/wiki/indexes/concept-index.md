@@ -7,6 +7,7 @@
 - [Choose Choreography Or Orchestration By Complexity and Autonomy](../concepts/choose-choreography-or-orchestration-by-complexity-and-autonomy.md)
 - [Use Immutable Versioned State For Agent Handoffs](../concepts/use-immutable-versioned-state-for-agent-handoffs.md)
 - [Wrap Agent Calls With Circuit Breakers and Compensation](../concepts/wrap-agent-calls-with-circuit-breakers-and-compensation.md)
+- [Agentic Retrieval Lets Models Plan Search Steps](../concepts/agentic-retrieval-lets-models-plan-search-steps.md)
 - [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](../concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md)
 - [Grow Agent Organizations Incrementally By Role Quality and Cost](../concepts/grow-agent-organizations-incrementally-by-role-quality-and-cost.md)
 - [Make agent work more trustworthy by making it verifiable](../concepts/make-agent-work-more-trustworthy-by-making-it-verifiable.md)
@@ -241,6 +242,7 @@
 - [Choose Choreography Or Orchestration By Complexity and Autonomy](../concepts/choose-choreography-or-orchestration-by-complexity-and-autonomy.md)
 - [Use Immutable Versioned State For Agent Handoffs](../concepts/use-immutable-versioned-state-for-agent-handoffs.md)
 - [Wrap Agent Calls With Circuit Breakers and Compensation](../concepts/wrap-agent-calls-with-circuit-breakers-and-compensation.md)
+- [Hybrid Retrieval Should Support Filters And Embedding Migration](../concepts/hybrid-retrieval-should-support-filters-and-embedding-migration.md)
 - [Fine-tuned encoder discriminators make low-latency guardrails practical](../concepts/fine-tuned-encoder-discriminators-make-low-latency-guardrails-practical.md)
 - [LLM guardrails need checkpoints at every untrusted boundary](../concepts/llm-guardrails-need-checkpoints-at-every-untrusted-boundary.md)
 - [Build internal AI engineering platforms when off-the-shelf tools lack enterprise context](../concepts/build-internal-ai-engineering-platforms-when-off-the-shelf-tools-lack-enterprise-context.md)
@@ -374,6 +376,8 @@
 - [Gate AI-generated open-source contributions through human-effort filters](../concepts/gate-ai-generated-open-source-contributions-through-human-effort-filters.md)
 - [Domain Gemma variants package specialized policy and task behavior](../concepts/domain-gemma-variants-package-specialized-policy-and-task-behavior.md)
 - [Neural weather models can target operational forecast variables directly](../concepts/neural-weather-models-can-target-operational-forecast-variables-directly.md)
+- [RAG Stacks Need Modular Baselines Instead Of One Fixed Recipe](../concepts/rag-stacks-need-modular-baselines-instead-of-one-fixed-recipe.md)
+- [Agentic Retrieval Lets Models Plan Search Steps](../concepts/agentic-retrieval-lets-models-plan-search-steps.md)
 
 ## Models
 
@@ -409,6 +413,10 @@
 - [Expose explicit control signals for generative media models](../concepts/expose-explicit-control-signals-for-generative-media-models.md)
 - [Use omnimodal embeddings for cross-modal retrieval and comparison](../concepts/use-omnimodal-embeddings-for-cross-modal-retrieval-and-comparison.md)
 - [Adapt embedding dimensions with Matryoshka representation learning](../concepts/adapt-embedding-dimensions-with-matryoshka-representation-learning.md)
+- [RAG Stacks Need Modular Baselines Instead Of One Fixed Recipe](../concepts/rag-stacks-need-modular-baselines-instead-of-one-fixed-recipe.md)
+- [Structure-Aware Document Parsing Improves RAG Chunk Quality](../concepts/structure-aware-document-parsing-improves-rag-chunk-quality.md)
+- [Hybrid Retrieval Should Support Filters And Embedding Migration](../concepts/hybrid-retrieval-should-support-filters-and-embedding-migration.md)
+- [Agentic Retrieval Lets Models Plan Search Steps](../concepts/agentic-retrieval-lets-models-plan-search-steps.md)
 - [Neural weather models can target operational forecast variables directly](../concepts/neural-weather-models-can-target-operational-forecast-variables-directly.md)
 - [Interactive world models need memory, control, and live prompting](../concepts/interactive-world-models-need-memory-control-and-live-prompting.md)
 
@@ -428,6 +436,8 @@
 - [Use social and expert graphs to personalize coding-agent context](../concepts/use-social-and-expert-graphs-to-personalize-coding-agent-context.md)
 - [Personal knowledge bases become agent context substrates](../concepts/personal-knowledge-bases-become-agent-context-substrates.md)
 - [Explicit context attachments can outperform opaque agent memory](../concepts/explicit-context-attachments-can-outperform-opaque-agent-memory.md)
+- [Structure-Aware Document Parsing Improves RAG Chunk Quality](../concepts/structure-aware-document-parsing-improves-rag-chunk-quality.md)
+- [Agentic Retrieval Lets Models Plan Search Steps](../concepts/agentic-retrieval-lets-models-plan-search-steps.md)
 - [Retire completed planning docs before they become agent doc rot](../concepts/retire-completed-planning-docs-before-they-become-agent-doc-rot.md)
 - [Use omnimodal embeddings for cross-modal retrieval and comparison](../concepts/use-omnimodal-embeddings-for-cross-modal-retrieval-and-comparison.md)
 - [Adapt embedding dimensions with Matryoshka representation learning](../concepts/adapt-embedding-dimensions-with-matryoshka-representation-learning.md)

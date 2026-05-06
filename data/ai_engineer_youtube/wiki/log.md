@@ -463,3 +463,11 @@
 - Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Treat Multi-Agent Systems As Distributed Systems](concepts/treat-multi-agent-systems-as-distributed-systems.md), [Choose Choreography Or Orchestration By Complexity and Autonomy](concepts/choose-choreography-or-orchestration-by-complexity-and-autonomy.md), [Use Immutable Versioned State For Agent Handoffs](concepts/use-immutable-versioned-state-for-agent-handoffs.md), [Wrap Agent Calls With Circuit Breakers and Compensation](concepts/wrap-agent-calls-with-circuit-breakers-and-compensation.md)
 - Notes: Added multi-agent production patterns covering distributed-systems failure modes, coordination pattern choice, append-only state handoffs, boundary contracts, circuit breakers, and saga compensation.
+
+## [2026-05-06] ingest | OpenRAG: An open-source stack for RAG - Phil Nash
+
+- Source: [OpenRAG: An open-source stack for RAG - Phil Nash](sources/20260408_4TxOBhDRRCM.md)
+- Processed: `4TxOBhDRRCM`
+- Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Retrieval](topics/retrieval.md), [Tools](topics/tools.md)
+- Updated concepts: [RAG Stacks Need Modular Baselines Instead Of One Fixed Recipe](concepts/rag-stacks-need-modular-baselines-instead-of-one-fixed-recipe.md), [Structure-Aware Document Parsing Improves RAG Chunk Quality](concepts/structure-aware-document-parsing-improves-rag-chunk-quality.md), [Hybrid Retrieval Should Support Filters And Embedding Migration](concepts/hybrid-retrieval-should-support-filters-and-embedding-migration.md), [Agentic Retrieval Lets Models Plan Search Steps](concepts/agentic-retrieval-lets-models-plan-search-steps.md)
+- Notes: Added OpenRAG-backed RAG guidance covering Docling ingestion, OpenSearch/JVector hybrid retrieval, LangFlow customization, local model options, APIs, MCP exposure, and agentic retrieval traces.

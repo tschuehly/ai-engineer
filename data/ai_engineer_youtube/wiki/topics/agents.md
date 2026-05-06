@@ -131,6 +131,7 @@ The web itself is also becoming an agent surface. Sites can publish `llms.txt` o
 - [Choose autonomy level by task uncertainty and control needs](../concepts/choose-autonomy-level-by-task-uncertainty-and-control-needs.md) - not every agent request needs open-ended autonomy.
 - [Deep research agents need planning, grounded evidence, and pivot loops](../concepts/deep-research-agents-need-planning-grounded-evidence-and-pivot-loops.md) - research agents should search, inspect, cite, pivot, and synthesize rather than only answer from priors.
 - [Split exploratory research agents from constrained writing workflows](../concepts/split-exploratory-research-agents-from-constrained-writing-workflows.md) - adjacent tasks can communicate through artifacts when they need different autonomy levels.
+- [Agentic retrieval lets models plan search steps](../concepts/agentic-retrieval-lets-models-plan-search-steps.md) - retrieval agents can decide which searches to perform and how to use the results.
 
 ## Open Questions
 
@@ -220,3 +221,4 @@ The web itself is also becoming an agent surface. Sites can publish `llms.txt` o
 - [One Registry to Rule them All - Sonny Merla, Mauro Luchetti, & Mattia Redaelli, Quantyca](../sources/20260410_VXfRt_H-V08.md)
 - [AI Didn't Kill the Web, It Moved in! - Olivier Leplus (AWS) & Yohan Lasorsa (Microsoft)](../sources/20260410_XZ0boOjtbNo.md)
 - [From Chaos to Choreography: Multi-Agent Orchestration Patterns That Actually Work - Sandipan Bhaumik](../sources/20260408_2czYyrTzILg.md)
+- [OpenRAG: An open-source stack for RAG - Phil Nash](../sources/20260408_4TxOBhDRRCM.md)
