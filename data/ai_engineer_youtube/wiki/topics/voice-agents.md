@@ -2,7 +2,7 @@
 
 ## Overview
 
-Voice agents add realtime audio constraints to the usual agent stack of model, instructions, tools, and runtime. The central architecture choice is whether to chain speech-to-text, text reasoning, and text-to-speech components or use a speech-to-speech model that preserves conversational semantics and reduces latency. Stateful streaming APIs extend that decision into a runtime shape: audio buffers, visual frames, transcriptions, realtime events, and tool calls may all flow over one session. Low-latency consumer products may prioritize expressiveness and responsiveness, while customer-service workflows often need stronger accuracy, integrations, and guardrails even if the experience is less fluid. Production voice systems should keep the conversational agent's tool surface small, delegate complex tasks to specialist agents or models, and preserve context through summarized handoffs. Evaluation needs traces, labeled conversations, transcript-based checks, audio-specific judgments, synthetic conversations, and guardrails that fit within the timing of spoken responses.
+Voice agents add realtime audio constraints to the usual agent stack of model, instructions, tools, and runtime. The central architecture choice is whether to chain speech-to-text, text reasoning, and text-to-speech components or use a speech-to-speech model that preserves conversational semantics and reduces latency. Stateful streaming APIs extend that decision into a runtime shape: audio buffers, visual frames, transcriptions, realtime events, and tool calls may all flow over one session. Low-latency consumer products may prioritize expressiveness and responsiveness, while customer-service workflows often need stronger accuracy, integrations, and guardrails even if the experience is less fluid. Contact-center voice intelligence adds a data-pipeline shape: preserve speaker channels, tune STT with domain vocabulary and normalization, extract structured JSON, mask PII before LLM processing, and verify CRM-bound summaries before durable updates. Production voice systems should keep the conversational agent's tool surface small, delegate complex tasks to specialist agents or models, and preserve context through summarized handoffs. Evaluation needs traces, labeled conversations, transcript-based checks, audio-specific judgments, synthetic conversations, and guardrails that fit within the timing of spoken responses.
 
 ## Key Concepts
 
@@ -12,15 +12,20 @@ Voice agents add realtime audio constraints to the usual agent stack of model, i
 - [Prompt voice agents for persona, prosody, and brand fit](../concepts/prompt-voice-agents-for-persona-prosody-and-brand-fit.md) - voice prompts shape spoken demeanor, tone, pacing, and brand realism.
 - [Evaluate voice agents with traces, transcripts, audio checks, and simulations](../concepts/evaluate-voice-agents-with-traces-transcripts-audio-checks-and-simulations.md) - voice evals combine standard task checks with audio-specific and latency-aware validation.
 - [Realtime multimodal agents use stateful streams for audio, vision, and tools](../concepts/realtime-multimodal-agents-use-stateful-streams-for-audio-vision-and-tools.md) - live audio agents can include visual context, streaming events, transcriptions, and tools in the same session.
+- [Preserve speaker channels before voice-agent transcription](../concepts/preserve-speaker-channels-before-voice-agent-transcription.md) - voice pipelines should keep agent and customer speech separable before STT and summarization.
+- [Extract contact-center intelligence as structured JSON](../concepts/extract-contact-center-intelligence-as-structured-json.md) - contact-center voice workflows need schema-aligned intent, action, entity, sentiment, and CRM fields rather than free-form summaries.
+- [Verify AI call summaries before CRM sync](../concepts/verify-ai-call-summaries-before-crm-sync.md) - operators should validate AI-generated summaries before they update durable customer records.
 
 ## Open Questions
 
 - Which voice-agent workflows should accept extra latency for chained control rather than use a lower-latency speech-to-speech model?
 - What audio-specific eval rubrics reliably measure brand fit, pacing, interruption handling, and conversational comfort?
 - How should teams evaluate multimodal voice agents when the relevant context includes screen frames or camera input as well as transcript content?
+- Which contact-center fields can be auto-confirmed safely, and which always require operator validation before CRM sync?
 
 ## Sources
 
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md)
 - [Building Effective Voice Agents - Toki Sherbakov + Anoop Kotha, OpenAI](../sources/20250720_-OXiljTJxQU.md)
 - [Building Conversational Agents - Thor Schaeff and Philipp Schmid, Google DeepMind](../sources/20260430_cVzf49yg0D8.md)
+- [Contact Center Voice AI: Low-Latency Intelligence Extraction from Messy Audio Streams - Dippu Singh](../sources/20260408_IEF842ZEU5A.md)

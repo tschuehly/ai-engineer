@@ -18,6 +18,8 @@ Production MCP deployment has a sharp security cliff between local stdio and rem
 
 Guardrails are an infrastructure layer, not just a prompt. Production systems need low-latency classifiers or policy checks at input, output, retrieval, MCP, memory, and plan boundaries, and the serving path must account for added latency. ModernBERT-style encoder discriminators are one concrete option when a self-hosted safety layer needs millisecond-scale classification rather than seconds of LLM-as-judge delay.
 
+Voice infrastructure has an upstream data-quality layer before any model call. Contact-center pipelines should preserve raw channel fidelity, apply denoising and level normalization, run early PII masking, tune STT with domain vocabulary and inverse text normalization, and map structured LLM outputs through an API gateway into CRM schemas. Each added privacy or verification layer can increase latency, so architecture decisions must balance low-latency extraction with compliance and durable-record accuracy.
+
 Enterprise AI registries are another infrastructure layer between experimentation and production. A model gateway can centralize model access, authentication, budget erosion, and request analytics, while registries track MCP servers, A2A agents, models, ownership, environments, costs, and use-case lineage. The practical deployment pattern is to give teams template repositories and CI/CD flows that publish both runtime artifacts and registry metadata, so governance stays aligned with what is actually deployed.
 
 Multi-agent orchestration is also infrastructure once workflows leave the demo stage. A production system needs a workflow engine, state store, contract registry, serving layer, observability layer, and recovery controls around agent calls. Immutable append-only state versions make handoffs replayable; schema contracts catch malformed or low-confidence outputs at boundaries; circuit breakers, timeouts, rate limits, and compensation methods keep one failing agent or API from cascading through the full workflow.
@@ -79,6 +81,8 @@ Multi-agent orchestration is also infrastructure once workflows leave the demo s
 - [Adapt embedding dimensions with Matryoshka representation learning](../concepts/adapt-embedding-dimensions-with-matryoshka-representation-learning.md) - embedding infrastructure can tune vector dimensionality for index cost, latency, and semantic expressiveness.
 - [Neural weather models can target operational forecast variables directly](../concepts/neural-weather-models-can-target-operational-forecast-variables-directly.md) - operational AI systems should choose model targets and hardware paths around the variables users actually need.
 - [Fine-tuned encoder discriminators make low-latency guardrails practical](../concepts/fine-tuned-encoder-discriminators-make-low-latency-guardrails-practical.md) - guardrail serving can use encoder classifiers where generative judges are too slow.
+- [Preserve speaker channels before voice-agent transcription](../concepts/preserve-speaker-channels-before-voice-agent-transcription.md) - audio infrastructure should retain speaker separation, denoise, normalize, and mask PII before model processing.
+- [Extract contact-center intelligence as structured JSON](../concepts/extract-contact-center-intelligence-as-structured-json.md) - low-latency voice infrastructure can turn transcripts into CRM-ready structured records through prompt templates, STT tuning, and schema mapping.
 - [LLM guardrails need checkpoints at every untrusted boundary](../concepts/llm-guardrails-need-checkpoints-at-every-untrusted-boundary.md) - guardrail infrastructure should be placed around all untrusted context and action boundaries.
 - [Hybrid retrieval should support filters and embedding migration](../concepts/hybrid-retrieval-should-support-filters-and-embedding-migration.md) - retrieval infrastructure needs lexical/vector search, filters, and migration paths for changing embedding models.
 
@@ -106,6 +110,7 @@ Multi-agent orchestration is also infrastructure once workflows leave the demo s
 - Which AI asset registry fields should be enforced by CI/CD rather than manually maintained after deployment?
 - Which local workstation workloads should stay local because privacy, queueing, or latency matter more than elastic scale?
 - Which agent handoff contracts, state versions, and recovery transitions should be persisted for audit and replay?
+- How much PII masking and operator verification can voice infrastructure add before latency undermines the realtime workflow?
 
 ## Sources
 
@@ -141,3 +146,4 @@ Multi-agent orchestration is also infrastructure once workflows leave the demo s
 - [OpenRAG: An open-source stack for RAG - Phil Nash](../sources/20260408_4TxOBhDRRCM.md)
 - [Why, and how you need to sandbox AI-Generated Code? - Harshil Agrawal, Cloudflare](../sources/20260408_AHtGAgQ0Q_Q.md)
 - [Your Insecure MCP Server Won't Survive Production - Tun Shwe, Lenses](../sources/20260408_BurJvbqFr4c.md)
+- [Contact Center Voice AI: Low-Latency Intelligence Extraction from Messy Audio Streams - Dippu Singh](../sources/20260408_IEF842ZEU5A.md)

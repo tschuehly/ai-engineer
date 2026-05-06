@@ -18,6 +18,8 @@ Repository-local web-agent workflows can make implementation, verification, prev
 
 Multi-agent workflows need explicit coordination and recovery choices. Event-driven choreography works when agents can act independently and the system can trace every event; centralized orchestration works when dependencies, state, rollback, or auditability matter more than autonomy. Durable workflows should pass immutable state versions through data-contract validation and wrap agent calls with circuit breakers, graceful degradation, and compensation so partial failures do not leave hidden side effects.
 
+Contact-center voice workflows show a concrete human-in-the-loop automation pattern: shift after-call documentation from manual memory work into a streamed extraction pipeline, but keep operators responsible for quick validation before the generated summary updates CRM fields. The workflow is only as strong as the early audio and transcript stages; speaker separation, domain STT, masking, grounded JSON extraction, and schema mapping all happen before the final human confirmation.
+
 ## Key Concepts
 
 - [Bootstrap RL with targeted SFT before reinforcement learning](../concepts/bootstrap-rl-with-targeted-sft-before-reinforcement-learning.md) - interactive post-training can teach protocol first, then optimize outcomes through RL.
@@ -29,6 +31,9 @@ Multi-agent workflows need explicit coordination and recovery choices. Event-dri
 - [Choose choreography or orchestration by complexity and autonomy](../concepts/choose-choreography-or-orchestration-by-complexity-and-autonomy.md) - workflow control should be selected by dependency complexity, autonomy need, and auditability.
 - [Use immutable versioned state for agent handoffs](../concepts/use-immutable-versioned-state-for-agent-handoffs.md) - workflows become debuggable when each handoff records a sealed state version and contract check.
 - [Wrap agent calls with circuit breakers and compensation](../concepts/wrap-agent-calls-with-circuit-breakers-and-compensation.md) - retry, fail-fast, degradation, and rollback behavior should be planned before production.
+- [Preserve speaker channels before voice-agent transcription](../concepts/preserve-speaker-channels-before-voice-agent-transcription.md) - voice workflows should prevent speaker-attribution errors before they reach extraction or review.
+- [Extract contact-center intelligence as structured JSON](../concepts/extract-contact-center-intelligence-as-structured-json.md) - after-call workflows become automatable when conversation content is converted into schema-aligned business fields.
+- [Verify AI call summaries before CRM sync](../concepts/verify-ai-call-summaries-before-crm-sync.md) - human verification keeps CRM updates accountable without reverting to fully manual note-taking.
 - [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](../concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md) - explicit role handoffs turn validation from a reminder into a workflow path.
 - [Reusable Routines Turn Prompts Into Operational Agent Workflows](../concepts/reusable-routines-turn-prompts-into-operational-agent-workflows.md) - repeated prompts can become scheduled or manually triggered routines with variables and skills.
 - [Repository skills and AGENTS.md encode repeatable web-agent workflows](../concepts/repository-skills-and-agents-md-encode-repeatable-web-agent-workflows.md) - web feature work can include local QA, preview sharing, and handoff rules by default.
@@ -156,6 +161,7 @@ Multi-agent workflows need explicit coordination and recovery choices. Event-dri
 - Which prompt surfaces should be refreshed during long-running agent work as context gets compacted or paged out?
 - Which multi-agent workflows need saga-style compensation because partial side effects are unacceptable?
 - How should teams decide when an RL run is slow-but-healthy versus stuck and worth interrupting?
+- Which after-call voice fields should be reviewed by the operator versus routed directly into analytics-only data stores?
 
 ## Sources
 
@@ -197,3 +203,4 @@ Multi-agent workflows need explicit coordination and recovery choices. Event-dri
 - [Judge the Judge: Building LLM Evaluators That Actually Work with GEPA - Mahmoud Mabrouk, Agenta AI](../sources/20260410_X4dEHRzBLmc.md)
 - [From Chaos to Choreography: Multi-Agent Orchestration Patterns That Actually Work - Sandipan Bhaumik](../sources/20260408_2czYyrTzILg.md)
 - [Let LLMs Wander: Engineering RL Environments - Stefano Fiorucci](../sources/20260408_71V3fTaUp2Q.md)
+- [Contact Center Voice AI: Low-Latency Intelligence Extraction from Messy Audio Streams - Dippu Singh](../sources/20260408_IEF842ZEU5A.md)

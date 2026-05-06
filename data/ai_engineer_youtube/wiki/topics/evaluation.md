@@ -10,6 +10,8 @@ Guardrail evaluation is also part of production AI evaluation. Safety layers sho
 
 RAG evaluation should treat the pipeline as a set of changeable components, not a solved top-k pattern. Parsing quality, chunk hierarchy, OCR, image descriptions, embedding models, hybrid lexical/vector scoring, metadata filters, and agentic search decisions can each change the answer. Agentic retrieval adds a trace-level evaluation requirement: teams should inspect which searches the model chose, not only whether the final answer sounded plausible.
 
+Contact-center voice evaluation should inspect each pipeline stage, not only the final summary. Speaker-channel preservation, STT accuracy under accents and poor audio, domain vocabulary, numeric normalization, grounded JSON extraction, hallucination checks, operator edits, and CRM-field mappings each create a failure point that can corrupt business records or analytics.
+
 RL environments add an evaluation shape for interactive model behavior: the same environment can generate rollouts, compute deterministic or weighted rewards, and become the training loop. That makes the environment itself part of the eval artifact. Teams should control environment noise, inspect trajectories, check for hidden opponent or simulator bias, and try the trained model in the real task before trusting reward curves or benchmark scores.
 
 ## Key Concepts
@@ -44,6 +46,9 @@ RL environments add an evaluation shape for interactive model behavior: the same
 - [Evaluate context changes with lint, task scenarios, and probabilistic budgets](../concepts/evaluate-context-changes-with-lint-task-scenarios-and-probabilistic-budgets.md) - context evals need structural checks, behavioral scenarios, and repeated-run thresholds.
 - [Use agent logs and review feedback as context observability signals](../concepts/use-agent-logs-and-review-feedback-as-context-observability-signals.md) - production and review feedback should become test cases or context improvements.
 - [Evaluate voice agents with traces, transcripts, audio checks, and simulations](../concepts/evaluate-voice-agents-with-traces-transcripts-audio-checks-and-simulations.md) - voice evals need observability, transcript checks, audio judgments, simulations, and latency-aware guardrails.
+- [Preserve speaker channels before voice-agent transcription](../concepts/preserve-speaker-channels-before-voice-agent-transcription.md) - evaluation should catch speaker-mixing failures before they become wrong summaries.
+- [Extract contact-center intelligence as structured JSON](../concepts/extract-contact-center-intelligence-as-structured-json.md) - structured outputs make call-intent, entity, sentiment, and CRM-field checks more explicit than narrative summary review.
+- [Verify AI call summaries before CRM sync](../concepts/verify-ai-call-summaries-before-crm-sync.md) - operator edits provide a production signal for extraction accuracy and schema-mapping failures.
 - [Use golden data sets and mixed scoring functions for AI application confidence](../concepts/use-golden-data-sets-and-mixed-scoring-functions-for-ai-application-confidence.md) - curated edge cases plus deterministic and judge-model scores create a repeatable release gate.
 - [Apply online scoring to production traces with cost-aware sampling](../concepts/apply-online-scoring-to-production-traces-with-cost-aware-sampling.md) - production monitoring should score live traces while sampling expensive model-based judges deliberately.
 - [Replay production failures before promoting prompt fixes](../concepts/replay-production-failures-before-promoting-prompt-fixes.md) - production failures should become replayable regression cases before a prompt patch is trusted.
@@ -106,6 +111,7 @@ RL environments add an evaluation shape for interactive model behavior: the same
 - Which local inference metrics beyond time to first token and throughput best predict real user-perceived responsiveness?
 - How should retrieval evals isolate whether failures came from parsing, chunking, embedding choice, hybrid scoring, filters, or agent search planning?
 - Which RL environment scores should require manual rollout review before they are allowed to drive training decisions?
+- How should contact-center systems measure whether operator edits are correcting model errors, STT errors, schema mapping errors, or policy preferences?
 
 ## Sources
 
@@ -145,3 +151,4 @@ RL environments add an evaluation shape for interactive model behavior: the same
 - [Running LLMs locally: Practical LLM Performance on DGX Spark - Mozhgan Kabiri chimeh, NVIDIA](../sources/20260410_c5-kx2bwoCk.md)
 - [OpenRAG: An open-source stack for RAG - Phil Nash](../sources/20260408_4TxOBhDRRCM.md)
 - [Let LLMs Wander: Engineering RL Environments - Stefano Fiorucci](../sources/20260408_71V3fTaUp2Q.md)
+- [Contact Center Voice AI: Low-Latency Intelligence Extraction from Messy Audio Streams - Dippu Singh](../sources/20260408_IEF842ZEU5A.md)

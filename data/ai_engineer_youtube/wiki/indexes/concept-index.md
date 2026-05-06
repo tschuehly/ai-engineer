@@ -250,6 +250,8 @@
 - [Wrap Agent Calls With Circuit Breakers and Compensation](../concepts/wrap-agent-calls-with-circuit-breakers-and-compensation.md)
 - [Hybrid Retrieval Should Support Filters And Embedding Migration](../concepts/hybrid-retrieval-should-support-filters-and-embedding-migration.md)
 - [Fine-tuned encoder discriminators make low-latency guardrails practical](../concepts/fine-tuned-encoder-discriminators-make-low-latency-guardrails-practical.md)
+- [Preserve speaker channels before voice-agent transcription](../concepts/preserve-speaker-channels-before-voice-agent-transcription.md)
+- [Extract contact-center intelligence as structured JSON](../concepts/extract-contact-center-intelligence-as-structured-json.md)
 - [LLM guardrails need checkpoints at every untrusted boundary](../concepts/llm-guardrails-need-checkpoints-at-every-untrusted-boundary.md)
 - [Build internal AI engineering platforms when off-the-shelf tools lack enterprise context](../concepts/build-internal-ai-engineering-platforms-when-off-the-shelf-tools-lack-enterprise-context.md)
 - [Prevent AI billing surprises with caps, notifications, and rate limits](../concepts/prevent-ai-billing-surprises-with-caps-notifications-and-rate-limits.md)
@@ -304,6 +306,9 @@
 - [Profile small-model architectures on target hardware](../concepts/profile-small-model-architectures-on-target-hardware.md)
 - [Use local AI workstations when iteration, privacy, or latency dominate](../concepts/use-local-ai-workstations-when-iteration-privacy-or-latency-dominate.md)
 - [Make local inference benchmarks reproducible artifacts](../concepts/make-local-inference-benchmarks-reproducible-artifacts.md)
+- [Preserve speaker channels before voice-agent transcription](../concepts/preserve-speaker-channels-before-voice-agent-transcription.md)
+- [Extract contact-center intelligence as structured JSON](../concepts/extract-contact-center-intelligence-as-structured-json.md)
+- [Verify AI call summaries before CRM sync](../concepts/verify-ai-call-summaries-before-crm-sync.md)
 - [Treat quantization as a memory-bandwidth lever](../concepts/treat-quantization-as-a-memory-bandwidth-lever.md)
 - [Use MLX Swift LM for Apple local model integration](../concepts/use-mlx-swift-lm-for-apple-local-model-integration.md)
 - [Interleave local and global attention to trade context for efficiency](../concepts/interleave-local-and-global-attention-to-trade-context-for-efficiency.md)
@@ -548,6 +553,9 @@
 - [Evaluate voice agents with traces, transcripts, audio checks, and simulations](../concepts/evaluate-voice-agents-with-traces-transcripts-audio-checks-and-simulations.md)
 - [Realtime multimodal agents use stateful streams for audio, vision, and tools](../concepts/realtime-multimodal-agents-use-stateful-streams-for-audio-vision-and-tools.md)
 - [Realtime multimodal models should plan over specialized local actuators](../concepts/realtime-multimodal-models-should-plan-over-specialized-local-actuators.md)
+- [Preserve speaker channels before voice-agent transcription](../concepts/preserve-speaker-channels-before-voice-agent-transcription.md)
+- [Extract contact-center intelligence as structured JSON](../concepts/extract-contact-center-intelligence-as-structured-json.md)
+- [Verify AI call summaries before CRM sync](../concepts/verify-ai-call-summaries-before-crm-sync.md)
 
 ## Workflows
 
@@ -555,6 +563,8 @@
 - [Choose Choreography Or Orchestration By Complexity and Autonomy](../concepts/choose-choreography-or-orchestration-by-complexity-and-autonomy.md)
 - [Use Immutable Versioned State For Agent Handoffs](../concepts/use-immutable-versioned-state-for-agent-handoffs.md)
 - [Wrap Agent Calls With Circuit Breakers and Compensation](../concepts/wrap-agent-calls-with-circuit-breakers-and-compensation.md)
+- [Extract contact-center intelligence as structured JSON](../concepts/extract-contact-center-intelligence-as-structured-json.md)
+- [Verify AI call summaries before CRM sync](../concepts/verify-ai-call-summaries-before-crm-sync.md)
 - [Human Control Planes Turn Agent Swarms Into Manageable Organizations](../concepts/human-control-planes-turn-agent-swarms-into-manageable-organizations.md)
 - [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](../concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md)
 - [Reusable Routines Turn Prompts Into Operational Agent Workflows](../concepts/reusable-routines-turn-prompts-into-operational-agent-workflows.md)

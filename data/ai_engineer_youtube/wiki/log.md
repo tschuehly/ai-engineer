@@ -495,3 +495,11 @@
 - Updated topics: [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md)
 - Updated concepts: [Secure MCP Servers by Shrinking the Agent-Visible Surface](concepts/secure-mcp-servers-by-shrinking-the-agent-visible-surface.md), [Move Production MCP From API Keys to Scoped OAuth Token Flows](concepts/move-production-mcp-from-api-keys-to-scoped-oauth-token-flows.md), [Govern MCP Tool Calls With Tool-Level Policy and End-to-End Traces](concepts/govern-mcp-tool-calls-with-tool-level-policy-and-end-to-end-traces.md)
 - Notes: Added production MCP security guidance covering agent-visible surface minimization, remote OAuth 2.1/CIMD authorization, and enterprise tool-call governance.
+
+## [2026-05-06] ingest | Contact Center Voice AI: Low-Latency Intelligence Extraction from Messy Audio Streams - Dippu Singh
+
+- Source: [Contact Center Voice AI: Low-Latency Intelligence Extraction from Messy Audio Streams - Dippu Singh](sources/20260408_IEF842ZEU5A.md)
+- Processed: `IEF842ZEU5A`
+- Updated topics: [Voice Agents](topics/voice-agents.md), [Workflows](topics/workflows.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md)
+- Updated concepts: [Preserve Speaker Channels Before Voice-Agent Transcription](concepts/preserve-speaker-channels-before-voice-agent-transcription.md), [Extract Contact-Center Intelligence as Structured JSON](concepts/extract-contact-center-intelligence-as-structured-json.md), [Verify AI Call Summaries Before CRM Sync](concepts/verify-ai-call-summaries-before-crm-sync.md)
+- Notes: Added contact-center voice intelligence guidance covering channel-preserving audio capture, STT preparation, grounded structured JSON extraction, PII masking, operator verification, and CRM sync.
