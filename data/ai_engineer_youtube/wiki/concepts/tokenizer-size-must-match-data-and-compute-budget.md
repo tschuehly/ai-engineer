@@ -1,0 +1,23 @@
+# Tokenizer Size Must Match Data and Compute Budget
+
+Summary: Tokenizer design is a capacity and data-efficiency decision, not just preprocessing. Larger tokenizers can represent broader domains and languages, but they require more data and compute; tiny local runs may need character-level tokenization so the model can learn at all.
+
+Use when:
+- Choosing a tokenizer for a constrained training run.
+- Explaining why a production tokenizer choice may fail in a small-data experiment.
+
+Details:
+- The workshop treats tokenizer selection as one of the first and most important decisions when creating a transformer model (09:12-09:39).
+- A multilingual or larger model may need a huge tokenizer and therefore much more training data; for the local workshop, a character-level tokenizer with 65 symbols reduces embedding size and helps the model train under data limits (04:40-05:10, 09:54-10:17).
+- Using a full tokenizer in the tiny local setup would not converge in the allotted time; BPE-style tokenizers are positioned as a common choice for proper LLM training with larger corpora and longer runs (12:12-13:49).
+- Tokenizer training data matters by modality and domain: audio tokens trained on music data differ from tokens trained on voice data, and supporting both is harder than optimizing for one (01:19:04-01:20:08).
+
+Related topics:
+- [Models](../topics/models.md)
+- [Infrastructure](../topics/infrastructure.md)
+
+Related concepts:
+- [Local LLM training exposes the core model-building stack](local-llm-training-exposes-the-core-model-building-stack.md)
+
+Sources:
+- [Training an LLM from Scratch, Locally - Angelos Perivolaropoulos, ElevenLabs](../sources/20260504_UsB70Tf5zcE.md), 04:40-13:49

@@ -11,6 +11,7 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Evaluation](topics/evaluation.md) - task-level validation of models, tools, retrieval, and agent workflows.
 - [Inference](topics/inference.md) - production serving patterns for model runtimes, batching, routing, autoscaling, and resource use.
 - [Infrastructure](topics/infrastructure.md) - deployment runtimes, conversion paths, compilation choices, and operational validation.
+- [Models](topics/models.md) - model architecture, tokenizer, training, adaptation, and sizing choices under practical constraints.
 - [Retrieval](topics/retrieval.md) - bringing accurate, task-relevant knowledge from enterprise systems and curated context blocks into agent work.
 - [Tools](topics/tools.md) - MCP integrations, scripts, skills, and tool-use guidance for agent workflows.
 - [Workflows](topics/workflows.md) - repeatable loops for agent execution, failure discovery, and context improvement.

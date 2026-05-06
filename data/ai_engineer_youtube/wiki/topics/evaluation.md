@@ -2,7 +2,7 @@
 
 ## Overview
 
-Evaluation for AI engineering should measure whether models, tools, retrieval layers, skills, and agent workflows solve the intended task under real constraints. For enterprise context systems, a working connector or non-empty answer is not enough; the retrieved context must close the actual knowledge gap that blocks delivery. For coding-agent loops, checks must verify both deterministic correctness and whether an independent reviewer can see failures the producing agent missed. For skills, useful evals compare behavior with and without the skill while also validating that the harness is checking the right thing.
+Evaluation for AI engineering should measure whether models, tools, retrieval layers, skills, and agent workflows solve the intended task under real constraints. For enterprise context systems, a working connector or non-empty answer is not enough; the retrieved context must close the actual knowledge gap that blocks delivery. For coding-agent loops, checks must verify both deterministic correctness and whether an independent reviewer can see failures the producing agent missed. For skills, useful evals compare behavior with and without the skill while also validating that the harness is checking the right thing. For model training, basic train and validation loss curves are an early diagnostic layer before generated samples or downstream task evals are trusted.
 
 ## Key Concepts
 
@@ -12,15 +12,18 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - [Use independent validation contexts to reduce agent confirmation bias](../concepts/use-independent-validation-contexts-to-reduce-agent-confirmation-bias.md) - separate review agents can reduce self-affirming validation.
 - [Evaluate agent skills with task scenarios and comparative conditions](../concepts/evaluate-agent-skills-with-task-scenarios-and-comparative-conditions.md) - task scenarios and with/without comparisons reveal whether a skill changes behavior.
 - [Validate eval harnesses before trusting skill scores](../concepts/validate-eval-harnesses-before-trusting-skill-scores.md) - incorrect assertions or judges can misreport skill impact.
+- [Use loss curves to debug local model training](../concepts/use-loss-curves-to-debug-local-model-training.md) - train and validation loss patterns separate non-learning, overfitting, and instability.
 
 ## Open Questions
 
 - Which task-level signals best distinguish a bad retrieval result from an incomplete underlying knowledge base?
 - What validation should run outside the producing agent's context for code changes with production risk?
 - What mix of deterministic assertions and LLM-as-judge grading is reliable enough for skill evaluation?
+- Which generated-sample checks add signal after a tiny model's loss curves look healthy?
 
 ## Sources
 
 - [Demand-Driven Context: A Methodology for Coherent Knowledge Bases Through Agent Failure](../sources/20260505__QAVExf_1uw.md)
 - [Ralph Loops: Build Dumb AI Loops That Ship - Chris Parsons, Cherrypick](../sources/20260504_2TLXsxkz0zI.md)
 - [Skill Issue: How We Used AI to Make Agents Actually Good at Supabase - Pedro Rodrigues, Supabase](../sources/20260504_GmAQKINjv1E.md)
+- [Training an LLM from Scratch, Locally - Angelos Perivolaropoulos, ElevenLabs](../sources/20260504_UsB70Tf5zcE.md)

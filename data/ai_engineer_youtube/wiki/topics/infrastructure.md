@@ -2,7 +2,7 @@
 
 ## Overview
 
-AI infrastructure spans both edge deployment and server-side inference operations. Edge AI needs a path from model conversion through quantization, runtime integration, accelerator selection, and fleet validation. Server-side small-model inference needs model-aware runtimes plus routing, queueing, autoscaling, observability, and GPU provisioning so many specialized models can run efficiently in production.
+AI infrastructure spans local training environments, edge deployment, and server-side inference operations. Edge AI needs a path from model conversion through quantization, runtime integration, accelerator selection, and fleet validation. Server-side small-model inference needs model-aware runtimes plus routing, queueing, autoscaling, observability, and GPU provisioning so many specialized models can run efficiently in production. Local training work adds a smaller-scale infrastructure lesson: choose a setup that can run on MPS, CUDA, CPU, or Colab, and keep the model, tokenizer, and batch sizing proportional to the available memory.
 
 ## Key Concepts
 
@@ -10,13 +10,17 @@ AI infrastructure spans both edge deployment and server-side inference operation
 - [Benchmark edge models across the device fleet before shipping](../concepts/benchmark-edge-models-across-the-device-fleet-before-shipping.md) - compilation and acceleration choices should be validated against representative Android devices.
 - [Hot-swap small models to avoid one-model-per-GPU waste](../concepts/hot-swap-small-models-to-avoid-one-model-per-gpu-waste.md) - dynamic model loading helps keep accelerator capacity productive when many small models share the fleet.
 - [Production inference combines model support with cluster operations](../concepts/production-inference-combines-model-support-with-cluster-operations.md) - runtime support and infrastructure operations have to be designed together.
+- [Local LLM training exposes the core model-building stack](../concepts/local-llm-training-exposes-the-core-model-building-stack.md) - local model training makes tokenizer, architecture, training, and inference decisions explicit.
+- [Tokenizer size must match data and compute budget](../concepts/tokenizer-size-must-match-data-and-compute-budget.md) - tokenizer capacity has direct implications for memory, convergence, and required training data.
 
 ## Open Questions
 
 - Which conversion and quantization recipes preserve enough model quality for each target device class?
 - Which autoscaling signal best captures useful utilization for mixed small-model workloads?
+- How far can local CPU, MPS, or Colab training runs be trusted before moving to larger accelerator infrastructure?
 
 ## Sources
 
 - [Accelerating AI on Edge - Chintan Parikh and Weiyi Wang, Google DeepMind](../sources/20260505_Lm8BLHkxiAo.md)
 - [The Small Model Infrastructure Nobody Built (So We Did) - Filip Makraduli, Superlinked](../sources/20260505_qdh_x-uRs9g.md)
+- [Training an LLM from Scratch, Locally - Angelos Perivolaropoulos, ElevenLabs](../sources/20260504_UsB70Tf5zcE.md)

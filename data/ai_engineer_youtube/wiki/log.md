@@ -39,3 +39,11 @@
 - Updated topics: [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Agent skills package progressive-disclosure context for repeatable workflows](concepts/agent-skills-package-progressive-disclosure-context-for-repeatable-workflows.md), [Use skills for workflow guidance and MCP for integrations](concepts/use-skills-for-workflow-guidance-and-mcp-for-integrations.md), [Evaluate agent skills with task scenarios and comparative conditions](concepts/evaluate-agent-skills-with-task-scenarios-and-comparative-conditions.md), [Validate eval harnesses before trusting skill scores](concepts/validate-eval-harnesses-before-trusting-skill-scores.md)
 - Notes: Added a skill-development slice covering progressive disclosure, MCP/tool boundaries, comparative skill evals, and evaluator correctness checks.
+
+## [2026-05-06] ingest | Training an LLM from Scratch, Locally - Angelos Perivolaropoulos, ElevenLabs
+
+- Source: [Training an LLM from Scratch, Locally - Angelos Perivolaropoulos, ElevenLabs](sources/20260504_UsB70Tf5zcE.md)
+- Processed: `UsB70Tf5zcE`
+- Updated topics: [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Models](topics/models.md)
+- Updated concepts: [Local LLM training exposes the core model-building stack](concepts/local-llm-training-exposes-the-core-model-building-stack.md), [Tokenizer size must match data and compute budget](concepts/tokenizer-size-must-match-data-and-compute-budget.md), [Use loss curves to debug local model training](concepts/use-loss-curves-to-debug-local-model-training.md)
+- Notes: Added a local model-training slice covering tokenizer/data/compute tradeoffs, training stack decomposition, and loss-curve diagnostics.
