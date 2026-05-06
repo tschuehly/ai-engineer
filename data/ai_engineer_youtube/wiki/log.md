@@ -791,3 +791,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Universal AI Adoption Changes Engineering Coordination](concepts/universal-ai-adoption-changes-engineering-coordination.md), [Use Compounding Engineering Loops](concepts/use-compounding-engineering-loops.md), [Demo Culture Replaces Memo-First Product Persuasion](concepts/demo-culture-replaces-memo-first-product-persuasion.md), [Fractured Attention Becomes Usable With Delegated Agents](concepts/fractured-attention-becomes-usable-with-delegated-agents.md)
 - Notes: Added Every's AI-native company operating model around universal agent adoption, delegated parallel work, demo culture, and compounding engineering through codified agent context.
+
+## [2026-05-07] ingest | AI Consulting in Practice - NLW, Superintelligent, @AIDailyBrief
+
+- Source: [AI Consulting in Practice - NLW, Superintelligent, @AIDailyBrief](sources/20251218_ehQFj6VmuI8.md)
+- Processed: `ehQFj6VmuI8`
+- Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Measure AI ROI with outcome categories and bias caveats](concepts/measure-ai-roi-with-outcome-categories-and-bias-caveats.md), [Move enterprise AI adoption beyond spot experiments](concepts/move-enterprise-ai-adoption-beyond-spot-experiments.md), [Agentic automation can outperform first-tier productivity use cases](concepts/agentic-automation-can-outperform-first-tier-productivity-use-cases.md)
+- Notes: Added NLW's enterprise AI ROI survey framing around impact categories, selection-bias caveats, portfolio adoption, and higher-impact automation or agentic use cases.

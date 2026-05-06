@@ -46,6 +46,8 @@ Outcome-based delivery workflows add an organizational layer around AI-accelerat
 
 Leadership-led AI workflows should start from the actual SDLC constraint. Code completion is not automatically the highest-leverage target if reverse engineering, onboarding, incidents, context switching, meetings, compliance uncertainty, or missing runbook context dominate delivery. Useful rollouts identify that bottleneck, choose AI use cases that reduce it, then measure whether system outcomes changed. Leadership learning workflows should also avoid learning from only one segment of the market: a cross-segment convening can help AI transformation leaders compare frontier lab direction, startup product velocity, academic framing, consulting patterns, and large-enterprise deployment evidence before turning strategy into a tactical roadmap for their own company.
 
+Enterprise AI adoption workflows should then turn isolated pilots into a portfolio. A useful pattern is to classify use cases by impact category, record current ROI separately from expected future ROI, and keep explicit caveats around self-reported or self-selected data. The workflow should also look for movement from first-tier time savings toward automation, agentic workflows, risk reduction, new capabilities, and revenue or product-line impact, because these categories can require different governance, rollout, and measurement loops.
+
 ## Key Concepts
 
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - simple loops can replace over-specified DAGs when exploration is the work.
@@ -214,6 +216,9 @@ Leadership-led AI workflows should start from the actual SDLC constraint. Code c
 - [Outcome-based engineering compensation uses accepted story points](../concepts/outcome-based-engineering-compensation-uses-accepted-story-points.md) - roadmapping, architecture docs, tickets, acceptance, and quarterly compensation form a repeatable output-paid delivery workflow.
 - [Counterbalance output incentives with independent scoping and QA](../concepts/counterbalance-output-incentives-with-independent-scoping-and-qa.md) - output-paid workflows need independent controls before story points become payment.
 - [Use cross-segment convenings to calibrate AI transformation roadmaps](../concepts/use-cross-segment-convenings-to-calibrate-ai-transformation-roadmaps.md) - leadership learning should combine frontier, startup, academic, consulting, and enterprise deployment evidence.
+- [Measure AI ROI with outcome categories and bias caveats](../concepts/measure-ai-roi-with-outcome-categories-and-bias-caveats.md) - adoption workflows need impact categories and honest data-quality caveats.
+- [Move enterprise AI adoption beyond spot experiments](../concepts/move-enterprise-ai-adoption-beyond-spot-experiments.md) - portfolio workflows help organizations move from pilots to scaled use.
+- [Agentic automation can outperform first-tier productivity use cases](../concepts/agentic-automation-can-outperform-first-tier-productivity-use-cases.md) - workflow prioritization should distinguish basic productivity wins from deeper automation.
 
 ## Open Questions
 
@@ -327,3 +332,4 @@ Leadership-led AI workflows should start from the actual SDLC constraint. Code c
 - [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](../sources/20251223_LU9KgcZDRfY.md)
 - [The 3 Pillars of Autonomy - Michele Catasta, Replit](../sources/20251222_MLhAA9yguwM.md)
 - [Dispatch from the Future: building an AI-native Company - Dan Shipper, Every, AI & I](../sources/20251218_MGzymaYBiss.md)
+- [AI Consulting in Practice - NLW, Superintelligent, @AIDailyBrief](../sources/20251218_ehQFj6VmuI8.md)
