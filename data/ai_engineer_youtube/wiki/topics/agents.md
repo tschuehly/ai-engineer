@@ -36,6 +36,8 @@ Internal developer platforms are another agent surface. Practices that already h
 
 Agent-native company design shifts the unit of adoption from a tool to an operating model. When agents are embedded in product, support, operations, and culture, humans increasingly supervise and route asynchronous agent work while the organization hires for people who can apply domain expertise through agent counterparts.
 
+Leadership matters because agent and AI-assistant rollouts can produce either leverage or performative compliance. Organizations need policies, psychological safety, enablement time, impact measurement, and maintained prompt-rule ownership so agent behavior improves with feedback instead of drifting through unmanaged system prompts and local rule files.
+
 Enterprise analytics agents need especially careful autonomy staging. A GenBI copilot can start by routing users to certified dashboards and reports, then use those governed assets as context or SQL seeds before it attempts broader query generation. Splitting the pipeline into metadata, RAG/report-finding, SQL, and BI-answer agents keeps retrieval, query expansion, answer synthesis, orchestration, and governance as separately inspectable responsibilities.
 
 ## Key Concepts
@@ -43,6 +45,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - agent loops can stay flexible while the runtime validates tool execution.
 - [Use prompt-enforced todos as lightweight agent state](../concepts/use-prompt-enforced-todos-as-lightweight-agent-state.md) - prompt-visible state can guide model planning without full orchestration.
 - [Agent-native companies embed agents into product, operations, and culture](../concepts/agent-native-companies-embed-agents-into-product-operations-and-culture.md) - distinguishes core agent infrastructure from occasional AI assistance.
+- [Govern agent rules through feedback gatekeepers](../concepts/govern-agent-rules-through-feedback-gatekeepers.md) - organization-wide agent behavior needs maintained prompts and rule ownership.
 - [Start GenBI with certified assets before autonomous SQL](../concepts/start-genbi-with-certified-assets-before-autonomous-sql.md) - analytics agents can earn trust by retrieving governed BI assets before generating new queries.
 - [Start the workday by reviewing and dispatching agent work](../concepts/start-the-workday-by-reviewing-and-dispatching-agent-work.md) - treats agents as asynchronous coworkers whose work is reviewed, approved, and redirected.
 - [Hire for AI fluency and agent orchestration ability](../concepts/hire-for-ai-fluency-and-agent-orchestration-ability.md) - makes agent guidance a hiring and onboarding criterion.
@@ -301,3 +304,4 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [The Agent Native Company — Rick Blalock, Agentuity](../sources/20250603_0ZPAvzhpGjw.md)
 - [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](../sources/20251223_LU9KgcZDRfY.md)
 - [The 3 Pillars of Autonomy - Michele Catasta, Replit](../sources/20251222_MLhAA9yguwM.md)
+- [Leadership in AI Assisted Engineering - Justin Reock, DX (acq. Atlassian)](../sources/20251219_PmZDupFP3UM.md)

@@ -14,6 +14,8 @@ The Infinite Software Crisis framing adds a caution about conversational coding 
 
 AI adoption inside engineering teams is also an incentive design problem. If compensation and recognition reward time, headcount, or vague annual goals, engineers may have little direct reason to keep pushing unfamiliar agent workflows. Output-linked compensation can encourage tool leverage, but it needs independent scoping, acceptance checks, QA, and customer or strategist counterweights so agent-assisted speed does not become inflated story points or rushed code.
 
+Leadership-owned AI adoption adds another constraint: do not confuse adoption mandates with capability building. Teams need clear policy, time to learn, psychological safety, and examples of high-value use cases; otherwise engineers can satisfy usage targets without improving delivery. Rollouts should also look beyond code generation because stack-trace analysis, onboarding, legacy-spec generation, incident context gathering, and other interpretive or operational workflows may be the real bottleneck.
+
 ## Key Concepts
 
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md) - coding-agent SDKs package reusable runtime pieces around the model.
@@ -87,6 +89,9 @@ AI adoption inside engineering teams is also an incentive design problem. If com
 - [Browser DevTools MCP turns runtime debugging into agent tools](../concepts/browser-devtools-mcp-turns-runtime-debugging-into-agent-tools.md) - front-end agents can inspect live runtime evidence through browser tooling.
 - [Agent software factories need runnable, contextual, and verifiable primitives](../concepts/agent-software-factories-need-runnable-contextual-and-verifiable-primitives.md) - autonomous coding work depends on repository structure, setup commands, external context, and validation.
 - [AI adoption depends on incentive design as much as tool access](../concepts/ai-adoption-depends-on-incentive-design-as-much-as-tool-access.md) - direct upside from output gains can change whether engineers invest in AI tooling.
+- [Create psychological safety for AI adoption](../concepts/create-psychological-safety-for-ai-adoption.md) - engineers need safety, intent clarity, and learning time before AI usage becomes durable practice.
+- [Target AI rollouts at SDLC bottlenecks](../concepts/target-ai-rollouts-at-sdlc-bottlenecks.md) - coding-agent investment should target the actual delivery constraint rather than only code-writing speed.
+- [Govern agent rules through feedback gatekeepers](../concepts/govern-agent-rules-through-feedback-gatekeepers.md) - shared coding-agent rules need maintained ownership and feedback loops.
 - [Counterbalance output incentives with independent scoping and QA](../concepts/counterbalance-output-incentives-with-independent-scoping-and-qa.md) - throughput incentives need quality, acceptance, and collaboration controls.
 - [Treat agent readiness as verification infrastructure](../concepts/treat-agent-readiness-as-verification-infrastructure.md) - production coding-agent capability is bounded by explicit, scalable validation signals.
 - [Use agent readiness flywheels to improve the development environment](../concepts/use-agent-readiness-flywheels-to-improve-the-development-environment.md) - agents can help harden the tests, linters, docs, and instructions that future agents need.
@@ -133,6 +138,7 @@ AI adoption inside engineering teams is also an incentive design problem. If com
 - Which experienced-developer tasks are most likely to show positive field-study speedups rather than benchmark-only gains?
 - Which mature-repository tasks are independent enough for agent delegation without losing the maintainer context needed for follow-up work?
 - Which compensation or recognition systems encourage durable AI leverage without turning story points or line count into Goodharted targets?
+- Which AI use cases should become required practice because experienced engineers already report durable time savings from them?
 - Which product-taste checks can be made explicit enough for agents to assist without reducing design judgment to shallow style rules?
 - Which non-functional requirements should become documentation, lints, reviewer agents, or hard CI gates?
 - Which refactor-batching strategy best balances semantic cohesion, dependency ordering, agent success rate, and human PR review size?
@@ -148,6 +154,7 @@ AI adoption inside engineering teams is also an incentive design problem. If com
 - [Making Codebases Agent Ready - Eno Reyes, Factory AI](../sources/20251222_ShuJ_CN6zr4.md)
 - [The Infinite Software Crisis - Jake Nations, Netflix](../sources/20251220_eIoohUmYpGI.md)
 - [Paying Engineers like Salespeople - Arman Hezarkhani, Tenex](../sources/20251219_4mRekpZpBZs.md)
+- [Leadership in AI Assisted Engineering - Justin Reock, DX (acq. Atlassian)](../sources/20251219_PmZDupFP3UM.md)
 - [How Claude Code Works - Jared Zoneraich, PromptLayer](../sources/20251226_RFKCzGlAU6Q.md)
 - [Why Agent Hype can fall short of reality - Joel Becker, METR](../sources/20251224_RhfqQKe22ZA.md)
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md)

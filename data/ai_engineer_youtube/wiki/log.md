@@ -759,3 +759,11 @@
 - Updated topics: [AI Monetization](topics/ai-monetization.md), [Coding Agents](topics/coding-agents.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Outcome-based engineering compensation uses accepted story points](concepts/outcome-based-engineering-compensation-uses-accepted-story-points.md), [Counterbalance output incentives with independent scoping and QA](concepts/counterbalance-output-incentives-with-independent-scoping-and-qa.md), [AI adoption depends on incentive design as much as tool access](concepts/ai-adoption-depends-on-incentive-design-as-much-as-tool-access.md)
 - Notes: Added Tenex's output-based engineering compensation workflow, including story-point pay, incentive-driven AI adoption, roadmapping-to-ticket execution, and controls against inflated or low-quality output.
+
+## [2026-05-07] ingest | Leadership in AI Assisted Engineering - Justin Reock, DX (acq. Atlassian)
+
+- Source: [Leadership in AI Assisted Engineering - Justin Reock, DX (acq. Atlassian)](sources/20251219_PmZDupFP3UM.md)
+- Processed: `PmZDupFP3UM`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Measure AI engineering impact across utilization, impact, and cost](concepts/measure-ai-engineering-impact-across-utilization-impact-and-cost.md), [Create psychological safety for AI adoption](concepts/create-psychological-safety-for-ai-adoption.md), [Target AI rollouts at SDLC bottlenecks](concepts/target-ai-rollouts-at-sdlc-bottlenecks.md), [Govern agent rules through feedback gatekeepers](concepts/govern-agent-rules-through-feedback-gatekeepers.md)
+- Notes: Added DX's leadership playbook for AI-assisted engineering rollouts, covering impact measurement, enablement safety, bottleneck selection, and maintained prompt-rule feedback loops.
