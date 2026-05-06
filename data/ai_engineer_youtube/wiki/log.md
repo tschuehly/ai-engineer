@@ -127,3 +127,11 @@
 - Updated topics: [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Agents Reduce Dependency-Chain Chores Through Parallel Execution](concepts/agents-reduce-dependency-chain-chores-through-parallel-execution.md), [Non-Technical Collaborators Can Steer Agents With Natural Work Artifacts](concepts/non-technical-collaborators-can-steer-agents-with-natural-work-artifacts.md), [Code-Backed Content Can Replace Fragile CMS Workflows for Agents](concepts/code-backed-content-can-replace-fragile-cms-workflows-for-agents.md), [Agent Experience Prioritizes APIs, CLIs, and MCP Over Dashboards](concepts/agent-experience-prioritizes-apis-clis-and-mcp-over-dashboards.md)
 - Notes: Added operational agent patterns for non-coding work, natural-artifact collaboration, code-backed content management, and agent-facing product interfaces.
+
+## [2026-05-06] ingest | Agents on the Canvas in tldraw - Steve Ruiz, tldraw
+
+- Source: [Agents on the Canvas in tldraw - Steve Ruiz, tldraw](sources/20260501_sPUjIBH5Cwg.md)
+- Processed: `sPUjIBH5Cwg`
+- Updated topics: [Agents](topics/agents.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Canvas-native agents turn spatial work surfaces into prompt context](concepts/canvas-native-agents-turn-spatial-work-surfaces-into-prompt-context.md), [Structured canvas outputs make agent edits inspectable and editable](concepts/structured-canvas-outputs-make-agent-edits-inspectable-and-editable.md), [Shared canvases expose multi-agent state and coordination](concepts/shared-canvases-expose-multi-agent-state-and-coordination.md), [Hackable agent runtimes need tight safety boundaries](concepts/hackable-agent-runtimes-need-tight-safety-boundaries.md)
+- Notes: Added tldraw canvas-agent patterns for spatial prompt context, structured editable outputs, visible multi-agent coordination, and executable runtime safety boundaries.
