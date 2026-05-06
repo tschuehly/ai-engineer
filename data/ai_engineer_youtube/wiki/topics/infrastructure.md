@@ -15,6 +15,8 @@ AI infrastructure spans local training environments, edge deployment, server-sid
 - [Modular tiny-model pipelines reuse specialized models across mobile app workflows](../concepts/modular-tiny-model-pipelines-reuse-specialized-models-across-mobile-app-workflows.md) - app infrastructure can combine LiteRT and LiteRT-LM components instead of treating the LLM as the whole application.
 - [Prevent AI billing surprises with caps, notifications, and rate limits](../concepts/prevent-ai-billing-surprises-with-caps-notifications-and-rate-limits.md) - AI billing infrastructure should prevent runaway usage and unexpected invoices.
 - [Apply online scoring to production traces with cost-aware sampling](../concepts/apply-online-scoring-to-production-traces-with-cost-aware-sampling.md) - production eval infrastructure should distinguish always-on cheap checks from sampled expensive judge-model scoring.
+- [Code-backed content can replace fragile CMS workflows for agents](../concepts/code-backed-content-can-replace-fragile-cms-workflows-for-agents.md) - repository-backed content can make agent-managed operational data reviewable.
+- [Agent experience prioritizes APIs, CLIs, and MCP over dashboards](../concepts/agent-experience-prioritizes-apis-clis-and-mcp-over-dashboards.md) - infrastructure should include machine-friendly surfaces for agent users.
 
 ## Open Questions
 
@@ -23,6 +25,7 @@ AI infrastructure spans local training environments, edge deployment, server-sid
 - How far can local CPU, MPS, or Colab training runs be trusted before moving to larger accelerator infrastructure?
 - Which billing events and dimensions should be metered so AI invoices are explainable without exposing implementation noise?
 - Which prompt, tool, score, and trace artifacts should be promoted from local code into managed production infrastructure?
+- Which operational data belongs in code-backed infrastructure when agents are responsible for maintaining it?
 
 ## Sources
 
@@ -32,3 +35,4 @@ AI infrastructure spans local training environments, edge deployment, server-sid
 - [TLMs: Tiny LLMs and Agents on Edge Devices with LiteRT-LM - Cormac Brick, Google](../sources/20260503_BKWpYIWvAo4.md)
 - [Mastering AI Pricing: Flexible & Agile Monetization - Mayank Pant, Stripe](../sources/20260501_CrqPcIZOOXA.md)
 - [Shipping complex AI applications - Braintrust & Trainline](../sources/20260501_ZdheJTfLu-s.md)
+- [Agents for Everything Else - swyx](../sources/20260501_zepu8Kk6FBQ.md)

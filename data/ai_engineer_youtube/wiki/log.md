@@ -119,3 +119,11 @@
 - Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Stage Complex AI Applications Into Inspectable Deterministic and Agentic Steps](concepts/stage-complex-ai-applications-into-inspectable-deterministic-and-agentic-steps.md), [Use Golden Data Sets and Mixed Scoring Functions for AI Application Confidence](concepts/use-golden-data-sets-and-mixed-scoring-functions-for-ai-application-confidence.md), [Apply Online Scoring to Production Traces With Cost-Aware Sampling](concepts/apply-online-scoring-to-production-traces-with-cost-aware-sampling.md), [Replay Production Failures Before Promoting Prompt Fixes](concepts/replay-production-failures-before-promoting-prompt-fixes.md)
 - Notes: Added production AI application patterns for staged agent workflows, golden data sets, online scoring, managed traces, and failure replay remediation.
+
+## [2026-05-06] ingest | Agents for Everything Else - swyx
+
+- Source: [Agents for Everything Else - swyx](sources/20260501_zepu8Kk6FBQ.md)
+- Processed: `zepu8Kk6FBQ`
+- Updated topics: [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Agents Reduce Dependency-Chain Chores Through Parallel Execution](concepts/agents-reduce-dependency-chain-chores-through-parallel-execution.md), [Non-Technical Collaborators Can Steer Agents With Natural Work Artifacts](concepts/non-technical-collaborators-can-steer-agents-with-natural-work-artifacts.md), [Code-Backed Content Can Replace Fragile CMS Workflows for Agents](concepts/code-backed-content-can-replace-fragile-cms-workflows-for-agents.md), [Agent Experience Prioritizes APIs, CLIs, and MCP Over Dashboards](concepts/agent-experience-prioritizes-apis-clis-and-mcp-over-dashboards.md)
+- Notes: Added operational agent patterns for non-coding work, natural-artifact collaboration, code-backed content management, and agent-facing product interfaces.

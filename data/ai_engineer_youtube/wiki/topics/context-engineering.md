@@ -22,6 +22,7 @@ Context engineering treats prompts, skills, memory, retrieval, and documentation
 - [Use agent logs and review feedback as context observability signals](../concepts/use-agent-logs-and-review-feedback-as-context-observability-signals.md) - logs, reviews, and production failures should feed durable context improvements.
 - [Filter untrusted context before it reaches the agent](../concepts/filter-untrusted-context-before-it-reaches-the-agent.md) - repository and marketplace context needs screening before model ingestion.
 - [Personal knowledge bases become agent context substrates](../concepts/personal-knowledge-bases-become-agent-context-substrates.md) - personal notes and saved links become active context when agents connect them to current work.
+- [Code-backed content can replace fragile CMS workflows for agents](../concepts/code-backed-content-can-replace-fragile-cms-workflows-for-agents.md) - structured content in code can give agents a reviewable operational source of truth.
 
 ## Open Questions
 
@@ -32,6 +33,7 @@ Context engineering treats prompts, skills, memory, retrieval, and documentation
 - Which parts of a context engine can be cached safely as source-backed structure, and which generated answers must be recomputed from current sources?
 - What metadata should context packages expose so teams can evaluate provenance, version compatibility, dependencies, and security risk before installation?
 - How should personal knowledge-base agents avoid amplifying stale notes or noisy bookmarks into future context?
+- When should operational content be moved from a CMS into code so agents can manage it with diffs and review?
 
 ## Sources
 
@@ -41,3 +43,4 @@ Context engineering treats prompts, skills, memory, retrieval, and documentation
 - [Mergeable by default: Building the context engine to save time and tokens — Peter Werry, Unblocked](../sources/20260503_5ID22ACI7IM.md)
 - [Context Is the New Code - Patrick Debois, Tessl](../sources/20260503_bSG9wUYaHWU.md)
 - [I Gave an AI Agent the Keys to My Life (Here's What Happened) - Radek Sienkiewicz (@velvetshark-com)](../sources/20260502_sJ2jc7leKBk.md)
+- [Agents for Everything Else - swyx](../sources/20260501_zepu8Kk6FBQ.md)
