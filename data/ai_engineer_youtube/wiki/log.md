@@ -447,3 +447,11 @@
 - Updated topics: [Inference](topics/inference.md), [Infrastructure](topics/infrastructure.md), [Evaluation](topics/evaluation.md), [Models](topics/models.md)
 - Updated concepts: [Use Local AI Workstations When Iteration, Privacy, or Latency Dominate](concepts/use-local-ai-workstations-when-iteration-privacy-or-latency-dominate.md), [Make Local Inference Benchmarks Reproducible Artifacts](concepts/make-local-inference-benchmarks-reproducible-artifacts.md), [Treat Quantization as a Memory-Bandwidth Lever](concepts/treat-quantization-as-a-memory-bandwidth-lever.md)
 - Notes: Added local LLM serving guidance covering workstation/cloud tradeoffs, vLLM benchmark reproducibility, time-to-first-token measurement, and quantization-driven bandwidth effects.
+
+## [2026-05-06] ingest | AI Didn't Kill the Web, It Moved in! - Olivier Leplus (AWS) & Yohan Lasorsa (Microsoft)
+
+- Source: [AI Didn't Kill the Web, It Moved in! - Olivier Leplus (AWS) & Yohan Lasorsa (Microsoft)](sources/20260410_XZ0boOjtbNo.md)
+- Processed: `XZ0boOjtbNo`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Repository skills and AGENTS.md encode repeatable web-agent workflows](concepts/repository-skills-and-agents-md-encode-repeatable-web-agent-workflows.md), [Browser DevTools MCP turns runtime debugging into agent tools](concepts/browser-devtools-mcp-turns-runtime-debugging-into-agent-tools.md), [Browser-native AI APIs bring local models into web apps](concepts/browser-native-ai-apis-bring-local-models-into-web-apps.md), [Agent-readable web surfaces guide browsing agents](concepts/agent-readable-web-surfaces-guide-browsing-agents.md)
+- Notes: Added the web-as-agent-runtime slice covering repository skills, Chrome DevTools MCP, browser-local Web AI APIs, and agent-readable site surfaces.

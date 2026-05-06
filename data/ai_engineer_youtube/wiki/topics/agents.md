@@ -18,6 +18,8 @@ Agent security has to treat autonomy as an attack multiplier. Prompt injection, 
 
 Agent-to-agent systems need their own discovery contract as they spread across teams. An A2A registry can publish agent cards that describe each agent's identity, endpoint, capabilities, supported modalities, and authentication requirements, while a use-case registry links those agents to MCP tools, models, owners, and lifecycle status. That makes agent reuse and runtime discovery practical without losing governance and impact analysis.
 
+The web itself is also becoming an agent surface. Sites can publish `llms.txt` or `llms-full.txt` to guide agents toward the right documentation, and WebMCP-style proposals can expose intended app operations directly so agents do not have to infer every action from screenshots, DOM text, or coordinates.
+
 ## Key Concepts
 
 - [Sandboxed code execution turns model reasoning into inspectable computation](../concepts/sandboxed-code-execution-turns-model-reasoning-into-inspectable-computation.md) - executable sandboxes let agents compute and verify without touching the user's environment.
@@ -95,6 +97,7 @@ Agent-to-agent systems need their own discovery contract as they spread across t
 - [Agents reduce dependency-chain chores through parallel execution](../concepts/agents-reduce-dependency-chain-chores-through-parallel-execution.md) - agents can absorb prerequisite setup and integration work while humans keep moving.
 - [Non-technical collaborators can steer agents with natural work artifacts](../concepts/non-technical-collaborators-can-steer-agents-with-natural-work-artifacts.md) - agents become broader operational leverage when collaborators can use existing design, note, email, and screenshot artifacts as prompts.
 - [Agent experience prioritizes APIs, CLIs, and MCP over dashboards](../concepts/agent-experience-prioritizes-apis-clis-and-mcp-over-dashboards.md) - products should expose machine-friendly surfaces when agents become primary users.
+- [Agent-readable web surfaces guide browsing agents](../concepts/agent-readable-web-surfaces-guide-browsing-agents.md) - websites can expose documentation maps and explicit operations for agents.
 - [Fresh Markdown context mitigates model rot in codegen](../concepts/fresh-markdown-context-mitigates-model-rot-in-codegen.md) - current documentation reduces stale model failures for fast-moving software.
 - [Ask agents after each run what blocked their success](../concepts/ask-agents-after-each-run-what-blocked-their-success.md) - agents can provide cheap feedback about their own missing context or tools.
 - [Constrain sensitive file access with purpose-built tools](../concepts/constrain-sensitive-file-access-with-purpose-built-tools.md) - sensitive file operations should use narrow tools rather than raw reads.
@@ -208,3 +211,4 @@ Agent-to-agent systems need their own discovery contract as they spread across t
 - [$1 AI Guardrails: The Unreasonable Effectiveness of Finetuned ModernBERTs - Diego Carpentero](../sources/20260416_YZHPEkfy2kc.md)
 - [Paperclip: Open Source Human Control Plane for AI Labor - Dotta Bippa](../sources/20260415_h403btjldDQ.md)
 - [One Registry to Rule them All - Sonny Merla, Mauro Luchetti, & Mattia Redaelli, Quantyca](../sources/20260410_VXfRt_H-V08.md)
+- [AI Didn't Kill the Web, It Moved in! - Olivier Leplus (AWS) & Yohan Lasorsa (Microsoft)](../sources/20260410_XZ0boOjtbNo.md)
