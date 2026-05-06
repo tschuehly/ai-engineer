@@ -2,6 +2,12 @@
 
 This wiki is compiled from local AI Engineer YouTube transcripts. Start with a topic, follow concept links for source-backed detail, and use source notes when you need the original video context.
 
+## Current Emphasis
+
+- [Context development lifecycle treats context as an engineered artifact](concepts/context-development-lifecycle-treats-context-as-an-engineered-artifact.md) - context should move through generate, evaluate, distribute, observe, and adapt loops.
+- [Evaluate context changes with lint, task scenarios, and probabilistic budgets](concepts/evaluate-context-changes-with-lint-task-scenarios-and-probabilistic-budgets.md) - context updates need validation because instruction changes can alter downstream agent behavior.
+- [Package reusable context as skills, libraries, and registries](concepts/package-reusable-context-as-skills-libraries-and-registries.md) - reusable context can be distributed across teams but requires quality, dependency, and security controls.
+
 ## Topics
 
 - [Agents](topics/agents.md) - agent workflows that combine reasoning, tools, APIs, and local state.

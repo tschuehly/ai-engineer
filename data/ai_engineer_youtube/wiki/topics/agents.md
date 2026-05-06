@@ -2,7 +2,7 @@
 
 ## Overview
 
-Agent workflows depend on both model capability and the context substrate around the model. On-device agents can keep core inference local while invoking selected tools, APIs, and structured outputs; because small edge models are context-sensitive, tool and skill systems should expose compact descriptions first and load details only when needed. Enterprise agents also need institutional knowledge that is accurate enough to move real work through delivery systems. Context engines can supply that knowledge by selecting task-specific organizational context, resolving or surfacing conflicts, and using team or expert signals to personalize what the agent sees. Small models can sit in front of the main agent as retrieval, extraction, classification, or reranking tools that reduce context rot. For coding work, simple loops can give agents enough structure to process one ticket at a time while avoiding the coordination failure modes of large multi-agent plans. Skills add another packaging layer: they can expose product-specific workflow guidance through progressive disclosure while leaving service integrations to tools such as MCP.
+Agent workflows depend on both model capability and the context substrate around the model. On-device agents can keep core inference local while invoking selected tools, APIs, and structured outputs; because small edge models are context-sensitive, tool and skill systems should expose compact descriptions first and load details only when needed. Enterprise agents also need institutional knowledge that is accurate enough to move real work through delivery systems. Context engines can supply that knowledge by selecting task-specific organizational context, resolving or surfacing conflicts, and using team or expert signals to personalize what the agent sees. Small models can sit in front of the main agent as retrieval, extraction, classification, or reranking tools that reduce context rot. For coding work, simple loops can give agents enough structure to process one ticket at a time while avoiding the coordination failure modes of large multi-agent plans. Skills add another packaging layer: they can expose product-specific workflow guidance through progressive disclosure while leaving service integrations to tools such as MCP. As context becomes packageable, agents also need filters and provenance checks because unsafe instructions may be loaded before execution sandboxes can constrain behavior.
 
 ## Key Concepts
 
@@ -18,6 +18,7 @@ Agent workflows depend on both model capability and the context substrate around
 - [Use social and expert graphs to personalize coding-agent context](../concepts/use-social-and-expert-graphs-to-personalize-coding-agent-context.md) - agent context can be shaped by who owns, reviews, and works near the relevant code.
 - [Edge agent skills need progressive disclosure to preserve small-model reliability](../concepts/edge-agent-skills-need-progressive-disclosure-to-preserve-small-model-reliability.md) - on-device agents need compressed skill context to keep small-model tool use reliable.
 - [Constrained decoding makes small-model tool calls production-usable](../concepts/constrained-decoding-makes-small-model-tool-calls-production-usable.md) - runtime constraints can make local function calling less dependent on open-ended generation.
+- [Filter untrusted context before it reaches the agent](../concepts/filter-untrusted-context-before-it-reaches-the-agent.md) - agents need context-layer security in addition to execution sandboxes.
 
 ## Open Questions
 
@@ -27,6 +28,7 @@ Agent workflows depend on both model capability and the context substrate around
 - How much autonomy should coding agents receive before independent validation and permission boundaries become mandatory?
 - Which product workflows should become reusable skills rather than prompt snippets, documentation pages, or MCP tool descriptions?
 - When should a coding agent ask a context engine for more organizational context instead of exploring the repository itself?
+- Which context sources should be trusted enough to auto-load, and which should require filtering, provenance checks, or user approval?
 
 ## Sources
 
@@ -37,3 +39,4 @@ Agent workflows depend on both model capability and the context substrate around
 - [Skill Issue: How We Used AI to Make Agents Actually Good at Supabase - Pedro Rodrigues, Supabase](../sources/20260504_GmAQKINjv1E.md)
 - [Mergeable by default: Building the context engine to save time and tokens — Peter Werry, Unblocked](../sources/20260503_5ID22ACI7IM.md)
 - [TLMs: Tiny LLMs and Agents on Edge Devices with LiteRT-LM - Cormac Brick, Google](../sources/20260503_BKWpYIWvAo4.md)
+- [Context Is the New Code - Patrick Debois, Tessl](../sources/20260503_bSG9wUYaHWU.md)

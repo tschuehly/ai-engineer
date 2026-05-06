@@ -2,7 +2,7 @@
 
 ## Overview
 
-Evaluation for AI engineering should measure whether models, tools, retrieval layers, skills, and agent workflows solve the intended task under real constraints. For enterprise context systems, a working connector or non-empty answer is not enough; the retrieved context must close the actual knowledge gap that blocks delivery. For coding-agent loops, checks must verify both deterministic correctness and whether an independent reviewer can see failures the producing agent missed. For skills, useful evals compare behavior with and without the skill while also validating that the harness is checking the right thing. For model training, basic train and validation loss curves are an early diagnostic layer before generated samples or downstream task evals are trusted.
+Evaluation for AI engineering should measure whether models, tools, retrieval layers, skills, context packages, and agent workflows solve the intended task under real constraints. For enterprise context systems, a working connector or non-empty answer is not enough; the retrieved context must close the actual knowledge gap that blocks delivery. For coding-agent loops, checks must verify both deterministic correctness and whether an independent reviewer can see failures the producing agent missed. For skills and context files, useful evals compare behavior with and without the context, validate package format and clarity, and use repeated runs or error budgets when results are nondeterministic. For model training, basic train and validation loss curves are an early diagnostic layer before generated samples or downstream task evals are trusted.
 
 ## Key Concepts
 
@@ -14,6 +14,8 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - [Validate eval harnesses before trusting skill scores](../concepts/validate-eval-harnesses-before-trusting-skill-scores.md) - incorrect assertions or judges can misreport skill impact.
 - [Use loss curves to debug local model training](../concepts/use-loss-curves-to-debug-local-model-training.md) - train and validation loss patterns separate non-learning, overfitting, and instability.
 - [Constrained decoding makes small-model tool calls production-usable](../concepts/constrained-decoding-makes-small-model-tool-calls-production-usable.md) - production evaluation of edge agents should account for runtime guardrails, not only raw model output.
+- [Evaluate context changes with lint, task scenarios, and probabilistic budgets](../concepts/evaluate-context-changes-with-lint-task-scenarios-and-probabilistic-budgets.md) - context evals need structural checks, behavioral scenarios, and repeated-run thresholds.
+- [Use agent logs and review feedback as context observability signals](../concepts/use-agent-logs-and-review-feedback-as-context-observability-signals.md) - production and review feedback should become test cases or context improvements.
 
 ## Open Questions
 
@@ -21,6 +23,7 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - What validation should run outside the producing agent's context for code changes with production risk?
 - What mix of deterministic assertions and LLM-as-judge grading is reliable enough for skill evaluation?
 - Which generated-sample checks add signal after a tiny model's loss curves look healthy?
+- How should CI present nondeterministic context-eval results so teams can act on trend and error-budget changes without chasing noise?
 
 ## Sources
 
@@ -29,3 +32,4 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 - [Skill Issue: How We Used AI to Make Agents Actually Good at Supabase - Pedro Rodrigues, Supabase](../sources/20260504_GmAQKINjv1E.md)
 - [Training an LLM from Scratch, Locally - Angelos Perivolaropoulos, ElevenLabs](../sources/20260504_UsB70Tf5zcE.md)
 - [TLMs: Tiny LLMs and Agents on Edge Devices with LiteRT-LM - Cormac Brick, Google](../sources/20260503_BKWpYIWvAo4.md)
+- [Context Is the New Code - Patrick Debois, Tessl](../sources/20260503_bSG9wUYaHWU.md)
