@@ -18,6 +18,8 @@ Repository-local web-agent workflows can make implementation, verification, prev
 
 Multi-agent workflows need explicit coordination and recovery choices. Event-driven choreography works when agents can act independently and the system can trace every event; centralized orchestration works when dependencies, state, rollback, or auditability matter more than autonomy. Durable workflows should pass immutable state versions through data-contract validation and wrap agent calls with circuit breakers, graceful degradation, and compensation so partial failures do not leave hidden side effects.
 
+Durable workflow engines also address the single-agent production loop. Agent frameworks may provide the fixed loop that calls the LLM, executes requested tools, and feeds results back, but production workflows need persisted turns, retry policy, timeout behavior, and resumable waits around that loop. Human-in-the-loop steps are a useful stress test: the workflow should pause as logical state, release active process resources when needed, and resume when a human response arrives.
+
 Contact-center voice workflows show a concrete human-in-the-loop automation pattern: shift after-call documentation from manual memory work into a streamed extraction pipeline, but keep operators responsible for quick validation before the generated summary updates CRM fields. The workflow is only as strong as the early audio and transcript stages; speaker separation, domain STT, masking, grounded JSON extraction, and schema mapping all happen before the final human confirmation.
 
 Platform workflows should be shaped for agent loops as well as human onboarding. Agents need local validation, clear task and success definitions, and callable platform feedback so they can iterate before remote CI or deployment; when agents contribute back to platform code, policy guardrails and repository instructions should separate hard safety boundaries from workflow guidance.
@@ -34,6 +36,8 @@ DSPy-style workflows separate program shape from prompt shape: teams can define 
 - [Use hosted model playgrounds to prototype before owning infrastructure](../concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md) - hosted playgrounds can compress the path from idea to model, API, app, and cloud deployment experiment.
 - [Human Control Planes Turn Agent Swarms Into Manageable Organizations](../concepts/human-control-planes-turn-agent-swarms-into-manageable-organizations.md) - workflows need visible organizational state when many agents work in parallel.
 - [Treat multi-agent systems as distributed systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md) - workflow design must account for coordination complexity and shared-state failure modes.
+- [Use durable execution for production agent loops](../concepts/use-durable-execution-for-production-agent-loops.md) - workflow durability prevents crashes or rate limits from resetting long-running agent loops.
+- [Treat long waits as logical workflow state](../concepts/treat-long-waits-as-logical-workflow-state.md) - long human waits should be resumable workflow state rather than live process occupancy.
 - [Choose choreography or orchestration by complexity and autonomy](../concepts/choose-choreography-or-orchestration-by-complexity-and-autonomy.md) - workflow control should be selected by dependency complexity, autonomy need, and auditability.
 - [Use immutable versioned state for agent handoffs](../concepts/use-immutable-versioned-state-for-agent-handoffs.md) - workflows become debuggable when each handoff records a sealed state version and contract check.
 - [Wrap agent calls with circuit breakers and compensation](../concepts/wrap-agent-calls-with-circuit-breakers-and-compensation.md) - retry, fail-fast, degradation, and rollback behavior should be planned before production.
@@ -179,6 +183,7 @@ DSPy-style workflows separate program shape from prompt shape: teams can define 
 - Which workflow phases should communicate through durable artifacts instead of sharing one long agent context?
 - Which prompt surfaces should be refreshed during long-running agent work as context gets compacted or paged out?
 - Which multi-agent workflows need saga-style compensation because partial side effects are unacceptable?
+- Which human-in-the-loop waits should be durable workflow state instead of application-owned queues or ad hoc jobs?
 - How should teams decide when an RL run is slow-but-healthy versus stuck and worth interrupting?
 - Which after-call voice fields should be reviewed by the operator versus routed directly into analytics-only data stores?
 - Which LLM workflows have enough labeled examples and metrics to justify DSPy optimization instead of manual prompt iteration?
@@ -229,3 +234,4 @@ DSPy-style workflows separate program shape from prompt shape: teams can define 
 - [Cognitive Exhaust Fumes, or: Read-Only AI Is Underrated - Simon Podhajsky, Head of AI, Waypoint](../sources/20260408_u0TOSBbAw7c.md)
 - [Practical tactics to build reliable AI apps — Dmitry Kuchin, Multinear](../sources/20250803_-T6uZYYzkWw.md)
 - [DSPy: The End of Prompt Engineering - Kevin Madura, AlixPartners](../sources/20260108_-cKUW6n8hBU.md)
+- [OpenAI + @Temporalio : Building Durable, Production Ready Agents - Cornelia Davis, Temporal](../sources/20260112_k8cnVCMYmNc.md)

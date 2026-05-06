@@ -24,12 +24,17 @@ Enterprise AI registries are another infrastructure layer between experimentatio
 
 Multi-agent orchestration is also infrastructure once workflows leave the demo stage. A production system needs a workflow engine, state store, contract registry, serving layer, observability layer, and recovery controls around agent calls. Immutable append-only state versions make handoffs replayable; schema contracts catch malformed or low-confidence outputs at boundaries; circuit breakers, timeouts, rate limits, and compensation methods keep one failing agent or API from cascading through the full workflow.
 
+Durable execution infrastructure can wrap even a single agentic loop. Treat LLM calls, tool invocations, and external APIs as workflow activities with configured retry and timeout behavior, and persist successful results so crash recovery does not repeat token spend or side effects. For human-in-the-loop agents, the infrastructure should support logical waits that can leave active memory and later rehydrate state when approval or clarification arrives.
+
 Developer-platform infrastructure also needs to be consumable by agents. Self-service provisioning, API/CLI/MCP access, local validation, machine-readable observability, and layered contribution guardrails let agents work against internal platforms without relying on informal human escalation paths.
 
 ## Key Concepts
 
 - [Use hosted model playgrounds to prototype before owning infrastructure](../concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md) - hosted tools can validate model and deployment choices before teams own the runtime.
 - [Treat multi-agent systems as distributed systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md) - agent infrastructure needs distributed-systems controls once multiple agents share state and dependencies.
+- [Use durable execution for production agent loops](../concepts/use-durable-execution-for-production-agent-loops.md) - durable execution records completed LLM and tool steps so production agent loops can resume.
+- [Model LLM calls and tools as durable activities](../concepts/model-llm-calls-and-tools-as-durable-activities.md) - activities are an infrastructure boundary for retries, timeouts, and persisted external work.
+- [Treat long waits as logical workflow state](../concepts/treat-long-waits-as-logical-workflow-state.md) - infrastructure should rehydrate paused agent workflows after long waits instead of pinning processes.
 - [Use immutable versioned state for agent handoffs](../concepts/use-immutable-versioned-state-for-agent-handoffs.md) - append-only handoff state supports rollback, replay, and root-cause analysis.
 - [Wrap agent calls with circuit breakers and compensation](../concepts/wrap-agent-calls-with-circuit-breakers-and-compensation.md) - serving-layer failure controls and rollback contracts are part of production agent infrastructure.
 - [Choose choreography or orchestration by complexity and autonomy](../concepts/choose-choreography-or-orchestration-by-complexity-and-autonomy.md) - infrastructure shape depends on whether event-driven autonomy or centralized control is the stronger requirement.
@@ -118,6 +123,7 @@ Developer-platform infrastructure also needs to be consumable by agents. Self-se
 - Which AI asset registry fields should be enforced by CI/CD rather than manually maintained after deployment?
 - Which local workstation workloads should stay local because privacy, queueing, or latency matter more than elastic scale?
 - Which agent handoff contracts, state versions, and recovery transitions should be persisted for audit and replay?
+- Which agent loops need durable result recording to avoid duplicate LLM spend or repeated side effects after crash recovery?
 - How much PII masking and operator verification can voice infrastructure add before latency undermines the realtime workflow?
 
 ## Sources
@@ -157,3 +163,4 @@ Developer-platform infrastructure also needs to be consumable by agents. Self-se
 - [Bending a Public MCP Server Without Breaking It — Nimrod Hauser, Baz](../sources/20260408_U00AOI1eJUE.md)
 - [Contact Center Voice AI: Low-Latency Intelligence Extraction from Messy Audio Streams - Dippu Singh](../sources/20260408_IEF842ZEU5A.md)
 - [Platforms for Humans and Machines: Engineering for the Age of Agents - Juan Herreros Elorza](../sources/20260408_cCRO3ChaYhM.md)
+- [OpenAI + @Temporalio : Building Durable, Production Ready Agents - Cornelia Davis, Temporal](../sources/20260112_k8cnVCMYmNc.md)

@@ -22,6 +22,8 @@ Agent-to-agent systems need their own discovery contract as they spread across t
 
 Multi-agent production systems also inherit ordinary distributed-systems failure modes. Moving from one agent to several agents creates coordination paths, shared-state races, stale cache reads, partial workflow failures, and debugging gaps that better prompts do not fix. Choreography can preserve autonomy when agents coordinate through events, but it needs traceable event delivery; orchestration gives a central execution graph, state store, retries, logs, and rollback path when complex dependencies or regulated decisions require stronger control. Handoffs should use immutable versioned state and explicit data contracts so each agent receives a sealed input and produces a new auditable output rather than mutating shared records.
 
+Durable execution is the production version of that distributed-systems stance for a single agent loop as well as for multi-agent systems. LLM calls, tool invocations, and external API calls should be persisted around workflow boundaries so process crashes, rate limits, or downstream outages do not force the agent to repeat completed turns or re-trigger side effects. Long waits, including human approvals and clarifications, should also be modeled as durable workflow state rather than as a live process that must stay pinned until the human returns.
+
 The web itself is also becoming an agent surface. Sites can publish `llms.txt` or `llms-full.txt` to guide agents toward the right documentation, and WebMCP-style proposals can expose intended app operations directly so agents do not have to infer every action from screenshots, DOM text, or coordinates.
 
 Internal developer platforms are another agent surface. Practices that already helped human developers, such as self-service provisioning, API-first workflows, local validation, clear documentation, and observable runtime feedback, become prerequisites when coding agents need to deploy, debug, and verify work without tribal human handoffs.
@@ -35,6 +37,9 @@ Internal developer platforms are another agent surface. Practices that already h
 - [Sandboxed code execution turns model reasoning into inspectable computation](../concepts/sandboxed-code-execution-turns-model-reasoning-into-inspectable-computation.md) - executable sandboxes let agents compute and verify without touching the user's environment.
 - [Human Control Planes Turn Agent Swarms Into Manageable Organizations](../concepts/human-control-planes-turn-agent-swarms-into-manageable-organizations.md) - org-chart, project, task, budget, and memory surfaces make large agent organizations supervisable.
 - [Treat multi-agent systems as distributed systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md) - multi-agent scale introduces coordination, stale state, and failure-propagation problems.
+- [Use durable execution for production agent loops](../concepts/use-durable-execution-for-production-agent-loops.md) - production loops should persist LLM calls, tool outputs, and state across crashes and retries.
+- [Model LLM calls and tools as durable activities](../concepts/model-llm-calls-and-tools-as-durable-activities.md) - external work in an agent loop can receive retry, timeout, and persistence behavior through workflow activities.
+- [Treat long waits as logical workflow state](../concepts/treat-long-waits-as-logical-workflow-state.md) - agent approvals and clarifications should resume from durable state after long human waits.
 - [Choose choreography or orchestration by complexity and autonomy](../concepts/choose-choreography-or-orchestration-by-complexity-and-autonomy.md) - coordination style should match autonomy needs, dependency complexity, and audit requirements.
 - [Use immutable versioned state for agent handoffs](../concepts/use-immutable-versioned-state-for-agent-handoffs.md) - append-only state versions and data contracts make handoffs traceable and safer than shared mutable records.
 - [Wrap agent calls with circuit breakers and compensation](../concepts/wrap-agent-calls-with-circuit-breakers-and-compensation.md) - failure isolation and rollback paths prevent one failed agent from collapsing the workflow.
@@ -192,6 +197,7 @@ Internal developer platforms are another agent surface. Practices that already h
 - Which agent workflows need MCP's richer remote semantics instead of a CLI or local computer-use path?
 - Which agent-card fields are sufficient for safe runtime discovery by other internal agents?
 - Which agent coordination paths should be centralized in an orchestrator, and which are safe enough for event-driven choreography?
+- Which LLM calls and tool calls are safe to replay, and which require durable result recording before production use?
 
 ## Sources
 
@@ -252,3 +258,4 @@ Internal developer platforms are another agent surface. Practices that already h
 - [How METR measures Long Tasks and Experienced Open Source Dev Productivity - Joel Becker, METR](../sources/20260119_k1t2xyWMUdY.md)
 - [Identity for AI Agents - Patrick Riley & Carlos Galan, Auth0](../sources/20260114_VSdV-AdSlis.md)
 - [Your MCP Server is Bad (and you should feel bad) - Jeremiah Lowin, Prefect](../sources/20260112_96G7FLab8xc.md)
+- [OpenAI + @Temporalio : Building Durable, Production Ready Agents - Cornelia Davis, Temporal](../sources/20260112_k8cnVCMYmNc.md)

@@ -575,3 +575,11 @@
 - Updated topics: [Agents](topics/agents.md), [Tools](topics/tools.md)
 - Updated concepts: [Design MCP Servers as Agent Products](concepts/design-mcp-servers-as-agent-products.md), [Translate API Endpoints Into Agent Stories](concepts/translate-api-endpoints-into-agent-stories.md), [MCP Tool Surfaces Need Default Context Budgets](concepts/mcp-tool-surfaces-need-default-context-budgets.md), [Secure MCP Servers by Shrinking the Agent-Visible Surface](concepts/secure-mcp-servers-by-shrinking-the-agent-visible-surface.md)
 - Notes: Added Prefect's MCP design guidance that agent-facing servers should be curated product surfaces built around workflow outcomes, context budgets, and limited model orchestration.
+
+## [2026-05-06] ingest | OpenAI + @Temporalio : Building Durable, Production Ready Agents - Cornelia Davis, Temporal
+
+- Source: [OpenAI + @Temporalio : Building Durable, Production Ready Agents - Cornelia Davis, Temporal](sources/20260112_k8cnVCMYmNc.md)
+- Processed: `k8cnVCMYmNc`
+- Updated topics: [Agents](topics/agents.md), [Workflows](topics/workflows.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md)
+- Updated concepts: [Use Durable Execution for Production Agent Loops](concepts/use-durable-execution-for-production-agent-loops.md), [Model LLM Calls and Tools as Durable Activities](concepts/model-llm-calls-and-tools-as-durable-activities.md), [Treat Long Waits as Logical Workflow State](concepts/treat-long-waits-as-logical-workflow-state.md)
+- Notes: Added Temporal-backed production-agent guidance covering durable agent loops, activity-wrapped LLM and tool calls, retry policy, crash recovery, and long human waits as resumable workflow state.
