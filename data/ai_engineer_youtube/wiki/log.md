@@ -263,3 +263,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Retrieval](topics/retrieval.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Use PRDs to Align Agents on the Design Concept](concepts/use-prds-to-align-agents-on-the-design-concept.md), [Retire Completed Planning Docs Before They Become Agent Doc Rot](concepts/retire-completed-planning-docs-before-they-become-agent-doc-rot.md), [Delegate Implementations Behind Reviewed Module Interfaces](concepts/delegate-implementations-behind-reviewed-module-interfaces.md), [Run Parallel Issue Agents in Sandboxes With Review and Merge Loops](concepts/run-parallel-issue-agents-in-sandboxes-with-review-and-merge-loops.md)
 - Notes: Added Matt Pocock's AI coding workflow patterns for PRD alignment, stale planning-context control, module-interface delegation, and sandboxed parallel issue execution.
+
+## [2026-05-06] ingest | What Do Models Still Suck At? - Peter Gostev, Arena.ai, BullshitBench
+
+- Source: [What Do Models Still Suck At? - Peter Gostev, Arena.ai, BullshitBench](sources/20260424_R7A8rX-09Zw.md)
+- Processed: `R7A8rX-09Zw`
+- Updated topics: [Evaluation](topics/evaluation.md), [Models](topics/models.md)
+- Updated concepts: [Evaluate Whether Models Reject Impossible or Nonsensical Premises](concepts/evaluate-whether-models-reject-impossible-or-nonsensical-premises.md), [Track User Dissatisfaction Alongside Pairwise Model Preference](concepts/track-user-dissatisfaction-alongside-pairwise-model-preference.md), [Benchmark Narrow Slices Separately From Real Expert Work](concepts/benchmark-narrow-slices-separately-from-real-expert-work.md)
+- Notes: Added BullshitBench and Arena-derived evaluation patterns for premise rejection, dissatisfaction tracking, and benchmark blind spots.
