@@ -22,6 +22,8 @@ Long-horizon coding demos should be evaluated as workflows, not as one impressiv
 
 LLM program optimization adds another eval loop: define known inputs and outputs, write metrics that reflect the desired behavior, evaluate the base program, then let an optimizer propose improved prompts or modules. Metric breakdowns should be inspected after optimization because a gain can mean the metric is useful, the data is underspecified, or the program needs decomposition. Prompt-learning loops add a related requirement: labels and scalar scores are weaker than feedback that explains why an output failed and points to violated instructions, missing context, or rule-level noncompliance. The optimizer also inherits evaluator quality, so prompt-improvement systems should test their LLM judges, rule checkers, data splits, and loop budgets before trusting apparent prompt gains. PM-facing eval workflows should also avoid treating prompt playgrounds as isolated demos: traces and spans can carry real inputs, outputs, metadata, and agent actions into datasets and experiments, while LLM judges should emit categorical labels that are deterministically mapped to scores instead of raw numeric ratings.
 
+Coding-agent prompt learning turns that evaluation loop into a system-prompt update path: baseline the agent on tasks such as SWE-bench Lite, run generated patches through tests, ask judges for explanatory diagnoses, synthesize rules from the diagnoses, and rerun the benchmark to check whether agent behavior actually improved without weight changes.
+
 ## Key Concepts
 
 - [Evaluate agent trajectories with backtests and smell metrics](../concepts/evaluate-agent-trajectories-with-backtests-and-smell-metrics.md) - flexible tool-loop agents need historical and trajectory-level checks.
@@ -72,6 +74,7 @@ LLM program optimization adds another eval loop: define known inputs and outputs
 - [Build AI app benchmarks before optimization](../concepts/build-ai-app-benchmarks-before-optimization.md) - early benchmarks let teams compare prompts, models, retrieval, logic, and guardrails while catching regressions.
 - [Optimize LLM programs with metrics and teacher feedback](../concepts/optimize-llm-programs-with-metrics-and-teacher-feedback.md) - DSPy optimizers turn prompt improvement into a dataset-backed loop with metric and teacher-feedback signals.
 - [Use explanatory feedback to optimize prompts](../concepts/use-explanatory-feedback-to-optimize-prompts.md) - prompt optimization should collect reasons for failures, not just labels.
+- [System prompt learning updates agent rules from eval explanations](../concepts/system-prompt-learning-updates-agent-rules-from-eval-explanations.md) - coding-agent eval traces can update agent-visible rules.
 - [Structure prompt-learning experiments with train/test splits and loop budgets](../concepts/structure-prompt-learning-experiments-with-train-test-splits-and-loop-budgets.md) - prompt-learning runs need explicit sample, split, evaluator, and iteration controls.
 - [Evaluator quality is a dependency of prompt optimization](../concepts/evaluator-quality-is-a-dependency-of-prompt-optimization.md) - prompt optimizers amplify evaluator signal, so evaluator prompts and rules need validation.
 - [Apply online scoring to production traces with cost-aware sampling](../concepts/apply-online-scoring-to-production-traces-with-cost-aware-sampling.md) - production monitoring should score live traces while sampling expensive model-based judges deliberately.
@@ -194,6 +197,7 @@ LLM program optimization adds another eval loop: define known inputs and outputs
 - [Practical tactics to build reliable AI apps — Dmitry Kuchin, Multinear](../sources/20250803_-T6uZYYzkWw.md)
 - [DSPy: The End of Prompt Engineering - Kevin Madura, AlixPartners](../sources/20260108_-cKUW6n8hBU.md)
 - [Build a Prompt Learning Loop - SallyAnn DeLucia & Fuad Ali, Arize](../sources/20260106_SbcQYbrvAfI.md)
+- [The Unreasonable Effectiveness of Prompt Learning - Aparna Dhinakaran, Arize](../sources/20251223_pP_dSNz_EdQ.md)
 - [AGI: The Path Forward - Jason Warner & Eiso Kant, Poolside](../sources/20251227_OGCG_QkCcZo.md)
 - [Shipping AI That Works: An Evaluation Framework for PMs - Aman Khan, Arize](../sources/20251226_2HNSG990Ew8.md)
 - [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](../sources/20251223_LU9KgcZDRfY.md)

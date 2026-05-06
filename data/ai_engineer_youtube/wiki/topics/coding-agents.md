@@ -6,6 +6,8 @@ Coding agents work best when their autonomy is constrained by small work items, 
 
 High-consequence coding environments make permissions and verification part of the product, not an add-on. A coding agent can translate legacy Ada into Rust and add features, but defense, government, satellite, or critical-infrastructure contexts still require narrowed access, visible diffs, generated and human-run tests, and reviewable command output before the work is trusted.
 
+System-prompt learning adds a way to update coding-agent behavior without changing model weights. A team can run benchmark or production-like tasks, execute tests, ask a judge for explanations, and synthesize those failure explanations into rules that the agent sees on later runs.
+
 ## Key Concepts
 
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md) - coding-agent SDKs package reusable runtime pieces around the model.
@@ -35,6 +37,7 @@ High-consequence coding environments make permissions and verification part of t
 - [Encode non-functional requirements as agent-visible context](../concepts/encode-non-functional-requirements-as-agent-visible-context.md) - implicit team expectations need to become durable context agents can inspect.
 - [Use reviewer agents and lints to turn review lessons into guardrails](../concepts/use-reviewer-agents-and-lints-to-turn-review-lessons-into-guardrails.md) - repeated review findings should become automatic checks.
 - [Treat prompts as distributed harness surfaces](../concepts/treat-prompts-as-distributed-harness-surfaces.md) - rules files, skills, lints, PR comments, and tests can all steer agent trajectories.
+- [System prompt learning updates agent rules from eval explanations](../concepts/system-prompt-learning-updates-agent-rules-from-eval-explanations.md) - benchmark traces and judge explanations can become learned agent rules.
 - [AI-amplified shipping speed needs stronger product taste](../concepts/ai-amplified-shipping-speed-needs-stronger-product-taste.md) - implementation speed needs product judgment so teams do not ship every request.
 - [Zero-bug policies turn bug inflow into immediate work](../concepts/zero-bug-policies-turn-bug-inflow-into-immediate-work.md) - AI-assisted triage and repair can keep bugs from becoming passive backlog.
 - [AI agents still need human taste for interaction quality](../concepts/ai-agents-still-need-human-taste-for-interaction-quality.md) - agent-generated UI still needs review for timing, feel, and interaction quality.
@@ -144,3 +147,4 @@ High-consequence coding environments make permissions and verification part of t
 - [Claude Agent SDK [Full Workshop] - Thariq Shihipar, Anthropic](../sources/20260105_TqC1qOfiVcQ.md)
 - [Welcome to AIE CODE - Jed Borovik, Google DeepMind](../sources/20260105_mdEh4lBO_R0.md)
 - [AGI: The Path Forward - Jason Warner & Eiso Kant, Poolside](../sources/20251227_OGCG_QkCcZo.md)
+- [The Unreasonable Effectiveness of Prompt Learning - Aparna Dhinakaran, Arize](../sources/20251223_pP_dSNz_EdQ.md)

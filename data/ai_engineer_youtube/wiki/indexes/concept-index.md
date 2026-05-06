@@ -26,6 +26,7 @@
 - [Pair Next-Token Prediction With Reinforcement Learning for Long-Horizon Work](../concepts/pair-next-token-prediction-with-reinforcement-learning-for-long-horizon-work.md)
 - [Optimize LLM Programs With Metrics and Teacher Feedback](../concepts/optimize-llm-programs-with-metrics-and-teacher-feedback.md)
 - [Use Explanatory Feedback to Optimize Prompts](../concepts/use-explanatory-feedback-to-optimize-prompts.md)
+- [System Prompt Learning Updates Agent Rules From Eval Explanations](../concepts/system-prompt-learning-updates-agent-rules-from-eval-explanations.md)
 - [Evaluator Quality Is a Dependency of Prompt Optimization](../concepts/evaluator-quality-is-a-dependency-of-prompt-optimization.md)
 - [Choose Choreography Or Orchestration By Complexity and Autonomy](../concepts/choose-choreography-or-orchestration-by-complexity-and-autonomy.md)
 - [Use Immutable Versioned State For Agent Handoffs](../concepts/use-immutable-versioned-state-for-agent-handoffs.md)
@@ -260,6 +261,7 @@
 - [Use human judgment gates for high-risk agent code changes](../concepts/use-human-judgment-gates-for-high-risk-agent-code-changes.md)
 - [Quality Wednesdays train engineers to notice small regressions](../concepts/quality-wednesdays-train-engineers-to-notice-small-regressions.md)
 - [AI agents still need human taste for interaction quality](../concepts/ai-agents-still-need-human-taste-for-interaction-quality.md)
+- [System Prompt Learning Updates Agent Rules From Eval Explanations](../concepts/system-prompt-learning-updates-agent-rules-from-eval-explanations.md)
 - [Retire completed planning docs before they become agent doc rot](../concepts/retire-completed-planning-docs-before-they-become-agent-doc-rot.md)
 - [Delegate implementations behind reviewed module interfaces](../concepts/delegate-implementations-behind-reviewed-module-interfaces.md)
 - [Run parallel issue agents in sandboxes with review and merge loops](../concepts/run-parallel-issue-agents-in-sandboxes-with-review-and-merge-loops.md)
@@ -300,6 +302,7 @@
 - [Retire completed planning docs before they become agent doc rot](../concepts/retire-completed-planning-docs-before-they-become-agent-doc-rot.md)
 - [Guard AI-assisted platform contributions with policy and context](../concepts/guard-ai-assisted-platform-contributions-with-policy-and-context.md)
 - [Use Explanatory Feedback to Optimize Prompts](../concepts/use-explanatory-feedback-to-optimize-prompts.md)
+- [System Prompt Learning Updates Agent Rules From Eval Explanations](../concepts/system-prompt-learning-updates-agent-rules-from-eval-explanations.md)
 
 ## Edge Inference
 
@@ -468,6 +471,7 @@
 - [Build AI app benchmarks before optimization](../concepts/build-ai-app-benchmarks-before-optimization.md)
 - [Optimize LLM Programs With Metrics and Teacher Feedback](../concepts/optimize-llm-programs-with-metrics-and-teacher-feedback.md)
 - [Use Explanatory Feedback to Optimize Prompts](../concepts/use-explanatory-feedback-to-optimize-prompts.md)
+- [System Prompt Learning Updates Agent Rules From Eval Explanations](../concepts/system-prompt-learning-updates-agent-rules-from-eval-explanations.md)
 - [Structure Prompt-Learning Experiments With Train/Test Splits and Loop Budgets](../concepts/structure-prompt-learning-experiments-with-train-test-splits-and-loop-budgets.md)
 - [Evaluator Quality Is a Dependency of Prompt Optimization](../concepts/evaluator-quality-is-a-dependency-of-prompt-optimization.md)
 - [Apply online scoring to production traces with cost-aware sampling](../concepts/apply-online-scoring-to-production-traces-with-cost-aware-sampling.md)

@@ -11,6 +11,7 @@ Details:
 - The useful annotation is not only correct or incorrect; subject-matter experts should explain why the output failed, such as missing an instruction, ignoring context, or omitting required information, 07:34-07:53.
 - LLM-as-judge explanations can serve the same role when they provide reasoning behind the label and point at the exact instructions to change, 07:55-08:08.
 - The talk argues that explanatory text from humans or judges is especially valuable because text carries the reasons and improvement guidance that metric-only prompt optimizers can miss, 08:19-08:27, 13:39-13:54.
+- In a coding-agent setting, system-prompt learning uses English failure feedback from tests and LLM-as-judge explanations to write new rules for future runs, rather than trying to infer prompt changes from a scalar benchmark score alone, 01:23-03:56, 05:24-06:00.
 
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
@@ -21,6 +22,8 @@ Related concepts:
 - [Connect production observability to offline eval loops](connect-production-observability-to-offline-eval-loops.md)
 - [Optimize LLM programs with metrics and teacher feedback](optimize-llm-programs-with-metrics-and-teacher-feedback.md)
 - [Optimize Judge Prompts With Diagnostic Feedback](optimize-judge-prompts-with-diagnostic-feedback.md)
+- [System prompt learning updates agent rules from eval explanations](system-prompt-learning-updates-agent-rules-from-eval-explanations.md)
 
 Sources:
 - [Build a Prompt Learning Loop - SallyAnn DeLucia & Fuad Ali, Arize](../sources/20260106_SbcQYbrvAfI.md), 06:32-08:27, 13:39-13:54
+- [The Unreasonable Effectiveness of Prompt Learning - Aparna Dhinakaran, Arize](../sources/20251223_pP_dSNz_EdQ.md), 01:23-03:56, 05:24-06:00

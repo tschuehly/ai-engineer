@@ -695,3 +695,11 @@
 - Updated topics: [Agents](topics/agents.md), [AI Monetization](topics/ai-monetization.md), [Business Intelligence](topics/business-intelligence.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Fund Enterprise AI Through Incremental Productizable Bets](concepts/fund-enterprise-ai-through-incremental-productizable-bets.md), [Start GenBI With Certified Assets Before Autonomous SQL](concepts/start-genbi-with-certified-assets-before-autonomous-sql.md), [Evaluate BI Agents With Real Metadata and Expert Feedback](concepts/evaluate-bi-agents-with-real-metadata-and-expert-feedback.md), [Map AI Charge Metrics to Customer-Perceived Value](concepts/map-ai-charge-metrics-to-customer-perceived-value.md)
 - Notes: Added Northwestern Mutual's GenBI approach covering staged enterprise funding, certified-report-first analytics agents, metadata and expert-feedback evals, modular BI-agent architecture, and AI pressure on seat-based SaaS pricing.
+
+## [2026-05-07] ingest | The Unreasonable Effectiveness of Prompt Learning - Aparna Dhinakaran, Arize
+
+- Source: [The Unreasonable Effectiveness of Prompt Learning - Aparna Dhinakaran, Arize](sources/20251223_pP_dSNz_EdQ.md)
+- Processed: `pP_dSNz_EdQ`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
+- Updated concepts: [System prompt learning updates agent rules from eval explanations](concepts/system-prompt-learning-updates-agent-rules-from-eval-explanations.md), [Use explanatory feedback to optimize prompts](concepts/use-explanatory-feedback-to-optimize-prompts.md), [Evaluator quality is a dependency of prompt optimization](concepts/evaluator-quality-is-a-dependency-of-prompt-optimization.md), [Structure prompt-learning experiments with train/test splits and loop budgets](concepts/structure-prompt-learning-experiments-with-train-test-splits-and-loop-budgets.md)
+- Notes: Added Arize's system-prompt-learning loop for coding agents, covering SWE-bench-style baselines, LLM-as-judge explanations, meta-prompted rule updates, and eval-prompt quality as the key optimization dependency.
