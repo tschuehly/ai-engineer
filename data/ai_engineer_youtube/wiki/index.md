@@ -12,6 +12,7 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Inference](topics/inference.md) - production serving patterns for model runtimes, batching, routing, autoscaling, and resource use.
 - [Infrastructure](topics/infrastructure.md) - deployment runtimes, conversion paths, compilation choices, and operational validation.
 - [Retrieval](topics/retrieval.md) - bringing accurate, task-relevant knowledge from enterprise systems and curated context blocks into agent work.
+- [Tools](topics/tools.md) - MCP integrations, scripts, skills, and tool-use guidance for agent workflows.
 - [Workflows](topics/workflows.md) - repeatable loops for agent execution, failure discovery, and context improvement.
 
 ## Indexes
