@@ -34,8 +34,13 @@ The web itself is also becoming an agent surface. Sites can publish `llms.txt` o
 
 Internal developer platforms are another agent surface. Practices that already helped human developers, such as self-service provisioning, API-first workflows, local validation, clear documentation, and observable runtime feedback, become prerequisites when coding agents need to deploy, debug, and verify work without tribal human handoffs.
 
+Agent-native company design shifts the unit of adoption from a tool to an operating model. When agents are embedded in product, support, operations, and culture, humans increasingly supervise and route asynchronous agent work while the organization hires for people who can apply domain expertise through agent counterparts.
+
 ## Key Concepts
 
+- [Agent-native companies embed agents into product, operations, and culture](../concepts/agent-native-companies-embed-agents-into-product-operations-and-culture.md) - distinguishes core agent infrastructure from occasional AI assistance.
+- [Start the workday by reviewing and dispatching agent work](../concepts/start-the-workday-by-reviewing-and-dispatching-agent-work.md) - treats agents as asynchronous coworkers whose work is reviewed, approved, and redirected.
+- [Hire for AI fluency and agent orchestration ability](../concepts/hire-for-ai-fluency-and-agent-orchestration-ability.md) - makes agent guidance a hiring and onboarding criterion.
 - [Identify the human subject behind agent actions](../concepts/identify-the-human-subject-behind-agent-actions.md) - authorization needs to know which human or enterprise subject the agent represents.
 - [Vault and exchange tokens for scoped upstream agent access](../concepts/vault-and-exchange-tokens-for-scoped-upstream-agent-access.md) - delegated API access should be scope-bound and token-managed outside the model loop.
 - [Model MCP servers as OAuth clients in downstream API chains](../concepts/model-mcp-servers-as-oauth-clients-in-downstream-api-chains.md) - MCP servers may need first-class client identity when they call upstream APIs.
@@ -217,6 +222,7 @@ Internal developer platforms are another agent surface. Practices that already h
 - Which agent coordination paths should be centralized in an orchestrator, and which are safe enough for event-driven choreography?
 - Which LLM calls and tool calls are safe to replay, and which require durable result recording before production use?
 - Which agent failures should update prompts automatically, and which should first become human-reviewed feedback examples?
+- Which company workflows are central enough that removing agents would break the operating model rather than merely reduce convenience?
 
 ## Sources
 
@@ -283,3 +289,4 @@ Internal developer platforms are another agent surface. Practices that already h
 - [Claude Agent SDK [Full Workshop] - Thariq Shihipar, Anthropic](../sources/20260105_TqC1qOfiVcQ.md)
 - [Building Intelligent Research Agents with Manus - Ivan Leo, Manus AI (now Meta Superintelligence)](../sources/20251230_xz0-brt56L8.md)
 - [AGI: The Path Forward - Jason Warner & Eiso Kant, Poolside](../sources/20251227_OGCG_QkCcZo.md)
+- [The Agent Native Company — Rick Blalock, Agentuity](../sources/20250603_0ZPAvzhpGjw.md)

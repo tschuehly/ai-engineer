@@ -32,8 +32,13 @@ For AI app reliability work, build evals at the start of the workflow rather tha
 
 DSPy-style workflows separate program shape from prompt shape: teams can define signatures and modules, route inputs through ordinary control flow, select adapters for model-facing format, and then optimize the resulting program with datasets and metrics. This is most useful when the task has known examples and quality criteria, not when the workflow is too open-ended to score. Prompt-learning workflows should likewise be made explicit: start from examples with feedback, choose sample size and train/test split, run bounded generate/evaluate/refine loops, and review whether evaluator feedback is trustworthy enough to drive the next prompt.
 
+Agent-native organizational workflows start with supervision, dispatch, and review of agent work as a normal daily rhythm. This only works when the organization also adapts hiring and onboarding: employees need enough AI fluency to turn domain expertise into agent instructions, review artifacts, and role-specific agent setup.
+
 ## Key Concepts
 
+- [Agent-native companies embed agents into product, operations, and culture](../concepts/agent-native-companies-embed-agents-into-product-operations-and-culture.md) - pushes workflow design beyond one-off assistant use.
+- [Start the workday by reviewing and dispatching agent work](../concepts/start-the-workday-by-reviewing-and-dispatching-agent-work.md) - provides a daily operating loop for asynchronous agent output.
+- [Hire for AI fluency and agent orchestration ability](../concepts/hire-for-ai-fluency-and-agent-orchestration-ability.md) - makes candidate evaluation and onboarding part of the agent workflow.
 - [Bootstrap RL with targeted SFT before reinforcement learning](../concepts/bootstrap-rl-with-targeted-sft-before-reinforcement-learning.md) - interactive post-training can teach protocol first, then optimize outcomes through RL.
 - [Control environment noise for group-based RL](../concepts/control-environment-noise-for-group-based-rl.md) - RL workflows need stable seeds, difficulty ranges, batch sizing, and exploration settings.
 - [Inspect rollouts before trusting RL environment scores](../concepts/inspect-rollouts-before-trusting-rl-environment-scores.md) - reward curves should be paired with trajectory inspection and real-task trials.
@@ -210,6 +215,7 @@ DSPy-style workflows separate program shape from prompt shape: teams can define 
 - Which LLM workflows have enough labeled examples and metrics to justify DSPy optimization instead of manual prompt iteration?
 - Which prompt-learning loops need human explanations before automated optimization is safe?
 - Which large-refactor batches should wait for upstream merges, and which can safely proceed speculatively in parallel?
+- Which new-hire onboarding steps should be dedicated to configuring role-specific agents before ordinary execution work begins?
 
 ## Sources
 
@@ -266,3 +272,4 @@ DSPy-style workflows separate program shape from prompt shape: teams can define 
 - [OpenAI + @Temporalio : Building Durable, Production Ready Agents - Cornelia Davis, Temporal](../sources/20260112_k8cnVCMYmNc.md)
 - [AGI: The Path Forward - Jason Warner & Eiso Kant, Poolside](../sources/20251227_OGCG_QkCcZo.md)
 - [Shipping AI That Works: An Evaluation Framework for PMs - Aman Khan, Arize](../sources/20251226_2HNSG990Ew8.md)
+- [The Agent Native Company — Rick Blalock, Agentuity](../sources/20250603_0ZPAvzhpGjw.md)

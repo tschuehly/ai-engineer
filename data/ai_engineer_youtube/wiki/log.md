@@ -663,3 +663,11 @@
 - Updated topics: [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Label LLM Judge Outputs Before Mapping Them to Scores](concepts/label-llm-judge-outputs-before-mapping-them-to-scores.md), [Calibrate LLM Judges Like Binary Classifiers](concepts/calibrate-llm-judges-like-binary-classifiers.md), [Connect Production Observability to Offline Eval Loops](concepts/connect-production-observability-to-offline-eval-loops.md)
 - Notes: Added Arize's PM-facing eval framework covering label-first judge scoring and trace-backed prompt, dataset, and experiment workflows for production AI features.
+
+## [2026-05-07] ingest | The Agent Native Company — Rick Blalock, Agentuity
+
+- Source: [The Agent Native Company — Rick Blalock, Agentuity](sources/20250603_0ZPAvzhpGjw.md)
+- Processed: `0ZPAvzhpGjw`
+- Updated topics: [Agents](topics/agents.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Agent-native companies embed agents into product, operations, and culture](concepts/agent-native-companies-embed-agents-into-product-operations-and-culture.md), [Start the workday by reviewing and dispatching agent work](concepts/start-the-workday-by-reviewing-and-dispatching-agent-work.md), [Hire for AI fluency and agent orchestration ability](concepts/hire-for-ai-fluency-and-agent-orchestration-ability.md)
+- Notes: Added Agentuity's agent-native operating model covering agents as core company infrastructure, daily agent supervision loops, AI fluency hiring, and role-specific agent onboarding.
