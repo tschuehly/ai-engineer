@@ -20,6 +20,9 @@ Multi-agent workflows need explicit coordination and recovery choices. Event-dri
 
 ## Key Concepts
 
+- [Bootstrap RL with targeted SFT before reinforcement learning](../concepts/bootstrap-rl-with-targeted-sft-before-reinforcement-learning.md) - interactive post-training can teach protocol first, then optimize outcomes through RL.
+- [Control environment noise for group-based RL](../concepts/control-environment-noise-for-group-based-rl.md) - RL workflows need stable seeds, difficulty ranges, batch sizing, and exploration settings.
+- [Inspect rollouts before trusting RL environment scores](../concepts/inspect-rollouts-before-trusting-rl-environment-scores.md) - reward curves should be paired with trajectory inspection and real-task trials.
 - [Use hosted model playgrounds to prototype before owning infrastructure](../concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md) - hosted playgrounds can compress the path from idea to model, API, app, and cloud deployment experiment.
 - [Human Control Planes Turn Agent Swarms Into Manageable Organizations](../concepts/human-control-planes-turn-agent-swarms-into-manageable-organizations.md) - workflows need visible organizational state when many agents work in parallel.
 - [Treat multi-agent systems as distributed systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md) - workflow design must account for coordination complexity and shared-state failure modes.
@@ -152,6 +155,7 @@ Multi-agent workflows need explicit coordination and recovery choices. Event-dri
 - Which workflow phases should communicate through durable artifacts instead of sharing one long agent context?
 - Which prompt surfaces should be refreshed during long-running agent work as context gets compacted or paged out?
 - Which multi-agent workflows need saga-style compensation because partial side effects are unacceptable?
+- How should teams decide when an RL run is slow-but-healthy versus stuck and worth interrupting?
 
 ## Sources
 
@@ -192,3 +196,4 @@ Multi-agent workflows need explicit coordination and recovery choices. Event-dri
 - [Paperclip: Open Source Human Control Plane for AI Labor - Dotta Bippa](../sources/20260415_h403btjldDQ.md)
 - [Judge the Judge: Building LLM Evaluators That Actually Work with GEPA - Mahmoud Mabrouk, Agenta AI](../sources/20260410_X4dEHRzBLmc.md)
 - [From Chaos to Choreography: Multi-Agent Orchestration Patterns That Actually Work - Sandipan Bhaumik](../sources/20260408_2czYyrTzILg.md)
+- [Let LLMs Wander: Engineering RL Environments - Stefano Fiorucci](../sources/20260408_71V3fTaUp2Q.md)

@@ -471,3 +471,11 @@
 - Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Retrieval](topics/retrieval.md), [Tools](topics/tools.md)
 - Updated concepts: [RAG Stacks Need Modular Baselines Instead Of One Fixed Recipe](concepts/rag-stacks-need-modular-baselines-instead-of-one-fixed-recipe.md), [Structure-Aware Document Parsing Improves RAG Chunk Quality](concepts/structure-aware-document-parsing-improves-rag-chunk-quality.md), [Hybrid Retrieval Should Support Filters And Embedding Migration](concepts/hybrid-retrieval-should-support-filters-and-embedding-migration.md), [Agentic Retrieval Lets Models Plan Search Steps](concepts/agentic-retrieval-lets-models-plan-search-steps.md)
 - Notes: Added OpenRAG-backed RAG guidance covering Docling ingestion, OpenSearch/JVector hybrid retrieval, LangFlow customization, local model options, APIs, MCP exposure, and agentic retrieval traces.
+
+## [2026-05-06] ingest | Let LLMs Wander: Engineering RL Environments - Stefano Fiorucci
+
+- Source: [Let LLMs Wander: Engineering RL Environments - Stefano Fiorucci](sources/20260408_71V3fTaUp2Q.md)
+- Processed: `71V3fTaUp2Q`
+- Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Models](topics/models.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Build RL Environments as Software Artifacts](concepts/build-rl-environments-as-software-artifacts.md), [Use Verifiable Rewards for Language-Model RL](concepts/use-verifiable-rewards-for-language-model-rl.md), [Control Environment Noise for Group-Based RL](concepts/control-environment-noise-for-group-based-rl.md), [Bootstrap RL With Targeted SFT Before Reinforcement Learning](concepts/bootstrap-rl-with-targeted-sft-before-reinforcement-learning.md), [Inspect Rollouts Before Trusting RL Environment Scores](concepts/inspect-rollouts-before-trusting-rl-environment-scores.md)
+- Notes: Added Verifiers-backed RL environment guidance covering environment packaging, deterministic rewards, grouped rollout controls, synthetic SFT warm-up, and rollout inspection before trusting scores.
