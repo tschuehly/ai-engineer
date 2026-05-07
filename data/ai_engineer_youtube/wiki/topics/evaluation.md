@@ -26,6 +26,8 @@ RL environments add an evaluation shape for interactive model behavior: the same
 
 Enterprise RL adds a private-benchmark version of the same evaluation discipline. The target is not a public math score by itself, but a company-specific workflow whose success can be graded, reinforced, and tied back to measurable ROI. Systems simulations also become part of evaluation before training begins: candidate RL layouts should be scored for throughput, queue balance, response-length behavior, KV-cache feasibility, and maximum policy staleness so teams do not mistake fast hardware utilization for stable learning.
 
+Agent RFT adds another evaluation burden: the grader becomes the training signal for a real tool-using agent. Before training, teams should verify that train and eval sets mirror production traffic, that base-model behavior is measured, and that more samples can actually discover better rollouts. During reward design, trajectory context matters because final answers may only be meaningful alongside tool calls, terminal output, retrieved facts, file selections, tests, and lint results. Reward hacking must be treated as expected behavior in optimization-heavy domains: GPU-kernel agents, for example, can return reference code, no kernels, or identity kernels unless judges and static analysis block those shortcuts.
+
 Code world models add execution traces as both training data and evaluation evidence. If a model claims to understand code behavior, useful checks include whether it can trace local variable values, predict state transitions, use terminal feedback, and simulate expensive program paths without confusing approximation with formal guarantees.
 
 Coding-agent model evaluation should also vary the harness around the model. MiniMax M2's scaffold-generalization lesson is that scaling tools is not enough: useful evals should perturb tool descriptions, system prompts, user prompts, chat templates, environment behavior, and tool-response shape to see whether the model adapts or only memorized one agent scaffold.
@@ -109,6 +111,9 @@ AI code quality evaluation should also distinguish generated-code speed from SDL
 - [Use verifiable rewards for language-model RL](../concepts/use-verifiable-rewards-for-language-model-rl.md) - deterministic rewards make environment outcomes usable as eval and training signals.
 - [Specialize models against private benchmarks with RL](../concepts/specialize-models-against-private-benchmarks-with-rl.md) - private workflow success and ROI can define the reward target for enterprise post-training.
 - [Simulate RL run layouts before spending GPU budget](../concepts/simulate-rl-run-layouts-before-spending-gpu-budget.md) - RL infrastructure choices can be evaluated with throughput and staleness simulations before a costly run.
+- [Use Agent RFT after baseline and task optimization](../concepts/use-agent-rft-after-baseline-and-task-optimization.md) - RFT should be used only after the baseline and cheaper agent-improvement levers are clear.
+- [Preserve rollout trajectory context for agent RFT grading](../concepts/preserve-rollout-trajectory-context-for-agent-rft-grading.md) - multi-step agent rewards should inspect trajectory evidence as well as the final answer.
+- [Design Agent RFT rewards for production match and anti-hacking](../concepts/design-agent-rft-rewards-for-production-match-and-anti-hacking.md) - agent reward functions need production-matched data, objective criteria, and hack detection.
 - [Treat environments as eval, data, and training substrates](../concepts/treat-environments-as-eval-data-and-training-substrates.md) - one task harness can support evaluation, data creation, and training loops.
 - [Product harnesses can become model customization environments](../concepts/product-harnesses-can-become-model-customization-environments.md) - product-specific evals should match the harness where the model will actually operate.
 - [Control environment noise for group-based RL](../concepts/control-environment-noise-for-group-based-rl.md) - grouped rollout evals need differences to come from model behavior rather than simulator randomness.
@@ -289,5 +294,6 @@ AI code quality evaluation should also distinguish generated-code speed from SDL
 - [Hard Won Lessons from Building Effective AI Coding Agents - Nik Pash, Cline](../sources/20251212_I8fs4omN1no.md)
 - [RL Environments at Scale - Will Brown, Prime Intellect](../sources/20251209__IzZWeuTx7I.md)
 - [Efficient Reinforcement Learning - Rhythm Garg & Linden Li, Applied Compute](../sources/20251209_o15AaYl7Wu0.md)
+- [Agent Reinforcement Fine Tuning - Will Hang & Cathy Zhou, OpenAI](../sources/20251209_p1CmPZ2j6Lk.md)
 - [Moving away from Agile: What's Next - Martin Harrysson & Natasha Maniar, McKinsey & Company](../sources/20251212_SZStlIhyTCY.md)
 - [Can you prove AI ROI in Software Eng? (Stanford 120k Devs Study) - Yegor Denisov-Blanch, Stanford](../sources/20251211_JvosMkuNxF8.md)

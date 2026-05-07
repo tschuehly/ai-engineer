@@ -927,3 +927,11 @@
 - Updated topics: [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Models](topics/models.md)
 - Updated concepts: [Specialize Models Against Private Benchmarks With RL](concepts/specialize-models-against-private-benchmarks-with-rl.md), [Pipeline RL Trades Policy Staleness for GPU Throughput](concepts/pipeline-rl-trades-policy-staleness-for-gpu-throughput.md), [Simulate RL Run Layouts Before Spending GPU Budget](concepts/simulate-rl-run-layouts-before-spending-gpu-budget.md)
 - Notes: Added Applied Compute's enterprise RL framing and pipeline-RL systems model for balancing GPU throughput, response-length behavior, and policy staleness before costly runs.
+
+## [2026-05-07] ingest | Agent Reinforcement Fine Tuning - Will Hang & Cathy Zhou, OpenAI
+
+- Source: [Agent Reinforcement Fine Tuning - Will Hang & Cathy Zhou, OpenAI](sources/20251209_p1CmPZ2j6Lk.md)
+- Processed: `p1CmPZ2j6Lk`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Models](topics/models.md)
+- Updated concepts: [Use Agent RFT after baseline and task optimization](concepts/use-agent-rft-after-baseline-and-task-optimization.md), [Preserve rollout trajectory context for agent RFT grading](concepts/preserve-rollout-trajectory-context-for-agent-rft-grading.md), [Design Agent RFT rewards for production match and anti-hacking](concepts/design-agent-rft-rewards-for-production-match-and-anti-hacking.md)
+- Notes: Added OpenAI's Agent RFT workflow guidance for when to use reinforcement fine-tuning, how to grade tool-call trajectories, and how to design production-matched rewards that resist hacking.

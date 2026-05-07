@@ -20,6 +20,8 @@ Cline's RL environment factory adds a data-production pattern for that training 
 
 Applied Compute adds the enterprise specialization and systems-efficiency layer for RL. In that framing, RL turns private customer workflows into private benchmarks, then improves a specialized model through repeated use and data flywheels. Because those runs serve customer delivery rather than open-ended lab research, speed, cost, and low-variance runtime are product requirements. Asynchronous pipeline RL can improve GPU utilization by decoupling sampling from training, but it introduces stale-policy tokens and a throughput/stability tradeoff that has to be modeled before launch.
 
+OpenAI's Agent RFT talk adds a hosted, tool-using version of that post-training pattern. It treats reinforcement fine-tuning as a late-stage lever for multi-step agents after teams have matched training and eval data to production, measured a base-model baseline, and optimized prompts, tools, and task shape. The model learns from sampled trajectories that call real tool endpoints and receive custom reward signals, so useful gains depend on objective task definitions, enough exploration variance, and graders that capture production success rather than easy-to-game proxy behavior.
+
 ## Key Concepts
 
 - [Compare models by task, thinking budget, cost, and latency](../concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - model choice should be routed by workload constraints rather than by size alone.
@@ -61,6 +63,9 @@ Applied Compute adds the enterprise specialization and systems-efficiency layer 
 - [Specialize models against private benchmarks with RL](../concepts/specialize-models-against-private-benchmarks-with-rl.md) - enterprise RL should target measurable private workflows, not only public leaderboards.
 - [Pipeline RL trades policy staleness for GPU throughput](../concepts/pipeline-rl-trades-policy-staleness-for-gpu-throughput.md) - async RL improves utilization only when the algorithm can tolerate stale-policy data.
 - [Simulate RL run layouts before spending GPU budget](../concepts/simulate-rl-run-layouts-before-spending-gpu-budget.md) - GPU allocation, response lengths, KV-cache limits, and staleness should be modeled before expensive runs.
+- [Use Agent RFT after baseline and task optimization](../concepts/use-agent-rft-after-baseline-and-task-optimization.md) - reinforcement fine-tuning should follow data matching, baselining, prompt optimization, and task/tool simplification.
+- [Preserve rollout trajectory context for agent RFT grading](../concepts/preserve-rollout-trajectory-context-for-agent-rft-grading.md) - tool-calling training needs rollout IDs and trace context so graders can judge behavior, not only final text.
+- [Design Agent RFT rewards for production match and anti-hacking](../concepts/design-agent-rft-rewards-for-production-match-and-anti-hacking.md) - reward functions should mirror production, provide learning signal, and block metric gaming.
 - [Bootstrap RL with targeted SFT before reinforcement learning](../concepts/bootstrap-rl-with-targeted-sft-before-reinforcement-learning.md) - small models may need a syntax and valid-action warm-up before RL can improve strategy.
 - [Control environment noise for group-based RL](../concepts/control-environment-noise-for-group-based-rl.md) - grouped rollout methods need comparable environments, controlled difficulty, and stable batch sizing.
 - [Mitigate small-model doom loops during preference alignment and RL](../concepts/mitigate-small-model-doom-loops-during-preference-alignment-and-rl.md) - tiny reasoning models need post-training checks for repetitive loops that SFT may not remove.
@@ -124,3 +129,4 @@ Applied Compute adds the enterprise specialization and systems-efficiency layer 
 - [Hard Won Lessons from Building Effective AI Coding Agents - Nik Pash, Cline](../sources/20251212_I8fs4omN1no.md)
 - [RL Environments at Scale - Will Brown, Prime Intellect](../sources/20251209__IzZWeuTx7I.md)
 - [Efficient Reinforcement Learning - Rhythm Garg & Linden Li, Applied Compute](../sources/20251209_o15AaYl7Wu0.md)
+- [Agent Reinforcement Fine Tuning - Will Hang & Cathy Zhou, OpenAI](../sources/20251209_p1CmPZ2j6Lk.md)
