@@ -5,6 +5,8 @@
 - [Optimize action agents for reliability before abstract intelligence](../concepts/optimize-action-agents-for-reliability-before-abstract-intelligence.md)
 - [Make voice AI devices developer-extensible](../concepts/make-voice-ai-devices-developer-extensible.md)
 - [Measure AI intensity by human input to valuable output](../concepts/measure-ai-intensity-by-human-input-to-valuable-output.md)
+- [Start with augmentation when autonomous reliability is not ready](../concepts/start-with-augmentation-when-autonomous-reliability-is-not-ready.md)
+- [Use AI leapfrogging to find conservative-industry opportunities](../concepts/use-ai-leapfrogging-to-find-conservative-industry-opportunities.md)
 - [Standard models guide AI engineering practice](../concepts/standard-models-guide-ai-engineering-practice.md)
 - [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md)
 - [Choose AI coworker form factors by interaction mode](../concepts/choose-ai-coworker-form-factors-by-interaction-mode.md)
@@ -645,6 +647,7 @@
 ## Inference
 
 - [Abstract LLM inference behind one routing API](../concepts/abstract-llm-inference-behind-one-routing-api.md)
+- [Plan AI products for a multimodel market](../concepts/plan-ai-products-for-a-multimodel-market.md)
 - [Profile small-model architectures on target hardware](../concepts/profile-small-model-architectures-on-target-hardware.md)
 - [Use local AI workstations when iteration, privacy, or latency dominate](../concepts/use-local-ai-workstations-when-iteration-privacy-or-latency-dominate.md)
 - [Make local inference benchmarks reproducible artifacts](../concepts/make-local-inference-benchmarks-reproducible-artifacts.md)
@@ -695,6 +698,10 @@
 ## Product Strategy
 
 - [Measure AI intensity by human input to valuable output](../concepts/measure-ai-intensity-by-human-input-to-valuable-output.md)
+- [Plan AI products for a multimodel market](../concepts/plan-ai-products-for-a-multimodel-market.md)
+- [Build domain-specific workflow wrappers around models](../concepts/build-domain-specific-workflow-wrappers-around-models.md)
+- [Start with augmentation when autonomous reliability is not ready](../concepts/start-with-augmentation-when-autonomous-reliability-is-not-ready.md)
+- [Use AI leapfrogging to find conservative-industry opportunities](../concepts/use-ai-leapfrogging-to-find-conservative-industry-opportunities.md)
 - [Standard models guide AI engineering practice](../concepts/standard-models-guide-ai-engineering-practice.md)
 - [Design AI creative systems for generated-asset retrieval](../concepts/design-ai-creative-systems-for-generated-asset-retrieval.md)
 - [Prototype AI UX by feeling the model material](../concepts/prototype-ai-ux-by-feeling-the-model-material.md)
@@ -1157,6 +1164,7 @@
 ## Workflows
 
 - [Treat AI coding as safe software change](../concepts/treat-ai-coding-as-safe-software-change.md)
+- [Build domain-specific workflow wrappers around models](../concepts/build-domain-specific-workflow-wrappers-around-models.md)
 - [Stage vibe coding from prototype to structured workflow](../concepts/stage-vibe-coding-from-prototype-to-structured-workflow.md)
 - [Use repository instructions to ground coding agents](../concepts/use-repository-instructions-to-ground-coding-agents.md)
 - [Custom agent modes encode repeatable coding workflows](../concepts/custom-agent-modes-encode-repeatable-coding-workflows.md)

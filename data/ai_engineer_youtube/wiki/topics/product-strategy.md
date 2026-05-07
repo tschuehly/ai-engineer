@@ -10,6 +10,8 @@ AI-native product strategy also includes deciding where model behavior belongs i
 
 AI intensity gives product teams another product-shape lens: compare how much valuable output the system can produce for each human steering action. A higher ratio is not automatically better; it is useful only when the output is valuable, reviewable, and not annoying to control.
 
+AI startup strategy should also assume that raw model capability is a moving commodity surface. The product moat is less likely to be a generic prompt box on one model and more likely to be a thick workflow wrapper: domain knowledge, automatic context collection, model orchestration, output presentation, review affordances, and execution speed that keeps improving as models get cheaper and stronger.
+
 ## Key Concepts
 
 - [AI Does Not Replace Shareable Product Marketing](../concepts/ai-does-not-replace-shareable-product-marketing.md) - launch content only matters when it can earn attention and social sharing.
@@ -24,6 +26,10 @@ AI intensity gives product teams another product-shape lens: compare how much va
 - [Prototype AI UX by feeling the model material](../concepts/prototype-ai-ux-by-feeling-the-model-material.md) - AI UX choices need runnable probes that expose model behavior, latency, and fit.
 - [Court agent emergence with bounded play](../concepts/court-agent-emergence-with-bounded-play.md) - exploratory prototypes can reveal useful product behavior beyond automating an existing step.
 - [Design AI creative systems for generated-asset retrieval](../concepts/design-ai-creative-systems-for-generated-asset-retrieval.md) - product teams need output retrieval when creative personalization creates many generated variants.
+- [Plan AI products for a multimodel market](../concepts/plan-ai-products-for-a-multimodel-market.md) - product teams should preserve provider flexibility as model capability, cost, and share keep changing.
+- [Build domain-specific workflow wrappers around models](../concepts/build-domain-specific-workflow-wrappers-around-models.md) - defensible AI products package context, orchestration, review, and domain workflow fit around models.
+- [Start with augmentation when autonomous reliability is not ready](../concepts/start-with-augmentation-when-autonomous-reliability-is-not-ready.md) - copilots can be the right product shape before full automation is trustworthy.
+- [Use AI leapfrogging to find conservative-industry opportunities](../concepts/use-ai-leapfrogging-to-find-conservative-industry-opportunities.md) - slow historical software adoption does not preclude fast AI adoption when the workflow pain is concrete.
 
 ## Open Questions
 
@@ -39,3 +45,4 @@ AI intensity gives product teams another product-shape lens: compare how much va
 - [From Arc to Dia: Lessons learned building AI Browsers - Samir Mody, The Browser Company of New York](../sources/20251219_o4scJaQgnFA.md)
 - [Form factors for your new AI coworkers - Craig Wattrus, Flatfile](../sources/20250822_CiMVKnX-CNI.md)
 - [The Next Unicorns: 7 Top AI startups from the HF0 Residency](../sources/20250821_L8-5ezsoI5A.md)
+- [State of Startups and AI 2025 - Sarah Guo, Conviction](../sources/20250802_3MZS5gNElZM.md)

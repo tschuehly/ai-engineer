@@ -6,6 +6,8 @@ Inference is the production discipline of turning trained models into reliable, 
 
 Open frontier-scale models add an adoption constraint to inference: availability of weights is not enough when a model is too large for ordinary local hardware. GLM 4.6 is described as a 355B-parameter model that can be served through open-source inference stacks such as SGLang and vLLM when enough GPUs are available, while hosted/API access and coding-assistant integrations provide easier adoption paths for teams without large accelerator pools. Model marketplaces add a different adoption layer: one routing API can hide provider-specific edge cases, caching, tool-calling differences, regional routing, privacy controls, and observability while preserving the ability to compare and switch models.
 
+Application builders should treat that routing layer as a strategic default, not only an operational convenience. A competitive model market means last year's strong model can become cheap enough for broad use while newer providers or open-source releases change the quality frontier, so products should keep room to choose the right model at the right time.
+
 Brockman's infrastructure view adds a serving-shape warning: realtime AI interfaces and long compute-heavy jobs are different workloads. Inference platforms need to account for both low-latency interaction and longer test-time or agentic compute, because a fleet balanced for the wrong mix can waste scarce accelerator capacity.
 
 ## Key Concepts
@@ -27,6 +29,7 @@ Brockman's infrastructure view adds a serving-shape warning: realtime AI interfa
 - [Compile Python inference functions into portable native binaries](../concepts/compile-python-inference-functions-into-portable-native-binaries.md) - Python inference can be packaged as native libraries when portability and low-latency deployment matter.
 - [Expose local and open-source models through familiar API clients](../concepts/expose-local-and-open-source-models-through-familiar-api-clients.md) - API compatibility can hide whether a model runs through a hosted service, local runtime, or compiled binary.
 - [Abstract LLM inference behind one routing API](../concepts/abstract-llm-inference-behind-one-routing-api.md) - routing layers can normalize model access, provider differences, observability, privacy, and tool-calling support.
+- [Plan AI products for a multimodel market](../concepts/plan-ai-products-for-a-multimodel-market.md) - application infrastructure should assume model choice, pricing, and capability will keep changing.
 - [Open model families need ecosystem-compatible tooling](../concepts/open-model-families-need-ecosystem-compatible-tooling.md) - open-weight models need serving, fine-tuning, and integration support before developers can use them.
 - [Per-layer embeddings move effective-model capacity out of VRAM](../concepts/per-layer-embeddings-move-effective-model-capacity-out-of-vram.md) - flash-backed PLE changes the memory profile of effective on-device models.
 - [Hot-swap small models to avoid one-model-per-GPU waste](../concepts/hot-swap-small-models-to-avoid-one-model-per-gpu-waste.md) - many small models can share accelerator capacity when the runtime supports dynamic loading and eviction.
@@ -66,3 +69,4 @@ Brockman's infrastructure view adds a serving-shape warning: realtime AI interfa
 - [Minimax M2: Building the #1 Open Model - Olive Song, MiniMax](../sources/20251213_lY1iFbDPRlw.md)
 - [Z.ai GLM 4.6: What We Learned From 100 Million Open Source Downloads - Yuxuan Zhang, Z.ai](../sources/20251122_m6MF1OR_9kM.md)
 - [The Next Unicorns: 7 Top AI startups from the HF0 Residency](../sources/20250821_L8-5ezsoI5A.md)
+- [State of Startups and AI 2025 - Sarah Guo, Conviction](../sources/20250802_3MZS5gNElZM.md)

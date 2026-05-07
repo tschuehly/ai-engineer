@@ -12,6 +12,8 @@ System-prompt learning adds a way to update coding-agent behavior without changi
 
 Amp Code adds a product-architecture version of the same discipline. Its guidance is to keep the agent loop simple but tune the surrounding pieces aggressively: make core tools task-specific, use subagents to isolate context-heavy search or reasoning, and design editor surfaces around reviewing agent output rather than typing every change manually.
 
+The broader startup-market lesson from Cursor is that code was an early AI application because the workflow had structured text, deterministic validation, heavy model-lab investment, and builders who understood their own daily work. The transferable pattern is not "add chat to every profession"; it is to build domain-specific workflow products that package context, route models, standardize repetitive work, and make outputs safe to accept.
+
 Context-platform sizing adds an inference constraint to multi-agent coding systems. Orchestrators and subagents can make context more targeted, but they also create repeated prompt, tool-call, and tool-response regions whose cache hit rate affects cost, rate-limit pressure, latency, and concurrency.
 
 Yegge and Kim add a post-IDE version of the same pattern. The fragile shape is one oversized coding agent sent into the whole codebase with a larger context window and one expensive model for every request. The more durable shape decomposes the work into role-specialized agents for product, coding, review, testing, merging, and adjacent responsibilities, while the human interface becomes a review and orchestration surface rather than a place where every line is typed by hand. Their adoption warning is also practical: senior and staff engineers may resist these tools precisely because they carry cognitive overhead and threaten existing craft identities, so fluency has to come from hands-on production practice, not only from tool availability.
@@ -189,6 +191,7 @@ Greg Brockman's Codex framing connects agent usefulness directly to codebase sha
 - [Product engineers need direct customer context](../concepts/product-engineers-need-direct-customer-context.md) - engineers need direct customer feedback to make useful product decisions as AI handles more implementation.
 - [Unified coding-agent harnesses combine models, tools, environments, and safety](../concepts/unified-coding-agent-harnesses-combine-models-tools-environments-and-safety.md) - model capability needs an execution harness that manages tools, environments, and safety.
 - [Use stable agent harnesses as model-evolution boundaries](../concepts/use-stable-agent-harnesses-as-model-evolution-boundaries.md) - a maintained harness absorbs model and API churn so products can focus on workflow differentiation.
+- [Build domain-specific workflow wrappers around models](../concepts/build-domain-specific-workflow-wrappers-around-models.md) - Cursor-style products win by packaging model capability into the workflow, not by exposing one raw model.
 - [Agent managers orchestrate editor, browser, and background agents](../concepts/agent-managers-orchestrate-editor-browser-and-background-agents.md) - a higher-level IDE surface can coordinate agents, approvals, browser work, and manual editor handoff.
 - [Dynamic artifacts make agent work reviewable and reusable](../concepts/dynamic-artifacts-make-agent-work-reviewable-and-reusable.md) - artifacts make plans, progress, proof, feedback, and memory inspectable.
 - [Prompt coding agents around learned model habits](../concepts/prompt-coding-agents-around-learned-model-habits.md) - prompts should fit the model's trained coding behavior instead of blindly carrying over old harness instructions.
@@ -374,4 +377,5 @@ Greg Brockman's Codex framing connects agent usefulness directly to codebase sha
 - [What Data from 20m Pull Requests Reveal About AI Transformation - Nick Arcolano, Jellyfish](../sources/20251124_WqZq8L-v9pA.md)
 - [Real World Development with GitHub Copilot and VS Code — Harald Kirschner, Christopher Harrison](../sources/20250803_eOxOzcw70f0.md)
 - [How to Improve your Vibe Coding - Ian Butler](../sources/20250803_g03m-WFEu1U.md)
+- [State of Startups and AI 2025 - Sarah Guo, Conviction](../sources/20250802_3MZS5gNElZM.md)
 - [Developing Taste in Coding Agents: Applied Meta Neuro-Symbolic RL - Ahmad Awais, CommandCode](../sources/20251124_kWOQS3XPZ10.md)

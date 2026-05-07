@@ -4,6 +4,10 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Build domain-specific workflow wrappers around models](concepts/build-domain-specific-workflow-wrappers-around-models.md) - defensible AI products package context, orchestration, review, and domain workflow fit around changing models.
+- [Plan AI products for a multimodel market](concepts/plan-ai-products-for-a-multimodel-market.md) - model routing and provider flexibility matter as capability and pricing keep moving.
+- [Start with augmentation when autonomous reliability is not ready](concepts/start-with-augmentation-when-autonomous-reliability-is-not-ready.md) - copilots can earn trust before full agent autonomy is reliable enough.
+- [Use AI leapfrogging to find conservative-industry opportunities](concepts/use-ai-leapfrogging-to-find-conservative-industry-opportunities.md) - conservative sectors can adopt quickly when AI solves concrete workflow pain.
 - [Low-false-positive bug finding is required for coding-agent trust](concepts/low-false-positive-bug-finding-is-required-for-coding-agent-trust.md) - automated bug reports need precision because false-positive floods create alert fatigue and let real bugs through.
 - [Scope bug-hunting rules to specific defect classes](concepts/scope-bug-hunting-rules-to-specific-defect-classes.md) - rules files should name concrete security and logic bug classes and require test-backed fix validation.
 - [Use component inventories to preserve bug-hunting context](concepts/use-component-inventories-to-preserve-bug-hunting-context.md) - ask agents to map classes, variables, diffs, and usage paths before searching for complex cross-file bugs.
@@ -296,7 +300,7 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Inference](topics/inference.md) - production serving patterns for model runtimes, batching, routing, autoscaling, and resource use.
 - [Infrastructure](topics/infrastructure.md) - deployment runtimes, conversion paths, compilation choices, and operational validation.
 - [Models](topics/models.md) - model architecture, tokenizer, training, adaptation, and sizing choices under practical constraints.
-- [Product Strategy](topics/product-strategy.md) - product attention, onboarding, retention, taste, and primitives in AI-assisted product work.
+- [Product Strategy](topics/product-strategy.md) - product attention, onboarding, retention, taste, workflow wrappers, and primitives in AI-assisted product work.
 - [Retrieval](topics/retrieval.md) - bringing accurate, task-relevant knowledge from enterprise systems and curated context blocks into agent work.
 - [Tools](topics/tools.md) - MCP integrations, scripts, skills, and tool-use guidance for agent workflows.
 - [Voice Agents](topics/voice-agents.md) - realtime audio-agent architecture, tool delegation, persona prompting, and voice-specific evaluation.

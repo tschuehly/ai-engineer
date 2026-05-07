@@ -1335,3 +1335,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Low-false-positive bug finding is required for coding-agent trust](concepts/low-false-positive-bug-finding-is-required-for-coding-agent-trust.md), [Scope bug-hunting rules to specific defect classes](concepts/scope-bug-hunting-rules-to-specific-defect-classes.md), [Use component inventories to preserve bug-hunting context](concepts/use-component-inventories-to-preserve-bug-hunting-context.md), [Prefer thinking models for deep bug hunting, with variability caveats](concepts/prefer-thinking-models-for-deep-bug-hunting-with-variability-caveats.md)
 - Notes: Added Bismuth's bug-finding benchmark lessons for vibe coding: false-positive-heavy agents create alert fatigue, while scoped defect rules, context inventories, validation, and thinking models improve but do not eliminate current limitations.
+
+## [2026-05-07] ingest | State of Startups and AI 2025 - Sarah Guo, Conviction
+
+- Source: [State of Startups and AI 2025 - Sarah Guo, Conviction](sources/20250802_3MZS5gNElZM.md)
+- Processed: `3MZS5gNElZM`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Inference](topics/inference.md), [Product Strategy](topics/product-strategy.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Plan AI products for a multimodel market](concepts/plan-ai-products-for-a-multimodel-market.md), [Build domain-specific workflow wrappers around models](concepts/build-domain-specific-workflow-wrappers-around-models.md), [Start with augmentation when autonomous reliability is not ready](concepts/start-with-augmentation-when-autonomous-reliability-is-not-ready.md), [Use AI leapfrogging to find conservative-industry opportunities](concepts/use-ai-leapfrogging-to-find-conservative-industry-opportunities.md)
+- Notes: Added Conviction's AI startup framing for competitive multimodel planning, Cursor-style workflow products, pragmatic copilot-first autonomy, and vertical adoption in conservative industries.
