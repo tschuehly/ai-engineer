@@ -16,7 +16,7 @@ Coding-model evaluation needs model-family progress to be measured against fresh
 
 Coding and workplace-agent models also need training signals that look like the work they will do. MiniMax M2 adds a compact open-weight model pattern: train against scaled coding environments and verifiable goals, use expert developers as a reward/evaluation source, teach repeated reasoning-tool loops for noisy environments, perturb scaffolds so the behavior is not tied to one harness, and exploit small active-parameter cost when many parallel agent copies are useful.
 
-Cline's RL environment factory adds a data-production pattern for that training pressure: real coding-agent sessions can be converted into portable environments with start states, prompts, solved end states, traces, and outcome verifiers. In that framing, the agent product is not only an interface around current models; it is also a source of hard tasks that can shape future model capability.
+Cline's RL environment factory adds a data-production pattern for that training pressure: real coding-agent sessions can be converted into portable environments with start states, prompts, solved end states, traces, and outcome verifiers. In that framing, the agent product is not only an interface around current models; it is also a source of hard tasks that can shape future model capability. Prime Intellect generalizes this environment pattern beyond RL: a product harness with tasks and rewards can become an eval, synthetic-data generator, SFT or distillation source, RL training loop, and model-customization substrate.
 
 ## Key Concepts
 
@@ -44,6 +44,9 @@ Cline's RL environment factory adds a data-production pattern for that training 
 - [Treat quantization as a memory-bandwidth lever](../concepts/treat-quantization-as-a-memory-bandwidth-lever.md) - precision choices affect throughput and time to first token, not only whether a model fits.
 - [Post-train small models for narrow capabilities](../concepts/post-train-small-models-for-narrow-capabilities.md) - data extraction, tool use, and other focused tasks are better targets than average performance across every benchmark.
 - [Build RL environments as software artifacts](../concepts/build-rl-environments-as-software-artifacts.md) - interactive post-training tasks need runnable environments, parsers, state, and rewards rather than only static examples.
+- [Treat environments as eval, data, and training substrates](../concepts/treat-environments-as-eval-data-and-training-substrates.md) - environments preserve optionality across evals, synthetic data, SFT, distillation, and RL.
+- [Product harnesses can become model customization environments](../concepts/product-harnesses-can-become-model-customization-environments.md) - product-specific behavior can be trained inside the same harness that defines the user experience.
+- [Environment registries make AI research more accessible](../concepts/environment-registries-make-ai-research-more-accessible.md) - packaged environments make model research easier to share and run.
 - [Pair next-token prediction with reinforcement learning for long-horizon work](../concepts/pair-next-token-prediction-with-reinforcement-learning-for-long-horizon-work.md) - long-horizon model behavior needs task-completion feedback beyond fluent continuations.
 - [Train code models on execution traces, not only syntax](../concepts/train-code-models-on-execution-traces-not-only-syntax.md) - execution traces expose program dynamics that token-only source modeling can miss.
 - [Use neural debugging to fill code by simulated execution](../concepts/use-neural-debugging-to-fill-code-by-simulated-execution.md) - execution-aware code models can complete partial code from simulated state and surrounding structure.
@@ -112,3 +115,4 @@ Cline's RL environment factory adds a data-production pattern for that training 
 - [Coding Evals: From Code Snippets to Codebases - Naman Jain, Cursor](../sources/20251215_tHN44yJoeS8.md)
 - [Minimax M2: Building the #1 Open Model - Olive Song, MiniMax](../sources/20251213_lY1iFbDPRlw.md)
 - [Hard Won Lessons from Building Effective AI Coding Agents - Nik Pash, Cline](../sources/20251212_I8fs4omN1no.md)
+- [RL Environments at Scale - Will Brown, Prime Intellect](../sources/20251209__IzZWeuTx7I.md)

@@ -9,6 +9,8 @@ Use when:
 Details:
 - Fiorucci frames RL environments as gyms where LLM agents can use tools, run code, solve multi-step tasks, and learn from interaction and feedback. (00:45-01:02)
 - Verifiers packages environments as installable Python packages and provides base classes for single-turn, multi-turn, and tool-using environments, plus parsers, reward functions, model-serving abstraction, parallel trajectories, and trainer integrations. (10:19-11:46)
+- Brown frames the same environment artifact as a harness plus tasks and rewards that can serve evals, synthetic data, SFT, distillation, direct RL, and deployed user-task streams. 05:42-06:24
+- Environment registries extend the software-artifact pattern: each shared environment can be a Python project with dependencies, versions, async tools, a data set, and reward rubrics. 11:19-12:05
 - In the simple reverse-text environment, `load_environment` prepares the dataset, a parser extracts the model answer, a reward function compares it to ground truth, and a weighted rubric defines the score used for evaluation or training. (11:52-14:20)
 - For tic-tac-toe, the environment behaves like a game engine: it stores board state, parses the model's move, checks validity, applies opponent moves, checks win or draw state, and emits the next prompt until the trajectory ends. (19:00-20:52)
 - CWM adds a large-scale code-agent training example: samplers execute terminal actions in an environment, trajectories are scored, trainers compute gradients, checkpoints are pushed to samplers, and queued models plus queued trajectories keep asynchronous RL throughput high. 08:43-10:31
@@ -26,8 +28,11 @@ Related concepts:
 - [Agent tool loops turn model-required actions into executable results](agent-tool-loops-turn-model-required-actions-into-executable-results.md)
 - [Post-train small models for narrow capabilities](post-train-small-models-for-narrow-capabilities.md)
 - [Train code models on execution traces, not only syntax](train-code-models-on-execution-traces-not-only-syntax.md)
+- [Treat environments as eval, data, and training substrates](treat-environments-as-eval-data-and-training-substrates.md)
+- [Environment registries make AI research more accessible](environment-registries-make-ai-research-more-accessible.md)
 
 Sources:
 - [Let LLMs Wander: Engineering RL Environments - Stefano Fiorucci](../sources/20260408_71V3fTaUp2Q.md), 00:45-20:52
 - [Code World Model: Building World Models for Computation - Jacob Kahn, FAIR Meta](../sources/20251217_sYgE4ppDFOQ.md), 08:43-11:31
 - [Hard Won Lessons from Building Effective AI Coding Agents - Nik Pash, Cline](../sources/20251212_I8fs4omN1no.md), 05:07-10:01
+- [RL Environments at Scale - Will Brown, Prime Intellect](../sources/20251209__IzZWeuTx7I.md), 05:42-12:05

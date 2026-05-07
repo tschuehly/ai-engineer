@@ -22,7 +22,7 @@ Enterprise analytics agents add a metadata-specific evaluation layer. GenBI syst
 
 Contact-center voice evaluation should inspect each pipeline stage, not only the final summary. Speaker-channel preservation, STT accuracy under accents and poor audio, domain vocabulary, numeric normalization, grounded JSON extraction, hallucination checks, operator edits, and CRM-field mappings each create a failure point that can corrupt business records or analytics.
 
-RL environments add an evaluation shape for interactive model behavior: the same environment can generate rollouts, compute deterministic or weighted rewards, and become the training loop. That makes the environment itself part of the eval artifact. Teams should control environment noise, inspect trajectories, check for hidden opponent or simulator bias, and try the trained model in the real task before trusting reward curves or benchmark scores.
+RL environments add an evaluation shape for interactive model behavior: the same environment can generate rollouts, compute deterministic or weighted rewards, and become the training loop. That makes the environment itself part of the eval artifact. Teams should control environment noise, inspect trajectories, check for hidden opponent or simulator bias, and try the trained model in the real task before trusting reward curves or benchmark scores. Environment design also prevents vague agent validation: once a harness must include tasks and rewards, teams can compare models, prompts, hyperparameters, and training methods against a named optimization target instead of relying on a vibe check.
 
 Code world models add execution traces as both training data and evaluation evidence. If a model claims to understand code behavior, useful checks include whether it can trace local variable values, predict state transitions, use terminal feedback, and simulate expensive program paths without confusing approximation with formal guarantees.
 
@@ -105,6 +105,8 @@ AI code quality evaluation should also distinguish generated-code speed from SDL
 - [Train coding-agent models with environments and expert developer reward](../concepts/train-coding-agent-models-with-environments-and-expert-developer-reward.md) - expert developer feedback can evaluate whether coding behavior is trusted and useful.
 - [Use neural debugging to fill code by simulated execution](../concepts/use-neural-debugging-to-fill-code-by-simulated-execution.md) - code assistants can be evaluated on whether simulated execution supports accurate completions.
 - [Use verifiable rewards for language-model RL](../concepts/use-verifiable-rewards-for-language-model-rl.md) - deterministic rewards make environment outcomes usable as eval and training signals.
+- [Treat environments as eval, data, and training substrates](../concepts/treat-environments-as-eval-data-and-training-substrates.md) - one task harness can support evaluation, data creation, and training loops.
+- [Product harnesses can become model customization environments](../concepts/product-harnesses-can-become-model-customization-environments.md) - product-specific evals should match the harness where the model will actually operate.
 - [Control environment noise for group-based RL](../concepts/control-environment-noise-for-group-based-rl.md) - grouped rollout evals need differences to come from model behavior rather than simulator randomness.
 - [Inspect rollouts before trusting RL environment scores](../concepts/inspect-rollouts-before-trusting-rl-environment-scores.md) - strong environment scores can hide biased setup logic or memorized strategies.
 - [Make local inference benchmarks reproducible artifacts](../concepts/make-local-inference-benchmarks-reproducible-artifacts.md) - local serving claims should be backed by repeatable run artifacts and hardware metrics.
@@ -279,5 +281,6 @@ AI code quality evaluation should also distinguish generated-code speed from SDL
 - [Coding Evals: From Code Snippets to Codebases - Naman Jain, Cursor](../sources/20251215_tHN44yJoeS8.md)
 - [Minimax M2: Building the #1 Open Model - Olive Song, MiniMax](../sources/20251213_lY1iFbDPRlw.md)
 - [Hard Won Lessons from Building Effective AI Coding Agents - Nik Pash, Cline](../sources/20251212_I8fs4omN1no.md)
+- [RL Environments at Scale - Will Brown, Prime Intellect](../sources/20251209__IzZWeuTx7I.md)
 - [Moving away from Agile: What's Next - Martin Harrysson & Natasha Maniar, McKinsey & Company](../sources/20251212_SZStlIhyTCY.md)
 - [Can you prove AI ROI in Software Eng? (Stanford 120k Devs Study) - Yegor Denisov-Blanch, Stanford](../sources/20251211_JvosMkuNxF8.md)

@@ -2,6 +2,7 @@
 
 ## Agents
 
+- [Product harnesses can become model customization environments](../concepts/product-harnesses-can-become-model-customization-environments.md)
 - [Agent-native companies embed agents into product, operations, and culture](../concepts/agent-native-companies-embed-agents-into-product-operations-and-culture.md)
 - [Universal AI Adoption Changes Engineering Coordination](../concepts/universal-ai-adoption-changes-engineering-coordination.md)
 - [Move enterprise AI adoption beyond spot experiments](../concepts/move-enterprise-ai-adoption-beyond-spot-experiments.md)
@@ -409,6 +410,7 @@
 
 ## Infrastructure
 
+- [Environment registries make AI research more accessible](../concepts/environment-registries-make-ai-research-more-accessible.md)
 - [Treat Multi-Agent Systems As Distributed Systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md)
 - [Use Durable Execution for Production Agent Loops](../concepts/use-durable-execution-for-production-agent-loops.md)
 - [Keep Workflow Orchestration Deterministic and Put Side Effects in Steps](../concepts/keep-workflow-orchestration-deterministic-and-put-side-effects-in-steps.md)
@@ -521,6 +523,8 @@
 
 ## Evaluation
 
+- [Treat environments as eval, data, and training substrates](../concepts/treat-environments-as-eval-data-and-training-substrates.md)
+- [Product harnesses can become model customization environments](../concepts/product-harnesses-can-become-model-customization-environments.md)
 - [Update coding eval sets dynamically as model capability changes](../concepts/update-coding-eval-sets-dynamically-as-model-capability-changes.md)
 - [Build coding benchmarks around construct validity](../concepts/build-coding-benchmarks-around-construct-validity.md)
 - [Detect reward hacking in code optimization evals](../concepts/detect-reward-hacking-in-code-optimization-evals.md)
@@ -642,6 +646,9 @@
 
 ## Models
 
+- [Treat environments as eval, data, and training substrates](../concepts/treat-environments-as-eval-data-and-training-substrates.md)
+- [Product harnesses can become model customization environments](../concepts/product-harnesses-can-become-model-customization-environments.md)
+- [Environment registries make AI research more accessible](../concepts/environment-registries-make-ai-research-more-accessible.md)
 - [Ground generated media with current search context](../concepts/ground-generated-media-with-current-search-context.md)
 - [Update coding eval sets dynamically as model capability changes](../concepts/update-coding-eval-sets-dynamically-as-model-capability-changes.md)
 
@@ -725,6 +732,8 @@
 
 ## Tools
 
+- [Environment registries make AI research more accessible](../concepts/environment-registries-make-ai-research-more-accessible.md)
+- [Treat environments as eval, data, and training substrates](../concepts/treat-environments-as-eval-data-and-training-substrates.md)
 - [Use one-shot app builders for product ideation](../concepts/use-one-shot-app-builders-for-product-ideation.md)
 - [Infer full-stack app infrastructure from user intent](../concepts/infer-full-stack-app-infrastructure-from-user-intent.md)
 - [Ground generated media with current search context](../concepts/ground-generated-media-with-current-search-context.md)

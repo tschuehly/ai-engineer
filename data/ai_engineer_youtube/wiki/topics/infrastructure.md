@@ -60,6 +60,7 @@ AI-generated kernels turn low-level optimization into an infrastructure workflow
 - [Browser-native AI APIs bring local models into web apps](../concepts/browser-native-ai-apis-bring-local-models-into-web-apps.md) - client browsers can host local model downloads behind experimental AI APIs.
 - [Treat quantization as a memory-bandwidth lever](../concepts/treat-quantization-as-a-memory-bandwidth-lever.md) - memory capacity and memory bandwidth should be treated as separate infrastructure constraints.
 - [Open model families need ecosystem-compatible tooling](../concepts/open-model-families-need-ecosystem-compatible-tooling.md) - open model infrastructure includes license, runtime, fine-tuning, and distribution support.
+- [Environment registries make AI research more accessible](../concepts/environment-registries-make-ai-research-more-accessible.md) - shared environment infrastructure lets teams run evals, inference, fine-tuning, and RL without rebuilding the execution stack.
 - [Use MLX Swift LM for Apple local model integration](../concepts/use-mlx-swift-lm-for-apple-local-model-integration.md) - native Apple app infrastructure can use MLX-compatible Hugging Face models without building a cloud service first.
 - [Build internal AI engineering platforms when off-the-shelf tools lack enterprise context](../concepts/build-internal-ai-engineering-platforms-when-off-the-shelf-tools-lack-enterprise-context.md) - internal platforms can connect agents to monorepos, service catalogs, operational tools, and review systems.
 - [Build paved paths for enterprise AI engineering tools](../concepts/build-paved-paths-for-enterprise-ai-engineering-tools.md) - shared model, MCP, deployment, and enablement infrastructure prevents fragmented enterprise AI tooling.
@@ -203,3 +204,4 @@ AI-generated kernels turn low-level optimization into an infrastructure workflow
 - [Making Codebases Agent Ready - Eno Reyes, Factory AI](../sources/20251222_ShuJ_CN6zr4.md)
 - [AI Kernel Generation: What's working, what's not, what's next - Natalie Serrino, Gimlet Labs](../sources/20251217_6guQG_tGt0o.md)
 - [Building in the Gemini Era - Kat Kampf & Ammaar Reshi, Google DeepMind](../sources/20251215_fgkXEIbZpGc.md)
+- [RL Environments at Scale - Will Brown, Prime Intellect](../sources/20251209__IzZWeuTx7I.md)

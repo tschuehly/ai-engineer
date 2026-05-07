@@ -55,6 +55,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 ## Key Concepts
 
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - agent loops can stay flexible while the runtime validates tool execution.
+- [Product harnesses can become model customization environments](../concepts/product-harnesses-can-become-model-customization-environments.md) - agent products can train and evaluate models inside the same harness that defines the user experience.
 - [Interleave reasoning and tool calls for long-horizon agents](../concepts/interleave-reasoning-and-tool-calls-for-long-horizon-agents.md) - long-running agents should react to tool feedback over repeated turns.
 - [Perturb agent scaffolds during training for generalization](../concepts/perturb-agent-scaffolds-during-training-for-generalization.md) - agent robustness includes prompt, template, environment, and tool-response variation.
 - [Small agentic models make parallel workplace agents economical](../concepts/small-agentic-models-make-parallel-workplace-agents-economical.md) - low-cost agentic models make concurrent specialist copies practical.
@@ -344,3 +345,4 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [The 3 Pillars of Autonomy - Michele Catasta, Replit](../sources/20251222_MLhAA9yguwM.md)
 - [Leadership in AI Assisted Engineering - Justin Reock, DX (acq. Atlassian)](../sources/20251219_PmZDupFP3UM.md)
 - [From Arc to Dia: Lessons learned building AI Browsers - Samir Mody, The Browser Company of New York](../sources/20251219_o4scJaQgnFA.md)
+- [RL Environments at Scale - Will Brown, Prime Intellect](../sources/20251209__IzZWeuTx7I.md)

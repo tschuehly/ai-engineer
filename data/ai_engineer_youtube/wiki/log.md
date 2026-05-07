@@ -911,3 +911,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
 - Updated concepts: [AI Code Quality Needs Full-SDLC Workflows](concepts/ai-code-quality-needs-full-sdlc-workflows.md), [AI Review Gates Turn Standards Into Executable Feedback](concepts/ai-review-gates-turn-standards-into-executable-feedback.md), [Context Quality Determines AI Code Review Trust](concepts/context-quality-determines-ai-code-review-trust.md), [AI Output Speed Can Overwhelm Review Capacity](concepts/ai-output-speed-can-overwhelm-review-capacity.md)
 - Notes: Added Qodo's AI code-quality framing around generated-code volume, SDLC-wide quality dimensions, context-backed review, and adaptive PR-time quality gates.
+
+## [2026-05-07] ingest | RL Environments at Scale - Will Brown, Prime Intellect
+
+- Source: [RL Environments at Scale - Will Brown, Prime Intellect](sources/20251209__IzZWeuTx7I.md)
+- Processed: `_IzZWeuTx7I`
+- Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Models](topics/models.md), [Tools](topics/tools.md)
+- Updated concepts: [Treat Environments as Eval, Data, and Training Substrates](concepts/treat-environments-as-eval-data-and-training-substrates.md), [Product Harnesses Can Become Model Customization Environments](concepts/product-harnesses-can-become-model-customization-environments.md), [Environment Registries Make AI Research More Accessible](concepts/environment-registries-make-ai-research-more-accessible.md), [Build RL Environments as Software Artifacts](concepts/build-rl-environments-as-software-artifacts.md)
+- Notes: Added Prime Intellect's environment abstraction for turning product harnesses into reusable eval, data-generation, model-customization, and RL artifacts.
