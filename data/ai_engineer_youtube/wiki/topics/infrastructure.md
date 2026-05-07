@@ -8,6 +8,8 @@ AI infrastructure spans local training environments, edge deployment, server-sid
 
 GPU marketplaces add a supply-allocation layer to AI infrastructure. Compute scarcity is not only a data-center construction problem: fragmented providers, idle enterprise GPUs, long grid interconnect waits, and changing training/inference demand can waste capacity even when accelerators already exist. A useful marketplace needs orchestration over heterogeneous clusters, flexible spot/on-demand/reserved commitments, resale or release paths for idle capacity, and a trust layer of provider ratings, benchmarks, provisioning, and reliability signals.
 
+Data-center inference adds another allocation layer inside the model-serving fleet. NVIDIA Dynamo-style deployments treat serving as a token factory with an application-specific Pareto point across quality, latency, and cost. The infrastructure has to split and balance prefill and decode workers, route around KV-cache locality and queue depth, preserve KV state across structured agent waits, and autoscale specialized worker pools when user traffic shifts from one input/output sequence length distribution to another.
+
 Browsers are becoming an infrastructure layer for both development and runtime AI. Chrome DevTools MCP can expose live web-app diagnostics to agents through structured tools, while browser-native Web AI APIs can put a downloaded local model behind summarization, proofreading, prompt, image, and audio APIs. That shifts some inference, debugging, storage, token accounting, and compatibility concerns into the client browser, and because these APIs are experimental, production use needs capability checks and graceful fallbacks.
 
 Agent-built applications add a deployment boundary: the harness that plans and controls work should not be treated as the same trust domain as generated code. Infrastructure for the new application layer needs sandboxes and execution separation so agent-written software can run without giving that code direct authority over the agent runtime.
@@ -145,6 +147,11 @@ Remote MCP infrastructure can reuse ordinary cloud primitives when the local std
 - [Benchmark edge models across the device fleet before shipping](../concepts/benchmark-edge-models-across-the-device-fleet-before-shipping.md) - compilation and acceleration choices should be validated against representative Android devices.
 - [Hot-swap small models to avoid one-model-per-GPU waste](../concepts/hot-swap-small-models-to-avoid-one-model-per-gpu-waste.md) - dynamic model loading helps keep accelerator capacity productive when many small models share the fleet.
 - [Production inference combines model support with cluster operations](../concepts/production-inference-combines-model-support-with-cluster-operations.md) - runtime support and infrastructure operations have to be designed together.
+- [Tune inference to the application Pareto point](../concepts/tune-inference-to-the-application-pareto-point.md) - application SLAs should define the serving target across quality, latency, and cost.
+- [Disaggregate prefill and decode workers by workload shape](../concepts/disaggregate-prefill-and-decode-workers-by-workload-shape.md) - data-center serving can allocate different worker pools to different generation phases.
+- [Route inference requests by KV locality and worker load](../concepts/route-inference-requests-by-kv-locality-and-worker-load.md) - routing infrastructure should balance cache reuse against queueing.
+- [Exploit structured agent waits for KV-cache manipulation](../concepts/exploit-structured-agent-waits-for-kv-cache-manipulation.md) - agent runtime structure can drive cache movement decisions in the serving layer.
+- [Autoscale specialized inference workers as traffic mix changes](../concepts/autoscale-specialized-inference-workers-as-traffic-mix-changes.md) - autoscaling should track changing prefill/decode and sequence-length demand.
 - [Patch-level visual embeddings trade ingest cost for query-time retrieval](../concepts/patch-level-visual-embeddings-trade-ingest-cost-for-query-time-retrieval.md) - visual-document retrieval needs capacity planning for many page-patch vectors and heavier ingestion.
 - [Local LLM training exposes the core model-building stack](../concepts/local-llm-training-exposes-the-core-model-building-stack.md) - local model training makes tokenizer, architecture, training, and inference decisions explicit.
 - [Tokenizer size must match data and compute budget](../concepts/tokenizer-size-must-match-data-and-compute-budget.md) - tokenizer capacity has direct implications for memory, convergence, and required training data.
@@ -328,5 +335,6 @@ Remote MCP infrastructure can reuse ordinary cloud primitives when the local std
 - [The 2025 AI Engineering Report - Barr Yaron, Amplify](../sources/20250801_mQ7_Zje7WKE.md)
 - [Infrastructure for the Singularity - Jesse Han, Morph](../sources/20250801_2goSS66XRBk.md)
 - [Why We Don't Need More Data Centers - Dr. Jasper Zhang, Hyperbolic](../sources/20250801_M6Vbaig1TsM.md)
+- [Hacking the Inference Pareto Frontier - Kyle Kranen, NVIDIA](../sources/20250801_Y2qc0UhDSnc.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

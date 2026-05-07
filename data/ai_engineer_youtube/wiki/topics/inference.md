@@ -14,10 +14,17 @@ Compute marketplaces add a lower-level routing problem beneath model marketplace
 
 Morph's reasoning-time branching pattern adds another long-running inference shape: instead of one model call consuming more hidden thinking tokens, the system can branch the external environment, run parallel agents against the same state, and choose verifier-passing branches. Capacity planning then has to include workspace snapshot overhead, branch fanout, verifier cost, and the wall-clock goal of finding a good branch faster than a single linear run.
 
+NVIDIA Dynamo's inference-frontier framing adds a data-center serving lens: the useful target is an application's operating point across quality, latency, and cost, not a single benchmark metric. Distributed inference can move that point by disaggregating compute-bound prefill from often memory-bound decode, routing requests by both KV locality and worker load, exploiting agent structure such as re-query loops and tool-call waits to preserve KV state, and dynamically shifting specialized worker pools as input and output sequence distributions change.
+
 ## Key Concepts
 
 - [Dual-mode AI infrastructure](../concepts/dual-mode-ai-infrastructure.md) - inference fleets should distinguish realtime latency needs from long compute-heavy workloads.
 - [Scale Test-Time Search Through Parallel Verifier-Checked Branches](../concepts/scale-test-time-search-through-parallel-verifier-checked-branches.md) - test-time compute can fan out into external branch attempts scored by verifiers.
+- [Tune inference to the application Pareto point](../concepts/tune-inference-to-the-application-pareto-point.md) - model-serving choices should target the application's quality, latency, and cost operating point.
+- [Disaggregate prefill and decode workers by workload shape](../concepts/disaggregate-prefill-and-decode-workers-by-workload-shape.md) - prefill and decode stress hardware differently and can benefit from separate worker pools.
+- [Route inference requests by KV locality and worker load](../concepts/route-inference-requests-by-kv-locality-and-worker-load.md) - KV-friendly routing should still account for queue depth and worker load.
+- [Exploit structured agent waits for KV-cache manipulation](../concepts/exploit-structured-agent-waits-for-kv-cache-manipulation.md) - tool-call and re-query structure can tell the serving layer when to offload or restore KV state.
+- [Autoscale specialized inference workers as traffic mix changes](../concepts/autoscale-specialized-inference-workers-as-traffic-mix-changes.md) - worker mix should adapt as input and output sequence length distributions shift.
 - [Profile small-model architectures on target hardware](../concepts/profile-small-model-architectures-on-target-hardware.md) - local inference performance should be measured on the intended hardware, not inferred from architecture alone.
 - [Use local AI workstations when iteration, privacy, or latency dominate](../concepts/use-local-ai-workstations-when-iteration-privacy-or-latency-dominate.md) - local serving can complement cloud infrastructure when queueing, data residency, or deterministic latency drive the workflow.
 - [Make local inference benchmarks reproducible artifacts](../concepts/make-local-inference-benchmarks-reproducible-artifacts.md) - benchmark runs should capture environment, responses, timing, and hardware metrics for later verification.
@@ -60,6 +67,7 @@ Morph's reasoning-time branching pattern adds another long-running inference sha
 - Which provider differences should model-routing APIs normalize, and which should remain visible because they affect quality or risk?
 - Which inference metrics distinguish realtime user interaction from long-running agentic compute in capacity plans?
 - Which workloads are safe to route through lower-cost marketplace GPUs, and which require reserved, benchmarked, or reliability-backed capacity?
+- How should inference platforms expose prefill/decode, KV-routing, and worker-specialization controls without making every application team become serving-infrastructure experts?
 
 ## Sources
 
@@ -80,3 +88,4 @@ Morph's reasoning-time branching pattern adds another long-running inference sha
 - [State of Startups and AI 2025 - Sarah Guo, Conviction](../sources/20250802_3MZS5gNElZM.md)
 - [Infrastructure for the Singularity - Jesse Han, Morph](../sources/20250801_2goSS66XRBk.md)
 - [Why We Don't Need More Data Centers - Dr. Jasper Zhang, Hyperbolic](../sources/20250801_M6Vbaig1TsM.md)
+- [Hacking the Inference Pareto Frontier - Kyle Kranen, NVIDIA](../sources/20250801_Y2qc0UhDSnc.md)

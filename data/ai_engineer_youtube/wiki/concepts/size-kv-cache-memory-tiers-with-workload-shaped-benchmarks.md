@@ -11,6 +11,7 @@ Details:
 - Working-set and cache-hit curves are not linear; they vary with context length, accelerator choice, prefill/decode architecture, and memory-tier behavior (14:23-14:53).
 - Useful token storage needs enough capacity plus fast writes and reads; otherwise the system drops KVs before they are stored, blocks GPUs, or cannot fetch cached tokens fast enough to affect inference (16:05-17:00).
 - WEKA's benchmark framing ramps coding-agent user pools, compares memory-tier configurations, and measures whether systems maintain output tokens and concurrency as HBM advantages fade and lower tiers carry more of the working set (18:46-22:58).
+- Agent tool waits create a concrete tiering case: if the runtime knows a tool call will take about 30 seconds, it can move KV state from GPU memory to host memory and restore it before the next LLM call instead of losing the cached prefill work (16:14-17:40).
 
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
@@ -23,3 +24,4 @@ Related concepts:
 
 Sources:
 - [Context Platform Engineering to Reduce Token Anxiety - Val Bercovici, WEKA](../sources/20251124_NTBX-wxUhHs.md), 11:07-12:49, 14:23-17:00, 18:46-22:58
+- [Hacking the Inference Pareto Frontier - Kyle Kranen, NVIDIA](../sources/20250801_Y2qc0UhDSnc.md), 16:14-17:40

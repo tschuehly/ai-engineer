@@ -8,6 +8,8 @@ Agent workflows depend on both model capability and the context substrate around
 
 Agent models themselves can be tuned for this loop shape. M2's training story emphasizes interleaving reasoning with many tool-call turns, perturbing the operational surface around tools and prompts, and using small active-parameter economics to run multiple workplace-agent copies in parallel. Agent RFT adds a production-post-training variant: teams can train a reasoning model over multi-step rollouts that call hosted tool endpoints and receive custom reward signals, as long as rollout IDs and tool-call context are preserved for grading and the workflow is well-defined enough for production-matched rewards.
 
+Agent serving infrastructure can also use the structure of agent work. Re-query loops and tool-call waits are not just application behavior; they reveal when KV-cache state will be reused, moved out of GPU memory during a wait, and restored before the next model call, which can reduce repeated prefill cost without changing the agent's visible workflow.
+
 Computer-use agents add a general-purpose action layer for software that still only exposes visual UI. Nova Act's framing is deliberately granular: train a UI-capable model, expose it through SDK `act` calls, make the smallest interaction units reliable, and let developers compose those actions with structured extraction and ordinary code. That is a useful counterweight to vague autonomy claims. Browser control can reach workflows that APIs do not cover, but it also makes perception, action grounding, and human-agent interaction outcomes part of the agent's reliability story.
 
 As agents move from prediction into decisions and actions, monitoring and evaluation need to follow the whole agent system. A single model score misses failures introduced by perception, reasoning, tool calls, virtual or cyber-physical action loops, and coordination across multiple agents.
@@ -238,6 +240,7 @@ The agent-versus-workflow debate is a false binary for production design. A flex
 - [Skills turn procedural feedback into transferable agent memory](../concepts/skills-turn-procedural-feedback-into-transferable-agent-memory.md) - shared skills can preserve procedure-level lessons for future agent runs.
 - [Server-side interaction state simplifies branching conversational agents](../concepts/server-side-interaction-state-simplifies-branching-conversational-agents.md) - interaction IDs can simplify continuation, retrieval, and branching without pretending context is infinite.
 - [Agent tool loops turn model-required actions into executable results](../concepts/agent-tool-loops-turn-model-required-actions-into-executable-results.md) - tool-using agents need a runtime loop that validates and executes model-requested actions.
+- [Exploit structured agent waits for KV-cache manipulation](../concepts/exploit-structured-agent-waits-for-kv-cache-manipulation.md) - predictable re-query and tool-call waits can help inference systems preserve cache state.
 - [VoiceVision agents wrap visual RAG with retrieval, image-reading, and speech tools](../concepts/voicevision-agents-wrap-visual-rag-with-retrieval-image-reading-and-speech-tools.md) - lightweight agents can orchestrate visual retrieval, multimodal answer generation, and speech output.
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md) - agent products need reusable runtime primitives around the model call.
 - [Use Bash as a composable code-mode tool for agents](../concepts/use-bash-as-a-composable-code-mode-tool-for-agents.md) - shell access can let agents compose local programs and verification steps when authority is controlled.
@@ -483,5 +486,6 @@ The agent-versus-workflow debate is a false binary for production design. A flex
 - [Fuzzing in the GenAI Era — Leonard Tang, Haize Labs](../sources/20250822_OMGPvW8TBHc.md)
 - [The 2025 AI Engineering Report - Barr Yaron, Amplify](../sources/20250801_mQ7_Zje7WKE.md)
 - [Infrastructure for the Singularity - Jesse Han, Morph](../sources/20250801_2goSS66XRBk.md)
+- [Hacking the Inference Pareto Frontier - Kyle Kranen, NVIDIA](../sources/20250801_Y2qc0UhDSnc.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

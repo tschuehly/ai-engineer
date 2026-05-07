@@ -1391,3 +1391,11 @@
 - Updated topics: [Infrastructure](topics/infrastructure.md), [Inference](topics/inference.md)
 - Updated concepts: [Aggregate Idle GPU Supply Through Compute Marketplaces](concepts/aggregate-idle-gpu-supply-through-compute-marketplaces.md), [Match GPU Commitments To Workload Lifecycle](concepts/match-gpu-commitments-to-workload-lifecycle.md), [Benchmark And Rate Heterogeneous GPU Providers](concepts/benchmark-and-rate-heterogeneous-gpu-providers.md)
 - Notes: Added Hyperbolic's GPU marketplace framing for pooling idle accelerator supply, matching reservations to workload phases, and benchmarking heterogeneous providers.
+
+## [2026-05-07] ingest | Hacking the Inference Pareto Frontier - Kyle Kranen, NVIDIA
+
+- Source: [Hacking the Inference Pareto Frontier - Kyle Kranen, NVIDIA](sources/20250801_Y2qc0UhDSnc.md)
+- Processed: `Y2qc0UhDSnc`
+- Updated topics: [Inference](topics/inference.md), [Infrastructure](topics/infrastructure.md), [Agents](topics/agents.md)
+- Updated concepts: [Tune inference to the application Pareto point](concepts/tune-inference-to-the-application-pareto-point.md), [Disaggregate prefill and decode workers by workload shape](concepts/disaggregate-prefill-and-decode-workers-by-workload-shape.md), [Route inference requests by KV locality and worker load](concepts/route-inference-requests-by-kv-locality-and-worker-load.md), [Exploit structured agent waits for KV-cache manipulation](concepts/exploit-structured-agent-waits-for-kv-cache-manipulation.md), [Autoscale specialized inference workers as traffic mix changes](concepts/autoscale-specialized-inference-workers-as-traffic-mix-changes.md)
+- Notes: Added NVIDIA Dynamo's inference-frontier patterns for serving applications at a chosen quality, latency, and cost point through disaggregation, KV-aware routing, structured KV reuse, and dynamic worker pools.
