@@ -1256,6 +1256,14 @@
 - Updated concepts: [Use eval agents to improve prompts, datasets, and scorers](concepts/use-eval-agents-to-improve-prompts-datasets-and-scorers.md)
 - Notes: Added Braintrust's Loop framing for eval-native agents that propose inspectable improvements to prompts, datasets, and scorers instead of leaving dashboards as passive diagnosis tools.
 
+## [2026-05-07] ingest | 2025 is the Year of Evals! Just like 2024, and 2023, and ... - John Dickerson, CEO Mozilla AI
+
+- Source: [2025 is the Year of Evals! Just like 2024, and 2023, and ... - John Dickerson, CEO Mozilla AI](sources/20250806_CQGuvf6gSrM.md)
+- Processed: `CQGuvf6gSrM`
+- Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md)
+- Updated concepts: [Connect AI Evals to C-Suite Risk and ROI](concepts/connect-ai-evals-to-c-suite-risk-and-roi.md), [Monitor Whole Agent Systems, Not Single Models](concepts/monitor-whole-agent-systems-not-single-models.md), [Domain Evals Need Expert-Built Environments](concepts/domain-evals-need-expert-built-environments.md), [Calibrate LLM Judges Like Binary Classifiers](concepts/calibrate-llm-judges-like-binary-classifiers.md)
+- Notes: Added Mozilla AI's enterprise eval framing for C-suite risk and ROI, system-level agent monitoring, expert validation environments, and LLM-as-judge bias caveats.
+
 ## [2026-05-07] ingest | On Engineering AI Systems that Endure The Bitter Lesson - Omar Khattab, DSPy & Databricks
 
 - Source: [On Engineering AI Systems that Endure The Bitter Lesson - Omar Khattab, DSPy & Databricks](sources/20250806_qdmxApz3EJI.md)

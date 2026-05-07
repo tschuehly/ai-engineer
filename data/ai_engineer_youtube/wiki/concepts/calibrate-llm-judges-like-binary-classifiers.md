@@ -16,6 +16,7 @@ Details:
 - Judge calibration starts before prompt optimization: inspect trace distributions and annotation quality, because small, uneven, or AI-generated labels can make the optimized judge learn the wrong rubric. 13:21-14:29
 - For PM-facing product evals, the judge prompt should produce categorical labels that can be mapped to scores, rather than raw numeric ratings, because numeric prompts produce unreliable model behavior. 10:38-11:28
 - Off-the-shelf LLM judges can hallucinate, shift under ordering or rubric changes, and produce uncalibrated numeric scores; judge-time compute can improve reliability through structured judge agents, debate, self-verification, ensembling, or task-tuned reward models. 07:10-13:56
+- LLM-as-judge systems can reduce dataset-creation and judging cost, but they still behave as imperfect substitutes for human evaluators and can carry biases around traits such as conciseness or helpfulness. 18:13-19:01
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -28,9 +29,11 @@ Related concepts:
 - [Optimize Judge Prompts With Diagnostic Feedback](optimize-judge-prompts-with-diagnostic-feedback.md)
 - [Label LLM Judge Outputs Before Mapping Them to Scores](label-llm-judge-outputs-before-mapping-them-to-scores.md)
 - [Search natural-language input space as an optimization problem](search-natural-language-input-space-as-an-optimization-problem.md)
+- [Domain Evals Need Expert-Built Environments](domain-evals-need-expert-built-environments.md)
 
 Sources:
 - [Full Workshop: Build Your Own Deep Research Agents - Louis-François Bouchard, Paul Iusztin, Samridhi](../sources/20260420_mYSRn6PC1mc.md), 01:43:43-01:45:45
 - [Judge the Judge: Building LLM Evaluators That Actually Work with GEPA - Mahmoud Mabrouk, Agenta AI](../sources/20260410_X4dEHRzBLmc.md), 01:18-03:15, 13:21-14:29
 - [Shipping AI That Works: An Evaluation Framework for PMs - Aman Khan, Arize](../sources/20251226_2HNSG990Ew8.md), 09:19-11:28
 - [Fuzzing in the GenAI Era — Leonard Tang, Haize Labs](../sources/20250822_OMGPvW8TBHc.md), 07:10-13:56
+- [2025 is the Year of Evals! Just like 2024, and 2023, and ... - John Dickerson, CEO Mozilla AI](../sources/20250806_CQGuvf6gSrM.md), 18:13-19:01

@@ -8,6 +8,8 @@ Agent workflows depend on both model capability and the context substrate around
 
 Agent models themselves can be tuned for this loop shape. M2's training story emphasizes interleaving reasoning with many tool-call turns, perturbing the operational surface around tools and prompts, and using small active-parameter economics to run multiple workplace-agent copies in parallel. Agent RFT adds a production-post-training variant: teams can train a reasoning model over multi-step rollouts that call hosted tool endpoints and receive custom reward signals, as long as rollout IDs and tool-call context are preserved for grading and the workflow is well-defined enough for production-matched rewards.
 
+As agents move from prediction into decisions and actions, monitoring and evaluation need to follow the whole agent system. A single model score misses failures introduced by perception, reasoning, tool calls, virtual or cyber-physical action loops, and coordination across multiple agents.
+
 GLM 4.6 adds a systems-training detail for those long agent rollouts: short math or code-completion RL can keep training and inference colocated, but slow software-engineering tasks that wait on browsers, APIs, and external environments need decoupled rollout workers, buffers, and periodic weight updates so one slow trajectory does not stall the whole training pipeline.
 
 Robotics adds a useful discipline for digital-agent design: treat the agent as an embodied action system. The model is only one part of the loop; APIs, MCP servers, terminal, browser, VM, OS access, persistent files, monitoring, simulation, retraining, and human feedback form the digital body and offline stack. This also makes action feedback a first-class design problem: long-running commands, browser pop-ups, and stateful VMs should expose enough live observation and interruption control for the agent to close the loop after acting, not merely predict a plan and hope the world matches.
@@ -140,6 +142,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Sandboxed code execution turns model reasoning into inspectable computation](../concepts/sandboxed-code-execution-turns-model-reasoning-into-inspectable-computation.md) - executable sandboxes let agents compute and verify without touching the user's environment.
 - [Human Control Planes Turn Agent Swarms Into Manageable Organizations](../concepts/human-control-planes-turn-agent-swarms-into-manageable-organizations.md) - org-chart, project, task, budget, and memory surfaces make large agent organizations supervisable.
 - [Treat multi-agent systems as distributed systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md) - multi-agent scale introduces coordination, stale state, and failure-propagation problems.
+- [Monitor Whole Agent Systems, Not Single Models](../concepts/monitor-whole-agent-systems-not-single-models.md) - agent observability should cover the full autonomous or multi-agent system, not only one model call.
 - [Use durable execution for production agent loops](../concepts/use-durable-execution-for-production-agent-loops.md) - production loops should persist LLM calls, tool outputs, and state across crashes and retries.
 - [Compose Deep Research as Plan, Parallel Search, and Analysis Agents](../concepts/compose-deep-research-as-plan-parallel-search-and-analysis-agents.md) - research agents can be composed from inspectable planner, search, and analysis roles.
 - [Evaluate Agent Loops With Correctness, Cost, Latency, and Step Counts](../concepts/evaluate-agent-loops-with-correctness-cost-latency-and-step-counts.md) - operational metrics need correctness checks before they rank agent models.
@@ -346,6 +349,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 ## Sources
 
 - [Designing AI-Intensive Applications - swyx](../sources/20250809_IHkyFhU6JEY.md)
+- [2025 is the Year of Evals! Just like 2024, and 2023, and ... - John Dickerson, CEO Mozilla AI](../sources/20250806_CQGuvf6gSrM.md)
 - [The Next Unicorns: 7 Top AI startups from the HF0 Residency](../sources/20250821_L8-5ezsoI5A.md)
 - [Form factors for your new AI coworkers - Craig Wattrus, Flatfile](../sources/20250822_CiMVKnX-CNI.md)
 - [How BlackRock Builds Custom Knowledge Apps at Scale — Vaibhav Page & Infant Vasanth, BlackRock](../sources/20250823_08mH36_NVos.md)
