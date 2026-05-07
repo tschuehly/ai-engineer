@@ -48,6 +48,8 @@ Graph-backed retrieval becomes infrastructure when relationship traversal is on 
 
 AI-generated kernels turn low-level optimization into an infrastructure workflow. A useful system needs a supervisor that accepts source code, target hardware, and human guidance; synthesis agents that search optimization ideas; and a verification agent that executes candidates on actual hardware with strict correctness and timing checks. This infrastructure is most valuable when heterogeneous agentic inference workloads need to move across CUDA, Triton, Metal, Pallas, or new device generations faster than scarce kernel experts can hand-port every path.
 
+Compiler pipelines can also be infrastructure for model portability, not only for optimization. Muna's Python-to-native path treats model-serving code as an artifact that can be traced, typed, lowered, compiled, and loaded through FFI, then exposed through an OpenAI-compatible client. LLMs fit this pipeline best when they generate bounded operation lowerings that the compiler can compose and verify, not when they replace representation, typing, compilation, and runtime packaging.
+
 RL training infrastructure has a similar systems-modeling requirement. Synchronous RL wastes accelerator capacity when long-tail samples keep the whole step waiting, while asynchronous pipeline RL keeps sampling and training workers busy through queues and in-flight weight updates. The infrastructure problem is to allocate GPUs between sampling and training so production and consumption rates match, KV-cache memory is respected, and policy staleness stays within the algorithm's tolerance.
 
 Agent optimization infrastructure can include a meta-controller that routes budget across context, compute, verification, memory, and temporary parameter adaptation. That controller needs telemetry for task outcomes, per-strategy contribution, compute, latency, memory, and confidence calibration, plus efficient profiling so the optimizer does not spend more on deciding than it saves through adaptive execution.
@@ -85,6 +87,9 @@ Architecture-copilot infrastructure needs a live system model before recommendat
 - [High-consequence data changes vendor trust requirements](../concepts/high-consequence-data-changes-vendor-trust-requirements.md) - regulated agent infrastructure needs stronger control mappings, monitoring, and locality guarantees.
 - [Use AI kernel generation for known optimization patterns, not expert-level breakthroughs](../concepts/use-ai-kernel-generation-for-known-optimization-patterns-not-expert-level-breakthroughs.md) - infrastructure should aim generated kernels at long-tail optimization and porting work.
 - [Evaluate generated kernels for correctness, performance, and benchmark gaming](../concepts/evaluate-generated-kernels-for-correctness-performance-and-benchmark-gaming.md) - generated low-level code requires strict verification infrastructure before adoption.
+- [Compile Python inference functions into portable native binaries](../concepts/compile-python-inference-functions-into-portable-native-binaries.md) - compiler infrastructure can turn Python model code into portable native deployment artifacts.
+- [Use LLMs to generate compiler lowerings under verification](../concepts/use-llms-to-generate-compiler-lowerings-under-verification.md) - LLM-generated backend code should sit inside typed, compiled, tested compiler boundaries.
+- [Expose local and open-source models through familiar API clients](../concepts/expose-local-and-open-source-models-through-familiar-api-clients.md) - model portability infrastructure should preserve stable application-facing client contracts.
 - [Browser-native AI APIs bring local models into web apps](../concepts/browser-native-ai-apis-bring-local-models-into-web-apps.md) - client browsers can host local model downloads behind experimental AI APIs.
 - [Treat quantization as a memory-bandwidth lever](../concepts/treat-quantization-as-a-memory-bandwidth-lever.md) - memory capacity and memory bandwidth should be treated as separate infrastructure constraints.
 - [Open model families need ecosystem-compatible tooling](../concepts/open-model-families-need-ecosystem-compatible-tooling.md) - open model infrastructure includes license, runtime, fine-tuning, and distribution support.
@@ -202,6 +207,7 @@ Architecture-copilot infrastructure needs a live system model before recommendat
 ## Sources
 
 - [Context Platform Engineering to Reduce Token Anxiety - Val Bercovici, WEKA](../sources/20251124_NTBX-wxUhHs.md)
+- [Compilers in the Age of LLMs - Yusuf Olokoba, Muna](../sources/20251124_q2nHsJVy4FE.md)
 - [Government Agents: AI Agents Meet Tough Regulations - Mark Myshatyn, Los Alamos National Lab](../sources/20251206_TnSGx36Ly0Q.md)
 - [What We Learned Deploying AI within Bloomberg's Engineering Organization - Lei Zhang, Bloomberg](../sources/20251216_Q81AzlA-VE8.md)
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md)

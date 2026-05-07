@@ -1103,3 +1103,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Coding-agent taste captures the invisible architecture of choices](concepts/coding-agent-taste-captures-the-invisible-architecture-of-choices.md), [Learn coding preferences from implicit edit feedback](concepts/learn-coding-preferences-from-implicit-edit-feedback.md), [Share taste packages across teams and domains](concepts/share-taste-packages-across-teams-and-domains.md)
 - Notes: Added CommandCode's preference-learning framing for turning developer edits and review taste into inspectable, shareable coding-agent guidance.
+
+## [2026-05-07] ingest | Compilers in the Age of LLMs - Yusuf Olokoba, Muna
+
+- Source: [Compilers in the Age of LLMs - Yusuf Olokoba, Muna](sources/20251124_q2nHsJVy4FE.md)
+- Processed: `q2nHsJVy4FE`
+- Updated topics: [Inference](topics/inference.md), [Infrastructure](topics/infrastructure.md), [Models](topics/models.md), [Tools](topics/tools.md)
+- Updated concepts: [Compile Python inference functions into portable native binaries](concepts/compile-python-inference-functions-into-portable-native-binaries.md), [Use LLMs to generate compiler lowerings under verification](concepts/use-llms-to-generate-compiler-lowerings-under-verification.md), [Expose local and open-source models through familiar API clients](concepts/expose-local-and-open-source-models-through-familiar-api-clients.md)
+- Notes: Added Muna's compiler-based inference deployment pattern for turning Python model functions into portable native binaries behind familiar API clients, with LLM assistance scoped to verifiable compiler lowerings.

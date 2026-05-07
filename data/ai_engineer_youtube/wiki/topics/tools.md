@@ -46,6 +46,8 @@ Coding agents can also become programmable tools inside other products. Codex is
 
 Shell wrappers can also act as local harness tools. A wrapper around Codex CLI can accept file-backed task inputs, launch a child `codex exec`, and print the child output to stdout so the parent agent receives a compact result. This uses Bash as a composable tool surface, but it also turns command shape, sandbox mode, credentials, rollout logging, output files, and timeouts into explicit tool-design concerns.
 
+Model-client wrappers are another tool-surface pattern. When a compiled local model can be invoked through the same `embeddings.create`-style call shape as a hosted model, application and agent code can stay stable while runtime-specific resolution, FFI loading, and output shaping move behind the client boundary.
+
 ## Key Concepts
 
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - compact tool loops can be the core architecture for coding agents.
@@ -126,6 +128,8 @@ Shell wrappers can also act as local harness tools. A wrapper around Codex CLI c
 - [Human approval can hide tool-description and parameter risk](../concepts/human-approval-can-hide-tool-description-and-parameter-risk.md) - tool approval UX should reveal hidden instructions and sensitive parameters.
 - [LLM guardrails need checkpoints at every untrusted boundary](../concepts/llm-guardrails-need-checkpoints-at-every-untrusted-boundary.md) - tool descriptions and tool calls are guardrail checkpoints, not trusted implementation detail.
 - [Expose explicit control signals for generative media models](../concepts/expose-explicit-control-signals-for-generative-media-models.md) - image and video tools should expose structured controls when text alone is too imprecise.
+- [Use LLMs to generate compiler lowerings under verification](../concepts/use-llms-to-generate-compiler-lowerings-under-verification.md) - LLM code generation is safer when constrained to reusable compiler primitives and checked by the compiler pipeline.
+- [Expose local and open-source models through familiar API clients](../concepts/expose-local-and-open-source-models-through-familiar-api-clients.md) - familiar client contracts reduce tool churn across local, remote, and compiled model runtimes.
 - [Split large automation surfaces into specialized subagents and subworkflows](../concepts/split-large-automation-surfaces-into-specialized-subagents-and-subworkflows.md) - subworkflows and specialist agents keep large tool surfaces manageable.
 - [Delegate complex voice-agent tasks through specialist tools and handoffs](../concepts/delegate-complex-voice-agent-tasks-through-specialist-tools-and-handoffs.md) - voice systems should route harder tool or policy decisions to specialists while preserving context.
 - [Agent experience prioritizes APIs, CLIs, and MCP over dashboards](../concepts/agent-experience-prioritizes-apis-clis-and-mcp-over-dashboards.md) - agent-facing products need machine-friendly control surfaces, not only human dashboards.
@@ -224,6 +228,7 @@ Shell wrappers can also act as local harness tools. A wrapper around Codex CLI c
 ## Sources
 
 - [Your Support Team Should Ship Code - Lisa Orr, Zapier](../sources/20251216_RmJ4rTLV_x4.md)
+- [Compilers in the Age of LLMs - Yusuf Olokoba, Muna](../sources/20251124_q2nHsJVy4FE.md)
 - [Hacking Subagents Into Codex CLI - Brian John, Betterup](../sources/20251124_5eJqXtevlXg.md)
 - [How Claude Code Works - Jared Zoneraich, PromptLayer](../sources/20251226_RFKCzGlAU6Q.md)
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md)
