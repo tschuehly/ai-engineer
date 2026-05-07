@@ -24,6 +24,8 @@ The new application layer also changes the economic boundary for automation. Age
 
 Agent security has to treat autonomy as an attack multiplier. Prompt injection, indirect context injection, RAG poisoning, MCP tool-description exploits, and model-internals jailbreaks all become more consequential when the model can fetch context, call tools, click links, install packages, or continue a self-escalation path. Guardrails therefore need checkpoints around the inputs, retrieved context, tool metadata, memory, plans, outputs, and high-impact actions rather than only one policy prompt at the edge of the system. Long-task capability claims should also say whether the agent is being watched: transcript monitors, model reviewers, resource controls, and human escalation can lower effective unmonitored autonomy even when an agent can complete longer supervised tasks. Replit's non-technical-user framing adds another autonomy axis: a coding agent may need to take technical implementation decisions entirely on behalf of the user while leaving product-goal control to the human. Browser agents concentrate the risk because they combine private user data, untrusted webpage context, and external action channels such as forms, websites, email, and calendars; technical prompt-injection mitigations should be paired with product controls that let users inspect sensitive data before it is written or sent.
 
+Government and national-security agents add a high-consequence version of this problem. They may need to act on controlled, classified, mission, operational, finance, or PII-bearing data while still moving work faster, so ordinary SaaS security claims are not enough. Regulated agent products need explainable decision paths, isolated deployment options, governance evidence, and current feature availability in restricted regions. Scientific agents in these environments should also connect reasoning to domain infrastructure: literature review and hypothesis generation become more useful when the agent can execute code and run simulations against trusted HPC assets.
+
 Agent-to-agent systems need their own discovery contract as they spread across teams. An A2A registry can publish agent cards that describe each agent's identity, endpoint, capabilities, supported modalities, and authentication requirements, while a use-case registry links those agents to MCP tools, models, owners, and lifecycle status. That makes agent reuse and runtime discovery practical without losing governance and impact analysis.
 
 Coding-agent systems also need role decomposition before they become effective agent organizations. Yegge's critique of one giant coding agent is that larger context windows and more expensive models do not remove the need for task decomposition; agent systems should separate product framing, implementation, review, testing, merging, and related roles when those roles need different context, tools, models, or verification surfaces.
@@ -57,6 +59,9 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 ## Key Concepts
 
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - agent loops can stay flexible while the runtime validates tool execution.
+- [Scientific agents should execute against domain infrastructure](../concepts/scientific-agents-should-execute-against-domain-infrastructure.md) - research agents should connect hypotheses to domain tools, simulations, and compute assets.
+- [Regulated agents need explainability, isolation, governance, and speed](../concepts/regulated-agents-need-explainability-isolation-governance-and-speed.md) - federal agent products need auditability, restricted deployment options, compliance artifacts, and timely feature parity.
+- [High-consequence data changes vendor trust requirements](../concepts/high-consequence-data-changes-vendor-trust-requirements.md) - controlled and classified data require stronger deployment, monitoring, and governance evidence than ordinary SaaS trust signals.
 - [Role-specialized agent systems beat one giant coding agent](../concepts/role-specialized-agent-systems-beat-one-giant-coding-agent.md) - multi-agent decomposition should follow role and context boundaries, not just model size.
 - [Product harnesses can become model customization environments](../concepts/product-harnesses-can-become-model-customization-environments.md) - agent products can train and evaluate models inside the same harness that defines the user experience.
 - [Interleave reasoning and tool calls for long-horizon agents](../concepts/interleave-reasoning-and-tool-calls-for-long-horizon-agents.md) - long-running agents should react to tool feedback over repeated turns.
@@ -275,6 +280,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 
 ## Sources
 
+- [Government Agents: AI Agents Meet Tough Regulations - Mark Myshatyn, Los Alamos National Lab](../sources/20251206_TnSGx36Ly0Q.md)
 - [What We Learned Deploying AI within Bloomberg's Engineering Organization - Lei Zhang, Bloomberg](../sources/20251216_Q81AzlA-VE8.md)
 - [Your Support Team Should Ship Code - Lisa Orr, Zapier](../sources/20251216_RmJ4rTLV_x4.md)
 - [How Claude Code Works - Jared Zoneraich, PromptLayer](../sources/20251226_RFKCzGlAU6Q.md)

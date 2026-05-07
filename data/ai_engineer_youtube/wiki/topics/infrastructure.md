@@ -20,6 +20,8 @@ Production MCP deployment has a sharp security cliff between local stdio and rem
 
 Guardrails are an infrastructure layer, not just a prompt. Production systems need low-latency classifiers or policy checks at input, output, retrieval, MCP, memory, and plan boundaries, and the serving path must account for added latency. ModernBERT-style encoder discriminators are one concrete option when a self-hosted safety layer needs millisecond-scale classification rather than seconds of LLM-as-judge delay.
 
+Regulated public-sector infrastructure adds deployment and governance constraints that ordinary SaaS launches can avoid. If a tool must operate on controlled, classified, mission, operational, finance, or PII-bearing data, the infrastructure conversation expands to NIST SP 800-53, FedRAMP, DoD cloud requirements, CNSSI 1253, continuous monitoring, restricted regions, self-hosting, SBOMs, dependency patching, and feature freshness in federal environments. Scientific-agent infrastructure also needs domain execution paths: an agent that proposes a physics design should be able to run code and simulations on appropriate HPC assets rather than stopping at a plausible explanation.
+
 Voice infrastructure has an upstream data-quality layer before any model call. Contact-center pipelines should preserve raw channel fidelity, apply denoising and level normalization, run early PII masking, tune STT with domain vocabulary and inverse text normalization, and map structured LLM outputs through an API gateway into CRM schemas. Each added privacy or verification layer can increase latency, so architecture decisions must balance low-latency extraction with compliance and durable-record accuracy.
 
 Enterprise AI registries are another infrastructure layer between experimentation and production. A model gateway can centralize model access, authentication, budget erosion, and request analytics, while registries track MCP servers, A2A agents, models, ownership, environments, costs, and use-case lineage. The practical deployment pattern is to give teams template repositories and CI/CD flows that publish both runtime artifacts and registry metadata, so governance stays aligned with what is actually deployed.
@@ -57,6 +59,9 @@ RL training infrastructure has a similar systems-modeling requirement. Synchrono
 - [Use local AI workstations when iteration, privacy, or latency dominate](../concepts/use-local-ai-workstations-when-iteration-privacy-or-latency-dominate.md) - local workstations can move development closer to the engineer while preserving a later scale-out path.
 - [Make local inference benchmarks reproducible artifacts](../concepts/make-local-inference-benchmarks-reproducible-artifacts.md) - reproducible local serving tests need container isolation, warmups, hardware metrics, and stored run outputs.
 - [Use hardware-in-the-loop search for AI kernel generation](../concepts/use-hardware-in-the-loop-search-for-ai-kernel-generation.md) - kernel-generation harnesses need target hardware in the optimization loop.
+- [Scientific agents should execute against domain infrastructure](../concepts/scientific-agents-should-execute-against-domain-infrastructure.md) - research-agent infrastructure should include executable domain tools and simulation backends.
+- [Regulated agents need explainability, isolation, governance, and speed](../concepts/regulated-agents-need-explainability-isolation-governance-and-speed.md) - federal deployments should be architected for auditability, isolation, governance artifacts, and timely feature availability.
+- [High-consequence data changes vendor trust requirements](../concepts/high-consequence-data-changes-vendor-trust-requirements.md) - regulated agent infrastructure needs stronger control mappings, monitoring, and locality guarantees.
 - [Use AI kernel generation for known optimization patterns, not expert-level breakthroughs](../concepts/use-ai-kernel-generation-for-known-optimization-patterns-not-expert-level-breakthroughs.md) - infrastructure should aim generated kernels at long-tail optimization and porting work.
 - [Evaluate generated kernels for correctness, performance, and benchmark gaming](../concepts/evaluate-generated-kernels-for-correctness-performance-and-benchmark-gaming.md) - generated low-level code requires strict verification infrastructure before adoption.
 - [Browser-native AI APIs bring local models into web apps](../concepts/browser-native-ai-apis-bring-local-models-into-web-apps.md) - client browsers can host local model downloads behind experimental AI APIs.
@@ -166,6 +171,7 @@ RL training infrastructure has a similar systems-modeling requirement. Synchrono
 
 ## Sources
 
+- [Government Agents: AI Agents Meet Tough Regulations - Mark Myshatyn, Los Alamos National Lab](../sources/20251206_TnSGx36Ly0Q.md)
 - [What We Learned Deploying AI within Bloomberg's Engineering Organization - Lei Zhang, Bloomberg](../sources/20251216_Q81AzlA-VE8.md)
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md)
 - [Gemma 4 Deep Dive - Cassidy Hardin, Researcher, Google DeepMind](../sources/20260427__A367W_qvc8.md)

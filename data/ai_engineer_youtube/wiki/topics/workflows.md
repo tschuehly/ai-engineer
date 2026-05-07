@@ -12,6 +12,8 @@ Enterprise AI operating models should change the workflow shape, not only the to
 
 Compressed research is a lower-risk operations pattern: keep the business event and human decision in place, but let an agent gather, classify, route, or summarize the evidence that made the work slow. This is especially useful when the source information already exists in company systems but is not available in the right place at decision time.
 
+Scientific and government workflows show a higher-consequence version of compressed research. An agent can read papers, discover adjacent literature, propose a hypothesis, generate executable code, and hand the result to domain simulation infrastructure, but regulated deployment adds a parallel workflow for pilot governance, risk classification, data-boundary review, SBOMs, patching plans, continuous monitoring, and restricted-region or self-hosted availability.
+
 Open-source agent workflows have their own bottleneck: AI can generate more reports, PRs, and fixes than maintainers can safely absorb. Projects need triage loops, contribution boundaries, foundation or company support for sustained maintenance, extension points so experiments can happen without turning every idea into core-review load, and human-effort filters that require concise contributor context before maintainers spend review time.
 
 Org-chart agent workflows add a business-operations control surface: assign work through roles, keep plans and tasks visible, route completion through reviewer and approver agents, and convert repeated prompts into scheduled or manually parameterized routines. They should grow from the smallest useful agent set because role behavior, skill use, budgets, model cost, and concurrency all need validation before fan-out.
@@ -67,6 +69,9 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 ## Key Concepts
 
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - simple loops can replace over-specified DAGs when exploration is the work.
+- [Scientific agents should execute against domain infrastructure](../concepts/scientific-agents-should-execute-against-domain-infrastructure.md) - scientific workflows should connect research synthesis to executable validation.
+- [High-consequence data changes vendor trust requirements](../concepts/high-consequence-data-changes-vendor-trust-requirements.md) - regulated workflow adoption depends on customer-specific data classes and trust evidence.
+- [Regulated agents need explainability, isolation, governance, and speed](../concepts/regulated-agents-need-explainability-isolation-governance-and-speed.md) - federal workflows need both mission speed and governance-ready deployment artifacts.
 - [Use prompt-enforced todos as lightweight agent state](../concepts/use-prompt-enforced-todos-as-lightweight-agent-state.md) - lightweight task state can keep a run oriented without a full workflow graph.
 - [Agent-native companies embed agents into product, operations, and culture](../concepts/agent-native-companies-embed-agents-into-product-operations-and-culture.md) - pushes workflow design beyond one-off assistant use.
 - [Use Compounding Engineering Loops](../concepts/use-compounding-engineering-loops.md) - durable agent workflows should capture lessons back into reusable context.
@@ -304,6 +309,7 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 
 ## Sources
 
+- [Government Agents: AI Agents Meet Tough Regulations - Mark Myshatyn, Los Alamos National Lab](../sources/20251206_TnSGx36Ly0Q.md)
 - [What We Learned Deploying AI within Bloomberg's Engineering Organization - Lei Zhang, Bloomberg](../sources/20251216_Q81AzlA-VE8.md)
 - [Your Support Team Should Ship Code - Lisa Orr, Zapier](../sources/20251216_RmJ4rTLV_x4.md)
 - [How Claude Code Works - Jared Zoneraich, PromptLayer](../sources/20251226_RFKCzGlAU6Q.md)

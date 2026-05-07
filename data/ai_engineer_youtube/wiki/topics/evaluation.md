@@ -50,9 +50,12 @@ Coding capability evals also need to evolve with model capability. Static progra
 
 AI code quality evaluation should also distinguish generated-code speed from SDLC quality. If AI creates more PRs and more code while defects per line stay flat, total review and defect load can still rise; useful evaluation has to inspect code-level issues, process-level ownership, test coverage, standards compliance, and whether review gates learn from accepted and rejected suggestions over time.
 
+Regulated-agent evaluation adds accountability and deployment-readiness evidence. High-consequence public-sector agents should be judged on whether their decisions can be explained after a bad outcome, whether infrastructure isolates sensitive data, whether SBOM, dependency, patching, and monitoring artifacts support governance, and whether restricted-region deployments keep pace with commercial capability.
+
 ## Key Concepts
 
 - [Evaluate agent trajectories with backtests and smell metrics](../concepts/evaluate-agent-trajectories-with-backtests-and-smell-metrics.md) - flexible tool-loop agents need historical and trajectory-level checks.
+- [Regulated agents need explainability, isolation, governance, and speed](../concepts/regulated-agents-need-explainability-isolation-governance-and-speed.md) - regulated-agent evaluation should include auditability, deployment isolation, governance artifacts, and feature freshness.
 - [Update coding eval sets dynamically as model capability changes](../concepts/update-coding-eval-sets-dynamically-as-model-capability-changes.md) - fresh tasks, release windows, and calibrated difficulty preserve benchmark signal.
 - [Build coding benchmarks around construct validity](../concepts/build-coding-benchmarks-around-construct-validity.md) - repository evals should measure the real engineering capability they claim to measure.
 - [Detect reward hacking in code optimization evals](../concepts/detect-reward-hacking-in-code-optimization-evals.md) - code evals need to catch benchmark exploitation and non-idiomatic hacks beyond tests.
@@ -229,6 +232,7 @@ AI code quality evaluation should also distinguish generated-code speed from SDL
 
 ## Sources
 
+- [Government Agents: AI Agents Meet Tough Regulations - Mark Myshatyn, Los Alamos National Lab](../sources/20251206_TnSGx36Ly0Q.md)
 - [Your Support Team Should Ship Code - Lisa Orr, Zapier](../sources/20251216_RmJ4rTLV_x4.md)
 - [How Claude Code Works - Jared Zoneraich, PromptLayer](../sources/20251226_RFKCzGlAU6Q.md)
 - [Why Agent Hype can fall short of reality - Joel Becker, METR](../sources/20251224_RhfqQKe22ZA.md)

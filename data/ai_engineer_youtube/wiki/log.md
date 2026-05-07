@@ -951,3 +951,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Role-specialized agent systems beat one giant coding agent](concepts/role-specialized-agent-systems-beat-one-giant-coding-agent.md), [AI coding adoption needs hands-on production practice](concepts/ai-coding-adoption-needs-hands-on-production-practice.md), [Agentic coding collapses coordination tax for small valuable changes](concepts/agentic-coding-collapses-coordination-tax-for-small-valuable-changes.md)
 - Notes: Added Yegge and Kim's post-IDE AI coding framing around specialized agent roles, production-practice adoption, and lower coordination cost for small valuable changes.
+
+## [2026-05-07] ingest | Government Agents: AI Agents Meet Tough Regulations - Mark Myshatyn, Los Alamos National Lab
+
+- Source: [Government Agents: AI Agents Meet Tough Regulations - Mark Myshatyn, Los Alamos National Lab](sources/20251206_TnSGx36Ly0Q.md)
+- Processed: `TnSGx36Ly0Q`
+- Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Scientific agents should execute against domain infrastructure](concepts/scientific-agents-should-execute-against-domain-infrastructure.md), [Regulated agents need explainability, isolation, governance, and speed](concepts/regulated-agents-need-explainability-isolation-governance-and-speed.md), [High-consequence data changes vendor trust requirements](concepts/high-consequence-data-changes-vendor-trust-requirements.md)
+- Notes: Added Los Alamos' regulated-agent framing around scientific/HPC execution, high-consequence data boundaries, and federal deployment requirements for explainability, isolation, governance, and speed.
