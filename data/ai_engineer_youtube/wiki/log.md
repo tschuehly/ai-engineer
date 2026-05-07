@@ -1854,3 +1854,11 @@
 - Updated topics: [Evaluation](topics/evaluation.md), [Retrieval](topics/retrieval.md), [Product Strategy](topics/product-strategy.md), [Security](topics/security.md), [Models](topics/models.md)
 - Updated concepts: [Ground Regulated Explanations in Deterministic Engines](concepts/ground-regulated-explanations-in-deterministic-engines.md), [Stage Regulated LLM Evals From Experts to Automated Judges](concepts/stage-regulated-llm-evals-from-experts-to-automated-judges.md), [Treat Model and Prompt Upgrades as Regulated Migrations](concepts/treat-model-and-prompt-upgrades-as-regulated-migrations.md)
 - Notes: Added Intuit's regulated tax-explanation patterns for deterministic numeric grounding, expert-seeded evals, GraphRAG personalization, and eval-gated model/prompt migrations.
+
+## [2026-05-07] ingest | From Hype to Habit: How We're Building an AI-First SaaS Company-While Still Shipping the Roadmap
+
+- Source: [From Hype to Habit: How We're Building an AI-First SaaS Company-While Still Shipping the Roadmap](sources/20250723_3YGRcgZJ3yc.md)
+- Processed: `3YGRcgZJ3yc`
+- Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Product Strategy](topics/product-strategy.md), [Workflows](topics/workflows.md)
+- Updated concepts: [AI-First Strategy Reimagines Value Across Workflows](concepts/ai-first-strategy-reimagines-value-across-workflows.md), [Ritualized Discovery Keeps AI Roadmaps Adaptive](concepts/ritualized-discovery-keeps-ai-roadmaps-adaptive.md), [Treat Process as a Product During AI Transformation](concepts/treat-process-as-a-product-during-ai-transformation.md), [Scale AI Fluency With Self-Service Platforms](concepts/scale-ai-fluency-with-self-service-platforms.md)
+- Notes: Added Sprout Social's AI-first SaaS operating-model guidance across strategy, adaptive planning, process evaluation, and company-wide enablement.

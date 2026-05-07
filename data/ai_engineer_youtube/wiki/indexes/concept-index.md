@@ -1,6 +1,7 @@
 # Concept Index
 
 ## Agents
+- [Scale AI Fluency With Self-Service Platforms](../concepts/scale-ai-fluency-with-self-service-platforms.md)
 - [Hire Humans for Context, Verification, and Accountability](../concepts/hire-humans-for-context-verification-and-accountability.md)
 - [Type-Safe Agent Schemas Make Refactoring and Validation Easier](../concepts/type-safe-agent-schemas-make-refactoring-and-validation-easier.md)
 - [Validation Errors Can Drive Agent Self-Repair Loops](../concepts/validation-errors-can-drive-agent-self-repair-loops.md)
@@ -634,6 +635,7 @@
 
 ## Infrastructure
 
+- [Scale AI Fluency With Self-Service Platforms](../concepts/scale-ai-fluency-with-self-service-platforms.md)
 - [Prefer Generalist AI Engineers Before Narrow Specialists](../concepts/prefer-generalist-ai-engineers-before-narrow-specialists.md)
 - [Replace Anecdotal Agent Tuning With Eval and Observability Loops](../concepts/replace-anecdotal-agent-tuning-with-eval-and-observability-loops.md)
 - [Agent-Native SDLC Platforms Need Context, Reliability, and Parallelism](../concepts/agent-native-sdlc-platforms-need-context-reliability-and-parallelism.md)
@@ -866,6 +868,9 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [AI-First Strategy Reimagines Value Across Workflows](../concepts/ai-first-strategy-reimagines-value-across-workflows.md)
+- [Ritualized Discovery Keeps AI Roadmaps Adaptive](../concepts/ritualized-discovery-keeps-ai-roadmaps-adaptive.md)
+- [Treat Process as a Product During AI Transformation](../concepts/treat-process-as-a-product-during-ai-transformation.md)
 
 - [Evals Only Cover Known AI Product Failures](../concepts/evals-only-cover-known-ai-product-failures.md)
 - [Turn AI Product Intents Into Contained Workflows](../concepts/turn-ai-product-intents-into-contained-workflows.md)
@@ -1533,6 +1538,10 @@
 
 ## Workflows
 
+- [AI-First Strategy Reimagines Value Across Workflows](../concepts/ai-first-strategy-reimagines-value-across-workflows.md)
+- [Ritualized Discovery Keeps AI Roadmaps Adaptive](../concepts/ritualized-discovery-keeps-ai-roadmaps-adaptive.md)
+- [Treat Process as a Product During AI Transformation](../concepts/treat-process-as-a-product-during-ai-transformation.md)
+- [Scale AI Fluency With Self-Service Platforms](../concepts/scale-ai-fluency-with-self-service-platforms.md)
 - [AI Product Issues Need Signals and Intents](../concepts/ai-product-issues-need-signals-and-intents.md)
 - [Turn AI Product Intents Into Contained Workflows](../concepts/turn-ai-product-intents-into-contained-workflows.md)
 - [Shape AI Teams Around the Bottleneck](../concepts/shape-ai-teams-around-the-bottleneck.md)

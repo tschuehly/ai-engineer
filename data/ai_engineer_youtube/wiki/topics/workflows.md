@@ -12,6 +12,8 @@ Domain-native LLM workflows need a production-to-expert-to-engineering loop. Liv
 
 Enterprise AI operating models should change the workflow shape, not only the tool list. AI-native software work can move from quarterly planning toward continuous planning, from story-driven handoffs toward spec-driven work, and from uniform Agile ceremonies toward work-type-specific collaboration: agent factories for high-context but well-defined modernization, iterative co-creation for feature discovery, and workflow-specific squads for bug fixes or greenfield development. Expectations, hands-on coaching, bring-your-own-code practice, first-sprint habit formation, incentives, and outcome measurement need to move together or usage can rise without impact.
 
+AI-first SaaS transformation adds an operating cadence around uncertainty itself. Instead of treating AI exploration as isolated spikes, teams can reserve planning-cycle capacity for experiments, hackathons, learning forums, and MVPs that validate direction. Process should remain subject to outcome review: if a new ritual does not create clarity, unblock teams, or improve decision speed, it should be changed or removed before it becomes transformation overhead.
+
 Compressed research is a lower-risk operations pattern: keep the business event and human decision in place, but let an agent gather, classify, route, or summarize the evidence that made the work slow. This is especially useful when the source information already exists in company systems but is not available in the right place at decision time. Enterprise deep research is the document-centric version of that workflow: it fits tasks such as RFP responses, onboarding guides, and investment memos where the hard part is searching many private sources, choosing the right evidence, and synthesizing a cited artifact that a human can review or adapt.
 
 Scientific and government workflows show a higher-consequence version of compressed research. An agent can read papers, discover adjacent literature, propose a hypothesis, generate executable code, and hand the result to domain simulation infrastructure, but regulated deployment adds a parallel workflow for pilot governance, risk classification, data-boundary review, SBOMs, patching plans, continuous monitoring, and restricted-region or self-hosted availability.
@@ -474,6 +476,10 @@ Healthcare revenue cycle workflows add a financially measurable version of the s
 - [Build paved paths for enterprise AI engineering tools](../concepts/build-paved-paths-for-enterprise-ai-engineering-tools.md) - communities, training, discovery, deployment, and quality gates make scaled AI engineering less chaotic.
 - [Agentic automation can outperform first-tier productivity use cases](../concepts/agentic-automation-can-outperform-first-tier-productivity-use-cases.md) - workflow prioritization should distinguish basic productivity wins from deeper automation.
 
+- [Ritualized Discovery Keeps AI Roadmaps Adaptive](../concepts/ritualized-discovery-keeps-ai-roadmaps-adaptive.md) - discovery capacity should be built into AI planning cycles rather than left as ad hoc spikes.
+- [Treat Process as a Product During AI Transformation](../concepts/treat-process-as-a-product-during-ai-transformation.md) - transformation rituals should be evaluated against clarity, unblocking, and decision speed.
+- [Scale AI Fluency With Self-Service Platforms](../concepts/scale-ai-fluency-with-self-service-platforms.md) - organization-wide AI workflows need enablement and platform support beyond specialist teams.
+
 ## Open Questions
 
 - Which repeated research phases can be compressed without changing the human decision owner?
@@ -651,6 +657,7 @@ Healthcare revenue cycle workflows add a financially measurable version of the s
 - [Ship Agents that Ship: A Hands-On Workshop - Kyle Penfound, Jeremy Adams, Dagger](../sources/20250727_Fzb1a24hF-o.md)
 - [The AI Engineer's Guide to Raising VC - Dani Grant (Jam), Chelcie Taylor (Notable)](../sources/20250727_YYNXFsUutbM.md)
 - [Building Alice's Brain: an AI Sales Rep that Learns Like a Human - Sherwood & Satwik, 11x](../sources/20250729_KWmkMV0FNwQ.md)
+- [From Hype to Habit: How We're Building an AI-First SaaS Company-While Still Shipping the Roadmap](../sources/20250723_3YGRcgZJ3yc.md)
 - [Scaling AI Agents Without Breaking Reliability - Preeti Somal, Temporal](../sources/20250728_1izYWsokr9s.md)
 - [Why your product needs an AI product manager, and why it should be you — James Lowe, i.AI](../sources/20250728_xzJdSi2Tsqw.md)
 - [[Full Workshop] Building Metrics that actually work - David Karam, Pi Labs (fmr Google Search)](../sources/20250729_jxrGodnopHo.md)

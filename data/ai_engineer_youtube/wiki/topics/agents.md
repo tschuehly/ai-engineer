@@ -12,6 +12,8 @@ Customer-facing agents create an ownership role around the agent as a branded co
 
 Factory's agent-native SDLC framing adds a platform-level version of this shift. The argument is that agents become transformative when they operate across planning, coding, testing, monitoring, and incident response with centralized engineering context, reliable execution, and parallel infrastructure, not when they are merely sprinkled onto human-first IDEs. The strongest agents should ground themselves in codebase state, recent changes, machine capabilities, and organizational memory, then ask clarifying questions before acting.
 
+AI-first company adoption reinforces that agent work cannot stay confined to a specialist AI team. Marketers, designers, PMs, support teams, and product engineers may all need enough AI fluency to recognize useful agent opportunities and enough platform support to prototype without every task becoming central-team work. The goal is not universal model expertise; it is making AI thinking and exploration normal across the company.
+
 Typed agent frameworks add another reliability lever to the basic loop. Pydantic AI's examples show structured outputs as validated final-result tools, explicit loop termination through final text or structured output, validation-error retries, and typed dependency injection for tools. This does not remove the need for prompts or evals, but it gives humans, coding agents, static type checkers, and runtime validators a shared contract when the application is refactored.
 
 Production agent design should optimize for efficacy before autonomy. Agency is useful when changing inputs make fixed automation brittle, but it should be raised only when the resulting system still reliably solves the user task. Tool calling, orchestration, multi-agent routing, evals, observability, and safety trip wires are therefore not optional extras; they are the controls that keep agentic behavior from turning into low-efficacy autonomy.
@@ -218,6 +220,7 @@ Devin 2.0 frames the same progression as changing human-intervention intervals. 
 - [Embed agent tools in existing work surfaces](../concepts/embed-agent-tools-in-existing-work-surfaces.md) - agent tools become more useful when embedded where users already triage, code, and review.
 - [Agentic automation can outperform first-tier productivity use cases](../concepts/agentic-automation-can-outperform-first-tier-productivity-use-cases.md) - deeper automation may produce more value than only personal time savings.
 - [Fractured Attention Becomes Usable With Delegated Agents](../concepts/fractured-attention-becomes-usable-with-delegated-agents.md) - agent delegation can turn short attention windows into productive investigation and fix loops.
+- [Scale AI Fluency With Self-Service Platforms](../concepts/scale-ai-fluency-with-self-service-platforms.md) - broad agent adoption needs enablement and self-service paths outside the central AI team.
 - [Govern agent rules through feedback gatekeepers](../concepts/govern-agent-rules-through-feedback-gatekeepers.md) - organization-wide agent behavior needs maintained prompts and rule ownership.
 - [Start GenBI with certified assets before autonomous SQL](../concepts/start-genbi-with-certified-assets-before-autonomous-sql.md) - analytics agents can earn trust by retrieving governed BI assets before generating new queries.
 - [Start the workday by reviewing and dispatching agent work](../concepts/start-the-workday-by-reviewing-and-dispatching-agent-work.md) - treats agents as asynchronous coworkers whose work is reviewed, approved, and redirected.
@@ -601,6 +604,7 @@ Devin 2.0 frames the same progression as changing human-intervention intervals. 
 - [How we hacked YC Spring 2025 batch's AI agents - Rene Brandel, Casco](../sources/20250730_kv-QAuKWllQ.md)
 - [OpenAI on Securing Code-Executing AI Agents - Fouad Matin (Codex, Agent Robustness)](../sources/20250730_w7IMuYsBNr8.md)
 - [Building Alice's Brain: an AI Sales Rep that Learns Like a Human - Sherwood & Satwik, 11x](../sources/20250729_KWmkMV0FNwQ.md)
+- [From Hype to Habit: How We're Building an AI-First SaaS Company-While Still Shipping the Roadmap](../sources/20250723_3YGRcgZJ3yc.md)
 - [Scaling AI Agents Without Breaking Reliability - Preeti Somal, Temporal](../sources/20250728_1izYWsokr9s.md)
 - [On Curiosity -- Sharif Shameem, Lexica](../sources/20250719_0F8mnGPUycY.md)
 - [Shipping Products When You Don't Know What they Can Do - Ben Stein, Teammates](../sources/20250728_PthmdT92qNg.md)

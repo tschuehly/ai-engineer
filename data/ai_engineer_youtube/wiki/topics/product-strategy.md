@@ -34,6 +34,8 @@ AI-engineer founders also need to translate technical taste into a market narrat
 
 AI team design is also a product-strategy decision. The right team depends on the company's bottleneck: domain/data gaps, weak technology capability, missing customer empathy, product integration, monetization, reliability, observability, or specialist model performance all imply different staffing. Generalist AI engineers often fit early transformation work because they can build, use available platforms, understand tradeoffs, and talk to customers, while narrow specialists are most valuable after the baseline is strong and the remaining constraint is specialized performance.
 
+AI-first SaaS strategy adds a roadmap-level version of that judgment. The product question should move from where to add intelligence to an existing feature toward which cross-workflow customer value becomes possible when AI can combine signals across teams and roles. That future cannot replace current customer commitments outright, so planning needs ritualized discovery, MVPs built for learning, and enough permission to change direction when model capability, customer expectation, or evidence shifts.
+
 ## Key Concepts
 
 - [AI Does Not Replace Shareable Product Marketing](../concepts/ai-does-not-replace-shareable-product-marketing.md) - launch content only matters when it can earn attention and social sharing.
@@ -86,6 +88,9 @@ AI team design is also a product-strategy decision. The right team depends on th
 - [Prefer Generalist AI Engineers Before Narrow Specialists](../concepts/prefer-generalist-ai-engineers-before-narrow-specialists.md) - broad builders can be more useful than researchers until the product needs specialty performance.
 - [Hire Humans for Context, Verification, and Accountability](../concepts/hire-humans-for-context-verification-and-accountability.md) - human roles still carry context, verification, and responsibility for AI systems.
 - [Upskill AI Teams Through Build, Domain, and Customer Loops](../concepts/upskill-ai-teams-through-build-domain-and-customer-loops.md) - team enablement should shorten prototype, evaluation, domain, and customer feedback loops.
+- [AI-First Strategy Reimagines Value Across Workflows](../concepts/ai-first-strategy-reimagines-value-across-workflows.md) - AI-first product strategy unifies workflow value instead of adding isolated model features.
+- [Ritualized Discovery Keeps AI Roadmaps Adaptive](../concepts/ritualized-discovery-keeps-ai-roadmaps-adaptive.md) - planned discovery rituals keep AI roadmaps responsive to changing capability and evidence.
+- [Treat Process as a Product During AI Transformation](../concepts/treat-process-as-a-product-during-ai-transformation.md) - operating processes should be evaluated by product-like outcomes during AI transformation.
 
 ## Open Questions
 
@@ -99,6 +104,7 @@ AI team design is also a product-strategy decision. The right team depends on th
 - Which agent affordances should be exposed as open-ended capabilities, and which need hard deterministic constraints before customers can safely compose them?
 - How much early design-partner evidence is enough to distinguish a fundable AI startup wedge from a promising but narrow feature?
 - Which AI team bottlenecks should be solved by hiring, and which should first be solved by upskilling, tooling, process, or clearer product scope?
+- How should AI-first SaaS teams decide when discovery evidence is strong enough to change committed roadmap work?
 
 ## Sources
 
@@ -121,4 +127,5 @@ AI team design is also a product-strategy decision. The right team depends on th
 - [AI That Pays: Lessons from Revenue Cycle - Nathan Wan, Ensemble Health](../sources/20250724_TquUsN1QsWs.md)
 - [Building AI Products That Actually Work - Ben Hylak (Raindrop), Sid Bendre (Oleve)](../sources/20250724_eSvXbb2EBYc.md)
 - [How Intuit uses LLMs to explain taxes to millions of taxpayers - Jaspreet Singh, Intuit](../sources/20250723__zl_zimMRak.md)
+- [From Hype to Habit: How We're Building an AI-First SaaS Company-While Still Shipping the Roadmap](../sources/20250723_3YGRcgZJ3yc.md)
 - [Machines of Buying and Selling Grace - Adam Behrens, New Generation](../sources/20250723_zlZz0mDF2eg.md)

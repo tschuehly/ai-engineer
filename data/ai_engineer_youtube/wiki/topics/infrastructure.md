@@ -48,6 +48,8 @@ Voice infrastructure has an upstream data-quality layer before any model call. C
 
 Computer vision adds a similar latency-and-locality constraint for real-world perception. If a system must perceive motion or act on camera input, it often needs multiple frames per second and edge execution rather than a single centralized inference hub. That makes the model choice, visual backbone, accelerator path, and benchmark target part of infrastructure, not just research accuracy.
 
+Self-service AI platforms are also cultural infrastructure. They let product and engineering teams prototype and ship AI-powered features without making every experiment depend on deep central AI-team involvement, while enablement rituals help non-specialists understand what is safe, useful, and worth building.
+
 Enterprise AI registries are another infrastructure layer between experimentation and production. A model gateway can centralize model access, authentication, budget erosion, and request analytics, while registries track MCP servers, A2A agents, models, ownership, environments, costs, and use-case lineage. The practical deployment pattern is to give teams template repositories and CI/CD flows that publish both runtime artifacts and registry metadata, so governance stays aligned with what is actually deployed.
 
 Enterprise analytics infrastructure needs a governed data and metadata layer before an agent writes or executes arbitrary queries. A GenBI stack can separate metadata understanding, certified-report retrieval, SQL expansion, business-answer synthesis, orchestration, trust controls, and contextual UI. That lets teams package the report finder, metadata enrichment, and data-pivoting pieces independently while retaining the benchmarks and catalog improvements even if the end-to-end agent changes.
@@ -227,6 +229,7 @@ Dagger-style agent delivery infrastructure packages that feedback path as portab
 - [Browser DevTools MCP turns runtime debugging into agent tools](../concepts/browser-devtools-mcp-turns-runtime-debugging-into-agent-tools.md) - browser automation and DevTools traces become part of the agent infrastructure for web apps.
 - [Agent software factories need runnable, contextual, and verifiable primitives](../concepts/agent-software-factories-need-runnable-contextual-and-verifiable-primitives.md) - infrastructure for agents includes reproducible dev setup and executable checks, not only model hosting.
 - [Treat agent readiness as verification infrastructure](../concepts/treat-agent-readiness-as-verification-infrastructure.md) - tests, linters, specs, and review criteria are infrastructure that determines how much agent autonomy is safe.
+- [Scale AI Fluency With Self-Service Platforms](../concepts/scale-ai-fluency-with-self-service-platforms.md) - internal platforms can make AI exploration available without bottlenecking on specialists.
 - [Use agent readiness flywheels to improve the development environment](../concepts/use-agent-readiness-flywheels-to-improve-the-development-environment.md) - readiness investment compounds when agents help improve the validation environment.
 - [Cloud agents turn coding work into asynchronous VM-backed queues](../concepts/cloud-agents-turn-coding-work-into-asynchronous-vm-backed-queues.md) - VM-backed environments can isolate and parallelize coding-agent execution.
 - [Production-Matched RL Environments Train Coding Agents on Real Tool Surfaces](../concepts/production-matched-rl-environments-train-coding-agents-on-real-tool-surfaces.md) - training infrastructure should preserve the same tools and sandboxes used in production agent runs.
@@ -439,6 +442,7 @@ Dagger-style agent delivery infrastructure packages that feedback path as portab
 - [Real-time Experiments with an AI Co-Scientist - Stefania Druga, fmr. Google Deepmind](../sources/20250728_wNH3q9pqn0U.md)
 - [Structuring a modern AI team - Denys Linkov, Wisedocs](../sources/20250724_SbUxRluVRwk.md)
 - [AX is the only Experience that Matters - Ivan Burazin, Daytona](../sources/20250724_e9sLVMN76qU.md)
+- [From Hype to Habit: How We're Building an AI-First SaaS Company-While Still Shipping the Roadmap](../sources/20250723_3YGRcgZJ3yc.md)
 - [Machines of Buying and Selling Grace - Adam Behrens, New Generation](../sources/20250723_zlZz0mDF2eg.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

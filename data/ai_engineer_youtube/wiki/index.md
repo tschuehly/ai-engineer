@@ -22,6 +22,8 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Simulated Conversations Test Customer-Facing Agents Before Launch](concepts/simulated-conversations-test-customer-facing-agents-before-launch.md) - simulated users and live handoff review make support-agent behavior testable.
 - [Agentic Commerce Moves From Static Stores to Intent Infrastructure](concepts/agentic-commerce-moves-from-static-stores-to-intent-infrastructure.md) - shopping agents need explicit buyer and seller intent, not only browser automation over static product pages.
 - [Expose Commerce Data Through Agent-Native Product APIs](concepts/expose-commerce-data-through-agent-native-product-apis.md) - merchant catalogs need API or MCP surfaces that avoid brittle scraping and one-off feeds.
+- [AI-First Strategy Reimagines Value Across Workflows](concepts/ai-first-strategy-reimagines-value-across-workflows.md) - AI-first SaaS strategy should unify customer value across workflows rather than add isolated AI features.
+- [Ritualized Discovery Keeps AI Roadmaps Adaptive](concepts/ritualized-discovery-keeps-ai-roadmaps-adaptive.md) - planned experimentation and learning keep AI roadmaps responsive to fast-changing capability.
 
 - [Enterprise Open-Model Adoption Follows Task Pressure](concepts/enterprise-open-model-adoption-follows-task-pressure.md) - open models become attractive when enterprise workloads expose task-specific quality, latency, cost, or differentiation pressure.
 - [Self-Hosted Inference Needs a Platform Beyond Runtime and GPUs](concepts/self-hosted-inference-needs-a-platform-beyond-runtime-and-gpus.md) - model weights, serving runtimes, and GPUs still need production platform work for mission-critical inference.
