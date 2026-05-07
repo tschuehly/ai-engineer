@@ -48,6 +48,8 @@ Leadership-led AI workflows should start from the actual SDLC constraint. Code c
 
 Enterprise AI adoption workflows should then turn isolated pilots into a portfolio. A useful pattern is to classify use cases by impact category, record current ROI separately from expected future ROI, and keep explicit caveats around self-reported or self-selected data. The workflow should also look for movement from first-tier time savings toward automation, agentic workflows, risk reduction, new capabilities, and revenue or product-line impact, because these categories can require different governance, rollout, and measurement loops.
 
+Enterprise engineering adoption also needs workflow scaffolding after the first demo. Bloomberg's rollout suggests starting with broad experimentation, then redirecting scaled effort toward mature-codebase work such as uplift patches and incident response, while using onboarding, training, guilds, inner-source, visiting engineers, and leadership workshops to turn individual tool use into organization-level capability.
+
 ## Key Concepts
 
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - simple loops can replace over-specified DAGs when exploration is the work.
@@ -218,6 +220,9 @@ Enterprise AI adoption workflows should then turn isolated pilots into a portfol
 - [Use cross-segment convenings to calibrate AI transformation roadmaps](../concepts/use-cross-segment-convenings-to-calibrate-ai-transformation-roadmaps.md) - leadership learning should combine frontier, startup, academic, consulting, and enterprise deployment evidence.
 - [Measure AI ROI with outcome categories and bias caveats](../concepts/measure-ai-roi-with-outcome-categories-and-bias-caveats.md) - adoption workflows need impact categories and honest data-quality caveats.
 - [Move enterprise AI adoption beyond spot experiments](../concepts/move-enterprise-ai-adoption-beyond-spot-experiments.md) - portfolio workflows help organizations move from pilots to scaled use.
+- [Greenfield AI coding gains drop off in mature codebases](../concepts/greenfield-ai-coding-gains-drop-off-in-mature-codebases.md) - adoption workflows should measure durable impact after easy generation work is exhausted.
+- [Target enterprise coding agents at maintenance and incident work](../concepts/target-enterprise-coding-agents-at-maintenance-and-incident-work.md) - scaled workflows can target patching, migration, and incident response before broad open-ended generation.
+- [Build paved paths for enterprise AI engineering tools](../concepts/build-paved-paths-for-enterprise-ai-engineering-tools.md) - communities, training, discovery, deployment, and quality gates make scaled AI engineering less chaotic.
 - [Agentic automation can outperform first-tier productivity use cases](../concepts/agentic-automation-can-outperform-first-tier-productivity-use-cases.md) - workflow prioritization should distinguish basic productivity wins from deeper automation.
 
 ## Open Questions
@@ -265,6 +270,7 @@ Enterprise AI adoption workflows should then turn isolated pilots into a portfol
 
 ## Sources
 
+- [What We Learned Deploying AI within Bloomberg's Engineering Organization - Lei Zhang, Bloomberg](../sources/20251216_Q81AzlA-VE8.md)
 - [How Claude Code Works - Jared Zoneraich, PromptLayer](../sources/20251226_RFKCzGlAU6Q.md)
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md)
 - [Spec-Driven Development: Agentic Coding at FAANG Scale and Quality - Al Harris, Amazon Kiro](../sources/20260109_HY_JyxAZsiE.md)

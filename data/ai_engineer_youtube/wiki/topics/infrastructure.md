@@ -32,6 +32,8 @@ Durable agent infrastructure also needs a deterministic orchestration boundary. 
 
 Developer-platform infrastructure also needs to be consumable by agents. Self-service provisioning, API/CLI/MCP access, standardized development environments, local validation, machine-readable observability, and layered contribution guardrails let agents work against internal platforms without relying on informal human escalation paths. Agent-ready infrastructure should prefer fast local checks over slow CI-only loops because agents will repeatedly run whatever feedback path is available.
 
+Enterprise AI engineering platforms should also reduce duplicate tool building. A model gateway can provide experimentation, visibility, and model-fit guidance; an MCP discovery hub can reveal existing servers before another team builds one; and a standardized deployment/runtime platform can handle authentication, SDLC, and production quality controls while leaving room for easy proofs of concept.
+
 AI-generated kernels turn low-level optimization into an infrastructure workflow. A useful system needs a supervisor that accepts source code, target hardware, and human guidance; synthesis agents that search optimization ideas; and a verification agent that executes candidates on actual hardware with strict correctness and timing checks. This infrastructure is most valuable when heterogeneous agentic inference workloads need to move across CUDA, Triton, Metal, Pallas, or new device generations faster than scarce kernel experts can hand-port every path.
 
 ## Key Concepts
@@ -56,6 +58,7 @@ AI-generated kernels turn low-level optimization into an infrastructure workflow
 - [Open model families need ecosystem-compatible tooling](../concepts/open-model-families-need-ecosystem-compatible-tooling.md) - open model infrastructure includes license, runtime, fine-tuning, and distribution support.
 - [Use MLX Swift LM for Apple local model integration](../concepts/use-mlx-swift-lm-for-apple-local-model-integration.md) - native Apple app infrastructure can use MLX-compatible Hugging Face models without building a cloud service first.
 - [Build internal AI engineering platforms when off-the-shelf tools lack enterprise context](../concepts/build-internal-ai-engineering-platforms-when-off-the-shelf-tools-lack-enterprise-context.md) - internal platforms can connect agents to monorepos, service catalogs, operational tools, and review systems.
+- [Build paved paths for enterprise AI engineering tools](../concepts/build-paved-paths-for-enterprise-ai-engineering-tools.md) - shared model, MCP, deployment, and enablement infrastructure prevents fragmented enterprise AI tooling.
 - [Route Gemma 4 model variants by deployment and workflow shape](../concepts/route-gemma-4-model-variants-by-deployment-and-workflow-shape.md) - Gemma 4 supports both downloadable local/self-hosted paths and hosted access for larger models.
 - [Unified coding-agent harnesses combine models, tools, environments, and safety](../concepts/unified-coding-agent-harnesses-combine-models-tools-environments-and-safety.md) - agent infrastructure includes harnesses that manage tool execution, environments, and safety around models.
 - [LiteRT provides a cross-platform path from model conversion to edge deployment](../concepts/litert-provides-a-cross-platform-path-from-model-conversion-to-edge-deployment.md) - TensorFlow Lite format compatibility and conversion support allow models to target multiple edge platforms.
@@ -148,6 +151,7 @@ AI-generated kernels turn low-level optimization into an infrastructure workflow
 
 ## Sources
 
+- [What We Learned Deploying AI within Bloomberg's Engineering Organization - Lei Zhang, Bloomberg](../sources/20251216_Q81AzlA-VE8.md)
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md)
 - [Gemma 4 Deep Dive - Cassidy Hardin, Researcher, Google DeepMind](../sources/20260427__A367W_qvc8.md)
 - [Why building eval platforms is hard - Phil Hetzel, Braintrust](../sources/20260428__fQ7Z_Wfouk.md)

@@ -18,6 +18,8 @@ Leadership-owned AI adoption adds another constraint: do not confuse adoption ma
 
 Execution-aware code models point to another coding-agent interface: the model can treat the repository as an environment with state transitions rather than only a text corpus. CWM's Bash-oriented setup trains the model in a terminal-like environment, while neural debugging suggests that partial code sketches, local variable traces, and simulated execution can become a more precise collaboration surface than prose-only prompts.
 
+Enterprise rollouts should be skeptical of greenfield-only codegen wins. Bloomberg's deployment across thousands of engineers showed early gains in proofs of concept, tests, and one-time scripts, but those signals dropped quickly once work moved into mature codebases with verification, review, and merge constraints. Higher-leverage coding-agent targets may be maintenance, migration, patching, and incident response: uplift agents can scan existing code for applicable fixes and open explanatory pull requests, while incident agents can inspect operational evidence before responders over-anchor on a favorite hypothesis.
+
 ## Key Concepts
 
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md) - coding-agent SDKs package reusable runtime pieces around the model.
@@ -28,6 +30,8 @@ Execution-aware code models point to another coding-agent interface: the model c
 - [Let the core agent loop orchestrate parallel subtasks](../concepts/let-the-core-agent-loop-orchestrate-parallel-subtasks.md) - the main loop can choose parallel subtasks dynamically instead of requiring manual thread dispatch.
 - [Design coding-agent editors as review surfaces](../concepts/design-coding-agent-editors-as-review-surfaces.md) - editor UX should help humans inspect generated diffs, commands, diagnostics, and change structure.
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - tool-loop architecture can replace large DAGs for exploratory coding work.
+- [Greenfield AI coding gains drop off in mature codebases](../concepts/greenfield-ai-coding-gains-drop-off-in-mature-codebases.md) - broad enterprise adoption should distinguish early toy gains from mature-codebase impact.
+- [Target enterprise coding agents at maintenance and incident work](../concepts/target-enterprise-coding-agents-at-maintenance-and-incident-work.md) - maintenance patches and troubleshooting can be stronger scaled use cases than generic generation.
 - [Use prompt-enforced todos as lightweight agent state](../concepts/use-prompt-enforced-todos-as-lightweight-agent-state.md) - todos orient the model without turning every step into hard orchestration.
 - [Put brittle edge cases behind rigorous tools](../concepts/put-brittle-edge-cases-behind-rigorous-tools.md) - structured tools provide hard boundaries for behavior that prompts should not merely suggest.
 - [Evaluate agent trajectories with backtests and smell metrics](../concepts/evaluate-agent-trajectories-with-backtests-and-smell-metrics.md) - flexible coding agents need trajectory-level eval signals, not only final output checks.
@@ -160,6 +164,7 @@ Execution-aware code models point to another coding-agent interface: the model c
 ## Sources
 
 - [Making Codebases Agent Ready - Eno Reyes, Factory AI](../sources/20251222_ShuJ_CN6zr4.md)
+- [What We Learned Deploying AI within Bloomberg's Engineering Organization - Lei Zhang, Bloomberg](../sources/20251216_Q81AzlA-VE8.md)
 - [The Infinite Software Crisis - Jake Nations, Netflix](../sources/20251220_eIoohUmYpGI.md)
 - [Paying Engineers like Salespeople - Arman Hezarkhani, Tenex](../sources/20251219_4mRekpZpBZs.md)
 - [Leadership in AI Assisted Engineering - Justin Reock, DX (acq. Atlassian)](../sources/20251219_PmZDupFP3UM.md)

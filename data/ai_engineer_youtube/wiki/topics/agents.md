@@ -38,6 +38,8 @@ Agent-native company design shifts the unit of adoption from a tool to an operat
 
 Enterprise agent adoption should also be judged by portfolio breadth and organizational integration, not only by whether one pilot worked. Self-reported ROI evidence from an AI-interested audience suggests that teams seeing more value are often pursuing multiple use cases systematically across functions, and that automation or agentic use cases can outperform basic first-tier productivity use cases. That signal needs bias caveats, but it reinforces the pattern that agents become more valuable when they are part of a broader operating workflow rather than a novelty deployment.
 
+Large engineering organizations need adoption architecture around agent creation itself. If many teams independently build PR-review bots, incident agents, and MCP servers, the result can be duplicate, chaotic tool surfaces. A paved path with model access, discovery, MCP deployment, runtime support, quality gates, training, communities, and leadership enablement lets experimentation stay broad while production agent behavior remains governed.
+
 Leadership matters because agent and AI-assistant rollouts can produce either leverage or performative compliance. Organizations need policies, psychological safety, enablement time, impact measurement, and maintained prompt-rule ownership so agent behavior improves with feedback instead of drifting through unmanaged system prompts and local rule files.
 
 Enterprise analytics agents need especially careful autonomy staging. A GenBI copilot can start by routing users to certified dashboards and reports, then use those governed assets as context or SQL seeds before it attempts broader query generation. Splitting the pipeline into metadata, RAG/report-finding, SQL, and BI-answer agents keeps retrieval, query expansion, answer synthesis, orchestration, and governance as separately inspectable responsibilities.
@@ -49,6 +51,8 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Agent-native companies embed agents into product, operations, and culture](../concepts/agent-native-companies-embed-agents-into-product-operations-and-culture.md) - distinguishes core agent infrastructure from occasional AI assistance.
 - [Universal AI Adoption Changes Engineering Coordination](../concepts/universal-ai-adoption-changes-engineering-coordination.md) - full-team adoption lets engineering coordination move from editor-centric handoffs toward delegated agent work.
 - [Move enterprise AI adoption beyond spot experiments](../concepts/move-enterprise-ai-adoption-beyond-spot-experiments.md) - portfolio adoption gives agent work a better chance of changing organizational outcomes.
+- [Build paved paths for enterprise AI engineering tools](../concepts/build-paved-paths-for-enterprise-ai-engineering-tools.md) - scaled adoption needs shared platform routes for model access, MCP discovery, deployment, and governance.
+- [Target enterprise coding agents at maintenance and incident work](../concepts/target-enterprise-coding-agents-at-maintenance-and-incident-work.md) - enterprise agents can focus on operational and maintenance work with clear evidence surfaces.
 - [Agentic automation can outperform first-tier productivity use cases](../concepts/agentic-automation-can-outperform-first-tier-productivity-use-cases.md) - deeper automation may produce more value than only personal time savings.
 - [Fractured Attention Becomes Usable With Delegated Agents](../concepts/fractured-attention-becomes-usable-with-delegated-agents.md) - agent delegation can turn short attention windows into productive investigation and fix loops.
 - [Govern agent rules through feedback gatekeepers](../concepts/govern-agent-rules-through-feedback-gatekeepers.md) - organization-wide agent behavior needs maintained prompts and rule ownership.
@@ -245,6 +249,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 
 ## Sources
 
+- [What We Learned Deploying AI within Bloomberg's Engineering Organization - Lei Zhang, Bloomberg](../sources/20251216_Q81AzlA-VE8.md)
 - [How Claude Code Works - Jared Zoneraich, PromptLayer](../sources/20251226_RFKCzGlAU6Q.md)
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md)
 - [Everything I Learned Training Frontier Small Models - Maxime Labonne, Liquid AI](../sources/20260429_fLUtUkqYHnQ.md)

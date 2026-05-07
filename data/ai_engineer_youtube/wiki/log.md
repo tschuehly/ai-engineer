@@ -815,3 +815,11 @@
 - Updated topics: [Models](topics/models.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md)
 - Updated concepts: [Train code models on execution traces, not only syntax](concepts/train-code-models-on-execution-traces-not-only-syntax.md), [Use neural debugging to fill code by simulated execution](concepts/use-neural-debugging-to-fill-code-by-simulated-execution.md), [Use Bash as a composable code-mode tool for agents](concepts/use-bash-as-a-composable-code-mode-tool-for-agents.md), [Build RL environments as software artifacts](concepts/build-rl-environments-as-software-artifacts.md)
 - Notes: Added FAIR Meta's CWM framing for execution-trace code modeling, neural debugging, Bash-oriented code-agent environments, and asynchronous RL training loops.
+
+## [2026-05-07] ingest | What We Learned Deploying AI within Bloomberg's Engineering Organization - Lei Zhang, Bloomberg
+
+- Source: [What We Learned Deploying AI within Bloomberg's Engineering Organization - Lei Zhang, Bloomberg](sources/20251216_Q81AzlA-VE8.md)
+- Processed: `Q81AzlA-VE8`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Greenfield AI coding gains drop off in mature codebases](concepts/greenfield-ai-coding-gains-drop-off-in-mature-codebases.md), [Target enterprise coding agents at maintenance and incident work](concepts/target-enterprise-coding-agents-at-maintenance-and-incident-work.md), [Build paved paths for enterprise AI engineering tools](concepts/build-paved-paths-for-enterprise-ai-engineering-tools.md)
+- Notes: Added Bloomberg's scaled engineering rollout lessons around mature-codebase ROI, uplift and incident-response agents, and paved AI platform adoption.
