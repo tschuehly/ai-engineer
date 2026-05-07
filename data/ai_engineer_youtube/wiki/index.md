@@ -4,6 +4,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Ship Continuously Viable Product Shapes](concepts/ship-continuously-viable-product-shapes.md) - every product increment should be usable enough to create real feedback.
+- [Run Named-Customer Feedback Loops Daily](concepts/run-named-customer-feedback-loops-daily.md) - specific users, concrete artifacts, and high-bandwidth channels keep AI-speed product iteration grounded.
+- [Treat APIs as High-Inertia Product Contracts](concepts/treat-apis-as-high-inertia-product-contracts.md) - developer-platform APIs and data structures need extra care because customer migrations can be long.
 - [Share Demos To Reveal Latent Model Capabilities](concepts/share-demos-to-reveal-latent-model-capabilities.md) - small runnable demos expose model capabilities and product surfaces that specs or labels miss.
 - [Assemble Realtime Multimodal Context for Lab Agents](concepts/assemble-realtime-multimodal-context-for-lab-agents.md) - lab agents need dynamic context from connected sensors, cameras, voice, text, protocols, and history.
 - [Use Open Lab Hardware as the Co-Scientist Action Surface](concepts/use-open-lab-hardware-as-the-co-scientist-action-surface.md) - open sensors and lab automation create inspectable feedback loops for scientific agents.

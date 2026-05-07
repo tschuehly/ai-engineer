@@ -1591,3 +1591,11 @@
 - Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Assemble Realtime Multimodal Context for Lab Agents](concepts/assemble-realtime-multimodal-context-for-lab-agents.md), [Use Open Lab Hardware as the Co-Scientist Action Surface](concepts/use-open-lab-hardware-as-the-co-scientist-action-surface.md), [Ground Scientific Simulations in Live Experiment Traces](concepts/ground-scientific-simulations-in-live-experiment-traces.md), [Scientific Agents Should Execute Against Domain Infrastructure](concepts/scientific-agents-should-execute-against-domain-infrastructure.md)
 - Notes: Added Druga's realtime co-scientist workflow for assembling multimodal lab context, using open hardware as the agent's feedback surface, and grounding simulations in empirical experiment traces.
+
+## [2026-05-07] ingest | Shipping something to someone always wins - Kenneth Auchenberg (ex. Stripe, VSCode)
+
+- Source: [Shipping something to someone always wins - Kenneth Auchenberg (ex. Stripe, VSCode)](sources/20250728_mHzJhXppwUA.md)
+- Processed: `mHzJhXppwUA`
+- Updated topics: [Product Strategy](topics/product-strategy.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Ship Continuously Viable Product Shapes](concepts/ship-continuously-viable-product-shapes.md), [Run Named-Customer Feedback Loops Daily](concepts/run-named-customer-feedback-loops-daily.md), [Treat APIs as High-Inertia Product Contracts](concepts/treat-apis-as-high-inertia-product-contracts.md)
+- Notes: Added Auchenberg's product-loop guidance for AI-speed building: ship usable slices to named customers, collect high-bandwidth feedback, and treat platform APIs as durable contracts.
