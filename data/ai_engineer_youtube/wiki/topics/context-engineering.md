@@ -18,9 +18,12 @@ Coding-agent subagents are another context-management lever. Instead of forcing 
 
 Context compression for coding agents is not just about fitting files into a smaller prompt. Nations' Netflix example shows that a multi-million-token codebase can be reduced into a research document and implementation plan only after humans select relevant architecture, diagrams, interfaces, requirements, and sometimes a manual migration seed. The goal is to distinguish intended design constraints from accidental local patterns before generation preserves both as if they were requirements.
 
+Proactive agents add a timing constraint to context engineering. A background coding agent needs current project observation, personalized preferences, repository and environment knowledge, editable memory, and just-in-time task context so it can consult the right guidance before interrupting the user. Context that arrives too soon becomes noise, while context that arrives too late misses the intervention window.
+
 ## Key Concepts
 
 - [Keep agent context small, fresh, and task-specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md) - context should be externalized, selected, summarized, and isolated so stale or excessive history does not degrade agent work.
+- [Proactive agent systems need observation, personalization, timing, and workflow embedding](../concepts/proactive-agent-systems-need-observation-personalization-timing-and-workflow-embedding.md) - proactive agents need context selected for the current moment and workflow surface.
 - [Use subagents to isolate context-heavy subtasks](../concepts/use-subagents-to-isolate-context-heavy-subtasks.md) - separate context windows can preserve the main agent's working memory.
 - [Offload long-horizon agent state outside the context window](../concepts/offload-long-horizon-agent-state-outside-the-context-window.md) - files, plans, docs, memories, and scoped subagents can hold state until it is relevant.
 - [Enterprise agent failures often expose missing institutional knowledge](../concepts/enterprise-agent-failures-expose-missing-institutional-knowledge.md) - agent failures can indicate missing or stale enterprise knowledge rather than weak model reasoning.
@@ -123,3 +126,4 @@ Context compression for coding agents is not just about fitting files into a sma
 - [The 3 Pillars of Autonomy - Michele Catasta, Replit](../sources/20251222_MLhAA9yguwM.md)
 - [The Infinite Software Crisis - Jake Nations, Netflix](../sources/20251220_eIoohUmYpGI.md)
 - [Dispatch from the Future: building an AI-native Company - Dan Shipper, Every, AI & I](../sources/20251218_MGzymaYBiss.md)
+- [Proactive Agents - Kath Korevec, Google Labs](../sources/20251213_v3u8xc0zLec.md)

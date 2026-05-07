@@ -871,3 +871,11 @@
 - Updated topics: [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Retrieval](topics/retrieval.md)
 - Updated concepts: [Choose HybridRAG when relationship structure matters](concepts/choose-hybridrag-when-relationship-structure-matters.md), [Treat ontology and triplet quality as GraphRAG bottlenecks](concepts/treat-ontology-and-triplet-quality-as-graphrag-bottlenecks.md), [Balance GraphRAG hop depth against production latency](concepts/balance-graphrag-hop-depth-against-production-latency.md)
 - Notes: Added NVIDIA's HybridRAG guidance around graph/vector retrieval selection, graph-construction quality, traversal latency, and RAG pipeline evaluation.
+
+## [2026-05-07] ingest | Proactive Agents - Kath Korevec, Google Labs
+
+- Source: [Proactive Agents - Kath Korevec, Google Labs](sources/20251213_v3u8xc0zLec.md)
+- Processed: `v3u8xc0zLec`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Proactive agent systems need observation, personalization, timing, and workflow embedding](concepts/proactive-agent-systems-need-observation-personalization-timing-and-workflow-embedding.md), [Stage proactive coding agents from maintenance to system awareness](concepts/stage-proactive-coding-agents-from-maintenance-to-system-awareness.md), [Keep humans aligned with proactive agent work](concepts/keep-humans-aligned-with-proactive-agent-work.md)
+- Notes: Added Google Labs' proactive coding-agent framing around reducing async-agent monitoring load through staged background work, live context, verification, and human alignment.

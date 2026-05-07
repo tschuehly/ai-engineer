@@ -20,6 +20,8 @@ Execution-aware code models point to another coding-agent interface: the model c
 
 Coding-agent model training can also target the harness and workflow shape directly. MiniMax M2's framing suggests that a coding model should learn from scaled coding environments, expert developer reward, repeated reasoning/tool-call turns, and scaffold perturbations across prompts, templates, tools, and tool responses. That makes agent robustness a training and evaluation target rather than a property assumed from benchmark rank or raw tool count.
 
+Proactive coding-agent products add a background-work layer on top of the ordinary prompt loop. The agent can index the repository, find to-dos, detect missing tests or unsafe patterns, suggest best practices, prepare environments, and consult just-in-time context before asking the developer. That only helps when the product also preserves alignment: the user should see what the agent is doing, edit memory, inspect critic feedback, validate Playwright screenshots or other evidence, and redirect work that is technically plausible but not project-aligned.
+
 Enterprise rollouts should be skeptical of greenfield-only codegen wins. Bloomberg's deployment across thousands of engineers showed early gains in proofs of concept, tests, and one-time scripts, but those signals dropped quickly once work moved into mature codebases with verification, review, and merge constraints. Higher-leverage coding-agent targets may be maintenance, migration, patching, and incident response: uplift agents can scan existing code for applicable fixes and open explanatory pull requests, while incident agents can inspect operational evidence before responders over-anchor on a favorite hypothesis.
 
 Zapier's Scout Agent adds a support-led maintenance pattern. For integration products exposed to constant API changes, support can be a strong first user because tickets arrive with fresh customer context, current logs, and practical validation knowledge. Scout turns support issues into categorized, fixability-checked, plan/execute/validate merge requests, then keeps support iteration inside GitLab before engineering review.
@@ -69,6 +71,9 @@ Vibe engineering adds a human-skill framing for frontend-heavy agentic coding. T
 - [Benchmark saturation pushes capability evals toward human time horizons](../concepts/benchmark-saturation-pushes-capability-evals-toward-human-time-horizons.md) - time-horizon curves help compare models when ordinary benchmarks saturate.
 - [Self-reported task duration is a weak productivity signal](../concepts/self-reported-task-duration-is-a-weak-productivity-signal.md) - developer speedup studies should avoid relying on recalled task times.
 - [Keep agent context small, fresh, and task-specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md) - context overload and stale history can make coding agents worse.
+- [Proactive agent systems need observation, personalization, timing, and workflow embedding](../concepts/proactive-agent-systems-need-observation-personalization-timing-and-workflow-embedding.md) - coding agents need situational awareness before they can act before a prompt.
+- [Stage proactive coding agents from maintenance to system awareness](../concepts/stage-proactive-coding-agents-from-maintenance-to-system-awareness.md) - background coding work should grow from local maintenance to cross-system consequence awareness.
+- [Keep humans aligned with proactive agent work](../concepts/keep-humans-aligned-with-proactive-agent-work.md) - proactive coding agents still need review, verification, and redirection surfaces.
 - [Use research-plan-implement loops for coding agents](../concepts/use-research-plan-implement-loops-for-coding-agents.md) - research and planning reduce wrong assumptions before code generation.
 - [Long AI coding conversations compound accidental complexity](../concepts/long-ai-coding-conversations-compound-accidental-complexity.md) - passing tests after many conversational pivots can hide architectural drift.
 - [Manual migration seeds teach agents the hidden constraints](../concepts/manual-migration-seeds-teach-agents-the-hidden-constraints.md) - one hand-done migration can reveal invariants and seams before broader agentic refactoring.
@@ -235,3 +240,4 @@ Vibe engineering adds a human-skill framing for frontend-heavy agentic coding. T
 - [Coding Evals: From Code Snippets to Codebases - Naman Jain, Cursor](../sources/20251215_tHN44yJoeS8.md)
 - [From Vibe Coding To Vibe Engineering - Kitze, Sizzy](../sources/20251214_JV-wY5pxXLo.md)
 - [Minimax M2: Building the #1 Open Model - Olive Song, MiniMax](../sources/20251213_lY1iFbDPRlw.md)
+- [Proactive Agents - Kath Korevec, Google Labs](../sources/20251213_v3u8xc0zLec.md)
