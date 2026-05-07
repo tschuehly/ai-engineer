@@ -24,6 +24,8 @@ OpenAI's Agent RFT talk adds a hosted, tool-using version of that post-training 
 
 Cursor Composer adds a product-owned coding-model example: reinforcement learning can specialize a model for a concrete IDE agent workflow when the training loop uses high-quality data, enough compute, and the same tools and environment the model will see at inference time. Its reported improvements are behavioral as much as benchmark-oriented: the model learned to use semantic search, read files before editing, and call tools in parallel.
 
+GLM 4.6 adds a staged open-model training recipe for long-context coding and agent behavior. The useful pattern is not just more tokens: general pretraining is followed by code and reasoning continuation, repo-level code contexts, synthetic reasoning traces, long-context agent data, and RL systems that treat short reasoning tasks differently from slow software-engineering trajectories. Its reported post-training details also expose concrete failure modes: multistage short-to-long RL can erode long-context ability, sequence-mean loss can encourage short reward-seeking coding outputs, and mixed-quality scientific reasoning data can underperform smaller expert-verified datasets.
+
 ## Key Concepts
 
 - [Compare models by task, thinking budget, cost, and latency](../concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - model choice should be routed by workload constraints rather than by size alone.
@@ -59,6 +61,11 @@ Cursor Composer adds a product-owned coding-model example: reinforcement learnin
 - [Use neural debugging to fill code by simulated execution](../concepts/use-neural-debugging-to-fill-code-by-simulated-execution.md) - execution-aware code models can complete partial code from simulated state and surrounding structure.
 - [Train coding-agent models with environments and expert developer reward](../concepts/train-coding-agent-models-with-environments-and-expert-developer-reward.md) - coding-agent model quality should be shaped by verifiable environments and developer trust judgments.
 - [Production-Matched RL Environments Train Coding Agents on Real Tool Surfaces](../concepts/production-matched-rl-environments-train-coding-agents-on-real-tool-surfaces.md) - production-like tool loops make specialized coding-model training more likely to transfer.
+- [Train coding models on repo-level contexts](../concepts/train-coding-models-on-repo-level-contexts.md) - coding-model data should expose project structure, linked files, issues, pull requests, and execution traces.
+- [Use hybrid RL system design for agent trajectories](../concepts/use-hybrid-rl-system-design-for-agent-trajectories.md) - short reasoning RL and long agent trajectories need different training/inference coupling.
+- [Preserve long-context ability with single-stage RL](../concepts/preserve-long-context-ability-with-single-stage-rl.md) - long-context post-training can regress when RL ramps through shorter context windows.
+- [Use token-weighted loss for long coding outputs](../concepts/use-token-weighted-loss-for-long-coding-outputs.md) - token-averaged loss can reduce short-template reward seeking in varied-length coding outputs.
+- [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md) - multimodal models need layout and temporal cues for screenshots, slides, video, and GUI action.
 - [Turn real coding sessions into RL environments](../concepts/turn-real-coding-sessions-into-rl-environments.md) - real coding traces can become training environments when reconstructed and verified.
 - [Interleave reasoning and tool calls for long-horizon agents](../concepts/interleave-reasoning-and-tool-calls-for-long-horizon-agents.md) - long-horizon model behavior needs repeated think-act-observe cycles in noisy tool environments.
 - [Perturb agent scaffolds during training for generalization](../concepts/perturb-agent-scaffolds-during-training-for-generalization.md) - robust agent models should tolerate variation in tools, prompts, templates, environments, and responses.
@@ -136,3 +143,4 @@ Cursor Composer adds a product-owned coding-model example: reinforcement learnin
 - [Efficient Reinforcement Learning - Rhythm Garg & Linden Li, Applied Compute](../sources/20251209_o15AaYl7Wu0.md)
 - [Agent Reinforcement Fine Tuning - Will Hang & Cathy Zhou, OpenAI](../sources/20251209_p1CmPZ2j6Lk.md)
 - [Building Cursor Composer - Lee Robinson, Cursor](../sources/20251202_fL1iJHtl51Q.md)
+- [Z.ai GLM 4.6: What We Learned From 100 Million Open Source Downloads - Yuxuan Zhang, Z.ai](../sources/20251122_m6MF1OR_9kM.md)

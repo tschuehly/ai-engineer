@@ -1143,3 +1143,11 @@
 - Updated topics: [Product Strategy](topics/product-strategy.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
 - Updated concepts: [AI Does Not Replace Shareable Product Marketing](concepts/ai-does-not-replace-shareable-product-marketing.md), [Optimize Onboarding Around One Aha Moment](concepts/optimize-onboarding-around-one-aha-moment.md), [Build Product Primitives Before Feature Surfaces](concepts/build-product-primitives-before-feature-surfaces.md)
 - Notes: Added Raad's product-strategy funnel for AI-assisted products: earn attention with shareable ideas, reduce first-use friction to one aha moment, and retain power users through primitives-first product architecture.
+
+## [2026-05-07] ingest | Z.ai GLM 4.6: What We Learned From 100 Million Open Source Downloads - Yuxuan Zhang, Z.ai
+
+- Source: [Z.ai GLM 4.6: What We Learned From 100 Million Open Source Downloads - Yuxuan Zhang, Z.ai](sources/20251122_m6MF1OR_9kM.md)
+- Processed: `m6MF1OR_9kM`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Inference](topics/inference.md), [Models](topics/models.md)
+- Updated concepts: [Train coding models on repo-level contexts](concepts/train-coding-models-on-repo-level-contexts.md), [Use hybrid RL system design for agent trajectories](concepts/use-hybrid-rl-system-design-for-agent-trajectories.md), [Preserve long-context ability with single-stage RL](concepts/preserve-long-context-ability-with-single-stage-rl.md), [Use token-weighted loss for long coding outputs](concepts/use-token-weighted-loss-for-long-coding-outputs.md), [Keep visual inputs at native shape for GUI and video agents](concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
+- Notes: Added GLM 4.6's open-model training recipe for repo-level coding contexts, long-context RL retention, SLIME-style agent trajectory training, token-weighted coding loss, and native-shape visual inputs.

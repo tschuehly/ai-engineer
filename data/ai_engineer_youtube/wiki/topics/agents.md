@@ -8,6 +8,8 @@ Agent workflows depend on both model capability and the context substrate around
 
 Agent models themselves can be tuned for this loop shape. M2's training story emphasizes interleaving reasoning with many tool-call turns, perturbing the operational surface around tools and prompts, and using small active-parameter economics to run multiple workplace-agent copies in parallel. Agent RFT adds a production-post-training variant: teams can train a reasoning model over multi-step rollouts that call hosted tool endpoints and receive custom reward signals, as long as rollout IDs and tool-call context are preserved for grading and the workflow is well-defined enough for production-matched rewards.
 
+GLM 4.6 adds a systems-training detail for those long agent rollouts: short math or code-completion RL can keep training and inference colocated, but slow software-engineering tasks that wait on browsers, APIs, and external environments need decoupled rollout workers, buffers, and periodic weight updates so one slow trajectory does not stall the whole training pipeline.
+
 Robotics adds a useful discipline for digital-agent design: treat the agent as an embodied action system. The model is only one part of the loop; APIs, MCP servers, terminal, browser, VM, OS access, persistent files, monitoring, simulation, retraining, and human feedback form the digital body and offline stack. This also makes action feedback a first-class design problem: long-running commands, browser pop-ups, and stateful VMs should expose enough live observation and interruption control for the agent to close the loop after acting, not merely predict a plan and hope the world matches.
 
 Agent optimization can also move into a learned routing layer around the agent. Meta-controller approaches profile task complexity, uncertainty, verifiability, and resource constraints, then decide whether the current run needs minimal context, context reflection, extra compute, hierarchical verification, structured memory retrieval, or selective test-time adaptation. This is useful only when the routing layer is itself evaluated: weak reflection, sparse rewards, verifier agreement on the same wrong answer, and profiling overhead can turn "self-optimization" into a new failure surface.
@@ -77,6 +79,8 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [High-consequence data changes vendor trust requirements](../concepts/high-consequence-data-changes-vendor-trust-requirements.md) - controlled and classified data require stronger deployment, monitoring, and governance evidence than ordinary SaaS trust signals.
 - [Role-specialized agent systems beat one giant coding agent](../concepts/role-specialized-agent-systems-beat-one-giant-coding-agent.md) - multi-agent decomposition should follow role and context boundaries, not just model size.
 - [Product harnesses can become model customization environments](../concepts/product-harnesses-can-become-model-customization-environments.md) - agent products can train and evaluate models inside the same harness that defines the user experience.
+- [Use hybrid RL system design for agent trajectories](../concepts/use-hybrid-rl-system-design-for-agent-trajectories.md) - long agent rollouts need infrastructure that tolerates slow external environments.
+- [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md) - GUI and video agents need visual layout and temporal order preserved.
 - [Interleave reasoning and tool calls for long-horizon agents](../concepts/interleave-reasoning-and-tool-calls-for-long-horizon-agents.md) - long-running agents should react to tool feedback over repeated turns.
 - [Use Agent RFT after baseline and task optimization](../concepts/use-agent-rft-after-baseline-and-task-optimization.md) - weight-changing agent optimization belongs after baseline and task/tool improvements.
 - [Route agent optimization by task profile, not one fixed loop](../concepts/route-agent-optimization-by-task-profile-not-one-fixed-loop.md) - task profiles can route agents across context, compute, verification, memory, and parameter strategies.
@@ -344,6 +348,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Building Conversational Agents - Thor Schaeff and Philipp Schmid, Google DeepMind](../sources/20260430_cVzf49yg0D8.md)
 - [LLM codegen fails and how to stop 'em - Danilo Campos, PostHog](../sources/20260430_juoNbJiZUi0.md)
 - [OpenAI Codex Masterclass  - Vaibhav Srivastav & Katia Gil Guzman](../sources/20260429_MhHEGMFCEB0.md)
+- [Z.ai GLM 4.6: What We Learned From 100 Million Open Source Downloads - Yuxuan Zhang, Z.ai](../sources/20251122_m6MF1OR_9kM.md)
 - [Building your own software factory — Eric Zakariasson, Cursor](../sources/20260428_rnDm57Py54A.md)
 - [One Login to Rule Them All: Cross-App Access for MCP - Garrett Galow, WorkOS](../sources/20260428_EmhRyw6xeT0.md)
 - [Scaling GitHub for your Agents — Sam Morrow, GitHub](../sources/20260427_0n3MKk7r60w.md)

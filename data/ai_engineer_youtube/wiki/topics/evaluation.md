@@ -44,6 +44,8 @@ Code world models add execution traces as both training data and evaluation evid
 
 Coding-agent model evaluation should also vary the harness around the model. MiniMax M2's scaffold-generalization lesson is that scaling tools is not enough: useful evals should perturb tool descriptions, system prompts, user prompts, chat templates, environment behavior, and tool-response shape to see whether the model adapts or only memorized one agent scaffold.
 
+GLM 4.6 adds two evaluation angles for training-time agent work. CC-Bench 1.1 treats agent-style coding as full trajectories over real-world task categories rather than isolated algorithm answers, recording planning, tool calls, edits, and execution. Its RL lessons also show that training metrics need regression checks for long-context retention, short-output reward seeking, and data-quality effects rather than assuming larger or more staged training always improves the target behavior.
+
 Real coding sessions can become evaluation and training environments when they are treated as reconstructable software artifacts. Cline's pipeline frames a coding benchmark as a starting repository state, starting prompt, and verifier; the same environment becomes an RL environment when the reward updates the policy model. This makes verifier design central: tests should capture the user's intended outcome and avoid encoding incidental details from the ground-truth patch, because path-biased verifiers can train agents toward mimicry or shortcuts.
 
 Long-horizon coding demos should be evaluated as workflows, not as one impressive final answer. Poolside's Ada-to-Rust demo includes visible diffs, build output, generated test commands, Bash scripts, manual reruns, and feature-level checks; those surfaces are the evidence that a multi-step coding agent did useful work rather than only producing a convincing summary.
@@ -143,6 +145,9 @@ PR-derived field telemetry adds a practical adoption dashboard shape for AI codi
 - [Use Agent RFT after baseline and task optimization](../concepts/use-agent-rft-after-baseline-and-task-optimization.md) - RFT should be used only after the baseline and cheaper agent-improvement levers are clear.
 - [Preserve rollout trajectory context for agent RFT grading](../concepts/preserve-rollout-trajectory-context-for-agent-rft-grading.md) - multi-step agent rewards should inspect trajectory evidence as well as the final answer.
 - [Production-Matched RL Environments Train Coding Agents on Real Tool Surfaces](../concepts/production-matched-rl-environments-train-coding-agents-on-real-tool-surfaces.md) - eval and RL environments need production-like tool loops when behavior transfer matters.
+- [Train coding models on repo-level contexts](../concepts/train-coding-models-on-repo-level-contexts.md) - coding evals should cover multi-file project context and full agent trajectories.
+- [Preserve long-context ability with single-stage RL](../concepts/preserve-long-context-ability-with-single-stage-rl.md) - post-training evals should check long-context retention after RL schedules.
+- [Use token-weighted loss for long coding outputs](../concepts/use-token-weighted-loss-for-long-coding-outputs.md) - coding RL should be checked for short-output reward seeking.
 - [Design Agent RFT rewards for production match and anti-hacking](../concepts/design-agent-rft-rewards-for-production-match-and-anti-hacking.md) - agent reward functions need production-matched data, objective criteria, and hack detection.
 - [Treat environments as eval, data, and training substrates](../concepts/treat-environments-as-eval-data-and-training-substrates.md) - one task harness can support evaluation, data creation, and training loops.
 - [Ground agent simulation and evaluation in production logs](../concepts/ground-agent-simulation-and-evaluation-in-production-logs.md) - log-grounded simulation and failure triage provide more improvement signal than aggregate benchmark scores alone.
@@ -209,7 +214,6 @@ PR-derived field telemetry adds a practical adoption dashboard shape for AI codi
 - [Balance GraphRAG hop depth against production latency](../concepts/balance-graphrag-hop-depth-against-production-latency.md) - graph retrieval evals should measure answer quality and traversal latency together.
 - [Agentic retrieval lets models plan search steps](../concepts/agentic-retrieval-lets-models-plan-search-steps.md) - evals should inspect model-selected search actions and final answers.
 - [Enterprise deep research needs trustworthy retrieval and governance controls](../concepts/enterprise-deep-research-needs-trustworthy-retrieval-and-governance-controls.md) - private-corpus research evals must cover factuality, citations, access boundaries, retrieval quality, and traceability.
-
 ## Open Questions
 
 - Which task-level signals best distinguish a bad retrieval result from an incomplete underlying knowledge base?
@@ -322,6 +326,7 @@ PR-derived field telemetry adds a practical adoption dashboard shape for AI codi
 - [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](../sources/20251223_LU9KgcZDRfY.md)
 - [Making Codebases Agent Ready - Eno Reyes, Factory AI](../sources/20251222_ShuJ_CN6zr4.md)
 - [Leadership in AI Assisted Engineering - Justin Reock, DX (acq. Atlassian)](../sources/20251219_PmZDupFP3UM.md)
+- [Z.ai GLM 4.6: What We Learned From 100 Million Open Source Downloads - Yuxuan Zhang, Z.ai](../sources/20251122_m6MF1OR_9kM.md)
 - [From Arc to Dia: Lessons learned building AI Browsers - Samir Mody, The Browser Company of New York](../sources/20251219_o4scJaQgnFA.md)
 - [No More Slop - swyx](../sources/20251222_IoiHI7p12Ao.md)
 - [The 3 Pillars of Autonomy - Michele Catasta, Replit](../sources/20251222_MLhAA9yguwM.md)

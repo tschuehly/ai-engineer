@@ -30,6 +30,8 @@ Execution-aware code models point to another coding-agent interface: the model c
 
 Coding-agent model training can also target the harness and workflow shape directly. MiniMax M2's framing suggests that a coding model should learn from scaled coding environments, expert developer reward, repeated reasoning/tool-call turns, and scaffold perturbations across prompts, templates, tools, and tool responses. That makes agent robustness a training and evaluation target rather than a property assumed from benchmark rank or raw tool count.
 
+GLM 4.6 adds a data-side version of the same principle: coding-agent models should see repo-level contexts with multiple files, issues, pull requests, and project structure before they are expected to work inside real codebases. Its CC-Bench framing also treats coding capability as an agent trajectory with planning, tools, edits, and execution rather than only as a final answer.
+
 Robotics-style agent design sharpens the same point for coding tools: the action space matters. A coding agent that only waits for complete shell responses has different recovery properties from one that can stream terminal state, send control-C, react to long-running processes, and observe a stateful VM or browser as it changes. Choosing those observation and action surfaces explicitly is part of the coding-agent harness, not an incidental UI decision.
 
 Cline adds a harder-edged version of the same lesson: once frontier models can use a stripped-down terminal harness effectively, durable progress comes less from clever agent scaffolding and more from real coding tasks converted into RL and eval environments. The reusable pipeline is to capture tasks where a model struggled, qualify whether the repository, starting commit, prompt journey, and eventual human fix are available, reconstruct the start and solved states, package the task in Docker, and define a verifier that tests the intended outcome rather than the exact reference path.
@@ -114,6 +116,7 @@ Jellyfish's pull-request telemetry calibrates the adoption curve. Interactive to
 - [Train code models on execution traces, not only syntax](../concepts/train-code-models-on-execution-traces-not-only-syntax.md) - code-agent models can learn from execution state transitions rather than only source tokens.
 - [Use neural debugging to fill code by simulated execution](../concepts/use-neural-debugging-to-fill-code-by-simulated-execution.md) - partial code plus simulated local state can guide model completion and debugging.
 - [Train coding-agent models with environments and expert developer reward](../concepts/train-coding-agent-models-with-environments-and-expert-developer-reward.md) - real coding environments and expert developer reward shape model behavior toward trusted workflows.
+- [Train coding models on repo-level contexts](../concepts/train-coding-models-on-repo-level-contexts.md) - model training and evals should expose project structure and multi-file change context.
 - [Production-Matched RL Environments Train Coding Agents on Real Tool Surfaces](../concepts/production-matched-rl-environments-train-coding-agents-on-real-tool-surfaces.md) - training rollouts should mirror the actual IDE or cloud-agent tools the model will use.
 - [Choose agent observation and action spaces explicitly](../concepts/choose-agent-observation-and-action-spaces-explicitly.md) - coding-agent behavior depends on whether the harness exposes tool calls, streamed terminals, browser state, or desktop control.
 - [Close agent loops around live action feedback](../concepts/close-agent-loops-around-live-action-feedback.md) - shell and browser actions need live feedback and interruption controls for recovery.
@@ -309,6 +312,7 @@ Jellyfish's pull-request telemetry calibrates the adoption curve. Interactive to
 - [AgentCraft: Putting the Orc in Orchestration - Ido Salomon](../sources/20260425_kR64LOqBBCU.md)
 - [Full Walkthrough: Workflow for AI Coding - Matt Pocock](../sources/20260424_-QFHIoCo-Ko.md)
 - ["Software Fundamentals Matter More Than Ever" - Matt Pocock](../sources/20260423_v4F1gFy-hqg.md)
+- [Z.ai GLM 4.6: What We Learned From 100 Million Open Source Downloads - Yuxuan Zhang, Z.ai](../sources/20251122_m6MF1OR_9kM.md)
 - [How AI is changing Software Engineering: A Conversation with Gergely Orosz, @pragmaticengineer](../sources/20260421_CS5Cmz5FssI.md)
 - [Taste & Craft: A Conversation with Tuomas Artman, CTO Linear & Gergely Orosz, @pragmaticengineer](../sources/20260421_wjk0ulMAkbc.md)
 - [The Friction is Your Judgment - Armin Ronacher & Cristina Poncela Cubeiro, Earendil](../sources/20260418__Zcw_sVF6hU.md)
