@@ -328,6 +328,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Interactive world models need memory, control, and live prompting](concepts/interactive-world-models-need-memory-control-and-live-prompting.md) - generated environments require consistency and controllability when users act inside them.
 - [Ground generated media with current search context](concepts/ground-generated-media-with-current-search-context.md) - image-generation workflows can use current retrieval before synthesis.
 - [Use WebRTC instead of WebSockets for realtime media streams](concepts/use-webrtc-instead-of-websockets-for-realtime-media-streams.md) - realtime voice and video agents need transport semantics built for fresh media under jitter and packet loss.
+- [Seller Knowledge Bases Let Agents Pull Business Context at Action Time](concepts/seller-knowledge-bases-let-agents-pull-business-context-at-action-time.md) - domain agents can replace manual context forms with source ingestion and action-time retrieval.
+- [Show Retrieved Chunks Inside Agent Workflows](concepts/show-retrieved-chunks-inside-agent-workflows.md) - retrieval-backed products should expose the evidence used for generated actions.
+- [Benchmark RAG Pipelines After Production Usage Exists](concepts/benchmark-rag-pipelines-after-production-usage-exists.md) - real usage should drive parser, retrieval, hallucination, hybrid-search, and cost benchmarks.
 
 ## Topics
 

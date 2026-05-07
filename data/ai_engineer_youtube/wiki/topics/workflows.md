@@ -104,6 +104,8 @@ Branchable cloud workspaces create a workflow primitive for stateful agent explo
 
 Agentic workflows should be designed as composable primitives, not as allegiance to one framework shape. Use agent loops where the task needs flexible turns and tool decisions; use workflow structure where dependencies, traceability, branching, retries, or human waits need to be explicit. The practical move is often local: find the unreliable LLM call, overloaded tool surface, or opaque handoff and add enough workflow structure there without removing useful agent exploration elsewhere.
 
+Knowledge-base onboarding workflows can move domain setup from manual forms into source ingestion. A practical seller-agent flow lets the user upload decks, websites, images, calls, and videos; stores the raw artifact; parses asynchronously by source type; chunks and embeds the parsed Markdown; updates the UI; retrieves relevant chunks at generation time; and shows the retrieved evidence beside generated messages for review.
+
 ## Key Concepts
 
 - [Plan Asynchronous Authorization for Background Agents](../concepts/plan-asynchronous-authorization-for-background-agents.md) - long-running workflows need ways to request additional access after the user leaves the initial authorization flow.
@@ -177,6 +179,8 @@ Agentic workflows should be designed as composable primitives, not as allegiance
 - [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](../concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md) - explicit role handoffs turn validation from a reminder into a workflow path.
 - [Reverse-engineer AI app evals from user outcomes](../concepts/reverse-engineer-ai-app-evals-from-user-outcomes.md) - reliability workflows should start from what users and the business need the app to accomplish.
 - [Build AI app benchmarks before optimization](../concepts/build-ai-app-benchmarks-before-optimization.md) - benchmark-first workflows catch regressions while teams optimize prompts, models, retrieval, and guardrails.
+- [Seller Knowledge Bases Let Agents Pull Business Context at Action Time](../concepts/seller-knowledge-bases-let-agents-pull-business-context-at-action-time.md) - source uploads can replace manual context forms for domain-agent onboarding.
+- [Show Retrieved Chunks Inside Agent Workflows](../concepts/show-retrieved-chunks-inside-agent-workflows.md) - workflow UIs can expose the evidence retrieved for generated actions.
 - [Map application evals to the product court](../concepts/map-application-evals-to-the-product-court.md) - AI app eval workflows should cover real in-bounds user behavior instead of irrelevant or clustered cases.
 - [Keep eval data constant and task logic variable](../concepts/keep-eval-data-constant-and-task-logic-variable.md) - stable data with variable task logic keeps eval comparisons clean across implementation changes.
 - [Prefer simple debuggable eval scores](../concepts/prefer-simple-debuggable-eval-scores.md) - understandable scoring and CI reports make eval workflows useful during review.
@@ -533,3 +537,4 @@ Agentic workflows should be designed as composable primitives, not as allegiance
 - [State of Startups and AI 2025 - Sarah Guo, Conviction](../sources/20250802_3MZS5gNElZM.md)
 - [Useful General Intelligence - Danielle Perszyk, Amazon AGI](../sources/20250802_Dj0b_cEBHBI.md)
 - [Building Agents at Cloud Scale - Antje Barth, AWS](../sources/20250802_WJjInLeaJjo.md)
+- [Building Alice's Brain: an AI Sales Rep that Learns Like a Human - Sherwood & Satwik, 11x](../sources/20250729_KWmkMV0FNwQ.md)

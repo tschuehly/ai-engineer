@@ -1487,3 +1487,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Infrastructure](topics/infrastructure.md), [Security](topics/security.md), [Tools](topics/tools.md)
 - Updated concepts: [Treat Code-Executing Agents as RCE-Risk Surfaces](concepts/treat-code-executing-agents-as-rce-risk-surfaces.md), [Give Code-Executing Agents Isolated Computers](concepts/give-code-executing-agents-isolated-computers.md), [Restrict Agent Internet Access With Allowlists](concepts/restrict-agent-internet-access-with-allowlists.md), [Keep Human Review on High-Risk Agent Operations](concepts/keep-human-review-on-high-risk-agent-operations.md)
 - Notes: Added OpenAI Codex security patterns for RCE-shaped agent risk, isolated execution, network policy, dependency checks, and human review.
+
+## [2026-05-07] ingest | Building Alice's Brain: an AI Sales Rep that Learns Like a Human - Sherwood & Satwik, 11x
+
+- Source: [Building Alice's Brain: an AI Sales Rep that Learns Like a Human - Sherwood & Satwik, 11x](sources/20250729_KWmkMV0FNwQ.md)
+- Processed: `KWmkMV0FNwQ`
+- Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Retrieval](topics/retrieval.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Seller Knowledge Bases Let Agents Pull Business Context at Action Time](concepts/seller-knowledge-bases-let-agents-pull-business-context-at-action-time.md), [Parse Multimodal Business Sources Into Structured Markdown](concepts/parse-multimodal-business-sources-into-structured-markdown.md), [Show Retrieved Chunks Inside Agent Workflows](concepts/show-retrieved-chunks-inside-agent-workflows.md), [Benchmark RAG Pipelines After Production Usage Exists](concepts/benchmark-rag-pipelines-after-production-usage-exists.md)
+- Notes: Added 11x Alice's seller knowledge-base architecture: upload mixed business sources, parse them to Markdown, chunk/embed for action-time retrieval, expose retrieved chunks in the UI, and benchmark RAG once production usage exists.

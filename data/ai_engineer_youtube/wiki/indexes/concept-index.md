@@ -2,6 +2,8 @@
 
 ## Agents
 
+- [Seller Knowledge Bases Let Agents Pull Business Context at Action Time](../concepts/seller-knowledge-bases-let-agents-pull-business-context-at-action-time.md)
+- [Show Retrieved Chunks Inside Agent Workflows](../concepts/show-retrieved-chunks-inside-agent-workflows.md)
 - [Compose agents and workflows as interchangeable primitives](../concepts/compose-agents-and-workflows-as-interchangeable-primitives.md)
 - [Add structure where agent reliability fails](../concepts/add-structure-where-agent-reliability-fails.md)
 - [Agent Adoption Trails LLM Adoption in the Workplace](../concepts/agent-adoption-trails-llm-adoption-in-the-workplace.md)
@@ -770,6 +772,7 @@
 
 ## Evaluation
 
+- [Benchmark RAG Pipelines After Production Usage Exists](../concepts/benchmark-rag-pipelines-after-production-usage-exists.md)
 - [AI System Evaluation Still Depends on Human Review](../concepts/ai-system-evaluation-still-depends-on-human-review.md)
 - [Prompt Management Lags Prompt Iteration](../concepts/prompt-management-lags-prompt-iteration.md)
 - [Do not trust saturated vision benchmarks as visual intelligence](../concepts/do-not-trust-saturated-vision-benchmarks-as-visual-intelligence.md)
@@ -1028,6 +1031,10 @@
 
 ## Retrieval
 
+- [Seller Knowledge Bases Let Agents Pull Business Context at Action Time](../concepts/seller-knowledge-bases-let-agents-pull-business-context-at-action-time.md)
+- [Parse Multimodal Business Sources Into Structured Markdown](../concepts/parse-multimodal-business-sources-into-structured-markdown.md)
+- [Show Retrieved Chunks Inside Agent Workflows](../concepts/show-retrieved-chunks-inside-agent-workflows.md)
+- [Benchmark RAG Pipelines After Production Usage Exists](../concepts/benchmark-rag-pipelines-after-production-usage-exists.md)
 - [Dedicated Vector Databases Remain Common RAG Infrastructure](../concepts/dedicated-vector-databases-remain-common-rag-infrastructure.md)
 - [Use Fast Query-Document Evals for Retrieval Changes](../concepts/use-fast-query-document-evals-for-retrieval-changes.md)
 - [Align Synthetic Retrieval Queries With Real User Specificity](../concepts/align-synthetic-retrieval-queries-with-real-user-specificity.md)
@@ -1271,6 +1278,8 @@
 
 ## Workflows
 
+- [Seller Knowledge Bases Let Agents Pull Business Context at Action Time](../concepts/seller-knowledge-bases-let-agents-pull-business-context-at-action-time.md)
+- [Show Retrieved Chunks Inside Agent Workflows](../concepts/show-retrieved-chunks-inside-agent-workflows.md)
 - [Plan Asynchronous Authorization for Background Agents](../concepts/plan-asynchronous-authorization-for-background-agents.md)
 - [Compose agents and workflows as interchangeable primitives](../concepts/compose-agents-and-workflows-as-interchangeable-primitives.md)
 - [Prefer readable workflow APIs over graph-theory surfaces](../concepts/prefer-readable-workflow-apis-over-graph-theory-surfaces.md)

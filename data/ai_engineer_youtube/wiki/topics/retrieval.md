@@ -60,6 +60,12 @@ Private research agents can treat connectors and uploads as complementary retrie
 - [Enterprise deep research needs trustworthy retrieval and governance controls](../concepts/enterprise-deep-research-needs-trustworthy-retrieval-and-governance-controls.md) - internal research outputs need retrieval quality, hallucination mitigation, access control, deployment flexibility, and observability.
 - [Treat embeddings as recoverable sensitive data](../concepts/treat-embeddings-as-recoverable-sensitive-data.md) - vector stores should be secured like source-derived data, not treated as anonymized storage.
 - [Train long-tail knowledge into weights with curated synthetic data](../concepts/train-long-tail-knowledge-into-weights-with-curated-synthetic-data.md) - weight updates become an alternative when RAG cannot combine or adapt niche knowledge well enough.
+- [Seller Knowledge Bases Let Agents Pull Business Context at Action Time](../concepts/seller-knowledge-bases-let-agents-pull-business-context-at-action-time.md) - seller-facing agents can retrieve relevant product and proof-point context during each generated action.
+- [Parse Multimodal Business Sources Into Structured Markdown](../concepts/parse-multimodal-business-sources-into-structured-markdown.md) - mixed business sources need structured text before chunking and retrieval.
+- [Show Retrieved Chunks Inside Agent Workflows](../concepts/show-retrieved-chunks-inside-agent-workflows.md) - retrieval evidence should be visible inside the product workflow, not only in traces.
+- [Benchmark RAG Pipelines After Production Usage Exists](../concepts/benchmark-rag-pipelines-after-production-usage-exists.md) - real usage should drive parser, retrieval, hallucination, hybrid-search, and cost benchmarks.
+
+Seller-facing agents show a product-specific version of retrieval as onboarding. Instead of asking users to manually prefill product offers, value props, pain points, case studies, and ICP fields, the product can ingest seller materials once and retrieve only the relevant chunks at message-generation time. That makes parsing and chunking part of the user experience: decks, websites, screenshots, calls, and videos need to become structured text before retrieval can help the agent write grounded outbound messages. Because this retrieval directly shapes customer-facing output, the workflow should expose retrieved chunks in the UI and then benchmark parsing accuracy, completeness, hallucinations, hybrid search, and cost once real usage exists.
 
 ## Open Questions
 
@@ -76,6 +82,7 @@ Private research agents can treat connectors and uploads as complementary retrie
 - Which private corpora are too sensitive to expose through third-party or loosely protected embedding stores?
 - Which advisory tasks need graph-backed quantitative computation, and which should remain simple vector lookup?
 - How much synthetic-query calibration is enough before real query logs exist?
+- What evidence should a seller-agent UI expose so operators can debug whether generated outreach used the right retrieved context?
 
 ## Sources
 
@@ -103,3 +110,4 @@ Private research agents can treat connectors and uploads as complementary retrie
 - [Context Engineering: Connecting the Dots with Graphs - Stephen Chin, Neo4j](../sources/20251124_LLuKshphGOE.md)
 - [Enterprise Deep Research: The Next Killer App for Enterprise AI — Ofer Mendelevitch, Vectara](../sources/20251124_fh9LgKXBGnQ.md)
 - [The 2025 AI Engineering Report - Barr Yaron, Amplify](../sources/20250801_mQ7_Zje7WKE.md)
+- [Building Alice's Brain: an AI Sales Rep that Learns Like a Human - Sherwood & Satwik, 11x](../sources/20250729_KWmkMV0FNwQ.md)

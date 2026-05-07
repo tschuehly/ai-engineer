@@ -90,6 +90,8 @@ Cloud-scale assistant systems add a specialist-service pattern. Alexa Plus is de
 
 The agent-versus-workflow debate is a false binary for production design. A flexible agent loop is useful when the system needs turn-by-turn exploration, tool choice, or human/agent back-and-forth, while workflows are useful when order, dependencies, traceability, suspend/resume behavior, and replay matter. Mature systems can compose the two: agents can be workflow steps, workflows can be tools, agents can call other agents as tools, and workflow handoffs can narrow the next agent's authority or context.
 
+Sales-development agents add a non-coding version of the same context problem. To act for a seller, the agent needs company/product knowledge, case studies, pain points, value propositions, and ICP details, but stuffing all offers into every email makes output worse and asking users to hand-enter every detail creates onboarding friction. A seller knowledge base lets the agent retrieve the relevant business context at action time, while a UI that shows retrieved chunks gives operators a way to inspect what the agent used.
+
 ## Key Concepts
 
 - [Compose agents and workflows as interchangeable primitives](../concepts/compose-agents-and-workflows-as-interchangeable-primitives.md) - agents and workflows can call each other as tools, steps, and handoff mechanisms.
@@ -156,6 +158,8 @@ The agent-versus-workflow debate is a false binary for production design. A flex
 - [Hire for AI fluency and agent orchestration ability](../concepts/hire-for-ai-fluency-and-agent-orchestration-ability.md) - makes agent guidance a hiring and onboarding criterion.
 - [Identify the human subject behind agent actions](../concepts/identify-the-human-subject-behind-agent-actions.md) - authorization needs to know which human or enterprise subject the agent represents.
 - [Treat Agents As Users For Authorization](../concepts/treat-agents-as-users-for-authorization.md) - agent tool calls need the represented user's object permissions, not service-level authority.
+- [Seller Knowledge Bases Let Agents Pull Business Context at Action Time](../concepts/seller-knowledge-bases-let-agents-pull-business-context-at-action-time.md) - domain agents can retrieve product and proof-point context during each action instead of relying on manual context stuffing.
+- [Show Retrieved Chunks Inside Agent Workflows](../concepts/show-retrieved-chunks-inside-agent-workflows.md) - agent products should expose evidence behind retrieved-context-driven outputs.
 - [Authenticate Agents With URL-Based PKI Identities](../concepts/authenticate-agents-with-url-based-pki-identities.md) - agent-to-agent and client-credentials flows need verifiable agent identity.
 - [Authorize High-Impact Agent Actions Transactionally](../concepts/authorize-high-impact-agent-actions-transactionally.md) - sensitive agent actions should be authorized at transaction granularity.
 - [Preserve Authorization Chain of Custody Across Agent Hops](../concepts/preserve-authorization-chain-of-custody-across-agent-hops.md) - multi-agent delegation needs end-to-end authorization visibility.
@@ -503,5 +507,6 @@ The agent-versus-workflow debate is a false binary for production design. A flex
 - [How to Secure Agents using OAuth - Jared Hanson (Keycard, Passport.js)](../sources/20250730_blmAkayzE8M.md)
 - [How we hacked YC Spring 2025 batch's AI agents - Rene Brandel, Casco](../sources/20250730_kv-QAuKWllQ.md)
 - [OpenAI on Securing Code-Executing AI Agents - Fouad Matin (Codex, Agent Robustness)](../sources/20250730_w7IMuYsBNr8.md)
+- [Building Alice's Brain: an AI Sales Rep that Learns Like a Human - Sherwood & Satwik, 11x](../sources/20250729_KWmkMV0FNwQ.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)
