@@ -1063,3 +1063,11 @@
 - Updated topics: [Architecture Copilots](topics/architecture-copilots.md), [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Live architecture digital twins ground architecture copilots](concepts/live-architecture-digital-twins-ground-architecture-copilots.md), [Rank architecture recommendations by business impact](concepts/rank-architecture-recommendations-by-business-impact.md), [Embed architecture governance into developer workflows](concepts/embed-architecture-governance-into-developer-workflows.md)
 - Notes: Added Catio's architecture-copilot workflow for grounding strategic architecture advice in live system visibility, business-impact ranking, and developer-workflow governance.
+
+## [2026-05-07] ingest | What Data from 20m Pull Requests Reveal About AI Transformation - Nick Arcolano, Jellyfish
+
+- Source: [What Data from 20m Pull Requests Reveal About AI Transformation - Nick Arcolano, Jellyfish](sources/20251124_WqZq8L-v9pA.md)
+- Processed: `WqZq8L-v9pA`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md)
+- Updated concepts: [Measure AI Coding Adoption With PR Telemetry and Guardrails](concepts/measure-ai-coding-adoption-with-pr-telemetry-and-guardrails.md), [Autonomous Coding Agents Are Still Early In PR Production Data](concepts/autonomous-coding-agents-are-still-early-in-pr-production-data.md), [Active Repos Per Engineer Exposes Context Architecture Drag](concepts/active-repos-per-engineer-exposes-context-architecture-drag.md), [Measure AI Engineering Impact Across Utilization, Impact, and Cost](concepts/measure-ai-engineering-impact-across-utilization-impact-and-cost.md), [Codebase Hygiene Amplifies AI Productivity Gains](concepts/codebase-hygiene-amplifies-ai-productivity-gains.md)
+- Notes: Added Jellyfish's PR telemetry framing for measuring AI coding adoption, calibrating autonomous-agent maturity, and diagnosing distributed-repository context bottlenecks.

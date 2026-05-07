@@ -56,6 +56,8 @@ Cursor Composer adds a model-building version of the same workflow split. A stro
 
 Codex CLI subagent retrofits add a pragmatic harness-extension pattern. When a CLI agent lacks native subagents, a parent session can invoke a stable wrapper command that starts a child `codex exec` process, lets the child spend its own context budget, and returns only the result. The tradeoff is operational: sandbox access, copied credentials, long-running timeouts, serial execution, and approval ergonomics become part of the harness design rather than incidental script details.
 
+Jellyfish's pull-request telemetry calibrates the adoption curve. Interactive tools such as Copilot, Cursor, and Claude Code can correlate with higher PR throughput and lower cycle time even while fully autonomous coding agents remain a small share of merged PRs. The same data warns that teams should expect larger PRs and should segment gains by repository architecture, because highly distributed codebases can erase the apparent adoption benefit when cross-repo context is hard to assemble.
+
 ## Key Concepts
 
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md) - coding-agent SDKs package reusable runtime pieces around the model.
@@ -76,8 +78,11 @@ Codex CLI subagent retrofits add a pragmatic harness-extension pattern. When a C
 - [Let the core agent loop orchestrate parallel subtasks](../concepts/let-the-core-agent-loop-orchestrate-parallel-subtasks.md) - the main loop can choose parallel subtasks dynamically instead of requiring manual thread dispatch.
 - [Design coding-agent editors as review surfaces](../concepts/design-coding-agent-editors-as-review-surfaces.md) - editor UX should help humans inspect generated diffs, commands, diagnostics, and change structure.
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - tool-loop architecture can replace large DAGs for exploratory coding work.
+- [Autonomous coding agents are still early in PR production data](../concepts/autonomous-coding-agents-are-still-early-in-pr-production-data.md) - interactive coding tools may drive most current adoption gains while autonomous agents remain experimental.
+- [Measure AI coding adoption with PR telemetry and guardrails](../concepts/measure-ai-coding-adoption-with-pr-telemetry-and-guardrails.md) - coding-agent rollout claims should include delivery, review-size, and quality signals.
 - [Greenfield AI coding gains drop off in mature codebases](../concepts/greenfield-ai-coding-gains-drop-off-in-mature-codebases.md) - broad enterprise adoption should distinguish early toy gains from mature-codebase impact.
 - [Codebase hygiene amplifies AI productivity gains](../concepts/codebase-hygiene-amplifies-ai-productivity-gains.md) - clean, testable, documented codebases make AI coding more reliable and valuable.
+- [Active repos per engineer exposes context architecture drag](../concepts/active-repos-per-engineer-exposes-context-architecture-drag.md) - cross-repo context burdens can suppress gains from otherwise high AI tool adoption.
 - [Benchmark AI engineering practices by usage pattern](../concepts/benchmark-ai-engineering-practices-by-usage-pattern.md) - teams with the same tools can differ sharply in how effectively they use AI.
 - [Measure AI ROI with primary output and guardrails](../concepts/measure-ai-roi-with-primary-output-and-guardrails.md) - coding-agent ROI needs quality and rework checks alongside output.
 - [Target enterprise coding agents at maintenance and incident work](../concepts/target-enterprise-coding-agents-at-maintenance-and-incident-work.md) - maintenance patches and troubleshooting can be stronger scaled use cases than generic generation.
@@ -319,3 +324,4 @@ Codex CLI subagent retrofits add a pragmatic harness-extension pattern. When a C
 - [Building Cursor Composer - Lee Robinson, Cursor](../sources/20251202_fL1iJHtl51Q.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)
+- [What Data from 20m Pull Requests Reveal About AI Transformation - Nick Arcolano, Jellyfish](../sources/20251124_WqZq8L-v9pA.md)

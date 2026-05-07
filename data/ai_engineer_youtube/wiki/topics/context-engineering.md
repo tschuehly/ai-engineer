@@ -30,6 +30,8 @@ Frequent intentional compaction is a coding-specific context-engineering workflo
 
 Architecture copilots add a system-map version of context engineering. Instead of relying on stale architecture docs, they normalize current cloud, Kubernetes, service, logging, dependency, drift, business-objective, and standards context into a live model that an AI can use for architecture recommendations.
 
+Repository architecture can turn context engineering into the adoption bottleneck for coding agents. In PR telemetry, highly distributed codebases did not show the same AI-adoption-to-throughput lift as centralized or balanced codebases, plausibly because tools and agents operate best inside one repository while product, service, and ownership relationships span many repositories and remain undocumented.
+
 ## Key Concepts
 
 - [Keep agent context small, fresh, and task-specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md) - context should be externalized, selected, summarized, and isolated so stale or excessive history does not degrade agent work.
@@ -49,6 +51,7 @@ Architecture copilots add a system-map version of context engineering. Instead o
 - [Agent skills package progressive-disclosure context for repeatable workflows](../concepts/agent-skills-package-progressive-disclosure-context-for-repeatable-workflows.md) - skill metadata can keep initial context small while making deeper instructions discoverable.
 - [Skills turn procedural feedback into transferable agent memory](../concepts/skills-turn-procedural-feedback-into-transferable-agent-memory.md) - skill updates can preserve repeatable procedural lessons without treating all context as memory.
 - [Context engines select task-specific organizational context](../concepts/context-engines-select-task-specific-organizational-context.md) - context engines should personalize and narrow organizational context for the current task.
+- [Active repos per engineer exposes context architecture drag](../concepts/active-repos-per-engineer-exposes-context-architecture-drag.md) - repository distribution can make cross-repo context the blocker for AI coding gains.
 - [Live architecture digital twins ground architecture copilots](../concepts/live-architecture-digital-twins-ground-architecture-copilots.md) - architecture context should reflect deployed reality, not only documentation.
 - [Surface unresolved context conflicts to agents and users](../concepts/surface-unresolved-context-conflicts-to-agents-and-users.md) - unresolved contradictions should become explicit handoff points rather than hidden guesses.
 - [Do not cache context-engine answers as durable truth](../concepts/do-not-cache-context-engine-answers-as-durable-truth.md) - generated answers can become stale or self-reinforcing if reused as canonical context.
@@ -156,3 +159,4 @@ Architecture copilots add a system-map version of context engineering. Instead o
 - [Katelyn Lesse - Evolving Claude APIs for Agents, Anthropic](../sources/20251204_aqW68Is_Kj4.md)
 - [Context Engineering: Connecting the Dots with Graphs - Stephen Chin, Neo4j](../sources/20251124_LLuKshphGOE.md)
 - [AI Copilots for Tech Architecture: The Highest-ROI Use Case You're Not Building - Boris B., Catio](../sources/20251124_QRWdapxMdSY.md)
+- [What Data from 20m Pull Requests Reveal About AI Transformation - Nick Arcolano, Jellyfish](../sources/20251124_WqZq8L-v9pA.md)

@@ -54,6 +54,8 @@ AI code quality evaluation should also distinguish generated-code speed from SDL
 
 Regulated-agent evaluation adds accountability and deployment-readiness evidence. High-consequence public-sector agents should be judged on whether their decisions can be explained after a bad outcome, whether infrastructure isolates sensitive data, whether SBOM, dependency, patching, and monitoring artifacts support governance, and whether restricted-region deployments keep pace with commercial capability.
 
+PR-derived field telemetry adds a practical adoption dashboard shape for AI coding rollouts. Developer AI adoption rate can be correlated with PR throughput and cycle time, but the result should be segmented by architecture and paired with PR-size, bug-ticket, and revert-rate guardrails. Otherwise teams can mistake more and larger PRs for productive transformation while missing review burden, quality drift, or cross-repo context bottlenecks.
+
 ## Key Concepts
 
 - [Evaluate agent trajectories with backtests and smell metrics](../concepts/evaluate-agent-trajectories-with-backtests-and-smell-metrics.md) - flexible tool-loop agents need historical and trajectory-level checks.
@@ -70,10 +72,12 @@ Regulated-agent evaluation adds accountability and deployment-readiness evidence
 - [Compare models by task, thinking budget, cost, and latency](../concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - side-by-side model comparisons help choose enough reasoning at acceptable speed and cost.
 - [Do not use token volume as a developer productivity metric](../concepts/do-not-use-token-volume-as-a-developer-productivity-metric.md) - adoption dashboards should avoid rewarding visible token spend over task impact.
 - [Measure AI engineering impact across utilization, impact, and cost](../concepts/measure-ai-engineering-impact-across-utilization-impact-and-cost.md) - AI adoption metrics need to connect usage to quality, velocity, and spend.
+- [Measure AI coding adoption with PR telemetry and guardrails](../concepts/measure-ai-coding-adoption-with-pr-telemetry-and-guardrails.md) - PR throughput and cycle time need quality and review-size checks.
 - [Measure AI transformation by outcomes instead of adoption](../concepts/measure-ai-transformation-by-outcomes-instead-of-adoption.md) - enterprise rollout metrics should trace tool and enablement inputs through delivery, quality, resilience, and economic outcomes.
 - [Benchmark AI engineering practices by usage pattern](../concepts/benchmark-ai-engineering-practices-by-usage-pattern.md) - adoption dashboards should distinguish access, personal use, shared team practices, task-level autonomy, and orchestration.
 - [Measure AI ROI with primary output and guardrails](../concepts/measure-ai-roi-with-primary-output-and-guardrails.md) - ROI claims need effective output plus quality and rework checks, not activity metrics alone.
 - [Codebase hygiene amplifies AI productivity gains](../concepts/codebase-hygiene-amplifies-ai-productivity-gains.md) - tests, types, documentation, modularity, and code quality shape whether AI assistance pays off.
+- [Active repos per engineer exposes context architecture drag](../concepts/active-repos-per-engineer-exposes-context-architecture-drag.md) - architecture segmentation can explain why similar adoption rates produce different productivity lift.
 - [Measure AI ROI with outcome categories and bias caveats](../concepts/measure-ai-roi-with-outcome-categories-and-bias-caveats.md) - ROI measurement should separate value categories and disclose survey limitations.
 - [Move enterprise AI adoption beyond spot experiments](../concepts/move-enterprise-ai-adoption-beyond-spot-experiments.md) - evaluation should notice whether AI work is isolated or part of a broader adoption portfolio.
 - [Agentic automation can outperform first-tier productivity use cases](../concepts/agentic-automation-can-outperform-first-tier-productivity-use-cases.md) - ROI evaluation should separate basic time savings from deeper automation and agent workflows.
@@ -309,5 +313,6 @@ Regulated-agent evaluation adds accountability and deployment-readiness evidence
 - [Agent Reinforcement Fine Tuning - Will Hang & Cathy Zhou, OpenAI](../sources/20251209_p1CmPZ2j6Lk.md)
 - [Building Cursor Composer - Lee Robinson, Cursor](../sources/20251202_fL1iJHtl51Q.md)
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)
+- [What Data from 20m Pull Requests Reveal About AI Transformation - Nick Arcolano, Jellyfish](../sources/20251124_WqZq8L-v9pA.md)
 - [Moving away from Agile: What's Next - Martin Harrysson & Natasha Maniar, McKinsey & Company](../sources/20251212_SZStlIhyTCY.md)
 - [Can you prove AI ROI in Software Eng? (Stanford 120k Devs Study) - Yegor Denisov-Blanch, Stanford](../sources/20251211_JvosMkuNxF8.md)
