@@ -1783,3 +1783,11 @@
 - Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [AI Architects Combine Technical, Brand, and Business Judgment](concepts/ai-architects-combine-technical-brand-and-business-judgment.md), [Start Customer-Facing Agents With Narrow Valuable Outcomes](concepts/start-customer-facing-agents-with-narrow-valuable-outcomes.md), [Agent Icebergs Hide Platform and Lifecycle Burden](concepts/agent-icebergs-hide-platform-and-lifecycle-burden.md), [Simulated Conversations Test Customer-Facing Agents Before Launch](concepts/simulated-conversations-test-customer-facing-agents-before-launch.md)
 - Notes: Added Sierra's customer-facing agent ownership model, incremental rollout guidance, hidden platform burden, and simulation-plus-coaching evaluation loop.
+
+## [2026-05-07] ingest | Building Applications with AI Agents — Michael Albada, Microsoft
+
+- Source: [Building Applications with AI Agents — Michael Albada, Microsoft](sources/20250724_R30col3UPUg.md)
+- Processed: `R30col3UPUg`
+- Updated topics: [Agents](topics/agents.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md)
+- Updated concepts: [Raise Agent Agency Only When Efficacy Holds](concepts/raise-agent-agency-only-when-efficacy-holds.md), [Group Agent Tools by Human-Facing Actions](concepts/group-agent-tools-by-human-facing-actions.md), [Keep Fixed Business Logic Outside the Model](concepts/keep-fixed-business-logic-outside-the-model.md), [Replace Anecdotal Agent Tuning With Eval and Observability Loops](concepts/replace-anecdotal-agent-tuning-with-eval-and-observability-loops.md)
+- Notes: Added production-agent design guidance for efficacy-first autonomy, curated tool surfaces, deterministic rule gates, and eval/observability-driven improvement.

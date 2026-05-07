@@ -18,6 +18,8 @@ Confident vibe coding adds an early-evaluation requirement for enterprise code g
 
 Agent-loop evals should pair operational metrics with correctness checks. Cost, latency, and number of steps are useful only after the harness verifies whether the agent actually reached the right outcome; otherwise a model can look fast because it guessed early or skipped the hard reasoning path.
 
+Agent evals should also replace anecdotal development. Once a prototype reaches a plausible baseline, teams need input/output eval sets, human-reviewed examples, batch runs, failure clustering, and production tracing to compare choices such as model, tool count, memory, number of agents, and orchestration style. Observability then closes the loop by turning real customer traces into failure categories and regression examples.
+
 Enterprise workflow evals can inspect the trajectory itself. If a task has a known golden workflow, the evaluation can compare whether the agent found the expected steps, sources, checks, or approvals before judging the final response. This catches acceptable-looking outputs that bypass internal process, protocol, or metric requirements.
 
 Customer-facing agent evaluation needs simulation before launch and coaching after launch. Sierra's pattern uses simulated personas, accounts, and devices to generate many conversations against the agent before customers see it, then monitors live handoffs and mistakes as coaching material. This is especially important for nondeterministic support agents because a single input/output expectation cannot represent the real conversational surface.
@@ -168,6 +170,7 @@ Coding-agent code quality needs evaluation while the diff is still forming. Usef
 - [Activation Steering Can Patch Specific Runtime Behaviors](../concepts/activation-steering-can-patch-specific-runtime-behaviors.md) - runtime feature controls should be validated against the policy or behavior they intend to patch.
 - [Model Diffs Inspect Post-Training Feature Changes](../concepts/model-diffs-inspect-post-training-feature-changes.md) - post-training inspection can complement aggregate eval scores by surfacing feature-level behavioral drift.
 - [Evaluate Agent Loops With Correctness, Cost, Latency, and Step Counts](../concepts/evaluate-agent-loops-with-correctness-cost-latency-and-step-counts.md) - loop metrics should include both outcome validity and operational cost.
+- [Replace Anecdotal Agent Tuning With Eval and Observability Loops](../concepts/replace-anecdotal-agent-tuning-with-eval-and-observability-loops.md) - agent design choices should be guided by eval sets, traces, and clustered failures.
 - [Golden Workflows Evaluate Agent Trajectories](../concepts/golden-workflows-evaluate-agent-trajectories.md) - process-level expected workflows can evaluate the agent trace, not only the final answer.
 - [Simulated Conversations Test Customer-Facing Agents Before Launch](../concepts/simulated-conversations-test-customer-facing-agents-before-launch.md) - simulated users and post-launch handoffs reveal support-agent failures before and after release.
 - [Benchmark RAG Pipelines After Production Usage Exists](../concepts/benchmark-rag-pipelines-after-production-usage-exists.md) - production traces should drive parser, retrieval, hallucination, hybrid-search, and cost benchmarks.
@@ -408,6 +411,7 @@ Coding-agent code quality needs evaluation while the diff is still forming. Usef
 
 - [How to build Enterprise Aware Agents - Chau Tran, Glean](../sources/20250724_hxFpUcvWPcU.md)
 - [Rise of the AI Architect - Clay Bavor, Cofounder, Sierra w/ Alessio Fanelli](../sources/20250724_C3geUfBR2js.md)
+- [Building Applications with AI Agents — Michael Albada, Microsoft](../sources/20250724_R30col3UPUg.md)
 - [Beyond the Prototype: Using AI to Write High-Quality Code - Josh Albrecht, Imbue](../sources/20250725_x_1EumTaXeE.md)
 - [Strategies for LLM Evals (GuideLLM, lm-eval-harness, OpenAI Evals Workshop) - Taylor Jordan Smith](../sources/20250727_89NuzmKokIk.md)
 - [Your Coding Agent Just Got Cloned And Your Brain Isn't Ready - Rustin Banks, Google Jules](../sources/20250725_X4BwOu0GWb8.md)

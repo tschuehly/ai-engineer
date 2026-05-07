@@ -4,6 +4,8 @@
 - [Type-Safe Agent Schemas Make Refactoring and Validation Easier](../concepts/type-safe-agent-schemas-make-refactoring-and-validation-easier.md)
 - [Validation Errors Can Drive Agent Self-Repair Loops](../concepts/validation-errors-can-drive-agent-self-repair-loops.md)
 - [Trace Agent Tool Arguments to Debug Real Failures](../concepts/trace-agent-tool-arguments-to-debug-real-failures.md)
+- [Raise Agent Agency Only When Efficacy Holds](../concepts/raise-agent-agency-only-when-efficacy-holds.md)
+- [Group Agent Tools by Human-Facing Actions](../concepts/group-agent-tools-by-human-facing-actions.md)
 - [Agent-Native SDLC Platforms Need Context, Reliability, and Parallelism](../concepts/agent-native-sdlc-platforms-need-context-reliability-and-parallelism.md)
 - [Workflow Search Retrieves Enterprise Practice at Runtime](../concepts/workflow-search-retrieves-enterprise-practice-at-runtime.md)
 - [Golden Workflows Evaluate Agent Trajectories](../concepts/golden-workflows-evaluate-agent-trajectories.md)
@@ -617,6 +619,7 @@
 
 ## Infrastructure
 
+- [Replace Anecdotal Agent Tuning With Eval and Observability Loops](../concepts/replace-anecdotal-agent-tuning-with-eval-and-observability-loops.md)
 - [Agent-Native SDLC Platforms Need Context, Reliability, and Parallelism](../concepts/agent-native-sdlc-platforms-need-context-reliability-and-parallelism.md)
 - [Incident Agents Turn Alerts Into RCA and Operational Memory](../concepts/incident-agents-turn-alerts-into-rca-and-operational-memory.md)
 - [Enterprise Coding Agents Need Ownership, Auditability, and Action Controls](../concepts/enterprise-coding-agents-need-ownership-auditability-and-action-controls.md)
@@ -883,6 +886,7 @@
 
 ## Evaluation
 
+- [Replace Anecdotal Agent Tuning With Eval and Observability Loops](../concepts/replace-anecdotal-agent-tuning-with-eval-and-observability-loops.md)
 - [Simulated Conversations Test Customer-Facing Agents Before Launch](../concepts/simulated-conversations-test-customer-facing-agents-before-launch.md)
 - [AI Diff Review Should Find Problems Before Merge](../concepts/ai-diff-review-should-find-problems-before-merge.md)
 - [Generated Tests Need Meaningful Plans, Coverage, and Pruning](../concepts/generated-tests-need-meaningful-plans-coverage-and-pruning.md)
@@ -1290,6 +1294,8 @@
 
 ## Tools
 
+- [Group Agent Tools by Human-Facing Actions](../concepts/group-agent-tools-by-human-facing-actions.md)
+- [Keep Fixed Business Logic Outside the Model](../concepts/keep-fixed-business-logic-outside-the-model.md)
 - [Agent Icebergs Hide Platform and Lifecycle Burden](../concepts/agent-icebergs-hide-platform-and-lifecycle-burden.md)
 - [Vet MCP Servers As Action-Capable Extensions](../concepts/vet-mcp-servers-as-action-capable-extensions.md)
 - [Choose A2A and MCP by Ownership Boundary](../concepts/choose-a2a-and-mcp-by-ownership-boundary.md)
@@ -1482,6 +1488,9 @@
 
 ## Workflows
 
+- [Raise Agent Agency Only When Efficacy Holds](../concepts/raise-agent-agency-only-when-efficacy-holds.md)
+- [Keep Fixed Business Logic Outside the Model](../concepts/keep-fixed-business-logic-outside-the-model.md)
+- [Replace Anecdotal Agent Tuning With Eval and Observability Loops](../concepts/replace-anecdotal-agent-tuning-with-eval-and-observability-loops.md)
 - [AI Architects Combine Technical, Brand, and Business Judgment](../concepts/ai-architects-combine-technical-brand-and-business-judgment.md)
 - [Start Customer-Facing Agents With Narrow Valuable Outcomes](../concepts/start-customer-facing-agents-with-narrow-valuable-outcomes.md)
 - [Simulated Conversations Test Customer-Facing Agents Before Launch](../concepts/simulated-conversations-test-customer-facing-agents-before-launch.md)

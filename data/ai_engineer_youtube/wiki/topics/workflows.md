@@ -30,6 +30,8 @@ Multi-agent workflows need explicit coordination and recovery choices. Event-dri
 
 Durable workflow engines also address the single-agent production loop. Agent frameworks may provide the fixed loop that calls the LLM, executes requested tools, and feeds results back, but production workflows need persisted turns, retry policy, timeout behavior, and resumable waits around that loop. Human-in-the-loop steps are a useful stress test: the workflow should pause as logical state, release active process resources when needed, and resume when a human response arrives. Workflow-like automations can still justify an agent harness when the middle of the process requires flexible exploration, repository cloning, Docker runs, tests, and structured output rather than only known deterministic steps.
 
+Agentic workflow design should start simple and add autonomy only when it beats the simpler structure. A single chain or branching tree is cheaper, easier to measure, and more reliable when it fits the task; a freer agent loop becomes attractive when chains and trees become too complex to maintain. Hard business rules and side effects should still sit in deterministic state and validation steps, while the model handles enrichment, interpretation, and action selection inside bounded authority.
+
 Python agent workflows can keep ordinary imperative structure while becoming durable. PydanticAI's Temporal demo wraps agents, keeps non-IO orchestration deterministic, places LLM and tool calls behind activity boundaries, and uses normal `TaskGroup`-style parallelism for search branches. That matters for deep research and similar workflows because a crash after planning and search should not require paying for those steps again before final analysis resumes.
 
 Pydantic AI's shorter typed-agent demo adds the non-durable inner-loop contract: model calls can produce structured final-result tool calls, Pydantic validation can reject invalid output, and the harness can return the validation error to the model for a corrected retry. The same workflow benefits from observability: traces reveal the model exchanges, tool arguments, validation retries, cost, and latency that explain why a run failed or passed.
@@ -167,6 +169,9 @@ Customer-facing agent workflows should be narrow before they are broad. Sierra's
 - [Compose agents and workflows as interchangeable primitives](../concepts/compose-agents-and-workflows-as-interchangeable-primitives.md) - workflows can call agents, agents can call workflows, and both can appear as steps or tools.
 - [Prefer readable workflow APIs over graph-theory surfaces](../concepts/prefer-readable-workflow-apis-over-graph-theory-surfaces.md) - workflow definitions should be reviewable as ordinary control flow.
 - [Add structure where agent reliability fails](../concepts/add-structure-where-agent-reliability-fails.md) - reliability work should target the failing segment of an agentic workflow.
+- [Raise Agent Agency Only When Efficacy Holds](../concepts/raise-agent-agency-only-when-efficacy-holds.md) - simpler automation should remain when it is more effective than autonomy.
+- [Keep Fixed Business Logic Outside the Model](../concepts/keep-fixed-business-logic-outside-the-model.md) - workflow gates should enforce hard conditions outside prompt text.
+- [Replace Anecdotal Agent Tuning With Eval and Observability Loops](../concepts/replace-anecdotal-agent-tuning-with-eval-and-observability-loops.md) - workflow changes should be driven by eval sets and traced failure clusters.
 - [Run eval suites in CI/CD before and during production](../concepts/run-eval-suites-in-cicd-before-and-during-production.md) - eval workflows should become automated checks around model, prompt, data, and production-use-case changes.
 - [AI Engineering Practice Is Heterogeneous and Fast Moving](../concepts/ai-engineering-practice-is-heterogeneous-and-fast-moving.md) - AI workflows need to account for mixed roles, mixed use cases, and frequent model and prompt updates.
 - [Branchable Cloud Workspaces Make Agent Actions Reversible](../concepts/branchable-cloud-workspaces-make-agent-actions-reversible.md) - snapshot-based workflows let agents try stateful actions and backtrack.
@@ -502,6 +507,7 @@ Customer-facing agent workflows should be narrow before they are broad. Sierra's
 
 - [How to build Enterprise Aware Agents - Chau Tran, Glean](../sources/20250724_hxFpUcvWPcU.md)
 - [Rise of the AI Architect - Clay Bavor, Cofounder, Sierra w/ Alessio Fanelli](../sources/20250724_C3geUfBR2js.md)
+- [Building Applications with AI Agents — Michael Albada, Microsoft](../sources/20250724_R30col3UPUg.md)
 - [Beyond the Prototype: Using AI to Write High-Quality Code - Josh Albrecht, Imbue](../sources/20250725_x_1EumTaXeE.md)
 - [Devin 2.0 and the Future of SWE - Scott Wu, Cognition](../sources/20250725_MI83buT_23o.md)
 - [Your Coding Agent Just Got Cloned And Your Brain Isn't Ready - Rustin Banks, Google Jules](../sources/20250725_X4BwOu0GWb8.md)

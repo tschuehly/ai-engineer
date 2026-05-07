@@ -14,6 +14,8 @@ Factory's agent-native SDLC framing adds a platform-level version of this shift.
 
 Typed agent frameworks add another reliability lever to the basic loop. Pydantic AI's examples show structured outputs as validated final-result tools, explicit loop termination through final text or structured output, validation-error retries, and typed dependency injection for tools. This does not remove the need for prompts or evals, but it gives humans, coding agents, static type checkers, and runtime validators a shared contract when the application is refactored.
 
+Production agent design should optimize for efficacy before autonomy. Agency is useful when changing inputs make fixed automation brittle, but it should be raised only when the resulting system still reliably solves the user task. Tool calling, orchestration, multi-agent routing, evals, observability, and safety trip wires are therefore not optional extras; they are the controls that keep agentic behavior from turning into low-efficacy autonomy.
+
 Agent models themselves can be tuned for this loop shape. M2's training story emphasizes interleaving reasoning with many tool-call turns, perturbing the operational surface around tools and prompts, and using small active-parameter economics to run multiple workplace-agent copies in parallel. Agent RFT adds a production-post-training variant: teams can train a reasoning model over multi-step rollouts that call hosted tool endpoints and receive custom reward signals, as long as rollout IDs and tool-call context are preserved for grading and the workflow is well-defined enough for production-matched rewards.
 
 Agent serving infrastructure can also use the structure of agent work. Re-query loops and tool-call waits are not just application behavior; they reveal when KV-cache state will be reused, moved out of GPU memory during a wait, and restored before the next model call, which can reduce repeated prefill cost without changing the agent's visible workflow.
@@ -128,6 +130,8 @@ Devin 2.0 frames the same progression as changing human-intervention intervals. 
 - [Type-Safe Agent Schemas Make Refactoring and Validation Easier](../concepts/type-safe-agent-schemas-make-refactoring-and-validation-easier.md) - typed outputs and dependencies make agent application contracts visible to static tooling and runtime validation.
 - [Validation Errors Can Drive Agent Self-Repair Loops](../concepts/validation-errors-can-drive-agent-self-repair-loops.md) - validation failures can be fed back into the model as structured retry feedback.
 - [Trace Agent Tool Arguments to Debug Real Failures](../concepts/trace-agent-tool-arguments-to-debug-real-failures.md) - trace-level tool arguments reveal why a tool-using run failed.
+- [Raise Agent Agency Only When Efficacy Holds](../concepts/raise-agent-agency-only-when-efficacy-holds.md) - autonomy should increase only when the system remains effective on the task.
+- [Group Agent Tools by Human-Facing Actions](../concepts/group-agent-tools-by-human-facing-actions.md) - curated action-level tools reduce confusion from broad API catalogs.
 - [Backlog-Scale Coding Agents Need Confidence and Self-Testing](../concepts/backlog-scale-coding-agents-need-confidence-and-self-testing.md) - agents working many queued tasks need confidence thresholds and escalation paths.
 - [Choose Copilot Mode By Autonomy and Feedback Need](../concepts/choose-copilot-mode-by-autonomy-and-feedback-need.md) - Copilot exposes multiple coding-agent autonomy levels inside a developer workflow.
 - [Vet MCP Servers As Action-Capable Extensions](../concepts/vet-mcp-servers-as-action-capable-extensions.md) - Copilot MCP servers can read external data and perform actions, so trust and scope matter.
@@ -459,6 +463,7 @@ Devin 2.0 frames the same progression as changing human-intervention intervals. 
 
 - [How to build Enterprise Aware Agents - Chau Tran, Glean](../sources/20250724_hxFpUcvWPcU.md)
 - [Rise of the AI Architect - Clay Bavor, Cofounder, Sierra w/ Alessio Fanelli](../sources/20250724_C3geUfBR2js.md)
+- [Building Applications with AI Agents — Michael Albada, Microsoft](../sources/20250724_R30col3UPUg.md)
 - [Devin 2.0 and the Future of SWE - Scott Wu, Cognition](../sources/20250725_MI83buT_23o.md)
 - [Your Coding Agent Just Got Cloned And Your Brain Isn't Ready - Rustin Banks, Google Jules](../sources/20250725_X4BwOu0GWb8.md)
 - [Ship Production Software in Minutes, Not Months - Eno Reyes, Factory](../sources/20250725_iheWKg2Tkrk.md)
