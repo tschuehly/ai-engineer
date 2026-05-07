@@ -247,6 +247,7 @@ Remote MCP infrastructure can reuse ordinary cloud primitives when the local std
 - [Choose WebRTC topologies by realtime application shape](../concepts/choose-webrtc-topologies-by-realtime-application-shape.md) - realtime infrastructure can connect local devices, cloud AI, or multiparty sessions.
 - [LLM guardrails need checkpoints at every untrusted boundary](../concepts/llm-guardrails-need-checkpoints-at-every-untrusted-boundary.md) - guardrail infrastructure should be placed around all untrusted context and action boundaries.
 - [Hybrid retrieval should support filters and embedding migration](../concepts/hybrid-retrieval-should-support-filters-and-embedding-migration.md) - retrieval infrastructure needs lexical/vector search, filters, and migration paths for changing embedding models.
+- [AI Data Lakehouses Need Online Retrieval and Offline Iteration Paths](../concepts/ai-data-lakehouses-need-online-retrieval-and-offline-iteration-paths.md) - object-store-backed AI data should support retrieval, analytics, preprocessing, and training.
 - [Choose HybridRAG when relationship structure matters](../concepts/choose-hybridrag-when-relationship-structure-matters.md) - graph/vector retrieval should be an infrastructure choice driven by corpus structure and query needs.
 - [Balance GraphRAG hop depth against production latency](../concepts/balance-graphrag-hop-depth-against-production-latency.md) - production graph retrieval needs traversal limits, acceleration, and latency-aware evaluation.
 - [Make internal platforms self-service for agent users](../concepts/make-internal-platforms-self-service-for-agent-users.md) - agent-ready infrastructure removes person-dependent operational handoffs.
@@ -292,6 +293,7 @@ Remote MCP infrastructure can reuse ordinary cloud primitives when the local std
 - Which agent loops need durable result recording to avoid duplicate LLM spend or repeated side effects after crash recovery?
 - Which cache TTL and memory-tier configuration preserves useful agent working sets without blocking GPUs or overprovisioning storage?
 - Which graph algorithms, acceleration paths, and traversal limits keep HybridRAG latency acceptable as graphs grow to millions of nodes?
+- Which AI-data storage layouts let teams avoid duplicate vector, text, blob, analytics, and training copies without hurting online retrieval latency?
 - How much PII masking and operator verification can voice infrastructure add before latency undermines the realtime workflow?
 - What workload measurements are needed before splitting accelerator fleets between realtime and long-compute AI jobs?
 - Which realtime voice paths can use local peer-to-peer WebRTC, and which need cloud or multiparty media infrastructure?
@@ -313,6 +315,7 @@ Remote MCP infrastructure can reuse ordinary cloud primitives when the local std
 - [The Small Model Infrastructure Nobody Built (So We Did) - Filip Makraduli, Superlinked](../sources/20260505_qdh_x-uRs9g.md)
 - [Training an LLM from Scratch, Locally - Angelos Perivolaropoulos, ElevenLabs](../sources/20260504_UsB70Tf5zcE.md)
 - [TLMs: Tiny LLMs and Agents on Edge Devices with LiteRT-LM - Cormac Brick, Google](../sources/20260503_BKWpYIWvAo4.md)
+- [Scaling Enterprise-Grade RAG: Lessons from Legal Frontier - Calvin Qi (Harvey), Chang She (Lance)](../sources/20250729_W1MiZChnkfA.md)
 - [Mastering AI Pricing: Flexible & Agile Monetization - Mayank Pant, Stripe](../sources/20260501_CrqPcIZOOXA.md)
 - [Vision: Zero Bugs — Johann Schleier-Smith, Temporal](../sources/20251124_qLqttdO33UM.md)
 - [Shipping complex AI applications - Braintrust & Trainline](../sources/20260501_ZdheJTfLu-s.md)

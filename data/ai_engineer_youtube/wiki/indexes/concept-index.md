@@ -611,6 +611,7 @@
 - [Use Immutable Versioned State For Agent Handoffs](../concepts/use-immutable-versioned-state-for-agent-handoffs.md)
 - [Wrap Agent Calls With Circuit Breakers and Compensation](../concepts/wrap-agent-calls-with-circuit-breakers-and-compensation.md)
 - [Hybrid Retrieval Should Support Filters And Embedding Migration](../concepts/hybrid-retrieval-should-support-filters-and-embedding-migration.md)
+- [AI Data Lakehouses Need Online Retrieval and Offline Iteration Paths](../concepts/ai-data-lakehouses-need-online-retrieval-and-offline-iteration-paths.md)
 - [Choose HybridRAG when relationship structure matters](../concepts/choose-hybridrag-when-relationship-structure-matters.md)
 - [Balance GraphRAG hop depth against production latency](../concepts/balance-graphrag-hop-depth-against-production-latency.md)
 - [App factories turn sandbox artifacts into governed knowledge apps](../concepts/app-factories-turn-sandbox-artifacts-into-governed-knowledge-apps.md)
@@ -773,6 +774,8 @@
 ## Evaluation
 
 - [Benchmark RAG Pipelines After Production Usage Exists](../concepts/benchmark-rag-pipelines-after-production-usage-exists.md)
+- [Layer Domain RAG Evals by Fidelity, Cost, and Speed](../concepts/layer-domain-rag-evals-by-fidelity-cost-and-speed.md)
+- [Decompose Domain RAG by Query Structure and Corpus Scale](../concepts/decompose-domain-rag-by-query-structure-and-corpus-scale.md)
 - [AI System Evaluation Still Depends on Human Review](../concepts/ai-system-evaluation-still-depends-on-human-review.md)
 - [Prompt Management Lags Prompt Iteration](../concepts/prompt-management-lags-prompt-iteration.md)
 - [Do not trust saturated vision benchmarks as visual intelligence](../concepts/do-not-trust-saturated-vision-benchmarks-as-visual-intelligence.md)
@@ -1035,6 +1038,9 @@
 - [Parse Multimodal Business Sources Into Structured Markdown](../concepts/parse-multimodal-business-sources-into-structured-markdown.md)
 - [Show Retrieved Chunks Inside Agent Workflows](../concepts/show-retrieved-chunks-inside-agent-workflows.md)
 - [Benchmark RAG Pipelines After Production Usage Exists](../concepts/benchmark-rag-pipelines-after-production-usage-exists.md)
+- [Decompose Domain RAG by Query Structure and Corpus Scale](../concepts/decompose-domain-rag-by-query-structure-and-corpus-scale.md)
+- [Layer Domain RAG Evals by Fidelity, Cost, and Speed](../concepts/layer-domain-rag-evals-by-fidelity-cost-and-speed.md)
+- [AI Data Lakehouses Need Online Retrieval and Offline Iteration Paths](../concepts/ai-data-lakehouses-need-online-retrieval-and-offline-iteration-paths.md)
 - [Dedicated Vector Databases Remain Common RAG Infrastructure](../concepts/dedicated-vector-databases-remain-common-rag-infrastructure.md)
 - [Use Fast Query-Document Evals for Retrieval Changes](../concepts/use-fast-query-document-evals-for-retrieval-changes.md)
 - [Align Synthetic Retrieval Queries With Real User Specificity](../concepts/align-synthetic-retrieval-queries-with-real-user-specificity.md)

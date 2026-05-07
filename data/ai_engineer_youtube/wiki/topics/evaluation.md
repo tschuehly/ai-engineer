@@ -88,6 +88,8 @@ Verifier-backed branching adds an evaluation pattern for test-time search. A sha
 
 RAG evaluation can be sequenced with product maturity. A pre-production knowledge-base build may start with practical requirements such as supported source types, Markdown output, asynchronous webhooks, and enough product quality to reach real users. Once usage exists, the benchmark should expand to parser accuracy, parser completeness, hallucinated output, cost, and whether hybrid graph/vector retrieval improves real messages or decisions.
 
+High-stakes domain RAG also needs a fidelity ladder. Expert review can catch legal or regulatory mistakes that engineers and generic metrics miss, but it is expensive; curated expert criteria and automated retrieval metrics provide faster feedback for everyday iteration. Useful automated checks can stay concrete, such as whether retrieval hit the right corpus, folder, section, keywords, or provision before judging the final answer.
+
 ## Key Concepts
 
 - [AI System Evaluation Still Depends on Human Review](../concepts/ai-system-evaluation-still-depends-on-human-review.md) - production AI quality checks still combine observability, offline evals, benchmarks, user data, and human review.
@@ -117,6 +119,8 @@ RAG evaluation can be sequenced with product maturity. A pre-production knowledg
 - [Compare models by task, thinking budget, cost, and latency](../concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - side-by-side model comparisons help choose enough reasoning at acceptable speed and cost.
 - [Evaluate Agent Loops With Correctness, Cost, Latency, and Step Counts](../concepts/evaluate-agent-loops-with-correctness-cost-latency-and-step-counts.md) - loop metrics should include both outcome validity and operational cost.
 - [Benchmark RAG Pipelines After Production Usage Exists](../concepts/benchmark-rag-pipelines-after-production-usage-exists.md) - production traces should drive parser, retrieval, hallucination, hybrid-search, and cost benchmarks.
+- [Layer Domain RAG Evals by Fidelity, Cost, and Speed](../concepts/layer-domain-rag-evals-by-fidelity-cost-and-speed.md) - expert review, curated criteria, and fast metrics serve different iteration speeds.
+- [Decompose Domain RAG by Query Structure and Corpus Scale](../concepts/decompose-domain-rag-by-query-structure-and-corpus-scale.md) - evaluation should reflect the domain query structure and corpus scale being retrieved.
 - [Do not use token volume as a developer productivity metric](../concepts/do-not-use-token-volume-as-a-developer-productivity-metric.md) - adoption dashboards should avoid rewarding visible token spend over task impact.
 - [Measure AI engineering impact across utilization, impact, and cost](../concepts/measure-ai-engineering-impact-across-utilization-impact-and-cost.md) - AI adoption metrics need to connect usage to quality, velocity, and spend.
 - [Measure AI coding adoption with PR telemetry and guardrails](../concepts/measure-ai-coding-adoption-with-pr-telemetry-and-guardrails.md) - PR throughput and cycle time need quality and review-size checks.
@@ -437,3 +441,4 @@ RAG evaluation can be sequenced with product maturity. A pre-production knowledg
 - [Useful General Intelligence - Danielle Perszyk, Amazon AGI](../sources/20250802_Dj0b_cEBHBI.md)
 - [From Self-driving to Autonomous Voice Agents - Brooke Hopkins, Coval](../sources/20250731_kDczF4wBh8s.md)
 - [Building Alice's Brain: an AI Sales Rep that Learns Like a Human - Sherwood & Satwik, 11x](../sources/20250729_KWmkMV0FNwQ.md)
+- [Scaling Enterprise-Grade RAG: Lessons from Legal Frontier - Calvin Qi (Harvey), Chang She (Lance)](../sources/20250729_W1MiZChnkfA.md)

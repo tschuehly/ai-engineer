@@ -1495,3 +1495,11 @@
 - Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Retrieval](topics/retrieval.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Seller Knowledge Bases Let Agents Pull Business Context at Action Time](concepts/seller-knowledge-bases-let-agents-pull-business-context-at-action-time.md), [Parse Multimodal Business Sources Into Structured Markdown](concepts/parse-multimodal-business-sources-into-structured-markdown.md), [Show Retrieved Chunks Inside Agent Workflows](concepts/show-retrieved-chunks-inside-agent-workflows.md), [Benchmark RAG Pipelines After Production Usage Exists](concepts/benchmark-rag-pipelines-after-production-usage-exists.md)
 - Notes: Added 11x Alice's seller knowledge-base architecture: upload mixed business sources, parse them to Markdown, chunk/embed for action-time retrieval, expose retrieved chunks in the UI, and benchmark RAG once production usage exists.
+
+## [2026-05-07] ingest | Scaling Enterprise-Grade RAG: Lessons from Legal Frontier - Calvin Qi (Harvey), Chang She (Lance)
+
+- Source: [Scaling Enterprise-Grade RAG: Lessons from Legal Frontier - Calvin Qi (Harvey), Chang She (Lance)](sources/20250729_W1MiZChnkfA.md)
+- Processed: `W1MiZChnkfA`
+- Updated topics: [Retrieval](topics/retrieval.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md)
+- Updated concepts: [Decompose Domain RAG by Query Structure and Corpus Scale](concepts/decompose-domain-rag-by-query-structure-and-corpus-scale.md), [Layer Domain RAG Evals by Fidelity, Cost, and Speed](concepts/layer-domain-rag-evals-by-fidelity-cost-and-speed.md), [AI Data Lakehouses Need Online Retrieval and Offline Iteration Paths](concepts/ai-data-lakehouses-need-online-retrieval-and-offline-iteration-paths.md)
+- Notes: Added Harvey and LanceDB's enterprise legal RAG patterns for domain-shaped retrieval, expert-grounded eval ladders, and shared multimodal AI-data infrastructure.

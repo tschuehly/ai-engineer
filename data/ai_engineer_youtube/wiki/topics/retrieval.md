@@ -64,8 +64,13 @@ Private research agents can treat connectors and uploads as complementary retrie
 - [Parse Multimodal Business Sources Into Structured Markdown](../concepts/parse-multimodal-business-sources-into-structured-markdown.md) - mixed business sources need structured text before chunking and retrieval.
 - [Show Retrieved Chunks Inside Agent Workflows](../concepts/show-retrieved-chunks-inside-agent-workflows.md) - retrieval evidence should be visible inside the product workflow, not only in traces.
 - [Benchmark RAG Pipelines After Production Usage Exists](../concepts/benchmark-rag-pipelines-after-production-usage-exists.md) - real usage should drive parser, retrieval, hallucination, hybrid-search, and cost benchmarks.
+- [Decompose Domain RAG by Query Structure and Corpus Scale](../concepts/decompose-domain-rag-by-query-structure-and-corpus-scale.md) - expert retrieval should model corpus scale and mixed semantic, lexical, temporal, and domain constraints.
+- [Layer Domain RAG Evals by Fidelity, Cost, and Speed](../concepts/layer-domain-rag-evals-by-fidelity-cost-and-speed.md) - domain RAG needs expert review, curated criteria, and fast retrieval metrics.
+- [AI Data Lakehouses Need Online Retrieval and Offline Iteration Paths](../concepts/ai-data-lakehouses-need-online-retrieval-and-offline-iteration-paths.md) - shared AI data substrates should support search, analytics, preprocessing, and training.
 
 Seller-facing agents show a product-specific version of retrieval as onboarding. Instead of asking users to manually prefill product offers, value props, pain points, case studies, and ICP fields, the product can ingest seller materials once and retrieve only the relevant chunks at message-generation time. That makes parsing and chunking part of the user experience: decks, websites, screenshots, calls, and videos need to become structured text before retrieval can help the agent write grounded outbound messages. Because this retrieval directly shapes customer-facing output, the workflow should expose retrieved chunks in the UI and then benchmark parsing accuracy, completeness, hallucinations, hybrid search, and cost once real usage exists.
+
+Expert-domain RAG adds another layer of corpus and query modeling. Legal retrieval may need to work across on-demand uploads, project vaults, and global law or regulation corpora, while a single query can combine semantic intent, jurisdiction, dates, named directives, multiple provisions, and domain abbreviations. Dense retrieval alone is not the architecture; the system needs domain experts to shape representation, preprocessing, categorization, sparse and dense matching, filters, reranking, and evaluation.
 
 ## Open Questions
 
@@ -83,6 +88,7 @@ Seller-facing agents show a product-specific version of retrieval as onboarding.
 - Which advisory tasks need graph-backed quantitative computation, and which should remain simple vector lookup?
 - How much synthetic-query calibration is enough before real query logs exist?
 - What evidence should a seller-agent UI expose so operators can debug whether generated outreach used the right retrieved context?
+- Which domain constraints belong in query planning, filters, rerankers, or corpus preprocessing for expert legal and regulatory RAG?
 
 ## Sources
 
@@ -111,3 +117,4 @@ Seller-facing agents show a product-specific version of retrieval as onboarding.
 - [Enterprise Deep Research: The Next Killer App for Enterprise AI — Ofer Mendelevitch, Vectara](../sources/20251124_fh9LgKXBGnQ.md)
 - [The 2025 AI Engineering Report - Barr Yaron, Amplify](../sources/20250801_mQ7_Zje7WKE.md)
 - [Building Alice's Brain: an AI Sales Rep that Learns Like a Human - Sherwood & Satwik, 11x](../sources/20250729_KWmkMV0FNwQ.md)
+- [Scaling Enterprise-Grade RAG: Lessons from Legal Frontier - Calvin Qi (Harvey), Chang She (Lance)](../sources/20250729_W1MiZChnkfA.md)

@@ -4,6 +4,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Decompose Domain RAG by Query Structure and Corpus Scale](concepts/decompose-domain-rag-by-query-structure-and-corpus-scale.md) - expert retrieval should reflect corpus scale, jurisdictional filters, dates, named provisions, and domain jargon.
+- [Layer Domain RAG Evals by Fidelity, Cost, and Speed](concepts/layer-domain-rag-evals-by-fidelity-cost-and-speed.md) - high-stakes RAG needs expert review, curated criteria, and fast retrieval metrics.
+- [AI Data Lakehouses Need Online Retrieval and Offline Iteration Paths](concepts/ai-data-lakehouses-need-online-retrieval-and-offline-iteration-paths.md) - multimodal AI data infrastructure should serve search, analytics, preprocessing, and training from a shared substrate.
 - [Treat Code-Executing Agents as RCE-Risk Surfaces](concepts/treat-code-executing-agents-as-rce-risk-surfaces.md) - shell and code execution should be secured as an intentional remote-code-execution surface.
 - [Restrict Agent Internet Access With Allowlists](concepts/restrict-agent-internet-access-with-allowlists.md) - network access is a major prompt-injection and exfiltration path for code-executing agents.
 - [Classify AI Bot Traffic By Intent And Benefit](concepts/classify-ai-bot-traffic-by-intent-and-benefit.md) - public sites need different policies for search crawlers, training crawlers, user-triggered fetchers, and operator agents.
