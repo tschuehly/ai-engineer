@@ -70,7 +70,7 @@ Leadership matters because agent and AI-assistant rollouts can produce either le
 
 Enterprise operating models are part of agent adoption. Adding agents to existing Agile roles can leave companies with marginal gains because work allocation, review, technical-debt control, and collaboration become the new bottlenecks. Smaller AI-native pods, consolidated product-builder roles, continuous planning, spec-driven work, and task-specific human-agent collaboration patterns let agents change the delivery system rather than only individual throughput.
 
-Enterprise analytics agents need especially careful autonomy staging. A GenBI copilot can start by routing users to certified dashboards and reports, then use those governed assets as context or SQL seeds before it attempts broader query generation. Splitting the pipeline into metadata, RAG/report-finding, SQL, and BI-answer agents keeps retrieval, query expansion, answer synthesis, orchestration, and governance as separately inspectable responsibilities.
+Enterprise analytics agents need especially careful autonomy staging. A GenBI copilot can start by routing users to certified dashboards and reports, then use those governed assets as context or SQL seeds before it attempts broader query generation. Splitting the pipeline into metadata, RAG/report-finding, SQL, and BI-answer agents keeps retrieval, query expansion, answer synthesis, orchestration, and governance as separately inspectable responsibilities. Graph-backed advisory agents add another form of staged responsibility: a supervisory "wisdom" agent can coordinate specialist agents that collect insight, update graph regions, and leave decision state in a centralized graph for later inspection.
 
 ## Key Concepts
 
@@ -214,6 +214,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Use parent agents to compare and merge parallel subagent outputs](../concepts/use-parent-agents-to-compare-and-merge-parallel-subagent-outputs.md) - parent agents can turn parallel model attempts into a reviewable comparison and synthesis workflow.
 - [Use skills for workflow guidance and MCP for integrations](../concepts/use-skills-for-workflow-guidance-and-mcp-for-integrations.md) - agents often need both a reliable tool surface and context that explains how to use it.
 - [Agentic GraphRAG uses schema-aware multi-step graph queries](../concepts/agentic-graphrag-uses-schema-aware-multi-step-graph-queries.md) - agents can use graph tools to inspect schema, issue Cypher queries, and gather relationship-aware context.
+- [Use supervisory graph agents to update shared knowledge state](../concepts/use-supervisory-graph-agents-to-update-shared-knowledge-state.md) - a coordinating agent can delegate graph updates to specialist agents while preserving shared decision state.
 - [Context window editing clears stale tool results](../concepts/context-window-editing-clears-stale-tool-results.md) - tool-heavy agents need active pruning of low-value outputs during long sessions.
 - [Evaluate agent skills with task scenarios and comparative conditions](../concepts/evaluate-agent-skills-with-task-scenarios-and-comparative-conditions.md) - skill usefulness should be measured against real task behavior.
 - [Context engines select task-specific organizational context](../concepts/context-engines-select-task-specific-organizational-context.md) - agents need the right organizational context before they can produce code that fits the system.
@@ -329,6 +330,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 ## Sources
 
 - [How BlackRock Builds Custom Knowledge Apps at Scale — Vaibhav Page & Infant Vasanth, BlackRock](../sources/20250823_08mH36_NVos.md)
+- [Wisdom-Driven Knowledge Augmented Generation at Scale - Chin Keong Lam, Patho AI](../sources/20250822_9AQOvT8LnMI.md)
 - [Building an Agentic Platform - Ben Kus, CTO Box](../sources/20250824_12v5S1n1eOY.md)
 
 - [Government Agents: AI Agents Meet Tough Regulations - Mark Myshatyn, Los Alamos National Lab](../sources/20251206_TnSGx36Ly0Q.md)

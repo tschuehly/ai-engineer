@@ -1191,3 +1191,11 @@
 - Updated topics: [Evaluation](topics/evaluation.md), [Generative Media](topics/generative-media.md), [Models](topics/models.md)
 - Updated concepts: [Evaluate Generative Media With Perceptual Metrics](concepts/evaluate-generative-media-with-perceptual-metrics.md), [Account For Compression Artifacts In Media Model Data And Evals](concepts/account-for-compression-artifacts-in-media-model-data-and-evals.md), [Personalize Aesthetic Evals With Preference Classifiers](concepts/personalize-aesthetic-evals-with-preference-classifiers.md)
 - Notes: Added Krea's perceptual-eval warning that media metrics must account for human-visible quality, compressed internet artifacts, and subjective aesthetic preference.
+
+## [2026-05-07] ingest | Wisdom-Driven Knowledge Augmented Generation at Scale - Chin Keong Lam, Patho AI
+
+- Source: [Wisdom-Driven Knowledge Augmented Generation at Scale - Chin Keong Lam, Patho AI](sources/20250822_9AQOvT8LnMI.md)
+- Processed: `9AQOvT8LnMI`
+- Updated topics: [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Retrieval](topics/retrieval.md)
+- Updated concepts: [Map Expert Decision Taxonomies Into Knowledge Graphs](concepts/map-expert-decision-taxonomies-into-knowledge-graphs.md), [Use Graph-Backed KAG For Quantitative Advisory Questions](concepts/use-graph-backed-kag-for-quantitative-advisory-questions.md), [Use Supervisory Graph Agents To Update Shared Knowledge State](concepts/use-supervisory-graph-agents-to-update-shared-knowledge-state.md), [Prune LLM-Extracted Graphs With Domain Experts](concepts/prune-llm-extracted-graphs-with-domain-experts.md)
+- Notes: Added Patho AI's KAG pattern for turning expert decision taxonomies, structured quantitative evidence, and supervised graph-agent updates into source-backed advisory systems.

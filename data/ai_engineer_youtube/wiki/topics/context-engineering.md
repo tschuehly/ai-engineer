@@ -18,7 +18,7 @@ Long context should be treated as temporary working memory, not durable knowledg
 
 Context platform engineering adds an inference-side complement to context selection. Agentic coding sessions often resend system prompts, tool calls, and tool responses far more than direct user text, so context engineering should consider which repeated regions become KV-cache working sets and how cache time-to-live interacts with human pauses and fast tool loops.
 
-Tool-heavy agent sessions also need active cleanup inside the working window. Memory can keep durable patterns and preferences outside the prompt until they are relevant, while context editing removes stale tool outputs that otherwise crowd out current task context. Knowledge graphs add a structured memory option when relationships matter: semantic and procedural learnings can become nodes, relationships, properties, embeddings, and access overlays that agents can traverse and humans can inspect. Tool definitions and responses should be treated as first-class context artifacts: in agent loops, tool schemas and outputs can dominate the token budget more than the system prompt, so context engineering includes how tools are named, described, scoped, and serialized.
+Tool-heavy agent sessions also need active cleanup inside the working window. Memory can keep durable patterns and preferences outside the prompt until they are relevant, while context editing removes stale tool outputs that otherwise crowd out current task context. Knowledge graphs add a structured memory option when relationships matter: semantic and procedural learnings can become nodes, relationships, properties, embeddings, and access overlays that agents can traverse and humans can inspect. Expert advisory systems add a decision-taxonomy variant: knowledge, experience, insight, current situation, and decision-making relationships can become graph context that guides recommendations rather than only retrieval. Tool definitions and responses should be treated as first-class context artifacts: in agent loops, tool schemas and outputs can dominate the token budget more than the system prompt, so context engineering includes how tools are named, described, scoped, and serialized.
 
 Coding-agent subagents are another context-management lever. Instead of forcing one agent to spend its main window on broad repository search, deep reasoning, dependency lookup, or codemod planning, a specialist can consume context in a separate window and return only the useful result.
 
@@ -102,6 +102,8 @@ Repository architecture can turn context engineering into the adoption bottlenec
 - [Use Compounding Engineering Loops](../concepts/use-compounding-engineering-loops.md) - agent-work lessons should be captured into files, commands, subagents, and onboarding context.
 - [Do not treat long context as durable model memory](../concepts/do-not-treat-long-context-as-durable-model-memory.md) - full-context prompting has latency and reasoning limits even when the window is large enough.
 - [Knowledge graphs make agent memory traversable and explainable](../concepts/knowledge-graphs-make-agent-memory-traversable-and-explainable.md) - graph memory can preserve relationships, provenance, and access rules outside the raw context window.
+- [Map expert decision taxonomies into knowledge graphs](../concepts/map-expert-decision-taxonomies-into-knowledge-graphs.md) - expert context can include the decision structure that turns knowledge into advice.
+- [Use supervisory graph agents to update shared knowledge state](../concepts/use-supervisory-graph-agents-to-update-shared-knowledge-state.md) - multi-agent workflows can preserve findings in a shared graph rather than transient messages.
 - [Long AI coding conversations compound accidental complexity](../concepts/long-ai-coding-conversations-compound-accidental-complexity.md) - stale conversational history can carry wrong architectural turns into later code.
 - [Manual migration seeds teach agents the hidden constraints](../concepts/manual-migration-seeds-teach-agents-the-hidden-constraints.md) - manual examples can become high-signal context for later agent research.
 - [Treat embeddings as recoverable sensitive data](../concepts/treat-embeddings-as-recoverable-sensitive-data.md) - embeddings are derived context artifacts that still need data-protection controls.
@@ -129,6 +131,7 @@ Repository architecture can turn context engineering into the adoption bottlenec
 - Which architectural seams require human-written context because raw code makes technical debt look like intended convention?
 - When should codebase onboarding context be prewritten, generated on demand, or avoided because source code is the better source of truth?
 - Which repeated prompt, tool-call, and tool-response regions should be engineered for KV-cache reuse rather than summarized or regenerated?
+- Which expert taxonomies are stable enough to encode as graph context instead of leaving them in prompts or interviews?
 
 ## Sources
 
@@ -175,3 +178,4 @@ Repository architecture can turn context engineering into the adoption bottlenec
 - [The Unbearable Lightness of Agent Optimization - Alberto Romero, Jointly](../sources/20251124_zfvEMNmVlNY.md)
 - [Backlog.md: Terminal Kanban Board for Managing Tasks with AI Agents - Alex Gavrilescu, Funstage](../sources/20251124_zMXKhhwiCIc.md)
 - [Five hard earned lessons about Evals - Ankur Goyal, Braintrust](../sources/20250823_a4BV0gGmXgA.md)
+- [Wisdom-Driven Knowledge Augmented Generation at Scale - Chin Keong Lam, Patho AI](../sources/20250822_9AQOvT8LnMI.md)

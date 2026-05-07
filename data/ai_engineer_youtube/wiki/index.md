@@ -4,6 +4,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Map expert decision taxonomies into knowledge graphs](concepts/map-expert-decision-taxonomies-into-knowledge-graphs.md) - advisory KAG systems can encode the decision structure that turns knowledge into recommendations.
+- [Use graph-backed KAG for quantitative advisory questions](concepts/use-graph-backed-kag-for-quantitative-advisory-questions.md) - graph retrieval can select exact values and support deterministic calculations for evidence-backed advice.
+- [Prune LLM-extracted graphs with domain experts](concepts/prune-llm-extracted-graphs-with-domain-experts.md) - LLM graph extraction should be reviewed against expert taxonomy before it drives retrieval.
 - [Continuously reconcile eval datasets with user reality](concepts/continuously-reconcile-eval-datasets-with-user-reality.md) - eval datasets should evolve from selected user feedback, not remain static synthetic fixtures.
 - [Evaluate generative media with perceptual metrics](concepts/evaluate-generative-media-with-perceptual-metrics.md) - image and video evals should match human-visible quality, not only easy metric surfaces.
 - [Personalize aesthetic evals with preference classifiers](concepts/personalize-aesthetic-evals-with-preference-classifiers.md) - creative products may need user-specific taste models for subjective quality.
