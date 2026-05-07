@@ -4,6 +4,11 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Abstract LLM inference behind one routing API](concepts/abstract-llm-inference-behind-one-routing-api.md) - model marketplaces can hide provider heterogeneity behind routing, tool-calling, caching, observability, and privacy controls.
+- [Optimize action agents for reliability before abstract intelligence](concepts/optimize-action-agents-for-reliability-before-abstract-intelligence.md) - ordinary business actions need dependable completion more than higher benchmark intelligence.
+- [Extract enterprise interaction data into structured graphs](concepts/extract-enterprise-interaction-data-into-structured-graphs.md) - messy sales and marketing records can become graph-backed attribution and analytics substrates.
+- [Make voice AI devices developer-extensible](concepts/make-voice-ai-devices-developer-extensible.md) - voice hardware can become an open developer platform for custom assistants, robots, toys, and appliances.
+- [Design AI creative systems for generated-asset retrieval](concepts/design-ai-creative-systems-for-generated-asset-retrieval.md) - large-scale generated media workflows need search and organization over output variants.
 - [Network digital twins ground change-management agents](concepts/network-digital-twins-ground-change-management-agents.md) - network-change agents can assess and test proposed changes against modeled production state.
 - [Normalize network telemetry into agent-readable schemas](concepts/normalize-network-telemetry-into-agent-readable-schemas.md) - heterogeneous operational data needs a canonical graph schema before agents can query it reliably.
 - [Train graph-query agents with schemas and example queries](concepts/train-graph-query-agents-with-schemas-and-example-queries.md) - schema-trained graph query agents can reduce token-heavy ReAct exploration.

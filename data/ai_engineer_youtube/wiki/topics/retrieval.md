@@ -16,6 +16,7 @@ Private research agents can treat connectors and uploads as complementary retrie
 
 ## Key Concepts
 
+- [Extract enterprise interaction data into structured graphs](../concepts/extract-enterprise-interaction-data-into-structured-graphs.md) - LLM extraction can turn messy interaction records into queryable graph context.
 - [Context blocks turn monolithic enterprise knowledge into reusable agent context](../concepts/context-blocks-turn-monolithic-enterprise-knowledge-into-reusable-agent-context.md) - decomposed context units give retrieval systems cleaner targets than broad documentation monoliths.
 - [Evaluate retrieval and MCP layers by task value, not only response availability](../concepts/evaluate-retrieval-and-mcp-layers-by-task-value.md) - retrieval must be tested against whether it helps complete work.
 - [Use small models as context-management tools before agent reasoning](../concepts/use-small-models-as-context-management-tools-before-agent-reasoning.md) - embeddings, rerankers, NER, and extraction models can structure or filter retrieval inputs before agent reasoning.
@@ -74,6 +75,7 @@ Private research agents can treat connectors and uploads as complementary retrie
 
 ## Sources
 
+- [The Next Unicorns: 7 Top AI startups from the HF0 Residency](../sources/20250821_L8-5ezsoI5A.md)
 - [How BlackRock Builds Custom Knowledge Apps at Scale — Vaibhav Page & Infant Vasanth, BlackRock](../sources/20250823_08mH36_NVos.md)
 - [Wisdom-Driven Knowledge Augmented Generation at Scale - Chin Keong Lam, Patho AI](../sources/20250822_9AQOvT8LnMI.md)
 - [Multi Agent AI and Network Knowledge Graphs for Change — Ola Mabadeje, Cisco](../sources/20250822_m0dxZ-NDKHo.md)

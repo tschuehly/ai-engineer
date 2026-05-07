@@ -2,6 +2,8 @@
 
 ## Agents
 
+- [Optimize action agents for reliability before abstract intelligence](../concepts/optimize-action-agents-for-reliability-before-abstract-intelligence.md)
+- [Make voice AI devices developer-extensible](../concepts/make-voice-ai-devices-developer-extensible.md)
 - [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md)
 - [Choose AI coworker form factors by interaction mode](../concepts/choose-ai-coworker-form-factors-by-interaction-mode.md)
 - [Design agent presence with visual alignment and handoff](../concepts/design-agent-presence-with-visual-alignment-and-handoff.md)
@@ -273,6 +275,7 @@
 
 ## Business Intelligence
 
+- [Extract enterprise interaction data into structured graphs](../concepts/extract-enterprise-interaction-data-into-structured-graphs.md)
 - [Fund enterprise AI through incremental productizable bets](../concepts/fund-enterprise-ai-through-incremental-productizable-bets.md)
 - [Start GenBI with certified assets before autonomous SQL](../concepts/start-genbi-with-certified-assets-before-autonomous-sql.md)
 - [Evaluate BI agents with real metadata and expert feedback](../concepts/evaluate-bi-agents-with-real-metadata-and-expert-feedback.md)
@@ -618,6 +621,7 @@
 
 ## Inference
 
+- [Abstract LLM inference behind one routing API](../concepts/abstract-llm-inference-behind-one-routing-api.md)
 - [Profile small-model architectures on target hardware](../concepts/profile-small-model-architectures-on-target-hardware.md)
 - [Use local AI workstations when iteration, privacy, or latency dominate](../concepts/use-local-ai-workstations-when-iteration-privacy-or-latency-dominate.md)
 - [Make local inference benchmarks reproducible artifacts](../concepts/make-local-inference-benchmarks-reproducible-artifacts.md)
@@ -646,6 +650,7 @@
 
 ## Generative Media
 
+- [Design AI creative systems for generated-asset retrieval](../concepts/design-ai-creative-systems-for-generated-asset-retrieval.md)
 - [Curate generative-media data before tuning model internals](../concepts/curate-generative-media-data-before-tuning-model-internals.md)
 - [Train image and video diffusion models in learned latent spaces](../concepts/train-image-and-video-diffusion-models-in-learned-latent-spaces.md)
 - [Use guidance to trade diffusion sample diversity for conditional quality](../concepts/use-guidance-to-trade-diffusion-sample-diversity-for-conditional-quality.md)
@@ -658,6 +663,7 @@
 
 ## Product Strategy
 
+- [Design AI creative systems for generated-asset retrieval](../concepts/design-ai-creative-systems-for-generated-asset-retrieval.md)
 - [Prototype AI UX by feeling the model material](../concepts/prototype-ai-ux-by-feeling-the-model-material.md)
 - [Choose AI coworker form factors by interaction mode](../concepts/choose-ai-coworker-form-factors-by-interaction-mode.md)
 - [Court agent emergence with bounded play](../concepts/court-agent-emergence-with-bounded-play.md)
@@ -670,6 +676,7 @@
 
 ## Evaluation
 
+- [Optimize action agents for reliability before abstract intelligence](../concepts/optimize-action-agents-for-reliability-before-abstract-intelligence.md)
 - [Use challenge eval sets for future user demands](../concepts/use-challenge-eval-sets-for-future-user-demands.md)
 - [Evaluate operational graph agents with extrinsic task metrics](../concepts/evaluate-operational-graph-agents-with-extrinsic-task-metrics.md)
 - [Evaluate generative media with perceptual metrics](../concepts/evaluate-generative-media-with-perceptual-metrics.md)
@@ -896,6 +903,7 @@
 
 ## Retrieval
 
+- [Extract enterprise interaction data into structured graphs](../concepts/extract-enterprise-interaction-data-into-structured-graphs.md)
 - [Agentic document extraction decomposes complex fields](../concepts/agentic-document-extraction-decomposes-complex-fields.md)
 - [Normalize network telemetry into agent-readable schemas](../concepts/normalize-network-telemetry-into-agent-readable-schemas.md)
 - [Train graph-query agents with schemas and example queries](../concepts/train-graph-query-agents-with-schemas-and-example-queries.md)
@@ -939,6 +947,7 @@
 
 ## Tools
 
+- [Abstract LLM inference behind one routing API](../concepts/abstract-llm-inference-behind-one-routing-api.md)
 - [Choose AI coworker form factors by interaction mode](../concepts/choose-ai-coworker-form-factors-by-interaction-mode.md)
 - [Prototype AI UX by feeling the model material](../concepts/prototype-ai-ux-by-feeling-the-model-material.md)
 - [Design agent presence with visual alignment and handoff](../concepts/design-agent-presence-with-visual-alignment-and-handoff.md)
@@ -1071,6 +1080,7 @@
 
 ## Voice Agents
 
+- [Make voice AI devices developer-extensible](../concepts/make-voice-ai-devices-developer-extensible.md)
 - [VoiceVision agents wrap visual RAG with retrieval, image-reading, and speech tools](../concepts/voicevision-agents-wrap-visual-rag-with-retrieval-image-reading-and-speech-tools.md)
 - [Choose voice-agent architecture by latency, accuracy, and semantics](../concepts/choose-voice-agent-architecture-by-latency-accuracy-and-semantics.md)
 - [Delegate complex voice-agent tasks through specialist tools and handoffs](../concepts/delegate-complex-voice-agent-tasks-through-specialist-tools-and-handoffs.md)

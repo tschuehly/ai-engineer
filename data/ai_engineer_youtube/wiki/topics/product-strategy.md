@@ -6,7 +6,7 @@ AI engineering does not remove product strategy work; it makes weak product judg
 
 The funnel is a useful operating model. Top-of-funnel work should create something worth sharing, not merely announce another feature. Onboarding should identify one aha moment and remove every step that delays it. Retention should avoid the false choice between simple and capable: build powerful primitives first, assemble the beginner path from them, and expose deeper controls as users grow.
 
-AI-native product strategy also includes deciding where model behavior belongs in the experience. Invisible background work, ambient surfacing, inline artifact manipulation, and conversational build flows carry different trust, interruption, and control costs. Teams should prototype those choices with runnable model probes because static screens cannot reveal whether the model is fast, accurate, aligned, awkward, or surprisingly capable in the proposed surface.
+AI-native product strategy also includes deciding where model behavior belongs in the experience. Invisible background work, ambient surfacing, inline artifact manipulation, conversational build flows, adaptive websites, and personalized creative pipelines carry different trust, interruption, and control costs. Teams should prototype those choices with runnable model probes because static screens cannot reveal whether the model is fast, accurate, aligned, awkward, or surprisingly capable in the proposed surface.
 
 ## Key Concepts
 
@@ -19,6 +19,7 @@ AI-native product strategy also includes deciding where model behavior belongs i
 - [Choose AI coworker form factors by interaction mode](../concepts/choose-ai-coworker-form-factors-by-interaction-mode.md) - product teams should choose whether AI is invisible, ambient, inline, or conversational based on the workflow.
 - [Prototype AI UX by feeling the model material](../concepts/prototype-ai-ux-by-feeling-the-model-material.md) - AI UX choices need runnable probes that expose model behavior, latency, and fit.
 - [Court agent emergence with bounded play](../concepts/court-agent-emergence-with-bounded-play.md) - exploratory prototypes can reveal useful product behavior beyond automating an existing step.
+- [Design AI creative systems for generated-asset retrieval](../concepts/design-ai-creative-systems-for-generated-asset-retrieval.md) - product teams need output retrieval when creative personalization creates many generated variants.
 
 ## Open Questions
 
@@ -31,3 +32,4 @@ AI-native product strategy also includes deciding where model behavior belongs i
 - [Taste & Craft: A Conversation with Tuomas Artman, CTO Linear & Gergely Orosz, @pragmaticengineer](../sources/20260421_wjk0ulMAkbc.md)
 - [From Arc to Dia: Lessons learned building AI Browsers - Samir Mody, The Browser Company of New York](../sources/20251219_o4scJaQgnFA.md)
 - [Form factors for your new AI coworkers - Craig Wattrus, Flatfile](../sources/20250822_CiMVKnX-CNI.md)
+- [The Next Unicorns: 7 Top AI startups from the HF0 Residency](../sources/20250821_L8-5ezsoI5A.md)

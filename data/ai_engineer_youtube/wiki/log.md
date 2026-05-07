@@ -1223,3 +1223,11 @@
 - Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Retrieval](topics/retrieval.md)
 - Updated concepts: [Network digital twins ground change-management agents](concepts/network-digital-twins-ground-change-management-agents.md), [Normalize network telemetry into agent-readable schemas](concepts/normalize-network-telemetry-into-agent-readable-schemas.md), [Train graph-query agents with schemas and example queries](concepts/train-graph-query-agents-with-schemas-and-example-queries.md), [Evaluate operational graph agents with extrinsic task metrics](concepts/evaluate-operational-graph-agents-with-extrinsic-task-metrics.md)
 - Notes: Added Cisco's operational graph-agent pattern for using ITSM ticket intent, schema-normalized network graphs, digital-twin tests, and extrinsic workflow metrics in change management.
+
+## [2026-05-07] ingest | The Next Unicorns: 7 Top AI startups from the HF0 Residency
+
+- Source: [The Next Unicorns: 7 Top AI startups from the HF0 Residency](sources/20250821_L8-5ezsoI5A.md)
+- Processed: `L8-5ezsoI5A`
+- Updated topics: [Agents](topics/agents.md), [Business Intelligence](topics/business-intelligence.md), [Evaluation](topics/evaluation.md), [Generative Media](topics/generative-media.md), [Inference](topics/inference.md), [Product Strategy](topics/product-strategy.md), [Retrieval](topics/retrieval.md), [Tools](topics/tools.md), [Voice Agents](topics/voice-agents.md)
+- Updated concepts: [Design AI creative systems for generated-asset retrieval](concepts/design-ai-creative-systems-for-generated-asset-retrieval.md), [Make voice AI devices developer-extensible](concepts/make-voice-ai-devices-developer-extensible.md), [Optimize action agents for reliability before abstract intelligence](concepts/optimize-action-agents-for-reliability-before-abstract-intelligence.md), [Extract enterprise interaction data into structured graphs](concepts/extract-enterprise-interaction-data-into-structured-graphs.md), [Abstract LLM inference behind one routing API](concepts/abstract-llm-inference-behind-one-routing-api.md)
+- Notes: Added HF0 demo-day patterns for creative asset retrieval, voice AI hardware ecosystems, reliable action agents, graph-backed enterprise interaction intelligence, and model-routing marketplaces.

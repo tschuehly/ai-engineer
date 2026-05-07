@@ -76,6 +76,8 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 
 ## Key Concepts
 
+- [Optimize action agents for reliability before abstract intelligence](../concepts/optimize-action-agents-for-reliability-before-abstract-intelligence.md) - business workflows need agents that complete ordinary actions reliably.
+- [Make voice AI devices developer-extensible](../concepts/make-voice-ai-devices-developer-extensible.md) - voice agent platforms can expose hardware and application extension points.
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - agent loops can stay flexible while the runtime validates tool execution.
 - [Embed architecture governance into developer workflows](../concepts/embed-architecture-governance-into-developer-workflows.md) - architecture agents can scale expert guidance without turning governance into a bottleneck.
 - [Scientific agents should execute against domain infrastructure](../concepts/scientific-agents-should-execute-against-domain-infrastructure.md) - research agents should connect hypotheses to domain tools, simulations, and compute assets.
@@ -338,6 +340,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 
 ## Sources
 
+- [The Next Unicorns: 7 Top AI startups from the HF0 Residency](../sources/20250821_L8-5ezsoI5A.md)
 - [Form factors for your new AI coworkers - Craig Wattrus, Flatfile](../sources/20250822_CiMVKnX-CNI.md)
 - [How BlackRock Builds Custom Knowledge Apps at Scale — Vaibhav Page & Infant Vasanth, BlackRock](../sources/20250823_08mH36_NVos.md)
 - [Wisdom-Driven Knowledge Augmented Generation at Scale - Chin Keong Lam, Patho AI](../sources/20250822_9AQOvT8LnMI.md)

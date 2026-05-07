@@ -54,6 +54,7 @@ AI coworker products add tool surfaces that are neither plain chat nor backend A
 
 ## Key Concepts
 
+- [Abstract LLM inference behind one routing API](../concepts/abstract-llm-inference-behind-one-routing-api.md) - model-routing platforms can normalize tool calling, provider edge cases, caching, and observability.
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - compact tool loops can be the core architecture for coding agents.
 - [Choose AI coworker form factors by interaction mode](../concepts/choose-ai-coworker-form-factors-by-interaction-mode.md) - agent tool surfaces can be invisible, ambient, inline, or conversational rather than only chat.
 - [Prototype AI UX by feeling the model material](../concepts/prototype-ai-ux-by-feeling-the-model-material.md) - runnable tools reveal whether a model fits the proposed interaction surface.
@@ -236,6 +237,7 @@ AI coworker products add tool surfaces that are neither plain chat nor backend A
 
 ## Sources
 
+- [The Next Unicorns: 7 Top AI startups from the HF0 Residency](../sources/20250821_L8-5ezsoI5A.md)
 - [Form factors for your new AI coworkers - Craig Wattrus, Flatfile](../sources/20250822_CiMVKnX-CNI.md)
 - [Your Support Team Should Ship Code - Lisa Orr, Zapier](../sources/20251216_RmJ4rTLV_x4.md)
 - [Compilers in the Age of LLMs - Yusuf Olokoba, Muna](../sources/20251124_q2nHsJVy4FE.md)

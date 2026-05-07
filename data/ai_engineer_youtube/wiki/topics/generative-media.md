@@ -2,7 +2,7 @@
 
 ## Overview
 
-Generative media covers the model and product patterns behind image, video, and other audiovisual generation. The current sources frame large-scale media systems as more than a diffusion backbone: data curation, learned latent representations, denoising architecture, sampling procedure, step distillation, explicit controls, and interactive state all shape whether the model is practical and steerable. Compared with language models, media diffusion can exploit spatial or temporal topology, bidirectional attention, perceptual frequency weighting, and coarse-to-fine generation instead of strict token-by-token causality. Media evaluation has the same perceptual constraint: codecs, internet artifacts, FID-style scores, and object-count metrics may not match what humans notice or what a creative user values. World models add a different bar from passive generation: when users act inside generated environments, the system needs memory, consistency, controllability, and live prompting so the world remains coherent under interaction.
+Generative media covers the model and product patterns behind image, video, and other audiovisual generation. The current sources frame large-scale media systems as more than a diffusion backbone: data curation, learned latent representations, denoising architecture, sampling procedure, step distillation, explicit controls, and interactive state all shape whether the model is practical and steerable. Compared with language models, media diffusion can exploit spatial or temporal topology, bidirectional attention, perceptual frequency weighting, and coarse-to-fine generation instead of strict token-by-token causality. Media evaluation has the same perceptual constraint: codecs, internet artifacts, FID-style scores, and object-count metrics may not match what humans notice or what a creative user values. Media products also need retrieval over their own outputs: once a studio or campaign generates many personalized variants, finding the right asset and preserving provenance can become as important as creating another image. World models add a different bar from passive generation: when users act inside generated environments, the system needs memory, consistency, controllability, and live prompting so the world remains coherent under interaction.
 
 ## Key Concepts
 
@@ -15,6 +15,7 @@ Generative media covers the model and product patterns behind image, video, and 
 - [Evaluate generative media with perceptual metrics](../concepts/evaluate-generative-media-with-perceptual-metrics.md) - media scores should account for human-visible quality, not only easy embedding or object checks.
 - [Account for compression artifacts in media model data and evals](../concepts/account-for-compression-artifacts-in-media-model-data-and-evals.md) - compressed internet media can shape both training data and metric behavior.
 - [Personalize aesthetic evals with preference classifiers](../concepts/personalize-aesthetic-evals-with-preference-classifiers.md) - creative products may need user-specific taste models rather than one universal aesthetic score.
+- [Design AI creative systems for generated-asset retrieval](../concepts/design-ai-creative-systems-for-generated-asset-retrieval.md) - generated-media products need indexing and search when output volume grows with personalization.
 - [Interactive world models need memory, control, and live prompting](../concepts/interactive-world-models-need-memory-control-and-live-prompting.md) - generated environments need state and action consistency when users navigate inside them.
 
 ## Open Questions
@@ -24,6 +25,7 @@ Generative media covers the model and product patterns behind image, video, and 
 - Which controls should be trained into the base model, exposed through adapters, or handled by external editing workflows?
 - Which generated-world failures should be evaluated as media quality problems, interaction-control problems, or long-horizon memory problems?
 - How should perceptual media evals combine universal human-visible defects with user-specific aesthetic preferences?
+- What retrieval and provenance metadata should generated-media tools attach before personalized asset volume becomes unmanageable?
 
 ## Sources
 
@@ -31,3 +33,4 @@ Generative media covers the model and product patterns behind image, video, and 
 - [How Google DeepMind is researching the next Frontier of AI for Gemini - Raia Hadsell, VP of Research](../sources/20260418_zZsTVBXcbow.md)
 - [Building in the Gemini Era - Kat Kampf & Ammaar Reshi, Google DeepMind](../sources/20251215_fgkXEIbZpGc.md)
 - [Perceptual Evaluations: Evals for Aesthetics - Diego Rodriguez, Krea.ai](../sources/20250823_h5ItAJuB3Fc.md)
+- [The Next Unicorns: 7 Top AI startups from the HF0 Residency](../sources/20250821_L8-5ezsoI5A.md)

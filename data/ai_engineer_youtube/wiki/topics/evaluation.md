@@ -107,6 +107,7 @@ PR-derived field telemetry adds a practical adoption dashboard shape for AI codi
 - [Agentic automation can outperform first-tier productivity use cases](../concepts/agentic-automation-can-outperform-first-tier-productivity-use-cases.md) - ROI evaluation should separate basic time savings from deeper automation and agent workflows.
 - [Measure AI developer productivity with field experiments, not benchmark extrapolation alone](../concepts/measure-ai-developer-productivity-with-field-experiments-not-benchmark-extrapolation-alone.md) - real experienced-developer work can diverge from lab capability curves.
 - [Benchmark saturation pushes capability evals toward human time horizons](../concepts/benchmark-saturation-pushes-capability-evals-toward-human-time-horizons.md) - benchmark scores become less informative as task sets saturate.
+- [Optimize action agents for reliability before abstract intelligence](../concepts/optimize-action-agents-for-reliability-before-abstract-intelligence.md) - action-agent evaluation should prioritize dependable task completion over abstract capability claims.
 - [Reliability thresholds determine whether coding agents save time](../concepts/reliability-thresholds-determine-whether-coding-agents-save-time.md) - productivity depends on total prompting, review, correction, and handoff cost.
 - [Treat slop as a quality failure, not an AI provenance label](../concepts/treat-slop-as-a-quality-failure-not-an-ai-provenance-label.md) - quality gates should inspect the output rather than treating origin as the whole judgment.
 - [Do not report agent autonomy without quality accountability](../concepts/do-not-report-agent-autonomy-without-quality-accountability.md) - long autonomous runs need quality evidence before they count as capability.
@@ -261,6 +262,7 @@ PR-derived field telemetry adds a practical adoption dashboard shape for AI codi
 - Which utilization signals best predict positive quality and velocity outcomes rather than mere tool exposure?
 - Which field-study designs can detect AI coding-tool speedups without washing out effects through task allocation, repository familiarity, or review overhead?
 - Which reliability threshold lets expert maintainers accept coding-agent output without spending more time verifying and repairing it than they save?
+- Which ordinary business actions are narrow enough to demand near-production reliability before broader reasoning improves the product?
 - How should capability evals combine time-horizon curves, mergeability checks, and real-work RCTs without over-weighting any one source of evidence?
 - Which observed timing traces are strong enough to replace self-reported task duration in developer productivity studies?
 - Which product-quality regressions can be detected mechanically, and which still require trained human taste?
@@ -292,6 +294,7 @@ PR-derived field telemetry adds a practical adoption dashboard shape for AI codi
 
 ## Sources
 
+- [The Next Unicorns: 7 Top AI startups from the HF0 Residency](../sources/20250821_L8-5ezsoI5A.md)
 - [Building an Agentic Platform - Ben Kus, CTO Box](../sources/20250824_12v5S1n1eOY.md)
 - [Wisdom-Driven Knowledge Augmented Generation at Scale - Chin Keong Lam, Patho AI](../sources/20250822_9AQOvT8LnMI.md)
 - [Multi Agent AI and Network Knowledge Graphs for Change — Ola Mabadeje, Cisco](../sources/20250822_m0dxZ-NDKHo.md)
