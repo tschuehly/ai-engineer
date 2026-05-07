@@ -10,6 +10,7 @@ Details:
 - AI companies can grow faster than traditional SaaS while facing lower and more usage-sensitive margins, so static SaaS pricing can become misaligned as usage and cost profiles change.
 - The first price is a hypothesis, not a permanent commitment; teams should ship a plausible price, talk to churned and upgraded customers, run pricing tests, and realign pricing as features move from premium to standard.
 - Pricing iteration depends on infrastructure: if each pricing change takes three or four months of engineering work, the billing stack blocks product and monetization learning.
+- AI teams should build a continual pricing experimentation muscle because a new model can materially change cost structure overnight; multi-year pricing cycles are too slow for AI products. (09:36-10:39)
 
 Related topics:
 - [AI Monetization](../topics/ai-monetization.md)
@@ -17,6 +18,8 @@ Related topics:
 Related concepts:
 - [Map AI charge metrics to customer-perceived value](map-ai-charge-metrics-to-customer-perceived-value.md)
 - [Use hybrid AI pricing to balance predictable revenue and margin protection](use-hybrid-ai-pricing-to-balance-predictable-revenue-and-margin-protection.md)
+- [Simulate AI pricing against usage data before launch](simulate-ai-pricing-against-usage-data-before-launch.md)
 
 Sources:
 - [Mastering AI Pricing: Flexible & Agile Monetization - Mayank Pant, Stripe](../sources/20260501_CrqPcIZOOXA.md), 03:44-04:18, 15:10-17:15
+- [Monetizing AI - Alvaro Morales, Orb](../sources/20250723_6WQYLQB0odc.md), 01:28-03:08, 09:36-10:39

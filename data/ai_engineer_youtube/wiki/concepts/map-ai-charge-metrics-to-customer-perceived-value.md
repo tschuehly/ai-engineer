@@ -12,6 +12,7 @@ Details:
 - Outcome-based pricing is easier to sell but harder to attribute; consumption pricing is easier to implement but farther from customer value, so teams need data to justify where they land.
 - Credits can abstract multiple features into a customer-facing currency while allowing internal mappings to evolve as model costs and feature value change.
 - GenAI productivity can weaken seat count as a proxy for value: if one employee can do far more work with AI, pricing by employees may diverge from the work or business value produced. (21:20-22:24)
+- Agent pricing can be placed on a spectrum from resource units such as tokens, through workflow steps and whole workflows, to labor-replacement units and measured outcomes. Outcome pricing is strongest when both parties agree on the outcome definition and can measure it objectively. (05:54-09:35)
 
 Related topics:
 - [AI Monetization](../topics/ai-monetization.md)
@@ -19,7 +20,9 @@ Related topics:
 Related concepts:
 - [Treat AI pricing as a fast-moving product hypothesis](treat-ai-pricing-as-a-fast-moving-product-hypothesis.md)
 - [Use hybrid AI pricing to balance predictable revenue and margin protection](use-hybrid-ai-pricing-to-balance-predictable-revenue-and-margin-protection.md)
+- [Choose direct or indirect AI monetization](choose-direct-or-indirect-ai-monetization.md)
 
 Sources:
 - [Mastering AI Pricing: Flexible & Agile Monetization - Mayank Pant, Stripe](../sources/20260501_CrqPcIZOOXA.md), 02:32-03:17, 06:24-11:34
 - [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](../sources/20251223_LU9KgcZDRfY.md), 21:20-22:24
+- [Monetizing AI - Alvaro Morales, Orb](../sources/20250723_6WQYLQB0odc.md), 05:54-09:35

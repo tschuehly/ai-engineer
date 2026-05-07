@@ -1862,3 +1862,11 @@
 - Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Product Strategy](topics/product-strategy.md), [Workflows](topics/workflows.md)
 - Updated concepts: [AI-First Strategy Reimagines Value Across Workflows](concepts/ai-first-strategy-reimagines-value-across-workflows.md), [Ritualized Discovery Keeps AI Roadmaps Adaptive](concepts/ritualized-discovery-keeps-ai-roadmaps-adaptive.md), [Treat Process as a Product During AI Transformation](concepts/treat-process-as-a-product-during-ai-transformation.md), [Scale AI Fluency With Self-Service Platforms](concepts/scale-ai-fluency-with-self-service-platforms.md)
 - Notes: Added Sprout Social's AI-first SaaS operating-model guidance across strategy, adaptive planning, process evaluation, and company-wide enablement.
+
+## [2026-05-07] ingest | Monetizing AI - Alvaro Morales, Orb
+
+- Source: [Monetizing AI - Alvaro Morales, Orb](sources/20250723_6WQYLQB0odc.md)
+- Processed: `6WQYLQB0odc`
+- Updated topics: [AI Monetization](topics/ai-monetization.md), [Infrastructure](topics/infrastructure.md)
+- Updated concepts: [Treat AI Pricing as a Fast-Moving Product Hypothesis](concepts/treat-ai-pricing-as-a-fast-moving-product-hypothesis.md), [Map AI Charge Metrics to Customer-Perceived Value](concepts/map-ai-charge-metrics-to-customer-perceived-value.md), [Choose Direct or Indirect AI Monetization](concepts/choose-direct-or-indirect-ai-monetization.md), [Simulate AI Pricing Against Usage Data Before Launch](concepts/simulate-ai-pricing-against-usage-data-before-launch.md)
+- Notes: Added Orb's monetization decision framework, agent value-metric spectrum, outcome-pricing measurement caveats, and pre-launch pricing simulation workflow.

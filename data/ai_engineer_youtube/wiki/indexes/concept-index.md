@@ -343,6 +343,8 @@
 
 - [Treat AI pricing as a fast-moving product hypothesis](../concepts/treat-ai-pricing-as-a-fast-moving-product-hypothesis.md)
 - [Map AI charge metrics to customer-perceived value](../concepts/map-ai-charge-metrics-to-customer-perceived-value.md)
+- [Choose Direct or Indirect AI Monetization](../concepts/choose-direct-or-indirect-ai-monetization.md)
+- [Simulate AI Pricing Against Usage Data Before Launch](../concepts/simulate-ai-pricing-against-usage-data-before-launch.md)
 - [Revenue Cycle AI Targets Administrative Friction](../concepts/revenue-cycle-ai-targets-administrative-friction.md)
 - [Outcome-based engineering compensation uses accepted story points](../concepts/outcome-based-engineering-compensation-uses-accepted-story-points.md)
 - [Use hybrid AI pricing to balance predictable revenue and margin protection](../concepts/use-hybrid-ai-pricing-to-balance-predictable-revenue-and-margin-protection.md)
