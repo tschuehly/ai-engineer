@@ -5,6 +5,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 ## Current Emphasis
 
 - [Serve Realtime TTS By Audio-Token Throughput](concepts/serve-realtime-tts-by-audio-token-throughput.md) - streaming voice inference needs generated codec-token rates that stay ahead of playback.
+- [Design Private AI Serving Around Verifiable Remote Compute](concepts/design-private-ai-serving-around-verifiable-remote-compute.md) - sensitive remote inference needs enforceable and verifiable compute guarantees.
+- [Bind Sensitive Payloads To Remote Attestation Claims](concepts/bind-sensitive-payloads-to-remote-attestation-claims.md) - clients can release data only to servers still matching trusted hardware and software claims.
+- [Use Transparency Logs To Audit Attested AI Binaries](concepts/use-transparency-logs-to-audit-attested-ai-binaries.md) - append-only software-release records connect binary review to runtime attestation.
 - [Remove Head-Of-Line Silence From Voice Models](concepts/remove-head-of-line-silence-from-voice-models.md) - generated leading silence can waste scarce conversational latency even when not played.
 - [Route LoRA Voice Clones With Sticky GPU Affinity](concepts/route-lora-voice-clones-with-sticky-gpu-affinity.md) - voice-clone adapters need routing that considers GPU residency and session continuity.
 - [Voice Agent Infrastructure Needs Realtime Session Deployment](concepts/voice-agent-infrastructure-needs-realtime-session-deployment.md) - production voice agents need cold-start, autoscaling, global routing, and data-residency-aware deployment for long-running media sessions.

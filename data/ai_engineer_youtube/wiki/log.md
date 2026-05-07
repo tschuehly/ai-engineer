@@ -1447,3 +1447,11 @@
 - Updated topics: [Voice Agents](topics/voice-agents.md), [Inference](topics/inference.md), [Infrastructure](topics/infrastructure.md)
 - Updated concepts: [Serve Realtime TTS By Audio-Token Throughput](concepts/serve-realtime-tts-by-audio-token-throughput.md), [Remove Head-Of-Line Silence From Voice Models](concepts/remove-head-of-line-silence-from-voice-models.md), [Route LoRA Voice Clones With Sticky GPU Affinity](concepts/route-lora-voice-clones-with-sticky-gpu-affinity.md)
 - Notes: Added Gabber's Orpheus serving patterns for realtime audio-token throughput, leading-silence cleanup, vLLM FP8 batching, and adapter-aware GPU routing.
+
+## [2026-05-07] ingest | The Unofficial Guide to Apple's Private Cloud Compute - Jmo, CONFSEC
+
+- Source: [The Unofficial Guide to Apple's Private Cloud Compute - Jmo, CONFSEC](sources/20250730_CCsWZ5bJlO8.md)
+- Processed: `CCsWZ5bJlO8`
+- Updated topics: [Infrastructure](topics/infrastructure.md), [Inference](topics/inference.md)
+- Updated concepts: [Design Private AI Serving Around Verifiable Remote Compute](concepts/design-private-ai-serving-around-verifiable-remote-compute.md), [Bind Sensitive Payloads To Remote Attestation Claims](concepts/bind-sensitive-payloads-to-remote-attestation-claims.md), [Use Transparency Logs To Audit Attested AI Binaries](concepts/use-transparency-logs-to-audit-attested-ai-binaries.md)
+- Notes: Added Apple PCC's private cloud inference pattern: verifiable remote compute, attestation-bound payload release, transparency-log auditing, and the latency, observability, trust, and billing tradeoffs of privacy-preserving serving.

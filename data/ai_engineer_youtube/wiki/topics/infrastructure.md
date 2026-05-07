@@ -14,6 +14,8 @@ Browsers are becoming an infrastructure layer for both development and runtime A
 
 Agent-built applications add a deployment boundary: the harness that plans and controls work should not be treated as the same trust domain as generated code. Infrastructure for the new application layer needs sandboxes and execution separation so agent-written software can run without giving that code direct authority over the agent runtime.
 
+Private AI serving adds a confidential-compute boundary for sensitive inference. Apple PCC-style architecture treats the remote AI server as untrusted until the client can verify stateless computation, code-enforced limits, non-targetability, no privileged runtime access, and transparency evidence. Remote attestation can bind encrypted payloads to signed hardware and software claims, while transparency logs let reviewers and clients compare runtime attestations against public signed binary records. The tradeoff is operational: removing SSH, disks, detailed logs, and user-identifying telemetry improves privacy guarantees but makes debugging, billing, latency management, and trust in the platform operator's supply-chain and key-management behavior more explicit.
+
 Full-stack app-generation runtimes add an inference-to-infrastructure boundary. When a user asks for a multiplayer app, persistent storage, ecommerce, or API-connected product, the builder can infer backend services, packages, server wiring, payments, and third-party integrations, but the generated runtime behavior still needs validation under realistic concurrency and state.
 
 Code-mode infrastructure should also treat capability grants as part of the runtime contract. Generated programs should start with no authority, receive only the APIs or network paths required for the task, and leave enough execution trace to explain high-impact actions later. AI-generated code is still untrusted code: it can crash through hallucinated loops, expose secrets through over-helpful environment inspection, or exfiltrate data after prompt injection. Infrastructure should default-deny network access, proxy authenticated calls through trusted application code, isolate tenants by sandbox, cap CPU and memory, clean up idle sandboxes, and log what ran.
@@ -93,6 +95,9 @@ Remote MCP infrastructure can reuse ordinary cloud primitives when the local std
 - [Deploy Remote MCP Servers on Serverless Cloud Infrastructure](../concepts/deploy-remote-mcp-servers-on-serverless-cloud-infrastructure.md) - serverless compute and API routing can host remote MCP tools with auth and session persistence.
 - [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](../concepts/retrieve-tool-descriptions-before-loading-large-tool-catalogs.md) - search infrastructure can keep large tool catalogs out of the default context window.
 - [Dual-mode AI infrastructure](../concepts/dual-mode-ai-infrastructure.md) - infrastructure planning must balance long compute-heavy work against low-latency realtime workloads.
+- [Design Private AI Serving Around Verifiable Remote Compute](../concepts/design-private-ai-serving-around-verifiable-remote-compute.md) - sensitive inference needs enforceable and verifiable remote-compute guarantees, not only privacy policy.
+- [Bind Sensitive Payloads To Remote Attestation Claims](../concepts/bind-sensitive-payloads-to-remote-attestation-claims.md) - clients can encrypt data only after checking signed claims about server hardware and software state.
+- [Use Transparency Logs To Audit Attested AI Binaries](../concepts/use-transparency-logs-to-audit-attested-ai-binaries.md) - append-only binary records connect build review to runtime attestation.
 - [Aggregate Idle GPU Supply Through Compute Marketplaces](../concepts/aggregate-idle-gpu-supply-through-compute-marketplaces.md) - marketplace orchestration can turn fragmented idle accelerator supply into usable AI compute.
 - [Match GPU Commitments To Workload Lifecycle](../concepts/match-gpu-commitments-to-workload-lifecycle.md) - training bursts, experiment spikes, and inference hosting should use different capacity shapes.
 - [Benchmark And Rate Heterogeneous GPU Providers](../concepts/benchmark-and-rate-heterogeneous-gpu-providers.md) - marketplace compute needs ratings, benchmarks, provisioning, and reliability metadata above nominal GPU type.
@@ -349,5 +354,6 @@ Remote MCP infrastructure can reuse ordinary cloud primitives when the local std
 - [Hacking the Inference Pareto Frontier - Kyle Kranen, NVIDIA](../sources/20250801_Y2qc0UhDSnc.md)
 - [Your realtime AI is ngmi - Sean DuBois (OpenAI), Kwindla Kramer (Daily)](../sources/20250731_E71YtNbCFXY.md)
 - [Pipecat Cloud: Enterprise Voice Agents Built On Open Source - Kwindla Hultman Kramer, Daily](../sources/20250731_IA4lZjh9sTs.md)
+- [The Unofficial Guide to Apple's Private Cloud Compute - Jmo, CONFSEC](../sources/20250730_CCsWZ5bJlO8.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

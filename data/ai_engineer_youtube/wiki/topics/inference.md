@@ -18,9 +18,14 @@ NVIDIA Dynamo's inference-frontier framing adds a data-center serving lens: the 
 
 Realtime voice serving adds an audio-token variant of the same discipline. A TTS model that emits codec tokens has to generate fast enough for playback, not just fast enough for text UX; leading generated silence, adapter loading, batch shape, and quantization choices all affect whether the first useful audio arrives inside the conversation window.
 
+Private cloud inference changes the serving contract for sensitive workloads. A PCC-style design does not simply promise retention limits; it asks the client to verify the server's attested hardware and software state, encrypt payloads only for that state, and compare attestation claims against public transparency-log records. That can make remote inference usable for privacy-sensitive requests that outgrow local models, but it adds latency, encryption overhead, reduced observability, and weak per-user telemetry.
+
 ## Key Concepts
 
 - [Dual-mode AI infrastructure](../concepts/dual-mode-ai-infrastructure.md) - inference fleets should distinguish realtime latency needs from long compute-heavy workloads.
+- [Design Private AI Serving Around Verifiable Remote Compute](../concepts/design-private-ai-serving-around-verifiable-remote-compute.md) - privacy-sensitive inference should verify the remote compute path before releasing data.
+- [Bind Sensitive Payloads To Remote Attestation Claims](../concepts/bind-sensitive-payloads-to-remote-attestation-claims.md) - attestation-bound encryption makes payload release depend on the server still running trusted code.
+- [Use Transparency Logs To Audit Attested AI Binaries](../concepts/use-transparency-logs-to-audit-attested-ai-binaries.md) - inference clients can compare runtime claims to signed release records.
 - [Scale Test-Time Search Through Parallel Verifier-Checked Branches](../concepts/scale-test-time-search-through-parallel-verifier-checked-branches.md) - test-time compute can fan out into external branch attempts scored by verifiers.
 - [Tune inference to the application Pareto point](../concepts/tune-inference-to-the-application-pareto-point.md) - model-serving choices should target the application's quality, latency, and cost operating point.
 - [Serve Realtime TTS By Audio-Token Throughput](../concepts/serve-realtime-tts-by-audio-token-throughput.md) - streaming voice inference needs generated codec-token throughput that stays ahead of playback.
@@ -95,3 +100,4 @@ Realtime voice serving adds an audio-token variant of the same discipline. A TTS
 - [Why We Don't Need More Data Centers - Dr. Jasper Zhang, Hyperbolic](../sources/20250801_M6Vbaig1TsM.md)
 - [Hacking the Inference Pareto Frontier - Kyle Kranen, NVIDIA](../sources/20250801_Y2qc0UhDSnc.md)
 - [Serving Voice AI at $1/hr: Open-source, LoRAs, Latency, Load Balancing - Neil Dwyer, Gabber](../sources/20250731_rD23-VZZHOo.md)
+- [The Unofficial Guide to Apple's Private Cloud Compute - Jmo, CONFSEC](../sources/20250730_CCsWZ5bJlO8.md)
