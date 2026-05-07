@@ -6,8 +6,11 @@ Inference is the production discipline of turning trained models into reliable, 
 
 Open frontier-scale models add an adoption constraint to inference: availability of weights is not enough when a model is too large for ordinary local hardware. GLM 4.6 is described as a 355B-parameter model that can be served through open-source inference stacks such as SGLang and vLLM when enough GPUs are available, while hosted/API access and coding-assistant integrations provide easier adoption paths for teams without large accelerator pools. Model marketplaces add a different adoption layer: one routing API can hide provider-specific edge cases, caching, tool-calling differences, regional routing, privacy controls, and observability while preserving the ability to compare and switch models.
 
+Brockman's infrastructure view adds a serving-shape warning: realtime AI interfaces and long compute-heavy jobs are different workloads. Inference platforms need to account for both low-latency interaction and longer test-time or agentic compute, because a fleet balanced for the wrong mix can waste scarce accelerator capacity.
+
 ## Key Concepts
 
+- [Dual-mode AI infrastructure](../concepts/dual-mode-ai-infrastructure.md) - inference fleets should distinguish realtime latency needs from long compute-heavy workloads.
 - [Profile small-model architectures on target hardware](../concepts/profile-small-model-architectures-on-target-hardware.md) - local inference performance should be measured on the intended hardware, not inferred from architecture alone.
 - [Use local AI workstations when iteration, privacy, or latency dominate](../concepts/use-local-ai-workstations-when-iteration-privacy-or-latency-dominate.md) - local serving can complement cloud infrastructure when queueing, data residency, or deterministic latency drive the workflow.
 - [Make local inference benchmarks reproducible artifacts](../concepts/make-local-inference-benchmarks-reproducible-artifacts.md) - benchmark runs should capture environment, responses, timing, and hardware metrics for later verification.
@@ -45,9 +48,11 @@ Open frontier-scale models add an adoption constraint to inference: availability
 - Which workplace-agent subtasks are cheap and independent enough to route to many small model copies instead of one larger agent?
 - Which KV-cache hit-rate bands are needed before agent swarms stop wasting prefill capacity on repeated prompt, tool-call, and tool-response tokens?
 - Which provider differences should model-routing APIs normalize, and which should remain visible because they affect quality or risk?
+- Which inference metrics distinguish realtime user interaction from long-running agentic compute in capacity plans?
 
 ## Sources
 
+- [#define AI Engineer - Greg Brockman, OpenAI (ft. Jensen Huang)](../sources/20250810_avWhreBUYF0.md)
 - [Context Platform Engineering to Reduce Token Anxiety - Val Bercovici, WEKA](../sources/20251124_NTBX-wxUhHs.md)
 - [Compilers in the Age of LLMs - Yusuf Olokoba, Muna](../sources/20251124_q2nHsJVy4FE.md)
 - [The Small Model Infrastructure Nobody Built (So We Did) - Filip Makraduli, Superlinked](../sources/20260505_qdh_x-uRs9g.md)

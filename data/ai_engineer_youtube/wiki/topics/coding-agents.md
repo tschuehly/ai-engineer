@@ -68,8 +68,12 @@ Codex CLI subagent retrofits add a pragmatic harness-extension pattern. When a C
 
 Jellyfish's pull-request telemetry calibrates the adoption curve. Interactive tools such as Copilot, Cursor, and Claude Code can correlate with higher PR throughput and lower cycle time even while fully autonomous coding agents remain a small share of merged PRs. The same data warns that teams should expect larger PRs and should segment gains by repository architecture, because highly distributed codebases can erase the apparent adoption benefit when cross-repo context is hard to assemble.
 
+Greg Brockman's Codex framing connects agent usefulness directly to codebase shape. Repositories optimized only for human memory can hide too much conceptual load in large modules and informal architecture; model-shaped codebases expose smaller modules, quick tests, and clear component boundaries so agents can fill in implementation details and rerun checks repeatedly. His longer-term view also moves coding agents beyond greenfield app demos: the bigger software-engineering opportunity is transforming existing applications through migrations, dependency updates, and legacy codebase change, especially when cloud-resident agents can work asynchronously like coworkers.
+
 ## Key Concepts
 
+- [Model-shaped codebase architecture for coding agents](../concepts/model-shaped-codebase-architecture-for-coding-agents.md) - codebase structure determines how much value agents can extract from tests and modules.
+- [Agentic coding transforms existing software](../concepts/agentic-coding-transforms-existing-software.md) - mature applications, migrations, and library upgrades are a deeper agent target than greenfield demos.
 - [High-assurance agentic coding needs process, not just generation](../concepts/high-assurance-agentic-coding-needs-process-not-just-generation.md) - reliable generated code needs specifications, modularity, independent verification, and process feedback.
 - [Use formal specifications and proofs for critical generated code](../concepts/use-formal-specifications-and-proofs-for-critical-generated-code.md) - formal methods can harden selected generated components when specifications are explicit.
 - [Separate generation and verification prompts or models](../concepts/separate-generation-and-verification-prompts-or-models.md) - independent prompts, contexts, or model providers reduce shared assumptions between coding and testing.
@@ -281,9 +285,11 @@ Jellyfish's pull-request telemetry calibrates the adoption curve. Interactive to
 - Which real coding sessions are difficult enough, reconstructable enough, and safe enough to become shared RL environments?
 - Which outcome verifiers are broad enough to accept valid alternate fixes while still blocking reward hacks and shallow workarounds?
 - How can teams measure the right compaction frequency before context cleanup becomes either too sparse to help or too heavy to read?
+- Which codebase decomposition choices most improve agent success without over-fragmenting human architecture?
 
 ## Sources
 
+- [#define AI Engineer - Greg Brockman, OpenAI (ft. Jensen Huang)](../sources/20250810_avWhreBUYF0.md)
 - [Context Platform Engineering to Reduce Token Anxiety - Val Bercovici, WEKA](../sources/20251124_NTBX-wxUhHs.md)
 - [No Vibes Allowed: Solving Hard Problems in Complex Codebases - Dex Horthy, HumanLayer](../sources/20251202_rmvDxxNubIg.md)
 - [Hacking Subagents Into Codex CLI - Brian John, Betterup](../sources/20251124_5eJqXtevlXg.md)

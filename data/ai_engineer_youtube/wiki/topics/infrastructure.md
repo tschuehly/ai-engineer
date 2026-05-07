@@ -68,8 +68,12 @@ Web and mobile coding agents add a remote-compute version of that harness proble
 
 Architecture-copilot infrastructure needs a live system model before recommendations are credible. The described pattern ingests cloud, Kubernetes, service, logging, dependency, and drift signals into a normalized digital twin, then uses that model to support explainable recommendations and workflow-embedded governance.
 
+Brockman's AI infrastructure framing adds a fleet-shape constraint at frontier scale. AGI-scale work is not only model software; it can require massive physical infrastructure, and the workloads split between long compute-heavy jobs and low-latency realtime interactions. A fleet can use different accelerator shapes for each mode, but the ratio matters: if planning overestimates one mode, expensive capacity can become idle or mismatched.
+
 ## Key Concepts
 
+- [Dual-mode AI infrastructure](../concepts/dual-mode-ai-infrastructure.md) - infrastructure planning must balance long compute-heavy work against low-latency realtime workloads.
+- [Research engineering partnership](../concepts/research-engineering-partnership.md) - frontier model progress depends on systems engineering that makes research ideas executable.
 - [Use formal specifications and proofs for critical generated code](../concepts/use-formal-specifications-and-proofs-for-critical-generated-code.md) - proof-capable languages and verifiers can become infrastructure around generated critical components.
 - [High-assurance agentic coding needs process, not just generation](../concepts/high-assurance-agentic-coding-needs-process-not-just-generation.md) - assurance infrastructure includes process, certification, testing, and feedback boundaries.
 - [Use hosted model playgrounds to prototype before owning infrastructure](../concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md) - hosted tools can validate model and deployment choices before teams own the runtime.
@@ -227,9 +231,11 @@ Architecture-copilot infrastructure needs a live system model before recommendat
 - Which cache TTL and memory-tier configuration preserves useful agent working sets without blocking GPUs or overprovisioning storage?
 - Which graph algorithms, acceleration paths, and traversal limits keep HybridRAG latency acceptable as graphs grow to millions of nodes?
 - How much PII masking and operator verification can voice infrastructure add before latency undermines the realtime workflow?
+- What workload measurements are needed before splitting accelerator fleets between realtime and long-compute AI jobs?
 
 ## Sources
 
+- [#define AI Engineer - Greg Brockman, OpenAI (ft. Jensen Huang)](../sources/20250810_avWhreBUYF0.md)
 - [How BlackRock Builds Custom Knowledge Apps at Scale — Vaibhav Page & Infant Vasanth, BlackRock](../sources/20250823_08mH36_NVos.md)
 - [Building an Agentic Platform - Ben Kus, CTO Box](../sources/20250824_12v5S1n1eOY.md)
 

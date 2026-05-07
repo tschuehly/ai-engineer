@@ -26,8 +26,11 @@ Cursor Composer adds a product-owned coding-model example: reinforcement learnin
 
 GLM 4.6 adds a staged open-model training recipe for long-context coding and agent behavior. The useful pattern is not just more tokens: general pretraining is followed by code and reasoning continuation, repo-level code contexts, synthetic reasoning traces, long-context agent data, and RL systems that treat short reasoning tasks differently from slow software-engineering trajectories. Its reported post-training details also expose concrete failure modes: multistage short-to-long RL can erode long-context ability, sequence-mean loss can encourage short reward-seeking coding outputs, and mixed-quality scientific reasoning data can underperform smaller expert-verified datasets.
 
+Brockman's research-engineering framing keeps model progress tied to executable systems. The AlexNet example combines an idea with fast GPU kernels, and current frontier work adds 100,000-GPU systems plus complex RL orchestration. Model capability should therefore be understood as the product of research direction, data, training method, runtime systems, and infrastructure rather than a research paper or parameter count alone.
+
 ## Key Concepts
 
+- [Research engineering partnership](../concepts/research-engineering-partnership.md) - model progress requires ideas and engineering systems to land together.
 - [Compare models by task, thinking budget, cost, and latency](../concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - model choice should be routed by workload constraints rather than by size alone.
 - [Update coding eval sets dynamically as model capability changes](../concepts/update-coding-eval-sets-dynamically-as-model-capability-changes.md) - coding-model comparisons need fresh tasks and calibrated difficulty to stay meaningful.
 - [Grow Agent Organizations Incrementally By Role Quality and Cost](../concepts/grow-agent-organizations-incrementally-by-role-quality-and-cost.md) - agent roles should use models whose quality and price fit the work.
@@ -116,8 +119,11 @@ GLM 4.6 adds a staged open-model training recipe for long-context coding and age
 - Which quantization formats preserve enough quality while improving local model responsiveness for each hardware class?
 - Which coding-eval time windows best separate memorized benchmark behavior from genuine current model capability?
 - Which scaffold perturbations best predict whether a coding-agent model will transfer across real harnesses and tool APIs?
+- Which model advances are blocked by research ideas versus the engineering systems needed to test and scale them?
 
 ## Sources
+
+- [#define AI Engineer - Greg Brockman, OpenAI (ft. Jensen Huang)](../sources/20250810_avWhreBUYF0.md)
 
 - [Building an Agentic Platform - Ben Kus, CTO Box](../sources/20250824_12v5S1n1eOY.md)
 

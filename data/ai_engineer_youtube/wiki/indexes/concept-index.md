@@ -282,6 +282,8 @@
 
 ## Coding Agents
 
+- [Model-shaped codebase architecture for coding agents](../concepts/model-shaped-codebase-architecture-for-coding-agents.md)
+- [Agentic coding transforms existing software](../concepts/agentic-coding-transforms-existing-software.md)
 - [Choose agent observation and action spaces explicitly](../concepts/choose-agent-observation-and-action-spaces-explicitly.md)
 - [Close agent loops around live action feedback](../concepts/close-agent-loops-around-live-action-feedback.md)
 - [Frequent intentional compaction keeps coding agents in the smart zone](../concepts/frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md)
@@ -514,6 +516,8 @@
 
 ## Infrastructure
 
+- [Dual-mode AI infrastructure](../concepts/dual-mode-ai-infrastructure.md)
+- [Research engineering partnership](../concepts/research-engineering-partnership.md)
 - [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md)
 - [Network digital twins ground change-management agents](../concepts/network-digital-twins-ground-change-management-agents.md)
 - [Normalize network telemetry into agent-readable schemas](../concepts/normalize-network-telemetry-into-agent-readable-schemas.md)
@@ -833,6 +837,7 @@
 
 ## Models
 
+- [Research engineering partnership](../concepts/research-engineering-partnership.md)
 - [Prefer model-portable agentic prompts before fine-tuning](../concepts/prefer-model-portable-agentic-prompts-before-fine-tuning.md)
 - [Treat environments as eval, data, and training substrates](../concepts/treat-environments-as-eval-data-and-training-substrates.md)
 - [Product harnesses can become model customization environments](../concepts/product-harnesses-can-become-model-customization-environments.md)
@@ -1094,6 +1099,9 @@
 
 ## Workflows
 
+- [Research engineering partnership](../concepts/research-engineering-partnership.md)
+- [Model-shaped codebase architecture for coding agents](../concepts/model-shaped-codebase-architecture-for-coding-agents.md)
+- [Agentic coding transforms existing software](../concepts/agentic-coding-transforms-existing-software.md)
 - [Choose AI coworker form factors by interaction mode](../concepts/choose-ai-coworker-form-factors-by-interaction-mode.md)
 - [Design agent presence with visual alignment and handoff](../concepts/design-agent-presence-with-visual-alignment-and-handoff.md)
 - [Court agent emergence with bounded play](../concepts/court-agent-emergence-with-bounded-play.md)

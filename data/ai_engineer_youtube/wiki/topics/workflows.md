@@ -86,8 +86,13 @@ Yegge and Kim's adoption framing makes production practice part of the workflow.
 
 AI code quality workflows should cover the whole SDLC rather than only generation. Qodo's framing treats testing, review, context, executable standards, and secure validation environments as workflow surfaces that must keep learning as generated-code volume grows.
 
+Brockman's workflow advice is to challenge inherited constraints by first principles rather than by blanket rule-breaking. The Stripe bank-integration story compresses a slow external process by pairing implementation with parallel test-script work and keeping the certifier engaged, but the stated lesson is narrower: find overhead attached to constraints that no longer apply in the specific situation. For AI-assisted workflows, that means converting speedups into better process design, not pretending every safety, testing, or coordination step is obsolete.
+
 ## Key Concepts
 
+- [Research engineering partnership](../concepts/research-engineering-partnership.md) - research and engineering workflows need repeated coordination as systems scale.
+- [Model-shaped codebase architecture for coding agents](../concepts/model-shaped-codebase-architecture-for-coding-agents.md) - workflow speed depends on modules and checks agents can act on.
+- [Agentic coding transforms existing software](../concepts/agentic-coding-transforms-existing-software.md) - agent workflows should target mature codebase transformation, not only prototypes.
 - [High-assurance agentic coding needs process, not just generation](../concepts/high-assurance-agentic-coding-needs-process-not-just-generation.md) - workflow design should wrap generated code in requirements, verification, and feedback stages.
 - [Choose AI coworker form factors by interaction mode](../concepts/choose-ai-coworker-form-factors-by-interaction-mode.md) - workflow shape determines whether AI should be invisible, ambient, inline, or conversational.
 - [Design agent presence with visual alignment and handoff](../concepts/design-agent-presence-with-visual-alignment-and-handoff.md) - inline agent workflows need visual checks, snapshots, rollback, and safe handoff.
@@ -360,9 +365,11 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 - Which large-refactor batches should wait for upstream merges, and which can safely proceed speculatively in parallel?
 - Which new-hire onboarding steps should be dedicated to configuring role-specific agents before ordinary execution work begins?
 - Which tasks need full research-plan-implement compaction, and which only need direct prompting plus validation?
+- Which inherited workflow constraints still protect quality, and which are obsolete overhead under AI-assisted execution?
 
 ## Sources
 
+- [#define AI Engineer - Greg Brockman, OpenAI (ft. Jensen Huang)](../sources/20250810_avWhreBUYF0.md)
 - [Form factors for your new AI coworkers - Craig Wattrus, Flatfile](../sources/20250822_CiMVKnX-CNI.md)
 - [How BlackRock Builds Custom Knowledge Apps at Scale — Vaibhav Page & Infant Vasanth, BlackRock](../sources/20250823_08mH36_NVos.md)
 - [Building an Agentic Platform - Ben Kus, CTO Box](../sources/20250824_12v5S1n1eOY.md)

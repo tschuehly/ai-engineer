@@ -4,6 +4,10 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Model-shaped codebase architecture for coding agents](concepts/model-shaped-codebase-architecture-for-coding-agents.md) - smaller tested modules and fast checks make coding agents more useful.
+- [Agentic coding transforms existing software](concepts/agentic-coding-transforms-existing-software.md) - the deeper coding-agent opportunity is migrations, upgrades, and legacy application change.
+- [Dual-mode AI infrastructure](concepts/dual-mode-ai-infrastructure.md) - mixed AI fleets must balance long compute-heavy jobs with low-latency realtime workloads.
+- [Research engineering partnership](concepts/research-engineering-partnership.md) - model progress needs research ideas and executable systems to mature together.
 - [Abstract LLM inference behind one routing API](concepts/abstract-llm-inference-behind-one-routing-api.md) - model marketplaces can hide provider heterogeneity behind routing, tool-calling, caching, observability, and privacy controls.
 - [Optimize action agents for reliability before abstract intelligence](concepts/optimize-action-agents-for-reliability-before-abstract-intelligence.md) - ordinary business actions need dependable completion more than higher benchmark intelligence.
 - [Extract enterprise interaction data into structured graphs](concepts/extract-enterprise-interaction-data-into-structured-graphs.md) - messy sales and marketing records can become graph-backed attribution and analytics substrates.

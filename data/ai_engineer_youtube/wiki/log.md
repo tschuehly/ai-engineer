@@ -1231,3 +1231,11 @@
 - Updated topics: [Agents](topics/agents.md), [Business Intelligence](topics/business-intelligence.md), [Evaluation](topics/evaluation.md), [Generative Media](topics/generative-media.md), [Inference](topics/inference.md), [Product Strategy](topics/product-strategy.md), [Retrieval](topics/retrieval.md), [Tools](topics/tools.md), [Voice Agents](topics/voice-agents.md)
 - Updated concepts: [Design AI creative systems for generated-asset retrieval](concepts/design-ai-creative-systems-for-generated-asset-retrieval.md), [Make voice AI devices developer-extensible](concepts/make-voice-ai-devices-developer-extensible.md), [Optimize action agents for reliability before abstract intelligence](concepts/optimize-action-agents-for-reliability-before-abstract-intelligence.md), [Extract enterprise interaction data into structured graphs](concepts/extract-enterprise-interaction-data-into-structured-graphs.md), [Abstract LLM inference behind one routing API](concepts/abstract-llm-inference-behind-one-routing-api.md)
 - Notes: Added HF0 demo-day patterns for creative asset retrieval, voice AI hardware ecosystems, reliable action agents, graph-backed enterprise interaction intelligence, and model-routing marketplaces.
+
+## [2026-05-07] ingest | #define AI Engineer - Greg Brockman, OpenAI (ft. Jensen Huang)
+
+- Source: [#define AI Engineer - Greg Brockman, OpenAI (ft. Jensen Huang)](sources/20250810_avWhreBUYF0.md)
+- Processed: `avWhreBUYF0`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Infrastructure](topics/infrastructure.md), [Inference](topics/inference.md), [Models](topics/models.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Research Engineering Partnership](concepts/research-engineering-partnership.md), [Model-Shaped Codebase Architecture for Coding Agents](concepts/model-shaped-codebase-architecture-for-coding-agents.md), [Agentic Coding Transforms Existing Software](concepts/agentic-coding-transforms-existing-software.md), [Dual-Mode AI Infrastructure](concepts/dual-mode-ai-infrastructure.md)
+- Notes: Added Brockman's AI engineer framing for research-engineering co-design, Codex-ready codebase structure, mature-codebase agent transformation, and mixed realtime/long-compute infrastructure planning.
