@@ -1870,3 +1870,11 @@
 - Updated topics: [AI Monetization](topics/ai-monetization.md), [Infrastructure](topics/infrastructure.md)
 - Updated concepts: [Treat AI Pricing as a Fast-Moving Product Hypothesis](concepts/treat-ai-pricing-as-a-fast-moving-product-hypothesis.md), [Map AI Charge Metrics to Customer-Perceived Value](concepts/map-ai-charge-metrics-to-customer-perceived-value.md), [Choose Direct or Indirect AI Monetization](concepts/choose-direct-or-indirect-ai-monetization.md), [Simulate AI Pricing Against Usage Data Before Launch](concepts/simulate-ai-pricing-against-usage-data-before-launch.md)
 - Notes: Added Orb's monetization decision framework, agent value-metric spectrum, outcome-pricing measurement caveats, and pre-launch pricing simulation workflow.
+
+## [2026-05-07] ingest | Build Dynamic Products, and Stop the AI Sideshow - Eliza Cabrera (Workday) + Jeremy Silva (Freeplay)
+
+- Source: [Build Dynamic Products, and Stop the AI Sideshow - Eliza Cabrera (Workday) + Jeremy Silva (Freeplay)](sources/20250723_CB-4NKDYnRs.md)
+- Processed: `CB-4NKDYnRs`
+- Updated topics: [Product Strategy](topics/product-strategy.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md), [Agents](topics/agents.md)
+- Updated concepts: [Integrate AI Strategy Into Core Product Strategy](concepts/integrate-ai-strategy-into-core-product-strategy.md), [Mature AI Products Through Crawl-Walk-Run Integration](concepts/mature-ai-products-through-crawl-walk-run-integration.md), [Plan AI Reliability Risk Inside Product Work](concepts/plan-ai-reliability-risk-inside-product-work.md)
+- Notes: Added the AI sideshow failure mode, staged dynamic-product integration, and product-planning guidance for AI reliability risk.

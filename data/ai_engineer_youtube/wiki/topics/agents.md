@@ -126,7 +126,7 @@ Team work-management platforms add a broader coordination plane for agents. Agen
 
 Remote agent protocols should be chosen by ownership and deployment boundaries, not by novelty. A2A is useful when a host agent needs to communicate with remote specialist agents, while MCP supplies a tool, context, and resource surface behind those agents. When the agents and tools are all local to one codebase, direct function calls can be faster and easier to debug; when a webhook launches a business process, a host agent can preserve the central decision point by slicing the event into compact delegated tasks instead of forwarding the whole payload to every subagent.
 
-GitHub Copilot adds a mainstream example of mode-dependent autonomy. A user can keep work conversational in ask or edit mode, let local agent mode explore files and run tests under immediate supervision, or assign a GitHub issue to Copilot Coding Agent for asynchronous PR-producing work. The more autonomous path increases the importance of explicit issue context, repository instructions, prepared execution environments, and trusted MCP tool access.
+GitHub Copilot adds a mainstream example of mode-dependent autonomy. A user can keep work conversational in ask or edit mode, let local agent mode explore files and run tests under immediate supervision, or assign a GitHub issue to Copilot Coding Agent for asynchronous PR-producing work. The more autonomous path increases the importance of explicit issue context, repository instructions, prepared execution environments, and trusted MCP tool access. Product agents follow a similar maturity ladder: embedded assists and contextual copilots can build product and trust before cross-product autonomous agents force UI, UX, architecture, and risk decisions across the suite.
 
 Devin 2.0 frames the same progression as changing human-intervention intervals. Longer coding-agent horizons do not only make the model "smarter"; they force new agent-product surfaces for task scoping, Slack or issue-system collaboration, codebase exploration, confidence estimates, human escalation, and self-testing before autonomous backlog work can be trusted.
 
@@ -157,6 +157,7 @@ Devin 2.0 frames the same progression as changing human-intervention intervals. 
 - [Make voice AI devices developer-extensible](../concepts/make-voice-ai-devices-developer-extensible.md) - voice agent platforms can expose hardware and application extension points.
 - [Measure AI intensity by human input to valuable output](../concepts/measure-ai-intensity-by-human-input-to-valuable-output.md) - autonomy and product value can be compared by output per user steering event.
 - [Start with augmentation when autonomous reliability is not ready](../concepts/start-with-augmentation-when-autonomous-reliability-is-not-ready.md) - agent products can earn trust through copilot-like assistance before full autonomy.
+- [Mature AI Products Through Crawl-Walk-Run Integration](../concepts/mature-ai-products-through-crawl-walk-run-integration.md) - product agents should grow from embedded assists to contextual copilots before cross-product autonomy.
 - [Use AI leapfrogging to find conservative-industry opportunities](../concepts/use-ai-leapfrogging-to-find-conservative-industry-opportunities.md) - vertical agents can spread quickly in conservative sectors when they solve concrete workflow pain.
 - [Standard models guide AI engineering practice](../concepts/standard-models-guide-ai-engineering-practice.md) - reusable mental models help teams navigate beyond single techniques such as RAG.
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - agent loops can stay flexible while the runtime validates tool execution.
@@ -614,5 +615,6 @@ Devin 2.0 frames the same progression as changing human-intervention intervals. 
 - [Structuring a modern AI team - Denys Linkov, Wisedocs](../sources/20250724_SbUxRluVRwk.md)
 - [AX is the only Experience that Matters - Ivan Burazin, Daytona](../sources/20250724_e9sLVMN76qU.md)
 - [Machines of Buying and Selling Grace - Adam Behrens, New Generation](../sources/20250723_zlZz0mDF2eg.md)
+- [Build Dynamic Products, and Stop the AI Sideshow - Eliza Cabrera (Workday) + Jeremy Silva (Freeplay)](../sources/20250723_CB-4NKDYnRs.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

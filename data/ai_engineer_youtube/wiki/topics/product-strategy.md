@@ -34,7 +34,7 @@ AI-engineer founders also need to translate technical taste into a market narrat
 
 AI team design is also a product-strategy decision. The right team depends on the company's bottleneck: domain/data gaps, weak technology capability, missing customer empathy, product integration, monetization, reliability, observability, or specialist model performance all imply different staffing. Generalist AI engineers often fit early transformation work because they can build, use available platforms, understand tradeoffs, and talk to customers, while narrow specialists are most valuable after the baseline is strong and the remaining constraint is specialized performance.
 
-AI-first SaaS strategy adds a roadmap-level version of that judgment. The product question should move from where to add intelligence to an existing feature toward which cross-workflow customer value becomes possible when AI can combine signals across teams and roles. That future cannot replace current customer commitments outright, so planning needs ritualized discovery, MVPs built for learning, and enough permission to change direction when model capability, customer expectation, or evidence shifts.
+AI-first SaaS strategy adds a roadmap-level version of that judgment. The product question should move from where to add intelligence to an existing feature toward which cross-workflow customer value becomes possible when AI can combine signals across teams and roles. That future cannot replace current customer commitments outright, so planning needs ritualized discovery, MVPs built for learning, and enough permission to change direction when model capability, customer expectation, or evidence shifts. Product teams should also avoid turning AI into a separate sideshow: isolated AI strategy, quarantined risk, technology-first demos, and top-down feature pushes tend to create bolt-on chatbots or summarizers. A stronger pattern integrates AI risk, evals, customer problems, and bottom-up product discovery into the normal roadmap, then matures through embedded assists, contextual copilots, and only later cross-product agentic experiences.
 
 ## Key Concepts
 
@@ -91,6 +91,9 @@ AI-first SaaS strategy adds a roadmap-level version of that judgment. The produc
 - [AI-First Strategy Reimagines Value Across Workflows](../concepts/ai-first-strategy-reimagines-value-across-workflows.md) - AI-first product strategy unifies workflow value instead of adding isolated model features.
 - [Ritualized Discovery Keeps AI Roadmaps Adaptive](../concepts/ritualized-discovery-keeps-ai-roadmaps-adaptive.md) - planned discovery rituals keep AI roadmaps responsive to changing capability and evidence.
 - [Treat Process as a Product During AI Transformation](../concepts/treat-process-as-a-product-during-ai-transformation.md) - operating processes should be evaluated by product-like outcomes during AI transformation.
+- [Integrate AI Strategy Into Core Product Strategy](../concepts/integrate-ai-strategy-into-core-product-strategy.md) - AI work should solve core customer problems rather than run as a separate capability showcase.
+- [Mature AI Products Through Crawl-Walk-Run Integration](../concepts/mature-ai-products-through-crawl-walk-run-integration.md) - embedded assists can grow into contextual copilots and cross-product agents without becoming bolt-ons.
+- [Plan AI Reliability Risk Inside Product Work](../concepts/plan-ai-reliability-risk-inside-product-work.md) - product planning should include AI evals, testing, prototypes, and reliability thresholds.
 
 ## Open Questions
 
@@ -128,4 +131,5 @@ AI-first SaaS strategy adds a roadmap-level version of that judgment. The produc
 - [Building AI Products That Actually Work - Ben Hylak (Raindrop), Sid Bendre (Oleve)](../sources/20250724_eSvXbb2EBYc.md)
 - [How Intuit uses LLMs to explain taxes to millions of taxpayers - Jaspreet Singh, Intuit](../sources/20250723__zl_zimMRak.md)
 - [From Hype to Habit: How We're Building an AI-First SaaS Company-While Still Shipping the Roadmap](../sources/20250723_3YGRcgZJ3yc.md)
+- [Build Dynamic Products, and Stop the AI Sideshow - Eliza Cabrera (Workday) + Jeremy Silva (Freeplay)](../sources/20250723_CB-4NKDYnRs.md)
 - [Machines of Buying and Selling Grace - Adam Behrens, New Generation](../sources/20250723_zlZz0mDF2eg.md)

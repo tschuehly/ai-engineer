@@ -12,7 +12,7 @@ Domain-native LLM workflows need a production-to-expert-to-engineering loop. Liv
 
 Enterprise AI operating models should change the workflow shape, not only the tool list. AI-native software work can move from quarterly planning toward continuous planning, from story-driven handoffs toward spec-driven work, and from uniform Agile ceremonies toward work-type-specific collaboration: agent factories for high-context but well-defined modernization, iterative co-creation for feature discovery, and workflow-specific squads for bug fixes or greenfield development. Expectations, hands-on coaching, bring-your-own-code practice, first-sprint habit formation, incentives, and outcome measurement need to move together or usage can rise without impact.
 
-AI-first SaaS transformation adds an operating cadence around uncertainty itself. Instead of treating AI exploration as isolated spikes, teams can reserve planning-cycle capacity for experiments, hackathons, learning forums, and MVPs that validate direction. Process should remain subject to outcome review: if a new ritual does not create clarity, unblock teams, or improve decision speed, it should be changed or removed before it becomes transformation overhead.
+AI-first SaaS transformation adds an operating cadence around uncertainty itself. Instead of treating AI exploration as isolated spikes, teams can reserve planning-cycle capacity for experiments, hackathons, learning forums, and MVPs that validate direction. Process should remain subject to outcome review: if a new ritual does not create clarity, unblock teams, or improve decision speed, it should be changed or removed before it becomes transformation overhead. Dynamic-product workflows add a staged product-integration path: crawl by embedding AI into existing workflows, walk by adding contextual and personalized surfaces, and run only when cross-product agentic behavior justifies rethinking UI, UX, and application architecture.
 
 Compressed research is a lower-risk operations pattern: keep the business event and human decision in place, but let an agent gather, classify, route, or summarize the evidence that made the work slow. This is especially useful when the source information already exists in company systems but is not available in the right place at decision time. Enterprise deep research is the document-centric version of that workflow: it fits tasks such as RFP responses, onboarding guides, and investment memos where the hard part is searching many private sources, choosing the right evidence, and synthesizing a cited artifact that a human can review or adapt.
 
@@ -479,6 +479,9 @@ Healthcare revenue cycle workflows add a financially measurable version of the s
 - [Ritualized Discovery Keeps AI Roadmaps Adaptive](../concepts/ritualized-discovery-keeps-ai-roadmaps-adaptive.md) - discovery capacity should be built into AI planning cycles rather than left as ad hoc spikes.
 - [Treat Process as a Product During AI Transformation](../concepts/treat-process-as-a-product-during-ai-transformation.md) - transformation rituals should be evaluated against clarity, unblocking, and decision speed.
 - [Scale AI Fluency With Self-Service Platforms](../concepts/scale-ai-fluency-with-self-service-platforms.md) - organization-wide AI workflows need enablement and platform support beyond specialist teams.
+- [Integrate AI Strategy Into Core Product Strategy](../concepts/integrate-ai-strategy-into-core-product-strategy.md) - roadmap workflow should pair top-level AI strategy with bottom-up product discovery.
+- [Mature AI Products Through Crawl-Walk-Run Integration](../concepts/mature-ai-products-through-crawl-walk-run-integration.md) - AI workflows can mature from embedded acceleration to contextual help and agentic cross-product operation.
+- [Plan AI Reliability Risk Inside Product Work](../concepts/plan-ai-reliability-risk-inside-product-work.md) - product workflows should test, evaluate, and prototype AI risk before broad launch.
 
 ## Open Questions
 
@@ -667,3 +670,4 @@ Healthcare revenue cycle workflows add a financially measurable version of the s
 - [Structuring a modern AI team - Denys Linkov, Wisedocs](../sources/20250724_SbUxRluVRwk.md)
 - [AI That Pays: Lessons from Revenue Cycle - Nathan Wan, Ensemble Health](../sources/20250724_TquUsN1QsWs.md)
 - [Building AI Products That Actually Work - Ben Hylak (Raindrop), Sid Bendre (Oleve)](../sources/20250724_eSvXbb2EBYc.md)
+- [Build Dynamic Products, and Stop the AI Sideshow - Eliza Cabrera (Workday) + Jeremy Silva (Freeplay)](../sources/20250723_CB-4NKDYnRs.md)

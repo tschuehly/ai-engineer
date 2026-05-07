@@ -24,6 +24,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Expose Commerce Data Through Agent-Native Product APIs](concepts/expose-commerce-data-through-agent-native-product-apis.md) - merchant catalogs need API or MCP surfaces that avoid brittle scraping and one-off feeds.
 - [AI-First Strategy Reimagines Value Across Workflows](concepts/ai-first-strategy-reimagines-value-across-workflows.md) - AI-first SaaS strategy should unify customer value across workflows rather than add isolated AI features.
 - [Ritualized Discovery Keeps AI Roadmaps Adaptive](concepts/ritualized-discovery-keeps-ai-roadmaps-adaptive.md) - planned experimentation and learning keep AI roadmaps responsive to fast-changing capability.
+- [Integrate AI Strategy Into Core Product Strategy](concepts/integrate-ai-strategy-into-core-product-strategy.md) - AI initiatives should not become separate sidecars to core product strategy.
+- [Mature AI Products Through Crawl-Walk-Run Integration](concepts/mature-ai-products-through-crawl-walk-run-integration.md) - embedded assists can mature into contextual copilots and cross-product agents.
+- [Plan AI Reliability Risk Inside Product Work](concepts/plan-ai-reliability-risk-inside-product-work.md) - product planning should include evals, testing, prototypes, and reliability thresholds.
 
 - [Enterprise Open-Model Adoption Follows Task Pressure](concepts/enterprise-open-model-adoption-follows-task-pressure.md) - open models become attractive when enterprise workloads expose task-specific quality, latency, cost, or differentiation pressure.
 - [Self-Hosted Inference Needs a Platform Beyond Runtime and GPUs](concepts/self-hosted-inference-needs-a-platform-beyond-runtime-and-gpus.md) - model weights, serving runtimes, and GPUs still need production platform work for mission-critical inference.

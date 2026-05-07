@@ -200,6 +200,7 @@ Coding-agent code quality needs evaluation while the diff is still forming. Usef
 - [Optimize action agents for reliability before abstract intelligence](../concepts/optimize-action-agents-for-reliability-before-abstract-intelligence.md) - action-agent evaluation should prioritize dependable task completion over abstract capability claims.
 - [Map application evals to the product court](../concepts/map-application-evals-to-the-product-court.md) - eval sets should cover the in-bounds domain users actually exercise.
 - [Resolve AI Capability Risk Before Product Surface Commitment](../concepts/resolve-ai-capability-risk-before-product-surface-commitment.md) - capability-first evals keep product teams from building around model behavior that cannot meet the workflow threshold.
+- [Plan AI Reliability Risk Inside Product Work](../concepts/plan-ai-reliability-risk-inside-product-work.md) - product teams need evals and tests that make AI reliability risk visible during roadmap planning.
 - [Keep eval data constant and task logic variable](../concepts/keep-eval-data-constant-and-task-logic-variable.md) - stable data and variable tasks make prompt, RAG, preprocessing, and model changes comparable.
 - [Prefer simple debuggable eval scores](../concepts/prefer-simple-debuggable-eval-scores.md) - simple pass/fail checks and understandable CI reports make regressions easier to act on.
 - [Reliability thresholds determine whether coding agents save time](../concepts/reliability-thresholds-determine-whether-coding-agents-save-time.md) - productivity depends on total prompting, review, correction, and handoff cost.
@@ -550,3 +551,4 @@ Coding-agent code quality needs evaluation while the diff is still forming. Usef
 - [Software Development Agents: What Works and What Doesn't - Robert Brennan, OpenHands](../sources/20250725_o_hhkJtlbSs.md)
 - [AI That Pays: Lessons from Revenue Cycle - Nathan Wan, Ensemble Health](../sources/20250724_TquUsN1QsWs.md)
 - [Building AI Products That Actually Work - Ben Hylak (Raindrop), Sid Bendre (Oleve)](../sources/20250724_eSvXbb2EBYc.md)
+- [Build Dynamic Products, and Stop the AI Sideshow - Eliza Cabrera (Workday) + Jeremy Silva (Freeplay)](../sources/20250723_CB-4NKDYnRs.md)
