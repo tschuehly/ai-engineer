@@ -1311,3 +1311,11 @@
 - Updated topics: [Vision AI](topics/vision-ai.md), [Evaluation](topics/evaluation.md), [Models](topics/models.md), [Infrastructure](topics/infrastructure.md)
 - Updated concepts: [Do not trust saturated vision benchmarks as visual intelligence](concepts/do-not-trust-saturated-vision-benchmarks-as-visual-intelligence.md), [Use vision-only features when captions erase visual distinctions](concepts/use-vision-only-features-when-captions-erase-visual-distinctions.md), [Evaluate vision models on domain adaptability and few-shot grounding](concepts/evaluate-vision-models-on-domain-adaptability-and-few-shot-grounding.md)
 - Notes: Added Roboflow's vision-AI framing for saturated benchmark caveats, DINOv2-style visual feature fidelity, and RF100-VL domain-adaptability evaluation.
+
+## [2026-05-07] ingest | Real World Development with GitHub Copilot and VS Code — Harald Kirschner, Christopher Harrison
+
+- Source: [Real World Development with GitHub Copilot and VS Code — Harald Kirschner, Christopher Harrison](sources/20250803_eOxOzcw70f0.md)
+- Processed: `eOxOzcw70f0`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Stage Vibe Coding From Prototype to Structured Workflow](concepts/stage-vibe-coding-from-prototype-to-structured-workflow.md), [Use Repository Instructions To Ground Coding Agents](concepts/use-repository-instructions-to-ground-coding-agents.md), [Custom Agent Modes Encode Repeatable Coding Workflows](concepts/custom-agent-modes-encode-repeatable-coding-workflows.md), [Visual Browser Context Steers Frontend Agents](concepts/visual-browser-context-steers-frontend-agents.md)
+- Notes: Added Copilot and VS Code workflow patterns for moving from exploratory vibe coding to repeatable team workflows with repo instructions, custom modes, browser context, MCP tools, and scoped approvals.

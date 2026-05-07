@@ -4,6 +4,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Stage vibe coding from prototype to structured workflow](concepts/stage-vibe-coding-from-prototype-to-structured-workflow.md) - use exploratory vibe coding for learning and prototypes, then add templates, instructions, tools, tests, and approvals for durable work.
+- [Use repository instructions to ground coding agents](concepts/use-repository-instructions-to-ground-coding-agents.md) - keep shared stack, version, tooling, and workflow guidance in repo-visible instructions instead of repeating it in every prompt.
+- [Visual browser context steers frontend agents](concepts/visual-browser-context-steers-frontend-agents.md) - attach rendered UI, selected elements, HTML, CSS, screenshots, and browser-test tools to frontend agent loops.
 - [Treat AI coding as safe software change](concepts/treat-ai-coding-as-safe-software-change.md) - judge production AI coding by safe change, ownership, and operations rather than generated-code volume.
 - [Give coding agents the same engineering infrastructure humans need](concepts/give-coding-agents-the-same-engineering-infrastructure-humans-need.md) - agents need documented standards, reproducible environments, fast tests, boundaries, and clear tasks.
 - [Make code review the bottleneck skill for AI-generated code](concepts/make-code-review-the-bottleneck-skill-for-ai-generated-code.md) - review capacity and review tooling become central as agents produce more implementation.

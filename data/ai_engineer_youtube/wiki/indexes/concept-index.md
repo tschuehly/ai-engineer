@@ -289,6 +289,10 @@
 ## Coding Agents
 
 - [Treat AI coding as safe software change](../concepts/treat-ai-coding-as-safe-software-change.md)
+- [Stage vibe coding from prototype to structured workflow](../concepts/stage-vibe-coding-from-prototype-to-structured-workflow.md)
+- [Use repository instructions to ground coding agents](../concepts/use-repository-instructions-to-ground-coding-agents.md)
+- [Custom agent modes encode repeatable coding workflows](../concepts/custom-agent-modes-encode-repeatable-coding-workflows.md)
+- [Visual browser context steers frontend agents](../concepts/visual-browser-context-steers-frontend-agents.md)
 - [Give coding agents the same engineering infrastructure humans need](../concepts/give-coding-agents-the-same-engineering-infrastructure-humans-need.md)
 - [Make code review the bottleneck skill for AI-generated code](../concepts/make-code-review-the-bottleneck-skill-for-ai-generated-code.md)
 - [Model-shaped codebase architecture for coding agents](../concepts/model-shaped-codebase-architecture-for-coding-agents.md)
@@ -1004,6 +1008,9 @@
 - [Expose local and open-source models through familiar API clients](../concepts/expose-local-and-open-source-models-through-familiar-api-clients.md)
 
 - [Run Coding Agents Through a Simple Master Loop](../concepts/run-coding-agents-through-a-simple-master-loop.md)
+- [Use repository instructions to ground coding agents](../concepts/use-repository-instructions-to-ground-coding-agents.md)
+- [Custom agent modes encode repeatable coding workflows](../concepts/custom-agent-modes-encode-repeatable-coding-workflows.md)
+- [Visual browser context steers frontend agents](../concepts/visual-browser-context-steers-frontend-agents.md)
 - [Expose task workflow guidance through MCP resources and tools](../concepts/expose-task-workflow-guidance-through-mcp-resources-and-tools.md)
 - [Task-tuned tool sets beat generic integration surfaces for core coding loops](../concepts/task-tuned-tool-sets-beat-generic-integration-surfaces-for-core-coding-loops.md)
 - [Use subagents to isolate context-heavy subtasks](../concepts/use-subagents-to-isolate-context-heavy-subtasks.md)
@@ -1140,6 +1147,10 @@
 ## Workflows
 
 - [Treat AI coding as safe software change](../concepts/treat-ai-coding-as-safe-software-change.md)
+- [Stage vibe coding from prototype to structured workflow](../concepts/stage-vibe-coding-from-prototype-to-structured-workflow.md)
+- [Use repository instructions to ground coding agents](../concepts/use-repository-instructions-to-ground-coding-agents.md)
+- [Custom agent modes encode repeatable coding workflows](../concepts/custom-agent-modes-encode-repeatable-coding-workflows.md)
+- [Visual browser context steers frontend agents](../concepts/visual-browser-context-steers-frontend-agents.md)
 - [Give coding agents the same engineering infrastructure humans need](../concepts/give-coding-agents-the-same-engineering-infrastructure-humans-need.md)
 - [Make code review the bottleneck skill for AI-generated code](../concepts/make-code-review-the-bottleneck-skill-for-ai-generated-code.md)
 - [Use Fast Query-Document Evals for Retrieval Changes](../concepts/use-fast-query-document-evals-for-retrieval-changes.md)

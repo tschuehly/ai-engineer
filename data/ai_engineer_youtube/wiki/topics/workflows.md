@@ -94,7 +94,7 @@ Yegge and Kim's adoption framing makes production practice part of the workflow.
 
 AI code quality workflows should cover the whole SDLC rather than only generation. Qodo's framing treats testing, review, context, executable standards, and secure validation environments as workflow surfaces that must keep learning as generated-code volume grows. Confident vibe coding adds another workflow shape: use the command line to compose specialized coding agents, and move review, coverage, and best-practice feedback earlier than PR-time inspection.
 
-Brockman's workflow advice is to challenge inherited constraints by first principles rather than by blanket rule-breaking. The Stripe bank-integration story compresses a slow external process by pairing implementation with parallel test-script work and keeping the certifier engaged, but the stated lesson is narrower: find overhead attached to constraints that no longer apply in the specific situation. For AI-assisted workflows, that means converting speedups into better process design, not pretending every safety, testing, or coordination step is obsolete.
+Brockman's workflow advice is to challenge inherited constraints by first principles rather than by blanket rule-breaking. The Stripe bank-integration story compresses a slow external process by pairing implementation with parallel test-script work and keeping the certifier engaged, but the stated lesson is narrower: find overhead attached to constraints that no longer apply in the specific situation. For AI-assisted workflows, that means converting speedups into better process design, not pretending every safety, testing, or coordination step is obsolete. Copilot's VS Code workflow adds another practical path from ad hoc prompting to team practice: begin with a fast prototype, then stabilize the workflow through starter templates, `.github/copilot-instructions.md`, custom modes such as TDD, configured tasks and tests, MCP integrations, browser feedback, and scoped approval settings.
 
 ## Key Concepts
 
@@ -103,6 +103,10 @@ Brockman's workflow advice is to challenge inherited constraints by first princi
 - [Research engineering partnership](../concepts/research-engineering-partnership.md) - research and engineering workflows need repeated coordination as systems scale.
 - [Model-shaped codebase architecture for coding agents](../concepts/model-shaped-codebase-architecture-for-coding-agents.md) - workflow speed depends on modules and checks agents can act on.
 - [Treat AI coding as safe software change](../concepts/treat-ai-coding-as-safe-software-change.md) - production workflows should optimize for safe change, not raw generated-code volume.
+- [Stage vibe coding from prototype to structured workflow](../concepts/stage-vibe-coding-from-prototype-to-structured-workflow.md) - use more structure as a coding-agent session moves from exploration to maintainable work.
+- [Use repository instructions to ground coding agents](../concepts/use-repository-instructions-to-ground-coding-agents.md) - shared instructions keep team workflow guidance available across agent sessions.
+- [Custom agent modes encode repeatable coding workflows](../concepts/custom-agent-modes-encode-repeatable-coding-workflows.md) - modes make repeated practices such as TDD invocable without restating the whole process.
+- [Visual browser context steers frontend agents](../concepts/visual-browser-context-steers-frontend-agents.md) - browser evidence closes the loop between frontend intent, runtime UI, and code changes.
 - [Give coding agents the same engineering infrastructure humans need](../concepts/give-coding-agents-the-same-engineering-infrastructure-humans-need.md) - agent workflows need reproducible setup, local tests, standards, and scoped tasks.
 - [Make code review the bottleneck skill for AI-generated code](../concepts/make-code-review-the-bottleneck-skill-for-ai-generated-code.md) - review workflows should focus human attention on intent, impact, and quality.
 - [Agentic coding transforms existing software](../concepts/agentic-coding-transforms-existing-software.md) - agent workflows should target mature codebase transformation, not only prototypes.
@@ -495,3 +499,4 @@ Brockman's workflow advice is to challenge inherited constraints by first princi
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)
 - [Vision: Zero Bugs — Johann Schleier-Smith, Temporal](../sources/20251124_qLqttdO33UM.md)
 - [Backlog.md: Terminal Kanban Board for Managing Tasks with AI Agents - Alex Gavrilescu, Funstage](../sources/20251124_zMXKhhwiCIc.md)
+- [Real World Development with GitHub Copilot and VS Code — Harald Kirschner, Christopher Harrison](../sources/20250803_eOxOzcw70f0.md)

@@ -50,12 +50,15 @@ Shell wrappers can also act as local harness tools. A wrapper around Codex CLI c
 
 Model-client wrappers are another tool-surface pattern. When a compiled local model can be invoked through the same `embeddings.create`-style call shape as a hosted model, application and agent code can stay stable while runtime-specific resolution, FFI loading, and output shaping move behind the client boundary.
 
-AI coworker products add tool surfaces that are neither plain chat nor backend APIs. A tool can be invisible background work, ambient affordances in a workspace, inline transformation controls, or a conversational builder. When an agent acts inline, the tool UX should show what it is doing, ask for alignment at meaningful checkpoints, keep snapshots and rollback paths visible, and hand control back to the user when the model cannot safely complete the work.
+AI coworker products add tool surfaces that are neither plain chat nor backend APIs. A tool can be invisible background work, ambient affordances in a workspace, inline transformation controls, or a conversational builder. When an agent acts inline, the tool UX should show what it is doing, ask for alignment at meaningful checkpoints, keep snapshots and rollback paths visible, and hand control back to the user when the model cannot safely complete the work. Coding IDEs add another tool-policy layer: repository instructions, custom modes, MCP servers, browser previews, selected-element context, and auto-approval settings shape what the agent sees and may do. Terminal approvals remain especially sensitive because command chaining can make a simple allow-list less precise than it looks.
 
 ## Key Concepts
 
 - [Abstract LLM inference behind one routing API](../concepts/abstract-llm-inference-behind-one-routing-api.md) - model-routing platforms can normalize tool calling, provider edge cases, caching, and observability.
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - compact tool loops can be the core architecture for coding agents.
+- [Use repository instructions to ground coding agents](../concepts/use-repository-instructions-to-ground-coding-agents.md) - repo instructions are a shared model-facing tool for team conventions.
+- [Custom agent modes encode repeatable coding workflows](../concepts/custom-agent-modes-encode-repeatable-coding-workflows.md) - modes package workflow constraints, tools, and prompts into reusable agent behavior.
+- [Visual browser context steers frontend agents](../concepts/visual-browser-context-steers-frontend-agents.md) - browser previews and selected element context make rendered UI a direct agent tool surface.
 - [Choose AI coworker form factors by interaction mode](../concepts/choose-ai-coworker-form-factors-by-interaction-mode.md) - agent tool surfaces can be invisible, ambient, inline, or conversational rather than only chat.
 - [Prototype AI UX by feeling the model material](../concepts/prototype-ai-ux-by-feeling-the-model-material.md) - runnable tools reveal whether a model fits the proposed interaction surface.
 - [Design agent presence with visual alignment and handoff](../concepts/design-agent-presence-with-visual-alignment-and-handoff.md) - inline tools need visible progress, alignment, rollback, and handoff.
@@ -316,5 +319,6 @@ AI coworker products add tool surfaces that are neither plain chat nor backend A
 - [Context Engineering: Connecting the Dots with Graphs - Stephen Chin, Neo4j](../sources/20251124_LLuKshphGOE.md)
 - [Five hard earned lessons about Evals - Ankur Goyal, Braintrust](../sources/20250823_a4BV0gGmXgA.md)
 - [Backlog.md: Terminal Kanban Board for Managing Tasks with AI Agents - Alex Gavrilescu, Funstage](../sources/20251124_zMXKhhwiCIc.md)
+- [Real World Development with GitHub Copilot and VS Code — Harald Kirschner, Christopher Harrison](../sources/20250803_eOxOzcw70f0.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)
