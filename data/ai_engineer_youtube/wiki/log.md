@@ -1503,3 +1503,11 @@
 - Updated topics: [Retrieval](topics/retrieval.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md)
 - Updated concepts: [Decompose Domain RAG by Query Structure and Corpus Scale](concepts/decompose-domain-rag-by-query-structure-and-corpus-scale.md), [Layer Domain RAG Evals by Fidelity, Cost, and Speed](concepts/layer-domain-rag-evals-by-fidelity-cost-and-speed.md), [AI Data Lakehouses Need Online Retrieval and Offline Iteration Paths](concepts/ai-data-lakehouses-need-online-retrieval-and-offline-iteration-paths.md)
 - Notes: Added Harvey and LanceDB's enterprise legal RAG patterns for domain-shaped retrieval, expert-grounded eval ladders, and shared multimodal AI-data infrastructure.
+
+## [2026-05-07] ingest | [Full Workshop] Building Metrics that actually work - David Karam, Pi Labs (fmr Google Search)
+
+- Source: [[Full Workshop] Building Metrics that actually work - David Karam, Pi Labs (fmr Google Search)](sources/20250729_jxrGodnopHo.md)
+- Processed: `jxrGodnopHo`
+- Updated topics: [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Treat Evals as the Home of Domain Knowledge](concepts/treat-evals-as-the-home-of-domain-knowledge.md), [Build Scoring Systems From Inspectable Quality Signals](concepts/build-scoring-systems-from-inspectable-quality-signals.md), [Use Online Candidate Scoring to Lift Generation Quality](concepts/use-online-candidate-scoring-to-lift-generation-quality.md)
+- Notes: Added Pi Labs' metric-building workflow: encode domain judgment in evolving scoring systems, decompose subjective quality into inspectable signals, calibrate metrics, and reuse scorers for online candidate selection.

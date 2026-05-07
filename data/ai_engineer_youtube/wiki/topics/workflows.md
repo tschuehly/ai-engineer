@@ -40,6 +40,8 @@ For AI app reliability work, build evals at the start of the workflow rather tha
 
 Application eval workflows should also map the product domain before optimizing. The team should gather real prompts and feedback, identify in-bounds and out-of-bounds work, keep the data set stable, vary the task logic under test, and run simple debuggable scores in CI so prompt, model, RAG, or preprocessing changes reveal both improvements and regressions.
 
+Metric-building workflows should start from a simple product behavior, then iteratively turn coarse judgment into a scoring system. Teams can begin with a system prompt, examples, or explicit criteria, generate good and bad cases, inspect failures, add correlated signals, and calibrate against human and user behavior. As the scorer matures, it can move from offline spreadsheets and notebooks into online candidate scoring, prompt optimization, synthetic-data filtering, and training loops.
+
 AI application improvement workflows should also inspect both inputs and outputs. Input-side retrieval checks should run quickly enough to support repeated experiments on embedding models, chunking, and top-k choices. Output-side conversation analysis should extract structured fields from chats and agent traces, cluster similar work, and compare KPIs across those clusters so teams can decide whether to add tools, build routers, change prompts, educate users, or refuse unsupported categories.
 
 DSPy-style workflows separate program shape from prompt shape: teams can define signatures and modules, route inputs through ordinary control flow, select adapters for model-facing format, and then optimize the resulting program with datasets and metrics. This is most useful when the task has known examples and quality criteria, not when the workflow is too open-ended to score. Prompt-learning workflows should likewise be made explicit: start from examples with feedback, choose sample size and train/test split, run bounded generate/evaluate/refine loops, and review whether evaluator feedback is trustworthy enough to drive the next prompt.
@@ -184,6 +186,9 @@ Knowledge-base onboarding workflows can move domain setup from manual forms into
 - [Map application evals to the product court](../concepts/map-application-evals-to-the-product-court.md) - AI app eval workflows should cover real in-bounds user behavior instead of irrelevant or clustered cases.
 - [Keep eval data constant and task logic variable](../concepts/keep-eval-data-constant-and-task-logic-variable.md) - stable data with variable task logic keeps eval comparisons clean across implementation changes.
 - [Prefer simple debuggable eval scores](../concepts/prefer-simple-debuggable-eval-scores.md) - understandable scoring and CI reports make eval workflows useful during review.
+- [Treat Evals as the Home of Domain Knowledge](../concepts/treat-evals-as-the-home-of-domain-knowledge.md) - workflow-specific judgment should be encoded where later optimization loops can reuse it.
+- [Build Scoring Systems From Inspectable Quality Signals](../concepts/build-scoring-systems-from-inspectable-quality-signals.md) - scoring workflows should grow signal by signal as failures expose missing criteria.
+- [Use Online Candidate Scoring to Lift Generation Quality](../concepts/use-online-candidate-scoring-to-lift-generation-quality.md) - production workflows can reuse eval metrics to select among sampled outputs.
 - [Agentic document extraction decomposes complex fields](../concepts/agentic-document-extraction-decomposes-complex-fields.md) - field-heavy document workflows should be decomposed into grouped, checked, and retryable steps.
 - [Domain-expert sandboxes accelerate knowledge-app iteration](../concepts/domain-expert-sandboxes-accelerate-knowledge-app-iteration.md) - domain operators need a fast loop for templates, validations, runs, and model strategies.
 - [App factories turn sandbox artifacts into governed knowledge apps](../concepts/app-factories-turn-sandbox-artifacts-into-governed-knowledge-apps.md) - approved sandbox definitions can be packaged into governed user-facing apps.
@@ -538,3 +543,4 @@ Knowledge-base onboarding workflows can move domain setup from manual forms into
 - [Useful General Intelligence - Danielle Perszyk, Amazon AGI](../sources/20250802_Dj0b_cEBHBI.md)
 - [Building Agents at Cloud Scale - Antje Barth, AWS](../sources/20250802_WJjInLeaJjo.md)
 - [Building Alice's Brain: an AI Sales Rep that Learns Like a Human - Sherwood & Satwik, 11x](../sources/20250729_KWmkMV0FNwQ.md)
+- [[Full Workshop] Building Metrics that actually work - David Karam, Pi Labs (fmr Google Search)](../sources/20250729_jxrGodnopHo.md)

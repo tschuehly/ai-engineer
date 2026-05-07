@@ -773,6 +773,9 @@
 
 ## Evaluation
 
+- [Treat Evals as the Home of Domain Knowledge](../concepts/treat-evals-as-the-home-of-domain-knowledge.md)
+- [Build Scoring Systems From Inspectable Quality Signals](../concepts/build-scoring-systems-from-inspectable-quality-signals.md)
+- [Use Online Candidate Scoring to Lift Generation Quality](../concepts/use-online-candidate-scoring-to-lift-generation-quality.md)
 - [Benchmark RAG Pipelines After Production Usage Exists](../concepts/benchmark-rag-pipelines-after-production-usage-exists.md)
 - [Layer Domain RAG Evals by Fidelity, Cost, and Speed](../concepts/layer-domain-rag-evals-by-fidelity-cost-and-speed.md)
 - [Decompose Domain RAG by Query Structure and Corpus Scale](../concepts/decompose-domain-rag-by-query-structure-and-corpus-scale.md)
@@ -1284,6 +1287,9 @@
 
 ## Workflows
 
+- [Treat Evals as the Home of Domain Knowledge](../concepts/treat-evals-as-the-home-of-domain-knowledge.md)
+- [Build Scoring Systems From Inspectable Quality Signals](../concepts/build-scoring-systems-from-inspectable-quality-signals.md)
+- [Use Online Candidate Scoring to Lift Generation Quality](../concepts/use-online-candidate-scoring-to-lift-generation-quality.md)
 - [Seller Knowledge Bases Let Agents Pull Business Context at Action Time](../concepts/seller-knowledge-bases-let-agents-pull-business-context-at-action-time.md)
 - [Show Retrieved Chunks Inside Agent Workflows](../concepts/show-retrieved-chunks-inside-agent-workflows.md)
 - [Plan Asynchronous Authorization for Background Agents](../concepts/plan-asynchronous-authorization-for-background-agents.md)

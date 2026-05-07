@@ -5,6 +5,8 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 ## Current Emphasis
 
 - [Decompose Domain RAG by Query Structure and Corpus Scale](concepts/decompose-domain-rag-by-query-structure-and-corpus-scale.md) - expert retrieval should reflect corpus scale, jurisdictional filters, dates, named provisions, and domain jargon.
+- [Build Scoring Systems From Inspectable Quality Signals](concepts/build-scoring-systems-from-inspectable-quality-signals.md) - subjective AI product quality becomes easier to debug when decomposed into calibrated signals.
+- [Treat Evals as the Home of Domain Knowledge](concepts/treat-evals-as-the-home-of-domain-knowledge.md) - scoring systems can become the reusable judgment layer for prompts, data, training, and runtime selection.
 - [Layer Domain RAG Evals by Fidelity, Cost, and Speed](concepts/layer-domain-rag-evals-by-fidelity-cost-and-speed.md) - high-stakes RAG needs expert review, curated criteria, and fast retrieval metrics.
 - [AI Data Lakehouses Need Online Retrieval and Offline Iteration Paths](concepts/ai-data-lakehouses-need-online-retrieval-and-offline-iteration-paths.md) - multimodal AI data infrastructure should serve search, analytics, preprocessing, and training from a shared substrate.
 - [Treat Code-Executing Agents as RCE-Risk Surfaces](concepts/treat-code-executing-agents-as-rce-risk-surfaces.md) - shell and code execution should be secured as an intentional remote-code-execution surface.
