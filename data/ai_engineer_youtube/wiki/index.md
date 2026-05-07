@@ -4,6 +4,7 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Record Workflow History for Agent Debugging and Compliance](concepts/record-workflow-history-for-agent-debugging-and-compliance.md) - durable workflow history makes production agent behavior inspectable for debugging, replay, and audit.
 - [AI Product Management Balances Viability, Feasibility, Desirability, and AI Uncertainty](concepts/ai-product-management-balances-viability-feasibility-desirability-and-ai-uncertainty.md) - AI product direction needs product judgment and AI/data/eval fluency in the same loop.
 - [Resolve AI Capability Risk Before Product Surface Commitment](concepts/resolve-ai-capability-risk-before-product-surface-commitment.md) - capability evals should precede product-surface investment when model feasibility is the largest risk.
 - [Explore AI Features Widely Then Cut Back to the User Workflow](concepts/explore-ai-features-widely-then-cut-back-to-the-user-workflow.md) - cheap AI feature prototypes should be tested broadly, then simplified around validated user needs.

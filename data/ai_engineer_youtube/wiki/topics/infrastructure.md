@@ -126,6 +126,7 @@ Remote MCP infrastructure can reuse ordinary cloud primitives when the local std
 - [Use hosted model playgrounds to prototype before owning infrastructure](../concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md) - hosted tools can validate model and deployment choices before teams own the runtime.
 - [Treat multi-agent systems as distributed systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md) - agent infrastructure needs distributed-systems controls once multiple agents share state and dependencies.
 - [Use durable execution for production agent loops](../concepts/use-durable-execution-for-production-agent-loops.md) - durable execution records completed LLM and tool steps so production agent loops can resume.
+- [Record Workflow History for Agent Debugging and Compliance](../concepts/record-workflow-history-for-agent-debugging-and-compliance.md) - durable histories provide evidence for debugging, test/dev replay, and compliance.
 - [Observability-to-PR agents turn incidents into reviewable fixes](../concepts/observability-to-pr-agents-turn-incidents-into-reviewable-fixes.md) - operational workflows can produce reviewable code changes from production evidence.
 - [Analyze operational health over time slices before invoking repair agents](../concepts/analyze-operational-health-over-time-slices-before-invoking-repair-agents.md) - time-windowed health analysis reduces noisy alert-to-agent handoffs.
 - [Headless coding-agent servers make agents callable infrastructure](../concepts/headless-coding-agent-servers-make-agents-callable-infrastructure.md) - coding agents can be deployed as controlled backend services.
@@ -383,5 +384,6 @@ Remote MCP infrastructure can reuse ordinary cloud primitives when the local std
 - [How we hacked YC Spring 2025 batch's AI agents - Rene Brandel, Casco](../sources/20250730_kv-QAuKWllQ.md)
 - [OpenAI on Securing Code-Executing AI Agents - Fouad Matin (Codex, Agent Robustness)](../sources/20250730_w7IMuYsBNr8.md)
 - [Layering every technique in RAG, one query at a time - David Karam, Pi Labs (fmr. Google Search)](../sources/20250729_w9u11ioHGA0.md)
+- [Scaling AI Agents Without Breaking Reliability - Preeti Somal, Temporal](../sources/20250728_1izYWsokr9s.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

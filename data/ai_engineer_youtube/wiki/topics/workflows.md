@@ -110,6 +110,8 @@ Agentic workflows should be designed as composable primitives, not as allegiance
 
 Knowledge-base onboarding workflows can move domain setup from manual forms into source ingestion. A practical seller-agent flow lets the user upload decks, websites, images, calls, and videos; stores the raw artifact; parses asynchronously by source type; chunks and embeds the parsed Markdown; updates the UI; retrieves relevant chunks at generation time; and shows the retrieved evidence beside generated messages for review.
 
+Durable workflow engines are also an agent observability boundary. When the workflow records signals, queries, activity calls, retries, and state transitions, teams can inspect how an agent crossed LLM calls, tools, user input, and long-running waits instead of reconstructing behavior from scattered logs.
+
 ## Key Concepts
 
 - [Plan Asynchronous Authorization for Background Agents](../concepts/plan-asynchronous-authorization-for-background-agents.md) - long-running workflows need ways to request additional access after the user leaves the initial authorization flow.
@@ -163,6 +165,7 @@ Knowledge-base onboarding workflows can move domain setup from manual forms into
 - [Human Control Planes Turn Agent Swarms Into Manageable Organizations](../concepts/human-control-planes-turn-agent-swarms-into-manageable-organizations.md) - workflows need visible organizational state when many agents work in parallel.
 - [Treat multi-agent systems as distributed systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md) - workflow design must account for coordination complexity and shared-state failure modes.
 - [Use durable execution for production agent loops](../concepts/use-durable-execution-for-production-agent-loops.md) - workflow durability prevents crashes or rate limits from resetting long-running agent loops.
+- [Record Workflow History for Agent Debugging and Compliance](../concepts/record-workflow-history-for-agent-debugging-and-compliance.md) - durable workflow histories make agent execution inspectable after the run.
 - [Compose Deep Research as Plan, Parallel Search, and Analysis Agents](../concepts/compose-deep-research-as-plan-parallel-search-and-analysis-agents.md) - staged research workflows can stay inspectable while running search branches in parallel.
 - [Evaluate Agent Loops With Correctness, Cost, Latency, and Step Counts](../concepts/evaluate-agent-loops-with-correctness-cost-latency-and-step-counts.md) - workflow evals should check quality before trusting efficiency metrics.
 - [Observability-to-PR agents turn incidents into reviewable fixes](../concepts/observability-to-pr-agents-turn-incidents-into-reviewable-fixes.md) - workflows can turn detected infrastructure issues into planned coding-agent PRs.
@@ -547,5 +550,6 @@ Knowledge-base onboarding workflows can move domain setup from manual forms into
 - [Useful General Intelligence - Danielle Perszyk, Amazon AGI](../sources/20250802_Dj0b_cEBHBI.md)
 - [Building Agents at Cloud Scale - Antje Barth, AWS](../sources/20250802_WJjInLeaJjo.md)
 - [Building Alice's Brain: an AI Sales Rep that Learns Like a Human - Sherwood & Satwik, 11x](../sources/20250729_KWmkMV0FNwQ.md)
+- [Scaling AI Agents Without Breaking Reliability - Preeti Somal, Temporal](../sources/20250728_1izYWsokr9s.md)
 - [Why your product needs an AI product manager, and why it should be you — James Lowe, i.AI](../sources/20250728_xzJdSi2Tsqw.md)
 - [[Full Workshop] Building Metrics that actually work - David Karam, Pi Labs (fmr Google Search)](../sources/20250729_jxrGodnopHo.md)

@@ -179,6 +179,7 @@ Agent search is not just human search with a bot typing into it. Agents can pass
 - [Treat multi-agent systems as distributed systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md) - multi-agent scale introduces coordination, stale state, and failure-propagation problems.
 - [Monitor Whole Agent Systems, Not Single Models](../concepts/monitor-whole-agent-systems-not-single-models.md) - agent observability should cover the full autonomous or multi-agent system, not only one model call.
 - [Use durable execution for production agent loops](../concepts/use-durable-execution-for-production-agent-loops.md) - production loops should persist LLM calls, tool outputs, and state across crashes and retries.
+- [Record Workflow History for Agent Debugging and Compliance](../concepts/record-workflow-history-for-agent-debugging-and-compliance.md) - agent executions need inspectable histories when debugging, compliance, or test replay matter.
 - [Compose Deep Research as Plan, Parallel Search, and Analysis Agents](../concepts/compose-deep-research-as-plan-parallel-search-and-analysis-agents.md) - research agents can be composed from inspectable planner, search, and analysis roles.
 - [Evaluate Agent Loops With Correctness, Cost, Latency, and Step Counts](../concepts/evaluate-agent-loops-with-correctness-cost-latency-and-step-counts.md) - operational metrics need correctness checks before they rank agent models.
 - [Treat agent APIs as asynchronous task lifecycles](../concepts/treat-agent-apis-as-asynchronous-task-lifecycles.md) - long-running agent APIs need stable handles, status, continuation, and result delivery.
@@ -512,5 +513,6 @@ Agent search is not just human search with a bot typing into it. Agents can pass
 - [How we hacked YC Spring 2025 batch's AI agents - Rene Brandel, Casco](../sources/20250730_kv-QAuKWllQ.md)
 - [OpenAI on Securing Code-Executing AI Agents - Fouad Matin (Codex, Agent Robustness)](../sources/20250730_w7IMuYsBNr8.md)
 - [Building Alice's Brain: an AI Sales Rep that Learns Like a Human - Sherwood & Satwik, 11x](../sources/20250729_KWmkMV0FNwQ.md)
+- [Scaling AI Agents Without Breaking Reliability - Preeti Somal, Temporal](../sources/20250728_1izYWsokr9s.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

@@ -1551,3 +1551,11 @@
 - Updated topics: [Product Strategy](topics/product-strategy.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md), [Tools](topics/tools.md)
 - Updated concepts: [AI Product Management Balances Viability, Feasibility, Desirability, and AI Uncertainty](concepts/ai-product-management-balances-viability-feasibility-desirability-and-ai-uncertainty.md), [Resolve AI Capability Risk Before Product Surface Commitment](concepts/resolve-ai-capability-risk-before-product-surface-commitment.md), [Explore AI Features Widely Then Cut Back to the User Workflow](concepts/explore-ai-features-widely-then-cut-back-to-the-user-workflow.md), [Pivot AI Product Interfaces When Platform Defaults Shift](concepts/pivot-ai-product-interfaces-when-platform-defaults-shift.md)
 - Notes: Added i.AI's AI product-management patterns for capability-first evaluation, broad but temporary feature exploration, workflow simplification, and platform-interface pivots around MCP and enterprise AI clients.
+
+## [2026-05-07] ingest | Scaling AI Agents Without Breaking Reliability - Preeti Somal, Temporal
+
+- Source: [Scaling AI Agents Without Breaking Reliability - Preeti Somal, Temporal](sources/20250728_1izYWsokr9s.md)
+- Processed: `1izYWsokr9s`
+- Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Use Durable Execution for Production Agent Loops](concepts/use-durable-execution-for-production-agent-loops.md), [Model LLM Calls and Tools as Durable Activities](concepts/model-llm-calls-and-tools-as-durable-activities.md), [Record Workflow History for Agent Debugging and Compliance](concepts/record-workflow-history-for-agent-debugging-and-compliance.md)
+- Notes: Added Temporal's code-first reliability framing for production agents as distributed workflows with activity-wrapped tools, signal/query interactions, durable retries, and exportable workflow history.
