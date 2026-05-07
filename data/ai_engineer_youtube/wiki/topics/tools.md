@@ -88,6 +88,7 @@ Shell wrappers can also act as local harness tools. A wrapper around Codex CLI c
 - [Use MLX Swift LM for Apple local model integration](../concepts/use-mlx-swift-lm-for-apple-local-model-integration.md) - MLX Swift LM turns Hugging Face model IDs into a native Apple local-inference tool path.
 - [Realtime multimodal models should plan over specialized local actuators](../concepts/realtime-multimodal-models-should-plan-over-specialized-local-actuators.md) - embodied tool use should separate conversational planning from local action execution.
 - [Use skills for workflow guidance and MCP for integrations](../concepts/use-skills-for-workflow-guidance-and-mcp-for-integrations.md) - separates the integration layer from the contextual guidance layer.
+- [Agentic GraphRAG uses schema-aware multi-step graph queries](../concepts/agentic-graphrag-uses-schema-aware-multi-step-graph-queries.md) - graph MCP tools can expose schema, Cypher queries, traversal, and supporting chunks to agents.
 - [Context window editing clears stale tool results](../concepts/context-window-editing-clears-stale-tool-results.md) - tool runtimes should remove stale outputs before they crowd out current context.
 - [General agents need skills for domain expertise](../concepts/general-agents-need-skills-for-domain-expertise.md) - tool-capable agents still need skills that encode domain procedures.
 - [Customize subagents by task, model, tools, and permissions](../concepts/customize-subagents-by-task-model-tools-and-permissions.md) - specialist agents should receive scoped tool and MCP access that matches their role.
@@ -289,3 +290,4 @@ Shell wrappers can also act as local harness tools. A wrapper around Codex CLI c
 - [Future-Proof Coding Agents - Bill Chen & Brian Fioca, OpenAI](../sources/20251205_wVl6ZjELpBk.md)
 - [Defying Gravity - Kevin Hou, Google DeepMind](../sources/20251202_HN-F-OQe6j0.md)
 - [Katelyn Lesse - Evolving Claude APIs for Agents, Anthropic](../sources/20251204_aqW68Is_Kj4.md)
+- [Context Engineering: Connecting the Dots with Graphs - Stephen Chin, Neo4j](../sources/20251124_LLuKshphGOE.md)

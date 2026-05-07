@@ -11,6 +11,7 @@ Details:
 - The first context-editing example clears old tool results because prior file reads and other large outputs may take substantial window space while no longer being relevant. 05:58-06:43
 - Anthropic reports that combining memory with context editing improved an internal benchmark by 39%, which supports treating context pruning as an eval-backed runtime feature rather than prompt hygiene alone. 06:46-07:05
 - Larger context windows still benefit from editing; the talk argues that million-token windows and tools for editing active context work together, rather than size replacing relevance management. 07:07-07:17
+- Chin gives the same warning from a context-engineering angle: old tool outputs can dump enough information into the window that they crowd out relevant current evidence. 04:17-04:43
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -24,3 +25,4 @@ Related concepts:
 
 Sources:
 - [Katelyn Lesse - Evolving Claude APIs for Agents, Anthropic](../sources/20251204_aqW68Is_Kj4.md), 03:50-07:17
+- [Context Engineering: Connecting the Dots with Graphs - Stephen Chin, Neo4j](../sources/20251124_LLuKshphGOE.md), 04:17-04:43

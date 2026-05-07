@@ -14,7 +14,7 @@ For coding agents, the same loop can target repository or agent rule files direc
 
 Long context should be treated as temporary working memory, not durable knowledge. Large prompts can keep a model from outright lacking a document, but attention cost, latency, and context-rot behavior mean "fits in the window" is weaker than "the model can reason over it reliably." For stable long-tail knowledge, the design choice may move from prompt stuffing to retrieval, contextual embeddings, or model adaptation.
 
-Tool-heavy agent sessions also need active cleanup inside the working window. Memory can keep durable patterns and preferences outside the prompt until they are relevant, while context editing removes stale tool outputs that otherwise crowd out current task context.
+Tool-heavy agent sessions also need active cleanup inside the working window. Memory can keep durable patterns and preferences outside the prompt until they are relevant, while context editing removes stale tool outputs that otherwise crowd out current task context. Knowledge graphs add a structured memory option when relationships matter: semantic and procedural learnings can become nodes, relationships, properties, embeddings, and access overlays that agents can traverse and humans can inspect.
 
 Coding-agent subagents are another context-management lever. Instead of forcing one agent to spend its main window on broad repository search, deep reasoning, dependency lookup, or codemod planning, a specialist can consume context in a separate window and return only the useful result.
 
@@ -81,6 +81,7 @@ Frequent intentional compaction is a coding-specific context-engineering workflo
 - [System prompt learning updates agent rules from eval explanations](../concepts/system-prompt-learning-updates-agent-rules-from-eval-explanations.md) - eval explanations can become durable agent-visible rules.
 - [Use Compounding Engineering Loops](../concepts/use-compounding-engineering-loops.md) - agent-work lessons should be captured into files, commands, subagents, and onboarding context.
 - [Do not treat long context as durable model memory](../concepts/do-not-treat-long-context-as-durable-model-memory.md) - full-context prompting has latency and reasoning limits even when the window is large enough.
+- [Knowledge graphs make agent memory traversable and explainable](../concepts/knowledge-graphs-make-agent-memory-traversable-and-explainable.md) - graph memory can preserve relationships, provenance, and access rules outside the raw context window.
 - [Long AI coding conversations compound accidental complexity](../concepts/long-ai-coding-conversations-compound-accidental-complexity.md) - stale conversational history can carry wrong architectural turns into later code.
 - [Manual migration seeds teach agents the hidden constraints](../concepts/manual-migration-seeds-teach-agents-the-hidden-constraints.md) - manual examples can become high-signal context for later agent research.
 - [Treat embeddings as recoverable sensitive data](../concepts/treat-embeddings-as-recoverable-sensitive-data.md) - embeddings are derived context artifacts that still need data-protection controls.
@@ -145,3 +146,4 @@ Frequent intentional compaction is a coding-specific context-engineering workflo
 - [Proactive Agents - Kath Korevec, Google Labs](../sources/20251213_v3u8xc0zLec.md)
 - [The State of AI Code Quality: Hype vs Reality — Itamar Friedman, Qodo](../sources/20251211_rgjF5o2Qjsc.md)
 - [Katelyn Lesse - Evolving Claude APIs for Agents, Anthropic](../sources/20251204_aqW68Is_Kj4.md)
+- [Context Engineering: Connecting the Dots with Graphs - Stephen Chin, Neo4j](../sources/20251124_LLuKshphGOE.md)

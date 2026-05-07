@@ -1031,3 +1031,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Vibe Coding Hangover Is a Maintainability Failure](concepts/vibe-coding-hangover-is-a-maintainability-failure.md), [Plan Coding-Agent Work Through Feature Inventories and Dependency Graphs](concepts/plan-coding-agent-work-through-feature-inventories-and-dependency-graphs.md), [Assemble Per-Feature Context Packages for Coding Agents](concepts/assemble-per-feature-context-packages-for-coding-agents.md), [Use Multisensory Feedback Loops for Coding-Agent Validation](concepts/use-multisensory-feedback-loops-for-coding-agent-validation.md)
 - Notes: Added Gallon's make-it-work framework for avoiding brittle vibe-coded demoware through human-owned planning, dependency-ordered atomic features, curated agent context, and multisensory validation.
+
+## [2026-05-07] ingest | Context Engineering: Connecting the Dots with Graphs - Stephen Chin, Neo4j
+
+- Source: [Context Engineering: Connecting the Dots with Graphs - Stephen Chin, Neo4j](sources/20251124_LLuKshphGOE.md)
+- Processed: `LLuKshphGOE`
+- Updated topics: [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Retrieval](topics/retrieval.md), [Tools](topics/tools.md)
+- Updated concepts: [Knowledge Graphs Make Agent Memory Traversable And Explainable](concepts/knowledge-graphs-make-agent-memory-traversable-and-explainable.md), [Agentic GraphRAG Uses Schema-Aware Multi-Step Graph Queries](concepts/agentic-graphrag-uses-schema-aware-multi-step-graph-queries.md), [Choose HybridRAG When Relationship Structure Matters](concepts/choose-hybridrag-when-relationship-structure-matters.md), [Context Window Editing Clears Stale Tool Results](concepts/context-window-editing-clears-stale-tool-results.md)
+- Notes: Added graph-backed context engineering patterns for relationship-aware memory, explainable retrieval, access overlays, and schema-aware agentic Cypher querying through MCP.
