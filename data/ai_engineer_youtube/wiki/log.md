@@ -943,3 +943,11 @@
 - Updated topics: [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [General agents need skills for domain expertise](concepts/general-agents-need-skills-for-domain-expertise.md), [Treat complex skills like software artifacts](concepts/treat-complex-skills-like-software-artifacts.md), [Skills turn procedural feedback into transferable agent memory](concepts/skills-turn-procedural-feedback-into-transferable-agent-memory.md), [Agent skills package progressive-disclosure context for repeatable workflows](concepts/agent-skills-package-progressive-disclosure-context-for-repeatable-workflows.md), [Use skills for workflow guidance and MCP for integrations](concepts/use-skills-for-workflow-guidance-and-mcp-for-integrations.md), [Package reusable context as skills, libraries, and registries](concepts/package-reusable-context-as-skills-libraries-and-registries.md)
 - Notes: Added Anthropic's framing that general code/runtime agents gain domain competence through skill libraries, while complex skills need tests, version lineage, dependency metadata, and feedback-driven procedural memory.
+
+## [2026-05-07] ingest | 2026: The Year The IDE Died - Steve Yegge & Gene Kim, Authors, Vibe Coding
+
+- Source: [2026: The Year The IDE Died - Steve Yegge & Gene Kim, Authors, Vibe Coding](sources/20251206_7Dtu2bilcFs.md)
+- Processed: `7Dtu2bilcFs`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Role-specialized agent systems beat one giant coding agent](concepts/role-specialized-agent-systems-beat-one-giant-coding-agent.md), [AI coding adoption needs hands-on production practice](concepts/ai-coding-adoption-needs-hands-on-production-practice.md), [Agentic coding collapses coordination tax for small valuable changes](concepts/agentic-coding-collapses-coordination-tax-for-small-valuable-changes.md)
+- Notes: Added Yegge and Kim's post-IDE AI coding framing around specialized agent roles, production-practice adoption, and lower coordination cost for small valuable changes.

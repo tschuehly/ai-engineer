@@ -32,6 +32,8 @@ Internal platform tools should be designed so agents can call the same intended 
 
 For coding agents, tool boundaries should be chosen by what needs hard semantics. Read tools can control token load, grep/glob can support exact codebase search, edit tools can enforce read-before-write and diff-shaped changes, Bash can compose project commands inside a sandbox, and brittle edge cases can be moved into versioned tools that are easier to evaluate than broad prompt guidance. When an action can be exposed as a CLI or API, that text-native surface is usually a better agent tool than browser automation, especially when accuracy matters.
 
+The post-IDE direction adds another tool-design constraint: putting every request through one all-purpose coding agent wastes context and model budget. A better tool surface can route trivial checks, product exploration, implementation, review, tests, and merges through narrower roles and interfaces, while the human sees orchestration state and evidence instead of a raw terminal transcript.
+
 Amp Code adds that generic integration availability is not the same as a good core tool surface. A coding agent may need custom search, reasoning, dependency-lookup, and codemod tools tuned to the exact feedback loops it must close; otherwise tool descriptions and calls become context overhead and irrelevant choices become failure modes.
 
 Zapier's Scout work reinforces that useful tools still need to live where the work happens. A separate API playground added another window and saw weak engagement, while the same capabilities gained traction when embedded into support ticket creation, Cursor through MCP, Jira, GitLab CI/CD, and GitLab comment-based iteration.
@@ -42,6 +44,7 @@ Prompt-to-app builders are also tool surfaces. AI Studio shows a compact version
 
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - compact tool loops can be the core architecture for coding agents.
 - [Task-tuned tool sets beat generic integration surfaces for core coding loops](../concepts/task-tuned-tool-sets-beat-generic-integration-surfaces-for-core-coding-loops.md) - core agent tools should be selected and described for the local workflow.
+- [Role-specialized agent systems beat one giant coding agent](../concepts/role-specialized-agent-systems-beat-one-giant-coding-agent.md) - tool and model routing should follow role-specific work rather than one universal worker.
 - [Embed agent tools in existing work surfaces](../concepts/embed-agent-tools-in-existing-work-surfaces.md) - standalone tools can fail when they force users out of their normal IDE, ticket, or review flow.
 - [Use subagents to isolate context-heavy subtasks](../concepts/use-subagents-to-isolate-context-heavy-subtasks.md) - subagents can be tool-like specialists for search, reasoning, dependency lookup, and codemods.
 - [Design coding-agent editors as review surfaces](../concepts/design-coding-agent-editors-as-review-surfaces.md) - review-oriented UI is part of the tool surface for agent-heavy coding.
@@ -266,3 +269,4 @@ Prompt-to-app builders are also tool surfaces. AI Studio shows a compact version
 - [The 3 Pillars of Autonomy - Michele Catasta, Replit](../sources/20251222_MLhAA9yguwM.md)
 - [From Arc to Dia: Lessons learned building AI Browsers - Samir Mody, The Browser Company of New York](../sources/20251219_o4scJaQgnFA.md)
 - [RL Environments at Scale - Will Brown, Prime Intellect](../sources/20251209__IzZWeuTx7I.md)
+- [2026: The Year The IDE Died - Steve Yegge & Gene Kim, Authors, Vibe Coding](../sources/20251206_7Dtu2bilcFs.md)

@@ -26,6 +26,8 @@ Agent security has to treat autonomy as an attack multiplier. Prompt injection, 
 
 Agent-to-agent systems need their own discovery contract as they spread across teams. An A2A registry can publish agent cards that describe each agent's identity, endpoint, capabilities, supported modalities, and authentication requirements, while a use-case registry links those agents to MCP tools, models, owners, and lifecycle status. That makes agent reuse and runtime discovery practical without losing governance and impact analysis.
 
+Coding-agent systems also need role decomposition before they become effective agent organizations. Yegge's critique of one giant coding agent is that larger context windows and more expensive models do not remove the need for task decomposition; agent systems should separate product framing, implementation, review, testing, merging, and related roles when those roles need different context, tools, models, or verification surfaces.
+
 Multi-agent production systems also inherit ordinary distributed-systems failure modes. Moving from one agent to several agents creates coordination paths, shared-state races, stale cache reads, partial workflow failures, and debugging gaps that better prompts do not fix. Choreography can preserve autonomy when agents coordinate through events, but it needs traceable event delivery; orchestration gives a central execution graph, state store, retries, logs, and rollback path when complex dependencies or regulated decisions require stronger control. Handoffs should use immutable versioned state and explicit data contracts so each agent receives a sealed input and produces a new auditable output rather than mutating shared records.
 
 Durable execution is the production version of that distributed-systems stance for a single agent loop as well as for multi-agent systems. LLM calls, tool invocations, and external API calls should be persisted around workflow boundaries so process crashes, rate limits, or downstream outages do not force the agent to repeat completed turns or re-trigger side effects. Long waits, including human approvals and clarifications, should also be modeled as durable workflow state rather than as a live process that must stay pinned until the human returns.
@@ -55,6 +57,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 ## Key Concepts
 
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - agent loops can stay flexible while the runtime validates tool execution.
+- [Role-specialized agent systems beat one giant coding agent](../concepts/role-specialized-agent-systems-beat-one-giant-coding-agent.md) - multi-agent decomposition should follow role and context boundaries, not just model size.
 - [Product harnesses can become model customization environments](../concepts/product-harnesses-can-become-model-customization-environments.md) - agent products can train and evaluate models inside the same harness that defines the user experience.
 - [Interleave reasoning and tool calls for long-horizon agents](../concepts/interleave-reasoning-and-tool-calls-for-long-horizon-agents.md) - long-running agents should react to tool feedback over repeated turns.
 - [Use Agent RFT after baseline and task optimization](../concepts/use-agent-rft-after-baseline-and-task-optimization.md) - weight-changing agent optimization belongs after baseline and task/tool improvements.
@@ -288,6 +291,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Software Engineering Is Becoming Plan and Review - Louis Knight-Webb, Vibe Kanban](../sources/20260502_W76woOYHlvY.md)
 - [I Gave an AI Agent the Keys to My Life (Here's What Happened) - Radek Sienkiewicz (@velvetshark-com)](../sources/20260502_sJ2jc7leKBk.md)
 - [Human-in-the-Loop Automation with n8n - Liam McGarrigle](../sources/20260502_tDArkCqjA-c.md)
+- [2026: The Year The IDE Died - Steve Yegge & Gene Kim, Authors, Vibe Coding](../sources/20251206_7Dtu2bilcFs.md)
 - [Building Effective Voice Agents - Toki Sherbakov + Anoop Kotha, OpenAI](../sources/20250720_-OXiljTJxQU.md)
 - [Shipping complex AI applications - Braintrust & Trainline](../sources/20260501_ZdheJTfLu-s.md)
 - [Agents for Everything Else - swyx](../sources/20260501_zepu8Kk6FBQ.md)

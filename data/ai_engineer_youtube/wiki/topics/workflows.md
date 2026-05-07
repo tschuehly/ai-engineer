@@ -60,6 +60,8 @@ Prompt-to-app workflows can sit before implementation as a product ideation loop
 
 Vibe engineering turns agentic coding into a supervised review workflow rather than a slot-machine loop. A practical pattern is to let the agent produce a change, inspect the running UI, voice-dump observations and bugs, inspect the code, then feed back technical patterns and context through rules, docs, commands, and memories. Loose prompting is acceptable for disposable scripts or one-off tools, but durable code needs enough cleanliness and context structure for future agent runs to continue safely.
 
+Yegge and Kim's adoption framing makes production practice part of the workflow. A leader or senior engineer who ships one bounded feature with an agent learns the real context, review, maintenance, and safety constraints in a way that a training session or usage dashboard cannot show. The same source also reframes small valuable work: when an issue can be safely bounded and owned, agentic coding can remove backlog grooming, persuasion, and staffing delays, but the resulting artifact still needs maintainership after the prototype lands.
+
 AI code quality workflows should cover the whole SDLC rather than only generation. Qodo's framing treats testing, review, context, executable standards, and secure validation environments as workflow surfaces that must keep learning as generated-code volume grows.
 
 ## Key Concepts
@@ -70,6 +72,8 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 - [Use Compounding Engineering Loops](../concepts/use-compounding-engineering-loops.md) - durable agent workflows should capture lessons back into reusable context.
 - [Demo Culture Replaces Memo-First Product Persuasion](../concepts/demo-culture-replaces-memo-first-product-persuasion.md) - prototypes can become the decision artifact when agentic implementation is cheap.
 - [Universal AI Adoption Changes Engineering Coordination](../concepts/universal-ai-adoption-changes-engineering-coordination.md) - partial adoption can keep workflows anchored to traditional handoffs.
+- [AI coding adoption needs hands-on production practice](../concepts/ai-coding-adoption-needs-hands-on-production-practice.md) - adoption workflows should culminate in real shipped artifacts and reflection.
+- [Agentic coding collapses coordination tax for small valuable changes](../concepts/agentic-coding-collapses-coordination-tax-for-small-valuable-changes.md) - workflow value can come from removing queueing and persuasion overhead, not only typing faster.
 - [Fund enterprise AI through incremental productizable bets](../concepts/fund-enterprise-ai-through-incremental-productizable-bets.md) - breaks uncertain enterprise AI research into short value-producing stages.
 - [Start the workday by reviewing and dispatching agent work](../concepts/start-the-workday-by-reviewing-and-dispatching-agent-work.md) - provides a daily operating loop for asynchronous agent output.
 - [Hire for AI fluency and agent orchestration ability](../concepts/hire-for-ai-fluency-and-agent-orchestration-ability.md) - makes candidate evaluation and onboarding part of the agent workflow.
@@ -305,6 +309,7 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 - [How Claude Code Works - Jared Zoneraich, PromptLayer](../sources/20251226_RFKCzGlAU6Q.md)
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md)
 - [Don't Build Agents, Build Skills Instead - Barry Zhang & Mahesh Murag, Anthropic](../sources/20251208_CEvIs9y1uog.md)
+- [2026: The Year The IDE Died - Steve Yegge & Gene Kim, Authors, Vibe Coding](../sources/20251206_7Dtu2bilcFs.md)
 - [Spec-Driven Development: Agentic Coding at FAANG Scale and Quality - Al Harris, Amazon Kiro](../sources/20260109_HY_JyxAZsiE.md)
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md)
 - [OpenAI Codex Masterclass  - Vaibhav Srivastav & Katia Gil Guzman](../sources/20260429_MhHEGMFCEB0.md)

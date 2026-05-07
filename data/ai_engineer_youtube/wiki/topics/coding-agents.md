@@ -10,6 +10,8 @@ System-prompt learning adds a way to update coding-agent behavior without changi
 
 Amp Code adds a product-architecture version of the same discipline. Its guidance is to keep the agent loop simple but tune the surrounding pieces aggressively: make core tools task-specific, use subagents to isolate context-heavy search or reasoning, and design editor surfaces around reviewing agent output rather than typing every change manually.
 
+Yegge and Kim add a post-IDE version of the same pattern. The fragile shape is one oversized coding agent sent into the whole codebase with a larger context window and one expensive model for every request. The more durable shape decomposes the work into role-specialized agents for product, coding, review, testing, merging, and adjacent responsibilities, while the human interface becomes a review and orchestration surface rather than a place where every line is typed by hand. Their adoption warning is also practical: senior and staff engineers may resist these tools precisely because they carry cognitive overhead and threaten existing craft identities, so fluency has to come from hands-on production practice, not only from tool availability.
+
 The Infinite Software Crisis framing adds a caution about conversational coding itself. A long AI chat can feel productive while it accumulates accidental complexity: abandoned approaches, fixed-to-pass tests, overwritten architecture, and preserved technical debt. Research-plan-implement workflows help because they compress understanding into reviewable artifacts before code generation; when the system is too tangled, one manual migration may be the only way to expose the hidden constraints that agents need.
 
 AI adoption inside engineering teams is also an incentive design problem. If compensation and recognition reward time, headcount, or vague annual goals, engineers may have little direct reason to keep pushing unfamiliar agent workflows. Output-linked compensation can encourage tool leverage, but it needs independent scoping, acceptance checks, QA, and customer or strategist counterweights so agent-assisted speed does not become inflated story points or rushed code.
@@ -45,6 +47,9 @@ Qodo's code-quality framing adds a full-SDLC quality layer. Generation-time rule
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md) - coding-agent SDKs package reusable runtime pieces around the model.
 - [Task-tuned tool sets beat generic integration surfaces for core coding loops](../concepts/task-tuned-tool-sets-beat-generic-integration-surfaces-for-core-coding-loops.md) - core coding-agent tools should be optimized for local feedback loops rather than inherited from generic integrations.
 - [Use subagents to isolate context-heavy subtasks](../concepts/use-subagents-to-isolate-context-heavy-subtasks.md) - specialists can search, reason, fetch dependency context, or prepare codemods without exhausting the main agent's context.
+- [Role-specialized agent systems beat one giant coding agent](../concepts/role-specialized-agent-systems-beat-one-giant-coding-agent.md) - decomposition across product, coding, review, test, and merge roles can beat one large context-hungry worker.
+- [AI coding adoption needs hands-on production practice](../concepts/ai-coding-adoption-needs-hands-on-production-practice.md) - adoption programs should make practitioners ship bounded real work rather than only consume enablement.
+- [Agentic coding collapses coordination tax for small valuable changes](../concepts/agentic-coding-collapses-coordination-tax-for-small-valuable-changes.md) - small useful fixes can move from backlog negotiation into direct implementation when safety and ownership are handled.
 - [Scope coding-agent autonomy by user decision authority](../concepts/scope-coding-agent-autonomy-by-user-decision-authority.md) - autonomy should cover the technical decisions the user cannot make or verify.
 - [Autonomous browser verification finds painted-door failures](../concepts/autonomous-browser-verification-finds-painted-door-failures.md) - generated web apps need environment feedback for UI paths that only look complete.
 - [Let the core agent loop orchestrate parallel subtasks](../concepts/let-the-core-agent-loop-orchestrate-parallel-subtasks.md) - the main loop can choose parallel subtasks dynamically instead of requiring manual thread dispatch.
@@ -265,6 +270,7 @@ Qodo's code-quality framing adds a full-SDLC quality layer. Generation-time rule
 - [Coding Evals: From Code Snippets to Codebases - Naman Jain, Cursor](../sources/20251215_tHN44yJoeS8.md)
 - [From Vibe Coding To Vibe Engineering - Kitze, Sizzy](../sources/20251214_JV-wY5pxXLo.md)
 - [The State of AI Code Quality: Hype vs Reality — Itamar Friedman, Qodo](../sources/20251211_rgjF5o2Qjsc.md)
+- [2026: The Year The IDE Died - Steve Yegge & Gene Kim, Authors, Vibe Coding](../sources/20251206_7Dtu2bilcFs.md)
 - [Minimax M2: Building the #1 Open Model - Olive Song, MiniMax](../sources/20251213_lY1iFbDPRlw.md)
 - [Hard Won Lessons from Building Effective AI Coding Agents - Nik Pash, Cline](../sources/20251212_I8fs4omN1no.md)
 - [Agent Reinforcement Fine Tuning - Will Hang & Cathy Zhou, OpenAI](../sources/20251209_p1CmPZ2j6Lk.md)
