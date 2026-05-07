@@ -5,6 +5,8 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 ## Current Emphasis
 
 - [AI-Native Search APIs Serve Agent Query Shapes](concepts/ai-native-search-apis-serve-agent-query-shapes.md) - agent search differs from human search because agents can issue contextual, repeated, high-recall queries.
+- [Anchor AI Products on One Reliable User Outcome](concepts/anchor-ai-products-on-one-reliable-user-outcome.md) - AI product purpose filters model capabilities by whether they reliably deliver the user's core job.
+- [Earn AI Product Trust Before Asking for Delight](concepts/earn-ai-product-trust-before-asking-for-delight.md) - delightful AI interactions need first-use reliability and honest model edges first.
 - [Neural Web Search Supports Semantic Agent Queries](concepts/neural-web-search-supports-semantic-agent-queries.md) - embedding-backed web search can represent semantic intent and negation that keyword matching misses.
 - [Expose Search Controls For Agentic Retrieval](concepts/expose-search-controls-for-agentic-retrieval.md) - agent-facing search APIs should expose retrieval knobs such as result count, domains, dates, and neural/keyword mode.
 - [Dynamic AI Search Evals Need Fresh Grounding Sets](concepts/dynamic-ai-search-evals-need-fresh-grounding-sets.md) - web-backed RAG and search agents need eval sets that refresh with changing sources and user needs.

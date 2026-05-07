@@ -6,7 +6,7 @@ AI engineering does not remove product strategy work; it makes weak product judg
 
 The funnel is a useful operating model. Top-of-funnel work should create something worth sharing, not merely announce another feature. Onboarding should identify one aha moment and remove every step that delays it. Retention should avoid the false choice between simple and capable: build powerful primitives first, assemble the beginner path from them, and expose deeper controls as users grow.
 
-AI-native product strategy also includes deciding where model behavior belongs in the experience. Invisible background work, ambient surfacing, inline artifact manipulation, conversational build flows, adaptive websites, and personalized creative pipelines carry different trust, interruption, and control costs. Teams should prototype those choices with runnable model probes because static screens cannot reveal whether the model is fast, accurate, aligned, awkward, or surprisingly capable in the proposed surface.
+AI-native product strategy also includes deciding where model behavior belongs in the experience. Invisible background work, ambient surfacing, inline artifact manipulation, conversational build flows, adaptive websites, and personalized creative pipelines carry different trust, interruption, and control costs. Teams should prototype those choices with runnable model probes because static screens cannot reveal whether the model is fast, accurate, aligned, awkward, or surprisingly capable in the proposed surface. Prototype energy still needs product restraint: a pile of model capabilities is not a product unless it is anchored to one reliable user outcome, earns trust in the first attempted job, exposes model edges honestly, and makes AI delight feel user-steered rather than like a trick.
 
 AI intensity gives product teams another product-shape lens: compare how much valuable output the system can produce for each human steering action. A higher ratio is not automatically better; it is useful only when the output is valuable, reviewable, and not annoying to control.
 
@@ -30,12 +30,18 @@ AI startup strategy should also assume that raw model capability is a moving com
 - [Build domain-specific workflow wrappers around models](../concepts/build-domain-specific-workflow-wrappers-around-models.md) - defensible AI products package context, orchestration, review, and domain workflow fit around models.
 - [Start with augmentation when autonomous reliability is not ready](../concepts/start-with-augmentation-when-autonomous-reliability-is-not-ready.md) - copilots can be the right product shape before full automation is trustworthy.
 - [Use AI leapfrogging to find conservative-industry opportunities](../concepts/use-ai-leapfrogging-to-find-conservative-industry-opportunities.md) - slow historical software adoption does not preclude fast AI adoption when the workflow pain is concrete.
+- [Anchor AI Products on One Reliable User Outcome](../concepts/anchor-ai-products-on-one-reliable-user-outcome.md) - purpose filters whether a model capability strengthens the user's core job or adds baggage.
+- [Earn AI Product Trust Before Asking for Delight](../concepts/earn-ai-product-trust-before-asking-for-delight.md) - first-use success and honest model edges are prerequisites for playful AI moments.
+- [Nail Deterministic UX Before Probabilistic Delight](../concepts/nail-deterministic-ux-before-probabilistic-delight.md) - AI apps still need ordinary product reliability before model magic matters.
+- [Use Agency Instead of Trickery for AI Delight](../concepts/use-agency-instead-of-trickery-for-ai-delight.md) - generated surprises work best when users feel they steered the result.
+- [Avoid Kitchen-Sink AI Capability Products](../concepts/avoid-kitchen-sink-ai-capability-products.md) - shipping many model features without a focused outcome creates demo disease.
 
 ## Open Questions
 
 - Which AI-product onboarding metrics best distinguish a real aha moment from a merely completed signup or first prompt?
 - Which AI-product surfaces should increase output-per-input, and which need more explicit user steering for trust?
 - How can teams evaluate "shareability" before a launch without reducing product marketing to generic virality formulas?
+- How should teams measure whether a delightful probabilistic feature is expanding agency rather than masking an unclear core job?
 
 ## Sources
 
@@ -46,3 +52,4 @@ AI startup strategy should also assume that raw model capability is a moving com
 - [Form factors for your new AI coworkers - Craig Wattrus, Flatfile](../sources/20250822_CiMVKnX-CNI.md)
 - [The Next Unicorns: 7 Top AI startups from the HF0 Residency](../sources/20250821_L8-5ezsoI5A.md)
 - [State of Startups and AI 2025 - Sarah Guo, Conviction](../sources/20250802_3MZS5gNElZM.md)
+- [Everything is ugly, so go build something that isn't - Raiza Martin, Huxe (ex NotebookLM)](../sources/20250728_yG5d5UaGz1M.md)

@@ -1535,3 +1535,11 @@
 - Updated topics: [Agents](topics/agents.md), [Retrieval](topics/retrieval.md), [Tools](topics/tools.md)
 - Updated concepts: [Neural Web Search Supports Semantic Agent Queries](concepts/neural-web-search-supports-semantic-agent-queries.md), [AI-Native Search APIs Serve Agent Query Shapes](concepts/ai-native-search-apis-serve-agent-query-shapes.md), [Expose Search Controls For Agentic Retrieval](concepts/expose-search-controls-for-agentic-retrieval.md)
 - Notes: Added Exa's neural RAG framing for agent search: learned semantic web retrieval, search APIs optimized for agent query shapes, and explicit search controls for multi-step retrieval loops.
+
+## [2026-05-07] ingest | Everything is ugly, so go build something that isn't - Raiza Martin, Huxe (ex NotebookLM)
+
+- Source: [Everything is ugly, so go build something that isn't - Raiza Martin, Huxe (ex NotebookLM)](sources/20250728_yG5d5UaGz1M.md)
+- Processed: `yG5d5UaGz1M`
+- Updated topics: [Product Strategy](topics/product-strategy.md)
+- Updated concepts: [Anchor AI Products on One Reliable User Outcome](concepts/anchor-ai-products-on-one-reliable-user-outcome.md), [Earn AI Product Trust Before Asking for Delight](concepts/earn-ai-product-trust-before-asking-for-delight.md), [Nail Deterministic UX Before Probabilistic Delight](concepts/nail-deterministic-ux-before-probabilistic-delight.md), [Use Agency Instead of Trickery for AI Delight](concepts/use-agency-instead-of-trickery-for-ai-delight.md), [Avoid Kitchen-Sink AI Capability Products](concepts/avoid-kitchen-sink-ai-capability-products.md)
+- Notes: Added Raiza Martin's AI product design guidance on purpose, first-use trust, deterministic UX basics, agency-centered delight, and restraint against capability-first feature sprawl.

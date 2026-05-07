@@ -772,6 +772,11 @@
 - [AI-amplified shipping speed needs stronger product taste](../concepts/ai-amplified-shipping-speed-needs-stronger-product-taste.md)
 - [Product Engineers Need Direct Customer Context](../concepts/product-engineers-need-direct-customer-context.md)
 - [Treat model behavior as a product craft](../concepts/treat-model-behavior-as-a-product-craft.md)
+- [Anchor AI Products on One Reliable User Outcome](../concepts/anchor-ai-products-on-one-reliable-user-outcome.md)
+- [Earn AI Product Trust Before Asking for Delight](../concepts/earn-ai-product-trust-before-asking-for-delight.md)
+- [Nail Deterministic UX Before Probabilistic Delight](../concepts/nail-deterministic-ux-before-probabilistic-delight.md)
+- [Use Agency Instead of Trickery for AI Delight](../concepts/use-agency-instead-of-trickery-for-ai-delight.md)
+- [Avoid Kitchen-Sink AI Capability Products](../concepts/avoid-kitchen-sink-ai-capability-products.md)
 
 ## Evaluation
 
