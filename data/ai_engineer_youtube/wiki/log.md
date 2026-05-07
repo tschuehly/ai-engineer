@@ -1807,3 +1807,11 @@
 - Updated topics: [Healthcare Operations](topics/healthcare-operations.md), [AI Monetization](topics/ai-monetization.md), [Evaluation](topics/evaluation.md), [Product Strategy](topics/product-strategy.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Revenue Cycle AI Targets Administrative Friction](concepts/revenue-cycle-ai-targets-administrative-friction.md), [Prevent Revenue Cycle Denials Upstream](concepts/prevent-revenue-cycle-denials-upstream.md), [Expert-Reviewed GenAI Appeals Beat Off-the-Shelf Letters](concepts/expert-reviewed-genai-appeals-beat-off-the-shelf-letters.md)
 - Notes: Added healthcare revenue cycle AI as a measurable operations domain where longitudinal data prevents denials and GenAI appeal drafting remains expert-reviewed.
+
+## [2026-05-07] ingest | Remote MCPs: What we learned from shipping - John Welsh, Anthropic
+
+- Source: [Remote MCPs: What we learned from shipping - John Welsh, Anthropic](sources/20250619_0NHCyq8bBcM.md)
+- Processed: `0NHCyq8bBcM`
+- Updated topics: [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md), [Security](topics/security.md)
+- Updated concepts: [Carry MCP JSON-RPC Over Internal Transports](concepts/carry-mcp-json-rpc-over-internal-transports.md), [MCP Gateways Create an Enterprise Root of Trust](concepts/mcp-gateways-create-an-enterprise-root-of-trust.md), [Gateway Platform Primitives Let Teams Focus on MCP Business Logic](concepts/gateway-platform-primitives-let-teams-focus-on-mcp-business-logic.md)
+- Notes: Added Anthropic's remote-MCP gateway pattern and the distinction between stable MCP message semantics and organization-specific internal transports.

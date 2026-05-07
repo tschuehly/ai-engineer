@@ -72,6 +72,8 @@ Third-party MCP tools also need ordinary integration hardening. A protocol-level
 
 GitHub Copilot's MCP integration reinforces that external tool access is not passive context. An MCP server can let Copilot create GitHub issues, search external systems, or inspect database schemas and data; because those servers can also perform tasks on the user's behalf, third-party MCP servers need trust review and scope discipline before they are added to developer workflows.
 
+Anthropic's remote-MCP experience adds two practical tool-surface lessons. First, a gateway should create a pit of success: one `connect to MCP` call can route to internal or external servers, retrieve stored credentials, return a normal MCP SDK client session, and keep product teams from reimplementing OAuth and tool plumbing. Second, MCP's JSON-RPC messages can travel over internal websockets, gRPC, Unix sockets, or other stream carriers while preserving the standard SDK boundary; external interoperability and internal routing do not have to be the same design problem.
+
 ## Key Concepts
 
 - [Vet MCP Servers As Action-Capable Extensions](../concepts/vet-mcp-servers-as-action-capable-extensions.md) - MCP servers should be vetted as tools that can act through the agent, not just as data feeds.
@@ -92,6 +94,9 @@ GitHub Copilot's MCP integration reinforces that external tool access is not pas
 - [Add structure where agent reliability fails](../concepts/add-structure-where-agent-reliability-fails.md) - narrow tool sets and structured steps can improve failing agent segments.
 - [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](../concepts/retrieve-tool-descriptions-before-loading-large-tool-catalogs.md) - retrieval can narrow thousands of tools before the model chooses one.
 - [Deploy Remote MCP Servers on Serverless Cloud Infrastructure](../concepts/deploy-remote-mcp-servers-on-serverless-cloud-infrastructure.md) - streamable HTTP MCP endpoints can run behind Lambda, API Gateway, auth, and session storage.
+- [MCP Gateways Create an Enterprise Root of Trust](../concepts/mcp-gateways-create-an-enterprise-root-of-trust.md) - gateways centralize routing, credentials, policy, observability, and secure connectivity for many MCP clients and servers.
+- [Gateway Platform Primitives Let Teams Focus on MCP Business Logic](../concepts/gateway-platform-primitives-let-teams-focus-on-mcp-business-logic.md) - shared gateway primitives let teams reuse integrations without rebuilding auth and operations.
+- [Carry MCP JSON-RPC Over Internal Transports](../concepts/carry-mcp-json-rpc-over-internal-transports.md) - internal transports can vary while MCP's message protocol stays the agent-facing contract.
 - [Abstract LLM inference behind one routing API](../concepts/abstract-llm-inference-behind-one-routing-api.md) - model-routing platforms can normalize tool calling, provider edge cases, caching, and observability.
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - compact tool loops can be the core architecture for coding agents.
 - [Use repository instructions to ground coding agents](../concepts/use-repository-instructions-to-ground-coding-agents.md) - repo instructions are a shared model-facing tool for team conventions.
@@ -332,6 +337,7 @@ GitHub Copilot's MCP integration reinforces that external tool access is not pas
 - [(possible dupe but better sound) What does Enterprise Ready MCP mean? - Tobin South, WorkOS](../sources/20250627_0MqYA52iWQU.md)
 - [Scaling GitHub for your Agents — Sam Morrow, GitHub](../sources/20260427_0n3MKk7r60w.md)
 - [Gateways are All You Need - Karan Sampath, Anthropic](../sources/20260427_CD6R4Wf3jnY.md)
+- [Remote MCPs: What we learned from shipping - John Welsh, Anthropic](../sources/20250619_0NHCyq8bBcM.md)
 - [MCP = Mega Context Problem - Matt Carey](../sources/20260425_YBYUvGOuotE.md)
 - [Building Generative Image & Video models at Scale - Sander Dieleman, Google DeepMind](../sources/20260421_xOP1PM8fwnk.md)
 - [The End of Apps - Kitze, Sizzy.co](../sources/20260423_4fntwuOoedA.md)

@@ -102,6 +102,8 @@ Open-source realtime TTS adds another concrete serving layer to voice infrastruc
 
 Remote MCP infrastructure can reuse ordinary cloud primitives when the local stdio assumption no longer fits. A simple MCP server can be wrapped behind Lambda and API Gateway with streamable HTTP, an authorizer or Cognito, and DynamoDB-backed session state; the client can then list remote tools and pass them into an agent. This does not remove the need for gateway, authorization, and context-budget design, but it gives teams a serverless path from local MCP demos to shared cloud endpoints.
 
+Remote MCP gateway infrastructure can also standardize internal agent integration before teams agree on one network transport. Anthropic's pattern returns a normal MCP SDK client session from a simple client-library call, while the gateway handles URL-based routing, credentials, OAuth flow helpers, rate limiting, observability, and policy hooks. The message protocol remains stable even if internal traffic runs over websockets, gRPC, Unix sockets, or another stream carrier.
+
 LLM evaluation infrastructure also needs a CI/CD shape. Manual workshop runs are useful for learning tools, but production teams should turn serving benchmarks, factual checks, formatting checks, safety and bias tests, and custom product evals into repeatable gates that run when prompts, models, data sets, or production use cases change.
 
 Dagger-style agent delivery infrastructure packages that feedback path as portable workflow code. Containers, source directories, repositories, LLM calls, build functions, and test functions can share one runtime and cache, so the agent gets the same tool surface locally and in GitHub Actions. That reduces environment drift and makes the CI path a continuation of the local agent workflow rather than a separate automation.
@@ -187,6 +189,9 @@ Dagger-style agent delivery infrastructure packages that feedback path as portab
 - [Build internal AI engineering platforms when off-the-shelf tools lack enterprise context](../concepts/build-internal-ai-engineering-platforms-when-off-the-shelf-tools-lack-enterprise-context.md) - internal platforms can connect agents to monorepos, service catalogs, operational tools, and review systems.
 - [App factories turn sandbox artifacts into governed knowledge apps](../concepts/app-factories-turn-sandbox-artifacts-into-governed-knowledge-apps.md) - sandbox definitions can become deployed internal apps through shared platform controls.
 - [Build paved paths for enterprise AI engineering tools](../concepts/build-paved-paths-for-enterprise-ai-engineering-tools.md) - shared model, MCP, deployment, and enablement infrastructure prevents fragmented enterprise AI tooling.
+- [MCP Gateways Create an Enterprise Root of Trust](../concepts/mcp-gateways-create-an-enterprise-root-of-trust.md) - gateway infrastructure centralizes trust, secure connectivity, credentials, policy, and observability across MCP clients and servers.
+- [Gateway Platform Primitives Let Teams Focus on MCP Business Logic](../concepts/gateway-platform-primitives-let-teams-focus-on-mcp-business-logic.md) - shared gateway primitives keep domain teams focused on integration behavior instead of platform plumbing.
+- [Carry MCP JSON-RPC Over Internal Transports](../concepts/carry-mcp-json-rpc-over-internal-transports.md) - internal stream transports can adapt to local infrastructure while preserving MCP protocol semantics.
 - [Route Gemma 4 model variants by deployment and workflow shape](../concepts/route-gemma-4-model-variants-by-deployment-and-workflow-shape.md) - Gemma 4 supports both downloadable local/self-hosted paths and hosted access for larger models.
 - [Unified coding-agent harnesses combine models, tools, environments, and safety](../concepts/unified-coding-agent-harnesses-combine-models-tools-environments-and-safety.md) - agent infrastructure includes harnesses that manage tool execution, environments, and safety around models.
 - [Use stable agent harnesses as model-evolution boundaries](../concepts/use-stable-agent-harnesses-as-model-evolution-boundaries.md) - harness infrastructure shields product workflows from model and API churn.
@@ -363,6 +368,7 @@ Dagger-style agent delivery infrastructure packages that feedback path as portab
 - [One Login to Rule Them All: Cross-App Access for MCP - Garrett Galow, WorkOS](../sources/20260428_EmhRyw6xeT0.md)
 - [Scaling GitHub for your Agents — Sam Morrow, GitHub](../sources/20260427_0n3MKk7r60w.md)
 - [Gateways are All You Need - Karan Sampath, Anthropic](../sources/20260427_CD6R4Wf3jnY.md)
+- [Remote MCPs: What we learned from shipping - John Welsh, Anthropic](../sources/20250619_0NHCyq8bBcM.md)
 - [Collaborative AI Engineering: One Dev, Two Dozen Agents, Zero Alignment - Maggie Appleton, GitHub](../sources/20260426_ClWD8OEYgp8.md)
 - [MCP = Mega Context Problem - Matt Carey](../sources/20260425_YBYUvGOuotE.md)
 - [How AI is changing Software Engineering: A Conversation with Gergely Orosz, @pragmaticengineer](../sources/20260421_CS5Cmz5FssI.md)
