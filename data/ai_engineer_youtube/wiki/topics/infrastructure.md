@@ -44,6 +44,8 @@ AI-generated kernels turn low-level optimization into an infrastructure workflow
 
 RL training infrastructure has a similar systems-modeling requirement. Synchronous RL wastes accelerator capacity when long-tail samples keep the whole step waiting, while asynchronous pipeline RL keeps sampling and training workers busy through queues and in-flight weight updates. The infrastructure problem is to allocate GPUs between sampling and training so production and consumption rates match, KV-cache memory is respected, and policy staleness stays within the algorithm's tolerance.
 
+Coding-agent harnesses are another infrastructure layer when teams want products to survive rapid model and API churn. The harness absorbs model-facing details such as tool loops, compaction, sandboxing, permissions, MCP support, parallel tool calls, port forwarding, and image handling. A stable SDK boundary can let product teams integrate the harness into IDEs, CI/CD, GitHub Actions, or product agents while leaving model/harness maintenance to a shared provider.
+
 ## Key Concepts
 
 - [Use hosted model playgrounds to prototype before owning infrastructure](../concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md) - hosted tools can validate model and deployment choices before teams own the runtime.
@@ -75,6 +77,7 @@ RL training infrastructure has a similar systems-modeling requirement. Synchrono
 - [Build paved paths for enterprise AI engineering tools](../concepts/build-paved-paths-for-enterprise-ai-engineering-tools.md) - shared model, MCP, deployment, and enablement infrastructure prevents fragmented enterprise AI tooling.
 - [Route Gemma 4 model variants by deployment and workflow shape](../concepts/route-gemma-4-model-variants-by-deployment-and-workflow-shape.md) - Gemma 4 supports both downloadable local/self-hosted paths and hosted access for larger models.
 - [Unified coding-agent harnesses combine models, tools, environments, and safety](../concepts/unified-coding-agent-harnesses-combine-models-tools-environments-and-safety.md) - agent infrastructure includes harnesses that manage tool execution, environments, and safety around models.
+- [Use stable agent harnesses as model-evolution boundaries](../concepts/use-stable-agent-harnesses-as-model-evolution-boundaries.md) - harness infrastructure shields product workflows from model and API churn.
 - [LiteRT provides a cross-platform path from model conversion to edge deployment](../concepts/litert-provides-a-cross-platform-path-from-model-conversion-to-edge-deployment.md) - TensorFlow Lite format compatibility and conversion support allow models to target multiple edge platforms.
 - [Benchmark edge models across the device fleet before shipping](../concepts/benchmark-edge-models-across-the-device-fleet-before-shipping.md) - compilation and acceleration choices should be validated against representative Android devices.
 - [Hot-swap small models to avoid one-model-per-GPU waste](../concepts/hot-swap-small-models-to-avoid-one-model-per-gpu-waste.md) - dynamic model loading helps keep accelerator capacity productive when many small models share the fleet.
@@ -220,3 +223,4 @@ RL training infrastructure has a similar systems-modeling requirement. Synchrono
 - [RL Environments at Scale - Will Brown, Prime Intellect](../sources/20251209__IzZWeuTx7I.md)
 - [Efficient Reinforcement Learning - Rhythm Garg & Linden Li, Applied Compute](../sources/20251209_o15AaYl7Wu0.md)
 - [VoiceVision RAG - Integrating Visual Document Intelligence with Voice Response - Suman Debnath, AWS](../sources/20251206_hwCmfThIiS4.md)
+- [Future-Proof Coding Agents - Bill Chen & Brian Fioca, OpenAI](../sources/20251205_wVl6ZjELpBk.md)

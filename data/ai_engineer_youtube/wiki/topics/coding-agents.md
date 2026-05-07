@@ -42,6 +42,8 @@ Vibe engineering adds a human-skill framing for frontend-heavy agentic coding. T
 
 Qodo's code-quality framing adds a full-SDLC quality layer. Generation-time rules in Cursor, Copilot, or similar tools may be only partially followed, so teams need review-time and testing-time gates that translate standards into executable feedback. The review layer should inspect both code-level problems such as security and efficiency and process-level problems such as ownership, verification, guardrails, and learning from AI-caused failures.
 
+OpenAI's future-proofing framing makes the harness itself a long-lived abstraction. A coding agent is a user interface plus model plus harness, and the harness owns the prompt, tools, tool loop, compaction, sandboxing, permissions, MCP support, and other model-facing behavior. Teams can either maintain that moving layer themselves or integrate a maintained harness through an SDK, then spend more of their effort on the IDE, CI/CD, review, product, or domain workflow that differentiates the experience. The caveat is prompt compatibility: newer coding models may already have trained habits around planning, context inspection, implementation, and testing, so prompts copied from other models can make the agent overexplore or slow down.
+
 ## Key Concepts
 
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md) - coding-agent SDKs package reusable runtime pieces around the model.
@@ -119,6 +121,9 @@ Qodo's code-quality framing adds a full-SDLC quality layer. Generation-time rule
 - [Keep critical code inside human understanding and review capacity](../concepts/keep-critical-code-inside-human-understanding-and-review-capacity.md) - important code should not be delegated beyond what humans can read, evaluate, and own.
 - [Product engineers need direct customer context](../concepts/product-engineers-need-direct-customer-context.md) - engineers need direct customer feedback to make useful product decisions as AI handles more implementation.
 - [Unified coding-agent harnesses combine models, tools, environments, and safety](../concepts/unified-coding-agent-harnesses-combine-models-tools-environments-and-safety.md) - model capability needs an execution harness that manages tools, environments, and safety.
+- [Use stable agent harnesses as model-evolution boundaries](../concepts/use-stable-agent-harnesses-as-model-evolution-boundaries.md) - a maintained harness absorbs model and API churn so products can focus on workflow differentiation.
+- [Prompt coding agents around learned model habits](../concepts/prompt-coding-agents-around-learned-model-habits.md) - prompts should fit the model's trained coding behavior instead of blindly carrying over old harness instructions.
+- [Use coding agents as programmable subagents inside products](../concepts/use-coding-agents-as-programmable-subagents-inside-products.md) - SDKs and CI/CD integrations let products call coding agents as subagents or tools.
 - [Own agent context instead of accepting hidden harness mutation](../concepts/own-agent-context-instead-of-accepting-hidden-harness-mutation.md) - hidden prompt, tool, and compaction changes can break coding-agent workflows.
 - [Minimal coding-agent harnesses can outperform feature-heavy surfaces](../concepts/minimal-coding-agent-harnesses-can-outperform-feature-heavy-surfaces.md) - small execution contracts can beat large default tool surfaces.
 - [Turn real coding sessions into RL environments](../concepts/turn-real-coding-sessions-into-rl-environments.md) - real agent failures can become portable training and evaluation tasks.
@@ -271,6 +276,7 @@ Qodo's code-quality framing adds a full-SDLC quality layer. Generation-time rule
 - [From Vibe Coding To Vibe Engineering - Kitze, Sizzy](../sources/20251214_JV-wY5pxXLo.md)
 - [The State of AI Code Quality: Hype vs Reality — Itamar Friedman, Qodo](../sources/20251211_rgjF5o2Qjsc.md)
 - [2026: The Year The IDE Died - Steve Yegge & Gene Kim, Authors, Vibe Coding](../sources/20251206_7Dtu2bilcFs.md)
+- [Future-Proof Coding Agents - Bill Chen & Brian Fioca, OpenAI](../sources/20251205_wVl6ZjELpBk.md)
 - [Minimax M2: Building the #1 Open Model - Olive Song, MiniMax](../sources/20251213_lY1iFbDPRlw.md)
 - [Hard Won Lessons from Building Effective AI Coding Agents - Nik Pash, Cline](../sources/20251212_I8fs4omN1no.md)
 - [Agent Reinforcement Fine Tuning - Will Hang & Cathy Zhou, OpenAI](../sources/20251209_p1CmPZ2j6Lk.md)

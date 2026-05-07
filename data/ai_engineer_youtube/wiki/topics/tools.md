@@ -40,9 +40,13 @@ Zapier's Scout work reinforces that useful tools still need to live where the wo
 
 Prompt-to-app builders are also tool surfaces. AI Studio shows a compact version: model and API feature chips can attach Search grounding, Maps grounding, Live API, and model choices to a generated app, while one-shot builders can clone UI screenshots or explore export flows before a team commits to production implementation. Full-stack app builders extend that surface by inferring packages, backend services, storage, payments, and first- or third-party API integrations from application intent.
 
+Coding agents can also become programmable tools inside other products. Codex is described as callable through SDKs, GitHub Actions, CI/CD, and MCP-connected product agents, which lets an outer product delegate code-writing, connector creation, merge-conflict handling, or bug fixing without rebuilding the full coding-agent harness. The tool-design burden then shifts to the product boundary: expose the coding agent where the work already happens and reserve the surrounding UI, policy, and workflow decisions for the product.
+
 ## Key Concepts
 
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - compact tool loops can be the core architecture for coding agents.
+- [Use coding agents as programmable subagents inside products](../concepts/use-coding-agents-as-programmable-subagents-inside-products.md) - coding agents can be called through SDKs, CI/CD, and MCP as product-internal tools.
+- [Use stable agent harnesses as model-evolution boundaries](../concepts/use-stable-agent-harnesses-as-model-evolution-boundaries.md) - maintained harnesses keep model and tool churn behind a stable integration surface.
 - [Task-tuned tool sets beat generic integration surfaces for core coding loops](../concepts/task-tuned-tool-sets-beat-generic-integration-surfaces-for-core-coding-loops.md) - core agent tools should be selected and described for the local workflow.
 - [Role-specialized agent systems beat one giant coding agent](../concepts/role-specialized-agent-systems-beat-one-giant-coding-agent.md) - tool and model routing should follow role-specific work rather than one universal worker.
 - [Embed agent tools in existing work surfaces](../concepts/embed-agent-tools-in-existing-work-surfaces.md) - standalone tools can fail when they force users out of their normal IDE, ticket, or review flow.
@@ -272,3 +276,4 @@ Prompt-to-app builders are also tool surfaces. AI Studio shows a compact version
 - [RL Environments at Scale - Will Brown, Prime Intellect](../sources/20251209__IzZWeuTx7I.md)
 - [2026: The Year The IDE Died - Steve Yegge & Gene Kim, Authors, Vibe Coding](../sources/20251206_7Dtu2bilcFs.md)
 - [VoiceVision RAG - Integrating Visual Document Intelligence with Voice Response - Suman Debnath, AWS](../sources/20251206_hwCmfThIiS4.md)
+- [Future-Proof Coding Agents - Bill Chen & Brian Fioca, OpenAI](../sources/20251205_wVl6ZjELpBk.md)

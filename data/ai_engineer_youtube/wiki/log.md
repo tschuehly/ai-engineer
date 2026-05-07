@@ -967,3 +967,11 @@
 - Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Retrieval](topics/retrieval.md), [Tools](topics/tools.md), [Voice Agents](topics/voice-agents.md)
 - Updated concepts: [Treat PDF pages as visual retrieval units](concepts/treat-pdf-pages-as-visual-retrieval-units.md), [Patch-level visual embeddings trade ingest cost for query-time retrieval](concepts/patch-level-visual-embeddings-trade-ingest-cost-for-query-time-retrieval.md), [VoiceVision agents wrap visual RAG with retrieval, image-reading, and speech tools](concepts/voicevision-agents-wrap-visual-rag-with-retrieval-image-reading-and-speech-tools.md)
 - Notes: Added visual-document RAG guidance for ColPali-style page-image retrieval, patch-vector indexing tradeoffs, and Strands-based voice response tooling.
+
+## [2026-05-07] ingest | Future-Proof Coding Agents - Bill Chen & Brian Fioca, OpenAI
+
+- Source: [Future-Proof Coding Agents - Bill Chen & Brian Fioca, OpenAI](sources/20251205_wVl6ZjELpBk.md)
+- Processed: `wVl6ZjELpBk`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md)
+- Updated concepts: [Unified coding-agent harnesses combine models, tools, environments, and safety](concepts/unified-coding-agent-harnesses-combine-models-tools-environments-and-safety.md), [Use stable agent harnesses as model-evolution boundaries](concepts/use-stable-agent-harnesses-as-model-evolution-boundaries.md), [Prompt coding agents around learned model habits](concepts/prompt-coding-agents-around-learned-model-habits.md), [Use coding agents as programmable subagents inside products](concepts/use-coding-agents-as-programmable-subagents-inside-products.md)
+- Notes: Added OpenAI's future-proofing guidance for stable coding-agent harnesses, model-habit-aware prompting, and SDK-based product embedding.
