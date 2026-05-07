@@ -11,6 +11,10 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Assemble Realtime Multimodal Context for Lab Agents](concepts/assemble-realtime-multimodal-context-for-lab-agents.md) - lab agents need dynamic context from connected sensors, cameras, voice, text, protocols, and history.
 - [Use Open Lab Hardware as the Co-Scientist Action Surface](concepts/use-open-lab-hardware-as-the-co-scientist-action-surface.md) - open sensors and lab automation create inspectable feedback loops for scientific agents.
 - [Ground Scientific Simulations in Live Experiment Traces](concepts/ground-scientific-simulations-in-live-experiment-traces.md) - physical experiment traces can calibrate simulations and future condition choices.
+- [Physical AI Has a Three-Stage Compute Lifecycle](concepts/physical-ai-has-a-three-stage-compute-lifecycle.md) - robotics foundation models span simulation/data generation, training, and edge deployment.
+- [Robotics Data Pyramids Combine Scarce Real Trajectories With Synthetic Data](concepts/robotics-data-pyramids-combine-scarce-real-trajectories-with-synthetic-data.md) - robot-action data needs teleoperation, human videos, simulation, and trajectory multiplication.
+- [Dual-System VLA Architectures Separate Planning From Realtime Control](concepts/dual-system-vla-architectures-separate-planning-from-realtime-control.md) - embodied models can pair slow semantic planning with high-frequency motor execution.
+- [Embodiment-Specific Action Decoders Make Robot Foundation Models Adaptable](concepts/embodiment-specific-action-decoders-make-robot-foundation-models-adaptable.md) - shared robot foundation-model outputs need body-specific decoders for continuous motion.
 - [Specify Agent Products by Affordance, Not Exhaustive Feature Rules](concepts/specify-agent-products-by-affordance-not-exhaustive-feature-rules.md) - open-ended agent surfaces need composable capability boundaries rather than exhaustive feature rules.
 - [Treat Product Evals as Probabilistic Specifications](concepts/treat-product-evals-as-probabilistic-specifications.md) - AI product evals turn subjective agent behavior into release and bug-triage thresholds.
 - [Co-Discover Emergent Agent Behavior With Customers](concepts/co-discover-emergent-agent-behavior-with-customers.md) - early agent products build trust through shared discovery, runnable feedback, and honest uncertainty.
@@ -383,6 +387,7 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Models](topics/models.md) - model architecture, tokenizer, training, adaptation, and sizing choices under practical constraints.
 - [Product Strategy](topics/product-strategy.md) - product attention, onboarding, retention, taste, workflow wrappers, and primitives in AI-assisted product work.
 - [Retrieval](topics/retrieval.md) - bringing accurate, task-relevant knowledge from enterprise systems and curated context blocks into agent work.
+- [Robotics](topics/robotics.md) - physical AI, robot foundation models, action data, embodiment control, and sim-to-real constraints.
 - [Security](topics/security.md) - safeguards for AI traffic, agents, generated code, private inference, and public web surfaces.
 - [Tools](topics/tools.md) - MCP integrations, scripts, skills, and tool-use guidance for agent workflows.
 - [Voice Agents](topics/voice-agents.md) - realtime audio-agent architecture, turn-taking, tool delegation, persona prompting, and voice-specific evaluation.

@@ -561,6 +561,7 @@
 - [Profile small-model architectures on target hardware](../concepts/profile-small-model-architectures-on-target-hardware.md)
 - [Use MLX Swift LM for Apple local model integration](../concepts/use-mlx-swift-lm-for-apple-local-model-integration.md)
 - [Match Gemma edge model size to device memory and interaction class](../concepts/match-gemma-edge-model-size-to-device-memory-and-interaction-class.md)
+- [Physical AI Has a Three-Stage Compute Lifecycle](../concepts/physical-ai-has-a-three-stage-compute-lifecycle.md)
 - [Benchmark edge models across the device fleet before shipping](../concepts/benchmark-edge-models-across-the-device-fleet-before-shipping.md)
 - [Edge agent skills need progressive disclosure to preserve small-model reliability](../concepts/edge-agent-skills-need-progressive-disclosure-to-preserve-small-model-reliability.md)
 - [Constrained decoding makes small-model tool calls production-usable](../concepts/constrained-decoding-makes-small-model-tool-calls-production-usable.md)
@@ -1003,6 +1004,9 @@
 ## Models
 
 - [AI Engineering Practice Is Heterogeneous and Fast Moving](../concepts/ai-engineering-practice-is-heterogeneous-and-fast-moving.md)
+- [Robotics Data Pyramids Combine Scarce Real Trajectories With Synthetic Data](../concepts/robotics-data-pyramids-combine-scarce-real-trajectories-with-synthetic-data.md)
+- [Dual-System VLA Architectures Separate Planning From Realtime Control](../concepts/dual-system-vla-architectures-separate-planning-from-realtime-control.md)
+- [Embodiment-Specific Action Decoders Make Robot Foundation Models Adaptable](../concepts/embodiment-specific-action-decoders-make-robot-foundation-models-adaptable.md)
 - [Multimodal Models Have a Production Adoption Gap](../concepts/multimodal-models-have-a-production-adoption-gap.md)
 - [Evaluate Speech-To-Speech Models Against Enterprise Control Needs](../concepts/evaluate-speech-to-speech-models-against-enterprise-control-needs.md)
 - [Research engineering partnership](../concepts/research-engineering-partnership.md)
@@ -1140,6 +1144,15 @@
 - [Retire completed planning docs before they become agent doc rot](../concepts/retire-completed-planning-docs-before-they-become-agent-doc-rot.md)
 - [Use omnimodal embeddings for cross-modal retrieval and comparison](../concepts/use-omnimodal-embeddings-for-cross-modal-retrieval-and-comparison.md)
 - [Adapt embedding dimensions with Matryoshka representation learning](../concepts/adapt-embedding-dimensions-with-matryoshka-representation-learning.md)
+
+## Robotics
+
+- [Physical AI Has a Three-Stage Compute Lifecycle](../concepts/physical-ai-has-a-three-stage-compute-lifecycle.md)
+- [Robotics Data Pyramids Combine Scarce Real Trajectories With Synthetic Data](../concepts/robotics-data-pyramids-combine-scarce-real-trajectories-with-synthetic-data.md)
+- [Dual-System VLA Architectures Separate Planning From Realtime Control](../concepts/dual-system-vla-architectures-separate-planning-from-realtime-control.md)
+- [Embodiment-Specific Action Decoders Make Robot Foundation Models Adaptable](../concepts/embodiment-specific-action-decoders-make-robot-foundation-models-adaptable.md)
+- [Robotics Policy Failures Can Originate Below The Model](../concepts/robotics-policy-failures-can-originate-below-the-model.md)
+- [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md)
 
 ## Security
 

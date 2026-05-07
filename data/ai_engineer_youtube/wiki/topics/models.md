@@ -32,6 +32,8 @@ Morph's Magi 1 framing pushes that idea toward branch-aware reasoning models: th
 
 Computer-vision models add a visual-fidelity caveat to multimodal model selection. Caption-aligned VLMs can look semantically competent while missing fine details that captions never supervised, such as object part pose, direction, clock hands, or domain-specific visual classes. Vision-only self-supervised backbones such as DINOv2 can preserve richer visual feature structure, but the useful engineering target is aligning those features with language and object-detection heads without reducing them to caption-level semantics.
 
+Robot foundation models add action as another model output modality. GR00T N1's vision-language-action framing combines image observations, robot state, and language prompts, then outputs action trajectories through a dual-system architecture and embodiment-specific decoder. The model lesson is that physical AI needs scarce action data, sim-to-real strategy, realtime control, and body-specific output adaptation in addition to ordinary foundation-model pretraining.
+
 ## Key Concepts
 
 - [AI Engineering Practice Is Heterogeneous and Fast Moving](../concepts/ai-engineering-practice-is-heterogeneous-and-fast-moving.md) - model strategy must tolerate frequent updates and multiple concurrent use cases.
@@ -63,6 +65,9 @@ Computer-vision models add a visual-fidelity caveat to multimodal model selectio
 - [Interleave local and global attention to trade context for efficiency](../concepts/interleave-local-and-global-attention-to-trade-context-for-efficiency.md) - attention placement and grouped query attention can reduce context cost without removing global context flow.
 - [Per-layer embeddings move effective-model capacity out of VRAM](../concepts/per-layer-embeddings-move-effective-model-capacity-out-of-vram.md) - PLE shows one way to add representational depth while respecting on-device memory constraints.
 - [Tune multimodal token budgets by visual or audio task](../concepts/tune-multimodal-token-budgets-by-visual-or-audio-task.md) - image and audio inputs should spend tokens according to the modality's actual task value.
+- [Robotics Data Pyramids Combine Scarce Real Trajectories With Synthetic Data](../concepts/robotics-data-pyramids-combine-scarce-real-trajectories-with-synthetic-data.md) - robot foundation models need data strategies beyond scraping because action traces are scarce.
+- [Dual-System VLA Architectures Separate Planning From Realtime Control](../concepts/dual-system-vla-architectures-separate-planning-from-realtime-control.md) - VLA models can split slow task planning from high-frequency motor execution.
+- [Embodiment-Specific Action Decoders Make Robot Foundation Models Adaptable](../concepts/embodiment-specific-action-decoders-make-robot-foundation-models-adaptable.md) - shared robot-model knowledge becomes deployable through body-specific action decoding.
 - [Profile small-model architectures on target hardware](../concepts/profile-small-model-architectures-on-target-hardware.md) - operator choices should be validated on the CPUs, phones, GPUs, and accelerators that will run the model.
 - [Treat quantization as a memory-bandwidth lever](../concepts/treat-quantization-as-a-memory-bandwidth-lever.md) - precision choices affect throughput and time to first token, not only whether a model fits.
 - [Post-train small models for narrow capabilities](../concepts/post-train-small-models-for-narrow-capabilities.md) - data extraction, tool use, and other focused tasks are better targets than average performance across every benchmark.
@@ -137,6 +142,7 @@ Computer-vision models add a visual-fidelity caveat to multimodal model selectio
 
 - [Building an Agentic Platform - Ben Kus, CTO Box](../sources/20250824_12v5S1n1eOY.md)
 - [Vision AI in 2025 - Peter Robicheaux, Roboflow](../sources/20250803_IQc05eCvNYE.md)
+- [What Is a Humanoid Foundation Model? An Introduction to GR00T N1 - Annika & Aastha](../sources/20250728_mWKYvT9Lc50.md)
 
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md)
 - [Compilers in the Age of LLMs - Yusuf Olokoba, Muna](../sources/20251124_q2nHsJVy4FE.md)

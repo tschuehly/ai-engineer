@@ -1599,3 +1599,11 @@
 - Updated topics: [Product Strategy](topics/product-strategy.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Ship Continuously Viable Product Shapes](concepts/ship-continuously-viable-product-shapes.md), [Run Named-Customer Feedback Loops Daily](concepts/run-named-customer-feedback-loops-daily.md), [Treat APIs as High-Inertia Product Contracts](concepts/treat-apis-as-high-inertia-product-contracts.md)
 - Notes: Added Auchenberg's product-loop guidance for AI-speed building: ship usable slices to named customers, collect high-bandwidth feedback, and treat platform APIs as durable contracts.
+
+## [2026-05-07] ingest | What Is a Humanoid Foundation Model? An Introduction to GR00T N1 - Annika & Aastha
+
+- Source: [What Is a Humanoid Foundation Model? An Introduction to GR00T N1 - Annika & Aastha](sources/20250728_mWKYvT9Lc50.md)
+- Processed: `mWKYvT9Lc50`
+- Updated topics: [Robotics](topics/robotics.md), [Agents](topics/agents.md), [Models](topics/models.md), [Edge Inference](topics/edge-inference.md)
+- Updated concepts: [Physical AI Has a Three-Stage Compute Lifecycle](concepts/physical-ai-has-a-three-stage-compute-lifecycle.md), [Robotics Data Pyramids Combine Scarce Real Trajectories With Synthetic Data](concepts/robotics-data-pyramids-combine-scarce-real-trajectories-with-synthetic-data.md), [Dual-System VLA Architectures Separate Planning From Realtime Control](concepts/dual-system-vla-architectures-separate-planning-from-realtime-control.md), [Embodiment-Specific Action Decoders Make Robot Foundation Models Adaptable](concepts/embodiment-specific-action-decoders-make-robot-foundation-models-adaptable.md)
+- Notes: Added GR00T N1's physical-AI framing for robot foundation models: staged compute, scarce action data, dual-system VLA control, and body-specific action decoding.
