@@ -1415,3 +1415,11 @@
 - Updated topics: [Voice Agents](topics/voice-agents.md), [Infrastructure](topics/infrastructure.md), [Agents](topics/agents.md)
 - Updated concepts: [Design Voice Agents Around Voice-To-Voice Latency Budgets](concepts/design-voice-agents-around-voice-to-voice-latency-budgets.md), [Use WebRTC Instead Of WebSockets For Realtime Media Streams](concepts/use-webrtc-instead-of-websockets-for-realtime-media-streams.md), [Choose WebRTC Topologies By Realtime Application Shape](concepts/choose-webrtc-topologies-by-realtime-application-shape.md)
 - Notes: Added realtime voice networking guidance: budget the full voice-to-voice path, use WebRTC for media streams rather than TCP/WebSockets, and choose local, cloud, or multiparty WebRTC topologies by product shape.
+
+## [2026-05-07] ingest | Pipecat Cloud: Enterprise Voice Agents Built On Open Source - Kwindla Hultman Kramer, Daily
+
+- Source: [Pipecat Cloud: Enterprise Voice Agents Built On Open Source - Kwindla Hultman Kramer, Daily](sources/20250731_IA4lZjh9sTs.md)
+- Processed: `IA4lZjh9sTs`
+- Updated topics: [Voice Agents](topics/voice-agents.md), [Infrastructure](topics/infrastructure.md), [Evaluation](topics/evaluation.md)
+- Updated concepts: [Voice Agent Infrastructure Needs Realtime Session Deployment](concepts/voice-agent-infrastructure-needs-realtime-session-deployment.md), [Filter Background Audio Before Voice-Agent Inference](concepts/filter-background-audio-before-voice-agent-inference.md), [Evaluate Speech-To-Speech Models Against Enterprise Control Needs](concepts/evaluate-speech-to-speech-models-against-enterprise-control-needs.md), [Use Frame Pipelines to Compose Realtime Voice Agents](concepts/use-frame-pipelines-to-compose-realtime-voice-agents.md), [Choose Voice-Agent Architecture by Latency, Accuracy, and Semantics](concepts/choose-voice-agent-architecture-by-latency-accuracy-and-semantics.md)
+- Notes: Added Pipecat Cloud's production voice-agent deployment framing, background-audio failure modes, and speech-to-speech adoption criteria for enterprise workflows.

@@ -4,6 +4,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Voice Agent Infrastructure Needs Realtime Session Deployment](concepts/voice-agent-infrastructure-needs-realtime-session-deployment.md) - production voice agents need cold-start, autoscaling, global routing, and data-residency-aware deployment for long-running media sessions.
+- [Filter Background Audio Before Voice-Agent Inference](concepts/filter-background-audio-before-voice-agent-inference.md) - speech-like noise can trigger interruptions and pseudo-transcripts before the model reasons.
+- [Evaluate Speech-To-Speech Models Against Enterprise Control Needs](concepts/evaluate-speech-to-speech-models-against-enterprise-control-needs.md) - native audio models should cross task-specific eval thresholds before replacing cascaded enterprise voice pipelines.
 - [Compose agents and workflows as interchangeable primitives](concepts/compose-agents-and-workflows-as-interchangeable-primitives.md) - agent loops and workflow graphs can call each other as tools, steps, and handoff mechanisms.
 - [Add structure where agent reliability fails](concepts/add-structure-where-agent-reliability-fails.md) - use workflow control selectively around unreliable LLM calls, tool sets, or traceability gaps.
 - [Prefer readable workflow APIs over graph-theory surfaces](concepts/prefer-readable-workflow-apis-over-graph-theory-surfaces.md) - workflow definitions should preserve team-readable control flow instead of forcing node-and-edge graph construction.
