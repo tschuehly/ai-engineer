@@ -16,11 +16,16 @@ Morph's reasoning-time branching pattern adds another long-running inference sha
 
 NVIDIA Dynamo's inference-frontier framing adds a data-center serving lens: the useful target is an application's operating point across quality, latency, and cost, not a single benchmark metric. Distributed inference can move that point by disaggregating compute-bound prefill from often memory-bound decode, routing requests by both KV locality and worker load, exploiting agent structure such as re-query loops and tool-call waits to preserve KV state, and dynamically shifting specialized worker pools as input and output sequence distributions change.
 
+Realtime voice serving adds an audio-token variant of the same discipline. A TTS model that emits codec tokens has to generate fast enough for playback, not just fast enough for text UX; leading generated silence, adapter loading, batch shape, and quantization choices all affect whether the first useful audio arrives inside the conversation window.
+
 ## Key Concepts
 
 - [Dual-mode AI infrastructure](../concepts/dual-mode-ai-infrastructure.md) - inference fleets should distinguish realtime latency needs from long compute-heavy workloads.
 - [Scale Test-Time Search Through Parallel Verifier-Checked Branches](../concepts/scale-test-time-search-through-parallel-verifier-checked-branches.md) - test-time compute can fan out into external branch attempts scored by verifiers.
 - [Tune inference to the application Pareto point](../concepts/tune-inference-to-the-application-pareto-point.md) - model-serving choices should target the application's quality, latency, and cost operating point.
+- [Serve Realtime TTS By Audio-Token Throughput](../concepts/serve-realtime-tts-by-audio-token-throughput.md) - streaming voice inference needs generated codec-token throughput that stays ahead of playback.
+- [Remove Head-Of-Line Silence From Voice Models](../concepts/remove-head-of-line-silence-from-voice-models.md) - generated leading silence burns inference time before useful audio exists.
+- [Route LoRA Voice Clones With Sticky GPU Affinity](../concepts/route-lora-voice-clones-with-sticky-gpu-affinity.md) - adapter-aware routing keeps sessions near the GPU state needed for realtime voice clones.
 - [Disaggregate prefill and decode workers by workload shape](../concepts/disaggregate-prefill-and-decode-workers-by-workload-shape.md) - prefill and decode stress hardware differently and can benefit from separate worker pools.
 - [Route inference requests by KV locality and worker load](../concepts/route-inference-requests-by-kv-locality-and-worker-load.md) - KV-friendly routing should still account for queue depth and worker load.
 - [Exploit structured agent waits for KV-cache manipulation](../concepts/exploit-structured-agent-waits-for-kv-cache-manipulation.md) - tool-call and re-query structure can tell the serving layer when to offload or restore KV state.
@@ -89,3 +94,4 @@ NVIDIA Dynamo's inference-frontier framing adds a data-center serving lens: the 
 - [Infrastructure for the Singularity - Jesse Han, Morph](../sources/20250801_2goSS66XRBk.md)
 - [Why We Don't Need More Data Centers - Dr. Jasper Zhang, Hyperbolic](../sources/20250801_M6Vbaig1TsM.md)
 - [Hacking the Inference Pareto Frontier - Kyle Kranen, NVIDIA](../sources/20250801_Y2qc0UhDSnc.md)
+- [Serving Voice AI at $1/hr: Open-source, LoRAs, Latency, Load Balancing - Neil Dwyer, Gabber](../sources/20250731_rD23-VZZHOo.md)

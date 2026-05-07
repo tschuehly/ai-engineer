@@ -549,6 +549,8 @@
 
 ## Infrastructure
 
+- [Route LoRA Voice Clones With Sticky GPU Affinity](../concepts/route-lora-voice-clones-with-sticky-gpu-affinity.md)
+- [Serve Realtime TTS By Audio-Token Throughput](../concepts/serve-realtime-tts-by-audio-token-throughput.md)
 - [Dedicated Vector Databases Remain Common RAG Infrastructure](../concepts/dedicated-vector-databases-remain-common-rag-infrastructure.md)
 - [Prompt Management Lags Prompt Iteration](../concepts/prompt-management-lags-prompt-iteration.md)
 - [Deploy Remote MCP Servers on Serverless Cloud Infrastructure](../concepts/deploy-remote-mcp-servers-on-serverless-cloud-infrastructure.md)
@@ -675,6 +677,9 @@
 
 - [Abstract LLM inference behind one routing API](../concepts/abstract-llm-inference-behind-one-routing-api.md)
 - [Plan AI products for a multimodel market](../concepts/plan-ai-products-for-a-multimodel-market.md)
+- [Serve Realtime TTS By Audio-Token Throughput](../concepts/serve-realtime-tts-by-audio-token-throughput.md)
+- [Remove Head-Of-Line Silence From Voice Models](../concepts/remove-head-of-line-silence-from-voice-models.md)
+- [Route LoRA Voice Clones With Sticky GPU Affinity](../concepts/route-lora-voice-clones-with-sticky-gpu-affinity.md)
 - [Scale Test-Time Search Through Parallel Verifier-Checked Branches](../concepts/scale-test-time-search-through-parallel-verifier-checked-branches.md)
 - [Tune inference to the application Pareto point](../concepts/tune-inference-to-the-application-pareto-point.md)
 - [Disaggregate prefill and decode workers by workload shape](../concepts/disaggregate-prefill-and-decode-workers-by-workload-shape.md)
@@ -1200,6 +1205,9 @@
 - [Choose voice-agent architecture by latency, accuracy, and semantics](../concepts/choose-voice-agent-architecture-by-latency-accuracy-and-semantics.md)
 - [Voice Agent Infrastructure Needs Realtime Session Deployment](../concepts/voice-agent-infrastructure-needs-realtime-session-deployment.md)
 - [Design voice agents around voice-to-voice latency budgets](../concepts/design-voice-agents-around-voice-to-voice-latency-budgets.md)
+- [Serve Realtime TTS By Audio-Token Throughput](../concepts/serve-realtime-tts-by-audio-token-throughput.md)
+- [Remove Head-Of-Line Silence From Voice Models](../concepts/remove-head-of-line-silence-from-voice-models.md)
+- [Route LoRA Voice Clones With Sticky GPU Affinity](../concepts/route-lora-voice-clones-with-sticky-gpu-affinity.md)
 - [Use WebRTC instead of WebSockets for realtime media streams](../concepts/use-webrtc-instead-of-websockets-for-realtime-media-streams.md)
 - [Choose WebRTC topologies by realtime application shape](../concepts/choose-webrtc-topologies-by-realtime-application-shape.md)
 - [Delegate complex voice-agent tasks through specialist tools and handoffs](../concepts/delegate-complex-voice-agent-tasks-through-specialist-tools-and-handoffs.md)

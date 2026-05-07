@@ -4,6 +4,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Serve Realtime TTS By Audio-Token Throughput](concepts/serve-realtime-tts-by-audio-token-throughput.md) - streaming voice inference needs generated codec-token rates that stay ahead of playback.
+- [Remove Head-Of-Line Silence From Voice Models](concepts/remove-head-of-line-silence-from-voice-models.md) - generated leading silence can waste scarce conversational latency even when not played.
+- [Route LoRA Voice Clones With Sticky GPU Affinity](concepts/route-lora-voice-clones-with-sticky-gpu-affinity.md) - voice-clone adapters need routing that considers GPU residency and session continuity.
 - [Voice Agent Infrastructure Needs Realtime Session Deployment](concepts/voice-agent-infrastructure-needs-realtime-session-deployment.md) - production voice agents need cold-start, autoscaling, global routing, and data-residency-aware deployment for long-running media sessions.
 - [Simulate Voice Agents With Probabilistic Conversation Evals](concepts/simulate-voice-agents-with-probabilistic-conversation-evals.md) - repeated simulated conversations expose voice-agent failure probabilities better than one-off expected outputs.
 - [Calibrate Voice Eval Realism To The Behavior Under Test](concepts/calibrate-voice-eval-realism-to-the-behavior-under-test.md) - text, simple voice, and hyperrealistic audio evals should be selected by the behavior being measured.

@@ -1439,3 +1439,11 @@
 - Updated topics: [Voice Agents](topics/voice-agents.md), [Evaluation](topics/evaluation.md)
 - Updated concepts: [Simulate Voice Agents With Probabilistic Conversation Evals](concepts/simulate-voice-agents-with-probabilistic-conversation-evals.md), [Calibrate Voice Eval Realism To The Behavior Under Test](concepts/calibrate-voice-eval-realism-to-the-behavior-under-test.md), [Evaluate Voice Agents With Traces, Transcripts, Audio Checks, and Simulations](concepts/evaluate-voice-agents-with-traces-transcripts-audio-checks-and-simulations.md)
 - Notes: Added Coval's self-driving-inspired evaluation loop for autonomous voice agents: probabilistic simulation, realism matched to the target behavior, calibrated automated metrics, and continuous release monitoring.
+
+## [2026-05-07] ingest | Serving Voice AI at $1/hr: Open-source, LoRAs, Latency, Load Balancing - Neil Dwyer, Gabber
+
+- Source: [Serving Voice AI at $1/hr: Open-source, LoRAs, Latency, Load Balancing - Neil Dwyer, Gabber](sources/20250731_rD23-VZZHOo.md)
+- Processed: `rD23-VZZHOo`
+- Updated topics: [Voice Agents](topics/voice-agents.md), [Inference](topics/inference.md), [Infrastructure](topics/infrastructure.md)
+- Updated concepts: [Serve Realtime TTS By Audio-Token Throughput](concepts/serve-realtime-tts-by-audio-token-throughput.md), [Remove Head-Of-Line Silence From Voice Models](concepts/remove-head-of-line-silence-from-voice-models.md), [Route LoRA Voice Clones With Sticky GPU Affinity](concepts/route-lora-voice-clones-with-sticky-gpu-affinity.md)
+- Notes: Added Gabber's Orpheus serving patterns for realtime audio-token throughput, leading-silence cleanup, vLLM FP8 batching, and adapter-aware GPU routing.

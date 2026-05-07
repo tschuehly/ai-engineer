@@ -80,10 +80,14 @@ Brockman's AI infrastructure framing adds a fleet-shape constraint at frontier s
 
 Realtime voice infrastructure adds a smaller but concrete version of that constraint. Development and production depend on live network transport, low-latency provider calls, VAD or semantic turn detection, synchronized audio/text events, and release evals that exercise real services end to end. WebRTC is the preferred transport layer for realtime audio/video streams because it can prioritize fresh media under packet loss and jitter, adapt bandwidth, and expose stats without forcing each app to rebuild media networking on top of TCP.
 
+Open-source realtime TTS adds another concrete serving layer to voice infrastructure. If each voice clone is a LoRA adapter over a shared model, the fleet needs batch inference, adapter-aware routing, quantization that preserves realtime audio-token throughput, and sticky session placement so long-running streams stay near the GPU memory state they need.
+
 Remote MCP infrastructure can reuse ordinary cloud primitives when the local stdio assumption no longer fits. A simple MCP server can be wrapped behind Lambda and API Gateway with streamable HTTP, an authorizer or Cognito, and DynamoDB-backed session state; the client can then list remote tools and pass them into an agent. This does not remove the need for gateway, authorization, and context-budget design, but it gives teams a serverless path from local MCP demos to shared cloud endpoints.
 
 ## Key Concepts
 
+- [Route LoRA Voice Clones With Sticky GPU Affinity](../concepts/route-lora-voice-clones-with-sticky-gpu-affinity.md) - voice clone serving needs session-sticky, adapter-aware routing over shared GPUs.
+- [Serve Realtime TTS By Audio-Token Throughput](../concepts/serve-realtime-tts-by-audio-token-throughput.md) - realtime TTS capacity depends on generated audio-token rate, batching, quantization, and GPU choice.
 - [Dedicated Vector Databases Remain Common RAG Infrastructure](../concepts/dedicated-vector-databases-remain-common-rag-infrastructure.md) - many teams still choose specialized vector databases as production context stores.
 - [Prompt Management Lags Prompt Iteration](../concepts/prompt-management-lags-prompt-iteration.md) - infrastructure needs prompt versioning and ownership when prompts change more often than models.
 - [Deploy Remote MCP Servers on Serverless Cloud Infrastructure](../concepts/deploy-remote-mcp-servers-on-serverless-cloud-infrastructure.md) - serverless compute and API routing can host remote MCP tools with auth and session persistence.
@@ -308,6 +312,7 @@ Remote MCP infrastructure can reuse ordinary cloud primitives when the local std
 - [$1 AI Guardrails: The Unreasonable Effectiveness of Finetuned ModernBERTs - Diego Carpentero](../sources/20260416_YZHPEkfy2kc.md)
 - [One Registry to Rule them All - Sonny Merla, Mauro Luchetti, & Mattia Redaelli, Quantyca](../sources/20260410_VXfRt_H-V08.md)
 - [Running LLMs locally: Practical LLM Performance on DGX Spark - Mozhgan Kabiri chimeh, NVIDIA](../sources/20260410_c5-kx2bwoCk.md)
+- [Serving Voice AI at $1/hr: Open-source, LoRAs, Latency, Load Balancing - Neil Dwyer, Gabber](../sources/20250731_rD23-VZZHOo.md)
 - [AI Didn't Kill the Web, It Moved in! - Olivier Leplus (AWS) & Yohan Lasorsa (Microsoft)](../sources/20260410_XZ0boOjtbNo.md)
 - [From Chaos to Choreography: Multi-Agent Orchestration Patterns That Actually Work - Sandipan Bhaumik](../sources/20260408_2czYyrTzILg.md)
 - [OpenRAG: An open-source stack for RAG - Phil Nash](../sources/20260408_4TxOBhDRRCM.md)
