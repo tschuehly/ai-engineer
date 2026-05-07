@@ -1431,3 +1431,11 @@
 - Updated topics: [Voice Agents](topics/voice-agents.md)
 - Updated concepts: [Choose Voice-Agent Architecture by Latency, Accuracy, and Semantics](concepts/choose-voice-agent-architecture-by-latency-accuracy-and-semantics.md), [Evaluate Speech-To-Speech Models Against Enterprise Control Needs](concepts/evaluate-speech-to-speech-models-against-enterprise-control-needs.md), [Multilingual Voice Agents Need Language Detection and Switching](concepts/multilingual-voice-agents-need-language-detection-and-switching.md), [Keep Voice Agents Conversational During Long Tool Latency](concepts/keep-voice-agents-conversational-during-long-tool-latency.md), [Voice Generation Safety Needs Moderation, Consent, and Provenance](concepts/voice-generation-safety-needs-moderation-consent-and-provenance.md)
 - Notes: Added ElevenLabs' conversational-agent workshop patterns for observable cascaded voice pipelines, multilingual language switching, slow-tool wait handling, and generated-audio safety controls.
+
+## [2026-05-07] ingest | From Self-driving to Autonomous Voice Agents - Brooke Hopkins, Coval
+
+- Source: [From Self-driving to Autonomous Voice Agents - Brooke Hopkins, Coval](sources/20250731_kDczF4wBh8s.md)
+- Processed: `kDczF4wBh8s`
+- Updated topics: [Voice Agents](topics/voice-agents.md), [Evaluation](topics/evaluation.md)
+- Updated concepts: [Simulate Voice Agents With Probabilistic Conversation Evals](concepts/simulate-voice-agents-with-probabilistic-conversation-evals.md), [Calibrate Voice Eval Realism To The Behavior Under Test](concepts/calibrate-voice-eval-realism-to-the-behavior-under-test.md), [Evaluate Voice Agents With Traces, Transcripts, Audio Checks, and Simulations](concepts/evaluate-voice-agents-with-traces-transcripts-audio-checks-and-simulations.md)
+- Notes: Added Coval's self-driving-inspired evaluation loop for autonomous voice agents: probabilistic simulation, realism matched to the target behavior, calibrated automated metrics, and continuous release monitoring.

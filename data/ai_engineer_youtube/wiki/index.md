@@ -5,6 +5,8 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 ## Current Emphasis
 
 - [Voice Agent Infrastructure Needs Realtime Session Deployment](concepts/voice-agent-infrastructure-needs-realtime-session-deployment.md) - production voice agents need cold-start, autoscaling, global routing, and data-residency-aware deployment for long-running media sessions.
+- [Simulate Voice Agents With Probabilistic Conversation Evals](concepts/simulate-voice-agents-with-probabilistic-conversation-evals.md) - repeated simulated conversations expose voice-agent failure probabilities better than one-off expected outputs.
+- [Calibrate Voice Eval Realism To The Behavior Under Test](concepts/calibrate-voice-eval-realism-to-the-behavior-under-test.md) - text, simple voice, and hyperrealistic audio evals should be selected by the behavior being measured.
 - [Filter Background Audio Before Voice-Agent Inference](concepts/filter-background-audio-before-voice-agent-inference.md) - speech-like noise can trigger interruptions and pseudo-transcripts before the model reasons.
 - [Evaluate Speech-To-Speech Models Against Enterprise Control Needs](concepts/evaluate-speech-to-speech-models-against-enterprise-control-needs.md) - native audio models should cross task-specific eval thresholds before replacing cascaded enterprise voice pipelines.
 - [Multilingual Voice Agents Need Language Detection and Switching](concepts/multilingual-voice-agents-need-language-detection-and-switching.md) - spoken agents need explicit language identification and switching policy when user comfort or regional requirements matter.
