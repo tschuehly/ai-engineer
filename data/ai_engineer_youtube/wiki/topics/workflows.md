@@ -50,6 +50,8 @@ Enterprise AI research workflows can be made fundable by turning each uncertain 
 
 AI coding workflows should also separate easy generation from simple system design. Nations' three-phase approach turns one long coding conversation into research, planning, and implementation artifacts with human checkpoints between them. Gallon's framework adds a more granular make-it-work sequence: capture a master project specification, extract and categorize features, develop atomic feature specifications, build a dependency matrix, then produce an implementation plan that sequences phases and binary validation criteria. That structure keeps review at the speed of generation: humans validate the research and plan before the agent produces a diff, then review implementation against a known plan rather than reverse-engineering whatever the chat invented.
 
+Preference-learning workflows add a feedback path that runs during normal coding. When a developer edits generated code to change library choice, file structure, parameter shape, test framework, or design details, that correction can become learned taste for later agent runs. The workflow is valuable when it reduces repeated steering without hiding the preference surface from the developer or team.
+
 Architecture-copilot workflows put an aiming step before coding-copilot execution. The recommended rollout is incremental: pick one portfolio area, build live visibility, generate recommendations tied to business outcomes, pilot autonomous guidance with one team, and scale only after the ROI and adoption path are proven.
 
 Frequent intentional compaction adds a context-window version of the same workflow. Research, plan, and implementation are useful because each phase can compact the previous phase into a smaller, reviewed artifact: codebase truth, then implementation intent, then executable change. The workflow should scale with task difficulty rather than become ceremony; a small button change may need direct prompting, while hard brownfield work needs enough compaction and review to keep the agent out of stale or noisy context.
@@ -174,6 +176,8 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 - [Demand-driven context pulls knowledge from failed work rather than pushing a complete knowledge base upfront](../concepts/demand-driven-context-pulls-knowledge-from-failed-work.md) - failed work items become the driver for context improvements.
 - [Ralph loops process one ticket at a time with fresh context](../concepts/ralph-loops-process-one-ticket-at-a-time-with-fresh-context.md) - narrow repeatable work units reduce orchestration complexity.
 - [Feedback turns coding-agent loops into prompt and skill improvement cycles](../concepts/feedback-turns-coding-agent-loops-into-prompt-and-skill-improvement-cycles.md) - each run can improve the instructions that shape later runs.
+- [Learn coding preferences from implicit edit feedback](../concepts/learn-coding-preferences-from-implicit-edit-feedback.md) - coding and review corrections can become future agent preferences.
+- [Share taste packages across teams and domains](../concepts/share-taste-packages-across-teams-and-domains.md) - learned taste can be shared as a workflow artifact across team and domain boundaries.
 - [Choose plan-heavy or review-heavy agent workflows by task shape](../concepts/choose-plan-heavy-or-review-heavy-agent-workflows-by-task-shape.md) - workflow design should match planning depth to whether a task can be specified and tested.
 - [Match AI operating models to work type](../concepts/match-ai-operating-models-to-work-type.md) - human-agent collaboration should differ for modernization, feature development, and other task shapes.
 - [Use one-pizza pods for agentic engineering](../concepts/use-one-pizza-pods-for-agentic-engineering.md) - smaller consolidated teams can make agent orchestration part of the daily workflow.
@@ -393,6 +397,7 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 - [The Unreasonable Effectiveness of Prompt Learning - Aparna Dhinakaran, Arize](../sources/20251223_pP_dSNz_EdQ.md)
 - [Building durable Agents with Workflow DevKit & AI SDK - Peter Wielander, Vercel](../sources/20260106_kmV-qg4uoNI.md)
 - [From Stateless Nightmares to Durable Agents - Samuel Colvin, Pydantic](../sources/20251124_flf_IKnFYnE.md)
+- [Developing Taste in Coding Agents: Applied Meta Neuro-Symbolic RL - Ahmad Awais, CommandCode](../sources/20251124_kWOQS3XPZ10.md)
 - [Developer Experience in the Age of AI Coding Agents - Max Kanat-Alexander, Capital One](../sources/20251223_rT2Del5pwg4.md)
 - [Making Codebases Agent Ready - Eno Reyes, Factory AI](../sources/20251222_ShuJ_CN6zr4.md)
 - [The Infinite Software Crisis - Jake Nations, Netflix](../sources/20251220_eIoohUmYpGI.md)

@@ -1095,3 +1095,11 @@
 - Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Use Durable Execution for Production Agent Loops](concepts/use-durable-execution-for-production-agent-loops.md), [Model LLM Calls and Tools as Durable Activities](concepts/model-llm-calls-and-tools-as-durable-activities.md), [Keep Workflow Orchestration Deterministic and Put Side Effects in Steps](concepts/keep-workflow-orchestration-deterministic-and-put-side-effects-in-steps.md), [Compose Deep Research as Plan, Parallel Search, and Analysis Agents](concepts/compose-deep-research-as-plan-parallel-search-and-analysis-agents.md), [Evaluate Agent Loops With Correctness, Cost, Latency, and Step Counts](concepts/evaluate-agent-loops-with-correctness-cost-latency-and-step-counts.md)
 - Notes: Added PydanticAI and Temporal durable-agent patterns for replaying completed LLM and tool work, inspecting runs in Logfire, composing deep research from small agent roles, and validating loop metrics against correctness.
+
+## [2026-05-07] ingest | Developing Taste in Coding Agents: Applied Meta Neuro-Symbolic RL - Ahmad Awais, CommandCode
+
+- Source: [Developing Taste in Coding Agents: Applied Meta Neuro-Symbolic RL - Ahmad Awais, CommandCode](sources/20251124_kWOQS3XPZ10.md)
+- Processed: `kWOQS3XPZ10`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Coding-agent taste captures the invisible architecture of choices](concepts/coding-agent-taste-captures-the-invisible-architecture-of-choices.md), [Learn coding preferences from implicit edit feedback](concepts/learn-coding-preferences-from-implicit-edit-feedback.md), [Share taste packages across teams and domains](concepts/share-taste-packages-across-teams-and-domains.md)
+- Notes: Added CommandCode's preference-learning framing for turning developer edits and review taste into inspectable, shareable coding-agent guidance.

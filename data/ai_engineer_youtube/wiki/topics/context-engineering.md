@@ -28,6 +28,8 @@ Proactive agents add a timing constraint to context engineering. A background co
 
 AI code review turns context quality into a trust issue. Review and generation tools need access to the relevant standards, best practices, version history, PR history, organizational logs, and current code context; otherwise developers can distrust the LLM's judgment even when the model is capable.
 
+Taste models turn repeated code edits into another context source. Instead of asking developers to encode every convention in `AGENTS.md`, `CLAUDE.md`, or prompt files, a system can infer preferences from how generated code is corrected, expose the learned taste as a transparent artifact, and inject it only when the current task matches the relevant domain, project, or team scope.
+
 Frequent intentional compaction is a coding-specific context-engineering workflow. It treats the active context window as a limited, trajectory-sensitive working area: preserve correct current facts and intent in reviewed Markdown artifacts, start fresh sessions from those artifacts, and prefer on-demand compressed context from current code over broad static onboarding docs that grow stale. Per-feature context packaging adds a planning-artifact variant of the same idea: after a master specification, feature inventory, specifications, dependencies, and implementation plan exist, the implementation agent should receive only the sections relevant to the current atomic feature plus its dependencies and validation strategy.
 
 Architecture copilots add a system-map version of context engineering. Instead of relying on stale architecture docs, they normalize current cloud, Kubernetes, service, logging, dependency, drift, business-objective, and standards context into a live model that an AI can use for architecture recommendations.
@@ -65,6 +67,8 @@ Repository architecture can turn context engineering into the adoption bottlenec
 - [Package reusable context as skills, libraries, and registries](../concepts/package-reusable-context-as-skills-libraries-and-registries.md) - shared context needs package, registry, dependency, and security practices.
 - [Treat complex skills like software artifacts](../concepts/treat-complex-skills-like-software-artifacts.md) - executable and dependency-heavy skills need eval, version, and lineage practices.
 - [Use agent logs and review feedback as context observability signals](../concepts/use-agent-logs-and-review-feedback-as-context-observability-signals.md) - logs, reviews, and production failures should feed durable context improvements.
+- [Learn coding preferences from implicit edit feedback](../concepts/learn-coding-preferences-from-implicit-edit-feedback.md) - corrected generated code can become preference context for later runs.
+- [Share taste packages across teams and domains](../concepts/share-taste-packages-across-teams-and-domains.md) - learned preferences can be distributed as reusable context packages.
 - [Filter untrusted context before it reaches the agent](../concepts/filter-untrusted-context-before-it-reaches-the-agent.md) - repository and marketplace context needs screening before model ingestion.
 - [Aggregated personal context creates mosaic and exfiltration risk](../concepts/aggregated-personal-context-creates-mosaic-and-exfiltration-risk.md) - aggregated read-only sources can still reveal sensitive composites and leak through remaining communication paths.
 - [Personal knowledge bases become agent context substrates](../concepts/personal-knowledge-bases-become-agent-context-substrates.md) - personal notes and saved links become active context when agents connect them to current work.
@@ -163,4 +167,5 @@ Repository architecture can turn context engineering into the adoption bottlenec
 - [Context Engineering: Connecting the Dots with Graphs - Stephen Chin, Neo4j](../sources/20251124_LLuKshphGOE.md)
 - [AI Copilots for Tech Architecture: The Highest-ROI Use Case You're Not Building - Boris B., Catio](../sources/20251124_QRWdapxMdSY.md)
 - [What Data from 20m Pull Requests Reveal About AI Transformation - Nick Arcolano, Jellyfish](../sources/20251124_WqZq8L-v9pA.md)
+- [Developing Taste in Coding Agents: Applied Meta Neuro-Symbolic RL - Ahmad Awais, CommandCode](../sources/20251124_kWOQS3XPZ10.md)
 - [The Unbearable Lightness of Agent Optimization - Alberto Romero, Jointly](../sources/20251124_zfvEMNmVlNY.md)
