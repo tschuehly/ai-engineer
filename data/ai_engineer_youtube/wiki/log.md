@@ -1359,3 +1359,11 @@
 - Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Specialist Expert Systems Bundle Capabilities, APIs, and Instructions](concepts/specialist-expert-systems-bundle-capabilities-apis-and-instructions.md), [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](concepts/retrieve-tool-descriptions-before-loading-large-tool-catalogs.md), [Deploy Remote MCP Servers on Serverless Cloud Infrastructure](concepts/deploy-remote-mcp-servers-on-serverless-cloud-infrastructure.md), [Agent Connectivity Stack Combines Skills, MCP, CLIs, and Computer Use](concepts/agent-connectivity-stack-combines-skills-mcp-clis-and-computer-use.md)
 - Notes: Added AWS cloud-scale agent patterns for specialist capability bundles, retrieval-narrowed tool catalogs, CLI-plus-MCP grounding, and Lambda-backed remote MCP services.
+
+## [2026-05-07] ingest | The 2025 AI Engineering Report - Barr Yaron, Amplify
+
+- Source: [The 2025 AI Engineering Report - Barr Yaron, Amplify](sources/20250801_mQ7_Zje7WKE.md)
+- Processed: `mQ7_Zje7WKE`
+- Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Models](topics/models.md), [Retrieval](topics/retrieval.md), [Workflows](topics/workflows.md)
+- Updated concepts: [AI Engineering Practice Is Heterogeneous and Fast Moving](concepts/ai-engineering-practice-is-heterogeneous-and-fast-moving.md), [Prompt Management Lags Prompt Iteration](concepts/prompt-management-lags-prompt-iteration.md), [Multimodal Models Have a Production Adoption Gap](concepts/multimodal-models-have-a-production-adoption-gap.md), [Agent Adoption Trails LLM Adoption in the Workplace](concepts/agent-adoption-trails-llm-adoption-in-the-workplace.md), [AI System Evaluation Still Depends on Human Review](concepts/ai-system-evaluation-still-depends-on-human-review.md), [Dedicated Vector Databases Remain Common RAG Infrastructure](concepts/dedicated-vector-databases-remain-common-rag-infrastructure.md)
+- Notes: Added Amplify survey findings on how AI engineering is currently practiced across prompts, models, agents, multimodal systems, evals, and context infrastructure.

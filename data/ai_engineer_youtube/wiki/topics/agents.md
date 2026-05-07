@@ -86,6 +86,7 @@ Cloud-scale assistant systems add a specialist-service pattern. Alexa Plus is de
 
 ## Key Concepts
 
+- [Agent Adoption Trails LLM Adoption in the Workplace](../concepts/agent-adoption-trails-llm-adoption-in-the-workplace.md) - ordinary LLM workplace satisfaction can be much higher than agent satisfaction even when future agent intent is strong.
 - [Specialist Expert Systems Bundle Capabilities, APIs, and Instructions](../concepts/specialist-expert-systems-bundle-capabilities-apis-and-instructions.md) - broad assistants can scale through task-specific capability bundles rather than one monolithic tool surface.
 - [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](../concepts/retrieve-tool-descriptions-before-loading-large-tool-catalogs.md) - large agent systems can search tool descriptions before adding only relevant tools to context.
 - [Optimize action agents for reliability before abstract intelligence](../concepts/optimize-action-agents-for-reliability-before-abstract-intelligence.md) - business workflows need agents that complete ordinary actions reliably.
@@ -470,5 +471,6 @@ Cloud-scale assistant systems add a specialist-service pattern. Alexa Plus is de
 - [Rishabh Garg, Tesla Optimus — Challenges in High Performance Robotics Systems](../sources/20250825_bCGbuyv8PMk.md)
 - [Multi Agent AI and Network Knowledge Graphs for Change — Ola Mabadeje, Cisco](../sources/20250822_m0dxZ-NDKHo.md)
 - [Fuzzing in the GenAI Era — Leonard Tang, Haize Labs](../sources/20250822_OMGPvW8TBHc.md)
+- [The 2025 AI Engineering Report - Barr Yaron, Amplify](../sources/20250801_mQ7_Zje7WKE.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

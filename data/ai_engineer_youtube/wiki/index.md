@@ -4,6 +4,8 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Agent Adoption Trails LLM Adoption in the Workplace](concepts/agent-adoption-trails-llm-adoption-in-the-workplace.md) - workplace LLM usage can look mature while LLM-controlled workflows still need separate reliability, permission, and evaluation gates.
+- [Prompt Management Lags Prompt Iteration](concepts/prompt-management-lags-prompt-iteration.md) - frequent prompt edits need ownership, versioning, and evals because unmanaged prompts are still common.
 - [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](concepts/retrieve-tool-descriptions-before-loading-large-tool-catalogs.md) - large agent systems can search tool descriptions and load only relevant tools into model context.
 - [Deploy Remote MCP Servers on Serverless Cloud Infrastructure](concepts/deploy-remote-mcp-servers-on-serverless-cloud-infrastructure.md) - local MCP tools can become streamable HTTP cloud services with auth and session persistence.
 - [Specialist Expert Systems Bundle Capabilities, APIs, and Instructions](concepts/specialist-expert-systems-bundle-capabilities-apis-and-instructions.md) - broad assistants can scale through task-focused capability bundles orchestrated together.

@@ -16,6 +16,7 @@ Private research agents can treat connectors and uploads as complementary retrie
 
 ## Key Concepts
 
+- [Dedicated Vector Databases Remain Common RAG Infrastructure](../concepts/dedicated-vector-databases-remain-common-rag-infrastructure.md) - survey data shows dedicated vector stores remain a common choice for context storage.
 - [Use fast query-document evals for retrieval changes](../concepts/use-fast-query-document-evals-for-retrieval-changes.md) - local query/document pairs expose whether retrieval changes improve the actual corpus.
 - [Align synthetic retrieval queries with real user specificity](../concepts/align-synthetic-retrieval-queries-with-real-user-specificity.md) - synthetic retrieval evals should be calibrated against realistic user query shape.
 - [Extract enterprise interaction data into structured graphs](../concepts/extract-enterprise-interaction-data-into-structured-graphs.md) - LLM extraction can turn messy interaction records into queryable graph context.
@@ -101,3 +102,4 @@ Private research agents can treat connectors and uploads as complementary retrie
 - [VoiceVision RAG - Integrating Visual Document Intelligence with Voice Response - Suman Debnath, AWS](../sources/20251206_hwCmfThIiS4.md)
 - [Context Engineering: Connecting the Dots with Graphs - Stephen Chin, Neo4j](../sources/20251124_LLuKshphGOE.md)
 - [Enterprise Deep Research: The Next Killer App for Enterprise AI — Ofer Mendelevitch, Vectara](../sources/20251124_fh9LgKXBGnQ.md)
+- [The 2025 AI Engineering Report - Barr Yaron, Amplify](../sources/20250801_mQ7_Zje7WKE.md)

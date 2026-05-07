@@ -32,6 +32,8 @@ Computer-vision models add a visual-fidelity caveat to multimodal model selectio
 
 ## Key Concepts
 
+- [AI Engineering Practice Is Heterogeneous and Fast Moving](../concepts/ai-engineering-practice-is-heterogeneous-and-fast-moving.md) - model strategy must tolerate frequent updates and multiple concurrent use cases.
+- [Multimodal Models Have a Production Adoption Gap](../concepts/multimodal-models-have-a-production-adoption-gap.md) - image, video, and audio capabilities still trail text in workplace production use.
 - [Research engineering partnership](../concepts/research-engineering-partnership.md) - model progress requires ideas and engineering systems to land together.
 - [Compare models by task, thinking budget, cost, and latency](../concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - model choice should be routed by workload constraints rather than by size alone.
 - [Update coding eval sets dynamically as model capability changes](../concepts/update-coding-eval-sets-dynamically-as-model-capability-changes.md) - coding-model comparisons need fresh tasks and calibrated difficulty to stay meaningful.
@@ -158,6 +160,7 @@ Computer-vision models add a visual-fidelity caveat to multimodal model selectio
 - [Coding Evals: From Code Snippets to Codebases - Naman Jain, Cursor](../sources/20251215_tHN44yJoeS8.md)
 - [Minimax M2: Building the #1 Open Model - Olive Song, MiniMax](../sources/20251213_lY1iFbDPRlw.md)
 - [Hard Won Lessons from Building Effective AI Coding Agents - Nik Pash, Cline](../sources/20251212_I8fs4omN1no.md)
+- [The 2025 AI Engineering Report - Barr Yaron, Amplify](../sources/20250801_mQ7_Zje7WKE.md)
 - [RL Environments at Scale - Will Brown, Prime Intellect](../sources/20251209__IzZWeuTx7I.md)
 - [Efficient Reinforcement Learning - Rhythm Garg & Linden Li, Applied Compute](../sources/20251209_o15AaYl7Wu0.md)
 - [Agent Reinforcement Fine Tuning - Will Hang & Cathy Zhou, OpenAI](../sources/20251209_p1CmPZ2j6Lk.md)

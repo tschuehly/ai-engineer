@@ -86,6 +86,8 @@ Retrieval-specific evals should be fast enough to change engineering behavior. Q
 
 ## Key Concepts
 
+- [AI System Evaluation Still Depends on Human Review](../concepts/ai-system-evaluation-still-depends-on-human-review.md) - production AI quality checks still combine observability, offline evals, benchmarks, user data, and human review.
+- [Prompt Management Lags Prompt Iteration](../concepts/prompt-management-lags-prompt-iteration.md) - frequent prompt changes need management and eval gates because many teams still lack prompt-management workflows.
 - [Use fast query-document evals for retrieval changes](../concepts/use-fast-query-document-evals-for-retrieval-changes.md) - cheap query/document checks let teams compare retrieval changes on local data.
 - [Do not trust saturated vision benchmarks as visual intelligence](../concepts/do-not-trust-saturated-vision-benchmarks-as-visual-intelligence.md) - common visual benchmarks can hide weak fine-detail and spatial reasoning.
 - [Evaluate vision models on domain adaptability and few-shot grounding](../concepts/evaluate-vision-models-on-domain-adaptability-and-few-shot-grounding.md) - vision evals should test class names, annotator instructions, examples, and specialized domains.
@@ -330,6 +332,7 @@ Retrieval-specific evals should be fast enough to change engineering behavior. Q
 - [Wisdom-Driven Knowledge Augmented Generation at Scale - Chin Keong Lam, Patho AI](../sources/20250822_9AQOvT8LnMI.md)
 - [Multi Agent AI and Network Knowledge Graphs for Change — Ola Mabadeje, Cisco](../sources/20250822_m0dxZ-NDKHo.md)
 - [Fuzzing in the GenAI Era — Leonard Tang, Haize Labs](../sources/20250822_OMGPvW8TBHc.md)
+- [The 2025 AI Engineering Report - Barr Yaron, Amplify](../sources/20250801_mQ7_Zje7WKE.md)
 
 - [Government Agents: AI Agents Meet Tough Regulations - Mark Myshatyn, Los Alamos National Lab](../sources/20251206_TnSGx36Ly0Q.md)
 - [Your Support Team Should Ship Code - Lisa Orr, Zapier](../sources/20251216_RmJ4rTLV_x4.md)

@@ -102,6 +102,9 @@ Cloud-scale agent workflow can still start with local iteration. The Strands pat
 
 ## Key Concepts
 
+- [AI Engineering Practice Is Heterogeneous and Fast Moving](../concepts/ai-engineering-practice-is-heterogeneous-and-fast-moving.md) - AI workflows need to account for mixed roles, mixed use cases, and frequent model and prompt updates.
+- [Prompt Management Lags Prompt Iteration](../concepts/prompt-management-lags-prompt-iteration.md) - fast prompt iteration should be treated as a managed workflow rather than an ad hoc editing habit.
+- [Agent Adoption Trails LLM Adoption in the Workplace](../concepts/agent-adoption-trails-llm-adoption-in-the-workplace.md) - agent workflows need maturity gates distinct from general LLM adoption.
 - [Specialist Expert Systems Bundle Capabilities, APIs, and Instructions](../concepts/specialist-expert-systems-bundle-capabilities-apis-and-instructions.md) - workflow specialists can package task-specific instructions and APIs for orchestration.
 - [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](../concepts/retrieve-tool-descriptions-before-loading-large-tool-catalogs.md) - large tool workflows should discover relevant tools before the model selects and executes them.
 - [Use fast query-document evals for retrieval changes](../concepts/use-fast-query-document-evals-for-retrieval-changes.md) - fast retrieval checks keep experimentation inside the product improvement loop.
@@ -507,6 +510,7 @@ Cloud-scale agent workflow can still start with local iteration. The Strands pat
 - [AI Copilots for Tech Architecture: The Highest-ROI Use Case You're Not Building - Boris B., Catio](../sources/20251124_QRWdapxMdSY.md)
 - [Enterprise Deep Research: The Next Killer App for Enterprise AI — Ofer Mendelevitch, Vectara](../sources/20251124_fh9LgKXBGnQ.md)
 - [AI changes *Nothing* — Dax Raad, OpenCode](../sources/20251123_o3gmwzo-Mik.md)
+- [The 2025 AI Engineering Report - Barr Yaron, Amplify](../sources/20250801_mQ7_Zje7WKE.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)
 - [Vision: Zero Bugs — Johann Schleier-Smith, Temporal](../sources/20251124_qLqttdO33UM.md)

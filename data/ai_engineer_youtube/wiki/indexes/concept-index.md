@@ -2,6 +2,7 @@
 
 ## Agents
 
+- [Agent Adoption Trails LLM Adoption in the Workplace](../concepts/agent-adoption-trails-llm-adoption-in-the-workplace.md)
 - [Specialist Expert Systems Bundle Capabilities, APIs, and Instructions](../concepts/specialist-expert-systems-bundle-capabilities-apis-and-instructions.md)
 - [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](../concepts/retrieve-tool-descriptions-before-loading-large-tool-catalogs.md)
 - [Optimize action agents for reliability before abstract intelligence](../concepts/optimize-action-agents-for-reliability-before-abstract-intelligence.md)
@@ -542,6 +543,8 @@
 
 ## Infrastructure
 
+- [Dedicated Vector Databases Remain Common RAG Infrastructure](../concepts/dedicated-vector-databases-remain-common-rag-infrastructure.md)
+- [Prompt Management Lags Prompt Iteration](../concepts/prompt-management-lags-prompt-iteration.md)
 - [Deploy Remote MCP Servers on Serverless Cloud Infrastructure](../concepts/deploy-remote-mcp-servers-on-serverless-cloud-infrastructure.md)
 - [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](../concepts/retrieve-tool-descriptions-before-loading-large-tool-catalogs.md)
 - [Dual-mode AI infrastructure](../concepts/dual-mode-ai-infrastructure.md)
@@ -723,6 +726,8 @@
 
 ## Evaluation
 
+- [AI System Evaluation Still Depends on Human Review](../concepts/ai-system-evaluation-still-depends-on-human-review.md)
+- [Prompt Management Lags Prompt Iteration](../concepts/prompt-management-lags-prompt-iteration.md)
 - [Do not trust saturated vision benchmarks as visual intelligence](../concepts/do-not-trust-saturated-vision-benchmarks-as-visual-intelligence.md)
 - [Evaluate vision models on domain adaptability and few-shot grounding](../concepts/evaluate-vision-models-on-domain-adaptability-and-few-shot-grounding.md)
 - [Use Fast Query-Document Evals for Retrieval Changes](../concepts/use-fast-query-document-evals-for-retrieval-changes.md)
@@ -896,6 +901,8 @@
 
 ## Models
 
+- [AI Engineering Practice Is Heterogeneous and Fast Moving](../concepts/ai-engineering-practice-is-heterogeneous-and-fast-moving.md)
+- [Multimodal Models Have a Production Adoption Gap](../concepts/multimodal-models-have-a-production-adoption-gap.md)
 - [Research engineering partnership](../concepts/research-engineering-partnership.md)
 - [Use vision-only features when captions erase visual distinctions](../concepts/use-vision-only-features-when-captions-erase-visual-distinctions.md)
 - [Evaluate vision models on domain adaptability and few-shot grounding](../concepts/evaluate-vision-models-on-domain-adaptability-and-few-shot-grounding.md)
@@ -969,6 +976,7 @@
 
 ## Retrieval
 
+- [Dedicated Vector Databases Remain Common RAG Infrastructure](../concepts/dedicated-vector-databases-remain-common-rag-infrastructure.md)
 - [Use Fast Query-Document Evals for Retrieval Changes](../concepts/use-fast-query-document-evals-for-retrieval-changes.md)
 - [Align Synthetic Retrieval Queries With Real User Specificity](../concepts/align-synthetic-retrieval-queries-with-real-user-specificity.md)
 - [Extract enterprise interaction data into structured graphs](../concepts/extract-enterprise-interaction-data-into-structured-graphs.md)
@@ -1173,6 +1181,9 @@
 
 ## Workflows
 
+- [AI Engineering Practice Is Heterogeneous and Fast Moving](../concepts/ai-engineering-practice-is-heterogeneous-and-fast-moving.md)
+- [Prompt Management Lags Prompt Iteration](../concepts/prompt-management-lags-prompt-iteration.md)
+- [Agent Adoption Trails LLM Adoption in the Workplace](../concepts/agent-adoption-trails-llm-adoption-in-the-workplace.md)
 - [Specialist Expert Systems Bundle Capabilities, APIs, and Instructions](../concepts/specialist-expert-systems-bundle-capabilities-apis-and-instructions.md)
 - [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](../concepts/retrieve-tool-descriptions-before-loading-large-tool-catalogs.md)
 - [Treat AI coding as safe software change](../concepts/treat-ai-coding-as-safe-software-change.md)

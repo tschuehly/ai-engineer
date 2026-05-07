@@ -78,6 +78,8 @@ Remote MCP infrastructure can reuse ordinary cloud primitives when the local std
 
 ## Key Concepts
 
+- [Dedicated Vector Databases Remain Common RAG Infrastructure](../concepts/dedicated-vector-databases-remain-common-rag-infrastructure.md) - many teams still choose specialized vector databases as production context stores.
+- [Prompt Management Lags Prompt Iteration](../concepts/prompt-management-lags-prompt-iteration.md) - infrastructure needs prompt versioning and ownership when prompts change more often than models.
 - [Deploy Remote MCP Servers on Serverless Cloud Infrastructure](../concepts/deploy-remote-mcp-servers-on-serverless-cloud-infrastructure.md) - serverless compute and API routing can host remote MCP tools with auth and session persistence.
 - [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](../concepts/retrieve-tool-descriptions-before-loading-large-tool-catalogs.md) - search infrastructure can keep large tool catalogs out of the default context window.
 - [Dual-mode AI infrastructure](../concepts/dual-mode-ai-infrastructure.md) - infrastructure planning must balance long compute-heavy work against low-latency realtime workloads.
@@ -312,5 +314,6 @@ Remote MCP infrastructure can reuse ordinary cloud primitives when the local std
 - [The Unbearable Lightness of Agent Optimization - Alberto Romero, Jointly](../sources/20251124_zfvEMNmVlNY.md)
 - [Agents are Robots Too: What Self-Driving Taught Me About Building Agents - Jesse Hu, Abundant](../sources/20251124_qqXdLf3wy1E.md)
 - [Rishabh Garg, Tesla Optimus — Challenges in High Performance Robotics Systems](../sources/20250825_bCGbuyv8PMk.md)
+- [The 2025 AI Engineering Report - Barr Yaron, Amplify](../sources/20250801_mQ7_Zje7WKE.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)
