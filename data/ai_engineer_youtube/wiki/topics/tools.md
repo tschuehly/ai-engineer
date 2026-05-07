@@ -73,6 +73,7 @@ Prompt-to-app builders are also tool surfaces. AI Studio shows a compact version
 - [Use MLX Swift LM for Apple local model integration](../concepts/use-mlx-swift-lm-for-apple-local-model-integration.md) - MLX Swift LM turns Hugging Face model IDs into a native Apple local-inference tool path.
 - [Realtime multimodal models should plan over specialized local actuators](../concepts/realtime-multimodal-models-should-plan-over-specialized-local-actuators.md) - embodied tool use should separate conversational planning from local action execution.
 - [Use skills for workflow guidance and MCP for integrations](../concepts/use-skills-for-workflow-guidance-and-mcp-for-integrations.md) - separates the integration layer from the contextual guidance layer.
+- [General agents need skills for domain expertise](../concepts/general-agents-need-skills-for-domain-expertise.md) - tool-capable agents still need skills that encode domain procedures.
 - [Customize subagents by task, model, tools, and permissions](../concepts/customize-subagents-by-task-model-tools-and-permissions.md) - specialist agents should receive scoped tool and MCP access that matches their role.
 - [Configure agent modes, rules, and permissions as the workflow evolves](../concepts/configure-agent-modes-rules-and-permissions-as-the-workflow-evolves.md) - modes, AGENTS.md, skills, worktrees, MCP servers, and approval controls shape how tools are used.
 - [Keep spec artifacts feature-scoped, mutable, and context-backed](../concepts/keep-spec-artifacts-feature-scoped-mutable-and-context-backed.md) - MCP servers and steering files can enrich specs without bloating every task prompt.
@@ -82,6 +83,7 @@ Prompt-to-app builders are also tool surfaces. AI Studio shows a compact version
 - [Edge agent skills need progressive disclosure to preserve small-model reliability](../concepts/edge-agent-skills-need-progressive-disclosure-to-preserve-small-model-reliability.md) - small local models need tool context to be discoverable without all details being preloaded.
 - [Constrained decoding makes small-model tool calls production-usable](../concepts/constrained-decoding-makes-small-model-tool-calls-production-usable.md) - tool runtimes can improve small-model reliability by constraining calls to valid tools.
 - [Package reusable context as skills, libraries, and registries](../concepts/package-reusable-context-as-skills-libraries-and-registries.md) - tool guidance can be shared as installable context packages.
+- [Treat complex skills like software artifacts](../concepts/treat-complex-skills-like-software-artifacts.md) - executable skills need tests, dependency metadata, and version lineage.
 - [Filter untrusted context before it reaches the agent](../concepts/filter-untrusted-context-before-it-reaches-the-agent.md) - tool and skill ecosystems need controls for unsafe context before execution sandboxes apply.
 - [Aggregated personal context creates mosaic and exfiltration risk](../concepts/aggregated-personal-context-creates-mosaic-and-exfiltration-risk.md) - read-only tool access still needs privacy analysis when many personal sources are combined.
 - [Ambient agents need self-maintenance and memory hygiene](../concepts/ambient-agents-need-self-maintenance-and-memory-hygiene.md) - operational jobs and deterministic scripts keep always-on agent systems reliable.
@@ -205,6 +207,7 @@ Prompt-to-app builders are also tool surfaces. AI Studio shows a compact version
 - [Your Support Team Should Ship Code - Lisa Orr, Zapier](../sources/20251216_RmJ4rTLV_x4.md)
 - [How Claude Code Works - Jared Zoneraich, PromptLayer](../sources/20251226_RFKCzGlAU6Q.md)
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md)
+- [Don't Build Agents, Build Skills Instead - Barry Zhang & Mahesh Murag, Anthropic](../sources/20251208_CEvIs9y1uog.md)
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md)
 - [Skill Issue: How We Used AI to Make Agents Actually Good at Supabase - Pedro Rodrigues, Supabase](../sources/20260504_GmAQKINjv1E.md)
 - [Mergeable by default: Building the context engine to save time and tokens — Peter Werry, Unblocked](../sources/20260503_5ID22ACI7IM.md)

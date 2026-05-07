@@ -162,6 +162,8 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 - [Evaluate workspace isolation with positive and negative filesystem scorers](../concepts/evaluate-workspace-isolation-with-positive-and-negative-filesystem-scorers.md) - prompt-enforced workspace workflows need scorers for both intended and forbidden edits.
 - [Use parent agents to compare and merge parallel subagent outputs](../concepts/use-parent-agents-to-compare-and-merge-parallel-subagent-outputs.md) - parent agents can coordinate subagent results into a reviewable comparison and synthesis loop.
 - [Agent skills package progressive-disclosure context for repeatable workflows](../concepts/agent-skills-package-progressive-disclosure-context-for-repeatable-workflows.md) - repeated workflows can be packaged as skills with deeper references loaded on demand.
+- [Treat complex skills like software artifacts](../concepts/treat-complex-skills-like-software-artifacts.md) - skill workflows need evals, versioning, and dependency metadata as they become executable packages.
+- [Skills turn procedural feedback into transferable agent memory](../concepts/skills-turn-procedural-feedback-into-transferable-agent-memory.md) - workflow feedback can become shared procedural memory through skill updates.
 - [Evaluate agent skills with task scenarios and comparative conditions](../concepts/evaluate-agent-skills-with-task-scenarios-and-comparative-conditions.md) - workflow changes can be tested by comparing runs with and without the skill.
 - [Validate eval harnesses before trusting skill scores](../concepts/validate-eval-harnesses-before-trusting-skill-scores.md) - workflow evals need checks for evaluator mistakes, not just agent mistakes.
 - [Surface unresolved context conflicts to agents and users](../concepts/surface-unresolved-context-conflicts-to-agents-and-users.md) - context workflows should turn unresolved contradictions into explicit clarification points.
@@ -302,6 +304,7 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 - [Your Support Team Should Ship Code - Lisa Orr, Zapier](../sources/20251216_RmJ4rTLV_x4.md)
 - [How Claude Code Works - Jared Zoneraich, PromptLayer](../sources/20251226_RFKCzGlAU6Q.md)
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md)
+- [Don't Build Agents, Build Skills Instead - Barry Zhang & Mahesh Murag, Anthropic](../sources/20251208_CEvIs9y1uog.md)
 - [Spec-Driven Development: Agentic Coding at FAANG Scale and Quality - Al Harris, Amazon Kiro](../sources/20260109_HY_JyxAZsiE.md)
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md)
 - [OpenAI Codex Masterclass  - Vaibhav Srivastav & Katia Gil Guzman](../sources/20260429_MhHEGMFCEB0.md)

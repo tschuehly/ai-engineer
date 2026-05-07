@@ -935,3 +935,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Models](topics/models.md)
 - Updated concepts: [Use Agent RFT after baseline and task optimization](concepts/use-agent-rft-after-baseline-and-task-optimization.md), [Preserve rollout trajectory context for agent RFT grading](concepts/preserve-rollout-trajectory-context-for-agent-rft-grading.md), [Design Agent RFT rewards for production match and anti-hacking](concepts/design-agent-rft-rewards-for-production-match-and-anti-hacking.md)
 - Notes: Added OpenAI's Agent RFT workflow guidance for when to use reinforcement fine-tuning, how to grade tool-call trajectories, and how to design production-matched rewards that resist hacking.
+
+## [2026-05-07] ingest | Don't Build Agents, Build Skills Instead - Barry Zhang & Mahesh Murag, Anthropic
+
+- Source: [Don't Build Agents, Build Skills Instead - Barry Zhang & Mahesh Murag, Anthropic](sources/20251208_CEvIs9y1uog.md)
+- Processed: `CEvIs9y1uog`
+- Updated topics: [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [General agents need skills for domain expertise](concepts/general-agents-need-skills-for-domain-expertise.md), [Treat complex skills like software artifacts](concepts/treat-complex-skills-like-software-artifacts.md), [Skills turn procedural feedback into transferable agent memory](concepts/skills-turn-procedural-feedback-into-transferable-agent-memory.md), [Agent skills package progressive-disclosure context for repeatable workflows](concepts/agent-skills-package-progressive-disclosure-context-for-repeatable-workflows.md), [Use skills for workflow guidance and MCP for integrations](concepts/use-skills-for-workflow-guidance-and-mcp-for-integrations.md), [Package reusable context as skills, libraries, and registries](concepts/package-reusable-context-as-skills-libraries-and-registries.md)
+- Notes: Added Anthropic's framing that general code/runtime agents gain domain competence through skill libraries, while complex skills need tests, version lineage, dependency metadata, and feedback-driven procedural memory.

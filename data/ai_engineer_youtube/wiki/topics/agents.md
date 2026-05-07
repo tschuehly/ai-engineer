@@ -147,6 +147,8 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Collaborative plans become executable agent context](../concepts/collaborative-plans-become-executable-agent-context.md) - shared plan editing keeps team intent visible before an agent implements.
 - [Social context dashboards keep agentic teams oriented](../concepts/social-context-dashboards-keep-agentic-teams-oriented.md) - summarized teammate activity and session context reduce orientation cost as agent output grows.
 - [Agent skills package progressive-disclosure context for repeatable workflows](../concepts/agent-skills-package-progressive-disclosure-context-for-repeatable-workflows.md) - skills can make domain workflows available without loading all instructions upfront.
+- [General agents need skills for domain expertise](../concepts/general-agents-need-skills-for-domain-expertise.md) - reusable agent runtimes still need packaged professional procedures for domain work.
+- [Skills turn procedural feedback into transferable agent memory](../concepts/skills-turn-procedural-feedback-into-transferable-agent-memory.md) - shared skills can preserve procedure-level lessons for future agent runs.
 - [Server-side interaction state simplifies branching conversational agents](../concepts/server-side-interaction-state-simplifies-branching-conversational-agents.md) - interaction IDs can simplify continuation, retrieval, and branching without pretending context is infinite.
 - [Agent tool loops turn model-required actions into executable results](../concepts/agent-tool-loops-turn-model-required-actions-into-executable-results.md) - tool-using agents need a runtime loop that validates and executes model-requested actions.
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md) - agent products need reusable runtime primitives around the model call.
@@ -328,6 +330,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Platforms for Humans and Machines: Engineering for the Age of Agents - Juan Herreros Elorza](../sources/20260408_cCRO3ChaYhM.md)
 - [Cognitive Exhaust Fumes, or: Read-Only AI Is Underrated - Simon Podhajsky, Head of AI, Waypoint](../sources/20260408_u0TOSBbAw7c.md)
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md)
+- [Don't Build Agents, Build Skills Instead - Barry Zhang & Mahesh Murag, Anthropic](../sources/20251208_CEvIs9y1uog.md)
 - [How METR measures Long Tasks and Experienced Open Source Dev Productivity - Joel Becker, METR](../sources/20260119_k1t2xyWMUdY.md)
 - [Identity for AI Agents - Patrick Riley & Carlos Galan, Auth0](../sources/20260114_VSdV-AdSlis.md)
 - [Your MCP Server is Bad (and you should feel bad) - Jeremiah Lowin, Prefect](../sources/20260112_96G7FLab8xc.md)
