@@ -895,3 +895,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Match AI Operating Models to Work Type](concepts/match-ai-operating-models-to-work-type.md), [Use One-Pizza Pods for Agentic Engineering](concepts/use-one-pizza-pods-for-agentic-engineering.md), [Measure AI Transformation by Outcomes Instead of Adoption](concepts/measure-ai-transformation-by-outcomes-instead-of-adoption.md)
 - Notes: Added enterprise operating-model guidance for scaling AI coding beyond individual productivity into team structure, workflow selection, and outcome measurement.
+
+## [2026-05-07] ingest | Can you prove AI ROI in Software Eng? (Stanford 120k Devs Study) - Yegor Denisov-Blanch, Stanford
+
+- Source: [Can you prove AI ROI in Software Eng? (Stanford 120k Devs Study) - Yegor Denisov-Blanch, Stanford](sources/20251211_JvosMkuNxF8.md)
+- Processed: `JvosMkuNxF8`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md)
+- Updated concepts: [Codebase Hygiene Amplifies AI Productivity Gains](concepts/codebase-hygiene-amplifies-ai-productivity-gains.md), [Benchmark AI Engineering Practices by Usage Pattern](concepts/benchmark-ai-engineering-practices-by-usage-pattern.md), [Measure AI ROI With Primary Output and Guardrails](concepts/measure-ai-roi-with-primary-output-and-guardrails.md), [Do Not Use Token Volume as a Developer Productivity Metric](concepts/do-not-use-token-volume-as-a-developer-productivity-metric.md), [Measure AI Engineering Impact Across Utilization, Impact, and Cost](concepts/measure-ai-engineering-impact-across-utilization-impact-and-cost.md)
+- Notes: Added Stanford's AI software-engineering ROI guidance around codebase hygiene, usage-pattern benchmarking, and output metrics checked against quality and rework guardrails.

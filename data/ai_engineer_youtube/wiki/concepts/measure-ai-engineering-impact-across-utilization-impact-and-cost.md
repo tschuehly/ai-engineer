@@ -12,6 +12,7 @@ Details:
 - DX's measurement framework normalizes signals into utilization, impact, and cost, with maturity moving from "what is happening?" to correlations with velocity, quality, and spend. (09:56-11:04)
 - Leaders should watch speed and quality together: higher PR throughput is not useful if change failure rate, maintainability, change confidence, or perceived quality degrade. (07:35-08:01)
 - Organization averages can hide extreme variance: company-level slices showed some organizations improving while others declined on the same impact measures. (02:40-03:23)
+- A later Stanford ROI talk makes the same point with a team case study: PR count increased after AI adoption, but code quality fell, rework increased, and effective output did not meaningfully increase. (12:57-15:28)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -20,6 +21,8 @@ Related topics:
 Related concepts:
 - [Do not use token volume as a developer productivity metric](do-not-use-token-volume-as-a-developer-productivity-metric.md)
 - [Measure AI developer productivity with field experiments, not benchmark extrapolation alone](measure-ai-developer-productivity-with-field-experiments-not-benchmark-extrapolation-alone.md)
+- [Measure AI ROI with primary output and guardrails](measure-ai-roi-with-primary-output-and-guardrails.md)
 
 Sources:
 - [Leadership in AI Assisted Engineering - Justin Reock, DX (acq. Atlassian)](../sources/20251219_PmZDupFP3UM.md), 02:40-03:23, 07:35-11:04
+- [Can you prove AI ROI in Software Eng? (Stanford 120k Devs Study) - Yegor Denisov-Blanch, Stanford](../sources/20251211_JvosMkuNxF8.md), 12:57-15:28

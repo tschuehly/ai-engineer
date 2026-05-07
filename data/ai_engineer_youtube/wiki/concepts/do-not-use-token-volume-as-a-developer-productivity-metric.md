@@ -12,6 +12,7 @@ Details:
 - The failure mode is concrete: engineers may ask agents to summarize documentation poorly or run autonomous agents to produce low-value work because those actions raise visible token counts. (03:00-03:27)
 - The transcript compares token counting to lines-of-code and pull-request-count metrics, both of which encouraged optimization of output volume rather than valuable software outcomes. (04:18-04:41)
 - A later source describes companies using token-burning leaderboards as visible career signals, which can reward adoption theater instead of validated engineering impact. (20:48-21:04)
+- A Stanford ROI talk adds field-study evidence that token spend per engineer had only a loose correlation with productivity lift, with a directional "death valley" around mid-level token use where some teams did worse than lower-usage teams. (03:14-04:02)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -20,7 +21,10 @@ Related topics:
 Related concepts:
 - [Track user dissatisfaction alongside pairwise model preference](track-user-dissatisfaction-alongside-pairwise-model-preference.md)
 - [Limit agent change size by feedback speed](limit-agent-change-size-by-feedback-speed.md)
+- [Benchmark AI engineering practices by usage pattern](benchmark-ai-engineering-practices-by-usage-pattern.md)
+- [Measure AI ROI with primary output and guardrails](measure-ai-roi-with-primary-output-and-guardrails.md)
 
 Sources:
 - [How AI is changing Software Engineering: A Conversation with Gergely Orosz, @pragmaticengineer](../sources/20260421_CS5Cmz5FssI.md), 01:17-04:41
 - [From Vibe Coding To Vibe Engineering - Kitze, Sizzy](../sources/20251214_JV-wY5pxXLo.md), 20:48-21:04
+- [Can you prove AI ROI in Software Eng? (Stanford 120k Devs Study) - Yegor Denisov-Blanch, Stanford](../sources/20251211_JvosMkuNxF8.md), 03:14-04:02
