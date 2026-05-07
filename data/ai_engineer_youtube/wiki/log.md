@@ -1631,3 +1631,11 @@
 - Updated topics: [Retrieval](topics/retrieval.md), [Evaluation](topics/evaluation.md)
 - Updated concepts: [Search Engines Shift Retrieval Work to Ingestion](concepts/search-engines-shift-retrieval-work-to-ingestion.md), [BM25 Scores Lexical Retrieval With Frequency, Rarity, and Field Length](concepts/bm25-scores-lexical-retrieval-with-frequency-rarity-and-field-length.md), [Hybrid Retrieval Combines Lexical, Sparse, Dense, and Reranking Signals](concepts/hybrid-retrieval-combines-lexical-sparse-dense-and-reranking-signals.md)
 - Notes: Added Elastic's retrieval workshop material on search-engine ingestion, inverted indexes, BM25, dense-vector caveats, hybrid retrieval, RRF, and reranking.
+
+## [2026-05-07] ingest | Why you should care about AI interpretability - Mark Bissell, Goodfire AI
+
+- Source: [Why you should care about AI interpretability - Mark Bissell, Goodfire AI](sources/20250727_6AVMHZPjpTQ.md)
+- Processed: `6AVMHZPjpTQ`
+- Updated topics: [Models](topics/models.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md)
+- Updated concepts: [Mechanistic Interpretability Turns Model Internals Into Engineering Surfaces](concepts/mechanistic-interpretability-turns-model-internals-into-engineering-surfaces.md), [Activation Steering Can Patch Specific Runtime Behaviors](concepts/activation-steering-can-patch-specific-runtime-behaviors.md), [Use Activation Triggers for Dynamic Prompting](concepts/use-activation-triggers-for-dynamic-prompting.md), [Model Diffs Inspect Post-Training Feature Changes](concepts/model-diffs-inspect-post-training-feature-changes.md), [Interpretability-Native Interfaces Expose Concept-Level Model Controls](concepts/interpretability-native-interfaces-expose-concept-level-model-controls.md)
+- Notes: Added Goodfire's interpretability framing for feature attribution, activation steering, dynamic prompt injection, post-training model diffs, and concept-level creative controls.

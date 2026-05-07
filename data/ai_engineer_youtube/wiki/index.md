@@ -5,6 +5,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 ## Current Emphasis
 
 - [Product Work Graphs Coordinate Agents and Humans](concepts/product-work-graphs-coordinate-agents-and-humans.md) - issues, projects, feedback, related work, and communication threads become shared context for agents and humans.
+- [Mechanistic Interpretability Turns Model Internals Into Engineering Surfaces](concepts/mechanistic-interpretability-turns-model-internals-into-engineering-surfaces.md) - learned model features can be inspected and steered as engineering controls.
+- [Activation Steering Can Patch Specific Runtime Behaviors](concepts/activation-steering-can-patch-specific-runtime-behaviors.md) - feature-level steering can target specific runtime behaviors when validated against evals.
+- [Interpretability-Native Interfaces Expose Concept-Level Model Controls](concepts/interpretability-native-interfaces-expose-concept-level-model-controls.md) - generative interfaces can expose learned concepts as spatial controls rather than only prompt text.
 - [First-Class Agent Users Need Identity, Scopes, and Audit Trails](concepts/first-class-agent-users-need-identity-scopes-and-audit-trails.md) - collaboration-platform agents need governable user identity, scoped access, and inspectable history.
 - [Platform-Native Agents Should Behave Like Good Teammates](concepts/platform-native-agents-should-behave-like-good-teammates.md) - embedded agents should acknowledge, clarify, update state, and keep comments concise.
 - [Enterprise MCP Requires SaaS Security Controls](concepts/enterprise-mcp-requires-saas-security-controls.md) - public and enterprise MCP servers need SSO, provisioning, audit, DLP, abuse prevention, and access controls.

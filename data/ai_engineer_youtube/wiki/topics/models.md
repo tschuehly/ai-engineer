@@ -34,6 +34,8 @@ Computer-vision models add a visual-fidelity caveat to multimodal model selectio
 
 Robot foundation models add action as another model output modality. GR00T N1's vision-language-action framing combines image observations, robot state, and language prompts, then outputs action trajectories through a dual-system architecture and embodiment-specific decoder. The model lesson is that physical AI needs scarce action data, sim-to-real strategy, realtime control, and body-specific output adaptation in addition to ordinary foundation-model pretraining.
 
+Mechanistic interpretability adds a model-internal engineering surface. Instead of treating the model as only a prompt-response box, feature attribution can show which learned concepts contributed to a token, activation steering can adjust a behavior at inference time, dynamic prompting can trigger instructions when internal features fire, and model diffs can inspect post-training changes. These controls should be evaluated like any other model intervention because they can be powerful, hidden from users, and narrower than ordinary prompt or fine-tuning changes.
+
 ## Key Concepts
 
 - [AI Engineering Practice Is Heterogeneous and Fast Moving](../concepts/ai-engineering-practice-is-heterogeneous-and-fast-moving.md) - model strategy must tolerate frequent updates and multiple concurrent use cases.
@@ -53,6 +55,11 @@ Robot foundation models add action as another model output modality. GR00T N1's 
 - [Ground generated media with current search context](../concepts/ground-generated-media-with-current-search-context.md) - grounded image models combine retrieval, text rendering, localization, and generation.
 - [Use vision-only features when captions erase visual distinctions](../concepts/use-vision-only-features-when-captions-erase-visual-distinctions.md) - caption supervision can miss visual distinctions that self-supervised visual features preserve.
 - [Evaluate vision models on domain adaptability and few-shot grounding](../concepts/evaluate-vision-models-on-domain-adaptability-and-few-shot-grounding.md) - object-detection models should be compared on specialized domains and few-shot grounding, not only common-class benchmarks.
+- [Mechanistic Interpretability Turns Model Internals Into Engineering Surfaces](../concepts/mechanistic-interpretability-turns-model-internals-into-engineering-surfaces.md) - model features and activations can become inspectable controls for debugging and steering.
+- [Activation Steering Can Patch Specific Runtime Behaviors](../concepts/activation-steering-can-patch-specific-runtime-behaviors.md) - raising or lowering specific features can change targeted model behavior at inference time.
+- [Use Activation Triggers for Dynamic Prompting](../concepts/use-activation-triggers-for-dynamic-prompting.md) - internal feature activations can decide when runtime prompts or context should be injected.
+- [Model Diffs Inspect Post-Training Feature Changes](../concepts/model-diffs-inspect-post-training-feature-changes.md) - feature-level diffs can reveal behavioral shifts after post-training.
+- [Interpretability-Native Interfaces Expose Concept-Level Model Controls](../concepts/interpretability-native-interfaces-expose-concept-level-model-controls.md) - learned concepts can become direct UI controls for generative models.
 - [Evaluate whether models reject impossible or nonsensical premises](../concepts/evaluate-whether-models-reject-impossible-or-nonsensical-premises.md) - model reliability includes knowing when not to answer a malformed request.
 - [Benchmark narrow slices separately from real expert work](../concepts/benchmark-narrow-slices-separately-from-real-expert-work.md) - public benchmark progress should be interpreted alongside real prompt distributions and expert dissatisfaction.
 - [Route Gemma 4 model variants by deployment and workflow shape](../concepts/route-gemma-4-model-variants-by-deployment-and-workflow-shape.md) - Gemma 4's effective, MoE, and dense variants map to different local, hosted, reasoning, coding, and agentic workloads.
@@ -135,6 +142,7 @@ Robot foundation models add action as another model output modality. GR00T N1's 
 - Which scaffold perturbations best predict whether a coding-agent model will transfer across real harnesses and tool APIs?
 - Which model advances are blocked by research ideas versus the engineering systems needed to test and scale them?
 - How can VLMs use high-fidelity vision-only features while preserving language alignment and real-time detection performance?
+- Which interpretability-derived feature controls are stable enough across prompts, model versions, and deployment environments to use as production levers?
 
 ## Sources
 
@@ -143,6 +151,7 @@ Robot foundation models add action as another model output modality. GR00T N1's 
 - [Building an Agentic Platform - Ben Kus, CTO Box](../sources/20250824_12v5S1n1eOY.md)
 - [Vision AI in 2025 - Peter Robicheaux, Roboflow](../sources/20250803_IQc05eCvNYE.md)
 - [What Is a Humanoid Foundation Model? An Introduction to GR00T N1 - Annika & Aastha](../sources/20250728_mWKYvT9Lc50.md)
+- [Why you should care about AI interpretability - Mark Bissell, Goodfire AI](../sources/20250727_6AVMHZPjpTQ.md)
 
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md)
 - [Compilers in the Age of LLMs - Yusuf Olokoba, Muna](../sources/20251124_q2nHsJVy4FE.md)

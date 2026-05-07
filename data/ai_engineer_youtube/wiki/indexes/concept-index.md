@@ -813,6 +813,8 @@
 
 ## Evaluation
 
+- [Activation Steering Can Patch Specific Runtime Behaviors](../concepts/activation-steering-can-patch-specific-runtime-behaviors.md)
+- [Model Diffs Inspect Post-Training Feature Changes](../concepts/model-diffs-inspect-post-training-feature-changes.md)
 - [Ground Scientific Simulations in Live Experiment Traces](../concepts/ground-scientific-simulations-in-live-experiment-traces.md)
 - [Assemble Realtime Multimodal Context for Lab Agents](../concepts/assemble-realtime-multimodal-context-for-lab-agents.md)
 - [Failure-Mode Ontologies Prioritize Domain AI Work](../concepts/failure-mode-ontologies-prioritize-domain-ai-work.md)
@@ -1011,6 +1013,11 @@
 
 ## Models
 
+- [Mechanistic Interpretability Turns Model Internals Into Engineering Surfaces](../concepts/mechanistic-interpretability-turns-model-internals-into-engineering-surfaces.md)
+- [Activation Steering Can Patch Specific Runtime Behaviors](../concepts/activation-steering-can-patch-specific-runtime-behaviors.md)
+- [Use Activation Triggers for Dynamic Prompting](../concepts/use-activation-triggers-for-dynamic-prompting.md)
+- [Model Diffs Inspect Post-Training Feature Changes](../concepts/model-diffs-inspect-post-training-feature-changes.md)
+- [Interpretability-Native Interfaces Expose Concept-Level Model Controls](../concepts/interpretability-native-interfaces-expose-concept-level-model-controls.md)
 - [AI Engineering Practice Is Heterogeneous and Fast Moving](../concepts/ai-engineering-practice-is-heterogeneous-and-fast-moving.md)
 - [Robotics Data Pyramids Combine Scarce Real Trajectories With Synthetic Data](../concepts/robotics-data-pyramids-combine-scarce-real-trajectories-with-synthetic-data.md)
 - [Dual-System VLA Architectures Separate Planning From Realtime Control](../concepts/dual-system-vla-architectures-separate-planning-from-realtime-control.md)
@@ -1189,6 +1196,8 @@
 
 ## Tools
 
+- [Use Activation Triggers for Dynamic Prompting](../concepts/use-activation-triggers-for-dynamic-prompting.md)
+- [Interpretability-Native Interfaces Expose Concept-Level Model Controls](../concepts/interpretability-native-interfaces-expose-concept-level-model-controls.md)
 - [First-Class Agent Users Need Identity, Scopes, and Audit Trails](../concepts/first-class-agent-users-need-identity-scopes-and-audit-trails.md)
 - [Platform-Native Agents Should Behave Like Good Teammates](../concepts/platform-native-agents-should-behave-like-good-teammates.md)
 - [Expose Search Controls For Agentic Retrieval](../concepts/expose-search-controls-for-agentic-retrieval.md)

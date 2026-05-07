@@ -48,6 +48,8 @@ Contact-center voice evaluation should inspect each pipeline stage, not only the
 
 RL environments add an evaluation shape for interactive model behavior: the same environment can generate rollouts, compute deterministic or weighted rewards, and become the training loop. That makes the environment itself part of the eval artifact. Teams should control environment noise, inspect trajectories, check for hidden opponent or simulator bias, and try the trained model in the real task before trusting reward curves or benchmark scores. Environment design also prevents vague agent validation: once a harness must include tasks and rewards, teams can compare models, prompts, hyperparameters, and training methods against a named optimization target instead of relying on a vibe check.
 
+Interpretability-derived controls also need evaluation. Feature attribution can expose why a token was produced, activation steering can patch a specific behavior, and model diffs can reveal post-training feature changes, but each control should be checked against task evals and regression cases. A feature-level intervention that improves privacy handling, jailbreak resistance, or brand behavior can still create hidden off-target behavior if the team treats it as a guaranteed semantic switch rather than a model intervention.
+
 Robotics-style agent evaluation emphasizes that action systems need more than final-answer scores. Production logs, live action feedback, stateful starting conditions, and counterfactual simulations reveal whether an agent can recover after its own actions shift the environment. A single benchmark percentage is only a starting point; failure categories and replayable trajectories tell teams where to improve the agent loop.
 
 Scientific co-scientist evaluation needs the same trace discipline. Realtime lab agents should preserve sensor readings, microscope or camera frames, sample conditions, protocol context, and resulting measurements so the team can verify whether the agent's interpretation matched the experiment. Those traces can also seed simulations, letting teams compare proposed conditions against recorded physical behavior before changing the next run.
@@ -139,6 +141,8 @@ High-stakes domain RAG also needs a fidelity ladder. Expert review can catch leg
 - [Evaluate support coding agents by staged failure modes](../concepts/evaluate-support-coding-agents-by-staged-failure-modes.md) - support agents need separate checks for triage, fixability, and generated solution quality.
 - [Analyze operational health over time slices before invoking repair agents](../concepts/analyze-operational-health-over-time-slices-before-invoking-repair-agents.md) - repair triggers should be evaluated against richer time-windowed evidence, not isolated alert thresholds.
 - [Compare models by task, thinking budget, cost, and latency](../concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - side-by-side model comparisons help choose enough reasoning at acceptable speed and cost.
+- [Activation Steering Can Patch Specific Runtime Behaviors](../concepts/activation-steering-can-patch-specific-runtime-behaviors.md) - runtime feature controls should be validated against the policy or behavior they intend to patch.
+- [Model Diffs Inspect Post-Training Feature Changes](../concepts/model-diffs-inspect-post-training-feature-changes.md) - post-training inspection can complement aggregate eval scores by surfacing feature-level behavioral drift.
 - [Evaluate Agent Loops With Correctness, Cost, Latency, and Step Counts](../concepts/evaluate-agent-loops-with-correctness-cost-latency-and-step-counts.md) - loop metrics should include both outcome validity and operational cost.
 - [Benchmark RAG Pipelines After Production Usage Exists](../concepts/benchmark-rag-pipelines-after-production-usage-exists.md) - production traces should drive parser, retrieval, hallucination, hybrid-search, and cost benchmarks.
 - [Layer Domain RAG Evals by Fidelity, Cost, and Speed](../concepts/layer-domain-rag-evals-by-fidelity-cost-and-speed.md) - expert review, curated criteria, and fast metrics serve different iteration speeds.
@@ -478,6 +482,7 @@ High-stakes domain RAG also needs a fidelity ladder. Expert review can catch leg
 - [Scaling Enterprise-Grade RAG: Lessons from Legal Frontier - Calvin Qi (Harvey), Chang She (Lance)](../sources/20250729_W1MiZChnkfA.md)
 - [Layering every technique in RAG, one query at a time - David Karam, Pi Labs (fmr. Google Search)](../sources/20250729_w9u11ioHGA0.md)
 - [Information Retrieval from the Ground Up - Philipp Krenn, Elastic](../sources/20250727_4Xe_iMYxBQc.md)
+- [Why you should care about AI interpretability - Mark Bissell, Goodfire AI](../sources/20250727_6AVMHZPjpTQ.md)
 - [Make your LLM app a Domain Expert: How to Build an Expert System - Christopher Lovejoy, Anterior](../sources/20250728_MRM7oA3JsFs.md)
 - [Why your product needs an AI product manager, and why it should be you — James Lowe, i.AI](../sources/20250728_xzJdSi2Tsqw.md)
 - [Shipping Products When You Don't Know What they Can Do - Ben Stein, Teammates](../sources/20250728_PthmdT92qNg.md)

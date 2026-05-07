@@ -60,6 +60,8 @@ At cloud scale, tool discovery itself becomes a tool. AWS's Strands example keep
 
 Workflow composition adds another tool-design rule: a workflow can be exposed as an agent tool, and an agent can be exposed as a workflow step or tool. This is useful only when the exposed primitive is small enough to understand, because broad tool sets and graph-shaped APIs can create selection and maintenance failures. Dynamic tool injection is the tool-surface version of this pattern: provide the agent only the tools that fit the current task segment. Collaboration tools add another tool boundary: agents should be OAuth-installed platform users with GraphQL or API access, granular scopes, mention and assignment webhooks, and admin-managed access rather than anonymous background automations.
 
+Mechanistic interpretability can become a tool surface when feature attribution, activation steering, dynamic prompting, and concept palettes are exposed through product controls. These tools differ from ordinary prompts because they operate against model-internal features during generation or post-training inspection. That makes them useful for debugging, targeted steering, and creative control, but also means product UIs and review workflows need to disclose and evaluate the effective intervention rather than hiding it as invisible model magic.
+
 ## Key Concepts
 
 - [Product Work Graphs Coordinate Agents and Humans](../concepts/product-work-graphs-coordinate-agents-and-humans.md) - product tools can expose issues, feedback, projects, and relationships as an agent coordination surface.
@@ -78,6 +80,8 @@ Workflow composition adds another tool-design rule: a workflow can be exposed as
 - [Visual browser context steers frontend agents](../concepts/visual-browser-context-steers-frontend-agents.md) - browser previews and selected element context make rendered UI a direct agent tool surface.
 - [Choose AI coworker form factors by interaction mode](../concepts/choose-ai-coworker-form-factors-by-interaction-mode.md) - agent tool surfaces can be invisible, ambient, inline, or conversational rather than only chat.
 - [Prototype AI UX by feeling the model material](../concepts/prototype-ai-ux-by-feeling-the-model-material.md) - runnable tools reveal whether a model fits the proposed interaction surface.
+- [Use Activation Triggers for Dynamic Prompting](../concepts/use-activation-triggers-for-dynamic-prompting.md) - feature listeners can inject runtime prompt context when the model begins representing a relevant topic.
+- [Interpretability-Native Interfaces Expose Concept-Level Model Controls](../concepts/interpretability-native-interfaces-expose-concept-level-model-controls.md) - concept palettes and strength controls make learned representations into direct product tools.
 - [Design agent presence with visual alignment and handoff](../concepts/design-agent-presence-with-visual-alignment-and-handoff.md) - inline tools need visible progress, alignment, rollback, and handoff.
 - [Use coding agents as programmable subagents inside products](../concepts/use-coding-agents-as-programmable-subagents-inside-products.md) - coding agents can be called through SDKs, CI/CD, and MCP as product-internal tools.
 - [Headless coding-agent servers make agents callable infrastructure](../concepts/headless-coding-agent-servers-make-agents-callable-infrastructure.md) - terminal coding agents become workflow tools when exposed through a server API and packaged tool environment.
@@ -362,5 +366,6 @@ Workflow composition adds another tool-design rule: a workflow can be exposed as
 - [Why your product needs an AI product manager, and why it should be you — James Lowe, i.AI](../sources/20250728_xzJdSi2Tsqw.md)
 - [How we hacked YC Spring 2025 batch's AI agents - Rene Brandel, Casco](../sources/20250730_kv-QAuKWllQ.md)
 - [OpenAI on Securing Code-Executing AI Agents - Fouad Matin (Codex, Agent Robustness)](../sources/20250730_w7IMuYsBNr8.md)
+- [Why you should care about AI interpretability - Mark Bissell, Goodfire AI](../sources/20250727_6AVMHZPjpTQ.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)
