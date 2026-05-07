@@ -1207,3 +1207,11 @@
 - Updated topics: [Agents](topics/agents.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md), [Product Strategy](topics/product-strategy.md)
 - Updated concepts: [Choose AI coworker form factors by interaction mode](concepts/choose-ai-coworker-form-factors-by-interaction-mode.md), [Prototype AI UX by feeling the model material](concepts/prototype-ai-ux-by-feeling-the-model-material.md), [Design agent presence with visual alignment and handoff](concepts/design-agent-presence-with-visual-alignment-and-handoff.md), [Court agent emergence with bounded play](concepts/court-agent-emergence-with-bounded-play.md)
 - Notes: Added Flatfile's AI coworker UX patterns for invisible, ambient, inline, and conversational form factors, runnable model probes, inline alignment controls, and emergent human-escalation behavior.
+
+## [2026-05-07] ingest | Fuzzing in the GenAI Era — Leonard Tang, Haize Labs
+
+- Source: [Fuzzing in the GenAI Era — Leonard Tang, Haize Labs](sources/20250822_OMGPvW8TBHc.md)
+- Processed: `OMGPvW8TBHc`
+- Updated topics: [Evaluation](topics/evaluation.md), [Agents](topics/agents.md)
+- Updated concepts: [Fuzz AI applications for local input brittleness](concepts/fuzz-ai-applications-for-local-input-brittleness.md), [Search natural-language input space as an optimization problem](concepts/search-natural-language-input-space-as-an-optimization-problem.md), [Calibrate LLM judges like binary classifiers](concepts/calibrate-llm-judges-like-binary-classifiers.md)
+- Notes: Added Haize Labs' GenAI fuzzing frame for finding brittle local failures with simulated stimuli, guided adversarial input search, and judge-time compute for automated scoring.

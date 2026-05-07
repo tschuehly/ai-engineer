@@ -18,7 +18,7 @@ Software-engineering ROI measurement should also separate access, usage quality,
 
 Incoming AI-generated work needs evaluation too: automated security reports, issues, pull requests, and fixes can be high-volume and plausible, but maintainers still need to triage them because false reports, low-context fixes, and rushed patches can consume review capacity or break the product. Contribution gates that demand concise human context can be a practical first-pass evaluator before maintainers inspect a generated diff.
 
-Reliable AI app evals should also be reverse-engineered from user-visible outcomes before optimization begins. Generic measures such as groundedness, factuality, or bias can miss whether the product actually resolved the user's task, so teams should define scenario-specific answer criteria, include persona and wording variants, inspect individual failures, and use the benchmark as the baseline for prompt, model, retrieval, logic, and guardrail experiments.
+Reliable AI app evals should also be reverse-engineered from user-visible outcomes before optimization begins. Generic measures such as groundedness, factuality, or bias can miss whether the product actually resolved the user's task, so teams should define scenario-specific answer criteria, include persona and wording variants, inspect individual failures, and use the benchmark as the baseline for prompt, model, retrieval, logic, and guardrail experiments. Static golden sets are only a starting point for GenAI systems because similar natural-language inputs can produce sharply different outputs; production-readiness evals should fuzz nearby syntactic, semantic, conversational, and modality variants and treat failure discovery as guided search over the input space.
 
 Product-funnel evaluation should also treat attention, activation, and retention as distinct outcomes. For AI products and developer tools, a generated launch asset can be plentiful but still fail if nobody has a reason to share it; an onboarding flow can collect profile data but fail if users never reach the aha moment; and a feature roadmap can look active while neglecting primitives that keep advanced users from outgrowing the product.
 
@@ -183,6 +183,8 @@ PR-derived field telemetry adds a practical adoption dashboard shape for AI codi
 - [Personalize aesthetic evals with preference classifiers](../concepts/personalize-aesthetic-evals-with-preference-classifiers.md) - subjective creative quality may need learned user preference boundaries.
 - [Evaluate tool definitions and outputs as context](../concepts/evaluate-tool-definitions-and-outputs-as-context.md) - agent evals should include tool schemas, tool descriptions, output formats, and token footprint.
 - [Build AI app benchmarks before optimization](../concepts/build-ai-app-benchmarks-before-optimization.md) - early benchmarks let teams compare prompts, models, retrieval, logic, and guardrails while catching regressions.
+- [Fuzz AI applications for local input brittleness](../concepts/fuzz-ai-applications-for-local-input-brittleness.md) - generated input variants expose failures that static golden examples miss.
+- [Search natural-language input space as an optimization problem](../concepts/search-natural-language-input-space-as-an-optimization-problem.md) - fuzzing and adversarial testing should use guided prompt and modality search against a judge score.
 - [Use challenge eval sets for future user demands](../concepts/use-challenge-eval-sets-for-future-user-demands.md) - evals should include hard cases that users will ask for after initial success.
 - [Optimize LLM programs with metrics and teacher feedback](../concepts/optimize-llm-programs-with-metrics-and-teacher-feedback.md) - DSPy optimizers turn prompt improvement into a dataset-backed loop with metric and teacher-feedback signals.
 - [Use hierarchical verification before trusting weak agent feedback](../concepts/use-hierarchical-verification-before-trusting-weak-agent-feedback.md) - weak reflection and feedback need quality gates, model diversity, and execution checks.
@@ -288,6 +290,7 @@ PR-derived field telemetry adds a practical adoption dashboard shape for AI codi
 
 - [Building an Agentic Platform - Ben Kus, CTO Box](../sources/20250824_12v5S1n1eOY.md)
 - [Wisdom-Driven Knowledge Augmented Generation at Scale - Chin Keong Lam, Patho AI](../sources/20250822_9AQOvT8LnMI.md)
+- [Fuzzing in the GenAI Era — Leonard Tang, Haize Labs](../sources/20250822_OMGPvW8TBHc.md)
 
 - [Government Agents: AI Agents Meet Tough Regulations - Mark Myshatyn, Los Alamos National Lab](../sources/20251206_TnSGx36Ly0Q.md)
 - [Your Support Team Should Ship Code - Lisa Orr, Zapier](../sources/20251216_RmJ4rTLV_x4.md)
