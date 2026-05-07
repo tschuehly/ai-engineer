@@ -4,6 +4,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Parallel Coding Agents Support Multitasking and Variation Search](concepts/parallel-coding-agents-support-multitasking-and-variation-search.md) - cloned coding agents can run independent backlog work or competing approaches to the same complex task.
+- [Verification-First Prompts Make Parallel Agent Work Reviewable](concepts/verification-first-prompts-make-parallel-agent-work-reviewable.md) - asynchronous agent tasks need observable success conditions before dispatch.
+- [Cloud Agents Turn Coding Work Into Asynchronous VM-Backed Queues](concepts/cloud-agents-turn-coding-work-into-asynchronous-vm-backed-queues.md) - remote VM-backed agents make coding work dispatchable from GitHub, phones, and review queues.
 - [Coding-Agent Capability Tiers Change the Bottleneck](concepts/coding-agent-capability-tiers-change-the-bottleneck.md) - longer coding-agent task horizons shift the bottleneck from text prediction to context, collaboration, confidence, and verification.
 - [Use Playbooks for Repetitive Codebase Migrations](concepts/use-playbooks-for-repetitive-codebase-migrations.md) - migration tasks with clear steps but file-by-file judgment are a strong fit for procedural agent guidance.
 - [Codebase Intelligence Needs Structural and Historical Signals](concepts/codebase-intelligence-needs-structural-and-historical-signals.md) - multi-file coding agents need call hierarchies, language servers, commit history, lint, and cross-file references beyond raw text.

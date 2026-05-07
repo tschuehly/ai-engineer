@@ -120,6 +120,7 @@ General LLM eval programs can be staged as a pyramid. Start with serving perform
 - [Benchmark inference with use-case-shaped token loads](../concepts/benchmark-inference-with-use-case-shaped-token-loads.md) - serving benchmarks should reflect the application's request rates and token profiles.
 - [Customize open benchmark harnesses with proprietary task data](../concepts/customize-open-benchmark-harnesses-with-proprietary-task-data.md) - public benchmark frameworks should be adapted to private task data and product-specific safety cases.
 - [Run eval suites in CI/CD before and during production](../concepts/run-eval-suites-in-cicd-before-and-during-production.md) - eval suites should become automated release and production-monitoring infrastructure.
+- [Verification-First Prompts Make Parallel Agent Work Reviewable](../concepts/verification-first-prompts-make-parallel-agent-work-reviewable.md) - asynchronous agent prompts should define observable stop conditions before work fans out.
 - [Dynamic AI Search Evals Need Fresh Grounding Sets](../concepts/dynamic-ai-search-evals-need-fresh-grounding-sets.md) - current web-backed search needs dynamic benchmarks that reflect changing sources and user context.
 - [Reference-Free AI Search Metrics Decompose Answer Quality](../concepts/reference-free-ai-search-metrics-decompose-answer-quality.md) - answer completeness, document relevance, and hallucination checks can diagnose production search quality without labeled ground truth.
 - [AI Search Providers Should Return Grounding Documents](../concepts/ai-search-providers-should-return-grounding-documents.md) - grounding documents make search evaluation and debugging more transparent than citations alone.
@@ -390,6 +391,7 @@ General LLM eval programs can be staged as a pyramid. Start with serving perform
 ## Sources
 
 - [Strategies for LLM Evals (GuideLLM, lm-eval-harness, OpenAI Evals Workshop) - Taylor Jordan Smith](../sources/20250727_89NuzmKokIk.md)
+- [Your Coding Agent Just Got Cloned And Your Brain Isn't Ready - Rustin Banks, Google Jules](../sources/20250725_X4BwOu0GWb8.md)
 - [Evaluating AI Search: A Practical Framework for Augmented AI Systems - Quotient AI + Tavily](../sources/20250729_wRJD0inpmjU.md)
 - [How to look at your data - Jeff Huber (Chroma) + Jason Liu (567)](../sources/20250806_jryZvCuA0Uc.md)
 - [Vision AI in 2025 - Peter Robicheaux, Roboflow](../sources/20250803_IQc05eCvNYE.md)

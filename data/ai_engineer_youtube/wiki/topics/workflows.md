@@ -314,6 +314,8 @@ Devin-style coding-agent workflows evolve with task horizon. Repeatable migratio
 - [Use one-pizza pods for agentic engineering](../concepts/use-one-pizza-pods-for-agentic-engineering.md) - smaller consolidated teams can make agent orchestration part of the daily workflow.
 - [Measure AI transformation by outcomes instead of adoption](../concepts/measure-ai-transformation-by-outcomes-instead-of-adoption.md) - rollout workflows should connect usage to delivery, quality, resilience, and economic outcomes.
 - [Parallel coding-agent queues need focus-preserving review interfaces](../concepts/parallel-coding-agent-queues-need-focus-preserving-review-interfaces.md) - long-running agent workflows need queueing and review handoffs that reduce context switching.
+- [Parallel Coding Agents Support Multitasking and Variation Search](../concepts/parallel-coding-agents-support-multitasking-and-variation-search.md) - parallel workflows can compare alternative approaches as well as process independent tasks.
+- [Verification-First Prompts Make Parallel Agent Work Reviewable](../concepts/verification-first-prompts-make-parallel-agent-work-reviewable.md) - task prompts should define the condition that lets asynchronous agents know when to stop.
 - [Agent managers orchestrate editor, browser, and background agents](../concepts/agent-managers-orchestrate-editor-browser-and-background-agents.md) - workflow control can move into a dedicated agent manager instead of raw editor logs.
 - [Dynamic artifacts make agent work reviewable and reusable](../concepts/dynamic-artifacts-make-agent-work-reviewable-and-reusable.md) - artifacts support planning, monitoring, commenting, proof, and memory.
 - [Product-research flywheels expose model and harness gaps](../concepts/product-research-flywheels-expose-model-and-harness-gaps.md) - dogfooding connects product workflow failures back to model and harness improvement.
@@ -477,6 +479,7 @@ Devin-style coding-agent workflows evolve with task horizon. Repeatable migratio
 ## Sources
 
 - [Devin 2.0 and the Future of SWE - Scott Wu, Cognition](../sources/20250725_MI83buT_23o.md)
+- [Your Coding Agent Just Got Cloned And Your Brain Isn't Ready - Rustin Banks, Google Jules](../sources/20250725_X4BwOu0GWb8.md)
 - [Piloting agents in GitHub Copilot - Christopher Harrison, Microsoft](../sources/20250726_DdaAABdAqZY.md)
 - [Building the platform for agent coordination - Tom Moor, Linear](../sources/20250728_UG9IAdmi2Dg.md)
 - [Make your LLM app a Domain Expert: How to Build an Expert System - Christopher Lovejoy, Anterior](../sources/20250728_MRM7oA3JsFs.md)

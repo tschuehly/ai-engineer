@@ -34,6 +34,8 @@ Execution-aware code models point to another coding-agent interface: the model c
 
 Coding-agent model training can also target the harness and workflow shape directly. MiniMax M2's framing suggests that a coding model should learn from scaled coding environments, expert developer reward, repeated reasoning/tool-call turns, and scaffold perturbations across prompts, templates, tools, and tool responses. That makes agent robustness a training and evaluation target rather than a property assumed from benchmark rank or raw tool count.
 
+Jules adds a practical cloud-agent parallelism pattern. Once agents run in remote VMs rather than only inside the local IDE, a developer can dispatch multiple background tasks from GitHub or even a phone, then review the results after the agents have cloned the repository, run commands, and tested their changes. Banks separates two useful forms of parallelism: ordinary multitasking across backlog items, and variation search where multiple agents try different approaches to the same hard task. That only works when each task starts with an observable definition of success and ends with merge-and-test infrastructure; otherwise parallelism just produces more PRs to inspect.
+
 GLM 4.6 adds a data-side version of the same principle: coding-agent models should see repo-level contexts with multiple files, issues, pull requests, and project structure before they are expected to work inside real codebases. Its CC-Bench framing also treats coding capability as an agent trajectory with planning, tools, edits, and execution rather than only as a final answer.
 
 Robotics-style agent design sharpens the same point for coding tools: the action space matters. A coding agent that only waits for complete shell responses has different recovery properties from one that can stream terminal state, send control-C, react to long-running processes, and observe a stateful VM or browser as it changes. Choosing those observation and action surfaces explicitly is part of the coding-agent harness, not an incidental UI decision.
@@ -87,6 +89,9 @@ Devin 2.0 adds a product-evolution view of the same trajectory. As coding agents
 - [Prepare Reversible Repository Snapshots for Coding Agents](../concepts/prepare-reversible-repository-snapshots-for-coding-agents.md) - clean remote VM snapshots let agents validate and recover from repository work.
 - [Codebase Intelligence Needs Structural and Historical Signals](../concepts/codebase-intelligence-needs-structural-and-historical-signals.md) - cross-file work needs language, history, and relationship signals beyond raw source text.
 - [Backlog-Scale Coding Agents Need Confidence and Self-Testing](../concepts/backlog-scale-coding-agents-need-confidence-and-self-testing.md) - parallel issue execution needs escalation and validation loops before PR handoff.
+- [Parallel Coding Agents Support Multitasking and Variation Search](../concepts/parallel-coding-agents-support-multitasking-and-variation-search.md) - parallelism can mean many backlog items or many approaches to one complex task.
+- [Verification-First Prompts Make Parallel Agent Work Reviewable](../concepts/verification-first-prompts-make-parallel-agent-work-reviewable.md) - asynchronous coding work needs explicit observable success criteria before dispatch.
+- [Cloud Agents Turn Coding Work Into Asynchronous VM-Backed Queues](../concepts/cloud-agents-turn-coding-work-into-asynchronous-vm-backed-queues.md) - VM-backed agents let work run in the background while humans review plans, tests, and diffs.
 - [Choose Copilot Mode By Autonomy and Feedback Need](../concepts/choose-copilot-mode-by-autonomy-and-feedback-need.md) - Copilot ask, edit, local agent, and asynchronous coding-agent modes fit different supervision levels.
 - [Layer Copilot Context Through Issues, Instructions, and Repository Structure](../concepts/layer-copilot-context-through-issues-instructions-and-repository-structure.md) - issue text, repository instructions, scoped instruction files, and code structure shape Copilot output.
 - [Prepare Copilot Coding Agent Environments With Setup Steps](../concepts/prepare-copilot-coding-agent-environments-with-setup-steps.md) - GitHub Actions setup steps give background Copilot work the dependencies and scripts it needs.
@@ -328,6 +333,7 @@ Devin 2.0 adds a product-evolution view of the same trajectory. As coding agents
 ## Sources
 
 - [Devin 2.0 and the Future of SWE - Scott Wu, Cognition](../sources/20250725_MI83buT_23o.md)
+- [Your Coding Agent Just Got Cloned And Your Brain Isn't Ready - Rustin Banks, Google Jules](../sources/20250725_X4BwOu0GWb8.md)
 - [Piloting agents in GitHub Copilot - Christopher Harrison, Microsoft](../sources/20250726_DdaAABdAqZY.md)
 - [Ship Agents that Ship: A Hands-On Workshop - Kyle Penfound, Jeremy Adams, Dagger](../sources/20250727_Fzb1a24hF-o.md)
 - [Vibes won't cut it - Chris Kelly, Augment Code](../sources/20250803_Dc3qOA9WOnE.md)

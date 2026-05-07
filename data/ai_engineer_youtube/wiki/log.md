@@ -244,7 +244,7 @@
 
 - Source: [AgentCraft: Putting the Orc in Orchestration - Ido Salomon](sources/20260425_kR64LOqBBCU.md)
 - Processed: `kR64LOqBBCU`
-- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Workflows](topics/workflows.md)
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Spatial Agent Maps Expose Filesystem-Level Lineage and Collisions](concepts/spatial-agent-maps-expose-filesystem-level-lineage-and-collisions.md), [Let Agents Propose Quest Queues for Parallel Work](concepts/let-agents-propose-quest-queues-for-parallel-work.md), [Review Bundles Compress Parallel Agent Output Into Evidence](concepts/review-bundles-compress-parallel-agent-output-into-evidence.md)
 - Notes: Added AgentCraft patterns for game-inspired multi-agent orchestration, repository activity visibility, agent-suggested work queues, and evidence-backed review of parallel agent output.
 
@@ -1719,3 +1719,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Infrastructure](topics/infrastructure.md), [Retrieval](topics/retrieval.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Coding-Agent Capability Tiers Change the Bottleneck](concepts/coding-agent-capability-tiers-change-the-bottleneck.md), [Use Playbooks for Repetitive Codebase Migrations](concepts/use-playbooks-for-repetitive-codebase-migrations.md), [Prepare Reversible Repository Snapshots for Coding Agents](concepts/prepare-reversible-repository-snapshots-for-coding-agents.md), [Codebase Intelligence Needs Structural and Historical Signals](concepts/codebase-intelligence-needs-structural-and-historical-signals.md), [Backlog-Scale Coding Agents Need Confidence and Self-Testing](concepts/backlog-scale-coding-agents-need-confidence-and-self-testing.md)
 - Notes: Added Devin 2.0's coding-agent evolution model from tab completion to migrations, cross-file codebase intelligence, and backlog-scale PR workflows with escalation and self-testing.
+
+## [2026-05-07] ingest | Your Coding Agent Just Got Cloned And Your Brain Isn't Ready - Rustin Banks, Google Jules
+
+- Source: [Your Coding Agent Just Got Cloned And Your Brain Isn't Ready - Rustin Banks, Google Jules](sources/20250725_X4BwOu0GWb8.md)
+- Processed: `X4BwOu0GWb8`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Parallel Coding Agents Support Multitasking and Variation Search](concepts/parallel-coding-agents-support-multitasking-and-variation-search.md), [Verification-First Prompts Make Parallel Agent Work Reviewable](concepts/verification-first-prompts-make-parallel-agent-work-reviewable.md), [Cloud Agents Turn Coding Work Into Asynchronous VM-Backed Queues](concepts/cloud-agents-turn-coding-work-into-asynchronous-vm-backed-queues.md)
+- Notes: Added Jules-specific guidance for cloud VM coding agents, parallel variation search, success-condition prompting, and merge/test requirements for asynchronous work.
