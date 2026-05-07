@@ -15,6 +15,7 @@ Details:
 - Kanat-Alexander frames CLIs and APIs as accuracy infrastructure for agents: browser or computer-use automation can work, but text-native action surfaces better match how agents operate and reduce unnecessary orchestration risk (04:36-05:07).
 - Agent-facing CLIs and APIs should run during development when they are part of the coding loop; CI-only feedback with long latency weakens iterative agent workflows (16:37-17:18).
 - Friedman frames the CLI as a workflow surface for coding agents: developers can run agents in the background, collect logs, pipe outputs, and chain specialized generation, coverage, and review agents across SDLC tasks. (14:32-17:25)
+- Burazin adds that APIs and readable docs are the baseline for agent experience, but the practical test is whether an agent can complete the task without a human clicking buttons, typing into terminals, reading logs, or debugging missing setup. 03:07-06:29, 14:30-15:02
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -22,6 +23,7 @@ Related topics:
 - [Infrastructure](../topics/infrastructure.md)
 
 Related concepts:
+- [Agent Experience Means Autonomous Access, Understanding, and Operation](agent-experience-means-autonomous-access-understanding-and-operation.md)
 - [Use skills for workflow guidance and MCP for integrations](use-skills-for-workflow-guidance-and-mcp-for-integrations.md)
 - [Use tool names and descriptions as operational prompts](use-tool-names-and-descriptions-as-operational-prompts.md)
 - [Separate agent harnesses from generated-code execution](separate-agent-harnesses-from-generated-code-execution.md)
@@ -33,3 +35,4 @@ Sources:
 - [The New Application Layer - Malte Ubl, CTO Vercel](../sources/20260420_XKup1pj-34M.md), 13:00-13:38
 - [Developer Experience in the Age of AI Coding Agents - Max Kanat-Alexander, Capital One](../sources/20251223_rT2Del5pwg4.md), 04:36-05:07, 16:37-17:18
 - [Vibe Coding with Confidence - Itamar Friedman, Qodo](../sources/20250806_n991Yxo1aOI.md), 14:32-17:25
+- [AX is the only Experience that Matters - Ivan Burazin, Daytona](../sources/20250724_e9sLVMN76qU.md), 03:07-06:29, 14:30-15:02

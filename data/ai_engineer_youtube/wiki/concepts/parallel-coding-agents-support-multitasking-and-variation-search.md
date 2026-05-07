@@ -13,6 +13,7 @@ Details:
 - Front-end examples include asking separate agents to implement drag and drop with different libraries or test strategies, such as React Beautiful DnD, DnD Kit, test-first work, Jest, or Playwright. 04:44-05:15, 06:50-07:03
 - Variation search only helps when there is a selection mechanism: test coverage, visual inspection, automated checks, or an explicit human choice. 04:36-04:41, 06:58-07:07
 - Parallel agents also make otherwise deferred quality work more tractable, such as accessibility audits, security audits, and Lighthouse improvements that often sit in a backlog. 07:16-07:36
+- Burazin gives the infrastructure reason this is agent-native: unlike a human tied to one or two machines, an agent can fork a machine many times, try alternatives concurrently, and converge on an output. 12:47-13:35
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -23,6 +24,8 @@ Related concepts:
 - [Parallel coding-agent queues need focus-preserving review interfaces](parallel-coding-agent-queues-need-focus-preserving-review-interfaces.md)
 - [Use parent agents to compare and merge parallel subagent outputs](use-parent-agents-to-compare-and-merge-parallel-subagent-outputs.md)
 - [Cloud Agents Turn Coding Work Into Asynchronous VM-Backed Queues](cloud-agents-turn-coding-work-into-asynchronous-vm-backed-queues.md)
+- [Agent-Native Runtimes Provide Fast API-Controlled Sandboxes](agent-native-runtimes-provide-fast-api-controlled-sandboxes.md)
 
 Sources:
 - [Your Coding Agent Just Got Cloned And Your Brain Isn't Ready - Rustin Banks, Google Jules](../sources/20250725_X4BwOu0GWb8.md), 03:51-07:36
+- [AX is the only Experience that Matters - Ivan Burazin, Daytona](../sources/20250724_e9sLVMN76qU.md), 12:47-13:35

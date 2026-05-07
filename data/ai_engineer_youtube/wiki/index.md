@@ -26,6 +26,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Agentic Workloads Turn Token Price Into Unit-Economics Pressure](concepts/agentic-workloads-turn-token-price-into-unit-economics-pressure.md) - multi-call agent workflows can make hosted per-token pricing dominate ROI.
 - [MCP Gateways Create an Enterprise Root of Trust](concepts/mcp-gateways-create-an-enterprise-root-of-trust.md) - shared gateways centralize credentials, routing, policy, and observability for remote MCP clients and servers.
 - [Carry MCP JSON-RPC Over Internal Transports](concepts/carry-mcp-json-rpc-over-internal-transports.md) - MCP can standardize model-context messages while internal transports remain platform-specific.
+- [Agent Experience Means Autonomous Access, Understanding, and Operation](concepts/agent-experience-means-autonomous-access-understanding-and-operation.md) - agent-facing products should be tested by autonomous task completion rather than only dashboards or endpoint availability.
+- [Agent-Native Runtimes Provide Fast API-Controlled Sandboxes](concepts/agent-native-runtimes-provide-fast-api-controlled-sandboxes.md) - sandboxes become agent-native when agents can create, control, clone, and inspect them through machine-readable surfaces.
+- [Declarative Environment and Data Primitives Remove Agent Setup Drag](concepts/declarative-environment-and-data-primitives-remove-agent-setup-drag.md) - agents need reusable platform primitives for dependency and dataset setup.
 
 - [AI Diff Review Should Find Problems Before Merge](concepts/ai-diff-review-should-find-problems-before-merge.md) - coding-agent review loops should identify concrete defects while diffs are being created.
 - [Specs and Style Guides Steer Coding Agents Toward Maintainable Code](concepts/specs-and-style-guides-steer-coding-agents-toward-maintainable-code.md) - plans, docs, specs, and style rules make agent-visible intent and constraints.

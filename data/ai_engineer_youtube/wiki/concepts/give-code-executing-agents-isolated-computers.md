@@ -13,6 +13,7 @@ Details:
 - Local Codex CLI-style agents still need appropriate sandboxing, such as containerization, app-level sandboxing, or OS-level sandboxing. 04:41-05:02
 - Codex CLI examples include macOS Seatbelt policies and Linux sandboxing built with seccomp and Landlock to support unprivileged execution and reduce privilege-escalation risk. 06:09-07:42
 - The isolated environment still needs the right dependencies and task access; isolation should not prevent validation, but it should limit second-order consequences outside the intended workspace. 06:09-08:24
+- Burazin describes the positive product side of isolation: a sandbox can become an agent-native runtime when the agent can quickly create, control, clone, and use the environment through APIs and preloaded tools. 08:12-09:53
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -23,7 +24,9 @@ Related concepts:
 - [Capability-Based Sandboxes Start With No Authority](capability-based-sandboxes-start-with-no-authority.md)
 - [Run Agent-Written API Code Inside Programmable Sandboxes](run-agent-written-api-code-inside-programmable-sandboxes.md)
 - [Do Not Roll Your Own Agent Code Sandbox](do-not-roll-your-own-agent-code-sandbox.md)
+- [Agent-Native Runtimes Provide Fast API-Controlled Sandboxes](agent-native-runtimes-provide-fast-api-controlled-sandboxes.md)
 
 Sources:
 - [Software Development Agents: What Works and What Doesn't - Robert Brennan, OpenHands](../sources/20250725_o_hhkJtlbSs.md), 06:44-07:23
 - [OpenAI on Securing Code-Executing AI Agents - Fouad Matin (Codex, Agent Robustness)](../sources/20250730_w7IMuYsBNr8.md), 04:25-08:24
+- [AX is the only Experience that Matters - Ivan Burazin, Daytona](../sources/20250724_e9sLVMN76qU.md), 08:12-09:53
