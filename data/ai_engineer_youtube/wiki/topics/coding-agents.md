@@ -6,6 +6,8 @@ Coding agents work best when their autonomy is constrained by small work items, 
 
 High-consequence coding environments make permissions and verification part of the product, not an add-on. A coding agent can translate legacy Ada into Rust and add features, but defense, government, satellite, or critical-infrastructure contexts still require narrowed access, visible diffs, generated and human-run tests, and reviewable command output before the work is trusted.
 
+Code execution makes that permission model concrete. A capable coding agent may no longer need a complex hand-coded router because it can choose when to write programs, call tools, run tests, and edit files itself. That makes the harness responsible for RCE-shaped controls: give the agent an isolated computer or OS sandbox, keep filesystem writes scoped to the workspace, disable or allowlist network access, verify packages before adoption, and preserve human review for meaningful operations and final diffs.
+
 High-assurance coding adds a stronger version of this quality bar. Agentic coding should not be judged only by how cheaply it emits lines: the durable pattern is to combine detailed specifications, modular boundaries, typed languages, independent testing contexts, safety cases, adversarial testing, trusted libraries, and formal proofs for critical sections. That does not make LLM behavior itself formally verified, but it moves generated code into an assurance process that can catch defects before adoption depends on manual cleanup.
 
 System-prompt learning adds a way to update coding-agent behavior without changing model weights. A team can run benchmark or production-like tasks, execute tests, ask a judge for explanations, and synthesize those failure explanations into rules that the agent sees on later runs.
@@ -190,6 +192,9 @@ Greg Brockman's Codex framing connects agent usefulness directly to codebase sha
 - [Keep critical code inside human understanding and review capacity](../concepts/keep-critical-code-inside-human-understanding-and-review-capacity.md) - important code should not be delegated beyond what humans can read, evaluate, and own.
 - [Product engineers need direct customer context](../concepts/product-engineers-need-direct-customer-context.md) - engineers need direct customer feedback to make useful product decisions as AI handles more implementation.
 - [Unified coding-agent harnesses combine models, tools, environments, and safety](../concepts/unified-coding-agent-harnesses-combine-models-tools-environments-and-safety.md) - model capability needs an execution harness that manages tools, environments, and safety.
+- [Treat Code-Executing Agents as RCE-Risk Surfaces](../concepts/treat-code-executing-agents-as-rce-risk-surfaces.md) - agent autonomy over code execution should be reviewed as an intentional RCE-like surface.
+- [Give Code-Executing Agents Isolated Computers](../concepts/give-code-executing-agents-isolated-computers.md) - coding agents should run in isolated environments and return reviewable artifacts.
+- [Keep Human Review on High-Risk Agent Operations](../concepts/keep-human-review-on-high-risk-agent-operations.md) - package additions, sensitive operations, and final diffs need human review despite LLM monitors.
 - [Use stable agent harnesses as model-evolution boundaries](../concepts/use-stable-agent-harnesses-as-model-evolution-boundaries.md) - a maintained harness absorbs model and API churn so products can focus on workflow differentiation.
 - [Build domain-specific workflow wrappers around models](../concepts/build-domain-specific-workflow-wrappers-around-models.md) - Cursor-style products win by packaging model capability into the workflow, not by exposing one raw model.
 - [Agent managers orchestrate editor, browser, and background agents](../concepts/agent-managers-orchestrate-editor-browser-and-background-agents.md) - a higher-level IDE surface can coordinate agents, approvals, browser work, and manual editor handoff.
@@ -379,3 +384,4 @@ Greg Brockman's Codex framing connects agent usefulness directly to codebase sha
 - [How to Improve your Vibe Coding - Ian Butler](../sources/20250803_g03m-WFEu1U.md)
 - [State of Startups and AI 2025 - Sarah Guo, Conviction](../sources/20250802_3MZS5gNElZM.md)
 - [Developing Taste in Coding Agents: Applied Meta Neuro-Symbolic RL - Ahmad Awais, CommandCode](../sources/20251124_kWOQS3XPZ10.md)
+- [OpenAI on Securing Code-Executing AI Agents - Fouad Matin (Codex, Agent Robustness)](../sources/20250730_w7IMuYsBNr8.md)

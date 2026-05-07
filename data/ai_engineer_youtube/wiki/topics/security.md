@@ -12,6 +12,8 @@ Agent tool access has a separate identity problem. Long-lived API keys in MCP co
 
 Agent application security is broader than prompt injection and OAuth. Red-team evidence from live startup agents shows ordinary web and infrastructure bugs becoming agent bugs: IDOR appears when tools accept user IDs or document IDs without per-object authorization, service-level backend permissions let an agent traverse data beyond the represented user, code sandboxes can expose files, metadata services, service tokens, and customer data, and SSRF can leak credentials when tools fetch user-controlled repositories or URLs from privileged infrastructure.
 
+Code-executing agents add another security boundary because the useful capability is also RCE-shaped. A reasoning model that can decide when to write and run code may simplify agent loops, but it also needs isolated execution, default-limited filesystem access, network restrictions, dependency checks, and reviewable outputs. Prompt injection is especially dangerous when untrusted web or GitHub issue content enters the same loop that can read a repository and make outbound requests. Model-level suspicion helps, but deterministic system controls such as sandbox policy, network allowlists, HTTP method restrictions, and human review of sensitive operations carry the hard security boundary.
+
 ## Key Concepts
 
 - [Classify AI Bot Traffic By Intent And Benefit](../concepts/classify-ai-bot-traffic-by-intent-and-benefit.md) - access rules should distinguish search, training, user-triggered, and operator-style AI traffic.
@@ -25,14 +27,20 @@ Agent application security is broader than prompt injection and OAuth. Red-team 
 - [Treat Agents As Users For Authorization](../concepts/treat-agents-as-users-for-authorization.md) - agent tools need requester-scoped authorization rather than service-level trust.
 - [Do Not Roll Your Own Agent Code Sandbox](../concepts/do-not-roll-your-own-agent-code-sandbox.md) - code execution boundaries can become arbitrary execution and lateral movement.
 - [Server-Side Request Forgery Exfiltrates Agent Credentials](../concepts/server-side-request-forgery-exfiltrates-agent-credentials.md) - privileged agent fetch tools can leak tokens to attacker-controlled endpoints.
+- [Treat Code-Executing Agents as RCE-Risk Surfaces](../concepts/treat-code-executing-agents-as-rce-risk-surfaces.md) - shell and code execution should be designed as an intentional remote-code-execution risk.
+- [Give Code-Executing Agents Isolated Computers](../concepts/give-code-executing-agents-isolated-computers.md) - agent execution should happen in a dedicated container, VM, or OS sandbox with reviewable outputs.
+- [Restrict Agent Internet Access With Allowlists](../concepts/restrict-agent-internet-access-with-allowlists.md) - network access should be disabled or constrained by explicit domains, commands, and HTTP methods.
+- [Keep Human Review on High-Risk Agent Operations](../concepts/keep-human-review-on-high-risk-agent-operations.md) - LLM monitors help, but sensitive commands, dependency changes, and diffs still need accountable review.
 
 ## Open Questions
 
 - Which HTTP message signature and private access token patterns will get enough crawler, browser, and site adoption to become practical for general bot policy?
 - Which agent identity and attestation patterns will become practical enough for open MCP ecosystems without recreating brittle pre-registration workflows?
+- How should code-executing agent products balance full-auto sandboxed work against approval fatigue for commands that are low-risk individually but high-risk in aggregate?
 
 ## Sources
 
 - [How to defend your sites from AI bots - David Mytton, Arcjet](../sources/20250730_Gi4V8viBGYQ.md)
 - [How to Secure Agents using OAuth - Jared Hanson (Keycard, Passport.js)](../sources/20250730_blmAkayzE8M.md)
 - [How we hacked YC Spring 2025 batch's AI agents - Rene Brandel, Casco](../sources/20250730_kv-QAuKWllQ.md)
+- [OpenAI on Securing Code-Executing AI Agents - Fouad Matin (Codex, Agent Robustness)](../sources/20250730_w7IMuYsBNr8.md)

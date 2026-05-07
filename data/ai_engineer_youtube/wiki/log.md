@@ -1479,3 +1479,11 @@
 - Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Security](topics/security.md), [Tools](topics/tools.md)
 - Updated concepts: [Treat Agents As Users For Authorization](concepts/treat-agents-as-users-for-authorization.md), [Do Not Roll Your Own Agent Code Sandbox](concepts/do-not-roll-your-own-agent-code-sandbox.md), [Server-Side Request Forgery Exfiltrates Agent Credentials](concepts/server-side-request-forgery-exfiltrates-agent-credentials.md)
 - Notes: Added Casco's live agent red-team findings: IDOR through object IDs, service-level permission hazards, code-sandbox lateral movement, and SSRF credential leakage.
+
+## [2026-05-07] ingest | OpenAI on Securing Code-Executing AI Agents - Fouad Matin (Codex, Agent Robustness)
+
+- Source: [OpenAI on Securing Code-Executing AI Agents - Fouad Matin (Codex, Agent Robustness)](sources/20250730_w7IMuYsBNr8.md)
+- Processed: `w7IMuYsBNr8`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Infrastructure](topics/infrastructure.md), [Security](topics/security.md), [Tools](topics/tools.md)
+- Updated concepts: [Treat Code-Executing Agents as RCE-Risk Surfaces](concepts/treat-code-executing-agents-as-rce-risk-surfaces.md), [Give Code-Executing Agents Isolated Computers](concepts/give-code-executing-agents-isolated-computers.md), [Restrict Agent Internet Access With Allowlists](concepts/restrict-agent-internet-access-with-allowlists.md), [Keep Human Review on High-Risk Agent Operations](concepts/keep-human-review-on-high-risk-agent-operations.md)
+- Notes: Added OpenAI Codex security patterns for RCE-shaped agent risk, isolated execution, network policy, dependency checks, and human review.

@@ -188,6 +188,9 @@
 - [Agent tool loops turn model-required actions into executable results](../concepts/agent-tool-loops-turn-model-required-actions-into-executable-results.md)
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md)
 - [Use Bash as a composable code-mode tool for agents](../concepts/use-bash-as-a-composable-code-mode-tool-for-agents.md)
+- [Treat Code-Executing Agents as RCE-Risk Surfaces](../concepts/treat-code-executing-agents-as-rce-risk-surfaces.md)
+- [Give Code-Executing Agents Isolated Computers](../concepts/give-code-executing-agents-isolated-computers.md)
+- [Keep Human Review on High-Risk Agent Operations](../concepts/keep-human-review-on-high-risk-agent-operations.md)
 - [Layer agent permissions across model behavior, harness parsing, and sandboxing](../concepts/layer-agent-permissions-across-model-behavior-harness-parsing-and-sandboxing.md)
 - [Use hooks for deterministic agent verification and live context injection](../concepts/use-hooks-for-deterministic-agent-verification-and-live-context-injection.md)
 - [Agent skills should point to current docs instead of embedding every API detail](../concepts/agent-skills-should-point-to-current-docs-instead-of-embedding-every-api-detail.md)
@@ -650,6 +653,7 @@
 - [Compile Python inference functions into portable native binaries](../concepts/compile-python-inference-functions-into-portable-native-binaries.md)
 - [Use LLMs to generate compiler lowerings under verification](../concepts/use-llms-to-generate-compiler-lowerings-under-verification.md)
 - [Expose local and open-source models through familiar API clients](../concepts/expose-local-and-open-source-models-through-familiar-api-clients.md)
+- [Keep Human Review on High-Risk Agent Operations](../concepts/keep-human-review-on-high-risk-agent-operations.md)
 - [Agent software factories need runnable, contextual, and verifiable primitives](../concepts/agent-software-factories-need-runnable-contextual-and-verifiable-primitives.md)
 - [Treat agent readiness as verification infrastructure](../concepts/treat-agent-readiness-as-verification-infrastructure.md)
 - [Use agent readiness flywheels to improve the development environment](../concepts/use-agent-readiness-flywheels-to-improve-the-development-environment.md)
@@ -1082,6 +1086,10 @@
 - [Treat Agents As Users For Authorization](../concepts/treat-agents-as-users-for-authorization.md)
 - [Do Not Roll Your Own Agent Code Sandbox](../concepts/do-not-roll-your-own-agent-code-sandbox.md)
 - [Server-Side Request Forgery Exfiltrates Agent Credentials](../concepts/server-side-request-forgery-exfiltrates-agent-credentials.md)
+- [Treat Code-Executing Agents as RCE-Risk Surfaces](../concepts/treat-code-executing-agents-as-rce-risk-surfaces.md)
+- [Give Code-Executing Agents Isolated Computers](../concepts/give-code-executing-agents-isolated-computers.md)
+- [Restrict Agent Internet Access With Allowlists](../concepts/restrict-agent-internet-access-with-allowlists.md)
+- [Keep Human Review on High-Risk Agent Operations](../concepts/keep-human-review-on-high-risk-agent-operations.md)
 
 ## Tools
 

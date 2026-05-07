@@ -22,6 +22,8 @@ Full-stack app-generation runtimes add an inference-to-infrastructure boundary. 
 
 Code-mode infrastructure should also treat capability grants as part of the runtime contract. Generated programs should start with no authority, receive only the APIs or network paths required for the task, and leave enough execution trace to explain high-impact actions later. AI-generated code is still untrusted code: it can crash through hallucinated loops, expose secrets through over-helpful environment inspection, or exfiltrate data after prompt injection. Infrastructure should default-deny network access, proxy authenticated calls through trusted application code, isolate tenants by sandbox, cap CPU and memory, clean up idle sandboxes, and log what ran.
 
+Code-executing agent infrastructure has a related but more interactive shape: the agent may inspect a repository, run tests, install dependencies, read external docs, and produce a PR. The safer default is a dedicated container, VM, or OS sandbox with scoped filesystem access and no broad ambient network. When internet access is needed, the runtime should expose configurable allowlists, method restrictions, and package-safety checks rather than giving the agent arbitrary outbound reach.
+
 Agent code sandboxes need the same suspicion even when the interface looks narrow. A tool that can write a Python file and read files can still discover app internals, overwrite enforcement code, query metadata services, recover service tokens, and move laterally into data platforms. Sandboxes should therefore be hardened infrastructure products or deeply reviewed isolation layers, not ad hoc helper containers built beside the agent.
 
 Sandbox technology should match the workload. V8-style isolates are useful for short-lived tool calls, plugins, skills, data transformations, and code interpreters when filesystem, process, and arbitrary-binary access are intentionally absent. Containers are heavier, but they are the right shape when generated work must clone repositories, install packages, run builds, start dev servers, expose preview URLs, or otherwise need real operating-system features.
@@ -117,6 +119,8 @@ Remote MCP infrastructure can reuse ordinary cloud primitives when the local std
 - [Research engineering partnership](../concepts/research-engineering-partnership.md) - frontier model progress depends on systems engineering that makes research ideas executable.
 - [Use formal specifications and proofs for critical generated code](../concepts/use-formal-specifications-and-proofs-for-critical-generated-code.md) - proof-capable languages and verifiers can become infrastructure around generated critical components.
 - [High-assurance agentic coding needs process, not just generation](../concepts/high-assurance-agentic-coding-needs-process-not-just-generation.md) - assurance infrastructure includes process, certification, testing, and feedback boundaries.
+- [Give Code-Executing Agents Isolated Computers](../concepts/give-code-executing-agents-isolated-computers.md) - agent infrastructure should isolate local or hosted command execution before returning reviewable artifacts.
+- [Restrict Agent Internet Access With Allowlists](../concepts/restrict-agent-internet-access-with-allowlists.md) - networked agent runs should use explicit outbound policy rather than broad internet access.
 - [Use hosted model playgrounds to prototype before owning infrastructure](../concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md) - hosted tools can validate model and deployment choices before teams own the runtime.
 - [Treat multi-agent systems as distributed systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md) - agent infrastructure needs distributed-systems controls once multiple agents share state and dependencies.
 - [Use durable execution for production agent loops](../concepts/use-durable-execution-for-production-agent-loops.md) - durable execution records completed LLM and tool steps so production agent loops can resume.
@@ -371,5 +375,6 @@ Remote MCP infrastructure can reuse ordinary cloud primitives when the local std
 - [How to defend your sites from AI bots - David Mytton, Arcjet](../sources/20250730_Gi4V8viBGYQ.md)
 - [How to Secure Agents using OAuth - Jared Hanson (Keycard, Passport.js)](../sources/20250730_blmAkayzE8M.md)
 - [How we hacked YC Spring 2025 batch's AI agents - Rene Brandel, Casco](../sources/20250730_kv-QAuKWllQ.md)
+- [OpenAI on Securing Code-Executing AI Agents - Fouad Matin (Codex, Agent Robustness)](../sources/20250730_w7IMuYsBNr8.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

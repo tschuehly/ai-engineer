@@ -148,6 +148,7 @@ Workflow composition adds another tool-design rule: a workflow can be exposed as
 - [Structured canvas outputs make agent edits inspectable and editable](../concepts/structured-canvas-outputs-make-agent-edits-inspectable-and-editable.md) - structured editor objects keep visual agent outputs modifiable rather than flattened into pixels.
 - [Hackable agent runtimes need tight safety boundaries](../concepts/hackable-agent-runtimes-need-tight-safety-boundaries.md) - executable editor or browser access needs stricter controls than ordinary shape or API tools.
 - [Route high-impact agent actions through explicit human approval gates](../concepts/route-high-impact-agent-actions-through-explicit-human-approval-gates.md) - approval steps keep sensitive tool execution outside model-only control.
+- [Keep Human Review on High-Risk Agent Operations](../concepts/keep-human-review-on-high-risk-agent-operations.md) - package, command, and diff review should combine tool monitors with human approval.
 - [Use tool names and descriptions as operational prompts](../concepts/use-tool-names-and-descriptions-as-operational-prompts.md) - clear tool metadata improves selection and enables local tool-specific guidance.
 - [Evaluate tool definitions and outputs as context](../concepts/evaluate-tool-definitions-and-outputs-as-context.md) - agent-facing tools need model-shaped schemas and output formats.
 - [VoiceVision agents wrap visual RAG with retrieval, image-reading, and speech tools](../concepts/voicevision-agents-wrap-visual-rag-with-retrieval-image-reading-and-speech-tools.md) - retrieval, image-reader, and speech tools can keep visual-document workflows inspectable inside an agent.
@@ -347,5 +348,6 @@ Workflow composition adds another tool-design rule: a workflow can be exposed as
 - [Useful General Intelligence - Danielle Perszyk, Amazon AGI](../sources/20250802_Dj0b_cEBHBI.md)
 - [Building Agents at Cloud Scale - Antje Barth, AWS](../sources/20250802_WJjInLeaJjo.md)
 - [How we hacked YC Spring 2025 batch's AI agents - Rene Brandel, Casco](../sources/20250730_kv-QAuKWllQ.md)
+- [OpenAI on Securing Code-Executing AI Agents - Fouad Matin (Codex, Agent Robustness)](../sources/20250730_w7IMuYsBNr8.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

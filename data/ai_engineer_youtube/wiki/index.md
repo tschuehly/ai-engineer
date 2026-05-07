@@ -4,6 +4,8 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Treat Code-Executing Agents as RCE-Risk Surfaces](concepts/treat-code-executing-agents-as-rce-risk-surfaces.md) - shell and code execution should be secured as an intentional remote-code-execution surface.
+- [Restrict Agent Internet Access With Allowlists](concepts/restrict-agent-internet-access-with-allowlists.md) - network access is a major prompt-injection and exfiltration path for code-executing agents.
 - [Classify AI Bot Traffic By Intent And Benefit](concepts/classify-ai-bot-traffic-by-intent-and-benefit.md) - public sites need different policies for search crawlers, training crawlers, user-triggered fetchers, and operator agents.
 - [Model MCP Servers as OAuth Resource Servers](concepts/model-mcp-servers-as-oauth-resource-servers.md) - agent tool servers should verify tokens while dedicated authorization infrastructure handles login, consent, and token issuance.
 - [Authenticate Agents With URL-Based PKI Identities](concepts/authenticate-agents-with-url-based-pki-identities.md) - agent-to-agent and client-credentials flows need verifiable client identity.
