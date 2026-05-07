@@ -6,6 +6,8 @@
 - [Neural Web Search Supports Semantic Agent Queries](../concepts/neural-web-search-supports-semantic-agent-queries.md)
 - [Seller Knowledge Bases Let Agents Pull Business Context at Action Time](../concepts/seller-knowledge-bases-let-agents-pull-business-context-at-action-time.md)
 - [Show Retrieved Chunks Inside Agent Workflows](../concepts/show-retrieved-chunks-inside-agent-workflows.md)
+- [Specify Agent Products by Affordance, Not Exhaustive Feature Rules](../concepts/specify-agent-products-by-affordance-not-exhaustive-feature-rules.md)
+- [Co-Discover Emergent Agent Behavior With Customers](../concepts/co-discover-emergent-agent-behavior-with-customers.md)
 - [Compose agents and workflows as interchangeable primitives](../concepts/compose-agents-and-workflows-as-interchangeable-primitives.md)
 - [Add structure where agent reliability fails](../concepts/add-structure-where-agent-reliability-fails.md)
 - [Agent Adoption Trails LLM Adoption in the Workplace](../concepts/agent-adoption-trails-llm-adoption-in-the-workplace.md)
@@ -788,6 +790,9 @@
 - [Resolve AI Capability Risk Before Product Surface Commitment](../concepts/resolve-ai-capability-risk-before-product-surface-commitment.md)
 - [Explore AI Features Widely Then Cut Back to the User Workflow](../concepts/explore-ai-features-widely-then-cut-back-to-the-user-workflow.md)
 - [Pivot AI Product Interfaces When Platform Defaults Shift](../concepts/pivot-ai-product-interfaces-when-platform-defaults-shift.md)
+- [Specify Agent Products by Affordance, Not Exhaustive Feature Rules](../concepts/specify-agent-products-by-affordance-not-exhaustive-feature-rules.md)
+- [Treat Product Evals as Probabilistic Specifications](../concepts/treat-product-evals-as-probabilistic-specifications.md)
+- [Co-Discover Emergent Agent Behavior With Customers](../concepts/co-discover-emergent-agent-behavior-with-customers.md)
 
 ## Evaluation
 
@@ -815,6 +820,7 @@
 - [Align Synthetic Retrieval Queries With Real User Specificity](../concepts/align-synthetic-retrieval-queries-with-real-user-specificity.md)
 - [Cluster Conversation Outputs to Prioritize AI Product Work](../concepts/cluster-conversation-outputs-to-prioritize-ai-product-work.md)
 - [Map application evals to the product court](../concepts/map-application-evals-to-the-product-court.md)
+- [Treat Product Evals as Probabilistic Specifications](../concepts/treat-product-evals-as-probabilistic-specifications.md)
 - [Keep eval data constant and task logic variable](../concepts/keep-eval-data-constant-and-task-logic-variable.md)
 - [Prefer simple debuggable eval scores](../concepts/prefer-simple-debuggable-eval-scores.md)
 - [Evaluate Speech-To-Speech Models Against Enterprise Control Needs](../concepts/evaluate-speech-to-speech-models-against-enterprise-control-needs.md)

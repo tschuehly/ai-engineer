@@ -1575,3 +1575,11 @@
 - Updated topics: [Product Strategy](topics/product-strategy.md), [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md)
 - Updated concepts: [Share Demos To Reveal Latent Model Capabilities](concepts/share-demos-to-reveal-latent-model-capabilities.md), [Compress Environment Context For Early Agent Experiments](concepts/compress-environment-context-for-early-agent-experiments.md)
 - Notes: Added demos as exploratory capability probes and captured early GPT-3 context-compression patterns for browser and code-generation agent experiments.
+
+## [2026-05-07] ingest | Shipping Products When You Don't Know What they Can Do - Ben Stein, Teammates
+
+- Source: [Shipping Products When You Don't Know What they Can Do - Ben Stein, Teammates](sources/20250728_PthmdT92qNg.md)
+- Processed: `PthmdT92qNg`
+- Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Product Strategy](topics/product-strategy.md)
+- Updated concepts: [Specify Agent Products by Affordance, Not Exhaustive Feature Rules](concepts/specify-agent-products-by-affordance-not-exhaustive-feature-rules.md), [Treat Product Evals as Probabilistic Specifications](concepts/treat-product-evals-as-probabilistic-specifications.md), [Co-Discover Emergent Agent Behavior With Customers](concepts/co-discover-emergent-agent-behavior-with-customers.md), [Court agent emergence with bounded play](concepts/court-agent-emergence-with-bounded-play.md)
+- Notes: Added Teammates' product-management patterns for affordance-based agent specs, eval-backed probabilistic behavior thresholds, and customer co-discovery of emergent agent workflows.

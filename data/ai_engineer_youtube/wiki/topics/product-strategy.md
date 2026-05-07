@@ -18,6 +18,8 @@ AI product management adds an operating role or mindset around that uncertainty.
 
 Demos are one of the fastest ways to search that uncertain product space. A demo does not need production completeness to be useful; it can reveal a latent model capability, make a new interaction mode imaginable, or show that an old computing idea has become newly practical. The risk is treating demos as proof of reliability. Their product value is strongest when they are used as capability probes and shared artifacts, then followed by the usual work of narrowing, evaluating, and hardening the product.
 
+Agent-native products add a requirements problem: broad model capability plus free-form user surfaces can make exhaustive feature specs impossible. Product teams should define the affordances an agent may use, build runnable probes to feel the interaction, and let product evals express what behavior is acceptable often enough to ship. Customer trust then depends less on pretending to know every emergent behavior upfront and more on honest co-discovery, visible thresholds, and fast feedback loops.
+
 ## Key Concepts
 
 - [AI Does Not Replace Shareable Product Marketing](../concepts/ai-does-not-replace-shareable-product-marketing.md) - launch content only matters when it can earn attention and social sharing.
@@ -48,6 +50,9 @@ Demos are one of the fastest ways to search that uncertain product space. A demo
 - [Explore AI Features Widely Then Cut Back to the User Workflow](../concepts/explore-ai-features-widely-then-cut-back-to-the-user-workflow.md) - cheap AI feature prototypes should be tested broadly, then simplified around validated user needs.
 - [Pivot AI Product Interfaces When Platform Defaults Shift](../concepts/pivot-ai-product-interfaces-when-platform-defaults-shift.md) - product interfaces should adapt when enterprise AI clients and interoperability standards change distribution.
 - [Share Demos To Reveal Latent Model Capabilities](../concepts/share-demos-to-reveal-latent-model-capabilities.md) - runnable demos expose model behaviors and product surfaces that are hard to infer from labels or specs.
+- [Specify Agent Products by Affordance, Not Exhaustive Feature Rules](../concepts/specify-agent-products-by-affordance-not-exhaustive-feature-rules.md) - broad agent surfaces need composable capability boundaries instead of endless edge-case feature rules.
+- [Treat Product Evals as Probabilistic Specifications](../concepts/treat-product-evals-as-probabilistic-specifications.md) - product evals make probabilistic behavior concrete enough to ship, debug, and discuss with customers.
+- [Co-Discover Emergent Agent Behavior With Customers](../concepts/co-discover-emergent-agent-behavior-with-customers.md) - early agent products earn trust through shared discovery and feedback, not impossible certainty about every behavior.
 
 ## Open Questions
 
@@ -58,6 +63,7 @@ Demos are one of the fastest ways to search that uncertain product space. A demo
 - When should a custom AI client remain the primary product surface, and when should the team prioritize portable tool/data access through MCP or other standards?
 - How should teams distinguish demos that reveal real latent capability from demos that only succeed through brittle scaffolding?
 - Which domain insights should become prompt context, retrieval knowledge, rules, fine-tuning data, or product workflow changes?
+- Which agent affordances should be exposed as open-ended capabilities, and which need hard deterministic constraints before customers can safely compose them?
 
 ## Sources
 
@@ -72,3 +78,4 @@ Demos are one of the fastest ways to search that uncertain product space. A demo
 - [Why your product needs an AI product manager, and why it should be you — James Lowe, i.AI](../sources/20250728_xzJdSi2Tsqw.md)
 - [On Curiosity -- Sharif Shameem, Lexica](../sources/20250719_0F8mnGPUycY.md)
 - [Make your LLM app a Domain Expert: How to Build an Expert System - Christopher Lovejoy, Anterior](../sources/20250728_MRM7oA3JsFs.md)
+- [Shipping Products When You Don't Know What they Can Do - Ben Stein, Teammates](../sources/20250728_PthmdT92qNg.md)

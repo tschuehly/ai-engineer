@@ -5,6 +5,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 ## Current Emphasis
 
 - [Share Demos To Reveal Latent Model Capabilities](concepts/share-demos-to-reveal-latent-model-capabilities.md) - small runnable demos expose model capabilities and product surfaces that specs or labels miss.
+- [Specify Agent Products by Affordance, Not Exhaustive Feature Rules](concepts/specify-agent-products-by-affordance-not-exhaustive-feature-rules.md) - open-ended agent surfaces need composable capability boundaries rather than exhaustive feature rules.
+- [Treat Product Evals as Probabilistic Specifications](concepts/treat-product-evals-as-probabilistic-specifications.md) - AI product evals turn subjective agent behavior into release and bug-triage thresholds.
+- [Co-Discover Emergent Agent Behavior With Customers](concepts/co-discover-emergent-agent-behavior-with-customers.md) - early agent products build trust through shared discovery, runnable feedback, and honest uncertainty.
 - [Last-Mile Domain Context Beats Model Chasing](concepts/last-mile-domain-context-beats-model-chasing.md) - vertical AI systems need expert workflow context after strong models reach a baseline.
 - [Failure-Mode Ontologies Prioritize Domain AI Work](concepts/failure-mode-ontologies-prioritize-domain-ai-work.md) - expert-labeled error taxonomies connect production failures to customer metrics and engineering priorities.
 - [Production Failure Sets Drive Domain AI Iteration](concepts/production-failure-sets-drive-domain-ai-iteration.md) - labeled production misses become focused eval sets for targeted improvement and regression checks.

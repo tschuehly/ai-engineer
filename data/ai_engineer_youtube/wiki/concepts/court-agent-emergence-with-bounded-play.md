@@ -11,6 +11,7 @@ Details:
 - In one prototype, dropping a JSON file and a CSV file led the agent to infer that the files should be combined, merge them, report duplicates, and suggest likely next actions. (11:48-13:09)
 - A knowledge-base experiment over customer calls and documentation produced an unexpected escalation pattern: the agent decided it could not generate missing employee IDs but could tell the user to ask HR for them. (13:17-14:12)
 - The source frames this human-escalation behavior as something the designer discovered through playing with the model and workflow, not something reached from upfront specification alone. (13:56-14:12)
+- Teammates adds the product-management version of the same pattern: product teams may need to discover whether an agent can handle customer-invented workflows, such as Google Doc comment tagging, after customers try them. (01:57-02:46)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -24,3 +25,4 @@ Related concepts:
 
 Sources:
 - [Form factors for your new AI coworkers - Craig Wattrus, Flatfile](../sources/20250822_CiMVKnX-CNI.md), 11:09-14:12
+- [Shipping Products When You Don't Know What they Can Do - Ben Stein, Teammates](../sources/20250728_PthmdT92qNg.md), 01:57-07:25
