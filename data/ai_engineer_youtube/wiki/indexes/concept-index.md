@@ -1063,6 +1063,13 @@
 - [Use omnimodal embeddings for cross-modal retrieval and comparison](../concepts/use-omnimodal-embeddings-for-cross-modal-retrieval-and-comparison.md)
 - [Adapt embedding dimensions with Matryoshka representation learning](../concepts/adapt-embedding-dimensions-with-matryoshka-representation-learning.md)
 
+## Security
+
+- [Classify AI Bot Traffic By Intent And Benefit](../concepts/classify-ai-bot-traffic-by-intent-and-benefit.md)
+- [Layer Bot Detection Signals Instead Of Trusting One Header](../concepts/layer-bot-detection-signals-instead-of-trusting-one-header.md)
+- [Treat CAPTCHA And Proof Of Work As Economic Friction](../concepts/treat-captcha-and-proof-of-work-as-economic-friction.md)
+- [Key Rate Limits By Fingerprint Or Session Instead Of IP Alone](../concepts/key-rate-limits-by-fingerprint-or-session-instead-of-ip-alone.md)
+
 ## Tools
 
 - [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](../concepts/retrieve-tool-descriptions-before-loading-large-tool-catalogs.md)

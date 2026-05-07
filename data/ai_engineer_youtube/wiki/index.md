@@ -4,6 +4,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Classify AI Bot Traffic By Intent And Benefit](concepts/classify-ai-bot-traffic-by-intent-and-benefit.md) - public sites need different policies for search crawlers, training crawlers, user-triggered fetchers, and operator agents.
+- [Layer Bot Detection Signals Instead Of Trusting One Header](concepts/layer-bot-detection-signals-instead-of-trusting-one-header.md) - bot defense should combine crawler policy, user-agent checks, verified identities, and IP reputation.
+- [Key Rate Limits By Fingerprint Or Session Instead Of IP Alone](concepts/key-rate-limits-by-fingerprint-or-session-instead-of-ip-alone.md) - automated clients can rotate IPs while retaining stable session or fingerprint signals.
 - [Serve Realtime TTS By Audio-Token Throughput](concepts/serve-realtime-tts-by-audio-token-throughput.md) - streaming voice inference needs generated codec-token rates that stay ahead of playback.
 - [Design Private AI Serving Around Verifiable Remote Compute](concepts/design-private-ai-serving-around-verifiable-remote-compute.md) - sensitive remote inference needs enforceable and verifiable compute guarantees.
 - [Bind Sensitive Payloads To Remote Attestation Claims](concepts/bind-sensitive-payloads-to-remote-attestation-claims.md) - clients can release data only to servers still matching trusted hardware and software claims.
@@ -337,6 +340,7 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Models](topics/models.md) - model architecture, tokenizer, training, adaptation, and sizing choices under practical constraints.
 - [Product Strategy](topics/product-strategy.md) - product attention, onboarding, retention, taste, workflow wrappers, and primitives in AI-assisted product work.
 - [Retrieval](topics/retrieval.md) - bringing accurate, task-relevant knowledge from enterprise systems and curated context blocks into agent work.
+- [Security](topics/security.md) - safeguards for AI traffic, agents, generated code, private inference, and public web surfaces.
 - [Tools](topics/tools.md) - MCP integrations, scripts, skills, and tool-use guidance for agent workflows.
 - [Voice Agents](topics/voice-agents.md) - realtime audio-agent architecture, turn-taking, tool delegation, persona prompting, and voice-specific evaluation.
 - [Vision AI](topics/vision-ai.md) - computer-vision models, VLM limits, visual benchmarks, and domain-adaptable object detection.

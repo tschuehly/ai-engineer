@@ -1455,3 +1455,11 @@
 - Updated topics: [Infrastructure](topics/infrastructure.md), [Inference](topics/inference.md)
 - Updated concepts: [Design Private AI Serving Around Verifiable Remote Compute](concepts/design-private-ai-serving-around-verifiable-remote-compute.md), [Bind Sensitive Payloads To Remote Attestation Claims](concepts/bind-sensitive-payloads-to-remote-attestation-claims.md), [Use Transparency Logs To Audit Attested AI Binaries](concepts/use-transparency-logs-to-audit-attested-ai-binaries.md)
 - Notes: Added Apple PCC's private cloud inference pattern: verifiable remote compute, attestation-bound payload release, transparency-log auditing, and the latency, observability, trust, and billing tradeoffs of privacy-preserving serving.
+
+## [2026-05-07] ingest | How to defend your sites from AI bots - David Mytton, Arcjet
+
+- Source: [How to defend your sites from AI bots - David Mytton, Arcjet](sources/20250730_Gi4V8viBGYQ.md)
+- Processed: `Gi4V8viBGYQ`
+- Updated topics: [Security](topics/security.md), [Infrastructure](topics/infrastructure.md), [Agents](topics/agents.md)
+- Updated concepts: [Classify AI Bot Traffic By Intent And Benefit](concepts/classify-ai-bot-traffic-by-intent-and-benefit.md), [Layer Bot Detection Signals Instead Of Trusting One Header](concepts/layer-bot-detection-signals-instead-of-trusting-one-header.md), [Treat CAPTCHA And Proof Of Work As Economic Friction](concepts/treat-captcha-and-proof-of-work-as-economic-friction.md), [Key Rate Limits By Fingerprint Or Session Instead Of IP Alone](concepts/key-rate-limits-by-fingerprint-or-session-instead-of-ip-alone.md)
+- Notes: Added a web-security slice for AI-era automated traffic, including crawler intent taxonomy, layered identity signals, challenge economics, fingerprints, and rate-limit key design.

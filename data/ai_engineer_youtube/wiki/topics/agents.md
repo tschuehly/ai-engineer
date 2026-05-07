@@ -10,7 +10,7 @@ Agent models themselves can be tuned for this loop shape. M2's training story em
 
 Agent serving infrastructure can also use the structure of agent work. Re-query loops and tool-call waits are not just application behavior; they reveal when KV-cache state will be reused, moved out of GPU memory during a wait, and restored before the next model call, which can reduce repeated prefill cost without changing the agent's visible workflow.
 
-Computer-use agents add a general-purpose action layer for software that still only exposes visual UI. Nova Act's framing is deliberately granular: train a UI-capable model, expose it through SDK `act` calls, make the smallest interaction units reliable, and let developers compose those actions with structured extraction and ordinary code. That is a useful counterweight to vague autonomy claims. Browser control can reach workflows that APIs do not cover, but it also makes perception, action grounding, and human-agent interaction outcomes part of the agent's reliability story.
+Computer-use agents add a general-purpose action layer for software that still only exposes visual UI. Nova Act's framing is deliberately granular: train a UI-capable model, expose it through SDK `act` calls, make the smallest interaction units reliable, and let developers compose those actions with structured extraction and ordinary code. That is a useful counterweight to vague autonomy claims. Browser control can reach workflows that APIs do not cover, but it also makes perception, action grounding, and human-agent interaction outcomes part of the agent's reliability story. Browser-like operator agents also complicate public web policy: a request may represent a legitimate user's delegated action or an unwanted automation such as bulk purchase abuse, so sites need bot policy that distinguishes training crawlers, search crawlers, user-triggered fetches, and operator-style actions.
 
 As agents move from prediction into decisions and actions, monitoring and evaluation need to follow the whole agent system. A single model score misses failures introduced by perception, reasoning, tool calls, virtual or cyber-physical action loops, and coordination across multiple agents.
 
@@ -287,6 +287,7 @@ The agent-versus-workflow debate is a false binary for production design. A flex
 - [Agent experience prioritizes APIs, CLIs, and MCP over dashboards](../concepts/agent-experience-prioritizes-apis-clis-and-mcp-over-dashboards.md) - products should expose machine-friendly surfaces when agents become primary users.
 - [Agent-readable web surfaces guide browsing agents](../concepts/agent-readable-web-surfaces-guide-browsing-agents.md) - websites can expose documentation maps and explicit operations for agents.
 - [Use Browser UI Control When APIs Are Absent](../concepts/use-browser-ui-control-when-apis-are-absent.md) - browser agents can reach human-facing workflows that lack APIs.
+- [Classify AI Bot Traffic By Intent And Benefit](../concepts/classify-ai-bot-traffic-by-intent-and-benefit.md) - web-facing systems should distinguish beneficial crawlers, training crawlers, user-triggered fetches, and operator agents.
 - [Compose Computer-Use Agents From Reliable Atomic Actions](../concepts/compose-computer-use-agents-from-reliable-atomic-actions.md) - complex browser workflows become more controllable when built from small reliable UI actions plus ordinary code.
 - [Evaluate Agents By Human-Agent Interaction Outcomes](../concepts/evaluate-agents-by-human-agent-interaction-outcomes.md) - useful general intelligence should be judged by whether it improves human agency and work outcomes.
 - [Fresh Markdown context mitigates model rot in codegen](../concepts/fresh-markdown-context-mitigates-model-rot-in-codegen.md) - current documentation reduces stale model failures for fast-moving software.
@@ -489,5 +490,6 @@ The agent-versus-workflow debate is a false binary for production design. A flex
 - [Infrastructure for the Singularity - Jesse Han, Morph](../sources/20250801_2goSS66XRBk.md)
 - [Hacking the Inference Pareto Frontier - Kyle Kranen, NVIDIA](../sources/20250801_Y2qc0UhDSnc.md)
 - [Your realtime AI is ngmi - Sean DuBois (OpenAI), Kwindla Kramer (Daily)](../sources/20250731_E71YtNbCFXY.md)
+- [How to defend your sites from AI bots - David Mytton, Arcjet](../sources/20250730_Gi4V8viBGYQ.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)
