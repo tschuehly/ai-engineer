@@ -1193,6 +1193,7 @@
 - [Realtime multimodal agents use stateful streams for audio, vision, and tools](../concepts/realtime-multimodal-agents-use-stateful-streams-for-audio-vision-and-tools.md)
 - [Use frame pipelines to compose realtime voice agents](../concepts/use-frame-pipelines-to-compose-realtime-voice-agents.md)
 - [Semantic turn detection improves voice interruption timing](../concepts/semantic-turn-detection-improves-voice-interruption-timing.md)
+- [Full-duplex speech models make turn-taking a learned behavior](../concepts/full-duplex-speech-models-make-turn-taking-a-learned-behavior.md)
 - [Test realtime voice services with bot-to-bot release evals](../concepts/test-realtime-voice-services-with-bot-to-bot-release-evals.md)
 - [Realtime multimodal models should plan over specialized local actuators](../concepts/realtime-multimodal-models-should-plan-over-specialized-local-actuators.md)
 - [Preserve speaker channels before voice-agent transcription](../concepts/preserve-speaker-channels-before-voice-agent-transcription.md)

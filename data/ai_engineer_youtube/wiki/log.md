@@ -1320,6 +1320,14 @@
 - Updated concepts: [Stage Vibe Coding From Prototype to Structured Workflow](concepts/stage-vibe-coding-from-prototype-to-structured-workflow.md), [Use Repository Instructions To Ground Coding Agents](concepts/use-repository-instructions-to-ground-coding-agents.md), [Custom Agent Modes Encode Repeatable Coding Workflows](concepts/custom-agent-modes-encode-repeatable-coding-workflows.md), [Visual Browser Context Steers Frontend Agents](concepts/visual-browser-context-steers-frontend-agents.md)
 - Notes: Added Copilot and VS Code workflow patterns for moving from exploratory vibe coding to repeatable team workflows with repo instructions, custom modes, browser context, MCP tools, and scoped approvals.
 
+## [2026-05-07] ingest | Why ChatGPT Keeps Interrupting You - Dr. Tom Shapland, LiveKit
+
+- Source: [Why ChatGPT Keeps Interrupting You - Dr. Tom Shapland, LiveKit](sources/20250731_1v9zBiZKlIY.md)
+- Processed: `1v9zBiZKlIY`
+- Updated topics: [Voice Agents](topics/voice-agents.md)
+- Updated concepts: [Semantic Turn Detection Improves Voice Interruption Timing](concepts/semantic-turn-detection-improves-voice-interruption-timing.md), [Full-Duplex Speech Models Make Turn-Taking a Learned Behavior](concepts/full-duplex-speech-models-make-turn-taking-a-learned-behavior.md)
+- Notes: Added LiveKit's interruption analysis for why VAD-plus-silence pipelines cut users off, how semantic and acoustic turn detectors improve cascaded agents, and why full-duplex models are promising but not yet a complete production replacement.
+
 ## [2026-05-07] ingest | Full Workshop: Realtime Voice AI - Mark Backman, Daily
 
 - Source: [Full Workshop: Realtime Voice AI - Mark Backman, Daily](sources/20250803_nxuTVd7v7dg.md)

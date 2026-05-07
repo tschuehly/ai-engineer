@@ -173,6 +173,7 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Use Bash as a composable code-mode tool for agents](concepts/use-bash-as-a-composable-code-mode-tool-for-agents.md) - shell access can replace many bespoke tools when paired with parsing, permissions, and sandboxing.
 - [Treat PDF pages as visual retrieval units](concepts/treat-pdf-pages-as-visual-retrieval-units.md) - image-heavy and scanned PDFs may need page-image retrieval instead of text/table/image extraction.
 - [Use hybrid AI pricing to balance predictable revenue and margin protection](concepts/use-hybrid-ai-pricing-to-balance-predictable-revenue-and-margin-protection.md) - AI products often need base fees plus scaling fees because pure subscription and pure usage models each fail under AI cost dynamics.
+- [Full-duplex speech models make turn-taking a learned behavior](concepts/full-duplex-speech-models-make-turn-taking-a-learned-behavior.md) - native speech models can learn simultaneous listening, silence, speech, forecasting, and backchannels from raw audio.
 - [Outcome-based engineering compensation uses accepted story points](concepts/outcome-based-engineering-compensation-uses-accepted-story-points.md) - AI-accelerated engineering services can tie both billing and engineer upside to accepted delivered output.
 - [Enterprise deep research runs multi-step synthesis over private corpora](concepts/enterprise-deep-research-runs-multi-step-synthesis-over-private-corpora.md) - private-company research agents can search, reflect, synthesize, and cite internal documents for business artifacts.
 - [Fund enterprise AI through incremental productizable bets](concepts/fund-enterprise-ai-through-incremental-productizable-bets.md) - risk-averse organizations can keep AI research fundable by producing measurable value at each stage.
@@ -323,7 +324,7 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Product Strategy](topics/product-strategy.md) - product attention, onboarding, retention, taste, workflow wrappers, and primitives in AI-assisted product work.
 - [Retrieval](topics/retrieval.md) - bringing accurate, task-relevant knowledge from enterprise systems and curated context blocks into agent work.
 - [Tools](topics/tools.md) - MCP integrations, scripts, skills, and tool-use guidance for agent workflows.
-- [Voice Agents](topics/voice-agents.md) - realtime audio-agent architecture, tool delegation, persona prompting, and voice-specific evaluation.
+- [Voice Agents](topics/voice-agents.md) - realtime audio-agent architecture, turn-taking, tool delegation, persona prompting, and voice-specific evaluation.
 - [Vision AI](topics/vision-ai.md) - computer-vision models, VLM limits, visual benchmarks, and domain-adaptable object detection.
 - [Workflows](topics/workflows.md) - repeatable loops for agent execution, failure discovery, and context improvement.
 
