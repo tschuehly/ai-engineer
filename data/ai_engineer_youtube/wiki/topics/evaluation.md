@@ -12,7 +12,7 @@ Reliable AI app evals should also be reverse-engineered from user-visible outcom
 
 Guardrail evaluation is also part of production AI evaluation. Safety layers should be tested at the same boundaries where attacks enter: direct prompts, external context, RAG chunks, MCP tool descriptions, memory, agent plans, and model responses. For latency-sensitive paths, a fine-tuned encoder discriminator can be evaluated as a binary classifier and compared against slower LLM-as-judge checks, while human approval flows should be tested for whether reviewers see the effective action and hidden parameters they are approving. Multi-agent organizations add another evaluation question: does the workflow actually force review, approval, and role-specific quality checks, or are those still best-effort prompt instructions?
 
-RAG evaluation should treat the pipeline as a set of changeable components, not a solved top-k pattern. Parsing quality, chunk hierarchy, OCR, image descriptions, embedding models, hybrid lexical/vector scoring, metadata filters, and agentic search decisions can each change the answer. Agentic retrieval adds a trace-level evaluation requirement: teams should inspect which searches the model chose, not only whether the final answer sounded plausible.
+RAG evaluation should treat the pipeline as a set of changeable components, not a solved top-k pattern. Parsing quality, chunk hierarchy, OCR, image descriptions, embedding models, hybrid lexical/vector scoring, metadata filters, graph ontology, extracted triplets, traversal depth, and agentic search decisions can each change the answer. Agentic retrieval adds a trace-level evaluation requirement: teams should inspect which searches the model chose, not only whether the final answer sounded plausible. Graph-backed RAG also needs evaluation of retrieval latency and answer quality together because deeper graph traversal can expose better relationships while slowing production responses.
 
 Enterprise analytics agents add a metadata-specific evaluation layer. GenBI systems should be tested against messy production-like schemas and real user questions, with BI experts reviewing outputs before business users or executives depend on them. Metadata quality can be evaluated directly by running the same question set against better- and worse-documented data sources, then measuring whether the LLM finds the right context, report, or query path more reliably.
 
@@ -144,6 +144,8 @@ Coding capability evals also need to evolve with model capability. Static progra
 - [Domain Gemma variants package specialized policy and task behavior](../concepts/domain-gemma-variants-package-specialized-policy-and-task-behavior.md) - safety and domain variants still need validation against the policies or specialist tasks they claim to support.
 - [Neural weather models can target operational forecast variables directly](../concepts/neural-weather-models-can-target-operational-forecast-variables-directly.md) - domain models should be evaluated against operational targets such as forecast lead time, tail risk, and phenomenon-specific prediction.
 - [RAG stacks need modular baselines instead of one fixed recipe](../concepts/rag-stacks-need-modular-baselines-instead-of-one-fixed-recipe.md) - RAG quality depends on tuning shared components to the corpus and user task.
+- [Treat ontology and triplet quality as GraphRAG bottlenecks](../concepts/treat-ontology-and-triplet-quality-as-graphrag-bottlenecks.md) - GraphRAG evals should inspect graph-construction quality before blaming generation.
+- [Balance GraphRAG hop depth against production latency](../concepts/balance-graphrag-hop-depth-against-production-latency.md) - graph retrieval evals should measure answer quality and traversal latency together.
 - [Agentic retrieval lets models plan search steps](../concepts/agentic-retrieval-lets-models-plan-search-steps.md) - evals should inspect model-selected search actions and final answers.
 
 ## Open Questions
@@ -182,6 +184,7 @@ Coding capability evals also need to evolve with model capability. Static progra
 - Which local inference metrics beyond time to first token and throughput best predict real user-perceived responsiveness?
 - Which generated-kernel speedups are real enough to ship rather than artifacts of launch timing, cache state, tiny inputs, or benchmark-specific shortcuts?
 - How should retrieval evals isolate whether failures came from parsing, chunking, embedding choice, hybrid scoring, filters, or agent search planning?
+- How should GraphRAG evals isolate ontology errors, triplet extraction errors, traversal-depth misses, and final generation errors?
 - Which metadata fields most improve BI-agent accuracy, and which only make catalog documentation look better without changing task outcomes?
 - Which RL environment scores should require manual rollout review before they are allowed to drive training decisions?
 - How should contact-center systems measure whether operator edits are correcting model errors, STT errors, schema mapping errors, or policy preferences?
@@ -236,6 +239,7 @@ Coding capability evals also need to evolve with model capability. Static progra
 - [Judge the Judge: Building LLM Evaluators That Actually Work with GEPA - Mahmoud Mabrouk, Agenta AI](../sources/20260410_X4dEHRzBLmc.md)
 - [Running LLMs locally: Practical LLM Performance on DGX Spark - Mozhgan Kabiri chimeh, NVIDIA](../sources/20260410_c5-kx2bwoCk.md)
 - [OpenRAG: An open-source stack for RAG - Phil Nash](../sources/20260408_4TxOBhDRRCM.md)
+- [HybridRAG: A Fusion of Graph and Vector Retrieval  - Mitesh Patel, NVIDIA](../sources/20250722_-tgQa8Fzf80.md)
 - [Let LLMs Wander: Engineering RL Environments - Stefano Fiorucci](../sources/20260408_71V3fTaUp2Q.md)
 - [Contact Center Voice AI: Low-Latency Intelligence Extraction from Messy Audio Streams - Dippu Singh](../sources/20260408_IEF842ZEU5A.md)
 - [Practical tactics to build reliable AI apps — Dmitry Kuchin, Multinear](../sources/20250803_-T6uZYYzkWw.md)

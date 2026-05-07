@@ -863,3 +863,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Inference](topics/inference.md), [Models](topics/models.md)
 - Updated concepts: [Train coding-agent models with environments and expert developer reward](concepts/train-coding-agent-models-with-environments-and-expert-developer-reward.md), [Interleave reasoning and tool calls for long-horizon agents](concepts/interleave-reasoning-and-tool-calls-for-long-horizon-agents.md), [Perturb agent scaffolds during training for generalization](concepts/perturb-agent-scaffolds-during-training-for-generalization.md), [Small agentic models make parallel workplace agents economical](concepts/small-agentic-models-make-parallel-workplace-agents-economical.md)
 - Notes: Added MiniMax M2's model-training lessons for coding and workplace agents: verifiable environments, expert developer reward, repeated tool reasoning, scaffold perturbations, and cost-effective parallel agent copies.
+
+## [2026-05-07] ingest | HybridRAG: A Fusion of Graph and Vector Retrieval  - Mitesh Patel, NVIDIA
+
+- Source: [HybridRAG: A Fusion of Graph and Vector Retrieval  - Mitesh Patel, NVIDIA](sources/20250722_-tgQa8Fzf80.md)
+- Processed: `-tgQa8Fzf80`
+- Updated topics: [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Retrieval](topics/retrieval.md)
+- Updated concepts: [Choose HybridRAG when relationship structure matters](concepts/choose-hybridrag-when-relationship-structure-matters.md), [Treat ontology and triplet quality as GraphRAG bottlenecks](concepts/treat-ontology-and-triplet-quality-as-graphrag-bottlenecks.md), [Balance GraphRAG hop depth against production latency](concepts/balance-graphrag-hop-depth-against-production-latency.md)
+- Notes: Added NVIDIA's HybridRAG guidance around graph/vector retrieval selection, graph-construction quality, traversal latency, and RAG pipeline evaluation.

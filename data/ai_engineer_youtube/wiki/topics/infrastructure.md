@@ -36,6 +36,8 @@ Developer-platform infrastructure also needs to be consumable by agents. Self-se
 
 Enterprise AI engineering platforms should also reduce duplicate tool building. A model gateway can provide experimentation, visibility, and model-fit guidance; an MCP discovery hub can reveal existing servers before another team builds one; and a standardized deployment/runtime platform can handle authentication, SDLC, and production quality controls while leaving room for easy proofs of concept.
 
+Graph-backed retrieval becomes infrastructure when relationship traversal is on the production path. Large knowledge graphs need graph construction pipelines, traversal-depth controls, latency budgets, acceleration paths such as cuGraph or NetworkX-backed graph algorithms, and evaluation that checks both retrieval quality and generated answers.
+
 AI-generated kernels turn low-level optimization into an infrastructure workflow. A useful system needs a supervisor that accepts source code, target hardware, and human guidance; synthesis agents that search optimization ideas; and a verification agent that executes candidates on actual hardware with strict correctness and timing checks. This infrastructure is most valuable when heterogeneous agentic inference workloads need to move across CUDA, Triton, Metal, Pallas, or new device generations faster than scarce kernel experts can hand-port every path.
 
 ## Key Concepts
@@ -115,6 +117,8 @@ AI-generated kernels turn low-level optimization into an infrastructure workflow
 - [Extract contact-center intelligence as structured JSON](../concepts/extract-contact-center-intelligence-as-structured-json.md) - low-latency voice infrastructure can turn transcripts into CRM-ready structured records through prompt templates, STT tuning, and schema mapping.
 - [LLM guardrails need checkpoints at every untrusted boundary](../concepts/llm-guardrails-need-checkpoints-at-every-untrusted-boundary.md) - guardrail infrastructure should be placed around all untrusted context and action boundaries.
 - [Hybrid retrieval should support filters and embedding migration](../concepts/hybrid-retrieval-should-support-filters-and-embedding-migration.md) - retrieval infrastructure needs lexical/vector search, filters, and migration paths for changing embedding models.
+- [Choose HybridRAG when relationship structure matters](../concepts/choose-hybridrag-when-relationship-structure-matters.md) - graph/vector retrieval should be an infrastructure choice driven by corpus structure and query needs.
+- [Balance GraphRAG hop depth against production latency](../concepts/balance-graphrag-hop-depth-against-production-latency.md) - production graph retrieval needs traversal limits, acceleration, and latency-aware evaluation.
 - [Make internal platforms self-service for agent users](../concepts/make-internal-platforms-self-service-for-agent-users.md) - agent-ready infrastructure removes person-dependent operational handoffs.
 - [Expose observability as agent-readable feedback](../concepts/expose-observability-as-agent-readable-feedback.md) - infrastructure should provide verification signals through machine-friendly interfaces.
 - [Local-first platform workflows shorten agent feedback loops](../concepts/local-first-platform-workflows-shorten-agent-feedback-loops.md) - local validation keeps agent iteration from waiting on slow remote pipelines.
@@ -150,6 +154,7 @@ AI-generated kernels turn low-level optimization into an infrastructure workflow
 - Which kernel-generation verification controls are needed before generated low-level code can become an API-compatible production replacement?
 - Which agent handoff contracts, state versions, and recovery transitions should be persisted for audit and replay?
 - Which agent loops need durable result recording to avoid duplicate LLM spend or repeated side effects after crash recovery?
+- Which graph algorithms, acceleration paths, and traversal limits keep HybridRAG latency acceptable as graphs grow to millions of nodes?
 - How much PII masking and operator verification can voice infrastructure add before latency undermines the realtime workflow?
 
 ## Sources
@@ -185,6 +190,7 @@ AI-generated kernels turn low-level optimization into an infrastructure workflow
 - [AI Didn't Kill the Web, It Moved in! - Olivier Leplus (AWS) & Yohan Lasorsa (Microsoft)](../sources/20260410_XZ0boOjtbNo.md)
 - [From Chaos to Choreography: Multi-Agent Orchestration Patterns That Actually Work - Sandipan Bhaumik](../sources/20260408_2czYyrTzILg.md)
 - [OpenRAG: An open-source stack for RAG - Phil Nash](../sources/20260408_4TxOBhDRRCM.md)
+- [HybridRAG: A Fusion of Graph and Vector Retrieval  - Mitesh Patel, NVIDIA](../sources/20250722_-tgQa8Fzf80.md)
 - [Why, and how you need to sandbox AI-Generated Code? - Harshil Agrawal, Cloudflare](../sources/20260408_AHtGAgQ0Q_Q.md)
 - [Your Insecure MCP Server Won't Survive Production - Tun Shwe, Lenses](../sources/20260408_BurJvbqFr4c.md)
 - [Bending a Public MCP Server Without Breaking It — Nimrod Hauser, Baz](../sources/20260408_U00AOI1eJUE.md)
