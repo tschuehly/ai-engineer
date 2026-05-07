@@ -887,3 +887,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Models](topics/models.md)
 - Updated concepts: [Minimal coding-agent harnesses can outperform feature-heavy surfaces](concepts/minimal-coding-agent-harnesses-can-outperform-feature-heavy-surfaces.md), [Turn real coding sessions into RL environments](concepts/turn-real-coding-sessions-into-rl-environments.md), [Prefer outcome verifiers over ground-truth path checks](concepts/prefer-outcome-verifiers-over-ground-truth-path-checks.md), [Train coding-agent models with environments and expert developer reward](concepts/train-coding-agent-models-with-environments-and-expert-developer-reward.md), [Build RL environments as software artifacts](concepts/build-rl-environments-as-software-artifacts.md)
 - Notes: Added Cline's argument that coding-agent progress depends on turning real agent failures into reconstructable RL/eval environments with outcome-focused verifiers.
+
+## [2026-05-07] ingest | Moving away from Agile: What's Next - Martin Harrysson & Natasha Maniar, McKinsey & Company
+
+- Source: [Moving away from Agile: What's Next - Martin Harrysson & Natasha Maniar, McKinsey & Company](sources/20251212_SZStlIhyTCY.md)
+- Processed: `SZStlIhyTCY`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Match AI Operating Models to Work Type](concepts/match-ai-operating-models-to-work-type.md), [Use One-Pizza Pods for Agentic Engineering](concepts/use-one-pizza-pods-for-agentic-engineering.md), [Measure AI Transformation by Outcomes Instead of Adoption](concepts/measure-ai-transformation-by-outcomes-instead-of-adoption.md)
+- Notes: Added enterprise operating-model guidance for scaling AI coding beyond individual productivity into team structure, workflow selection, and outcome measurement.

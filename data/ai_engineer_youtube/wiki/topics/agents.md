@@ -48,6 +48,8 @@ Large engineering organizations need adoption architecture around agent creation
 
 Leadership matters because agent and AI-assistant rollouts can produce either leverage or performative compliance. Organizations need policies, psychological safety, enablement time, impact measurement, and maintained prompt-rule ownership so agent behavior improves with feedback instead of drifting through unmanaged system prompts and local rule files.
 
+Enterprise operating models are part of agent adoption. Adding agents to existing Agile roles can leave companies with marginal gains because work allocation, review, technical-debt control, and collaboration become the new bottlenecks. Smaller AI-native pods, consolidated product-builder roles, continuous planning, spec-driven work, and task-specific human-agent collaboration patterns let agents change the delivery system rather than only individual throughput.
+
 Enterprise analytics agents need especially careful autonomy staging. A GenBI copilot can start by routing users to certified dashboards and reports, then use those governed assets as context or SQL seeds before it attempts broader query generation. Splitting the pipeline into metadata, RAG/report-finding, SQL, and BI-answer agents keeps retrieval, query expansion, answer synthesis, orchestration, and governance as separately inspectable responsibilities.
 
 ## Key Concepts
@@ -64,6 +66,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Universal AI Adoption Changes Engineering Coordination](../concepts/universal-ai-adoption-changes-engineering-coordination.md) - full-team adoption lets engineering coordination move from editor-centric handoffs toward delegated agent work.
 - [Move enterprise AI adoption beyond spot experiments](../concepts/move-enterprise-ai-adoption-beyond-spot-experiments.md) - portfolio adoption gives agent work a better chance of changing organizational outcomes.
 - [Build paved paths for enterprise AI engineering tools](../concepts/build-paved-paths-for-enterprise-ai-engineering-tools.md) - scaled adoption needs shared platform routes for model access, MCP discovery, deployment, and governance.
+- [Use one-pizza pods for agentic engineering](../concepts/use-one-pizza-pods-for-agentic-engineering.md) - agent-native roles consolidate execution specialties into smaller orchestration-capable teams.
 - [Target enterprise coding agents at maintenance and incident work](../concepts/target-enterprise-coding-agents-at-maintenance-and-incident-work.md) - enterprise agents can focus on operational and maintenance work with clear evidence surfaces.
 - [Support-led coding agents exploit fresh customer context](../concepts/support-led-coding-agents-exploit-fresh-customer-context.md) - customer-facing operators can supply fresh context and validation for maintenance agents.
 - [Embed agent tools in existing work surfaces](../concepts/embed-agent-tools-in-existing-work-surfaces.md) - agent tools become more useful when embedded where users already triage, code, and review.
@@ -334,6 +337,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [AI Consulting in Practice - NLW, Superintelligent, @AIDailyBrief](../sources/20251218_ehQFj6VmuI8.md)
 - [Minimax M2: Building the #1 Open Model - Olive Song, MiniMax](../sources/20251213_lY1iFbDPRlw.md)
 - [Hard Won Lessons from Building Effective AI Coding Agents - Nik Pash, Cline](../sources/20251212_I8fs4omN1no.md)
+- [Moving away from Agile: What's Next - Martin Harrysson & Natasha Maniar, McKinsey & Company](../sources/20251212_SZStlIhyTCY.md)
 - [Proactive Agents - Kath Korevec, Google Labs](../sources/20251213_v3u8xc0zLec.md)
 - [The Agent Native Company — Rick Blalock, Agentuity](../sources/20250603_0ZPAvzhpGjw.md)
 - [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](../sources/20251223_LU9KgcZDRfY.md)
