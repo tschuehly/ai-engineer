@@ -154,6 +154,7 @@ Brockman's workflow advice is to challenge inherited constraints by first princi
 - [AI code quality needs full-SDLC workflows](../concepts/ai-code-quality-needs-full-sdlc-workflows.md) - quality workflows should span planning, development, review, testing, deployment, ownership, and verification.
 - [AI review gates turn standards into executable feedback](../concepts/ai-review-gates-turn-standards-into-executable-feedback.md) - PR checks can make coding standards measurable and adaptable.
 - [Use prompt mutation loops to hill-climb product behavior](../concepts/use-prompt-mutation-loops-to-hill-climb-product-behavior.md) - prompt variants can be scored, selected, reflected on, and mutated as part of product behavior iteration.
+- [Use eval agents to improve prompts, datasets, and scorers](../concepts/use-eval-agents-to-improve-prompts-datasets-and-scorers.md) - eval workflows can become active optimization loops when proposed changes remain inspectable.
 - [Build AI product iteration tools into the product context](../concepts/build-ai-product-iteration-tools-into-the-product-context.md) - in-product tools let more roles dogfood and refine AI behavior with realistic context.
 - [System prompt learning updates agent rules from eval explanations](../concepts/system-prompt-learning-updates-agent-rules-from-eval-explanations.md) - coding-agent prompt learning turns traces into rule updates.
 - [Structure prompt-learning experiments with train/test splits and loop budgets](../concepts/structure-prompt-learning-experiments-with-train-test-splits-and-loop-budgets.md) - sample, split, evaluator, and iteration controls make prompt-learning runs comparable.
@@ -453,6 +454,7 @@ Brockman's workflow advice is to challenge inherited constraints by first princi
 - [AGI: The Path Forward - Jason Warner & Eiso Kant, Poolside](../sources/20251227_OGCG_QkCcZo.md)
 - [Shipping AI That Works: An Evaluation Framework for PMs - Aman Khan, Arize](../sources/20251226_2HNSG990Ew8.md)
 - [The Agent Native Company — Rick Blalock, Agentuity](../sources/20250603_0ZPAvzhpGjw.md)
+- [The Future of Evals - Ankur Goyal, Braintrust](../sources/20250809_MC55hdWLq4o.md)
 - [No More Slop - swyx](../sources/20251222_IoiHI7p12Ao.md)
 - [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](../sources/20251223_LU9KgcZDRfY.md)
 - [The 3 Pillars of Autonomy - Michele Catasta, Replit](../sources/20251222_MLhAA9yguwM.md)

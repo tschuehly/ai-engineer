@@ -1247,3 +1247,11 @@
 - Updated topics: [Agents](topics/agents.md), [Product Strategy](topics/product-strategy.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Standard Models Guide AI Engineering Practice](concepts/standard-models-guide-ai-engineering-practice.md), [Measure AI Intensity by Human Input to Valuable Output](concepts/measure-ai-intensity-by-human-input-to-valuable-output.md), [SPADE Structures AI-Intensive Workflows](concepts/spade-structures-ai-intensive-workflows.md)
 - Notes: Added swyx's AI-intensive application frame for reusable AI engineering standard models, output-per-human-input product intensity, and SPADE-style many-call workflow design.
+
+## [2026-05-07] ingest | The Future of Evals - Ankur Goyal, Braintrust
+
+- Source: [The Future of Evals - Ankur Goyal, Braintrust](sources/20250809_MC55hdWLq4o.md)
+- Processed: `MC55hdWLq4o`
+- Updated topics: [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Use eval agents to improve prompts, datasets, and scorers](concepts/use-eval-agents-to-improve-prompts-datasets-and-scorers.md)
+- Notes: Added Braintrust's Loop framing for eval-native agents that propose inspectable improvements to prompts, datasets, and scorers instead of leaving dashboards as passive diagnosis tools.

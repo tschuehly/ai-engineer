@@ -497,6 +497,7 @@
 - [Use Explanatory Feedback to Optimize Prompts](../concepts/use-explanatory-feedback-to-optimize-prompts.md)
 - [Treat model behavior as a product craft](../concepts/treat-model-behavior-as-a-product-craft.md)
 - [Use prompt mutation loops to hill-climb product behavior](../concepts/use-prompt-mutation-loops-to-hill-climb-product-behavior.md)
+- [Use eval agents to improve prompts, datasets, and scorers](../concepts/use-eval-agents-to-improve-prompts-datasets-and-scorers.md)
 - [System Prompt Learning Updates Agent Rules From Eval Explanations](../concepts/system-prompt-learning-updates-agent-rules-from-eval-explanations.md)
 
 ## Edge Inference
@@ -745,6 +746,7 @@
 - [Product engineers need direct customer context](../concepts/product-engineers-need-direct-customer-context.md)
 - [Make agent work more trustworthy by making it verifiable](../concepts/make-agent-work-more-trustworthy-by-making-it-verifiable.md)
 - [Mature eval platforms from spreadsheets into experiment systems](../concepts/mature-eval-platforms-from-spreadsheets-into-experiment-systems.md)
+- [Use eval agents to improve prompts, datasets, and scorers](../concepts/use-eval-agents-to-improve-prompts-datasets-and-scorers.md)
 - [Connect production observability to offline eval loops](../concepts/connect-production-observability-to-offline-eval-loops.md)
 - [Agent traces require specialized eval infrastructure](../concepts/agent-traces-require-specialized-eval-infrastructure.md)
 - [Expose observability as agent-readable feedback](../concepts/expose-observability-as-agent-readable-feedback.md)

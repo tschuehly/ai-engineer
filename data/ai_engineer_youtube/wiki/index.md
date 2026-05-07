@@ -6,6 +6,7 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 - [Measure AI intensity by human input to valuable output](concepts/measure-ai-intensity-by-human-input-to-valuable-output.md) - compare AI products by useful output per human steering event rather than by agent labels.
 - [SPADE structures AI-intensive workflows](concepts/spade-structures-ai-intensive-workflows.md) - high-volume AI-call products can synchronize, plan, analyze, deliver, and evaluate around one artifact.
+- [Use eval agents to improve prompts, datasets, and scorers](concepts/use-eval-agents-to-improve-prompts-datasets-and-scorers.md) - eval-native agents can turn scored results into inspectable system and benchmark improvements.
 - [Model-shaped codebase architecture for coding agents](concepts/model-shaped-codebase-architecture-for-coding-agents.md) - smaller tested modules and fast checks make coding agents more useful.
 - [Agentic coding transforms existing software](concepts/agentic-coding-transforms-existing-software.md) - the deeper coding-agent opportunity is migrations, upgrades, and legacy application change.
 - [Dual-mode AI infrastructure](concepts/dual-mode-ai-infrastructure.md) - mixed AI fleets must balance long compute-heavy jobs with low-latency realtime workloads.
