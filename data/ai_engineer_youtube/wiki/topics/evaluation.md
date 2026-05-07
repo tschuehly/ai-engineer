@@ -24,7 +24,7 @@ Reliable AI app evals should also be reverse-engineered from user-visible outcom
 
 Product-funnel evaluation should also treat attention, activation, and retention as distinct outcomes. For AI products and developer tools, a generated launch asset can be plentiful but still fail if nobody has a reason to share it; an onboarding flow can collect profile data but fail if users never reach the aha moment; and a feature roadmap can look active while neglecting primitives that keep advanced users from outgrowing the product.
 
-Application-layer evals also need a domain map before they can be trusted. Teams should define the product "court": the in-bounds user prompts, out-of-bounds requests, easy cases, hard cases, known passes, and known failures. A small number of repeated manual checks can look convincing while missing entire regions of production behavior. The eval harness should keep representative input data stable while varying the implementation under test, such as the system prompt, model, RAG, preprocessing, or middleware. Scoring should stay as simple and debuggable as the domain allows, because PR reviewers need to understand which changes improved behavior and which introduced regressions.
+Application-layer evals also need a domain map before they can be trusted. Teams should define the product "court": the in-bounds user prompts, out-of-bounds requests, easy cases, hard cases, known passes, and known failures. A small number of repeated manual checks can look convincing while missing entire regions of production behavior. The eval harness should keep representative input data stable while varying the implementation under test, such as the system prompt, model, RAG, preprocessing, or middleware. Scoring should stay as simple and debuggable as the domain allows, because PR reviewers need to understand which changes improved behavior and which introduced regressions. Vision evals need the same domain discipline: common benchmarks such as ImageNet or COCO can become saturated pattern-matching surfaces, so teams should add fine-detail, spatial, specialized-domain, and few-shot grounding tests before treating a VLM or detector as visually intelligent.
 
 Guardrail evaluation is also part of production AI evaluation. Safety layers should be tested at the same boundaries where attacks enter: direct prompts, external context, RAG chunks, MCP tool descriptions, memory, agent plans, and model responses. For latency-sensitive paths, a fine-tuned encoder discriminator can be evaluated as a binary classifier and compared against slower LLM-as-judge checks, while human approval flows should be tested for whether reviewers see the effective action and hidden parameters they are approving. Multi-agent organizations add another evaluation question: does the workflow actually force review, approval, and role-specific quality checks, or are those still best-effort prompt instructions?
 
@@ -85,6 +85,8 @@ Retrieval-specific evals should be fast enough to change engineering behavior. Q
 ## Key Concepts
 
 - [Use fast query-document evals for retrieval changes](../concepts/use-fast-query-document-evals-for-retrieval-changes.md) - cheap query/document checks let teams compare retrieval changes on local data.
+- [Do not trust saturated vision benchmarks as visual intelligence](../concepts/do-not-trust-saturated-vision-benchmarks-as-visual-intelligence.md) - common visual benchmarks can hide weak fine-detail and spatial reasoning.
+- [Evaluate vision models on domain adaptability and few-shot grounding](../concepts/evaluate-vision-models-on-domain-adaptability-and-few-shot-grounding.md) - vision evals should test class names, annotator instructions, examples, and specialized domains.
 - [Align synthetic retrieval queries with real user specificity](../concepts/align-synthetic-retrieval-queries-with-real-user-specificity.md) - generated benchmark queries should match production query shape rather than overfitting to documents.
 - [Cluster conversation outputs to prioritize AI product work](../concepts/cluster-conversation-outputs-to-prioritize-ai-product-work.md) - conversation metadata and KPI clusters turn aggregate scores into roadmap decisions.
 - [Use formal specifications and proofs for critical generated code](../concepts/use-formal-specifications-and-proofs-for-critical-generated-code.md) - verification can prove selected properties before generated code executes.
@@ -309,10 +311,12 @@ Retrieval-specific evals should be fast enough to change engineering behavior. Q
 - How should verifier builders distinguish necessary behavioral requirements from incidental details in a ground-truth patch?
 - Which intermediate progress metrics best predict final success for codebase translation and large refactors?
 - How much should in-the-wild IDE completion evals normalize for latency before comparing model quality?
+- Which vision benchmarks best predict production performance on specialized object-detection domains rather than only common web-photo classes?
 
 ## Sources
 
 - [How to look at your data - Jeff Huber (Chroma) + Jason Liu (567)](../sources/20250806_jryZvCuA0Uc.md)
+- [Vision AI in 2025 - Peter Robicheaux, Roboflow](../sources/20250803_IQc05eCvNYE.md)
 - [Evals Are Not Unit Tests - Ido Pesok, Vercel v0](../sources/20250806_L8OoYeDI_ls.md)
 - [The Next Unicorns: 7 Top AI startups from the HF0 Residency](../sources/20250821_L8-5ezsoI5A.md)
 - [Building an Agentic Platform - Ben Kus, CTO Box](../sources/20250824_12v5S1n1eOY.md)

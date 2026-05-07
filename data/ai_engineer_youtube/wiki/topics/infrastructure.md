@@ -26,6 +26,8 @@ Regulated public-sector infrastructure adds deployment and governance constraint
 
 Voice infrastructure has an upstream data-quality layer before any model call. Contact-center pipelines should preserve raw channel fidelity, apply denoising and level normalization, run early PII masking, tune STT with domain vocabulary and inverse text normalization, and map structured LLM outputs through an API gateway into CRM schemas. Each added privacy or verification layer can increase latency, so architecture decisions must balance low-latency extraction with compliance and durable-record accuracy.
 
+Computer vision adds a similar latency-and-locality constraint for real-world perception. If a system must perceive motion or act on camera input, it often needs multiple frames per second and edge execution rather than a single centralized inference hub. That makes the model choice, visual backbone, accelerator path, and benchmark target part of infrastructure, not just research accuracy.
+
 Enterprise AI registries are another infrastructure layer between experimentation and production. A model gateway can centralize model access, authentication, budget erosion, and request analytics, while registries track MCP servers, A2A agents, models, ownership, environments, costs, and use-case lineage. The practical deployment pattern is to give teams template repositories and CI/CD flows that publish both runtime artifacts and registry metadata, so governance stays aligned with what is actually deployed.
 
 Enterprise analytics infrastructure needs a governed data and metadata layer before an agent writes or executes arbitrary queries. A GenBI stack can separate metadata understanding, certified-report retrieval, SQL expansion, business-answer synthesis, orchestration, trust controls, and contextual UI. That lets teams package the report finder, metadata enrichment, and data-pivoting pieces independently while retaining the benchmarks and catalog improvements even if the end-to-end agent changes.
@@ -184,6 +186,7 @@ Brockman's AI infrastructure framing adds a fleet-shape constraint at frontier s
 - [Neural weather models can target operational forecast variables directly](../concepts/neural-weather-models-can-target-operational-forecast-variables-directly.md) - operational AI systems should choose model targets and hardware paths around the variables users actually need.
 - [Fine-tuned encoder discriminators make low-latency guardrails practical](../concepts/fine-tuned-encoder-discriminators-make-low-latency-guardrails-practical.md) - guardrail serving can use encoder classifiers where generative judges are too slow.
 - [Preserve speaker channels before voice-agent transcription](../concepts/preserve-speaker-channels-before-voice-agent-transcription.md) - audio infrastructure should retain speaker separation, denoise, normalize, and mask PII before model processing.
+- [Evaluate vision models on domain adaptability and few-shot grounding](../concepts/evaluate-vision-models-on-domain-adaptability-and-few-shot-grounding.md) - camera, domain, and few-shot benchmark design should match the deployment contexts where visual inference runs.
 - [Extract contact-center intelligence as structured JSON](../concepts/extract-contact-center-intelligence-as-structured-json.md) - low-latency voice infrastructure can turn transcripts into CRM-ready structured records through prompt templates, STT tuning, and schema mapping.
 - [LLM guardrails need checkpoints at every untrusted boundary](../concepts/llm-guardrails-need-checkpoints-at-every-untrusted-boundary.md) - guardrail infrastructure should be placed around all untrusted context and action boundaries.
 - [Hybrid retrieval should support filters and embedding migration](../concepts/hybrid-retrieval-should-support-filters-and-embedding-migration.md) - retrieval infrastructure needs lexical/vector search, filters, and migration paths for changing embedding models.
@@ -215,6 +218,7 @@ Brockman's AI infrastructure framing adds a fleet-shape constraint at frontier s
 - Which MCP servers should support stateless transport or well-known server discovery before broad production rollout?
 - Which sandbox and rate-limit policies are required before a platform lets agents run generated code against its APIs?
 - Which generated-code workloads can stay in isolate-style runtimes, and which require container lifecycle, filesystem, and process controls?
+- Which computer-vision workloads need edge execution because motion perception or decision latency cannot tolerate centralized inference?
 - Which enterprise-specific context and workflow integrations justify custom internal agent platforms instead of vendor tools?
 - Which sandbox artifacts should be promoted automatically into knowledge-app factory deployments, and which require platform or compliance review first?
 - When should infrastructure expose adaptive embedding dimensions as a product knob rather than a fixed model configuration?
@@ -291,6 +295,7 @@ Brockman's AI infrastructure framing adds a fleet-shape constraint at frontier s
 - [RL Environments at Scale - Will Brown, Prime Intellect](../sources/20251209__IzZWeuTx7I.md)
 - [Efficient Reinforcement Learning - Rhythm Garg & Linden Li, Applied Compute](../sources/20251209_o15AaYl7Wu0.md)
 - [VoiceVision RAG - Integrating Visual Document Intelligence with Voice Response - Suman Debnath, AWS](../sources/20251206_hwCmfThIiS4.md)
+- [Vision AI in 2025 - Peter Robicheaux, Roboflow](../sources/20250803_IQc05eCvNYE.md)
 - [Future-Proof Coding Agents - Bill Chen & Brian Fioca, OpenAI](../sources/20251205_wVl6ZjELpBk.md)
 - [Katelyn Lesse - Evolving Claude APIs for Agents, Anthropic](../sources/20251204_aqW68Is_Kj4.md)
 - [Building Cursor Composer - Lee Robinson, Cursor](../sources/20251202_fL1iJHtl51Q.md)

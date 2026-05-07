@@ -1303,3 +1303,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Treat AI Coding as Safe Software Change](concepts/treat-ai-coding-as-safe-software-change.md), [Give Coding Agents the Same Engineering Infrastructure Humans Need](concepts/give-coding-agents-the-same-engineering-infrastructure-humans-need.md), [Make Code Review the Bottleneck Skill for AI-Generated Code](concepts/make-code-review-the-bottleneck-skill-for-ai-generated-code.md)
 - Notes: Added Augment's production AI coding frame: generated code is still operationally owned code, so agents need ordinary engineering infrastructure and humans need stronger review discipline.
+
+## [2026-05-07] ingest | Vision AI in 2025 - Peter Robicheaux, Roboflow
+
+- Source: [Vision AI in 2025 - Peter Robicheaux, Roboflow](sources/20250803_IQc05eCvNYE.md)
+- Processed: `IQc05eCvNYE`
+- Updated topics: [Vision AI](topics/vision-ai.md), [Evaluation](topics/evaluation.md), [Models](topics/models.md), [Infrastructure](topics/infrastructure.md)
+- Updated concepts: [Do not trust saturated vision benchmarks as visual intelligence](concepts/do-not-trust-saturated-vision-benchmarks-as-visual-intelligence.md), [Use vision-only features when captions erase visual distinctions](concepts/use-vision-only-features-when-captions-erase-visual-distinctions.md), [Evaluate vision models on domain adaptability and few-shot grounding](concepts/evaluate-vision-models-on-domain-adaptability-and-few-shot-grounding.md)
+- Notes: Added Roboflow's vision-AI framing for saturated benchmark caveats, DINOv2-style visual feature fidelity, and RF100-VL domain-adaptability evaluation.

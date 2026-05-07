@@ -28,6 +28,8 @@ GLM 4.6 adds a staged open-model training recipe for long-context coding and age
 
 Brockman's research-engineering framing keeps model progress tied to executable systems. The AlexNet example combines an idea with fast GPU kernels, and current frontier work adds 100,000-GPU systems plus complex RL orchestration. Model capability should therefore be understood as the product of research direction, data, training method, runtime systems, and infrastructure rather than a research paper or parameter count alone.
 
+Computer-vision models add a visual-fidelity caveat to multimodal model selection. Caption-aligned VLMs can look semantically competent while missing fine details that captions never supervised, such as object part pose, direction, clock hands, or domain-specific visual classes. Vision-only self-supervised backbones such as DINOv2 can preserve richer visual feature structure, but the useful engineering target is aligning those features with language and object-detection heads without reducing them to caption-level semantics.
+
 ## Key Concepts
 
 - [Research engineering partnership](../concepts/research-engineering-partnership.md) - model progress requires ideas and engineering systems to land together.
@@ -42,6 +44,8 @@ Brockman's research-engineering framing keeps model progress tied to executable 
 - [Distill diffusion models to reduce sampling steps](../concepts/distill-diffusion-models-to-reduce-sampling-steps.md) - diffusion distillation targets latency by shortening the denoising path.
 - [Expose explicit control signals for generative media models](../concepts/expose-explicit-control-signals-for-generative-media-models.md) - text prompts should be complemented by structured controls when users need predictable media outputs.
 - [Ground generated media with current search context](../concepts/ground-generated-media-with-current-search-context.md) - grounded image models combine retrieval, text rendering, localization, and generation.
+- [Use vision-only features when captions erase visual distinctions](../concepts/use-vision-only-features-when-captions-erase-visual-distinctions.md) - caption supervision can miss visual distinctions that self-supervised visual features preserve.
+- [Evaluate vision models on domain adaptability and few-shot grounding](../concepts/evaluate-vision-models-on-domain-adaptability-and-few-shot-grounding.md) - object-detection models should be compared on specialized domains and few-shot grounding, not only common-class benchmarks.
 - [Evaluate whether models reject impossible or nonsensical premises](../concepts/evaluate-whether-models-reject-impossible-or-nonsensical-premises.md) - model reliability includes knowing when not to answer a malformed request.
 - [Benchmark narrow slices separately from real expert work](../concepts/benchmark-narrow-slices-separately-from-real-expert-work.md) - public benchmark progress should be interpreted alongside real prompt distributions and expert dissatisfaction.
 - [Route Gemma 4 model variants by deployment and workflow shape](../concepts/route-gemma-4-model-variants-by-deployment-and-workflow-shape.md) - Gemma 4's effective, MoE, and dense variants map to different local, hosted, reasoning, coding, and agentic workloads.
@@ -120,12 +124,14 @@ Brockman's research-engineering framing keeps model progress tied to executable 
 - Which coding-eval time windows best separate memorized benchmark behavior from genuine current model capability?
 - Which scaffold perturbations best predict whether a coding-agent model will transfer across real harnesses and tool APIs?
 - Which model advances are blocked by research ideas versus the engineering systems needed to test and scale them?
+- How can VLMs use high-fidelity vision-only features while preserving language alignment and real-time detection performance?
 
 ## Sources
 
 - [#define AI Engineer - Greg Brockman, OpenAI (ft. Jensen Huang)](../sources/20250810_avWhreBUYF0.md)
 
 - [Building an Agentic Platform - Ben Kus, CTO Box](../sources/20250824_12v5S1n1eOY.md)
+- [Vision AI in 2025 - Peter Robicheaux, Roboflow](../sources/20250803_IQc05eCvNYE.md)
 
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md)
 - [Compilers in the Age of LLMs - Yusuf Olokoba, Muna](../sources/20251124_q2nHsJVy4FE.md)

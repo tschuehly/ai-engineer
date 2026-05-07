@@ -219,6 +219,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [MCP applications ship UI and tools together](concepts/mcp-applications-ship-ui-and-tools-together.md) - an MCP server can provide both a human-rendered interface and model-callable tools when clients support richer protocol semantics.
 - [Capability-based sandboxes start with no authority](concepts/capability-based-sandboxes-start-with-no-authority.md) - code-mode runtimes should grant explicit task-scoped APIs and network access rather than broad ambient authority.
 - [Compare models by task, thinking budget, cost, and latency](concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - model routing should account for task fit, reasoning depth, speed, and cost instead of defaulting to the largest model.
+- [Do not trust saturated vision benchmarks as visual intelligence](concepts/do-not-trust-saturated-vision-benchmarks-as-visual-intelligence.md) - common visual benchmarks can hide failures on fine-detail reasoning and domain adaptation.
+- [Use vision-only features when captions erase visual distinctions](concepts/use-vision-only-features-when-captions-erase-visual-distinctions.md) - caption-aligned embeddings may miss visual details that self-supervised visual features retain.
+- [Evaluate vision models on domain adaptability and few-shot grounding](concepts/evaluate-vision-models-on-domain-adaptability-and-few-shot-grounding.md) - vision benchmarks should test specialized domains, annotator instructions, and few-shot examples.
 - [Train image and video diffusion models in learned latent spaces](concepts/train-image-and-video-diffusion-models-in-learned-latent-spaces.md) - learned autoencoder latents make high-resolution and video diffusion tractable while preserving useful media topology.
 - [Use guidance to trade diffusion sample diversity for conditional quality](concepts/use-guidance-to-trade-diffusion-sample-diversity-for-conditional-quality.md) - diffusion sampling settings can improve conditional adherence and perceived quality at the cost of diversity and artifact risk.
 - [Evaluate whether models reject impossible or nonsensical premises](concepts/evaluate-whether-models-reject-impossible-or-nonsensical-premises.md) - reliable models and agents should stop or reframe invalid requests instead of confidently accommodating them.
@@ -291,6 +294,7 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Retrieval](topics/retrieval.md) - bringing accurate, task-relevant knowledge from enterprise systems and curated context blocks into agent work.
 - [Tools](topics/tools.md) - MCP integrations, scripts, skills, and tool-use guidance for agent workflows.
 - [Voice Agents](topics/voice-agents.md) - realtime audio-agent architecture, tool delegation, persona prompting, and voice-specific evaluation.
+- [Vision AI](topics/vision-ai.md) - computer-vision models, VLM limits, visual benchmarks, and domain-adaptable object detection.
 - [Workflows](topics/workflows.md) - repeatable loops for agent execution, failure discovery, and context improvement.
 
 ## Indexes
