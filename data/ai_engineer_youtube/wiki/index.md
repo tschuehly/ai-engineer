@@ -6,6 +6,7 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 - [Context development lifecycle treats context as an engineered artifact](concepts/context-development-lifecycle-treats-context-as-an-engineered-artifact.md) - context should move through generate, evaluate, distribute, observe, and adapt loops.
 - [Treat AI coding as a central applied-AI problem](concepts/treat-ai-coding-as-a-central-applied-ai-problem.md) - code-facing systems are where model capability becomes usable software and workflow leverage.
+- [Vibe engineering is supervised agentic coding with judgment](concepts/vibe-engineering-is-supervised-agentic-coding-with-judgment.md) - agentic coding still depends on human context, abstraction judgment, and acceptance criteria.
 - [Scope coding-agent autonomy by user decision authority](concepts/scope-coding-agent-autonomy-by-user-decision-authority.md) - autonomy should be scoped to the technical decisions the user cannot safely make.
 - [Route high-impact agent actions through explicit human approval gates](concepts/route-high-impact-agent-actions-through-explicit-human-approval-gates.md) - sensitive automations should pause at review boundaries the model cannot bypass.
 - [Browser agents sit in the prompt-injection lethal trifecta](concepts/browser-agents-sit-in-the-prompt-injection-lethal-trifecta.md) - browser agents combine private data, untrusted web content, and external action channels.
@@ -76,6 +77,7 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Connect production observability to offline eval loops](concepts/connect-production-observability-to-offline-eval-loops.md) - production traces should reveal failure modes and become replayable offline regression examples.
 - [Fresh Markdown context mitigates model rot in codegen](concepts/fresh-markdown-context-mitigates-model-rot-in-codegen.md) - productized coding agents need current docs when model training snapshots lag fast-moving APIs.
 - [Keep agent context small, fresh, and task-specific](concepts/keep-agent-context-small-fresh-and-task-specific.md) - long sessions, stale comments, broad MCP surfaces, and mixed tasks can make agent output worse.
+- [Keep agent-generated code clean enough for continued agent work](concepts/keep-agent-generated-code-clean-enough-for-continued-agent-work.md) - generated code needs enough structure for future human and agent iterations.
 - [Use research-plan-implement loops for coding agents](concepts/use-research-plan-implement-loops-for-coding-agents.md) - research and planning artifacts give implementation agents a reviewed path before they write code.
 - [Long AI coding conversations compound accidental complexity](concepts/long-ai-coding-conversations-compound-accidental-complexity.md) - long iterative chats can turn local fixes and pivots into tangled code.
 - [Manual migration seeds teach agents the hidden constraints](concepts/manual-migration-seeds-teach-agents-the-hidden-constraints.md) - one hand-done migration can expose invariants before broader agentic refactors.

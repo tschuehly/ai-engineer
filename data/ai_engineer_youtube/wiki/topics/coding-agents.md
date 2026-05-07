@@ -24,6 +24,8 @@ Zapier's Scout Agent adds a support-led maintenance pattern. For integration pro
 
 Coding-agent evaluation should track the same expansion in task horizon as the tools themselves. Naman Jain's coding-eval progression moves from single-line completions, to interview-style problems, to repository question answering, to optimization and codebase translation tasks that can take hours. That progression changes the benchmark requirements: fresh rolling tasks fight contamination, construct-valid repository tasks preserve real engineering meaning, reward-hack detectors catch agents that exploit benchmark infrastructure, and intermediate progress signals make long translations or refactors measurable before final pass/fail. Live IDE evals add one more agent-product constraint: developer acceptance is not a pure quality label when latency and presentation shape whether users accept a completion.
 
+Vibe engineering adds a human-skill framing for frontend-heavy agentic coding. The useful boundary is not whether the human types code, but whether they can steer the agent with primitives, rules, architecture context, fast feedback, and judgment about what is good enough. LLMs make abstraction cheaper, which means they can reach a good design faster or lock in a bad abstraction faster; senior judgment is still needed to decide when repeated code is acceptable, when a refactor is useful, and when generated code is clean enough for future agents to continue from.
+
 ## Key Concepts
 
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md) - coding-agent SDKs package reusable runtime pieces around the model.
@@ -52,6 +54,9 @@ Coding-agent evaluation should track the same expansion in task horizon as the t
 - [Train code models on execution traces, not only syntax](../concepts/train-code-models-on-execution-traces-not-only-syntax.md) - code-agent models can learn from execution state transitions rather than only source tokens.
 - [Use neural debugging to fill code by simulated execution](../concepts/use-neural-debugging-to-fill-code-by-simulated-execution.md) - partial code plus simulated local state can guide model completion and debugging.
 - [Treat coding agents as fast junior collaborators](../concepts/treat-coding-agents-as-fast-junior-collaborators.md) - agent output needs human judgment and local context even when execution is fast.
+- [Vibe engineering is supervised agentic coding with judgment](../concepts/vibe-engineering-is-supervised-agentic-coding-with-judgment.md) - agentic coding works best when experienced humans steer context, abstractions, and acceptance criteria.
+- [Use voice-dumped UI and code observations as agent feedback](../concepts/use-voice-dumped-ui-and-code-observations-as-agent-feedback.md) - spoken UI and code review can provide high-bandwidth frontend feedback to agents.
+- [Keep agent-generated code clean enough for continued agent work](../concepts/keep-agent-generated-code-clean-enough-for-continued-agent-work.md) - generated code should be good enough for humans and future agents to build on.
 - [Measure AI developer productivity with field experiments, not benchmark extrapolation alone](../concepts/measure-ai-developer-productivity-with-field-experiments-not-benchmark-extrapolation-alone.md) - coding-agent productivity claims need real-work measurements.
 - [Reliability thresholds determine whether coding agents save time](../concepts/reliability-thresholds-determine-whether-coding-agents-save-time.md) - coding-agent output must be reliable enough to reduce total work after review and correction.
 - [Treat slop as a quality failure, not an AI provenance label](../concepts/treat-slop-as-a-quality-failure-not-an-ai-provenance-label.md) - AI usage should not replace direct quality, authenticity, accuracy, and security checks.
@@ -174,6 +179,7 @@ Coding-agent evaluation should track the same expansion in task horizon as the t
 - When should a tangled migration pause agent implementation until a human has produced a seed example by hand?
 - Which static code benchmarks have become too contaminated or saturated to guide coding-agent progress?
 - Which benchmark-exploitation patterns should be blocked by the sandbox, detected by a judge, or left for human code review?
+- Which frontend feedback should be spoken, browser-verified, code-reviewed, or turned into reusable agent rules?
 
 ## Sources
 
@@ -221,3 +227,4 @@ Coding-agent evaluation should track the same expansion in task horizon as the t
 - [Dispatch from the Future: building an AI-native Company - Dan Shipper, Every, AI & I](../sources/20251218_MGzymaYBiss.md)
 - [Code World Model: Building World Models for Computation - Jacob Kahn, FAIR Meta](../sources/20251217_sYgE4ppDFOQ.md)
 - [Coding Evals: From Code Snippets to Codebases - Naman Jain, Cursor](../sources/20251215_tHN44yJoeS8.md)
+- [From Vibe Coding To Vibe Engineering - Kitze, Sizzy](../sources/20251214_JV-wY5pxXLo.md)

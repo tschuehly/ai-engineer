@@ -54,6 +54,8 @@ Support-led coding workflows add a practical backlog pattern for products with m
 
 Prompt-to-app workflows can sit before implementation as a product ideation loop. A team can turn a screenshot, rough feature idea, or desired interaction into a runnable UI, inspect alternate interaction patterns, then decide whether to move into a heavier IDE or full-stack runtime. The same workflow needs verification once it crosses from front-end demos into stateful or multiplayer behavior: generated lobbies, collisions, readiness gates, storage, payments, and API integrations should be tested as real runtime behavior rather than accepted as prompt output.
 
+Vibe engineering turns agentic coding into a supervised review workflow rather than a slot-machine loop. A practical pattern is to let the agent produce a change, inspect the running UI, voice-dump observations and bugs, inspect the code, then feed back technical patterns and context through rules, docs, commands, and memories. Loose prompting is acceptable for disposable scripts or one-off tools, but durable code needs enough cleanliness and context structure for future agent runs to continue safely.
+
 ## Key Concepts
 
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - simple loops can replace over-specified DAGs when exploration is the work.
@@ -112,6 +114,9 @@ Prompt-to-app workflows can sit before implementation as a product ideation loop
 - [Practice-driven AI tool fluency beats theory-only adoption](../concepts/practice-driven-ai-tool-fluency-beats-theory-only-adoption.md) - AI workflow competence comes from repeated real-use experimentation.
 - [Treat coding agents as fast junior collaborators](../concepts/treat-coding-agents-as-fast-junior-collaborators.md) - workflow design should preserve human direction around agent execution.
 - [Keep agent context small, fresh, and task-specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md) - session hygiene prevents old or irrelevant context from steering later work.
+- [Vibe engineering is supervised agentic coding with judgment](../concepts/vibe-engineering-is-supervised-agentic-coding-with-judgment.md) - coding-agent workflows need a human who can steer and accept or reject agent output.
+- [Use voice-dumped UI and code observations as agent feedback](../concepts/use-voice-dumped-ui-and-code-observations-as-agent-feedback.md) - voice feedback can compress UI review and code critique into one agent handoff.
+- [Keep agent-generated code clean enough for continued agent work](../concepts/keep-agent-generated-code-clean-enough-for-continued-agent-work.md) - workflow throughput should not leave future agents blocked by accepted slop.
 - [Use research-plan-implement loops for coding agents](../concepts/use-research-plan-implement-loops-for-coding-agents.md) - separate phases make coding-agent work more reviewable.
 - [Long AI coding conversations compound accidental complexity](../concepts/long-ai-coding-conversations-compound-accidental-complexity.md) - workflows should avoid letting conversational pivots become architecture.
 - [Manual migration seeds teach agents the hidden constraints](../concepts/manual-migration-seeds-teach-agents-the-hidden-constraints.md) - exploratory manual work can seed later agentic migration workflows.
@@ -350,3 +355,4 @@ Prompt-to-app workflows can sit before implementation as a product ideation loop
 - [Dispatch from the Future: building an AI-native Company - Dan Shipper, Every, AI & I](../sources/20251218_MGzymaYBiss.md)
 - [AI Consulting in Practice - NLW, Superintelligent, @AIDailyBrief](../sources/20251218_ehQFj6VmuI8.md)
 - [Building in the Gemini Era - Kat Kampf & Ammaar Reshi, Google DeepMind](../sources/20251215_fgkXEIbZpGc.md)
+- [From Vibe Coding To Vibe Engineering - Kitze, Sizzy](../sources/20251214_JV-wY5pxXLo.md)

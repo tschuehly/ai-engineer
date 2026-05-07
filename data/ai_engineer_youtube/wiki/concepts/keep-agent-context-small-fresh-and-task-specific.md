@@ -13,6 +13,7 @@ Details:
 - Durable information should live outside the active context window in scratchpads, memory files, and AGENTS.md-like project instructions, then be selectively pulled in for the current task. (07:16-08:05)
 - When the session has drifted, start a new session, have the agent summarize the useful state for the next agent, manually verify the summary, and continue with only the corrected context. (10:37-11:15)
 - Splitting work across agents or sessions can be useful primarily because it isolates task context and prevents irrelevant or wrong history from accumulating. (08:30-08:48)
+- Vibe engineering needs explicit context surfaces such as rules, docs, commands, and memories because the model cannot hold an entire app context or infer project intent like a mind reader. (10:59-11:13)
 
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
@@ -26,3 +27,4 @@ Related concepts:
 
 Sources:
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md), 04:33-11:15
+- [From Vibe Coding To Vibe Engineering - Kitze, Sizzy](../sources/20251214_JV-wY5pxXLo.md), 10:59-11:13

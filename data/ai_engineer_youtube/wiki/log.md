@@ -847,3 +847,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Models](topics/models.md)
 - Updated concepts: [Update coding eval sets dynamically as model capability changes](concepts/update-coding-eval-sets-dynamically-as-model-capability-changes.md), [Build coding benchmarks around construct validity](concepts/build-coding-benchmarks-around-construct-validity.md), [Detect reward hacking in code optimization evals](concepts/detect-reward-hacking-in-code-optimization-evals.md), [Use intermediate progress signals for long-horizon code evals](concepts/use-intermediate-progress-signals-for-long-horizon-code-evals.md), [Design in-the-wild coding evals around developer behavior](concepts/design-in-the-wild-coding-evals-around-developer-behavior.md)
 - Notes: Added Cursor's coding-eval progression from fresh dynamic programming benchmarks to repository optimization, reward-hack detection, long-horizon progress metrics, and latency-aware IDE preference studies.
+
+## [2026-05-07] ingest | From Vibe Coding To Vibe Engineering - Kitze, Sizzy
+
+- Source: [From Vibe Coding To Vibe Engineering - Kitze, Sizzy](sources/20251214_JV-wY5pxXLo.md)
+- Processed: `JV-wY5pxXLo`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Vibe engineering is supervised agentic coding with judgment](concepts/vibe-engineering-is-supervised-agentic-coding-with-judgment.md), [Use voice-dumped UI and code observations as agent feedback](concepts/use-voice-dumped-ui-and-code-observations-as-agent-feedback.md), [Keep agent-generated code clean enough for continued agent work](concepts/keep-agent-generated-code-clean-enough-for-continued-agent-work.md), [Keep agent context small, fresh, and task-specific](concepts/keep-agent-context-small-fresh-and-task-specific.md), [Do not use token volume as a developer productivity metric](concepts/do-not-use-token-volume-as-a-developer-productivity-metric.md)
+- Notes: Added Kitze's distinction between loose vibe coding and supervised vibe engineering, including voice feedback, context surfaces, and good-enough generated-code review.
