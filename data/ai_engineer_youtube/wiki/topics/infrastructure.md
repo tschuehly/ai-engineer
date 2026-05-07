@@ -72,9 +72,12 @@ Architecture-copilot infrastructure needs a live system model before recommendat
 
 Brockman's AI infrastructure framing adds a fleet-shape constraint at frontier scale. AGI-scale work is not only model software; it can require massive physical infrastructure, and the workloads split between long compute-heavy jobs and low-latency realtime interactions. A fleet can use different accelerator shapes for each mode, but the ratio matters: if planning overestimates one mode, expensive capacity can become idle or mismatched.
 
+Realtime voice infrastructure adds a smaller but concrete version of that constraint. Development and production depend on live network transport, low-latency provider calls, VAD or semantic turn detection, synchronized audio/text events, and release evals that exercise real services end to end.
+
 ## Key Concepts
 
 - [Dual-mode AI infrastructure](../concepts/dual-mode-ai-infrastructure.md) - infrastructure planning must balance long compute-heavy work against low-latency realtime workloads.
+- [Test realtime voice services with bot-to-bot release evals](../concepts/test-realtime-voice-services-with-bot-to-bot-release-evals.md) - networked voice providers need integration checks at release time.
 - [Research engineering partnership](../concepts/research-engineering-partnership.md) - frontier model progress depends on systems engineering that makes research ideas executable.
 - [Use formal specifications and proofs for critical generated code](../concepts/use-formal-specifications-and-proofs-for-critical-generated-code.md) - proof-capable languages and verifiers can become infrastructure around generated critical components.
 - [High-assurance agentic coding needs process, not just generation](../concepts/high-assurance-agentic-coding-needs-process-not-just-generation.md) - assurance infrastructure includes process, certification, testing, and feedback boundaries.
