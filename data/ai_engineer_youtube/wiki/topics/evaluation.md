@@ -86,6 +86,8 @@ PR-derived field telemetry adds a practical adoption dashboard shape for AI codi
 
 Retrieval-specific evals should be fast enough to change engineering behavior. Query-document pair checks can compare chunking, embedding models, and top-k parameters on the application's own data without waiting for slow judge pipelines. Synthetic query generation can bootstrap that benchmark, but only if the generated questions are aligned with realistic user specificity; otherwise the eval can reward retrieval systems that only handle clean document-shaped questions. Once real traffic exists, conversation logs add an output-side eval surface: extracting tools, errors, frustration, satisfaction, and use-case metadata lets teams compare KPIs across clusters instead of staring at one aggregate factuality score.
 
+RAG evaluation should also sequence complexity. A useful loss analysis asks which query shapes are failing before choosing the next technique: exact-term misses, paraphrase misses, candidate ordering failures, vertical-domain vocabulary, missing structured product signals, ambiguous intent, cost overload, and UX overconfidence each point to different fixes. This keeps BM25, vector retrieval, cross-encoder rerankers, custom embeddings, fan-out, distillation, and fallback UX in one empirical ladder instead of treating them as rival ideologies.
+
 Verifier-backed branching adds an evaluation pattern for test-time search. A shared snapshot can fan out to multiple agents or subagents, each branch mutates its own environment, and a verifier selects branches that satisfy the target condition. This is useful only when the verifier captures the desired outcome; otherwise parallel branching scales the wrong signal.
 
 RAG evaluation can be sequenced with product maturity. A pre-production knowledge-base build may start with practical requirements such as supported source types, Markdown output, asynchronous webhooks, and enough product quality to reach real users. Once usage exists, the benchmark should expand to parser accuracy, parser completeness, hallucinated output, cost, and whether hybrid graph/vector retrieval improves real messages or decisions.
@@ -97,6 +99,9 @@ High-stakes domain RAG also needs a fidelity ladder. Expert review can catch leg
 - [AI System Evaluation Still Depends on Human Review](../concepts/ai-system-evaluation-still-depends-on-human-review.md) - production AI quality checks still combine observability, offline evals, benchmarks, user data, and human review.
 - [Prompt Management Lags Prompt Iteration](../concepts/prompt-management-lags-prompt-iteration.md) - frequent prompt changes need management and eval gates because many teams still lack prompt-management workflows.
 - [Use fast query-document evals for retrieval changes](../concepts/use-fast-query-document-evals-for-retrieval-changes.md) - cheap query/document checks let teams compare retrieval changes on local data.
+- [Sequence RAG Techniques by Loss Analysis and Complexity-Adjusted Impact](../concepts/sequence-rag-techniques-by-loss-analysis-and-complexity-adjusted-impact.md) - retrieval evals should identify the smallest technique likely to close the observed quality gap.
+- [Choose Lexical, Vector, and Reranking Retrieval by Query Shape](../concepts/choose-lexical-vector-and-reranking-retrieval-by-query-shape.md) - query-shape analysis distinguishes exact-match, semantic, and candidate-ordering failures.
+- [Rank RAG Results With Domain and Product Signals Beyond Relevance](../concepts/rank-rag-results-with-domain-and-product-signals-beyond-relevance.md) - evals should inspect whether relevance-only ranking misses domain and product-quality signals.
 - [Do not trust saturated vision benchmarks as visual intelligence](../concepts/do-not-trust-saturated-vision-benchmarks-as-visual-intelligence.md) - common visual benchmarks can hide weak fine-detail and spatial reasoning.
 - [Evaluate vision models on domain adaptability and few-shot grounding](../concepts/evaluate-vision-models-on-domain-adaptability-and-few-shot-grounding.md) - vision evals should test class names, annotator instructions, examples, and specialized domains.
 - [Align synthetic retrieval queries with real user specificity](../concepts/align-synthetic-retrieval-queries-with-real-user-specificity.md) - generated benchmark queries should match production query shape rather than overfitting to documents.
@@ -321,6 +326,7 @@ High-stakes domain RAG also needs a fidelity ladder. Expert review can catch leg
 - Which local inference metrics beyond time to first token and throughput best predict real user-perceived responsiveness?
 - Which generated-kernel speedups are real enough to ship rather than artifacts of launch timing, cache state, tiny inputs, or benchmark-specific shortcuts?
 - How should retrieval evals isolate whether failures came from parsing, chunking, embedding choice, hybrid scoring, filters, or agent search planning?
+- How should retrieval evals decide when product fallback or clarification is better than another ranking model?
 - How should GraphRAG evals isolate ontology errors, triplet extraction errors, traversal-depth misses, and final generation errors?
 - Which extrinsic task metrics best capture whether a network-change digital twin reduced production change failures?
 - What benchmark mix captures graph-backed KAG accuracy, flexibility, reproducibility, traceability, and scalability for advisory systems?
@@ -447,4 +453,5 @@ High-stakes domain RAG also needs a fidelity ladder. Expert review can catch leg
 - [From Self-driving to Autonomous Voice Agents - Brooke Hopkins, Coval](../sources/20250731_kDczF4wBh8s.md)
 - [Building Alice's Brain: an AI Sales Rep that Learns Like a Human - Sherwood & Satwik, 11x](../sources/20250729_KWmkMV0FNwQ.md)
 - [Scaling Enterprise-Grade RAG: Lessons from Legal Frontier - Calvin Qi (Harvey), Chang She (Lance)](../sources/20250729_W1MiZChnkfA.md)
+- [Layering every technique in RAG, one query at a time - David Karam, Pi Labs (fmr. Google Search)](../sources/20250729_w9u11ioHGA0.md)
 - [[Full Workshop] Building Metrics that actually work - David Karam, Pi Labs (fmr Google Search)](../sources/20250729_jxrGodnopHo.md)

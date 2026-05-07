@@ -1511,3 +1511,11 @@
 - Updated topics: [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Treat Evals as the Home of Domain Knowledge](concepts/treat-evals-as-the-home-of-domain-knowledge.md), [Build Scoring Systems From Inspectable Quality Signals](concepts/build-scoring-systems-from-inspectable-quality-signals.md), [Use Online Candidate Scoring to Lift Generation Quality](concepts/use-online-candidate-scoring-to-lift-generation-quality.md)
 - Notes: Added Pi Labs' metric-building workflow: encode domain judgment in evolving scoring systems, decompose subjective quality into inspectable signals, calibrate metrics, and reuse scorers for online candidate selection.
+
+## [2026-05-07] ingest | Layering every technique in RAG, one query at a time - David Karam, Pi Labs (fmr. Google Search)
+
+- Source: [Layering every technique in RAG, one query at a time - David Karam, Pi Labs (fmr. Google Search)](sources/20250729_w9u11ioHGA0.md)
+- Processed: `w9u11ioHGA0`
+- Updated topics: [Retrieval](topics/retrieval.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md)
+- Updated concepts: [Sequence RAG Techniques by Loss Analysis and Complexity-Adjusted Impact](concepts/sequence-rag-techniques-by-loss-analysis-and-complexity-adjusted-impact.md), [Choose Lexical, Vector, and Reranking Retrieval by Query Shape](concepts/choose-lexical-vector-and-reranking-retrieval-by-query-shape.md), [Rank RAG Results With Domain and Product Signals Beyond Relevance](concepts/rank-rag-results-with-domain-and-product-signals-beyond-relevance.md), [Use Supplementary Retrieval and UX Fallbacks for Ambiguous Queries](concepts/use-supplementary-retrieval-and-ux-fallbacks-for-ambiguous-queries.md)
+- Notes: Added Pi Labs' RAG quality-engineering ladder for sequencing retrieval techniques by query failures, impact, cost, and product fallback needs.

@@ -10,6 +10,8 @@ GPU marketplaces add a supply-allocation layer to AI infrastructure. Compute sca
 
 Data-center inference adds another allocation layer inside the model-serving fleet. NVIDIA Dynamo-style deployments treat serving as a token factory with an application-specific Pareto point across quality, latency, and cost. The infrastructure has to split and balance prefill and decode workers, route around KV-cache locality and queue depth, preserve KV state across structured agent waits, and autoscale specialized worker pools when user traffic shifts from one input/output sequence length distribution to another.
 
+Large RAG systems create their own infrastructure ladder. Broad fan-out and supplementary retrieval can improve recall for ambiguous queries, but more backends, more queries, cross-encoder reranking, and LLM post-processing raise serving cost and latency. Distillation becomes an infrastructure option only after the full stack proves valuable but too slow or expensive: the target is to hold the observed quality bar while reducing model size or response time.
+
 Browsers are becoming an infrastructure layer for both development and runtime AI. Chrome DevTools MCP can expose live web-app diagnostics to agents through structured tools, while browser-native Web AI APIs can put a downloaded local model behind summarization, proofreading, prompt, image, and audio APIs. That shifts some inference, debugging, storage, token accounting, and compatibility concerns into the client browser, and because these APIs are experimental, production use needs capability checks and graceful fallbacks.
 
 Agent-built applications add a deployment boundary: the harness that plans and controls work should not be treated as the same trust domain as generated code. Infrastructure for the new application layer needs sandboxes and execution separation so agent-written software can run without giving that code direct authority over the agent runtime.
@@ -170,6 +172,7 @@ Remote MCP infrastructure can reuse ordinary cloud primitives when the local std
 - [Hot-swap small models to avoid one-model-per-GPU waste](../concepts/hot-swap-small-models-to-avoid-one-model-per-gpu-waste.md) - dynamic model loading helps keep accelerator capacity productive when many small models share the fleet.
 - [Production inference combines model support with cluster operations](../concepts/production-inference-combines-model-support-with-cluster-operations.md) - runtime support and infrastructure operations have to be designed together.
 - [Tune inference to the application Pareto point](../concepts/tune-inference-to-the-application-pareto-point.md) - application SLAs should define the serving target across quality, latency, and cost.
+- [Use Supplementary Retrieval and UX Fallbacks for Ambiguous Queries](../concepts/use-supplementary-retrieval-and-ux-fallbacks-for-ambiguous-queries.md) - retrieval fan-out improves recall but adds cost and should degrade gracefully when intent remains unclear.
 - [Disaggregate prefill and decode workers by workload shape](../concepts/disaggregate-prefill-and-decode-workers-by-workload-shape.md) - data-center serving can allocate different worker pools to different generation phases.
 - [Route inference requests by KV locality and worker load](../concepts/route-inference-requests-by-kv-locality-and-worker-load.md) - routing infrastructure should balance cache reuse against queueing.
 - [Exploit structured agent waits for KV-cache manipulation](../concepts/exploit-structured-agent-waits-for-kv-cache-manipulation.md) - agent runtime structure can drive cache movement decisions in the serving layer.
@@ -379,5 +382,6 @@ Remote MCP infrastructure can reuse ordinary cloud primitives when the local std
 - [How to Secure Agents using OAuth - Jared Hanson (Keycard, Passport.js)](../sources/20250730_blmAkayzE8M.md)
 - [How we hacked YC Spring 2025 batch's AI agents - Rene Brandel, Casco](../sources/20250730_kv-QAuKWllQ.md)
 - [OpenAI on Securing Code-Executing AI Agents - Fouad Matin (Codex, Agent Robustness)](../sources/20250730_w7IMuYsBNr8.md)
+- [Layering every technique in RAG, one query at a time - David Karam, Pi Labs (fmr. Google Search)](../sources/20250729_w9u11ioHGA0.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)
