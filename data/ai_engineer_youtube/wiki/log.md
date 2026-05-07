@@ -1135,3 +1135,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Repo-local Markdown tasks give agents durable scoped work units](concepts/repo-local-markdown-tasks-give-agents-durable-scoped-work-units.md), [Expose task workflow guidance through MCP resources and tools](concepts/expose-task-workflow-guidance-through-mcp-resources-and-tools.md), [Review coding-agent work at task, plan, and code checkpoints](concepts/review-coding-agent-work-at-task-plan-and-code-checkpoints.md)
 - Notes: Added Backlog.md's repo-local task workflow for scoping coding-agent work, teaching task lifecycle through MCP resources and tools, and reviewing intent before implementation expands into code.
+
+## [2026-05-07] ingest | AI changes *Nothing* — Dax Raad, OpenCode
+
+- Source: [AI changes *Nothing* — Dax Raad, OpenCode](sources/20251123_o3gmwzo-Mik.md)
+- Processed: `o3gmwzo-Mik`
+- Updated topics: [Product Strategy](topics/product-strategy.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
+- Updated concepts: [AI Does Not Replace Shareable Product Marketing](concepts/ai-does-not-replace-shareable-product-marketing.md), [Optimize Onboarding Around One Aha Moment](concepts/optimize-onboarding-around-one-aha-moment.md), [Build Product Primitives Before Feature Surfaces](concepts/build-product-primitives-before-feature-surfaces.md)
+- Notes: Added Raad's product-strategy funnel for AI-assisted products: earn attention with shareable ideas, reduce first-use friction to one aha moment, and retain power users through primitives-first product architecture.

@@ -630,6 +630,15 @@
 - [Expose explicit control signals for generative media models](../concepts/expose-explicit-control-signals-for-generative-media-models.md)
 - [Interactive world models need memory, control, and live prompting](../concepts/interactive-world-models-need-memory-control-and-live-prompting.md)
 
+## Product Strategy
+
+- [AI Does Not Replace Shareable Product Marketing](../concepts/ai-does-not-replace-shareable-product-marketing.md)
+- [Optimize Onboarding Around One Aha Moment](../concepts/optimize-onboarding-around-one-aha-moment.md)
+- [Build Product Primitives Before Feature Surfaces](../concepts/build-product-primitives-before-feature-surfaces.md)
+- [AI-amplified shipping speed needs stronger product taste](../concepts/ai-amplified-shipping-speed-needs-stronger-product-taste.md)
+- [Product Engineers Need Direct Customer Context](../concepts/product-engineers-need-direct-customer-context.md)
+- [Treat model behavior as a product craft](../concepts/treat-model-behavior-as-a-product-craft.md)
+
 ## Evaluation
 
 - [Ground agent simulation and evaluation in production logs](../concepts/ground-agent-simulation-and-evaluation-in-production-logs.md)
@@ -1026,6 +1035,9 @@
 - [High-consequence data changes vendor trust requirements](../concepts/high-consequence-data-changes-vendor-trust-requirements.md)
 - [Use one-shot app builders for product ideation](../concepts/use-one-shot-app-builders-for-product-ideation.md)
 - [Infer full-stack app infrastructure from user intent](../concepts/infer-full-stack-app-infrastructure-from-user-intent.md)
+- [AI Does Not Replace Shareable Product Marketing](../concepts/ai-does-not-replace-shareable-product-marketing.md)
+- [Optimize Onboarding Around One Aha Moment](../concepts/optimize-onboarding-around-one-aha-moment.md)
+- [Build Product Primitives Before Feature Surfaces](../concepts/build-product-primitives-before-feature-surfaces.md)
 
 - [Agent-native companies embed agents into product, operations, and culture](../concepts/agent-native-companies-embed-agents-into-product-operations-and-culture.md)
 - [Use Compounding Engineering Loops](../concepts/use-compounding-engineering-loops.md)

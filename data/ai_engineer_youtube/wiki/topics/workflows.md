@@ -52,6 +52,8 @@ Enterprise AI research workflows can be made fundable by turning each uncertain 
 
 AI coding workflows should also separate easy generation from simple system design. Nations' three-phase approach turns one long coding conversation into research, planning, and implementation artifacts with human checkpoints between them. Gallon's framework adds a more granular make-it-work sequence: capture a master project specification, extract and categorize features, develop atomic feature specifications, build a dependency matrix, then produce an implementation plan that sequences phases and binary validation criteria. That structure keeps review at the speed of generation: humans validate the research and plan before the agent produces a diff, then review implementation against a known plan rather than reverse-engineering whatever the chat invented.
 
+Product workflows need the same discipline before generated code or copy enters the loop. A launch workflow should ask whether the marketing artifact has a plausible reason to be shared, whether first use reaches one aha moment before nonessential questions, and whether feature work is building durable primitives rather than one-off surfaces that power users will outgrow.
+
 Backlog.md turns that sequence into a terminal and repo workflow. A human or agent creates a Markdown task, the human checks description and acceptance criteria, the agent writes an implementation plan from the task and codebase, the human reviews direction, and only then does the agent implement and move the task to done when the definition of done is met. Independent tasks can run in parallel through Git worktrees when dependencies are clear.
 
 Preference-learning workflows add a feedback path that runs during normal coding. When a developer edits generated code to change library choice, file structure, parameter shape, test framework, or design details, that correction can become learned taste for later agent runs. The workflow is valuable when it reduces repeated steering without hiding the preference surface from the developer or team.
@@ -288,6 +290,9 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 - [Make validation fast, local, deterministic, and actionable](../concepts/make-validation-fast-local-deterministic-and-actionable.md) - coding-agent workflows need quick checks that can guide the next iteration.
 - [Use one-shot app builders for product ideation](../concepts/use-one-shot-app-builders-for-product-ideation.md) - runnable prototypes can replace abstract feature speculation.
 - [Infer full-stack app infrastructure from user intent](../concepts/infer-full-stack-app-infrastructure-from-user-intent.md) - generated full-stack workflows should infer infrastructure while preserving runtime validation.
+- [AI Does Not Replace Shareable Product Marketing](../concepts/ai-does-not-replace-shareable-product-marketing.md) - generated launch content still needs a human reason to earn attention and sharing.
+- [Optimize Onboarding Around One Aha Moment](../concepts/optimize-onboarding-around-one-aha-moment.md) - first-use workflows should minimize steps before the core product proof.
+- [Build Product Primitives Before Feature Surfaces](../concepts/build-product-primitives-before-feature-surfaces.md) - retention workflows should invest in primitives that support both simple defaults and power users.
 - [Standardize development environments around common model priors](../concepts/standardize-development-environments-around-common-model-priors.md) - workflow reliability improves when agents operate in conventional local environments.
 - [Use AI to scale codebase understanding against code slop](../concepts/use-ai-to-scale-codebase-understanding-against-code-slop.md) - workflows can use AI for mapping, inspecting, and routing code work instead of only generating more code.
 - [Outcome-based engineering compensation uses accepted story points](../concepts/outcome-based-engineering-compensation-uses-accepted-story-points.md) - roadmapping, architecture docs, tickets, acceptance, and quarterly compensation form a repeatable output-paid delivery workflow.
@@ -431,6 +436,7 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 - [Moving away from Agile: What's Next - Martin Harrysson & Natasha Maniar, McKinsey & Company](../sources/20251212_SZStlIhyTCY.md)
 - [AI Copilots for Tech Architecture: The Highest-ROI Use Case You're Not Building - Boris B., Catio](../sources/20251124_QRWdapxMdSY.md)
 - [Enterprise Deep Research: The Next Killer App for Enterprise AI — Ofer Mendelevitch, Vectara](../sources/20251124_fh9LgKXBGnQ.md)
+- [AI changes *Nothing* — Dax Raad, OpenCode](../sources/20251123_o3gmwzo-Mik.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)
 - [Vision: Zero Bugs — Johann Schleier-Smith, Temporal](../sources/20251124_qLqttdO33UM.md)

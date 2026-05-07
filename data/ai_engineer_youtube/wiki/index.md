@@ -8,6 +8,8 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Repo-local Markdown tasks give agents durable scoped work units](concepts/repo-local-markdown-tasks-give-agents-durable-scoped-work-units.md) - repository task files can carry agent scope, acceptance criteria, progress, and review state outside the active context window.
 - [Context development lifecycle treats context as an engineered artifact](concepts/context-development-lifecycle-treats-context-as-an-engineered-artifact.md) - context should move through generate, evaluate, distribute, observe, and adapt loops.
 - [Treat AI coding as a central applied-AI problem](concepts/treat-ai-coding-as-a-central-applied-ai-problem.md) - code-facing systems are where model capability becomes usable software and workflow leverage.
+- [Optimize onboarding around one aha moment](concepts/optimize-onboarding-around-one-aha-moment.md) - first-use product flows should reach the core proof before asking for nonessential setup.
+- [Build product primitives before feature surfaces](concepts/build-product-primitives-before-feature-surfaces.md) - durable products combine simple defaults with deep capability through underlying primitives.
 - [Treat agents as embodied action systems](concepts/treat-agents-as-embodied-action-systems.md) - tools, terminals, browsers, VMs, OS access, and files are the digital body through which agents act.
 - [Ground agent simulation and evaluation in production logs](concepts/ground-agent-simulation-and-evaluation-in-production-logs.md) - production traces and failure categories should drive agent simulation and improvement loops.
 - [Coding-agent taste captures the invisible architecture of choices](concepts/coding-agent-taste-captures-the-invisible-architecture-of-choices.md) - generated code should match learned developer, team, and project judgment beyond correctness.
@@ -234,6 +236,7 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Inference](topics/inference.md) - production serving patterns for model runtimes, batching, routing, autoscaling, and resource use.
 - [Infrastructure](topics/infrastructure.md) - deployment runtimes, conversion paths, compilation choices, and operational validation.
 - [Models](topics/models.md) - model architecture, tokenizer, training, adaptation, and sizing choices under practical constraints.
+- [Product Strategy](topics/product-strategy.md) - product attention, onboarding, retention, taste, and primitives in AI-assisted product work.
 - [Retrieval](topics/retrieval.md) - bringing accurate, task-relevant knowledge from enterprise systems and curated context blocks into agent work.
 - [Tools](topics/tools.md) - MCP integrations, scripts, skills, and tool-use guidance for agent workflows.
 - [Voice Agents](topics/voice-agents.md) - realtime audio-agent architecture, tool delegation, persona prompting, and voice-specific evaluation.
