@@ -1183,3 +1183,11 @@
 - Updated topics: [Evaluation](topics/evaluation.md), [Context Engineering](topics/context-engineering.md), [Tools](topics/tools.md)
 - Updated concepts: [Continuously reconcile eval datasets with user reality](concepts/continuously-reconcile-eval-datasets-with-user-reality.md), [Write custom scorers as product specifications](concepts/write-custom-scorers-as-product-specifications.md), [Evaluate tool definitions and outputs as context](concepts/evaluate-tool-definitions-and-outputs-as-context.md)
 - Notes: Added Braintrust's eval-competence workflow for feeding curated user feedback into datasets, writing product-specific scorers, and treating tool definitions and responses as evaluated context.
+
+## [2026-05-07] ingest | Perceptual Evaluations: Evals for Aesthetics - Diego Rodriguez, Krea.ai
+
+- Source: [Perceptual Evaluations: Evals for Aesthetics - Diego Rodriguez, Krea.ai](sources/20250823_h5ItAJuB3Fc.md)
+- Processed: `h5ItAJuB3Fc`
+- Updated topics: [Evaluation](topics/evaluation.md), [Generative Media](topics/generative-media.md), [Models](topics/models.md)
+- Updated concepts: [Evaluate Generative Media With Perceptual Metrics](concepts/evaluate-generative-media-with-perceptual-metrics.md), [Account For Compression Artifacts In Media Model Data And Evals](concepts/account-for-compression-artifacts-in-media-model-data-and-evals.md), [Personalize Aesthetic Evals With Preference Classifiers](concepts/personalize-aesthetic-evals-with-preference-classifiers.md)
+- Notes: Added Krea's perceptual-eval warning that media metrics must account for human-visible quality, compressed internet artifacts, and subjective aesthetic preference.

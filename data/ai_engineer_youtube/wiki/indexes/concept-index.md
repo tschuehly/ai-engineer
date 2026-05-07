@@ -643,6 +643,9 @@
 - [Use guidance to trade diffusion sample diversity for conditional quality](../concepts/use-guidance-to-trade-diffusion-sample-diversity-for-conditional-quality.md)
 - [Distill diffusion models to reduce sampling steps](../concepts/distill-diffusion-models-to-reduce-sampling-steps.md)
 - [Expose explicit control signals for generative media models](../concepts/expose-explicit-control-signals-for-generative-media-models.md)
+- [Evaluate generative media with perceptual metrics](../concepts/evaluate-generative-media-with-perceptual-metrics.md)
+- [Account for compression artifacts in media model data and evals](../concepts/account-for-compression-artifacts-in-media-model-data-and-evals.md)
+- [Personalize aesthetic evals with preference classifiers](../concepts/personalize-aesthetic-evals-with-preference-classifiers.md)
 - [Interactive world models need memory, control, and live prompting](../concepts/interactive-world-models-need-memory-control-and-live-prompting.md)
 
 ## Product Strategy
@@ -657,6 +660,9 @@
 ## Evaluation
 
 - [Use challenge eval sets for future user demands](../concepts/use-challenge-eval-sets-for-future-user-demands.md)
+- [Evaluate generative media with perceptual metrics](../concepts/evaluate-generative-media-with-perceptual-metrics.md)
+- [Account for compression artifacts in media model data and evals](../concepts/account-for-compression-artifacts-in-media-model-data-and-evals.md)
+- [Personalize aesthetic evals with preference classifiers](../concepts/personalize-aesthetic-evals-with-preference-classifiers.md)
 - [Ground agent simulation and evaluation in production logs](../concepts/ground-agent-simulation-and-evaluation-in-production-logs.md)
 - [Close agent loops around live action feedback](../concepts/close-agent-loops-around-live-action-feedback.md)
 - [Robotics policy failures can originate below the model](../concepts/robotics-policy-failures-can-originate-below-the-model.md)
@@ -811,6 +817,8 @@
 - [Product harnesses can become model customization environments](../concepts/product-harnesses-can-become-model-customization-environments.md)
 - [Environment registries make AI research more accessible](../concepts/environment-registries-make-ai-research-more-accessible.md)
 - [Ground generated media with current search context](../concepts/ground-generated-media-with-current-search-context.md)
+- [Account for compression artifacts in media model data and evals](../concepts/account-for-compression-artifacts-in-media-model-data-and-evals.md)
+- [Personalize aesthetic evals with preference classifiers](../concepts/personalize-aesthetic-evals-with-preference-classifiers.md)
 - [Update coding eval sets dynamically as model capability changes](../concepts/update-coding-eval-sets-dynamically-as-model-capability-changes.md)
 
 - [Grow Agent Organizations Incrementally By Role Quality and Cost](../concepts/grow-agent-organizations-incrementally-by-role-quality-and-cost.md)

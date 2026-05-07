@@ -5,6 +5,8 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 ## Current Emphasis
 
 - [Continuously reconcile eval datasets with user reality](concepts/continuously-reconcile-eval-datasets-with-user-reality.md) - eval datasets should evolve from selected user feedback, not remain static synthetic fixtures.
+- [Evaluate generative media with perceptual metrics](concepts/evaluate-generative-media-with-perceptual-metrics.md) - image and video evals should match human-visible quality, not only easy metric surfaces.
+- [Personalize aesthetic evals with preference classifiers](concepts/personalize-aesthetic-evals-with-preference-classifiers.md) - creative products may need user-specific taste models for subjective quality.
 - [Write custom scorers as product specifications](concepts/write-custom-scorers-as-product-specifications.md) - scoring functions should encode the product's intended behavior rather than someone else's generic metric.
 - [Evaluate tool definitions and outputs as context](concepts/evaluate-tool-definitions-and-outputs-as-context.md) - agent tool schemas and responses are part of the model's context budget and should be optimized like prompts.
 - [Domain-expert sandboxes accelerate knowledge-app iteration](concepts/domain-expert-sandboxes-accelerate-knowledge-app-iteration.md) - domain operators need fast, reviewable control over templates, validations, runs, and model strategies.
