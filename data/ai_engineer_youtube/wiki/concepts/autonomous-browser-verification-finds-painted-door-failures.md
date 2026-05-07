@@ -13,6 +13,8 @@ Details:
 - Autonomous testing breaks the human-feedback bottleneck, prevents small errors from compounding, and checks whether model completion claims are real rather than hallucinated. 10:33-11:12
 - Unit tests and API tests cover important but partial slices; browser verification is needed to test how a web app functions and looks. 11:12-12:05
 - Replit combines browser interaction, database checks, logs, API calls, screenshots, and Playwright scripts; generated Playwright is expressive, LLM-manageable, and reusable as a regression suite. 12:05-14:56
+- Antigravity adds a productized browser-verification surface: an agent-controlled Chrome browser can click, scroll, run JavaScript, retrieve DOM state, and produce a screen recording so the human can review what the agent actually tested rather than only a code diff. 03:14-04:24, 09:48-10:27
+- Multimodal model understanding makes browser recordings and screenshots reusable feedback: the model can inspect the visual evidence it produced and iterate from there. 10:16-11:05
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -23,7 +25,8 @@ Related concepts:
 - [Browser DevTools MCP turns runtime debugging into agent tools](browser-devtools-mcp-turns-runtime-debugging-into-agent-tools.md)
 - [Make validation fast, local, deterministic, and actionable](make-validation-fast-local-deterministic-and-actionable.md)
 - [Do not report agent autonomy without quality accountability](do-not-report-agent-autonomy-without-quality-accountability.md)
+- [Agent managers orchestrate editor, browser, and background agents](agent-managers-orchestrate-editor-browser-and-background-agents.md)
 
 Sources:
 - [The 3 Pillars of Autonomy - Michele Catasta, Replit](../sources/20251222_MLhAA9yguwM.md), 08:31-14:56
-
+- [Defying Gravity - Kevin Hou, Google DeepMind](../sources/20251202_HN-F-OQe6j0.md), 03:14-04:24, 09:48-11:05

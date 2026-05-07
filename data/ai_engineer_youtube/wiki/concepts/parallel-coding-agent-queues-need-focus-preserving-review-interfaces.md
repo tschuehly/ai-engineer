@@ -15,6 +15,8 @@ Details:
 - A parent-agent comparison flow can make parallel work more reviewable by running model-specific subagents in isolated worktrees, summarizing differences, and helping the user combine preferred pieces instead of choosing one run blindly. 06:18-12:13
 - Large-refactor orchestration needs an explicit human-input loop before scaling concurrency: the OpenHands guidance suggests starting with roughly three to five concurrent agents, then expanding only once review and merge paths are reliable. (17:28-18:01)
 - Amp shows the same bottleneck inside the editor: when the developer mostly reviews agent output, a custom diff viewer, editable diffs, code navigation, arbitrary commit ranges, and guided change tours become core interface primitives. 02:48-03:18, 11:21-12:35
+- Antigravity adds an agent-manager version of the queue interface: actions that need attention, such as terminal-command approvals, go into an inbox; OS notifications summon the user only when necessary; artifacts provide the review and feedback surface for many parallel tasks. 04:39-05:13, 19:20-20:29
+- The editor remains an escape hatch from the queue: when the user does not trust the agent or needs to finish the last portion manually, the environment can reopen the exact files, artifacts, and conversation context in the editor. 19:57-20:19
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -27,9 +29,12 @@ Related concepts:
 - [Use parent agents to compare and merge parallel subagent outputs](use-parent-agents-to-compare-and-merge-parallel-subagent-outputs.md)
 - [Decompose large refactors into dependency-aware agent batches](decompose-large-refactors-into-dependency-aware-agent-batches.md)
 - [Design coding-agent editors as review surfaces](design-coding-agent-editors-as-review-surfaces.md)
+- [Agent managers orchestrate editor, browser, and background agents](agent-managers-orchestrate-editor-browser-and-background-agents.md)
+- [Dynamic artifacts make agent work reviewable and reusable](dynamic-artifacts-make-agent-work-reviewable-and-reusable.md)
 
 Sources:
 - [Software Engineering Is Becoming Plan and Review - Louis Knight-Webb, Vibe Kanban](../sources/20260502_W76woOYHlvY.md), 07:26-15:28
 - [Replacing 12K LoC with a 200 LoC Skill - David Gomes, Cursor](../sources/20260430_WE_Gnowy3uw.md), 06:18-12:13
 - [Automating Large Scale Refactors with Parallel Agents - Robert Brennan, OpenHands](../sources/20260108_rcsliSIy_YU.md), 17:28-18:01
 - [Amp Code: Next Generation AI Coding - Beyang Liu, Amp Code](../sources/20251222_gvIAkmZUEZY.md), 02:48-03:18, 11:21-12:35
+- [Defying Gravity - Kevin Hou, Google DeepMind](../sources/20251202_HN-F-OQe6j0.md), 04:39-05:13, 19:20-20:29

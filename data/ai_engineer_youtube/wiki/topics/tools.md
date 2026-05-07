@@ -32,6 +32,8 @@ Internal platform tools should be designed so agents can call the same intended 
 
 For coding agents, tool boundaries should be chosen by what needs hard semantics. Read tools can control token load, grep/glob can support exact codebase search, edit tools can enforce read-before-write and diff-shaped changes, Bash can compose project commands inside a sandbox, and brittle edge cases can be moved into versioned tools that are easier to evaluate than broad prompt guidance. When an action can be exposed as a CLI or API, that text-native surface is usually a better agent tool than browser automation, especially when accuracy matters.
 
+Agent-first IDEs show how browser and editor tools can be combined without hiding their authority. Antigravity gives the agent a Chrome browser for authenticated context retrieval, UI interaction, JavaScript execution, DOM inspection, and screen recording, while keeping terminal-command approvals and editor handoff visible in the agent manager.
+
 The post-IDE direction adds another tool-design constraint: putting every request through one all-purpose coding agent wastes context and model budget. A better tool surface can route trivial checks, product exploration, implementation, review, tests, and merges through narrower roles and interfaces, while the human sees orchestration state and evidence instead of a raw terminal transcript.
 
 Amp Code adds that generic integration availability is not the same as a good core tool surface. A coding agent may need custom search, reasoning, dependency-lookup, and codemod tools tuned to the exact feedback loops it must close; otherwise tool descriptions and calls become context overhead and irrelevant choices become failure modes.
@@ -63,6 +65,8 @@ Coding agents can also become programmable tools inside other products. Codex is
 - [Repository skills and AGENTS.md encode repeatable web-agent workflows](../concepts/repository-skills-and-agents-md-encode-repeatable-web-agent-workflows.md) - repo-local instructions can make browser proof, preview sharing, and confirmation gates part of every web-agent change.
 - [Browser DevTools MCP turns runtime debugging into agent tools](../concepts/browser-devtools-mcp-turns-runtime-debugging-into-agent-tools.md) - DevTools MCP turns live browser state, traces, and diagnostics into agent-callable tools.
 - [Autonomous browser verification finds painted-door failures](../concepts/autonomous-browser-verification-finds-painted-door-failures.md) - browser, DOM, log, API, database, screenshot, and Playwright surfaces give agents verification feedback.
+- [Agent managers orchestrate editor, browser, and background agents](../concepts/agent-managers-orchestrate-editor-browser-and-background-agents.md) - agent products can coordinate editor, browser, approvals, and notifications as one tool surface.
+- [Dynamic artifacts make agent work reviewable and reusable](../concepts/dynamic-artifacts-make-agent-work-reviewable-and-reusable.md) - generated plans, recordings, diagrams, and comments are tool outputs for supervision and memory.
 - [Browser-native AI APIs bring local models into web apps](../concepts/browser-native-ai-apis-bring-local-models-into-web-apps.md) - browser-managed local models can become product APIs for summarization, proofreading, and multimodal prompts.
 - [Agent-readable web surfaces guide browsing agents](../concepts/agent-readable-web-surfaces-guide-browsing-agents.md) - `llms.txt` and WebMCP-style surfaces make sites easier for agents to read and operate.
 - [Build internal AI engineering platforms when off-the-shelf tools lack enterprise context](../concepts/build-internal-ai-engineering-platforms-when-off-the-shelf-tools-lack-enterprise-context.md) - enterprise tool platforms may need custom context and integrations around existing engineering systems.
@@ -278,4 +282,5 @@ Coding agents can also become programmable tools inside other products. Codex is
 - [2026: The Year The IDE Died - Steve Yegge & Gene Kim, Authors, Vibe Coding](../sources/20251206_7Dtu2bilcFs.md)
 - [VoiceVision RAG - Integrating Visual Document Intelligence with Voice Response - Suman Debnath, AWS](../sources/20251206_hwCmfThIiS4.md)
 - [Future-Proof Coding Agents - Bill Chen & Brian Fioca, OpenAI](../sources/20251205_wVl6ZjELpBk.md)
+- [Defying Gravity - Kevin Hou, Google DeepMind](../sources/20251202_HN-F-OQe6j0.md)
 - [Katelyn Lesse - Evolving Claude APIs for Agents, Anthropic](../sources/20251204_aqW68Is_Kj4.md)

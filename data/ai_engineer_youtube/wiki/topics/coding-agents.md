@@ -44,6 +44,8 @@ Qodo's code-quality framing adds a full-SDLC quality layer. Generation-time rule
 
 OpenAI's future-proofing framing makes the harness itself a long-lived abstraction. A coding agent is a user interface plus model plus harness, and the harness owns the prompt, tools, tool loop, compaction, sandboxing, permissions, MCP support, and other model-facing behavior. Teams can either maintain that moving layer themselves or integrate a maintained harness through an SDK, then spend more of their effort on the IDE, CI/CD, review, product, or domain workflow that differentiates the experience. The caveat is prompt compatibility: newer coding models may already have trained habits around planning, context inspection, implementation, and testing, so prompts copied from other models can make the agent overexplore or slow down.
 
+Antigravity adds a concrete agent-first IDE shape to that abstraction. The agent manager is the orchestration surface, the editor remains the manual escape hatch, and an agent-controlled browser supplies both authenticated context and verifiable UI evidence. Its artifact system turns plans, open questions, task lists, diagrams, screenshots, screen recordings, and walkthroughs into reviewable objects instead of forcing humans to follow raw transcript streams.
+
 HumanLayer's frequent intentional compaction framing makes that harness behavior concrete for hard brownfield work. Instead of letting one long chat accumulate search, tool output, corrections, and stale trajectory, the workflow repeatedly compresses useful state into reviewed artifacts. Research compresses source-backed codebase truth, planning compresses human intent into files, snippets, steps, and tests, and implementation can run from a low-context plan. The human role moves to the highest-leverage checkpoints: review whether the research is true and the plan is sane before a wrong assumption multiplies into a large diff.
 
 ## Key Concepts
@@ -126,6 +128,8 @@ HumanLayer's frequent intentional compaction framing makes that harness behavior
 - [Product engineers need direct customer context](../concepts/product-engineers-need-direct-customer-context.md) - engineers need direct customer feedback to make useful product decisions as AI handles more implementation.
 - [Unified coding-agent harnesses combine models, tools, environments, and safety](../concepts/unified-coding-agent-harnesses-combine-models-tools-environments-and-safety.md) - model capability needs an execution harness that manages tools, environments, and safety.
 - [Use stable agent harnesses as model-evolution boundaries](../concepts/use-stable-agent-harnesses-as-model-evolution-boundaries.md) - a maintained harness absorbs model and API churn so products can focus on workflow differentiation.
+- [Agent managers orchestrate editor, browser, and background agents](../concepts/agent-managers-orchestrate-editor-browser-and-background-agents.md) - a higher-level IDE surface can coordinate agents, approvals, browser work, and manual editor handoff.
+- [Dynamic artifacts make agent work reviewable and reusable](../concepts/dynamic-artifacts-make-agent-work-reviewable-and-reusable.md) - artifacts make plans, progress, proof, feedback, and memory inspectable.
 - [Prompt coding agents around learned model habits](../concepts/prompt-coding-agents-around-learned-model-habits.md) - prompts should fit the model's trained coding behavior instead of blindly carrying over old harness instructions.
 - [Use coding agents as programmable subagents inside products](../concepts/use-coding-agents-as-programmable-subagents-inside-products.md) - SDKs and CI/CD integrations let products call coding agents as subagents or tools.
 - [Own agent context instead of accepting hidden harness mutation](../concepts/own-agent-context-instead-of-accepting-hidden-harness-mutation.md) - hidden prompt, tool, and compaction changes can break coding-agent workflows.
@@ -235,6 +239,7 @@ HumanLayer's frequent intentional compaction framing makes that harness behavior
 ## Sources
 
 - [No Vibes Allowed: Solving Hard Problems in Complex Codebases - Dex Horthy, HumanLayer](../sources/20251202_rmvDxxNubIg.md)
+- [Defying Gravity - Kevin Hou, Google DeepMind](../sources/20251202_HN-F-OQe6j0.md)
 - [Making Codebases Agent Ready - Eno Reyes, Factory AI](../sources/20251222_ShuJ_CN6zr4.md)
 - [What We Learned Deploying AI within Bloomberg's Engineering Organization - Lei Zhang, Bloomberg](../sources/20251216_Q81AzlA-VE8.md)
 - [Your Support Team Should Ship Code - Lisa Orr, Zapier](../sources/20251216_RmJ4rTLV_x4.md)

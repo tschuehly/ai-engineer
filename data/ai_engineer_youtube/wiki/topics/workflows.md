@@ -50,6 +50,8 @@ AI coding workflows should also separate easy generation from simple system desi
 
 Frequent intentional compaction adds a context-window version of the same workflow. Research, plan, and implementation are useful because each phase can compact the previous phase into a smaller, reviewed artifact: codebase truth, then implementation intent, then executable change. The workflow should scale with task difficulty rather than become ceremony; a small button change may need direct prompting, while hard brownfield work needs enough compaction and review to keep the agent out of stale or noisy context.
 
+Agent-first IDE workflows make those artifacts live inside the working surface. Antigravity uses the agent manager as a queue and review control plane, lets the model decide when to create a plan, task list, diagram, screenshot, recording, or walkthrough, and lets the user batch comments on text or image artifacts while execution continues. Its dogfooding loop also turns real product use into research feedback about model, tool, and harness gaps.
+
 Outcome-based delivery workflows add an organizational layer around AI-accelerated engineering. A roadmapping phase can turn client goals into product requirements, architecture design documents, and story-pointed tickets, while acceptance gates determine when output becomes compensable. This creates a workflow incentive for AI leverage only if scoping, QA, and customer approval remain separate from the person paid for implementation throughput.
 
 Leadership-led AI workflows should start from the actual SDLC constraint. Code completion is not automatically the highest-leverage target if reverse engineering, onboarding, incidents, context switching, meetings, compliance uncertainty, or missing runbook context dominate delivery. Useful rollouts identify that bottleneck, choose AI use cases that reduce it, then measure whether system outcomes changed. Leadership learning workflows should also avoid learning from only one segment of the market: a cross-segment convening can help AI transformation leaders compare frontier lab direction, startup product velocity, academic framing, consulting patterns, and large-enterprise deployment evidence before turning strategy into a tactical roadmap for their own company.
@@ -164,6 +166,9 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 - [Use one-pizza pods for agentic engineering](../concepts/use-one-pizza-pods-for-agentic-engineering.md) - smaller consolidated teams can make agent orchestration part of the daily workflow.
 - [Measure AI transformation by outcomes instead of adoption](../concepts/measure-ai-transformation-by-outcomes-instead-of-adoption.md) - rollout workflows should connect usage to delivery, quality, resilience, and economic outcomes.
 - [Parallel coding-agent queues need focus-preserving review interfaces](../concepts/parallel-coding-agent-queues-need-focus-preserving-review-interfaces.md) - long-running agent workflows need queueing and review handoffs that reduce context switching.
+- [Agent managers orchestrate editor, browser, and background agents](../concepts/agent-managers-orchestrate-editor-browser-and-background-agents.md) - workflow control can move into a dedicated agent manager instead of raw editor logs.
+- [Dynamic artifacts make agent work reviewable and reusable](../concepts/dynamic-artifacts-make-agent-work-reviewable-and-reusable.md) - artifacts support planning, monitoring, commenting, proof, and memory.
+- [Product-research flywheels expose model and harness gaps](../concepts/product-research-flywheels-expose-model-and-harness-gaps.md) - dogfooding connects product workflow failures back to model and harness improvement.
 - [Support-led coding agents exploit fresh customer context](../concepts/support-led-coding-agents-exploit-fresh-customer-context.md) - support-led workflows preserve fresh logs, customer pain, and validation context.
 - [Embed agent tools in existing work surfaces](../concepts/embed-agent-tools-in-existing-work-surfaces.md) - workflow adoption improves when agent tools are embedded in existing tickets, IDEs, and merge requests.
 - [Evaluate support coding agents by staged failure modes](../concepts/evaluate-support-coding-agents-by-staged-failure-modes.md) - production support workflows need evals for routing, action gating, and solution quality.
@@ -315,6 +320,7 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 ## Sources
 
 - [No Vibes Allowed: Solving Hard Problems in Complex Codebases - Dex Horthy, HumanLayer](../sources/20251202_rmvDxxNubIg.md)
+- [Defying Gravity - Kevin Hou, Google DeepMind](../sources/20251202_HN-F-OQe6j0.md)
 - [Government Agents: AI Agents Meet Tough Regulations - Mark Myshatyn, Los Alamos National Lab](../sources/20251206_TnSGx36Ly0Q.md)
 - [What We Learned Deploying AI within Bloomberg's Engineering Organization - Lei Zhang, Bloomberg](../sources/20251216_Q81AzlA-VE8.md)
 - [Your Support Team Should Ship Code - Lisa Orr, Zapier](../sources/20251216_RmJ4rTLV_x4.md)

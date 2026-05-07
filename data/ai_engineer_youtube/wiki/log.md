@@ -991,3 +991,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Frequent intentional compaction keeps coding agents in the smart zone](concepts/frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md), [Review research and plans before they multiply into code](concepts/review-research-and-plans-before-they-multiply-into-code.md), [Use research-plan-implement loops for coding agents](concepts/use-research-plan-implement-loops-for-coding-agents.md), [Keep agent context small, fresh, and task-specific](concepts/keep-agent-context-small-fresh-and-task-specific.md)
 - Notes: Added HumanLayer's context-compaction workflow for brownfield coding agents, including on-demand compressed context and high-leverage review of research and plans before implementation.
+
+## [2026-05-07] ingest | Defying Gravity - Kevin Hou, Google DeepMind
+
+- Source: [Defying Gravity - Kevin Hou, Google DeepMind](sources/20251202_HN-F-OQe6j0.md)
+- Processed: `HN-F-OQe6j0`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Agent managers orchestrate editor, browser, and background agents](concepts/agent-managers-orchestrate-editor-browser-and-background-agents.md), [Dynamic artifacts make agent work reviewable and reusable](concepts/dynamic-artifacts-make-agent-work-reviewable-and-reusable.md), [Autonomous browser verification finds painted-door failures](concepts/autonomous-browser-verification-finds-painted-door-failures.md), [Parallel coding-agent queues need focus-preserving review interfaces](concepts/parallel-coding-agent-queues-need-focus-preserving-review-interfaces.md), [Product-research flywheels expose model and harness gaps](concepts/product-research-flywheels-expose-model-and-harness-gaps.md)
+- Notes: Added Google Antigravity's agent-first IDE patterns around agent manager orchestration, browser evidence, dynamic artifacts, and dogfooding-driven model and harness improvement.
