@@ -32,6 +32,8 @@ Durable agent infrastructure also needs a deterministic orchestration boundary. 
 
 Developer-platform infrastructure also needs to be consumable by agents. Self-service provisioning, API/CLI/MCP access, standardized development environments, local validation, machine-readable observability, and layered contribution guardrails let agents work against internal platforms without relying on informal human escalation paths. Agent-ready infrastructure should prefer fast local checks over slow CI-only loops because agents will repeatedly run whatever feedback path is available.
 
+AI-generated kernels turn low-level optimization into an infrastructure workflow. A useful system needs a supervisor that accepts source code, target hardware, and human guidance; synthesis agents that search optimization ideas; and a verification agent that executes candidates on actual hardware with strict correctness and timing checks. This infrastructure is most valuable when heterogeneous agentic inference workloads need to move across CUDA, Triton, Metal, Pallas, or new device generations faster than scarce kernel experts can hand-port every path.
+
 ## Key Concepts
 
 - [Use hosted model playgrounds to prototype before owning infrastructure](../concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md) - hosted tools can validate model and deployment choices before teams own the runtime.
@@ -46,6 +48,9 @@ Developer-platform infrastructure also needs to be consumable by agents. Self-se
 - [Choose choreography or orchestration by complexity and autonomy](../concepts/choose-choreography-or-orchestration-by-complexity-and-autonomy.md) - infrastructure shape depends on whether event-driven autonomy or centralized control is the stronger requirement.
 - [Use local AI workstations when iteration, privacy, or latency dominate](../concepts/use-local-ai-workstations-when-iteration-privacy-or-latency-dominate.md) - local workstations can move development closer to the engineer while preserving a later scale-out path.
 - [Make local inference benchmarks reproducible artifacts](../concepts/make-local-inference-benchmarks-reproducible-artifacts.md) - reproducible local serving tests need container isolation, warmups, hardware metrics, and stored run outputs.
+- [Use hardware-in-the-loop search for AI kernel generation](../concepts/use-hardware-in-the-loop-search-for-ai-kernel-generation.md) - kernel-generation harnesses need target hardware in the optimization loop.
+- [Use AI kernel generation for known optimization patterns, not expert-level breakthroughs](../concepts/use-ai-kernel-generation-for-known-optimization-patterns-not-expert-level-breakthroughs.md) - infrastructure should aim generated kernels at long-tail optimization and porting work.
+- [Evaluate generated kernels for correctness, performance, and benchmark gaming](../concepts/evaluate-generated-kernels-for-correctness-performance-and-benchmark-gaming.md) - generated low-level code requires strict verification infrastructure before adoption.
 - [Browser-native AI APIs bring local models into web apps](../concepts/browser-native-ai-apis-bring-local-models-into-web-apps.md) - client browsers can host local model downloads behind experimental AI APIs.
 - [Treat quantization as a memory-bandwidth lever](../concepts/treat-quantization-as-a-memory-bandwidth-lever.md) - memory capacity and memory bandwidth should be treated as separate infrastructure constraints.
 - [Open model families need ecosystem-compatible tooling](../concepts/open-model-families-need-ecosystem-compatible-tooling.md) - open model infrastructure includes license, runtime, fine-tuning, and distribution support.
@@ -136,6 +141,7 @@ Developer-platform infrastructure also needs to be consumable by agents. Self-se
 - Which BI catalog and semantic-layer metadata should be mandatory before an analytics agent can generate or execute SQL?
 - Which local workstation workloads should stay local because privacy, queueing, or latency matter more than elastic scale?
 - Which CI-only checks should be converted into development-time commands before agents rely on them repeatedly?
+- Which kernel-generation verification controls are needed before generated low-level code can become an API-compatible production replacement?
 - Which agent handoff contracts, state versions, and recovery transitions should be persisted for audit and replay?
 - Which agent loops need durable result recording to avoid duplicate LLM spend or repeated side effects after crash recovery?
 - How much PII masking and operator verification can voice infrastructure add before latency undermines the realtime workflow?
@@ -182,3 +188,4 @@ Developer-platform infrastructure also needs to be consumable by agents. Self-se
 - [Building durable Agents with Workflow DevKit & AI SDK - Peter Wielander, Vercel](../sources/20260106_kmV-qg4uoNI.md)
 - [Developer Experience in the Age of AI Coding Agents - Max Kanat-Alexander, Capital One](../sources/20251223_rT2Del5pwg4.md)
 - [Making Codebases Agent Ready - Eno Reyes, Factory AI](../sources/20251222_ShuJ_CN6zr4.md)
+- [AI Kernel Generation: What's working, what's not, what's next - Natalie Serrino, Gimlet Labs](../sources/20251217_6guQG_tGt0o.md)

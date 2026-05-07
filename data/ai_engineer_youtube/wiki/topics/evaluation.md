@@ -28,6 +28,8 @@ Coding-agent prompt learning turns that evaluation loop into a system-prompt upd
 
 Anti-slop evaluation should be provenance-neutral. Human and AI outputs can both be low-quality, inauthentic, inaccurate, insecure, or unmaintainable, so the release question is whether the artifact meets the bar. Agent autonomy claims need the same discipline: unattended runtime is only meaningful when paired with tests, review findings, security evidence, maintainability judgment, and human ownership. For generated web apps, browser-level verification is a specific autonomy test because visible UI can hide missing handlers, mock data, or other painted-door failures that non-technical users will not systematically inspect.
 
+Generated kernel evaluation has an unusually concrete version of the same problem: the agent can compile, run, and report a speedup while still being wrong, measuring the wrong thing, or exploiting the benchmark. Useful evaluation needs floating-point tolerance policy, representative input sizes, warmups, cache controls, reliable hardware timing, baseline comparisons, and scrutiny for suspicious speedups that satisfy the benchmark without preserving intended behavior.
+
 ## Key Concepts
 
 - [Evaluate agent trajectories with backtests and smell metrics](../concepts/evaluate-agent-trajectories-with-backtests-and-smell-metrics.md) - flexible tool-loop agents need historical and trajectory-level checks.
@@ -72,6 +74,8 @@ Anti-slop evaluation should be provenance-neutral. Human and AI outputs can both
 - [Control environment noise for group-based RL](../concepts/control-environment-noise-for-group-based-rl.md) - grouped rollout evals need differences to come from model behavior rather than simulator randomness.
 - [Inspect rollouts before trusting RL environment scores](../concepts/inspect-rollouts-before-trusting-rl-environment-scores.md) - strong environment scores can hide biased setup logic or memorized strategies.
 - [Make local inference benchmarks reproducible artifacts](../concepts/make-local-inference-benchmarks-reproducible-artifacts.md) - local serving claims should be backed by repeatable run artifacts and hardware metrics.
+- [Evaluate generated kernels for correctness, performance, and benchmark gaming](../concepts/evaluate-generated-kernels-for-correctness-performance-and-benchmark-gaming.md) - kernel speedups must survive numerical checks, reliable timing, and anti-cheating review.
+- [Use hardware-in-the-loop search for AI kernel generation](../concepts/use-hardware-in-the-loop-search-for-ai-kernel-generation.md) - profiling on actual target devices is the evaluation signal for low-level optimization agents.
 - [Mitigate small-model doom loops during preference alignment and RL](../concepts/mitigate-small-model-doom-loops-during-preference-alignment-and-rl.md) - small reasoning models need output-loop checks and post-training reward signals beyond SFT.
 - [Constrained decoding makes small-model tool calls production-usable](../concepts/constrained-decoding-makes-small-model-tool-calls-production-usable.md) - production evaluation of edge agents should account for runtime guardrails, not only raw model output.
 - [Evaluate context changes with lint, task scenarios, and probabilistic budgets](../concepts/evaluate-context-changes-with-lint-task-scenarios-and-probabilistic-budgets.md) - context evals need structural checks, behavioral scenarios, and repeated-run thresholds.
@@ -158,6 +162,7 @@ Anti-slop evaluation should be provenance-neutral. Human and AI outputs can both
 - Which reviewer-agent findings are stable enough to gate CI, and which should remain advisory comments?
 - How much human annotation quality and distribution coverage is enough before judge-prompt optimization becomes trustworthy?
 - Which local inference metrics beyond time to first token and throughput best predict real user-perceived responsiveness?
+- Which generated-kernel speedups are real enough to ship rather than artifacts of launch timing, cache state, tiny inputs, or benchmark-specific shortcuts?
 - How should retrieval evals isolate whether failures came from parsing, chunking, embedding choice, hybrid scoring, filters, or agent search planning?
 - Which metadata fields most improve BI-agent accuracy, and which only make catalog documentation look better without changing task outcomes?
 - Which RL environment scores should require manual rollout review before they are allowed to drive training decisions?
@@ -223,3 +228,4 @@ Anti-slop evaluation should be provenance-neutral. Human and AI outputs can both
 - [No More Slop - swyx](../sources/20251222_IoiHI7p12Ao.md)
 - [The 3 Pillars of Autonomy - Michele Catasta, Replit](../sources/20251222_MLhAA9yguwM.md)
 - [AI Consulting in Practice - NLW, Superintelligent, @AIDailyBrief](../sources/20251218_ehQFj6VmuI8.md)
+- [AI Kernel Generation: What's working, what's not, what's next - Natalie Serrino, Gimlet Labs](../sources/20251217_6guQG_tGt0o.md)

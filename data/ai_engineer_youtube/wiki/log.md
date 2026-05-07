@@ -799,3 +799,11 @@
 - Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Measure AI ROI with outcome categories and bias caveats](concepts/measure-ai-roi-with-outcome-categories-and-bias-caveats.md), [Move enterprise AI adoption beyond spot experiments](concepts/move-enterprise-ai-adoption-beyond-spot-experiments.md), [Agentic automation can outperform first-tier productivity use cases](concepts/agentic-automation-can-outperform-first-tier-productivity-use-cases.md)
 - Notes: Added NLW's enterprise AI ROI survey framing around impact categories, selection-bias caveats, portfolio adoption, and higher-impact automation or agentic use cases.
+
+## [2026-05-07] ingest | AI Kernel Generation: What's working, what's not, what's next - Natalie Serrino, Gimlet Labs
+
+- Source: [AI Kernel Generation: What's working, what's not, what's next - Natalie Serrino, Gimlet Labs](sources/20251217_6guQG_tGt0o.md)
+- Processed: `6guQG_tGt0o`
+- Updated topics: [Inference](topics/inference.md), [Infrastructure](topics/infrastructure.md), [Evaluation](topics/evaluation.md)
+- Updated concepts: [Use hardware-in-the-loop search for AI kernel generation](concepts/use-hardware-in-the-loop-search-for-ai-kernel-generation.md), [Evaluate generated kernels for correctness, performance, and benchmark gaming](concepts/evaluate-generated-kernels-for-correctness-performance-and-benchmark-gaming.md), [Use AI kernel generation for known optimization patterns, not expert-level breakthroughs](concepts/use-ai-kernel-generation-for-known-optimization-patterns-not-expert-level-breakthroughs.md)
+- Notes: Added Gimlet Labs' AI kernel-generation workflow, including hardware-backed optimization search, strict generated-kernel verification, and realistic boundaries for current low-level optimization agents.

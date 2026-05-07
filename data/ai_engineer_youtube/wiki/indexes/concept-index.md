@@ -407,6 +407,9 @@
 - [Use hosted model playgrounds to prototype before owning infrastructure](../concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md)
 - [Open model families need ecosystem-compatible tooling](../concepts/open-model-families-need-ecosystem-compatible-tooling.md)
 - [Use MLX Swift LM for Apple local model integration](../concepts/use-mlx-swift-lm-for-apple-local-model-integration.md)
+- [Use hardware-in-the-loop search for AI kernel generation](../concepts/use-hardware-in-the-loop-search-for-ai-kernel-generation.md)
+- [Use AI kernel generation for known optimization patterns, not expert-level breakthroughs](../concepts/use-ai-kernel-generation-for-known-optimization-patterns-not-expert-level-breakthroughs.md)
+- [Evaluate generated kernels for correctness, performance, and benchmark gaming](../concepts/evaluate-generated-kernels-for-correctness-performance-and-benchmark-gaming.md)
 - [Agent software factories need runnable, contextual, and verifiable primitives](../concepts/agent-software-factories-need-runnable-contextual-and-verifiable-primitives.md)
 - [Treat agent readiness as verification infrastructure](../concepts/treat-agent-readiness-as-verification-infrastructure.md)
 - [Use agent readiness flywheels to improve the development environment](../concepts/use-agent-readiness-flywheels-to-improve-the-development-environment.md)
@@ -442,6 +445,9 @@
 - [Profile small-model architectures on target hardware](../concepts/profile-small-model-architectures-on-target-hardware.md)
 - [Use local AI workstations when iteration, privacy, or latency dominate](../concepts/use-local-ai-workstations-when-iteration-privacy-or-latency-dominate.md)
 - [Make local inference benchmarks reproducible artifacts](../concepts/make-local-inference-benchmarks-reproducible-artifacts.md)
+- [Use hardware-in-the-loop search for AI kernel generation](../concepts/use-hardware-in-the-loop-search-for-ai-kernel-generation.md)
+- [Use AI kernel generation for known optimization patterns, not expert-level breakthroughs](../concepts/use-ai-kernel-generation-for-known-optimization-patterns-not-expert-level-breakthroughs.md)
+- [Evaluate generated kernels for correctness, performance, and benchmark gaming](../concepts/evaluate-generated-kernels-for-correctness-performance-and-benchmark-gaming.md)
 - [Preserve speaker channels before voice-agent transcription](../concepts/preserve-speaker-channels-before-voice-agent-transcription.md)
 - [Extract contact-center intelligence as structured JSON](../concepts/extract-contact-center-intelligence-as-structured-json.md)
 - [Verify AI call summaries before CRM sync](../concepts/verify-ai-call-summaries-before-crm-sync.md)
@@ -468,6 +474,8 @@
 ## Evaluation
 
 - [Evaluate Agent Trajectories With Backtests and Smell Metrics](../concepts/evaluate-agent-trajectories-with-backtests-and-smell-metrics.md)
+- [Evaluate generated kernels for correctness, performance, and benchmark gaming](../concepts/evaluate-generated-kernels-for-correctness-performance-and-benchmark-gaming.md)
+- [Use hardware-in-the-loop search for AI kernel generation](../concepts/use-hardware-in-the-loop-search-for-ai-kernel-generation.md)
 - [Use Research-Plan-Implement Loops for Coding Agents](../concepts/use-research-plan-implement-loops-for-coding-agents.md)
 - [Translate structured requirements into property-based tests](../concepts/translate-structured-requirements-into-property-based-tests.md)
 - [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](../concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md)
