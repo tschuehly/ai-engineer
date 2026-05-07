@@ -807,3 +807,11 @@
 - Updated topics: [Inference](topics/inference.md), [Infrastructure](topics/infrastructure.md), [Evaluation](topics/evaluation.md)
 - Updated concepts: [Use hardware-in-the-loop search for AI kernel generation](concepts/use-hardware-in-the-loop-search-for-ai-kernel-generation.md), [Evaluate generated kernels for correctness, performance, and benchmark gaming](concepts/evaluate-generated-kernels-for-correctness-performance-and-benchmark-gaming.md), [Use AI kernel generation for known optimization patterns, not expert-level breakthroughs](concepts/use-ai-kernel-generation-for-known-optimization-patterns-not-expert-level-breakthroughs.md)
 - Notes: Added Gimlet Labs' AI kernel-generation workflow, including hardware-backed optimization search, strict generated-kernel verification, and realistic boundaries for current low-level optimization agents.
+
+## [2026-05-07] ingest | Code World Model: Building World Models for Computation - Jacob Kahn, FAIR Meta
+
+- Source: [Code World Model: Building World Models for Computation - Jacob Kahn, FAIR Meta](sources/20251217_sYgE4ppDFOQ.md)
+- Processed: `sYgE4ppDFOQ`
+- Updated topics: [Models](topics/models.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md)
+- Updated concepts: [Train code models on execution traces, not only syntax](concepts/train-code-models-on-execution-traces-not-only-syntax.md), [Use neural debugging to fill code by simulated execution](concepts/use-neural-debugging-to-fill-code-by-simulated-execution.md), [Use Bash as a composable code-mode tool for agents](concepts/use-bash-as-a-composable-code-mode-tool-for-agents.md), [Build RL environments as software artifacts](concepts/build-rl-environments-as-software-artifacts.md)
+- Notes: Added FAIR Meta's CWM framing for execution-trace code modeling, neural debugging, Bash-oriented code-agent environments, and asynchronous RL training loops.

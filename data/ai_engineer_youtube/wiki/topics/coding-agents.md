@@ -16,6 +16,8 @@ AI adoption inside engineering teams is also an incentive design problem. If com
 
 Leadership-owned AI adoption adds another constraint: do not confuse adoption mandates with capability building. Teams need clear policy, time to learn, psychological safety, and examples of high-value use cases; otherwise engineers can satisfy usage targets without improving delivery. Rollouts should also look beyond code generation because stack-trace analysis, onboarding, legacy-spec generation, incident context gathering, and other interpretive or operational workflows may be the real bottleneck. AI-native engineering teams can also treat the coding agent as the default implementation surface. Every's operating model frames this as a move from writing code by hand to planning, delegating, assessing, and codifying agent work; the quality loop depends on tests, direct product trial, code review, agent review, and prompt files or commands that preserve what the team learned.
 
+Execution-aware code models point to another coding-agent interface: the model can treat the repository as an environment with state transitions rather than only a text corpus. CWM's Bash-oriented setup trains the model in a terminal-like environment, while neural debugging suggests that partial code sketches, local variable traces, and simulated execution can become a more precise collaboration surface than prose-only prompts.
+
 ## Key Concepts
 
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md) - coding-agent SDKs package reusable runtime pieces around the model.
@@ -31,6 +33,8 @@ Leadership-owned AI adoption adds another constraint: do not confuse adoption ma
 - [Evaluate agent trajectories with backtests and smell metrics](../concepts/evaluate-agent-trajectories-with-backtests-and-smell-metrics.md) - flexible coding agents need trajectory-level eval signals, not only final output checks.
 - [Treat AI coding as a central applied-AI problem](../concepts/treat-ai-coding-as-a-central-applied-ai-problem.md) - code-facing systems are where applied AI becomes usable software and workflow leverage.
 - [Use Bash as a composable code-mode tool for agents](../concepts/use-bash-as-a-composable-code-mode-tool-for-agents.md) - shell access lets coding agents discover, run, and verify local project workflows.
+- [Train code models on execution traces, not only syntax](../concepts/train-code-models-on-execution-traces-not-only-syntax.md) - code-agent models can learn from execution state transitions rather than only source tokens.
+- [Use neural debugging to fill code by simulated execution](../concepts/use-neural-debugging-to-fill-code-by-simulated-execution.md) - partial code plus simulated local state can guide model completion and debugging.
 - [Treat coding agents as fast junior collaborators](../concepts/treat-coding-agents-as-fast-junior-collaborators.md) - agent output needs human judgment and local context even when execution is fast.
 - [Measure AI developer productivity with field experiments, not benchmark extrapolation alone](../concepts/measure-ai-developer-productivity-with-field-experiments-not-benchmark-extrapolation-alone.md) - coding-agent productivity claims need real-work measurements.
 - [Reliability thresholds determine whether coding agents save time](../concepts/reliability-thresholds-determine-whether-coding-agents-save-time.md) - coding-agent output must be reliable enough to reduce total work after review and correction.
@@ -195,3 +199,4 @@ Leadership-owned AI adoption adds another constraint: do not confuse adoption ma
 - [Amp Code: Next Generation AI Coding - Beyang Liu, Amp Code](../sources/20251222_gvIAkmZUEZY.md)
 - [The 3 Pillars of Autonomy - Michele Catasta, Replit](../sources/20251222_MLhAA9yguwM.md)
 - [Dispatch from the Future: building an AI-native Company - Dan Shipper, Every, AI & I](../sources/20251218_MGzymaYBiss.md)
+- [Code World Model: Building World Models for Computation - Jacob Kahn, FAIR Meta](../sources/20251217_sYgE4ppDFOQ.md)

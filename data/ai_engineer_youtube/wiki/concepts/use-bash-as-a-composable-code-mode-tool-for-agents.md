@@ -11,6 +11,7 @@ Details:
 - Existing software such as FFmpeg and LibreOffice can become agent capabilities through Bash without creating one custom tool per operation. 16:26-16:34
 - For coding agents, Bash lets the model discover and run local project checks such as `npm run lint` instead of requiring a prebuilt linter tool. 16:36-17:13
 - In a non-coding email example, saving search results, grepping prices, writing intermediate files with line numbers, and checking extracted values gives the agent a more inspectable path than reasoning over a raw pile of messages. 17:28-19:00
+- CWM intentionally uses fewer tools than many coding-agent systems and emphasizes Bash so the model learns terminal commands, file mutation, code execution, and repository-level work in an engineer-like environment. 06:55-08:05
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -24,3 +25,4 @@ Related concepts:
 
 Sources:
 - [Claude Agent SDK [Full Workshop] - Thariq Shihipar, Anthropic](../sources/20260105_TqC1qOfiVcQ.md), 15:51-19:00
+- [Code World Model: Building World Models for Computation - Jacob Kahn, FAIR Meta](../sources/20251217_sYgE4ppDFOQ.md), 06:55-08:05

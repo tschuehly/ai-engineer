@@ -10,6 +10,8 @@ Long-tail knowledge adaptation adds a memory-oriented model pattern. When a doma
 
 Long-horizon agent models add a post-training pressure: fluent next-token continuation is not the same as sustained task completion. Poolside's public demo frames reinforcement learning as the missing ingredient for moving from completions and chat toward autonomous software-development and knowledge-work agents, especially when the target behavior spans codebase inspection, translation, testing, feature addition, and iterative verification.
 
+Code world models add an execution-aware variant of model training for software. Instead of treating code only as syntax, CWM trains around program execution traces: local variables, memory, line-by-line state, repository-level test and CI traces, and state/action/state transitions. This makes code a constrained world-modeling substrate where a model can learn to simulate program behavior, support neural-debugger interfaces, and reason about expensive execution paths before every real-world action is run.
+
 ## Key Concepts
 
 - [Compare models by task, thinking budget, cost, and latency](../concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - model choice should be routed by workload constraints rather than by size alone.
@@ -35,6 +37,8 @@ Long-horizon agent models add a post-training pressure: fluent next-token contin
 - [Post-train small models for narrow capabilities](../concepts/post-train-small-models-for-narrow-capabilities.md) - data extraction, tool use, and other focused tasks are better targets than average performance across every benchmark.
 - [Build RL environments as software artifacts](../concepts/build-rl-environments-as-software-artifacts.md) - interactive post-training tasks need runnable environments, parsers, state, and rewards rather than only static examples.
 - [Pair next-token prediction with reinforcement learning for long-horizon work](../concepts/pair-next-token-prediction-with-reinforcement-learning-for-long-horizon-work.md) - long-horizon model behavior needs task-completion feedback beyond fluent continuations.
+- [Train code models on execution traces, not only syntax](../concepts/train-code-models-on-execution-traces-not-only-syntax.md) - execution traces expose program dynamics that token-only source modeling can miss.
+- [Use neural debugging to fill code by simulated execution](../concepts/use-neural-debugging-to-fill-code-by-simulated-execution.md) - execution-aware code models can complete partial code from simulated state and surrounding structure.
 - [Use verifiable rewards for language-model RL](../concepts/use-verifiable-rewards-for-language-model-rl.md) - automatic outcome checks can turn task success, format compliance, and action validity into training signals.
 - [Bootstrap RL with targeted SFT before reinforcement learning](../concepts/bootstrap-rl-with-targeted-sft-before-reinforcement-learning.md) - small models may need a syntax and valid-action warm-up before RL can improve strategy.
 - [Control environment noise for group-based RL](../concepts/control-environment-noise-for-group-based-rl.md) - grouped rollout methods need comparable environments, controlled difficulty, and stable batch sizing.
@@ -88,3 +92,4 @@ Long-horizon agent models add a post-training pressure: fluent next-token contin
 - [Let LLMs Wander: Engineering RL Environments - Stefano Fiorucci](../sources/20260408_71V3fTaUp2Q.md)
 - [Jack Morris: Stuffing Context is not Memory, Updating Weights is](../sources/20251229_Jty4s9-Jb78.md)
 - [AGI: The Path Forward - Jason Warner & Eiso Kant, Poolside](../sources/20251227_OGCG_QkCcZo.md)
+- [Code World Model: Building World Models for Computation - Jacob Kahn, FAIR Meta](../sources/20251217_sYgE4ppDFOQ.md)
