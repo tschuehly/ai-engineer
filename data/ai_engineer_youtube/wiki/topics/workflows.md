@@ -32,6 +32,8 @@ Durable workflow engines also address the single-agent production loop. Agent fr
 
 Python agent workflows can keep ordinary imperative structure while becoming durable. PydanticAI's Temporal demo wraps agents, keeps non-IO orchestration deterministic, places LLM and tool calls behind activity boundaries, and uses normal `TaskGroup`-style parallelism for search branches. That matters for deep research and similar workflows because a crash after planning and search should not require paying for those steps again before final analysis resumes.
 
+Pydantic AI's shorter typed-agent demo adds the non-durable inner-loop contract: model calls can produce structured final-result tool calls, Pydantic validation can reject invalid output, and the harness can return the validation error to the model for a corrected retry. The same workflow benefits from observability: traces reveal the model exchanges, tool arguments, validation retries, cost, and latency that explain why a run failed or passed.
+
 Workflow-backed TypeScript agents should keep orchestration deterministic and put LLM calls, sandbox commands, and external APIs behind step boundaries. That makes the running agent easier to inspect through step spans, easier to connect to a resumable UI stream, and easier to control through scheduling, cancellation, and run-version operations when it waits beyond one request.
 
 API-backed agent workflows should be hardened only after their task shape is understood. A practical path is to prototype the repeated work in the provider's web UI, observe which context, files, connectors, and permissions make the run succeed, then encode that stable shape as an API task lifecycle with polling or webhooks. When the workflow starts in a channel such as Slack, store the thread-to-task mapping explicitly so follow-up messages continue the same task and final results return to the user's original conversation.
@@ -609,3 +611,4 @@ Devin-style coding-agent workflows evolve with task horizon. Repeatable migratio
 - [[Full Workshop] Building Metrics that actually work - David Karam, Pi Labs (fmr Google Search)](../sources/20250729_jxrGodnopHo.md)
 - [Strategies for LLM Evals (GuideLLM, lm-eval-harness, OpenAI Evals Workshop) - Taylor Jordan Smith](../sources/20250727_89NuzmKokIk.md)
 - [A2A & MCP Workshop: Automating Business Processes with LLMs - Damien Murphy, Bench](../sources/20250726_wXVvfFMTyzY.md)
+- [Human seeded Evals - Samuel Colvin, Pydantic](../sources/20250725_o_LRtAomJCs.md)

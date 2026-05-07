@@ -8,6 +8,8 @@ Agent workflows depend on both model capability and the context substrate around
 
 Factory's agent-native SDLC framing adds a platform-level version of this shift. The argument is that agents become transformative when they operate across planning, coding, testing, monitoring, and incident response with centralized engineering context, reliable execution, and parallel infrastructure, not when they are merely sprinkled onto human-first IDEs. The strongest agents should ground themselves in codebase state, recent changes, machine capabilities, and organizational memory, then ask clarifying questions before acting.
 
+Typed agent frameworks add another reliability lever to the basic loop. Pydantic AI's examples show structured outputs as validated final-result tools, explicit loop termination through final text or structured output, validation-error retries, and typed dependency injection for tools. This does not remove the need for prompts or evals, but it gives humans, coding agents, static type checkers, and runtime validators a shared contract when the application is refactored.
+
 Agent models themselves can be tuned for this loop shape. M2's training story emphasizes interleaving reasoning with many tool-call turns, perturbing the operational surface around tools and prompts, and using small active-parameter economics to run multiple workplace-agent copies in parallel. Agent RFT adds a production-post-training variant: teams can train a reasoning model over multi-step rollouts that call hosted tool endpoints and receive custom reward signals, as long as rollout IDs and tool-call context are preserved for grading and the workflow is well-defined enough for production-matched rewards.
 
 Agent serving infrastructure can also use the structure of agent work. Re-query loops and tool-call waits are not just application behavior; they reveal when KV-cache state will be reused, moved out of GPU memory during a wait, and restored before the next model call, which can reduce repeated prefill cost without changing the agent's visible workflow.
@@ -117,6 +119,9 @@ Devin 2.0 frames the same progression as changing human-intervention intervals. 
 ## Key Concepts
 
 - [Coding-Agent Capability Tiers Change the Bottleneck](../concepts/coding-agent-capability-tiers-change-the-bottleneck.md) - longer agent work horizons require different interfaces, context, and verification.
+- [Type-Safe Agent Schemas Make Refactoring and Validation Easier](../concepts/type-safe-agent-schemas-make-refactoring-and-validation-easier.md) - typed outputs and dependencies make agent application contracts visible to static tooling and runtime validation.
+- [Validation Errors Can Drive Agent Self-Repair Loops](../concepts/validation-errors-can-drive-agent-self-repair-loops.md) - validation failures can be fed back into the model as structured retry feedback.
+- [Trace Agent Tool Arguments to Debug Real Failures](../concepts/trace-agent-tool-arguments-to-debug-real-failures.md) - trace-level tool arguments reveal why a tool-using run failed.
 - [Backlog-Scale Coding Agents Need Confidence and Self-Testing](../concepts/backlog-scale-coding-agents-need-confidence-and-self-testing.md) - agents working many queued tasks need confidence thresholds and escalation paths.
 - [Choose Copilot Mode By Autonomy and Feedback Need](../concepts/choose-copilot-mode-by-autonomy-and-feedback-need.md) - Copilot exposes multiple coding-agent autonomy levels inside a developer workflow.
 - [Vet MCP Servers As Action-Capable Extensions](../concepts/vet-mcp-servers-as-action-capable-extensions.md) - Copilot MCP servers can read external data and perform actions, so trust and scope matter.
@@ -566,5 +571,6 @@ Devin 2.0 frames the same progression as changing human-intervention intervals. 
 - [On Curiosity -- Sharif Shameem, Lexica](../sources/20250719_0F8mnGPUycY.md)
 - [Shipping Products When You Don't Know What they Can Do - Ben Stein, Teammates](../sources/20250728_PthmdT92qNg.md)
 - [A2A & MCP Workshop: Automating Business Processes with LLMs - Damien Murphy, Bench](../sources/20250726_wXVvfFMTyzY.md)
+- [Human seeded Evals - Samuel Colvin, Pydantic](../sources/20250725_o_LRtAomJCs.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

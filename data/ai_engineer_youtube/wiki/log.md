@@ -1735,3 +1735,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Workflows](topics/workflows.md), [Infrastructure](topics/infrastructure.md), [Security](topics/security.md)
 - Updated concepts: [Agent-Native SDLC Platforms Need Context, Reliability, and Parallelism](concepts/agent-native-sdlc-platforms-need-context-reliability-and-parallelism.md), [Agent Planning Should Mine Feedback Before Producing PRDs and Tickets](concepts/agent-planning-should-mine-feedback-before-producing-prds-and-tickets.md), [Incident Agents Turn Alerts Into RCA and Operational Memory](concepts/incident-agents-turn-alerts-into-rca-and-operational-memory.md), [Enterprise Coding Agents Need Ownership, Auditability, and Action Controls](concepts/enterprise-coding-agents-need-ownership-auditability-and-action-controls.md)
 - Notes: Added Factory's agent-native SDLC framing for lifecycle-wide delegation, feedback-backed planning, incident learning loops, and enterprise governance controls.
+
+## [2026-05-07] ingest | Human seeded Evals - Samuel Colvin, Pydantic
+
+- Source: [Human seeded Evals - Samuel Colvin, Pydantic](sources/20250725_o_LRtAomJCs.md)
+- Processed: `o_LRtAomJCs`
+- Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Type-Safe Agent Schemas Make Refactoring and Validation Easier](concepts/type-safe-agent-schemas-make-refactoring-and-validation-easier.md), [Validation Errors Can Drive Agent Self-Repair Loops](concepts/validation-errors-can-drive-agent-self-repair-loops.md), [Trace Agent Tool Arguments to Debug Real Failures](concepts/trace-agent-tool-arguments-to-debug-real-failures.md)
+- Notes: Added Pydantic AI patterns for typed agent contracts, schema-driven retry loops, and Logfire trace debugging while noting that the transcript did not cover the advertised human-seeded eval method.

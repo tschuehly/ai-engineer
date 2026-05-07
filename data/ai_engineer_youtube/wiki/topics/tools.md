@@ -8,6 +8,8 @@ Agent tools are most useful when their execution surface is paired with clear co
 
 Domain skills can act as node-level controls by supplying expert handling for specific work-tree contingencies after the agent discovers them. Persistent artifacts such as documents, comments, and tables can also be tool surfaces because they let the user scope an instruction to the exact clause, row, or review finding instead of relying on a linear chat correction. Research agents especially need tool and artifact discipline: source gathering, YouTube analysis, compilation, and writing can be split into explicit tools or files so downstream workflows consume grounded evidence instead of hidden conversation state.
 
+Typed tool surfaces can make the runtime contract stricter. Pydantic AI's tool examples register functions against an agent, pass a typed run context into those functions, and validate final structured output before downstream code receives it. Validation errors can also become tool responses that the model sees during a retry, turning schema failures into a narrow repair loop rather than untyped downstream exceptions.
+
 Agent-facing products should treat APIs and CLIs as primary interfaces once agents become meaningful users. Dashboards still matter for humans, but agent experience asks whether a feature can be automated, called from a CLI, or used through a stable machine surface. Open model families add a model-tooling version of the same rule: release success depends on meeting developers in their existing runtimes, fine-tuning libraries, quantization paths, and product integrations. Environment tooling applies the same lesson to research workflows: shared Python environment projects, registries, rubrics, async tool definitions, and managed execution make evals and RL artifacts reusable instead of one-off lab infrastructure. For Apple local apps, MLX Swift LM and Hugging Face model IDs form a compact tooling path, while curated app model catalogs prevent users from selecting weights that are available but poor on the target phone.
 
 Enterprise AI product surfaces may need to decouple custom clients from the underlying tool and data layer. i.AI's Redbox remained useful as a secure chat client, but Microsoft Copilot Chat's enterprise availability and MCP's tool/data standardization changed the distribution strategy: government-specific tools and data became more valuable when reachable from multiple enterprise clients rather than only one bespoke UI.
@@ -69,6 +71,8 @@ GitHub Copilot's MCP integration reinforces that external tool access is not pas
 ## Key Concepts
 
 - [Vet MCP Servers As Action-Capable Extensions](../concepts/vet-mcp-servers-as-action-capable-extensions.md) - MCP servers should be vetted as tools that can act through the agent, not just as data feeds.
+- [Type-Safe Agent Schemas Make Refactoring and Validation Easier](../concepts/type-safe-agent-schemas-make-refactoring-and-validation-easier.md) - typed tool dependencies and outputs keep framework contracts refactorable.
+- [Trace Agent Tool Arguments to Debug Real Failures](../concepts/trace-agent-tool-arguments-to-debug-real-failures.md) - tool traces should expose selected arguments, responses, latency, and cost.
 - [Product Work Graphs Coordinate Agents and Humans](../concepts/product-work-graphs-coordinate-agents-and-humans.md) - product tools can expose issues, feedback, projects, and relationships as an agent coordination surface.
 - [Choose A2A and MCP by Ownership Boundary](../concepts/choose-a2a-and-mcp-by-ownership-boundary.md) - tool protocols should be introduced where ownership, deployment, or third-party integration boundaries justify them.
 - [Harden Third-Party MCP Tools Against Silent Failure and Endpoint Risk](../concepts/harden-third-party-mcp-tools-against-silent-failure-and-endpoint-risk.md) - remote MCP tools require output validation and endpoint-security controls outside the protocol.
@@ -377,5 +381,6 @@ GitHub Copilot's MCP integration reinforces that external tool access is not pas
 - [OpenAI on Securing Code-Executing AI Agents - Fouad Matin (Codex, Agent Robustness)](../sources/20250730_w7IMuYsBNr8.md)
 - [Why you should care about AI interpretability - Mark Bissell, Goodfire AI](../sources/20250727_6AVMHZPjpTQ.md)
 - [A2A & MCP Workshop: Automating Business Processes with LLMs - Damien Murphy, Bench](../sources/20250726_wXVvfFMTyzY.md)
+- [Human seeded Evals - Samuel Colvin, Pydantic](../sources/20250725_o_LRtAomJCs.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

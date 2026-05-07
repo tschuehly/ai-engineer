@@ -273,6 +273,8 @@ General LLM eval programs can be staged as a pyramid. Start with serving perform
 - [Account for compression artifacts in media model data and evals](../concepts/account-for-compression-artifacts-in-media-model-data-and-evals.md) - codec artifacts can make metric behavior and model data less neutral than they appear.
 - [Personalize aesthetic evals with preference classifiers](../concepts/personalize-aesthetic-evals-with-preference-classifiers.md) - subjective creative quality may need learned user preference boundaries.
 - [Evaluate tool definitions and outputs as context](../concepts/evaluate-tool-definitions-and-outputs-as-context.md) - agent evals should include tool schemas, tool descriptions, output formats, and token footprint.
+- [Validation Errors Can Drive Agent Self-Repair Loops](../concepts/validation-errors-can-drive-agent-self-repair-loops.md) - schema failures can become concrete retry feedback before outputs are accepted.
+- [Trace Agent Tool Arguments to Debug Real Failures](../concepts/trace-agent-tool-arguments-to-debug-real-failures.md) - traces expose the tool arguments and spans needed to diagnose tool-using runs.
 - [Build AI app benchmarks before optimization](../concepts/build-ai-app-benchmarks-before-optimization.md) - early benchmarks let teams compare prompts, models, retrieval, logic, and guardrails while catching regressions.
 - [Use evals as durable AI system specifications](../concepts/use-evals-as-durable-ai-system-specifications.md) - evals keep product criteria explicit while lower-level AI implementation changes.
 - [Fuzz AI applications for local input brittleness](../concepts/fuzz-ai-applications-for-local-input-brittleness.md) - generated input variants expose failures that static golden examples miss.
@@ -507,3 +509,4 @@ General LLM eval programs can be staged as a pyramid. Start with serving perform
 - [Shipping Products When You Don't Know What they Can Do - Ben Stein, Teammates](../sources/20250728_PthmdT92qNg.md)
 - [Real-time Experiments with an AI Co-Scientist - Stefania Druga, fmr. Google Deepmind](../sources/20250728_wNH3q9pqn0U.md)
 - [[Full Workshop] Building Metrics that actually work - David Karam, Pi Labs (fmr Google Search)](../sources/20250729_jxrGodnopHo.md)
+- [Human seeded Evals - Samuel Colvin, Pydantic](../sources/20250725_o_LRtAomJCs.md)

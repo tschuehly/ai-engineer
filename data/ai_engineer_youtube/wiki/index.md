@@ -4,6 +4,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Type-Safe Agent Schemas Make Refactoring and Validation Easier](concepts/type-safe-agent-schemas-make-refactoring-and-validation-easier.md) - typed outputs and dependencies make agent application contracts visible to static tooling and runtime validation.
+- [Validation Errors Can Drive Agent Self-Repair Loops](concepts/validation-errors-can-drive-agent-self-repair-loops.md) - schema failures can become concrete retry feedback before outputs are accepted.
+- [Trace Agent Tool Arguments to Debug Real Failures](concepts/trace-agent-tool-arguments-to-debug-real-failures.md) - trace-level tool arguments reveal why a tool-using agent run failed.
 - [Agent-Native SDLC Platforms Need Context, Reliability, and Parallelism](concepts/agent-native-sdlc-platforms-need-context-reliability-and-parallelism.md) - lifecycle-wide agent delegation needs central context, reliable execution, and parallel infrastructure.
 - [Agent Planning Should Mine Feedback Before Producing PRDs and Tickets](concepts/agent-planning-should-mine-feedback-before-producing-prds-and-tickets.md) - planning agents should research user feedback and technical constraints before decomposing work.
 - [Incident Agents Turn Alerts Into RCA and Operational Memory](concepts/incident-agents-turn-alerts-into-rca-and-operational-memory.md) - incident agents can turn operational evidence into RCA, mitigation, runbooks, and team memory.
