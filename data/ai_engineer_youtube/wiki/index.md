@@ -8,6 +8,8 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Group Agent Tools by Human-Facing Actions](concepts/group-agent-tools-by-human-facing-actions.md) - agent tool catalogs should be curated around clear actions rather than mirrored from every API endpoint.
 - [Keep Fixed Business Logic Outside the Model](concepts/keep-fixed-business-logic-outside-the-model.md) - hard workflow rules belong in deterministic validation and state gates.
 - [Replace Anecdotal Agent Tuning With Eval and Observability Loops](concepts/replace-anecdotal-agent-tuning-with-eval-and-observability-loops.md) - eval sets, traces, and clustered failures should drive agent improvement.
+- [Shape AI Teams Around the Bottleneck](concepts/shape-ai-teams-around-the-bottleneck.md) - team composition should follow the current product, domain, infrastructure, or business constraint.
+- [Prefer Generalist AI Engineers Before Narrow Specialists](concepts/prefer-generalist-ai-engineers-before-narrow-specialists.md) - early AI transformation often needs adaptable builders before frontier specialists.
 
 - [Workflow Search Retrieves Enterprise Practice at Runtime](concepts/workflow-search-retrieves-enterprise-practice-at-runtime.md) - prior task-workflow examples can steer enterprise agents with current company practice.
 - [Golden Workflows Evaluate Agent Trajectories](concepts/golden-workflows-evaluate-agent-trajectories.md) - known processes can evaluate agent steps, not just final answers.

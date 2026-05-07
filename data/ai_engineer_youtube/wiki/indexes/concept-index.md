@@ -1,6 +1,7 @@
 # Concept Index
 
 ## Agents
+- [Hire Humans for Context, Verification, and Accountability](../concepts/hire-humans-for-context-verification-and-accountability.md)
 - [Type-Safe Agent Schemas Make Refactoring and Validation Easier](../concepts/type-safe-agent-schemas-make-refactoring-and-validation-easier.md)
 - [Validation Errors Can Drive Agent Self-Repair Loops](../concepts/validation-errors-can-drive-agent-self-repair-loops.md)
 - [Trace Agent Tool Arguments to Debug Real Failures](../concepts/trace-agent-tool-arguments-to-debug-real-failures.md)
@@ -619,6 +620,7 @@
 
 ## Infrastructure
 
+- [Prefer Generalist AI Engineers Before Narrow Specialists](../concepts/prefer-generalist-ai-engineers-before-narrow-specialists.md)
 - [Replace Anecdotal Agent Tuning With Eval and Observability Loops](../concepts/replace-anecdotal-agent-tuning-with-eval-and-observability-loops.md)
 - [Agent-Native SDLC Platforms Need Context, Reliability, and Parallelism](../concepts/agent-native-sdlc-platforms-need-context-reliability-and-parallelism.md)
 - [Incident Agents Turn Alerts Into RCA and Operational Memory](../concepts/incident-agents-turn-alerts-into-rca-and-operational-memory.md)
@@ -844,6 +846,10 @@
 
 ## Product Strategy
 
+- [Shape AI Teams Around the Bottleneck](../concepts/shape-ai-teams-around-the-bottleneck.md)
+- [Prefer Generalist AI Engineers Before Narrow Specialists](../concepts/prefer-generalist-ai-engineers-before-narrow-specialists.md)
+- [Hire Humans for Context, Verification, and Accountability](../concepts/hire-humans-for-context-verification-and-accountability.md)
+- [Upskill AI Teams Through Build, Domain, and Customer Loops](../concepts/upskill-ai-teams-through-build-domain-and-customer-loops.md)
 - [Product Work Graphs Coordinate Agents and Humans](../concepts/product-work-graphs-coordinate-agents-and-humans.md)
 - [Platform-Native Agents Should Behave Like Good Teammates](../concepts/platform-native-agents-should-behave-like-good-teammates.md)
 - [Last-Mile Domain Context Beats Model Chasing](../concepts/last-mile-domain-context-beats-model-chasing.md)
@@ -1488,6 +1494,8 @@
 
 ## Workflows
 
+- [Shape AI Teams Around the Bottleneck](../concepts/shape-ai-teams-around-the-bottleneck.md)
+- [Upskill AI Teams Through Build, Domain, and Customer Loops](../concepts/upskill-ai-teams-through-build-domain-and-customer-loops.md)
 - [Raise Agent Agency Only When Efficacy Holds](../concepts/raise-agent-agency-only-when-efficacy-holds.md)
 - [Keep Fixed Business Logic Outside the Model](../concepts/keep-fixed-business-logic-outside-the-model.md)
 - [Replace Anecdotal Agent Tuning With Eval and Observability Loops](../concepts/replace-anecdotal-agent-tuning-with-eval-and-observability-loops.md)

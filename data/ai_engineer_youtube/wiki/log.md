@@ -1791,3 +1791,11 @@
 - Updated topics: [Agents](topics/agents.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md)
 - Updated concepts: [Raise Agent Agency Only When Efficacy Holds](concepts/raise-agent-agency-only-when-efficacy-holds.md), [Group Agent Tools by Human-Facing Actions](concepts/group-agent-tools-by-human-facing-actions.md), [Keep Fixed Business Logic Outside the Model](concepts/keep-fixed-business-logic-outside-the-model.md), [Replace Anecdotal Agent Tuning With Eval and Observability Loops](concepts/replace-anecdotal-agent-tuning-with-eval-and-observability-loops.md)
 - Notes: Added production-agent design guidance for efficacy-first autonomy, curated tool surfaces, deterministic rule gates, and eval/observability-driven improvement.
+
+## [2026-05-07] ingest | Structuring a modern AI team - Denys Linkov, Wisedocs
+
+- Source: [Structuring a modern AI team - Denys Linkov, Wisedocs](sources/20250724_SbUxRluVRwk.md)
+- Processed: `SbUxRluVRwk`
+- Updated topics: [Agents](topics/agents.md), [Product Strategy](topics/product-strategy.md), [Workflows](topics/workflows.md), [Infrastructure](topics/infrastructure.md)
+- Updated concepts: [Shape AI Teams Around the Bottleneck](concepts/shape-ai-teams-around-the-bottleneck.md), [Prefer Generalist AI Engineers Before Narrow Specialists](concepts/prefer-generalist-ai-engineers-before-narrow-specialists.md), [Hire Humans for Context, Verification, and Accountability](concepts/hire-humans-for-context-verification-and-accountability.md), [Upskill AI Teams Through Build, Domain, and Customer Loops](concepts/upskill-ai-teams-through-build-domain-and-customer-loops.md)
+- Notes: Added Denys Linkov's organizational guidance for staffing AI teams around bottlenecks, generalist capability, accountable human context, and operational upskilling loops.

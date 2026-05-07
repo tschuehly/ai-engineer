@@ -98,6 +98,8 @@ Agent-native company design shifts the unit of adoption from a tool to an operat
 
 Enterprise agent adoption should also be judged by portfolio breadth and organizational integration, not only by whether one pilot worked. Self-reported ROI evidence from an AI-interested audience suggests that teams seeing more value are often pursuing multiple use cases systematically across functions, and that automation or agentic use cases can outperform basic first-tier productivity use cases. That signal needs bias caveats, but it reinforces the pattern that agents become more valuable when they are part of a broader operating workflow rather than a novelty deployment.
 
+AI agents do not remove the organizational need for humans who hold context and verify action. Large context windows may let agents act over more material, but teams still need accountable people with enough expertise to judge whether the context is right and whether execution matches the business, domain, and system constraints.
+
 Large engineering organizations need adoption architecture around agent creation itself. If many teams independently build PR-review bots, incident agents, and MCP servers, the result can be duplicate, chaotic tool surfaces. A paved path with model access, discovery, MCP deployment, runtime support, quality gates, training, communities, and leadership enablement lets experimentation stay broad while production agent behavior remains governed.
 
 Leadership matters because agent and AI-assistant rollouts can produce either leverage or performative compliance. Organizations need policies, psychological safety, enablement time, impact measurement, and maintained prompt-rule ownership so agent behavior improves with feedback instead of drifting through unmanaged system prompts and local rule files.
@@ -309,6 +311,7 @@ Devin 2.0 frames the same progression as changing human-intervention intervals. 
 - [Cloud Agents Turn Coding Work Into Asynchronous VM-Backed Queues](../concepts/cloud-agents-turn-coding-work-into-asynchronous-vm-backed-queues.md) - remote VMs make coding agents callable background workers rather than local IDE assistants only.
 - [Start Coding Agents With Small Verifiable Chores](../concepts/start-coding-agents-with-small-verifiable-chores.md) - coding-agent autonomy should begin with bounded, checkable work.
 - [Human Ownership Keeps Agent Pull Requests From Bypassing Review](../concepts/human-ownership-keeps-agent-pull-requests-from-bypassing-review.md) - bot-created changes still need human responsibility and normal review routing.
+- [Hire Humans for Context, Verification, and Accountability](../concepts/hire-humans-for-context-verification-and-accountability.md) - agents can act over context, but humans still verify correctness and own system accountability.
 - [Scope coding-agent autonomy by user decision authority](../concepts/scope-coding-agent-autonomy-by-user-decision-authority.md) - autonomy should absorb technical decisions the target user cannot safely make.
 - [Let the core agent loop orchestrate parallel subtasks](../concepts/let-the-core-agent-loop-orchestrate-parallel-subtasks.md) - parallelism should not push decomposition and merge-conflict work onto non-technical users.
 - [Spatial agent maps expose filesystem-level lineage and collisions](../concepts/spatial-agent-maps-expose-filesystem-level-lineage-and-collisions.md) - repository-shaped visibility helps humans see where agents are acting and where parallel edits may collide.
@@ -594,5 +597,6 @@ Devin 2.0 frames the same progression as changing human-intervention intervals. 
 - [A2A & MCP Workshop: Automating Business Processes with LLMs - Damien Murphy, Bench](../sources/20250726_wXVvfFMTyzY.md)
 - [Human seeded Evals - Samuel Colvin, Pydantic](../sources/20250725_o_LRtAomJCs.md)
 - [Software Development Agents: What Works and What Doesn't - Robert Brennan, OpenHands](../sources/20250725_o_hhkJtlbSs.md)
+- [Structuring a modern AI team - Denys Linkov, Wisedocs](../sources/20250724_SbUxRluVRwk.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

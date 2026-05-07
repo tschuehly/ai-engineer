@@ -24,6 +24,8 @@ Agent coordination platforms add a product-strategy constraint: agent functional
 
 AI-engineer founders also need to translate technical taste into a market narrative when raising early capital. At pre-seed or seed, investors may not require revenue or even a finished product, but they still need to understand why this team has a timely, non-obvious insight and how the first wedge can become a company rather than a feature. Design partners, customer interviews, ICP hypotheses, pricing hypotheses, and product-velocity plans help convert early conviction into a credible path from prototype to scale.
 
+AI team design is also a product-strategy decision. The right team depends on the company's bottleneck: domain/data gaps, weak technology capability, missing customer empathy, product integration, monetization, reliability, observability, or specialist model performance all imply different staffing. Generalist AI engineers often fit early transformation work because they can build, use available platforms, understand tradeoffs, and talk to customers, while narrow specialists are most valuable after the baseline is strong and the remaining constraint is specialized performance.
+
 ## Key Concepts
 
 - [AI Does Not Replace Shareable Product Marketing](../concepts/ai-does-not-replace-shareable-product-marketing.md) - launch content only matters when it can earn attention and social sharing.
@@ -65,6 +67,10 @@ AI-engineer founders also need to translate technical taste into a market narrat
 - [Fundraising Pitches Should Explain Why You and Why Now](../concepts/fundraising-pitches-should-explain-why-you-and-why-now.md) - technical AI founders need a founder-market-time narrative, not only a model or product demo.
 - [Treat Investor Outreach Like Specific Go-To-Market](../concepts/treat-investor-outreach-like-specific-go-to-market.md) - investor relationships work like sales: use warm signals, specific asks, and response-oriented messages.
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md) - early customer evidence makes the wedge-to-company story more credible before revenue exists.
+- [Shape AI Teams Around the Bottleneck](../concepts/shape-ai-teams-around-the-bottleneck.md) - team composition should follow the missing capability that blocks product and business value.
+- [Prefer Generalist AI Engineers Before Narrow Specialists](../concepts/prefer-generalist-ai-engineers-before-narrow-specialists.md) - broad builders can be more useful than researchers until the product needs specialty performance.
+- [Hire Humans for Context, Verification, and Accountability](../concepts/hire-humans-for-context-verification-and-accountability.md) - human roles still carry context, verification, and responsibility for AI systems.
+- [Upskill AI Teams Through Build, Domain, and Customer Loops](../concepts/upskill-ai-teams-through-build-domain-and-customer-loops.md) - team enablement should shorten prototype, evaluation, domain, and customer feedback loops.
 
 ## Open Questions
 
@@ -77,6 +83,7 @@ AI-engineer founders also need to translate technical taste into a market narrat
 - Which domain insights should become prompt context, retrieval knowledge, rules, fine-tuning data, or product workflow changes?
 - Which agent affordances should be exposed as open-ended capabilities, and which need hard deterministic constraints before customers can safely compose them?
 - How much early design-partner evidence is enough to distinguish a fundable AI startup wedge from a promising but narrow feature?
+- Which AI team bottlenecks should be solved by hiring, and which should first be solved by upskilling, tooling, process, or clearer product scope?
 
 ## Sources
 
@@ -95,3 +102,4 @@ AI-engineer founders also need to translate technical taste into a market narrat
 - [Shipping Products When You Don't Know What they Can Do - Ben Stein, Teammates](../sources/20250728_PthmdT92qNg.md)
 - [Shipping something to someone always wins - Kenneth Auchenberg (ex. Stripe, VSCode)](../sources/20250728_mHzJhXppwUA.md)
 - [The AI Engineer's Guide to Raising VC - Dani Grant (Jam), Chelcie Taylor (Notable)](../sources/20250727_YYNXFsUutbM.md)
+- [Structuring a modern AI team - Denys Linkov, Wisedocs](../sources/20250724_SbUxRluVRwk.md)
