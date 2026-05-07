@@ -102,8 +102,13 @@ Cloud-scale agent workflow can still start with local iteration. The Strands pat
 
 Branchable cloud workspaces create a workflow primitive for stateful agent exploration. A human or orchestrator can declare a starting snapshot, hand it to multiple agents, let branches mutate independently, and pass the successful branch into later workflow steps. This works best when the branch outcome is verifiable and the workspace can be moved between humans, agents, and other agents without losing provenance.
 
+Agentic workflows should be designed as composable primitives, not as allegiance to one framework shape. Use agent loops where the task needs flexible turns and tool decisions; use workflow structure where dependencies, traceability, branching, retries, or human waits need to be explicit. The practical move is often local: find the unreliable LLM call, overloaded tool surface, or opaque handoff and add enough workflow structure there without removing useful agent exploration elsewhere.
+
 ## Key Concepts
 
+- [Compose agents and workflows as interchangeable primitives](../concepts/compose-agents-and-workflows-as-interchangeable-primitives.md) - workflows can call agents, agents can call workflows, and both can appear as steps or tools.
+- [Prefer readable workflow APIs over graph-theory surfaces](../concepts/prefer-readable-workflow-apis-over-graph-theory-surfaces.md) - workflow definitions should be reviewable as ordinary control flow.
+- [Add structure where agent reliability fails](../concepts/add-structure-where-agent-reliability-fails.md) - reliability work should target the failing segment of an agentic workflow.
 - [AI Engineering Practice Is Heterogeneous and Fast Moving](../concepts/ai-engineering-practice-is-heterogeneous-and-fast-moving.md) - AI workflows need to account for mixed roles, mixed use cases, and frequent model and prompt updates.
 - [Branchable Cloud Workspaces Make Agent Actions Reversible](../concepts/branchable-cloud-workspaces-make-agent-actions-reversible.md) - snapshot-based workflows let agents try stateful actions and backtrack.
 - [Scale Test-Time Search Through Parallel Verifier-Checked Branches](../concepts/scale-test-time-search-through-parallel-verifier-checked-branches.md) - branch-and-verify workflows promote the best attempt into downstream steps.
@@ -416,6 +421,7 @@ Branchable cloud workspaces create a workflow primitive for stateful agent explo
 
 ## Sources
 
+- [Agents vs Workflows: Why Not Both? - Sam Bhagwat, Mastra.ai](../sources/20250801_8SUJEqQNClw.md)
 - [Vibes won't cut it - Chris Kelly, Augment Code](../sources/20250803_Dc3qOA9WOnE.md)
 - [How to look at your data - Jeff Huber (Chroma) + Jason Liu (567)](../sources/20250806_jryZvCuA0Uc.md)
 - [Designing AI-Intensive Applications - swyx](../sources/20250809_IHkyFhU6JEY.md)

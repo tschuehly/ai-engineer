@@ -86,8 +86,12 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 
 Cloud-scale assistant systems add a specialist-service pattern. Alexa Plus is described as hundreds of expert systems that bundle capabilities, APIs, and instructions for particular tasks, then orchestrate across partner services and devices. That supports a broader design rule already visible in coding and workflow agents: split broad autonomy into capability-bounded specialists, then invest in the orchestration, permissions, and tool-discovery layers that let them cooperate.
 
+The agent-versus-workflow debate is a false binary for production design. A flexible agent loop is useful when the system needs turn-by-turn exploration, tool choice, or human/agent back-and-forth, while workflows are useful when order, dependencies, traceability, suspend/resume behavior, and replay matter. Mature systems can compose the two: agents can be workflow steps, workflows can be tools, agents can call other agents as tools, and workflow handoffs can narrow the next agent's authority or context.
+
 ## Key Concepts
 
+- [Compose agents and workflows as interchangeable primitives](../concepts/compose-agents-and-workflows-as-interchangeable-primitives.md) - agents and workflows can call each other as tools, steps, and handoff mechanisms.
+- [Add structure where agent reliability fails](../concepts/add-structure-where-agent-reliability-fails.md) - unreliable agent behavior should be surrounded by structure rather than forcing the whole system into one abstraction.
 - [Agent Adoption Trails LLM Adoption in the Workplace](../concepts/agent-adoption-trails-llm-adoption-in-the-workplace.md) - ordinary LLM workplace satisfaction can be much higher than agent satisfaction even when future agent intent is strong.
 - [Specialist Expert Systems Bundle Capabilities, APIs, and Instructions](../concepts/specialist-expert-systems-bundle-capabilities-apis-and-instructions.md) - broad assistants can scale through task-specific capability bundles rather than one monolithic tool surface.
 - [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](../concepts/retrieve-tool-descriptions-before-loading-large-tool-catalogs.md) - large agent systems can search tool descriptions before adding only relevant tools to context.
@@ -369,6 +373,7 @@ Cloud-scale assistant systems add a specialist-service pattern. Alexa Plus is de
 
 ## Sources
 
+- [Agents vs Workflows: Why Not Both? - Sam Bhagwat, Mastra.ai](../sources/20250801_8SUJEqQNClw.md)
 - [Designing AI-Intensive Applications - swyx](../sources/20250809_IHkyFhU6JEY.md)
 - [2025 is the Year of Evals! Just like 2024, and 2023, and ... - John Dickerson, CEO Mozilla AI](../sources/20250806_CQGuvf6gSrM.md)
 - [The Next Unicorns: 7 Top AI startups from the HF0 Residency](../sources/20250821_L8-5ezsoI5A.md)

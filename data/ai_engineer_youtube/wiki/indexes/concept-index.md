@@ -2,6 +2,8 @@
 
 ## Agents
 
+- [Compose agents and workflows as interchangeable primitives](../concepts/compose-agents-and-workflows-as-interchangeable-primitives.md)
+- [Add structure where agent reliability fails](../concepts/add-structure-where-agent-reliability-fails.md)
 - [Agent Adoption Trails LLM Adoption in the Workplace](../concepts/agent-adoption-trails-llm-adoption-in-the-workplace.md)
 - [Specialist Expert Systems Bundle Capabilities, APIs, and Instructions](../concepts/specialist-expert-systems-bundle-capabilities-apis-and-instructions.md)
 - [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](../concepts/retrieve-tool-descriptions-before-loading-large-tool-catalogs.md)
@@ -1191,6 +1193,9 @@
 
 ## Workflows
 
+- [Compose agents and workflows as interchangeable primitives](../concepts/compose-agents-and-workflows-as-interchangeable-primitives.md)
+- [Prefer readable workflow APIs over graph-theory surfaces](../concepts/prefer-readable-workflow-apis-over-graph-theory-surfaces.md)
+- [Add structure where agent reliability fails](../concepts/add-structure-where-agent-reliability-fails.md)
 - [AI Engineering Practice Is Heterogeneous and Fast Moving](../concepts/ai-engineering-practice-is-heterogeneous-and-fast-moving.md)
 - [Branchable Cloud Workspaces Make Agent Actions Reversible](../concepts/branchable-cloud-workspaces-make-agent-actions-reversible.md)
 - [Scale Test-Time Search Through Parallel Verifier-Checked Branches](../concepts/scale-test-time-search-through-parallel-verifier-checked-branches.md)

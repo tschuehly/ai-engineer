@@ -56,8 +56,13 @@ AI coworker products add tool surfaces that are neither plain chat nor backend A
 
 At cloud scale, tool discovery itself becomes a tool. AWS's Strands example keeps the agent shape simple by connecting a model to code-defined tools, but the large-catalog variant stores thousands of tool descriptions in a knowledge base and retrieves the relevant subset before exposing tools to the model. The same source shows how MCP tools can move from a local stdio server into a remote serverless endpoint with authorization and session storage, keeping the agent-facing tool contract while changing the deployment boundary.
 
+Workflow composition adds another tool-design rule: a workflow can be exposed as an agent tool, and an agent can be exposed as a workflow step or tool. This is useful only when the exposed primitive is small enough to understand, because broad tool sets and graph-shaped APIs can create selection and maintenance failures. Dynamic tool injection is the tool-surface version of this pattern: provide the agent only the tools that fit the current task segment.
+
 ## Key Concepts
 
+- [Compose agents and workflows as interchangeable primitives](../concepts/compose-agents-and-workflows-as-interchangeable-primitives.md) - tool and step boundaries can wrap either agent loops or workflow graphs.
+- [Prefer readable workflow APIs over graph-theory surfaces](../concepts/prefer-readable-workflow-apis-over-graph-theory-surfaces.md) - framework APIs should keep control flow understandable to maintainers.
+- [Add structure where agent reliability fails](../concepts/add-structure-where-agent-reliability-fails.md) - narrow tool sets and structured steps can improve failing agent segments.
 - [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](../concepts/retrieve-tool-descriptions-before-loading-large-tool-catalogs.md) - retrieval can narrow thousands of tools before the model chooses one.
 - [Deploy Remote MCP Servers on Serverless Cloud Infrastructure](../concepts/deploy-remote-mcp-servers-on-serverless-cloud-infrastructure.md) - streamable HTTP MCP endpoints can run behind Lambda, API Gateway, auth, and session storage.
 - [Abstract LLM inference behind one routing API](../concepts/abstract-llm-inference-behind-one-routing-api.md) - model-routing platforms can normalize tool calling, provider edge cases, caching, and observability.
@@ -252,6 +257,7 @@ At cloud scale, tool discovery itself becomes a tool. AWS's Strands example keep
 
 ## Sources
 
+- [Agents vs Workflows: Why Not Both? - Sam Bhagwat, Mastra.ai](../sources/20250801_8SUJEqQNClw.md)
 - [The Next Unicorns: 7 Top AI startups from the HF0 Residency](../sources/20250821_L8-5ezsoI5A.md)
 - [Form factors for your new AI coworkers - Craig Wattrus, Flatfile](../sources/20250822_CiMVKnX-CNI.md)
 - [Your Support Team Should Ship Code - Lisa Orr, Zapier](../sources/20251216_RmJ4rTLV_x4.md)

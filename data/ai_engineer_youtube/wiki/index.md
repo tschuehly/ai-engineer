@@ -4,6 +4,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Compose agents and workflows as interchangeable primitives](concepts/compose-agents-and-workflows-as-interchangeable-primitives.md) - agent loops and workflow graphs can call each other as tools, steps, and handoff mechanisms.
+- [Add structure where agent reliability fails](concepts/add-structure-where-agent-reliability-fails.md) - use workflow control selectively around unreliable LLM calls, tool sets, or traceability gaps.
+- [Prefer readable workflow APIs over graph-theory surfaces](concepts/prefer-readable-workflow-apis-over-graph-theory-surfaces.md) - workflow definitions should preserve team-readable control flow instead of forcing node-and-edge graph construction.
 - [Agent Adoption Trails LLM Adoption in the Workplace](concepts/agent-adoption-trails-llm-adoption-in-the-workplace.md) - workplace LLM usage can look mature while LLM-controlled workflows still need separate reliability, permission, and evaluation gates.
 - [Branchable Cloud Workspaces Make Agent Actions Reversible](concepts/branchable-cloud-workspaces-make-agent-actions-reversible.md) - fast VM and container snapshots let stateful agent actions become reversible branches.
 - [Scale Test-Time Search Through Parallel Verifier-Checked Branches](concepts/scale-test-time-search-through-parallel-verifier-checked-branches.md) - agents can fan out attempts from one snapshot and promote verifier-passing branches.

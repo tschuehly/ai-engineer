@@ -1375,3 +1375,11 @@
 - Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Inference](topics/inference.md), [Models](topics/models.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Branchable Cloud Workspaces Make Agent Actions Reversible](concepts/branchable-cloud-workspaces-make-agent-actions-reversible.md), [Scale Test-Time Search Through Parallel Verifier-Checked Branches](concepts/scale-test-time-search-through-parallel-verifier-checked-branches.md), [Train Reasoning Models For Verified Environment Branching](concepts/train-reasoning-models-for-verified-environment-branching.md)
 - Notes: Added Morph's branchable cloud-workspace pattern for reversible agent actions, parallel verifier-checked test-time search, and model/environment co-design for verified reasoning.
+
+## [2026-05-07] ingest | Agents vs Workflows: Why Not Both? - Sam Bhagwat, Mastra.ai
+
+- Source: [Agents vs Workflows: Why Not Both? - Sam Bhagwat, Mastra.ai](sources/20250801_8SUJEqQNClw.md)
+- Processed: `8SUJEqQNClw`
+- Updated topics: [Agents](topics/agents.md), [Workflows](topics/workflows.md), [Tools](topics/tools.md)
+- Updated concepts: [Compose agents and workflows as interchangeable primitives](concepts/compose-agents-and-workflows-as-interchangeable-primitives.md), [Prefer readable workflow APIs over graph-theory surfaces](concepts/prefer-readable-workflow-apis-over-graph-theory-surfaces.md), [Add structure where agent reliability fails](concepts/add-structure-where-agent-reliability-fails.md)
+- Notes: Added Mastra's design-pattern framing for combining agent loops and workflow structure based on reliability, traceability, and team-readable API shape.
