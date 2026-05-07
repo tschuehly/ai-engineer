@@ -127,6 +127,9 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 - [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](../concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md) - explicit role handoffs turn validation from a reminder into a workflow path.
 - [Reverse-engineer AI app evals from user outcomes](../concepts/reverse-engineer-ai-app-evals-from-user-outcomes.md) - reliability workflows should start from what users and the business need the app to accomplish.
 - [Build AI app benchmarks before optimization](../concepts/build-ai-app-benchmarks-before-optimization.md) - benchmark-first workflows catch regressions while teams optimize prompts, models, retrieval, and guardrails.
+- [Agentic document extraction decomposes complex fields](../concepts/agentic-document-extraction-decomposes-complex-fields.md) - field-heavy document workflows should be decomposed into grouped, checked, and retryable steps.
+- [Use challenge eval sets for future user demands](../concepts/use-challenge-eval-sets-for-future-user-demands.md) - workflow evaluation should include harder cases users will ask for after the simple cases work.
+- [Prefer model-portable agentic prompts before fine-tuning](../concepts/prefer-model-portable-agentic-prompts-before-fine-tuning.md) - workflow structure can preserve provider portability where fine-tuning would create model-version maintenance.
 - [DSPy programs keep LLM intent separate from prompt strings](../concepts/dspy-programs-keep-llm-intent-separate-from-prompt-strings.md) - program-first LLM workflows keep control flow stable while model prompts evolve.
 - [Optimize LLM programs with metrics and teacher feedback](../concepts/optimize-llm-programs-with-metrics-and-teacher-feedback.md) - known examples and metrics can drive DSPy optimizer loops.
 - [Use explanatory feedback to optimize prompts](../concepts/use-explanatory-feedback-to-optimize-prompts.md) - feedback-rich examples turn prompt editing into a repeatable improvement loop.
@@ -350,6 +353,8 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 - Which tasks need full research-plan-implement compaction, and which only need direct prompting plus validation?
 
 ## Sources
+
+- [Building an Agentic Platform - Ben Kus, CTO Box](../sources/20250824_12v5S1n1eOY.md)
 
 - [No Vibes Allowed: Solving Hard Problems in Complex Codebases - Dex Horthy, HumanLayer](../sources/20251202_rmvDxxNubIg.md)
 - [The Cure for the Vibe Coding Hangover - Corey J. Gallon, Rexmore](../sources/20251124_JsKTQbT58BY.md)

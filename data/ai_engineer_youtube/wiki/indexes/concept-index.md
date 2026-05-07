@@ -52,6 +52,9 @@
 - [Role-specialized agent systems beat one giant coding agent](../concepts/role-specialized-agent-systems-beat-one-giant-coding-agent.md)
 - [Interleave reasoning and tool calls for long-horizon agents](../concepts/interleave-reasoning-and-tool-calls-for-long-horizon-agents.md)
 - [Use Agent RFT after baseline and task optimization](../concepts/use-agent-rft-after-baseline-and-task-optimization.md)
+- [Agentic document extraction decomposes complex fields](../concepts/agentic-document-extraction-decomposes-complex-fields.md)
+- [Separate agentic workflow design from scale infrastructure](../concepts/separate-agentic-workflow-design-from-scale-infrastructure.md)
+- [Prefer model-portable agentic prompts before fine-tuning](../concepts/prefer-model-portable-agentic-prompts-before-fine-tuning.md)
 - [Route agent optimization by task profile, not one fixed loop](../concepts/route-agent-optimization-by-task-profile-not-one-fixed-loop.md)
 - [Use hierarchical verification before trusting weak agent feedback](../concepts/use-hierarchical-verification-before-trusting-weak-agent-feedback.md)
 - [Train meta-controllers with cost, confidence, and sparse-reward caveats](../concepts/train-meta-controllers-with-cost-confidence-and-sparse-reward-caveats.md)
@@ -649,6 +652,7 @@
 
 ## Evaluation
 
+- [Use challenge eval sets for future user demands](../concepts/use-challenge-eval-sets-for-future-user-demands.md)
 - [Ground agent simulation and evaluation in production logs](../concepts/ground-agent-simulation-and-evaluation-in-production-logs.md)
 - [Close agent loops around live action feedback](../concepts/close-agent-loops-around-live-action-feedback.md)
 - [Robotics policy failures can originate below the model](../concepts/robotics-policy-failures-can-originate-below-the-model.md)
@@ -795,6 +799,7 @@
 
 ## Models
 
+- [Prefer model-portable agentic prompts before fine-tuning](../concepts/prefer-model-portable-agentic-prompts-before-fine-tuning.md)
 - [Treat environments as eval, data, and training substrates](../concepts/treat-environments-as-eval-data-and-training-substrates.md)
 - [Product harnesses can become model customization environments](../concepts/product-harnesses-can-become-model-customization-environments.md)
 - [Environment registries make AI research more accessible](../concepts/environment-registries-make-ai-research-more-accessible.md)
@@ -862,6 +867,7 @@
 
 ## Retrieval
 
+- [Agentic document extraction decomposes complex fields](../concepts/agentic-document-extraction-decomposes-complex-fields.md)
 - [Treat PDF pages as visual retrieval units](../concepts/treat-pdf-pages-as-visual-retrieval-units.md)
 - [Patch-level visual embeddings trade ingest cost for query-time retrieval](../concepts/patch-level-visual-embeddings-trade-ingest-cost-for-query-time-retrieval.md)
 - [LLM attack surfaces span prompts, context, retrieval, tools, and actions](../concepts/llm-attack-surfaces-span-prompts-context-retrieval-tools-and-actions.md)
@@ -1037,6 +1043,9 @@
 
 ## Workflows
 
+- [Agentic document extraction decomposes complex fields](../concepts/agentic-document-extraction-decomposes-complex-fields.md)
+- [Use challenge eval sets for future user demands](../concepts/use-challenge-eval-sets-for-future-user-demands.md)
+- [Prefer model-portable agentic prompts before fine-tuning](../concepts/prefer-model-portable-agentic-prompts-before-fine-tuning.md)
 - [Frequent intentional compaction keeps coding agents in the smart zone](../concepts/frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md)
 - [Review research and plans before they multiply into code](../concepts/review-research-and-plans-before-they-multiply-into-code.md)
 - [Repo-local Markdown tasks give agents durable scoped work units](../concepts/repo-local-markdown-tasks-give-agents-durable-scoped-work-units.md)

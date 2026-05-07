@@ -85,6 +85,9 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md) - GUI and video agents need visual layout and temporal order preserved.
 - [Interleave reasoning and tool calls for long-horizon agents](../concepts/interleave-reasoning-and-tool-calls-for-long-horizon-agents.md) - long-running agents should react to tool feedback over repeated turns.
 - [Use Agent RFT after baseline and task optimization](../concepts/use-agent-rft-after-baseline-and-task-optimization.md) - weight-changing agent optimization belongs after baseline and task/tool improvements.
+- [Agentic document extraction decomposes complex fields](../concepts/agentic-document-extraction-decomposes-complex-fields.md) - long enterprise documents need agentic decomposition, checks, and multimodal validation rather than one extraction prompt.
+- [Separate agentic workflow design from scale infrastructure](../concepts/separate-agentic-workflow-design-from-scale-infrastructure.md) - agentic workflow graphs and high-volume distributed systems are distinct design layers.
+- [Prefer model-portable agentic prompts before fine-tuning](../concepts/prefer-model-portable-agentic-prompts-before-fine-tuning.md) - multi-provider platforms may prefer prompts and workflow structure over provider-specific model updates.
 - [Route agent optimization by task profile, not one fixed loop](../concepts/route-agent-optimization-by-task-profile-not-one-fixed-loop.md) - task profiles can route agents across context, compute, verification, memory, and parameter strategies.
 - [Use hierarchical verification before trusting weak agent feedback](../concepts/use-hierarchical-verification-before-trusting-weak-agent-feedback.md) - self-improving loops need quality gates and executable checks before they preserve learned deltas.
 - [Train meta-controllers with cost, confidence, and sparse-reward caveats](../concepts/train-meta-controllers-with-cost-confidence-and-sparse-reward-caveats.md) - learned agent routers must balance correctness, cost, confidence, and unstable training signals.
@@ -322,6 +325,8 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - Which company workflows are central enough that removing agents would break the operating model rather than merely reduce convenience?
 
 ## Sources
+
+- [Building an Agentic Platform - Ben Kus, CTO Box](../sources/20250824_12v5S1n1eOY.md)
 
 - [Government Agents: AI Agents Meet Tough Regulations - Mark Myshatyn, Los Alamos National Lab](../sources/20251206_TnSGx36Ly0Q.md)
 - [What We Learned Deploying AI within Bloomberg's Engineering Organization - Lei Zhang, Bloomberg](../sources/20251216_Q81AzlA-VE8.md)

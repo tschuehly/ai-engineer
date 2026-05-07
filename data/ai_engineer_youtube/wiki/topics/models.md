@@ -75,6 +75,7 @@ GLM 4.6 adds a staged open-model training recipe for long-context coding and age
 - [Pipeline RL trades policy staleness for GPU throughput](../concepts/pipeline-rl-trades-policy-staleness-for-gpu-throughput.md) - async RL improves utilization only when the algorithm can tolerate stale-policy data.
 - [Simulate RL run layouts before spending GPU budget](../concepts/simulate-rl-run-layouts-before-spending-gpu-budget.md) - GPU allocation, response lengths, KV-cache limits, and staleness should be modeled before expensive runs.
 - [Use Agent RFT after baseline and task optimization](../concepts/use-agent-rft-after-baseline-and-task-optimization.md) - reinforcement fine-tuning should follow data matching, baselining, prompt optimization, and task/tool simplification.
+- [Prefer model-portable agentic prompts before fine-tuning](../concepts/prefer-model-portable-agentic-prompts-before-fine-tuning.md) - provider-portable workflow improvements can be cheaper than repeated fine-tunes across model families.
 - [Preserve rollout trajectory context for agent RFT grading](../concepts/preserve-rollout-trajectory-context-for-agent-rft-grading.md) - tool-calling training needs rollout IDs and trace context so graders can judge behavior, not only final text.
 - [Design Agent RFT rewards for production match and anti-hacking](../concepts/design-agent-rft-rewards-for-production-match-and-anti-hacking.md) - reward functions should mirror production, provide learning signal, and block metric gaming.
 - [Bootstrap RL with targeted SFT before reinforcement learning](../concepts/bootstrap-rl-with-targeted-sft-before-reinforcement-learning.md) - small models may need a syntax and valid-action warm-up before RL can improve strategy.
@@ -114,6 +115,8 @@ GLM 4.6 adds a staged open-model training recipe for long-context coding and age
 - Which scaffold perturbations best predict whether a coding-agent model will transfer across real harnesses and tool APIs?
 
 ## Sources
+
+- [Building an Agentic Platform - Ben Kus, CTO Box](../sources/20250824_12v5S1n1eOY.md)
 
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md)
 - [Compilers in the Age of LLMs - Yusuf Olokoba, Muna](../sources/20251124_q2nHsJVy4FE.md)

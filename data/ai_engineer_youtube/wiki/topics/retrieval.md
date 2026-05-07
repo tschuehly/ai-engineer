@@ -30,6 +30,7 @@ Private research agents can treat connectors and uploads as complementary retrie
 - [Aggregated personal context creates mosaic and exfiltration risk](../concepts/aggregated-personal-context-creates-mosaic-and-exfiltration-risk.md) - aggregating many small personal signals changes the privacy risk of retrieval.
 - [RAG stacks need modular baselines instead of one fixed recipe](../concepts/rag-stacks-need-modular-baselines-instead-of-one-fixed-recipe.md) - shared RAG components should remain tunable for the source corpus and user workflow.
 - [Structure-aware document parsing improves RAG chunk quality](../concepts/structure-aware-document-parsing-improves-rag-chunk-quality.md) - preserving hierarchy, tables, OCR, and images gives retrieval better chunk boundaries.
+- [Agentic document extraction decomposes complex fields](../concepts/agentic-document-extraction-decomposes-complex-fields.md) - extraction pipelines should group related fields and validate OCR/image evidence before creating structured metadata.
 - [Treat PDF pages as visual retrieval units](../concepts/treat-pdf-pages-as-visual-retrieval-units.md) - scanned and visual PDFs may retrieve better when each page remains an image instead of being decomposed into text, tables, and images.
 - [Patch-level visual embeddings trade ingest cost for query-time retrieval](../concepts/patch-level-visual-embeddings-trade-ingest-cost-for-query-time-retrieval.md) - page-image retrieval stores many patch vectors and shifts the main cost toward ingestion and indexing.
 - [Hybrid retrieval should support filters and embedding migration](../concepts/hybrid-retrieval-should-support-filters-and-embedding-migration.md) - vector search should be paired with lexical search, metadata scope, and migration paths.
@@ -59,6 +60,8 @@ Private research agents can treat connectors and uploads as complementary retrie
 - Which private corpora are too sensitive to expose through third-party or loosely protected embedding stores?
 
 ## Sources
+
+- [Building an Agentic Platform - Ben Kus, CTO Box](../sources/20250824_12v5S1n1eOY.md)
 
 - [Demand-Driven Context: A Methodology for Coherent Knowledge Bases Through Agent Failure](../sources/20260505__QAVExf_1uw.md)
 - [The Small Model Infrastructure Nobody Built (So We Did) - Filip Makraduli, Superlinked](../sources/20260505_qdh_x-uRs9g.md)

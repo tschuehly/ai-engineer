@@ -175,6 +175,7 @@ PR-derived field telemetry adds a practical adoption dashboard shape for AI codi
 - [Use golden data sets and mixed scoring functions for AI application confidence](../concepts/use-golden-data-sets-and-mixed-scoring-functions-for-ai-application-confidence.md) - curated edge cases plus deterministic and judge-model scores create a repeatable release gate.
 - [Reverse-engineer AI app evals from user outcomes](../concepts/reverse-engineer-ai-app-evals-from-user-outcomes.md) - product and business outcomes should define the eval criteria before generic AI quality metrics.
 - [Build AI app benchmarks before optimization](../concepts/build-ai-app-benchmarks-before-optimization.md) - early benchmarks let teams compare prompts, models, retrieval, logic, and guardrails while catching regressions.
+- [Use challenge eval sets for future user demands](../concepts/use-challenge-eval-sets-for-future-user-demands.md) - evals should include hard cases that users will ask for after initial success.
 - [Optimize LLM programs with metrics and teacher feedback](../concepts/optimize-llm-programs-with-metrics-and-teacher-feedback.md) - DSPy optimizers turn prompt improvement into a dataset-backed loop with metric and teacher-feedback signals.
 - [Use hierarchical verification before trusting weak agent feedback](../concepts/use-hierarchical-verification-before-trusting-weak-agent-feedback.md) - weak reflection and feedback need quality gates, model diversity, and execution checks.
 - [Train meta-controllers with cost, confidence, and sparse-reward caveats](../concepts/train-meta-controllers-with-cost-confidence-and-sparse-reward-caveats.md) - learned strategy routers need reward and telemetry signals beyond final task success.
@@ -273,6 +274,8 @@ PR-derived field telemetry adds a practical adoption dashboard shape for AI codi
 - How much should in-the-wild IDE completion evals normalize for latency before comparing model quality?
 
 ## Sources
+
+- [Building an Agentic Platform - Ben Kus, CTO Box](../sources/20250824_12v5S1n1eOY.md)
 
 - [Government Agents: AI Agents Meet Tough Regulations - Mark Myshatyn, Los Alamos National Lab](../sources/20251206_TnSGx36Ly0Q.md)
 - [Your Support Team Should Ship Code - Lisa Orr, Zapier](../sources/20251216_RmJ4rTLV_x4.md)

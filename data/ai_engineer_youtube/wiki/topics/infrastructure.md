@@ -78,6 +78,7 @@ Architecture-copilot infrastructure needs a live system model before recommendat
 - [Headless coding-agent servers make agents callable infrastructure](../concepts/headless-coding-agent-servers-make-agents-callable-infrastructure.md) - coding agents can be deployed as controlled backend services.
 - [Keep workflow orchestration deterministic and put side effects in steps](../concepts/keep-workflow-orchestration-deterministic-and-put-side-effects-in-steps.md) - deterministic orchestration and step boundaries prevent recovery from replaying unsafe effects.
 - [Control long-running workflow agents through run lifecycle operations](../concepts/control-long-running-workflow-agents-through-run-lifecycle-operations.md) - infrastructure should expose cancellation, scheduling, and version handling for long-lived agent runs.
+- [Separate agentic workflow design from scale infrastructure](../concepts/separate-agentic-workflow-design-from-scale-infrastructure.md) - enterprise platforms should keep agent graph evolution distinct from high-volume processing infrastructure.
 - [Model LLM calls and tools as durable activities](../concepts/model-llm-calls-and-tools-as-durable-activities.md) - activities are an infrastructure boundary for retries, timeouts, and persisted external work.
 - [Evaluate Agent Loops With Correctness, Cost, Latency, and Step Counts](../concepts/evaluate-agent-loops-with-correctness-cost-latency-and-step-counts.md) - agent infrastructure metrics should not be optimized without correctness checks.
 - [Treat long waits as logical workflow state](../concepts/treat-long-waits-as-logical-workflow-state.md) - infrastructure should rehydrate paused agent workflows after long waits instead of pinning processes.
@@ -220,6 +221,8 @@ Architecture-copilot infrastructure needs a live system model before recommendat
 - How much PII masking and operator verification can voice infrastructure add before latency undermines the realtime workflow?
 
 ## Sources
+
+- [Building an Agentic Platform - Ben Kus, CTO Box](../sources/20250824_12v5S1n1eOY.md)
 
 - [Context Platform Engineering to Reduce Token Anxiety - Val Bercovici, WEKA](../sources/20251124_NTBX-wxUhHs.md)
 - [Compilers in the Age of LLMs - Yusuf Olokoba, Muna](../sources/20251124_q2nHsJVy4FE.md)

@@ -1159,3 +1159,11 @@
 - Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md)
 - Updated concepts: [Robotics policy failures can originate below the model](concepts/robotics-policy-failures-can-originate-below-the-model.md), [Pipeline realtime control loops with synchronization budgets](concepts/pipeline-realtime-control-loops-with-synchronization-budgets.md), [Logging can perturb realtime robotic systems](concepts/logging-can-perturb-realtime-robotic-systems.md), [Priority inversion can starve robot data reception](concepts/priority-inversion-can-starve-robot-data-reception.md)
 - Notes: Added Tesla Optimus robotics-system debugging patterns for distinguishing policy failures from control-loop timing, bus synchronization, logging, and scheduler failures.
+
+## [2026-05-07] ingest | Building an Agentic Platform - Ben Kus, CTO Box
+
+- Source: [Building an Agentic Platform - Ben Kus, CTO Box](sources/20250824_12v5S1n1eOY.md)
+- Processed: `12v5S1n1eOY`
+- Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Models](topics/models.md), [Retrieval](topics/retrieval.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Agentic Document Extraction Decomposes Complex Fields](concepts/agentic-document-extraction-decomposes-complex-fields.md), [Separate Agentic Workflow Design From Scale Infrastructure](concepts/separate-agentic-workflow-design-from-scale-infrastructure.md), [Use Challenge Eval Sets For Future User Demands](concepts/use-challenge-eval-sets-for-future-user-demands.md), [Prefer Model-Portable Agentic Prompts Before Fine-Tuning](concepts/prefer-model-portable-agentic-prompts-before-fine-tuning.md)
+- Notes: Added Box's enterprise content-agent architecture for decomposed document extraction, private-content research, challenge-set evaluation, and provider-portable prompt/workflow optimization.
