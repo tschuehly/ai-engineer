@@ -44,6 +44,8 @@ Prompt-to-app builders are also tool surfaces. AI Studio shows a compact version
 
 Coding agents can also become programmable tools inside other products. Codex is described as callable through SDKs, GitHub Actions, CI/CD, and MCP-connected product agents, which lets an outer product delegate code-writing, connector creation, merge-conflict handling, or bug fixing without rebuilding the full coding-agent harness. The tool-design burden then shifts to the product boundary: expose the coding agent where the work already happens and reserve the surrounding UI, policy, and workflow decisions for the product.
 
+Shell wrappers can also act as local harness tools. A wrapper around Codex CLI can accept file-backed task inputs, launch a child `codex exec`, and print the child output to stdout so the parent agent receives a compact result. This uses Bash as a composable tool surface, but it also turns command shape, sandbox mode, credentials, rollout logging, output files, and timeouts into explicit tool-design concerns.
+
 ## Key Concepts
 
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - compact tool loops can be the core architecture for coding agents.
@@ -53,6 +55,8 @@ Coding agents can also become programmable tools inside other products. Codex is
 - [Role-specialized agent systems beat one giant coding agent](../concepts/role-specialized-agent-systems-beat-one-giant-coding-agent.md) - tool and model routing should follow role-specific work rather than one universal worker.
 - [Embed agent tools in existing work surfaces](../concepts/embed-agent-tools-in-existing-work-surfaces.md) - standalone tools can fail when they force users out of their normal IDE, ticket, or review flow.
 - [Use subagents to isolate context-heavy subtasks](../concepts/use-subagents-to-isolate-context-heavy-subtasks.md) - subagents can be tool-like specialists for search, reasoning, dependency lookup, and codemods.
+- [Shell-wrapped subagents can retrofit harness capabilities](../concepts/shell-wrapped-subagents-can-retrofit-harness-capabilities.md) - wrapper scripts can add child-agent behavior to a CLI harness.
+- [Permission-stable command wrappers reduce approval friction](../concepts/permission-stable-command-wrappers-reduce-approval-friction.md) - wrappers can keep approved command text stable while task inputs change through files.
 - [Design coding-agent editors as review surfaces](../concepts/design-coding-agent-editors-as-review-surfaces.md) - review-oriented UI is part of the tool surface for agent-heavy coding.
 - [Put brittle edge cases behind rigorous tools](../concepts/put-brittle-edge-cases-behind-rigorous-tools.md) - high-risk or specific behaviors should become testable tool boundaries.
 - [Build RL environments as software artifacts](../concepts/build-rl-environments-as-software-artifacts.md) - Verifiers-style packages combine parsers, rewards, rollout execution, and trainer integration for model environments.
@@ -218,6 +222,7 @@ Coding agents can also become programmable tools inside other products. Codex is
 ## Sources
 
 - [Your Support Team Should Ship Code - Lisa Orr, Zapier](../sources/20251216_RmJ4rTLV_x4.md)
+- [Hacking Subagents Into Codex CLI - Brian John, Betterup](../sources/20251124_5eJqXtevlXg.md)
 - [How Claude Code Works - Jared Zoneraich, PromptLayer](../sources/20251226_RFKCzGlAU6Q.md)
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md)
 - [Don't Build Agents, Build Skills Instead - Barry Zhang & Mahesh Murag, Anthropic](../sources/20251208_CEvIs9y1uog.md)

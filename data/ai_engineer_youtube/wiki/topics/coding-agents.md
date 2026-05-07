@@ -50,11 +50,15 @@ HumanLayer's frequent intentional compaction framing makes that harness behavior
 
 Cursor Composer adds a model-building version of the same workflow split. A strongest frontier model can be useful for planning and context engineering, while a faster specialized coding model executes the plan inside the IDE loop. That speed is not cosmetic: when agent latency sits around 10-20 minutes, developers can fall into a semi-async middle where the run is too slow for flow but not independent enough to behave like a real background delegate. Composer's training also shows that coding-agent behavior can be learned directly against the production tool surface: rollouts used file reads, edits, codebase search, lint checks, shell commands, and parallel tool calls so the model learned to search and read before editing.
 
+Codex CLI subagent retrofits add a pragmatic harness-extension pattern. When a CLI agent lacks native subagents, a parent session can invoke a stable wrapper command that starts a child `codex exec` process, lets the child spend its own context budget, and returns only the result. The tradeoff is operational: sandbox access, copied credentials, long-running timeouts, serial execution, and approval ergonomics become part of the harness design rather than incidental script details.
+
 ## Key Concepts
 
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md) - coding-agent SDKs package reusable runtime pieces around the model.
 - [Task-tuned tool sets beat generic integration surfaces for core coding loops](../concepts/task-tuned-tool-sets-beat-generic-integration-surfaces-for-core-coding-loops.md) - core coding-agent tools should be optimized for local feedback loops rather than inherited from generic integrations.
 - [Use subagents to isolate context-heavy subtasks](../concepts/use-subagents-to-isolate-context-heavy-subtasks.md) - specialists can search, reason, fetch dependency context, or prepare codemods without exhausting the main agent's context.
+- [Shell-wrapped subagents can retrofit harness capabilities](../concepts/shell-wrapped-subagents-can-retrofit-harness-capabilities.md) - child CLI processes can approximate subagents when the parent harness only has shell tools.
+- [Permission-stable command wrappers reduce approval friction](../concepts/permission-stable-command-wrappers-reduce-approval-friction.md) - stable shell command shapes can make repeated subagent calls usable without broad permission bypasses.
 - [Role-specialized agent systems beat one giant coding agent](../concepts/role-specialized-agent-systems-beat-one-giant-coding-agent.md) - decomposition across product, coding, review, test, and merge roles can beat one large context-hungry worker.
 - [AI coding adoption needs hands-on production practice](../concepts/ai-coding-adoption-needs-hands-on-production-practice.md) - adoption programs should make practitioners ship bounded real work rather than only consume enablement.
 - [Agentic coding collapses coordination tax for small valuable changes](../concepts/agentic-coding-collapses-coordination-tax-for-small-valuable-changes.md) - small useful fixes can move from backlog negotiation into direct implementation when safety and ownership are handled.
@@ -243,6 +247,7 @@ Cursor Composer adds a model-building version of the same workflow split. A stro
 ## Sources
 
 - [No Vibes Allowed: Solving Hard Problems in Complex Codebases - Dex Horthy, HumanLayer](../sources/20251202_rmvDxxNubIg.md)
+- [Hacking Subagents Into Codex CLI - Brian John, Betterup](../sources/20251124_5eJqXtevlXg.md)
 - [Defying Gravity - Kevin Hou, Google DeepMind](../sources/20251202_HN-F-OQe6j0.md)
 - [Making Codebases Agent Ready - Eno Reyes, Factory AI](../sources/20251222_ShuJ_CN6zr4.md)
 - [What We Learned Deploying AI within Bloomberg's Engineering Organization - Lei Zhang, Bloomberg](../sources/20251216_Q81AzlA-VE8.md)

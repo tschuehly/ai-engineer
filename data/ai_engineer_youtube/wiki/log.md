@@ -1015,3 +1015,11 @@
 - Updated topics: None
 - Updated concepts: None
 - Notes: Filed the instrumental music upload as transcript-available but conceptually low-signal, without adding unsupported topic or concept claims.
+
+## [2026-05-07] ingest | Hacking Subagents Into Codex CLI - Brian John, Betterup
+
+- Source: [Hacking Subagents Into Codex CLI - Brian John, Betterup](sources/20251124_5eJqXtevlXg.md)
+- Processed: `5eJqXtevlXg`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Tools](topics/tools.md)
+- Updated concepts: [Shell-wrapped subagents can retrofit harness capabilities](concepts/shell-wrapped-subagents-can-retrofit-harness-capabilities.md), [Permission-stable command wrappers reduce approval friction](concepts/permission-stable-command-wrappers-reduce-approval-friction.md), [Use subagents to isolate context-heavy subtasks](concepts/use-subagents-to-isolate-context-heavy-subtasks.md), [Use Bash as a composable code-mode tool for agents](concepts/use-bash-as-a-composable-code-mode-tool-for-agents.md)
+- Notes: Added a Codex CLI subagent retrofit pattern covering child `codex exec` runs, file-backed handoff, sandbox and credential constraints, stable command approvals, and serial execution tradeoffs.
