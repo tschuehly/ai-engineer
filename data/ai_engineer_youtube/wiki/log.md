@@ -1623,3 +1623,11 @@
 - Updated topics: [Agents](topics/agents.md), [Workflows](topics/workflows.md), [Tools](topics/tools.md), [Retrieval](topics/retrieval.md), [Product Strategy](topics/product-strategy.md)
 - Updated concepts: [Product Work Graphs Coordinate Agents and Humans](concepts/product-work-graphs-coordinate-agents-and-humans.md), [First-Class Agent Users Need Identity, Scopes, and Audit Trails](concepts/first-class-agent-users-need-identity-scopes-and-audit-trails.md), [Platform-Native Agents Should Behave Like Good Teammates](concepts/platform-native-agents-should-behave-like-good-teammates.md)
 - Notes: Added Linear's agent-coordination platform patterns for work-graph context, installable governed agent users, and teammate-like platform behavior.
+
+## [2026-05-07] ingest | Information Retrieval from the Ground Up - Philipp Krenn, Elastic
+
+- Source: [Information Retrieval from the Ground Up - Philipp Krenn, Elastic](sources/20250727_4Xe_iMYxBQc.md)
+- Processed: `4Xe_iMYxBQc`
+- Updated topics: [Retrieval](topics/retrieval.md), [Evaluation](topics/evaluation.md)
+- Updated concepts: [Search Engines Shift Retrieval Work to Ingestion](concepts/search-engines-shift-retrieval-work-to-ingestion.md), [BM25 Scores Lexical Retrieval With Frequency, Rarity, and Field Length](concepts/bm25-scores-lexical-retrieval-with-frequency-rarity-and-field-length.md), [Hybrid Retrieval Combines Lexical, Sparse, Dense, and Reranking Signals](concepts/hybrid-retrieval-combines-lexical-sparse-dense-and-reranking-signals.md)
+- Notes: Added Elastic's retrieval workshop material on search-engine ingestion, inverted indexes, BM25, dense-vector caveats, hybrid retrieval, RRF, and reranking.

@@ -96,6 +96,8 @@ Retrieval-specific evals should be fast enough to change engineering behavior. Q
 
 RAG evaluation should also sequence complexity. A useful loss analysis asks which query shapes are failing before choosing the next technique: exact-term misses, paraphrase misses, candidate ordering failures, vertical-domain vocabulary, missing structured product signals, ambiguous intent, cost overload, and UX overconfidence each point to different fixes. This keeps BM25, vector retrieval, cross-encoder rerankers, custom embeddings, fan-out, distillation, and fallback UX in one empirical ladder instead of treating them as rival ideologies.
 
+Information-retrieval evaluation should also check whether the retrieval mechanism matches the query shape. Short brand, identifier, or exact-term queries can expose vector-only failures even when semantic examples look good; longer contextual queries can expose keyword-only failures. Hybrid retrieval then needs its own evaluation because RRF, boosts, filters, and rerankers can change both recall and ordering.
+
 Verifier-backed branching adds an evaluation pattern for test-time search. A shared snapshot can fan out to multiple agents or subagents, each branch mutates its own environment, and a verifier selects branches that satisfy the target condition. This is useful only when the verifier captures the desired outcome; otherwise parallel branching scales the wrong signal.
 
 RAG evaluation can be sequenced with product maturity. A pre-production knowledge-base build may start with practical requirements such as supported source types, Markdown output, asynchronous webhooks, and enough product quality to reach real users. Once usage exists, the benchmark should expand to parser accuracy, parser completeness, hallucinated output, cost, and whether hybrid graph/vector retrieval improves real messages or decisions.
@@ -112,6 +114,8 @@ High-stakes domain RAG also needs a fidelity ladder. Expert review can catch leg
 - [Use fast query-document evals for retrieval changes](../concepts/use-fast-query-document-evals-for-retrieval-changes.md) - cheap query/document checks let teams compare retrieval changes on local data.
 - [Sequence RAG Techniques by Loss Analysis and Complexity-Adjusted Impact](../concepts/sequence-rag-techniques-by-loss-analysis-and-complexity-adjusted-impact.md) - retrieval evals should identify the smallest technique likely to close the observed quality gap.
 - [Choose Lexical, Vector, and Reranking Retrieval by Query Shape](../concepts/choose-lexical-vector-and-reranking-retrieval-by-query-shape.md) - query-shape analysis distinguishes exact-match, semantic, and candidate-ordering failures.
+- [Hybrid Retrieval Combines Lexical, Sparse, Dense, and Reranking Signals](../concepts/hybrid-retrieval-combines-lexical-sparse-dense-and-reranking-signals.md) - hybrid retrieval choices should be evaluated because each combination changes candidate recall and ordering.
+- [BM25 Scores Lexical Retrieval With Frequency, Rarity, and Field Length](../concepts/bm25-scores-lexical-retrieval-with-frequency-rarity-and-field-length.md) - lexical evals should account for exact-term statistics that embeddings do not replace.
 - [Rank RAG Results With Domain and Product Signals Beyond Relevance](../concepts/rank-rag-results-with-domain-and-product-signals-beyond-relevance.md) - evals should inspect whether relevance-only ranking misses domain and product-quality signals.
 - [Do not trust saturated vision benchmarks as visual intelligence](../concepts/do-not-trust-saturated-vision-benchmarks-as-visual-intelligence.md) - common visual benchmarks can hide weak fine-detail and spatial reasoning.
 - [Evaluate vision models on domain adaptability and few-shot grounding](../concepts/evaluate-vision-models-on-domain-adaptability-and-few-shot-grounding.md) - vision evals should test class names, annotator instructions, examples, and specialized domains.
@@ -473,6 +477,7 @@ High-stakes domain RAG also needs a fidelity ladder. Expert review can catch leg
 - [Building Alice's Brain: an AI Sales Rep that Learns Like a Human - Sherwood & Satwik, 11x](../sources/20250729_KWmkMV0FNwQ.md)
 - [Scaling Enterprise-Grade RAG: Lessons from Legal Frontier - Calvin Qi (Harvey), Chang She (Lance)](../sources/20250729_W1MiZChnkfA.md)
 - [Layering every technique in RAG, one query at a time - David Karam, Pi Labs (fmr. Google Search)](../sources/20250729_w9u11ioHGA0.md)
+- [Information Retrieval from the Ground Up - Philipp Krenn, Elastic](../sources/20250727_4Xe_iMYxBQc.md)
 - [Make your LLM app a Domain Expert: How to Build an Expert System - Christopher Lovejoy, Anterior](../sources/20250728_MRM7oA3JsFs.md)
 - [Why your product needs an AI product manager, and why it should be you — James Lowe, i.AI](../sources/20250728_xzJdSi2Tsqw.md)
 - [Shipping Products When You Don't Know What they Can Do - Ben Stein, Teammates](../sources/20250728_PthmdT92qNg.md)
