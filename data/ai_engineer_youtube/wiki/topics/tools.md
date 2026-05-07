@@ -34,10 +34,13 @@ For coding agents, tool boundaries should be chosen by what needs hard semantics
 
 Amp Code adds that generic integration availability is not the same as a good core tool surface. A coding agent may need custom search, reasoning, dependency-lookup, and codemod tools tuned to the exact feedback loops it must close; otherwise tool descriptions and calls become context overhead and irrelevant choices become failure modes.
 
+Zapier's Scout work reinforces that useful tools still need to live where the work happens. A separate API playground added another window and saw weak engagement, while the same capabilities gained traction when embedded into support ticket creation, Cursor through MCP, Jira, GitLab CI/CD, and GitLab comment-based iteration.
+
 ## Key Concepts
 
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - compact tool loops can be the core architecture for coding agents.
 - [Task-tuned tool sets beat generic integration surfaces for core coding loops](../concepts/task-tuned-tool-sets-beat-generic-integration-surfaces-for-core-coding-loops.md) - core agent tools should be selected and described for the local workflow.
+- [Embed agent tools in existing work surfaces](../concepts/embed-agent-tools-in-existing-work-surfaces.md) - standalone tools can fail when they force users out of their normal IDE, ticket, or review flow.
 - [Use subagents to isolate context-heavy subtasks](../concepts/use-subagents-to-isolate-context-heavy-subtasks.md) - subagents can be tool-like specialists for search, reasoning, dependency lookup, and codemods.
 - [Design coding-agent editors as review surfaces](../concepts/design-coding-agent-editors-as-review-surfaces.md) - review-oriented UI is part of the tool surface for agent-heavy coding.
 - [Put brittle edge cases behind rigorous tools](../concepts/put-brittle-edge-cases-behind-rigorous-tools.md) - high-risk or specific behaviors should become testable tool boundaries.
@@ -192,6 +195,7 @@ Amp Code adds that generic integration availability is not the same as a good co
 
 ## Sources
 
+- [Your Support Team Should Ship Code - Lisa Orr, Zapier](../sources/20251216_RmJ4rTLV_x4.md)
 - [How Claude Code Works - Jared Zoneraich, PromptLayer](../sources/20251226_RFKCzGlAU6Q.md)
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md)
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md)

@@ -50,6 +50,8 @@ Enterprise AI adoption workflows should then turn isolated pilots into a portfol
 
 Enterprise engineering adoption also needs workflow scaffolding after the first demo. Bloomberg's rollout suggests starting with broad experimentation, then redirecting scaled effort toward mature-codebase work such as uplift patches and incident response, while using onboarding, training, guilds, inner-source, visiting engineers, and leadership workshops to turn individual tool use into organization-level capability.
 
+Support-led coding workflows add a practical backlog pattern for products with many integrations or other constantly changing surfaces. Zapier's Scout Agent starts from live support issues, runs diagnosis and routing, kicks off an asynchronous GitLab pipeline with plan, execute, and validate phases, attaches a merge request back to Jira, and lets support request another pass inside GitLab before engineering review.
+
 ## Key Concepts
 
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - simple loops can replace over-specified DAGs when exploration is the work.
@@ -131,6 +133,9 @@ Enterprise engineering adoption also needs workflow scaffolding after the first 
 - [Feedback turns coding-agent loops into prompt and skill improvement cycles](../concepts/feedback-turns-coding-agent-loops-into-prompt-and-skill-improvement-cycles.md) - each run can improve the instructions that shape later runs.
 - [Choose plan-heavy or review-heavy agent workflows by task shape](../concepts/choose-plan-heavy-or-review-heavy-agent-workflows-by-task-shape.md) - workflow design should match planning depth to whether a task can be specified and tested.
 - [Parallel coding-agent queues need focus-preserving review interfaces](../concepts/parallel-coding-agent-queues-need-focus-preserving-review-interfaces.md) - long-running agent workflows need queueing and review handoffs that reduce context switching.
+- [Support-led coding agents exploit fresh customer context](../concepts/support-led-coding-agents-exploit-fresh-customer-context.md) - support-led workflows preserve fresh logs, customer pain, and validation context.
+- [Embed agent tools in existing work surfaces](../concepts/embed-agent-tools-in-existing-work-surfaces.md) - workflow adoption improves when agent tools are embedded in existing tickets, IDEs, and merge requests.
+- [Evaluate support coding agents by staged failure modes](../concepts/evaluate-support-coding-agents-by-staged-failure-modes.md) - production support workflows need evals for routing, action gating, and solution quality.
 - [Let the core agent loop orchestrate parallel subtasks](../concepts/let-the-core-agent-loop-orchestrate-parallel-subtasks.md) - agent-led decomposition can use parallelism without making the user reconcile thread outputs.
 - [Spatial agent maps expose filesystem-level lineage and collisions](../concepts/spatial-agent-maps-expose-filesystem-level-lineage-and-collisions.md) - spatial activity maps help operators understand where parallel agents are acting.
 - [Let agents propose quest queues for parallel work](../concepts/let-agents-propose-quest-queues-for-parallel-work.md) - queues of agent-suggested missions can move ideation and maintenance discovery into the workflow.
@@ -271,6 +276,7 @@ Enterprise engineering adoption also needs workflow scaffolding after the first 
 ## Sources
 
 - [What We Learned Deploying AI within Bloomberg's Engineering Organization - Lei Zhang, Bloomberg](../sources/20251216_Q81AzlA-VE8.md)
+- [Your Support Team Should Ship Code - Lisa Orr, Zapier](../sources/20251216_RmJ4rTLV_x4.md)
 - [How Claude Code Works - Jared Zoneraich, PromptLayer](../sources/20251226_RFKCzGlAU6Q.md)
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md)
 - [Spec-Driven Development: Agentic Coding at FAANG Scale and Quality - Al Harris, Amazon Kiro](../sources/20260109_HY_JyxAZsiE.md)

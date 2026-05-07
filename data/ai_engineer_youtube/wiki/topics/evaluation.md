@@ -32,9 +32,12 @@ Anti-slop evaluation should be provenance-neutral. Human and AI outputs can both
 
 Generated kernel evaluation has an unusually concrete version of the same problem: the agent can compile, run, and report a speedup while still being wrong, measuring the wrong thing, or exploiting the benchmark. Useful evaluation needs floating-point tolerance policy, representative input sizes, warmups, cache controls, reliable hardware timing, baseline comparisons, and scrutiny for suspicious speedups that satisfy the benchmark without preserving intended behavior.
 
+Support coding agents need staged evaluation before their throughput numbers are trusted. Zapier's Scout Agent separates whether a support issue is categorized correctly, whether the issue is actually fixable by code, and whether the generated fix is accurate. Each failure asks for a different improvement: routing and triage, action gating, or code-generation quality.
+
 ## Key Concepts
 
 - [Evaluate agent trajectories with backtests and smell metrics](../concepts/evaluate-agent-trajectories-with-backtests-and-smell-metrics.md) - flexible tool-loop agents need historical and trajectory-level checks.
+- [Evaluate support coding agents by staged failure modes](../concepts/evaluate-support-coding-agents-by-staged-failure-modes.md) - support agents need separate checks for triage, fixability, and generated solution quality.
 - [Compare models by task, thinking budget, cost, and latency](../concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - side-by-side model comparisons help choose enough reasoning at acceptable speed and cost.
 - [Do not use token volume as a developer productivity metric](../concepts/do-not-use-token-volume-as-a-developer-productivity-metric.md) - adoption dashboards should avoid rewarding visible token spend over task impact.
 - [Measure AI engineering impact across utilization, impact, and cost](../concepts/measure-ai-engineering-impact-across-utilization-impact-and-cost.md) - AI adoption metrics need to connect usage to quality, velocity, and spend.
@@ -177,6 +180,7 @@ Generated kernel evaluation has an unusually concrete version of the same proble
 
 ## Sources
 
+- [Your Support Team Should Ship Code - Lisa Orr, Zapier](../sources/20251216_RmJ4rTLV_x4.md)
 - [How Claude Code Works - Jared Zoneraich, PromptLayer](../sources/20251226_RFKCzGlAU6Q.md)
 - [Why Agent Hype can fall short of reality - Joel Becker, METR](../sources/20251224_RhfqQKe22ZA.md)
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md)

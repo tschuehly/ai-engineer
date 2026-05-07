@@ -53,6 +53,8 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Move enterprise AI adoption beyond spot experiments](../concepts/move-enterprise-ai-adoption-beyond-spot-experiments.md) - portfolio adoption gives agent work a better chance of changing organizational outcomes.
 - [Build paved paths for enterprise AI engineering tools](../concepts/build-paved-paths-for-enterprise-ai-engineering-tools.md) - scaled adoption needs shared platform routes for model access, MCP discovery, deployment, and governance.
 - [Target enterprise coding agents at maintenance and incident work](../concepts/target-enterprise-coding-agents-at-maintenance-and-incident-work.md) - enterprise agents can focus on operational and maintenance work with clear evidence surfaces.
+- [Support-led coding agents exploit fresh customer context](../concepts/support-led-coding-agents-exploit-fresh-customer-context.md) - customer-facing operators can supply fresh context and validation for maintenance agents.
+- [Embed agent tools in existing work surfaces](../concepts/embed-agent-tools-in-existing-work-surfaces.md) - agent tools become more useful when embedded where users already triage, code, and review.
 - [Agentic automation can outperform first-tier productivity use cases](../concepts/agentic-automation-can-outperform-first-tier-productivity-use-cases.md) - deeper automation may produce more value than only personal time savings.
 - [Fractured Attention Becomes Usable With Delegated Agents](../concepts/fractured-attention-becomes-usable-with-delegated-agents.md) - agent delegation can turn short attention windows into productive investigation and fix loops.
 - [Govern agent rules through feedback gatekeepers](../concepts/govern-agent-rules-through-feedback-gatekeepers.md) - organization-wide agent behavior needs maintained prompts and rule ownership.
@@ -250,6 +252,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 ## Sources
 
 - [What We Learned Deploying AI within Bloomberg's Engineering Organization - Lei Zhang, Bloomberg](../sources/20251216_Q81AzlA-VE8.md)
+- [Your Support Team Should Ship Code - Lisa Orr, Zapier](../sources/20251216_RmJ4rTLV_x4.md)
 - [How Claude Code Works - Jared Zoneraich, PromptLayer](../sources/20251226_RFKCzGlAU6Q.md)
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md)
 - [Everything I Learned Training Frontier Small Models - Maxime Labonne, Liquid AI](../sources/20260429_fLUtUkqYHnQ.md)

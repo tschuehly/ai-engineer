@@ -20,6 +20,8 @@ Execution-aware code models point to another coding-agent interface: the model c
 
 Enterprise rollouts should be skeptical of greenfield-only codegen wins. Bloomberg's deployment across thousands of engineers showed early gains in proofs of concept, tests, and one-time scripts, but those signals dropped quickly once work moved into mature codebases with verification, review, and merge constraints. Higher-leverage coding-agent targets may be maintenance, migration, patching, and incident response: uplift agents can scan existing code for applicable fixes and open explanatory pull requests, while incident agents can inspect operational evidence before responders over-anchor on a favorite hypothesis.
 
+Zapier's Scout Agent adds a support-led maintenance pattern. For integration products exposed to constant API changes, support can be a strong first user because tickets arrive with fresh customer context, current logs, and practical validation knowledge. Scout turns support issues into categorized, fixability-checked, plan/execute/validate merge requests, then keeps support iteration inside GitLab before engineering review.
+
 ## Key Concepts
 
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md) - coding-agent SDKs package reusable runtime pieces around the model.
@@ -32,6 +34,9 @@ Enterprise rollouts should be skeptical of greenfield-only codegen wins. Bloombe
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - tool-loop architecture can replace large DAGs for exploratory coding work.
 - [Greenfield AI coding gains drop off in mature codebases](../concepts/greenfield-ai-coding-gains-drop-off-in-mature-codebases.md) - broad enterprise adoption should distinguish early toy gains from mature-codebase impact.
 - [Target enterprise coding agents at maintenance and incident work](../concepts/target-enterprise-coding-agents-at-maintenance-and-incident-work.md) - maintenance patches and troubleshooting can be stronger scaled use cases than generic generation.
+- [Support-led coding agents exploit fresh customer context](../concepts/support-led-coding-agents-exploit-fresh-customer-context.md) - support can validate fresh customer-facing maintenance fixes before stale backlog context disappears.
+- [Embed agent tools in existing work surfaces](../concepts/embed-agent-tools-in-existing-work-surfaces.md) - useful coding-agent tools gain adoption when they appear inside IDE, ticket, and review flows.
+- [Evaluate support coding agents by staged failure modes](../concepts/evaluate-support-coding-agents-by-staged-failure-modes.md) - support coding agents need separate checks for triage, fixability, and generated code quality.
 - [Use prompt-enforced todos as lightweight agent state](../concepts/use-prompt-enforced-todos-as-lightweight-agent-state.md) - todos orient the model without turning every step into hard orchestration.
 - [Put brittle edge cases behind rigorous tools](../concepts/put-brittle-edge-cases-behind-rigorous-tools.md) - structured tools provide hard boundaries for behavior that prompts should not merely suggest.
 - [Evaluate agent trajectories with backtests and smell metrics](../concepts/evaluate-agent-trajectories-with-backtests-and-smell-metrics.md) - flexible coding agents need trajectory-level eval signals, not only final output checks.
@@ -165,6 +170,7 @@ Enterprise rollouts should be skeptical of greenfield-only codegen wins. Bloombe
 
 - [Making Codebases Agent Ready - Eno Reyes, Factory AI](../sources/20251222_ShuJ_CN6zr4.md)
 - [What We Learned Deploying AI within Bloomberg's Engineering Organization - Lei Zhang, Bloomberg](../sources/20251216_Q81AzlA-VE8.md)
+- [Your Support Team Should Ship Code - Lisa Orr, Zapier](../sources/20251216_RmJ4rTLV_x4.md)
 - [The Infinite Software Crisis - Jake Nations, Netflix](../sources/20251220_eIoohUmYpGI.md)
 - [Paying Engineers like Salespeople - Arman Hezarkhani, Tenex](../sources/20251219_4mRekpZpBZs.md)
 - [Leadership in AI Assisted Engineering - Justin Reock, DX (acq. Atlassian)](../sources/20251219_PmZDupFP3UM.md)

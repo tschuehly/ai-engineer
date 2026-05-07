@@ -823,3 +823,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Greenfield AI coding gains drop off in mature codebases](concepts/greenfield-ai-coding-gains-drop-off-in-mature-codebases.md), [Target enterprise coding agents at maintenance and incident work](concepts/target-enterprise-coding-agents-at-maintenance-and-incident-work.md), [Build paved paths for enterprise AI engineering tools](concepts/build-paved-paths-for-enterprise-ai-engineering-tools.md)
 - Notes: Added Bloomberg's scaled engineering rollout lessons around mature-codebase ROI, uplift and incident-response agents, and paved AI platform adoption.
+
+## [2026-05-07] ingest | Your Support Team Should Ship Code - Lisa Orr, Zapier
+
+- Source: [Your Support Team Should Ship Code - Lisa Orr, Zapier](sources/20251216_RmJ4rTLV_x4.md)
+- Processed: `RmJ4rTLV_x4`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Support-led coding agents exploit fresh customer context](concepts/support-led-coding-agents-exploit-fresh-customer-context.md), [Embed agent tools in existing work surfaces](concepts/embed-agent-tools-in-existing-work-surfaces.md), [Evaluate support coding agents by staged failure modes](concepts/evaluate-support-coding-agents-by-staged-failure-modes.md)
+- Notes: Added Zapier's Scout Agent workflow for turning support integration tickets into reviewable merge requests through embedded tools, asynchronous orchestration, and staged evaluation.
