@@ -3,6 +3,7 @@
 ## Agents
 
 - [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md)
+- [Expose task workflow guidance through MCP resources and tools](../concepts/expose-task-workflow-guidance-through-mcp-resources-and-tools.md)
 - [Close agent loops around live action feedback](../concepts/close-agent-loops-around-live-action-feedback.md)
 - [Choose agent observation and action spaces explicitly](../concepts/choose-agent-observation-and-action-spaces-explicitly.md)
 - [Ground agent simulation and evaluation in production logs](../concepts/ground-agent-simulation-and-evaluation-in-production-logs.md)
@@ -124,6 +125,8 @@
 - [Use small models as context-management tools before agent reasoning](../concepts/use-small-models-as-context-management-tools-before-agent-reasoning.md)
 - [Post-train small models for narrow capabilities](../concepts/post-train-small-models-for-narrow-capabilities.md)
 - [Ralph loops process one ticket at a time with fresh context](../concepts/ralph-loops-process-one-ticket-at-a-time-with-fresh-context.md)
+- [Repo-local Markdown tasks give agents durable scoped work units](../concepts/repo-local-markdown-tasks-give-agents-durable-scoped-work-units.md)
+- [Review coding-agent work at task, plan, and code checkpoints](../concepts/review-coding-agent-work-at-task-plan-and-code-checkpoints.md)
 - [Use independent validation contexts to reduce agent confirmation bias](../concepts/use-independent-validation-contexts-to-reduce-agent-confirmation-bias.md)
 - [Coding-agent taste captures the invisible architecture of choices](../concepts/coding-agent-taste-captures-the-invisible-architecture-of-choices.md)
 - [Learn coding preferences from implicit edit feedback](../concepts/learn-coding-preferences-from-implicit-edit-feedback.md)
@@ -423,6 +426,7 @@
 
 - [Frequent intentional compaction keeps coding agents in the smart zone](../concepts/frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md)
 - [Assemble per-feature context packages for coding agents](../concepts/assemble-per-feature-context-packages-for-coding-agents.md)
+- [Repo-local Markdown tasks give agents durable scoped work units](../concepts/repo-local-markdown-tasks-give-agents-durable-scoped-work-units.md)
 - [Keep Agent Context Small, Fresh, and Task-Specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md)
 - [Proactive agent systems need observation, personalization, timing, and workflow embedding](../concepts/proactive-agent-systems-need-observation-personalization-timing-and-workflow-embedding.md)
 - [Use subagents to isolate context-heavy subtasks](../concepts/use-subagents-to-isolate-context-heavy-subtasks.md)
@@ -631,6 +635,7 @@
 - [Ground agent simulation and evaluation in production logs](../concepts/ground-agent-simulation-and-evaluation-in-production-logs.md)
 - [Close agent loops around live action feedback](../concepts/close-agent-loops-around-live-action-feedback.md)
 - [Review research and plans before they multiply into code](../concepts/review-research-and-plans-before-they-multiply-into-code.md)
+- [Review coding-agent work at task, plan, and code checkpoints](../concepts/review-coding-agent-work-at-task-plan-and-code-checkpoints.md)
 - [Use multisensory feedback loops for coding-agent validation](../concepts/use-multisensory-feedback-loops-for-coding-agent-validation.md)
 - [Regulated agents need explainability, isolation, governance, and speed](../concepts/regulated-agents-need-explainability-isolation-governance-and-speed.md)
 - [Treat environments as eval, data, and training substrates](../concepts/treat-environments-as-eval-data-and-training-substrates.md)
@@ -878,6 +883,7 @@
 - [Expose local and open-source models through familiar API clients](../concepts/expose-local-and-open-source-models-through-familiar-api-clients.md)
 
 - [Run Coding Agents Through a Simple Master Loop](../concepts/run-coding-agents-through-a-simple-master-loop.md)
+- [Expose task workflow guidance through MCP resources and tools](../concepts/expose-task-workflow-guidance-through-mcp-resources-and-tools.md)
 - [Task-tuned tool sets beat generic integration surfaces for core coding loops](../concepts/task-tuned-tool-sets-beat-generic-integration-surfaces-for-core-coding-loops.md)
 - [Use subagents to isolate context-heavy subtasks](../concepts/use-subagents-to-isolate-context-heavy-subtasks.md)
 - [Shell-wrapped subagents can retrofit harness capabilities](../concepts/shell-wrapped-subagents-can-retrofit-harness-capabilities.md)
@@ -1010,6 +1016,8 @@
 
 - [Frequent intentional compaction keeps coding agents in the smart zone](../concepts/frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md)
 - [Review research and plans before they multiply into code](../concepts/review-research-and-plans-before-they-multiply-into-code.md)
+- [Repo-local Markdown tasks give agents durable scoped work units](../concepts/repo-local-markdown-tasks-give-agents-durable-scoped-work-units.md)
+- [Review coding-agent work at task, plan, and code checkpoints](../concepts/review-coding-agent-work-at-task-plan-and-code-checkpoints.md)
 - [Vibe coding hangover is a maintainability failure](../concepts/vibe-coding-hangover-is-a-maintainability-failure.md)
 - [Plan coding-agent work through feature inventories and dependency graphs](../concepts/plan-coding-agent-work-through-feature-inventories-and-dependency-graphs.md)
 - [Use multisensory feedback loops for coding-agent validation](../concepts/use-multisensory-feedback-loops-for-coding-agent-validation.md)

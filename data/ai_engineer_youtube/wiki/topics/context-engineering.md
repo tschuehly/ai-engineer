@@ -32,6 +32,8 @@ Taste models turn repeated code edits into another context source. Instead of as
 
 Frequent intentional compaction is a coding-specific context-engineering workflow. It treats the active context window as a limited, trajectory-sensitive working area: preserve correct current facts and intent in reviewed Markdown artifacts, start fresh sessions from those artifacts, and prefer on-demand compressed context from current code over broad static onboarding docs that grow stale. Per-feature context packaging adds a planning-artifact variant of the same idea: after a master specification, feature inventory, specifications, dependencies, and implementation plan exist, the implementation agent should receive only the sections relevant to the current atomic feature plus its dependencies and validation strategy.
 
+Repo-local task files are a smaller-grained version of this context packaging. A Markdown task with acceptance criteria and status can define what one agent run should do, what it should not do, and how completion will be checked; because it is versioned in Git, it remains available after chat context is compacted or discarded.
+
 Architecture copilots add a system-map version of context engineering. Instead of relying on stale architecture docs, they normalize current cloud, Kubernetes, service, logging, dependency, drift, business-objective, and standards context into a live model that an AI can use for architecture recommendations.
 
 Repository architecture can turn context engineering into the adoption bottleneck for coding agents. In PR telemetry, highly distributed codebases did not show the same AI-adoption-to-throughput lift as centralized or balanced codebases, plausibly because tools and agents operate best inside one repository while product, service, and ownership relationships span many repositories and remain undocumented.
@@ -41,6 +43,7 @@ Repository architecture can turn context engineering into the adoption bottlenec
 - [Keep agent context small, fresh, and task-specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md) - context should be externalized, selected, summarized, and isolated so stale or excessive history does not degrade agent work.
 - [Frequent intentional compaction keeps coding agents in the smart zone](../concepts/frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md) - source-backed compaction controls size, correctness, completeness, and trajectory in coding-agent sessions.
 - [Assemble Per-Feature Context Packages for Coding Agents](../concepts/assemble-per-feature-context-packages-for-coding-agents.md) - planning artifacts should be sliced into feature-specific context packages before implementation.
+- [Repo-local Markdown tasks give agents durable scoped work units](../concepts/repo-local-markdown-tasks-give-agents-durable-scoped-work-units.md) - Markdown task files package scope, progress, and acceptance criteria as durable context.
 - [Proactive agent systems need observation, personalization, timing, and workflow embedding](../concepts/proactive-agent-systems-need-observation-personalization-timing-and-workflow-embedding.md) - proactive agents need context selected for the current moment and workflow surface.
 - [Use subagents to isolate context-heavy subtasks](../concepts/use-subagents-to-isolate-context-heavy-subtasks.md) - separate context windows can preserve the main agent's working memory.
 - [Agent swarms create reusable KV-cache working sets](../concepts/agent-swarms-create-reusable-kv-cache-working-sets.md) - repeated prompt and tool regions in agent swarms should be treated as cacheable context infrastructure.
@@ -169,3 +172,4 @@ Repository architecture can turn context engineering into the adoption bottlenec
 - [What Data from 20m Pull Requests Reveal About AI Transformation - Nick Arcolano, Jellyfish](../sources/20251124_WqZq8L-v9pA.md)
 - [Developing Taste in Coding Agents: Applied Meta Neuro-Symbolic RL - Ahmad Awais, CommandCode](../sources/20251124_kWOQS3XPZ10.md)
 - [The Unbearable Lightness of Agent Optimization - Alberto Romero, Jointly](../sources/20251124_zfvEMNmVlNY.md)
+- [Backlog.md: Terminal Kanban Board for Managing Tasks with AI Agents - Alex Gavrilescu, Funstage](../sources/20251124_zMXKhhwiCIc.md)

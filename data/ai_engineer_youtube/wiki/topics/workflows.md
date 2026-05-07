@@ -52,6 +52,8 @@ Enterprise AI research workflows can be made fundable by turning each uncertain 
 
 AI coding workflows should also separate easy generation from simple system design. Nations' three-phase approach turns one long coding conversation into research, planning, and implementation artifacts with human checkpoints between them. Gallon's framework adds a more granular make-it-work sequence: capture a master project specification, extract and categorize features, develop atomic feature specifications, build a dependency matrix, then produce an implementation plan that sequences phases and binary validation criteria. That structure keeps review at the speed of generation: humans validate the research and plan before the agent produces a diff, then review implementation against a known plan rather than reverse-engineering whatever the chat invented.
 
+Backlog.md turns that sequence into a terminal and repo workflow. A human or agent creates a Markdown task, the human checks description and acceptance criteria, the agent writes an implementation plan from the task and codebase, the human reviews direction, and only then does the agent implement and move the task to done when the definition of done is met. Independent tasks can run in parallel through Git worktrees when dependencies are clear.
+
 Preference-learning workflows add a feedback path that runs during normal coding. When a developer edits generated code to change library choice, file structure, parameter shape, test framework, or design details, that correction can become learned taste for later agent runs. The workflow is valuable when it reduces repeated steering without hiding the preference surface from the developer or team.
 
 Architecture-copilot workflows put an aiming step before coding-copilot execution. The recommended rollout is incremental: pick one portfolio area, build live visibility, generate recommendations tied to business outcomes, pilot autonomous guidance with one team, and scale only after the ROI and adoption path are proven.
@@ -163,6 +165,8 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 - [Spec-driven development turns prompts into requirements, design, and tasks](../concepts/spec-driven-development-turns-prompts-into-requirements-design-and-tasks.md) - coding-agent workflows can route from prompt to spec artifacts to task execution.
 - [Translate structured requirements into property-based tests](../concepts/translate-structured-requirements-into-property-based-tests.md) - workflow completion can be tied to tests derived from acceptance criteria.
 - [Keep spec artifacts feature-scoped, mutable, and context-backed](../concepts/keep-spec-artifacts-feature-scoped-mutable-and-context-backed.md) - spec workflows should amend or prune artifacts as the system evolves.
+- [Repo-local Markdown tasks give agents durable scoped work units](../concepts/repo-local-markdown-tasks-give-agents-durable-scoped-work-units.md) - task files keep work state and acceptance criteria available across agent sessions.
+- [Review coding-agent work at task, plan, and code checkpoints](../concepts/review-coding-agent-work-at-task-plan-and-code-checkpoints.md) - task workflows should review intent and direction before generated code exists.
 - [Configure agent modes, rules, and permissions as the workflow evolves](../concepts/configure-agent-modes-rules-and-permissions-as-the-workflow-evolves.md) - workflow configuration should adapt as the team learns what agents can do safely.
 - [Make agent work more trustworthy by making it verifiable](../concepts/make-agent-work-more-trustworthy-by-making-it-verifiable.md) - workflow design should turn hard-to-review autonomy into checked or constrained subwork.
 - [Harness engineering shifts scarcity from code production to control surfaces](../concepts/harness-engineering-shifts-scarcity-from-code-production-to-control-surfaces.md) - workflow leverage moves to structures that steer abundant implementation capacity.
@@ -430,3 +434,4 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)
 - [Vision: Zero Bugs — Johann Schleier-Smith, Temporal](../sources/20251124_qLqttdO33UM.md)
+- [Backlog.md: Terminal Kanban Board for Managing Tasks with AI Agents - Alex Gavrilescu, Funstage](../sources/20251124_zMXKhhwiCIc.md)

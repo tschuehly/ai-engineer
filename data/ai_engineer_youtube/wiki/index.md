@@ -5,6 +5,7 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 ## Current Emphasis
 
 - [Live architecture digital twins ground architecture copilots](concepts/live-architecture-digital-twins-ground-architecture-copilots.md) - architecture advice needs a current model of the actual tech estate.
+- [Repo-local Markdown tasks give agents durable scoped work units](concepts/repo-local-markdown-tasks-give-agents-durable-scoped-work-units.md) - repository task files can carry agent scope, acceptance criteria, progress, and review state outside the active context window.
 - [Context development lifecycle treats context as an engineered artifact](concepts/context-development-lifecycle-treats-context-as-an-engineered-artifact.md) - context should move through generate, evaluate, distribute, observe, and adapt loops.
 - [Treat AI coding as a central applied-AI problem](concepts/treat-ai-coding-as-a-central-applied-ai-problem.md) - code-facing systems are where model capability becomes usable software and workflow leverage.
 - [Treat agents as embodied action systems](concepts/treat-agents-as-embodied-action-systems.md) - tools, terminals, browsers, VMs, OS access, and files are the digital body through which agents act.

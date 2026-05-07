@@ -12,6 +12,8 @@ Agent-facing products should treat APIs and CLIs as primary interfaces once agen
 
 MCP is one part of the agent connectivity stack, not a universal replacement for every surface. Skills carry reusable domain knowledge, CLIs and computer use fit local sandboxed environments, and MCP fits remote semantics, authorization, governance, resources, long-running tasks, and cross-client application surfaces. MCP applications and skills over MCP point to a richer server-authored surface where an integration can ship UI, tools, and current usage guidance together.
 
+Task-management tools need the same product shape. Backlog.md uses MCP resources to teach agents the task lifecycle and MCP tools to let them search, view, create, update, and complete repo-local Markdown tasks; the resource/tool split keeps workflow guidance explicit while preserving a constrained operation surface.
+
 RAG stacks are another tool surface when their internals are inspectable and editable. OpenRAG's LangFlow layer exposes ingestion, retrieval, guardrails, parsers, URL ingestion, calculators, prompt templates, and OpenSearch tools as flow components; its API keys and MCP server let other applications or agents call the same retrieval system instead of duplicating it.
 
 LLM programming frameworks can make prompt format itself a tool layer. DSPy signatures and modules describe the workflow intent, while adapters choose how that intent is rendered to the model, so teams can compare JSON, BAML, compressed formats, or model-specific formatting without rewriting the program.
@@ -76,6 +78,7 @@ Model-client wrappers are another tool-surface pattern. When a compiled local mo
 - [Dynamic artifacts make agent work reviewable and reusable](../concepts/dynamic-artifacts-make-agent-work-reviewable-and-reusable.md) - generated plans, recordings, diagrams, and comments are tool outputs for supervision and memory.
 - [Browser-native AI APIs bring local models into web apps](../concepts/browser-native-ai-apis-bring-local-models-into-web-apps.md) - browser-managed local models can become product APIs for summarization, proofreading, and multimodal prompts.
 - [Agent-readable web surfaces guide browsing agents](../concepts/agent-readable-web-surfaces-guide-browsing-agents.md) - `llms.txt` and WebMCP-style surfaces make sites easier for agents to read and operate.
+- [Expose task workflow guidance through MCP resources and tools](../concepts/expose-task-workflow-guidance-through-mcp-resources-and-tools.md) - resources can teach a task workflow while tools mutate task state through the intended interface.
 - [Build internal AI engineering platforms when off-the-shelf tools lack enterprise context](../concepts/build-internal-ai-engineering-platforms-when-off-the-shelf-tools-lack-enterprise-context.md) - enterprise tool platforms may need custom context and integrations around existing engineering systems.
 - [Make internal platforms self-service for agent users](../concepts/make-internal-platforms-self-service-for-agent-users.md) - platform tools should remove person-dependent handoffs from agent workflows.
 - [Expose observability as agent-readable feedback](../concepts/expose-observability-as-agent-readable-feedback.md) - operational signals should be available through APIs, CLIs, or MCP.
@@ -297,5 +300,6 @@ Model-client wrappers are another tool-surface pattern. When a compiled local mo
 - [Defying Gravity - Kevin Hou, Google DeepMind](../sources/20251202_HN-F-OQe6j0.md)
 - [Katelyn Lesse - Evolving Claude APIs for Agents, Anthropic](../sources/20251204_aqW68Is_Kj4.md)
 - [Context Engineering: Connecting the Dots with Graphs - Stephen Chin, Neo4j](../sources/20251124_LLuKshphGOE.md)
+- [Backlog.md: Terminal Kanban Board for Managing Tasks with AI Agents - Alex Gavrilescu, Funstage](../sources/20251124_zMXKhhwiCIc.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

@@ -1127,3 +1127,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md)
 - Updated concepts: [Treat agents as embodied action systems](concepts/treat-agents-as-embodied-action-systems.md), [Close agent loops around live action feedback](concepts/close-agent-loops-around-live-action-feedback.md), [Choose agent observation and action spaces explicitly](concepts/choose-agent-observation-and-action-spaces-explicitly.md), [Ground agent simulation and evaluation in production logs](concepts/ground-agent-simulation-and-evaluation-in-production-logs.md)
 - Notes: Added robotics-derived agent engineering guidance for embodiment, action feedback, explicit observation/action surfaces, and production-log-grounded simulation.
+
+## [2026-05-07] ingest | Backlog.md: Terminal Kanban Board for Managing Tasks with AI Agents - Alex Gavrilescu, Funstage
+
+- Source: [Backlog.md: Terminal Kanban Board for Managing Tasks with AI Agents - Alex Gavrilescu, Funstage](sources/20251124_zMXKhhwiCIc.md)
+- Processed: `zMXKhhwiCIc`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Repo-local Markdown tasks give agents durable scoped work units](concepts/repo-local-markdown-tasks-give-agents-durable-scoped-work-units.md), [Expose task workflow guidance through MCP resources and tools](concepts/expose-task-workflow-guidance-through-mcp-resources-and-tools.md), [Review coding-agent work at task, plan, and code checkpoints](concepts/review-coding-agent-work-at-task-plan-and-code-checkpoints.md)
+- Notes: Added Backlog.md's repo-local task workflow for scoping coding-agent work, teaching task lifecycle through MCP resources and tools, and reviewing intent before implementation expands into code.
