@@ -54,8 +54,12 @@ Model-client wrappers are another tool-surface pattern. When a compiled local mo
 
 AI coworker products add tool surfaces that are neither plain chat nor backend APIs. A tool can be invisible background work, ambient affordances in a workspace, inline transformation controls, or a conversational builder. When an agent acts inline, the tool UX should show what it is doing, ask for alignment at meaningful checkpoints, keep snapshots and rollback paths visible, and hand control back to the user when the model cannot safely complete the work. Coding IDEs add another tool-policy layer: repository instructions, custom modes, MCP servers, browser previews, selected-element context, and auto-approval settings shape what the agent sees and may do. Terminal approvals remain especially sensitive because command chaining can make a simple allow-list less precise than it looks.
 
+At cloud scale, tool discovery itself becomes a tool. AWS's Strands example keeps the agent shape simple by connecting a model to code-defined tools, but the large-catalog variant stores thousands of tool descriptions in a knowledge base and retrieves the relevant subset before exposing tools to the model. The same source shows how MCP tools can move from a local stdio server into a remote serverless endpoint with authorization and session storage, keeping the agent-facing tool contract while changing the deployment boundary.
+
 ## Key Concepts
 
+- [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](../concepts/retrieve-tool-descriptions-before-loading-large-tool-catalogs.md) - retrieval can narrow thousands of tools before the model chooses one.
+- [Deploy Remote MCP Servers on Serverless Cloud Infrastructure](../concepts/deploy-remote-mcp-servers-on-serverless-cloud-infrastructure.md) - streamable HTTP MCP endpoints can run behind Lambda, API Gateway, auth, and session storage.
 - [Abstract LLM inference behind one routing API](../concepts/abstract-llm-inference-behind-one-routing-api.md) - model-routing platforms can normalize tool calling, provider edge cases, caching, and observability.
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - compact tool loops can be the core architecture for coding agents.
 - [Use repository instructions to ground coding agents](../concepts/use-repository-instructions-to-ground-coding-agents.md) - repo instructions are a shared model-facing tool for team conventions.
@@ -326,5 +330,6 @@ AI coworker products add tool surfaces that are neither plain chat nor backend A
 - [Backlog.md: Terminal Kanban Board for Managing Tasks with AI Agents - Alex Gavrilescu, Funstage](../sources/20251124_zMXKhhwiCIc.md)
 - [Real World Development with GitHub Copilot and VS Code — Harald Kirschner, Christopher Harrison](../sources/20250803_eOxOzcw70f0.md)
 - [Useful General Intelligence - Danielle Perszyk, Amazon AGI](../sources/20250802_Dj0b_cEBHBI.md)
+- [Building Agents at Cloud Scale - Antje Barth, AWS](../sources/20250802_WJjInLeaJjo.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

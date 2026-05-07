@@ -4,6 +4,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](concepts/retrieve-tool-descriptions-before-loading-large-tool-catalogs.md) - large agent systems can search tool descriptions and load only relevant tools into model context.
+- [Deploy Remote MCP Servers on Serverless Cloud Infrastructure](concepts/deploy-remote-mcp-servers-on-serverless-cloud-infrastructure.md) - local MCP tools can become streamable HTTP cloud services with auth and session persistence.
+- [Specialist Expert Systems Bundle Capabilities, APIs, and Instructions](concepts/specialist-expert-systems-bundle-capabilities-apis-and-instructions.md) - broad assistants can scale through task-focused capability bundles orchestrated together.
 - [Build domain-specific workflow wrappers around models](concepts/build-domain-specific-workflow-wrappers-around-models.md) - defensible AI products package context, orchestration, review, and domain workflow fit around changing models.
 - [Use Browser UI Control When APIs Are Absent](concepts/use-browser-ui-control-when-apis-are-absent.md) - computer-use agents can operate existing visual workflows when no API surface exists.
 - [Compose Computer-Use Agents From Reliable Atomic Actions](concepts/compose-computer-use-agents-from-reliable-atomic-actions.md) - reliable UI action primitives can be embedded in ordinary program structure.

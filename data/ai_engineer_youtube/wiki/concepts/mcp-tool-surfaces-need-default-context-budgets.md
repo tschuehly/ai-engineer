@@ -15,6 +15,7 @@ Details:
 - Agent discovery is not a one-time human documentation read: every session may enumerate tool names and descriptions during handshake, so tool count and description size become recurring context costs. 06:12-06:56
 - A visible tool count above roughly 50 tools per agent is a performance smell unless the team invests in routing, splitting, namespacing, and evaluation; the budget is per agent, not per individual server. 35:32-37:14
 - Amp adds a coding-agent-specific version of this failure mode: irrelevant tools increase context confusion, and generic MCP server descriptions may not be tuned to the feedback loops a particular coding agent needs to close. 04:40-05:58
+- AWS describes an internal agent with more than 6,000 tools and uses a retrieval step over stored tool descriptions so only relevant tools enter the model context. (10:57-11:30)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -26,9 +27,11 @@ Related concepts:
 - [Discover large API tool surfaces progressively](discover-large-api-tool-surfaces-progressively.md)
 - [Design MCP Servers as Agent Products](design-mcp-servers-as-agent-products.md)
 - [Task-tuned tool sets beat generic integration surfaces for core coding loops](task-tuned-tool-sets-beat-generic-integration-surfaces-for-core-coding-loops.md)
+- [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](retrieve-tool-descriptions-before-loading-large-tool-catalogs.md)
 
 Sources:
 - [Scaling GitHub for your Agents — Sam Morrow, GitHub](../sources/20260427_0n3MKk7r60w.md), 02:06-06:13
 - [MCP = Mega Context Problem - Matt Carey](../sources/20260425_YBYUvGOuotE.md), 02:37-03:30
 - [Your MCP Server is Bad (and you should feel bad) - Jeremiah Lowin, Prefect](../sources/20260112_96G7FLab8xc.md), 06:12-06:56, 28:25-29:24, 35:32-37:14
 - [Amp Code: Next Generation AI Coding - Beyang Liu, Amp Code](../sources/20251222_gvIAkmZUEZY.md), 04:40-05:58
+- [Building Agents at Cloud Scale - Antje Barth, AWS](../sources/20250802_WJjInLeaJjo.md), 10:57-11:30

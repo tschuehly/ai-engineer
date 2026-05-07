@@ -1351,3 +1351,11 @@
 - Updated topics: [Agents](topics/agents.md), [Tools](topics/tools.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Use Browser UI Control When APIs Are Absent](concepts/use-browser-ui-control-when-apis-are-absent.md), [Compose Computer-Use Agents From Reliable Atomic Actions](concepts/compose-computer-use-agents-from-reliable-atomic-actions.md), [Evaluate Agents By Human-Agent Interaction Outcomes](concepts/evaluate-agents-by-human-agent-interaction-outcomes.md)
 - Notes: Added Amazon AGI's useful-general-intelligence framing for Nova Act: use browser UI control where APIs are absent, compose workflows from reliable action primitives, and evaluate agents by human-agent interaction outcomes.
+
+## [2026-05-07] ingest | Building Agents at Cloud Scale - Antje Barth, AWS
+
+- Source: [Building Agents at Cloud Scale - Antje Barth, AWS](sources/20250802_WJjInLeaJjo.md)
+- Processed: `WJjInLeaJjo`
+- Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Specialist Expert Systems Bundle Capabilities, APIs, and Instructions](concepts/specialist-expert-systems-bundle-capabilities-apis-and-instructions.md), [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](concepts/retrieve-tool-descriptions-before-loading-large-tool-catalogs.md), [Deploy Remote MCP Servers on Serverless Cloud Infrastructure](concepts/deploy-remote-mcp-servers-on-serverless-cloud-infrastructure.md), [Agent Connectivity Stack Combines Skills, MCP, CLIs, and Computer Use](concepts/agent-connectivity-stack-combines-skills-mcp-clis-and-computer-use.md)
+- Notes: Added AWS cloud-scale agent patterns for specialist capability bundles, retrieval-narrowed tool catalogs, CLI-plus-MCP grounding, and Lambda-backed remote MCP services.

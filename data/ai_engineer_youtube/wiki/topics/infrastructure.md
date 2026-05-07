@@ -74,8 +74,12 @@ Brockman's AI infrastructure framing adds a fleet-shape constraint at frontier s
 
 Realtime voice infrastructure adds a smaller but concrete version of that constraint. Development and production depend on live network transport, low-latency provider calls, VAD or semantic turn detection, synchronized audio/text events, and release evals that exercise real services end to end.
 
+Remote MCP infrastructure can reuse ordinary cloud primitives when the local stdio assumption no longer fits. A simple MCP server can be wrapped behind Lambda and API Gateway with streamable HTTP, an authorizer or Cognito, and DynamoDB-backed session state; the client can then list remote tools and pass them into an agent. This does not remove the need for gateway, authorization, and context-budget design, but it gives teams a serverless path from local MCP demos to shared cloud endpoints.
+
 ## Key Concepts
 
+- [Deploy Remote MCP Servers on Serverless Cloud Infrastructure](../concepts/deploy-remote-mcp-servers-on-serverless-cloud-infrastructure.md) - serverless compute and API routing can host remote MCP tools with auth and session persistence.
+- [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](../concepts/retrieve-tool-descriptions-before-loading-large-tool-catalogs.md) - search infrastructure can keep large tool catalogs out of the default context window.
 - [Dual-mode AI infrastructure](../concepts/dual-mode-ai-infrastructure.md) - infrastructure planning must balance long compute-heavy work against low-latency realtime workloads.
 - [Test realtime voice services with bot-to-bot release evals](../concepts/test-realtime-voice-services-with-bot-to-bot-release-evals.md) - networked voice providers need integration checks at release time.
 - [Research engineering partnership](../concepts/research-engineering-partnership.md) - frontier model progress depends on systems engineering that makes research ideas executable.
@@ -299,6 +303,7 @@ Realtime voice infrastructure adds a smaller but concrete version of that constr
 - [Efficient Reinforcement Learning - Rhythm Garg & Linden Li, Applied Compute](../sources/20251209_o15AaYl7Wu0.md)
 - [VoiceVision RAG - Integrating Visual Document Intelligence with Voice Response - Suman Debnath, AWS](../sources/20251206_hwCmfThIiS4.md)
 - [Vision AI in 2025 - Peter Robicheaux, Roboflow](../sources/20250803_IQc05eCvNYE.md)
+- [Building Agents at Cloud Scale - Antje Barth, AWS](../sources/20250802_WJjInLeaJjo.md)
 - [Future-Proof Coding Agents - Bill Chen & Brian Fioca, OpenAI](../sources/20251205_wVl6ZjELpBk.md)
 - [Katelyn Lesse - Evolving Claude APIs for Agents, Anthropic](../sources/20251204_aqW68Is_Kj4.md)
 - [Building Cursor Composer - Lee Robinson, Cursor](../sources/20251202_fL1iJHtl51Q.md)

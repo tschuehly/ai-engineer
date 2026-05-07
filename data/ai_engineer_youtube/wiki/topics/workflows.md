@@ -98,8 +98,12 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 
 Brockman's workflow advice is to challenge inherited constraints by first principles rather than by blanket rule-breaking. The Stripe bank-integration story compresses a slow external process by pairing implementation with parallel test-script work and keeping the certifier engaged, but the stated lesson is narrower: find overhead attached to constraints that no longer apply in the specific situation. For AI-assisted workflows, that means converting speedups into better process design, not pretending every safety, testing, or coordination step is obsolete. Copilot's VS Code workflow adds another practical path from ad hoc prompting to team practice: begin with a fast prototype, then stabilize the workflow through starter templates, `.github/copilot-instructions.md`, custom modes such as TDD, configured tasks and tests, MCP integrations, browser feedback, and scoped approval settings.
 
+Cloud-scale agent workflow can still start with local iteration. The Strands pattern is to define a prompt and tools in code, test locally, then deploy the same model-tool shape into cloud infrastructure when the workflow is ready. For very large tool catalogs, the workflow adds a retrieval step before tool selection so the model sees task-relevant tools instead of every possible integration.
+
 ## Key Concepts
 
+- [Specialist Expert Systems Bundle Capabilities, APIs, and Instructions](../concepts/specialist-expert-systems-bundle-capabilities-apis-and-instructions.md) - workflow specialists can package task-specific instructions and APIs for orchestration.
+- [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](../concepts/retrieve-tool-descriptions-before-loading-large-tool-catalogs.md) - large tool workflows should discover relevant tools before the model selects and executes them.
 - [Use fast query-document evals for retrieval changes](../concepts/use-fast-query-document-evals-for-retrieval-changes.md) - fast retrieval checks keep experimentation inside the product improvement loop.
 - [Cluster conversation outputs to prioritize AI product work](../concepts/cluster-conversation-outputs-to-prioritize-ai-product-work.md) - output analysis turns logs into decisions about tools, prompts, routing, and refusal behavior.
 - [Research engineering partnership](../concepts/research-engineering-partnership.md) - research and engineering workflows need repeated coordination as systems scale.
@@ -511,3 +515,4 @@ Brockman's workflow advice is to challenge inherited constraints by first princi
 - [How to Improve your Vibe Coding - Ian Butler](../sources/20250803_g03m-WFEu1U.md)
 - [State of Startups and AI 2025 - Sarah Guo, Conviction](../sources/20250802_3MZS5gNElZM.md)
 - [Useful General Intelligence - Danielle Perszyk, Amazon AGI](../sources/20250802_Dj0b_cEBHBI.md)
+- [Building Agents at Cloud Scale - Antje Barth, AWS](../sources/20250802_WJjInLeaJjo.md)

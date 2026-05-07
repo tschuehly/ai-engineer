@@ -82,8 +82,12 @@ Enterprise operating models are part of agent adoption. Adding agents to existin
 
 Enterprise analytics agents need especially careful autonomy staging. A GenBI copilot can start by routing users to certified dashboards and reports, then use those governed assets as context or SQL seeds before it attempts broader query generation. Splitting the pipeline into metadata, RAG/report-finding, SQL, and BI-answer agents keeps retrieval, query expansion, answer synthesis, orchestration, and governance as separately inspectable responsibilities. Graph-backed advisory agents add another form of staged responsibility: a supervisory "wisdom" agent can coordinate specialist agents that collect insight, update graph regions, and leave decision state in a centralized graph for later inspection.
 
+Cloud-scale assistant systems add a specialist-service pattern. Alexa Plus is described as hundreds of expert systems that bundle capabilities, APIs, and instructions for particular tasks, then orchestrate across partner services and devices. That supports a broader design rule already visible in coding and workflow agents: split broad autonomy into capability-bounded specialists, then invest in the orchestration, permissions, and tool-discovery layers that let them cooperate.
+
 ## Key Concepts
 
+- [Specialist Expert Systems Bundle Capabilities, APIs, and Instructions](../concepts/specialist-expert-systems-bundle-capabilities-apis-and-instructions.md) - broad assistants can scale through task-specific capability bundles rather than one monolithic tool surface.
+- [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](../concepts/retrieve-tool-descriptions-before-loading-large-tool-catalogs.md) - large agent systems can search tool descriptions before adding only relevant tools to context.
 - [Optimize action agents for reliability before abstract intelligence](../concepts/optimize-action-agents-for-reliability-before-abstract-intelligence.md) - business workflows need agents that complete ordinary actions reliably.
 - [Make voice AI devices developer-extensible](../concepts/make-voice-ai-devices-developer-extensible.md) - voice agent platforms can expose hardware and application extension points.
 - [Measure AI intensity by human input to valuable output](../concepts/measure-ai-intensity-by-human-input-to-valuable-output.md) - autonomy and product value can be compared by output per user steering event.
@@ -449,6 +453,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [The Agent Native Company — Rick Blalock, Agentuity](../sources/20250603_0ZPAvzhpGjw.md)
 - [State of Startups and AI 2025 - Sarah Guo, Conviction](../sources/20250802_3MZS5gNElZM.md)
 - [Useful General Intelligence - Danielle Perszyk, Amazon AGI](../sources/20250802_Dj0b_cEBHBI.md)
+- [Building Agents at Cloud Scale - Antje Barth, AWS](../sources/20250802_WJjInLeaJjo.md)
 - [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](../sources/20251223_LU9KgcZDRfY.md)
 - [The 3 Pillars of Autonomy - Michele Catasta, Replit](../sources/20251222_MLhAA9yguwM.md)
 - [Leadership in AI Assisted Engineering - Justin Reock, DX (acq. Atlassian)](../sources/20251219_PmZDupFP3UM.md)

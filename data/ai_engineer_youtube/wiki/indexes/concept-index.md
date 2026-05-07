@@ -2,6 +2,8 @@
 
 ## Agents
 
+- [Specialist Expert Systems Bundle Capabilities, APIs, and Instructions](../concepts/specialist-expert-systems-bundle-capabilities-apis-and-instructions.md)
+- [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](../concepts/retrieve-tool-descriptions-before-loading-large-tool-catalogs.md)
 - [Optimize action agents for reliability before abstract intelligence](../concepts/optimize-action-agents-for-reliability-before-abstract-intelligence.md)
 - [Make voice AI devices developer-extensible](../concepts/make-voice-ai-devices-developer-extensible.md)
 - [Measure AI intensity by human input to valuable output](../concepts/measure-ai-intensity-by-human-input-to-valuable-output.md)
@@ -540,6 +542,8 @@
 
 ## Infrastructure
 
+- [Deploy Remote MCP Servers on Serverless Cloud Infrastructure](../concepts/deploy-remote-mcp-servers-on-serverless-cloud-infrastructure.md)
+- [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](../concepts/retrieve-tool-descriptions-before-loading-large-tool-catalogs.md)
 - [Dual-mode AI infrastructure](../concepts/dual-mode-ai-infrastructure.md)
 - [Research engineering partnership](../concepts/research-engineering-partnership.md)
 - [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md)
@@ -1011,6 +1015,9 @@
 
 ## Tools
 
+- [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](../concepts/retrieve-tool-descriptions-before-loading-large-tool-catalogs.md)
+- [Deploy Remote MCP Servers on Serverless Cloud Infrastructure](../concepts/deploy-remote-mcp-servers-on-serverless-cloud-infrastructure.md)
+- [Specialist Expert Systems Bundle Capabilities, APIs, and Instructions](../concepts/specialist-expert-systems-bundle-capabilities-apis-and-instructions.md)
 - [Abstract LLM inference behind one routing API](../concepts/abstract-llm-inference-behind-one-routing-api.md)
 - [Choose AI coworker form factors by interaction mode](../concepts/choose-ai-coworker-form-factors-by-interaction-mode.md)
 - [Prototype AI UX by feeling the model material](../concepts/prototype-ai-ux-by-feeling-the-model-material.md)
@@ -1166,6 +1173,8 @@
 
 ## Workflows
 
+- [Specialist Expert Systems Bundle Capabilities, APIs, and Instructions](../concepts/specialist-expert-systems-bundle-capabilities-apis-and-instructions.md)
+- [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](../concepts/retrieve-tool-descriptions-before-loading-large-tool-catalogs.md)
 - [Treat AI coding as safe software change](../concepts/treat-ai-coding-as-safe-software-change.md)
 - [Build domain-specific workflow wrappers around models](../concepts/build-domain-specific-workflow-wrappers-around-models.md)
 - [Stage vibe coding from prototype to structured workflow](../concepts/stage-vibe-coding-from-prototype-to-structured-workflow.md)
