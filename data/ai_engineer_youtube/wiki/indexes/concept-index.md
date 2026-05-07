@@ -860,6 +860,8 @@
 
 ## Product Strategy
 
+- [Evals Only Cover Known AI Product Failures](../concepts/evals-only-cover-known-ai-product-failures.md)
+- [Turn AI Product Intents Into Contained Workflows](../concepts/turn-ai-product-intents-into-contained-workflows.md)
 - [Shape AI Teams Around the Bottleneck](../concepts/shape-ai-teams-around-the-bottleneck.md)
 - [Prefer Generalist AI Engineers Before Narrow Specialists](../concepts/prefer-generalist-ai-engineers-before-narrow-specialists.md)
 - [Hire Humans for Context, Verification, and Accountability](../concepts/hire-humans-for-context-verification-and-accountability.md)
@@ -906,6 +908,9 @@
 
 ## Evaluation
 
+- [Evals Only Cover Known AI Product Failures](../concepts/evals-only-cover-known-ai-product-failures.md)
+- [AI Product Issues Need Signals and Intents](../concepts/ai-product-issues-need-signals-and-intents.md)
+- [Turn AI Product Intents Into Contained Workflows](../concepts/turn-ai-product-intents-into-contained-workflows.md)
 - [Replace Anecdotal Agent Tuning With Eval and Observability Loops](../concepts/replace-anecdotal-agent-tuning-with-eval-and-observability-loops.md)
 - [Simulated Conversations Test Customer-Facing Agents Before Launch](../concepts/simulated-conversations-test-customer-facing-agents-before-launch.md)
 - [AI Diff Review Should Find Problems Before Merge](../concepts/ai-diff-review-should-find-problems-before-merge.md)
@@ -1510,6 +1515,8 @@
 
 ## Workflows
 
+- [AI Product Issues Need Signals and Intents](../concepts/ai-product-issues-need-signals-and-intents.md)
+- [Turn AI Product Intents Into Contained Workflows](../concepts/turn-ai-product-intents-into-contained-workflows.md)
 - [Shape AI Teams Around the Bottleneck](../concepts/shape-ai-teams-around-the-bottleneck.md)
 - [Upskill AI Teams Through Build, Domain, and Customer Loops](../concepts/upskill-ai-teams-through-build-domain-and-customer-loops.md)
 - [Raise Agent Agency Only When Efficacy Holds](../concepts/raise-agent-agency-only-when-efficacy-holds.md)

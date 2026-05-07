@@ -22,6 +22,8 @@ Demos are one of the fastest ways to search that uncertain product space. A demo
 
 Agent-native products add a requirements problem: broad model capability plus free-form user surfaces can make exhaustive feature specs impossible. Product teams should define the affordances an agent may use, build runnable probes to feel the interaction, and let product evals express what behavior is acceptable often enough to ship. Customer trust then depends less on pretending to know every emergent behavior upfront and more on honest co-discovery, visible thresholds, and fast feedback loops.
 
+AI product strategy should also accept that the full behavior surface cannot be specified upfront. As models and tool integrations become more capable, products create more undefined behavior, formats, intents, and edge cases. The practical strategy is to ship narrow useful experiences, watch production signals, identify user intents, and harden the workflows where the expected lift, negative sentiment, volume, and strategic relevance justify the work.
+
 Agent coordination platforms add a product-strategy constraint: agent functionality should often be embedded into the system where users already manage work instead of shipped as a separate copilot shell. Linear's approach favors small hidden AI assists, product-intelligence relationships, and first-class agent teammates inside issues, projects, Slack handoffs, and customer-feedback workflows, while rejecting visible AI surfaces that do not meet the product's quality bar.
 
 AI-engineer founders also need to translate technical taste into a market narrative when raising early capital. At pre-seed or seed, investors may not require revenue or even a finished product, but they still need to understand why this team has a timely, non-obvious insight and how the first wedge can become a company rather than a feature. Design partners, customer interviews, ICP hypotheses, pricing hypotheses, and product-velocity plans help convert early conviction into a credible path from prototype to scale.
@@ -65,6 +67,8 @@ AI team design is also a product-strategy decision. The right team depends on th
 - [Specify Agent Products by Affordance, Not Exhaustive Feature Rules](../concepts/specify-agent-products-by-affordance-not-exhaustive-feature-rules.md) - broad agent surfaces need composable capability boundaries instead of endless edge-case feature rules.
 - [Treat Product Evals as Probabilistic Specifications](../concepts/treat-product-evals-as-probabilistic-specifications.md) - product evals make probabilistic behavior concrete enough to ship, debug, and discuss with customers.
 - [Co-Discover Emergent Agent Behavior With Customers](../concepts/co-discover-emergent-agent-behavior-with-customers.md) - early agent products earn trust through shared discovery and feedback, not impossible certainty about every behavior.
+- [Evals Only Cover Known AI Product Failures](../concepts/evals-only-cover-known-ai-product-failures.md) - product quality needs production discovery beyond known-case evals.
+- [Turn AI Product Intents Into Contained Workflows](../concepts/turn-ai-product-intents-into-contained-workflows.md) - intent-driven workflow containment makes probabilistic behavior easier to improve.
 - [Product Work Graphs Coordinate Agents and Humans](../concepts/product-work-graphs-coordinate-agents-and-humans.md) - agent products can create more value by inhabiting existing work graphs than by forcing separate chat workflows.
 - [Platform-Native Agents Should Behave Like Good Teammates](../concepts/platform-native-agents-should-behave-like-good-teammates.md) - agent product quality includes communication and state-update behavior, not only task completion.
 - [Fundraising Pitches Should Explain Why You and Why Now](../concepts/fundraising-pitches-should-explain-why-you-and-why-now.md) - technical AI founders need a founder-market-time narrative, not only a model or product demo.
@@ -107,3 +111,4 @@ AI team design is also a product-strategy decision. The right team depends on th
 - [The AI Engineer's Guide to Raising VC - Dani Grant (Jam), Chelcie Taylor (Notable)](../sources/20250727_YYNXFsUutbM.md)
 - [Structuring a modern AI team - Denys Linkov, Wisedocs](../sources/20250724_SbUxRluVRwk.md)
 - [AI That Pays: Lessons from Revenue Cycle - Nathan Wan, Ensemble Health](../sources/20250724_TquUsN1QsWs.md)
+- [Building AI Products That Actually Work - Ben Hylak (Raindrop), Sid Bendre (Oleve)](../sources/20250724_eSvXbb2EBYc.md)

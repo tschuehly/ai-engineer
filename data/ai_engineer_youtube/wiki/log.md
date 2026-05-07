@@ -1831,3 +1831,10 @@
 - Updated topics: [Agents](topics/agents.md), [Tools](topics/tools.md), [Infrastructure](topics/infrastructure.md), [Coding Agents](topics/coding-agents.md)
 - Updated concepts: [Agent Experience Means Autonomous Access, Understanding, and Operation](concepts/agent-experience-means-autonomous-access-understanding-and-operation.md), [Agent-Native Runtimes Provide Fast API-Controlled Sandboxes](concepts/agent-native-runtimes-provide-fast-api-controlled-sandboxes.md), [Declarative Environment and Data Primitives Remove Agent Setup Drag](concepts/declarative-environment-and-data-primitives-remove-agent-setup-drag.md), [Agent experience prioritizes APIs, CLIs, and MCP over dashboards](concepts/agent-experience-prioritizes-apis-clis-and-mcp-over-dashboards.md), [Parallel Coding Agents Support Multitasking and Variation Search](concepts/parallel-coding-agents-support-multitasking-and-variation-search.md)
 - Notes: Added Daytona's agent-experience framing and the runtime primitives needed for agents to set up, operate, and fork work environments autonomously.
+## [2026-05-07] ingest | Building AI Products That Actually Work - Ben Hylak (Raindrop), Sid Bendre (Oleve)
+
+- Source: [Building AI Products That Actually Work - Ben Hylak (Raindrop), Sid Bendre (Oleve)](sources/20250724_eSvXbb2EBYc.md)
+- Processed: `eSvXbb2EBYc`
+- Updated topics: [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md), [Product Strategy](topics/product-strategy.md)
+- Updated concepts: [Evals Only Cover Known AI Product Failures](concepts/evals-only-cover-known-ai-product-failures.md), [AI Product Issues Need Signals and Intents](concepts/ai-product-issues-need-signals-and-intents.md), [Turn AI Product Intents Into Contained Workflows](concepts/turn-ai-product-intents-into-contained-workflows.md)
+- Notes: Added product-reliability patterns for using production signals, user intents, and contained workflows alongside known-case evals.
