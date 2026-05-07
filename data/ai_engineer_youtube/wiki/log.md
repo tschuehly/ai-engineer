@@ -1663,3 +1663,11 @@
 - Updated topics: [Product Strategy](topics/product-strategy.md), [AI Monetization](topics/ai-monetization.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Fundraising Pitches Should Explain Why You and Why Now](concepts/fundraising-pitches-should-explain-why-you-and-why-now.md), [Treat Investor Outreach Like Specific Go-To-Market](concepts/treat-investor-outreach-like-specific-go-to-market.md), [Use Design Partner Evidence To Support Early AI Startup Scale](concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 - Notes: Added early AI-startup fundraising patterns for converting technical insight into investor narrative, specific outreach, and evidence-backed wedge-to-scale hypotheses.
+
+## [2026-05-07] ingest | Introduction to LLM serving with SGLang - Philip Kiely and Yineng Zhang, Baseten
+
+- Source: [Introduction to LLM serving with SGLang - Philip Kiely and Yineng Zhang, Baseten](sources/20250726_Ahtaha9fEM0.md)
+- Processed: `Ahtaha9fEM0`
+- Updated topics: [Inference](topics/inference.md), [Infrastructure](topics/infrastructure.md), [Models](topics/models.md)
+- Updated concepts: [SGLang Serves Models Through Configured OpenAI-Compatible Servers](concepts/sglang-serves-models-through-configured-openai-compatible-servers.md), [Tune CUDA Graph Batch Capture to Real Decode Concurrency](concepts/tune-cuda-graph-batch-capture-to-real-decode-concurrency.md), [Use Eagle 3 Speculative Decoding With Matched Draft Models](concepts/use-eagle-3-speculative-decoding-with-matched-draft-models.md)
+- Notes: Added SGLang serving patterns for OpenAI-compatible deployment, flag-driven runtime configuration, CUDA graph decode tuning, and Eagle 3 speculative decoding setup.

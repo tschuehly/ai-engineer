@@ -4,6 +4,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Tune CUDA Graph Batch Capture to Real Decode Concurrency](concepts/tune-cuda-graph-batch-capture-to-real-decode-concurrency.md) - SGLang decode performance needs CUDA graph capture sized to realistic concurrent request batches.
+- [Use Eagle 3 Speculative Decoding With Matched Draft Models](concepts/use-eagle-3-speculative-decoding-with-matched-draft-models.md) - speculative decoding needs target/draft model pairing and workload-shaped benchmark checks.
+- [SGLang Serves Models Through Configured OpenAI-Compatible Servers](concepts/sglang-serves-models-through-configured-openai-compatible-servers.md) - SGLang exposes open models through configurable OpenAI-compatible serving endpoints.
 - [Package Agent Delivery Workflows as Portable Code](concepts/package-agent-delivery-workflows-as-portable-code.md) - delivery agents are easier to trust when build, test, LLM, and environment steps are encoded as portable workflow code.
 - [Fundraising Pitches Should Explain Why You and Why Now](concepts/fundraising-pitches-should-explain-why-you-and-why-now.md) - technical AI founders need to turn product insight into a founder-market-time narrative.
 - [Use Design Partner Evidence To Support Early AI Startup Scale](concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md) - early customer evidence can support wedge-to-company, ICP, and monetization claims before revenue exists.

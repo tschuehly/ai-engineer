@@ -74,6 +74,8 @@ Morph's Infinibranch talk adds branchable cloud state as infrastructure for agen
 
 Compiler pipelines can also be infrastructure for model portability, not only for optimization. Muna's Python-to-native path treats model-serving code as an artifact that can be traced, typed, lowered, compiled, and loaded through FFI, then exposed through an OpenAI-compatible client. LLMs fit this pipeline best when they generate bounded operation lowerings that the compiler can compose and verify, not when they replace representation, typing, compilation, and runtime packaging.
 
+SGLang's deployment pattern reinforces that model serving infrastructure is partly a packaging problem and partly a runtime-configuration problem. A server command can be bundled with dependencies into a deployment artifact, exposed through an OpenAI-compatible endpoint, and benchmarked from a separate client, but production quality depends on hardware-aware settings such as CUDA graph max batch size and speculative decoding parameters rather than only on whether the server starts.
+
 RL training infrastructure has a similar systems-modeling requirement. Synchronous RL wastes accelerator capacity when long-tail samples keep the whole step waiting, while asynchronous pipeline RL keeps sampling and training workers busy through queues and in-flight weight updates. The infrastructure problem is to allocate GPUs between sampling and training so production and consumption rates match, KV-cache memory is respected, and policy staleness stays within the algorithm's tolerance.
 
 Robotics contributes a broader infrastructure lesson for agents: the offline stack can be the development accelerator. Production agents need monitoring, logs, simulation, counterfactual replay, retraining paths, and human-feedback loops around the online model. Stateful VMs and persistent files make this harder because the infrastructure must capture the world state that shaped the agent's action, not only the prompt and final answer.
@@ -107,6 +109,8 @@ Dagger-style agent delivery infrastructure packages that feedback path as portab
 - [Package Agent Delivery Workflows as Portable Code](../concepts/package-agent-delivery-workflows-as-portable-code.md) - coding-agent infrastructure can share local and CI execution through one portable workflow runtime.
 - [Return Typed Workspace Outputs From Coding Agents](../concepts/return-typed-workspace-outputs-from-coding-agents.md) - infrastructure should make agent outputs concrete artifacts that validation and PR automation can consume.
 - [Benchmark inference with use-case-shaped token loads](../concepts/benchmark-inference-with-use-case-shaped-token-loads.md) - serving infrastructure should be benchmarked with request shapes and tail-latency metrics that match the application.
+- [SGLang Serves Models Through Configured OpenAI-Compatible Servers](../concepts/sglang-serves-models-through-configured-openai-compatible-servers.md) - serving infrastructure can preserve standard API clients while varying model, hardware, and launch flags.
+- [Tune CUDA Graph Batch Capture to Real Decode Concurrency](../concepts/tune-cuda-graph-batch-capture-to-real-decode-concurrency.md) - concurrency-shaped benchmarks should confirm that serving fast paths remain active.
 - [Run eval suites in CI/CD before and during production](../concepts/run-eval-suites-in-cicd-before-and-during-production.md) - eval infrastructure should become automated release and production-check machinery.
 - [Route LoRA Voice Clones With Sticky GPU Affinity](../concepts/route-lora-voice-clones-with-sticky-gpu-affinity.md) - voice clone serving needs session-sticky, adapter-aware routing over shared GPUs.
 - [Serve Realtime TTS By Audio-Token Throughput](../concepts/serve-realtime-tts-by-audio-token-throughput.md) - realtime TTS capacity depends on generated audio-token rate, batching, quantization, and GPU choice.
@@ -396,6 +400,7 @@ Dagger-style agent delivery infrastructure packages that feedback path as portab
 - [Pipecat Cloud: Enterprise Voice Agents Built On Open Source - Kwindla Hultman Kramer, Daily](../sources/20250731_IA4lZjh9sTs.md)
 - [The Unofficial Guide to Apple's Private Cloud Compute - Jmo, CONFSEC](../sources/20250730_CCsWZ5bJlO8.md)
 - [Strategies for LLM Evals (GuideLLM, lm-eval-harness, OpenAI Evals Workshop) - Taylor Jordan Smith](../sources/20250727_89NuzmKokIk.md)
+- [Introduction to LLM serving with SGLang - Philip Kiely and Yineng Zhang, Baseten](../sources/20250726_Ahtaha9fEM0.md)
 - [Ship Agents that Ship: A Hands-On Workshop - Kyle Penfound, Jeremy Adams, Dagger](../sources/20250727_Fzb1a24hF-o.md)
 - [How to defend your sites from AI bots - David Mytton, Arcjet](../sources/20250730_Gi4V8viBGYQ.md)
 - [How to Secure Agents using OAuth - Jared Hanson (Keycard, Passport.js)](../sources/20250730_blmAkayzE8M.md)

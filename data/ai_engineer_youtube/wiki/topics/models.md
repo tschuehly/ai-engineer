@@ -38,6 +38,8 @@ Mechanistic interpretability adds a model-internal engineering surface. Instead 
 
 ## Key Concepts
 
+- [Use Eagle 3 Speculative Decoding With Matched Draft Models](../concepts/use-eagle-3-speculative-decoding-with-matched-draft-models.md) - speculative decoding draft models need to be matched to the target model rather than treated as arbitrary smaller substitutes.
+- [SGLang Serves Models Through Configured OpenAI-Compatible Servers](../concepts/sglang-serves-models-through-configured-openai-compatible-servers.md) - model availability depends on serving-framework support, hardware settings, and API-compatible deployment paths.
 - [AI Engineering Practice Is Heterogeneous and Fast Moving](../concepts/ai-engineering-practice-is-heterogeneous-and-fast-moving.md) - model strategy must tolerate frequent updates and multiple concurrent use cases.
 - [Multimodal Models Have a Production Adoption Gap](../concepts/multimodal-models-have-a-production-adoption-gap.md) - image, video, and audio capabilities still trail text in workplace production use.
 - [Research engineering partnership](../concepts/research-engineering-partnership.md) - model progress requires ideas and engineering systems to land together.
@@ -152,6 +154,7 @@ Mechanistic interpretability adds a model-internal engineering surface. Instead 
 - [Vision AI in 2025 - Peter Robicheaux, Roboflow](../sources/20250803_IQc05eCvNYE.md)
 - [What Is a Humanoid Foundation Model? An Introduction to GR00T N1 - Annika & Aastha](../sources/20250728_mWKYvT9Lc50.md)
 - [Why you should care about AI interpretability - Mark Bissell, Goodfire AI](../sources/20250727_6AVMHZPjpTQ.md)
+- [Introduction to LLM serving with SGLang - Philip Kiely and Yineng Zhang, Baseten](../sources/20250726_Ahtaha9fEM0.md)
 
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md)
 - [Compilers in the Age of LLMs - Yusuf Olokoba, Muna](../sources/20251124_q2nHsJVy4FE.md)

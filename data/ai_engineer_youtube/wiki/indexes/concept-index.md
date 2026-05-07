@@ -581,6 +581,8 @@
 - [Package Agent Delivery Workflows as Portable Code](../concepts/package-agent-delivery-workflows-as-portable-code.md)
 - [Return Typed Workspace Outputs From Coding Agents](../concepts/return-typed-workspace-outputs-from-coding-agents.md)
 - [Benchmark inference with use-case-shaped token loads](../concepts/benchmark-inference-with-use-case-shaped-token-loads.md)
+- [SGLang Serves Models Through Configured OpenAI-Compatible Servers](../concepts/sglang-serves-models-through-configured-openai-compatible-servers.md)
+- [Tune CUDA Graph Batch Capture to Real Decode Concurrency](../concepts/tune-cuda-graph-batch-capture-to-real-decode-concurrency.md)
 - [Run eval suites in CI/CD before and during production](../concepts/run-eval-suites-in-cicd-before-and-during-production.md)
 - [Route LoRA Voice Clones With Sticky GPU Affinity](../concepts/route-lora-voice-clones-with-sticky-gpu-affinity.md)
 - [Serve Realtime TTS By Audio-Token Throughput](../concepts/serve-realtime-tts-by-audio-token-throughput.md)
@@ -660,6 +662,8 @@
 - [Benchmark edge models across the device fleet before shipping](../concepts/benchmark-edge-models-across-the-device-fleet-before-shipping.md)
 - [Hot-swap small models to avoid one-model-per-GPU waste](../concepts/hot-swap-small-models-to-avoid-one-model-per-gpu-waste.md)
 - [Production inference combines model support with cluster operations](../concepts/production-inference-combines-model-support-with-cluster-operations.md)
+- [SGLang Serves Models Through Configured OpenAI-Compatible Servers](../concepts/sglang-serves-models-through-configured-openai-compatible-servers.md)
+- [Tune CUDA Graph Batch Capture to Real Decode Concurrency](../concepts/tune-cuda-graph-batch-capture-to-real-decode-concurrency.md)
 - [KV-cache hit rate is a production agent SLO](../concepts/kv-cache-hit-rate-is-a-production-agent-slo.md)
 - [Size KV-cache memory tiers with workload-shaped benchmarks](../concepts/size-kv-cache-memory-tiers-with-workload-shaped-benchmarks.md)
 - [Local LLM training exposes the core model-building stack](../concepts/local-llm-training-exposes-the-core-model-building-stack.md)
@@ -720,6 +724,9 @@
 ## Inference
 
 - [Benchmark inference with use-case-shaped token loads](../concepts/benchmark-inference-with-use-case-shaped-token-loads.md)
+- [SGLang Serves Models Through Configured OpenAI-Compatible Servers](../concepts/sglang-serves-models-through-configured-openai-compatible-servers.md)
+- [Tune CUDA Graph Batch Capture to Real Decode Concurrency](../concepts/tune-cuda-graph-batch-capture-to-real-decode-concurrency.md)
+- [Use Eagle 3 Speculative Decoding With Matched Draft Models](../concepts/use-eagle-3-speculative-decoding-with-matched-draft-models.md)
 - [Abstract LLM inference behind one routing API](../concepts/abstract-llm-inference-behind-one-routing-api.md)
 - [Plan AI products for a multimodel market](../concepts/plan-ai-products-for-a-multimodel-market.md)
 - [Serve Realtime TTS By Audio-Token Throughput](../concepts/serve-realtime-tts-by-audio-token-throughput.md)
@@ -1029,6 +1036,8 @@
 
 ## Models
 
+- [Use Eagle 3 Speculative Decoding With Matched Draft Models](../concepts/use-eagle-3-speculative-decoding-with-matched-draft-models.md)
+- [SGLang Serves Models Through Configured OpenAI-Compatible Servers](../concepts/sglang-serves-models-through-configured-openai-compatible-servers.md)
 - [Mechanistic Interpretability Turns Model Internals Into Engineering Surfaces](../concepts/mechanistic-interpretability-turns-model-internals-into-engineering-surfaces.md)
 - [Activation Steering Can Patch Specific Runtime Behaviors](../concepts/activation-steering-can-patch-specific-runtime-behaviors.md)
 - [Use Activation Triggers for Dynamic Prompting](../concepts/use-activation-triggers-for-dynamic-prompting.md)
