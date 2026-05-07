@@ -4,6 +4,10 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Network digital twins ground change-management agents](concepts/network-digital-twins-ground-change-management-agents.md) - network-change agents can assess and test proposed changes against modeled production state.
+- [Normalize network telemetry into agent-readable schemas](concepts/normalize-network-telemetry-into-agent-readable-schemas.md) - heterogeneous operational data needs a canonical graph schema before agents can query it reliably.
+- [Train graph-query agents with schemas and example queries](concepts/train-graph-query-agents-with-schemas-and-example-queries.md) - schema-trained graph query agents can reduce token-heavy ReAct exploration.
+- [Evaluate operational graph agents with extrinsic task metrics](concepts/evaluate-operational-graph-agents-with-extrinsic-task-metrics.md) - graph-agent quality should map to customer workflow value.
 - [Choose AI coworker form factors by interaction mode](concepts/choose-ai-coworker-form-factors-by-interaction-mode.md) - AI product UX can be invisible, ambient, inline, or conversational depending on the work.
 - [Prototype AI UX by feeling the model material](concepts/prototype-ai-ux-by-feeling-the-model-material.md) - runnable model probes expose behavior and fit that static mockups cannot.
 - [Design agent presence with visual alignment and handoff](concepts/design-agent-presence-with-visual-alignment-and-handoff.md) - inline agents need visible checks, snapshots, rollback, and graceful control return.

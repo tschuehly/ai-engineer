@@ -1215,3 +1215,11 @@
 - Updated topics: [Evaluation](topics/evaluation.md), [Agents](topics/agents.md)
 - Updated concepts: [Fuzz AI applications for local input brittleness](concepts/fuzz-ai-applications-for-local-input-brittleness.md), [Search natural-language input space as an optimization problem](concepts/search-natural-language-input-space-as-an-optimization-problem.md), [Calibrate LLM judges like binary classifiers](concepts/calibrate-llm-judges-like-binary-classifiers.md)
 - Notes: Added Haize Labs' GenAI fuzzing frame for finding brittle local failures with simulated stimuli, guided adversarial input search, and judge-time compute for automated scoring.
+
+## [2026-05-07] ingest | Multi Agent AI and Network Knowledge Graphs for Change — Ola Mabadeje, Cisco
+
+- Source: [Multi Agent AI and Network Knowledge Graphs for Change — Ola Mabadeje, Cisco](sources/20250822_m0dxZ-NDKHo.md)
+- Processed: `m0dxZ-NDKHo`
+- Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Retrieval](topics/retrieval.md)
+- Updated concepts: [Network digital twins ground change-management agents](concepts/network-digital-twins-ground-change-management-agents.md), [Normalize network telemetry into agent-readable schemas](concepts/normalize-network-telemetry-into-agent-readable-schemas.md), [Train graph-query agents with schemas and example queries](concepts/train-graph-query-agents-with-schemas-and-example-queries.md), [Evaluate operational graph agents with extrinsic task metrics](concepts/evaluate-operational-graph-agents-with-extrinsic-task-metrics.md)
+- Notes: Added Cisco's operational graph-agent pattern for using ITSM ticket intent, schema-normalized network graphs, digital-twin tests, and extrinsic workflow metrics in change management.

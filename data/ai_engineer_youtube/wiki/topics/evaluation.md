@@ -26,6 +26,8 @@ Guardrail evaluation is also part of production AI evaluation. Safety layers sho
 
 RAG evaluation should treat the pipeline as a set of changeable components, not a solved top-k pattern. Parsing quality, chunk hierarchy, OCR, image descriptions, embedding models, hybrid lexical/vector scoring, metadata filters, graph ontology, extracted triplets, traversal depth, and agentic search decisions can each change the answer. Agentic retrieval adds a trace-level evaluation requirement: teams should inspect which searches the model chose, not only whether the final answer sounded plausible. Graph-backed RAG also needs evaluation of retrieval latency and answer quality together because deeper graph traversal can expose better relationships while slowing production responses. Graph-backed KAG adds quantitative and decision-quality checks: can the system select exact structured values, run deterministic calculations, preserve traceability, and support the advisory decision it claims to make? Enterprise deep research adds governance and factuality checks to that surface: because the agent turns private documents into business artifacts, teams should verify not only answer quality and citations, but also whether multimodal documents were parsed, the right metadata and access controls scoped retrieval, hallucination mitigation caught unsupported claims, and observability can explain how the report was produced.
 
+Operational graph agents add an extrinsic metric requirement. A network knowledge graph or digital twin should be judged by whether it improves ticket summaries, impact assessments, test selection, execution reports, remediation recommendations, and approval-board evidence in the real workflow, not only by intrinsic graph completeness or retrieval statistics.
+
 Enterprise analytics agents add a metadata-specific evaluation layer. GenBI systems should be tested against messy production-like schemas and real user questions, with BI experts reviewing outputs before business users or executives depend on them. Metadata quality can be evaluated directly by running the same question set against better- and worse-documented data sources, then measuring whether the LLM finds the right context, report, or query path more reliably.
 
 Contact-center voice evaluation should inspect each pipeline stage, not only the final summary. Speaker-channel preservation, STT accuracy under accents and poor audio, domain vocabulary, numeric normalization, grounded JSON extraction, hallucination checks, operator edits, and CRM-field mappings each create a failure point that can corrupt business records or analytics.
@@ -229,6 +231,7 @@ PR-derived field telemetry adds a practical adoption dashboard shape for AI codi
 - [RAG stacks need modular baselines instead of one fixed recipe](../concepts/rag-stacks-need-modular-baselines-instead-of-one-fixed-recipe.md) - RAG quality depends on tuning shared components to the corpus and user task.
 - [Treat ontology and triplet quality as GraphRAG bottlenecks](../concepts/treat-ontology-and-triplet-quality-as-graphrag-bottlenecks.md) - GraphRAG evals should inspect graph-construction quality before blaming generation.
 - [Balance GraphRAG hop depth against production latency](../concepts/balance-graphrag-hop-depth-against-production-latency.md) - graph retrieval evals should measure answer quality and traversal latency together.
+- [Evaluate operational graph agents with extrinsic task metrics](../concepts/evaluate-operational-graph-agents-with-extrinsic-task-metrics.md) - graph-agent evaluation should map to customer workflow value.
 - [Use graph-backed KAG for quantitative advisory questions](../concepts/use-graph-backed-kag-for-quantitative-advisory-questions.md) - quantitative advisory answers should be evaluated for exact value selection, computation, and evidence.
 - [Prune LLM-extracted graphs with domain experts](../concepts/prune-llm-extracted-graphs-with-domain-experts.md) - graph extraction quality needs expert taxonomy review and relationship pruning.
 - [Agentic retrieval lets models plan search steps](../concepts/agentic-retrieval-lets-models-plan-search-steps.md) - evals should inspect model-selected search actions and final answers.
@@ -270,6 +273,7 @@ PR-derived field telemetry adds a practical adoption dashboard shape for AI codi
 - Which generated-kernel speedups are real enough to ship rather than artifacts of launch timing, cache state, tiny inputs, or benchmark-specific shortcuts?
 - How should retrieval evals isolate whether failures came from parsing, chunking, embedding choice, hybrid scoring, filters, or agent search planning?
 - How should GraphRAG evals isolate ontology errors, triplet extraction errors, traversal-depth misses, and final generation errors?
+- Which extrinsic task metrics best capture whether a network-change digital twin reduced production change failures?
 - What benchmark mix captures graph-backed KAG accuracy, flexibility, reproducibility, traceability, and scalability for advisory systems?
 - Which metadata fields most improve BI-agent accuracy, and which only make catalog documentation look better without changing task outcomes?
 - Which RL environment scores should require manual rollout review before they are allowed to drive training decisions?
@@ -290,6 +294,7 @@ PR-derived field telemetry adds a practical adoption dashboard shape for AI codi
 
 - [Building an Agentic Platform - Ben Kus, CTO Box](../sources/20250824_12v5S1n1eOY.md)
 - [Wisdom-Driven Knowledge Augmented Generation at Scale - Chin Keong Lam, Patho AI](../sources/20250822_9AQOvT8LnMI.md)
+- [Multi Agent AI and Network Knowledge Graphs for Change — Ola Mabadeje, Cisco](../sources/20250822_m0dxZ-NDKHo.md)
 - [Fuzzing in the GenAI Era — Leonard Tang, Haize Labs](../sources/20250822_OMGPvW8TBHc.md)
 
 - [Government Agents: AI Agents Meet Tough Regulations - Mark Myshatyn, Los Alamos National Lab](../sources/20251206_TnSGx36Ly0Q.md)

@@ -99,6 +99,8 @@
 - [Wrap Agent Calls With Circuit Breakers and Compensation](../concepts/wrap-agent-calls-with-circuit-breakers-and-compensation.md)
 - [Agentic Retrieval Lets Models Plan Search Steps](../concepts/agentic-retrieval-lets-models-plan-search-steps.md)
 - [Agentic GraphRAG Uses Schema-Aware Multi-Step Graph Queries](../concepts/agentic-graphrag-uses-schema-aware-multi-step-graph-queries.md)
+- [Network digital twins ground change-management agents](../concepts/network-digital-twins-ground-change-management-agents.md)
+- [Train graph-query agents with schemas and example queries](../concepts/train-graph-query-agents-with-schemas-and-example-queries.md)
 - [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](../concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md)
 - [Grow Agent Organizations Incrementally By Role Quality and Cost](../concepts/grow-agent-organizations-incrementally-by-role-quality-and-cost.md)
 - [Make agent work more trustworthy by making it verifiable](../concepts/make-agent-work-more-trustworthy-by-making-it-verifiable.md)
@@ -510,6 +512,8 @@
 ## Infrastructure
 
 - [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md)
+- [Network digital twins ground change-management agents](../concepts/network-digital-twins-ground-change-management-agents.md)
+- [Normalize network telemetry into agent-readable schemas](../concepts/normalize-network-telemetry-into-agent-readable-schemas.md)
 - [Robotics policy failures can originate below the model](../concepts/robotics-policy-failures-can-originate-below-the-model.md)
 - [Pipeline realtime control loops with synchronization budgets](../concepts/pipeline-realtime-control-loops-with-synchronization-budgets.md)
 - [Logging can perturb realtime robotic systems](../concepts/logging-can-perturb-realtime-robotic-systems.md)
@@ -667,6 +671,7 @@
 ## Evaluation
 
 - [Use challenge eval sets for future user demands](../concepts/use-challenge-eval-sets-for-future-user-demands.md)
+- [Evaluate operational graph agents with extrinsic task metrics](../concepts/evaluate-operational-graph-agents-with-extrinsic-task-metrics.md)
 - [Evaluate generative media with perceptual metrics](../concepts/evaluate-generative-media-with-perceptual-metrics.md)
 - [Account for compression artifacts in media model data and evals](../concepts/account-for-compression-artifacts-in-media-model-data-and-evals.md)
 - [Personalize aesthetic evals with preference classifiers](../concepts/personalize-aesthetic-evals-with-preference-classifiers.md)
@@ -892,6 +897,9 @@
 ## Retrieval
 
 - [Agentic document extraction decomposes complex fields](../concepts/agentic-document-extraction-decomposes-complex-fields.md)
+- [Normalize network telemetry into agent-readable schemas](../concepts/normalize-network-telemetry-into-agent-readable-schemas.md)
+- [Train graph-query agents with schemas and example queries](../concepts/train-graph-query-agents-with-schemas-and-example-queries.md)
+- [Evaluate operational graph agents with extrinsic task metrics](../concepts/evaluate-operational-graph-agents-with-extrinsic-task-metrics.md)
 - [Treat PDF pages as visual retrieval units](../concepts/treat-pdf-pages-as-visual-retrieval-units.md)
 - [Patch-level visual embeddings trade ingest cost for query-time retrieval](../concepts/patch-level-visual-embeddings-trade-ingest-cost-for-query-time-retrieval.md)
 - [LLM attack surfaces span prompts, context, retrieval, tools, and actions](../concepts/llm-attack-surfaces-span-prompts-context-retrieval-tools-and-actions.md)

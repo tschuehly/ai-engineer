@@ -10,6 +10,8 @@ RAG systems benefit from reusable baselines, but not from a single fixed recipe.
 
 Document extraction for enterprise retrieval often needs a domain-operated template layer before chunks become trusted structured data. BlackRock's knowledge-app sandbox treats field source, type, required status, validations, dependencies, labels, embeddings, and business tags as configurable retrieval and extraction metadata, so operators can compare runs and refine evidence before downstream systems consume the output.
 
+Operational graphs add a schema-normalization burden before retrieval even starts. Network agents may need controllers, devices, telemetry, SIEM data, and configuration files normalized into an agent-readable graph so queries hit the right layer of production state; when the schema and query workload are stable, a specialized graph-query agent can be trained on schema and example queries to reduce token-heavy exploration.
+
 Private research agents can treat connectors and uploads as complementary retrieval inputs. A connector such as Notion or Microsoft 365 provides durable organizational context, while uploaded receipts, PDFs, screenshots, or task files provide local evidence for the current run. The workflow becomes more useful when the agent can compare both layers and write results back to the right internal page or record. Enterprise deep research applies the same private-context idea to larger document-heavy corpora: the agent runs multi-step or parallel investigation over internal sources, reflects on retrieved evidence, and synthesizes a cited report. That raises the retrieval bar because multimodal ingestion, hybrid search, metadata, reranking, access control, hallucination checks, deployment boundaries, and observability all affect whether the research output can be trusted.
 
 ## Key Concepts
@@ -42,7 +44,10 @@ Private research agents can treat connectors and uploads as complementary retrie
 - [Prune LLM-extracted graphs with domain experts](../concepts/prune-llm-extracted-graphs-with-domain-experts.md) - extracted graph structure should be shaped by expert taxonomy and relationship pruning.
 - [Choose HybridRAG when relationship structure matters](../concepts/choose-hybridrag-when-relationship-structure-matters.md) - graph retrieval is most useful when questions need explicit entity relationships, not only semantic chunk similarity.
 - [Knowledge graphs make agent memory traversable and explainable](../concepts/knowledge-graphs-make-agent-memory-traversable-and-explainable.md) - graph context can store relationships, embeddings, and access overlays as inspectable retrieval structure.
+- [Normalize network telemetry into agent-readable schemas](../concepts/normalize-network-telemetry-into-agent-readable-schemas.md) - operational graph agents need heterogeneous network data consolidated before they can query production state.
 - [Agentic GraphRAG uses schema-aware multi-step graph queries](../concepts/agentic-graphrag-uses-schema-aware-multi-step-graph-queries.md) - agentic graph retrieval trades speed for deeper schema-guided traversal and supporting chunks.
+- [Train graph-query agents with schemas and example queries](../concepts/train-graph-query-agents-with-schemas-and-example-queries.md) - schema-trained query agents can reduce token use and latency for recurring graph queries.
+- [Evaluate operational graph agents with extrinsic task metrics](../concepts/evaluate-operational-graph-agents-with-extrinsic-task-metrics.md) - operational graph quality should be judged by workflow outcomes, not only intrinsic graph metrics.
 - [Treat ontology and triplet quality as GraphRAG bottlenecks](../concepts/treat-ontology-and-triplet-quality-as-graphrag-bottlenecks.md) - noisy graph construction creates noisy graph retrieval.
 - [Balance GraphRAG hop depth against production latency](../concepts/balance-graphrag-hop-depth-against-production-latency.md) - deeper traversal can improve context, but it must fit the application's latency budget.
 - [Agentic retrieval lets models plan search steps](../concepts/agentic-retrieval-lets-models-plan-search-steps.md) - retrieval tools can let the model decompose and repeat searches instead of relying on one top-k query.
@@ -58,6 +63,7 @@ Private research agents can treat connectors and uploads as complementary retrie
 - Which retrieval steps benefit from hot-swappable small models rather than a single general embedding or reranking service?
 - How should Graph RAG or graph summarization systems preserve permission boundaries when summaries cross source scopes?
 - Which graph-traversal depths, graph-acceleration libraries, and RAG evaluation metrics produce the best relevance-latency balance for each corpus?
+- Which operational graph schemas are documented enough for LLM agents to use reliably without repeated schema rediscovery?
 - How should personal retrieval distinguish durable notes from stale bookmarks and noisy saved material?
 - What status metadata should retrieval systems use to demote closed PRDs and historical planning artifacts?
 - When should cross-modal retrieval use one omnimodal embedding space instead of separate modality-specific indexes plus fusion?
@@ -70,6 +76,7 @@ Private research agents can treat connectors and uploads as complementary retrie
 
 - [How BlackRock Builds Custom Knowledge Apps at Scale — Vaibhav Page & Infant Vasanth, BlackRock](../sources/20250823_08mH36_NVos.md)
 - [Wisdom-Driven Knowledge Augmented Generation at Scale - Chin Keong Lam, Patho AI](../sources/20250822_9AQOvT8LnMI.md)
+- [Multi Agent AI and Network Knowledge Graphs for Change — Ola Mabadeje, Cisco](../sources/20250822_m0dxZ-NDKHo.md)
 - [Building an Agentic Platform - Ben Kus, CTO Box](../sources/20250824_12v5S1n1eOY.md)
 
 - [Demand-Driven Context: A Methodology for Coherent Knowledge Bases Through Agent Failure](../sources/20260505__QAVExf_1uw.md)

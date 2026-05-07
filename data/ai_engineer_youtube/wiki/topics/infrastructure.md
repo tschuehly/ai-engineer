@@ -46,7 +46,7 @@ Enterprise AI engineering platforms should also reduce duplicate tool building. 
 
 Knowledge-app factories add the same platform pattern for enterprise document workflows. A sandbox can let domain experts configure extraction templates, validation rules, model strategies, and transformations, while a cloud-native factory packages the resulting definition into an application with distribution, access control, cluster choice, downstream integration, and cost controls. The infrastructure value is not only faster app creation; it also keeps regulated deployment and human-review requirements attached to what leaves the sandbox.
 
-Graph-backed retrieval becomes infrastructure when relationship traversal is on the production path. Large knowledge graphs need graph construction pipelines, traversal-depth controls, latency budgets, acceleration paths such as cuGraph or NetworkX-backed graph algorithms, and evaluation that checks both retrieval quality and generated answers.
+Graph-backed retrieval becomes infrastructure when relationship traversal is on the production path. Large knowledge graphs need graph construction pipelines, traversal-depth controls, latency budgets, acceleration paths such as cuGraph or NetworkX-backed graph algorithms, and evaluation that checks both retrieval quality and generated answers. In operational environments, graph infrastructure also includes ETL from live systems into a canonical schema, layered graph access for different test types, and executable tools around the graph so agents can validate proposed changes against a digital twin.
 
 AI-generated kernels turn low-level optimization into an infrastructure workflow. A useful system needs a supervisor that accepts source code, target hardware, and human guidance; synthesis agents that search optimization ideas; and a verification agent that executes candidates on actual hardware with strict correctness and timing checks. This infrastructure is most valuable when heterogeneous agentic inference workloads need to move across CUDA, Triton, Metal, Pallas, or new device generations faster than scarce kernel experts can hand-port every path.
 
@@ -153,6 +153,8 @@ Architecture-copilot infrastructure needs a live system model before recommendat
 - [Enterprise AI asset registries connect governance to runtime lineage](../concepts/enterprise-ai-asset-registries-connect-governance-to-runtime-lineage.md) - registry metadata makes deployed AI assets auditable and traceable to business use cases.
 - [App factories turn sandbox artifacts into governed knowledge apps](../concepts/app-factories-turn-sandbox-artifacts-into-governed-knowledge-apps.md) - sandbox definitions can become deployed internal apps through shared platform controls.
 - [Live architecture digital twins ground architecture copilots](../concepts/live-architecture-digital-twins-ground-architecture-copilots.md) - live architecture models turn operational inventory into agent-usable planning infrastructure.
+- [Network digital twins ground change-management agents](../concepts/network-digital-twins-ground-change-management-agents.md) - network-change agents need a current graph plus test tools before they can validate proposed changes.
+- [Normalize network telemetry into agent-readable schemas](../concepts/normalize-network-telemetry-into-agent-readable-schemas.md) - production network graph infrastructure depends on schema-normalized telemetry, configuration, SIEM, and controller data.
 - [Rank architecture recommendations by business impact](../concepts/rank-architecture-recommendations-by-business-impact.md) - infrastructure recommendations need traceable business-impact scores.
 - [Start GenBI with certified assets before autonomous SQL](../concepts/start-genbi-with-certified-assets-before-autonomous-sql.md) - governed BI infrastructure should expose certified reports and metadata before agent-generated SQL.
 - [Evaluate BI agents with real metadata and expert feedback](../concepts/evaluate-bi-agents-with-real-metadata-and-expert-feedback.md) - metadata enrichment should be validated against real question sets and expert feedback.
@@ -213,6 +215,7 @@ Architecture-copilot infrastructure needs a live system model before recommendat
 - Which sandbox artifacts should be promoted automatically into knowledge-app factory deployments, and which require platform or compliance review first?
 - When should infrastructure expose adaptive embedding dimensions as a product knob rather than a fixed model configuration?
 - Which AI asset registry fields should be enforced by CI/CD rather than manually maintained after deployment?
+- Which network or infrastructure tests should run against a digital twin before an agent writes change evidence back to an ITSM system?
 - Which BI catalog and semantic-layer metadata should be mandatory before an analytics agent can generate or execute SQL?
 - Which local workstation workloads should stay local because privacy, queueing, or latency matter more than elastic scale?
 - Which RL workloads benefit from dedicated async sampling and training pools, and which are too staleness-sensitive for pipeline execution?
@@ -286,6 +289,7 @@ Architecture-copilot infrastructure needs a live system model before recommendat
 - [Katelyn Lesse - Evolving Claude APIs for Agents, Anthropic](../sources/20251204_aqW68Is_Kj4.md)
 - [Building Cursor Composer - Lee Robinson, Cursor](../sources/20251202_fL1iJHtl51Q.md)
 - [AI Copilots for Tech Architecture: The Highest-ROI Use Case You're Not Building - Boris B., Catio](../sources/20251124_QRWdapxMdSY.md)
+- [Multi Agent AI and Network Knowledge Graphs for Change — Ola Mabadeje, Cisco](../sources/20250822_m0dxZ-NDKHo.md)
 - [The Unbearable Lightness of Agent Optimization - Alberto Romero, Jointly](../sources/20251124_zfvEMNmVlNY.md)
 - [Agents are Robots Too: What Self-Driving Taught Me About Building Agents - Jesse Hu, Abundant](../sources/20251124_qqXdLf3wy1E.md)
 - [Rishabh Garg, Tesla Optimus — Challenges in High Performance Robotics Systems](../sources/20250825_bCGbuyv8PMk.md)

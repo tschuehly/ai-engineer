@@ -40,7 +40,7 @@ Agent security has to treat autonomy as an attack multiplier. Prompt injection, 
 
 Government and national-security agents add a high-consequence version of this problem. They may need to act on controlled, classified, mission, operational, finance, or PII-bearing data while still moving work faster, so ordinary SaaS security claims are not enough. Regulated agent products need explainable decision paths, isolated deployment options, governance evidence, and current feature availability in restricted regions. Scientific agents in these environments should also connect reasoning to domain infrastructure: literature review and hypothesis generation become more useful when the agent can execute code and run simulations against trusted HPC assets.
 
-Agent-to-agent systems need their own discovery contract as they spread across teams. An A2A registry can publish agent cards that describe each agent's identity, endpoint, capabilities, supported modalities, and authentication requirements, while a use-case registry links those agents to MCP tools, models, owners, and lifecycle status. That makes agent reuse and runtime discovery practical without losing governance and impact analysis. Graph-backed memory adds another discovery and context contract for agents: an agent can retrieve schema, traverse relationships, and pull attached chunks through a graph tool when fixed retrieval cannot answer a relationship-heavy question.
+Agent-to-agent systems need their own discovery contract as they spread across teams. An A2A registry can publish agent cards that describe each agent's identity, endpoint, capabilities, supported modalities, and authentication requirements, while a use-case registry links those agents to MCP tools, models, owners, and lifecycle status. That makes agent reuse and runtime discovery practical without losing governance and impact analysis. Graph-backed memory adds another discovery and context contract for agents: an agent can retrieve schema, traverse relationships, and pull attached chunks through a graph tool when fixed retrieval cannot answer a relationship-heavy question. Network operations show the same pattern in a high-consequence workflow: a planner agent can coordinate specialized impact-assessment, query, test-planning, and execution agents around ITSM tickets, but the agents need a current network digital twin and a write-back path to the ticketing system so approval boards see evidence rather than chat output.
 
 Architecture copilots add a strategic agent layer ahead of coding agents. They need a live model of the tech estate, business-objective context, and governance guidance so architecture agents can aim the work before coding agents execute it. Their value is in making architecture recommendations explainable, traceable, and embedded in developer workflows rather than leaving teams to choose between slow review gates and unguided autonomy.
 
@@ -220,6 +220,8 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Use parent agents to compare and merge parallel subagent outputs](../concepts/use-parent-agents-to-compare-and-merge-parallel-subagent-outputs.md) - parent agents can turn parallel model attempts into a reviewable comparison and synthesis workflow.
 - [Use skills for workflow guidance and MCP for integrations](../concepts/use-skills-for-workflow-guidance-and-mcp-for-integrations.md) - agents often need both a reliable tool surface and context that explains how to use it.
 - [Agentic GraphRAG uses schema-aware multi-step graph queries](../concepts/agentic-graphrag-uses-schema-aware-multi-step-graph-queries.md) - agents can use graph tools to inspect schema, issue Cypher queries, and gather relationship-aware context.
+- [Network digital twins ground change-management agents](../concepts/network-digital-twins-ground-change-management-agents.md) - network-change agents should assess and test proposed changes against modeled production state.
+- [Train graph-query agents with schemas and example queries](../concepts/train-graph-query-agents-with-schemas-and-example-queries.md) - recurring graph access can be optimized into a specialized query agent.
 - [Use supervisory graph agents to update shared knowledge state](../concepts/use-supervisory-graph-agents-to-update-shared-knowledge-state.md) - a coordinating agent can delegate graph updates to specialist agents while preserving shared decision state.
 - [Context window editing clears stale tool results](../concepts/context-window-editing-clears-stale-tool-results.md) - tool-heavy agents need active pruning of low-value outputs during long sessions.
 - [Evaluate agent skills with task scenarios and comparative conditions](../concepts/evaluate-agent-skills-with-task-scenarios-and-comparative-conditions.md) - skill usefulness should be measured against real task behavior.
@@ -305,6 +307,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - Which interaction state should be delegated to an API provider, and which state must be owned by the application for retention, audit, or compaction reasons?
 - Which product behaviors can be safely prompt-coded, and which need hard runtime enforcement?
 - When should a coding agent ask a context engine for more organizational context instead of exploring the repository itself?
+- Which ITSM actions should agents be allowed to perform directly, and which should remain approval-board evidence only?
 - Which context sources should be trusted enough to auto-load, and which should require filtering, provenance checks, or user approval?
 - Which personal-agent permissions should require explicit review even after adjacent workflows have become reliable?
 - Which personal-agent domains need separate agents, topics, or workspaces rather than shared memory in one chat?
@@ -434,6 +437,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Developing Taste in Coding Agents: Applied Meta Neuro-Symbolic RL - Ahmad Awais, CommandCode](../sources/20251124_kWOQS3XPZ10.md)
 - [Agents are Robots Too: What Self-Driving Taught Me About Building Agents - Jesse Hu, Abundant](../sources/20251124_qqXdLf3wy1E.md)
 - [Rishabh Garg, Tesla Optimus — Challenges in High Performance Robotics Systems](../sources/20250825_bCGbuyv8PMk.md)
+- [Multi Agent AI and Network Knowledge Graphs for Change — Ola Mabadeje, Cisco](../sources/20250822_m0dxZ-NDKHo.md)
 - [Fuzzing in the GenAI Era — Leonard Tang, Haize Labs](../sources/20250822_OMGPvW8TBHc.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)
