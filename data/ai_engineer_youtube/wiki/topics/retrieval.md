@@ -24,6 +24,7 @@ Product work graphs are another retrieval target. A product-intelligence pipelin
 
 ## Key Concepts
 
+- [Codebase Intelligence Needs Structural and Historical Signals](../concepts/codebase-intelligence-needs-structural-and-historical-signals.md) - codebase search should combine structure, history, and lint signals with text retrieval.
 - [Dynamic AI Search Evals Need Fresh Grounding Sets](../concepts/dynamic-ai-search-evals-need-fresh-grounding-sets.md) - web-backed retrieval should be tested against fresh evidence, not only static QA rows.
 - [Reference-Free AI Search Metrics Decompose Answer Quality](../concepts/reference-free-ai-search-metrics-decompose-answer-quality.md) - search quality needs separate signals for complete answers, relevant retrieved documents, and unsupported claims.
 - [AI Search Providers Should Return Grounding Documents](../concepts/ai-search-providers-should-return-grounding-documents.md) - retrieved evidence should be available for debugging and evaluation, not hidden behind final citations.
@@ -118,6 +119,7 @@ Expert-domain RAG adds another layer of corpus and query modeling. Legal retriev
 
 ## Sources
 
+- [Devin 2.0 and the Future of SWE - Scott Wu, Cognition](../sources/20250725_MI83buT_23o.md)
 - [Building the platform for agent coordination - Tom Moor, Linear](../sources/20250728_UG9IAdmi2Dg.md)
 - [Evaluating AI Search: A Practical Framework for Augmented AI Systems - Quotient AI + Tavily](../sources/20250729_wRJD0inpmjU.md)
 - [Building a Smarter AI Agent with Neural RAG - Will Bryk, Exa.ai](../sources/20250729_xnXqpUW_Kp8.md)

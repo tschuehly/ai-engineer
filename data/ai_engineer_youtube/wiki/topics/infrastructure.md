@@ -108,6 +108,7 @@ Dagger-style agent delivery infrastructure packages that feedback path as portab
 
 ## Key Concepts
 
+- [Prepare Reversible Repository Snapshots for Coding Agents](../concepts/prepare-reversible-repository-snapshots-for-coding-agents.md) - prepared VM snapshots let coding agents validate, reload, and roll back repository work.
 - [Prepare Copilot Coding Agent Environments With Setup Steps](../concepts/prepare-copilot-coding-agent-environments-with-setup-steps.md) - asynchronous coding agents need reproducible setup steps, dependencies, and tests in their execution environment.
 - [Package Agent Delivery Workflows as Portable Code](../concepts/package-agent-delivery-workflows-as-portable-code.md) - coding-agent infrastructure can share local and CI execution through one portable workflow runtime.
 - [Return Typed Workspace Outputs From Coding Agents](../concepts/return-typed-workspace-outputs-from-coding-agents.md) - infrastructure should make agent outputs concrete artifacts that validation and PR automation can consume.
@@ -327,6 +328,7 @@ Dagger-style agent delivery infrastructure packages that feedback path as portab
 
 ## Sources
 
+- [Devin 2.0 and the Future of SWE - Scott Wu, Cognition](../sources/20250725_MI83buT_23o.md)
 - [Piloting agents in GitHub Copilot - Christopher Harrison, Microsoft](../sources/20250726_DdaAABdAqZY.md)
 - [#define AI Engineer - Greg Brockman, OpenAI (ft. Jensen Huang)](../sources/20250810_avWhreBUYF0.md)
 - [How BlackRock Builds Custom Knowledge Apps at Scale — Vaibhav Page & Infant Vasanth, BlackRock](../sources/20250823_08mH36_NVos.md)

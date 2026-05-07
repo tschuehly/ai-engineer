@@ -108,8 +108,12 @@ Remote agent protocols should be chosen by ownership and deployment boundaries, 
 
 GitHub Copilot adds a mainstream example of mode-dependent autonomy. A user can keep work conversational in ask or edit mode, let local agent mode explore files and run tests under immediate supervision, or assign a GitHub issue to Copilot Coding Agent for asynchronous PR-producing work. The more autonomous path increases the importance of explicit issue context, repository instructions, prepared execution environments, and trusted MCP tool access.
 
+Devin 2.0 frames the same progression as changing human-intervention intervals. Longer coding-agent horizons do not only make the model "smarter"; they force new agent-product surfaces for task scoping, Slack or issue-system collaboration, codebase exploration, confidence estimates, human escalation, and self-testing before autonomous backlog work can be trusted.
+
 ## Key Concepts
 
+- [Coding-Agent Capability Tiers Change the Bottleneck](../concepts/coding-agent-capability-tiers-change-the-bottleneck.md) - longer agent work horizons require different interfaces, context, and verification.
+- [Backlog-Scale Coding Agents Need Confidence and Self-Testing](../concepts/backlog-scale-coding-agents-need-confidence-and-self-testing.md) - agents working many queued tasks need confidence thresholds and escalation paths.
 - [Choose Copilot Mode By Autonomy and Feedback Need](../concepts/choose-copilot-mode-by-autonomy-and-feedback-need.md) - Copilot exposes multiple coding-agent autonomy levels inside a developer workflow.
 - [Vet MCP Servers As Action-Capable Extensions](../concepts/vet-mcp-servers-as-action-capable-extensions.md) - Copilot MCP servers can read external data and perform actions, so trust and scope matter.
 - [Product Work Graphs Coordinate Agents and Humans](../concepts/product-work-graphs-coordinate-agents-and-humans.md) - issues, projects, feedback, related work, and communication threads give agents a shared coordination substrate with humans.
@@ -426,6 +430,7 @@ GitHub Copilot adds a mainstream example of mode-dependent autonomy. A user can 
 
 ## Sources
 
+- [Devin 2.0 and the Future of SWE - Scott Wu, Cognition](../sources/20250725_MI83buT_23o.md)
 - [Piloting agents in GitHub Copilot - Christopher Harrison, Microsoft](../sources/20250726_DdaAABdAqZY.md)
 - [Building the platform for agent coordination - Tom Moor, Linear](../sources/20250728_UG9IAdmi2Dg.md)
 - [Agents vs Workflows: Why Not Both? - Sam Bhagwat, Mastra.ai](../sources/20250801_8SUJEqQNClw.md)

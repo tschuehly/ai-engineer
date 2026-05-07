@@ -78,8 +78,15 @@ Dagger adds a delivery-runtime pattern for coding agents: encode the build, test
 
 GitHub Copilot's agent modes make workflow selection concrete inside a mainstream developer tool. Ask, edit, local agent, and asynchronous coding-agent modes should be selected by feedback need and autonomy level rather than treated as interchangeable. For background issue work, the issue, `copilot-instructions.md`, task-specific instruction files, project structure, and GitHub Actions setup steps become the agent's operating context.
 
+Devin 2.0 adds a product-evolution view of the same trajectory. As coding agents move from tab completion to migrations, isolated bugs, broader feature work, and backlog-scale PR delivery, each tier changes the engineering bottleneck: playbooks and memory help repeatable migrations, prepared repository snapshots support isolated work, structural codebase intelligence supports cross-file changes, and confidence plus self-testing determine when agents can work asynchronously across many queued tasks.
+
 ## Key Concepts
 
+- [Coding-Agent Capability Tiers Change the Bottleneck](../concepts/coding-agent-capability-tiers-change-the-bottleneck.md) - agent interfaces and infrastructure should change as tasks grow from text prediction to long-horizon work.
+- [Use Playbooks for Repetitive Codebase Migrations](../concepts/use-playbooks-for-repetitive-codebase-migrations.md) - procedural guidance helps agents execute clear but non-deterministic migration steps repeatedly.
+- [Prepare Reversible Repository Snapshots for Coding Agents](../concepts/prepare-reversible-repository-snapshots-for-coding-agents.md) - clean remote VM snapshots let agents validate and recover from repository work.
+- [Codebase Intelligence Needs Structural and Historical Signals](../concepts/codebase-intelligence-needs-structural-and-historical-signals.md) - cross-file work needs language, history, and relationship signals beyond raw source text.
+- [Backlog-Scale Coding Agents Need Confidence and Self-Testing](../concepts/backlog-scale-coding-agents-need-confidence-and-self-testing.md) - parallel issue execution needs escalation and validation loops before PR handoff.
 - [Choose Copilot Mode By Autonomy and Feedback Need](../concepts/choose-copilot-mode-by-autonomy-and-feedback-need.md) - Copilot ask, edit, local agent, and asynchronous coding-agent modes fit different supervision levels.
 - [Layer Copilot Context Through Issues, Instructions, and Repository Structure](../concepts/layer-copilot-context-through-issues-instructions-and-repository-structure.md) - issue text, repository instructions, scoped instruction files, and code structure shape Copilot output.
 - [Prepare Copilot Coding Agent Environments With Setup Steps](../concepts/prepare-copilot-coding-agent-environments-with-setup-steps.md) - GitHub Actions setup steps give background Copilot work the dependencies and scripts it needs.
@@ -320,6 +327,7 @@ GitHub Copilot's agent modes make workflow selection concrete inside a mainstrea
 
 ## Sources
 
+- [Devin 2.0 and the Future of SWE - Scott Wu, Cognition](../sources/20250725_MI83buT_23o.md)
 - [Piloting agents in GitHub Copilot - Christopher Harrison, Microsoft](../sources/20250726_DdaAABdAqZY.md)
 - [Ship Agents that Ship: A Hands-On Workshop - Kyle Penfound, Jeremy Adams, Dagger](../sources/20250727_Fzb1a24hF-o.md)
 - [Vibes won't cut it - Chris Kelly, Augment Code](../sources/20250803_Dc3qOA9WOnE.md)

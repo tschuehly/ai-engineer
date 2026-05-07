@@ -1711,3 +1711,11 @@
 - Updated topics: [Models](topics/models.md), [Evaluation](topics/evaluation.md), [Inference](topics/inference.md)
 - Updated concepts: [Scale Reasoning Models With RL and Verifiable Domains](concepts/scale-reasoning-models-with-rl-and-verifiable-domains.md), [Distill Reasoning Traces Into Small Models](concepts/distill-reasoning-traces-into-small-models.md)
 - Notes: Added DeepSeek R1/V3 patterns for reasoning post-training, verifiable-domain RL, test-time reasoning-token budgets, and distillation of improved reasoning traces into small models.
+
+## [2026-05-07] ingest | Devin 2.0 and the Future of SWE - Scott Wu, Cognition
+
+- Source: [Devin 2.0 and the Future of SWE - Scott Wu, Cognition](sources/20250725_MI83buT_23o.md)
+- Processed: `MI83buT_23o`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Infrastructure](topics/infrastructure.md), [Retrieval](topics/retrieval.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Coding-Agent Capability Tiers Change the Bottleneck](concepts/coding-agent-capability-tiers-change-the-bottleneck.md), [Use Playbooks for Repetitive Codebase Migrations](concepts/use-playbooks-for-repetitive-codebase-migrations.md), [Prepare Reversible Repository Snapshots for Coding Agents](concepts/prepare-reversible-repository-snapshots-for-coding-agents.md), [Codebase Intelligence Needs Structural and Historical Signals](concepts/codebase-intelligence-needs-structural-and-historical-signals.md), [Backlog-Scale Coding Agents Need Confidence and Self-Testing](concepts/backlog-scale-coding-agents-need-confidence-and-self-testing.md)
+- Notes: Added Devin 2.0's coding-agent evolution model from tab completion to migrations, cross-file codebase intelligence, and backlog-scale PR workflows with escalation and self-testing.

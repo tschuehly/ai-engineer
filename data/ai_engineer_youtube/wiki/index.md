@@ -4,6 +4,10 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Coding-Agent Capability Tiers Change the Bottleneck](concepts/coding-agent-capability-tiers-change-the-bottleneck.md) - longer coding-agent task horizons shift the bottleneck from text prediction to context, collaboration, confidence, and verification.
+- [Use Playbooks for Repetitive Codebase Migrations](concepts/use-playbooks-for-repetitive-codebase-migrations.md) - migration tasks with clear steps but file-by-file judgment are a strong fit for procedural agent guidance.
+- [Codebase Intelligence Needs Structural and Historical Signals](concepts/codebase-intelligence-needs-structural-and-historical-signals.md) - multi-file coding agents need call hierarchies, language servers, commit history, lint, and cross-file references beyond raw text.
+- [Backlog-Scale Coding Agents Need Confidence and Self-Testing](concepts/backlog-scale-coding-agents-need-confidence-and-self-testing.md) - queued issue agents need escalation boundaries and local validation before delivering PRs.
 - [Scale Reasoning Models With RL and Verifiable Domains](concepts/scale-reasoning-models-with-rl-and-verifiable-domains.md) - DeepSeek-style reasoning post-training uses verifiable math and code domains to spend more test-time compute on hard prompts.
 - [Distill Reasoning Traces Into Small Models](concepts/distill-reasoning-traces-into-small-models.md) - stronger reasoning-model traces can transfer useful reasoning behavior into 8B-class deployable models.
 - [End-to-End Driving Models Can Use Route Text and Camera Video](concepts/end-to-end-driving-models-can-use-route-text-and-camera-video.md) - EMMA frames autonomous driving as route-conditioned camera-video-to-waypoint prediction.

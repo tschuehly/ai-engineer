@@ -40,8 +40,11 @@ Repository architecture can turn context engineering into the adoption bottlenec
 
 Production AI coding adds a low-level context hygiene requirement: the agent needs current standards, package choices, development setup, task boundaries, and implementation direction in explicit files rather than in tribal memory. Rules files and Markdown plans can become reusable prompt context when they describe the intended workflow and stack, but they should be paired with tests, linters, and review because the model's fluent statements about what it did are not reliable evidence by themselves.
 
+Devin 2.0 adds a codebase-intelligence layer to this context problem. Raw source text is not enough for broader bug and feature work; agents and humans need structural and historical representations such as call hierarchies, language-server output, commit history, lint feedback, and generated codebase explanations before they can plan consistent cross-file changes.
+
 ## Key Concepts
 
+- [Codebase Intelligence Needs Structural and Historical Signals](../concepts/codebase-intelligence-needs-structural-and-historical-signals.md) - multi-file coding work needs codebase relationships and history in context.
 - [Layer Copilot Context Through Issues, Instructions, and Repository Structure](../concepts/layer-copilot-context-through-issues-instructions-and-repository-structure.md) - Copilot shows how issue text, repository rules, scoped instructions, and code structure combine into task context.
 - [Compress Environment Context For Early Agent Experiments](../concepts/compress-environment-context-for-early-agent-experiments.md) - shrink or decompose large web, GUI, or code contexts so model experiments can run within available context windows.
 - [Keep agent context small, fresh, and task-specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md) - context should be externalized, selected, summarized, and isolated so stale or excessive history does not degrade agent work.
@@ -140,6 +143,7 @@ Production AI coding adds a low-level context hygiene requirement: the agent nee
 
 ## Sources
 
+- [Devin 2.0 and the Future of SWE - Scott Wu, Cognition](../sources/20250725_MI83buT_23o.md)
 - [Piloting agents in GitHub Copilot - Christopher Harrison, Microsoft](../sources/20250726_DdaAABdAqZY.md)
 - [Vibes won't cut it - Chris Kelly, Augment Code](../sources/20250803_Dc3qOA9WOnE.md)
 - [Context Platform Engineering to Reduce Token Anxiety - Val Bercovici, WEKA](../sources/20251124_NTBX-wxUhHs.md)

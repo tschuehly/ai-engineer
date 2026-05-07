@@ -124,8 +124,12 @@ Dagger's agent workshop shows a lighter-weight delivery workflow with the same p
 
 Webhook-backed business workflows can use a host agent as the orchestration and context-slicing layer. The host reads the incoming event, decides which specialist agents or tools are needed, sequences dependent work when one output is required by the next step, and sends small task payloads rather than all source context. This keeps external agents focused while preserving a central control point for retries, routing, context budget, and cross-tool decisions.
 
+Devin-style coding-agent workflows evolve with task horizon. Repeatable migrations can be driven by playbooks and memory; isolated tasks need prepared repositories with lint, CI, reload, and rollback; broader tasks need an exploration-and-planning phase with codebase search or wiki context; backlog-scale workflows need issue-system integration, confidence thresholds, human escalation, and self-testing before PR handoff.
+
 ## Key Concepts
 
+- [Use Playbooks for Repetitive Codebase Migrations](../concepts/use-playbooks-for-repetitive-codebase-migrations.md) - repeatable migration workflows can be encoded as clear procedural steps for agents.
+- [Backlog-Scale Coding Agents Need Confidence and Self-Testing](../concepts/backlog-scale-coding-agents-need-confidence-and-self-testing.md) - asynchronous issue queues need confidence, escalation, and local verification.
 - [Choose Copilot Mode By Autonomy and Feedback Need](../concepts/choose-copilot-mode-by-autonomy-and-feedback-need.md) - Copilot work can stay conversational, local-agentic, or asynchronous depending on task feedback needs.
 - [Layer Copilot Context Through Issues, Instructions, and Repository Structure](../concepts/layer-copilot-context-through-issues-instructions-and-repository-structure.md) - background coding-agent work needs workflow context in issues and instruction files.
 - [Prepare Copilot Coding Agent Environments With Setup Steps](../concepts/prepare-copilot-coding-agent-environments-with-setup-steps.md) - setup workflows turn environment preparation into part of the agent workflow.
@@ -472,6 +476,7 @@ Webhook-backed business workflows can use a host agent as the orchestration and 
 
 ## Sources
 
+- [Devin 2.0 and the Future of SWE - Scott Wu, Cognition](../sources/20250725_MI83buT_23o.md)
 - [Piloting agents in GitHub Copilot - Christopher Harrison, Microsoft](../sources/20250726_DdaAABdAqZY.md)
 - [Building the platform for agent coordination - Tom Moor, Linear](../sources/20250728_UG9IAdmi2Dg.md)
 - [Make your LLM app a Domain Expert: How to Build an Expert System - Christopher Lovejoy, Anterior](../sources/20250728_MRM7oA3JsFs.md)
