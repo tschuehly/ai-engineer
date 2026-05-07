@@ -50,6 +50,8 @@ Proactive coding workflows try to remove the prompt/wait/repeat loop without rem
 
 Enterprise AI research workflows can be made fundable by turning each uncertain phase into a small productizable bet. For GenBI, the useful pattern is to work with production-like but controlled data, involve expert users early, ship six-week deliverables such as metadata enrichment or report discovery, and preserve stop/go decision points so leadership can keep funding tied to measurable value instead of sunk cost.
 
+Enterprise knowledge-app workflows need the same separation between expert iteration and deployment. BlackRock's pattern gives investment-operations experts a sandbox for extraction templates, prompts, field dependencies, QC checks, model strategies, and run comparisons, then sends approved definitions into an app factory for downstream integration. That keeps the fast learning loop close to domain experts while leaving distribution, access control, cost controls, and regulated human review in the production workflow.
+
 AI coding workflows should also separate easy generation from simple system design. Nations' three-phase approach turns one long coding conversation into research, planning, and implementation artifacts with human checkpoints between them. Gallon's framework adds a more granular make-it-work sequence: capture a master project specification, extract and categorize features, develop atomic feature specifications, build a dependency matrix, then produce an implementation plan that sequences phases and binary validation criteria. That structure keeps review at the speed of generation: humans validate the research and plan before the agent produces a diff, then review implementation against a known plan rather than reverse-engineering whatever the chat invented.
 
 Product workflows need the same discipline before generated code or copy enters the loop. A launch workflow should ask whether the marketing artifact has a plausible reason to be shared, whether first use reaches one aha moment before nonessential questions, and whether feature work is building durable primitives rather than one-off surfaces that power users will outgrow.
@@ -128,6 +130,8 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 - [Reverse-engineer AI app evals from user outcomes](../concepts/reverse-engineer-ai-app-evals-from-user-outcomes.md) - reliability workflows should start from what users and the business need the app to accomplish.
 - [Build AI app benchmarks before optimization](../concepts/build-ai-app-benchmarks-before-optimization.md) - benchmark-first workflows catch regressions while teams optimize prompts, models, retrieval, and guardrails.
 - [Agentic document extraction decomposes complex fields](../concepts/agentic-document-extraction-decomposes-complex-fields.md) - field-heavy document workflows should be decomposed into grouped, checked, and retryable steps.
+- [Domain-expert sandboxes accelerate knowledge-app iteration](../concepts/domain-expert-sandboxes-accelerate-knowledge-app-iteration.md) - domain operators need a fast loop for templates, validations, runs, and model strategies.
+- [App factories turn sandbox artifacts into governed knowledge apps](../concepts/app-factories-turn-sandbox-artifacts-into-governed-knowledge-apps.md) - approved sandbox definitions can be packaged into governed user-facing apps.
 - [Use challenge eval sets for future user demands](../concepts/use-challenge-eval-sets-for-future-user-demands.md) - workflow evaluation should include harder cases users will ask for after the simple cases work.
 - [Prefer model-portable agentic prompts before fine-tuning](../concepts/prefer-model-portable-agentic-prompts-before-fine-tuning.md) - workflow structure can preserve provider portability where fine-tuning would create model-version maintenance.
 - [DSPy programs keep LLM intent separate from prompt strings](../concepts/dspy-programs-keep-llm-intent-separate-from-prompt-strings.md) - program-first LLM workflows keep control flow stable while model prompts evolve.
@@ -354,6 +358,7 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 
 ## Sources
 
+- [How BlackRock Builds Custom Knowledge Apps at Scale — Vaibhav Page & Infant Vasanth, BlackRock](../sources/20250823_08mH36_NVos.md)
 - [Building an Agentic Platform - Ben Kus, CTO Box](../sources/20250824_12v5S1n1eOY.md)
 
 - [No Vibes Allowed: Solving Hard Problems in Complex Codebases - Dex Horthy, HumanLayer](../sources/20251202_rmvDxxNubIg.md)

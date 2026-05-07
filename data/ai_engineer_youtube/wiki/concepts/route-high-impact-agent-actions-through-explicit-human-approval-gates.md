@@ -15,6 +15,7 @@ Details:
 - Guardian approvals are presented as a safer alternative to all-access coding-agent operation: privileged actions such as deleting directories, running servers, or exposing files should trigger review logic instead of being granted by default. 49:50-51:40
 - Carpentero adds a caveat for approval UX: a human may approve a simplified operation while the model reads a fuller tool description or hidden parameter that changes the actual action. 10:53-12:04, 15:28-15:39
 - Auth0 describes an async approval pattern for long-running agents: the agent initiates an authorization request for a risky operation, the user receives structured transaction details, and approval returns as an access token containing the exact approved details. 09:02-10:40
+- BlackRock's regulated financial-app framing argues for designing human-in-the-loop review first because compliance and four-eyes checks remain necessary even when agentic automation is tempting. 13:44-14:05
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -33,3 +34,4 @@ Sources:
 - [OpenAI Codex Masterclass  - Vaibhav Srivastav & Katia Gil Guzman](../sources/20260429_MhHEGMFCEB0.md), 49:50-51:40
 - [$1 AI Guardrails: The Unreasonable Effectiveness of Finetuned ModernBERTs - Diego Carpentero](../sources/20260416_YZHPEkfy2kc.md), 10:53-12:04, 15:28-15:39
 - [Identity for AI Agents - Patrick Riley & Carlos Galan, Auth0](../sources/20260114_VSdV-AdSlis.md), 09:02-10:40
+- [How BlackRock Builds Custom Knowledge Apps at Scale — Vaibhav Page & Infant Vasanth, BlackRock](../sources/20250823_08mH36_NVos.md), 13:44-14:05

@@ -4,6 +4,8 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Domain-expert sandboxes accelerate knowledge-app iteration](concepts/domain-expert-sandboxes-accelerate-knowledge-app-iteration.md) - domain operators need fast, reviewable control over templates, validations, runs, and model strategies.
+- [App factories turn sandbox artifacts into governed knowledge apps](concepts/app-factories-turn-sandbox-artifacts-into-governed-knowledge-apps.md) - sandbox outputs should move into production through platform, access, cost, and review controls.
 - [Agentic document extraction decomposes complex fields](concepts/agentic-document-extraction-decomposes-complex-fields.md) - long enterprise document extraction needs grouped fields, multimodal checks, model comparison, and retry loops.
 - [Live architecture digital twins ground architecture copilots](concepts/live-architecture-digital-twins-ground-architecture-copilots.md) - architecture advice needs a current model of the actual tech estate.
 - [Repo-local Markdown tasks give agents durable scoped work units](concepts/repo-local-markdown-tasks-give-agents-durable-scoped-work-units.md) - repository task files can carry agent scope, acceptance criteria, progress, and review state outside the active context window.

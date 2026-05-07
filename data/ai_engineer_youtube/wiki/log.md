@@ -1167,3 +1167,11 @@
 - Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Models](topics/models.md), [Retrieval](topics/retrieval.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Agentic Document Extraction Decomposes Complex Fields](concepts/agentic-document-extraction-decomposes-complex-fields.md), [Separate Agentic Workflow Design From Scale Infrastructure](concepts/separate-agentic-workflow-design-from-scale-infrastructure.md), [Use Challenge Eval Sets For Future User Demands](concepts/use-challenge-eval-sets-for-future-user-demands.md), [Prefer Model-Portable Agentic Prompts Before Fine-Tuning](concepts/prefer-model-portable-agentic-prompts-before-fine-tuning.md)
 - Notes: Added Box's enterprise content-agent architecture for decomposed document extraction, private-content research, challenge-set evaluation, and provider-portable prompt/workflow optimization.
+
+## [2026-05-07] ingest | How BlackRock Builds Custom Knowledge Apps at Scale — Vaibhav Page & Infant Vasanth, BlackRock
+
+- Source: [How BlackRock Builds Custom Knowledge Apps at Scale — Vaibhav Page & Infant Vasanth, BlackRock](sources/20250823_08mH36_NVos.md)
+- Processed: `08mH36_NVos`
+- Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Retrieval](topics/retrieval.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Domain-expert Sandboxes Accelerate Knowledge-app Iteration](concepts/domain-expert-sandboxes-accelerate-knowledge-app-iteration.md), [App Factories Turn Sandbox Artifacts Into Governed Knowledge Apps](concepts/app-factories-turn-sandbox-artifacts-into-governed-knowledge-apps.md), [Agentic Document Extraction Decomposes Complex Fields](concepts/agentic-document-extraction-decomposes-complex-fields.md), [Route High-Impact Agent Actions Through Explicit Human Approval Gates](concepts/route-high-impact-agent-actions-through-explicit-human-approval-gates.md)
+- Notes: Added BlackRock's knowledge-app platform pattern for putting extraction-template iteration in domain experts' hands while routing production deployment through governed app-factory infrastructure.

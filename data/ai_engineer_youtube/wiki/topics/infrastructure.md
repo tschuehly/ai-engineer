@@ -44,6 +44,8 @@ Developer-platform infrastructure also needs to be consumable by agents. Self-se
 
 Enterprise AI engineering platforms should also reduce duplicate tool building. A model gateway can provide experimentation, visibility, and model-fit guidance; an MCP discovery hub can reveal existing servers before another team builds one; and a standardized deployment/runtime platform can handle authentication, SDLC, and production quality controls while leaving room for easy proofs of concept.
 
+Knowledge-app factories add the same platform pattern for enterprise document workflows. A sandbox can let domain experts configure extraction templates, validation rules, model strategies, and transformations, while a cloud-native factory packages the resulting definition into an application with distribution, access control, cluster choice, downstream integration, and cost controls. The infrastructure value is not only faster app creation; it also keeps regulated deployment and human-review requirements attached to what leaves the sandbox.
+
 Graph-backed retrieval becomes infrastructure when relationship traversal is on the production path. Large knowledge graphs need graph construction pipelines, traversal-depth controls, latency budgets, acceleration paths such as cuGraph or NetworkX-backed graph algorithms, and evaluation that checks both retrieval quality and generated answers.
 
 AI-generated kernels turn low-level optimization into an infrastructure workflow. A useful system needs a supervisor that accepts source code, target hardware, and human guidance; synthesis agents that search optimization ideas; and a verification agent that executes candidates on actual hardware with strict correctness and timing checks. This infrastructure is most valuable when heterogeneous agentic inference workloads need to move across CUDA, Triton, Metal, Pallas, or new device generations faster than scarce kernel experts can hand-port every path.
@@ -109,6 +111,7 @@ Architecture-copilot infrastructure needs a live system model before recommendat
 - [Train meta-controllers with cost, confidence, and sparse-reward caveats](../concepts/train-meta-controllers-with-cost-confidence-and-sparse-reward-caveats.md) - meta-controller infrastructure needs reward, cost, and confidence telemetry.
 - [Use MLX Swift LM for Apple local model integration](../concepts/use-mlx-swift-lm-for-apple-local-model-integration.md) - native Apple app infrastructure can use MLX-compatible Hugging Face models without building a cloud service first.
 - [Build internal AI engineering platforms when off-the-shelf tools lack enterprise context](../concepts/build-internal-ai-engineering-platforms-when-off-the-shelf-tools-lack-enterprise-context.md) - internal platforms can connect agents to monorepos, service catalogs, operational tools, and review systems.
+- [App factories turn sandbox artifacts into governed knowledge apps](../concepts/app-factories-turn-sandbox-artifacts-into-governed-knowledge-apps.md) - sandbox definitions can become deployed internal apps through shared platform controls.
 - [Build paved paths for enterprise AI engineering tools](../concepts/build-paved-paths-for-enterprise-ai-engineering-tools.md) - shared model, MCP, deployment, and enablement infrastructure prevents fragmented enterprise AI tooling.
 - [Route Gemma 4 model variants by deployment and workflow shape](../concepts/route-gemma-4-model-variants-by-deployment-and-workflow-shape.md) - Gemma 4 supports both downloadable local/self-hosted paths and hosted access for larger models.
 - [Unified coding-agent harnesses combine models, tools, environments, and safety](../concepts/unified-coding-agent-harnesses-combine-models-tools-environments-and-safety.md) - agent infrastructure includes harnesses that manage tool execution, environments, and safety around models.
@@ -148,6 +151,7 @@ Architecture-copilot infrastructure needs a live system model before recommendat
 - [MCP gateways create an enterprise root of trust](../concepts/mcp-gateways-create-an-enterprise-root-of-trust.md) - gateway infrastructure centralizes trust, routing, observability, and deployment for many MCP servers.
 - [Gateway platform primitives let teams focus on MCP business logic](../concepts/gateway-platform-primitives-let-teams-focus-on-mcp-business-logic.md) - platform primitives prevent every domain MCP server from rebuilding common infrastructure.
 - [Enterprise AI asset registries connect governance to runtime lineage](../concepts/enterprise-ai-asset-registries-connect-governance-to-runtime-lineage.md) - registry metadata makes deployed AI assets auditable and traceable to business use cases.
+- [App factories turn sandbox artifacts into governed knowledge apps](../concepts/app-factories-turn-sandbox-artifacts-into-governed-knowledge-apps.md) - sandbox definitions can become deployed internal apps through shared platform controls.
 - [Live architecture digital twins ground architecture copilots](../concepts/live-architecture-digital-twins-ground-architecture-copilots.md) - live architecture models turn operational inventory into agent-usable planning infrastructure.
 - [Rank architecture recommendations by business impact](../concepts/rank-architecture-recommendations-by-business-impact.md) - infrastructure recommendations need traceable business-impact scores.
 - [Start GenBI with certified assets before autonomous SQL](../concepts/start-genbi-with-certified-assets-before-autonomous-sql.md) - governed BI infrastructure should expose certified reports and metadata before agent-generated SQL.
@@ -206,6 +210,7 @@ Architecture-copilot infrastructure needs a live system model before recommendat
 - Which sandbox and rate-limit policies are required before a platform lets agents run generated code against its APIs?
 - Which generated-code workloads can stay in isolate-style runtimes, and which require container lifecycle, filesystem, and process controls?
 - Which enterprise-specific context and workflow integrations justify custom internal agent platforms instead of vendor tools?
+- Which sandbox artifacts should be promoted automatically into knowledge-app factory deployments, and which require platform or compliance review first?
 - When should infrastructure expose adaptive embedding dimensions as a product knob rather than a fixed model configuration?
 - Which AI asset registry fields should be enforced by CI/CD rather than manually maintained after deployment?
 - Which BI catalog and semantic-layer metadata should be mandatory before an analytics agent can generate or execute SQL?
@@ -222,6 +227,7 @@ Architecture-copilot infrastructure needs a live system model before recommendat
 
 ## Sources
 
+- [How BlackRock Builds Custom Knowledge Apps at Scale — Vaibhav Page & Infant Vasanth, BlackRock](../sources/20250823_08mH36_NVos.md)
 - [Building an Agentic Platform - Ben Kus, CTO Box](../sources/20250824_12v5S1n1eOY.md)
 
 - [Context Platform Engineering to Reduce Token Anxiety - Val Bercovici, WEKA](../sources/20251124_NTBX-wxUhHs.md)

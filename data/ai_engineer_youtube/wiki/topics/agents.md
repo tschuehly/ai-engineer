@@ -86,6 +86,8 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Interleave reasoning and tool calls for long-horizon agents](../concepts/interleave-reasoning-and-tool-calls-for-long-horizon-agents.md) - long-running agents should react to tool feedback over repeated turns.
 - [Use Agent RFT after baseline and task optimization](../concepts/use-agent-rft-after-baseline-and-task-optimization.md) - weight-changing agent optimization belongs after baseline and task/tool improvements.
 - [Agentic document extraction decomposes complex fields](../concepts/agentic-document-extraction-decomposes-complex-fields.md) - long enterprise documents need agentic decomposition, checks, and multimodal validation rather than one extraction prompt.
+- [Domain-expert sandboxes accelerate knowledge-app iteration](../concepts/domain-expert-sandboxes-accelerate-knowledge-app-iteration.md) - expert-owned sandboxes keep domain rules close to the people who can evaluate them.
+- [App factories turn sandbox artifacts into governed knowledge apps](../concepts/app-factories-turn-sandbox-artifacts-into-governed-knowledge-apps.md) - deployed knowledge apps need platform controls around sandbox-produced agent and extraction workflows.
 - [Separate agentic workflow design from scale infrastructure](../concepts/separate-agentic-workflow-design-from-scale-infrastructure.md) - agentic workflow graphs and high-volume distributed systems are distinct design layers.
 - [Prefer model-portable agentic prompts before fine-tuning](../concepts/prefer-model-portable-agentic-prompts-before-fine-tuning.md) - multi-provider platforms may prefer prompts and workflow structure over provider-specific model updates.
 - [Route agent optimization by task profile, not one fixed loop](../concepts/route-agent-optimization-by-task-profile-not-one-fixed-loop.md) - task profiles can route agents across context, compute, verification, memory, and parameter strategies.
@@ -326,6 +328,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 
 ## Sources
 
+- [How BlackRock Builds Custom Knowledge Apps at Scale — Vaibhav Page & Infant Vasanth, BlackRock](../sources/20250823_08mH36_NVos.md)
 - [Building an Agentic Platform - Ben Kus, CTO Box](../sources/20250824_12v5S1n1eOY.md)
 
 - [Government Agents: AI Agents Meet Tough Regulations - Mark Myshatyn, Los Alamos National Lab](../sources/20251206_TnSGx36Ly0Q.md)

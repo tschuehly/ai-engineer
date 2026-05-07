@@ -11,6 +11,7 @@ Details:
 - The agentic workflow keeps the same product contract of document in and fields out, but decomposes the work into field preparation, intelligent field grouping, multiple document queries, tool checks, page-image verification, model voting, and judge feedback.
 - Field grouping matters because related values such as contract parties and their addresses need to be extracted together; splitting them independently can produce mismatched structured data.
 - OCR is a first-stage dependency, not a solved detail: scans, handwriting, strikeouts, PDFs, file formats, and languages can corrupt the context passed into the model.
+- BlackRock's investment-operations example adds a production-template view: fields may be extracted or derived, required or optional, typed, validated, and dependent on other fields such as a callable bond requiring call date and call price. (09:10-11:04)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -21,6 +22,8 @@ Related concepts:
 - [Route heterogeneous documents through multimodal LLM pipelines](route-heterogeneous-documents-through-multimodal-llm-pipelines.md)
 - [Structure-aware document parsing improves RAG chunk quality](structure-aware-document-parsing-improves-rag-chunk-quality.md)
 - [Stage complex AI applications into inspectable deterministic and agentic steps](stage-complex-ai-applications-into-inspectable-deterministic-and-agentic-steps.md)
+- [Domain-expert Sandboxes Accelerate Knowledge-app Iteration](domain-expert-sandboxes-accelerate-knowledge-app-iteration.md)
 
 Sources:
 - [Building an Agentic Platform - Ben Kus, CTO Box](../sources/20250824_12v5S1n1eOY.md), 05:34-12:23
+- [How BlackRock Builds Custom Knowledge Apps at Scale — Vaibhav Page & Infant Vasanth, BlackRock](../sources/20250823_08mH36_NVos.md), 09:10-11:04
