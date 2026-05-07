@@ -239,6 +239,10 @@
 - [Choose WebRTC topologies by realtime application shape](../concepts/choose-webrtc-topologies-by-realtime-application-shape.md)
 - [Cross-app access centralizes MCP authentication through the identity provider](../concepts/cross-app-access-centralizes-mcp-authentication-through-the-identity-provider.md)
 - [Identify the human subject behind agent actions](../concepts/identify-the-human-subject-behind-agent-actions.md)
+- [Authenticate Agents With URL-Based PKI Identities](../concepts/authenticate-agents-with-url-based-pki-identities.md)
+- [Authorize High-Impact Agent Actions Transactionally](../concepts/authorize-high-impact-agent-actions-transactionally.md)
+- [Preserve Authorization Chain of Custody Across Agent Hops](../concepts/preserve-authorization-chain-of-custody-across-agent-hops.md)
+- [Plan Asynchronous Authorization for Background Agents](../concepts/plan-asynchronous-authorization-for-background-agents.md)
 - [Vault and exchange tokens for scoped upstream agent access](../concepts/vault-and-exchange-tokens-for-scoped-upstream-agent-access.md)
 - [Model MCP servers as OAuth clients in downstream API chains](../concepts/model-mcp-servers-as-oauth-clients-in-downstream-api-chains.md)
 - [Cross-app access does not replace authorization policy](../concepts/cross-app-access-does-not-replace-authorization-policy.md)
@@ -251,6 +255,8 @@
 - [Enforce deterministic guardrails around sensitive tool calls](../concepts/enforce-deterministic-guardrails-around-sensitive-tool-calls.md)
 - [Move mandatory brittle tool steps outside the agent loop](../concepts/move-mandatory-brittle-tool-steps-outside-the-agent-loop.md)
 - [Move production MCP from API keys to scoped OAuth token flows](../concepts/move-production-mcp-from-api-keys-to-scoped-oauth-token-flows.md)
+- [Model MCP Servers as OAuth Resource Servers](../concepts/model-mcp-servers-as-oauth-resource-servers.md)
+- [Preserve Authorization Chain of Custody Across Agent Hops](../concepts/preserve-authorization-chain-of-custody-across-agent-hops.md)
 - [Govern MCP tool calls with tool-level policy and end-to-end traces](../concepts/govern-mcp-tool-calls-with-tool-level-policy-and-end-to-end-traces.md)
 - [Enterprise AI asset registries connect governance to runtime lineage](../concepts/enterprise-ai-asset-registries-connect-governance-to-runtime-lineage.md)
 - [A2A agent registries make deployed agents discoverable through agent cards](../concepts/a2a-agent-registries-make-deployed-agents-discoverable-through-agent-cards.md)
@@ -1065,6 +1071,10 @@
 
 ## Security
 
+- [Model MCP Servers as OAuth Resource Servers](../concepts/model-mcp-servers-as-oauth-resource-servers.md)
+- [Authenticate Agents With URL-Based PKI Identities](../concepts/authenticate-agents-with-url-based-pki-identities.md)
+- [Authorize High-Impact Agent Actions Transactionally](../concepts/authorize-high-impact-agent-actions-transactionally.md)
+- [Preserve Authorization Chain of Custody Across Agent Hops](../concepts/preserve-authorization-chain-of-custody-across-agent-hops.md)
 - [Classify AI Bot Traffic By Intent And Benefit](../concepts/classify-ai-bot-traffic-by-intent-and-benefit.md)
 - [Layer Bot Detection Signals Instead Of Trusting One Header](../concepts/layer-bot-detection-signals-instead-of-trusting-one-header.md)
 - [Treat CAPTCHA And Proof Of Work As Economic Friction](../concepts/treat-captcha-and-proof-of-work-as-economic-friction.md)
@@ -1072,6 +1082,11 @@
 
 ## Tools
 
+- [Model MCP Servers as OAuth Resource Servers](../concepts/model-mcp-servers-as-oauth-resource-servers.md)
+- [Authenticate Agents With URL-Based PKI Identities](../concepts/authenticate-agents-with-url-based-pki-identities.md)
+- [Authorize High-Impact Agent Actions Transactionally](../concepts/authorize-high-impact-agent-actions-transactionally.md)
+- [Preserve Authorization Chain of Custody Across Agent Hops](../concepts/preserve-authorization-chain-of-custody-across-agent-hops.md)
+- [Plan Asynchronous Authorization for Background Agents](../concepts/plan-asynchronous-authorization-for-background-agents.md)
 - [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](../concepts/retrieve-tool-descriptions-before-loading-large-tool-catalogs.md)
 - [Deploy Remote MCP Servers on Serverless Cloud Infrastructure](../concepts/deploy-remote-mcp-servers-on-serverless-cloud-infrastructure.md)
 - [Specialist Expert Systems Bundle Capabilities, APIs, and Instructions](../concepts/specialist-expert-systems-bundle-capabilities-apis-and-instructions.md)
@@ -1245,6 +1260,7 @@
 
 ## Workflows
 
+- [Plan Asynchronous Authorization for Background Agents](../concepts/plan-asynchronous-authorization-for-background-agents.md)
 - [Compose agents and workflows as interchangeable primitives](../concepts/compose-agents-and-workflows-as-interchangeable-primitives.md)
 - [Prefer readable workflow APIs over graph-theory surfaces](../concepts/prefer-readable-workflow-apis-over-graph-theory-surfaces.md)
 - [Add structure where agent reliability fails](../concepts/add-structure-where-agent-reliability-fails.md)

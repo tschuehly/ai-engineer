@@ -106,6 +106,7 @@ Agentic workflows should be designed as composable primitives, not as allegiance
 
 ## Key Concepts
 
+- [Plan Asynchronous Authorization for Background Agents](../concepts/plan-asynchronous-authorization-for-background-agents.md) - long-running workflows need ways to request additional access after the user leaves the initial authorization flow.
 - [Compose agents and workflows as interchangeable primitives](../concepts/compose-agents-and-workflows-as-interchangeable-primitives.md) - workflows can call agents, agents can call workflows, and both can appear as steps or tools.
 - [Prefer readable workflow APIs over graph-theory surfaces](../concepts/prefer-readable-workflow-apis-over-graph-theory-surfaces.md) - workflow definitions should be reviewable as ordinary control flow.
 - [Add structure where agent reliability fails](../concepts/add-structure-where-agent-reliability-fails.md) - reliability work should target the failing segment of an agentic workflow.
@@ -451,6 +452,7 @@ Agentic workflows should be designed as composable primitives, not as allegiance
 - [Software Engineering Is Becoming Plan and Review - Louis Knight-Webb, Vibe Kanban](../sources/20260502_W76woOYHlvY.md)
 - [I Gave an AI Agent the Keys to My Life (Here's What Happened) - Radek Sienkiewicz (@velvetshark-com)](../sources/20260502_sJ2jc7leKBk.md)
 - [Human-in-the-Loop Automation with n8n - Liam McGarrigle](../sources/20260502_tDArkCqjA-c.md)
+- [How to Secure Agents using OAuth - Jared Hanson (Keycard, Passport.js)](../sources/20250730_blmAkayzE8M.md)
 - [Building Effective Voice Agents - Toki Sherbakov + Anoop Kotha, OpenAI](../sources/20250720_-OXiljTJxQU.md)
 - [Shipping complex AI applications - Braintrust & Trainline](../sources/20260501_ZdheJTfLu-s.md)
 - [Agents for Everything Else - swyx](../sources/20260501_zepu8Kk6FBQ.md)

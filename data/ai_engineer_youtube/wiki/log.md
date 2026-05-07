@@ -1463,3 +1463,11 @@
 - Updated topics: [Security](topics/security.md), [Infrastructure](topics/infrastructure.md), [Agents](topics/agents.md)
 - Updated concepts: [Classify AI Bot Traffic By Intent And Benefit](concepts/classify-ai-bot-traffic-by-intent-and-benefit.md), [Layer Bot Detection Signals Instead Of Trusting One Header](concepts/layer-bot-detection-signals-instead-of-trusting-one-header.md), [Treat CAPTCHA And Proof Of Work As Economic Friction](concepts/treat-captcha-and-proof-of-work-as-economic-friction.md), [Key Rate Limits By Fingerprint Or Session Instead Of IP Alone](concepts/key-rate-limits-by-fingerprint-or-session-instead-of-ip-alone.md)
 - Notes: Added a web-security slice for AI-era automated traffic, including crawler intent taxonomy, layered identity signals, challenge economics, fingerprints, and rate-limit key design.
+
+## [2026-05-07] ingest | How to Secure Agents using OAuth - Jared Hanson (Keycard, Passport.js)
+
+- Source: [How to Secure Agents using OAuth - Jared Hanson (Keycard, Passport.js)](sources/20250730_blmAkayzE8M.md)
+- Processed: `blmAkayzE8M`
+- Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Security](topics/security.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Move Production MCP From API Keys to Scoped OAuth Token Flows](concepts/move-production-mcp-from-api-keys-to-scoped-oauth-token-flows.md), [Model MCP Servers as OAuth Resource Servers](concepts/model-mcp-servers-as-oauth-resource-servers.md), [Authenticate Agents With URL-Based PKI Identities](concepts/authenticate-agents-with-url-based-pki-identities.md), [Authorize High-Impact Agent Actions Transactionally](concepts/authorize-high-impact-agent-actions-transactionally.md), [Preserve Authorization Chain of Custody Across Agent Hops](concepts/preserve-authorization-chain-of-custody-across-agent-hops.md), [Plan Asynchronous Authorization for Background Agents](concepts/plan-asynchronous-authorization-for-background-agents.md)
+- Notes: Added agent OAuth security patterns for MCP role separation, verifiable agent clients, high-impact transaction permissions, downstream authorization continuity, and background step-up access.

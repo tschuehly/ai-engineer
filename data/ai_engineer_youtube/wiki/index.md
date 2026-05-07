@@ -5,6 +5,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 ## Current Emphasis
 
 - [Classify AI Bot Traffic By Intent And Benefit](concepts/classify-ai-bot-traffic-by-intent-and-benefit.md) - public sites need different policies for search crawlers, training crawlers, user-triggered fetchers, and operator agents.
+- [Model MCP Servers as OAuth Resource Servers](concepts/model-mcp-servers-as-oauth-resource-servers.md) - agent tool servers should verify tokens while dedicated authorization infrastructure handles login, consent, and token issuance.
+- [Authenticate Agents With URL-Based PKI Identities](concepts/authenticate-agents-with-url-based-pki-identities.md) - agent-to-agent and client-credentials flows need verifiable client identity.
+- [Authorize High-Impact Agent Actions Transactionally](concepts/authorize-high-impact-agent-actions-transactionally.md) - broad OAuth scopes are not enough for financial, commercial, or other sensitive agent actions.
 - [Layer Bot Detection Signals Instead Of Trusting One Header](concepts/layer-bot-detection-signals-instead-of-trusting-one-header.md) - bot defense should combine crawler policy, user-agent checks, verified identities, and IP reputation.
 - [Key Rate Limits By Fingerprint Or Session Instead Of IP Alone](concepts/key-rate-limits-by-fingerprint-or-session-instead-of-ip-alone.md) - automated clients can rotate IPs while retaining stable session or fingerprint signals.
 - [Serve Realtime TTS By Audio-Token Throughput](concepts/serve-realtime-tts-by-audio-token-throughput.md) - streaming voice inference needs generated codec-token rates that stay ahead of playback.
