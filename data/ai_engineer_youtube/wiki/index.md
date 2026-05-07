@@ -4,6 +4,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Low-false-positive bug finding is required for coding-agent trust](concepts/low-false-positive-bug-finding-is-required-for-coding-agent-trust.md) - automated bug reports need precision because false-positive floods create alert fatigue and let real bugs through.
+- [Scope bug-hunting rules to specific defect classes](concepts/scope-bug-hunting-rules-to-specific-defect-classes.md) - rules files should name concrete security and logic bug classes and require test-backed fix validation.
+- [Use component inventories to preserve bug-hunting context](concepts/use-component-inventories-to-preserve-bug-hunting-context.md) - ask agents to map classes, variables, diffs, and usage paths before searching for complex cross-file bugs.
 - [Stage vibe coding from prototype to structured workflow](concepts/stage-vibe-coding-from-prototype-to-structured-workflow.md) - use exploratory vibe coding for learning and prototypes, then add templates, instructions, tools, tests, and approvals for durable work.
 - [Use repository instructions to ground coding agents](concepts/use-repository-instructions-to-ground-coding-agents.md) - keep shared stack, version, tooling, and workflow guidance in repo-visible instructions instead of repeating it in every prompt.
 - [Visual browser context steers frontend agents](concepts/visual-browser-context-steers-frontend-agents.md) - attach rendered UI, selected elements, HTML, CSS, screenshots, and browser-test tools to frontend agent loops.

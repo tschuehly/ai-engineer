@@ -137,6 +137,10 @@ Greg Brockman's Codex framing connects agent usefulness directly to codebase sha
 - [Interleave reasoning and tool calls for long-horizon agents](../concepts/interleave-reasoning-and-tool-calls-for-long-horizon-agents.md) - coding agents need to reason again after tool responses instead of assuming one tool pass is enough.
 - [Perturb agent scaffolds during training for generalization](../concepts/perturb-agent-scaffolds-during-training-for-generalization.md) - scaffold variation should be part of model robustness testing and training.
 - [Treat coding agents as fast junior collaborators](../concepts/treat-coding-agents-as-fast-junior-collaborators.md) - agent output needs human judgment and local context even when execution is fast.
+- [Low-false-positive bug finding is required for coding-agent trust](../concepts/low-false-positive-bug-finding-is-required-for-coding-agent-trust.md) - false-positive bug floods destroy review trust and can let real defects ship.
+- [Scope bug-hunting rules to specific defect classes](../concepts/scope-bug-hunting-rules-to-specific-defect-classes.md) - named defect classes and test-backed fix validation beat vague repository bug scans.
+- [Use component inventories to preserve bug-hunting context](../concepts/use-component-inventories-to-preserve-bug-hunting-context.md) - explicit class, variable, diff, and usage maps help agents keep cross-file bug logic in view.
+- [Prefer thinking models for deep bug hunting, with variability caveats](../concepts/prefer-thinking-models-for-deep-bug-hunting-with-variability-caveats.md) - reasoning models can find deeper bugs but still need verification against run-to-run variance.
 - [Vibe engineering is supervised agentic coding with judgment](../concepts/vibe-engineering-is-supervised-agentic-coding-with-judgment.md) - agentic coding works best when experienced humans steer context, abstractions, and acceptance criteria.
 - [Coding-agent taste captures the invisible architecture of choices](../concepts/coding-agent-taste-captures-the-invisible-architecture-of-choices.md) - coding agents need learned situational preferences, not only correctness and static rules.
 - [Learn coding preferences from implicit edit feedback](../concepts/learn-coding-preferences-from-implicit-edit-feedback.md) - repeated developer edits can become future agent guidance without manual rule maintenance.
@@ -369,4 +373,5 @@ Greg Brockman's Codex framing connects agent usefulness directly to codebase sha
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)
 - [What Data from 20m Pull Requests Reveal About AI Transformation - Nick Arcolano, Jellyfish](../sources/20251124_WqZq8L-v9pA.md)
 - [Real World Development with GitHub Copilot and VS Code — Harald Kirschner, Christopher Harrison](../sources/20250803_eOxOzcw70f0.md)
+- [How to Improve your Vibe Coding - Ian Butler](../sources/20250803_g03m-WFEu1U.md)
 - [Developing Taste in Coding Agents: Applied Meta Neuro-Symbolic RL - Ahmad Awais, CommandCode](../sources/20251124_kWOQS3XPZ10.md)

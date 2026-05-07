@@ -1327,3 +1327,11 @@
 - Updated topics: [Voice Agents](topics/voice-agents.md), [Agents](topics/agents.md), [Tools](topics/tools.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md)
 - Updated concepts: [Use Frame Pipelines to Compose Realtime Voice Agents](concepts/use-frame-pipelines-to-compose-realtime-voice-agents.md), [Semantic Turn Detection Improves Voice Interruption Timing](concepts/semantic-turn-detection-improves-voice-interruption-timing.md), [Test Realtime Voice Services With Bot-to-Bot Release Evals](concepts/test-realtime-voice-services-with-bot-to-bot-release-evals.md)
 - Notes: Added Daily's Pipecat workshop patterns for composing realtime voice agents from streaming processors, improving turn-taking with semantic completion signals, and validating provider integrations with bot-to-bot release evals.
+
+## [2026-05-07] ingest | How to Improve your Vibe Coding - Ian Butler
+
+- Source: [How to Improve your Vibe Coding - Ian Butler](sources/20250803_g03m-WFEu1U.md)
+- Processed: `g03m-WFEu1U`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Low-false-positive bug finding is required for coding-agent trust](concepts/low-false-positive-bug-finding-is-required-for-coding-agent-trust.md), [Scope bug-hunting rules to specific defect classes](concepts/scope-bug-hunting-rules-to-specific-defect-classes.md), [Use component inventories to preserve bug-hunting context](concepts/use-component-inventories-to-preserve-bug-hunting-context.md), [Prefer thinking models for deep bug hunting, with variability caveats](concepts/prefer-thinking-models-for-deep-bug-hunting-with-variability-caveats.md)
+- Notes: Added Bismuth's bug-finding benchmark lessons for vibe coding: false-positive-heavy agents create alert fatigue, while scoped defect rules, context inventories, validation, and thinking models improve but do not eliminate current limitations.
