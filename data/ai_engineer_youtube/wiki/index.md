@@ -5,6 +5,10 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 ## Current Emphasis
 
 - [Share Demos To Reveal Latent Model Capabilities](concepts/share-demos-to-reveal-latent-model-capabilities.md) - small runnable demos expose model capabilities and product surfaces that specs or labels miss.
+- [Last-Mile Domain Context Beats Model Chasing](concepts/last-mile-domain-context-beats-model-chasing.md) - vertical AI systems need expert workflow context after strong models reach a baseline.
+- [Failure-Mode Ontologies Prioritize Domain AI Work](concepts/failure-mode-ontologies-prioritize-domain-ai-work.md) - expert-labeled error taxonomies connect production failures to customer metrics and engineering priorities.
+- [Production Failure Sets Drive Domain AI Iteration](concepts/production-failure-sets-drive-domain-ai-iteration.md) - labeled production misses become focused eval sets for targeted improvement and regression checks.
+- [Domain Expert Review Tools Convert Judgment Into Deployable Knowledge](concepts/domain-expert-review-tools-convert-judgment-into-deployable-knowledge.md) - expert review surfaces can turn specialist feedback into tested production context.
 - [Compress Environment Context For Early Agent Experiments](concepts/compress-environment-context-for-early-agent-experiments.md) - early agent demos can require compressed environment representations before the model can act usefully.
 - [Record Workflow History for Agent Debugging and Compliance](concepts/record-workflow-history-for-agent-debugging-and-compliance.md) - durable workflow history makes production agent behavior inspectable for debugging, replay, and audit.
 - [AI Product Management Balances Viability, Feasibility, Desirability, and AI Uncertainty](concepts/ai-product-management-balances-viability-feasibility-desirability-and-ai-uncertainty.md) - AI product direction needs product judgment and AI/data/eval fluency in the same loop.

@@ -12,6 +12,8 @@ AI intensity gives product teams another product-shape lens: compare how much va
 
 AI startup strategy should also assume that raw model capability is a moving commodity surface. The product moat is less likely to be a generic prompt box on one model and more likely to be a thick workflow wrapper: domain knowledge, automatic context collection, model orchestration, output presentation, review affordances, and execution speed that keeps improving as models get cheaper and stronger.
 
+For vertical AI, that workflow wrapper needs a deliberate last-mile domain-context system. Strong general models can reach a useful baseline, but specialized products still need customer-specific workflow interpretation, expert-labeled failure modes, and domain-expert PM prioritization to close the final performance gap. The product surface should make expert judgment operational: specialists need tools to review evidence, label failures, and propose deployable domain knowledge rather than leaving those insights in meetings or spreadsheets.
+
 AI product management adds an operating role or mindset around that uncertainty. Someone must connect viability, feasibility, desirability, data, evals, probabilistic behavior, guardrails, and human-in-the-loop design before a team overcommits to a product surface. The product sequence often changes: validate the core AI capability first when feasibility is uncertain, use cheap AI-assisted implementation to explore many feature variants with real users, then remove the extras and focus the workflow. Platform strategy needs the same willingness to pivot; a custom AI client can remain useful while tools and data move behind MCP or other portable interfaces as enterprise defaults change.
 
 Demos are one of the fastest ways to search that uncertain product space. A demo does not need production completeness to be useful; it can reveal a latent model capability, make a new interaction mode imaginable, or show that an old computing idea has become newly practical. The risk is treating demos as proof of reliability. Their product value is strongest when they are used as capability probes and shared artifacts, then followed by the usual work of narrowing, evaluating, and hardening the product.
@@ -32,6 +34,8 @@ Demos are one of the fastest ways to search that uncertain product space. A demo
 - [Design AI creative systems for generated-asset retrieval](../concepts/design-ai-creative-systems-for-generated-asset-retrieval.md) - product teams need output retrieval when creative personalization creates many generated variants.
 - [Plan AI products for a multimodel market](../concepts/plan-ai-products-for-a-multimodel-market.md) - product teams should preserve provider flexibility as model capability, cost, and share keep changing.
 - [Build domain-specific workflow wrappers around models](../concepts/build-domain-specific-workflow-wrappers-around-models.md) - defensible AI products package context, orchestration, review, and domain workflow fit around models.
+- [Last-Mile Domain Context Beats Model Chasing](../concepts/last-mile-domain-context-beats-model-chasing.md) - vertical AI applications need systems that translate customer and workflow expertise into model-usable context.
+- [Failure-Mode Ontologies Prioritize Domain AI Work](../concepts/failure-mode-ontologies-prioritize-domain-ai-work.md) - expert-labeled failure categories connect production errors to product metrics and engineering priorities.
 - [Start with augmentation when autonomous reliability is not ready](../concepts/start-with-augmentation-when-autonomous-reliability-is-not-ready.md) - copilots can be the right product shape before full automation is trustworthy.
 - [Use AI leapfrogging to find conservative-industry opportunities](../concepts/use-ai-leapfrogging-to-find-conservative-industry-opportunities.md) - slow historical software adoption does not preclude fast AI adoption when the workflow pain is concrete.
 - [Anchor AI Products on One Reliable User Outcome](../concepts/anchor-ai-products-on-one-reliable-user-outcome.md) - purpose filters whether a model capability strengthens the user's core job or adds baggage.
@@ -53,6 +57,7 @@ Demos are one of the fastest ways to search that uncertain product space. A demo
 - How should teams measure whether a delightful probabilistic feature is expanding agency rather than masking an unclear core job?
 - When should a custom AI client remain the primary product surface, and when should the team prioritize portable tool/data access through MCP or other standards?
 - How should teams distinguish demos that reveal real latent capability from demos that only succeed through brittle scaffolding?
+- Which domain insights should become prompt context, retrieval knowledge, rules, fine-tuning data, or product workflow changes?
 
 ## Sources
 
@@ -66,3 +71,4 @@ Demos are one of the fastest ways to search that uncertain product space. A demo
 - [Everything is ugly, so go build something that isn't - Raiza Martin, Huxe (ex NotebookLM)](../sources/20250728_yG5d5UaGz1M.md)
 - [Why your product needs an AI product manager, and why it should be you — James Lowe, i.AI](../sources/20250728_xzJdSi2Tsqw.md)
 - [On Curiosity -- Sharif Shameem, Lexica](../sources/20250719_0F8mnGPUycY.md)
+- [Make your LLM app a Domain Expert: How to Build an Expert System - Christopher Lovejoy, Anterior](../sources/20250728_MRM7oA3JsFs.md)

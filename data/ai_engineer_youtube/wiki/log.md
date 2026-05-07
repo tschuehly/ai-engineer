@@ -1552,6 +1552,14 @@
 - Updated concepts: [AI Product Management Balances Viability, Feasibility, Desirability, and AI Uncertainty](concepts/ai-product-management-balances-viability-feasibility-desirability-and-ai-uncertainty.md), [Resolve AI Capability Risk Before Product Surface Commitment](concepts/resolve-ai-capability-risk-before-product-surface-commitment.md), [Explore AI Features Widely Then Cut Back to the User Workflow](concepts/explore-ai-features-widely-then-cut-back-to-the-user-workflow.md), [Pivot AI Product Interfaces When Platform Defaults Shift](concepts/pivot-ai-product-interfaces-when-platform-defaults-shift.md)
 - Notes: Added i.AI's AI product-management patterns for capability-first evaluation, broad but temporary feature exploration, workflow simplification, and platform-interface pivots around MCP and enterprise AI clients.
 
+## [2026-05-07] ingest | Make your LLM app a Domain Expert: How to Build an Expert System - Christopher Lovejoy, Anterior
+
+- Source: [Make your LLM app a Domain Expert: How to Build an Expert System - Christopher Lovejoy, Anterior](sources/20250728_MRM7oA3JsFs.md)
+- Processed: `MRM7oA3JsFs`
+- Updated topics: [Product Strategy](topics/product-strategy.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Last-Mile Domain Context Beats Model Chasing](concepts/last-mile-domain-context-beats-model-chasing.md), [Failure-Mode Ontologies Prioritize Domain AI Work](concepts/failure-mode-ontologies-prioritize-domain-ai-work.md), [Production Failure Sets Drive Domain AI Iteration](concepts/production-failure-sets-drive-domain-ai-iteration.md), [Domain Expert Review Tools Convert Judgment Into Deployable Knowledge](concepts/domain-expert-review-tools-convert-judgment-into-deployable-knowledge.md)
+- Notes: Added Anterior's adaptive domain-intelligence loop for vertical AI: expert-reviewed production outputs become metrics, failure-mode eval sets, deployable domain knowledge, and prioritized engineering work.
+
 ## [2026-05-07] ingest | Scaling AI Agents Without Breaking Reliability - Preeti Somal, Temporal
 
 - Source: [Scaling AI Agents Without Breaking Reliability - Preeti Somal, Temporal](sources/20250728_1izYWsokr9s.md)

@@ -760,6 +760,8 @@
 
 ## Product Strategy
 
+- [Last-Mile Domain Context Beats Model Chasing](../concepts/last-mile-domain-context-beats-model-chasing.md)
+- [Failure-Mode Ontologies Prioritize Domain AI Work](../concepts/failure-mode-ontologies-prioritize-domain-ai-work.md)
 - [Measure AI intensity by human input to valuable output](../concepts/measure-ai-intensity-by-human-input-to-valuable-output.md)
 - [Plan AI products for a multimodel market](../concepts/plan-ai-products-for-a-multimodel-market.md)
 - [Build domain-specific workflow wrappers around models](../concepts/build-domain-specific-workflow-wrappers-around-models.md)
@@ -789,6 +791,9 @@
 
 ## Evaluation
 
+- [Failure-Mode Ontologies Prioritize Domain AI Work](../concepts/failure-mode-ontologies-prioritize-domain-ai-work.md)
+- [Production Failure Sets Drive Domain AI Iteration](../concepts/production-failure-sets-drive-domain-ai-iteration.md)
+- [Domain Expert Review Tools Convert Judgment Into Deployable Knowledge](../concepts/domain-expert-review-tools-convert-judgment-into-deployable-knowledge.md)
 - [AI-Native Search APIs Serve Agent Query Shapes](../concepts/ai-native-search-apis-serve-agent-query-shapes.md)
 - [Resolve AI Capability Risk Before Product Surface Commitment](../concepts/resolve-ai-capability-risk-before-product-surface-commitment.md)
 - [Dynamic AI Search Evals Need Fresh Grounding Sets](../concepts/dynamic-ai-search-evals-need-fresh-grounding-sets.md)
@@ -1320,6 +1325,9 @@
 
 ## Workflows
 
+- [Last-Mile Domain Context Beats Model Chasing](../concepts/last-mile-domain-context-beats-model-chasing.md)
+- [Production Failure Sets Drive Domain AI Iteration](../concepts/production-failure-sets-drive-domain-ai-iteration.md)
+- [Domain Expert Review Tools Convert Judgment Into Deployable Knowledge](../concepts/domain-expert-review-tools-convert-judgment-into-deployable-knowledge.md)
 - [AI Product Management Balances Viability, Feasibility, Desirability, and AI Uncertainty](../concepts/ai-product-management-balances-viability-feasibility-desirability-and-ai-uncertainty.md)
 - [Explore AI Features Widely Then Cut Back to the User Workflow](../concepts/explore-ai-features-widely-then-cut-back-to-the-user-workflow.md)
 - [Treat Evals as the Home of Domain Knowledge](../concepts/treat-evals-as-the-home-of-domain-knowledge.md)
