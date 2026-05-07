@@ -10,6 +10,8 @@ Rate limiting also needs better keys than source IP alone. Automated clients can
 
 Agent tool access has a separate identity problem. Long-lived API keys in MCP config files are not a durable security model for large agent fleets; OAuth can move agent access toward short-lived scoped tokens, but the OAuth roles should stay clean. MCP servers are safer and easier to operate when they behave as resource servers that verify tokens while a separate authorization server handles login, consent, token issuance, and policy. Future agent systems also need verified agent identities, transaction-specific permissions for high-impact actions, and chain-of-custody when one agent, MCP server, or upstream API delegates to another.
 
+Agent application security is broader than prompt injection and OAuth. Red-team evidence from live startup agents shows ordinary web and infrastructure bugs becoming agent bugs: IDOR appears when tools accept user IDs or document IDs without per-object authorization, service-level backend permissions let an agent traverse data beyond the represented user, code sandboxes can expose files, metadata services, service tokens, and customer data, and SSRF can leak credentials when tools fetch user-controlled repositories or URLs from privileged infrastructure.
+
 ## Key Concepts
 
 - [Classify AI Bot Traffic By Intent And Benefit](../concepts/classify-ai-bot-traffic-by-intent-and-benefit.md) - access rules should distinguish search, training, user-triggered, and operator-style AI traffic.
@@ -20,6 +22,9 @@ Agent tool access has a separate identity problem. Long-lived API keys in MCP co
 - [Authenticate Agents With URL-Based PKI Identities](../concepts/authenticate-agents-with-url-based-pki-identities.md) - agent clients need verifiable identity when they act without a human delegation flow.
 - [Authorize High-Impact Agent Actions Transactionally](../concepts/authorize-high-impact-agent-actions-transactionally.md) - sensitive actions need amount-, budget-, or action-specific authorization rather than broad standing scopes.
 - [Preserve Authorization Chain of Custody Across Agent Hops](../concepts/preserve-authorization-chain-of-custody-across-agent-hops.md) - authorization context should survive MCP-to-API and agent-to-agent delegation.
+- [Treat Agents As Users For Authorization](../concepts/treat-agents-as-users-for-authorization.md) - agent tools need requester-scoped authorization rather than service-level trust.
+- [Do Not Roll Your Own Agent Code Sandbox](../concepts/do-not-roll-your-own-agent-code-sandbox.md) - code execution boundaries can become arbitrary execution and lateral movement.
+- [Server-Side Request Forgery Exfiltrates Agent Credentials](../concepts/server-side-request-forgery-exfiltrates-agent-credentials.md) - privileged agent fetch tools can leak tokens to attacker-controlled endpoints.
 
 ## Open Questions
 
@@ -30,3 +35,4 @@ Agent tool access has a separate identity problem. Long-lived API keys in MCP co
 
 - [How to defend your sites from AI bots - David Mytton, Arcjet](../sources/20250730_Gi4V8viBGYQ.md)
 - [How to Secure Agents using OAuth - Jared Hanson (Keycard, Passport.js)](../sources/20250730_blmAkayzE8M.md)
+- [How we hacked YC Spring 2025 batch's AI agents - Rene Brandel, Casco](../sources/20250730_kv-QAuKWllQ.md)

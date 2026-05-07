@@ -1471,3 +1471,11 @@
 - Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Security](topics/security.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Move Production MCP From API Keys to Scoped OAuth Token Flows](concepts/move-production-mcp-from-api-keys-to-scoped-oauth-token-flows.md), [Model MCP Servers as OAuth Resource Servers](concepts/model-mcp-servers-as-oauth-resource-servers.md), [Authenticate Agents With URL-Based PKI Identities](concepts/authenticate-agents-with-url-based-pki-identities.md), [Authorize High-Impact Agent Actions Transactionally](concepts/authorize-high-impact-agent-actions-transactionally.md), [Preserve Authorization Chain of Custody Across Agent Hops](concepts/preserve-authorization-chain-of-custody-across-agent-hops.md), [Plan Asynchronous Authorization for Background Agents](concepts/plan-asynchronous-authorization-for-background-agents.md)
 - Notes: Added agent OAuth security patterns for MCP role separation, verifiable agent clients, high-impact transaction permissions, downstream authorization continuity, and background step-up access.
+
+## [2026-05-07] ingest | How we hacked YC Spring 2025 batch's AI agents - Rene Brandel, Casco
+
+- Source: [How we hacked YC Spring 2025 batch's AI agents - Rene Brandel, Casco](sources/20250730_kv-QAuKWllQ.md)
+- Processed: `kv-QAuKWllQ`
+- Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Security](topics/security.md), [Tools](topics/tools.md)
+- Updated concepts: [Treat Agents As Users For Authorization](concepts/treat-agents-as-users-for-authorization.md), [Do Not Roll Your Own Agent Code Sandbox](concepts/do-not-roll-your-own-agent-code-sandbox.md), [Server-Side Request Forgery Exfiltrates Agent Credentials](concepts/server-side-request-forgery-exfiltrates-agent-credentials.md)
+- Notes: Added Casco's live agent red-team findings: IDOR through object IDs, service-level permission hazards, code-sandbox lateral movement, and SSRF credential leakage.

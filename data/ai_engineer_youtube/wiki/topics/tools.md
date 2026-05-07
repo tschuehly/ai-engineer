@@ -22,7 +22,7 @@ LLM programming frameworks can make prompt format itself a tool layer. DSPy sign
 
 Open-source agent tools need extension points as well as integrations. Plugin architecture can keep memory, wiki, dreaming, and other experimental capabilities installable without forcing every idea into core or overloading maintainers with unrelated pull requests. Ordinary package-manager distribution can be enough for harness extensions when extensions are just code modules that add tools, commands, events, providers, or compaction behavior. Routine systems are another tool layer: they package repeated prompts as scheduled or manually parameterized workflows, often invoking skills for specialized domain guidance while keeping the trigger, variables, and project or agent ownership explicit.
 
-Tool metadata is also a security boundary. MCP and function-calling systems should treat full tool descriptions, hidden parameters, and approval summaries as prompt and policy surfaces, because a model may act on instructions the reviewer never saw. High-risk tools need approval UI that exposes the effective action and guardrails that inspect the full model-visible metadata.
+Tool metadata is also a security boundary. MCP and function-calling systems should treat full tool descriptions, hidden parameters, and approval summaries as prompt and policy surfaces, because a model may act on instructions the reviewer never saw. High-risk tools need approval UI that exposes the effective action and guardrails that inspect the full model-visible metadata. Tools that fetch object IDs, repository URLs, schemas, or arbitrary files also need requester-scoped authorization and allowlisted network behavior; otherwise the tool layer can become an IDOR or SSRF channel even when the model prompt looks harmless.
 
 Durable workflow tools add another tool boundary: LLM calls, sandbox operations, and external API calls should be wrapped as steps so the tool run has cached inputs and outputs, retry behavior, spans, and event logs. The workflow engine gives observability and resumability, but sandboxing and permission control still belong to the agent's underlying tool and VM boundaries.
 
@@ -174,6 +174,7 @@ Workflow composition adds another tool-design rule: a workflow can be exposed as
 - [Realtime multimodal agents use stateful streams for audio, vision, and tools](../concepts/realtime-multimodal-agents-use-stateful-streams-for-audio-vision-and-tools.md) - streaming sessions can combine live input, transcriptions, and grounding tools.
 - [Use frame pipelines to compose realtime voice agents](../concepts/use-frame-pipelines-to-compose-realtime-voice-agents.md) - voice-agent tools can be modeled as streaming processors in the live media path.
 - [Constrain sensitive file access with purpose-built tools](../concepts/constrain-sensitive-file-access-with-purpose-built-tools.md) - narrow operations keep secrets out of model context and logs.
+- [Treat Agents As Users For Authorization](../concepts/treat-agents-as-users-for-authorization.md) - object lookup tools need requester-scoped authorization checks.
 - [Agent rules should emerge from observed off-rail behavior](../concepts/agent-rules-should-emerge-from-observed-off-rail-behavior.md) - rules, checks, and hooks are tool-context controls that should be grounded in local agent failures.
 - [Cross-app access centralizes MCP authentication through the identity provider](../concepts/cross-app-access-centralizes-mcp-authentication-through-the-identity-provider.md) - IdP-mediated trust can make enterprise MCP access less repetitive and more governable.
 - [Short-lived IdP-derived tokens reduce standing MCP access](../concepts/short-lived-idp-derived-tokens-reduce-standing-mcp-access.md) - short token lifetimes tie MCP access to active SSO sessions.
@@ -210,6 +211,8 @@ Workflow composition adds another tool-design rule: a workflow can be exposed as
 - [Treat AI-generated code as untrusted code](../concepts/treat-ai-generated-code-as-untrusted-code.md) - generated tool implementations need runtime boundaries because model intent is not a security boundary.
 - [Run agent-written API code inside programmable sandboxes](../concepts/run-agent-written-api-code-inside-programmable-sandboxes.md) - code-mode tools need isolation, network controls, secret boundaries, and rate limits.
 - [Capability-based sandboxes start with no authority](../concepts/capability-based-sandboxes-start-with-no-authority.md) - generated-code runtimes should receive explicit task-scoped capabilities instead of broad ambient access.
+- [Do Not Roll Your Own Agent Code Sandbox](../concepts/do-not-roll-your-own-agent-code-sandbox.md) - code tools should use hardened sandbox boundaries rather than ad hoc helper containers.
+- [Server-Side Request Forgery Exfiltrates Agent Credentials](../concepts/server-side-request-forgery-exfiltrates-agent-credentials.md) - URL, schema, and repository-fetching tools need allowlists and credential boundaries.
 - [Choose isolates or containers by generated-code workload](../concepts/choose-isolates-or-containers-by-generated-code-workload.md) - runtime choice should follow whether a generated tool needs only bindings or a full OS-like environment.
 - [Encode agent intent into server-side tools](../concepts/encode-agent-intent-into-server-side-tools.md) - tools can hide multi-call service choreography behind a more reliable agent intent.
 - [Filter MCP tools by scopes and step-up authorization](../concepts/filter-mcp-tools-by-scopes-and-step-up-authorization.md) - scopes and OAuth challenges can shrink tool exposure while preserving workflow continuity.
@@ -343,5 +346,6 @@ Workflow composition adds another tool-design rule: a workflow can be exposed as
 - [Real World Development with GitHub Copilot and VS Code — Harald Kirschner, Christopher Harrison](../sources/20250803_eOxOzcw70f0.md)
 - [Useful General Intelligence - Danielle Perszyk, Amazon AGI](../sources/20250802_Dj0b_cEBHBI.md)
 - [Building Agents at Cloud Scale - Antje Barth, AWS](../sources/20250802_WJjInLeaJjo.md)
+- [How we hacked YC Spring 2025 batch's AI agents - Rene Brandel, Casco](../sources/20250730_kv-QAuKWllQ.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

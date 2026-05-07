@@ -1079,6 +1079,9 @@
 - [Layer Bot Detection Signals Instead Of Trusting One Header](../concepts/layer-bot-detection-signals-instead-of-trusting-one-header.md)
 - [Treat CAPTCHA And Proof Of Work As Economic Friction](../concepts/treat-captcha-and-proof-of-work-as-economic-friction.md)
 - [Key Rate Limits By Fingerprint Or Session Instead Of IP Alone](../concepts/key-rate-limits-by-fingerprint-or-session-instead-of-ip-alone.md)
+- [Treat Agents As Users For Authorization](../concepts/treat-agents-as-users-for-authorization.md)
+- [Do Not Roll Your Own Agent Code Sandbox](../concepts/do-not-roll-your-own-agent-code-sandbox.md)
+- [Server-Side Request Forgery Exfiltrates Agent Credentials](../concepts/server-side-request-forgery-exfiltrates-agent-credentials.md)
 
 ## Tools
 

@@ -22,6 +22,8 @@ Full-stack app-generation runtimes add an inference-to-infrastructure boundary. 
 
 Code-mode infrastructure should also treat capability grants as part of the runtime contract. Generated programs should start with no authority, receive only the APIs or network paths required for the task, and leave enough execution trace to explain high-impact actions later. AI-generated code is still untrusted code: it can crash through hallucinated loops, expose secrets through over-helpful environment inspection, or exfiltrate data after prompt injection. Infrastructure should default-deny network access, proxy authenticated calls through trusted application code, isolate tenants by sandbox, cap CPU and memory, clean up idle sandboxes, and log what ran.
 
+Agent code sandboxes need the same suspicion even when the interface looks narrow. A tool that can write a Python file and read files can still discover app internals, overwrite enforcement code, query metadata services, recover service tokens, and move laterally into data platforms. Sandboxes should therefore be hardened infrastructure products or deeply reviewed isolation layers, not ad hoc helper containers built beside the agent.
+
 Sandbox technology should match the workload. V8-style isolates are useful for short-lived tool calls, plugins, skills, data transformations, and code interpreters when filesystem, process, and arbitrary-binary access are intentionally absent. Containers are heavier, but they are the right shape when generated work must clone repositories, install packages, run builds, start dev servers, expose preview URLs, or otherwise need real operating-system features.
 
 Emerging MCP protocol work adds production-infrastructure concerns beyond ordinary tool schemas. Stateless transport can make MCP servers easier to deploy like ordinary stateless services, server discovery through well-known URLs can make agent-facing services easier to find, and asynchronous tasks plus extension mechanisms can support richer long-running or UI-backed agent interactions.
@@ -223,6 +225,8 @@ Remote MCP infrastructure can reuse ordinary cloud primitives when the local std
 - [Treat AI-generated code as untrusted code](../concepts/treat-ai-generated-code-as-untrusted-code.md) - generated-code infrastructure needs threat modeling around hallucination, over-helpfulness, and prompt injection.
 - [Run agent-written API code inside programmable sandboxes](../concepts/run-agent-written-api-code-inside-programmable-sandboxes.md) - generated-code execution needs infrastructure-level isolation and abuse controls.
 - [Capability-based sandboxes start with no authority](../concepts/capability-based-sandboxes-start-with-no-authority.md) - generated-code infrastructure should grant explicit task capabilities rather than ambient access.
+- [Do Not Roll Your Own Agent Code Sandbox](../concepts/do-not-roll-your-own-agent-code-sandbox.md) - sandbox infrastructure must prevent file mutation, metadata probing, and lateral movement from agent code tools.
+- [Server-Side Request Forgery Exfiltrates Agent Credentials](../concepts/server-side-request-forgery-exfiltrates-agent-credentials.md) - privileged backend fetches need network and credential containment.
 - [Choose isolates or containers by generated-code workload](../concepts/choose-isolates-or-containers-by-generated-code-workload.md) - isolates and containers solve different generated-code infrastructure problems.
 - [Infer full-stack app infrastructure from user intent](../concepts/infer-full-stack-app-infrastructure-from-user-intent.md) - prompt-to-app systems should map product intent to backend, storage, payments, and integrations.
 - [Separate agent harnesses from generated-code execution](../concepts/separate-agent-harnesses-from-generated-code-execution.md) - agent control planes and generated-code runtimes should be separate trust domains.
@@ -366,5 +370,6 @@ Remote MCP infrastructure can reuse ordinary cloud primitives when the local std
 - [The Unofficial Guide to Apple's Private Cloud Compute - Jmo, CONFSEC](../sources/20250730_CCsWZ5bJlO8.md)
 - [How to defend your sites from AI bots - David Mytton, Arcjet](../sources/20250730_Gi4V8viBGYQ.md)
 - [How to Secure Agents using OAuth - Jared Hanson (Keycard, Passport.js)](../sources/20250730_blmAkayzE8M.md)
+- [How we hacked YC Spring 2025 batch's AI agents - Rene Brandel, Casco](../sources/20250730_kv-QAuKWllQ.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)
