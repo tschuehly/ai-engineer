@@ -14,6 +14,8 @@ Details:
 - When the session has drifted, start a new session, have the agent summarize the useful state for the next agent, manually verify the summary, and continue with only the corrected context. (10:37-11:15)
 - Splitting work across agents or sessions can be useful primarily because it isolates task context and prevents irrelevant or wrong history from accumulating. (08:30-08:48)
 - Vibe engineering needs explicit context surfaces such as rules, docs, commands, and memories because the model cannot hold an entire app context or infer project intent like a mind reader. (10:59-11:13)
+- Frequent intentional compaction treats correctness, completeness, size, and trajectory as context-quality dimensions; repeated correction history and wrong research can poison the next tool choice even when the prompt still fits in the model window. 04:38-05:43
+- For coding agents, broad static onboarding can become too large or stale, while on-demand compressed context can summarize only the current vertical slice from source-backed code. 12:14-14:10
 
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
@@ -24,7 +26,9 @@ Related concepts:
 - [Context development lifecycle treats context as an engineered artifact](context-development-lifecycle-treats-context-as-an-engineered-artifact.md)
 - [Own agent context instead of accepting hidden harness mutation](own-agent-context-instead-of-accepting-hidden-harness-mutation.md)
 - [MCP tool surfaces need default context budgets](mcp-tool-surfaces-need-default-context-budgets.md)
+- [Frequent intentional compaction keeps coding agents in the smart zone](frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md)
 
 Sources:
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md), 04:33-11:15
 - [From Vibe Coding To Vibe Engineering - Kitze, Sizzy](../sources/20251214_JV-wY5pxXLo.md), 10:59-11:13
+- [No Vibes Allowed: Solving Hard Problems in Complex Codebases - Dex Horthy, HumanLayer](../sources/20251202_rmvDxxNubIg.md), 04:38-05:43, 12:14-14:10

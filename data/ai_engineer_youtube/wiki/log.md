@@ -983,3 +983,11 @@
 - Updated topics: [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md)
 - Updated concepts: [Compare Models by Task, Thinking Budget, Cost, and Latency](concepts/compare-models-by-task-thinking-budget-cost-and-latency.md), [Offload Long-Horizon Agent State Outside the Context Window](concepts/offload-long-horizon-agent-state-outside-the-context-window.md), [Context Window Editing Clears Stale Tool Results](concepts/context-window-editing-clears-stale-tool-results.md), [Sandboxed Code Execution Turns Model Reasoning Into Inspectable Computation](concepts/sandboxed-code-execution-turns-model-reasoning-into-inspectable-computation.md), [Use skills for workflow guidance and MCP for integrations](concepts/use-skills-for-workflow-guidance-and-mcp-for-integrations.md)
 - Notes: Added Anthropic's Claude API platform framing around reasoning budgets, tool schemas, memory, context editing, sandboxed code execution, and skills/MCP composition.
+
+## [2026-05-07] ingest | No Vibes Allowed: Solving Hard Problems in Complex Codebases - Dex Horthy, HumanLayer
+
+- Source: [No Vibes Allowed: Solving Hard Problems in Complex Codebases - Dex Horthy, HumanLayer](sources/20251202_rmvDxxNubIg.md)
+- Processed: `rmvDxxNubIg`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Frequent intentional compaction keeps coding agents in the smart zone](concepts/frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md), [Review research and plans before they multiply into code](concepts/review-research-and-plans-before-they-multiply-into-code.md), [Use research-plan-implement loops for coding agents](concepts/use-research-plan-implement-loops-for-coding-agents.md), [Keep agent context small, fresh, and task-specific](concepts/keep-agent-context-small-fresh-and-task-specific.md)
+- Notes: Added HumanLayer's context-compaction workflow for brownfield coding agents, including on-demand compressed context and high-leverage review of research and plans before implementation.

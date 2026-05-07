@@ -228,6 +228,8 @@
 
 ## Coding Agents
 
+- [Frequent intentional compaction keeps coding agents in the smart zone](../concepts/frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md)
+- [Review research and plans before they multiply into code](../concepts/review-research-and-plans-before-they-multiply-into-code.md)
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md)
 - [Use stable agent harnesses as model-evolution boundaries](../concepts/use-stable-agent-harnesses-as-model-evolution-boundaries.md)
 - [Prompt coding agents around learned model habits](../concepts/prompt-coding-agents-around-learned-model-habits.md)
@@ -364,6 +366,7 @@
 
 ## Context Engineering
 
+- [Frequent intentional compaction keeps coding agents in the smart zone](../concepts/frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md)
 - [Keep Agent Context Small, Fresh, and Task-Specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md)
 - [Proactive agent systems need observation, personalization, timing, and workflow embedding](../concepts/proactive-agent-systems-need-observation-personalization-timing-and-workflow-embedding.md)
 - [Use subagents to isolate context-heavy subtasks](../concepts/use-subagents-to-isolate-context-heavy-subtasks.md)
@@ -548,6 +551,7 @@
 
 ## Evaluation
 
+- [Review research and plans before they multiply into code](../concepts/review-research-and-plans-before-they-multiply-into-code.md)
 - [Regulated agents need explainability, isolation, governance, and speed](../concepts/regulated-agents-need-explainability-isolation-governance-and-speed.md)
 - [Treat environments as eval, data, and training substrates](../concepts/treat-environments-as-eval-data-and-training-substrates.md)
 - [Product harnesses can become model customization environments](../concepts/product-harnesses-can-become-model-customization-environments.md)
@@ -903,6 +907,8 @@
 
 ## Workflows
 
+- [Frequent intentional compaction keeps coding agents in the smart zone](../concepts/frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md)
+- [Review research and plans before they multiply into code](../concepts/review-research-and-plans-before-they-multiply-into-code.md)
 - [Scientific agents should execute against domain infrastructure](../concepts/scientific-agents-should-execute-against-domain-infrastructure.md)
 - [Regulated agents need explainability, isolation, governance, and speed](../concepts/regulated-agents-need-explainability-isolation-governance-and-speed.md)
 - [High-consequence data changes vendor trust requirements](../concepts/high-consequence-data-changes-vendor-trust-requirements.md)

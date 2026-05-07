@@ -15,6 +15,8 @@ Details:
 - Implementation can start in a fresh low-context session that receives only the plan, making changes easier to review and commit incrementally. (16:11-16:40)
 - Nations frames the same loop as a way to prevent long conversational coding sessions from accumulating abandoned approaches, conflicting patterns, and dead code; the three outputs are research, plan, and implementation, each validated before proceeding. (10:32-13:47)
 - For heavily tangled systems, the research phase may need a manually produced migration seed before agents can plan safely, because hidden invariants and service dependencies may only appear when a human changes the code and sees what breaks. (14:29-16:09)
+- Frequent intentional compaction adds a context-management rationale for the same loop: research compresses codebase truth, planning compresses human intent, and implementation can start from a reviewed low-context plan rather than a noisy long conversation. (07:31-08:25, 14:10-14:56)
+- The loop should scale with task complexity. Small edits may only need direct prompting, medium multi-repo features may need research plus a plan, and harder brownfield work needs more deliberate context compaction and human review. (17:48-18:29)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -27,7 +29,10 @@ Related concepts:
 - [Limit agent change size by feedback speed](limit-agent-change-size-by-feedback-speed.md)
 - [Long AI coding conversations compound accidental complexity](long-ai-coding-conversations-compound-accidental-complexity.md)
 - [Manual migration seeds teach agents the hidden constraints](manual-migration-seeds-teach-agents-the-hidden-constraints.md)
+- [Frequent intentional compaction keeps coding agents in the smart zone](frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md)
+- [Review research and plans before they multiply into code](review-research-and-plans-before-they-multiply-into-code.md)
 
 Sources:
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md), 11:36-16:40
 - [The Infinite Software Crisis - Jake Nations, Netflix](../sources/20251220_eIoohUmYpGI.md), 10:32-16:09
+- [No Vibes Allowed: Solving Hard Problems in Complex Codebases - Dex Horthy, HumanLayer](../sources/20251202_rmvDxxNubIg.md), 07:31-08:25, 14:10-18:29

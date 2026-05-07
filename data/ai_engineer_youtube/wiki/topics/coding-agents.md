@@ -44,6 +44,8 @@ Qodo's code-quality framing adds a full-SDLC quality layer. Generation-time rule
 
 OpenAI's future-proofing framing makes the harness itself a long-lived abstraction. A coding agent is a user interface plus model plus harness, and the harness owns the prompt, tools, tool loop, compaction, sandboxing, permissions, MCP support, and other model-facing behavior. Teams can either maintain that moving layer themselves or integrate a maintained harness through an SDK, then spend more of their effort on the IDE, CI/CD, review, product, or domain workflow that differentiates the experience. The caveat is prompt compatibility: newer coding models may already have trained habits around planning, context inspection, implementation, and testing, so prompts copied from other models can make the agent overexplore or slow down.
 
+HumanLayer's frequent intentional compaction framing makes that harness behavior concrete for hard brownfield work. Instead of letting one long chat accumulate search, tool output, corrections, and stale trajectory, the workflow repeatedly compresses useful state into reviewed artifacts. Research compresses source-backed codebase truth, planning compresses human intent into files, snippets, steps, and tests, and implementation can run from a low-context plan. The human role moves to the highest-leverage checkpoints: review whether the research is true and the plan is sane before a wrong assumption multiplies into a large diff.
+
 ## Key Concepts
 
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md) - coding-agent SDKs package reusable runtime pieces around the model.
@@ -84,6 +86,8 @@ OpenAI's future-proofing framing makes the harness itself a long-lived abstracti
 - [Vibe engineering is supervised agentic coding with judgment](../concepts/vibe-engineering-is-supervised-agentic-coding-with-judgment.md) - agentic coding works best when experienced humans steer context, abstractions, and acceptance criteria.
 - [Use voice-dumped UI and code observations as agent feedback](../concepts/use-voice-dumped-ui-and-code-observations-as-agent-feedback.md) - spoken UI and code review can provide high-bandwidth frontend feedback to agents.
 - [Keep agent-generated code clean enough for continued agent work](../concepts/keep-agent-generated-code-clean-enough-for-continued-agent-work.md) - generated code should be good enough for humans and future agents to build on.
+- [Frequent intentional compaction keeps coding agents in the smart zone](../concepts/frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md) - repeated source-backed context compression keeps brownfield coding work from drifting into noisy long-session behavior.
+- [Review research and plans before they multiply into code](../concepts/review-research-and-plans-before-they-multiply-into-code.md) - research and plan review catch high-blast-radius mistakes before implementation fans them out.
 - [AI code quality needs full-SDLC workflows](../concepts/ai-code-quality-needs-full-sdlc-workflows.md) - generated code needs quality checks across planning, development, review, testing, deployment, and ownership.
 - [AI review gates turn standards into executable feedback](../concepts/ai-review-gates-turn-standards-into-executable-feedback.md) - PR-time review gates can enforce rules that generation-time prompts only partially follow.
 - [Context quality determines AI code review trust](../concepts/context-quality-determines-ai-code-review-trust.md) - generation and review tools need standards, PR history, logs, and best practices as context, not only the current diff.
@@ -226,9 +230,11 @@ OpenAI's future-proofing framing makes the harness itself a long-lived abstracti
 - Which coding-agent model failures come from the base model and which come from overfitting to one harness, tool schema, or prompt template?
 - Which real coding sessions are difficult enough, reconstructable enough, and safe enough to become shared RL environments?
 - Which outcome verifiers are broad enough to accept valid alternate fixes while still blocking reward hacks and shallow workarounds?
+- How can teams measure the right compaction frequency before context cleanup becomes either too sparse to help or too heavy to read?
 
 ## Sources
 
+- [No Vibes Allowed: Solving Hard Problems in Complex Codebases - Dex Horthy, HumanLayer](../sources/20251202_rmvDxxNubIg.md)
 - [Making Codebases Agent Ready - Eno Reyes, Factory AI](../sources/20251222_ShuJ_CN6zr4.md)
 - [What We Learned Deploying AI within Bloomberg's Engineering Organization - Lei Zhang, Bloomberg](../sources/20251216_Q81AzlA-VE8.md)
 - [Your Support Team Should Ship Code - Lisa Orr, Zapier](../sources/20251216_RmJ4rTLV_x4.md)

@@ -48,6 +48,8 @@ Enterprise AI research workflows can be made fundable by turning each uncertain 
 
 AI coding workflows should also separate easy generation from simple system design. Nations' three-phase approach turns one long coding conversation into research, planning, and implementation artifacts with human checkpoints between them. That structure keeps review at the speed of generation: humans validate the research and plan before the agent produces a diff, then review implementation against a known plan rather than reverse-engineering whatever the chat invented.
 
+Frequent intentional compaction adds a context-window version of the same workflow. Research, plan, and implementation are useful because each phase can compact the previous phase into a smaller, reviewed artifact: codebase truth, then implementation intent, then executable change. The workflow should scale with task difficulty rather than become ceremony; a small button change may need direct prompting, while hard brownfield work needs enough compaction and review to keep the agent out of stale or noisy context.
+
 Outcome-based delivery workflows add an organizational layer around AI-accelerated engineering. A roadmapping phase can turn client goals into product requirements, architecture design documents, and story-pointed tickets, while acceptance gates determine when output becomes compensable. This creates a workflow incentive for AI leverage only if scoping, QA, and customer approval remain separate from the person paid for implementation throughput.
 
 Leadership-led AI workflows should start from the actual SDLC constraint. Code completion is not automatically the highest-leverage target if reverse engineering, onboarding, incidents, context switching, meetings, compliance uncertainty, or missing runbook context dominate delivery. Useful rollouts identify that bottleneck, choose AI use cases that reduce it, then measure whether system outcomes changed. Leadership learning workflows should also avoid learning from only one segment of the market: a cross-segment convening can help AI transformation leaders compare frontier lab direction, startup product velocity, academic framing, consulting patterns, and large-enterprise deployment evidence before turning strategy into a tactical roadmap for their own company.
@@ -134,6 +136,8 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 - [Vibe engineering is supervised agentic coding with judgment](../concepts/vibe-engineering-is-supervised-agentic-coding-with-judgment.md) - coding-agent workflows need a human who can steer and accept or reject agent output.
 - [Use voice-dumped UI and code observations as agent feedback](../concepts/use-voice-dumped-ui-and-code-observations-as-agent-feedback.md) - voice feedback can compress UI review and code critique into one agent handoff.
 - [Keep agent-generated code clean enough for continued agent work](../concepts/keep-agent-generated-code-clean-enough-for-continued-agent-work.md) - workflow throughput should not leave future agents blocked by accepted slop.
+- [Frequent intentional compaction keeps coding agents in the smart zone](../concepts/frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md) - workflow phases can compact context before long sessions drift.
+- [Review research and plans before they multiply into code](../concepts/review-research-and-plans-before-they-multiply-into-code.md) - humans should inspect high-leverage artifacts before implementation expands them into diffs.
 - [Use research-plan-implement loops for coding agents](../concepts/use-research-plan-implement-loops-for-coding-agents.md) - separate phases make coding-agent work more reviewable.
 - [Long AI coding conversations compound accidental complexity](../concepts/long-ai-coding-conversations-compound-accidental-complexity.md) - workflows should avoid letting conversational pivots become architecture.
 - [Manual migration seeds teach agents the hidden constraints](../concepts/manual-migration-seeds-teach-agents-the-hidden-constraints.md) - exploratory manual work can seed later agentic migration workflows.
@@ -306,9 +310,11 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 - Which prompt-learning loops need human explanations before automated optimization is safe?
 - Which large-refactor batches should wait for upstream merges, and which can safely proceed speculatively in parallel?
 - Which new-hire onboarding steps should be dedicated to configuring role-specific agents before ordinary execution work begins?
+- Which tasks need full research-plan-implement compaction, and which only need direct prompting plus validation?
 
 ## Sources
 
+- [No Vibes Allowed: Solving Hard Problems in Complex Codebases - Dex Horthy, HumanLayer](../sources/20251202_rmvDxxNubIg.md)
 - [Government Agents: AI Agents Meet Tough Regulations - Mark Myshatyn, Los Alamos National Lab](../sources/20251206_TnSGx36Ly0Q.md)
 - [What We Learned Deploying AI within Bloomberg's Engineering Organization - Lei Zhang, Bloomberg](../sources/20251216_Q81AzlA-VE8.md)
 - [Your Support Team Should Ship Code - Lisa Orr, Zapier](../sources/20251216_RmJ4rTLV_x4.md)
