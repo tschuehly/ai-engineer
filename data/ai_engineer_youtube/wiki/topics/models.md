@@ -16,6 +16,8 @@ Coding-model evaluation needs model-family progress to be measured against fresh
 
 Coding and workplace-agent models also need training signals that look like the work they will do. MiniMax M2 adds a compact open-weight model pattern: train against scaled coding environments and verifiable goals, use expert developers as a reward/evaluation source, teach repeated reasoning-tool loops for noisy environments, perturb scaffolds so the behavior is not tied to one harness, and exploit small active-parameter cost when many parallel agent copies are useful.
 
+Cline's RL environment factory adds a data-production pattern for that training pressure: real coding-agent sessions can be converted into portable environments with start states, prompts, solved end states, traces, and outcome verifiers. In that framing, the agent product is not only an interface around current models; it is also a source of hard tasks that can shape future model capability.
+
 ## Key Concepts
 
 - [Compare models by task, thinking budget, cost, and latency](../concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - model choice should be routed by workload constraints rather than by size alone.
@@ -46,6 +48,7 @@ Coding and workplace-agent models also need training signals that look like the 
 - [Train code models on execution traces, not only syntax](../concepts/train-code-models-on-execution-traces-not-only-syntax.md) - execution traces expose program dynamics that token-only source modeling can miss.
 - [Use neural debugging to fill code by simulated execution](../concepts/use-neural-debugging-to-fill-code-by-simulated-execution.md) - execution-aware code models can complete partial code from simulated state and surrounding structure.
 - [Train coding-agent models with environments and expert developer reward](../concepts/train-coding-agent-models-with-environments-and-expert-developer-reward.md) - coding-agent model quality should be shaped by verifiable environments and developer trust judgments.
+- [Turn real coding sessions into RL environments](../concepts/turn-real-coding-sessions-into-rl-environments.md) - real coding traces can become training environments when reconstructed and verified.
 - [Interleave reasoning and tool calls for long-horizon agents](../concepts/interleave-reasoning-and-tool-calls-for-long-horizon-agents.md) - long-horizon model behavior needs repeated think-act-observe cycles in noisy tool environments.
 - [Perturb agent scaffolds during training for generalization](../concepts/perturb-agent-scaffolds-during-training-for-generalization.md) - robust agent models should tolerate variation in tools, prompts, templates, environments, and responses.
 - [Small agentic models make parallel workplace agents economical](../concepts/small-agentic-models-make-parallel-workplace-agents-economical.md) - small active-parameter models can make multi-copy agent workflows affordable.
@@ -108,3 +111,4 @@ Coding and workplace-agent models also need training signals that look like the 
 - [Building in the Gemini Era - Kat Kampf & Ammaar Reshi, Google DeepMind](../sources/20251215_fgkXEIbZpGc.md)
 - [Coding Evals: From Code Snippets to Codebases - Naman Jain, Cursor](../sources/20251215_tHN44yJoeS8.md)
 - [Minimax M2: Building the #1 Open Model - Olive Song, MiniMax](../sources/20251213_lY1iFbDPRlw.md)
+- [Hard Won Lessons from Building Effective AI Coding Agents - Nik Pash, Cline](../sources/20251212_I8fs4omN1no.md)

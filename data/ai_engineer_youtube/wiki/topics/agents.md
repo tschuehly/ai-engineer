@@ -8,6 +8,8 @@ Agent workflows depend on both model capability and the context substrate around
 
 Agent models themselves can be tuned for this loop shape. M2's training story emphasizes interleaving reasoning with many tool-call turns, perturbing the operational surface around tools and prompts, and using small active-parameter economics to run multiple workplace-agent copies in parallel.
 
+Cline's coding-agent lesson separates harness progress from model progress. A stripped-down terminal harness can be enough for strong frontier models, while the more durable contribution is capturing where agents fail on real engineering work and turning those traces into standardized RL and eval environments.
+
 Proactive coding agents shift the interface again: instead of waiting for prompts or forcing humans to babysit many asynchronous terminals, they observe work patterns, personalize to the user and project, intervene at the right time, and live inside existing terminals, repositories, and IDEs. A practical maturity ladder starts with concrete maintenance signals such as missing tests, unused dependencies, and unsafe patterns; moves into project-aware help based on frameworks, deployment style, and user role; then connects code, design, telemetry, analytics, and conversion signals so agents can propose cross-boundary improvements. The human control point does not disappear: higher proactivity still needs visible agent activity, editable memory, critic review, verification artifacts, and redirection when the agent is misaligned.
 
 Code mode pushes tool-surface constraints into execution architecture. Model-written code can compress broad APIs and multi-step tool loops, but generated code should be treated as untrusted code even when it came from a helpful model. The harness should start generated code with no ambient authority, grant task-scoped capabilities with observable execution, choose isolates for short constrained functions, and choose containers only when the task needs a full filesystem, package manager, processes, or preview server.
@@ -119,6 +121,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Configure agent modes, rules, and permissions as the workflow evolves](../concepts/configure-agent-modes-rules-and-permissions-as-the-workflow-evolves.md) - modes, project rules, skills, tools, worktrees, and approval settings are part of the agent workflow.
 - [Own agent context instead of accepting hidden harness mutation](../concepts/own-agent-context-instead-of-accepting-hidden-harness-mutation.md) - agent operators need visibility into prompt, tool, reminder, and compaction changes.
 - [Minimal coding-agent harnesses can outperform feature-heavy surfaces](../concepts/minimal-coding-agent-harnesses-can-outperform-feature-heavy-surfaces.md) - models can sometimes perform better with a compact execution contract.
+- [Turn real coding sessions into RL environments](../concepts/turn-real-coding-sessions-into-rl-environments.md) - agent traces can become the substrate for better future models.
 - [Let agent harnesses extend through ordinary code packages](../concepts/let-agent-harnesses-extend-through-ordinary-code-packages.md) - optional harness capabilities can live in installable code modules.
 - [Customize subagents by task, model, tools, and permissions](../concepts/customize-subagents-by-task-model-tools-and-permissions.md) - specialist subagents should match role, model, tools, and authority to the task.
 - [Enterprise agent failures often expose missing institutional knowledge](../concepts/enterprise-agent-failures-expose-missing-institutional-knowledge.md) - task failures can reveal missing enterprise knowledge rather than insufficient model capability.
@@ -330,6 +333,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Dispatch from the Future: building an AI-native Company - Dan Shipper, Every, AI & I](../sources/20251218_MGzymaYBiss.md)
 - [AI Consulting in Practice - NLW, Superintelligent, @AIDailyBrief](../sources/20251218_ehQFj6VmuI8.md)
 - [Minimax M2: Building the #1 Open Model - Olive Song, MiniMax](../sources/20251213_lY1iFbDPRlw.md)
+- [Hard Won Lessons from Building Effective AI Coding Agents - Nik Pash, Cline](../sources/20251212_I8fs4omN1no.md)
 - [Proactive Agents - Kath Korevec, Google Labs](../sources/20251213_v3u8xc0zLec.md)
 - [The Agent Native Company — Rick Blalock, Agentuity](../sources/20250603_0ZPAvzhpGjw.md)
 - [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](../sources/20251223_LU9KgcZDRfY.md)

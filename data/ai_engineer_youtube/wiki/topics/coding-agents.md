@@ -20,6 +20,8 @@ Execution-aware code models point to another coding-agent interface: the model c
 
 Coding-agent model training can also target the harness and workflow shape directly. MiniMax M2's framing suggests that a coding model should learn from scaled coding environments, expert developer reward, repeated reasoning/tool-call turns, and scaffold perturbations across prompts, templates, tools, and tool responses. That makes agent robustness a training and evaluation target rather than a property assumed from benchmark rank or raw tool count.
 
+Cline adds a harder-edged version of the same lesson: once frontier models can use a stripped-down terminal harness effectively, durable progress comes less from clever agent scaffolding and more from real coding tasks converted into RL and eval environments. The reusable pipeline is to capture tasks where a model struggled, qualify whether the repository, starting commit, prompt journey, and eventual human fix are available, reconstruct the start and solved states, package the task in Docker, and define a verifier that tests the intended outcome rather than the exact reference path.
+
 Proactive coding-agent products add a background-work layer on top of the ordinary prompt loop. The agent can index the repository, find to-dos, detect missing tests or unsafe patterns, suggest best practices, prepare environments, and consult just-in-time context before asking the developer. That only helps when the product also preserves alignment: the user should see what the agent is doing, edit memory, inspect critic feedback, validate Playwright screenshots or other evidence, and redirect work that is technically plausible but not project-aligned.
 
 Enterprise rollouts should be skeptical of greenfield-only codegen wins. Bloomberg's deployment across thousands of engineers showed early gains in proofs of concept, tests, and one-time scripts, but those signals dropped quickly once work moved into mature codebases with verification, review, and merge constraints. Higher-leverage coding-agent targets may be maintenance, migration, patching, and incident response: uplift agents can scan existing code for applicable fixes and open explanatory pull requests, while incident agents can inspect operational evidence before responders over-anchor on a favorite hypothesis.
@@ -100,6 +102,8 @@ Vibe engineering adds a human-skill framing for frontend-heavy agentic coding. T
 - [Unified coding-agent harnesses combine models, tools, environments, and safety](../concepts/unified-coding-agent-harnesses-combine-models-tools-environments-and-safety.md) - model capability needs an execution harness that manages tools, environments, and safety.
 - [Own agent context instead of accepting hidden harness mutation](../concepts/own-agent-context-instead-of-accepting-hidden-harness-mutation.md) - hidden prompt, tool, and compaction changes can break coding-agent workflows.
 - [Minimal coding-agent harnesses can outperform feature-heavy surfaces](../concepts/minimal-coding-agent-harnesses-can-outperform-feature-heavy-surfaces.md) - small execution contracts can beat large default tool surfaces.
+- [Turn real coding sessions into RL environments](../concepts/turn-real-coding-sessions-into-rl-environments.md) - real agent failures can become portable training and evaluation tasks.
+- [Prefer outcome verifiers over ground-truth path checks](../concepts/prefer-outcome-verifiers-over-ground-truth-path-checks.md) - verifiers should reward task success rather than reference-patch mimicry.
 - [Isolate parallel coding work with project worktrees](../concepts/isolate-parallel-coding-work-with-project-worktrees.md) - separate work streams reduce interference between concurrent feature, bugfix, and investigation tasks.
 - [Customize subagents by task, model, tools, and permissions](../concepts/customize-subagents-by-task-model-tools-and-permissions.md) - specialist subagents should receive only the capabilities their role needs.
 - [Use agent hooks to automate session rituals](../concepts/use-agent-hooks-to-automate-session-rituals.md) - lifecycle hooks can automate setup, logging, and final validation passes.
@@ -191,6 +195,8 @@ Vibe engineering adds a human-skill framing for frontend-heavy agentic coding. T
 - Which benchmark-exploitation patterns should be blocked by the sandbox, detected by a judge, or left for human code review?
 - Which frontend feedback should be spoken, browser-verified, code-reviewed, or turned into reusable agent rules?
 - Which coding-agent model failures come from the base model and which come from overfitting to one harness, tool schema, or prompt template?
+- Which real coding sessions are difficult enough, reconstructable enough, and safe enough to become shared RL environments?
+- Which outcome verifiers are broad enough to accept valid alternate fixes while still blocking reward hacks and shallow workarounds?
 
 ## Sources
 
@@ -240,4 +246,5 @@ Vibe engineering adds a human-skill framing for frontend-heavy agentic coding. T
 - [Coding Evals: From Code Snippets to Codebases - Naman Jain, Cursor](../sources/20251215_tHN44yJoeS8.md)
 - [From Vibe Coding To Vibe Engineering - Kitze, Sizzy](../sources/20251214_JV-wY5pxXLo.md)
 - [Minimax M2: Building the #1 Open Model - Olive Song, MiniMax](../sources/20251213_lY1iFbDPRlw.md)
+- [Hard Won Lessons from Building Effective AI Coding Agents - Nik Pash, Cline](../sources/20251212_I8fs4omN1no.md)
 - [Proactive Agents - Kath Korevec, Google Labs](../sources/20251213_v3u8xc0zLec.md)

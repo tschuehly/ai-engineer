@@ -13,6 +13,7 @@ Details:
 - For tic-tac-toe, the environment behaves like a game engine: it stores board state, parses the model's move, checks validity, applies opponent moves, checks win or draw state, and emits the next prompt until the trajectory ends. (19:00-20:52)
 - CWM adds a large-scale code-agent training example: samplers execute terminal actions in an environment, trajectories are scored, trainers compute gradients, checkpoints are pushed to samplers, and queued models plus queued trajectories keep asynchronous RL throughput high. 08:43-10:31
 - The talk notes that mid-trajectory checkpoint updates can make a trajectory somewhat off-policy, but the system accepts that risk to remove bottlenecks and process more interaction data. 10:34-11:31
+- Cline's coding-agent environment recipe starts from a real repository snapshot and user prompt, reconstructs the real solved state, documents dependencies, removes Git from the Dockerized environment to reduce reward hacking, and records traces for repeatable scoring. 05:07-10:01
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -29,3 +30,4 @@ Related concepts:
 Sources:
 - [Let LLMs Wander: Engineering RL Environments - Stefano Fiorucci](../sources/20260408_71V3fTaUp2Q.md), 00:45-20:52
 - [Code World Model: Building World Models for Computation - Jacob Kahn, FAIR Meta](../sources/20251217_sYgE4ppDFOQ.md), 08:43-11:31
+- [Hard Won Lessons from Building Effective AI Coding Agents - Nik Pash, Cline](../sources/20251212_I8fs4omN1no.md), 05:07-10:01

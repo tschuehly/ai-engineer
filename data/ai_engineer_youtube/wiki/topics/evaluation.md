@@ -24,6 +24,8 @@ Code world models add execution traces as both training data and evaluation evid
 
 Coding-agent model evaluation should also vary the harness around the model. MiniMax M2's scaffold-generalization lesson is that scaling tools is not enough: useful evals should perturb tool descriptions, system prompts, user prompts, chat templates, environment behavior, and tool-response shape to see whether the model adapts or only memorized one agent scaffold.
 
+Real coding sessions can become evaluation and training environments when they are treated as reconstructable software artifacts. Cline's pipeline frames a coding benchmark as a starting repository state, starting prompt, and verifier; the same environment becomes an RL environment when the reward updates the policy model. This makes verifier design central: tests should capture the user's intended outcome and avoid encoding incidental details from the ground-truth patch, because path-biased verifiers can train agents toward mimicry or shortcuts.
+
 Long-horizon coding demos should be evaluated as workflows, not as one impressive final answer. Poolside's Ada-to-Rust demo includes visible diffs, build output, generated test commands, Bash scripts, manual reruns, and feature-level checks; those surfaces are the evidence that a multi-step coding agent did useful work rather than only producing a convincing summary.
 
 LLM program optimization adds another eval loop: define known inputs and outputs, write metrics that reflect the desired behavior, evaluate the base program, then let an optimizer propose improved prompts or modules. Metric breakdowns should be inspected after optimization because a gain can mean the metric is useful, the data is underspecified, or the program needs decomposition. Prompt-learning loops add a related requirement: labels and scalar scores are weaker than feedback that explains why an output failed and points to violated instructions, missing context, or rule-level noncompliance. The optimizer also inherits evaluator quality, so prompt-improvement systems should test their LLM judges, rule checkers, data splits, and loop budgets before trusting apparent prompt gains. Product teams can use the same shape for model behavior: seed prompts, run scored tasks, select strong variants, ask an LLM to reflect on successes and failures, mutate the prompts, and repeat while checking that evals actually represent product requirements. PM-facing eval workflows should also avoid treating prompt playgrounds as isolated demos: traces and spans can carry real inputs, outputs, metadata, and agent actions into datasets and experiments, while LLM judges should emit categorical labels that are deterministically mapped to scores instead of raw numeric ratings.
@@ -83,6 +85,8 @@ Coding capability evals also need to evolve with model capability. Static progra
 - [Validate eval harnesses before trusting skill scores](../concepts/validate-eval-harnesses-before-trusting-skill-scores.md) - incorrect assertions or judges can misreport skill impact.
 - [Use loss curves to debug local model training](../concepts/use-loss-curves-to-debug-local-model-training.md) - train and validation loss patterns separate non-learning, overfitting, and instability.
 - [Build RL environments as software artifacts](../concepts/build-rl-environments-as-software-artifacts.md) - stateful environments can evaluate interactive tasks that static datasets do not capture.
+- [Turn real coding sessions into RL environments](../concepts/turn-real-coding-sessions-into-rl-environments.md) - captured coding sessions need qualification, reconstruction, packaging, and scoring before they can train or compare agents.
+- [Prefer outcome verifiers over ground-truth path checks](../concepts/prefer-outcome-verifiers-over-ground-truth-path-checks.md) - benchmark tests should measure the intended final state rather than incidental reference-solution details.
 - [Pair next-token prediction with reinforcement learning for long-horizon work](../concepts/pair-next-token-prediction-with-reinforcement-learning-for-long-horizon-work.md) - agentic capability claims should be checked against task completion and rollout behavior.
 - [Train code models on execution traces, not only syntax](../concepts/train-code-models-on-execution-traces-not-only-syntax.md) - execution traces provide model-training and eval data for program semantics.
 - [Perturb agent scaffolds during training for generalization](../concepts/perturb-agent-scaffolds-during-training-for-generalization.md) - agent evals should vary prompts, templates, tools, environments, and tool responses.
@@ -193,6 +197,8 @@ Coding capability evals also need to evolve with model capability. Static progra
 - Which explanatory feedback fields are stable enough to automate prompt rewriting, and which still require subject-matter-expert review?
 - Which coding benchmark update cadence preserves freshness without making longitudinal model comparisons too unstable?
 - Which reward-hack detector signals are reliable enough to reject an otherwise passing optimization patch?
+- Which real coding traces have enough provenance to reconstruct both the starting state and the accepted human outcome?
+- How should verifier builders distinguish necessary behavioral requirements from incidental details in a ground-truth patch?
 - Which intermediate progress metrics best predict final success for codebase translation and large refactors?
 - How much should in-the-wild IDE completion evals normalize for latency before comparing model quality?
 
@@ -259,3 +265,4 @@ Coding capability evals also need to evolve with model capability. Static progra
 - [Code World Model: Building World Models for Computation - Jacob Kahn, FAIR Meta](../sources/20251217_sYgE4ppDFOQ.md)
 - [Coding Evals: From Code Snippets to Codebases - Naman Jain, Cursor](../sources/20251215_tHN44yJoeS8.md)
 - [Minimax M2: Building the #1 Open Model - Olive Song, MiniMax](../sources/20251213_lY1iFbDPRlw.md)
+- [Hard Won Lessons from Building Effective AI Coding Agents - Nik Pash, Cline](../sources/20251212_I8fs4omN1no.md)

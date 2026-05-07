@@ -879,3 +879,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Proactive agent systems need observation, personalization, timing, and workflow embedding](concepts/proactive-agent-systems-need-observation-personalization-timing-and-workflow-embedding.md), [Stage proactive coding agents from maintenance to system awareness](concepts/stage-proactive-coding-agents-from-maintenance-to-system-awareness.md), [Keep humans aligned with proactive agent work](concepts/keep-humans-aligned-with-proactive-agent-work.md)
 - Notes: Added Google Labs' proactive coding-agent framing around reducing async-agent monitoring load through staged background work, live context, verification, and human alignment.
+
+## [2026-05-07] ingest | Hard Won Lessons from Building Effective AI Coding Agents - Nik Pash, Cline
+
+- Source: [Hard Won Lessons from Building Effective AI Coding Agents - Nik Pash, Cline](sources/20251212_I8fs4omN1no.md)
+- Processed: `I8fs4omN1no`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Models](topics/models.md)
+- Updated concepts: [Minimal coding-agent harnesses can outperform feature-heavy surfaces](concepts/minimal-coding-agent-harnesses-can-outperform-feature-heavy-surfaces.md), [Turn real coding sessions into RL environments](concepts/turn-real-coding-sessions-into-rl-environments.md), [Prefer outcome verifiers over ground-truth path checks](concepts/prefer-outcome-verifiers-over-ground-truth-path-checks.md), [Train coding-agent models with environments and expert developer reward](concepts/train-coding-agent-models-with-environments-and-expert-developer-reward.md), [Build RL environments as software artifacts](concepts/build-rl-environments-as-software-artifacts.md)
+- Notes: Added Cline's argument that coding-agent progress depends on turning real agent failures into reconstructable RL/eval environments with outcome-focused verifiers.
