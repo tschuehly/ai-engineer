@@ -14,6 +14,8 @@ Compute marketplaces add a lower-level routing problem beneath model marketplace
 
 Morph's reasoning-time branching pattern adds another long-running inference shape: instead of one model call consuming more hidden thinking tokens, the system can branch the external environment, run parallel agents against the same state, and choose verifier-passing branches. Capacity planning then has to include workspace snapshot overhead, branch fanout, verifier cost, and the wall-clock goal of finding a good branch faster than a single linear run.
 
+DeepSeek's reasoning update adds a simpler token-budget version of that same test-time compute pressure. The source describes a model revision that spends roughly twice as many reasoning tokens on AIME-style problems after RL, so inference planning for reasoning models should treat hidden reasoning length as a tunable cost and latency driver, not just a model-quality feature.
+
 NVIDIA Dynamo's inference-frontier framing adds a data-center serving lens: the useful target is an application's operating point across quality, latency, and cost, not a single benchmark metric. Distributed inference can move that point by disaggregating compute-bound prefill from often memory-bound decode, routing requests by both KV locality and worker load, exploiting agent structure such as re-query loops and tool-call waits to preserve KV state, and dynamically shifting specialized worker pools as input and output sequence distributions change.
 
 Realtime voice serving adds an audio-token variant of the same discipline. A TTS model that emits codec tokens has to generate fast enough for playback, not just fast enough for text UX; leading generated silence, adapter loading, batch shape, and quantization choices all affect whether the first useful audio arrives inside the conversation window.
@@ -31,6 +33,8 @@ SGLang adds a concrete runtime-configuration layer to that serving discipline. A
 - [Bind Sensitive Payloads To Remote Attestation Claims](../concepts/bind-sensitive-payloads-to-remote-attestation-claims.md) - attestation-bound encryption makes payload release depend on the server still running trusted code.
 - [Use Transparency Logs To Audit Attested AI Binaries](../concepts/use-transparency-logs-to-audit-attested-ai-binaries.md) - inference clients can compare runtime claims to signed release records.
 - [Scale Test-Time Search Through Parallel Verifier-Checked Branches](../concepts/scale-test-time-search-through-parallel-verifier-checked-branches.md) - test-time compute can fan out into external branch attempts scored by verifiers.
+- [Scale Reasoning Models With RL and Verifiable Domains](../concepts/scale-reasoning-models-with-rl-and-verifiable-domains.md) - longer hidden reasoning traces improve some tasks but also create serving cost and latency obligations.
+- [Distill Reasoning Traces Into Small Models](../concepts/distill-reasoning-traces-into-small-models.md) - small models can inherit some reasoning behavior from larger teachers, changing deployment options.
 - [Tune inference to the application Pareto point](../concepts/tune-inference-to-the-application-pareto-point.md) - model-serving choices should target the application's quality, latency, and cost operating point.
 - [Serve Realtime TTS By Audio-Token Throughput](../concepts/serve-realtime-tts-by-audio-token-throughput.md) - streaming voice inference needs generated codec-token throughput that stays ahead of playback.
 - [Remove Head-Of-Line Silence From Voice Models](../concepts/remove-head-of-line-silence-from-voice-models.md) - generated leading silence burns inference time before useful audio exists.
@@ -111,3 +115,4 @@ SGLang adds a concrete runtime-configuration layer to that serving discipline. A
 - [The Unofficial Guide to Apple's Private Cloud Compute - Jmo, CONFSEC](../sources/20250730_CCsWZ5bJlO8.md)
 - [Strategies for LLM Evals (GuideLLM, lm-eval-harness, OpenAI Evals Workshop) - Taylor Jordan Smith](../sources/20250727_89NuzmKokIk.md)
 - [Introduction to LLM serving with SGLang - Philip Kiely and Yineng Zhang, Baseten](../sources/20250726_Ahtaha9fEM0.md)
+- [Latent Space Paper Club: AIEWF Special Edition (Test of Time, DeepSeek R1/V3) — VIbhu Sapra](../sources/20250725_9k3xPh-40mo.md)

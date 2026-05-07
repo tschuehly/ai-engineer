@@ -4,6 +4,8 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Scale Reasoning Models With RL and Verifiable Domains](concepts/scale-reasoning-models-with-rl-and-verifiable-domains.md) - DeepSeek-style reasoning post-training uses verifiable math and code domains to spend more test-time compute on hard prompts.
+- [Distill Reasoning Traces Into Small Models](concepts/distill-reasoning-traces-into-small-models.md) - stronger reasoning-model traces can transfer useful reasoning behavior into 8B-class deployable models.
 - [End-to-End Driving Models Can Use Route Text and Camera Video](concepts/end-to-end-driving-models-can-use-route-text-and-camera-video.md) - EMMA frames autonomous driving as route-conditioned camera-video-to-waypoint prediction.
 - [Use Reasoning Channels To Make Driving Planners Inspectable](concepts/use-reasoning-channels-to-make-driving-planners-inspectable.md) - end-to-end driving planners need critical-object and meta-decision explanations before waypoint outputs are trusted.
 - [Evaluate Driving Models With Generated Sensor Simulation](concepts/evaluate-driving-models-with-generated-sensor-simulation.md) - generated sensor video can evaluate camera-only planners under controllable weather and lighting conditions.

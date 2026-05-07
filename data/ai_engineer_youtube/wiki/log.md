@@ -1703,3 +1703,11 @@
 - Updated topics: [Robotics](topics/robotics.md), [Models](topics/models.md), [Evaluation](topics/evaluation.md)
 - Updated concepts: [End-to-End Driving Models Can Use Route Text and Camera Video](concepts/end-to-end-driving-models-can-use-route-text-and-camera-video.md), [Use Reasoning Channels To Make Driving Planners Inspectable](concepts/use-reasoning-channels-to-make-driving-planners-inspectable.md), [Evaluate Driving Models With Generated Sensor Simulation](concepts/evaluate-driving-models-with-generated-sensor-simulation.md)
 - Notes: Added Waymo EMMA patterns for route-conditioned multimodal driving, inspectable planner reasoning, and generated sensor simulation for closed-loop evaluation.
+
+## [2026-05-07] ingest | Latent Space Paper Club: AIEWF Special Edition (Test of Time, DeepSeek R1/V3) — VIbhu Sapra
+
+- Source: [Latent Space Paper Club: AIEWF Special Edition (Test of Time, DeepSeek R1/V3) — VIbhu Sapra](sources/20250725_9k3xPh-40mo.md)
+- Processed: `9k3xPh-40mo`
+- Updated topics: [Models](topics/models.md), [Evaluation](topics/evaluation.md), [Inference](topics/inference.md)
+- Updated concepts: [Scale Reasoning Models With RL and Verifiable Domains](concepts/scale-reasoning-models-with-rl-and-verifiable-domains.md), [Distill Reasoning Traces Into Small Models](concepts/distill-reasoning-traces-into-small-models.md)
+- Notes: Added DeepSeek R1/V3 patterns for reasoning post-training, verifiable-domain RL, test-time reasoning-token budgets, and distillation of improved reasoning traces into small models.

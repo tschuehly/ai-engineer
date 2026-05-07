@@ -10,6 +10,8 @@ Long-tail knowledge adaptation adds a memory-oriented model pattern. When a doma
 
 Long-horizon agent models add a post-training pressure: fluent next-token continuation is not the same as sustained task completion. Poolside's public demo frames reinforcement learning as the missing ingredient for moving from completions and chat toward autonomous software-development and knowledge-work agents, especially when the target behavior spans codebase inspection, translation, testing, feature addition, and iterative verification.
 
+DeepSeek R1/V3 adds a reasoning-model version of that post-training lesson. The Paper Club recap frames the May 28 update as better RL on the same model family, not a wholly new base model: more post-training made the model spend more test-time reasoning tokens on hard math/coding prompts and improved benchmarked reasoning, JSON output, and function calling. The same source also highlights reasoning-trace distillation as a small-model lever: an improved reasoning teacher can generate traces that transfer surprising capability into an 8B-class student.
+
 Code world models add an execution-aware variant of model training for software. Instead of treating code only as syntax, CWM trains around program execution traces: local variables, memory, line-by-line state, repository-level test and CI traces, and state/action/state transitions. This makes code a constrained world-modeling substrate where a model can learn to simulate program behavior, support neural-debugger interfaces, and reason about expensive execution paths before every real-world action is run.
 
 Coding-model evaluation needs model-family progress to be measured against fresh and appropriately difficult tasks. Dynamic code benchmarks can use post-training-window problem releases and changing difficulty distributions to avoid confusing memorized or saturated task sets with genuine model improvement. As coding models move from completions to repository optimization and translation, evals should also measure whether the model's apparent improvement survives real task distributions, runtime checks, and reward-hack detection.
@@ -89,6 +91,8 @@ Mechanistic interpretability adds a model-internal engineering surface. Instead 
 - [Treat quantization as a memory-bandwidth lever](../concepts/treat-quantization-as-a-memory-bandwidth-lever.md) - precision choices affect throughput and time to first token, not only whether a model fits.
 - [Post-train small models for narrow capabilities](../concepts/post-train-small-models-for-narrow-capabilities.md) - data extraction, tool use, and other focused tasks are better targets than average performance across every benchmark.
 - [Build RL environments as software artifacts](../concepts/build-rl-environments-as-software-artifacts.md) - interactive post-training tasks need runnable environments, parsers, state, and rewards rather than only static examples.
+- [Scale Reasoning Models With RL and Verifiable Domains](../concepts/scale-reasoning-models-with-rl-and-verifiable-domains.md) - reasoning post-training should target tasks where longer test-time reasoning can be rewarded and evaluated.
+- [Distill Reasoning Traces Into Small Models](../concepts/distill-reasoning-traces-into-small-models.md) - strong reasoning traces can transfer useful behavior into smaller deployable models.
 - [Treat environments as eval, data, and training substrates](../concepts/treat-environments-as-eval-data-and-training-substrates.md) - environments preserve optionality across evals, synthetic data, SFT, distillation, and RL.
 - [Product harnesses can become model customization environments](../concepts/product-harnesses-can-become-model-customization-environments.md) - product-specific behavior can be trained inside the same harness that defines the user experience.
 - [Environment registries make AI research more accessible](../concepts/environment-registries-make-ai-research-more-accessible.md) - packaged environments make model research easier to share and run.
@@ -163,6 +167,7 @@ Mechanistic interpretability adds a model-internal engineering surface. Instead 
 - [What Is a Humanoid Foundation Model? An Introduction to GR00T N1 - Annika & Aastha](../sources/20250728_mWKYvT9Lc50.md)
 - [Why you should care about AI interpretability - Mark Bissell, Goodfire AI](../sources/20250727_6AVMHZPjpTQ.md)
 - [Introduction to LLM serving with SGLang - Philip Kiely and Yineng Zhang, Baseten](../sources/20250726_Ahtaha9fEM0.md)
+- [Latent Space Paper Club: AIEWF Special Edition (Test of Time, DeepSeek R1/V3) — VIbhu Sapra](../sources/20250725_9k3xPh-40mo.md)
 - [Waymo's EMMA: Teaching Cars to Think - Jyh Jing Hwang, Waymo](../sources/20250726_iS9YFW28XyM.md)
 
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md)
