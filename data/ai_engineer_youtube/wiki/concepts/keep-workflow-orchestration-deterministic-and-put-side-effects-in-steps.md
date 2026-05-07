@@ -10,6 +10,7 @@ Details:
 - Workflow DevKit compiles workflow-related code into a separate bundle and blocks imports that would create side effects, because the orchestration layer must be rerunnable deterministically, 12:24-12:45.
 - LLM calls and agent tool calls should be marked as steps; in the demo, a durable agent class adds a step marker around the AI SDK agent's underlying LLM calls, 12:45-13:17.
 - Step inputs and outputs can be cached after a successful run and failed steps can be retried, so production recovery does not require re-running every prior part of the agent loop, 16:10-16:26.
+- Temporal's Python model draws the same line: workflow code must be deterministic, while IO and other non-deterministic work belong in activities whose inputs and outputs are recorded for replay, 04:47-05:36.
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -23,3 +24,4 @@ Related concepts:
 
 Sources:
 - [Building durable Agents with Workflow DevKit & AI SDK - Peter Wielander, Vercel](../sources/20260106_kmV-qg4uoNI.md), 12:24-13:17, 16:10-16:26
+- [From Stateless Nightmares to Durable Agents - Samuel Colvin, Pydantic](../sources/20251124_flf_IKnFYnE.md), 04:47-05:36

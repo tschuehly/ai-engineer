@@ -12,6 +12,7 @@ Details:
 - Research quality needs high precision and recall: enough relevant sources to cover the topic, but not so many that limited context is filled with noise. 22:12-22:27
 - The system should reduce hallucination and AI slop by grounding synthesis in research artifacts and preserving source citation. 20:40-20:49, 22:27-22:34
 - Mendelevitch applies the same deep-research shape to enterprise data: multi-step investigation, result synthesis, citations, and then a private-corpus version with multi-agent execution, reflection, and final synthesis. (02:19-03:47)
+- Colvin's PydanticAI demo implements this shape as a structured plan, bounded parallel search steps, XML-like evidence packaging, and a final analysis agent, with Logfire exposing each stage for inspection, 12:48-16:41.
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -22,7 +23,9 @@ Related concepts:
 - [Evaluate retrieval and MCP layers by task value, not only response availability](evaluate-retrieval-and-mcp-layers-by-task-value.md)
 - [Stage complex AI applications into inspectable deterministic and agentic steps](stage-complex-ai-applications-into-inspectable-deterministic-and-agentic-steps.md)
 - [Enterprise deep research runs multi-step synthesis over private corpora](enterprise-deep-research-runs-multi-step-synthesis-over-private-corpora.md)
+- [Compose Deep Research as Plan, Parallel Search, and Analysis Agents](compose-deep-research-as-plan-parallel-search-and-analysis-agents.md)
 
 Sources:
 - [Full Workshop: Build Your Own Deep Research Agents - Louis-François Bouchard, Paul Iusztin, Samridhi](../sources/20260420_mYSRn6PC1mc.md), 20:28-22:34
 - [Enterprise Deep Research: The Next Killer App for Enterprise AI — Ofer Mendelevitch, Vectara](../sources/20251124_fh9LgKXBGnQ.md), 02:19-03:47
+- [From Stateless Nightmares to Durable Agents - Samuel Colvin, Pydantic](../sources/20251124_flf_IKnFYnE.md), 12:48-16:41

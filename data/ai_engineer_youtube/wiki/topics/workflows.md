@@ -24,6 +24,8 @@ Multi-agent workflows need explicit coordination and recovery choices. Event-dri
 
 Durable workflow engines also address the single-agent production loop. Agent frameworks may provide the fixed loop that calls the LLM, executes requested tools, and feeds results back, but production workflows need persisted turns, retry policy, timeout behavior, and resumable waits around that loop. Human-in-the-loop steps are a useful stress test: the workflow should pause as logical state, release active process resources when needed, and resume when a human response arrives. Workflow-like automations can still justify an agent harness when the middle of the process requires flexible exploration, repository cloning, Docker runs, tests, and structured output rather than only known deterministic steps.
 
+Python agent workflows can keep ordinary imperative structure while becoming durable. PydanticAI's Temporal demo wraps agents, keeps non-IO orchestration deterministic, places LLM and tool calls behind activity boundaries, and uses normal `TaskGroup`-style parallelism for search branches. That matters for deep research and similar workflows because a crash after planning and search should not require paying for those steps again before final analysis resumes.
+
 Workflow-backed TypeScript agents should keep orchestration deterministic and put LLM calls, sandbox commands, and external APIs behind step boundaries. That makes the running agent easier to inspect through step spans, easier to connect to a resumable UI stream, and easier to control through scheduling, cancellation, and run-version operations when it waits beyond one request.
 
 API-backed agent workflows should be hardened only after their task shape is understood. A practical path is to prototype the repeated work in the provider's web UI, observe which context, files, connectors, and permissions make the run succeed, then encode that stable shape as an API task lifecycle with polling or webhooks. When the workflow starts in a channel such as Slack, store the thread-to-task mapping explicitly so follow-up messages continue the same task and final results return to the user's original conversation.
@@ -95,6 +97,8 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 - [Human Control Planes Turn Agent Swarms Into Manageable Organizations](../concepts/human-control-planes-turn-agent-swarms-into-manageable-organizations.md) - workflows need visible organizational state when many agents work in parallel.
 - [Treat multi-agent systems as distributed systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md) - workflow design must account for coordination complexity and shared-state failure modes.
 - [Use durable execution for production agent loops](../concepts/use-durable-execution-for-production-agent-loops.md) - workflow durability prevents crashes or rate limits from resetting long-running agent loops.
+- [Compose Deep Research as Plan, Parallel Search, and Analysis Agents](../concepts/compose-deep-research-as-plan-parallel-search-and-analysis-agents.md) - staged research workflows can stay inspectable while running search branches in parallel.
+- [Evaluate Agent Loops With Correctness, Cost, Latency, and Step Counts](../concepts/evaluate-agent-loops-with-correctness-cost-latency-and-step-counts.md) - workflow evals should check quality before trusting efficiency metrics.
 - [Observability-to-PR agents turn incidents into reviewable fixes](../concepts/observability-to-pr-agents-turn-incidents-into-reviewable-fixes.md) - workflows can turn detected infrastructure issues into planned coding-agent PRs.
 - [Analyze operational health over time slices before invoking repair agents](../concepts/analyze-operational-health-over-time-slices-before-invoking-repair-agents.md) - scheduled health windows keep workflow triggers from overreacting to one noisy metric.
 - [Keep workflow orchestration deterministic and put side effects in steps](../concepts/keep-workflow-orchestration-deterministic-and-put-side-effects-in-steps.md) - rerunnable workflow code needs side-effecting agent work isolated in steps.
@@ -388,6 +392,7 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 - [Build a Prompt Learning Loop - SallyAnn DeLucia & Fuad Ali, Arize](../sources/20260106_SbcQYbrvAfI.md)
 - [The Unreasonable Effectiveness of Prompt Learning - Aparna Dhinakaran, Arize](../sources/20251223_pP_dSNz_EdQ.md)
 - [Building durable Agents with Workflow DevKit & AI SDK - Peter Wielander, Vercel](../sources/20260106_kmV-qg4uoNI.md)
+- [From Stateless Nightmares to Durable Agents - Samuel Colvin, Pydantic](../sources/20251124_flf_IKnFYnE.md)
 - [Developer Experience in the Age of AI Coding Agents - Max Kanat-Alexander, Capital One](../sources/20251223_rT2Del5pwg4.md)
 - [Making Codebases Agent Ready - Eno Reyes, Factory AI](../sources/20251222_ShuJ_CN6zr4.md)
 - [The Infinite Software Crisis - Jake Nations, Netflix](../sources/20251220_eIoohUmYpGI.md)

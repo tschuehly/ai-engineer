@@ -34,6 +34,8 @@ Multi-agent orchestration is also infrastructure once workflows leave the demo s
 
 Durable execution infrastructure can wrap even a single agentic loop. Treat LLM calls, tool invocations, and external APIs as workflow activities with configured retry and timeout behavior, and persist successful results so crash recovery does not repeat token spend or side effects. For human-in-the-loop agents, the infrastructure should support logical waits that can leave active memory and later rehydrate state when approval or clarification arrives.
 
+PydanticAI's Temporal path adds a Python-specific implementation: wrap agents in Temporal-backed agents, keep IO in activities, and use Logfire to inspect workflow IDs, model calls, nested tool activities, parallel branches, costs, and cached replay behavior. The key infrastructure boundary is not only "can the process restart"; it is whether completed LLM calls and tool calls can replay instantly while unfinished activities rerun normally.
+
 Durable agent infrastructure also needs a deterministic orchestration boundary. Workflow code should be rerunnable and side-effect-free, while steps perform LLM calls, tool calls, sandbox commands, and external API work; observability then attaches to the step/event log, and lifecycle controls manage cancellation, scheduling, and deployment-version changes for in-flight runs.
 
 Self-healing infrastructure adds an operations-to-code workflow on top of that durable boundary. Railway Autofix uses scheduled workflows to fetch application architecture, resource metrics, HTTP metrics, service logs, build logs, and deployment logs, then passes an analyzed repair plan to a headless coding agent that opens a pull request. The infrastructure lesson is that agent repair needs machine-readable observability and code-execution tools, but the merge boundary can stay human-reviewed.
@@ -67,6 +69,7 @@ Architecture-copilot infrastructure needs a live system model before recommendat
 - [Keep workflow orchestration deterministic and put side effects in steps](../concepts/keep-workflow-orchestration-deterministic-and-put-side-effects-in-steps.md) - deterministic orchestration and step boundaries prevent recovery from replaying unsafe effects.
 - [Control long-running workflow agents through run lifecycle operations](../concepts/control-long-running-workflow-agents-through-run-lifecycle-operations.md) - infrastructure should expose cancellation, scheduling, and version handling for long-lived agent runs.
 - [Model LLM calls and tools as durable activities](../concepts/model-llm-calls-and-tools-as-durable-activities.md) - activities are an infrastructure boundary for retries, timeouts, and persisted external work.
+- [Evaluate Agent Loops With Correctness, Cost, Latency, and Step Counts](../concepts/evaluate-agent-loops-with-correctness-cost-latency-and-step-counts.md) - agent infrastructure metrics should not be optimized without correctness checks.
 - [Treat long waits as logical workflow state](../concepts/treat-long-waits-as-logical-workflow-state.md) - infrastructure should rehydrate paused agent workflows after long waits instead of pinning processes.
 - [Use immutable versioned state for agent handoffs](../concepts/use-immutable-versioned-state-for-agent-handoffs.md) - append-only handoff state supports rollback, replay, and root-cause analysis.
 - [Wrap agent calls with circuit breakers and compensation](../concepts/wrap-agent-calls-with-circuit-breakers-and-compensation.md) - serving-layer failure controls and rollback contracts are part of production agent infrastructure.
@@ -238,6 +241,7 @@ Architecture-copilot infrastructure needs a live system model before recommendat
 - [Contact Center Voice AI: Low-Latency Intelligence Extraction from Messy Audio Streams - Dippu Singh](../sources/20260408_IEF842ZEU5A.md)
 - [Platforms for Humans and Machines: Engineering for the Age of Agents - Juan Herreros Elorza](../sources/20260408_cCRO3ChaYhM.md)
 - [OpenAI + @Temporalio : Building Durable, Production Ready Agents - Cornelia Davis, Temporal](../sources/20260112_k8cnVCMYmNc.md)
+- [From Stateless Nightmares to Durable Agents - Samuel Colvin, Pydantic](../sources/20251124_flf_IKnFYnE.md)
 - [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](../sources/20251223_LU9KgcZDRfY.md)
 - [Building durable Agents with Workflow DevKit & AI SDK - Peter Wielander, Vercel](../sources/20260106_kmV-qg4uoNI.md)
 - [Developer Experience in the Age of AI Coding Agents - Max Kanat-Alexander, Capital One](../sources/20251223_rT2Del5pwg4.md)

@@ -40,6 +40,8 @@ Multi-agent production systems also inherit ordinary distributed-systems failure
 
 Durable execution is the production version of that distributed-systems stance for a single agent loop as well as for multi-agent systems. LLM calls, tool invocations, and external API calls should be persisted around workflow boundaries so process crashes, rate limits, or downstream outages do not force the agent to repeat completed turns or re-trigger side effects. Long waits, including human approvals and clarifications, should also be modeled as durable workflow state rather than as a live process that must stay pinned until the human returns.
 
+PydanticAI's Temporal integration makes that durability pattern concrete for Python agents: ordinary agent-like objects can be wrapped in Temporal-backed agents, while Temporal records activity inputs and outputs for LLM and tool IO. A killed worker can resume a specific workflow and replay completed model calls from stored results, while only unfinished activities such as a long final analysis need to run again.
+
 TypeScript agent products add a concrete implementation constraint to this durability story: workflow orchestration should be deterministic, while LLM calls, sandbox operations, and external tools become explicit steps whose inputs and outputs can be cached, retried, observed, canceled, and upgraded across deployment versions.
 
 Agent APIs need a similar task-lifecycle contract even when the workflow engine is hidden behind a provider API. A long-running agent task should return a stable task ID and task URL, expose states such as running, pending, completed, and error, support polling or webhooks, and let external products continue the same task rather than losing context in a new run. Chat integrations need a correlation layer: Slack thread IDs, users, channels, and statuses should map back to provider task IDs so follow-up messages and final replies land in the visible conversation while deeper execution state stays with the agent service.
@@ -108,6 +110,8 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Human Control Planes Turn Agent Swarms Into Manageable Organizations](../concepts/human-control-planes-turn-agent-swarms-into-manageable-organizations.md) - org-chart, project, task, budget, and memory surfaces make large agent organizations supervisable.
 - [Treat multi-agent systems as distributed systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md) - multi-agent scale introduces coordination, stale state, and failure-propagation problems.
 - [Use durable execution for production agent loops](../concepts/use-durable-execution-for-production-agent-loops.md) - production loops should persist LLM calls, tool outputs, and state across crashes and retries.
+- [Compose Deep Research as Plan, Parallel Search, and Analysis Agents](../concepts/compose-deep-research-as-plan-parallel-search-and-analysis-agents.md) - research agents can be composed from inspectable planner, search, and analysis roles.
+- [Evaluate Agent Loops With Correctness, Cost, Latency, and Step Counts](../concepts/evaluate-agent-loops-with-correctness-cost-latency-and-step-counts.md) - operational metrics need correctness checks before they rank agent models.
 - [Treat agent APIs as asynchronous task lifecycles](../concepts/treat-agent-apis-as-asynchronous-task-lifecycles.md) - long-running agent APIs need stable handles, status, continuation, and result delivery.
 - [Treat long-horizon agents as asynchronous workers with evolving interfaces](../concepts/treat-long-horizon-agents-as-asynchronous-workers-with-evolving-interfaces.md) - longer task horizons need visible progress, artifacts, and review surfaces.
 - [Agent managers orchestrate editor, browser, and background agents](../concepts/agent-managers-orchestrate-editor-browser-and-background-agents.md) - agent-first developer platforms can move supervision above the editor.
@@ -368,6 +372,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Your MCP Server is Bad (and you should feel bad) - Jeremiah Lowin, Prefect](../sources/20260112_96G7FLab8xc.md)
 - [OpenAI + @Temporalio : Building Durable, Production Ready Agents - Cornelia Davis, Temporal](../sources/20260112_k8cnVCMYmNc.md)
 - [Building durable Agents with Workflow DevKit & AI SDK - Peter Wielander, Vercel](../sources/20260106_kmV-qg4uoNI.md)
+- [From Stateless Nightmares to Durable Agents - Samuel Colvin, Pydantic](../sources/20251124_flf_IKnFYnE.md)
 - [Claude Agent SDK [Full Workshop] - Thariq Shihipar, Anthropic](../sources/20260105_TqC1qOfiVcQ.md)
 - [Building Intelligent Research Agents with Manus - Ivan Leo, Manus AI (now Meta Superintelligence)](../sources/20251230_xz0-brt56L8.md)
 - [AGI: The Path Forward - Jason Warner & Eiso Kant, Poolside](../sources/20251227_OGCG_QkCcZo.md)

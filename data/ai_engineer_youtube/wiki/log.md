@@ -1087,3 +1087,11 @@
 - Updated topics: [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md)
 - Updated concepts: [Route Agent Optimization By Task Profile, Not One Fixed Loop](concepts/route-agent-optimization-by-task-profile-not-one-fixed-loop.md), [Use Hierarchical Verification Before Trusting Weak Agent Feedback](concepts/use-hierarchical-verification-before-trusting-weak-agent-feedback.md), [Train Meta-Controllers With Cost, Confidence, And Sparse-Reward Caveats](concepts/train-meta-controllers-with-cost-confidence-and-sparse-reward-caveats.md)
 - Notes: Added Meta-ACE as a task-profiled optimization layer that routes across context, compute, verification, memory, and adaptation while preserving caveats around weak feedback and controller training.
+
+## [2026-05-07] ingest | From Stateless Nightmares to Durable Agents - Samuel Colvin, Pydantic
+
+- Source: [From Stateless Nightmares to Durable Agents - Samuel Colvin, Pydantic](sources/20251124_flf_IKnFYnE.md)
+- Processed: `flf_IKnFYnE`
+- Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Use Durable Execution for Production Agent Loops](concepts/use-durable-execution-for-production-agent-loops.md), [Model LLM Calls and Tools as Durable Activities](concepts/model-llm-calls-and-tools-as-durable-activities.md), [Keep Workflow Orchestration Deterministic and Put Side Effects in Steps](concepts/keep-workflow-orchestration-deterministic-and-put-side-effects-in-steps.md), [Compose Deep Research as Plan, Parallel Search, and Analysis Agents](concepts/compose-deep-research-as-plan-parallel-search-and-analysis-agents.md), [Evaluate Agent Loops With Correctness, Cost, Latency, and Step Counts](concepts/evaluate-agent-loops-with-correctness-cost-latency-and-step-counts.md)
+- Notes: Added PydanticAI and Temporal durable-agent patterns for replaying completed LLM and tool work, inspecting runs in Logfire, composing deep research from small agent roles, and validating loop metrics against correctness.

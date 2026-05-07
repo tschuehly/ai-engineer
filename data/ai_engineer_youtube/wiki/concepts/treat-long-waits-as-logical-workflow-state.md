@@ -10,6 +10,7 @@ Details:
 - Human-in-the-loop agent workflows often need to wait far longer than a live process should be pinned; Temporal lets the developer code the wait while the worker can remove inactive state from memory and later reconstitute it when input arrives, 58:24-60:02.
 - Temporal workflows can express ordinary code patterns such as parallel branches, awaits, long waits, and loops while preserving the workflow as durable execution state, 61:35-62:19.
 - The talk presents OpenAI Agents SDK orchestration as many small agents with independent loops that can be orchestrated together; durable workflows provide a place to coordinate those loops and non-agent steps like human input, 60:37-61:40.
+- Colvin gives a simple implementation cue: a Python workflow can sleep for seven days while Temporal handles pausing and resuming rather than keeping a live process pinned, 18:08-18:15.
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -23,3 +24,4 @@ Related concepts:
 
 Sources:
 - [OpenAI + @Temporalio : Building Durable, Production Ready Agents - Cornelia Davis, Temporal](../sources/20260112_k8cnVCMYmNc.md), 58:24-62:19
+- [From Stateless Nightmares to Durable Agents - Samuel Colvin, Pydantic](../sources/20251124_flf_IKnFYnE.md), 18:08-18:15
