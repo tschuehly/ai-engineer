@@ -1039,3 +1039,11 @@
 - Updated topics: [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Retrieval](topics/retrieval.md), [Tools](topics/tools.md)
 - Updated concepts: [Knowledge Graphs Make Agent Memory Traversable And Explainable](concepts/knowledge-graphs-make-agent-memory-traversable-and-explainable.md), [Agentic GraphRAG Uses Schema-Aware Multi-Step Graph Queries](concepts/agentic-graphrag-uses-schema-aware-multi-step-graph-queries.md), [Choose HybridRAG When Relationship Structure Matters](concepts/choose-hybridrag-when-relationship-structure-matters.md), [Context Window Editing Clears Stale Tool Results](concepts/context-window-editing-clears-stale-tool-results.md)
 - Notes: Added graph-backed context engineering patterns for relationship-aware memory, explainable retrieval, access overlays, and schema-aware agentic Cypher querying through MCP.
+
+## [2026-05-07] ingest | Context Platform Engineering to Reduce Token Anxiety - Val Bercovici, WEKA
+
+- Source: [Context Platform Engineering to Reduce Token Anxiety - Val Bercovici, WEKA](sources/20251124_NTBX-wxUhHs.md)
+- Processed: `NTBX-wxUhHs`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Inference](topics/inference.md), [Infrastructure](topics/infrastructure.md)
+- Updated concepts: [KV-cache hit rate is a production agent SLO](concepts/kv-cache-hit-rate-is-a-production-agent-slo.md), [Agent swarms create reusable KV-cache working sets](concepts/agent-swarms-create-reusable-kv-cache-working-sets.md), [Size KV-cache memory tiers with workload-shaped benchmarks](concepts/size-kv-cache-memory-tiers-with-workload-shaped-benchmarks.md)
+- Notes: Added context-platform engineering guidance for translating agent context reuse into KV-cache hit-rate SLOs, cache TTL choices, and memory-tier benchmark design.

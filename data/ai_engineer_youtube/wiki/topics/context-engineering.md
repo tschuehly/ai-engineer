@@ -14,6 +14,8 @@ For coding agents, the same loop can target repository or agent rule files direc
 
 Long context should be treated as temporary working memory, not durable knowledge. Large prompts can keep a model from outright lacking a document, but attention cost, latency, and context-rot behavior mean "fits in the window" is weaker than "the model can reason over it reliably." For stable long-tail knowledge, the design choice may move from prompt stuffing to retrieval, contextual embeddings, or model adaptation.
 
+Context platform engineering adds an inference-side complement to context selection. Agentic coding sessions often resend system prompts, tool calls, and tool responses far more than direct user text, so context engineering should consider which repeated regions become KV-cache working sets and how cache time-to-live interacts with human pauses and fast tool loops.
+
 Tool-heavy agent sessions also need active cleanup inside the working window. Memory can keep durable patterns and preferences outside the prompt until they are relevant, while context editing removes stale tool outputs that otherwise crowd out current task context. Knowledge graphs add a structured memory option when relationships matter: semantic and procedural learnings can become nodes, relationships, properties, embeddings, and access overlays that agents can traverse and humans can inspect.
 
 Coding-agent subagents are another context-management lever. Instead of forcing one agent to spend its main window on broad repository search, deep reasoning, dependency lookup, or codemod planning, a specialist can consume context in a separate window and return only the useful result.
@@ -33,6 +35,7 @@ Frequent intentional compaction is a coding-specific context-engineering workflo
 - [Assemble Per-Feature Context Packages for Coding Agents](../concepts/assemble-per-feature-context-packages-for-coding-agents.md) - planning artifacts should be sliced into feature-specific context packages before implementation.
 - [Proactive agent systems need observation, personalization, timing, and workflow embedding](../concepts/proactive-agent-systems-need-observation-personalization-timing-and-workflow-embedding.md) - proactive agents need context selected for the current moment and workflow surface.
 - [Use subagents to isolate context-heavy subtasks](../concepts/use-subagents-to-isolate-context-heavy-subtasks.md) - separate context windows can preserve the main agent's working memory.
+- [Agent swarms create reusable KV-cache working sets](../concepts/agent-swarms-create-reusable-kv-cache-working-sets.md) - repeated prompt and tool regions in agent swarms should be treated as cacheable context infrastructure.
 - [Offload long-horizon agent state outside the context window](../concepts/offload-long-horizon-agent-state-outside-the-context-window.md) - files, plans, docs, memories, and scoped subagents can hold state until it is relevant.
 - [Context window editing clears stale tool results](../concepts/context-window-editing-clears-stale-tool-results.md) - old tool outputs should be pruned when they stop helping the current task.
 - [Enterprise agent failures often expose missing institutional knowledge](../concepts/enterprise-agent-failures-expose-missing-institutional-knowledge.md) - agent failures can indicate missing or stale enterprise knowledge rather than weak model reasoning.
@@ -108,9 +111,11 @@ Frequent intentional compaction is a coding-specific context-engineering workflo
 - When should stable long-tail knowledge move from context or retrieval into model weights?
 - Which architectural seams require human-written context because raw code makes technical debt look like intended convention?
 - When should codebase onboarding context be prewritten, generated on demand, or avoided because source code is the better source of truth?
+- Which repeated prompt, tool-call, and tool-response regions should be engineered for KV-cache reuse rather than summarized or regenerated?
 
 ## Sources
 
+- [Context Platform Engineering to Reduce Token Anxiety - Val Bercovici, WEKA](../sources/20251124_NTBX-wxUhHs.md)
 - [No Vibes Allowed: Solving Hard Problems in Complex Codebases - Dex Horthy, HumanLayer](../sources/20251202_rmvDxxNubIg.md)
 - [The Cure for the Vibe Coding Hangover - Corey J. Gallon, Rexmore](../sources/20251124_JsKTQbT58BY.md)
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md)

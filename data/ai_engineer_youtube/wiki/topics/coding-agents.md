@@ -10,6 +10,8 @@ System-prompt learning adds a way to update coding-agent behavior without changi
 
 Amp Code adds a product-architecture version of the same discipline. Its guidance is to keep the agent loop simple but tune the surrounding pieces aggressively: make core tools task-specific, use subagents to isolate context-heavy search or reasoning, and design editor surfaces around reviewing agent output rather than typing every change manually.
 
+Context-platform sizing adds an inference constraint to multi-agent coding systems. Orchestrators and subagents can make context more targeted, but they also create repeated prompt, tool-call, and tool-response regions whose cache hit rate affects cost, rate-limit pressure, latency, and concurrency.
+
 Yegge and Kim add a post-IDE version of the same pattern. The fragile shape is one oversized coding agent sent into the whole codebase with a larger context window and one expensive model for every request. The more durable shape decomposes the work into role-specialized agents for product, coding, review, testing, merging, and adjacent responsibilities, while the human interface becomes a review and orchestration surface rather than a place where every line is typed by hand. Their adoption warning is also practical: senior and staff engineers may resist these tools precisely because they carry cognitive overhead and threaten existing craft identities, so fluency has to come from hands-on production practice, not only from tool availability.
 
 The Infinite Software Crisis framing adds a caution about conversational coding itself. A long AI chat can feel productive while it accumulates accidental complexity: abandoned approaches, fixed-to-pass tests, overwritten architecture, and preserved technical debt. Research-plan-implement workflows help because they compress understanding into reviewable artifacts before code generation; when the system is too tangled, one manual migration may be the only way to expose the hidden constraints that agents need.
@@ -57,6 +59,7 @@ Codex CLI subagent retrofits add a pragmatic harness-extension pattern. When a C
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md) - coding-agent SDKs package reusable runtime pieces around the model.
 - [Task-tuned tool sets beat generic integration surfaces for core coding loops](../concepts/task-tuned-tool-sets-beat-generic-integration-surfaces-for-core-coding-loops.md) - core coding-agent tools should be optimized for local feedback loops rather than inherited from generic integrations.
 - [Use subagents to isolate context-heavy subtasks](../concepts/use-subagents-to-isolate-context-heavy-subtasks.md) - specialists can search, reason, fetch dependency context, or prepare codemods without exhausting the main agent's context.
+- [Agent swarms create reusable KV-cache working sets](../concepts/agent-swarms-create-reusable-kv-cache-working-sets.md) - multi-agent coding systems create repeated context regions that should be considered in inference-platform sizing.
 - [Shell-wrapped subagents can retrofit harness capabilities](../concepts/shell-wrapped-subagents-can-retrofit-harness-capabilities.md) - child CLI processes can approximate subagents when the parent harness only has shell tools.
 - [Vibe Coding Hangover Is a Maintainability Failure](../concepts/vibe-coding-hangover-is-a-maintainability-failure.md) - generated demos become liabilities when the workflow skips understanding and ownership.
 - [Plan Coding-Agent Work Through Feature Inventories and Dependency Graphs](../concepts/plan-coding-agent-work-through-feature-inventories-and-dependency-graphs.md) - planning artifacts keep decomposition and dependency ordering out of improvised implementation.
@@ -250,6 +253,7 @@ Codex CLI subagent retrofits add a pragmatic harness-extension pattern. When a C
 
 ## Sources
 
+- [Context Platform Engineering to Reduce Token Anxiety - Val Bercovici, WEKA](../sources/20251124_NTBX-wxUhHs.md)
 - [No Vibes Allowed: Solving Hard Problems in Complex Codebases - Dex Horthy, HumanLayer](../sources/20251202_rmvDxxNubIg.md)
 - [Hacking Subagents Into Codex CLI - Brian John, Betterup](../sources/20251124_5eJqXtevlXg.md)
 - [The Cure for the Vibe Coding Hangover - Corey J. Gallon, Rexmore](../sources/20251124_JsKTQbT58BY.md)
