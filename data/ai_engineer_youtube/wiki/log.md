@@ -1151,3 +1151,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Inference](topics/inference.md), [Models](topics/models.md)
 - Updated concepts: [Train coding models on repo-level contexts](concepts/train-coding-models-on-repo-level-contexts.md), [Use hybrid RL system design for agent trajectories](concepts/use-hybrid-rl-system-design-for-agent-trajectories.md), [Preserve long-context ability with single-stage RL](concepts/preserve-long-context-ability-with-single-stage-rl.md), [Use token-weighted loss for long coding outputs](concepts/use-token-weighted-loss-for-long-coding-outputs.md), [Keep visual inputs at native shape for GUI and video agents](concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 - Notes: Added GLM 4.6's open-model training recipe for repo-level coding contexts, long-context RL retention, SLIME-style agent trajectory training, token-weighted coding loss, and native-shape visual inputs.
+
+## [2026-05-07] ingest | Rishabh Garg, Tesla Optimus — Challenges in High Performance Robotics Systems
+
+- Source: [Rishabh Garg, Tesla Optimus — Challenges in High Performance Robotics Systems](sources/20250825_bCGbuyv8PMk.md)
+- Processed: `bCGbuyv8PMk`
+- Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md)
+- Updated concepts: [Robotics policy failures can originate below the model](concepts/robotics-policy-failures-can-originate-below-the-model.md), [Pipeline realtime control loops with synchronization budgets](concepts/pipeline-realtime-control-loops-with-synchronization-budgets.md), [Logging can perturb realtime robotic systems](concepts/logging-can-perturb-realtime-robotic-systems.md), [Priority inversion can starve robot data reception](concepts/priority-inversion-can-starve-robot-data-reception.md)
+- Notes: Added Tesla Optimus robotics-system debugging patterns for distinguishing policy failures from control-loop timing, bus synchronization, logging, and scheduler failures.

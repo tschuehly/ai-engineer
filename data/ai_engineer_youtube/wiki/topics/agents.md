@@ -12,6 +12,8 @@ GLM 4.6 adds a systems-training detail for those long agent rollouts: short math
 
 Robotics adds a useful discipline for digital-agent design: treat the agent as an embodied action system. The model is only one part of the loop; APIs, MCP servers, terminal, browser, VM, OS access, persistent files, monitoring, simulation, retraining, and human feedback form the digital body and offline stack. This also makes action feedback a first-class design problem: long-running commands, browser pop-ups, and stateful VMs should expose enough live observation and interruption control for the agent to close the loop after acting, not merely predict a plan and hope the world matches.
 
+Physical robotics sharpens that lesson because the policy is separated from the world by hard realtime communication and scheduling paths. A stuttering actuator can look like a model or control-policy problem even when the root cause is CAN-bus saturation, RX/TX thread drift, stale sensor data, logging overhead, or priority inversion in the kernel reception path. Embodied AI systems therefore need runtime diagnostics that inspect the whole sensor-policy-actuator pipeline before blaming model behavior.
+
 Agent optimization can also move into a learned routing layer around the agent. Meta-controller approaches profile task complexity, uncertainty, verifiability, and resource constraints, then decide whether the current run needs minimal context, context reflection, extra compute, hierarchical verification, structured memory retrieval, or selective test-time adaptation. This is useful only when the routing layer is itself evaluated: weak reflection, sparse rewards, verifier agreement on the same wrong answer, and profiling overhead can turn "self-optimization" into a new failure surface.
 
 Agent-first IDEs add another interface pattern for this shift. Antigravity's agent manager treats the editor and browser as agent tools while the human supervises plans, approvals, notifications, artifacts, and parallel work from a higher-level control surface. Its browser integration also broadens agent context and verification: the same browser can retrieve authenticated docs or dashboards, interact with the app, and return screen recordings that both humans and multimodal models can inspect.
@@ -95,6 +97,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Use prompt-enforced todos as lightweight agent state](../concepts/use-prompt-enforced-todos-as-lightweight-agent-state.md) - prompt-visible state can guide model planning without full orchestration.
 - [Agent-native companies embed agents into product, operations, and culture](../concepts/agent-native-companies-embed-agents-into-product-operations-and-culture.md) - distinguishes core agent infrastructure from occasional AI assistance.
 - [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md) - tools, VMs, browsers, OS access, and files are the digital body through which agents act.
+- [Robotics policy failures can originate below the model](../concepts/robotics-policy-failures-can-originate-below-the-model.md) - embodied AI behavior must be debugged across policy, software, communication, and hardware layers.
 - [Close agent loops around live action feedback](../concepts/close-agent-loops-around-live-action-feedback.md) - agent actions need observable results, completion state, and interruption paths.
 - [Choose agent observation and action spaces explicitly](../concepts/choose-agent-observation-and-action-spaces-explicitly.md) - tool calls, terminal streams, browser control, and desktop frames encode different agent capabilities.
 - [Ground agent simulation and evaluation in production logs](../concepts/ground-agent-simulation-and-evaluation-in-production-logs.md) - logs and categorized failures should feed simulation and improvement loops.
@@ -413,5 +416,6 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [The Unbearable Lightness of Agent Optimization - Alberto Romero, Jointly](../sources/20251124_zfvEMNmVlNY.md)
 - [Developing Taste in Coding Agents: Applied Meta Neuro-Symbolic RL - Ahmad Awais, CommandCode](../sources/20251124_kWOQS3XPZ10.md)
 - [Agents are Robots Too: What Self-Driving Taught Me About Building Agents - Jesse Hu, Abundant](../sources/20251124_qqXdLf3wy1E.md)
+- [Rishabh Garg, Tesla Optimus — Challenges in High Performance Robotics Systems](../sources/20250825_bCGbuyv8PMk.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

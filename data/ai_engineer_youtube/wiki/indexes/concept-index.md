@@ -3,6 +3,7 @@
 ## Agents
 
 - [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md)
+- [Robotics policy failures can originate below the model](../concepts/robotics-policy-failures-can-originate-below-the-model.md)
 - [Expose task workflow guidance through MCP resources and tools](../concepts/expose-task-workflow-guidance-through-mcp-resources-and-tools.md)
 - [Close agent loops around live action feedback](../concepts/close-agent-loops-around-live-action-feedback.md)
 - [Choose agent observation and action spaces explicitly](../concepts/choose-agent-observation-and-action-spaces-explicitly.md)
@@ -499,6 +500,10 @@
 ## Infrastructure
 
 - [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md)
+- [Robotics policy failures can originate below the model](../concepts/robotics-policy-failures-can-originate-below-the-model.md)
+- [Pipeline realtime control loops with synchronization budgets](../concepts/pipeline-realtime-control-loops-with-synchronization-budgets.md)
+- [Logging can perturb realtime robotic systems](../concepts/logging-can-perturb-realtime-robotic-systems.md)
+- [Priority inversion can starve robot data reception](../concepts/priority-inversion-can-starve-robot-data-reception.md)
 - [Choose agent observation and action spaces explicitly](../concepts/choose-agent-observation-and-action-spaces-explicitly.md)
 - [Ground agent simulation and evaluation in production logs](../concepts/ground-agent-simulation-and-evaluation-in-production-logs.md)
 - [Scientific agents should execute against domain infrastructure](../concepts/scientific-agents-should-execute-against-domain-infrastructure.md)
@@ -646,6 +651,10 @@
 
 - [Ground agent simulation and evaluation in production logs](../concepts/ground-agent-simulation-and-evaluation-in-production-logs.md)
 - [Close agent loops around live action feedback](../concepts/close-agent-loops-around-live-action-feedback.md)
+- [Robotics policy failures can originate below the model](../concepts/robotics-policy-failures-can-originate-below-the-model.md)
+- [Pipeline realtime control loops with synchronization budgets](../concepts/pipeline-realtime-control-loops-with-synchronization-budgets.md)
+- [Logging can perturb realtime robotic systems](../concepts/logging-can-perturb-realtime-robotic-systems.md)
+- [Priority inversion can starve robot data reception](../concepts/priority-inversion-can-starve-robot-data-reception.md)
 - [Review research and plans before they multiply into code](../concepts/review-research-and-plans-before-they-multiply-into-code.md)
 - [Review coding-agent work at task, plan, and code checkpoints](../concepts/review-coding-agent-work-at-task-plan-and-code-checkpoints.md)
 - [Use multisensory feedback loops for coding-agent validation](../concepts/use-multisensory-feedback-loops-for-coding-agent-validation.md)

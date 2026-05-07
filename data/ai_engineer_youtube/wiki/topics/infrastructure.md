@@ -54,6 +54,8 @@ RL training infrastructure has a similar systems-modeling requirement. Synchrono
 
 Robotics contributes a broader infrastructure lesson for agents: the offline stack can be the development accelerator. Production agents need monitoring, logs, simulation, counterfactual replay, retraining paths, and human-feedback loops around the online model. Stateful VMs and persistent files make this harder because the infrastructure must capture the world state that shaped the agent's action, not only the prompt and final answer.
 
+Realtime robotics adds a lower-level version of the same infrastructure problem. A 2 ms control loop can be dominated by CAN-bus transmission time, and pipelining RX, policy execution, and TX can recover throughput only if synchronization, logging, and process priorities are designed as part of the control path. Observability itself needs isolation or budget: a log flush, UART write, or dropped-packet log can become the failure mechanism it is trying to explain.
+
 Agent optimization infrastructure can include a meta-controller that routes budget across context, compute, verification, memory, and temporary parameter adaptation. That controller needs telemetry for task outcomes, per-strategy contribution, compute, latency, memory, and confidence calibration, plus efficient profiling so the optimizer does not spend more on deciding than it saves through adaptive execution.
 
 Coding-agent harnesses are another infrastructure layer when teams want products to survive rapid model and API churn. The harness absorbs model-facing details such as tool loops, compaction, sandboxing, permissions, MCP support, parallel tool calls, port forwarding, and image handling. A stable SDK boundary can let product teams integrate the harness into IDEs, CI/CD, GitHub Actions, or product agents while leaving model/harness maintenance to a shared provider.
@@ -133,6 +135,10 @@ Architecture-copilot infrastructure needs a live system model before recommendat
 - [Cloud agents turn coding work into asynchronous VM-backed queues](../concepts/cloud-agents-turn-coding-work-into-asynchronous-vm-backed-queues.md) - VM-backed environments can isolate and parallelize coding-agent execution.
 - [Production-Matched RL Environments Train Coding Agents on Real Tool Surfaces](../concepts/production-matched-rl-environments-train-coding-agents-on-real-tool-surfaces.md) - training infrastructure should preserve the same tools and sandboxes used in production agent runs.
 - [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md) - agent infrastructure includes the digital body and offline stack around the model.
+- [Robotics policy failures can originate below the model](../concepts/robotics-policy-failures-can-originate-below-the-model.md) - embodied AI reliability depends on the software and communication path around the policy.
+- [Pipeline realtime control loops with synchronization budgets](../concepts/pipeline-realtime-control-loops-with-synchronization-budgets.md) - realtime policy loops need explicit budgets for bus latency, policy runtime, and RX/TX drift.
+- [Logging can perturb realtime robotic systems](../concepts/logging-can-perturb-realtime-robotic-systems.md) - diagnostic output can block or destabilize hard realtime control paths.
+- [Priority inversion can starve robot data reception](../concepts/priority-inversion-can-starve-robot-data-reception.md) - scheduler priority must protect the full data path, including kernel reception work.
 - [Choose agent observation and action spaces explicitly](../concepts/choose-agent-observation-and-action-spaces-explicitly.md) - infrastructure choices decide whether agents act through tools, terminal streams, browser control, desktop frames, or stateful VMs.
 - [Ground agent simulation and evaluation in production logs](../concepts/ground-agent-simulation-and-evaluation-in-production-logs.md) - logs and counterfactual simulation should feed agent improvement infrastructure.
 - [Latency Shapes Coding-Agent Interaction Mode](../concepts/latency-shapes-coding-agent-interaction-mode.md) - serving latency determines whether users supervise agents synchronously or delegate them into background queues.
@@ -273,5 +279,6 @@ Architecture-copilot infrastructure needs a live system model before recommendat
 - [AI Copilots for Tech Architecture: The Highest-ROI Use Case You're Not Building - Boris B., Catio](../sources/20251124_QRWdapxMdSY.md)
 - [The Unbearable Lightness of Agent Optimization - Alberto Romero, Jointly](../sources/20251124_zfvEMNmVlNY.md)
 - [Agents are Robots Too: What Self-Driving Taught Me About Building Agents - Jesse Hu, Abundant](../sources/20251124_qqXdLf3wy1E.md)
+- [Rishabh Garg, Tesla Optimus — Challenges in High Performance Robotics Systems](../sources/20250825_bCGbuyv8PMk.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)
