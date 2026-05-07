@@ -125,6 +125,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [AI pushes software engineers toward broader product and operations ownership](../concepts/ai-pushes-software-engineers-toward-broader-product-and-operations-ownership.md) - agent-augmented engineers need broader ownership and orchestration skills.
 - [Agents expand the economically viable software surface](../concepts/agents-expand-the-economically-viable-software-surface.md) - cheaper agent-based automation can make more useful software worth building.
 - [Compressed research agents preserve human decision points](../concepts/compressed-research-agents-preserve-human-decision-points.md) - agents can accelerate research while leaving final judgment with humans.
+- [Enterprise deep research runs multi-step synthesis over private corpora](../concepts/enterprise-deep-research-runs-multi-step-synthesis-over-private-corpora.md) - private-corpus agents can search internal sources, reflect, synthesize, and cite evidence for enterprise documents.
 - [Surface existing company information before redesigning processes](../concepts/surface-existing-company-information-before-redesigning-processes.md) - agents can turn scattered internal knowledge into usable operational context.
 - [Build internal AI engineering platforms when off-the-shelf tools lack enterprise context](../concepts/build-internal-ai-engineering-platforms-when-off-the-shelf-tools-lack-enterprise-context.md) - enterprise agents may need custom monorepo, service, review, and on-call integration.
 - [Make agent work more trustworthy by making it verifiable](../concepts/make-agent-work-more-trustworthy-by-making-it-verifiable.md) - agents become more reliable when tasks are decomposed into checked, proxied, or constrained steps.
@@ -244,6 +245,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Separate agent harnesses from generated-code execution](../concepts/separate-agent-harnesses-from-generated-code-execution.md) - agent runtimes need isolation between control logic and generated-code execution.
 - [Choose autonomy level by task uncertainty and control needs](../concepts/choose-autonomy-level-by-task-uncertainty-and-control-needs.md) - not every agent request needs open-ended autonomy.
 - [Deep research agents need planning, grounded evidence, and pivot loops](../concepts/deep-research-agents-need-planning-grounded-evidence-and-pivot-loops.md) - research agents should search, inspect, cite, pivot, and synthesize rather than only answer from priors.
+- [Enterprise deep research needs trustworthy retrieval and governance controls](../concepts/enterprise-deep-research-needs-trustworthy-retrieval-and-governance-controls.md) - private-data research agents need factuality, access, deployment, and observability controls.
 - [Split exploratory research agents from constrained writing workflows](../concepts/split-exploratory-research-agents-from-constrained-writing-workflows.md) - adjacent tasks can communicate through artifacts when they need different autonomy levels.
 - [Agentic retrieval lets models plan search steps](../concepts/agentic-retrieval-lets-models-plan-search-steps.md) - retrieval agents can decide which searches to perform and how to use the results.
 - [Use explanatory feedback to optimize prompts](../concepts/use-explanatory-feedback-to-optimize-prompts.md) - agent prompts improve from failure explanations that identify what the agent missed.
@@ -381,5 +383,6 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Context Engineering: Connecting the Dots with Graphs - Stephen Chin, Neo4j](../sources/20251124_LLuKshphGOE.md)
 - [Defying Gravity - Kevin Hou, Google DeepMind](../sources/20251202_HN-F-OQe6j0.md)
 - [AI Copilots for Tech Architecture: The Highest-ROI Use Case You're Not Building - Boris B., Catio](../sources/20251124_QRWdapxMdSY.md)
+- [Enterprise Deep Research: The Next Killer App for Enterprise AI — Ofer Mendelevitch, Vectara](../sources/20251124_fh9LgKXBGnQ.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

@@ -11,6 +11,7 @@ Details:
 - Deep research is goal-driven: the user gives an objective rather than an exact procedure, and the agent replaces a human's search, inspection, pivoting, synthesis, and iteration loop. 21:04-21:27
 - Research quality needs high precision and recall: enough relevant sources to cover the topic, but not so many that limited context is filled with noise. 22:12-22:27
 - The system should reduce hallucination and AI slop by grounding synthesis in research artifacts and preserving source citation. 20:40-20:49, 22:27-22:34
+- Mendelevitch applies the same deep-research shape to enterprise data: multi-step investigation, result synthesis, citations, and then a private-corpus version with multi-agent execution, reflection, and final synthesis. (02:19-03:47)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -20,6 +21,8 @@ Related topics:
 Related concepts:
 - [Evaluate retrieval and MCP layers by task value, not only response availability](evaluate-retrieval-and-mcp-layers-by-task-value.md)
 - [Stage complex AI applications into inspectable deterministic and agentic steps](stage-complex-ai-applications-into-inspectable-deterministic-and-agentic-steps.md)
+- [Enterprise deep research runs multi-step synthesis over private corpora](enterprise-deep-research-runs-multi-step-synthesis-over-private-corpora.md)
 
 Sources:
 - [Full Workshop: Build Your Own Deep Research Agents - Louis-François Bouchard, Paul Iusztin, Samridhi](../sources/20260420_mYSRn6PC1mc.md), 20:28-22:34
+- [Enterprise Deep Research: The Next Killer App for Enterprise AI — Ofer Mendelevitch, Vectara](../sources/20251124_fh9LgKXBGnQ.md), 02:19-03:47

@@ -10,7 +10,7 @@ Complex vertical workflows add another design dimension: make ambiguous work mor
 
 Enterprise AI operating models should change the workflow shape, not only the tool list. AI-native software work can move from quarterly planning toward continuous planning, from story-driven handoffs toward spec-driven work, and from uniform Agile ceremonies toward work-type-specific collaboration: agent factories for high-context but well-defined modernization, iterative co-creation for feature discovery, and workflow-specific squads for bug fixes or greenfield development. Expectations, hands-on coaching, bring-your-own-code practice, first-sprint habit formation, incentives, and outcome measurement need to move together or usage can rise without impact.
 
-Compressed research is a lower-risk operations pattern: keep the business event and human decision in place, but let an agent gather, classify, route, or summarize the evidence that made the work slow. This is especially useful when the source information already exists in company systems but is not available in the right place at decision time.
+Compressed research is a lower-risk operations pattern: keep the business event and human decision in place, but let an agent gather, classify, route, or summarize the evidence that made the work slow. This is especially useful when the source information already exists in company systems but is not available in the right place at decision time. Enterprise deep research is the document-centric version of that workflow: it fits tasks such as RFP responses, onboarding guides, and investment memos where the hard part is searching many private sources, choosing the right evidence, and synthesizing a cited artifact that a human can review or adapt.
 
 Scientific and government workflows show a higher-consequence version of compressed research. An agent can read papers, discover adjacent literature, propose a hypothesis, generate executable code, and hand the result to domain simulation infrastructure, but regulated deployment adds a parallel workflow for pilot governance, risk classification, data-boundary review, SBOMs, patching plans, continuous monitoring, and restricted-region or self-hosted availability.
 
@@ -255,6 +255,8 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 - [Choose autonomy level by task uncertainty and control needs](../concepts/choose-autonomy-level-by-task-uncertainty-and-control-needs.md) - workflows should absorb known steps before teams add agentic planning.
 - [Deep research agents need planning, grounded evidence, and pivot loops](../concepts/deep-research-agents-need-planning-grounded-evidence-and-pivot-loops.md) - open-ended research workflows need source-backed iteration.
 - [Compressed research agents preserve human decision points](../concepts/compressed-research-agents-preserve-human-decision-points.md) - research automation can preserve the process's human decision boundary.
+- [Enterprise deep research runs multi-step synthesis over private corpora](../concepts/enterprise-deep-research-runs-multi-step-synthesis-over-private-corpora.md) - document-heavy enterprise workflows can use multi-step private retrieval and synthesis before human review.
+- [Enterprise deep research needs trustworthy retrieval and governance controls](../concepts/enterprise-deep-research-needs-trustworthy-retrieval-and-governance-controls.md) - enterprise research workflows need access, deployment, observability, and factuality controls.
 - [Surface existing company information before redesigning processes](../concepts/surface-existing-company-information-before-redesigning-processes.md) - existing internal signals can power workflow improvements before process redesign.
 - [Agents expand the economically viable software surface](../concepts/agents-expand-the-economically-viable-software-surface.md) - cheaper automation changes which workflows are worth software investment.
 - [Split exploratory research agents from constrained writing workflows](../concepts/split-exploratory-research-agents-from-constrained-writing-workflows.md) - artifact handoff keeps different workflow phases appropriately constrained.
@@ -410,5 +412,6 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 - [Proactive Agents - Kath Korevec, Google Labs](../sources/20251213_v3u8xc0zLec.md)
 - [Moving away from Agile: What's Next - Martin Harrysson & Natasha Maniar, McKinsey & Company](../sources/20251212_SZStlIhyTCY.md)
 - [AI Copilots for Tech Architecture: The Highest-ROI Use Case You're Not Building - Boris B., Catio](../sources/20251124_QRWdapxMdSY.md)
+- [Enterprise Deep Research: The Next Killer App for Enterprise AI — Ofer Mendelevitch, Vectara](../sources/20251124_fh9LgKXBGnQ.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

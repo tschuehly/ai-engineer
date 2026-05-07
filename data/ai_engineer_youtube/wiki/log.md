@@ -1071,3 +1071,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md)
 - Updated concepts: [Measure AI Coding Adoption With PR Telemetry and Guardrails](concepts/measure-ai-coding-adoption-with-pr-telemetry-and-guardrails.md), [Autonomous Coding Agents Are Still Early In PR Production Data](concepts/autonomous-coding-agents-are-still-early-in-pr-production-data.md), [Active Repos Per Engineer Exposes Context Architecture Drag](concepts/active-repos-per-engineer-exposes-context-architecture-drag.md), [Measure AI Engineering Impact Across Utilization, Impact, and Cost](concepts/measure-ai-engineering-impact-across-utilization-impact-and-cost.md), [Codebase Hygiene Amplifies AI Productivity Gains](concepts/codebase-hygiene-amplifies-ai-productivity-gains.md)
 - Notes: Added Jellyfish's PR telemetry framing for measuring AI coding adoption, calibrating autonomous-agent maturity, and diagnosing distributed-repository context bottlenecks.
+
+## [2026-05-07] ingest | Enterprise Deep Research: The Next Killer App for Enterprise AI — Ofer Mendelevitch, Vectara
+
+- Source: [Enterprise Deep Research: The Next Killer App for Enterprise AI — Ofer Mendelevitch, Vectara](sources/20251124_fh9LgKXBGnQ.md)
+- Processed: `fh9LgKXBGnQ`
+- Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Retrieval](topics/retrieval.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Enterprise deep research runs multi-step synthesis over private corpora](concepts/enterprise-deep-research-runs-multi-step-synthesis-over-private-corpora.md), [Enterprise deep research needs trustworthy retrieval and governance controls](concepts/enterprise-deep-research-needs-trustworthy-retrieval-and-governance-controls.md), [Deep research agents need planning, grounded evidence, and pivot loops](concepts/deep-research-agents-need-planning-grounded-evidence-and-pivot-loops.md), [Use connectors and uploads as private research context](concepts/use-connectors-and-uploads-as-private-research-context.md)
+- Notes: Added Vectara's enterprise deep research framing for multi-step private-corpus synthesis, document-heavy workflows, and retrieval governance requirements.

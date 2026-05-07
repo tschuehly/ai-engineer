@@ -214,6 +214,8 @@
 - [Choose autonomy level by task uncertainty and control needs](../concepts/choose-autonomy-level-by-task-uncertainty-and-control-needs.md)
 - [Compressed research agents preserve human decision points](../concepts/compressed-research-agents-preserve-human-decision-points.md)
 - [Deep research agents need planning, grounded evidence, and pivot loops](../concepts/deep-research-agents-need-planning-grounded-evidence-and-pivot-loops.md)
+- [Enterprise deep research runs multi-step synthesis over private corpora](../concepts/enterprise-deep-research-runs-multi-step-synthesis-over-private-corpora.md)
+- [Enterprise deep research needs trustworthy retrieval and governance controls](../concepts/enterprise-deep-research-needs-trustworthy-retrieval-and-governance-controls.md)
 - [Split exploratory research agents from constrained writing workflows](../concepts/split-exploratory-research-agents-from-constrained-writing-workflows.md)
 - [Use omnimodal embeddings for cross-modal retrieval and comparison](../concepts/use-omnimodal-embeddings-for-cross-modal-retrieval-and-comparison.md)
 - [Interactive world models need memory, control, and live prompting](../concepts/interactive-world-models-need-memory-control-and-live-prompting.md)
@@ -788,6 +790,7 @@
 - [Structure-Aware Document Parsing Improves RAG Chunk Quality](../concepts/structure-aware-document-parsing-improves-rag-chunk-quality.md)
 - [Hybrid Retrieval Should Support Filters And Embedding Migration](../concepts/hybrid-retrieval-should-support-filters-and-embedding-migration.md)
 - [Agentic Retrieval Lets Models Plan Search Steps](../concepts/agentic-retrieval-lets-models-plan-search-steps.md)
+- [Enterprise deep research needs trustworthy retrieval and governance controls](../concepts/enterprise-deep-research-needs-trustworthy-retrieval-and-governance-controls.md)
 - [Neural weather models can target operational forecast variables directly](../concepts/neural-weather-models-can-target-operational-forecast-variables-directly.md)
 - [Interactive world models need memory, control, and live prompting](../concepts/interactive-world-models-need-memory-control-and-live-prompting.md)
 
@@ -946,6 +949,8 @@
 - [Scope personal and team agents by reachable authority](../concepts/scope-personal-and-team-agents-by-reachable-authority.md)
 - [Plugin architectures let agent systems absorb experiments](../concepts/plugin-architectures-let-agent-systems-absorb-experiments.md)
 - [Deep research agents need planning, grounded evidence, and pivot loops](../concepts/deep-research-agents-need-planning-grounded-evidence-and-pivot-loops.md)
+- [Enterprise deep research runs multi-step synthesis over private corpora](../concepts/enterprise-deep-research-runs-multi-step-synthesis-over-private-corpora.md)
+- [Enterprise deep research needs trustworthy retrieval and governance controls](../concepts/enterprise-deep-research-needs-trustworthy-retrieval-and-governance-controls.md)
 - [Split exploratory research agents from constrained writing workflows](../concepts/split-exploratory-research-agents-from-constrained-writing-workflows.md)
 
 ## Voice Agents
@@ -1122,6 +1127,8 @@
 - [Run verify-fix-review loops for agentic refactors](../concepts/run-verify-fix-review-loops-for-agentic-refactors.md)
 - [Choose autonomy level by task uncertainty and control needs](../concepts/choose-autonomy-level-by-task-uncertainty-and-control-needs.md)
 - [Deep research agents need planning, grounded evidence, and pivot loops](../concepts/deep-research-agents-need-planning-grounded-evidence-and-pivot-loops.md)
+- [Enterprise deep research runs multi-step synthesis over private corpora](../concepts/enterprise-deep-research-runs-multi-step-synthesis-over-private-corpora.md)
+- [Enterprise deep research needs trustworthy retrieval and governance controls](../concepts/enterprise-deep-research-needs-trustworthy-retrieval-and-governance-controls.md)
 - [Split exploratory research agents from constrained writing workflows](../concepts/split-exploratory-research-agents-from-constrained-writing-workflows.md)
 - [Calibrate LLM judges like binary classifiers](../concepts/calibrate-llm-judges-like-binary-classifiers.md)
 - [Label LLM Judge Outputs Before Mapping Them to Scores](../concepts/label-llm-judge-outputs-before-mapping-them-to-scores.md)
