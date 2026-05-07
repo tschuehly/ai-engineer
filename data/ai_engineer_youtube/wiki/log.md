@@ -1655,3 +1655,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Package Agent Delivery Workflows as Portable Code](concepts/package-agent-delivery-workflows-as-portable-code.md), [Trace Agent Tool Use To Improve Prompts And Tools](concepts/trace-agent-tool-use-to-improve-prompts-and-tools.md), [Return Typed Workspace Outputs From Coding Agents](concepts/return-typed-workspace-outputs-from-coding-agents.md)
 - Notes: Added Dagger's pattern for portable local-to-CI agent delivery workflows with traceable tool use, typed workspace outputs, validation, and PR automation.
+
+## [2026-05-07] ingest | The AI Engineer's Guide to Raising VC - Dani Grant (Jam), Chelcie Taylor (Notable)
+
+- Source: [The AI Engineer's Guide to Raising VC - Dani Grant (Jam), Chelcie Taylor (Notable)](sources/20250727_YYNXFsUutbM.md)
+- Processed: `YYNXFsUutbM`
+- Updated topics: [Product Strategy](topics/product-strategy.md), [AI Monetization](topics/ai-monetization.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Fundraising Pitches Should Explain Why You and Why Now](concepts/fundraising-pitches-should-explain-why-you-and-why-now.md), [Treat Investor Outreach Like Specific Go-To-Market](concepts/treat-investor-outreach-like-specific-go-to-market.md), [Use Design Partner Evidence To Support Early AI Startup Scale](concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
+- Notes: Added early AI-startup fundraising patterns for converting technical insight into investor narrative, specific outreach, and evidence-backed wedge-to-scale hypotheses.

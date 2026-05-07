@@ -5,6 +5,8 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 ## Current Emphasis
 
 - [Package Agent Delivery Workflows as Portable Code](concepts/package-agent-delivery-workflows-as-portable-code.md) - delivery agents are easier to trust when build, test, LLM, and environment steps are encoded as portable workflow code.
+- [Fundraising Pitches Should Explain Why You and Why Now](concepts/fundraising-pitches-should-explain-why-you-and-why-now.md) - technical AI founders need to turn product insight into a founder-market-time narrative.
+- [Use Design Partner Evidence To Support Early AI Startup Scale](concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md) - early customer evidence can support wedge-to-company, ICP, and monetization claims before revenue exists.
 - [Trace Agent Tool Use To Improve Prompts And Tools](concepts/trace-agent-tool-use-to-improve-prompts-and-tools.md) - agent observability should expose prompts, tools, tool calls, and environment state so failures improve the workflow.
 - [Return Typed Workspace Outputs From Coding Agents](concepts/return-typed-workspace-outputs-from-coding-agents.md) - coding agents should return typed workspace artifacts that code can validate before PR publication.
 - [Layer LLM evals from serving metrics to application risk](concepts/layer-llm-evals-from-serving-metrics-to-application-risk.md) - production evals should climb from serving metrics to formatting, accuracy, safety, bias, and product-specific risk.

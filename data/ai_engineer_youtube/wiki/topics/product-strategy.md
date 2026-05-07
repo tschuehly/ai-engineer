@@ -22,6 +22,8 @@ Agent-native products add a requirements problem: broad model capability plus fr
 
 Agent coordination platforms add a product-strategy constraint: agent functionality should often be embedded into the system where users already manage work instead of shipped as a separate copilot shell. Linear's approach favors small hidden AI assists, product-intelligence relationships, and first-class agent teammates inside issues, projects, Slack handoffs, and customer-feedback workflows, while rejecting visible AI surfaces that do not meet the product's quality bar.
 
+AI-engineer founders also need to translate technical taste into a market narrative when raising early capital. At pre-seed or seed, investors may not require revenue or even a finished product, but they still need to understand why this team has a timely, non-obvious insight and how the first wedge can become a company rather than a feature. Design partners, customer interviews, ICP hypotheses, pricing hypotheses, and product-velocity plans help convert early conviction into a credible path from prototype to scale.
+
 ## Key Concepts
 
 - [AI Does Not Replace Shareable Product Marketing](../concepts/ai-does-not-replace-shareable-product-marketing.md) - launch content only matters when it can earn attention and social sharing.
@@ -60,6 +62,9 @@ Agent coordination platforms add a product-strategy constraint: agent functional
 - [Co-Discover Emergent Agent Behavior With Customers](../concepts/co-discover-emergent-agent-behavior-with-customers.md) - early agent products earn trust through shared discovery and feedback, not impossible certainty about every behavior.
 - [Product Work Graphs Coordinate Agents and Humans](../concepts/product-work-graphs-coordinate-agents-and-humans.md) - agent products can create more value by inhabiting existing work graphs than by forcing separate chat workflows.
 - [Platform-Native Agents Should Behave Like Good Teammates](../concepts/platform-native-agents-should-behave-like-good-teammates.md) - agent product quality includes communication and state-update behavior, not only task completion.
+- [Fundraising Pitches Should Explain Why You and Why Now](../concepts/fundraising-pitches-should-explain-why-you-and-why-now.md) - technical AI founders need a founder-market-time narrative, not only a model or product demo.
+- [Treat Investor Outreach Like Specific Go-To-Market](../concepts/treat-investor-outreach-like-specific-go-to-market.md) - investor relationships work like sales: use warm signals, specific asks, and response-oriented messages.
+- [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md) - early customer evidence makes the wedge-to-company story more credible before revenue exists.
 
 ## Open Questions
 
@@ -71,6 +76,7 @@ Agent coordination platforms add a product-strategy constraint: agent functional
 - How should teams distinguish demos that reveal real latent capability from demos that only succeed through brittle scaffolding?
 - Which domain insights should become prompt context, retrieval knowledge, rules, fine-tuning data, or product workflow changes?
 - Which agent affordances should be exposed as open-ended capabilities, and which need hard deterministic constraints before customers can safely compose them?
+- How much early design-partner evidence is enough to distinguish a fundable AI startup wedge from a promising but narrow feature?
 
 ## Sources
 
@@ -88,3 +94,4 @@ Agent coordination platforms add a product-strategy constraint: agent functional
 - [Make your LLM app a Domain Expert: How to Build an Expert System - Christopher Lovejoy, Anterior](../sources/20250728_MRM7oA3JsFs.md)
 - [Shipping Products When You Don't Know What they Can Do - Ben Stein, Teammates](../sources/20250728_PthmdT92qNg.md)
 - [Shipping something to someone always wins - Kenneth Auchenberg (ex. Stripe, VSCode)](../sources/20250728_mHzJhXppwUA.md)
+- [The AI Engineer's Guide to Raising VC - Dani Grant (Jam), Chelcie Taylor (Notable)](../sources/20250727_YYNXFsUutbM.md)

@@ -124,6 +124,7 @@ Dagger's agent workshop shows a lighter-weight delivery workflow with the same p
 
 ## Key Concepts
 
+- [Treat Investor Outreach Like Specific Go-To-Market](../concepts/treat-investor-outreach-like-specific-go-to-market.md) - fundraising outreach should use warm signals, specific asks, and relationship-building like a sales motion.
 - [Package Agent Delivery Workflows as Portable Code](../concepts/package-agent-delivery-workflows-as-portable-code.md) - portable workflow code lets delivery agents run in local development and CI without changing the workflow.
 - [Trace Agent Tool Use To Improve Prompts And Tools](../concepts/trace-agent-tool-use-to-improve-prompts-and-tools.md) - trace inspection turns observed agent behavior into workflow improvements.
 - [Return Typed Workspace Outputs From Coding Agents](../concepts/return-typed-workspace-outputs-from-coding-agents.md) - workflow code should consume validated artifacts from agent runs.
@@ -580,6 +581,7 @@ Dagger's agent workshop shows a lighter-weight delivery workflow with the same p
 - [Useful General Intelligence - Danielle Perszyk, Amazon AGI](../sources/20250802_Dj0b_cEBHBI.md)
 - [Building Agents at Cloud Scale - Antje Barth, AWS](../sources/20250802_WJjInLeaJjo.md)
 - [Ship Agents that Ship: A Hands-On Workshop - Kyle Penfound, Jeremy Adams, Dagger](../sources/20250727_Fzb1a24hF-o.md)
+- [The AI Engineer's Guide to Raising VC - Dani Grant (Jam), Chelcie Taylor (Notable)](../sources/20250727_YYNXFsUutbM.md)
 - [Building Alice's Brain: an AI Sales Rep that Learns Like a Human - Sherwood & Satwik, 11x](../sources/20250729_KWmkMV0FNwQ.md)
 - [Scaling AI Agents Without Breaking Reliability - Preeti Somal, Temporal](../sources/20250728_1izYWsokr9s.md)
 - [Why your product needs an AI product manager, and why it should be you — James Lowe, i.AI](../sources/20250728_xzJdSi2Tsqw.md)

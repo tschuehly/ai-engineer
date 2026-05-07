@@ -312,6 +312,7 @@
 - [Outcome-based engineering compensation uses accepted story points](../concepts/outcome-based-engineering-compensation-uses-accepted-story-points.md)
 - [Use hybrid AI pricing to balance predictable revenue and margin protection](../concepts/use-hybrid-ai-pricing-to-balance-predictable-revenue-and-margin-protection.md)
 - [Prevent AI billing surprises with caps, notifications, and rate limits](../concepts/prevent-ai-billing-surprises-with-caps-notifications-and-rate-limits.md)
+- [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Architecture Copilots
 
@@ -818,6 +819,9 @@
 - [Specify Agent Products by Affordance, Not Exhaustive Feature Rules](../concepts/specify-agent-products-by-affordance-not-exhaustive-feature-rules.md)
 - [Treat Product Evals as Probabilistic Specifications](../concepts/treat-product-evals-as-probabilistic-specifications.md)
 - [Co-Discover Emergent Agent Behavior With Customers](../concepts/co-discover-emergent-agent-behavior-with-customers.md)
+- [Fundraising Pitches Should Explain Why You and Why Now](../concepts/fundraising-pitches-should-explain-why-you-and-why-now.md)
+- [Treat Investor Outreach Like Specific Go-To-Market](../concepts/treat-investor-outreach-like-specific-go-to-market.md)
+- [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
 

@@ -8,6 +8,8 @@ AI productivity also pressures traditional SaaS seat pricing. If one AI-augmente
 
 Engineering services face a parallel incentive problem. Story points can become an outcome-aligned charge metric when client billing and engineer upside both attach to accepted delivered work rather than elapsed time. That only works when the metric is guarded: independent scoping, acceptance checks, customer-visible QA, and hiring standards are part of the monetization design because output incentives can otherwise reward inflated estimates or low-quality velocity.
 
+At the fundraising stage, monetization can start as a testable hypothesis rather than a finished pricing table. Early customer conversations, design partners, likely ACV ranges, and whether buyers expect seat-based or usage-based pricing can all help founders explain how an AI product might become a large business before revenue exists.
+
 ## Key Concepts
 
 - [Treat AI pricing as a fast-moving product hypothesis](../concepts/treat-ai-pricing-as-a-fast-moving-product-hypothesis.md) - pricing should evolve with product capabilities, cost structure, and customer feedback.
@@ -15,6 +17,7 @@ Engineering services face a parallel incentive problem. Story points can become 
 - [Outcome-based engineering compensation uses accepted story points](../concepts/outcome-based-engineering-compensation-uses-accepted-story-points.md) - story points can become a pay and billing unit for accepted custom AI implementation work.
 - [Use hybrid AI pricing to balance predictable revenue and margin protection](../concepts/use-hybrid-ai-pricing-to-balance-predictable-revenue-and-margin-protection.md) - base plus scaling fees avoid the extremes of pure subscriptions and pure usage billing.
 - [Prevent AI billing surprises with caps, notifications, and rate limits](../concepts/prevent-ai-billing-surprises-with-caps-notifications-and-rate-limits.md) - variable usage pricing needs controls that keep customers in charge of spend.
+- [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md) - early buyer conversations can support ACV and pricing hypotheses before revenue exists.
 
 ## Open Questions
 
@@ -23,9 +26,11 @@ Engineering services face a parallel incentive problem. Story points can become 
 - What billing transparency is enough for customers to trust dynamic or dimension-based AI pricing?
 - When does AI-driven productivity make seat count a misleading proxy for delivered SaaS value?
 - Which delivery metrics are hard enough to price against without distorting engineering quality?
+- Which buyer signals are strong enough to support an early ACV or pricing hypothesis before the product is generally available?
 
 ## Sources
 
 - [Mastering AI Pricing: Flexible & Agile Monetization - Mayank Pant, Stripe](../sources/20260501_CrqPcIZOOXA.md)
 - [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](../sources/20251223_LU9KgcZDRfY.md)
 - [Paying Engineers like Salespeople - Arman Hezarkhani, Tenex](../sources/20251219_4mRekpZpBZs.md)
+- [The AI Engineer's Guide to Raising VC - Dani Grant (Jam), Chelcie Taylor (Notable)](../sources/20250727_YYNXFsUutbM.md)
