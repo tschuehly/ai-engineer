@@ -21,6 +21,7 @@ Code world models add an execution-aware variant of model training for software.
 - [Use guidance to trade diffusion sample diversity for conditional quality](../concepts/use-guidance-to-trade-diffusion-sample-diversity-for-conditional-quality.md) - diffusion sampling settings are part of model behavior, not a cosmetic afterthought.
 - [Distill diffusion models to reduce sampling steps](../concepts/distill-diffusion-models-to-reduce-sampling-steps.md) - diffusion distillation targets latency by shortening the denoising path.
 - [Expose explicit control signals for generative media models](../concepts/expose-explicit-control-signals-for-generative-media-models.md) - text prompts should be complemented by structured controls when users need predictable media outputs.
+- [Ground generated media with current search context](../concepts/ground-generated-media-with-current-search-context.md) - grounded image models combine retrieval, text rendering, localization, and generation.
 - [Evaluate whether models reject impossible or nonsensical premises](../concepts/evaluate-whether-models-reject-impossible-or-nonsensical-premises.md) - model reliability includes knowing when not to answer a malformed request.
 - [Benchmark narrow slices separately from real expert work](../concepts/benchmark-narrow-slices-separately-from-real-expert-work.md) - public benchmark progress should be interpreted alongside real prompt distributions and expert dissatisfaction.
 - [Route Gemma 4 model variants by deployment and workflow shape](../concepts/route-gemma-4-model-variants-by-deployment-and-workflow-shape.md) - Gemma 4's effective, MoE, and dense variants map to different local, hosted, reasoning, coding, and agentic workloads.
@@ -93,3 +94,4 @@ Code world models add an execution-aware variant of model training for software.
 - [Jack Morris: Stuffing Context is not Memory, Updating Weights is](../sources/20251229_Jty4s9-Jb78.md)
 - [AGI: The Path Forward - Jason Warner & Eiso Kant, Poolside](../sources/20251227_OGCG_QkCcZo.md)
 - [Code World Model: Building World Models for Computation - Jacob Kahn, FAIR Meta](../sources/20251217_sYgE4ppDFOQ.md)
+- [Building in the Gemini Era - Kat Kampf & Ammaar Reshi, Google DeepMind](../sources/20251215_fgkXEIbZpGc.md)

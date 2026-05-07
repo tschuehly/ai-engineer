@@ -8,6 +8,8 @@ Browsers are becoming an infrastructure layer for both development and runtime A
 
 Agent-built applications add a deployment boundary: the harness that plans and controls work should not be treated as the same trust domain as generated code. Infrastructure for the new application layer needs sandboxes and execution separation so agent-written software can run without giving that code direct authority over the agent runtime.
 
+Full-stack app-generation runtimes add an inference-to-infrastructure boundary. When a user asks for a multiplayer app, persistent storage, ecommerce, or API-connected product, the builder can infer backend services, packages, server wiring, payments, and third-party integrations, but the generated runtime behavior still needs validation under realistic concurrency and state.
+
 Code-mode infrastructure should also treat capability grants as part of the runtime contract. Generated programs should start with no authority, receive only the APIs or network paths required for the task, and leave enough execution trace to explain high-impact actions later. AI-generated code is still untrusted code: it can crash through hallucinated loops, expose secrets through over-helpful environment inspection, or exfiltrate data after prompt injection. Infrastructure should default-deny network access, proxy authenticated calls through trusted application code, isolate tenants by sandbox, cap CPU and memory, clean up idle sandboxes, and log what ran.
 
 Sandbox technology should match the workload. V8-style isolates are useful for short-lived tool calls, plugins, skills, data transformations, and code interpreters when filesystem, process, and arbitrary-binary access are intentionally absent. Containers are heavier, but they are the right shape when generated work must clone repositories, install packages, run builds, start dev servers, expose preview URLs, or otherwise need real operating-system features.
@@ -104,6 +106,7 @@ AI-generated kernels turn low-level optimization into an infrastructure workflow
 - [Run agent-written API code inside programmable sandboxes](../concepts/run-agent-written-api-code-inside-programmable-sandboxes.md) - generated-code execution needs infrastructure-level isolation and abuse controls.
 - [Capability-based sandboxes start with no authority](../concepts/capability-based-sandboxes-start-with-no-authority.md) - generated-code infrastructure should grant explicit task capabilities rather than ambient access.
 - [Choose isolates or containers by generated-code workload](../concepts/choose-isolates-or-containers-by-generated-code-workload.md) - isolates and containers solve different generated-code infrastructure problems.
+- [Infer full-stack app infrastructure from user intent](../concepts/infer-full-stack-app-infrastructure-from-user-intent.md) - prompt-to-app systems should map product intent to backend, storage, payments, and integrations.
 - [Separate agent harnesses from generated-code execution](../concepts/separate-agent-harnesses-from-generated-code-execution.md) - agent control planes and generated-code runtimes should be separate trust domains.
 - [Adapt embedding dimensions with Matryoshka representation learning](../concepts/adapt-embedding-dimensions-with-matryoshka-representation-learning.md) - embedding infrastructure can tune vector dimensionality for index cost, latency, and semantic expressiveness.
 - [Neural weather models can target operational forecast variables directly](../concepts/neural-weather-models-can-target-operational-forecast-variables-directly.md) - operational AI systems should choose model targets and hardware paths around the variables users actually need.
@@ -193,3 +196,4 @@ AI-generated kernels turn low-level optimization into an infrastructure workflow
 - [Developer Experience in the Age of AI Coding Agents - Max Kanat-Alexander, Capital One](../sources/20251223_rT2Del5pwg4.md)
 - [Making Codebases Agent Ready - Eno Reyes, Factory AI](../sources/20251222_ShuJ_CN6zr4.md)
 - [AI Kernel Generation: What's working, what's not, what's next - Natalie Serrino, Gimlet Labs](../sources/20251217_6guQG_tGt0o.md)
+- [Building in the Gemini Era - Kat Kampf & Ammaar Reshi, Google DeepMind](../sources/20251215_fgkXEIbZpGc.md)

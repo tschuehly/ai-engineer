@@ -157,6 +157,7 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Keep critical code inside human understanding and review capacity](concepts/keep-critical-code-inside-human-understanding-and-review-capacity.md) - agent throughput should not outrun the human ability to read, evaluate, and own important code.
 - [Use omnimodal embeddings for cross-modal retrieval and comparison](concepts/use-omnimodal-embeddings-for-cross-modal-retrieval-and-comparison.md) - retrieval and agent context can preserve concepts across text, audio, video, and documents.
 - [Interactive world models need memory, control, and live prompting](concepts/interactive-world-models-need-memory-control-and-live-prompting.md) - generated environments require consistency and controllability when users act inside them.
+- [Ground generated media with current search context](concepts/ground-generated-media-with-current-search-context.md) - image-generation workflows can use current retrieval before synthesis.
 
 ## Topics
 

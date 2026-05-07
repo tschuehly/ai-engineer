@@ -584,6 +584,8 @@
 
 ## Models
 
+- [Ground generated media with current search context](../concepts/ground-generated-media-with-current-search-context.md)
+
 - [Grow Agent Organizations Incrementally By Role Quality and Cost](../concepts/grow-agent-organizations-incrementally-by-role-quality-and-cost.md)
 - [Fine-tuned encoder discriminators make low-latency guardrails practical](../concepts/fine-tuned-encoder-discriminators-make-low-latency-guardrails-practical.md)
 - [Treat edge models as their own architecture class](../concepts/treat-edge-models-as-their-own-architecture-class.md)
@@ -660,6 +662,10 @@
 - [Adapt embedding dimensions with Matryoshka representation learning](../concepts/adapt-embedding-dimensions-with-matryoshka-representation-learning.md)
 
 ## Tools
+
+- [Use one-shot app builders for product ideation](../concepts/use-one-shot-app-builders-for-product-ideation.md)
+- [Infer full-stack app infrastructure from user intent](../concepts/infer-full-stack-app-infrastructure-from-user-intent.md)
+- [Ground generated media with current search context](../concepts/ground-generated-media-with-current-search-context.md)
 
 - [Run Coding Agents Through a Simple Master Loop](../concepts/run-coding-agents-through-a-simple-master-loop.md)
 - [Task-tuned tool sets beat generic integration surfaces for core coding loops](../concepts/task-tuned-tool-sets-beat-generic-integration-surfaces-for-core-coding-loops.md)
@@ -780,6 +786,9 @@
 - [Verify AI call summaries before CRM sync](../concepts/verify-ai-call-summaries-before-crm-sync.md)
 
 ## Workflows
+
+- [Use one-shot app builders for product ideation](../concepts/use-one-shot-app-builders-for-product-ideation.md)
+- [Infer full-stack app infrastructure from user intent](../concepts/infer-full-stack-app-infrastructure-from-user-intent.md)
 
 - [Agent-native companies embed agents into product, operations, and culture](../concepts/agent-native-companies-embed-agents-into-product-operations-and-culture.md)
 - [Use Compounding Engineering Loops](../concepts/use-compounding-engineering-loops.md)

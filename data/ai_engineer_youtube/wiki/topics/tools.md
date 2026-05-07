@@ -36,6 +36,8 @@ Amp Code adds that generic integration availability is not the same as a good co
 
 Zapier's Scout work reinforces that useful tools still need to live where the work happens. A separate API playground added another window and saw weak engagement, while the same capabilities gained traction when embedded into support ticket creation, Cursor through MCP, Jira, GitLab CI/CD, and GitLab comment-based iteration.
 
+Prompt-to-app builders are also tool surfaces. AI Studio shows a compact version: model and API feature chips can attach Search grounding, Maps grounding, Live API, and model choices to a generated app, while one-shot builders can clone UI screenshots or explore export flows before a team commits to production implementation. Full-stack app builders extend that surface by inferring packages, backend services, storage, payments, and first- or third-party API integrations from application intent.
+
 ## Key Concepts
 
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - compact tool loops can be the core architecture for coding agents.
@@ -157,6 +159,9 @@ Zapier's Scout work reinforces that useful tools still need to live where the wo
 - [Structure-aware document parsing improves RAG chunk quality](../concepts/structure-aware-document-parsing-improves-rag-chunk-quality.md) - document parsing settings are practical tool controls for retrieval quality.
 - [Standardize development environments around common model priors](../concepts/standardize-development-environments-around-common-model-priors.md) - conventional toolchains give agents more reliable operational patterns.
 - [Make validation fast, local, deterministic, and actionable](../concepts/make-validation-fast-local-deterministic-and-actionable.md) - validation commands are agent tools when they produce fast repairable feedback.
+- [Use one-shot app builders for product ideation](../concepts/use-one-shot-app-builders-for-product-ideation.md) - prompt-to-app surfaces can make UI and workflow ideas runnable quickly.
+- [Infer full-stack app infrastructure from user intent](../concepts/infer-full-stack-app-infrastructure-from-user-intent.md) - app builders can hide backend and integration choices behind user intent.
+- [Ground generated media with current search context](../concepts/ground-generated-media-with-current-search-context.md) - search grounding can be a media-generation tool, not only a text-answering tool.
 
 ## Open Questions
 
@@ -239,6 +244,7 @@ Zapier's Scout work reinforces that useful tools still need to live where the wo
 - [OpenRAG: An open-source stack for RAG - Phil Nash](../sources/20260408_4TxOBhDRRCM.md)
 - [Let LLMs Wander: Engineering RL Environments - Stefano Fiorucci](../sources/20260408_71V3fTaUp2Q.md)
 - [Why, and how you need to sandbox AI-Generated Code? - Harshil Agrawal, Cloudflare](../sources/20260408_AHtGAgQ0Q_Q.md)
+- [Building in the Gemini Era - Kat Kampf & Ammaar Reshi, Google DeepMind](../sources/20251215_fgkXEIbZpGc.md)
 - [Your Insecure MCP Server Won't Survive Production - Tun Shwe, Lenses](../sources/20260408_BurJvbqFr4c.md)
 - [Bending a Public MCP Server Without Breaking It — Nimrod Hauser, Baz](../sources/20260408_U00AOI1eJUE.md)
 - [Platforms for Humans and Machines: Engineering for the Age of Agents - Juan Herreros Elorza](../sources/20260408_cCRO3ChaYhM.md)

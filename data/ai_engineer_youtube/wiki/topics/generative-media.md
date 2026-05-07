@@ -11,6 +11,7 @@ Generative media covers the model and product patterns behind image, video, and 
 - [Use guidance to trade diffusion sample diversity for conditional quality](../concepts/use-guidance-to-trade-diffusion-sample-diversity-for-conditional-quality.md) - guidance is a sampling-time lever for prompt adherence, quality, diversity, and artifact risk.
 - [Distill diffusion models to reduce sampling steps](../concepts/distill-diffusion-models-to-reduce-sampling-steps.md) - diffusion distillation primarily reduces iterative denoising latency.
 - [Expose explicit control signals for generative media models](../concepts/expose-explicit-control-signals-for-generative-media-models.md) - media products need controls beyond text, such as camera motion, masks, and depth.
+- [Ground generated media with current search context](../concepts/ground-generated-media-with-current-search-context.md) - retrieval can make generated images depend on current facts and public context.
 - [Interactive world models need memory, control, and live prompting](../concepts/interactive-world-models-need-memory-control-and-live-prompting.md) - generated environments need state and action consistency when users navigate inside them.
 
 ## Open Questions
@@ -24,3 +25,4 @@ Generative media covers the model and product patterns behind image, video, and 
 
 - [Building Generative Image & Video models at Scale - Sander Dieleman, Google DeepMind](../sources/20260421_xOP1PM8fwnk.md)
 - [How Google DeepMind is researching the next Frontier of AI for Gemini - Raia Hadsell, VP of Research](../sources/20260418_zZsTVBXcbow.md)
+- [Building in the Gemini Era - Kat Kampf & Ammaar Reshi, Google DeepMind](../sources/20251215_fgkXEIbZpGc.md)

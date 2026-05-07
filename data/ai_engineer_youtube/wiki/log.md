@@ -831,3 +831,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Support-led coding agents exploit fresh customer context](concepts/support-led-coding-agents-exploit-fresh-customer-context.md), [Embed agent tools in existing work surfaces](concepts/embed-agent-tools-in-existing-work-surfaces.md), [Evaluate support coding agents by staged failure modes](concepts/evaluate-support-coding-agents-by-staged-failure-modes.md)
 - Notes: Added Zapier's Scout Agent workflow for turning support integration tickets into reviewable merge requests through embedded tools, asynchronous orchestration, and staged evaluation.
+
+## [2026-05-07] ingest | Building in the Gemini Era - Kat Kampf & Ammaar Reshi, Google DeepMind
+
+- Source: [Building in the Gemini Era - Kat Kampf & Ammaar Reshi, Google DeepMind](sources/20251215_fgkXEIbZpGc.md)
+- Processed: `fgkXEIbZpGc`
+- Updated topics: [Generative Media](topics/generative-media.md), [Models](topics/models.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md), [Infrastructure](topics/infrastructure.md)
+- Updated concepts: [Ground generated media with current search context](concepts/ground-generated-media-with-current-search-context.md), [Use one-shot app builders for product ideation](concepts/use-one-shot-app-builders-for-product-ideation.md), [Infer full-stack app infrastructure from user intent](concepts/infer-full-stack-app-infrastructure-from-user-intent.md)
+- Notes: Added Gemini-era app-builder patterns for search-grounded media generation, runnable product ideation, and full-stack runtime inference from application intent.

@@ -52,6 +52,8 @@ Enterprise engineering adoption also needs workflow scaffolding after the first 
 
 Support-led coding workflows add a practical backlog pattern for products with many integrations or other constantly changing surfaces. Zapier's Scout Agent starts from live support issues, runs diagnosis and routing, kicks off an asynchronous GitLab pipeline with plan, execute, and validate phases, attaches a merge request back to Jira, and lets support request another pass inside GitLab before engineering review.
 
+Prompt-to-app workflows can sit before implementation as a product ideation loop. A team can turn a screenshot, rough feature idea, or desired interaction into a runnable UI, inspect alternate interaction patterns, then decide whether to move into a heavier IDE or full-stack runtime. The same workflow needs verification once it crosses from front-end demos into stateful or multiplayer behavior: generated lobbies, collisions, readiness gates, storage, payments, and API integrations should be tested as real runtime behavior rather than accepted as prompt output.
+
 ## Key Concepts
 
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - simple loops can replace over-specified DAGs when exploration is the work.
@@ -218,6 +220,8 @@ Support-led coding workflows add a practical backlog pattern for products with m
 - [Plugin architectures let agent systems absorb experiments](../concepts/plugin-architectures-let-agent-systems-absorb-experiments.md) - extension workflows let experiments proceed without overloading core maintainers.
 - [Let agent harnesses extend through ordinary code packages](../concepts/let-agent-harnesses-extend-through-ordinary-code-packages.md) - package-based extension workflows keep optional harness behavior out of core.
 - [Make validation fast, local, deterministic, and actionable](../concepts/make-validation-fast-local-deterministic-and-actionable.md) - coding-agent workflows need quick checks that can guide the next iteration.
+- [Use one-shot app builders for product ideation](../concepts/use-one-shot-app-builders-for-product-ideation.md) - runnable prototypes can replace abstract feature speculation.
+- [Infer full-stack app infrastructure from user intent](../concepts/infer-full-stack-app-infrastructure-from-user-intent.md) - generated full-stack workflows should infer infrastructure while preserving runtime validation.
 - [Standardize development environments around common model priors](../concepts/standardize-development-environments-around-common-model-priors.md) - workflow reliability improves when agents operate in conventional local environments.
 - [Use AI to scale codebase understanding against code slop](../concepts/use-ai-to-scale-codebase-understanding-against-code-slop.md) - workflows can use AI for mapping, inspecting, and routing code work instead of only generating more code.
 - [Outcome-based engineering compensation uses accepted story points](../concepts/outcome-based-engineering-compensation-uses-accepted-story-points.md) - roadmapping, architecture docs, tickets, acceptance, and quarterly compensation form a repeatable output-paid delivery workflow.
@@ -345,3 +349,4 @@ Support-led coding workflows add a practical backlog pattern for products with m
 - [The 3 Pillars of Autonomy - Michele Catasta, Replit](../sources/20251222_MLhAA9yguwM.md)
 - [Dispatch from the Future: building an AI-native Company - Dan Shipper, Every, AI & I](../sources/20251218_MGzymaYBiss.md)
 - [AI Consulting in Practice - NLW, Superintelligent, @AIDailyBrief](../sources/20251218_ehQFj6VmuI8.md)
+- [Building in the Gemini Era - Kat Kampf & Ammaar Reshi, Google DeepMind](../sources/20251215_fgkXEIbZpGc.md)
