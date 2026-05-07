@@ -15,6 +15,7 @@ Details:
 - Review load should be assigned to specific people, distributed by a system, and governed by SLOs or other enforcement mechanisms; broadcasting review requests to a team channel often overloads the one most responsive reviewer (11:56-12:42).
 - Review systems need clear turn-taking because PR comments, responses, and follow-up pushes can otherwise depend on out-of-band Slack messages to tell reviewers when action is needed (12:42-13:14).
 - The best reviewers should teach review quality through apprenticeship; when senior reviewers spend all their time in meetings, junior engineers do not learn the judgment needed to maintain quality under higher agentic throughput (14:10-14:49).
+- The Qodo talk adds a volume-based failure mode: if AI produces more tasks, more PRs, and similar bugs per line, total bug and review load can grow even without proving AI-generated code is worse per line. (08:11-09:09)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -30,3 +31,4 @@ Related concepts:
 Sources:
 - [The Friction is Your Judgment - Armin Ronacher & Cristina Poncela Cubeiro, Earendil](../sources/20260418__Zcw_sVF6hU.md), 03:35-07:10
 - [Developer Experience in the Age of AI Coding Agents - Max Kanat-Alexander, Capital One](../sources/20251223_rT2Del5pwg4.md), 09:44-14:49
+- [The State of AI Code Quality: Hype vs Reality — Itamar Friedman, Qodo](../sources/20251211_rgjF5o2Qjsc.md), 08:11-09:09

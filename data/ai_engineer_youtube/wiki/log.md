@@ -903,3 +903,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md)
 - Updated concepts: [Codebase Hygiene Amplifies AI Productivity Gains](concepts/codebase-hygiene-amplifies-ai-productivity-gains.md), [Benchmark AI Engineering Practices by Usage Pattern](concepts/benchmark-ai-engineering-practices-by-usage-pattern.md), [Measure AI ROI With Primary Output and Guardrails](concepts/measure-ai-roi-with-primary-output-and-guardrails.md), [Do Not Use Token Volume as a Developer Productivity Metric](concepts/do-not-use-token-volume-as-a-developer-productivity-metric.md), [Measure AI Engineering Impact Across Utilization, Impact, and Cost](concepts/measure-ai-engineering-impact-across-utilization-impact-and-cost.md)
 - Notes: Added Stanford's AI software-engineering ROI guidance around codebase hygiene, usage-pattern benchmarking, and output metrics checked against quality and rework guardrails.
+
+## [2026-05-07] ingest | The State of AI Code Quality: Hype vs Reality — Itamar Friedman, Qodo
+
+- Source: [The State of AI Code Quality: Hype vs Reality — Itamar Friedman, Qodo](sources/20251211_rgjF5o2Qjsc.md)
+- Processed: `rgjF5o2Qjsc`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
+- Updated concepts: [AI Code Quality Needs Full-SDLC Workflows](concepts/ai-code-quality-needs-full-sdlc-workflows.md), [AI Review Gates Turn Standards Into Executable Feedback](concepts/ai-review-gates-turn-standards-into-executable-feedback.md), [Context Quality Determines AI Code Review Trust](concepts/context-quality-determines-ai-code-review-trust.md), [AI Output Speed Can Overwhelm Review Capacity](concepts/ai-output-speed-can-overwhelm-review-capacity.md)
+- Notes: Added Qodo's AI code-quality framing around generated-code volume, SDLC-wide quality dimensions, context-backed review, and adaptive PR-time quality gates.

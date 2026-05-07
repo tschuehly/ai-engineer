@@ -20,6 +20,8 @@ Context compression for coding agents is not just about fitting files into a sma
 
 Proactive agents add a timing constraint to context engineering. A background coding agent needs current project observation, personalized preferences, repository and environment knowledge, editable memory, and just-in-time task context so it can consult the right guidance before interrupting the user. Context that arrives too soon becomes noise, while context that arrives too late misses the intervention window.
 
+AI code review turns context quality into a trust issue. Review and generation tools need access to the relevant standards, best practices, version history, PR history, organizational logs, and current code context; otherwise developers can distrust the LLM's judgment even when the model is capable.
+
 ## Key Concepts
 
 - [Keep agent context small, fresh, and task-specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md) - context should be externalized, selected, summarized, and isolated so stale or excessive history does not degrade agent work.
@@ -51,6 +53,7 @@ Proactive agents add a timing constraint to context engineering. A background co
 - [Server-side interaction state simplifies branching conversational agents](../concepts/server-side-interaction-state-simplifies-branching-conversational-agents.md) - state APIs can reduce context plumbing while preserving explicit retention and compaction responsibilities.
 - [Agent skills should point to current docs instead of embedding every API detail](../concepts/agent-skills-should-point-to-current-docs-instead-of-embedding-every-api-detail.md) - skills should avoid stale copies of fast-changing documentation.
 - [Fresh Markdown context mitigates model rot in codegen](../concepts/fresh-markdown-context-mitigates-model-rot-in-codegen.md) - runtime-selected documentation can update model knowledge without retraining.
+- [Context quality determines AI code review trust](../concepts/context-quality-determines-ai-code-review-trust.md) - generation and review tools need broader software-development context to produce trustworthy quality feedback.
 - [Model airplanes give coding agents token-efficient exemplars](../concepts/model-airplanes-give-coding-agents-token-efficient-exemplars.md) - flattened reference projects can act as reusable, searchable skill context.
 - [Encode non-functional requirements as agent-visible context](../concepts/encode-non-functional-requirements-as-agent-visible-context.md) - durable quality expectations help agents reproduce team judgment.
 - [Treat prompts as distributed harness surfaces](../concepts/treat-prompts-as-distributed-harness-surfaces.md) - long-running work needs context refreshed through multiple instruction channels.
@@ -127,3 +130,4 @@ Proactive agents add a timing constraint to context engineering. A background co
 - [The Infinite Software Crisis - Jake Nations, Netflix](../sources/20251220_eIoohUmYpGI.md)
 - [Dispatch from the Future: building an AI-native Company - Dan Shipper, Every, AI & I](../sources/20251218_MGzymaYBiss.md)
 - [Proactive Agents - Kath Korevec, Google Labs](../sources/20251213_v3u8xc0zLec.md)
+- [The State of AI Code Quality: Hype vs Reality — Itamar Friedman, Qodo](../sources/20251211_rgjF5o2Qjsc.md)

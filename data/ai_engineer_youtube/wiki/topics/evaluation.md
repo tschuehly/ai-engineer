@@ -44,6 +44,8 @@ Support coding agents need staged evaluation before their throughput numbers are
 
 Coding capability evals also need to evolve with model capability. Static programming-problem benchmarks can lose signal through training-data contamination, brittle test suites, and difficulty distributions that become too easy or too hard. Dynamic code evals can use fresh release windows, rolling task sets, generated input tests, and recalibrated difficulty to keep comparisons near the current frontier. As tasks grow from snippets to repository-scale optimization or full codebase translation, construct validity matters more: the benchmark should use natural real-world tasks and grade the actual outcome, such as correctness, equivalence to an expert patch, runtime improvement, and maintainable code quality. Long-horizon code tasks also need intermediate progress signals, because final correctness alone is too sparse to guide multi-hour translation or refactoring attempts. In live IDE studies, preference signals need human-centered controls: acceptance rate measures both completion quality and user-facing factors such as latency, so experiments should balance latency before treating acceptance as a clean model-quality signal.
 
+AI code quality evaluation should also distinguish generated-code speed from SDLC quality. If AI creates more PRs and more code while defects per line stay flat, total review and defect load can still rise; useful evaluation has to inspect code-level issues, process-level ownership, test coverage, standards compliance, and whether review gates learn from accepted and rejected suggestions over time.
+
 ## Key Concepts
 
 - [Evaluate agent trajectories with backtests and smell metrics](../concepts/evaluate-agent-trajectories-with-backtests-and-smell-metrics.md) - flexible tool-loop agents need historical and trajectory-level checks.
@@ -52,6 +54,8 @@ Coding capability evals also need to evolve with model capability. Static progra
 - [Detect reward hacking in code optimization evals](../concepts/detect-reward-hacking-in-code-optimization-evals.md) - code evals need to catch benchmark exploitation and non-idiomatic hacks beyond tests.
 - [Use intermediate progress signals for long-horizon code evals](../concepts/use-intermediate-progress-signals-for-long-horizon-code-evals.md) - multi-hour code tasks need progress measures before final correctness.
 - [Design in-the-wild coding evals around developer behavior](../concepts/design-in-the-wild-coding-evals-around-developer-behavior.md) - IDE preference evals must control latency and interaction effects.
+- [AI code quality needs full-SDLC workflows](../concepts/ai-code-quality-needs-full-sdlc-workflows.md) - quality evaluation should span code-level and process-level failures across the SDLC.
+- [AI review gates turn standards into executable feedback](../concepts/ai-review-gates-turn-standards-into-executable-feedback.md) - review-time checks can convert standards into measurable PR feedback and trend data.
 - [Evaluate support coding agents by staged failure modes](../concepts/evaluate-support-coding-agents-by-staged-failure-modes.md) - support agents need separate checks for triage, fixability, and generated solution quality.
 - [Compare models by task, thinking budget, cost, and latency](../concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - side-by-side model comparisons help choose enough reasoning at acceptable speed and cost.
 - [Do not use token volume as a developer productivity metric](../concepts/do-not-use-token-volume-as-a-developer-productivity-metric.md) - adoption dashboards should avoid rewarding visible token spend over task impact.
@@ -218,6 +222,7 @@ Coding capability evals also need to evolve with model capability. Static progra
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md)
 - [Spec-Driven Development: Agentic Coding at FAANG Scale and Quality - Al Harris, Amazon Kiro](../sources/20260109_HY_JyxAZsiE.md)
 - [How METR measures Long Tasks and Experienced Open Source Dev Productivity - Joel Becker, METR](../sources/20260119_k1t2xyWMUdY.md)
+- [The State of AI Code Quality: Hype vs Reality — Itamar Friedman, Qodo](../sources/20251211_rgjF5o2Qjsc.md)
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md)
 - [Everything I Learned Training Frontier Small Models - Maxime Labonne, Liquid AI](../sources/20260429_fLUtUkqYHnQ.md)
 - [Why building eval platforms is hard - Phil Hetzel, Braintrust](../sources/20260428__fQ7Z_Wfouk.md)

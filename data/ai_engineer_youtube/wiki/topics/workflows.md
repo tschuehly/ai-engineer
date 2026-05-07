@@ -60,6 +60,8 @@ Prompt-to-app workflows can sit before implementation as a product ideation loop
 
 Vibe engineering turns agentic coding into a supervised review workflow rather than a slot-machine loop. A practical pattern is to let the agent produce a change, inspect the running UI, voice-dump observations and bugs, inspect the code, then feed back technical patterns and context through rules, docs, commands, and memories. Loose prompting is acceptable for disposable scripts or one-off tools, but durable code needs enough cleanliness and context structure for future agent runs to continue safely.
 
+AI code quality workflows should cover the whole SDLC rather than only generation. Qodo's framing treats testing, review, context, executable standards, and secure validation environments as workflow surfaces that must keep learning as generated-code volume grows.
+
 ## Key Concepts
 
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - simple loops can replace over-specified DAGs when exploration is the work.
@@ -97,6 +99,8 @@ Vibe engineering turns agentic coding into a supervised review workflow rather t
 - [DSPy programs keep LLM intent separate from prompt strings](../concepts/dspy-programs-keep-llm-intent-separate-from-prompt-strings.md) - program-first LLM workflows keep control flow stable while model prompts evolve.
 - [Optimize LLM programs with metrics and teacher feedback](../concepts/optimize-llm-programs-with-metrics-and-teacher-feedback.md) - known examples and metrics can drive DSPy optimizer loops.
 - [Use explanatory feedback to optimize prompts](../concepts/use-explanatory-feedback-to-optimize-prompts.md) - feedback-rich examples turn prompt editing into a repeatable improvement loop.
+- [AI code quality needs full-SDLC workflows](../concepts/ai-code-quality-needs-full-sdlc-workflows.md) - quality workflows should span planning, development, review, testing, deployment, ownership, and verification.
+- [AI review gates turn standards into executable feedback](../concepts/ai-review-gates-turn-standards-into-executable-feedback.md) - PR checks can make coding standards measurable and adaptable.
 - [Use prompt mutation loops to hill-climb product behavior](../concepts/use-prompt-mutation-loops-to-hill-climb-product-behavior.md) - prompt variants can be scored, selected, reflected on, and mutated as part of product behavior iteration.
 - [Build AI product iteration tools into the product context](../concepts/build-ai-product-iteration-tools-into-the-product-context.md) - in-product tools let more roles dogfood and refine AI behavior with realistic context.
 - [System prompt learning updates agent rules from eval explanations](../concepts/system-prompt-learning-updates-agent-rules-from-eval-explanations.md) - coding-agent prompt learning turns traces into rule updates.
@@ -366,5 +370,6 @@ Vibe engineering turns agentic coding into a supervised review workflow rather t
 - [AI Consulting in Practice - NLW, Superintelligent, @AIDailyBrief](../sources/20251218_ehQFj6VmuI8.md)
 - [Building in the Gemini Era - Kat Kampf & Ammaar Reshi, Google DeepMind](../sources/20251215_fgkXEIbZpGc.md)
 - [From Vibe Coding To Vibe Engineering - Kitze, Sizzy](../sources/20251214_JV-wY5pxXLo.md)
+- [The State of AI Code Quality: Hype vs Reality — Itamar Friedman, Qodo](../sources/20251211_rgjF5o2Qjsc.md)
 - [Proactive Agents - Kath Korevec, Google Labs](../sources/20251213_v3u8xc0zLec.md)
 - [Moving away from Agile: What's Next - Martin Harrysson & Natasha Maniar, McKinsey & Company](../sources/20251212_SZStlIhyTCY.md)

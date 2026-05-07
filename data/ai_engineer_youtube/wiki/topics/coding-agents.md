@@ -36,6 +36,8 @@ Coding-agent evaluation should track the same expansion in task horizon as the t
 
 Vibe engineering adds a human-skill framing for frontend-heavy agentic coding. The useful boundary is not whether the human types code, but whether they can steer the agent with primitives, rules, architecture context, fast feedback, and judgment about what is good enough. LLMs make abstraction cheaper, which means they can reach a good design faster or lock in a bad abstraction faster; senior judgment is still needed to decide when repeated code is acceptable, when a refactor is useful, and when generated code is clean enough for future agents to continue from.
 
+Qodo's code-quality framing adds a full-SDLC quality layer. Generation-time rules in Cursor, Copilot, or similar tools may be only partially followed, so teams need review-time and testing-time gates that translate standards into executable feedback. The review layer should inspect both code-level problems such as security and efficiency and process-level problems such as ownership, verification, guardrails, and learning from AI-caused failures.
+
 ## Key Concepts
 
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md) - coding-agent SDKs package reusable runtime pieces around the model.
@@ -73,6 +75,9 @@ Vibe engineering adds a human-skill framing for frontend-heavy agentic coding. T
 - [Vibe engineering is supervised agentic coding with judgment](../concepts/vibe-engineering-is-supervised-agentic-coding-with-judgment.md) - agentic coding works best when experienced humans steer context, abstractions, and acceptance criteria.
 - [Use voice-dumped UI and code observations as agent feedback](../concepts/use-voice-dumped-ui-and-code-observations-as-agent-feedback.md) - spoken UI and code review can provide high-bandwidth frontend feedback to agents.
 - [Keep agent-generated code clean enough for continued agent work](../concepts/keep-agent-generated-code-clean-enough-for-continued-agent-work.md) - generated code should be good enough for humans and future agents to build on.
+- [AI code quality needs full-SDLC workflows](../concepts/ai-code-quality-needs-full-sdlc-workflows.md) - generated code needs quality checks across planning, development, review, testing, deployment, and ownership.
+- [AI review gates turn standards into executable feedback](../concepts/ai-review-gates-turn-standards-into-executable-feedback.md) - PR-time review gates can enforce rules that generation-time prompts only partially follow.
+- [Context quality determines AI code review trust](../concepts/context-quality-determines-ai-code-review-trust.md) - generation and review tools need standards, PR history, logs, and best practices as context, not only the current diff.
 - [Measure AI developer productivity with field experiments, not benchmark extrapolation alone](../concepts/measure-ai-developer-productivity-with-field-experiments-not-benchmark-extrapolation-alone.md) - coding-agent productivity claims need real-work measurements.
 - [Reliability thresholds determine whether coding agents save time](../concepts/reliability-thresholds-determine-whether-coding-agents-save-time.md) - coding-agent output must be reliable enough to reduce total work after review and correction.
 - [Treat slop as a quality failure, not an AI provenance label](../concepts/treat-slop-as-a-quality-failure-not-an-ai-provenance-label.md) - AI usage should not replace direct quality, authenticity, accuracy, and security checks.
@@ -254,6 +259,7 @@ Vibe engineering adds a human-skill framing for frontend-heavy agentic coding. T
 - [Code World Model: Building World Models for Computation - Jacob Kahn, FAIR Meta](../sources/20251217_sYgE4ppDFOQ.md)
 - [Coding Evals: From Code Snippets to Codebases - Naman Jain, Cursor](../sources/20251215_tHN44yJoeS8.md)
 - [From Vibe Coding To Vibe Engineering - Kitze, Sizzy](../sources/20251214_JV-wY5pxXLo.md)
+- [The State of AI Code Quality: Hype vs Reality — Itamar Friedman, Qodo](../sources/20251211_rgjF5o2Qjsc.md)
 - [Minimax M2: Building the #1 Open Model - Olive Song, MiniMax](../sources/20251213_lY1iFbDPRlw.md)
 - [Hard Won Lessons from Building Effective AI Coding Agents - Nik Pash, Cline](../sources/20251212_I8fs4omN1no.md)
 - [Moving away from Agile: What's Next - Martin Harrysson & Natasha Maniar, McKinsey & Company](../sources/20251212_SZStlIhyTCY.md)
