@@ -693,6 +693,8 @@
 - [Local-first platform workflows shorten agent feedback loops](../concepts/local-first-platform-workflows-shorten-agent-feedback-loops.md)
 - [Guard AI-assisted platform contributions with policy and context](../concepts/guard-ai-assisted-platform-contributions-with-policy-and-context.md)
 - [Prevent AI billing surprises with caps, notifications, and rate limits](../concepts/prevent-ai-billing-surprises-with-caps-notifications-and-rate-limits.md)
+- [Agentic Workloads Turn Token Price Into Unit-Economics Pressure](../concepts/agentic-workloads-turn-token-price-into-unit-economics-pressure.md)
+- [Self-Hosted Inference Needs a Platform Beyond Runtime and GPUs](../concepts/self-hosted-inference-needs-a-platform-beyond-runtime-and-gpus.md)
 - [Shared cloud workspaces make agent sessions collaborative](../concepts/shared-cloud-workspaces-make-agent-sessions-collaborative.md)
 - [Unified coding-agent harnesses combine models, tools, environments, and safety](../concepts/unified-coding-agent-harnesses-combine-models-tools-environments-and-safety.md)
 - [Route Gemma 4 model variants by deployment and workflow shape](../concepts/route-gemma-4-model-variants-by-deployment-and-workflow-shape.md)
@@ -719,6 +721,7 @@
 - [Browser-native AI APIs bring local models into web apps](../concepts/browser-native-ai-apis-bring-local-models-into-web-apps.md)
 - [Use hosted model playgrounds to prototype before owning infrastructure](../concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md)
 - [Open model families need ecosystem-compatible tooling](../concepts/open-model-families-need-ecosystem-compatible-tooling.md)
+- [Enterprise Open-Model Adoption Follows Task Pressure](../concepts/enterprise-open-model-adoption-follows-task-pressure.md)
 - [Use MLX Swift LM for Apple local model integration](../concepts/use-mlx-swift-lm-for-apple-local-model-integration.md)
 - [Use hardware-in-the-loop search for AI kernel generation](../concepts/use-hardware-in-the-loop-search-for-ai-kernel-generation.md)
 - [Use AI kernel generation for known optimization patterns, not expert-level breakthroughs](../concepts/use-ai-kernel-generation-for-known-optimization-patterns-not-expert-level-breakthroughs.md)
@@ -763,6 +766,8 @@
 
 - [Benchmark inference with use-case-shaped token loads](../concepts/benchmark-inference-with-use-case-shaped-token-loads.md)
 - [SGLang Serves Models Through Configured OpenAI-Compatible Servers](../concepts/sglang-serves-models-through-configured-openai-compatible-servers.md)
+- [Self-Hosted Inference Needs a Platform Beyond Runtime and GPUs](../concepts/self-hosted-inference-needs-a-platform-beyond-runtime-and-gpus.md)
+- [Agentic Workloads Turn Token Price Into Unit-Economics Pressure](../concepts/agentic-workloads-turn-token-price-into-unit-economics-pressure.md)
 - [Tune CUDA Graph Batch Capture to Real Decode Concurrency](../concepts/tune-cuda-graph-batch-capture-to-real-decode-concurrency.md)
 - [Use Eagle 3 Speculative Decoding With Matched Draft Models](../concepts/use-eagle-3-speculative-decoding-with-matched-draft-models.md)
 - [Abstract LLM inference behind one routing API](../concepts/abstract-llm-inference-behind-one-routing-api.md)
@@ -1083,6 +1088,7 @@
 
 - [Use Eagle 3 Speculative Decoding With Matched Draft Models](../concepts/use-eagle-3-speculative-decoding-with-matched-draft-models.md)
 - [SGLang Serves Models Through Configured OpenAI-Compatible Servers](../concepts/sglang-serves-models-through-configured-openai-compatible-servers.md)
+- [Enterprise Open-Model Adoption Follows Task Pressure](../concepts/enterprise-open-model-adoption-follows-task-pressure.md)
 - [Mechanistic Interpretability Turns Model Internals Into Engineering Surfaces](../concepts/mechanistic-interpretability-turns-model-internals-into-engineering-surfaces.md)
 - [Activation Steering Can Patch Specific Runtime Behaviors](../concepts/activation-steering-can-patch-specific-runtime-behaviors.md)
 - [Use Activation Triggers for Dynamic Prompting](../concepts/use-activation-triggers-for-dynamic-prompting.md)

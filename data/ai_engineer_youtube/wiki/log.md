@@ -1759,3 +1759,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
 - Updated concepts: [AI Diff Review Should Find Problems Before Merge](concepts/ai-diff-review-should-find-problems-before-merge.md), [Specs and Style Guides Steer Coding Agents Toward Maintainable Code](concepts/specs-and-style-guides-steer-coding-agents-toward-maintainable-code.md), [Generated Tests Need Meaningful Plans, Coverage, and Pruning](concepts/generated-tests-need-meaningful-plans-coverage-and-pruning.md), [Custom LLM Checks Turn Team Standards Into Continuous Agent Feedback](concepts/custom-llm-checks-turn-team-standards-into-continuous-agent-feedback.md)
 - Notes: Added Imbue/Sculptor guidance for moving coding-agent output beyond prototypes through early problem detection, first-class specs, meaningful tests, and extensible LLM checks.
+
+## [2026-05-07] ingest | The Rise of Open Models in the Enterprise — Amir Haghighat, Baseten
+
+- Source: [The Rise of Open Models in the Enterprise — Amir Haghighat, Baseten](sources/20250724_3WV1vT0B0cg.md)
+- Processed: `3WV1vT0B0cg`
+- Updated topics: [Models](topics/models.md), [Inference](topics/inference.md), [Infrastructure](topics/infrastructure.md)
+- Updated concepts: [Enterprise Open-Model Adoption Follows Task Pressure](concepts/enterprise-open-model-adoption-follows-task-pressure.md), [Self-Hosted Inference Needs a Platform Beyond Runtime and GPUs](concepts/self-hosted-inference-needs-a-platform-beyond-runtime-and-gpus.md), [Agentic Workloads Turn Token Price Into Unit-Economics Pressure](concepts/agentic-workloads-turn-token-price-into-unit-economics-pressure.md)
+- Notes: Added Baseten's enterprise open-model adoption framing and the inference-platform requirements that appear once teams move beyond hosted APIs.

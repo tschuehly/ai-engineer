@@ -4,6 +4,10 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Enterprise Open-Model Adoption Follows Task Pressure](concepts/enterprise-open-model-adoption-follows-task-pressure.md) - open models become attractive when enterprise workloads expose task-specific quality, latency, cost, or differentiation pressure.
+- [Self-Hosted Inference Needs a Platform Beyond Runtime and GPUs](concepts/self-hosted-inference-needs-a-platform-beyond-runtime-and-gpus.md) - model weights, serving runtimes, and GPUs still need production platform work for mission-critical inference.
+- [Agentic Workloads Turn Token Price Into Unit-Economics Pressure](concepts/agentic-workloads-turn-token-price-into-unit-economics-pressure.md) - multi-call agent workflows can make hosted per-token pricing dominate ROI.
+
 - [AI Diff Review Should Find Problems Before Merge](concepts/ai-diff-review-should-find-problems-before-merge.md) - coding-agent review loops should identify concrete defects while diffs are being created.
 - [Specs and Style Guides Steer Coding Agents Toward Maintainable Code](concepts/specs-and-style-guides-steer-coding-agents-toward-maintainable-code.md) - plans, docs, specs, and style rules make agent-visible intent and constraints.
 - [Generated Tests Need Meaningful Plans, Coverage, and Pruning](concepts/generated-tests-need-meaningful-plans-coverage-and-pruning.md) - generated test suites need behavior-level plans, coverage checks, sandboxing, review, and cleanup.
