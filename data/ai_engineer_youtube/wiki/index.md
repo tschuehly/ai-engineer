@@ -4,6 +4,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Continuously reconcile eval datasets with user reality](concepts/continuously-reconcile-eval-datasets-with-user-reality.md) - eval datasets should evolve from selected user feedback, not remain static synthetic fixtures.
+- [Write custom scorers as product specifications](concepts/write-custom-scorers-as-product-specifications.md) - scoring functions should encode the product's intended behavior rather than someone else's generic metric.
+- [Evaluate tool definitions and outputs as context](concepts/evaluate-tool-definitions-and-outputs-as-context.md) - agent tool schemas and responses are part of the model's context budget and should be optimized like prompts.
 - [Domain-expert sandboxes accelerate knowledge-app iteration](concepts/domain-expert-sandboxes-accelerate-knowledge-app-iteration.md) - domain operators need fast, reviewable control over templates, validations, runs, and model strategies.
 - [App factories turn sandbox artifacts into governed knowledge apps](concepts/app-factories-turn-sandbox-artifacts-into-governed-knowledge-apps.md) - sandbox outputs should move into production through platform, access, cost, and review controls.
 - [Agentic document extraction decomposes complex fields](concepts/agentic-document-extraction-decomposes-complex-fields.md) - long enterprise document extraction needs grouped fields, multimodal checks, model comparison, and retry loops.

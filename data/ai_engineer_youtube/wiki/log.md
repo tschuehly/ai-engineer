@@ -1175,3 +1175,11 @@
 - Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Retrieval](topics/retrieval.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Domain-expert Sandboxes Accelerate Knowledge-app Iteration](concepts/domain-expert-sandboxes-accelerate-knowledge-app-iteration.md), [App Factories Turn Sandbox Artifacts Into Governed Knowledge Apps](concepts/app-factories-turn-sandbox-artifacts-into-governed-knowledge-apps.md), [Agentic Document Extraction Decomposes Complex Fields](concepts/agentic-document-extraction-decomposes-complex-fields.md), [Route High-Impact Agent Actions Through Explicit Human Approval Gates](concepts/route-high-impact-agent-actions-through-explicit-human-approval-gates.md)
 - Notes: Added BlackRock's knowledge-app platform pattern for putting extraction-template iteration in domain experts' hands while routing production deployment through governed app-factory infrastructure.
+
+## [2026-05-07] ingest | Five hard earned lessons about Evals - Ankur Goyal, Braintrust
+
+- Source: [Five hard earned lessons about Evals - Ankur Goyal, Braintrust](sources/20250823_a4BV0gGmXgA.md)
+- Processed: `a4BV0gGmXgA`
+- Updated topics: [Evaluation](topics/evaluation.md), [Context Engineering](topics/context-engineering.md), [Tools](topics/tools.md)
+- Updated concepts: [Continuously reconcile eval datasets with user reality](concepts/continuously-reconcile-eval-datasets-with-user-reality.md), [Write custom scorers as product specifications](concepts/write-custom-scorers-as-product-specifications.md), [Evaluate tool definitions and outputs as context](concepts/evaluate-tool-definitions-and-outputs-as-context.md)
+- Notes: Added Braintrust's eval-competence workflow for feeding curated user feedback into datasets, writing product-specific scorers, and treating tool definitions and responses as evaluated context.

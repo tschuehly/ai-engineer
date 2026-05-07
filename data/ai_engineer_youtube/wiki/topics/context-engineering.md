@@ -18,7 +18,7 @@ Long context should be treated as temporary working memory, not durable knowledg
 
 Context platform engineering adds an inference-side complement to context selection. Agentic coding sessions often resend system prompts, tool calls, and tool responses far more than direct user text, so context engineering should consider which repeated regions become KV-cache working sets and how cache time-to-live interacts with human pauses and fast tool loops.
 
-Tool-heavy agent sessions also need active cleanup inside the working window. Memory can keep durable patterns and preferences outside the prompt until they are relevant, while context editing removes stale tool outputs that otherwise crowd out current task context. Knowledge graphs add a structured memory option when relationships matter: semantic and procedural learnings can become nodes, relationships, properties, embeddings, and access overlays that agents can traverse and humans can inspect.
+Tool-heavy agent sessions also need active cleanup inside the working window. Memory can keep durable patterns and preferences outside the prompt until they are relevant, while context editing removes stale tool outputs that otherwise crowd out current task context. Knowledge graphs add a structured memory option when relationships matter: semantic and procedural learnings can become nodes, relationships, properties, embeddings, and access overlays that agents can traverse and humans can inspect. Tool definitions and responses should be treated as first-class context artifacts: in agent loops, tool schemas and outputs can dominate the token budget more than the system prompt, so context engineering includes how tools are named, described, scoped, and serialized.
 
 Coding-agent subagents are another context-management lever. Instead of forcing one agent to spend its main window on broad repository search, deep reasoning, dependency lookup, or codemod planning, a specialist can consume context in a separate window and return only the useful result.
 
@@ -87,6 +87,7 @@ Repository architecture can turn context engineering into the adoption bottlenec
 - [Treat prompts as distributed harness surfaces](../concepts/treat-prompts-as-distributed-harness-surfaces.md) - long-running work needs context refreshed through multiple instruction channels.
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md) - files, scripts, tools, hooks, and memory are part of the agent context substrate.
 - [Use hooks for deterministic agent verification and live context injection](../concepts/use-hooks-for-deterministic-agent-verification-and-live-context-injection.md) - event hooks can refresh an agent with changed state or enforce recurring context rules.
+- [Evaluate tool definitions and outputs as context](../concepts/evaluate-tool-definitions-and-outputs-as-context.md) - tool schemas and outputs should be engineered for model comprehension and context budget, not only backend convenience.
 - [Guard AI-assisted platform contributions with policy and context](../concepts/guard-ai-assisted-platform-contributions-with-policy-and-context.md) - platform contribution guidance belongs in agent-readable Markdown when hard policy alone is not enough.
 - [Collaborative plans become executable agent context](../concepts/collaborative-plans-become-executable-agent-context.md) - shared plans and discussion can become prompt context once teammates agree on intent.
 - [Social context dashboards keep agentic teams oriented](../concepts/social-context-dashboards-keep-agentic-teams-oriented.md) - code-adjacent conversations and teammate activity can orient agents and humans.
@@ -173,3 +174,4 @@ Repository architecture can turn context engineering into the adoption bottlenec
 - [Developing Taste in Coding Agents: Applied Meta Neuro-Symbolic RL - Ahmad Awais, CommandCode](../sources/20251124_kWOQS3XPZ10.md)
 - [The Unbearable Lightness of Agent Optimization - Alberto Romero, Jointly](../sources/20251124_zfvEMNmVlNY.md)
 - [Backlog.md: Terminal Kanban Board for Managing Tasks with AI Agents - Alex Gavrilescu, Funstage](../sources/20251124_zMXKhhwiCIc.md)
+- [Five hard earned lessons about Evals - Ankur Goyal, Braintrust](../sources/20250823_a4BV0gGmXgA.md)
