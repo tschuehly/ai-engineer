@@ -80,8 +80,13 @@ Regulated-agent evaluation adds accountability and deployment-readiness evidence
 
 PR-derived field telemetry adds a practical adoption dashboard shape for AI coding rollouts. Developer AI adoption rate can be correlated with PR throughput and cycle time, but the result should be segmented by architecture and paired with PR-size, bug-ticket, and revert-rate guardrails. Otherwise teams can mistake more and larger PRs for productive transformation while missing review burden, quality drift, or cross-repo context bottlenecks.
 
+Retrieval-specific evals should be fast enough to change engineering behavior. Query-document pair checks can compare chunking, embedding models, and top-k parameters on the application's own data without waiting for slow judge pipelines. Synthetic query generation can bootstrap that benchmark, but only if the generated questions are aligned with realistic user specificity; otherwise the eval can reward retrieval systems that only handle clean document-shaped questions. Once real traffic exists, conversation logs add an output-side eval surface: extracting tools, errors, frustration, satisfaction, and use-case metadata lets teams compare KPIs across clusters instead of staring at one aggregate factuality score.
+
 ## Key Concepts
 
+- [Use fast query-document evals for retrieval changes](../concepts/use-fast-query-document-evals-for-retrieval-changes.md) - cheap query/document checks let teams compare retrieval changes on local data.
+- [Align synthetic retrieval queries with real user specificity](../concepts/align-synthetic-retrieval-queries-with-real-user-specificity.md) - generated benchmark queries should match production query shape rather than overfitting to documents.
+- [Cluster conversation outputs to prioritize AI product work](../concepts/cluster-conversation-outputs-to-prioritize-ai-product-work.md) - conversation metadata and KPI clusters turn aggregate scores into roadmap decisions.
 - [Use formal specifications and proofs for critical generated code](../concepts/use-formal-specifications-and-proofs-for-critical-generated-code.md) - verification can prove selected properties before generated code executes.
 - [Separate generation and verification prompts or models](../concepts/separate-generation-and-verification-prompts-or-models.md) - independent verifier contexts can reduce confirmation bias in agent-coded changes.
 - [Agentic coding economics shift attention from writing cost to assurance cost](../concepts/agentic-coding-economics-shift-attention-from-writing-cost-to-assurance-cost.md) - ROI analysis must include verification and defect-correction cost.
@@ -307,6 +312,7 @@ PR-derived field telemetry adds a practical adoption dashboard shape for AI codi
 
 ## Sources
 
+- [How to look at your data - Jeff Huber (Chroma) + Jason Liu (567)](../sources/20250806_jryZvCuA0Uc.md)
 - [Evals Are Not Unit Tests - Ido Pesok, Vercel v0](../sources/20250806_L8OoYeDI_ls.md)
 - [The Next Unicorns: 7 Top AI startups from the HF0 Residency](../sources/20250821_L8-5ezsoI5A.md)
 - [Building an Agentic Platform - Ben Kus, CTO Box](../sources/20250824_12v5S1n1eOY.md)

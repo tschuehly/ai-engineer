@@ -1287,3 +1287,11 @@
 - Updated topics: [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Map application evals to the product court](concepts/map-application-evals-to-the-product-court.md), [Keep eval data constant and task logic variable](concepts/keep-eval-data-constant-and-task-logic-variable.md), [Prefer simple debuggable eval scores](concepts/prefer-simple-debuggable-eval-scores.md)
 - Notes: Added Vercel v0's application-layer eval pattern for domain coverage, reusable eval data, production-matched task logic, and CI reports that expose improvements and regressions.
+
+## [2026-05-07] ingest | How to look at your data - Jeff Huber (Chroma) + Jason Liu (567)
+
+- Source: [How to look at your data - Jeff Huber (Chroma) + Jason Liu (567)](sources/20250806_jryZvCuA0Uc.md)
+- Processed: `jryZvCuA0Uc`
+- Updated topics: [Evaluation](topics/evaluation.md), [Retrieval](topics/retrieval.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Use Fast Query-Document Evals for Retrieval Changes](concepts/use-fast-query-document-evals-for-retrieval-changes.md), [Align Synthetic Retrieval Queries With Real User Specificity](concepts/align-synthetic-retrieval-queries-with-real-user-specificity.md), [Cluster Conversation Outputs to Prioritize AI Product Work](concepts/cluster-conversation-outputs-to-prioritize-ai-product-work.md)
+- Notes: Added Chroma and Jason Liu's data-inspection workflow for retrieval evals, synthetic query calibration, and conversation-cluster product prioritization.

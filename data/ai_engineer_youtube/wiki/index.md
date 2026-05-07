@@ -4,6 +4,8 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Use fast query-document evals for retrieval changes](concepts/use-fast-query-document-evals-for-retrieval-changes.md) - compare retrieval configurations on local query/document pairs before changing embeddings or chunking.
+- [Cluster conversation outputs to prioritize AI product work](concepts/cluster-conversation-outputs-to-prioritize-ai-product-work.md) - mine conversation logs for use-case and failure clusters that guide product investments.
 - [Avoid premature low-level AI system coupling](concepts/avoid-premature-low-level-ai-system-coupling.md) - keep stable AI application intent separate from fast-changing model and inference mechanics.
 - [Use evals as durable AI system specifications](concepts/use-evals-as-durable-ai-system-specifications.md) - preserve product criteria while prompts, models, strategies, and optimizers evolve.
 - [Measure AI intensity by human input to valuable output](concepts/measure-ai-intensity-by-human-input-to-valuable-output.md) - compare AI products by useful output per human steering event rather than by agent labels.

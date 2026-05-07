@@ -40,6 +40,8 @@ For AI app reliability work, build evals at the start of the workflow rather tha
 
 Application eval workflows should also map the product domain before optimizing. The team should gather real prompts and feedback, identify in-bounds and out-of-bounds work, keep the data set stable, vary the task logic under test, and run simple debuggable scores in CI so prompt, model, RAG, or preprocessing changes reveal both improvements and regressions.
 
+AI application improvement workflows should also inspect both inputs and outputs. Input-side retrieval checks should run quickly enough to support repeated experiments on embedding models, chunking, and top-k choices. Output-side conversation analysis should extract structured fields from chats and agent traces, cluster similar work, and compare KPIs across those clusters so teams can decide whether to add tools, build routers, change prompts, educate users, or refuse unsupported categories.
+
 DSPy-style workflows separate program shape from prompt shape: teams can define signatures and modules, route inputs through ordinary control flow, select adapters for model-facing format, and then optimize the resulting program with datasets and metrics. This is most useful when the task has known examples and quality criteria, not when the workflow is too open-ended to score. Prompt-learning workflows should likewise be made explicit: start from examples with feedback, choose sample size and train/test split, run bounded generate/evaluate/refine loops, and review whether evaluator feedback is trustworthy enough to drive the next prompt.
 
 For coding agents, this workflow can be attached directly to rule files: run the agent on benchmark issues, collect test and judge feedback, use a meta-prompt to draft rule changes, diff the resulting prompt context, and rerun the benchmark before adopting the rules. Shared prompt context also needs ownership: a gatekeeper group can receive feedback on system prompts, Cursor rules, or agent Markdown and keep organization-wide instructions aligned with current frameworks and practices. AI-native products need a related model-behavior workflow: broaden ideation through in-product tools, dogfood ideas with real context, collect evals to clarify requirements, hill-climb through code and prompt changes, and route feedback back into the behavior system after shipping. The same workflow pressure applies to DevEx basics: fast local validation, written external context, clear turn-taking in review, and assigned review ownership keep agent iteration from becoming slow CI loops and rubber-stamped PRs.
@@ -94,6 +96,8 @@ Brockman's workflow advice is to challenge inherited constraints by first princi
 
 ## Key Concepts
 
+- [Use fast query-document evals for retrieval changes](../concepts/use-fast-query-document-evals-for-retrieval-changes.md) - fast retrieval checks keep experimentation inside the product improvement loop.
+- [Cluster conversation outputs to prioritize AI product work](../concepts/cluster-conversation-outputs-to-prioritize-ai-product-work.md) - output analysis turns logs into decisions about tools, prompts, routing, and refusal behavior.
 - [Research engineering partnership](../concepts/research-engineering-partnership.md) - research and engineering workflows need repeated coordination as systems scale.
 - [Model-shaped codebase architecture for coding agents](../concepts/model-shaped-codebase-architecture-for-coding-agents.md) - workflow speed depends on modules and checks agents can act on.
 - [Agentic coding transforms existing software](../concepts/agentic-coding-transforms-existing-software.md) - agent workflows should target mature codebase transformation, not only prototypes.
@@ -384,6 +388,7 @@ Brockman's workflow advice is to challenge inherited constraints by first princi
 
 ## Sources
 
+- [How to look at your data - Jeff Huber (Chroma) + Jason Liu (567)](../sources/20250806_jryZvCuA0Uc.md)
 - [Designing AI-Intensive Applications - swyx](../sources/20250809_IHkyFhU6JEY.md)
 - [#define AI Engineer - Greg Brockman, OpenAI (ft. Jensen Huang)](../sources/20250810_avWhreBUYF0.md)
 - [Form factors for your new AI coworkers - Craig Wattrus, Flatfile](../sources/20250822_CiMVKnX-CNI.md)

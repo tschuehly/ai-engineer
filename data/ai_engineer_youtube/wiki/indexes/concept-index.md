@@ -689,6 +689,9 @@
 
 ## Evaluation
 
+- [Use Fast Query-Document Evals for Retrieval Changes](../concepts/use-fast-query-document-evals-for-retrieval-changes.md)
+- [Align Synthetic Retrieval Queries With Real User Specificity](../concepts/align-synthetic-retrieval-queries-with-real-user-specificity.md)
+- [Cluster Conversation Outputs to Prioritize AI Product Work](../concepts/cluster-conversation-outputs-to-prioritize-ai-product-work.md)
 - [Map application evals to the product court](../concepts/map-application-evals-to-the-product-court.md)
 - [Keep eval data constant and task logic variable](../concepts/keep-eval-data-constant-and-task-logic-variable.md)
 - [Prefer simple debuggable eval scores](../concepts/prefer-simple-debuggable-eval-scores.md)
@@ -925,6 +928,8 @@
 
 ## Retrieval
 
+- [Use Fast Query-Document Evals for Retrieval Changes](../concepts/use-fast-query-document-evals-for-retrieval-changes.md)
+- [Align Synthetic Retrieval Queries With Real User Specificity](../concepts/align-synthetic-retrieval-queries-with-real-user-specificity.md)
 - [Extract enterprise interaction data into structured graphs](../concepts/extract-enterprise-interaction-data-into-structured-graphs.md)
 - [Agentic document extraction decomposes complex fields](../concepts/agentic-document-extraction-decomposes-complex-fields.md)
 - [Normalize network telemetry into agent-readable schemas](../concepts/normalize-network-telemetry-into-agent-readable-schemas.md)
@@ -1118,6 +1123,8 @@
 
 ## Workflows
 
+- [Use Fast Query-Document Evals for Retrieval Changes](../concepts/use-fast-query-document-evals-for-retrieval-changes.md)
+- [Cluster Conversation Outputs to Prioritize AI Product Work](../concepts/cluster-conversation-outputs-to-prioritize-ai-product-work.md)
 - [SPADE structures AI-intensive workflows](../concepts/spade-structures-ai-intensive-workflows.md)
 - [Map application evals to the product court](../concepts/map-application-evals-to-the-product-court.md)
 - [Keep eval data constant and task logic variable](../concepts/keep-eval-data-constant-and-task-logic-variable.md)
