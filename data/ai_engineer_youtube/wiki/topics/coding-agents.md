@@ -22,6 +22,8 @@ Enterprise rollouts should be skeptical of greenfield-only codegen wins. Bloombe
 
 Zapier's Scout Agent adds a support-led maintenance pattern. For integration products exposed to constant API changes, support can be a strong first user because tickets arrive with fresh customer context, current logs, and practical validation knowledge. Scout turns support issues into categorized, fixability-checked, plan/execute/validate merge requests, then keeps support iteration inside GitLab before engineering review.
 
+Coding-agent evaluation should track the same expansion in task horizon as the tools themselves. Naman Jain's coding-eval progression moves from single-line completions, to interview-style problems, to repository question answering, to optimization and codebase translation tasks that can take hours. That progression changes the benchmark requirements: fresh rolling tasks fight contamination, construct-valid repository tasks preserve real engineering meaning, reward-hack detectors catch agents that exploit benchmark infrastructure, and intermediate progress signals make long translations or refactors measurable before final pass/fail. Live IDE evals add one more agent-product constraint: developer acceptance is not a pure quality label when latency and presentation shape whether users accept a completion.
+
 ## Key Concepts
 
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md) - coding-agent SDKs package reusable runtime pieces around the model.
@@ -40,6 +42,11 @@ Zapier's Scout Agent adds a support-led maintenance pattern. For integration pro
 - [Use prompt-enforced todos as lightweight agent state](../concepts/use-prompt-enforced-todos-as-lightweight-agent-state.md) - todos orient the model without turning every step into hard orchestration.
 - [Put brittle edge cases behind rigorous tools](../concepts/put-brittle-edge-cases-behind-rigorous-tools.md) - structured tools provide hard boundaries for behavior that prompts should not merely suggest.
 - [Evaluate agent trajectories with backtests and smell metrics](../concepts/evaluate-agent-trajectories-with-backtests-and-smell-metrics.md) - flexible coding agents need trajectory-level eval signals, not only final output checks.
+- [Update coding eval sets dynamically as model capability changes](../concepts/update-coding-eval-sets-dynamically-as-model-capability-changes.md) - coding-agent benchmarks need fresh tasks and calibrated difficulty as models improve.
+- [Build coding benchmarks around construct validity](../concepts/build-coding-benchmarks-around-construct-validity.md) - repository-scale evals should use real tasks and grade actual engineering outcomes.
+- [Detect reward hacking in code optimization evals](../concepts/detect-reward-hacking-in-code-optimization-evals.md) - optimization agents can pass tests while exploiting benchmark infrastructure.
+- [Use intermediate progress signals for long-horizon code evals](../concepts/use-intermediate-progress-signals-for-long-horizon-code-evals.md) - large translation or refactor tasks need measurable partial progress.
+- [Design in-the-wild coding evals around developer behavior](../concepts/design-in-the-wild-coding-evals-around-developer-behavior.md) - live IDE evals should separate model quality from interaction effects such as latency.
 - [Treat AI coding as a central applied-AI problem](../concepts/treat-ai-coding-as-a-central-applied-ai-problem.md) - code-facing systems are where applied AI becomes usable software and workflow leverage.
 - [Use Bash as a composable code-mode tool for agents](../concepts/use-bash-as-a-composable-code-mode-tool-for-agents.md) - shell access lets coding agents discover, run, and verify local project workflows.
 - [Train code models on execution traces, not only syntax](../concepts/train-code-models-on-execution-traces-not-only-syntax.md) - code-agent models can learn from execution state transitions rather than only source tokens.
@@ -165,6 +172,8 @@ Zapier's Scout Agent adds a support-led maintenance pattern. For integration pro
 - Which review-routing and apprenticeship mechanisms scale PR volume without turning review into rubber stamping?
 - Which validation gaps should agents remediate first because they most constrain reliable single-task execution?
 - When should a tangled migration pause agent implementation until a human has produced a seed example by hand?
+- Which static code benchmarks have become too contaminated or saturated to guide coding-agent progress?
+- Which benchmark-exploitation patterns should be blocked by the sandbox, detected by a judge, or left for human code review?
 
 ## Sources
 
@@ -211,3 +220,4 @@ Zapier's Scout Agent adds a support-led maintenance pattern. For integration pro
 - [The 3 Pillars of Autonomy - Michele Catasta, Replit](../sources/20251222_MLhAA9yguwM.md)
 - [Dispatch from the Future: building an AI-native Company - Dan Shipper, Every, AI & I](../sources/20251218_MGzymaYBiss.md)
 - [Code World Model: Building World Models for Computation - Jacob Kahn, FAIR Meta](../sources/20251217_sYgE4ppDFOQ.md)
+- [Coding Evals: From Code Snippets to Codebases - Naman Jain, Cursor](../sources/20251215_tHN44yJoeS8.md)

@@ -211,6 +211,11 @@
 - [Use Prompt-Enforced Todos as Lightweight Agent State](../concepts/use-prompt-enforced-todos-as-lightweight-agent-state.md)
 - [Put Brittle Edge Cases Behind Rigorous Tools](../concepts/put-brittle-edge-cases-behind-rigorous-tools.md)
 - [Evaluate Agent Trajectories With Backtests and Smell Metrics](../concepts/evaluate-agent-trajectories-with-backtests-and-smell-metrics.md)
+- [Update coding eval sets dynamically as model capability changes](../concepts/update-coding-eval-sets-dynamically-as-model-capability-changes.md)
+- [Build coding benchmarks around construct validity](../concepts/build-coding-benchmarks-around-construct-validity.md)
+- [Detect reward hacking in code optimization evals](../concepts/detect-reward-hacking-in-code-optimization-evals.md)
+- [Use intermediate progress signals for long-horizon code evals](../concepts/use-intermediate-progress-signals-for-long-horizon-code-evals.md)
+- [Design in-the-wild coding evals around developer behavior](../concepts/design-in-the-wild-coding-evals-around-developer-behavior.md)
 - [Treat AI Coding as a Central Applied-AI Problem](../concepts/treat-ai-coding-as-a-central-applied-ai-problem.md)
 - [Use Bash as a composable code-mode tool for agents](../concepts/use-bash-as-a-composable-code-mode-tool-for-agents.md)
 - [Train code models on execution traces, not only syntax](../concepts/train-code-models-on-execution-traces-not-only-syntax.md)
@@ -484,6 +489,11 @@
 
 ## Evaluation
 
+- [Update coding eval sets dynamically as model capability changes](../concepts/update-coding-eval-sets-dynamically-as-model-capability-changes.md)
+- [Build coding benchmarks around construct validity](../concepts/build-coding-benchmarks-around-construct-validity.md)
+- [Detect reward hacking in code optimization evals](../concepts/detect-reward-hacking-in-code-optimization-evals.md)
+- [Use intermediate progress signals for long-horizon code evals](../concepts/use-intermediate-progress-signals-for-long-horizon-code-evals.md)
+- [Design in-the-wild coding evals around developer behavior](../concepts/design-in-the-wild-coding-evals-around-developer-behavior.md)
 - [Evaluate Agent Trajectories With Backtests and Smell Metrics](../concepts/evaluate-agent-trajectories-with-backtests-and-smell-metrics.md)
 - [Evaluate generated kernels for correctness, performance, and benchmark gaming](../concepts/evaluate-generated-kernels-for-correctness-performance-and-benchmark-gaming.md)
 - [Use hardware-in-the-loop search for AI kernel generation](../concepts/use-hardware-in-the-loop-search-for-ai-kernel-generation.md)
@@ -585,6 +595,7 @@
 ## Models
 
 - [Ground generated media with current search context](../concepts/ground-generated-media-with-current-search-context.md)
+- [Update coding eval sets dynamically as model capability changes](../concepts/update-coding-eval-sets-dynamically-as-model-capability-changes.md)
 
 - [Grow Agent Organizations Incrementally By Role Quality and Cost](../concepts/grow-agent-organizations-incrementally-by-role-quality-and-cost.md)
 - [Fine-tuned encoder discriminators make low-latency guardrails practical](../concepts/fine-tuned-encoder-discriminators-make-low-latency-guardrails-practical.md)

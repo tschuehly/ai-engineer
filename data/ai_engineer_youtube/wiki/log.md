@@ -839,3 +839,11 @@
 - Updated topics: [Generative Media](topics/generative-media.md), [Models](topics/models.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md), [Infrastructure](topics/infrastructure.md)
 - Updated concepts: [Ground generated media with current search context](concepts/ground-generated-media-with-current-search-context.md), [Use one-shot app builders for product ideation](concepts/use-one-shot-app-builders-for-product-ideation.md), [Infer full-stack app infrastructure from user intent](concepts/infer-full-stack-app-infrastructure-from-user-intent.md)
 - Notes: Added Gemini-era app-builder patterns for search-grounded media generation, runnable product ideation, and full-stack runtime inference from application intent.
+
+## [2026-05-07] ingest | Coding Evals: From Code Snippets to Codebases - Naman Jain, Cursor
+
+- Source: [Coding Evals: From Code Snippets to Codebases - Naman Jain, Cursor](sources/20251215_tHN44yJoeS8.md)
+- Processed: `tHN44yJoeS8`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Models](topics/models.md)
+- Updated concepts: [Update coding eval sets dynamically as model capability changes](concepts/update-coding-eval-sets-dynamically-as-model-capability-changes.md), [Build coding benchmarks around construct validity](concepts/build-coding-benchmarks-around-construct-validity.md), [Detect reward hacking in code optimization evals](concepts/detect-reward-hacking-in-code-optimization-evals.md), [Use intermediate progress signals for long-horizon code evals](concepts/use-intermediate-progress-signals-for-long-horizon-code-evals.md), [Design in-the-wild coding evals around developer behavior](concepts/design-in-the-wild-coding-evals-around-developer-behavior.md)
+- Notes: Added Cursor's coding-eval progression from fresh dynamic programming benchmarks to repository optimization, reward-hack detection, long-horizon progress metrics, and latency-aware IDE preference studies.

@@ -12,9 +12,12 @@ Long-horizon agent models add a post-training pressure: fluent next-token contin
 
 Code world models add an execution-aware variant of model training for software. Instead of treating code only as syntax, CWM trains around program execution traces: local variables, memory, line-by-line state, repository-level test and CI traces, and state/action/state transitions. This makes code a constrained world-modeling substrate where a model can learn to simulate program behavior, support neural-debugger interfaces, and reason about expensive execution paths before every real-world action is run.
 
+Coding-model evaluation needs model-family progress to be measured against fresh and appropriately difficult tasks. Dynamic code benchmarks can use post-training-window problem releases and changing difficulty distributions to avoid confusing memorized or saturated task sets with genuine model improvement. As coding models move from completions to repository optimization and translation, evals should also measure whether the model's apparent improvement survives real task distributions, runtime checks, and reward-hack detection.
+
 ## Key Concepts
 
 - [Compare models by task, thinking budget, cost, and latency](../concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - model choice should be routed by workload constraints rather than by size alone.
+- [Update coding eval sets dynamically as model capability changes](../concepts/update-coding-eval-sets-dynamically-as-model-capability-changes.md) - coding-model comparisons need fresh tasks and calibrated difficulty to stay meaningful.
 - [Grow Agent Organizations Incrementally By Role Quality and Cost](../concepts/grow-agent-organizations-incrementally-by-role-quality-and-cost.md) - agent roles should use models whose quality and price fit the work.
 - [Curate generative-media data before tuning model internals](../concepts/curate-generative-media-data-before-tuning-model-internals.md) - data quality can be a stronger lever than model or optimizer changes for image and video models.
 - [Train image and video diffusion models in learned latent spaces](../concepts/train-image-and-video-diffusion-models-in-learned-latent-spaces.md) - learned latents reduce media tensor size while preserving spatial or temporal topology.
@@ -72,6 +75,7 @@ Code world models add an execution-aware variant of model training for software.
 - Which media-generation failures should be fixed through data curation, latent representation design, sampling settings, distillation, or explicit controls?
 - Which non-language tasks should be handled by specialized frontier models instead of routed through a general LLM?
 - Which quantization formats preserve enough quality while improving local model responsiveness for each hardware class?
+- Which coding-eval time windows best separate memorized benchmark behavior from genuine current model capability?
 
 ## Sources
 
@@ -95,3 +99,4 @@ Code world models add an execution-aware variant of model training for software.
 - [AGI: The Path Forward - Jason Warner & Eiso Kant, Poolside](../sources/20251227_OGCG_QkCcZo.md)
 - [Code World Model: Building World Models for Computation - Jacob Kahn, FAIR Meta](../sources/20251217_sYgE4ppDFOQ.md)
 - [Building in the Gemini Era - Kat Kampf & Ammaar Reshi, Google DeepMind](../sources/20251215_fgkXEIbZpGc.md)
+- [Coding Evals: From Code Snippets to Codebases - Naman Jain, Cursor](../sources/20251215_tHN44yJoeS8.md)

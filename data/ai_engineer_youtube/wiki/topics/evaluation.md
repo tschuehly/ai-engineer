@@ -34,9 +34,16 @@ Generated kernel evaluation has an unusually concrete version of the same proble
 
 Support coding agents need staged evaluation before their throughput numbers are trusted. Zapier's Scout Agent separates whether a support issue is categorized correctly, whether the issue is actually fixable by code, and whether the generated fix is accurate. Each failure asks for a different improvement: routing and triage, action gating, or code-generation quality.
 
+Coding capability evals also need to evolve with model capability. Static programming-problem benchmarks can lose signal through training-data contamination, brittle test suites, and difficulty distributions that become too easy or too hard. Dynamic code evals can use fresh release windows, rolling task sets, generated input tests, and recalibrated difficulty to keep comparisons near the current frontier. As tasks grow from snippets to repository-scale optimization or full codebase translation, construct validity matters more: the benchmark should use natural real-world tasks and grade the actual outcome, such as correctness, equivalence to an expert patch, runtime improvement, and maintainable code quality. Long-horizon code tasks also need intermediate progress signals, because final correctness alone is too sparse to guide multi-hour translation or refactoring attempts. In live IDE studies, preference signals need human-centered controls: acceptance rate measures both completion quality and user-facing factors such as latency, so experiments should balance latency before treating acceptance as a clean model-quality signal.
+
 ## Key Concepts
 
 - [Evaluate agent trajectories with backtests and smell metrics](../concepts/evaluate-agent-trajectories-with-backtests-and-smell-metrics.md) - flexible tool-loop agents need historical and trajectory-level checks.
+- [Update coding eval sets dynamically as model capability changes](../concepts/update-coding-eval-sets-dynamically-as-model-capability-changes.md) - fresh tasks, release windows, and calibrated difficulty preserve benchmark signal.
+- [Build coding benchmarks around construct validity](../concepts/build-coding-benchmarks-around-construct-validity.md) - repository evals should measure the real engineering capability they claim to measure.
+- [Detect reward hacking in code optimization evals](../concepts/detect-reward-hacking-in-code-optimization-evals.md) - code evals need to catch benchmark exploitation and non-idiomatic hacks beyond tests.
+- [Use intermediate progress signals for long-horizon code evals](../concepts/use-intermediate-progress-signals-for-long-horizon-code-evals.md) - multi-hour code tasks need progress measures before final correctness.
+- [Design in-the-wild coding evals around developer behavior](../concepts/design-in-the-wild-coding-evals-around-developer-behavior.md) - IDE preference evals must control latency and interaction effects.
 - [Evaluate support coding agents by staged failure modes](../concepts/evaluate-support-coding-agents-by-staged-failure-modes.md) - support agents need separate checks for triage, fixability, and generated solution quality.
 - [Compare models by task, thinking budget, cost, and latency](../concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - side-by-side model comparisons help choose enough reasoning at acceptable speed and cost.
 - [Do not use token volume as a developer productivity metric](../concepts/do-not-use-token-volume-as-a-developer-productivity-metric.md) - adoption dashboards should avoid rewarding visible token spend over task impact.
@@ -177,6 +184,10 @@ Support coding agents need staged evaluation before their throughput numbers are
 - Which user-outcome metrics are strong enough to replace generic AI quality scores as release gates for each product workflow?
 - Which DSPy optimization metrics are stable enough to drive prompt changes automatically, and which should only surface diagnostics for human review?
 - Which explanatory feedback fields are stable enough to automate prompt rewriting, and which still require subject-matter-expert review?
+- Which coding benchmark update cadence preserves freshness without making longitudinal model comparisons too unstable?
+- Which reward-hack detector signals are reliable enough to reject an otherwise passing optimization patch?
+- Which intermediate progress metrics best predict final success for codebase translation and large refactors?
+- How much should in-the-wild IDE completion evals normalize for latency before comparing model quality?
 
 ## Sources
 
@@ -238,3 +249,4 @@ Support coding agents need staged evaluation before their throughput numbers are
 - [AI Consulting in Practice - NLW, Superintelligent, @AIDailyBrief](../sources/20251218_ehQFj6VmuI8.md)
 - [AI Kernel Generation: What's working, what's not, what's next - Natalie Serrino, Gimlet Labs](../sources/20251217_6guQG_tGt0o.md)
 - [Code World Model: Building World Models for Computation - Jacob Kahn, FAIR Meta](../sources/20251217_sYgE4ppDFOQ.md)
+- [Coding Evals: From Code Snippets to Codebases - Naman Jain, Cursor](../sources/20251215_tHN44yJoeS8.md)
