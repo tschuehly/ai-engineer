@@ -11,6 +11,7 @@ Details:
 - Quality issues can be mapped by SDLC stage, including planning, development, code review, testing, and deployment. (09:54-10:31)
 - A second useful split is code-level versus process-level quality: security and efficiency are code-level concerns, while learning, ownership, verification, guardrails, and standards are process responsibilities. (10:34-11:24)
 - If an outage comes from AI-generated code, the team still needs to learn from and own the code rather than assigning responsibility to the model. (11:00-11:16)
+- Confident vibe coding extends the same full-SDLC idea earlier in the workflow: generation alone may be enough for simple greenfield demos, but enterprise work needs review, testing, maintainability, bug fixing, refactoring, and standards woven into agentic workflows. (05:17-08:08)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -24,3 +25,4 @@ Related concepts:
 
 Sources:
 - [The State of AI Code Quality: Hype vs Reality — Itamar Friedman, Qodo](../sources/20251211_rgjF5o2Qjsc.md), 09:12-11:24
+- [Vibe Coding with Confidence - Itamar Friedman, Qodo](../sources/20250806_n991Yxo1aOI.md), 05:17-08:08

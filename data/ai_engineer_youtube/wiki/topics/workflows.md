@@ -86,7 +86,7 @@ Vibe engineering turns agentic coding into a supervised review workflow rather t
 
 Yegge and Kim's adoption framing makes production practice part of the workflow. A leader or senior engineer who ships one bounded feature with an agent learns the real context, review, maintenance, and safety constraints in a way that a training session or usage dashboard cannot show. The same source also reframes small valuable work: when an issue can be safely bounded and owned, agentic coding can remove backlog grooming, persuasion, and staffing delays, but the resulting artifact still needs maintainership after the prototype lands.
 
-AI code quality workflows should cover the whole SDLC rather than only generation. Qodo's framing treats testing, review, context, executable standards, and secure validation environments as workflow surfaces that must keep learning as generated-code volume grows.
+AI code quality workflows should cover the whole SDLC rather than only generation. Qodo's framing treats testing, review, context, executable standards, and secure validation environments as workflow surfaces that must keep learning as generated-code volume grows. Confident vibe coding adds another workflow shape: use the command line to compose specialized coding agents, and move review, coverage, and best-practice feedback earlier than PR-time inspection.
 
 Brockman's workflow advice is to challenge inherited constraints by first principles rather than by blanket rule-breaking. The Stripe bank-integration story compresses a slow external process by pairing implementation with parallel test-script work and keeping the certifier engaged, but the stated lesson is narrower: find overhead attached to constraints that no longer apply in the specific situation. For AI-assisted workflows, that means converting speedups into better process design, not pretending every safety, testing, or coordination step is obsolete.
 
@@ -154,6 +154,8 @@ Brockman's workflow advice is to challenge inherited constraints by first princi
 - [Optimize LLM programs with metrics and teacher feedback](../concepts/optimize-llm-programs-with-metrics-and-teacher-feedback.md) - known examples and metrics can drive DSPy optimizer loops.
 - [Use explanatory feedback to optimize prompts](../concepts/use-explanatory-feedback-to-optimize-prompts.md) - feedback-rich examples turn prompt editing into a repeatable improvement loop.
 - [AI code quality needs full-SDLC workflows](../concepts/ai-code-quality-needs-full-sdlc-workflows.md) - quality workflows should span planning, development, review, testing, deployment, ownership, and verification.
+- [Shift review and testing left for confident vibe coding](../concepts/shift-review-and-testing-left-for-confident-vibe-coding.md) - enterprise AI coding workflows need quality feedback during generation, not only after it.
+- [Compose coding-agent workflows through CLI pipelines](../concepts/compose-coding-agent-workflows-through-cli-pipelines.md) - CLI composition can chain specialized agents into repeatable SDLC workflows.
 - [AI review gates turn standards into executable feedback](../concepts/ai-review-gates-turn-standards-into-executable-feedback.md) - PR checks can make coding standards measurable and adaptable.
 - [Use prompt mutation loops to hill-climb product behavior](../concepts/use-prompt-mutation-loops-to-hill-climb-product-behavior.md) - prompt variants can be scored, selected, reflected on, and mutated as part of product behavior iteration.
 - [Use eval agents to improve prompts, datasets, and scorers](../concepts/use-eval-agents-to-improve-prompts-datasets-and-scorers.md) - eval workflows can become active optimization loops when proposed changes remain inspectable.
@@ -458,6 +460,7 @@ Brockman's workflow advice is to challenge inherited constraints by first princi
 - [The Agent Native Company — Rick Blalock, Agentuity](../sources/20250603_0ZPAvzhpGjw.md)
 - [The Future of Evals - Ankur Goyal, Braintrust](../sources/20250809_MC55hdWLq4o.md)
 - [On Engineering AI Systems that Endure The Bitter Lesson - Omar Khattab, DSPy & Databricks](../sources/20250806_qdmxApz3EJI.md)
+- [Vibe Coding with Confidence - Itamar Friedman, Qodo](../sources/20250806_n991Yxo1aOI.md)
 - [No More Slop - swyx](../sources/20251222_IoiHI7p12Ao.md)
 - [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](../sources/20251223_LU9KgcZDRfY.md)
 - [The 3 Pillars of Autonomy - Michele Catasta, Replit](../sources/20251222_MLhAA9yguwM.md)

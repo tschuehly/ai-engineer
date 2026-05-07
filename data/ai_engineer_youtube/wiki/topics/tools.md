@@ -32,7 +32,7 @@ Enterprise tool ecosystems also need registry metadata once many teams publish M
 
 Internal platform tools should be designed so agents can call the same intended paths humans use. APIs are the base layer, while CLIs or MCP servers can wrap those APIs for agent use; logs, metrics, traces, and relevant documentation should also be exposed through machine-friendly surfaces instead of only dashboards or full HTML pages.
 
-For coding agents, tool boundaries should be chosen by what needs hard semantics. Read tools can control token load, grep/glob can support exact codebase search, edit tools can enforce read-before-write and diff-shaped changes, Bash can compose project commands inside a sandbox, and brittle edge cases can be moved into versioned tools that are easier to evaluate than broad prompt guidance. When an action can be exposed as a CLI or API, that text-native surface is usually a better agent tool than browser automation, especially when accuracy matters.
+For coding agents, tool boundaries should be chosen by what needs hard semantics. Read tools can control token load, grep/glob can support exact codebase search, edit tools can enforce read-before-write and diff-shaped changes, Bash can compose project commands inside a sandbox, and brittle edge cases can be moved into versioned tools that are easier to evaluate than broad prompt guidance. When an action can be exposed as a CLI or API, that text-native surface is usually a better agent tool than browser automation, especially when accuracy matters. CLI surfaces are also workflow composition tools: they can run in the background, emit logs, accept pipes, call specialist agents, and chain generation, coverage, and review stages in a way that is awkward for IDE-only plugins.
 
 Agent-first IDEs show how browser and editor tools can be combined without hiding their authority. Antigravity gives the agent a Chrome browser for authenticated context retrieval, UI interaction, JavaScript execution, DOM inspection, and screen recording, while keeping terminal-command approvals and editor handoff visible in the agent manager.
 
@@ -145,6 +145,7 @@ AI coworker products add tool surfaces that are neither plain chat nor backend A
 - [Split large automation surfaces into specialized subagents and subworkflows](../concepts/split-large-automation-surfaces-into-specialized-subagents-and-subworkflows.md) - subworkflows and specialist agents keep large tool surfaces manageable.
 - [Delegate complex voice-agent tasks through specialist tools and handoffs](../concepts/delegate-complex-voice-agent-tasks-through-specialist-tools-and-handoffs.md) - voice systems should route harder tool or policy decisions to specialists while preserving context.
 - [Agent experience prioritizes APIs, CLIs, and MCP over dashboards](../concepts/agent-experience-prioritizes-apis-clis-and-mcp-over-dashboards.md) - agent-facing products need machine-friendly control surfaces, not only human dashboards.
+- [Compose coding-agent workflows through CLI pipelines](../concepts/compose-coding-agent-workflows-through-cli-pipelines.md) - command-line agents can be piped and chained across SDLC jobs.
 - [Separate agent harnesses from generated-code execution](../concepts/separate-agent-harnesses-from-generated-code-execution.md) - generated code should execute away from the trusted agent harness.
 - [Agent tool loops turn model-required actions into executable results](../concepts/agent-tool-loops-turn-model-required-actions-into-executable-results.md) - tool runtimes need to turn model-selected functions into validated execution and structured results.
 - [Use Bash as a composable code-mode tool for agents](../concepts/use-bash-as-a-composable-code-mode-tool-for-agents.md) - command-line access can compose existing software and verification artifacts.
@@ -295,6 +296,7 @@ AI coworker products add tool surfaces that are neither plain chat nor backend A
 - [Cognitive Exhaust Fumes, or: Read-Only AI Is Underrated - Simon Podhajsky, Head of AI, Waypoint](../sources/20260408_u0TOSBbAw7c.md)
 - [DSPy: The End of Prompt Engineering - Kevin Madura, AlixPartners](../sources/20260108_-cKUW6n8hBU.md)
 - [On Engineering AI Systems that Endure The Bitter Lesson - Omar Khattab, DSPy & Databricks](../sources/20250806_qdmxApz3EJI.md)
+- [Vibe Coding with Confidence - Itamar Friedman, Qodo](../sources/20250806_n991Yxo1aOI.md)
 - [Identity for AI Agents - Patrick Riley & Carlos Galan, Auth0](../sources/20260114_VSdV-AdSlis.md)
 - [Your MCP Server is Bad (and you should feel bad) - Jeremiah Lowin, Prefect](../sources/20260112_96G7FLab8xc.md)
 - [OpenAI + @Temporalio : Building Durable, Production Ready Agents - Cornelia Davis, Temporal](../sources/20260112_k8cnVCMYmNc.md)

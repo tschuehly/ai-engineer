@@ -6,6 +6,8 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 
 Task-file workflows add pre-code evaluation points. Reviewing a generated task's acceptance criteria checks whether the agent understood intent; reviewing the implementation plan checks whether it found the right files and architecture path; final review then verifies code against the definition of done.
 
+Confident vibe coding adds an early-evaluation requirement for enterprise code generation. Review and testing agents should not only inspect a finished PR; they should bring standards, context, coverage, and red-team feedback into the coding loop while the agent is still shaping the change.
+
 Agent-loop evals should pair operational metrics with correctness checks. Cost, latency, and number of steps are useful only after the harness verifies whether the agent actually reached the right outcome; otherwise a model can look fast because it guessed early or skipped the hard reasoning path.
 
 High-assurance coding adds another evaluation tier for generated code. Formal specifications and proof-carrying implementation paths can verify selected critical components before execution, but only against the requirements that were actually specified. Separate generation and verification prompts or model providers can also reduce shared blind spots, especially when paired with risk analysis, safety cases, adversarial tests, and trusted libraries.
@@ -89,6 +91,7 @@ PR-derived field telemetry adds a practical adoption dashboard shape for AI codi
 - [Use intermediate progress signals for long-horizon code evals](../concepts/use-intermediate-progress-signals-for-long-horizon-code-evals.md) - multi-hour code tasks need progress measures before final correctness.
 - [Design in-the-wild coding evals around developer behavior](../concepts/design-in-the-wild-coding-evals-around-developer-behavior.md) - IDE preference evals must control latency and interaction effects.
 - [AI code quality needs full-SDLC workflows](../concepts/ai-code-quality-needs-full-sdlc-workflows.md) - quality evaluation should span code-level and process-level failures across the SDLC.
+- [Shift review and testing left for confident vibe coding](../concepts/shift-review-and-testing-left-for-confident-vibe-coding.md) - quality checks are more useful when they shape agent output before late review.
 - [AI review gates turn standards into executable feedback](../concepts/ai-review-gates-turn-standards-into-executable-feedback.md) - review-time checks can convert standards into measurable PR feedback and trend data.
 - [Evaluate support coding agents by staged failure modes](../concepts/evaluate-support-coding-agents-by-staged-failure-modes.md) - support agents need separate checks for triage, fixability, and generated solution quality.
 - [Analyze operational health over time slices before invoking repair agents](../concepts/analyze-operational-health-over-time-slices-before-invoking-repair-agents.md) - repair triggers should be evaluated against richer time-windowed evidence, not isolated alert thresholds.
@@ -312,6 +315,7 @@ PR-derived field telemetry adds a practical adoption dashboard shape for AI codi
 - [Spec-Driven Development: Agentic Coding at FAANG Scale and Quality - Al Harris, Amazon Kiro](../sources/20260109_HY_JyxAZsiE.md)
 - [How METR measures Long Tasks and Experienced Open Source Dev Productivity - Joel Becker, METR](../sources/20260119_k1t2xyWMUdY.md)
 - [The State of AI Code Quality: Hype vs Reality — Itamar Friedman, Qodo](../sources/20251211_rgjF5o2Qjsc.md)
+- [Vibe Coding with Confidence - Itamar Friedman, Qodo](../sources/20250806_n991Yxo1aOI.md)
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md)
 - [Everything I Learned Training Frontier Small Models - Maxime Labonne, Liquid AI](../sources/20260429_fLUtUkqYHnQ.md)
 - [Why building eval platforms is hard - Phil Hetzel, Braintrust](../sources/20260428__fQ7Z_Wfouk.md)

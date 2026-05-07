@@ -14,6 +14,7 @@ Details:
 - He says feature proposals should answer how the feature is automated and how an agent uses it, treating CLI design as a first-class product question rather than an afterthought to UI. (13:27-13:38)
 - Kanat-Alexander frames CLIs and APIs as accuracy infrastructure for agents: browser or computer-use automation can work, but text-native action surfaces better match how agents operate and reduce unnecessary orchestration risk (04:36-05:07).
 - Agent-facing CLIs and APIs should run during development when they are part of the coding loop; CI-only feedback with long latency weakens iterative agent workflows (16:37-17:18).
+- Friedman frames the CLI as a workflow surface for coding agents: developers can run agents in the background, collect logs, pipe outputs, and chain specialized generation, coverage, and review agents across SDLC tasks. (14:32-17:25)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -31,3 +32,4 @@ Sources:
 - [Agents for Everything Else - swyx](../sources/20260501_zepu8Kk6FBQ.md), 12:48-13:38
 - [The New Application Layer - Malte Ubl, CTO Vercel](../sources/20260420_XKup1pj-34M.md), 13:00-13:38
 - [Developer Experience in the Age of AI Coding Agents - Max Kanat-Alexander, Capital One](../sources/20251223_rT2Del5pwg4.md), 04:36-05:07, 16:37-17:18
+- [Vibe Coding with Confidence - Itamar Friedman, Qodo](../sources/20250806_n991Yxo1aOI.md), 14:32-17:25

@@ -68,7 +68,7 @@ Codex CLI subagent retrofits add a pragmatic harness-extension pattern. When a C
 
 Jellyfish's pull-request telemetry calibrates the adoption curve. Interactive tools such as Copilot, Cursor, and Claude Code can correlate with higher PR throughput and lower cycle time even while fully autonomous coding agents remain a small share of merged PRs. The same data warns that teams should expect larger PRs and should segment gains by repository architecture, because highly distributed codebases can erase the apparent adoption benefit when cross-repo context is hard to assemble.
 
-Greg Brockman's Codex framing connects agent usefulness directly to codebase shape. Repositories optimized only for human memory can hide too much conceptual load in large modules and informal architecture; model-shaped codebases expose smaller modules, quick tests, and clear component boundaries so agents can fill in implementation details and rerun checks repeatedly. His longer-term view also moves coding agents beyond greenfield app demos: the bigger software-engineering opportunity is transforming existing applications through migrations, dependency updates, and legacy codebase change, especially when cloud-resident agents can work asynchronously like coworkers.
+Greg Brockman's Codex framing connects agent usefulness directly to codebase shape. Repositories optimized only for human memory can hide too much conceptual load in large modules and informal architecture; model-shaped codebases expose smaller modules, quick tests, and clear component boundaries so agents can fill in implementation details and rerun checks repeatedly. His longer-term view also moves coding agents beyond greenfield app demos: the bigger software-engineering opportunity is transforming existing applications through migrations, dependency updates, and legacy codebase change, especially when cloud-resident agents can work asynchronously like coworkers. Qodo's confident-vibe-coding framing adds a workflow version of the same control problem: enterprise code generation should be surrounded by shifted-left review, testing, best-practice context, and CLI-composable agent pipelines rather than treated as a standalone chat or IDE completion.
 
 ## Key Concepts
 
@@ -78,6 +78,8 @@ Greg Brockman's Codex framing connects agent usefulness directly to codebase sha
 - [Use formal specifications and proofs for critical generated code](../concepts/use-formal-specifications-and-proofs-for-critical-generated-code.md) - formal methods can harden selected generated components when specifications are explicit.
 - [Separate generation and verification prompts or models](../concepts/separate-generation-and-verification-prompts-or-models.md) - independent prompts, contexts, or model providers reduce shared assumptions between coding and testing.
 - [Agentic coding economics shift attention from writing cost to assurance cost](../concepts/agentic-coding-economics-shift-attention-from-writing-cost-to-assurance-cost.md) - the bottleneck moves from emitting code to verifying and trusting it.
+- [Shift review and testing left for confident vibe coding](../concepts/shift-review-and-testing-left-for-confident-vibe-coding.md) - review, testing, and best-practice context should influence generation before PR-time cleanup.
+- [Compose coding-agent workflows through CLI pipelines](../concepts/compose-coding-agent-workflows-through-cli-pipelines.md) - CLI surfaces let specialized generation, coverage, and review agents compose into repeatable workflows.
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md) - coding-agent SDKs package reusable runtime pieces around the model.
 - [Task-tuned tool sets beat generic integration surfaces for core coding loops](../concepts/task-tuned-tool-sets-beat-generic-integration-surfaces-for-core-coding-loops.md) - core coding-agent tools should be optimized for local feedback loops rather than inherited from generic integrations.
 - [Use subagents to isolate context-heavy subtasks](../concepts/use-subagents-to-isolate-context-heavy-subtasks.md) - specialists can search, reason, fetch dependency context, or prepare codemods without exhausting the main agent's context.
@@ -342,6 +344,7 @@ Greg Brockman's Codex framing connects agent usefulness directly to codebase sha
 - [Coding Evals: From Code Snippets to Codebases - Naman Jain, Cursor](../sources/20251215_tHN44yJoeS8.md)
 - [From Vibe Coding To Vibe Engineering - Kitze, Sizzy](../sources/20251214_JV-wY5pxXLo.md)
 - [The State of AI Code Quality: Hype vs Reality — Itamar Friedman, Qodo](../sources/20251211_rgjF5o2Qjsc.md)
+- [Vibe Coding with Confidence - Itamar Friedman, Qodo](../sources/20250806_n991Yxo1aOI.md)
 - [2026: The Year The IDE Died - Steve Yegge & Gene Kim, Authors, Vibe Coding](../sources/20251206_7Dtu2bilcFs.md)
 - [Future-Proof Coding Agents - Bill Chen & Brian Fioca, OpenAI](../sources/20251205_wVl6ZjELpBk.md)
 - [Minimax M2: Building the #1 Open Model - Olive Song, MiniMax](../sources/20251213_lY1iFbDPRlw.md)

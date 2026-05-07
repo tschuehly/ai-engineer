@@ -1263,3 +1263,11 @@
 - Updated topics: [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Avoid premature low-level AI system coupling](concepts/avoid-premature-low-level-ai-system-coupling.md), [Prompt strings entangle task intent with model tricks](concepts/prompt-strings-entangle-task-intent-with-model-tricks.md), [Use evals as durable AI system specifications](concepts/use-evals-as-durable-ai-system-specifications.md), [DSPy programs keep LLM intent separate from prompt strings](concepts/dspy-programs-keep-llm-intent-separate-from-prompt-strings.md)
 - Notes: Added Khattab's durable-AI-system framing: keep application-specific signatures, control flow, tools, and evals stable while treating models, prompts, inference strategies, and optimizers as swappable lower-level mechanisms.
+
+## [2026-05-07] ingest | Vibe Coding with Confidence - Itamar Friedman, Qodo
+
+- Source: [Vibe Coding with Confidence - Itamar Friedman, Qodo](sources/20250806_n991Yxo1aOI.md)
+- Processed: `n991Yxo1aOI`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Shift review and testing left for confident vibe coding](concepts/shift-review-and-testing-left-for-confident-vibe-coding.md), [Compose coding-agent workflows through CLI pipelines](concepts/compose-coding-agent-workflows-through-cli-pipelines.md), [AI Code Quality Needs Full-SDLC Workflows](concepts/ai-code-quality-needs-full-sdlc-workflows.md), [Agent experience prioritizes APIs, CLIs, and MCP over dashboards](concepts/agent-experience-prioritizes-apis-clis-and-mcp-over-dashboards.md)
+- Notes: Added Qodo's confidence framing for enterprise vibe coding: shift review, testing, context, and best-practice feedback into the generation loop and compose specialized coding agents through CLI pipelines while A2A remains early.
