@@ -52,6 +52,8 @@ Interpretability-derived controls also need evaluation. Feature attribution can 
 
 Robotics-style agent evaluation emphasizes that action systems need more than final-answer scores. Production logs, live action feedback, stateful starting conditions, and counterfactual simulations reveal whether an agent can recover after its own actions shift the environment. A single benchmark percentage is only a starting point; failure categories and replayable trajectories tell teams where to improve the agent loop.
 
+Autonomous-driving foundation models show the same principle in a safety-critical action domain. Open-loop replay can compare waypoint predictions against logged driving, but simulation is more faithful when the planner's output changes future observations. Generated sensor simulation adds a controllable eval surface: teams can vary weather and time of day, then check whether a camera-only planner degrades in expected ways before relying on road tests alone.
+
 Scientific co-scientist evaluation needs the same trace discipline. Realtime lab agents should preserve sensor readings, microscope or camera frames, sample conditions, protocol context, and resulting measurements so the team can verify whether the agent's interpretation matched the experiment. Those traces can also seed simulations, letting teams compare proposed conditions against recorded physical behavior before changing the next run.
 
 For physical robots, evaluation also needs timing and instrumentation checks below the policy. Bus captures, timestamped `candump` output, and cycle-time plots can distinguish a policy defect from delayed messages, stale sensor inputs, queued commands, logging-induced packet loss, or priority inversion. The evaluation target is not just whether the policy command is reasonable, but whether the whole sensor-policy-actuator path preserves cadence under load.
@@ -227,6 +229,8 @@ General LLM eval programs can be staged as a pyramid. Start with serving perform
 - [Design Agent RFT rewards for production match and anti-hacking](../concepts/design-agent-rft-rewards-for-production-match-and-anti-hacking.md) - agent reward functions need production-matched data, objective criteria, and hack detection.
 - [Treat environments as eval, data, and training substrates](../concepts/treat-environments-as-eval-data-and-training-substrates.md) - one task harness can support evaluation, data creation, and training loops.
 - [Ground agent simulation and evaluation in production logs](../concepts/ground-agent-simulation-and-evaluation-in-production-logs.md) - log-grounded simulation and failure triage provide more improvement signal than aggregate benchmark scores alone.
+- [Evaluate Driving Models With Generated Sensor Simulation](../concepts/evaluate-driving-models-with-generated-sensor-simulation.md) - generated sensor video can test embodied planners under controllable environmental conditions.
+- [Use Reasoning Channels To Make Driving Planners Inspectable](../concepts/use-reasoning-channels-to-make-driving-planners-inspectable.md) - intermediate driving explanations expose why an end-to-end planner selected its maneuver.
 - [Close agent loops around live action feedback](../concepts/close-agent-loops-around-live-action-feedback.md) - evals should check whether agents can observe and recover from action results.
 - [Ground Scientific Simulations in Live Experiment Traces](../concepts/ground-scientific-simulations-in-live-experiment-traces.md) - lab-agent evals should preserve empirical traces that can calibrate simulations and future condition choices.
 - [Assemble Realtime Multimodal Context for Lab Agents](../concepts/assemble-realtime-multimodal-context-for-lab-agents.md) - evaluation should inspect which modalities and protocols were actually included in the model context.
@@ -485,6 +489,7 @@ General LLM eval programs can be staged as a pyramid. Start with serving perform
 - [Backlog.md: Terminal Kanban Board for Managing Tasks with AI Agents - Alex Gavrilescu, Funstage](../sources/20251124_zMXKhhwiCIc.md)
 - [Agents are Robots Too: What Self-Driving Taught Me About Building Agents - Jesse Hu, Abundant](../sources/20251124_qqXdLf3wy1E.md)
 - [Rishabh Garg, Tesla Optimus — Challenges in High Performance Robotics Systems](../sources/20250825_bCGbuyv8PMk.md)
+- [Waymo's EMMA: Teaching Cars to Think - Jyh Jing Hwang, Waymo](../sources/20250726_iS9YFW28XyM.md)
 - [Useful General Intelligence - Danielle Perszyk, Amazon AGI](../sources/20250802_Dj0b_cEBHBI.md)
 - [From Self-driving to Autonomous Voice Agents - Brooke Hopkins, Coval](../sources/20250731_kDczF4wBh8s.md)
 - [Building Alice's Brain: an AI Sales Rep that Learns Like a Human - Sherwood & Satwik, 11x](../sources/20250729_KWmkMV0FNwQ.md)

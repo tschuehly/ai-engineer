@@ -1695,3 +1695,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Infrastructure](topics/infrastructure.md), [Security](topics/security.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Choose Copilot Mode By Autonomy and Feedback Need](concepts/choose-copilot-mode-by-autonomy-and-feedback-need.md), [Layer Copilot Context Through Issues, Instructions, and Repository Structure](concepts/layer-copilot-context-through-issues-instructions-and-repository-structure.md), [Prepare Copilot Coding Agent Environments With Setup Steps](concepts/prepare-copilot-coding-agent-environments-with-setup-steps.md), [Vet MCP Servers As Action-Capable Extensions](concepts/vet-mcp-servers-as-action-capable-extensions.md)
 - Notes: Added Copilot-specific coding-agent workflow guidance for mode choice, layered context, prepared GitHub Actions environments, and MCP trust boundaries.
+
+## [2026-05-07] ingest | Waymo's EMMA: Teaching Cars to Think - Jyh Jing Hwang, Waymo
+
+- Source: [Waymo's EMMA: Teaching Cars to Think - Jyh Jing Hwang, Waymo](sources/20250726_iS9YFW28XyM.md)
+- Processed: `iS9YFW28XyM`
+- Updated topics: [Robotics](topics/robotics.md), [Models](topics/models.md), [Evaluation](topics/evaluation.md)
+- Updated concepts: [End-to-End Driving Models Can Use Route Text and Camera Video](concepts/end-to-end-driving-models-can-use-route-text-and-camera-video.md), [Use Reasoning Channels To Make Driving Planners Inspectable](concepts/use-reasoning-channels-to-make-driving-planners-inspectable.md), [Evaluate Driving Models With Generated Sensor Simulation](concepts/evaluate-driving-models-with-generated-sensor-simulation.md)
+- Notes: Added Waymo EMMA patterns for route-conditioned multimodal driving, inspectable planner reasoning, and generated sensor simulation for closed-loop evaluation.

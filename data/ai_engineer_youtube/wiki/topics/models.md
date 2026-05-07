@@ -34,6 +34,8 @@ Computer-vision models add a visual-fidelity caveat to multimodal model selectio
 
 Robot foundation models add action as another model output modality. GR00T N1's vision-language-action framing combines image observations, robot state, and language prompts, then outputs action trajectories through a dual-system architecture and embodiment-specific decoder. Physical Intelligence adds a complementary VLA architecture: start from a pretrained VLM-like backbone, train it on robot data and multimodal annotations for scene understanding and high-level task subdivision, then add an action expert transformer that attends to the backbone and emits continuous robot actions through diffusion flow matching. The model lesson is that physical AI needs scarce action data, sim-to-real strategy, realtime control, held-out-environment evaluation, and body-specific output adaptation in addition to ordinary foundation-model pretraining.
 
+Autonomous driving adds a route-conditioned multimodal planning variant. Waymo's EMMA exploration uses a Gemini-based model with route text and eight-camera video as input, then predicts future waypoints. The model lesson is that foundation models can be adapted to action domains by converting existing operational logs into self-supervised future-state targets, but end-to-end action models need intermediate reasoning outputs and simulation-based evals before raw benchmark quality is persuasive.
+
 Mechanistic interpretability adds a model-internal engineering surface. Instead of treating the model as only a prompt-response box, feature attribution can show which learned concepts contributed to a token, activation steering can adjust a behavior at inference time, dynamic prompting can trigger instructions when internal features fire, and model diffs can inspect post-training changes. These controls should be evaluated like any other model intervention because they can be powerful, hidden from users, and narrower than ordinary prompt or fine-tuning changes.
 
 ## Key Concepts
@@ -77,6 +79,9 @@ Mechanistic interpretability adds a model-internal engineering surface. Instead 
 - [Robotics Data Pyramids Combine Scarce Real Trajectories With Synthetic Data](../concepts/robotics-data-pyramids-combine-scarce-real-trajectories-with-synthetic-data.md) - robot foundation models need data strategies beyond scraping because action traces are scarce.
 - [Robotics Data Engines Need Operated Teleoperation Pipelines](../concepts/robotics-data-engines-need-operated-teleoperation-pipelines.md) - high-quality robot data needs ongoing operated collection and annotation loops.
 - [Dual-System VLA Architectures Separate Planning From Realtime Control](../concepts/dual-system-vla-architectures-separate-planning-from-realtime-control.md) - VLA models can split slow task planning from high-frequency motor execution.
+- [End-to-End Driving Models Can Use Route Text and Camera Video](../concepts/end-to-end-driving-models-can-use-route-text-and-camera-video.md) - route-conditioned camera-video models can learn future waypoint prediction from driving logs.
+- [Use Reasoning Channels To Make Driving Planners Inspectable](../concepts/use-reasoning-channels-to-make-driving-planners-inspectable.md) - intermediate object, behavior, and decision explanations make end-to-end action models easier to inspect.
+- [Evaluate Driving Models With Generated Sensor Simulation](../concepts/evaluate-driving-models-with-generated-sensor-simulation.md) - generated video can create controllable sensor conditions for planner evaluation.
 - [Action Expert Transformers Adapt VLMs For High-Frequency Robot Control](../concepts/action-expert-transformers-adapt-vlms-for-high-frequency-robot-control.md) - VLM-style backbones need action-generation architecture before they become robot policies.
 - [Embodiment-Specific Action Decoders Make Robot Foundation Models Adaptable](../concepts/embodiment-specific-action-decoders-make-robot-foundation-models-adaptable.md) - shared robot-model knowledge becomes deployable through body-specific action decoding.
 - [Test Robot Generalization By Held-Out Locations And Hardware](../concepts/test-robot-generalization-by-held-out-locations-and-hardware.md) - robot model capability should transfer to unseen homes and unfamiliar platforms.
@@ -158,6 +163,7 @@ Mechanistic interpretability adds a model-internal engineering surface. Instead 
 - [What Is a Humanoid Foundation Model? An Introduction to GR00T N1 - Annika & Aastha](../sources/20250728_mWKYvT9Lc50.md)
 - [Why you should care about AI interpretability - Mark Bissell, Goodfire AI](../sources/20250727_6AVMHZPjpTQ.md)
 - [Introduction to LLM serving with SGLang - Philip Kiely and Yineng Zhang, Baseten](../sources/20250726_Ahtaha9fEM0.md)
+- [Waymo's EMMA: Teaching Cars to Think - Jyh Jing Hwang, Waymo](../sources/20250726_iS9YFW28XyM.md)
 
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md)
 - [Compilers in the Age of LLMs - Yusuf Olokoba, Muna](../sources/20251124_q2nHsJVy4FE.md)

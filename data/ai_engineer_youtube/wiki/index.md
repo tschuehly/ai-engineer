@@ -4,6 +4,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [End-to-End Driving Models Can Use Route Text and Camera Video](concepts/end-to-end-driving-models-can-use-route-text-and-camera-video.md) - EMMA frames autonomous driving as route-conditioned camera-video-to-waypoint prediction.
+- [Use Reasoning Channels To Make Driving Planners Inspectable](concepts/use-reasoning-channels-to-make-driving-planners-inspectable.md) - end-to-end driving planners need critical-object and meta-decision explanations before waypoint outputs are trusted.
+- [Evaluate Driving Models With Generated Sensor Simulation](concepts/evaluate-driving-models-with-generated-sensor-simulation.md) - generated sensor video can evaluate camera-only planners under controllable weather and lighting conditions.
 - [Choose Copilot Mode By Autonomy and Feedback Need](concepts/choose-copilot-mode-by-autonomy-and-feedback-need.md) - Copilot workflows should match ask, edit, local agent, or asynchronous coding-agent mode to task feedback needs.
 - [Layer Copilot Context Through Issues, Instructions, and Repository Structure](concepts/layer-copilot-context-through-issues-instructions-and-repository-structure.md) - issue text, repository instructions, scoped instruction files, and code shape background agent behavior.
 - [Prepare Copilot Coding Agent Environments With Setup Steps](concepts/prepare-copilot-coding-agent-environments-with-setup-steps.md) - GitHub Actions setup steps make asynchronous coding-agent environments reproducible.
