@@ -735,6 +735,8 @@
 
 ## Retrieval
 
+- [Treat PDF pages as visual retrieval units](../concepts/treat-pdf-pages-as-visual-retrieval-units.md)
+- [Patch-level visual embeddings trade ingest cost for query-time retrieval](../concepts/patch-level-visual-embeddings-trade-ingest-cost-for-query-time-retrieval.md)
 - [LLM attack surfaces span prompts, context, retrieval, tools, and actions](../concepts/llm-attack-surfaces-span-prompts-context-retrieval-tools-and-actions.md)
 - [Filter untrusted context before it reaches the agent](../concepts/filter-untrusted-context-before-it-reaches-the-agent.md)
 - [Context blocks turn monolithic enterprise knowledge into reusable agent context](../concepts/context-blocks-turn-monolithic-enterprise-knowledge-into-reusable-agent-context.md)
@@ -882,6 +884,7 @@
 
 ## Voice Agents
 
+- [VoiceVision agents wrap visual RAG with retrieval, image-reading, and speech tools](../concepts/voicevision-agents-wrap-visual-rag-with-retrieval-image-reading-and-speech-tools.md)
 - [Choose voice-agent architecture by latency, accuracy, and semantics](../concepts/choose-voice-agent-architecture-by-latency-accuracy-and-semantics.md)
 - [Delegate complex voice-agent tasks through specialist tools and handoffs](../concepts/delegate-complex-voice-agent-tasks-through-specialist-tools-and-handoffs.md)
 - [Prompt voice agents for persona, prosody, and brand fit](../concepts/prompt-voice-agents-for-persona-prosody-and-brand-fit.md)

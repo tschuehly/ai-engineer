@@ -159,6 +159,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Skills turn procedural feedback into transferable agent memory](../concepts/skills-turn-procedural-feedback-into-transferable-agent-memory.md) - shared skills can preserve procedure-level lessons for future agent runs.
 - [Server-side interaction state simplifies branching conversational agents](../concepts/server-side-interaction-state-simplifies-branching-conversational-agents.md) - interaction IDs can simplify continuation, retrieval, and branching without pretending context is infinite.
 - [Agent tool loops turn model-required actions into executable results](../concepts/agent-tool-loops-turn-model-required-actions-into-executable-results.md) - tool-using agents need a runtime loop that validates and executes model-requested actions.
+- [VoiceVision agents wrap visual RAG with retrieval, image-reading, and speech tools](../concepts/voicevision-agents-wrap-visual-rag-with-retrieval-image-reading-and-speech-tools.md) - lightweight agents can orchestrate visual retrieval, multimodal answer generation, and speech output.
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md) - agent products need reusable runtime primitives around the model call.
 - [Use Bash as a composable code-mode tool for agents](../concepts/use-bash-as-a-composable-code-mode-tool-for-agents.md) - shell access can let agents compose local programs and verification steps when authority is controlled.
 - [Layer agent permissions across model behavior, harness parsing, and sandboxing](../concepts/layer-agent-permissions-across-model-behavior-harness-parsing-and-sandboxing.md) - broad shell and filesystem power needs multiple independent guardrail layers.
@@ -302,6 +303,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Shipping complex AI applications - Braintrust & Trainline](../sources/20260501_ZdheJTfLu-s.md)
 - [Agents for Everything Else - swyx](../sources/20260501_zepu8Kk6FBQ.md)
 - [Agents on the Canvas in tldraw - Steve Ruiz, tldraw](../sources/20260501_sPUjIBH5Cwg.md)
+- [VoiceVision RAG - Integrating Visual Document Intelligence with Voice Response - Suman Debnath, AWS](../sources/20251206_hwCmfThIiS4.md)
 - [Build a Prompt Learning Loop - SallyAnn DeLucia & Fuad Ali, Arize](../sources/20260106_SbcQYbrvAfI.md)
 - [Replacing 12K LoC with a 200 LoC Skill - David Gomes, Cursor](../sources/20260430_WE_Gnowy3uw.md)
 - [Building Conversational Agents - Thor Schaeff and Philipp Schmid, Google DeepMind](../sources/20260430_cVzf49yg0D8.md)

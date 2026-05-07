@@ -79,6 +79,7 @@ RL training infrastructure has a similar systems-modeling requirement. Synchrono
 - [Benchmark edge models across the device fleet before shipping](../concepts/benchmark-edge-models-across-the-device-fleet-before-shipping.md) - compilation and acceleration choices should be validated against representative Android devices.
 - [Hot-swap small models to avoid one-model-per-GPU waste](../concepts/hot-swap-small-models-to-avoid-one-model-per-gpu-waste.md) - dynamic model loading helps keep accelerator capacity productive when many small models share the fleet.
 - [Production inference combines model support with cluster operations](../concepts/production-inference-combines-model-support-with-cluster-operations.md) - runtime support and infrastructure operations have to be designed together.
+- [Patch-level visual embeddings trade ingest cost for query-time retrieval](../concepts/patch-level-visual-embeddings-trade-ingest-cost-for-query-time-retrieval.md) - visual-document retrieval needs capacity planning for many page-patch vectors and heavier ingestion.
 - [Local LLM training exposes the core model-building stack](../concepts/local-llm-training-exposes-the-core-model-building-stack.md) - local model training makes tokenizer, architecture, training, and inference decisions explicit.
 - [Tokenizer size must match data and compute budget](../concepts/tokenizer-size-must-match-data-and-compute-budget.md) - tokenizer capacity has direct implications for memory, convergence, and required training data.
 - [Multilingual tokenizers improve low-resource fine-tuning paths](../concepts/multilingual-tokenizers-improve-low-resource-fine-tuning-paths.md) - multilingual tokenization can lower friction for low-resource language adaptation.
@@ -218,3 +219,4 @@ RL training infrastructure has a similar systems-modeling requirement. Synchrono
 - [Building in the Gemini Era - Kat Kampf & Ammaar Reshi, Google DeepMind](../sources/20251215_fgkXEIbZpGc.md)
 - [RL Environments at Scale - Will Brown, Prime Intellect](../sources/20251209__IzZWeuTx7I.md)
 - [Efficient Reinforcement Learning - Rhythm Garg & Linden Li, Applied Compute](../sources/20251209_o15AaYl7Wu0.md)
+- [VoiceVision RAG - Integrating Visual Document Intelligence with Voice Response - Suman Debnath, AWS](../sources/20251206_hwCmfThIiS4.md)

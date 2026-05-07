@@ -105,6 +105,7 @@ Prompt-to-app builders are also tool surfaces. AI Studio shows a compact version
 - [Hackable agent runtimes need tight safety boundaries](../concepts/hackable-agent-runtimes-need-tight-safety-boundaries.md) - executable editor or browser access needs stricter controls than ordinary shape or API tools.
 - [Route high-impact agent actions through explicit human approval gates](../concepts/route-high-impact-agent-actions-through-explicit-human-approval-gates.md) - approval steps keep sensitive tool execution outside model-only control.
 - [Use tool names and descriptions as operational prompts](../concepts/use-tool-names-and-descriptions-as-operational-prompts.md) - clear tool metadata improves selection and enables local tool-specific guidance.
+- [VoiceVision agents wrap visual RAG with retrieval, image-reading, and speech tools](../concepts/voicevision-agents-wrap-visual-rag-with-retrieval-image-reading-and-speech-tools.md) - retrieval, image-reader, and speech tools can keep visual-document workflows inspectable inside an agent.
 - [Build AI product iteration tools into the product context](../concepts/build-ai-product-iteration-tools-into-the-product-context.md) - behavior tooling should run where real user and teammate context is available.
 - [Browser agents sit in the prompt-injection lethal trifecta](../concepts/browser-agents-sit-in-the-prompt-injection-lethal-trifecta.md) - browser tool design must account for private data, untrusted content, and external action channels.
 - [Human approval can hide tool-description and parameter risk](../concepts/human-approval-can-hide-tool-description-and-parameter-risk.md) - tool approval UX should reveal hidden instructions and sensitive parameters.
@@ -270,3 +271,4 @@ Prompt-to-app builders are also tool surfaces. AI Studio shows a compact version
 - [From Arc to Dia: Lessons learned building AI Browsers - Samir Mody, The Browser Company of New York](../sources/20251219_o4scJaQgnFA.md)
 - [RL Environments at Scale - Will Brown, Prime Intellect](../sources/20251209__IzZWeuTx7I.md)
 - [2026: The Year The IDE Died - Steve Yegge & Gene Kim, Authors, Vibe Coding](../sources/20251206_7Dtu2bilcFs.md)
+- [VoiceVision RAG - Integrating Visual Document Intelligence with Voice Response - Suman Debnath, AWS](../sources/20251206_hwCmfThIiS4.md)

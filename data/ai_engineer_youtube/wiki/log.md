@@ -959,3 +959,11 @@
 - Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Scientific agents should execute against domain infrastructure](concepts/scientific-agents-should-execute-against-domain-infrastructure.md), [Regulated agents need explainability, isolation, governance, and speed](concepts/regulated-agents-need-explainability-isolation-governance-and-speed.md), [High-consequence data changes vendor trust requirements](concepts/high-consequence-data-changes-vendor-trust-requirements.md)
 - Notes: Added Los Alamos' regulated-agent framing around scientific/HPC execution, high-consequence data boundaries, and federal deployment requirements for explainability, isolation, governance, and speed.
+
+## [2026-05-07] ingest | VoiceVision RAG - Integrating Visual Document Intelligence with Voice Response - Suman Debnath, AWS
+
+- Source: [VoiceVision RAG - Integrating Visual Document Intelligence with Voice Response - Suman Debnath, AWS](sources/20251206_hwCmfThIiS4.md)
+- Processed: `hwCmfThIiS4`
+- Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Retrieval](topics/retrieval.md), [Tools](topics/tools.md), [Voice Agents](topics/voice-agents.md)
+- Updated concepts: [Treat PDF pages as visual retrieval units](concepts/treat-pdf-pages-as-visual-retrieval-units.md), [Patch-level visual embeddings trade ingest cost for query-time retrieval](concepts/patch-level-visual-embeddings-trade-ingest-cost-for-query-time-retrieval.md), [VoiceVision agents wrap visual RAG with retrieval, image-reading, and speech tools](concepts/voicevision-agents-wrap-visual-rag-with-retrieval-image-reading-and-speech-tools.md)
+- Notes: Added visual-document RAG guidance for ColPali-style page-image retrieval, patch-vector indexing tradeoffs, and Strands-based voice response tooling.
