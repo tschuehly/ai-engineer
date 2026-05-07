@@ -13,6 +13,7 @@ Details:
 - The reusable pattern is to scale both environments and domain-expert reward sources; more tool tasks without expert judgment can miss whether the behavior is actually useful to developers.
 - Pash argues that coding-agent reliability improves when models practice in RL environments that force tool use, failure handling, retries, and real engineering problem solving. 04:18-05:04
 - Cline's RL environment factory turns real coding sessions into training substrates by qualifying tasks, reconstructing start and end states, containerizing the environment, and defining verifiers whose scores can train the policy model. 05:33-10:16
+- Cursor Composer adds that specialized coding-model RL can improve practical tool behavior when trained in a production-like environment; the model learned to search and read files before editing and to use parallel tool calls and semantic search more effectively. 02:16-02:26, 11:48-12:05
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -24,7 +25,9 @@ Related concepts:
 - [Build RL environments as software artifacts](build-rl-environments-as-software-artifacts.md)
 - [Train code models on execution traces, not only syntax](train-code-models-on-execution-traces-not-only-syntax.md)
 - [Turn real coding sessions into RL environments](turn-real-coding-sessions-into-rl-environments.md)
+- [Production-Matched RL Environments Train Coding Agents on Real Tool Surfaces](production-matched-rl-environments-train-coding-agents-on-real-tool-surfaces.md)
 
 Sources:
 - [Minimax M2: Building the #1 Open Model - Olive Song, MiniMax](../sources/20251213_lY1iFbDPRlw.md), 02:12-05:29
 - [Hard Won Lessons from Building Effective AI Coding Agents - Nik Pash, Cline](../sources/20251212_I8fs4omN1no.md), 04:18-10:16
+- [Building Cursor Composer - Lee Robinson, Cursor](../sources/20251202_fL1iJHtl51Q.md), 02:16-12:05

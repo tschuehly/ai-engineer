@@ -304,6 +304,8 @@
 - [Feedback turns coding-agent loops into prompt and skill improvement cycles](../concepts/feedback-turns-coding-agent-loops-into-prompt-and-skill-improvement-cycles.md)
 - [Use independent validation contexts to reduce agent confirmation bias](../concepts/use-independent-validation-contexts-to-reduce-agent-confirmation-bias.md)
 - [Coding agents shift engineering work toward planning and review](../concepts/coding-agents-shift-engineering-work-toward-planning-and-review.md)
+- [Production-Matched RL Environments Train Coding Agents on Real Tool Surfaces](../concepts/production-matched-rl-environments-train-coding-agents-on-real-tool-surfaces.md)
+- [Latency Shapes Coding-Agent Interaction Mode](../concepts/latency-shapes-coding-agent-interaction-mode.md)
 - [Choose plan-heavy or review-heavy agent workflows by task shape](../concepts/choose-plan-heavy-or-review-heavy-agent-workflows-by-task-shape.md)
 - [Match AI operating models to work type](../concepts/match-ai-operating-models-to-work-type.md)
 - [Use one-pizza pods for agentic engineering](../concepts/use-one-pizza-pods-for-agentic-engineering.md)

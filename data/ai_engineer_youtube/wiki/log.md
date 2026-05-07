@@ -999,3 +999,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Agent managers orchestrate editor, browser, and background agents](concepts/agent-managers-orchestrate-editor-browser-and-background-agents.md), [Dynamic artifacts make agent work reviewable and reusable](concepts/dynamic-artifacts-make-agent-work-reviewable-and-reusable.md), [Autonomous browser verification finds painted-door failures](concepts/autonomous-browser-verification-finds-painted-door-failures.md), [Parallel coding-agent queues need focus-preserving review interfaces](concepts/parallel-coding-agent-queues-need-focus-preserving-review-interfaces.md), [Product-research flywheels expose model and harness gaps](concepts/product-research-flywheels-expose-model-and-harness-gaps.md)
 - Notes: Added Google Antigravity's agent-first IDE patterns around agent manager orchestration, browser evidence, dynamic artifacts, and dogfooding-driven model and harness improvement.
+
+## [2026-05-07] ingest | Building Cursor Composer - Lee Robinson, Cursor
+
+- Source: [Building Cursor Composer - Lee Robinson, Cursor](sources/20251202_fL1iJHtl51Q.md)
+- Processed: `fL1iJHtl51Q`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Models](topics/models.md), [Infrastructure](topics/infrastructure.md), [Evaluation](topics/evaluation.md)
+- Updated concepts: [Production-Matched RL Environments Train Coding Agents on Real Tool Surfaces](concepts/production-matched-rl-environments-train-coding-agents-on-real-tool-surfaces.md), [Latency Shapes Coding-Agent Interaction Mode](concepts/latency-shapes-coding-agent-interaction-mode.md), [Product Harnesses Can Become Model Customization Environments](concepts/product-harnesses-can-become-model-customization-environments.md), [Train Coding-Agent Models with Environments and Expert Developer Reward](concepts/train-coding-agent-models-with-environments-and-expert-developer-reward.md), [Cloud Agents Turn Coding Work Into Asynchronous VM-Backed Queues](concepts/cloud-agents-turn-coding-work-into-asynchronous-vm-backed-queues.md)
+- Notes: Added Cursor Composer's production-matched coding-agent RL workflow, latency tradeoffs, and training-infrastructure synthesis.

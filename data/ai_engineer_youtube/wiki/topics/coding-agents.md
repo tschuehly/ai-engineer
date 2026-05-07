@@ -48,6 +48,8 @@ Antigravity adds a concrete agent-first IDE shape to that abstraction. The agent
 
 HumanLayer's frequent intentional compaction framing makes that harness behavior concrete for hard brownfield work. Instead of letting one long chat accumulate search, tool output, corrections, and stale trajectory, the workflow repeatedly compresses useful state into reviewed artifacts. Research compresses source-backed codebase truth, planning compresses human intent into files, snippets, steps, and tests, and implementation can run from a low-context plan. The human role moves to the highest-leverage checkpoints: review whether the research is true and the plan is sane before a wrong assumption multiplies into a large diff.
 
+Cursor Composer adds a model-building version of the same workflow split. A strongest frontier model can be useful for planning and context engineering, while a faster specialized coding model executes the plan inside the IDE loop. That speed is not cosmetic: when agent latency sits around 10-20 minutes, developers can fall into a semi-async middle where the run is too slow for flow but not independent enough to behave like a real background delegate. Composer's training also shows that coding-agent behavior can be learned directly against the production tool surface: rollouts used file reads, edits, codebase search, lint checks, shell commands, and parallel tool calls so the model learned to search and read before editing.
+
 ## Key Concepts
 
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md) - coding-agent SDKs package reusable runtime pieces around the model.
@@ -82,6 +84,8 @@ HumanLayer's frequent intentional compaction framing makes that harness behavior
 - [Train code models on execution traces, not only syntax](../concepts/train-code-models-on-execution-traces-not-only-syntax.md) - code-agent models can learn from execution state transitions rather than only source tokens.
 - [Use neural debugging to fill code by simulated execution](../concepts/use-neural-debugging-to-fill-code-by-simulated-execution.md) - partial code plus simulated local state can guide model completion and debugging.
 - [Train coding-agent models with environments and expert developer reward](../concepts/train-coding-agent-models-with-environments-and-expert-developer-reward.md) - real coding environments and expert developer reward shape model behavior toward trusted workflows.
+- [Production-Matched RL Environments Train Coding Agents on Real Tool Surfaces](../concepts/production-matched-rl-environments-train-coding-agents-on-real-tool-surfaces.md) - training rollouts should mirror the actual IDE or cloud-agent tools the model will use.
+- [Latency Shapes Coding-Agent Interaction Mode](../concepts/latency-shapes-coding-agent-interaction-mode.md) - model speed changes whether an agent feels synchronous, asynchronous, or stuck between both.
 - [Interleave reasoning and tool calls for long-horizon agents](../concepts/interleave-reasoning-and-tool-calls-for-long-horizon-agents.md) - coding agents need to reason again after tool responses instead of assuming one tool pass is enough.
 - [Perturb agent scaffolds during training for generalization](../concepts/perturb-agent-scaffolds-during-training-for-generalization.md) - scaffold variation should be part of model robustness testing and training.
 - [Treat coding agents as fast junior collaborators](../concepts/treat-coding-agents-as-fast-junior-collaborators.md) - agent output needs human judgment and local context even when execution is fast.
@@ -294,3 +298,4 @@ HumanLayer's frequent intentional compaction framing makes that harness behavior
 - [Moving away from Agile: What's Next - Martin Harrysson & Natasha Maniar, McKinsey & Company](../sources/20251212_SZStlIhyTCY.md)
 - [Can you prove AI ROI in Software Eng? (Stanford 120k Devs Study) - Yegor Denisov-Blanch, Stanford](../sources/20251211_JvosMkuNxF8.md)
 - [Proactive Agents - Kath Korevec, Google Labs](../sources/20251213_v3u8xc0zLec.md)
+- [Building Cursor Composer - Lee Robinson, Cursor](../sources/20251202_fL1iJHtl51Q.md)

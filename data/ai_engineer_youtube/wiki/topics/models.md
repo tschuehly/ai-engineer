@@ -22,6 +22,8 @@ Applied Compute adds the enterprise specialization and systems-efficiency layer 
 
 OpenAI's Agent RFT talk adds a hosted, tool-using version of that post-training pattern. It treats reinforcement fine-tuning as a late-stage lever for multi-step agents after teams have matched training and eval data to production, measured a base-model baseline, and optimized prompts, tools, and task shape. The model learns from sampled trajectories that call real tool endpoints and receive custom reward signals, so useful gains depend on objective task definitions, enough exploration variance, and graders that capture production success rather than easy-to-game proxy behavior.
 
+Cursor Composer adds a product-owned coding-model example: reinforcement learning can specialize a model for a concrete IDE agent workflow when the training loop uses high-quality data, enough compute, and the same tools and environment the model will see at inference time. Its reported improvements are behavioral as much as benchmark-oriented: the model learned to use semantic search, read files before editing, and call tools in parallel.
+
 ## Key Concepts
 
 - [Compare models by task, thinking budget, cost, and latency](../concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - model choice should be routed by workload constraints rather than by size alone.
@@ -55,6 +57,7 @@ OpenAI's Agent RFT talk adds a hosted, tool-using version of that post-training 
 - [Train code models on execution traces, not only syntax](../concepts/train-code-models-on-execution-traces-not-only-syntax.md) - execution traces expose program dynamics that token-only source modeling can miss.
 - [Use neural debugging to fill code by simulated execution](../concepts/use-neural-debugging-to-fill-code-by-simulated-execution.md) - execution-aware code models can complete partial code from simulated state and surrounding structure.
 - [Train coding-agent models with environments and expert developer reward](../concepts/train-coding-agent-models-with-environments-and-expert-developer-reward.md) - coding-agent model quality should be shaped by verifiable environments and developer trust judgments.
+- [Production-Matched RL Environments Train Coding Agents on Real Tool Surfaces](../concepts/production-matched-rl-environments-train-coding-agents-on-real-tool-surfaces.md) - production-like tool loops make specialized coding-model training more likely to transfer.
 - [Turn real coding sessions into RL environments](../concepts/turn-real-coding-sessions-into-rl-environments.md) - real coding traces can become training environments when reconstructed and verified.
 - [Interleave reasoning and tool calls for long-horizon agents](../concepts/interleave-reasoning-and-tool-calls-for-long-horizon-agents.md) - long-horizon model behavior needs repeated think-act-observe cycles in noisy tool environments.
 - [Perturb agent scaffolds during training for generalization](../concepts/perturb-agent-scaffolds-during-training-for-generalization.md) - robust agent models should tolerate variation in tools, prompts, templates, environments, and responses.
@@ -130,3 +133,4 @@ OpenAI's Agent RFT talk adds a hosted, tool-using version of that post-training 
 - [RL Environments at Scale - Will Brown, Prime Intellect](../sources/20251209__IzZWeuTx7I.md)
 - [Efficient Reinforcement Learning - Rhythm Garg & Linden Li, Applied Compute](../sources/20251209_o15AaYl7Wu0.md)
 - [Agent Reinforcement Fine Tuning - Will Hang & Cathy Zhou, OpenAI](../sources/20251209_p1CmPZ2j6Lk.md)
+- [Building Cursor Composer - Lee Robinson, Cursor](../sources/20251202_fL1iJHtl51Q.md)
