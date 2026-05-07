@@ -332,6 +332,7 @@
 
 - [Treat AI pricing as a fast-moving product hypothesis](../concepts/treat-ai-pricing-as-a-fast-moving-product-hypothesis.md)
 - [Map AI charge metrics to customer-perceived value](../concepts/map-ai-charge-metrics-to-customer-perceived-value.md)
+- [Revenue Cycle AI Targets Administrative Friction](../concepts/revenue-cycle-ai-targets-administrative-friction.md)
 - [Outcome-based engineering compensation uses accepted story points](../concepts/outcome-based-engineering-compensation-uses-accepted-story-points.md)
 - [Use hybrid AI pricing to balance predictable revenue and margin protection](../concepts/use-hybrid-ai-pricing-to-balance-predictable-revenue-and-margin-protection.md)
 - [Prevent AI billing surprises with caps, notifications, and rate limits](../concepts/prevent-ai-billing-surprises-with-caps-notifications-and-rate-limits.md)
@@ -773,6 +774,12 @@
 - [AI-generated security reports need maintainer triage](../concepts/ai-generated-security-reports-need-maintainer-triage.md)
 - [Gate AI-generated open-source contributions through human-effort filters](../concepts/gate-ai-generated-open-source-contributions-through-human-effort-filters.md)
 
+## Healthcare Operations
+
+- [Revenue Cycle AI Targets Administrative Friction](../concepts/revenue-cycle-ai-targets-administrative-friction.md)
+- [Prevent Revenue Cycle Denials Upstream](../concepts/prevent-revenue-cycle-denials-upstream.md)
+- [Expert-Reviewed GenAI Appeals Beat Off-the-Shelf Letters](../concepts/expert-reviewed-genai-appeals-beat-off-the-shelf-letters.md)
+
 ## Inference
 
 - [Benchmark inference with use-case-shaped token loads](../concepts/benchmark-inference-with-use-case-shaped-token-loads.md)
@@ -902,6 +909,7 @@
 - [Customize open benchmark harnesses with proprietary task data](../concepts/customize-open-benchmark-harnesses-with-proprietary-task-data.md)
 - [Run eval suites in CI/CD before and during production](../concepts/run-eval-suites-in-cicd-before-and-during-production.md)
 - [Verification-First Prompts Make Parallel Agent Work Reviewable](../concepts/verification-first-prompts-make-parallel-agent-work-reviewable.md)
+- [Expert-Reviewed GenAI Appeals Beat Off-the-Shelf Letters](../concepts/expert-reviewed-genai-appeals-beat-off-the-shelf-letters.md)
 - [Scale Reasoning Models With RL and Verifiable Domains](../concepts/scale-reasoning-models-with-rl-and-verifiable-domains.md)
 - [Activation Steering Can Patch Specific Runtime Behaviors](../concepts/activation-steering-can-patch-specific-runtime-behaviors.md)
 - [Model Diffs Inspect Post-Training Feature Changes](../concepts/model-diffs-inspect-post-training-feature-changes.md)
@@ -1749,3 +1757,5 @@
 - [Split exploratory research agents from constrained writing workflows](../concepts/split-exploratory-research-agents-from-constrained-writing-workflows.md)
 - [Calibrate LLM judges like binary classifiers](../concepts/calibrate-llm-judges-like-binary-classifiers.md)
 - [Label LLM Judge Outputs Before Mapping Them to Scores](../concepts/label-llm-judge-outputs-before-mapping-them-to-scores.md)
+- [Prevent Revenue Cycle Denials Upstream](../concepts/prevent-revenue-cycle-denials-upstream.md)
+- [Expert-Reviewed GenAI Appeals Beat Off-the-Shelf Letters](../concepts/expert-reviewed-genai-appeals-beat-off-the-shelf-letters.md)

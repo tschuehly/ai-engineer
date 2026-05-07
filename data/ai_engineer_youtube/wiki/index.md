@@ -456,6 +456,7 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Edge Inference](topics/edge-inference.md) - on-device inference decisions, model sizing, deployment, and fleet validation.
 - [Evaluation](topics/evaluation.md) - task-level validation of models, tools, retrieval, and agent workflows.
 - [Generative Media](topics/generative-media.md) - image and video generation models, latent representations, diffusion sampling, distillation, and controls.
+- [Healthcare Operations](topics/healthcare-operations.md) - revenue cycle AI, payer-provider friction, denial prevention, and expert-reviewed appeal workflows.
 - [Inference](topics/inference.md) - production serving patterns for model runtimes, batching, routing, autoscaling, and resource use.
 - [Infrastructure](topics/infrastructure.md) - deployment runtimes, conversion paths, compilation choices, and operational validation.
 - [Models](topics/models.md) - model architecture, tokenizer, training, adaptation, and sizing choices under practical constraints.

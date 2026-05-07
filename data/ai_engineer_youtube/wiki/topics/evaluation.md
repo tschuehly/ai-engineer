@@ -24,6 +24,8 @@ Enterprise workflow evals can inspect the trajectory itself. If a task has a kno
 
 Customer-facing agent evaluation needs simulation before launch and coaching after launch. Sierra's pattern uses simulated personas, accounts, and devices to generate many conversations against the agent before customers see it, then monitors live handoffs and mistakes as coaching material. This is especially important for nondeterministic support agents because a single input/output expectation cannot represent the real conversational surface.
 
+Healthcare revenue cycle evaluation can attach AI behavior directly to operational money flows. Appeal generation can be measured by turnaround time and denial overturn rate, while upstream prevention systems should be judged by whether they reduce preventable denials, rework, and delayed payments without hiding payer-policy or clinical-necessity disputes.
+
 High-assurance coding adds another evaluation tier for generated code. Formal specifications and proof-carrying implementation paths can verify selected critical components before execution, but only against the requirements that were actually specified. Separate generation and verification prompts or model providers can also reduce shared blind spots, especially when paired with risk analysis, safety cases, adversarial tests, and trusted libraries.
 
 Enterprise AI ROI evaluation should classify outcomes before comparing them. Time savings, output volume, quality, new capabilities, decision quality, cost savings, revenue, and risk reduction describe different kinds of value and should not be collapsed into a single generic productivity story. Self-reported surveys can reveal useful early patterns, especially around where people believe ROI is appearing, but their audience and sampling path must stay attached to the claim so leaders do not mistake directional adoption evidence for a controlled population study.
@@ -218,6 +220,8 @@ Coding-agent code quality needs evaluation while the diff is still forming. Usef
 - [Use independent validation contexts to reduce agent confirmation bias](../concepts/use-independent-validation-contexts-to-reduce-agent-confirmation-bias.md) - separate review agents can reduce self-affirming validation.
 - [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](../concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md) - review and approval roles make validation an enforceable workflow stage.
 - [Choose plan-heavy or review-heavy agent workflows by task shape](../concepts/choose-plan-heavy-or-review-heavy-agent-workflows-by-task-shape.md) - task shape determines whether upfront specification or review iteration is the more efficient validation path.
+- [Expert-Reviewed GenAI Appeals Beat Off-the-Shelf Letters](../concepts/expert-reviewed-genai-appeals-beat-off-the-shelf-letters.md) - appeal-generation quality is measured by expert approval, speed, and denial overturn outcomes.
+- [Revenue Cycle AI Targets Administrative Friction](../concepts/revenue-cycle-ai-targets-administrative-friction.md) - RCM provides concrete ROI metrics for AI workflow evaluation.
 - [Use research-plan-implement loops for coding agents](../concepts/use-research-plan-implement-loops-for-coding-agents.md) - research artifacts, plans, and verification commands make implementation-agent output easier to judge.
 - [Review research and plans before they multiply into code](../concepts/review-research-and-plans-before-they-multiply-into-code.md) - high-leverage review catches wrong assumptions before implementation expands them.
 - [Review coding-agent work at task, plan, and code checkpoints](../concepts/review-coding-agent-work-at-task-plan-and-code-checkpoints.md) - coding-agent workflows should check intent, direction, and final code separately.
@@ -532,3 +536,4 @@ Coding-agent code quality needs evaluation while the diff is still forming. Usef
 - [[Full Workshop] Building Metrics that actually work - David Karam, Pi Labs (fmr Google Search)](../sources/20250729_jxrGodnopHo.md)
 - [Human seeded Evals - Samuel Colvin, Pydantic](../sources/20250725_o_LRtAomJCs.md)
 - [Software Development Agents: What Works and What Doesn't - Robert Brennan, OpenHands](../sources/20250725_o_hhkJtlbSs.md)
+- [AI That Pays: Lessons from Revenue Cycle - Nathan Wan, Ensemble Health](../sources/20250724_TquUsN1QsWs.md)

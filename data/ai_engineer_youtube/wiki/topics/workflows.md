@@ -140,6 +140,8 @@ Enterprise-aware agent workflows can be compiled from agent traces themselves. W
 
 Customer-facing agent workflows should be narrow before they are broad. Sierra's rollout pattern starts from one valuable customer journey, models the path in code, preserves flexibility for topic shifts, makes compliance language deterministic when needed, and then uses pre-launch simulations plus post-launch conversation review to expand capability. The organizational workflow also changes: CX and support teams may become agent coaches who review conversations and update behavior rather than only handling escalations.
 
+Healthcare revenue cycle workflows add a financially measurable version of the same pattern. Late failures such as denials should not only trigger faster appeal generation; they should feed upstream checks for missing data, prior authorization gaps, policy changes, and registration errors. When a denial becomes a clinical-necessity dispute, the workflow should assemble patient records, guidelines, and payer policies for GenAI drafting while preserving expert approval before submission.
+
 ## Key Concepts
 
 - [Specs and Style Guides Steer Coding Agents Toward Maintainable Code](../concepts/specs-and-style-guides-steer-coding-agents-toward-maintainable-code.md) - plan-first work, current docs, and style guidance prevent predictable agent mistakes.
@@ -218,6 +220,8 @@ Customer-facing agent workflows should be narrow before they are broad. Sierra's
 - [Agentic coding collapses coordination tax for small valuable changes](../concepts/agentic-coding-collapses-coordination-tax-for-small-valuable-changes.md) - workflow value can come from removing queueing and persuasion overhead, not only typing faster.
 - [Fund enterprise AI through incremental productizable bets](../concepts/fund-enterprise-ai-through-incremental-productizable-bets.md) - breaks uncertain enterprise AI research into short value-producing stages.
 - [Start the workday by reviewing and dispatching agent work](../concepts/start-the-workday-by-reviewing-and-dispatching-agent-work.md) - provides a daily operating loop for asynchronous agent output.
+- [Prevent Revenue Cycle Denials Upstream](../concepts/prevent-revenue-cycle-denials-upstream.md) - downstream claim failures can become earlier checks and corrections in operational workflows.
+- [Expert-Reviewed GenAI Appeals Beat Off-the-Shelf Letters](../concepts/expert-reviewed-genai-appeals-beat-off-the-shelf-letters.md) - clinical appeal workflows need evidence assembly and expert approval around GenAI drafting.
 - [Hire for AI fluency and agent orchestration ability](../concepts/hire-for-ai-fluency-and-agent-orchestration-ability.md) - makes candidate evaluation and onboarding part of the agent workflow.
 - [Bootstrap RL with targeted SFT before reinforcement learning](../concepts/bootstrap-rl-with-targeted-sft-before-reinforcement-learning.md) - interactive post-training can teach protocol first, then optimize outcomes through RL.
 - [Control environment noise for group-based RL](../concepts/control-environment-noise-for-group-based-rl.md) - RL workflows need stable seeds, difficulty ranges, batch sizing, and exploration settings.
@@ -644,3 +648,4 @@ Customer-facing agent workflows should be narrow before they are broad. Sierra's
 - [A2A & MCP Workshop: Automating Business Processes with LLMs - Damien Murphy, Bench](../sources/20250726_wXVvfFMTyzY.md)
 - [Human seeded Evals - Samuel Colvin, Pydantic](../sources/20250725_o_LRtAomJCs.md)
 - [Structuring a modern AI team - Denys Linkov, Wisedocs](../sources/20250724_SbUxRluVRwk.md)
+- [AI That Pays: Lessons from Revenue Cycle - Nathan Wan, Ensemble Health](../sources/20250724_TquUsN1QsWs.md)

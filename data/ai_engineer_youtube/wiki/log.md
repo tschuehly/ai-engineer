@@ -1799,3 +1799,11 @@
 - Updated topics: [Agents](topics/agents.md), [Product Strategy](topics/product-strategy.md), [Workflows](topics/workflows.md), [Infrastructure](topics/infrastructure.md)
 - Updated concepts: [Shape AI Teams Around the Bottleneck](concepts/shape-ai-teams-around-the-bottleneck.md), [Prefer Generalist AI Engineers Before Narrow Specialists](concepts/prefer-generalist-ai-engineers-before-narrow-specialists.md), [Hire Humans for Context, Verification, and Accountability](concepts/hire-humans-for-context-verification-and-accountability.md), [Upskill AI Teams Through Build, Domain, and Customer Loops](concepts/upskill-ai-teams-through-build-domain-and-customer-loops.md)
 - Notes: Added Denys Linkov's organizational guidance for staffing AI teams around bottlenecks, generalist capability, accountable human context, and operational upskilling loops.
+
+## [2026-05-07] ingest | AI That Pays: Lessons from Revenue Cycle - Nathan Wan, Ensemble Health
+
+- Source: [AI That Pays: Lessons from Revenue Cycle - Nathan Wan, Ensemble Health](sources/20250724_TquUsN1QsWs.md)
+- Processed: `TquUsN1QsWs`
+- Updated topics: [Healthcare Operations](topics/healthcare-operations.md), [AI Monetization](topics/ai-monetization.md), [Evaluation](topics/evaluation.md), [Product Strategy](topics/product-strategy.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Revenue Cycle AI Targets Administrative Friction](concepts/revenue-cycle-ai-targets-administrative-friction.md), [Prevent Revenue Cycle Denials Upstream](concepts/prevent-revenue-cycle-denials-upstream.md), [Expert-Reviewed GenAI Appeals Beat Off-the-Shelf Letters](concepts/expert-reviewed-genai-appeals-beat-off-the-shelf-letters.md)
+- Notes: Added healthcare revenue cycle AI as a measurable operations domain where longitudinal data prevents denials and GenAI appeal drafting remains expert-reviewed.
