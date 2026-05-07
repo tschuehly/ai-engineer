@@ -4,6 +4,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Dynamic AI Search Evals Need Fresh Grounding Sets](concepts/dynamic-ai-search-evals-need-fresh-grounding-sets.md) - web-backed RAG and search agents need eval sets that refresh with changing sources and user needs.
+- [Reference-Free AI Search Metrics Decompose Answer Quality](concepts/reference-free-ai-search-metrics-decompose-answer-quality.md) - completeness, document relevance, and hallucination checks expose different search failure modes when labels are unavailable.
+- [AI Search Providers Should Return Grounding Documents](concepts/ai-search-providers-should-return-grounding-documents.md) - citations alone are weak observability for AI search debugging and reference-free evaluation.
 - [Sequence RAG Techniques by Loss Analysis and Complexity-Adjusted Impact](concepts/sequence-rag-techniques-by-loss-analysis-and-complexity-adjusted-impact.md) - retrieval improvements should be chosen from observed query failures and impact, not technique fashion.
 - [Rank RAG Results With Domain and Product Signals Beyond Relevance](concepts/rank-rag-results-with-domain-and-product-signals-beyond-relevance.md) - production ranking often needs structured domain, corpus, popularity, and preference signals beyond semantic similarity.
 - [Decompose Domain RAG by Query Structure and Corpus Scale](concepts/decompose-domain-rag-by-query-structure-and-corpus-scale.md) - expert retrieval should reflect corpus scale, jurisdictional filters, dates, named provisions, and domain jargon.

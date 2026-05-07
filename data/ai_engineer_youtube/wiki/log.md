@@ -1519,3 +1519,11 @@
 - Updated topics: [Retrieval](topics/retrieval.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md)
 - Updated concepts: [Sequence RAG Techniques by Loss Analysis and Complexity-Adjusted Impact](concepts/sequence-rag-techniques-by-loss-analysis-and-complexity-adjusted-impact.md), [Choose Lexical, Vector, and Reranking Retrieval by Query Shape](concepts/choose-lexical-vector-and-reranking-retrieval-by-query-shape.md), [Rank RAG Results With Domain and Product Signals Beyond Relevance](concepts/rank-rag-results-with-domain-and-product-signals-beyond-relevance.md), [Use Supplementary Retrieval and UX Fallbacks for Ambiguous Queries](concepts/use-supplementary-retrieval-and-ux-fallbacks-for-ambiguous-queries.md)
 - Notes: Added Pi Labs' RAG quality-engineering ladder for sequencing retrieval techniques by query failures, impact, cost, and product fallback needs.
+
+## [2026-05-07] ingest | Evaluating AI Search: A Practical Framework for Augmented AI Systems - Quotient AI + Tavily
+
+- Source: [Evaluating AI Search: A Practical Framework for Augmented AI Systems - Quotient AI + Tavily](sources/20250729_wRJD0inpmjU.md)
+- Processed: `wRJD0inpmjU`
+- Updated topics: [Evaluation](topics/evaluation.md), [Retrieval](topics/retrieval.md)
+- Updated concepts: [Dynamic AI Search Evals Need Fresh Grounding Sets](concepts/dynamic-ai-search-evals-need-fresh-grounding-sets.md), [Reference-Free AI Search Metrics Decompose Answer Quality](concepts/reference-free-ai-search-metrics-decompose-answer-quality.md), [AI Search Providers Should Return Grounding Documents](concepts/ai-search-providers-should-return-grounding-documents.md)
+- Notes: Added Quotient AI and Tavily's framework for evaluating real-time AI search with dynamic evidence-backed eval sets, reference-free quality metrics, and grounding-document observability.

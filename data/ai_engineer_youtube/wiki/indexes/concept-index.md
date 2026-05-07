@@ -773,6 +773,9 @@
 
 ## Evaluation
 
+- [Dynamic AI Search Evals Need Fresh Grounding Sets](../concepts/dynamic-ai-search-evals-need-fresh-grounding-sets.md)
+- [Reference-Free AI Search Metrics Decompose Answer Quality](../concepts/reference-free-ai-search-metrics-decompose-answer-quality.md)
+- [AI Search Providers Should Return Grounding Documents](../concepts/ai-search-providers-should-return-grounding-documents.md)
 - [Treat Evals as the Home of Domain Knowledge](../concepts/treat-evals-as-the-home-of-domain-knowledge.md)
 - [Build Scoring Systems From Inspectable Quality Signals](../concepts/build-scoring-systems-from-inspectable-quality-signals.md)
 - [Use Online Candidate Scoring to Lift Generation Quality](../concepts/use-online-candidate-scoring-to-lift-generation-quality.md)
@@ -1037,6 +1040,9 @@
 
 ## Retrieval
 
+- [Dynamic AI Search Evals Need Fresh Grounding Sets](../concepts/dynamic-ai-search-evals-need-fresh-grounding-sets.md)
+- [Reference-Free AI Search Metrics Decompose Answer Quality](../concepts/reference-free-ai-search-metrics-decompose-answer-quality.md)
+- [AI Search Providers Should Return Grounding Documents](../concepts/ai-search-providers-should-return-grounding-documents.md)
 - [Seller Knowledge Bases Let Agents Pull Business Context at Action Time](../concepts/seller-knowledge-bases-let-agents-pull-business-context-at-action-time.md)
 - [Parse Multimodal Business Sources Into Structured Markdown](../concepts/parse-multimodal-business-sources-into-structured-markdown.md)
 - [Show Retrieved Chunks Inside Agent Workflows](../concepts/show-retrieved-chunks-inside-agent-workflows.md)
