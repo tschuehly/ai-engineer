@@ -18,6 +18,8 @@ Leadership-owned AI adoption adds another constraint: do not confuse adoption ma
 
 Execution-aware code models point to another coding-agent interface: the model can treat the repository as an environment with state transitions rather than only a text corpus. CWM's Bash-oriented setup trains the model in a terminal-like environment, while neural debugging suggests that partial code sketches, local variable traces, and simulated execution can become a more precise collaboration surface than prose-only prompts.
 
+Coding-agent model training can also target the harness and workflow shape directly. MiniMax M2's framing suggests that a coding model should learn from scaled coding environments, expert developer reward, repeated reasoning/tool-call turns, and scaffold perturbations across prompts, templates, tools, and tool responses. That makes agent robustness a training and evaluation target rather than a property assumed from benchmark rank or raw tool count.
+
 Enterprise rollouts should be skeptical of greenfield-only codegen wins. Bloomberg's deployment across thousands of engineers showed early gains in proofs of concept, tests, and one-time scripts, but those signals dropped quickly once work moved into mature codebases with verification, review, and merge constraints. Higher-leverage coding-agent targets may be maintenance, migration, patching, and incident response: uplift agents can scan existing code for applicable fixes and open explanatory pull requests, while incident agents can inspect operational evidence before responders over-anchor on a favorite hypothesis.
 
 Zapier's Scout Agent adds a support-led maintenance pattern. For integration products exposed to constant API changes, support can be a strong first user because tickets arrive with fresh customer context, current logs, and practical validation knowledge. Scout turns support issues into categorized, fixability-checked, plan/execute/validate merge requests, then keeps support iteration inside GitLab before engineering review.
@@ -53,6 +55,9 @@ Vibe engineering adds a human-skill framing for frontend-heavy agentic coding. T
 - [Use Bash as a composable code-mode tool for agents](../concepts/use-bash-as-a-composable-code-mode-tool-for-agents.md) - shell access lets coding agents discover, run, and verify local project workflows.
 - [Train code models on execution traces, not only syntax](../concepts/train-code-models-on-execution-traces-not-only-syntax.md) - code-agent models can learn from execution state transitions rather than only source tokens.
 - [Use neural debugging to fill code by simulated execution](../concepts/use-neural-debugging-to-fill-code-by-simulated-execution.md) - partial code plus simulated local state can guide model completion and debugging.
+- [Train coding-agent models with environments and expert developer reward](../concepts/train-coding-agent-models-with-environments-and-expert-developer-reward.md) - real coding environments and expert developer reward shape model behavior toward trusted workflows.
+- [Interleave reasoning and tool calls for long-horizon agents](../concepts/interleave-reasoning-and-tool-calls-for-long-horizon-agents.md) - coding agents need to reason again after tool responses instead of assuming one tool pass is enough.
+- [Perturb agent scaffolds during training for generalization](../concepts/perturb-agent-scaffolds-during-training-for-generalization.md) - scaffold variation should be part of model robustness testing and training.
 - [Treat coding agents as fast junior collaborators](../concepts/treat-coding-agents-as-fast-junior-collaborators.md) - agent output needs human judgment and local context even when execution is fast.
 - [Vibe engineering is supervised agentic coding with judgment](../concepts/vibe-engineering-is-supervised-agentic-coding-with-judgment.md) - agentic coding works best when experienced humans steer context, abstractions, and acceptance criteria.
 - [Use voice-dumped UI and code observations as agent feedback](../concepts/use-voice-dumped-ui-and-code-observations-as-agent-feedback.md) - spoken UI and code review can provide high-bandwidth frontend feedback to agents.
@@ -180,6 +185,7 @@ Vibe engineering adds a human-skill framing for frontend-heavy agentic coding. T
 - Which static code benchmarks have become too contaminated or saturated to guide coding-agent progress?
 - Which benchmark-exploitation patterns should be blocked by the sandbox, detected by a judge, or left for human code review?
 - Which frontend feedback should be spoken, browser-verified, code-reviewed, or turned into reusable agent rules?
+- Which coding-agent model failures come from the base model and which come from overfitting to one harness, tool schema, or prompt template?
 
 ## Sources
 
@@ -228,3 +234,4 @@ Vibe engineering adds a human-skill framing for frontend-heavy agentic coding. T
 - [Code World Model: Building World Models for Computation - Jacob Kahn, FAIR Meta](../sources/20251217_sYgE4ppDFOQ.md)
 - [Coding Evals: From Code Snippets to Codebases - Naman Jain, Cursor](../sources/20251215_tHN44yJoeS8.md)
 - [From Vibe Coding To Vibe Engineering - Kitze, Sizzy](../sources/20251214_JV-wY5pxXLo.md)
+- [Minimax M2: Building the #1 Open Model - Olive Song, MiniMax](../sources/20251213_lY1iFbDPRlw.md)

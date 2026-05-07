@@ -855,3 +855,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Vibe engineering is supervised agentic coding with judgment](concepts/vibe-engineering-is-supervised-agentic-coding-with-judgment.md), [Use voice-dumped UI and code observations as agent feedback](concepts/use-voice-dumped-ui-and-code-observations-as-agent-feedback.md), [Keep agent-generated code clean enough for continued agent work](concepts/keep-agent-generated-code-clean-enough-for-continued-agent-work.md), [Keep agent context small, fresh, and task-specific](concepts/keep-agent-context-small-fresh-and-task-specific.md), [Do not use token volume as a developer productivity metric](concepts/do-not-use-token-volume-as-a-developer-productivity-metric.md)
 - Notes: Added Kitze's distinction between loose vibe coding and supervised vibe engineering, including voice feedback, context surfaces, and good-enough generated-code review.
+
+## [2026-05-07] ingest | Minimax M2: Building the #1 Open Model - Olive Song, MiniMax
+
+- Source: [Minimax M2: Building the #1 Open Model - Olive Song, MiniMax](sources/20251213_lY1iFbDPRlw.md)
+- Processed: `lY1iFbDPRlw`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Inference](topics/inference.md), [Models](topics/models.md)
+- Updated concepts: [Train coding-agent models with environments and expert developer reward](concepts/train-coding-agent-models-with-environments-and-expert-developer-reward.md), [Interleave reasoning and tool calls for long-horizon agents](concepts/interleave-reasoning-and-tool-calls-for-long-horizon-agents.md), [Perturb agent scaffolds during training for generalization](concepts/perturb-agent-scaffolds-during-training-for-generalization.md), [Small agentic models make parallel workplace agents economical](concepts/small-agentic-models-make-parallel-workplace-agents-economical.md)
+- Notes: Added MiniMax M2's model-training lessons for coding and workplace agents: verifiable environments, expert developer reward, repeated tool reasoning, scaffold perturbations, and cost-effective parallel agent copies.

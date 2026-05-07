@@ -14,6 +14,8 @@ Code world models add an execution-aware variant of model training for software.
 
 Coding-model evaluation needs model-family progress to be measured against fresh and appropriately difficult tasks. Dynamic code benchmarks can use post-training-window problem releases and changing difficulty distributions to avoid confusing memorized or saturated task sets with genuine model improvement. As coding models move from completions to repository optimization and translation, evals should also measure whether the model's apparent improvement survives real task distributions, runtime checks, and reward-hack detection.
 
+Coding and workplace-agent models also need training signals that look like the work they will do. MiniMax M2 adds a compact open-weight model pattern: train against scaled coding environments and verifiable goals, use expert developers as a reward/evaluation source, teach repeated reasoning-tool loops for noisy environments, perturb scaffolds so the behavior is not tied to one harness, and exploit small active-parameter cost when many parallel agent copies are useful.
+
 ## Key Concepts
 
 - [Compare models by task, thinking budget, cost, and latency](../concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - model choice should be routed by workload constraints rather than by size alone.
@@ -43,6 +45,10 @@ Coding-model evaluation needs model-family progress to be measured against fresh
 - [Pair next-token prediction with reinforcement learning for long-horizon work](../concepts/pair-next-token-prediction-with-reinforcement-learning-for-long-horizon-work.md) - long-horizon model behavior needs task-completion feedback beyond fluent continuations.
 - [Train code models on execution traces, not only syntax](../concepts/train-code-models-on-execution-traces-not-only-syntax.md) - execution traces expose program dynamics that token-only source modeling can miss.
 - [Use neural debugging to fill code by simulated execution](../concepts/use-neural-debugging-to-fill-code-by-simulated-execution.md) - execution-aware code models can complete partial code from simulated state and surrounding structure.
+- [Train coding-agent models with environments and expert developer reward](../concepts/train-coding-agent-models-with-environments-and-expert-developer-reward.md) - coding-agent model quality should be shaped by verifiable environments and developer trust judgments.
+- [Interleave reasoning and tool calls for long-horizon agents](../concepts/interleave-reasoning-and-tool-calls-for-long-horizon-agents.md) - long-horizon model behavior needs repeated think-act-observe cycles in noisy tool environments.
+- [Perturb agent scaffolds during training for generalization](../concepts/perturb-agent-scaffolds-during-training-for-generalization.md) - robust agent models should tolerate variation in tools, prompts, templates, environments, and responses.
+- [Small agentic models make parallel workplace agents economical](../concepts/small-agentic-models-make-parallel-workplace-agents-economical.md) - small active-parameter models can make multi-copy agent workflows affordable.
 - [Use verifiable rewards for language-model RL](../concepts/use-verifiable-rewards-for-language-model-rl.md) - automatic outcome checks can turn task success, format compliance, and action validity into training signals.
 - [Bootstrap RL with targeted SFT before reinforcement learning](../concepts/bootstrap-rl-with-targeted-sft-before-reinforcement-learning.md) - small models may need a syntax and valid-action warm-up before RL can improve strategy.
 - [Control environment noise for group-based RL](../concepts/control-environment-noise-for-group-based-rl.md) - grouped rollout methods need comparable environments, controlled difficulty, and stable batch sizing.
@@ -76,6 +82,7 @@ Coding-model evaluation needs model-family progress to be measured against fresh
 - Which non-language tasks should be handled by specialized frontier models instead of routed through a general LLM?
 - Which quantization formats preserve enough quality while improving local model responsiveness for each hardware class?
 - Which coding-eval time windows best separate memorized benchmark behavior from genuine current model capability?
+- Which scaffold perturbations best predict whether a coding-agent model will transfer across real harnesses and tool APIs?
 
 ## Sources
 
@@ -100,3 +107,4 @@ Coding-model evaluation needs model-family progress to be measured against fresh
 - [Code World Model: Building World Models for Computation - Jacob Kahn, FAIR Meta](../sources/20251217_sYgE4ppDFOQ.md)
 - [Building in the Gemini Era - Kat Kampf & Ammaar Reshi, Google DeepMind](../sources/20251215_fgkXEIbZpGc.md)
 - [Coding Evals: From Code Snippets to Codebases - Naman Jain, Cursor](../sources/20251215_tHN44yJoeS8.md)
+- [Minimax M2: Building the #1 Open Model - Olive Song, MiniMax](../sources/20251213_lY1iFbDPRlw.md)

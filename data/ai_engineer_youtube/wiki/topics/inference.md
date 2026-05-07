@@ -20,6 +20,7 @@ Inference is the production discipline of turning trained models into reliable, 
 - [Hot-swap small models to avoid one-model-per-GPU waste](../concepts/hot-swap-small-models-to-avoid-one-model-per-gpu-waste.md) - many small models can share accelerator capacity when the runtime supports dynamic loading and eviction.
 - [Production inference combines model support with cluster operations](../concepts/production-inference-combines-model-support-with-cluster-operations.md) - serving many model families requires both architecture-specific adaptation and production operations.
 - [Use small models as context-management tools before agent reasoning](../concepts/use-small-models-as-context-management-tools-before-agent-reasoning.md) - inference infrastructure can expose narrow models as preprocessing and retrieval tools for agent workflows.
+- [Small agentic models make parallel workplace agents economical](../concepts/small-agentic-models-make-parallel-workplace-agents-economical.md) - low per-agent cost changes whether multiple concurrent agent copies are practical.
 - [Train image and video diffusion models in learned latent spaces](../concepts/train-image-and-video-diffusion-models-in-learned-latent-spaces.md) - latent media representations shrink inference tensors while keeping useful topology.
 - [Use guidance to trade diffusion sample diversity for conditional quality](../concepts/use-guidance-to-trade-diffusion-sample-diversity-for-conditional-quality.md) - sampling parameters shape output quality and failure modes.
 - [Distill diffusion models to reduce sampling steps](../concepts/distill-diffusion-models-to-reduce-sampling-steps.md) - step reduction is a direct latency lever for diffusion serving.
@@ -32,6 +33,7 @@ Inference is the production discipline of turning trained models into reliable, 
 - How should diffusion serving expose guidance, step count, and distillation choices without letting users create predictable artifacts or unacceptable latency?
 - Which local workstation benchmarks are strong enough to predict production serving behavior after scaling to cloud or data-center infrastructure?
 - Which AI-generated kernel optimizations should be promoted into production once hardware-in-the-loop benchmarks show a speedup?
+- Which workplace-agent subtasks are cheap and independent enough to route to many small model copies instead of one larger agent?
 
 ## Sources
 
@@ -43,3 +45,4 @@ Inference is the production discipline of turning trained models into reliable, 
 - [Running LLMs locally: Practical LLM Performance on DGX Spark - Mozhgan Kabiri chimeh, NVIDIA](../sources/20260410_c5-kx2bwoCk.md)
 - [Jack Morris: Stuffing Context is not Memory, Updating Weights is](../sources/20251229_Jty4s9-Jb78.md)
 - [AI Kernel Generation: What's working, what's not, what's next - Natalie Serrino, Gimlet Labs](../sources/20251217_6guQG_tGt0o.md)
+- [Minimax M2: Building the #1 Open Model - Olive Song, MiniMax](../sources/20251213_lY1iFbDPRlw.md)
