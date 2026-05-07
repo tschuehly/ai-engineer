@@ -10,6 +10,8 @@ Application builders should treat that routing layer as a strategic default, not
 
 Brockman's infrastructure view adds a serving-shape warning: realtime AI interfaces and long compute-heavy jobs are different workloads. Inference platforms need to account for both low-latency interaction and longer test-time or agentic compute, because a fleet balanced for the wrong mix can waste scarce accelerator capacity.
 
+Compute marketplaces add a lower-level routing problem beneath model marketplaces: the same product may need long training runs, temporary experiment bursts, online inference, and offline batch inference at different times. A GPU aggregation layer can reduce over-reservation only if the platform exposes workload-shaped commitments and verifies heterogeneous supplier performance well enough for the inference or training job being routed.
+
 Morph's reasoning-time branching pattern adds another long-running inference shape: instead of one model call consuming more hidden thinking tokens, the system can branch the external environment, run parallel agents against the same state, and choose verifier-passing branches. Capacity planning then has to include workspace snapshot overhead, branch fanout, verifier cost, and the wall-clock goal of finding a good branch faster than a single linear run.
 
 ## Key Concepts
@@ -33,6 +35,8 @@ Morph's reasoning-time branching pattern adds another long-running inference sha
 - [Expose local and open-source models through familiar API clients](../concepts/expose-local-and-open-source-models-through-familiar-api-clients.md) - API compatibility can hide whether a model runs through a hosted service, local runtime, or compiled binary.
 - [Abstract LLM inference behind one routing API](../concepts/abstract-llm-inference-behind-one-routing-api.md) - routing layers can normalize model access, provider differences, observability, privacy, and tool-calling support.
 - [Plan AI products for a multimodel market](../concepts/plan-ai-products-for-a-multimodel-market.md) - application infrastructure should assume model choice, pricing, and capability will keep changing.
+- [Match GPU Commitments To Workload Lifecycle](../concepts/match-gpu-commitments-to-workload-lifecycle.md) - compute access should match training, experiment, online inference, and offline inference phases.
+- [Aggregate Idle GPU Supply Through Compute Marketplaces](../concepts/aggregate-idle-gpu-supply-through-compute-marketplaces.md) - pooled accelerator supply can change the cost envelope for model training and serving.
 - [Open model families need ecosystem-compatible tooling](../concepts/open-model-families-need-ecosystem-compatible-tooling.md) - open-weight models need serving, fine-tuning, and integration support before developers can use them.
 - [Per-layer embeddings move effective-model capacity out of VRAM](../concepts/per-layer-embeddings-move-effective-model-capacity-out-of-vram.md) - flash-backed PLE changes the memory profile of effective on-device models.
 - [Hot-swap small models to avoid one-model-per-GPU waste](../concepts/hot-swap-small-models-to-avoid-one-model-per-gpu-waste.md) - many small models can share accelerator capacity when the runtime supports dynamic loading and eviction.
@@ -55,6 +59,7 @@ Morph's reasoning-time branching pattern adds another long-running inference sha
 - Which KV-cache hit-rate bands are needed before agent swarms stop wasting prefill capacity on repeated prompt, tool-call, and tool-response tokens?
 - Which provider differences should model-routing APIs normalize, and which should remain visible because they affect quality or risk?
 - Which inference metrics distinguish realtime user interaction from long-running agentic compute in capacity plans?
+- Which workloads are safe to route through lower-cost marketplace GPUs, and which require reserved, benchmarked, or reliability-backed capacity?
 
 ## Sources
 
@@ -74,3 +79,4 @@ Morph's reasoning-time branching pattern adds another long-running inference sha
 - [The Next Unicorns: 7 Top AI startups from the HF0 Residency](../sources/20250821_L8-5ezsoI5A.md)
 - [State of Startups and AI 2025 - Sarah Guo, Conviction](../sources/20250802_3MZS5gNElZM.md)
 - [Infrastructure for the Singularity - Jesse Han, Morph](../sources/20250801_2goSS66XRBk.md)
+- [Why We Don't Need More Data Centers - Dr. Jasper Zhang, Hyperbolic](../sources/20250801_M6Vbaig1TsM.md)

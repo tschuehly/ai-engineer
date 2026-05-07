@@ -1383,3 +1383,11 @@
 - Updated topics: [Agents](topics/agents.md), [Workflows](topics/workflows.md), [Tools](topics/tools.md)
 - Updated concepts: [Compose agents and workflows as interchangeable primitives](concepts/compose-agents-and-workflows-as-interchangeable-primitives.md), [Prefer readable workflow APIs over graph-theory surfaces](concepts/prefer-readable-workflow-apis-over-graph-theory-surfaces.md), [Add structure where agent reliability fails](concepts/add-structure-where-agent-reliability-fails.md)
 - Notes: Added Mastra's design-pattern framing for combining agent loops and workflow structure based on reliability, traceability, and team-readable API shape.
+
+## [2026-05-07] ingest | Why We Don't Need More Data Centers - Dr. Jasper Zhang, Hyperbolic
+
+- Source: [Why We Don't Need More Data Centers - Dr. Jasper Zhang, Hyperbolic](sources/20250801_M6Vbaig1TsM.md)
+- Processed: `M6Vbaig1TsM`
+- Updated topics: [Infrastructure](topics/infrastructure.md), [Inference](topics/inference.md)
+- Updated concepts: [Aggregate Idle GPU Supply Through Compute Marketplaces](concepts/aggregate-idle-gpu-supply-through-compute-marketplaces.md), [Match GPU Commitments To Workload Lifecycle](concepts/match-gpu-commitments-to-workload-lifecycle.md), [Benchmark And Rate Heterogeneous GPU Providers](concepts/benchmark-and-rate-heterogeneous-gpu-providers.md)
+- Notes: Added Hyperbolic's GPU marketplace framing for pooling idle accelerator supply, matching reservations to workload phases, and benchmarking heterogeneous providers.
