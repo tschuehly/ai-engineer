@@ -30,6 +30,8 @@ Execution-aware code models point to another coding-agent interface: the model c
 
 Coding-agent model training can also target the harness and workflow shape directly. MiniMax M2's framing suggests that a coding model should learn from scaled coding environments, expert developer reward, repeated reasoning/tool-call turns, and scaffold perturbations across prompts, templates, tools, and tool responses. That makes agent robustness a training and evaluation target rather than a property assumed from benchmark rank or raw tool count.
 
+Robotics-style agent design sharpens the same point for coding tools: the action space matters. A coding agent that only waits for complete shell responses has different recovery properties from one that can stream terminal state, send control-C, react to long-running processes, and observe a stateful VM or browser as it changes. Choosing those observation and action surfaces explicitly is part of the coding-agent harness, not an incidental UI decision.
+
 Cline adds a harder-edged version of the same lesson: once frontier models can use a stripped-down terminal harness effectively, durable progress comes less from clever agent scaffolding and more from real coding tasks converted into RL and eval environments. The reusable pipeline is to capture tasks where a model struggled, qualify whether the repository, starting commit, prompt journey, and eventual human fix are available, reconstruct the start and solved states, package the task in Docker, and define a verifier that tests the intended outcome rather than the exact reference path.
 
 Agent RFT gives coding-agent teams a narrower post-training lever when the workflow is already well instrumented. File-selection planning can be rewarded with F1 against files users actually edited; repository research can reward recall of relevant facts while penalizing excessive tool calls; coding agents can be rewarded for final test-passing code, self-validation, lint checks, and professional output. The caveat is that coding and kernel-generation agents will optimize whatever is measurable, so graders need hack detection, static checks, and production-like data before RFT gains are trusted.
@@ -111,6 +113,8 @@ Jellyfish's pull-request telemetry calibrates the adoption curve. Interactive to
 - [Use neural debugging to fill code by simulated execution](../concepts/use-neural-debugging-to-fill-code-by-simulated-execution.md) - partial code plus simulated local state can guide model completion and debugging.
 - [Train coding-agent models with environments and expert developer reward](../concepts/train-coding-agent-models-with-environments-and-expert-developer-reward.md) - real coding environments and expert developer reward shape model behavior toward trusted workflows.
 - [Production-Matched RL Environments Train Coding Agents on Real Tool Surfaces](../concepts/production-matched-rl-environments-train-coding-agents-on-real-tool-surfaces.md) - training rollouts should mirror the actual IDE or cloud-agent tools the model will use.
+- [Choose agent observation and action spaces explicitly](../concepts/choose-agent-observation-and-action-spaces-explicitly.md) - coding-agent behavior depends on whether the harness exposes tool calls, streamed terminals, browser state, or desktop control.
+- [Close agent loops around live action feedback](../concepts/close-agent-loops-around-live-action-feedback.md) - shell and browser actions need live feedback and interruption controls for recovery.
 - [Latency Shapes Coding-Agent Interaction Mode](../concepts/latency-shapes-coding-agent-interaction-mode.md) - model speed changes whether an agent feels synchronous, asynchronous, or stuck between both.
 - [Interleave reasoning and tool calls for long-horizon agents](../concepts/interleave-reasoning-and-tool-calls-for-long-horizon-agents.md) - coding agents need to reason again after tool responses instead of assuming one tool pass is enough.
 - [Perturb agent scaffolds during training for generalization](../concepts/perturb-agent-scaffolds-during-training-for-generalization.md) - scaffold variation should be part of model robustness testing and training.
@@ -334,6 +338,7 @@ Jellyfish's pull-request telemetry calibrates the adoption curve. Interactive to
 - [Proactive Agents - Kath Korevec, Google Labs](../sources/20251213_v3u8xc0zLec.md)
 - [Building Cursor Composer - Lee Robinson, Cursor](../sources/20251202_fL1iJHtl51Q.md)
 - [Vision: Zero Bugs — Johann Schleier-Smith, Temporal](../sources/20251124_qLqttdO33UM.md)
+- [Agents are Robots Too: What Self-Driving Taught Me About Building Agents - Jesse Hu, Abundant](../sources/20251124_qqXdLf3wy1E.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)
 - [What Data from 20m Pull Requests Reveal About AI Transformation - Nick Arcolano, Jellyfish](../sources/20251124_WqZq8L-v9pA.md)

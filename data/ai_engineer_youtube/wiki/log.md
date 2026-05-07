@@ -1119,3 +1119,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
 - Updated concepts: [High-assurance agentic coding needs process, not just generation](concepts/high-assurance-agentic-coding-needs-process-not-just-generation.md), [Use formal specifications and proofs for critical generated code](concepts/use-formal-specifications-and-proofs-for-critical-generated-code.md), [Separate generation and verification prompts or models](concepts/separate-generation-and-verification-prompts-or-models.md), [Agentic coding economics shift attention from writing cost to assurance cost](concepts/agentic-coding-economics-shift-attention-from-writing-cost-to-assurance-cost.md)
 - Notes: Added high-assurance agentic coding guidance that turns aerospace-style process, formal verification, safety cases, independent validation contexts, and trusted components into practical AI coding workflow patterns.
+
+## [2026-05-07] ingest | Agents are Robots Too: What Self-Driving Taught Me About Building Agents - Jesse Hu, Abundant
+
+- Source: [Agents are Robots Too: What Self-Driving Taught Me About Building Agents - Jesse Hu, Abundant](sources/20251124_qqXdLf3wy1E.md)
+- Processed: `qqXdLf3wy1E`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md)
+- Updated concepts: [Treat agents as embodied action systems](concepts/treat-agents-as-embodied-action-systems.md), [Close agent loops around live action feedback](concepts/close-agent-loops-around-live-action-feedback.md), [Choose agent observation and action spaces explicitly](concepts/choose-agent-observation-and-action-spaces-explicitly.md), [Ground agent simulation and evaluation in production logs](concepts/ground-agent-simulation-and-evaluation-in-production-logs.md)
+- Notes: Added robotics-derived agent engineering guidance for embodiment, action feedback, explicit observation/action surfaces, and production-log-grounded simulation.

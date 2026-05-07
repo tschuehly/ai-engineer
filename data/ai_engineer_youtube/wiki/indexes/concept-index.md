@@ -2,6 +2,10 @@
 
 ## Agents
 
+- [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md)
+- [Close agent loops around live action feedback](../concepts/close-agent-loops-around-live-action-feedback.md)
+- [Choose agent observation and action spaces explicitly](../concepts/choose-agent-observation-and-action-spaces-explicitly.md)
+- [Ground agent simulation and evaluation in production logs](../concepts/ground-agent-simulation-and-evaluation-in-production-logs.md)
 - [Scientific agents should execute against domain infrastructure](../concepts/scientific-agents-should-execute-against-domain-infrastructure.md)
 - [Regulated agents need explainability, isolation, governance, and speed](../concepts/regulated-agents-need-explainability-isolation-governance-and-speed.md)
 - [High-consequence data changes vendor trust requirements](../concepts/high-consequence-data-changes-vendor-trust-requirements.md)
@@ -257,6 +261,8 @@
 
 ## Coding Agents
 
+- [Choose agent observation and action spaces explicitly](../concepts/choose-agent-observation-and-action-spaces-explicitly.md)
+- [Close agent loops around live action feedback](../concepts/close-agent-loops-around-live-action-feedback.md)
 - [Frequent intentional compaction keeps coding agents in the smart zone](../concepts/frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md)
 - [Review research and plans before they multiply into code](../concepts/review-research-and-plans-before-they-multiply-into-code.md)
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md)
@@ -485,6 +491,9 @@
 
 ## Infrastructure
 
+- [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md)
+- [Choose agent observation and action spaces explicitly](../concepts/choose-agent-observation-and-action-spaces-explicitly.md)
+- [Ground agent simulation and evaluation in production logs](../concepts/ground-agent-simulation-and-evaluation-in-production-logs.md)
 - [Scientific agents should execute against domain infrastructure](../concepts/scientific-agents-should-execute-against-domain-infrastructure.md)
 - [Regulated agents need explainability, isolation, governance, and speed](../concepts/regulated-agents-need-explainability-isolation-governance-and-speed.md)
 - [High-consequence data changes vendor trust requirements](../concepts/high-consequence-data-changes-vendor-trust-requirements.md)
@@ -619,6 +628,8 @@
 
 ## Evaluation
 
+- [Ground agent simulation and evaluation in production logs](../concepts/ground-agent-simulation-and-evaluation-in-production-logs.md)
+- [Close agent loops around live action feedback](../concepts/close-agent-loops-around-live-action-feedback.md)
 - [Review research and plans before they multiply into code](../concepts/review-research-and-plans-before-they-multiply-into-code.md)
 - [Use multisensory feedback loops for coding-agent validation](../concepts/use-multisensory-feedback-loops-for-coding-agent-validation.md)
 - [Regulated agents need explainability, isolation, governance, and speed](../concepts/regulated-agents-need-explainability-isolation-governance-and-speed.md)
