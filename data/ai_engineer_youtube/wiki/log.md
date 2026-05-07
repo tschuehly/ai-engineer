@@ -1583,3 +1583,11 @@
 - Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Product Strategy](topics/product-strategy.md)
 - Updated concepts: [Specify Agent Products by Affordance, Not Exhaustive Feature Rules](concepts/specify-agent-products-by-affordance-not-exhaustive-feature-rules.md), [Treat Product Evals as Probabilistic Specifications](concepts/treat-product-evals-as-probabilistic-specifications.md), [Co-Discover Emergent Agent Behavior With Customers](concepts/co-discover-emergent-agent-behavior-with-customers.md), [Court agent emergence with bounded play](concepts/court-agent-emergence-with-bounded-play.md)
 - Notes: Added Teammates' product-management patterns for affordance-based agent specs, eval-backed probabilistic behavior thresholds, and customer co-discovery of emergent agent workflows.
+
+## [2026-05-07] ingest | Real-time Experiments with an AI Co-Scientist - Stefania Druga, fmr. Google Deepmind
+
+- Source: [Real-time Experiments with an AI Co-Scientist - Stefania Druga, fmr. Google Deepmind](sources/20250728_wNH3q9pqn0U.md)
+- Processed: `wNH3q9pqn0U`
+- Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Assemble Realtime Multimodal Context for Lab Agents](concepts/assemble-realtime-multimodal-context-for-lab-agents.md), [Use Open Lab Hardware as the Co-Scientist Action Surface](concepts/use-open-lab-hardware-as-the-co-scientist-action-surface.md), [Ground Scientific Simulations in Live Experiment Traces](concepts/ground-scientific-simulations-in-live-experiment-traces.md), [Scientific Agents Should Execute Against Domain Infrastructure](concepts/scientific-agents-should-execute-against-domain-infrastructure.md)
+- Notes: Added Druga's realtime co-scientist workflow for assembling multimodal lab context, using open hardware as the agent's feedback surface, and grounding simulations in empirical experiment traces.

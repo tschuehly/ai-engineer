@@ -22,6 +22,8 @@ Robotics adds a useful discipline for digital-agent design: treat the agent as a
 
 Physical robotics sharpens that lesson because the policy is separated from the world by hard realtime communication and scheduling paths. A stuttering actuator can look like a model or control-policy problem even when the root cause is CAN-bus saturation, RX/TX thread drift, stale sensor data, logging overhead, or priority inversion in the kernel reception path. Embodied AI systems therefore need runtime diagnostics that inspect the whole sensor-policy-actuator pipeline before blaming model behavior.
 
+Scientific co-scientists make embodiment concrete in the lab. A useful lab agent needs more than literature search and hypothesis ranking: it needs a context assembly layer that knows which sensors, cameras, voice streams, text inputs, protocols, and chat history are present, plus an action surface of open lab hardware that can observe or adjust the physical experiment. Realtime empirical traces then become the bridge between hypothesis generation, simulation, and the next physical run.
+
 Agent optimization can also move into a learned routing layer around the agent. Meta-controller approaches profile task complexity, uncertainty, verifiability, and resource constraints, then decide whether the current run needs minimal context, context reflection, extra compute, hierarchical verification, structured memory retrieval, or selective test-time adaptation. This is useful only when the routing layer is itself evaluated: weak reflection, sparse rewards, verifier agreement on the same wrong answer, and profiling overhead can turn "self-optimization" into a new failure surface.
 
 Agent-first IDEs add another interface pattern for this shift. Antigravity's agent manager treats the editor and browser as agent tools while the human supervises plans, approvals, notifications, artifacts, and parallel work from a higher-level control surface. Its browser integration also broadens agent context and verification: the same browser can retrieve authenticated docs or dashboards, interact with the app, and return screen recordings that both humans and multimodal models can inspect.
@@ -143,6 +145,8 @@ Exploratory agent demos are also a capability-discovery tool. Early browser and 
 - [Design agent presence with visual alignment and handoff](../concepts/design-agent-presence-with-visual-alignment-and-handoff.md) - agents acting in a work surface need checks, rollback, and graceful control return.
 - [Court agent emergence with bounded play](../concepts/court-agent-emergence-with-bounded-play.md) - bounded prototypes can reveal agent behaviors that should become product patterns.
 - [Robotics policy failures can originate below the model](../concepts/robotics-policy-failures-can-originate-below-the-model.md) - embodied AI behavior must be debugged across policy, software, communication, and hardware layers.
+- [Assemble Realtime Multimodal Context for Lab Agents](../concepts/assemble-realtime-multimodal-context-for-lab-agents.md) - lab agents need dynamic context assembly from the modalities and protocols present in the current experiment.
+- [Use Open Lab Hardware as the Co-Scientist Action Surface](../concepts/use-open-lab-hardware-as-the-co-scientist-action-surface.md) - scientific co-scientists need concrete sensor, camera, and lab-automation surfaces for action and feedback.
 - [Close agent loops around live action feedback](../concepts/close-agent-loops-around-live-action-feedback.md) - agent actions need observable results, completion state, and interruption paths.
 - [Choose agent observation and action spaces explicitly](../concepts/choose-agent-observation-and-action-spaces-explicitly.md) - tool calls, terminal streams, browser control, and desktop frames encode different agent capabilities.
 - [Compress Environment Context For Early Agent Experiments](../concepts/compress-environment-context-for-early-agent-experiments.md) - environment representations can be compressed or decomposed to make early agent loops runnable under tight context budgets.
@@ -509,6 +513,7 @@ Exploratory agent demos are also a capability-discovery tool. Early browser and 
 - [The Unbearable Lightness of Agent Optimization - Alberto Romero, Jointly](../sources/20251124_zfvEMNmVlNY.md)
 - [Developing Taste in Coding Agents: Applied Meta Neuro-Symbolic RL - Ahmad Awais, CommandCode](../sources/20251124_kWOQS3XPZ10.md)
 - [Agents are Robots Too: What Self-Driving Taught Me About Building Agents - Jesse Hu, Abundant](../sources/20251124_qqXdLf3wy1E.md)
+- [Real-time Experiments with an AI Co-Scientist - Stefania Druga, fmr. Google Deepmind](../sources/20250728_wNH3q9pqn0U.md)
 - [Rishabh Garg, Tesla Optimus — Challenges in High Performance Robotics Systems](../sources/20250825_bCGbuyv8PMk.md)
 - [Multi Agent AI and Network Knowledge Graphs for Change — Ola Mabadeje, Cisco](../sources/20250822_m0dxZ-NDKHo.md)
 - [Fuzzing in the GenAI Era — Leonard Tang, Haize Labs](../sources/20250822_OMGPvW8TBHc.md)

@@ -5,6 +5,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 ## Current Emphasis
 
 - [Share Demos To Reveal Latent Model Capabilities](concepts/share-demos-to-reveal-latent-model-capabilities.md) - small runnable demos expose model capabilities and product surfaces that specs or labels miss.
+- [Assemble Realtime Multimodal Context for Lab Agents](concepts/assemble-realtime-multimodal-context-for-lab-agents.md) - lab agents need dynamic context from connected sensors, cameras, voice, text, protocols, and history.
+- [Use Open Lab Hardware as the Co-Scientist Action Surface](concepts/use-open-lab-hardware-as-the-co-scientist-action-surface.md) - open sensors and lab automation create inspectable feedback loops for scientific agents.
+- [Ground Scientific Simulations in Live Experiment Traces](concepts/ground-scientific-simulations-in-live-experiment-traces.md) - physical experiment traces can calibrate simulations and future condition choices.
 - [Specify Agent Products by Affordance, Not Exhaustive Feature Rules](concepts/specify-agent-products-by-affordance-not-exhaustive-feature-rules.md) - open-ended agent surfaces need composable capability boundaries rather than exhaustive feature rules.
 - [Treat Product Evals as Probabilistic Specifications](concepts/treat-product-evals-as-probabilistic-specifications.md) - AI product evals turn subjective agent behavior into release and bug-triage thresholds.
 - [Co-Discover Emergent Agent Behavior With Customers](concepts/co-discover-emergent-agent-behavior-with-customers.md) - early agent products build trust through shared discovery, runnable feedback, and honest uncertainty.

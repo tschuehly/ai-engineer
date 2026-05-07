@@ -24,6 +24,8 @@
 - [Design agent presence with visual alignment and handoff](../concepts/design-agent-presence-with-visual-alignment-and-handoff.md)
 - [Court agent emergence with bounded play](../concepts/court-agent-emergence-with-bounded-play.md)
 - [Robotics policy failures can originate below the model](../concepts/robotics-policy-failures-can-originate-below-the-model.md)
+- [Assemble Realtime Multimodal Context for Lab Agents](../concepts/assemble-realtime-multimodal-context-for-lab-agents.md)
+- [Use Open Lab Hardware as the Co-Scientist Action Surface](../concepts/use-open-lab-hardware-as-the-co-scientist-action-surface.md)
 - [Expose task workflow guidance through MCP resources and tools](../concepts/expose-task-workflow-guidance-through-mcp-resources-and-tools.md)
 - [Close agent loops around live action feedback](../concepts/close-agent-loops-around-live-action-feedback.md)
 - [Choose agent observation and action spaces explicitly](../concepts/choose-agent-observation-and-action-spaces-explicitly.md)
@@ -492,6 +494,7 @@
 
 ## Context Engineering
 
+- [Assemble Realtime Multimodal Context for Lab Agents](../concepts/assemble-realtime-multimodal-context-for-lab-agents.md)
 - [Compress Environment Context For Early Agent Experiments](../concepts/compress-environment-context-for-early-agent-experiments.md)
 - [Give coding agents the same engineering infrastructure humans need](../concepts/give-coding-agents-the-same-engineering-infrastructure-humans-need.md)
 - [Frequent intentional compaction keeps coding agents in the smart zone](../concepts/frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md)
@@ -599,6 +602,8 @@
 - [Choose agent observation and action spaces explicitly](../concepts/choose-agent-observation-and-action-spaces-explicitly.md)
 - [Ground agent simulation and evaluation in production logs](../concepts/ground-agent-simulation-and-evaluation-in-production-logs.md)
 - [Scientific agents should execute against domain infrastructure](../concepts/scientific-agents-should-execute-against-domain-infrastructure.md)
+- [Use Open Lab Hardware as the Co-Scientist Action Surface](../concepts/use-open-lab-hardware-as-the-co-scientist-action-surface.md)
+- [Ground Scientific Simulations in Live Experiment Traces](../concepts/ground-scientific-simulations-in-live-experiment-traces.md)
 - [Regulated agents need explainability, isolation, governance, and speed](../concepts/regulated-agents-need-explainability-isolation-governance-and-speed.md)
 - [High-consequence data changes vendor trust requirements](../concepts/high-consequence-data-changes-vendor-trust-requirements.md)
 - [Environment registries make AI research more accessible](../concepts/environment-registries-make-ai-research-more-accessible.md)
@@ -796,6 +801,8 @@
 
 ## Evaluation
 
+- [Ground Scientific Simulations in Live Experiment Traces](../concepts/ground-scientific-simulations-in-live-experiment-traces.md)
+- [Assemble Realtime Multimodal Context for Lab Agents](../concepts/assemble-realtime-multimodal-context-for-lab-agents.md)
 - [Failure-Mode Ontologies Prioritize Domain AI Work](../concepts/failure-mode-ontologies-prioritize-domain-ai-work.md)
 - [Production Failure Sets Drive Domain AI Iteration](../concepts/production-failure-sets-drive-domain-ai-iteration.md)
 - [Domain Expert Review Tools Convert Judgment Into Deployable Knowledge](../concepts/domain-expert-review-tools-convert-judgment-into-deployable-knowledge.md)
@@ -1331,6 +1338,8 @@
 
 ## Workflows
 
+- [Assemble Realtime Multimodal Context for Lab Agents](../concepts/assemble-realtime-multimodal-context-for-lab-agents.md)
+- [Ground Scientific Simulations in Live Experiment Traces](../concepts/ground-scientific-simulations-in-live-experiment-traces.md)
 - [Last-Mile Domain Context Beats Model Chasing](../concepts/last-mile-domain-context-beats-model-chasing.md)
 - [Production Failure Sets Drive Domain AI Iteration](../concepts/production-failure-sets-drive-domain-ai-iteration.md)
 - [Domain Expert Review Tools Convert Judgment Into Deployable Knowledge](../concepts/domain-expert-review-tools-convert-judgment-into-deployable-knowledge.md)

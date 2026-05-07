@@ -16,6 +16,8 @@ Compressed research is a lower-risk operations pattern: keep the business event 
 
 Scientific and government workflows show a higher-consequence version of compressed research. An agent can read papers, discover adjacent literature, propose a hypothesis, generate executable code, and hand the result to domain simulation infrastructure, but regulated deployment adds a parallel workflow for pilot governance, risk classification, data-boundary review, SBOMs, patching plans, continuous monitoring, and restricted-region or self-hosted availability.
 
+Realtime co-scientist workflows add a live experiment loop to that pattern: enumerate available sensors, cameras, outputs, safety constraints, and measurement goals; define the experiment protocol; assemble the active multimodal context for each model call; record traces and CSVs; analyze condition changes and outcomes; then feed traces into simulations or the next physical run. The smallest useful workflow is bounded by what can be safely measured and acted on, not by the model's ability to write a plausible hypothesis.
+
 Open-source agent workflows have their own bottleneck: AI can generate more reports, PRs, and fixes than maintainers can safely absorb. Projects need triage loops, contribution boundaries, foundation or company support for sustained maintenance, extension points so experiments can happen without turning every idea into core-review load, and human-effort filters that require concise contributor context before maintainers spend review time.
 
 Org-chart agent workflows add a business-operations control surface: assign work through roles, keep plans and tasks visible, route completion through reviewer and approver agents, and convert repeated prompts into scheduled or manually parameterized routines. They should grow from the smallest useful agent set because role behavior, skill use, budgets, model cost, and concurrency all need validation before fan-out.
@@ -148,6 +150,8 @@ Durable workflow engines are also an agent observability boundary. When the work
 - [Separate generation and verification prompts or models](../concepts/separate-generation-and-verification-prompts-or-models.md) - implementation and validation can run through separate agent contexts.
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - simple loops can replace over-specified DAGs when exploration is the work.
 - [Scientific agents should execute against domain infrastructure](../concepts/scientific-agents-should-execute-against-domain-infrastructure.md) - scientific workflows should connect research synthesis to executable validation.
+- [Assemble Realtime Multimodal Context for Lab Agents](../concepts/assemble-realtime-multimodal-context-for-lab-agents.md) - realtime experiment workflows need dynamic context from the active protocol and connected modalities.
+- [Ground Scientific Simulations in Live Experiment Traces](../concepts/ground-scientific-simulations-in-live-experiment-traces.md) - physical traces can feed simulation and condition-selection loops for future experiments.
 - [High-consequence data changes vendor trust requirements](../concepts/high-consequence-data-changes-vendor-trust-requirements.md) - regulated workflow adoption depends on customer-specific data classes and trust evidence.
 - [Regulated agents need explainability, isolation, governance, and speed](../concepts/regulated-agents-need-explainability-isolation-governance-and-speed.md) - federal workflows need both mission speed and governance-ready deployment artifacts.
 - [Use prompt-enforced todos as lightweight agent state](../concepts/use-prompt-enforced-todos-as-lightweight-agent-state.md) - lightweight task state can keep a run oriented without a full workflow graph.
@@ -458,6 +462,7 @@ Durable workflow engines are also an agent observability boundary. When the work
 - [The Cure for the Vibe Coding Hangover - Corey J. Gallon, Rexmore](../sources/20251124_JsKTQbT58BY.md)
 - [Defying Gravity - Kevin Hou, Google DeepMind](../sources/20251202_HN-F-OQe6j0.md)
 - [Government Agents: AI Agents Meet Tough Regulations - Mark Myshatyn, Los Alamos National Lab](../sources/20251206_TnSGx36Ly0Q.md)
+- [Real-time Experiments with an AI Co-Scientist - Stefania Druga, fmr. Google Deepmind](../sources/20250728_wNH3q9pqn0U.md)
 - [What We Learned Deploying AI within Bloomberg's Engineering Organization - Lei Zhang, Bloomberg](../sources/20251216_Q81AzlA-VE8.md)
 - [Your Support Team Should Ship Code - Lisa Orr, Zapier](../sources/20251216_RmJ4rTLV_x4.md)
 - [How Claude Code Works - Jared Zoneraich, PromptLayer](../sources/20251226_RFKCzGlAU6Q.md)
