@@ -126,6 +126,9 @@ Webhook-backed business workflows can use a host agent as the orchestration and 
 
 ## Key Concepts
 
+- [Choose Copilot Mode By Autonomy and Feedback Need](../concepts/choose-copilot-mode-by-autonomy-and-feedback-need.md) - Copilot work can stay conversational, local-agentic, or asynchronous depending on task feedback needs.
+- [Layer Copilot Context Through Issues, Instructions, and Repository Structure](../concepts/layer-copilot-context-through-issues-instructions-and-repository-structure.md) - background coding-agent work needs workflow context in issues and instruction files.
+- [Prepare Copilot Coding Agent Environments With Setup Steps](../concepts/prepare-copilot-coding-agent-environments-with-setup-steps.md) - setup workflows turn environment preparation into part of the agent workflow.
 - [Treat Investor Outreach Like Specific Go-To-Market](../concepts/treat-investor-outreach-like-specific-go-to-market.md) - fundraising outreach should use warm signals, specific asks, and relationship-building like a sales motion.
 - [Turn Webhooks Into Host-Agent Task Delegation](../concepts/turn-webhooks-into-host-agent-task-delegation.md) - incoming business events can be turned into compact delegated tasks with central sequencing.
 - [Choose A2A and MCP by Ownership Boundary](../concepts/choose-a2a-and-mcp-by-ownership-boundary.md) - workflow protocols should match local, internal, or third-party ownership boundaries.
@@ -469,6 +472,7 @@ Webhook-backed business workflows can use a host agent as the orchestration and 
 
 ## Sources
 
+- [Piloting agents in GitHub Copilot - Christopher Harrison, Microsoft](../sources/20250726_DdaAABdAqZY.md)
 - [Building the platform for agent coordination - Tom Moor, Linear](../sources/20250728_UG9IAdmi2Dg.md)
 - [Make your LLM app a Domain Expert: How to Build an Expert System - Christopher Lovejoy, Anterior](../sources/20250728_MRM7oA3JsFs.md)
 

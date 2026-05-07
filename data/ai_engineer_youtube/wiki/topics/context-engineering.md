@@ -42,6 +42,7 @@ Production AI coding adds a low-level context hygiene requirement: the agent nee
 
 ## Key Concepts
 
+- [Layer Copilot Context Through Issues, Instructions, and Repository Structure](../concepts/layer-copilot-context-through-issues-instructions-and-repository-structure.md) - Copilot shows how issue text, repository rules, scoped instructions, and code structure combine into task context.
 - [Compress Environment Context For Early Agent Experiments](../concepts/compress-environment-context-for-early-agent-experiments.md) - shrink or decompose large web, GUI, or code contexts so model experiments can run within available context windows.
 - [Keep agent context small, fresh, and task-specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md) - context should be externalized, selected, summarized, and isolated so stale or excessive history does not degrade agent work.
 - [Give coding agents the same engineering infrastructure humans need](../concepts/give-coding-agents-the-same-engineering-infrastructure-humans-need.md) - standards, setup, tests, and task boundaries are context agents need before production code changes.
@@ -139,6 +140,7 @@ Production AI coding adds a low-level context hygiene requirement: the agent nee
 
 ## Sources
 
+- [Piloting agents in GitHub Copilot - Christopher Harrison, Microsoft](../sources/20250726_DdaAABdAqZY.md)
 - [Vibes won't cut it - Chris Kelly, Augment Code](../sources/20250803_Dc3qOA9WOnE.md)
 - [Context Platform Engineering to Reduce Token Anxiety - Val Bercovici, WEKA](../sources/20251124_NTBX-wxUhHs.md)
 - [No Vibes Allowed: Solving Hard Problems in Complex Codebases - Dex Horthy, HumanLayer](../sources/20251202_rmvDxxNubIg.md)

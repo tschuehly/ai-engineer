@@ -1687,3 +1687,11 @@
 - Updated topics: [Agents](topics/agents.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Choose A2A and MCP by Ownership Boundary](concepts/choose-a2a-and-mcp-by-ownership-boundary.md), [Turn Webhooks Into Host-Agent Task Delegation](concepts/turn-webhooks-into-host-agent-task-delegation.md), [Harden Third-Party MCP Tools Against Silent Failure and Endpoint Risk](concepts/harden-third-party-mcp-tools-against-silent-failure-and-endpoint-risk.md)
 - Notes: Added Bench's A2A/MCP workshop patterns for protocol boundary selection, webhook-triggered host-agent delegation, and hardening third-party MCP tools.
+
+## [2026-05-07] ingest | Piloting agents in GitHub Copilot - Christopher Harrison, Microsoft
+
+- Source: [Piloting agents in GitHub Copilot - Christopher Harrison, Microsoft](sources/20250726_DdaAABdAqZY.md)
+- Processed: `DdaAABdAqZY`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Infrastructure](topics/infrastructure.md), [Security](topics/security.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Choose Copilot Mode By Autonomy and Feedback Need](concepts/choose-copilot-mode-by-autonomy-and-feedback-need.md), [Layer Copilot Context Through Issues, Instructions, and Repository Structure](concepts/layer-copilot-context-through-issues-instructions-and-repository-structure.md), [Prepare Copilot Coding Agent Environments With Setup Steps](concepts/prepare-copilot-coding-agent-environments-with-setup-steps.md), [Vet MCP Servers As Action-Capable Extensions](concepts/vet-mcp-servers-as-action-capable-extensions.md)
+- Notes: Added Copilot-specific coding-agent workflow guidance for mode choice, layered context, prepared GitHub Actions environments, and MCP trust boundaries.

@@ -64,8 +64,11 @@ Mechanistic interpretability can become a tool surface when feature attribution,
 
 Third-party MCP tools also need ordinary integration hardening. A protocol-level success response can still hide a business failure, such as a Slack tool returning empty content because the configured channel does not exist. Wrappers should validate returned content, convert ambiguous empty results into explicit errors, and decide whether a remote MCP or A2A endpoint is acceptable under the product's security boundary. In regulated workflows, provider agreements, encrypted transport, mutual TLS, IP allowlisting, endpoint controls, and private-network deployment may matter as much as the MCP or A2A contract itself.
 
+GitHub Copilot's MCP integration reinforces that external tool access is not passive context. An MCP server can let Copilot create GitHub issues, search external systems, or inspect database schemas and data; because those servers can also perform tasks on the user's behalf, third-party MCP servers need trust review and scope discipline before they are added to developer workflows.
+
 ## Key Concepts
 
+- [Vet MCP Servers As Action-Capable Extensions](../concepts/vet-mcp-servers-as-action-capable-extensions.md) - MCP servers should be vetted as tools that can act through the agent, not just as data feeds.
 - [Product Work Graphs Coordinate Agents and Humans](../concepts/product-work-graphs-coordinate-agents-and-humans.md) - product tools can expose issues, feedback, projects, and relationships as an agent coordination surface.
 - [Choose A2A and MCP by Ownership Boundary](../concepts/choose-a2a-and-mcp-by-ownership-boundary.md) - tool protocols should be introduced where ownership, deployment, or third-party integration boundaries justify them.
 - [Harden Third-Party MCP Tools Against Silent Failure and Endpoint Risk](../concepts/harden-third-party-mcp-tools-against-silent-failure-and-endpoint-risk.md) - remote MCP tools require output validation and endpoint-security controls outside the protocol.
@@ -285,6 +288,7 @@ Third-party MCP tools also need ordinary integration hardening. A protocol-level
 
 ## Sources
 
+- [Piloting agents in GitHub Copilot - Christopher Harrison, Microsoft](../sources/20250726_DdaAABdAqZY.md)
 - [Building the platform for agent coordination - Tom Moor, Linear](../sources/20250728_UG9IAdmi2Dg.md)
 - [Agents vs Workflows: Why Not Both? - Sam Bhagwat, Mastra.ai](../sources/20250801_8SUJEqQNClw.md)
 - [The Next Unicorns: 7 Top AI startups from the HF0 Residency](../sources/20250821_L8-5ezsoI5A.md)

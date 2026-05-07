@@ -4,6 +4,10 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Choose Copilot Mode By Autonomy and Feedback Need](concepts/choose-copilot-mode-by-autonomy-and-feedback-need.md) - Copilot workflows should match ask, edit, local agent, or asynchronous coding-agent mode to task feedback needs.
+- [Layer Copilot Context Through Issues, Instructions, and Repository Structure](concepts/layer-copilot-context-through-issues-instructions-and-repository-structure.md) - issue text, repository instructions, scoped instruction files, and code shape background agent behavior.
+- [Prepare Copilot Coding Agent Environments With Setup Steps](concepts/prepare-copilot-coding-agent-environments-with-setup-steps.md) - GitHub Actions setup steps make asynchronous coding-agent environments reproducible.
+- [Vet MCP Servers As Action-Capable Extensions](concepts/vet-mcp-servers-as-action-capable-extensions.md) - MCP servers connected to Copilot can read external data and perform actions, so trust review matters.
 - [Choose A2A and MCP by Ownership Boundary](concepts/choose-a2a-and-mcp-by-ownership-boundary.md) - protocol boundaries should match remote ownership and tool-surface needs.
 - [Turn Webhooks Into Host-Agent Task Delegation](concepts/turn-webhooks-into-host-agent-task-delegation.md) - webhook events can become compact delegated tasks for specialist agents.
 - [Harden Third-Party MCP Tools Against Silent Failure and Endpoint Risk](concepts/harden-third-party-mcp-tools-against-silent-failure-and-endpoint-risk.md) - remote MCP tools need output validation and endpoint security.

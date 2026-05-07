@@ -2,6 +2,8 @@
 
 ## Agents
 
+- [Choose Copilot Mode By Autonomy and Feedback Need](../concepts/choose-copilot-mode-by-autonomy-and-feedback-need.md)
+- [Vet MCP Servers As Action-Capable Extensions](../concepts/vet-mcp-servers-as-action-capable-extensions.md)
 - [Choose A2A and MCP by Ownership Boundary](../concepts/choose-a2a-and-mcp-by-ownership-boundary.md)
 - [Turn Webhooks Into Host-Agent Task Delegation](../concepts/turn-webhooks-into-host-agent-task-delegation.md)
 - [Harden Third-Party MCP Tools Against Silent Failure and Endpoint Risk](../concepts/harden-third-party-mcp-tools-against-silent-failure-and-endpoint-risk.md)
@@ -332,6 +334,9 @@
 
 ## Coding Agents
 
+- [Choose Copilot Mode By Autonomy and Feedback Need](../concepts/choose-copilot-mode-by-autonomy-and-feedback-need.md)
+- [Layer Copilot Context Through Issues, Instructions, and Repository Structure](../concepts/layer-copilot-context-through-issues-instructions-and-repository-structure.md)
+- [Prepare Copilot Coding Agent Environments With Setup Steps](../concepts/prepare-copilot-coding-agent-environments-with-setup-steps.md)
 - [Package Agent Delivery Workflows as Portable Code](../concepts/package-agent-delivery-workflows-as-portable-code.md)
 - [Trace Agent Tool Use To Improve Prompts And Tools](../concepts/trace-agent-tool-use-to-improve-prompts-and-tools.md)
 - [Return Typed Workspace Outputs From Coding Agents](../concepts/return-typed-workspace-outputs-from-coding-agents.md)
@@ -504,6 +509,7 @@
 
 ## Context Engineering
 
+- [Layer Copilot Context Through Issues, Instructions, and Repository Structure](../concepts/layer-copilot-context-through-issues-instructions-and-repository-structure.md)
 - [Assemble Realtime Multimodal Context for Lab Agents](../concepts/assemble-realtime-multimodal-context-for-lab-agents.md)
 - [Compress Environment Context For Early Agent Experiments](../concepts/compress-environment-context-for-early-agent-experiments.md)
 - [Give coding agents the same engineering infrastructure humans need](../concepts/give-coding-agents-the-same-engineering-infrastructure-humans-need.md)
@@ -581,6 +587,7 @@
 
 ## Infrastructure
 
+- [Prepare Copilot Coding Agent Environments With Setup Steps](../concepts/prepare-copilot-coding-agent-environments-with-setup-steps.md)
 - [Package Agent Delivery Workflows as Portable Code](../concepts/package-agent-delivery-workflows-as-portable-code.md)
 - [Return Typed Workspace Outputs From Coding Agents](../concepts/return-typed-workspace-outputs-from-coding-agents.md)
 - [Benchmark inference with use-case-shaped token loads](../concepts/benchmark-inference-with-use-case-shaped-token-loads.md)
@@ -1206,6 +1213,7 @@
 
 ## Security
 
+- [Vet MCP Servers As Action-Capable Extensions](../concepts/vet-mcp-servers-as-action-capable-extensions.md)
 - [Model MCP Servers as OAuth Resource Servers](../concepts/model-mcp-servers-as-oauth-resource-servers.md)
 - [Enterprise MCP Requires SaaS Security Controls](../concepts/enterprise-mcp-requires-saas-security-controls.md)
 - [Dynamic Client Registration Pressures MCP Auth Stacks](../concepts/dynamic-client-registration-pressures-mcp-auth-stacks.md)
@@ -1227,6 +1235,7 @@
 
 ## Tools
 
+- [Vet MCP Servers As Action-Capable Extensions](../concepts/vet-mcp-servers-as-action-capable-extensions.md)
 - [Choose A2A and MCP by Ownership Boundary](../concepts/choose-a2a-and-mcp-by-ownership-boundary.md)
 - [Turn Webhooks Into Host-Agent Task Delegation](../concepts/turn-webhooks-into-host-agent-task-delegation.md)
 - [Harden Third-Party MCP Tools Against Silent Failure and Endpoint Risk](../concepts/harden-third-party-mcp-tools-against-silent-failure-and-endpoint-risk.md)
@@ -1417,6 +1426,9 @@
 
 ## Workflows
 
+- [Choose Copilot Mode By Autonomy and Feedback Need](../concepts/choose-copilot-mode-by-autonomy-and-feedback-need.md)
+- [Layer Copilot Context Through Issues, Instructions, and Repository Structure](../concepts/layer-copilot-context-through-issues-instructions-and-repository-structure.md)
+- [Prepare Copilot Coding Agent Environments With Setup Steps](../concepts/prepare-copilot-coding-agent-environments-with-setup-steps.md)
 - [Turn Webhooks Into Host-Agent Task Delegation](../concepts/turn-webhooks-into-host-agent-task-delegation.md)
 - [Choose A2A and MCP by Ownership Boundary](../concepts/choose-a2a-and-mcp-by-ownership-boundary.md)
 - [Harden Third-Party MCP Tools Against Silent Failure and Endpoint Risk](../concepts/harden-third-party-mcp-tools-against-silent-failure-and-endpoint-risk.md)

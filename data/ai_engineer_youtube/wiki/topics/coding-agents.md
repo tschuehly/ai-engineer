@@ -76,8 +76,13 @@ Greg Brockman's Codex framing connects agent usefulness directly to codebase sha
 
 Dagger adds a delivery-runtime pattern for coding agents: encode the build, test, environment, and LLM steps as ordinary workflow code that can run locally or in CI. The important boundary is that prompt-level completion is not treated as enough; the agent returns a typed workspace artifact, and the workflow code can extract the resulting source and run deterministic checks before opening a pull request.
 
+GitHub Copilot's agent modes make workflow selection concrete inside a mainstream developer tool. Ask, edit, local agent, and asynchronous coding-agent modes should be selected by feedback need and autonomy level rather than treated as interchangeable. For background issue work, the issue, `copilot-instructions.md`, task-specific instruction files, project structure, and GitHub Actions setup steps become the agent's operating context.
+
 ## Key Concepts
 
+- [Choose Copilot Mode By Autonomy and Feedback Need](../concepts/choose-copilot-mode-by-autonomy-and-feedback-need.md) - Copilot ask, edit, local agent, and asynchronous coding-agent modes fit different supervision levels.
+- [Layer Copilot Context Through Issues, Instructions, and Repository Structure](../concepts/layer-copilot-context-through-issues-instructions-and-repository-structure.md) - issue text, repository instructions, scoped instruction files, and code structure shape Copilot output.
+- [Prepare Copilot Coding Agent Environments With Setup Steps](../concepts/prepare-copilot-coding-agent-environments-with-setup-steps.md) - GitHub Actions setup steps give background Copilot work the dependencies and scripts it needs.
 - [Package Agent Delivery Workflows as Portable Code](../concepts/package-agent-delivery-workflows-as-portable-code.md) - build, test, LLM, and environment steps should run as portable workflow code across local and CI execution.
 - [Trace Agent Tool Use To Improve Prompts And Tools](../concepts/trace-agent-tool-use-to-improve-prompts-and-tools.md) - traces turn tool-selection failures into prompt, description, or implementation improvements.
 - [Return Typed Workspace Outputs From Coding Agents](../concepts/return-typed-workspace-outputs-from-coding-agents.md) - completed agent work should be a typed artifact that code can validate before publishing.
@@ -315,6 +320,7 @@ Dagger adds a delivery-runtime pattern for coding agents: encode the build, test
 
 ## Sources
 
+- [Piloting agents in GitHub Copilot - Christopher Harrison, Microsoft](../sources/20250726_DdaAABdAqZY.md)
 - [Ship Agents that Ship: A Hands-On Workshop - Kyle Penfound, Jeremy Adams, Dagger](../sources/20250727_Fzb1a24hF-o.md)
 - [Vibes won't cut it - Chris Kelly, Augment Code](../sources/20250803_Dc3qOA9WOnE.md)
 - [#define AI Engineer - Greg Brockman, OpenAI (ft. Jensen Huang)](../sources/20250810_avWhreBUYF0.md)
