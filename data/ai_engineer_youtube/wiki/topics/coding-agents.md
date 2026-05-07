@@ -86,8 +86,14 @@ Devin 2.0 adds a product-evolution view of the same trajectory. As coding agents
 
 Factory adds an enterprise SDLC orchestration layer to the same trend. Agent-native coding is not just asking for code: agents can mine customer transcripts, meeting notes, architecture context, and product assumptions before producing PRDs, then turn those PRDs into dependent Linear or Jira tickets that multiple code agents can execute. That makes process documents a future-agent knowledge base, but it also raises enterprise questions about security, audit logs, command controls, and responsibility for agent actions.
 
+Imbue's Sculptor framing adds a quality loop for moving beyond prototypes: ask what is wrong with the generated diff while the change is being created, require plans before code when the task needs structure, feed specs and style guides into the workflow, compare lint state before and after agent runs, generate tests from meaning-level plans, and use custom LLM checks plus sandboxed repair attempts when issues are clearly stated.
+
 ## Key Concepts
 
+- [AI Diff Review Should Find Problems Before Merge](../concepts/ai-diff-review-should-find-problems-before-merge.md) - generated diffs need concrete defect-finding checks before merge-time trust decisions.
+- [Specs and Style Guides Steer Coding Agents Toward Maintainable Code](../concepts/specs-and-style-guides-steer-coding-agents-toward-maintainable-code.md) - specs, docs, plans, and strict style rules make agent-visible intent and constraints.
+- [Generated Tests Need Meaningful Plans, Coverage, and Pruning](../concepts/generated-tests-need-meaningful-plans-coverage-and-pruning.md) - generated tests need review, coverage, sandboxing, and cleanup rather than blind accumulation.
+- [Custom LLM Checks Turn Team Standards Into Continuous Agent Feedback](../concepts/custom-llm-checks-turn-team-standards-into-continuous-agent-feedback.md) - LLM checks can continuously enforce branch goals, architecture expectations, specs, and test quality.
 - [Coding-Agent Capability Tiers Change the Bottleneck](../concepts/coding-agent-capability-tiers-change-the-bottleneck.md) - agent interfaces and infrastructure should change as tasks grow from text prediction to long-horizon work.
 - [Use Playbooks for Repetitive Codebase Migrations](../concepts/use-playbooks-for-repetitive-codebase-migrations.md) - procedural guidance helps agents execute clear but non-deterministic migration steps repeatedly.
 - [Prepare Reversible Repository Snapshots for Coding Agents](../concepts/prepare-reversible-repository-snapshots-for-coding-agents.md) - clean remote VM snapshots let agents validate and recover from repository work.
@@ -341,6 +347,7 @@ Factory adds an enterprise SDLC orchestration layer to the same trend. Agent-nat
 
 ## Sources
 
+- [Beyond the Prototype: Using AI to Write High-Quality Code - Josh Albrecht, Imbue](../sources/20250725_x_1EumTaXeE.md)
 - [Devin 2.0 and the Future of SWE - Scott Wu, Cognition](../sources/20250725_MI83buT_23o.md)
 - [Your Coding Agent Just Got Cloned And Your Brain Isn't Ready - Rustin Banks, Google Jules](../sources/20250725_X4BwOu0GWb8.md)
 - [Ship Production Software in Minutes, Not Months - Eno Reyes, Factory](../sources/20250725_iheWKg2Tkrk.md)

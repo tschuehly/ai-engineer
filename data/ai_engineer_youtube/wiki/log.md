@@ -1751,3 +1751,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Security](topics/security.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Start Coding Agents With Small Verifiable Chores](concepts/start-coding-agents-with-small-verifiable-chores.md), [Human Ownership Keeps Agent Pull Requests From Bypassing Review](concepts/human-ownership-keeps-agent-pull-requests-from-bypassing-review.md), [Unified Coding-Agent Harnesses Combine Models, Tools, Environments, and Safety](concepts/unified-coding-agent-harnesses-combine-models-tools-environments-and-safety.md), [Give Code-Executing Agents Isolated Computers](concepts/give-code-executing-agents-isolated-computers.md)
 - Notes: Added OpenHands guidance for coding-agent tool surfaces, sandboxing, verifiable starter tasks, discard-and-reprompt iteration, and human accountability on agent PRs.
+
+## [2026-05-07] ingest | Beyond the Prototype: Using AI to Write High-Quality Code - Josh Albrecht, Imbue
+
+- Source: [Beyond the Prototype: Using AI to Write High-Quality Code - Josh Albrecht, Imbue](sources/20250725_x_1EumTaXeE.md)
+- Processed: `x_1EumTaXeE`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
+- Updated concepts: [AI Diff Review Should Find Problems Before Merge](concepts/ai-diff-review-should-find-problems-before-merge.md), [Specs and Style Guides Steer Coding Agents Toward Maintainable Code](concepts/specs-and-style-guides-steer-coding-agents-toward-maintainable-code.md), [Generated Tests Need Meaningful Plans, Coverage, and Pruning](concepts/generated-tests-need-meaningful-plans-coverage-and-pruning.md), [Custom LLM Checks Turn Team Standards Into Continuous Agent Feedback](concepts/custom-llm-checks-turn-team-standards-into-continuous-agent-feedback.md)
+- Notes: Added Imbue/Sculptor guidance for moving coding-agent output beyond prototypes through early problem detection, first-class specs, meaningful tests, and extensible LLM checks.

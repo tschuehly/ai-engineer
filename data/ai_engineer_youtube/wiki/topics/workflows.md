@@ -130,8 +130,11 @@ Webhook-backed business workflows can use a host agent as the orchestration and 
 
 Devin-style coding-agent workflows evolve with task horizon. Repeatable migrations can be driven by playbooks and memory; isolated tasks need prepared repositories with lint, CI, reload, and rollback; broader tasks need an exploration-and-planning phase with codebase search or wiki context; backlog-scale workflows need issue-system integration, confidence thresholds, human escalation, and self-testing before PR handoff.
 
+High-quality coding-agent workflows can prevent defects before generation by forcing plans before implementation, researching existing solutions, and keeping specs, docs, and strict style guides in the active agent context. The same workflow should watch for stale or conflicting specs so the agent does not code against intent that humans have only kept in side channels.
+
 ## Key Concepts
 
+- [Specs and Style Guides Steer Coding Agents Toward Maintainable Code](../concepts/specs-and-style-guides-steer-coding-agents-toward-maintainable-code.md) - plan-first work, current docs, and style guidance prevent predictable agent mistakes.
 - [Use Playbooks for Repetitive Codebase Migrations](../concepts/use-playbooks-for-repetitive-codebase-migrations.md) - repeatable migration workflows can be encoded as clear procedural steps for agents.
 - [Agent Planning Should Mine Feedback Before Producing PRDs and Tickets](../concepts/agent-planning-should-mine-feedback-before-producing-prds-and-tickets.md) - product planning workflows can use agents to mine feedback, constraints, and assumptions before ticket decomposition.
 - [Incident Agents Turn Alerts Into RCA and Operational Memory](../concepts/incident-agents-turn-alerts-into-rca-and-operational-memory.md) - incident workflows can turn scattered operational evidence into RCA, mitigation, runbooks, and memory.
@@ -487,6 +490,7 @@ Devin-style coding-agent workflows evolve with task horizon. Repeatable migratio
 
 ## Sources
 
+- [Beyond the Prototype: Using AI to Write High-Quality Code - Josh Albrecht, Imbue](../sources/20250725_x_1EumTaXeE.md)
 - [Devin 2.0 and the Future of SWE - Scott Wu, Cognition](../sources/20250725_MI83buT_23o.md)
 - [Your Coding Agent Just Got Cloned And Your Brain Isn't Ready - Rustin Banks, Google Jules](../sources/20250725_X4BwOu0GWb8.md)
 - [Ship Production Software in Minutes, Not Months - Eno Reyes, Factory](../sources/20250725_iheWKg2Tkrk.md)

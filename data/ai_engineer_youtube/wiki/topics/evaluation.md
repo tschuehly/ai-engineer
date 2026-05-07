@@ -116,8 +116,13 @@ High-stakes domain RAG also needs a fidelity ladder. Expert review can catch leg
 
 General LLM eval programs can be staged as a pyramid. Start with serving performance because a high-quality model still fails production if latency, throughput, concurrency, GPU sizing, or cost do not hold. Add formatting checks when downstream systems need strict JSON or other structured output. Add factual benchmarks such as MMLU-Pro for broad or fine-tuned accuracy checks, then add safety, bias, and application-specific custom evals. Open tools such as GuideLLM, lm-eval-harness, and promptfoo are useful starting points, but the eval surface should be adapted to the product's data, request shape, risk profile, and CI/CD release process.
 
+Coding-agent code quality needs evaluation while the diff is still forming. Useful checks include whether the diff introduces new lint or type errors relative to the starting codebase, whether generated tests express user-level behavior and cover the changed code, whether the branch still matches its stated goal, and whether specs, architecture expectations, or style rules reveal implementation gaps. This turns evaluation from a late PR gate into continuous defect discovery and repair feedback.
+
 ## Key Concepts
 
+- [AI Diff Review Should Find Problems Before Merge](../concepts/ai-diff-review-should-find-problems-before-merge.md) - generated diffs should be checked for concrete defects before reviewers are forced into full manual inspection or blind trust.
+- [Generated Tests Need Meaningful Plans, Coverage, and Pruning](../concepts/generated-tests-need-meaningful-plans-coverage-and-pruning.md) - AI-generated tests are useful only when behavior plans, coverage, review, sandboxing, and cleanup keep them meaningful.
+- [Custom LLM Checks Turn Team Standards Into Continuous Agent Feedback](../concepts/custom-llm-checks-turn-team-standards-into-continuous-agent-feedback.md) - LLM checks can evaluate branch intent, standards, architecture, specs, implementation gaps, and test quality.
 - [Layer LLM evals from serving metrics to application risk](../concepts/layer-llm-evals-from-serving-metrics-to-application-risk.md) - eval programs can start with serving metrics and grow toward accuracy, safety, bias, and application-specific checks.
 - [Benchmark inference with use-case-shaped token loads](../concepts/benchmark-inference-with-use-case-shaped-token-loads.md) - serving benchmarks should reflect the application's request rates and token profiles.
 - [Customize open benchmark harnesses with proprietary task data](../concepts/customize-open-benchmark-harnesses-with-proprietary-task-data.md) - public benchmark frameworks should be adapted to private task data and product-specific safety cases.
@@ -395,6 +400,7 @@ General LLM eval programs can be staged as a pyramid. Start with serving perform
 
 ## Sources
 
+- [Beyond the Prototype: Using AI to Write High-Quality Code - Josh Albrecht, Imbue](../sources/20250725_x_1EumTaXeE.md)
 - [Strategies for LLM Evals (GuideLLM, lm-eval-harness, OpenAI Evals Workshop) - Taylor Jordan Smith](../sources/20250727_89NuzmKokIk.md)
 - [Your Coding Agent Just Got Cloned And Your Brain Isn't Ready - Rustin Banks, Google Jules](../sources/20250725_X4BwOu0GWb8.md)
 - [Evaluating AI Search: A Practical Framework for Augmented AI Systems - Quotient AI + Tavily](../sources/20250729_wRJD0inpmjU.md)

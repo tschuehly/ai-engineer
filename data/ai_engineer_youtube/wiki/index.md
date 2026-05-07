@@ -4,6 +4,10 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [AI Diff Review Should Find Problems Before Merge](concepts/ai-diff-review-should-find-problems-before-merge.md) - coding-agent review loops should identify concrete defects while diffs are being created.
+- [Specs and Style Guides Steer Coding Agents Toward Maintainable Code](concepts/specs-and-style-guides-steer-coding-agents-toward-maintainable-code.md) - plans, docs, specs, and style rules make agent-visible intent and constraints.
+- [Generated Tests Need Meaningful Plans, Coverage, and Pruning](concepts/generated-tests-need-meaningful-plans-coverage-and-pruning.md) - generated test suites need behavior-level plans, coverage checks, sandboxing, review, and cleanup.
+- [Custom LLM Checks Turn Team Standards Into Continuous Agent Feedback](concepts/custom-llm-checks-turn-team-standards-into-continuous-agent-feedback.md) - LLM checks can encode team standards as continuous feedback for agent-generated code.
 - [Start Coding Agents With Small Verifiable Chores](concepts/start-coding-agents-with-small-verifiable-chores.md) - bounded tests, lint fixes, merge conflicts, and coverage work make safer starter tasks for autonomous coding agents.
 - [Human Ownership Keeps Agent Pull Requests From Bypassing Review](concepts/human-ownership-keeps-agent-pull-requests-from-bypassing-review.md) - agent-authored PRs still need accountable human ownership and normal review routing.
 

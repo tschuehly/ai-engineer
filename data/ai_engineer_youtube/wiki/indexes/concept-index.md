@@ -1,7 +1,6 @@
 # Concept Index
 
 ## Agents
-
 - [Type-Safe Agent Schemas Make Refactoring and Validation Easier](../concepts/type-safe-agent-schemas-make-refactoring-and-validation-easier.md)
 - [Validation Errors Can Drive Agent Self-Repair Loops](../concepts/validation-errors-can-drive-agent-self-repair-loops.md)
 - [Trace Agent Tool Arguments to Debug Real Failures](../concepts/trace-agent-tool-arguments-to-debug-real-failures.md)
@@ -344,6 +343,10 @@
 
 ## Coding Agents
 
+- [AI Diff Review Should Find Problems Before Merge](../concepts/ai-diff-review-should-find-problems-before-merge.md)
+- [Specs and Style Guides Steer Coding Agents Toward Maintainable Code](../concepts/specs-and-style-guides-steer-coding-agents-toward-maintainable-code.md)
+- [Generated Tests Need Meaningful Plans, Coverage, and Pruning](../concepts/generated-tests-need-meaningful-plans-coverage-and-pruning.md)
+- [Custom LLM Checks Turn Team Standards Into Continuous Agent Feedback](../concepts/custom-llm-checks-turn-team-standards-into-continuous-agent-feedback.md)
 - [Start Coding Agents With Small Verifiable Chores](../concepts/start-coding-agents-with-small-verifiable-chores.md)
 - [Human Ownership Keeps Agent Pull Requests From Bypassing Review](../concepts/human-ownership-keeps-agent-pull-requests-from-bypassing-review.md)
 - [Agent-Native SDLC Platforms Need Context, Reliability, and Parallelism](../concepts/agent-native-sdlc-platforms-need-context-reliability-and-parallelism.md)
@@ -869,6 +872,9 @@
 
 ## Evaluation
 
+- [AI Diff Review Should Find Problems Before Merge](../concepts/ai-diff-review-should-find-problems-before-merge.md)
+- [Generated Tests Need Meaningful Plans, Coverage, and Pruning](../concepts/generated-tests-need-meaningful-plans-coverage-and-pruning.md)
+- [Custom LLM Checks Turn Team Standards Into Continuous Agent Feedback](../concepts/custom-llm-checks-turn-team-standards-into-continuous-agent-feedback.md)
 - [Layer LLM evals from serving metrics to application risk](../concepts/layer-llm-evals-from-serving-metrics-to-application-risk.md)
 - [Benchmark inference with use-case-shaped token loads](../concepts/benchmark-inference-with-use-case-shaped-token-loads.md)
 - [Customize open benchmark harnesses with proprietary task data](../concepts/customize-open-benchmark-harnesses-with-proprietary-task-data.md)
@@ -1462,6 +1468,7 @@
 
 ## Workflows
 
+- [Specs and Style Guides Steer Coding Agents Toward Maintainable Code](../concepts/specs-and-style-guides-steer-coding-agents-toward-maintainable-code.md)
 - [Agent Planning Should Mine Feedback Before Producing PRDs and Tickets](../concepts/agent-planning-should-mine-feedback-before-producing-prds-and-tickets.md)
 - [Incident Agents Turn Alerts Into RCA and Operational Memory](../concepts/incident-agents-turn-alerts-into-rca-and-operational-memory.md)
 - [Agent-Native SDLC Platforms Need Context, Reliability, and Parallelism](../concepts/agent-native-sdlc-platforms-need-context-reliability-and-parallelism.md)
