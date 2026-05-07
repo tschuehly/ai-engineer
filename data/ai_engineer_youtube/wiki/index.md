@@ -4,6 +4,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [AI-Native Search APIs Serve Agent Query Shapes](concepts/ai-native-search-apis-serve-agent-query-shapes.md) - agent search differs from human search because agents can issue contextual, repeated, high-recall queries.
+- [Neural Web Search Supports Semantic Agent Queries](concepts/neural-web-search-supports-semantic-agent-queries.md) - embedding-backed web search can represent semantic intent and negation that keyword matching misses.
+- [Expose Search Controls For Agentic Retrieval](concepts/expose-search-controls-for-agentic-retrieval.md) - agent-facing search APIs should expose retrieval knobs such as result count, domains, dates, and neural/keyword mode.
 - [Dynamic AI Search Evals Need Fresh Grounding Sets](concepts/dynamic-ai-search-evals-need-fresh-grounding-sets.md) - web-backed RAG and search agents need eval sets that refresh with changing sources and user needs.
 - [Reference-Free AI Search Metrics Decompose Answer Quality](concepts/reference-free-ai-search-metrics-decompose-answer-quality.md) - completeness, document relevance, and hallucination checks expose different search failure modes when labels are unavailable.
 - [AI Search Providers Should Return Grounding Documents](concepts/ai-search-providers-should-return-grounding-documents.md) - citations alone are weak observability for AI search debugging and reference-free evaluation.

@@ -92,6 +92,8 @@ The agent-versus-workflow debate is a false binary for production design. A flex
 
 Sales-development agents add a non-coding version of the same context problem. To act for a seller, the agent needs company/product knowledge, case studies, pain points, value propositions, and ICP details, but stuffing all offers into every email makes output worse and asking users to hand-enter every detail creates onboarding friction. A seller knowledge base lets the agent retrieve the relevant business context at action time, while a UI that shows retrieved chunks gives operators a way to inspect what the agent used.
 
+Agent search is not just human search with a bot typing into it. Agents can pass large context blocks into search, issue many related queries, ask for thousands of results, and inspect pages faster than a person. That shifts the search API design toward semantic matching, exact task fit, result-count control, domain/date filters, and explicit neural versus keyword modes.
+
 ## Key Concepts
 
 - [Compose agents and workflows as interchangeable primitives](../concepts/compose-agents-and-workflows-as-interchangeable-primitives.md) - agents and workflows can call each other as tools, steps, and handoff mechanisms.
@@ -160,6 +162,8 @@ Sales-development agents add a non-coding version of the same context problem. T
 - [Treat Agents As Users For Authorization](../concepts/treat-agents-as-users-for-authorization.md) - agent tool calls need the represented user's object permissions, not service-level authority.
 - [Seller Knowledge Bases Let Agents Pull Business Context at Action Time](../concepts/seller-knowledge-bases-let-agents-pull-business-context-at-action-time.md) - domain agents can retrieve product and proof-point context during each action instead of relying on manual context stuffing.
 - [Show Retrieved Chunks Inside Agent Workflows](../concepts/show-retrieved-chunks-inside-agent-workflows.md) - agent products should expose evidence behind retrieved-context-driven outputs.
+- [AI-Native Search APIs Serve Agent Query Shapes](../concepts/ai-native-search-apis-serve-agent-query-shapes.md) - agent-facing search should optimize for complex, contextual, high-volume retrieval rather than human click behavior.
+- [Neural Web Search Supports Semantic Agent Queries](../concepts/neural-web-search-supports-semantic-agent-queries.md) - semantic search can handle agent queries whose meaning is not captured by overlapping keywords.
 - [Authenticate Agents With URL-Based PKI Identities](../concepts/authenticate-agents-with-url-based-pki-identities.md) - agent-to-agent and client-credentials flows need verifiable agent identity.
 - [Authorize High-Impact Agent Actions Transactionally](../concepts/authorize-high-impact-agent-actions-transactionally.md) - sensitive agent actions should be authorized at transaction granularity.
 - [Preserve Authorization Chain of Custody Across Agent Hops](../concepts/preserve-authorization-chain-of-custody-across-agent-hops.md) - multi-agent delegation needs end-to-end authorization visibility.

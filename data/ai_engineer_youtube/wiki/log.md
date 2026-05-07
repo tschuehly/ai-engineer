@@ -1527,3 +1527,11 @@
 - Updated topics: [Evaluation](topics/evaluation.md), [Retrieval](topics/retrieval.md)
 - Updated concepts: [Dynamic AI Search Evals Need Fresh Grounding Sets](concepts/dynamic-ai-search-evals-need-fresh-grounding-sets.md), [Reference-Free AI Search Metrics Decompose Answer Quality](concepts/reference-free-ai-search-metrics-decompose-answer-quality.md), [AI Search Providers Should Return Grounding Documents](concepts/ai-search-providers-should-return-grounding-documents.md)
 - Notes: Added Quotient AI and Tavily's framework for evaluating real-time AI search with dynamic evidence-backed eval sets, reference-free quality metrics, and grounding-document observability.
+
+## [2026-05-07] ingest | Building a Smarter AI Agent with Neural RAG - Will Bryk, Exa.ai
+
+- Source: [Building a Smarter AI Agent with Neural RAG - Will Bryk, Exa.ai](sources/20250729_xnXqpUW_Kp8.md)
+- Processed: `xnXqpUW_Kp8`
+- Updated topics: [Agents](topics/agents.md), [Retrieval](topics/retrieval.md), [Tools](topics/tools.md)
+- Updated concepts: [Neural Web Search Supports Semantic Agent Queries](concepts/neural-web-search-supports-semantic-agent-queries.md), [AI-Native Search APIs Serve Agent Query Shapes](concepts/ai-native-search-apis-serve-agent-query-shapes.md), [Expose Search Controls For Agentic Retrieval](concepts/expose-search-controls-for-agentic-retrieval.md)
+- Notes: Added Exa's neural RAG framing for agent search: learned semantic web retrieval, search APIs optimized for agent query shapes, and explicit search controls for multi-step retrieval loops.

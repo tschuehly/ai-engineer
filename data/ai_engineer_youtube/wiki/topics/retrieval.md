@@ -10,6 +10,8 @@ RAG systems benefit from reusable baselines, but not from a single fixed recipe.
 
 RAG technique choice should follow query-set loss analysis. Start with the product outcome, a launch bar, easy and hard query sets, and the simplest viable baseline, then inspect failures before adding layers. Small corpora may work with in-memory context until attention or window limits break; explicit keyword queries may only need BM25; paraphrased intent can justify vector retrieval; conflicted candidate sets can justify cross-encoder reranking; and vertical domains may require custom vocabulary or product-ranking signals. As queries become more ambiguous, the retrieval layer may need to fan out across supplementary backends, but product UX should also degrade gracefully when the system cannot confidently infer intent.
 
+Agent-facing web search has a different target shape than human search. Human search engines are optimized for short keyword queries, click-worthy pages, and a few links a person can inspect; agents can submit paragraph-length context, run many searches, ask for high-recall result sets, and process retrieved pages quickly. Neural web search extends the retrieval substrate by embedding documents and queries so semantic constraints, negation, and long-form intent can be represented directly. Agentic search APIs should therefore expose controls such as result count, domains, dates, and neural versus keyword mode instead of hiding all retrieval policy behind one opaque search box.
+
 Document extraction for enterprise retrieval often needs a domain-operated template layer before chunks become trusted structured data. BlackRock's knowledge-app sandbox treats field source, type, required status, validations, dependencies, labels, embeddings, and business tags as configurable retrieval and extraction metadata, so operators can compare runs and refine evidence before downstream systems consume the output.
 
 Operational graphs add a schema-normalization burden before retrieval even starts. Network agents may need controllers, devices, telemetry, SIEM data, and configuration files normalized into an agent-readable graph so queries hit the right layer of production state; when the schema and query workload are stable, a specialized graph-query agent can be trained on schema and example queries to reduce token-heavy exploration.
@@ -21,6 +23,9 @@ Private research agents can treat connectors and uploads as complementary retrie
 - [Dynamic AI Search Evals Need Fresh Grounding Sets](../concepts/dynamic-ai-search-evals-need-fresh-grounding-sets.md) - web-backed retrieval should be tested against fresh evidence, not only static QA rows.
 - [Reference-Free AI Search Metrics Decompose Answer Quality](../concepts/reference-free-ai-search-metrics-decompose-answer-quality.md) - search quality needs separate signals for complete answers, relevant retrieved documents, and unsupported claims.
 - [AI Search Providers Should Return Grounding Documents](../concepts/ai-search-providers-should-return-grounding-documents.md) - retrieved evidence should be available for debugging and evaluation, not hidden behind final citations.
+- [Neural Web Search Supports Semantic Agent Queries](../concepts/neural-web-search-supports-semantic-agent-queries.md) - learned document and query embeddings can represent semantic intent that keyword matching misses.
+- [AI-Native Search APIs Serve Agent Query Shapes](../concepts/ai-native-search-apis-serve-agent-query-shapes.md) - agent search needs complex contextual queries, repeated calls, and high-recall retrieval rather than human click optimization.
+- [Expose Search Controls For Agentic Retrieval](../concepts/expose-search-controls-for-agentic-retrieval.md) - agent-facing search tools should expose retrieval knobs such as result count, domains, dates, and neural/keyword mode.
 - [Dedicated Vector Databases Remain Common RAG Infrastructure](../concepts/dedicated-vector-databases-remain-common-rag-infrastructure.md) - survey data shows dedicated vector stores remain a common choice for context storage.
 - [Use fast query-document evals for retrieval changes](../concepts/use-fast-query-document-evals-for-retrieval-changes.md) - local query/document pairs expose whether retrieval changes improve the actual corpus.
 - [Sequence RAG Techniques by Loss Analysis and Complexity-Adjusted Impact](../concepts/sequence-rag-techniques-by-loss-analysis-and-complexity-adjusted-impact.md) - RAG layers should be added only when query failures justify their cost and difficulty.
@@ -100,10 +105,12 @@ Expert-domain RAG adds another layer of corpus and query modeling. Legal retriev
 - Which domain constraints belong in query planning, filters, rerankers, or corpus preprocessing for expert legal and regulatory RAG?
 - Which RAG failures should be fixed through retrieval engineering, and which should be punted to UX clarification or broader result selection?
 - Which AI search providers expose enough retrieved-document evidence to support reference-free quality metrics at production scale?
+- Which agent search tasks need high-recall semantic web search, and which are better served by keyword search plus reranking or filters?
 
 ## Sources
 
 - [Evaluating AI Search: A Practical Framework for Augmented AI Systems - Quotient AI + Tavily](../sources/20250729_wRJD0inpmjU.md)
+- [Building a Smarter AI Agent with Neural RAG - Will Bryk, Exa.ai](../sources/20250729_xnXqpUW_Kp8.md)
 - [How to look at your data - Jeff Huber (Chroma) + Jason Liu (567)](../sources/20250806_jryZvCuA0Uc.md)
 - [The Next Unicorns: 7 Top AI startups from the HF0 Residency](../sources/20250821_L8-5ezsoI5A.md)
 - [How BlackRock Builds Custom Knowledge Apps at Scale — Vaibhav Page & Infant Vasanth, BlackRock](../sources/20250823_08mH36_NVos.md)

@@ -2,6 +2,8 @@
 
 ## Agents
 
+- [AI-Native Search APIs Serve Agent Query Shapes](../concepts/ai-native-search-apis-serve-agent-query-shapes.md)
+- [Neural Web Search Supports Semantic Agent Queries](../concepts/neural-web-search-supports-semantic-agent-queries.md)
 - [Seller Knowledge Bases Let Agents Pull Business Context at Action Time](../concepts/seller-knowledge-bases-let-agents-pull-business-context-at-action-time.md)
 - [Show Retrieved Chunks Inside Agent Workflows](../concepts/show-retrieved-chunks-inside-agent-workflows.md)
 - [Compose agents and workflows as interchangeable primitives](../concepts/compose-agents-and-workflows-as-interchangeable-primitives.md)
@@ -773,6 +775,7 @@
 
 ## Evaluation
 
+- [AI-Native Search APIs Serve Agent Query Shapes](../concepts/ai-native-search-apis-serve-agent-query-shapes.md)
 - [Dynamic AI Search Evals Need Fresh Grounding Sets](../concepts/dynamic-ai-search-evals-need-fresh-grounding-sets.md)
 - [Reference-Free AI Search Metrics Decompose Answer Quality](../concepts/reference-free-ai-search-metrics-decompose-answer-quality.md)
 - [AI Search Providers Should Return Grounding Documents](../concepts/ai-search-providers-should-return-grounding-documents.md)
@@ -1040,6 +1043,9 @@
 
 ## Retrieval
 
+- [Neural Web Search Supports Semantic Agent Queries](../concepts/neural-web-search-supports-semantic-agent-queries.md)
+- [AI-Native Search APIs Serve Agent Query Shapes](../concepts/ai-native-search-apis-serve-agent-query-shapes.md)
+- [Expose Search Controls For Agentic Retrieval](../concepts/expose-search-controls-for-agentic-retrieval.md)
 - [Dynamic AI Search Evals Need Fresh Grounding Sets](../concepts/dynamic-ai-search-evals-need-fresh-grounding-sets.md)
 - [Reference-Free AI Search Metrics Decompose Answer Quality](../concepts/reference-free-ai-search-metrics-decompose-answer-quality.md)
 - [AI Search Providers Should Return Grounding Documents](../concepts/ai-search-providers-should-return-grounding-documents.md)
@@ -1119,6 +1125,7 @@
 
 ## Tools
 
+- [Expose Search Controls For Agentic Retrieval](../concepts/expose-search-controls-for-agentic-retrieval.md)
 - [Model MCP Servers as OAuth Resource Servers](../concepts/model-mcp-servers-as-oauth-resource-servers.md)
 - [Authenticate Agents With URL-Based PKI Identities](../concepts/authenticate-agents-with-url-based-pki-identities.md)
 - [Authorize High-Impact Agent Actions Transactionally](../concepts/authorize-high-impact-agent-actions-transactionally.md)

@@ -60,6 +60,7 @@ Workflow composition adds another tool-design rule: a workflow can be exposed as
 
 ## Key Concepts
 
+- [Expose Search Controls For Agentic Retrieval](../concepts/expose-search-controls-for-agentic-retrieval.md) - search tools should expose controllable parameters agents can compose during multi-step retrieval.
 - [Compose agents and workflows as interchangeable primitives](../concepts/compose-agents-and-workflows-as-interchangeable-primitives.md) - tool and step boundaries can wrap either agent loops or workflow graphs.
 - [Prefer readable workflow APIs over graph-theory surfaces](../concepts/prefer-readable-workflow-apis-over-graph-theory-surfaces.md) - framework APIs should keep control flow understandable to maintainers.
 - [Add structure where agent reliability fails](../concepts/add-structure-where-agent-reliability-fails.md) - narrow tool sets and structured steps can improve failing agent segments.
