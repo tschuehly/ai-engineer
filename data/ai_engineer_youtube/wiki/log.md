@@ -1279,3 +1279,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Shift review and testing left for confident vibe coding](concepts/shift-review-and-testing-left-for-confident-vibe-coding.md), [Compose coding-agent workflows through CLI pipelines](concepts/compose-coding-agent-workflows-through-cli-pipelines.md), [AI Code Quality Needs Full-SDLC Workflows](concepts/ai-code-quality-needs-full-sdlc-workflows.md), [Agent experience prioritizes APIs, CLIs, and MCP over dashboards](concepts/agent-experience-prioritizes-apis-clis-and-mcp-over-dashboards.md)
 - Notes: Added Qodo's confidence framing for enterprise vibe coding: shift review, testing, context, and best-practice feedback into the generation loop and compose specialized coding agents through CLI pipelines while A2A remains early.
+
+## [2026-05-07] ingest | Evals Are Not Unit Tests - Ido Pesok, Vercel v0
+
+- Source: [Evals Are Not Unit Tests - Ido Pesok, Vercel v0](sources/20250806_L8OoYeDI_ls.md)
+- Processed: `L8OoYeDI_ls`
+- Updated topics: [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Map application evals to the product court](concepts/map-application-evals-to-the-product-court.md), [Keep eval data constant and task logic variable](concepts/keep-eval-data-constant-and-task-logic-variable.md), [Prefer simple debuggable eval scores](concepts/prefer-simple-debuggable-eval-scores.md)
+- Notes: Added Vercel v0's application-layer eval pattern for domain coverage, reusable eval data, production-matched task logic, and CI reports that expose improvements and regressions.

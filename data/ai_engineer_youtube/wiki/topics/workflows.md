@@ -38,6 +38,8 @@ Platform workflows should be shaped for agent loops as well as human onboarding.
 
 For AI app reliability work, build evals at the start of the workflow rather than after a demo already feels good. A practical loop is to define scenario-level criteria from user outcomes, generate realistic persona and wording variants, inspect failures one by one, and then use the benchmark to compare model, prompt, RAG, logic, or agentic changes while watching for regressions and cost or latency tradeoffs.
 
+Application eval workflows should also map the product domain before optimizing. The team should gather real prompts and feedback, identify in-bounds and out-of-bounds work, keep the data set stable, vary the task logic under test, and run simple debuggable scores in CI so prompt, model, RAG, or preprocessing changes reveal both improvements and regressions.
+
 DSPy-style workflows separate program shape from prompt shape: teams can define signatures and modules, route inputs through ordinary control flow, select adapters for model-facing format, and then optimize the resulting program with datasets and metrics. This is most useful when the task has known examples and quality criteria, not when the workflow is too open-ended to score. Prompt-learning workflows should likewise be made explicit: start from examples with feedback, choose sample size and train/test split, run bounded generate/evaluate/refine loops, and review whether evaluator feedback is trustworthy enough to drive the next prompt.
 
 For coding agents, this workflow can be attached directly to rule files: run the agent on benchmark issues, collect test and judge feedback, use a meta-prompt to draft rule changes, diff the resulting prompt context, and rerun the benchmark before adopting the rules. Shared prompt context also needs ownership: a gatekeeper group can receive feedback on system prompts, Cursor rules, or agent Markdown and keep organization-wide instructions aligned with current frameworks and practices. AI-native products need a related model-behavior workflow: broaden ideation through in-product tools, dogfood ideas with real context, collect evals to clarify requirements, hill-climb through code and prompt changes, and route feedback back into the behavior system after shipping. The same workflow pressure applies to DevEx basics: fast local validation, written external context, clear turn-taking in review, and assigned review ownership keep agent iteration from becoming slow CI loops and rubber-stamped PRs.
@@ -143,6 +145,9 @@ Brockman's workflow advice is to challenge inherited constraints by first princi
 - [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](../concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md) - explicit role handoffs turn validation from a reminder into a workflow path.
 - [Reverse-engineer AI app evals from user outcomes](../concepts/reverse-engineer-ai-app-evals-from-user-outcomes.md) - reliability workflows should start from what users and the business need the app to accomplish.
 - [Build AI app benchmarks before optimization](../concepts/build-ai-app-benchmarks-before-optimization.md) - benchmark-first workflows catch regressions while teams optimize prompts, models, retrieval, and guardrails.
+- [Map application evals to the product court](../concepts/map-application-evals-to-the-product-court.md) - AI app eval workflows should cover real in-bounds user behavior instead of irrelevant or clustered cases.
+- [Keep eval data constant and task logic variable](../concepts/keep-eval-data-constant-and-task-logic-variable.md) - stable data with variable task logic keeps eval comparisons clean across implementation changes.
+- [Prefer simple debuggable eval scores](../concepts/prefer-simple-debuggable-eval-scores.md) - understandable scoring and CI reports make eval workflows useful during review.
 - [Agentic document extraction decomposes complex fields](../concepts/agentic-document-extraction-decomposes-complex-fields.md) - field-heavy document workflows should be decomposed into grouped, checked, and retryable steps.
 - [Domain-expert sandboxes accelerate knowledge-app iteration](../concepts/domain-expert-sandboxes-accelerate-knowledge-app-iteration.md) - domain operators need a fast loop for templates, validations, runs, and model strategies.
 - [App factories turn sandbox artifacts into governed knowledge apps](../concepts/app-factories-turn-sandbox-artifacts-into-governed-knowledge-apps.md) - approved sandbox definitions can be packaged into governed user-facing apps.
@@ -459,6 +464,7 @@ Brockman's workflow advice is to challenge inherited constraints by first princi
 - [Shipping AI That Works: An Evaluation Framework for PMs - Aman Khan, Arize](../sources/20251226_2HNSG990Ew8.md)
 - [The Agent Native Company — Rick Blalock, Agentuity](../sources/20250603_0ZPAvzhpGjw.md)
 - [The Future of Evals - Ankur Goyal, Braintrust](../sources/20250809_MC55hdWLq4o.md)
+- [Evals Are Not Unit Tests - Ido Pesok, Vercel v0](../sources/20250806_L8OoYeDI_ls.md)
 - [On Engineering AI Systems that Endure The Bitter Lesson - Omar Khattab, DSPy & Databricks](../sources/20250806_qdmxApz3EJI.md)
 - [Vibe Coding with Confidence - Itamar Friedman, Qodo](../sources/20250806_n991Yxo1aOI.md)
 - [No More Slop - swyx](../sources/20251222_IoiHI7p12Ao.md)

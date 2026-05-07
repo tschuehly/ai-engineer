@@ -9,6 +9,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Measure AI intensity by human input to valuable output](concepts/measure-ai-intensity-by-human-input-to-valuable-output.md) - compare AI products by useful output per human steering event rather than by agent labels.
 - [SPADE structures AI-intensive workflows](concepts/spade-structures-ai-intensive-workflows.md) - high-volume AI-call products can synchronize, plan, analyze, deliver, and evaluate around one artifact.
 - [Use eval agents to improve prompts, datasets, and scorers](concepts/use-eval-agents-to-improve-prompts-datasets-and-scorers.md) - eval-native agents can turn scored results into inspectable system and benchmark improvements.
+- [Map application evals to the product court](concepts/map-application-evals-to-the-product-court.md) - application eval sets should cover the in-bounds user domain, not just a few repeated demos.
+- [Keep eval data constant and task logic variable](concepts/keep-eval-data-constant-and-task-logic-variable.md) - stable eval data lets teams compare prompt, RAG, preprocessing, and model changes.
+- [Prefer simple debuggable eval scores](concepts/prefer-simple-debuggable-eval-scores.md) - deterministic pass/fail scoring and clear CI reports make regressions easier to diagnose.
 - [Connect AI evals to C-suite risk and ROI](concepts/connect-ai-evals-to-c-suite-risk-and-roi.md) - enterprise evaluation should map technical signals to budget, governance, risk, revenue, and cost decisions.
 - [Monitor whole agent systems, not single models](concepts/monitor-whole-agent-systems-not-single-models.md) - autonomous and multi-agent deployments need system-level observability.
 - [Domain evals need expert-built environments](concepts/domain-evals-need-expert-built-environments.md) - specialized workflows need expert validation data and task environments before automated judges can be trusted.

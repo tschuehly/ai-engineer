@@ -689,6 +689,9 @@
 
 ## Evaluation
 
+- [Map application evals to the product court](../concepts/map-application-evals-to-the-product-court.md)
+- [Keep eval data constant and task logic variable](../concepts/keep-eval-data-constant-and-task-logic-variable.md)
+- [Prefer simple debuggable eval scores](../concepts/prefer-simple-debuggable-eval-scores.md)
 - [Optimize action agents for reliability before abstract intelligence](../concepts/optimize-action-agents-for-reliability-before-abstract-intelligence.md)
 - [Use challenge eval sets for future user demands](../concepts/use-challenge-eval-sets-for-future-user-demands.md)
 - [Evaluate operational graph agents with extrinsic task metrics](../concepts/evaluate-operational-graph-agents-with-extrinsic-task-metrics.md)
@@ -1116,6 +1119,9 @@
 ## Workflows
 
 - [SPADE structures AI-intensive workflows](../concepts/spade-structures-ai-intensive-workflows.md)
+- [Map application evals to the product court](../concepts/map-application-evals-to-the-product-court.md)
+- [Keep eval data constant and task logic variable](../concepts/keep-eval-data-constant-and-task-logic-variable.md)
+- [Prefer simple debuggable eval scores](../concepts/prefer-simple-debuggable-eval-scores.md)
 - [Measure AI intensity by human input to valuable output](../concepts/measure-ai-intensity-by-human-input-to-valuable-output.md)
 - [Research engineering partnership](../concepts/research-engineering-partnership.md)
 - [Model-shaped codebase architecture for coding agents](../concepts/model-shaped-codebase-architecture-for-coding-agents.md)
