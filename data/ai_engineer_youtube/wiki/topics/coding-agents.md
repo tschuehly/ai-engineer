@@ -74,8 +74,13 @@ Jellyfish's pull-request telemetry calibrates the adoption curve. Interactive to
 
 Greg Brockman's Codex framing connects agent usefulness directly to codebase shape. Repositories optimized only for human memory can hide too much conceptual load in large modules and informal architecture; model-shaped codebases expose smaller modules, quick tests, and clear component boundaries so agents can fill in implementation details and rerun checks repeatedly. His longer-term view also moves coding agents beyond greenfield app demos: the bigger software-engineering opportunity is transforming existing applications through migrations, dependency updates, and legacy codebase change, especially when cloud-resident agents can work asynchronously like coworkers. Qodo's confident-vibe-coding framing adds a workflow version of the same control problem: enterprise code generation should be surrounded by shifted-left review, testing, best-practice context, and CLI-composable agent pipelines rather than treated as a standalone chat or IDE completion. Chris Kelly's production framing makes the same point from first principles: AI-generated code is still code, and the job is changing software safely. Agents therefore need the same engineering infrastructure as humans, while humans should spend more skill on code review, system understanding, and deciding whether a generated change is merely different or actually worse. GitHub Copilot in VS Code adds a pragmatic staging model: "YOLO" prompting is useful for learning, prototypes, and mockups, but durable team work needs starter templates, repo instructions, custom modes, configured tasks, MCP tools, browser context, and scoped approval settings.
 
+Dagger adds a delivery-runtime pattern for coding agents: encode the build, test, environment, and LLM steps as ordinary workflow code that can run locally or in CI. The important boundary is that prompt-level completion is not treated as enough; the agent returns a typed workspace artifact, and the workflow code can extract the resulting source and run deterministic checks before opening a pull request.
+
 ## Key Concepts
 
+- [Package Agent Delivery Workflows as Portable Code](../concepts/package-agent-delivery-workflows-as-portable-code.md) - build, test, LLM, and environment steps should run as portable workflow code across local and CI execution.
+- [Trace Agent Tool Use To Improve Prompts And Tools](../concepts/trace-agent-tool-use-to-improve-prompts-and-tools.md) - traces turn tool-selection failures into prompt, description, or implementation improvements.
+- [Return Typed Workspace Outputs From Coding Agents](../concepts/return-typed-workspace-outputs-from-coding-agents.md) - completed agent work should be a typed artifact that code can validate before publishing.
 - [Model-shaped codebase architecture for coding agents](../concepts/model-shaped-codebase-architecture-for-coding-agents.md) - codebase structure determines how much value agents can extract from tests and modules.
 - [Treat AI coding as safe software change](../concepts/treat-ai-coding-as-safe-software-change.md) - production AI coding should be judged by safe operation, maintenance, and ownership, not line count.
 - [Stage vibe coding from prototype to structured workflow](../concepts/stage-vibe-coding-from-prototype-to-structured-workflow.md) - autonomy should move from fast exploration toward templates, instructions, tools, checks, and approvals as stakes rise.
@@ -310,6 +315,7 @@ Greg Brockman's Codex framing connects agent usefulness directly to codebase sha
 
 ## Sources
 
+- [Ship Agents that Ship: A Hands-On Workshop - Kyle Penfound, Jeremy Adams, Dagger](../sources/20250727_Fzb1a24hF-o.md)
 - [Vibes won't cut it - Chris Kelly, Augment Code](../sources/20250803_Dc3qOA9WOnE.md)
 - [#define AI Engineer - Greg Brockman, OpenAI (ft. Jensen Huang)](../sources/20250810_avWhreBUYF0.md)
 - [Context Platform Engineering to Reduce Token Anxiety - Val Bercovici, WEKA](../sources/20251124_NTBX-wxUhHs.md)

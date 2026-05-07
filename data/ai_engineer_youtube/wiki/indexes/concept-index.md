@@ -328,6 +328,9 @@
 
 ## Coding Agents
 
+- [Package Agent Delivery Workflows as Portable Code](../concepts/package-agent-delivery-workflows-as-portable-code.md)
+- [Trace Agent Tool Use To Improve Prompts And Tools](../concepts/trace-agent-tool-use-to-improve-prompts-and-tools.md)
+- [Return Typed Workspace Outputs From Coding Agents](../concepts/return-typed-workspace-outputs-from-coding-agents.md)
 - [Treat AI coding as safe software change](../concepts/treat-ai-coding-as-safe-software-change.md)
 - [Stage vibe coding from prototype to structured workflow](../concepts/stage-vibe-coding-from-prototype-to-structured-workflow.md)
 - [Use repository instructions to ground coding agents](../concepts/use-repository-instructions-to-ground-coding-agents.md)
@@ -574,6 +577,8 @@
 
 ## Infrastructure
 
+- [Package Agent Delivery Workflows as Portable Code](../concepts/package-agent-delivery-workflows-as-portable-code.md)
+- [Return Typed Workspace Outputs From Coding Agents](../concepts/return-typed-workspace-outputs-from-coding-agents.md)
 - [Benchmark inference with use-case-shaped token loads](../concepts/benchmark-inference-with-use-case-shaped-token-loads.md)
 - [Run eval suites in CI/CD before and during production](../concepts/run-eval-suites-in-cicd-before-and-during-production.md)
 - [Route LoRA Voice Clones With Sticky GPU Affinity](../concepts/route-lora-voice-clones-with-sticky-gpu-affinity.md)
@@ -1390,6 +1395,9 @@
 
 ## Workflows
 
+- [Package Agent Delivery Workflows as Portable Code](../concepts/package-agent-delivery-workflows-as-portable-code.md)
+- [Trace Agent Tool Use To Improve Prompts And Tools](../concepts/trace-agent-tool-use-to-improve-prompts-and-tools.md)
+- [Return Typed Workspace Outputs From Coding Agents](../concepts/return-typed-workspace-outputs-from-coding-agents.md)
 - [Run eval suites in CI/CD before and during production](../concepts/run-eval-suites-in-cicd-before-and-during-production.md)
 - [Product Work Graphs Coordinate Agents and Humans](../concepts/product-work-graphs-coordinate-agents-and-humans.md)
 - [Platform-Native Agents Should Behave Like Good Teammates](../concepts/platform-native-agents-should-behave-like-good-teammates.md)

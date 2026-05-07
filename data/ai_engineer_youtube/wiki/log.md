@@ -1647,3 +1647,11 @@
 - Updated topics: [Evaluation](topics/evaluation.md), [Inference](topics/inference.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Layer LLM evals from serving metrics to application risk](concepts/layer-llm-evals-from-serving-metrics-to-application-risk.md), [Benchmark inference with use-case-shaped token loads](concepts/benchmark-inference-with-use-case-shaped-token-loads.md), [Customize open benchmark harnesses with proprietary task data](concepts/customize-open-benchmark-harnesses-with-proprietary-task-data.md), [Run eval suites in CI/CD before and during production](concepts/run-eval-suites-in-cicd-before-and-during-production.md)
 - Notes: Added Smith's production-eval workflow for layering serving benchmarks, factual and formatting checks, safety/bias tests, custom domain data, and CI/CD automation.
+
+## [2026-05-07] ingest | Ship Agents that Ship: A Hands-On Workshop - Kyle Penfound, Jeremy Adams, Dagger
+
+- Source: [Ship Agents that Ship: A Hands-On Workshop - Kyle Penfound, Jeremy Adams, Dagger](sources/20250727_Fzb1a24hF-o.md)
+- Processed: `Fzb1a24hF-o`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Package Agent Delivery Workflows as Portable Code](concepts/package-agent-delivery-workflows-as-portable-code.md), [Trace Agent Tool Use To Improve Prompts And Tools](concepts/trace-agent-tool-use-to-improve-prompts-and-tools.md), [Return Typed Workspace Outputs From Coding Agents](concepts/return-typed-workspace-outputs-from-coding-agents.md)
+- Notes: Added Dagger's pattern for portable local-to-CI agent delivery workflows with traceable tool use, typed workspace outputs, validation, and PR automation.

@@ -100,8 +100,12 @@ Remote MCP infrastructure can reuse ordinary cloud primitives when the local std
 
 LLM evaluation infrastructure also needs a CI/CD shape. Manual workshop runs are useful for learning tools, but production teams should turn serving benchmarks, factual checks, formatting checks, safety and bias tests, and custom product evals into repeatable gates that run when prompts, models, data sets, or production use cases change.
 
+Dagger-style agent delivery infrastructure packages that feedback path as portable workflow code. Containers, source directories, repositories, LLM calls, build functions, and test functions can share one runtime and cache, so the agent gets the same tool surface locally and in GitHub Actions. That reduces environment drift and makes the CI path a continuation of the local agent workflow rather than a separate automation.
+
 ## Key Concepts
 
+- [Package Agent Delivery Workflows as Portable Code](../concepts/package-agent-delivery-workflows-as-portable-code.md) - coding-agent infrastructure can share local and CI execution through one portable workflow runtime.
+- [Return Typed Workspace Outputs From Coding Agents](../concepts/return-typed-workspace-outputs-from-coding-agents.md) - infrastructure should make agent outputs concrete artifacts that validation and PR automation can consume.
 - [Benchmark inference with use-case-shaped token loads](../concepts/benchmark-inference-with-use-case-shaped-token-loads.md) - serving infrastructure should be benchmarked with request shapes and tail-latency metrics that match the application.
 - [Run eval suites in CI/CD before and during production](../concepts/run-eval-suites-in-cicd-before-and-during-production.md) - eval infrastructure should become automated release and production-check machinery.
 - [Route LoRA Voice Clones With Sticky GPU Affinity](../concepts/route-lora-voice-clones-with-sticky-gpu-affinity.md) - voice clone serving needs session-sticky, adapter-aware routing over shared GPUs.
@@ -392,6 +396,7 @@ LLM evaluation infrastructure also needs a CI/CD shape. Manual workshop runs are
 - [Pipecat Cloud: Enterprise Voice Agents Built On Open Source - Kwindla Hultman Kramer, Daily](../sources/20250731_IA4lZjh9sTs.md)
 - [The Unofficial Guide to Apple's Private Cloud Compute - Jmo, CONFSEC](../sources/20250730_CCsWZ5bJlO8.md)
 - [Strategies for LLM Evals (GuideLLM, lm-eval-harness, OpenAI Evals Workshop) - Taylor Jordan Smith](../sources/20250727_89NuzmKokIk.md)
+- [Ship Agents that Ship: A Hands-On Workshop - Kyle Penfound, Jeremy Adams, Dagger](../sources/20250727_Fzb1a24hF-o.md)
 - [How to defend your sites from AI bots - David Mytton, Arcjet](../sources/20250730_Gi4V8viBGYQ.md)
 - [How to Secure Agents using OAuth - Jared Hanson (Keycard, Passport.js)](../sources/20250730_blmAkayzE8M.md)
 - [(possible dupe but better sound) What does Enterprise Ready MCP mean? - Tobin South, WorkOS](../sources/20250627_0MqYA52iWQU.md)

@@ -120,8 +120,13 @@ Work-management platforms can host the agent workflow itself. An agent should ac
 
 Eval workflows can be staged the same way as software test workflows: start with component checks, then integration and end-to-end checks, and automate the suite in CI/CD as prompts, models, data, and production behavior evolve. This keeps evals tied to real release decisions instead of one-off benchmark exploration.
 
+Dagger's agent workshop shows a lighter-weight delivery workflow with the same principle: package build/test functions, source directories, containers, and LLM calls into workflow code, then run that code locally or through GitHub Actions. The trace view becomes part of the workflow feedback loop because it shows which prompt, environment, and tool call failed before the team changes the tool description or implementation.
+
 ## Key Concepts
 
+- [Package Agent Delivery Workflows as Portable Code](../concepts/package-agent-delivery-workflows-as-portable-code.md) - portable workflow code lets delivery agents run in local development and CI without changing the workflow.
+- [Trace Agent Tool Use To Improve Prompts And Tools](../concepts/trace-agent-tool-use-to-improve-prompts-and-tools.md) - trace inspection turns observed agent behavior into workflow improvements.
+- [Return Typed Workspace Outputs From Coding Agents](../concepts/return-typed-workspace-outputs-from-coding-agents.md) - workflow code should consume validated artifacts from agent runs.
 - [Product Work Graphs Coordinate Agents and Humans](../concepts/product-work-graphs-coordinate-agents-and-humans.md) - work graphs let agent actions, reviews, feedback, and issue state stay in the team's normal workflow.
 - [First-Class Agent Users Need Identity, Scopes, and Audit Trails](../concepts/first-class-agent-users-need-identity-scopes-and-audit-trails.md) - workflow platforms need install, access, webhook, and history controls for agent workers.
 - [Platform-Native Agents Should Behave Like Good Teammates](../concepts/platform-native-agents-should-behave-like-good-teammates.md) - agent workflow UX should mirror normal teammate behavior in the host platform.
@@ -574,6 +579,7 @@ Eval workflows can be staged the same way as software test workflows: start with
 - [State of Startups and AI 2025 - Sarah Guo, Conviction](../sources/20250802_3MZS5gNElZM.md)
 - [Useful General Intelligence - Danielle Perszyk, Amazon AGI](../sources/20250802_Dj0b_cEBHBI.md)
 - [Building Agents at Cloud Scale - Antje Barth, AWS](../sources/20250802_WJjInLeaJjo.md)
+- [Ship Agents that Ship: A Hands-On Workshop - Kyle Penfound, Jeremy Adams, Dagger](../sources/20250727_Fzb1a24hF-o.md)
 - [Building Alice's Brain: an AI Sales Rep that Learns Like a Human - Sherwood & Satwik, 11x](../sources/20250729_KWmkMV0FNwQ.md)
 - [Scaling AI Agents Without Breaking Reliability - Preeti Somal, Temporal](../sources/20250728_1izYWsokr9s.md)
 - [Why your product needs an AI product manager, and why it should be you — James Lowe, i.AI](../sources/20250728_xzJdSi2Tsqw.md)

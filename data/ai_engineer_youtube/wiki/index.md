@@ -4,6 +4,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Package Agent Delivery Workflows as Portable Code](concepts/package-agent-delivery-workflows-as-portable-code.md) - delivery agents are easier to trust when build, test, LLM, and environment steps are encoded as portable workflow code.
+- [Trace Agent Tool Use To Improve Prompts And Tools](concepts/trace-agent-tool-use-to-improve-prompts-and-tools.md) - agent observability should expose prompts, tools, tool calls, and environment state so failures improve the workflow.
+- [Return Typed Workspace Outputs From Coding Agents](concepts/return-typed-workspace-outputs-from-coding-agents.md) - coding agents should return typed workspace artifacts that code can validate before PR publication.
 - [Layer LLM evals from serving metrics to application risk](concepts/layer-llm-evals-from-serving-metrics-to-application-risk.md) - production evals should climb from serving metrics to formatting, accuracy, safety, bias, and product-specific risk.
 - [Benchmark inference with use-case-shaped token loads](concepts/benchmark-inference-with-use-case-shaped-token-loads.md) - serving benchmarks should model application request rates, input/output token profiles, and SLO-relevant tail latency.
 - [Customize open benchmark harnesses with proprietary task data](concepts/customize-open-benchmark-harnesses-with-proprietary-task-data.md) - public eval harnesses become more useful when adapted to private domain tasks and custom safety cases.
