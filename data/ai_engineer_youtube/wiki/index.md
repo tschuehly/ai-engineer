@@ -4,6 +4,8 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Enterprise MCP Requires SaaS Security Controls](concepts/enterprise-mcp-requires-saas-security-controls.md) - public and enterprise MCP servers need SSO, provisioning, audit, DLP, abuse prevention, and access controls.
+- [Authorization Propagation Is the Hard Part of Enterprise Agent Workloads](concepts/authorization-propagation-is-the-hard-part-of-enterprise-agent-workloads.md) - background agents need enforceable scopes across MCP, A2A, and service-account boundaries.
 - [Ship Continuously Viable Product Shapes](concepts/ship-continuously-viable-product-shapes.md) - every product increment should be usable enough to create real feedback.
 - [Run Named-Customer Feedback Loops Daily](concepts/run-named-customer-feedback-loops-daily.md) - specific users, concrete artifacts, and high-bandwidth channels keep AI-speed product iteration grounded.
 - [Treat APIs as High-Inertia Product Contracts](concepts/treat-apis-as-high-inertia-product-contracts.md) - developer-platform APIs and data structures need extra care because customer migrations can be long.

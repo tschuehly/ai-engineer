@@ -1607,3 +1607,11 @@
 - Updated topics: [Robotics](topics/robotics.md), [Agents](topics/agents.md), [Models](topics/models.md), [Edge Inference](topics/edge-inference.md)
 - Updated concepts: [Physical AI Has a Three-Stage Compute Lifecycle](concepts/physical-ai-has-a-three-stage-compute-lifecycle.md), [Robotics Data Pyramids Combine Scarce Real Trajectories With Synthetic Data](concepts/robotics-data-pyramids-combine-scarce-real-trajectories-with-synthetic-data.md), [Dual-System VLA Architectures Separate Planning From Realtime Control](concepts/dual-system-vla-architectures-separate-planning-from-realtime-control.md), [Embodiment-Specific Action Decoders Make Robot Foundation Models Adaptable](concepts/embodiment-specific-action-decoders-make-robot-foundation-models-adaptable.md)
 - Notes: Added GR00T N1's physical-AI framing for robot foundation models: staged compute, scarce action data, dual-system VLA control, and body-specific action decoding.
+
+## [2026-05-07] ingest | (possible dupe but better sound) What does Enterprise Ready MCP mean? - Tobin South, WorkOS
+
+- Source: [(possible dupe but better sound) What does Enterprise Ready MCP mean? - Tobin South, WorkOS](sources/20250627_0MqYA52iWQU.md)
+- Processed: `0MqYA52iWQU`
+- Updated topics: [Security](topics/security.md), [Tools](topics/tools.md), [Infrastructure](topics/infrastructure.md)
+- Updated concepts: [Enterprise MCP Requires SaaS Security Controls](concepts/enterprise-mcp-requires-saas-security-controls.md), [Dynamic Client Registration Pressures MCP Auth Stacks](concepts/dynamic-client-registration-pressures-mcp-auth-stacks.md), [Authorization Propagation Is the Hard Part of Enterprise Agent Workloads](concepts/authorization-propagation-is-the-hard-part-of-enterprise-agent-workloads.md)
+- Notes: Added WorkOS's enterprise MCP readiness framing: production MCP needs SaaS security controls, MCP-aware auth operations, and enforceable authorization propagation for asynchronous agent workloads.
