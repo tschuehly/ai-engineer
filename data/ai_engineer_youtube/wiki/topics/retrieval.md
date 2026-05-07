@@ -22,6 +22,8 @@ Private research agents can treat connectors and uploads as complementary retrie
 
 Product work graphs are another retrieval target. A product-intelligence pipeline can combine hybrid search, query rewriting, reranking, deterministic rules, and relationship explanations so issues retrieve related issues, likely owners, duplicates, projects, and customer-feedback clusters. That turns retrieval into coordination infrastructure: the agent does not only need relevant chunks, it needs the work relationships that tell it where an issue belongs and who should act.
 
+Workflow search treats prior enterprise processes as retrieval units. A task can retrieve similar task-workflow examples and pass their steps to the agent as dynamic prompt context; this is especially useful when the desired behavior depends on current company protocols, team practice, or executive metrics. The retrieval layer needs ordinary similarity signals plus authoritativeness signals such as who created the workflow, whether it succeeded, and whether trusted coworkers discussed it.
+
 ## Key Concepts
 
 - [Codebase Intelligence Needs Structural and Historical Signals](../concepts/codebase-intelligence-needs-structural-and-historical-signals.md) - codebase search should combine structure, history, and lint signals with text retrieval.
@@ -90,6 +92,8 @@ Product work graphs are another retrieval target. A product-intelligence pipelin
 - [Layer Domain RAG Evals by Fidelity, Cost, and Speed](../concepts/layer-domain-rag-evals-by-fidelity-cost-and-speed.md) - domain RAG needs expert review, curated criteria, and fast retrieval metrics.
 - [AI Data Lakehouses Need Online Retrieval and Offline Iteration Paths](../concepts/ai-data-lakehouses-need-online-retrieval-and-offline-iteration-paths.md) - shared AI data substrates should support search, analytics, preprocessing, and training.
 - [Product Work Graphs Coordinate Agents and Humans](../concepts/product-work-graphs-coordinate-agents-and-humans.md) - work-item retrieval can expose issue relationships, owners, duplicates, projects, and customer feedback as agent context.
+- [Workflow Search Retrieves Enterprise Practice at Runtime](../concepts/workflow-search-retrieves-enterprise-practice-at-runtime.md) - prior task-workflow examples can be retrieved as runtime context for agents.
+- [Dynamic Workflow Prompting Fits Changing Enterprise Behavior](../concepts/dynamic-workflow-prompting-fits-changing-enterprise-behavior.md) - search-time prompting keeps changing enterprise behavior outside retraining cycles.
 
 Seller-facing agents show a product-specific version of retrieval as onboarding. Instead of asking users to manually prefill product offers, value props, pain points, case studies, and ICP fields, the product can ingest seller materials once and retrieve only the relevant chunks at message-generation time. That makes parsing and chunking part of the user experience: decks, websites, screenshots, calls, and videos need to become structured text before retrieval can help the agent write grounded outbound messages. Because this retrieval directly shapes customer-facing output, the workflow should expose retrieved chunks in the UI and then benchmark parsing accuracy, completeness, hallucinations, hybrid search, and cost once real usage exists.
 
@@ -151,3 +155,4 @@ Expert-domain RAG adds another layer of corpus and query modeling. Legal retriev
 - [Scaling Enterprise-Grade RAG: Lessons from Legal Frontier - Calvin Qi (Harvey), Chang She (Lance)](../sources/20250729_W1MiZChnkfA.md)
 - [Layering every technique in RAG, one query at a time - David Karam, Pi Labs (fmr. Google Search)](../sources/20250729_w9u11ioHGA0.md)
 - [Information Retrieval from the Ground Up - Philipp Krenn, Elastic](../sources/20250727_4Xe_iMYxBQc.md)
+- [How to build Enterprise Aware Agents - Chau Tran, Glean](../sources/20250724_hxFpUcvWPcU.md)

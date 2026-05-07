@@ -18,6 +18,8 @@ Confident vibe coding adds an early-evaluation requirement for enterprise code g
 
 Agent-loop evals should pair operational metrics with correctness checks. Cost, latency, and number of steps are useful only after the harness verifies whether the agent actually reached the right outcome; otherwise a model can look fast because it guessed early or skipped the hard reasoning path.
 
+Enterprise workflow evals can inspect the trajectory itself. If a task has a known golden workflow, the evaluation can compare whether the agent found the expected steps, sources, checks, or approvals before judging the final response. This catches acceptable-looking outputs that bypass internal process, protocol, or metric requirements.
+
 High-assurance coding adds another evaluation tier for generated code. Formal specifications and proof-carrying implementation paths can verify selected critical components before execution, but only against the requirements that were actually specified. Separate generation and verification prompts or model providers can also reduce shared blind spots, especially when paired with risk analysis, safety cases, adversarial tests, and trusted libraries.
 
 Enterprise AI ROI evaluation should classify outcomes before comparing them. Time savings, output volume, quality, new capabilities, decision quality, cost savings, revenue, and risk reduction describe different kinds of value and should not be collapsed into a single generic productivity story. Self-reported surveys can reveal useful early patterns, especially around where people believe ROI is appearing, but their audience and sampling path must stay attached to the claim so leaders do not mistake directional adoption evidence for a controlled population study.
@@ -164,6 +166,7 @@ Coding-agent code quality needs evaluation while the diff is still forming. Usef
 - [Activation Steering Can Patch Specific Runtime Behaviors](../concepts/activation-steering-can-patch-specific-runtime-behaviors.md) - runtime feature controls should be validated against the policy or behavior they intend to patch.
 - [Model Diffs Inspect Post-Training Feature Changes](../concepts/model-diffs-inspect-post-training-feature-changes.md) - post-training inspection can complement aggregate eval scores by surfacing feature-level behavioral drift.
 - [Evaluate Agent Loops With Correctness, Cost, Latency, and Step Counts](../concepts/evaluate-agent-loops-with-correctness-cost-latency-and-step-counts.md) - loop metrics should include both outcome validity and operational cost.
+- [Golden Workflows Evaluate Agent Trajectories](../concepts/golden-workflows-evaluate-agent-trajectories.md) - process-level expected workflows can evaluate the agent trace, not only the final answer.
 - [Benchmark RAG Pipelines After Production Usage Exists](../concepts/benchmark-rag-pipelines-after-production-usage-exists.md) - production traces should drive parser, retrieval, hallucination, hybrid-search, and cost benchmarks.
 - [Layer Domain RAG Evals by Fidelity, Cost, and Speed](../concepts/layer-domain-rag-evals-by-fidelity-cost-and-speed.md) - expert review, curated criteria, and fast metrics serve different iteration speeds.
 - [Decompose Domain RAG by Query Structure and Corpus Scale](../concepts/decompose-domain-rag-by-query-structure-and-corpus-scale.md) - evaluation should reflect the domain query structure and corpus scale being retrieved.
@@ -400,6 +403,7 @@ Coding-agent code quality needs evaluation while the diff is still forming. Usef
 
 ## Sources
 
+- [How to build Enterprise Aware Agents - Chau Tran, Glean](../sources/20250724_hxFpUcvWPcU.md)
 - [Beyond the Prototype: Using AI to Write High-Quality Code - Josh Albrecht, Imbue](../sources/20250725_x_1EumTaXeE.md)
 - [Strategies for LLM Evals (GuideLLM, lm-eval-harness, OpenAI Evals Workshop) - Taylor Jordan Smith](../sources/20250727_89NuzmKokIk.md)
 - [Your Coding Agent Just Got Cloned And Your Brain Isn't Ready - Rustin Banks, Google Jules](../sources/20250725_X4BwOu0GWb8.md)

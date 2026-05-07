@@ -132,6 +132,8 @@ Devin-style coding-agent workflows evolve with task horizon. Repeatable migratio
 
 High-quality coding-agent workflows can prevent defects before generation by forcing plans before implementation, researching existing solutions, and keeping specs, docs, and strict style guides in the active agent context. The same workflow should watch for stale or conflicting specs so the agent does not code against intent that humans have only kept in side channels.
 
+Enterprise-aware agent workflows can be compiled from agent traces themselves. When an agent successfully completes a novel task, the trace can become a candidate workflow; when a future task resembles it, workflow search can retrieve that process and steer the agent toward known company practice. This creates a feedback loop where agents discover workflows, humans edit or approve them, and retrieval keeps the current process available without turning every workflow into fixed code or retrained weights.
+
 ## Key Concepts
 
 - [Specs and Style Guides Steer Coding Agents Toward Maintainable Code](../concepts/specs-and-style-guides-steer-coding-agents-toward-maintainable-code.md) - plan-first work, current docs, and style guidance prevent predictable agent mistakes.
@@ -139,6 +141,9 @@ High-quality coding-agent workflows can prevent defects before generation by for
 - [Agent Planning Should Mine Feedback Before Producing PRDs and Tickets](../concepts/agent-planning-should-mine-feedback-before-producing-prds-and-tickets.md) - product planning workflows can use agents to mine feedback, constraints, and assumptions before ticket decomposition.
 - [Incident Agents Turn Alerts Into RCA and Operational Memory](../concepts/incident-agents-turn-alerts-into-rca-and-operational-memory.md) - incident workflows can turn scattered operational evidence into RCA, mitigation, runbooks, and memory.
 - [Agent-Native SDLC Platforms Need Context, Reliability, and Parallelism](../concepts/agent-native-sdlc-platforms-need-context-reliability-and-parallelism.md) - SDLC workflows need platform support when agents operate across planning, coding, testing, and monitoring.
+- [Workflow Search Retrieves Enterprise Practice at Runtime](../concepts/workflow-search-retrieves-enterprise-practice-at-runtime.md) - enterprise workflows can be retrieved and composed as task guidance.
+- [Golden Workflows Evaluate Agent Trajectories](../concepts/golden-workflows-evaluate-agent-trajectories.md) - known workflows provide trace-level process checks for agent runs.
+- [Dynamic Workflow Prompting Fits Changing Enterprise Behavior](../concepts/dynamic-workflow-prompting-fits-changing-enterprise-behavior.md) - dynamic prompt examples fit workflows that vary by team or change over time.
 - [Backlog-Scale Coding Agents Need Confidence and Self-Testing](../concepts/backlog-scale-coding-agents-need-confidence-and-self-testing.md) - asynchronous issue queues need confidence, escalation, and local verification.
 - [Choose Copilot Mode By Autonomy and Feedback Need](../concepts/choose-copilot-mode-by-autonomy-and-feedback-need.md) - Copilot work can stay conversational, local-agentic, or asynchronous depending on task feedback needs.
 - [Layer Copilot Context Through Issues, Instructions, and Repository Structure](../concepts/layer-copilot-context-through-issues-instructions-and-repository-structure.md) - background coding-agent work needs workflow context in issues and instruction files.
@@ -490,6 +495,7 @@ High-quality coding-agent workflows can prevent defects before generation by for
 
 ## Sources
 
+- [How to build Enterprise Aware Agents - Chau Tran, Glean](../sources/20250724_hxFpUcvWPcU.md)
 - [Beyond the Prototype: Using AI to Write High-Quality Code - Josh Albrecht, Imbue](../sources/20250725_x_1EumTaXeE.md)
 - [Devin 2.0 and the Future of SWE - Scott Wu, Cognition](../sources/20250725_MI83buT_23o.md)
 - [Your Coding Agent Just Got Cloned And Your Brain Isn't Ready - Rustin Banks, Google Jules](../sources/20250725_X4BwOu0GWb8.md)

@@ -1767,3 +1767,11 @@
 - Updated topics: [Models](topics/models.md), [Inference](topics/inference.md), [Infrastructure](topics/infrastructure.md)
 - Updated concepts: [Enterprise Open-Model Adoption Follows Task Pressure](concepts/enterprise-open-model-adoption-follows-task-pressure.md), [Self-Hosted Inference Needs a Platform Beyond Runtime and GPUs](concepts/self-hosted-inference-needs-a-platform-beyond-runtime-and-gpus.md), [Agentic Workloads Turn Token Price Into Unit-Economics Pressure](concepts/agentic-workloads-turn-token-price-into-unit-economics-pressure.md)
 - Notes: Added Baseten's enterprise open-model adoption framing and the inference-platform requirements that appear once teams move beyond hosted APIs.
+
+## [2026-05-07] ingest | How to build Enterprise Aware Agents - Chau Tran, Glean
+
+- Source: [How to build Enterprise Aware Agents - Chau Tran, Glean](sources/20250724_hxFpUcvWPcU.md)
+- Processed: `hxFpUcvWPcU`
+- Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Retrieval](topics/retrieval.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Workflow Search Retrieves Enterprise Practice at Runtime](concepts/workflow-search-retrieves-enterprise-practice-at-runtime.md), [Golden Workflows Evaluate Agent Trajectories](concepts/golden-workflows-evaluate-agent-trajectories.md), [Dynamic Workflow Prompting Fits Changing Enterprise Behavior](concepts/dynamic-workflow-prompting-fits-changing-enterprise-behavior.md)
+- Notes: Added Glean's workflow-search pattern for retrieving, evaluating, and reusing enterprise task workflows as agent context.
