@@ -1023,3 +1023,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Tools](topics/tools.md)
 - Updated concepts: [Shell-wrapped subagents can retrofit harness capabilities](concepts/shell-wrapped-subagents-can-retrofit-harness-capabilities.md), [Permission-stable command wrappers reduce approval friction](concepts/permission-stable-command-wrappers-reduce-approval-friction.md), [Use subagents to isolate context-heavy subtasks](concepts/use-subagents-to-isolate-context-heavy-subtasks.md), [Use Bash as a composable code-mode tool for agents](concepts/use-bash-as-a-composable-code-mode-tool-for-agents.md)
 - Notes: Added a Codex CLI subagent retrofit pattern covering child `codex exec` runs, file-backed handoff, sandbox and credential constraints, stable command approvals, and serial execution tradeoffs.
+
+## [2026-05-07] ingest | The Cure for the Vibe Coding Hangover - Corey J. Gallon, Rexmore
+
+- Source: [The Cure for the Vibe Coding Hangover - Corey J. Gallon, Rexmore](sources/20251124_JsKTQbT58BY.md)
+- Processed: `JsKTQbT58BY`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Vibe Coding Hangover Is a Maintainability Failure](concepts/vibe-coding-hangover-is-a-maintainability-failure.md), [Plan Coding-Agent Work Through Feature Inventories and Dependency Graphs](concepts/plan-coding-agent-work-through-feature-inventories-and-dependency-graphs.md), [Assemble Per-Feature Context Packages for Coding Agents](concepts/assemble-per-feature-context-packages-for-coding-agents.md), [Use Multisensory Feedback Loops for Coding-Agent Validation](concepts/use-multisensory-feedback-loops-for-coding-agent-validation.md)
+- Notes: Added Gallon's make-it-work framework for avoiding brittle vibe-coded demoware through human-owned planning, dependency-ordered atomic features, curated agent context, and multisensory validation.

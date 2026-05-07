@@ -232,6 +232,10 @@
 - [Review research and plans before they multiply into code](../concepts/review-research-and-plans-before-they-multiply-into-code.md)
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md)
 - [Use stable agent harnesses as model-evolution boundaries](../concepts/use-stable-agent-harnesses-as-model-evolution-boundaries.md)
+- [Vibe coding hangover is a maintainability failure](../concepts/vibe-coding-hangover-is-a-maintainability-failure.md)
+- [Plan coding-agent work through feature inventories and dependency graphs](../concepts/plan-coding-agent-work-through-feature-inventories-and-dependency-graphs.md)
+- [Assemble per-feature context packages for coding agents](../concepts/assemble-per-feature-context-packages-for-coding-agents.md)
+- [Use multisensory feedback loops for coding-agent validation](../concepts/use-multisensory-feedback-loops-for-coding-agent-validation.md)
 - [Agent managers orchestrate editor, browser, and background agents](../concepts/agent-managers-orchestrate-editor-browser-and-background-agents.md)
 - [Dynamic artifacts make agent work reviewable and reusable](../concepts/dynamic-artifacts-make-agent-work-reviewable-and-reusable.md)
 - [Product-research flywheels expose model and harness gaps](../concepts/product-research-flywheels-expose-model-and-harness-gaps.md)
@@ -376,6 +380,7 @@
 ## Context Engineering
 
 - [Frequent intentional compaction keeps coding agents in the smart zone](../concepts/frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md)
+- [Assemble per-feature context packages for coding agents](../concepts/assemble-per-feature-context-packages-for-coding-agents.md)
 - [Keep Agent Context Small, Fresh, and Task-Specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md)
 - [Proactive agent systems need observation, personalization, timing, and workflow embedding](../concepts/proactive-agent-systems-need-observation-personalization-timing-and-workflow-embedding.md)
 - [Use subagents to isolate context-heavy subtasks](../concepts/use-subagents-to-isolate-context-heavy-subtasks.md)
@@ -561,6 +566,7 @@
 ## Evaluation
 
 - [Review research and plans before they multiply into code](../concepts/review-research-and-plans-before-they-multiply-into-code.md)
+- [Use multisensory feedback loops for coding-agent validation](../concepts/use-multisensory-feedback-loops-for-coding-agent-validation.md)
 - [Regulated agents need explainability, isolation, governance, and speed](../concepts/regulated-agents-need-explainability-isolation-governance-and-speed.md)
 - [Treat environments as eval, data, and training substrates](../concepts/treat-environments-as-eval-data-and-training-substrates.md)
 - [Product harnesses can become model customization environments](../concepts/product-harnesses-can-become-model-customization-environments.md)
@@ -922,6 +928,9 @@
 
 - [Frequent intentional compaction keeps coding agents in the smart zone](../concepts/frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md)
 - [Review research and plans before they multiply into code](../concepts/review-research-and-plans-before-they-multiply-into-code.md)
+- [Vibe coding hangover is a maintainability failure](../concepts/vibe-coding-hangover-is-a-maintainability-failure.md)
+- [Plan coding-agent work through feature inventories and dependency graphs](../concepts/plan-coding-agent-work-through-feature-inventories-and-dependency-graphs.md)
+- [Use multisensory feedback loops for coding-agent validation](../concepts/use-multisensory-feedback-loops-for-coding-agent-validation.md)
 - [Scientific agents should execute against domain infrastructure](../concepts/scientific-agents-should-execute-against-domain-infrastructure.md)
 - [Regulated agents need explainability, isolation, governance, and speed](../concepts/regulated-agents-need-explainability-isolation-governance-and-speed.md)
 - [High-consequence data changes vendor trust requirements](../concepts/high-consequence-data-changes-vendor-trust-requirements.md)

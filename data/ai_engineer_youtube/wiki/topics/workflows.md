@@ -46,7 +46,7 @@ Proactive coding workflows try to remove the prompt/wait/repeat loop without rem
 
 Enterprise AI research workflows can be made fundable by turning each uncertain phase into a small productizable bet. For GenBI, the useful pattern is to work with production-like but controlled data, involve expert users early, ship six-week deliverables such as metadata enrichment or report discovery, and preserve stop/go decision points so leadership can keep funding tied to measurable value instead of sunk cost.
 
-AI coding workflows should also separate easy generation from simple system design. Nations' three-phase approach turns one long coding conversation into research, planning, and implementation artifacts with human checkpoints between them. That structure keeps review at the speed of generation: humans validate the research and plan before the agent produces a diff, then review implementation against a known plan rather than reverse-engineering whatever the chat invented.
+AI coding workflows should also separate easy generation from simple system design. Nations' three-phase approach turns one long coding conversation into research, planning, and implementation artifacts with human checkpoints between them. Gallon's framework adds a more granular make-it-work sequence: capture a master project specification, extract and categorize features, develop atomic feature specifications, build a dependency matrix, then produce an implementation plan that sequences phases and binary validation criteria. That structure keeps review at the speed of generation: humans validate the research and plan before the agent produces a diff, then review implementation against a known plan rather than reverse-engineering whatever the chat invented.
 
 Frequent intentional compaction adds a context-window version of the same workflow. Research, plan, and implementation are useful because each phase can compact the previous phase into a smaller, reviewed artifact: codebase truth, then implementation intent, then executable change. The workflow should scale with task difficulty rather than become ceremony; a small button change may need direct prompting, while hard brownfield work needs enough compaction and review to keep the agent out of stale or noisy context.
 
@@ -141,6 +141,9 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 - [Frequent intentional compaction keeps coding agents in the smart zone](../concepts/frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md) - workflow phases can compact context before long sessions drift.
 - [Review research and plans before they multiply into code](../concepts/review-research-and-plans-before-they-multiply-into-code.md) - humans should inspect high-leverage artifacts before implementation expands them into diffs.
 - [Use research-plan-implement loops for coding agents](../concepts/use-research-plan-implement-loops-for-coding-agents.md) - separate phases make coding-agent work more reviewable.
+- [Plan Coding-Agent Work Through Feature Inventories and Dependency Graphs](../concepts/plan-coding-agent-work-through-feature-inventories-and-dependency-graphs.md) - workflow planning should create atomic, dependency-ordered implementation units.
+- [Vibe Coding Hangover Is a Maintainability Failure](../concepts/vibe-coding-hangover-is-a-maintainability-failure.md) - workflow shortcuts can turn working demos into code the team cannot own.
+- [Use Multisensory Feedback Loops for Coding-Agent Validation](../concepts/use-multisensory-feedback-loops-for-coding-agent-validation.md) - autonomous loops need observable runtime feedback, not only generated code.
 - [Long AI coding conversations compound accidental complexity](../concepts/long-ai-coding-conversations-compound-accidental-complexity.md) - workflows should avoid letting conversational pivots become architecture.
 - [Manual migration seeds teach agents the hidden constraints](../concepts/manual-migration-seeds-teach-agents-the-hidden-constraints.md) - exploratory manual work can seed later agentic migration workflows.
 - [Spec-driven development turns prompts into requirements, design, and tasks](../concepts/spec-driven-development-turns-prompts-into-requirements-design-and-tasks.md) - coding-agent workflows can route from prompt to spec artifacts to task execution.
@@ -320,6 +323,7 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 ## Sources
 
 - [No Vibes Allowed: Solving Hard Problems in Complex Codebases - Dex Horthy, HumanLayer](../sources/20251202_rmvDxxNubIg.md)
+- [The Cure for the Vibe Coding Hangover - Corey J. Gallon, Rexmore](../sources/20251124_JsKTQbT58BY.md)
 - [Defying Gravity - Kevin Hou, Google DeepMind](../sources/20251202_HN-F-OQe6j0.md)
 - [Government Agents: AI Agents Meet Tough Regulations - Mark Myshatyn, Los Alamos National Lab](../sources/20251206_TnSGx36Ly0Q.md)
 - [What We Learned Deploying AI within Bloomberg's Engineering Organization - Lei Zhang, Bloomberg](../sources/20251216_Q81AzlA-VE8.md)

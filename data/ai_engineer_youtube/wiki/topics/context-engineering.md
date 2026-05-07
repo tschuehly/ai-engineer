@@ -24,12 +24,13 @@ Proactive agents add a timing constraint to context engineering. A background co
 
 AI code review turns context quality into a trust issue. Review and generation tools need access to the relevant standards, best practices, version history, PR history, organizational logs, and current code context; otherwise developers can distrust the LLM's judgment even when the model is capable.
 
-Frequent intentional compaction is a coding-specific context-engineering workflow. It treats the active context window as a limited, trajectory-sensitive working area: preserve correct current facts and intent in reviewed Markdown artifacts, start fresh sessions from those artifacts, and prefer on-demand compressed context from current code over broad static onboarding docs that grow stale.
+Frequent intentional compaction is a coding-specific context-engineering workflow. It treats the active context window as a limited, trajectory-sensitive working area: preserve correct current facts and intent in reviewed Markdown artifacts, start fresh sessions from those artifacts, and prefer on-demand compressed context from current code over broad static onboarding docs that grow stale. Per-feature context packaging adds a planning-artifact variant of the same idea: after a master specification, feature inventory, specifications, dependencies, and implementation plan exist, the implementation agent should receive only the sections relevant to the current atomic feature plus its dependencies and validation strategy.
 
 ## Key Concepts
 
 - [Keep agent context small, fresh, and task-specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md) - context should be externalized, selected, summarized, and isolated so stale or excessive history does not degrade agent work.
 - [Frequent intentional compaction keeps coding agents in the smart zone](../concepts/frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md) - source-backed compaction controls size, correctness, completeness, and trajectory in coding-agent sessions.
+- [Assemble Per-Feature Context Packages for Coding Agents](../concepts/assemble-per-feature-context-packages-for-coding-agents.md) - planning artifacts should be sliced into feature-specific context packages before implementation.
 - [Proactive agent systems need observation, personalization, timing, and workflow embedding](../concepts/proactive-agent-systems-need-observation-personalization-timing-and-workflow-embedding.md) - proactive agents need context selected for the current moment and workflow surface.
 - [Use subagents to isolate context-heavy subtasks](../concepts/use-subagents-to-isolate-context-heavy-subtasks.md) - separate context windows can preserve the main agent's working memory.
 - [Offload long-horizon agent state outside the context window](../concepts/offload-long-horizon-agent-state-outside-the-context-window.md) - files, plans, docs, memories, and scoped subagents can hold state until it is relevant.
@@ -110,6 +111,7 @@ Frequent intentional compaction is a coding-specific context-engineering workflo
 ## Sources
 
 - [No Vibes Allowed: Solving Hard Problems in Complex Codebases - Dex Horthy, HumanLayer](../sources/20251202_rmvDxxNubIg.md)
+- [The Cure for the Vibe Coding Hangover - Corey J. Gallon, Rexmore](../sources/20251124_JsKTQbT58BY.md)
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md)
 - [Don't Build Agents, Build Skills Instead - Barry Zhang & Mahesh Murag, Anthropic](../sources/20251208_CEvIs9y1uog.md)
 - [Spec-Driven Development: Agentic Coding at FAANG Scale and Quality - Al Harris, Amazon Kiro](../sources/20260109_HY_JyxAZsiE.md)

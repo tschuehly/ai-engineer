@@ -82,6 +82,7 @@ Regulated-agent evaluation adds accountability and deployment-readiness evidence
 - [Treat slop as a quality failure, not an AI provenance label](../concepts/treat-slop-as-a-quality-failure-not-an-ai-provenance-label.md) - quality gates should inspect the output rather than treating origin as the whole judgment.
 - [Do not report agent autonomy without quality accountability](../concepts/do-not-report-agent-autonomy-without-quality-accountability.md) - long autonomous runs need quality evidence before they count as capability.
 - [Autonomous browser verification finds painted-door failures](../concepts/autonomous-browser-verification-finds-painted-door-failures.md) - browser checks gather the technical feedback needed to validate generated web-app behavior.
+- [Use Multisensory Feedback Loops for Coding-Agent Validation](../concepts/use-multisensory-feedback-loops-for-coding-agent-validation.md) - coding-agent validation should combine tests with visual, log, interaction, state, and code-structure evidence.
 - [Self-reported task duration is a weak productivity signal](../concepts/self-reported-task-duration-is-a-weak-productivity-signal.md) - speedup estimates should not rest on recalled elapsed time.
 - [Separate watched and unwatched agent time horizons](../concepts/separate-watched-and-unwatched-agent-time-horizons.md) - autonomy evals should record whether close monitoring is part of the result.
 - [Make agent work more trustworthy by making it verifiable](../concepts/make-agent-work-more-trustworthy-by-making-it-verifiable.md) - agent autonomy depends on whether tasks have direct checks, proxy checks, or safe constraints.
@@ -238,6 +239,7 @@ Regulated-agent evaluation adds accountability and deployment-readiness evidence
 
 - [Government Agents: AI Agents Meet Tough Regulations - Mark Myshatyn, Los Alamos National Lab](../sources/20251206_TnSGx36Ly0Q.md)
 - [Your Support Team Should Ship Code - Lisa Orr, Zapier](../sources/20251216_RmJ4rTLV_x4.md)
+- [The Cure for the Vibe Coding Hangover - Corey J. Gallon, Rexmore](../sources/20251124_JsKTQbT58BY.md)
 - [No Vibes Allowed: Solving Hard Problems in Complex Codebases - Dex Horthy, HumanLayer](../sources/20251202_rmvDxxNubIg.md)
 - [How Claude Code Works - Jared Zoneraich, PromptLayer](../sources/20251226_RFKCzGlAU6Q.md)
 - [Why Agent Hype can fall short of reality - Joel Becker, METR](../sources/20251224_RhfqQKe22ZA.md)
