@@ -48,6 +48,8 @@ AI-generated kernels turn low-level optimization into an infrastructure workflow
 
 RL training infrastructure has a similar systems-modeling requirement. Synchronous RL wastes accelerator capacity when long-tail samples keep the whole step waiting, while asynchronous pipeline RL keeps sampling and training workers busy through queues and in-flight weight updates. The infrastructure problem is to allocate GPUs between sampling and training so production and consumption rates match, KV-cache memory is respected, and policy staleness stays within the algorithm's tolerance.
 
+Agent optimization infrastructure can include a meta-controller that routes budget across context, compute, verification, memory, and temporary parameter adaptation. That controller needs telemetry for task outcomes, per-strategy contribution, compute, latency, memory, and confidence calibration, plus efficient profiling so the optimizer does not spend more on deciding than it saves through adaptive execution.
+
 Coding-agent harnesses are another infrastructure layer when teams want products to survive rapid model and API churn. The harness absorbs model-facing details such as tool loops, compaction, sandboxing, permissions, MCP support, parallel tool calls, port forwarding, and image handling. A stable SDK boundary can let product teams integrate the harness into IDEs, CI/CD, GitHub Actions, or product agents while leaving model/harness maintenance to a shared provider.
 
 Web and mobile coding agents add a remote-compute version of that harness problem. When the user starts work away from a local terminal and returns later, the platform needs secure sandboxed execution, container orchestration, and session persistence so generated code can run without depending on the user's machine.
@@ -86,6 +88,8 @@ Architecture-copilot infrastructure needs a live system model before recommendat
 - [Environment registries make AI research more accessible](../concepts/environment-registries-make-ai-research-more-accessible.md) - shared environment infrastructure lets teams run evals, inference, fine-tuning, and RL without rebuilding the execution stack.
 - [Pipeline RL trades policy staleness for GPU throughput](../concepts/pipeline-rl-trades-policy-staleness-for-gpu-throughput.md) - async RL infrastructure turns straggler waiting into a queueing and staleness-control problem.
 - [Simulate RL run layouts before spending GPU budget](../concepts/simulate-rl-run-layouts-before-spending-gpu-budget.md) - RL runs should be sized with workload simulations before using expensive accelerator fleets.
+- [Route agent optimization by task profile, not one fixed loop](../concepts/route-agent-optimization-by-task-profile-not-one-fixed-loop.md) - adaptive agent infrastructure should allocate budget by task profile.
+- [Train meta-controllers with cost, confidence, and sparse-reward caveats](../concepts/train-meta-controllers-with-cost-confidence-and-sparse-reward-caveats.md) - meta-controller infrastructure needs reward, cost, and confidence telemetry.
 - [Use MLX Swift LM for Apple local model integration](../concepts/use-mlx-swift-lm-for-apple-local-model-integration.md) - native Apple app infrastructure can use MLX-compatible Hugging Face models without building a cloud service first.
 - [Build internal AI engineering platforms when off-the-shelf tools lack enterprise context](../concepts/build-internal-ai-engineering-platforms-when-off-the-shelf-tools-lack-enterprise-context.md) - internal platforms can connect agents to monorepos, service catalogs, operational tools, and review systems.
 - [Build paved paths for enterprise AI engineering tools](../concepts/build-paved-paths-for-enterprise-ai-engineering-tools.md) - shared model, MCP, deployment, and enablement infrastructure prevents fragmented enterprise AI tooling.
@@ -247,5 +251,6 @@ Architecture-copilot infrastructure needs a live system model before recommendat
 - [Katelyn Lesse - Evolving Claude APIs for Agents, Anthropic](../sources/20251204_aqW68Is_Kj4.md)
 - [Building Cursor Composer - Lee Robinson, Cursor](../sources/20251202_fL1iJHtl51Q.md)
 - [AI Copilots for Tech Architecture: The Highest-ROI Use Case You're Not Building - Boris B., Catio](../sources/20251124_QRWdapxMdSY.md)
+- [The Unbearable Lightness of Agent Optimization - Alberto Romero, Jointly](../sources/20251124_zfvEMNmVlNY.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

@@ -8,6 +8,8 @@ Agent workflows depend on both model capability and the context substrate around
 
 Agent models themselves can be tuned for this loop shape. M2's training story emphasizes interleaving reasoning with many tool-call turns, perturbing the operational surface around tools and prompts, and using small active-parameter economics to run multiple workplace-agent copies in parallel. Agent RFT adds a production-post-training variant: teams can train a reasoning model over multi-step rollouts that call hosted tool endpoints and receive custom reward signals, as long as rollout IDs and tool-call context are preserved for grading and the workflow is well-defined enough for production-matched rewards.
 
+Agent optimization can also move into a learned routing layer around the agent. Meta-controller approaches profile task complexity, uncertainty, verifiability, and resource constraints, then decide whether the current run needs minimal context, context reflection, extra compute, hierarchical verification, structured memory retrieval, or selective test-time adaptation. This is useful only when the routing layer is itself evaluated: weak reflection, sparse rewards, verifier agreement on the same wrong answer, and profiling overhead can turn "self-optimization" into a new failure surface.
+
 Agent-first IDEs add another interface pattern for this shift. Antigravity's agent manager treats the editor and browser as agent tools while the human supervises plans, approvals, notifications, artifacts, and parallel work from a higher-level control surface. Its browser integration also broadens agent context and verification: the same browser can retrieve authenticated docs or dashboards, interact with the app, and return screen recordings that both humans and multimodal models can inspect.
 
 Cline's coding-agent lesson separates harness progress from model progress. A stripped-down terminal harness can be enough for strong frontier models, while the more durable contribution is capturing where agents fail on real engineering work and turning those traces into standardized RL and eval environments.
@@ -71,6 +73,9 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Product harnesses can become model customization environments](../concepts/product-harnesses-can-become-model-customization-environments.md) - agent products can train and evaluate models inside the same harness that defines the user experience.
 - [Interleave reasoning and tool calls for long-horizon agents](../concepts/interleave-reasoning-and-tool-calls-for-long-horizon-agents.md) - long-running agents should react to tool feedback over repeated turns.
 - [Use Agent RFT after baseline and task optimization](../concepts/use-agent-rft-after-baseline-and-task-optimization.md) - weight-changing agent optimization belongs after baseline and task/tool improvements.
+- [Route agent optimization by task profile, not one fixed loop](../concepts/route-agent-optimization-by-task-profile-not-one-fixed-loop.md) - task profiles can route agents across context, compute, verification, memory, and parameter strategies.
+- [Use hierarchical verification before trusting weak agent feedback](../concepts/use-hierarchical-verification-before-trusting-weak-agent-feedback.md) - self-improving loops need quality gates and executable checks before they preserve learned deltas.
+- [Train meta-controllers with cost, confidence, and sparse-reward caveats](../concepts/train-meta-controllers-with-cost-confidence-and-sparse-reward-caveats.md) - learned agent routers must balance correctness, cost, confidence, and unstable training signals.
 - [Preserve rollout trajectory context for agent RFT grading](../concepts/preserve-rollout-trajectory-context-for-agent-rft-grading.md) - tool-using agents should be graded with their sampled trajectory context.
 - [Perturb agent scaffolds during training for generalization](../concepts/perturb-agent-scaffolds-during-training-for-generalization.md) - agent robustness includes prompt, template, environment, and tool-response variation.
 - [Small agentic models make parallel workplace agents economical](../concepts/small-agentic-models-make-parallel-workplace-agents-economical.md) - low-cost agentic models make concurrent specialist copies practical.
@@ -384,5 +389,6 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Defying Gravity - Kevin Hou, Google DeepMind](../sources/20251202_HN-F-OQe6j0.md)
 - [AI Copilots for Tech Architecture: The Highest-ROI Use Case You're Not Building - Boris B., Catio](../sources/20251124_QRWdapxMdSY.md)
 - [Enterprise Deep Research: The Next Killer App for Enterprise AI — Ofer Mendelevitch, Vectara](../sources/20251124_fh9LgKXBGnQ.md)
+- [The Unbearable Lightness of Agent Optimization - Alberto Romero, Jointly](../sources/20251124_zfvEMNmVlNY.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

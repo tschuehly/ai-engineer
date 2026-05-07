@@ -1079,3 +1079,11 @@
 - Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Retrieval](topics/retrieval.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Enterprise deep research runs multi-step synthesis over private corpora](concepts/enterprise-deep-research-runs-multi-step-synthesis-over-private-corpora.md), [Enterprise deep research needs trustworthy retrieval and governance controls](concepts/enterprise-deep-research-needs-trustworthy-retrieval-and-governance-controls.md), [Deep research agents need planning, grounded evidence, and pivot loops](concepts/deep-research-agents-need-planning-grounded-evidence-and-pivot-loops.md), [Use connectors and uploads as private research context](concepts/use-connectors-and-uploads-as-private-research-context.md)
 - Notes: Added Vectara's enterprise deep research framing for multi-step private-corpus synthesis, document-heavy workflows, and retrieval governance requirements.
+
+## [2026-05-07] ingest | The Unbearable Lightness of Agent Optimization — Alberto Romero, Jointly
+
+- Source: [The Unbearable Lightness of Agent Optimization — Alberto Romero, Jointly](sources/20251124_zfvEMNmVlNY.md)
+- Processed: `zfvEMNmVlNY`
+- Updated topics: [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md)
+- Updated concepts: [Route Agent Optimization By Task Profile, Not One Fixed Loop](concepts/route-agent-optimization-by-task-profile-not-one-fixed-loop.md), [Use Hierarchical Verification Before Trusting Weak Agent Feedback](concepts/use-hierarchical-verification-before-trusting-weak-agent-feedback.md), [Train Meta-Controllers With Cost, Confidence, And Sparse-Reward Caveats](concepts/train-meta-controllers-with-cost-confidence-and-sparse-reward-caveats.md)
+- Notes: Added Meta-ACE as a task-profiled optimization layer that routes across context, compute, verification, memory, and adaptation while preserving caveats around weak feedback and controller training.

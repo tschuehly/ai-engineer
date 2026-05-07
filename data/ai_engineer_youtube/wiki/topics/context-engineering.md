@@ -10,6 +10,8 @@ Product engineering adds a customer-context layer to this problem. If AI handles
 
 Prompt-learning workflows show a narrower context loop: when traces or datasets include explanatory feedback from subject-matter experts or evaluators, that text becomes context for improving the next system prompt. Bare labels are less reusable because they do not identify the missed instruction, missing context, or rule violation that future prompts should address.
 
+Agentic context optimization should not be treated as one universal loop. Meta-adaptive context engineering frames context reflection as one strategy among several: a task profile can choose minimal context for simple work, AC-style reflection for incremental context updates, structured memory retrieval for hard tasks, or verification and extra compute when feedback is weak. That framing challenges a context-only optimization instinct: sometimes the right fix is less context, more execution checking, or a different resource allocation.
+
 For coding agents, the same loop can target repository or agent rule files directly: benchmark traces, unit-test results, and judge explanations can be fed into a meta-prompt that writes learned instructions for the next run. AI-native company workflows add a team-level version of the context loop. Lessons from delegated agent work can be codified into `CLAUDE.md`-style files, subagents, slash commands, prompt libraries, and onboarding guidance so tacit conventions become reusable agent-readable context rather than private memory.
 
 Long context should be treated as temporary working memory, not durable knowledge. Large prompts can keep a model from outright lacking a document, but attention cost, latency, and context-rot behavior mean "fits in the window" is weaker than "the model can reason over it reliably." For stable long-tail knowledge, the design choice may move from prompt stuffing to retrieval, contextual embeddings, or model adaptation.
@@ -59,6 +61,7 @@ Repository architecture can turn context engineering into the adoption bottlenec
 - [Product engineers need direct customer context](../concepts/product-engineers-need-direct-customer-context.md) - customer feedback, calls, and channels are product context for AI-assisted engineering decisions.
 - [Context development lifecycle treats context as an engineered artifact](../concepts/context-development-lifecycle-treats-context-as-an-engineered-artifact.md) - context should move through generate, evaluate, distribute, observe, and adapt loops.
 - [Evaluate context changes with lint, task scenarios, and probabilistic budgets](../concepts/evaluate-context-changes-with-lint-task-scenarios-and-probabilistic-budgets.md) - prompt and skill changes need validation because small context edits can change generated behavior.
+- [Route agent optimization by task profile, not one fixed loop](../concepts/route-agent-optimization-by-task-profile-not-one-fixed-loop.md) - context reflection should be chosen only when the task profile calls for it.
 - [Package reusable context as skills, libraries, and registries](../concepts/package-reusable-context-as-skills-libraries-and-registries.md) - shared context needs package, registry, dependency, and security practices.
 - [Treat complex skills like software artifacts](../concepts/treat-complex-skills-like-software-artifacts.md) - executable and dependency-heavy skills need eval, version, and lineage practices.
 - [Use agent logs and review feedback as context observability signals](../concepts/use-agent-logs-and-review-feedback-as-context-observability-signals.md) - logs, reviews, and production failures should feed durable context improvements.
@@ -160,3 +163,4 @@ Repository architecture can turn context engineering into the adoption bottlenec
 - [Context Engineering: Connecting the Dots with Graphs - Stephen Chin, Neo4j](../sources/20251124_LLuKshphGOE.md)
 - [AI Copilots for Tech Architecture: The Highest-ROI Use Case You're Not Building - Boris B., Catio](../sources/20251124_QRWdapxMdSY.md)
 - [What Data from 20m Pull Requests Reveal About AI Transformation - Nick Arcolano, Jellyfish](../sources/20251124_WqZq8L-v9pA.md)
+- [The Unbearable Lightness of Agent Optimization - Alberto Romero, Jointly](../sources/20251124_zfvEMNmVlNY.md)
