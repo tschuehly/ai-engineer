@@ -6,6 +6,8 @@ Evaluation for AI engineering should measure whether models, tools, retrieval la
 
 Agent-loop evals should pair operational metrics with correctness checks. Cost, latency, and number of steps are useful only after the harness verifies whether the agent actually reached the right outcome; otherwise a model can look fast because it guessed early or skipped the hard reasoning path.
 
+High-assurance coding adds another evaluation tier for generated code. Formal specifications and proof-carrying implementation paths can verify selected critical components before execution, but only against the requirements that were actually specified. Separate generation and verification prompts or model providers can also reduce shared blind spots, especially when paired with risk analysis, safety cases, adversarial tests, and trusted libraries.
+
 Enterprise AI ROI evaluation should classify outcomes before comparing them. Time savings, output volume, quality, new capabilities, decision quality, cost savings, revenue, and risk reduction describe different kinds of value and should not be collapsed into a single generic productivity story. Self-reported surveys can reveal useful early patterns, especially around where people believe ROI is appearing, but their audience and sampling path must stay attached to the claim so leaders do not mistake directional adoption evidence for a controlled population study.
 
 AI engineering transformation metrics should also distinguish adoption from operating-model impact. Tool usage, agent consumption, and breadth of use cases are only intermediate signals; teams need to connect investments in tools, upskilling, and change management to delivery speed, quality, security, resilience, developer sentiment, time to revenue, customer expansion, and cost per pod. Mean time to resolve priority bugs is one concrete resilience proxy when evaluating whether AI-assisted engineering improves the system rather than merely increasing activity.
@@ -62,6 +64,9 @@ PR-derived field telemetry adds a practical adoption dashboard shape for AI codi
 
 ## Key Concepts
 
+- [Use formal specifications and proofs for critical generated code](../concepts/use-formal-specifications-and-proofs-for-critical-generated-code.md) - verification can prove selected properties before generated code executes.
+- [Separate generation and verification prompts or models](../concepts/separate-generation-and-verification-prompts-or-models.md) - independent verifier contexts can reduce confirmation bias in agent-coded changes.
+- [Agentic coding economics shift attention from writing cost to assurance cost](../concepts/agentic-coding-economics-shift-attention-from-writing-cost-to-assurance-cost.md) - ROI analysis must include verification and defect-correction cost.
 - [Evaluate agent trajectories with backtests and smell metrics](../concepts/evaluate-agent-trajectories-with-backtests-and-smell-metrics.md) - flexible tool-loop agents need historical and trajectory-level checks.
 - [Regulated agents need explainability, isolation, governance, and speed](../concepts/regulated-agents-need-explainability-isolation-governance-and-speed.md) - regulated-agent evaluation should include auditability, deployment isolation, governance artifacts, and feature freshness.
 - [Update coding eval sets dynamically as model capability changes](../concepts/update-coding-eval-sets-dynamically-as-model-capability-changes.md) - fresh tasks, release windows, and calibrated difficulty preserve benchmark signal.
@@ -327,3 +332,4 @@ PR-derived field telemetry adds a practical adoption dashboard shape for AI codi
 - [The Unbearable Lightness of Agent Optimization - Alberto Romero, Jointly](../sources/20251124_zfvEMNmVlNY.md)
 - [Moving away from Agile: What's Next - Martin Harrysson & Natasha Maniar, McKinsey & Company](../sources/20251212_SZStlIhyTCY.md)
 - [Can you prove AI ROI in Software Eng? (Stanford 120k Devs Study) - Yegor Denisov-Blanch, Stanford](../sources/20251211_JvosMkuNxF8.md)
+- [Vision: Zero Bugs — Johann Schleier-Smith, Temporal](../sources/20251124_qLqttdO33UM.md)

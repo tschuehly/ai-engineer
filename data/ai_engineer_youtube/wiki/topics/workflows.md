@@ -20,6 +20,8 @@ Org-chart agent workflows add a business-operations control surface: assign work
 
 Repository-local web-agent workflows can make implementation, verification, preview sharing, and handoff rules part of the repeatable routine. Skills can teach the agent how to inspect issues, run browser QA, record evidence, create a public preview tunnel, notify a reviewer, and wait for confirmation before closing work.
 
+High-assurance agent workflows should make risk analysis and verification separate from code generation. A practical flow can ask one agent context to implement, another prompt or model to write tests and safety cases, and deterministic or formal tools to check critical properties; the workflow should also prefer trusted libraries for behavior that would be expensive to re-verify if generated from scratch.
+
 Multi-agent workflows need explicit coordination and recovery choices. Event-driven choreography works when agents can act independently and the system can trace every event; centralized orchestration works when dependencies, state, rollback, or auditability matter more than autonomy. Large refactor workflows make the dependency problem concrete: scan or visualize the code graph, form PR-sized batches, dispatch fixers only when upstream dependencies are ready, review and merge small outputs, then repeat as new batches unblock. Durable workflows should pass immutable state versions through data-contract validation and wrap agent calls with circuit breakers, graceful degradation, and compensation so partial failures do not leave hidden side effects.
 
 Durable workflow engines also address the single-agent production loop. Agent frameworks may provide the fixed loop that calls the LLM, executes requested tools, and feeds results back, but production workflows need persisted turns, retry policy, timeout behavior, and resumable waits around that loop. Human-in-the-loop steps are a useful stress test: the workflow should pause as logical state, release active process resources when needed, and resume when a human response arrives. Workflow-like automations can still justify an agent harness when the middle of the process requires flexible exploration, repository cloning, Docker runs, tests, and structured output rather than only known deterministic steps.
@@ -78,6 +80,8 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 
 ## Key Concepts
 
+- [High-assurance agentic coding needs process, not just generation](../concepts/high-assurance-agentic-coding-needs-process-not-just-generation.md) - workflow design should wrap generated code in requirements, verification, and feedback stages.
+- [Separate generation and verification prompts or models](../concepts/separate-generation-and-verification-prompts-or-models.md) - implementation and validation can run through separate agent contexts.
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - simple loops can replace over-specified DAGs when exploration is the work.
 - [Scientific agents should execute against domain infrastructure](../concepts/scientific-agents-should-execute-against-domain-infrastructure.md) - scientific workflows should connect research synthesis to executable validation.
 - [High-consequence data changes vendor trust requirements](../concepts/high-consequence-data-changes-vendor-trust-requirements.md) - regulated workflow adoption depends on customer-specific data classes and trust evidence.
@@ -425,3 +429,4 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 - [Enterprise Deep Research: The Next Killer App for Enterprise AI — Ofer Mendelevitch, Vectara](../sources/20251124_fh9LgKXBGnQ.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)
+- [Vision: Zero Bugs — Johann Schleier-Smith, Temporal](../sources/20251124_qLqttdO33UM.md)

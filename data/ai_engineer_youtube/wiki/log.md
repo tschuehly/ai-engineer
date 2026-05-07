@@ -1111,3 +1111,11 @@
 - Updated topics: [Inference](topics/inference.md), [Infrastructure](topics/infrastructure.md), [Models](topics/models.md), [Tools](topics/tools.md)
 - Updated concepts: [Compile Python inference functions into portable native binaries](concepts/compile-python-inference-functions-into-portable-native-binaries.md), [Use LLMs to generate compiler lowerings under verification](concepts/use-llms-to-generate-compiler-lowerings-under-verification.md), [Expose local and open-source models through familiar API clients](concepts/expose-local-and-open-source-models-through-familiar-api-clients.md)
 - Notes: Added Muna's compiler-based inference deployment pattern for turning Python model functions into portable native binaries behind familiar API clients, with LLM assistance scoped to verifiable compiler lowerings.
+
+## [2026-05-07] ingest | Vision: Zero Bugs — Johann Schleier-Smith, Temporal
+
+- Source: [Vision: Zero Bugs — Johann Schleier-Smith, Temporal](sources/20251124_qLqttdO33UM.md)
+- Processed: `qLqttdO33UM`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
+- Updated concepts: [High-assurance agentic coding needs process, not just generation](concepts/high-assurance-agentic-coding-needs-process-not-just-generation.md), [Use formal specifications and proofs for critical generated code](concepts/use-formal-specifications-and-proofs-for-critical-generated-code.md), [Separate generation and verification prompts or models](concepts/separate-generation-and-verification-prompts-or-models.md), [Agentic coding economics shift attention from writing cost to assurance cost](concepts/agentic-coding-economics-shift-attention-from-writing-cost-to-assurance-cost.md)
+- Notes: Added high-assurance agentic coding guidance that turns aerospace-style process, formal verification, safety cases, independent validation contexts, and trusted components into practical AI coding workflow patterns.

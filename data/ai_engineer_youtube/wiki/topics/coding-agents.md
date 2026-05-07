@@ -6,6 +6,8 @@ Coding agents work best when their autonomy is constrained by small work items, 
 
 High-consequence coding environments make permissions and verification part of the product, not an add-on. A coding agent can translate legacy Ada into Rust and add features, but defense, government, satellite, or critical-infrastructure contexts still require narrowed access, visible diffs, generated and human-run tests, and reviewable command output before the work is trusted.
 
+High-assurance coding adds a stronger version of this quality bar. Agentic coding should not be judged only by how cheaply it emits lines: the durable pattern is to combine detailed specifications, modular boundaries, typed languages, independent testing contexts, safety cases, adversarial testing, trusted libraries, and formal proofs for critical sections. That does not make LLM behavior itself formally verified, but it moves generated code into an assurance process that can catch defects before adoption depends on manual cleanup.
+
 System-prompt learning adds a way to update coding-agent behavior without changing model weights. A team can run benchmark or production-like tasks, execute tests, ask a judge for explanations, and synthesize those failure explanations into rules that the agent sees on later runs.
 
 Amp Code adds a product-architecture version of the same discipline. Its guidance is to keep the agent loop simple but tune the surrounding pieces aggressively: make core tools task-specific, use subagents to isolate context-heavy search or reasoning, and design editor surfaces around reviewing agent output rather than typing every change manually.
@@ -62,6 +64,10 @@ Jellyfish's pull-request telemetry calibrates the adoption curve. Interactive to
 
 ## Key Concepts
 
+- [High-assurance agentic coding needs process, not just generation](../concepts/high-assurance-agentic-coding-needs-process-not-just-generation.md) - reliable generated code needs specifications, modularity, independent verification, and process feedback.
+- [Use formal specifications and proofs for critical generated code](../concepts/use-formal-specifications-and-proofs-for-critical-generated-code.md) - formal methods can harden selected generated components when specifications are explicit.
+- [Separate generation and verification prompts or models](../concepts/separate-generation-and-verification-prompts-or-models.md) - independent prompts, contexts, or model providers reduce shared assumptions between coding and testing.
+- [Agentic coding economics shift attention from writing cost to assurance cost](../concepts/agentic-coding-economics-shift-attention-from-writing-cost-to-assurance-cost.md) - the bottleneck moves from emitting code to verifying and trusting it.
 - [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](../concepts/agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md) - coding-agent SDKs package reusable runtime pieces around the model.
 - [Task-tuned tool sets beat generic integration surfaces for core coding loops](../concepts/task-tuned-tool-sets-beat-generic-integration-surfaces-for-core-coding-loops.md) - core coding-agent tools should be optimized for local feedback loops rather than inherited from generic integrations.
 - [Use subagents to isolate context-heavy subtasks](../concepts/use-subagents-to-isolate-context-heavy-subtasks.md) - specialists can search, reason, fetch dependency context, or prepare codemods without exhausting the main agent's context.
@@ -327,6 +333,7 @@ Jellyfish's pull-request telemetry calibrates the adoption curve. Interactive to
 - [Can you prove AI ROI in Software Eng? (Stanford 120k Devs Study) - Yegor Denisov-Blanch, Stanford](../sources/20251211_JvosMkuNxF8.md)
 - [Proactive Agents - Kath Korevec, Google Labs](../sources/20251213_v3u8xc0zLec.md)
 - [Building Cursor Composer - Lee Robinson, Cursor](../sources/20251202_fL1iJHtl51Q.md)
+- [Vision: Zero Bugs — Johann Schleier-Smith, Temporal](../sources/20251124_qLqttdO33UM.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)
 - [What Data from 20m Pull Requests Reveal About AI Transformation - Nick Arcolano, Jellyfish](../sources/20251124_WqZq8L-v9pA.md)

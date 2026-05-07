@@ -56,12 +56,16 @@ Agent optimization infrastructure can include a meta-controller that routes budg
 
 Coding-agent harnesses are another infrastructure layer when teams want products to survive rapid model and API churn. The harness absorbs model-facing details such as tool loops, compaction, sandboxing, permissions, MCP support, parallel tool calls, port forwarding, and image handling. A stable SDK boundary can let product teams integrate the harness into IDEs, CI/CD, GitHub Actions, or product agents while leaving model/harness maintenance to a shared provider.
 
+High-assurance agent infrastructure includes reusable verified components and proof-capable toolchains, not only model hosting. When generated code touches critical behavior, infrastructure can route agents toward trusted libraries, typed languages, static verification, model checking, theorem provers, and proof-carrying languages such as Dafny or SPARK, while keeping the specification-to-code boundary explicit.
+
 Web and mobile coding agents add a remote-compute version of that harness problem. When the user starts work away from a local terminal and returns later, the platform needs secure sandboxed execution, container orchestration, and session persistence so generated code can run without depending on the user's machine.
 
 Architecture-copilot infrastructure needs a live system model before recommendations are credible. The described pattern ingests cloud, Kubernetes, service, logging, dependency, and drift signals into a normalized digital twin, then uses that model to support explainable recommendations and workflow-embedded governance.
 
 ## Key Concepts
 
+- [Use formal specifications and proofs for critical generated code](../concepts/use-formal-specifications-and-proofs-for-critical-generated-code.md) - proof-capable languages and verifiers can become infrastructure around generated critical components.
+- [High-assurance agentic coding needs process, not just generation](../concepts/high-assurance-agentic-coding-needs-process-not-just-generation.md) - assurance infrastructure includes process, certification, testing, and feedback boundaries.
 - [Use hosted model playgrounds to prototype before owning infrastructure](../concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md) - hosted tools can validate model and deployment choices before teams own the runtime.
 - [Treat multi-agent systems as distributed systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md) - agent infrastructure needs distributed-systems controls once multiple agents share state and dependencies.
 - [Use durable execution for production agent loops](../concepts/use-durable-execution-for-production-agent-loops.md) - durable execution records completed LLM and tool steps so production agent loops can resume.
@@ -218,6 +222,7 @@ Architecture-copilot infrastructure needs a live system model before recommendat
 - [Training an LLM from Scratch, Locally - Angelos Perivolaropoulos, ElevenLabs](../sources/20260504_UsB70Tf5zcE.md)
 - [TLMs: Tiny LLMs and Agents on Edge Devices with LiteRT-LM - Cormac Brick, Google](../sources/20260503_BKWpYIWvAo4.md)
 - [Mastering AI Pricing: Flexible & Agile Monetization - Mayank Pant, Stripe](../sources/20260501_CrqPcIZOOXA.md)
+- [Vision: Zero Bugs — Johann Schleier-Smith, Temporal](../sources/20251124_qLqttdO33UM.md)
 - [Shipping complex AI applications - Braintrust & Trainline](../sources/20260501_ZdheJTfLu-s.md)
 - [Agents for Everything Else - swyx](../sources/20260501_zepu8Kk6FBQ.md)
 - [OpenAI Codex Masterclass  - Vaibhav Srivastav & Katia Gil Guzman](../sources/20260429_MhHEGMFCEB0.md)
