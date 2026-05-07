@@ -1743,3 +1743,11 @@
 - Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Type-Safe Agent Schemas Make Refactoring and Validation Easier](concepts/type-safe-agent-schemas-make-refactoring-and-validation-easier.md), [Validation Errors Can Drive Agent Self-Repair Loops](concepts/validation-errors-can-drive-agent-self-repair-loops.md), [Trace Agent Tool Arguments to Debug Real Failures](concepts/trace-agent-tool-arguments-to-debug-real-failures.md)
 - Notes: Added Pydantic AI patterns for typed agent contracts, schema-driven retry loops, and Logfire trace debugging while noting that the transcript did not cover the advertised human-seeded eval method.
+
+## [2026-05-07] ingest | Software Development Agents: What Works and What Doesn't - Robert Brennan, OpenHands
+
+- Source: [Software Development Agents: What Works and What Doesn't - Robert Brennan, OpenHands](sources/20250725_o_hhkJtlbSs.md)
+- Processed: `o_hhkJtlbSs`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Security](topics/security.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Start Coding Agents With Small Verifiable Chores](concepts/start-coding-agents-with-small-verifiable-chores.md), [Human Ownership Keeps Agent Pull Requests From Bypassing Review](concepts/human-ownership-keeps-agent-pull-requests-from-bypassing-review.md), [Unified Coding-Agent Harnesses Combine Models, Tools, Environments, and Safety](concepts/unified-coding-agent-harnesses-combine-models-tools-environments-and-safety.md), [Give Code-Executing Agents Isolated Computers](concepts/give-code-executing-agents-isolated-computers.md)
+- Notes: Added OpenHands guidance for coding-agent tool surfaces, sandboxing, verifiable starter tasks, discard-and-reprompt iteration, and human accountability on agent PRs.

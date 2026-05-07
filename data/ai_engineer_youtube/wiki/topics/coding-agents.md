@@ -48,6 +48,8 @@ Proactive coding-agent products add a background-work layer on top of the ordina
 
 Enterprise rollouts should be skeptical of greenfield-only codegen wins. Bloomberg's deployment across thousands of engineers showed early gains in proofs of concept, tests, and one-time scripts, but those signals dropped quickly once work moved into mature codebases with verification, review, and merge constraints. Higher-leverage coding-agent targets may be maintenance, migration, patching, and incident response: uplift agents can scan existing code for applicable fixes and open explanatory pull requests, while incident agents can inspect operational evidence before responders over-anchor on a favorite hypothesis.
 
+OpenHands adds a practical starter-task ladder for that same adoption problem. Brennan's guidance is to begin with small chores that have obvious completion signals: lint errors, merge conflicts, a single failing test, database migrations with known best practices, and test coverage expansion. As users learn how the agent behaves, tasks can grow, but production-facing work still needs code review, local or ephemeral validation, and a human owner for the PR so bot-authored changes do not bypass review or languish without accountability.
+
 Railway Autofix adds a concrete infrastructure-maintenance version of that incident pattern. A scheduled workflow reads deployment architecture, service metrics, HTTP error rates, logs, and affected services, turns that evidence into Markdown and a repair plan, then invokes a coding agent to open a PR. The coding agent is productive because upstream workflow steps have already narrowed the problem and bundled operational context; the human still reviews the generated root-cause summary and diff before merging.
 
 Zapier's Scout Agent adds a support-led maintenance pattern. For integration products exposed to constant API changes, support can be a strong first user because tickets arrive with fresh customer context, current logs, and practical validation knowledge. Scout turns support issues into categorized, fixability-checked, plan/execute/validate merge requests, then keeps support iteration inside GitLab before engineering review.
@@ -111,6 +113,8 @@ Factory adds an enterprise SDLC orchestration layer to the same trend. Agent-nat
 - [Visual browser context steers frontend agents](../concepts/visual-browser-context-steers-frontend-agents.md) - rendered UI evidence gives frontend coding agents better steering than source-only prompts.
 - [Give coding agents the same engineering infrastructure humans need](../concepts/give-coding-agents-the-same-engineering-infrastructure-humans-need.md) - agents need standards, reproducible environments, tests, boundaries, and clear tasks.
 - [Make code review the bottleneck skill for AI-generated code](../concepts/make-code-review-the-bottleneck-skill-for-ai-generated-code.md) - review skill and review interfaces become scarce as agents generate more code.
+- [Start Coding Agents With Small Verifiable Chores](../concepts/start-coding-agents-with-small-verifiable-chores.md) - low-risk tasks with clear completion signals build agent-use intuition before larger delegation.
+- [Human Ownership Keeps Agent Pull Requests From Bypassing Review](../concepts/human-ownership-keeps-agent-pull-requests-from-bypassing-review.md) - agent-generated PRs need accountable review routing and follow-up ownership.
 - [Agentic coding transforms existing software](../concepts/agentic-coding-transforms-existing-software.md) - mature applications, migrations, and library upgrades are a deeper agent target than greenfield demos.
 - [High-assurance agentic coding needs process, not just generation](../concepts/high-assurance-agentic-coding-needs-process-not-just-generation.md) - reliable generated code needs specifications, modularity, independent verification, and process feedback.
 - [Use formal specifications and proofs for critical generated code](../concepts/use-formal-specifications-and-proofs-for-critical-generated-code.md) - formal methods can harden selected generated components when specifications are explicit.
@@ -394,6 +398,7 @@ Factory adds an enterprise SDLC orchestration layer to the same trend. Agent-nat
 - [Dispatch from the Future: building an AI-native Company - Dan Shipper, Every, AI & I](../sources/20251218_MGzymaYBiss.md)
 - [Code World Model: Building World Models for Computation - Jacob Kahn, FAIR Meta](../sources/20251217_sYgE4ppDFOQ.md)
 - [Coding Evals: From Code Snippets to Codebases - Naman Jain, Cursor](../sources/20251215_tHN44yJoeS8.md)
+- [Software Development Agents: What Works and What Doesn't - Robert Brennan, OpenHands](../sources/20250725_o_hhkJtlbSs.md)
 - [From Vibe Coding To Vibe Engineering - Kitze, Sizzy](../sources/20251214_JV-wY5pxXLo.md)
 - [The State of AI Code Quality: Hype vs Reality — Itamar Friedman, Qodo](../sources/20251211_rgjF5o2Qjsc.md)
 - [Vibe Coding with Confidence - Itamar Friedman, Qodo](../sources/20250806_n991Yxo1aOI.md)

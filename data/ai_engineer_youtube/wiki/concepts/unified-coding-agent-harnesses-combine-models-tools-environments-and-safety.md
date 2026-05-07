@@ -7,6 +7,8 @@ Use when:
 - Designing an agent platform that must run commands, tests, code exploration, and integrations safely.
 
 Details:
+- OpenHands frames a coding agent as a loop between an LLM and the external world: the model chooses a next action such as reading a file, editing code, running a command, or inspecting a webpage, then the harness returns the result for the next turn. 03:50-04:30
+- Brennan decomposes the harness into core software-engineering tools: diff or find-and-replace editing to avoid whole-file rewrites, terminal control for long-running and parallel commands, browser context via accessibility trees or Markdown rather than raw HTML, labeled screenshots for interaction, and sandboxing for autonomous execution. 04:33-07:23
 - The workshop describes Codex as more than a code-writing model: it can run commands, run tests, explore codebases, and work across app, IDE, CLI, Slack, GitHub, and integrations. 01:56-03:55
 - The model layer improves through GPT-5.3 Codex, Spark, GPT-5.4, and smaller variants, but Codex also depends on a unified agent harness for behavior management, tool execution, environment setup, and safety. 02:18-03:12
 - Serving and UX improvements are part of the agent system: websockets and fast mode are framed as token-speed improvements that make long-running agent work feel more usable. 06:11-06:55
@@ -25,5 +27,6 @@ Related concepts:
 - [Prompt coding agents around learned model habits](prompt-coding-agents-around-learned-model-habits.md)
 
 Sources:
+- [Software Development Agents: What Works and What Doesn't - Robert Brennan, OpenHands](../sources/20250725_o_hhkJtlbSs.md), 03:50-07:23
 - [OpenAI Codex Masterclass  - Vaibhav Srivastav & Katia Gil Guzman](../sources/20260429_MhHEGMFCEB0.md), 01:56-03:55, 06:11-06:55
 - [Future-Proof Coding Agents - Bill Chen & Brian Fioca, OpenAI](../sources/20251205_wVl6ZjELpBk.md), 02:06-04:24, 08:31-10:04

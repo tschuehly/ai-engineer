@@ -12,6 +12,8 @@ Computer-use agents need one more evaluation lens: does the agent interaction in
 
 Task-file workflows add pre-code evaluation points. Reviewing a generated task's acceptance criteria checks whether the agent understood intent; reviewing the implementation plan checks whether it found the right files and architecture path; final review then verifies code against the definition of done.
 
+Coding-agent starter tasks should be chosen for verification clarity. Lint fixes, merge conflicts, failing tests, database migrations with known standards, and coverage expansion are useful early delegations because the agent and reviewer can cheaply tell whether the work is done; larger production-facing work needs stronger review and runtime validation.
+
 Confident vibe coding adds an early-evaluation requirement for enterprise code generation. Review and testing agents should not only inspect a finished PR; they should bring standards, context, coverage, and red-team feedback into the coding loop while the agent is still shaping the change.
 
 Agent-loop evals should pair operational metrics with correctness checks. Cost, latency, and number of steps are useful only after the harness verifies whether the agent actually reached the right outcome; otherwise a model can look fast because it guessed early or skipped the hard reasoning path.
@@ -205,6 +207,7 @@ General LLM eval programs can be staged as a pyramid. Start with serving perform
 - [Use research-plan-implement loops for coding agents](../concepts/use-research-plan-implement-loops-for-coding-agents.md) - research artifacts, plans, and verification commands make implementation-agent output easier to judge.
 - [Review research and plans before they multiply into code](../concepts/review-research-and-plans-before-they-multiply-into-code.md) - high-leverage review catches wrong assumptions before implementation expands them.
 - [Review coding-agent work at task, plan, and code checkpoints](../concepts/review-coding-agent-work-at-task-plan-and-code-checkpoints.md) - coding-agent workflows should check intent, direction, and final code separately.
+- [Start Coding Agents With Small Verifiable Chores](../concepts/start-coding-agents-with-small-verifiable-chores.md) - starter agent tasks should expose cheap and explicit completion signals.
 - [Low-false-positive bug finding is required for coding-agent trust](../concepts/low-false-positive-bug-finding-is-required-for-coding-agent-trust.md) - bug-reporting agents need precision and reviewability, not only high issue counts.
 - [Prefer thinking models for deep bug hunting, with variability caveats](../concepts/prefer-thinking-models-for-deep-bug-hunting-with-variability-caveats.md) - bug-finding evals should account for model reasoning advantages and run-to-run instability.
 - [Translate structured requirements into property-based tests](../concepts/translate-structured-requirements-into-property-based-tests.md) - requirements should connect to executable invariants when possible.
@@ -510,3 +513,4 @@ General LLM eval programs can be staged as a pyramid. Start with serving perform
 - [Real-time Experiments with an AI Co-Scientist - Stefania Druga, fmr. Google Deepmind](../sources/20250728_wNH3q9pqn0U.md)
 - [[Full Workshop] Building Metrics that actually work - David Karam, Pi Labs (fmr Google Search)](../sources/20250729_jxrGodnopHo.md)
 - [Human seeded Evals - Samuel Colvin, Pydantic](../sources/20250725_o_LRtAomJCs.md)
+- [Software Development Agents: What Works and What Doesn't - Robert Brennan, OpenHands](../sources/20250725_o_hhkJtlbSs.md)

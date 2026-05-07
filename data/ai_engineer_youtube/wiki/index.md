@@ -4,6 +4,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Start Coding Agents With Small Verifiable Chores](concepts/start-coding-agents-with-small-verifiable-chores.md) - bounded tests, lint fixes, merge conflicts, and coverage work make safer starter tasks for autonomous coding agents.
+- [Human Ownership Keeps Agent Pull Requests From Bypassing Review](concepts/human-ownership-keeps-agent-pull-requests-from-bypassing-review.md) - agent-authored PRs still need accountable human ownership and normal review routing.
+
 - [Type-Safe Agent Schemas Make Refactoring and Validation Easier](concepts/type-safe-agent-schemas-make-refactoring-and-validation-easier.md) - typed outputs and dependencies make agent application contracts visible to static tooling and runtime validation.
 - [Validation Errors Can Drive Agent Self-Repair Loops](concepts/validation-errors-can-drive-agent-self-repair-loops.md) - schema failures can become concrete retry feedback before outputs are accepted.
 - [Trace Agent Tool Arguments to Debug Real Failures](concepts/trace-agent-tool-arguments-to-debug-real-failures.md) - trace-level tool arguments reveal why a tool-using agent run failed.

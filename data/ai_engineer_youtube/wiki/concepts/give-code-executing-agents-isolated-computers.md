@@ -7,6 +7,8 @@ Use when:
 - Designing local and hosted Codex-style execution environments.
 
 Details:
+- OpenHands runs agents inside Docker containers by default so autonomous shell work is separated from the user's workstation and cannot delete or mutate the user's home directory. 06:44-07:05
+- Container isolation does not solve external authority; when agents receive GitHub tokens, AWS access, or other third-party credentials, those credentials should be tightly scoped and least-privilege. 07:08-07:23
 - The talk recommends giving the agent "its own computer" as the first safeguard, especially for local runs. Codex in ChatGPT is described as spinning up a fully isolated container and producing a PR at the end. 04:25-04:41
 - Local Codex CLI-style agents still need appropriate sandboxing, such as containerization, app-level sandboxing, or OS-level sandboxing. 04:41-05:02
 - Codex CLI examples include macOS Seatbelt policies and Linux sandboxing built with seccomp and Landlock to support unprivileged execution and reduce privilege-escalation risk. 06:09-07:42
@@ -23,4 +25,5 @@ Related concepts:
 - [Do Not Roll Your Own Agent Code Sandbox](do-not-roll-your-own-agent-code-sandbox.md)
 
 Sources:
+- [Software Development Agents: What Works and What Doesn't - Robert Brennan, OpenHands](../sources/20250725_o_hhkJtlbSs.md), 06:44-07:23
 - [OpenAI on Securing Code-Executing AI Agents - Fouad Matin (Codex, Agent Robustness)](../sources/20250730_w7IMuYsBNr8.md), 04:25-08:24

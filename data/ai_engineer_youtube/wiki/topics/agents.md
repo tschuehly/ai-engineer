@@ -40,6 +40,8 @@ Proactive coding agents shift the interface again: instead of waiting for prompt
 
 Remote coding agents add a concrete asynchronous-worker form factor. Jules-style agents clone the repository into their own cloud VMs, run commands and tests away from the local laptop, and make development possible from lightweight clients such as a phone. Their leverage comes from bounded parallelism: agents can execute separate backlog items, or try alternative approaches to one problem, while the human or another agent compares outputs against tests, coverage, accessibility audits, Lighthouse scores, and merge checks.
 
+OpenHands adds a local harness and accountability version of the same pattern. A coding agent gets editor, terminal, browser, and sandbox surfaces so it can run the inner development loop, but useful autonomy still starts with small verifiable chores and tightly scoped credentials. When agent work becomes a pull request, the product must preserve the responsible human owner rather than letting a bot identity bypass review or leave failures unowned.
+
 Code mode pushes tool-surface constraints into execution architecture. Model-written code can compress broad APIs and multi-step tool loops, but generated code should be treated as untrusted code even when it came from a helpful model. The harness should start generated code with no ambient authority, grant task-scoped capabilities with observable execution, choose isolates for short constrained functions, and choose containers only when the task needs a full filesystem, package manager, processes, or preview server.
 
 Agentic engineering adds a pragmatic coding-agent stance: treat the agent as a fast, well-read junior collaborator whose output is only as good as the human direction, context, and review around it. Research-plan-implement loops, fresh task-specific sessions, AGENTS.md rules, scoped modes, worktrees, and explicit permission settings keep speed from turning into context pollution or large unreviewable diffs. Agent prompt improvement should also be treated as a learning loop: collect output traces, capture explanations for missed instructions or context failures, and validate evaluator feedback before letting automated prompt updates steer future behavior.
@@ -291,6 +293,8 @@ Devin 2.0 frames the same progression as changing human-intervention intervals. 
 - [Parallel coding-agent queues need focus-preserving review interfaces](../concepts/parallel-coding-agent-queues-need-focus-preserving-review-interfaces.md) - longer agent runs need interfaces that batch human attention around completed work.
 - [Parallel Coding Agents Support Multitasking and Variation Search](../concepts/parallel-coding-agents-support-multitasking-and-variation-search.md) - cloned agents can run independent work or competing implementation variants.
 - [Cloud Agents Turn Coding Work Into Asynchronous VM-Backed Queues](../concepts/cloud-agents-turn-coding-work-into-asynchronous-vm-backed-queues.md) - remote VMs make coding agents callable background workers rather than local IDE assistants only.
+- [Start Coding Agents With Small Verifiable Chores](../concepts/start-coding-agents-with-small-verifiable-chores.md) - coding-agent autonomy should begin with bounded, checkable work.
+- [Human Ownership Keeps Agent Pull Requests From Bypassing Review](../concepts/human-ownership-keeps-agent-pull-requests-from-bypassing-review.md) - bot-created changes still need human responsibility and normal review routing.
 - [Scope coding-agent autonomy by user decision authority](../concepts/scope-coding-agent-autonomy-by-user-decision-authority.md) - autonomy should absorb technical decisions the target user cannot safely make.
 - [Let the core agent loop orchestrate parallel subtasks](../concepts/let-the-core-agent-loop-orchestrate-parallel-subtasks.md) - parallelism should not push decomposition and merge-conflict work onto non-technical users.
 - [Spatial agent maps expose filesystem-level lineage and collisions](../concepts/spatial-agent-maps-expose-filesystem-level-lineage-and-collisions.md) - repository-shaped visibility helps humans see where agents are acting and where parallel edits may collide.
@@ -572,5 +576,6 @@ Devin 2.0 frames the same progression as changing human-intervention intervals. 
 - [Shipping Products When You Don't Know What they Can Do - Ben Stein, Teammates](../sources/20250728_PthmdT92qNg.md)
 - [A2A & MCP Workshop: Automating Business Processes with LLMs - Damien Murphy, Bench](../sources/20250726_wXVvfFMTyzY.md)
 - [Human seeded Evals - Samuel Colvin, Pydantic](../sources/20250725_o_LRtAomJCs.md)
+- [Software Development Agents: What Works and What Doesn't - Robert Brennan, OpenHands](../sources/20250725_o_hhkJtlbSs.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

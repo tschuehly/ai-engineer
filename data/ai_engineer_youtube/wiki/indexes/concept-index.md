@@ -344,6 +344,8 @@
 
 ## Coding Agents
 
+- [Start Coding Agents With Small Verifiable Chores](../concepts/start-coding-agents-with-small-verifiable-chores.md)
+- [Human Ownership Keeps Agent Pull Requests From Bypassing Review](../concepts/human-ownership-keeps-agent-pull-requests-from-bypassing-review.md)
 - [Agent-Native SDLC Platforms Need Context, Reliability, and Parallelism](../concepts/agent-native-sdlc-platforms-need-context-reliability-and-parallelism.md)
 - [Agent Planning Should Mine Feedback Before Producing PRDs and Tickets](../concepts/agent-planning-should-mine-feedback-before-producing-prds-and-tickets.md)
 - [Enterprise Coding Agents Need Ownership, Auditability, and Action Controls](../concepts/enterprise-coding-agents-need-ownership-auditability-and-action-controls.md)

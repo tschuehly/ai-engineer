@@ -14,6 +14,8 @@ Agent application security is broader than prompt injection and OAuth. Red-team 
 
 Code-executing agents add another security boundary because the useful capability is also RCE-shaped. A reasoning model that can decide when to write and run code may simplify agent loops, but it also needs isolated execution, default-limited filesystem access, network restrictions, dependency checks, and reviewable outputs. Prompt injection is especially dangerous when untrusted web or GitHub issue content enters the same loop that can read a repository and make outbound requests. Model-level suspicion helps, but deterministic system controls such as sandbox policy, network allowlists, HTTP method restrictions, and human review of sensitive operations carry the hard security boundary.
 
+OpenHands reinforces that sandboxing is only one layer. Docker containers can separate autonomous shell work from the user's workstation, but credentials such as GitHub tokens or AWS access still need least-privilege scoping because they grant authority outside the container.
+
 Enterprise coding-agent rollouts also need an accountability layer around ordinary development actions. Security review should ask where audit logs live, who owns an agent's actions, how destructive commands are constrained, and what responsibility model applies when a codebase-changing agent acts on behalf of a team.
 
 ## Key Concepts
@@ -38,6 +40,7 @@ Enterprise coding-agent rollouts also need an accountability layer around ordina
 - [Restrict Agent Internet Access With Allowlists](../concepts/restrict-agent-internet-access-with-allowlists.md) - network access should be disabled or constrained by explicit domains, commands, and HTTP methods.
 - [Keep Human Review on High-Risk Agent Operations](../concepts/keep-human-review-on-high-risk-agent-operations.md) - LLM monitors help, but sensitive commands, dependency changes, and diffs still need accountable review.
 - [Enterprise Coding Agents Need Ownership, Auditability, and Action Controls](../concepts/enterprise-coding-agents-need-ownership-auditability-and-action-controls.md) - enterprise agent security needs audit logs, responsibility boundaries, and controls for destructive actions.
+- [Human Ownership Keeps Agent Pull Requests From Bypassing Review](../concepts/human-ownership-keeps-agent-pull-requests-from-bypassing-review.md) - agent PR identity should not bypass second-human review or leave failures ownerless.
 
 ## Open Questions
 
@@ -54,3 +57,4 @@ Enterprise coding-agent rollouts also need an accountability layer around ordina
 - [How we hacked YC Spring 2025 batch's AI agents - Rene Brandel, Casco](../sources/20250730_kv-QAuKWllQ.md)
 - [OpenAI on Securing Code-Executing AI Agents - Fouad Matin (Codex, Agent Robustness)](../sources/20250730_w7IMuYsBNr8.md)
 - [Ship Production Software in Minutes, Not Months - Eno Reyes, Factory](../sources/20250725_iheWKg2Tkrk.md)
+- [Software Development Agents: What Works and What Doesn't - Robert Brennan, OpenHands](../sources/20250725_o_hhkJtlbSs.md)
