@@ -4,6 +4,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Choose A2A and MCP by Ownership Boundary](concepts/choose-a2a-and-mcp-by-ownership-boundary.md) - protocol boundaries should match remote ownership and tool-surface needs.
+- [Turn Webhooks Into Host-Agent Task Delegation](concepts/turn-webhooks-into-host-agent-task-delegation.md) - webhook events can become compact delegated tasks for specialist agents.
+- [Harden Third-Party MCP Tools Against Silent Failure and Endpoint Risk](concepts/harden-third-party-mcp-tools-against-silent-failure-and-endpoint-risk.md) - remote MCP tools need output validation and endpoint security.
 - [Tune CUDA Graph Batch Capture to Real Decode Concurrency](concepts/tune-cuda-graph-batch-capture-to-real-decode-concurrency.md) - SGLang decode performance needs CUDA graph capture sized to realistic concurrent request batches.
 - [Use Eagle 3 Speculative Decoding With Matched Draft Models](concepts/use-eagle-3-speculative-decoding-with-matched-draft-models.md) - speculative decoding needs target/draft model pairing and workload-shaped benchmark checks.
 - [SGLang Serves Models Through Configured OpenAI-Compatible Servers](concepts/sglang-serves-models-through-configured-openai-compatible-servers.md) - SGLang exposes open models through configurable OpenAI-compatible serving endpoints.

@@ -62,9 +62,14 @@ Workflow composition adds another tool-design rule: a workflow can be exposed as
 
 Mechanistic interpretability can become a tool surface when feature attribution, activation steering, dynamic prompting, and concept palettes are exposed through product controls. These tools differ from ordinary prompts because they operate against model-internal features during generation or post-training inspection. That makes them useful for debugging, targeted steering, and creative control, but also means product UIs and review workflows need to disclose and evaluate the effective intervention rather than hiding it as invisible model magic.
 
+Third-party MCP tools also need ordinary integration hardening. A protocol-level success response can still hide a business failure, such as a Slack tool returning empty content because the configured channel does not exist. Wrappers should validate returned content, convert ambiguous empty results into explicit errors, and decide whether a remote MCP or A2A endpoint is acceptable under the product's security boundary. In regulated workflows, provider agreements, encrypted transport, mutual TLS, IP allowlisting, endpoint controls, and private-network deployment may matter as much as the MCP or A2A contract itself.
+
 ## Key Concepts
 
 - [Product Work Graphs Coordinate Agents and Humans](../concepts/product-work-graphs-coordinate-agents-and-humans.md) - product tools can expose issues, feedback, projects, and relationships as an agent coordination surface.
+- [Choose A2A and MCP by Ownership Boundary](../concepts/choose-a2a-and-mcp-by-ownership-boundary.md) - tool protocols should be introduced where ownership, deployment, or third-party integration boundaries justify them.
+- [Harden Third-Party MCP Tools Against Silent Failure and Endpoint Risk](../concepts/harden-third-party-mcp-tools-against-silent-failure-and-endpoint-risk.md) - remote MCP tools require output validation and endpoint-security controls outside the protocol.
+- [Turn Webhooks Into Host-Agent Task Delegation](../concepts/turn-webhooks-into-host-agent-task-delegation.md) - specialist tool agents can receive compact task instructions instead of raw event payloads.
 - [First-Class Agent Users Need Identity, Scopes, and Audit Trails](../concepts/first-class-agent-users-need-identity-scopes-and-audit-trails.md) - agent tools should be installable, scoped, auditable platform actors.
 - [Platform-Native Agents Should Behave Like Good Teammates](../concepts/platform-native-agents-should-behave-like-good-teammates.md) - tool UX should make agent actions fit the host platform's normal communication conventions.
 - [Expose Search Controls For Agentic Retrieval](../concepts/expose-search-controls-for-agentic-retrieval.md) - search tools should expose controllable parameters agents can compose during multi-step retrieval.
@@ -367,5 +372,6 @@ Mechanistic interpretability can become a tool surface when feature attribution,
 - [How we hacked YC Spring 2025 batch's AI agents - Rene Brandel, Casco](../sources/20250730_kv-QAuKWllQ.md)
 - [OpenAI on Securing Code-Executing AI Agents - Fouad Matin (Codex, Agent Robustness)](../sources/20250730_w7IMuYsBNr8.md)
 - [Why you should care about AI interpretability - Mark Bissell, Goodfire AI](../sources/20250727_6AVMHZPjpTQ.md)
+- [A2A & MCP Workshop: Automating Business Processes with LLMs - Damien Murphy, Bench](../sources/20250726_wXVvfFMTyzY.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

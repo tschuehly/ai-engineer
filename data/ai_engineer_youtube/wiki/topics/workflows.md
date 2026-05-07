@@ -122,9 +122,14 @@ Eval workflows can be staged the same way as software test workflows: start with
 
 Dagger's agent workshop shows a lighter-weight delivery workflow with the same principle: package build/test functions, source directories, containers, and LLM calls into workflow code, then run that code locally or through GitHub Actions. The trace view becomes part of the workflow feedback loop because it shows which prompt, environment, and tool call failed before the team changes the tool description or implementation.
 
+Webhook-backed business workflows can use a host agent as the orchestration and context-slicing layer. The host reads the incoming event, decides which specialist agents or tools are needed, sequences dependent work when one output is required by the next step, and sends small task payloads rather than all source context. This keeps external agents focused while preserving a central control point for retries, routing, context budget, and cross-tool decisions.
+
 ## Key Concepts
 
 - [Treat Investor Outreach Like Specific Go-To-Market](../concepts/treat-investor-outreach-like-specific-go-to-market.md) - fundraising outreach should use warm signals, specific asks, and relationship-building like a sales motion.
+- [Turn Webhooks Into Host-Agent Task Delegation](../concepts/turn-webhooks-into-host-agent-task-delegation.md) - incoming business events can be turned into compact delegated tasks with central sequencing.
+- [Choose A2A and MCP by Ownership Boundary](../concepts/choose-a2a-and-mcp-by-ownership-boundary.md) - workflow protocols should match local, internal, or third-party ownership boundaries.
+- [Harden Third-Party MCP Tools Against Silent Failure and Endpoint Risk](../concepts/harden-third-party-mcp-tools-against-silent-failure-and-endpoint-risk.md) - workflow reliability depends on explicit validation and security controls around remote tools.
 - [Package Agent Delivery Workflows as Portable Code](../concepts/package-agent-delivery-workflows-as-portable-code.md) - portable workflow code lets delivery agents run in local development and CI without changing the workflow.
 - [Trace Agent Tool Use To Improve Prompts And Tools](../concepts/trace-agent-tool-use-to-improve-prompts-and-tools.md) - trace inspection turns observed agent behavior into workflow improvements.
 - [Return Typed Workspace Outputs From Coding Agents](../concepts/return-typed-workspace-outputs-from-coding-agents.md) - workflow code should consume validated artifacts from agent runs.
@@ -587,3 +592,4 @@ Dagger's agent workshop shows a lighter-weight delivery workflow with the same p
 - [Why your product needs an AI product manager, and why it should be you — James Lowe, i.AI](../sources/20250728_xzJdSi2Tsqw.md)
 - [[Full Workshop] Building Metrics that actually work - David Karam, Pi Labs (fmr Google Search)](../sources/20250729_jxrGodnopHo.md)
 - [Strategies for LLM Evals (GuideLLM, lm-eval-harness, OpenAI Evals Workshop) - Taylor Jordan Smith](../sources/20250727_89NuzmKokIk.md)
+- [A2A & MCP Workshop: Automating Business Processes with LLMs - Damien Murphy, Bench](../sources/20250726_wXVvfFMTyzY.md)

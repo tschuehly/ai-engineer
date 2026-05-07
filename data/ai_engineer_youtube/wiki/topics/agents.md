@@ -104,9 +104,14 @@ Exploratory agent demos are also a capability-discovery tool. Early browser and 
 
 Team work-management platforms add a broader coordination plane for agents. Agents can be mentioned, assigned, interrupted, and reviewed inside the same issue and communication surfaces as humans, but only if they have identity, scoped authority, audit history, event hooks, and teammate-like behavior that keeps shared work state current.
 
+Remote agent protocols should be chosen by ownership and deployment boundaries, not by novelty. A2A is useful when a host agent needs to communicate with remote specialist agents, while MCP supplies a tool, context, and resource surface behind those agents. When the agents and tools are all local to one codebase, direct function calls can be faster and easier to debug; when a webhook launches a business process, a host agent can preserve the central decision point by slicing the event into compact delegated tasks instead of forwarding the whole payload to every subagent.
+
 ## Key Concepts
 
 - [Product Work Graphs Coordinate Agents and Humans](../concepts/product-work-graphs-coordinate-agents-and-humans.md) - issues, projects, feedback, related work, and communication threads give agents a shared coordination substrate with humans.
+- [Choose A2A and MCP by Ownership Boundary](../concepts/choose-a2a-and-mcp-by-ownership-boundary.md) - protocol boundaries are most useful for remote agents and external tool surfaces, not fully local code paths.
+- [Turn Webhooks Into Host-Agent Task Delegation](../concepts/turn-webhooks-into-host-agent-task-delegation.md) - webhook events can become centrally coordinated subtasks for specialist agents.
+- [Harden Third-Party MCP Tools Against Silent Failure and Endpoint Risk](../concepts/harden-third-party-mcp-tools-against-silent-failure-and-endpoint-risk.md) - remote tool quality and endpoint exposure need validation and security controls around the agent.
 - [First-Class Agent Users Need Identity, Scopes, and Audit Trails](../concepts/first-class-agent-users-need-identity-scopes-and-audit-trails.md) - agent teammates need governable identity, scoped access, and inspectable history.
 - [Platform-Native Agents Should Behave Like Good Teammates](../concepts/platform-native-agents-should-behave-like-good-teammates.md) - embedded agents should acknowledge, clarify, update shared state, and communicate concisely.
 - [Compose agents and workflows as interchangeable primitives](../concepts/compose-agents-and-workflows-as-interchangeable-primitives.md) - agents and workflows can call each other as tools, steps, and handoff mechanisms.
@@ -540,5 +545,6 @@ Team work-management platforms add a broader coordination plane for agents. Agen
 - [Scaling AI Agents Without Breaking Reliability - Preeti Somal, Temporal](../sources/20250728_1izYWsokr9s.md)
 - [On Curiosity -- Sharif Shameem, Lexica](../sources/20250719_0F8mnGPUycY.md)
 - [Shipping Products When You Don't Know What they Can Do - Ben Stein, Teammates](../sources/20250728_PthmdT92qNg.md)
+- [A2A & MCP Workshop: Automating Business Processes with LLMs - Damien Murphy, Bench](../sources/20250726_wXVvfFMTyzY.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

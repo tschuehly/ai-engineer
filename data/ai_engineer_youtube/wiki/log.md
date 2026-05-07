@@ -1679,3 +1679,11 @@
 - Updated topics: [Robotics](topics/robotics.md), [Models](topics/models.md), [Infrastructure](topics/infrastructure.md), [Evaluation](topics/evaluation.md)
 - Updated concepts: [Robotics Data Engines Need Operated Teleoperation Pipelines](concepts/robotics-data-engines-need-operated-teleoperation-pipelines.md), [Action Expert Transformers Adapt VLMs For High-Frequency Robot Control](concepts/action-expert-transformers-adapt-vlms-for-high-frequency-robot-control.md), [Test Robot Generalization By Held-Out Locations And Hardware](concepts/test-robot-generalization-by-held-out-locations-and-hardware.md)
 - Notes: Added Physical Intelligence's robotics framing for operated teleoperation data engines, VLM-to-VLA action architecture, and held-out-location plus cross-hardware generalization checks.
+
+## [2026-05-07] ingest | A2A & MCP Workshop: Automating Business Processes with LLMs - Damien Murphy, Bench
+
+- Source: [A2A & MCP Workshop: Automating Business Processes with LLMs - Damien Murphy, Bench](sources/20250726_wXVvfFMTyzY.md)
+- Processed: `wXVvfFMTyzY`
+- Updated topics: [Agents](topics/agents.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Choose A2A and MCP by Ownership Boundary](concepts/choose-a2a-and-mcp-by-ownership-boundary.md), [Turn Webhooks Into Host-Agent Task Delegation](concepts/turn-webhooks-into-host-agent-task-delegation.md), [Harden Third-Party MCP Tools Against Silent Failure and Endpoint Risk](concepts/harden-third-party-mcp-tools-against-silent-failure-and-endpoint-risk.md)
+- Notes: Added Bench's A2A/MCP workshop patterns for protocol boundary selection, webhook-triggered host-agent delegation, and hardening third-party MCP tools.
