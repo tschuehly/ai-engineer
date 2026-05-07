@@ -1239,3 +1239,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Infrastructure](topics/infrastructure.md), [Inference](topics/inference.md), [Models](topics/models.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Research Engineering Partnership](concepts/research-engineering-partnership.md), [Model-Shaped Codebase Architecture for Coding Agents](concepts/model-shaped-codebase-architecture-for-coding-agents.md), [Agentic Coding Transforms Existing Software](concepts/agentic-coding-transforms-existing-software.md), [Dual-Mode AI Infrastructure](concepts/dual-mode-ai-infrastructure.md)
 - Notes: Added Brockman's AI engineer framing for research-engineering co-design, Codex-ready codebase structure, mature-codebase agent transformation, and mixed realtime/long-compute infrastructure planning.
+
+## [2026-05-07] ingest | Designing AI-Intensive Applications - swyx
+
+- Source: [Designing AI-Intensive Applications - swyx](sources/20250809_IHkyFhU6JEY.md)
+- Processed: `IHkyFhU6JEY`
+- Updated topics: [Agents](topics/agents.md), [Product Strategy](topics/product-strategy.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Standard Models Guide AI Engineering Practice](concepts/standard-models-guide-ai-engineering-practice.md), [Measure AI Intensity by Human Input to Valuable Output](concepts/measure-ai-intensity-by-human-input-to-valuable-output.md), [SPADE Structures AI-Intensive Workflows](concepts/spade-structures-ai-intensive-workflows.md)
+- Notes: Added swyx's AI-intensive application frame for reusable AI engineering standard models, output-per-human-input product intensity, and SPADE-style many-call workflow design.

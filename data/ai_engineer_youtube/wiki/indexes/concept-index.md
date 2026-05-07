@@ -4,6 +4,8 @@
 
 - [Optimize action agents for reliability before abstract intelligence](../concepts/optimize-action-agents-for-reliability-before-abstract-intelligence.md)
 - [Make voice AI devices developer-extensible](../concepts/make-voice-ai-devices-developer-extensible.md)
+- [Measure AI intensity by human input to valuable output](../concepts/measure-ai-intensity-by-human-input-to-valuable-output.md)
+- [Standard models guide AI engineering practice](../concepts/standard-models-guide-ai-engineering-practice.md)
 - [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md)
 - [Choose AI coworker form factors by interaction mode](../concepts/choose-ai-coworker-form-factors-by-interaction-mode.md)
 - [Design agent presence with visual alignment and handoff](../concepts/design-agent-presence-with-visual-alignment-and-handoff.md)
@@ -667,6 +669,8 @@
 
 ## Product Strategy
 
+- [Measure AI intensity by human input to valuable output](../concepts/measure-ai-intensity-by-human-input-to-valuable-output.md)
+- [Standard models guide AI engineering practice](../concepts/standard-models-guide-ai-engineering-practice.md)
 - [Design AI creative systems for generated-asset retrieval](../concepts/design-ai-creative-systems-for-generated-asset-retrieval.md)
 - [Prototype AI UX by feeling the model material](../concepts/prototype-ai-ux-by-feeling-the-model-material.md)
 - [Choose AI coworker form factors by interaction mode](../concepts/choose-ai-coworker-form-factors-by-interaction-mode.md)
@@ -1099,6 +1103,8 @@
 
 ## Workflows
 
+- [SPADE structures AI-intensive workflows](../concepts/spade-structures-ai-intensive-workflows.md)
+- [Measure AI intensity by human input to valuable output](../concepts/measure-ai-intensity-by-human-input-to-valuable-output.md)
 - [Research engineering partnership](../concepts/research-engineering-partnership.md)
 - [Model-shaped codebase architecture for coding agents](../concepts/model-shaped-codebase-architecture-for-coding-agents.md)
 - [Agentic coding transforms existing software](../concepts/agentic-coding-transforms-existing-software.md)

@@ -8,6 +8,8 @@ The funnel is a useful operating model. Top-of-funnel work should create somethi
 
 AI-native product strategy also includes deciding where model behavior belongs in the experience. Invisible background work, ambient surfacing, inline artifact manipulation, conversational build flows, adaptive websites, and personalized creative pipelines carry different trust, interruption, and control costs. Teams should prototype those choices with runnable model probes because static screens cannot reveal whether the model is fast, accurate, aligned, awkward, or surprisingly capable in the proposed surface.
 
+AI intensity gives product teams another product-shape lens: compare how much valuable output the system can produce for each human steering action. A higher ratio is not automatically better; it is useful only when the output is valuable, reviewable, and not annoying to control.
+
 ## Key Concepts
 
 - [AI Does Not Replace Shareable Product Marketing](../concepts/ai-does-not-replace-shareable-product-marketing.md) - launch content only matters when it can earn attention and social sharing.
@@ -17,6 +19,8 @@ AI-native product strategy also includes deciding where model behavior belongs i
 - [Product Engineers Need Direct Customer Context](../concepts/product-engineers-need-direct-customer-context.md) - product judgment improves when engineers see customer pain directly.
 - [Treat model behavior as a product craft](../concepts/treat-model-behavior-as-a-product-craft.md) - AI-native products need product ownership over behavior, prompts, evals, model choices, and personality.
 - [Choose AI coworker form factors by interaction mode](../concepts/choose-ai-coworker-form-factors-by-interaction-mode.md) - product teams should choose whether AI is invisible, ambient, inline, or conversational based on the workflow.
+- [Measure AI intensity by human input to valuable output](../concepts/measure-ai-intensity-by-human-input-to-valuable-output.md) - product teams can compare AI surfaces by output value per human steering event.
+- [Standard models guide AI engineering practice](../concepts/standard-models-guide-ai-engineering-practice.md) - product and engineering teams need reusable mental models for adding intelligence deliberately.
 - [Prototype AI UX by feeling the model material](../concepts/prototype-ai-ux-by-feeling-the-model-material.md) - AI UX choices need runnable probes that expose model behavior, latency, and fit.
 - [Court agent emergence with bounded play](../concepts/court-agent-emergence-with-bounded-play.md) - exploratory prototypes can reveal useful product behavior beyond automating an existing step.
 - [Design AI creative systems for generated-asset retrieval](../concepts/design-ai-creative-systems-for-generated-asset-retrieval.md) - product teams need output retrieval when creative personalization creates many generated variants.
@@ -24,10 +28,12 @@ AI-native product strategy also includes deciding where model behavior belongs i
 ## Open Questions
 
 - Which AI-product onboarding metrics best distinguish a real aha moment from a merely completed signup or first prompt?
+- Which AI-product surfaces should increase output-per-input, and which need more explicit user steering for trust?
 - How can teams evaluate "shareability" before a launch without reducing product marketing to generic virality formulas?
 
 ## Sources
 
+- [Designing AI-Intensive Applications - swyx](../sources/20250809_IHkyFhU6JEY.md)
 - [AI changes *Nothing* — Dax Raad, OpenCode](../sources/20251123_o3gmwzo-Mik.md)
 - [Taste & Craft: A Conversation with Tuomas Artman, CTO Linear & Gergely Orosz, @pragmaticengineer](../sources/20260421_wjk0ulMAkbc.md)
 - [From Arc to Dia: Lessons learned building AI Browsers - Samir Mody, The Browser Company of New York](../sources/20251219_o4scJaQgnFA.md)

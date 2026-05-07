@@ -48,6 +48,8 @@ Agent-native organizational workflows start with supervision, dispatch, and revi
 
 AI coworker workflow design should choose interaction mode deliberately. Background personalization can stay invisible, workspace scanning can be ambient, artifact transformation can be inline, and app-building or ambiguous direction can remain conversational. The workflow should also leave room for bounded play: realistic prototypes can reveal when an agent should combine inputs, create follow-up artifacts, or escalate missing information back to a human instead of pretending to complete the task.
 
+AI-intensive workflows can also be modeled as many model calls organized around one user-facing artifact. SPADE captures a reusable loop: synchronize input sources, plan the work, analyze in parallel, deliver a reduced artifact, and evaluate the result. This is a stronger design unit than a single prompt/response when the product repeatedly scrapes, researches, summarizes, transforms, or publishes from many inputs.
+
 Proactive coding workflows try to remove the prompt/wait/repeat loop without removing human alignment. The useful shape is not a wall of parallel terminals; it is background observation, repository indexing, candidate task discovery, critic review, Playwright-style verification artifacts, editable memory, and just-in-time context that lets the agent handle friction while the human keeps creative and product judgment. Proactivity should be staged: start with bounded maintenance and best-practice work, then move toward system-level proposals only when the agent can connect code, design, telemetry, and outcome signals.
 
 Enterprise AI research workflows can be made fundable by turning each uncertain phase into a small productizable bet. For GenBI, the useful pattern is to work with production-like but controlled data, involve expert users early, ship six-week deliverables such as metadata enrichment or report discovery, and preserve stop/go decision points so leadership can keep funding tied to measurable value instead of sunk cost.
@@ -95,6 +97,8 @@ Brockman's workflow advice is to challenge inherited constraints by first princi
 - [Agentic coding transforms existing software](../concepts/agentic-coding-transforms-existing-software.md) - agent workflows should target mature codebase transformation, not only prototypes.
 - [High-assurance agentic coding needs process, not just generation](../concepts/high-assurance-agentic-coding-needs-process-not-just-generation.md) - workflow design should wrap generated code in requirements, verification, and feedback stages.
 - [Choose AI coworker form factors by interaction mode](../concepts/choose-ai-coworker-form-factors-by-interaction-mode.md) - workflow shape determines whether AI should be invisible, ambient, inline, or conversational.
+- [SPADE structures AI-intensive workflows](../concepts/spade-structures-ai-intensive-workflows.md) - high-volume AI-call products can synchronize, plan, analyze, deliver, and evaluate around one useful artifact.
+- [Measure AI intensity by human input to valuable output](../concepts/measure-ai-intensity-by-human-input-to-valuable-output.md) - workflow autonomy should be judged by value per user steering event.
 - [Design agent presence with visual alignment and handoff](../concepts/design-agent-presence-with-visual-alignment-and-handoff.md) - inline agent workflows need visual checks, snapshots, rollback, and safe handoff.
 - [Court agent emergence with bounded play](../concepts/court-agent-emergence-with-bounded-play.md) - exploratory workflow prototypes can reveal useful behaviors beyond automating known steps.
 - [Separate generation and verification prompts or models](../concepts/separate-generation-and-verification-prompts-or-models.md) - implementation and validation can run through separate agent contexts.
@@ -366,9 +370,11 @@ Brockman's workflow advice is to challenge inherited constraints by first princi
 - Which new-hire onboarding steps should be dedicated to configuring role-specific agents before ordinary execution work begins?
 - Which tasks need full research-plan-implement compaction, and which only need direct prompting plus validation?
 - Which inherited workflow constraints still protect quality, and which are obsolete overhead under AI-assisted execution?
+- Which AI-intensive workflows should use a SPADE-style batch pipeline instead of a conversational or agent-loop interface?
 
 ## Sources
 
+- [Designing AI-Intensive Applications - swyx](../sources/20250809_IHkyFhU6JEY.md)
 - [#define AI Engineer - Greg Brockman, OpenAI (ft. Jensen Huang)](../sources/20250810_avWhreBUYF0.md)
 - [Form factors for your new AI coworkers - Craig Wattrus, Flatfile](../sources/20250822_CiMVKnX-CNI.md)
 - [How BlackRock Builds Custom Knowledge Apps at Scale — Vaibhav Page & Infant Vasanth, BlackRock](../sources/20250823_08mH36_NVos.md)
