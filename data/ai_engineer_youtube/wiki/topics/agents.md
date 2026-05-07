@@ -30,6 +30,8 @@ Government and national-security agents add a high-consequence version of this p
 
 Agent-to-agent systems need their own discovery contract as they spread across teams. An A2A registry can publish agent cards that describe each agent's identity, endpoint, capabilities, supported modalities, and authentication requirements, while a use-case registry links those agents to MCP tools, models, owners, and lifecycle status. That makes agent reuse and runtime discovery practical without losing governance and impact analysis. Graph-backed memory adds another discovery and context contract for agents: an agent can retrieve schema, traverse relationships, and pull attached chunks through a graph tool when fixed retrieval cannot answer a relationship-heavy question.
 
+Architecture copilots add a strategic agent layer ahead of coding agents. They need a live model of the tech estate, business-objective context, and governance guidance so architecture agents can aim the work before coding agents execute it. Their value is in making architecture recommendations explainable, traceable, and embedded in developer workflows rather than leaving teams to choose between slow review gates and unguided autonomy.
+
 Coding-agent systems also need role decomposition before they become effective agent organizations. Yegge's critique of one giant coding agent is that larger context windows and more expensive models do not remove the need for task decomposition; agent systems should separate product framing, implementation, review, testing, merging, and related roles when those roles need different context, tools, models, or verification surfaces.
 
 Multi-agent production systems also inherit ordinary distributed-systems failure modes. Moving from one agent to several agents creates coordination paths, shared-state races, stale cache reads, partial workflow failures, and debugging gaps that better prompts do not fix. Choreography can preserve autonomy when agents coordinate through events, but it needs traceable event delivery; orchestration gives a central execution graph, state store, retries, logs, and rollback path when complex dependencies or regulated decisions require stronger control. Handoffs should use immutable versioned state and explicit data contracts so each agent receives a sealed input and produces a new auditable output rather than mutating shared records.
@@ -61,6 +63,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 ## Key Concepts
 
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - agent loops can stay flexible while the runtime validates tool execution.
+- [Embed architecture governance into developer workflows](../concepts/embed-architecture-governance-into-developer-workflows.md) - architecture agents can scale expert guidance without turning governance into a bottleneck.
 - [Scientific agents should execute against domain infrastructure](../concepts/scientific-agents-should-execute-against-domain-infrastructure.md) - research agents should connect hypotheses to domain tools, simulations, and compute assets.
 - [Regulated agents need explainability, isolation, governance, and speed](../concepts/regulated-agents-need-explainability-isolation-governance-and-speed.md) - federal agent products need auditability, restricted deployment options, compliance artifacts, and timely feature parity.
 - [High-consequence data changes vendor trust requirements](../concepts/high-consequence-data-changes-vendor-trust-requirements.md) - controlled and classified data require stronger deployment, monitoring, and governance evidence than ordinary SaaS trust signals.
@@ -377,5 +380,6 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Katelyn Lesse - Evolving Claude APIs for Agents, Anthropic](../sources/20251204_aqW68Is_Kj4.md)
 - [Context Engineering: Connecting the Dots with Graphs - Stephen Chin, Neo4j](../sources/20251124_LLuKshphGOE.md)
 - [Defying Gravity - Kevin Hou, Google DeepMind](../sources/20251202_HN-F-OQe6j0.md)
+- [AI Copilots for Tech Architecture: The Highest-ROI Use Case You're Not Building - Boris B., Catio](../sources/20251124_QRWdapxMdSY.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

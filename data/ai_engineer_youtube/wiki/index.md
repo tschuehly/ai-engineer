@@ -4,6 +4,7 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Live architecture digital twins ground architecture copilots](concepts/live-architecture-digital-twins-ground-architecture-copilots.md) - architecture advice needs a current model of the actual tech estate.
 - [Context development lifecycle treats context as an engineered artifact](concepts/context-development-lifecycle-treats-context-as-an-engineered-artifact.md) - context should move through generate, evaluate, distribute, observe, and adapt loops.
 - [Treat AI coding as a central applied-AI problem](concepts/treat-ai-coding-as-a-central-applied-ai-problem.md) - code-facing systems are where model capability becomes usable software and workflow leverage.
 - [Vibe engineering is supervised agentic coding with judgment](concepts/vibe-engineering-is-supervised-agentic-coding-with-judgment.md) - agentic coding still depends on human context, abstraction judgment, and acceptance criteria.
@@ -209,6 +210,7 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 - [Agents](topics/agents.md) - agent workflows that combine reasoning, tools, APIs, and local state.
 - [AI Monetization](topics/ai-monetization.md) - pricing, charge metrics, billing guardrails, and monetization infrastructure for AI products.
+- [Architecture Copilots](topics/architecture-copilots.md) - AI-assisted architecture visibility, business-impact recommendations, and developer-workflow governance.
 - [Business Intelligence](topics/business-intelligence.md) - governed analytics agents, certified BI assets, metadata quality, and GenBI adoption workflows.
 - [Coding Agents](topics/coding-agents.md) - coding-agent loops, tickets, validation, and feedback-driven prompt or skill improvement.
 - [Context Engineering](topics/context-engineering.md) - engineering prompts, skills, memory, retrieval, and documentation into reusable task context.

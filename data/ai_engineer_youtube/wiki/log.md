@@ -1055,3 +1055,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Observability-to-PR agents turn incidents into reviewable fixes](concepts/observability-to-pr-agents-turn-incidents-into-reviewable-fixes.md), [Analyze operational health over time slices before invoking repair agents](concepts/analyze-operational-health-over-time-slices-before-invoking-repair-agents.md), [Headless coding-agent servers make agents callable infrastructure](concepts/headless-coding-agent-servers-make-agents-callable-infrastructure.md)
 - Notes: Added Railway Autofix patterns for scheduled health workflows that gather operational context, invoke a headless coding agent, and produce reviewable infrastructure-fix PRs.
+
+## [2026-05-07] ingest | AI Copilots for Tech Architecture: The Highest-ROI Use Case You're Not Building - Boris B., Catio
+
+- Source: [AI Copilots for Tech Architecture: The Highest-ROI Use Case You're Not Building - Boris B., Catio](sources/20251124_QRWdapxMdSY.md)
+- Processed: `QRWdapxMdSY`
+- Updated topics: [Architecture Copilots](topics/architecture-copilots.md), [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Live architecture digital twins ground architecture copilots](concepts/live-architecture-digital-twins-ground-architecture-copilots.md), [Rank architecture recommendations by business impact](concepts/rank-architecture-recommendations-by-business-impact.md), [Embed architecture governance into developer workflows](concepts/embed-architecture-governance-into-developer-workflows.md)
+- Notes: Added Catio's architecture-copilot workflow for grounding strategic architecture advice in live system visibility, business-impact ranking, and developer-workflow governance.

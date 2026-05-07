@@ -48,6 +48,8 @@ Enterprise AI research workflows can be made fundable by turning each uncertain 
 
 AI coding workflows should also separate easy generation from simple system design. Nations' three-phase approach turns one long coding conversation into research, planning, and implementation artifacts with human checkpoints between them. Gallon's framework adds a more granular make-it-work sequence: capture a master project specification, extract and categorize features, develop atomic feature specifications, build a dependency matrix, then produce an implementation plan that sequences phases and binary validation criteria. That structure keeps review at the speed of generation: humans validate the research and plan before the agent produces a diff, then review implementation against a known plan rather than reverse-engineering whatever the chat invented.
 
+Architecture-copilot workflows put an aiming step before coding-copilot execution. The recommended rollout is incremental: pick one portfolio area, build live visibility, generate recommendations tied to business outcomes, pilot autonomous guidance with one team, and scale only after the ROI and adoption path are proven.
+
 Frequent intentional compaction adds a context-window version of the same workflow. Research, plan, and implementation are useful because each phase can compact the previous phase into a smaller, reviewed artifact: codebase truth, then implementation intent, then executable change. The workflow should scale with task difficulty rather than become ceremony; a small button change may need direct prompting, while hard brownfield work needs enough compaction and review to keep the agent out of stale or noisy context.
 
 Agent-first IDE workflows make those artifacts live inside the working surface. Antigravity uses the agent manager as a queue and review control plane, lets the model decide when to create a plan, task list, diagram, screenshot, recording, or walkthrough, and lets the user batch comments on text or image artifacts while execution continues. Its dogfooding loop also turns real product use into research feedback about model, tool, and harness gaps.
@@ -158,6 +160,8 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 - [Use reviewer agents and lints to turn review lessons into guardrails](../concepts/use-reviewer-agents-and-lints-to-turn-review-lessons-into-guardrails.md) - repeated review lessons should become automatic workflow checks.
 - [Treat prompts as distributed harness surfaces](../concepts/treat-prompts-as-distributed-harness-surfaces.md) - workflow prompts can be injected through files, skills, lints, PR comments, and tests.
 - [Use decision logs to keep uncertain agents moving](../concepts/use-decision-logs-to-keep-uncertain-agents-moving.md) - decision logs preserve assumptions for review without stopping the entire work tree.
+- [Rank architecture recommendations by business impact](../concepts/rank-architecture-recommendations-by-business-impact.md) - architecture roadmaps should be scored against business goals before implementation.
+- [Embed architecture governance into developer workflows](../concepts/embed-architecture-governance-into-developer-workflows.md) - governance should guide developer decisions in-flow instead of becoming only a review gate.
 - [Collaborate with complex agents through high-bandwidth artifacts](../concepts/collaborate-with-complex-agents-through-high-bandwidth-artifacts.md) - artifact-native workflows let humans steer local parts of complex agent work.
 - [Isolate parallel coding work with project worktrees](../concepts/isolate-parallel-coding-work-with-project-worktrees.md) - worktrees let concurrent coding-agent runs proceed without colliding in one checkout.
 - [Customize subagents by task, model, tools, and permissions](../concepts/customize-subagents-by-task-model-tools-and-permissions.md) - decomposed agent work needs role-specific models, tools, and authority.
@@ -405,5 +409,6 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 - [The State of AI Code Quality: Hype vs Reality — Itamar Friedman, Qodo](../sources/20251211_rgjF5o2Qjsc.md)
 - [Proactive Agents - Kath Korevec, Google Labs](../sources/20251213_v3u8xc0zLec.md)
 - [Moving away from Agile: What's Next - Martin Harrysson & Natasha Maniar, McKinsey & Company](../sources/20251212_SZStlIhyTCY.md)
+- [AI Copilots for Tech Architecture: The Highest-ROI Use Case You're Not Building - Boris B., Catio](../sources/20251124_QRWdapxMdSY.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

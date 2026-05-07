@@ -52,6 +52,8 @@ Coding-agent harnesses are another infrastructure layer when teams want products
 
 Web and mobile coding agents add a remote-compute version of that harness problem. When the user starts work away from a local terminal and returns later, the platform needs secure sandboxed execution, container orchestration, and session persistence so generated code can run without depending on the user's machine.
 
+Architecture-copilot infrastructure needs a live system model before recommendations are credible. The described pattern ingests cloud, Kubernetes, service, logging, dependency, and drift signals into a normalized digital twin, then uses that model to support explainable recommendations and workflow-embedded governance.
+
 ## Key Concepts
 
 - [Use hosted model playgrounds to prototype before owning infrastructure](../concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md) - hosted tools can validate model and deployment choices before teams own the runtime.
@@ -118,6 +120,8 @@ Web and mobile coding agents add a remote-compute version of that harness proble
 - [MCP gateways create an enterprise root of trust](../concepts/mcp-gateways-create-an-enterprise-root-of-trust.md) - gateway infrastructure centralizes trust, routing, observability, and deployment for many MCP servers.
 - [Gateway platform primitives let teams focus on MCP business logic](../concepts/gateway-platform-primitives-let-teams-focus-on-mcp-business-logic.md) - platform primitives prevent every domain MCP server from rebuilding common infrastructure.
 - [Enterprise AI asset registries connect governance to runtime lineage](../concepts/enterprise-ai-asset-registries-connect-governance-to-runtime-lineage.md) - registry metadata makes deployed AI assets auditable and traceable to business use cases.
+- [Live architecture digital twins ground architecture copilots](../concepts/live-architecture-digital-twins-ground-architecture-copilots.md) - live architecture models turn operational inventory into agent-usable planning infrastructure.
+- [Rank architecture recommendations by business impact](../concepts/rank-architecture-recommendations-by-business-impact.md) - infrastructure recommendations need traceable business-impact scores.
 - [Start GenBI with certified assets before autonomous SQL](../concepts/start-genbi-with-certified-assets-before-autonomous-sql.md) - governed BI infrastructure should expose certified reports and metadata before agent-generated SQL.
 - [Evaluate BI agents with real metadata and expert feedback](../concepts/evaluate-bi-agents-with-real-metadata-and-expert-feedback.md) - metadata enrichment should be validated against real question sets and expert feedback.
 - [Blueprint repositories standardize MCP and A2A service delivery](../concepts/blueprint-repositories-standardize-mcp-and-a2a-service-delivery.md) - blueprints provide reusable platform scaffolding and CI/CD metadata publication.
@@ -242,5 +246,6 @@ Web and mobile coding agents add a remote-compute version of that harness proble
 - [Future-Proof Coding Agents - Bill Chen & Brian Fioca, OpenAI](../sources/20251205_wVl6ZjELpBk.md)
 - [Katelyn Lesse - Evolving Claude APIs for Agents, Anthropic](../sources/20251204_aqW68Is_Kj4.md)
 - [Building Cursor Composer - Lee Robinson, Cursor](../sources/20251202_fL1iJHtl51Q.md)
+- [AI Copilots for Tech Architecture: The Highest-ROI Use Case You're Not Building - Boris B., Catio](../sources/20251124_QRWdapxMdSY.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)
