@@ -10,6 +10,7 @@ Details:
 - The talk says speech-to-speech models are promising for conversational dynamics, narrative, storytelling, multilingual input, and potentially lower latency because they avoid separate transcription, text inference, and synthesis calls. 19:16-20:24, 24:03-25:01
 - For most enterprise voice AI workflows that need strong instruction following and function calling, the talk says current native audio models are usually not yet the right default even though they are improving every release. 20:04-20:51
 - Continuous bidirectional streaming models such as Moshi can express silence, turn-taking, and backchannels as model outputs, but the specific research model discussed is not production-ready for most real-world use cases. 17:51-19:14
+- ElevenLabs' workshop offers a parallel production caveat: sound-token-to-sound-token realtime models can be attractive, but a cascaded text path gives teams more explicit monitoring and understanding of what happened in a conversation. 09:52-10:41
 - Audio mode can expand context massively relative to text and is trained on scarcer data, which can degrade reliability and cause errors such as wrong-language responses. 25:07-26:39
 - The practical recommendation is to make model choice an eval threshold: swap providers or architectures in the same pipeline and run task-specific evals before choosing a production model. 20:45-20:51, 22:24-22:47, 23:12-23:28
 
@@ -21,6 +22,8 @@ Related topics:
 Related concepts:
 - [Choose voice-agent architecture by latency, accuracy, and semantics](choose-voice-agent-architecture-by-latency-accuracy-and-semantics.md)
 - [Full-duplex speech models make turn-taking a learned behavior](full-duplex-speech-models-make-turn-taking-a-learned-behavior.md)
+- [Multilingual Voice Agents Need Language Detection and Switching](multilingual-voice-agents-need-language-detection-and-switching.md)
 
 Sources:
 - [Pipecat Cloud: Enterprise Voice Agents Built On Open Source - Kwindla Hultman Kramer, Daily](../sources/20250731_IA4lZjh9sTs.md), 17:51-20:51, 22:24-23:28, 24:03-26:39
+- [[Full Workshop] Building Conversational AI Agents - Thor Schaeff, ElevenLabs](../sources/20250731_MPtCBaZn84A.md), 09:52-10:41

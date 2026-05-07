@@ -1423,3 +1423,11 @@
 - Updated topics: [Voice Agents](topics/voice-agents.md), [Infrastructure](topics/infrastructure.md), [Evaluation](topics/evaluation.md)
 - Updated concepts: [Voice Agent Infrastructure Needs Realtime Session Deployment](concepts/voice-agent-infrastructure-needs-realtime-session-deployment.md), [Filter Background Audio Before Voice-Agent Inference](concepts/filter-background-audio-before-voice-agent-inference.md), [Evaluate Speech-To-Speech Models Against Enterprise Control Needs](concepts/evaluate-speech-to-speech-models-against-enterprise-control-needs.md), [Use Frame Pipelines to Compose Realtime Voice Agents](concepts/use-frame-pipelines-to-compose-realtime-voice-agents.md), [Choose Voice-Agent Architecture by Latency, Accuracy, and Semantics](concepts/choose-voice-agent-architecture-by-latency-accuracy-and-semantics.md)
 - Notes: Added Pipecat Cloud's production voice-agent deployment framing, background-audio failure modes, and speech-to-speech adoption criteria for enterprise workflows.
+
+## [2026-05-07] ingest | [Full Workshop] Building Conversational AI Agents - Thor Schaeff, ElevenLabs
+
+- Source: [[Full Workshop] Building Conversational AI Agents - Thor Schaeff, ElevenLabs](sources/20250731_MPtCBaZn84A.md)
+- Processed: `MPtCBaZn84A`
+- Updated topics: [Voice Agents](topics/voice-agents.md)
+- Updated concepts: [Choose Voice-Agent Architecture by Latency, Accuracy, and Semantics](concepts/choose-voice-agent-architecture-by-latency-accuracy-and-semantics.md), [Evaluate Speech-To-Speech Models Against Enterprise Control Needs](concepts/evaluate-speech-to-speech-models-against-enterprise-control-needs.md), [Multilingual Voice Agents Need Language Detection and Switching](concepts/multilingual-voice-agents-need-language-detection-and-switching.md), [Keep Voice Agents Conversational During Long Tool Latency](concepts/keep-voice-agents-conversational-during-long-tool-latency.md), [Voice Generation Safety Needs Moderation, Consent, and Provenance](concepts/voice-generation-safety-needs-moderation-consent-and-provenance.md)
+- Notes: Added ElevenLabs' conversational-agent workshop patterns for observable cascaded voice pipelines, multilingual language switching, slow-tool wait handling, and generated-audio safety controls.
