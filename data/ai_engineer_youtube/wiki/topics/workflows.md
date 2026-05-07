@@ -149,6 +149,8 @@ Brockman's workflow advice is to challenge inherited constraints by first princi
 - [Use challenge eval sets for future user demands](../concepts/use-challenge-eval-sets-for-future-user-demands.md) - workflow evaluation should include harder cases users will ask for after the simple cases work.
 - [Prefer model-portable agentic prompts before fine-tuning](../concepts/prefer-model-portable-agentic-prompts-before-fine-tuning.md) - workflow structure can preserve provider portability where fine-tuning would create model-version maintenance.
 - [DSPy programs keep LLM intent separate from prompt strings](../concepts/dspy-programs-keep-llm-intent-separate-from-prompt-strings.md) - program-first LLM workflows keep control flow stable while model prompts evolve.
+- [Avoid premature low-level AI system coupling](../concepts/avoid-premature-low-level-ai-system-coupling.md) - workflow design should keep stable task intent separate from quickly expiring model and inference details.
+- [Use evals as durable AI system specifications](../concepts/use-evals-as-durable-ai-system-specifications.md) - explicit evals keep optimization criteria stable across model, prompt, and optimizer changes.
 - [Optimize LLM programs with metrics and teacher feedback](../concepts/optimize-llm-programs-with-metrics-and-teacher-feedback.md) - known examples and metrics can drive DSPy optimizer loops.
 - [Use explanatory feedback to optimize prompts](../concepts/use-explanatory-feedback-to-optimize-prompts.md) - feedback-rich examples turn prompt editing into a repeatable improvement loop.
 - [AI code quality needs full-SDLC workflows](../concepts/ai-code-quality-needs-full-sdlc-workflows.md) - quality workflows should span planning, development, review, testing, deployment, ownership, and verification.
@@ -455,6 +457,7 @@ Brockman's workflow advice is to challenge inherited constraints by first princi
 - [Shipping AI That Works: An Evaluation Framework for PMs - Aman Khan, Arize](../sources/20251226_2HNSG990Ew8.md)
 - [The Agent Native Company — Rick Blalock, Agentuity](../sources/20250603_0ZPAvzhpGjw.md)
 - [The Future of Evals - Ankur Goyal, Braintrust](../sources/20250809_MC55hdWLq4o.md)
+- [On Engineering AI Systems that Endure The Bitter Lesson - Omar Khattab, DSPy & Databricks](../sources/20250806_qdmxApz3EJI.md)
 - [No More Slop - swyx](../sources/20251222_IoiHI7p12Ao.md)
 - [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](../sources/20251223_LU9KgcZDRfY.md)
 - [The 3 Pillars of Autonomy - Michele Catasta, Replit](../sources/20251222_MLhAA9yguwM.md)

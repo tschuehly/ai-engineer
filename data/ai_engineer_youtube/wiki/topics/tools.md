@@ -16,7 +16,7 @@ Task-management tools need the same product shape. Backlog.md uses MCP resources
 
 RAG stacks are another tool surface when their internals are inspectable and editable. OpenRAG's LangFlow layer exposes ingestion, retrieval, guardrails, parsers, URL ingestion, calculators, prompt templates, and OpenSearch tools as flow components; its API keys and MCP server let other applications or agents call the same retrieval system instead of duplicating it.
 
-LLM programming frameworks can make prompt format itself a tool layer. DSPy signatures and modules describe the workflow intent, while adapters choose how that intent is rendered to the model, so teams can compare JSON, BAML, compressed formats, or model-specific formatting without rewriting the program.
+LLM programming frameworks can make prompt format itself a tool layer. DSPy signatures and modules describe the workflow intent, while adapters choose how that intent is rendered to the model, so teams can compare JSON, BAML, compressed formats, or model-specific formatting without rewriting the program. This matters because prompt strings otherwise become a low-level tool surface that entangles durable task intent with model-specific wording, examples, output-format instructions, parsing assumptions, and inference-strategy choices.
 
 Open-source agent tools need extension points as well as integrations. Plugin architecture can keep memory, wiki, dreaming, and other experimental capabilities installable without forcing every idea into core or overloading maintainers with unrelated pull requests. Ordinary package-manager distribution can be enough for harness extensions when extensions are just code modules that add tools, commands, events, providers, or compaction behavior. Routine systems are another tool layer: they package repeated prompts as scheduled or manually parameterized workflows, often invoking skills for specialized domain guidance while keeping the trigger, variables, and project or agent ownership explicit.
 
@@ -75,6 +75,8 @@ AI coworker products add tool surfaces that are neither plain chat nor backend A
 - [Sandboxed code execution turns model reasoning into inspectable computation](../concepts/sandboxed-code-execution-turns-model-reasoning-into-inspectable-computation.md) - sandboxed execution gives models computation tools while limiting local side effects.
 - [DSPy programs keep LLM intent separate from prompt strings](../concepts/dspy-programs-keep-llm-intent-separate-from-prompt-strings.md) - typed LLM-backed functions keep workflow logic in code instead of hand-managed prompt strings.
 - [DSPy adapters make prompt format a swappable runtime layer](../concepts/dspy-adapters-make-prompt-format-a-swappable-runtime-layer.md) - adapters make JSON, BAML, and compressed model-facing formats testable implementation choices.
+- [Prompt strings entangle task intent with model tricks](../concepts/prompt-strings-entangle-task-intent-with-model-tricks.md) - prompt blobs mix product intent with temporary model-specific implementation details.
+- [Avoid premature low-level AI system coupling](../concepts/avoid-premature-low-level-ai-system-coupling.md) - AI tools should expose stable application intent while lower-level models and strategies remain swappable.
 - [Route heterogeneous documents through multimodal LLM pipelines](../concepts/route-heterogeneous-documents-through-multimodal-llm-pipelines.md) - multimodal document classifiers and page-image tools can route mixed files through specialized processing paths.
 - [Reusable Routines Turn Prompts Into Operational Agent Workflows](../concepts/reusable-routines-turn-prompts-into-operational-agent-workflows.md) - routines turn repeated prompts into explicit tool workflows with schedules, variables, and skill references.
 - [Repository skills and AGENTS.md encode repeatable web-agent workflows](../concepts/repository-skills-and-agents-md-encode-repeatable-web-agent-workflows.md) - repo-local instructions can make browser proof, preview sharing, and confirmation gates part of every web-agent change.
@@ -292,6 +294,7 @@ AI coworker products add tool surfaces that are neither plain chat nor backend A
 - [Platforms for Humans and Machines: Engineering for the Age of Agents - Juan Herreros Elorza](../sources/20260408_cCRO3ChaYhM.md)
 - [Cognitive Exhaust Fumes, or: Read-Only AI Is Underrated - Simon Podhajsky, Head of AI, Waypoint](../sources/20260408_u0TOSBbAw7c.md)
 - [DSPy: The End of Prompt Engineering - Kevin Madura, AlixPartners](../sources/20260108_-cKUW6n8hBU.md)
+- [On Engineering AI Systems that Endure The Bitter Lesson - Omar Khattab, DSPy & Databricks](../sources/20250806_qdmxApz3EJI.md)
 - [Identity for AI Agents - Patrick Riley & Carlos Galan, Auth0](../sources/20260114_VSdV-AdSlis.md)
 - [Your MCP Server is Bad (and you should feel bad) - Jeremiah Lowin, Prefect](../sources/20260112_96G7FLab8xc.md)
 - [OpenAI + @Temporalio : Building Durable, Production Ready Agents - Cornelia Davis, Temporal](../sources/20260112_k8cnVCMYmNc.md)

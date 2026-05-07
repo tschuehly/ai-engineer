@@ -1255,3 +1255,11 @@
 - Updated topics: [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Use eval agents to improve prompts, datasets, and scorers](concepts/use-eval-agents-to-improve-prompts-datasets-and-scorers.md)
 - Notes: Added Braintrust's Loop framing for eval-native agents that propose inspectable improvements to prompts, datasets, and scorers instead of leaving dashboards as passive diagnosis tools.
+
+## [2026-05-07] ingest | On Engineering AI Systems that Endure The Bitter Lesson - Omar Khattab, DSPy & Databricks
+
+- Source: [On Engineering AI Systems that Endure The Bitter Lesson - Omar Khattab, DSPy & Databricks](sources/20250806_qdmxApz3EJI.md)
+- Processed: `qdmxApz3EJI`
+- Updated topics: [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Avoid premature low-level AI system coupling](concepts/avoid-premature-low-level-ai-system-coupling.md), [Prompt strings entangle task intent with model tricks](concepts/prompt-strings-entangle-task-intent-with-model-tricks.md), [Use evals as durable AI system specifications](concepts/use-evals-as-durable-ai-system-specifications.md), [DSPy programs keep LLM intent separate from prompt strings](concepts/dspy-programs-keep-llm-intent-separate-from-prompt-strings.md)
+- Notes: Added Khattab's durable-AI-system framing: keep application-specific signatures, control flow, tools, and evals stable while treating models, prompts, inference strategies, and optimizers as swappable lower-level mechanisms.

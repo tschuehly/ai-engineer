@@ -1,0 +1,25 @@
+# Use Evals As Durable AI System Specifications
+
+Summary: Evals are part of the stable AI system specification: they state what the application should care about even as models, prompts, inference strategies, and optimizers change.
+
+Use when:
+- Turning implicit prompt tinkering criteria into explicit optimization and regression targets.
+- Evaluating whether a model swap or optimizer run preserved the behavior the application actually needs.
+
+Details:
+- Khattab says prompt iteration often hides the real criteria by tweaking text to appease a model; evals externalize those criteria by saying what the system actually cares about. 15:09-15:26
+- Evals should not replace task instructions: learning from data is harder than following instructions, so a system needs both localized natural-language definitions and evals that measure whether the whole system works. 15:29-15:39
+- The eval should evaluate the full application-specific system, not a generic model default, because the goal is to make the assembled task, control flow, tools, and model choices work together. 16:48-17:12
+- Once evals name the target behavior, optimizers can change lower-level artifacts such as prompts, modules, or reinforcement-learning policies without making the product requirement itself disappear into model-specific prompt text. 17:05-17:22, 18:52-19:04
+
+Related topics:
+- [Evaluation](../topics/evaluation.md)
+- [Workflows](../topics/workflows.md)
+
+Related concepts:
+- [Optimize LLM programs with metrics and teacher feedback](optimize-llm-programs-with-metrics-and-teacher-feedback.md)
+- [Build AI app benchmarks before optimization](build-ai-app-benchmarks-before-optimization.md)
+- [Avoid premature low-level AI system coupling](avoid-premature-low-level-ai-system-coupling.md)
+
+Sources:
+- [On Engineering AI Systems that Endure The Bitter Lesson - Omar Khattab, DSPy & Databricks](../sources/20250806_qdmxApz3EJI.md), 15:09-15:39, 16:48-19:04

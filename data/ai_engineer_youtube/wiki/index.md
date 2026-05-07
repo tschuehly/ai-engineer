@@ -4,6 +4,8 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Avoid premature low-level AI system coupling](concepts/avoid-premature-low-level-ai-system-coupling.md) - keep stable AI application intent separate from fast-changing model and inference mechanics.
+- [Use evals as durable AI system specifications](concepts/use-evals-as-durable-ai-system-specifications.md) - preserve product criteria while prompts, models, strategies, and optimizers evolve.
 - [Measure AI intensity by human input to valuable output](concepts/measure-ai-intensity-by-human-input-to-valuable-output.md) - compare AI products by useful output per human steering event rather than by agent labels.
 - [SPADE structures AI-intensive workflows](concepts/spade-structures-ai-intensive-workflows.md) - high-volume AI-call products can synchronize, plan, analyze, deliver, and evaluate around one artifact.
 - [Use eval agents to improve prompts, datasets, and scorers](concepts/use-eval-agents-to-improve-prompts-datasets-and-scorers.md) - eval-native agents can turn scored results into inspectable system and benchmark improvements.
