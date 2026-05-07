@@ -4,6 +4,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Product Work Graphs Coordinate Agents and Humans](concepts/product-work-graphs-coordinate-agents-and-humans.md) - issues, projects, feedback, related work, and communication threads become shared context for agents and humans.
+- [First-Class Agent Users Need Identity, Scopes, and Audit Trails](concepts/first-class-agent-users-need-identity-scopes-and-audit-trails.md) - collaboration-platform agents need governable user identity, scoped access, and inspectable history.
+- [Platform-Native Agents Should Behave Like Good Teammates](concepts/platform-native-agents-should-behave-like-good-teammates.md) - embedded agents should acknowledge, clarify, update state, and keep comments concise.
 - [Enterprise MCP Requires SaaS Security Controls](concepts/enterprise-mcp-requires-saas-security-controls.md) - public and enterprise MCP servers need SSO, provisioning, audit, DLP, abuse prevention, and access controls.
 - [Authorization Propagation Is the Hard Part of Enterprise Agent Workloads](concepts/authorization-propagation-is-the-hard-part-of-enterprise-agent-workloads.md) - background agents need enforceable scopes across MCP, A2A, and service-account boundaries.
 - [Ship Continuously Viable Product Shapes](concepts/ship-continuously-viable-product-shapes.md) - every product increment should be usable enough to create real feedback.

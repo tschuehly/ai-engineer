@@ -20,6 +20,8 @@ Demos are one of the fastest ways to search that uncertain product space. A demo
 
 Agent-native products add a requirements problem: broad model capability plus free-form user surfaces can make exhaustive feature specs impossible. Product teams should define the affordances an agent may use, build runnable probes to feel the interaction, and let product evals express what behavior is acceptable often enough to ship. Customer trust then depends less on pretending to know every emergent behavior upfront and more on honest co-discovery, visible thresholds, and fast feedback loops.
 
+Agent coordination platforms add a product-strategy constraint: agent functionality should often be embedded into the system where users already manage work instead of shipped as a separate copilot shell. Linear's approach favors small hidden AI assists, product-intelligence relationships, and first-class agent teammates inside issues, projects, Slack handoffs, and customer-feedback workflows, while rejecting visible AI surfaces that do not meet the product's quality bar.
+
 ## Key Concepts
 
 - [AI Does Not Replace Shareable Product Marketing](../concepts/ai-does-not-replace-shareable-product-marketing.md) - launch content only matters when it can earn attention and social sharing.
@@ -56,6 +58,8 @@ Agent-native products add a requirements problem: broad model capability plus fr
 - [Specify Agent Products by Affordance, Not Exhaustive Feature Rules](../concepts/specify-agent-products-by-affordance-not-exhaustive-feature-rules.md) - broad agent surfaces need composable capability boundaries instead of endless edge-case feature rules.
 - [Treat Product Evals as Probabilistic Specifications](../concepts/treat-product-evals-as-probabilistic-specifications.md) - product evals make probabilistic behavior concrete enough to ship, debug, and discuss with customers.
 - [Co-Discover Emergent Agent Behavior With Customers](../concepts/co-discover-emergent-agent-behavior-with-customers.md) - early agent products earn trust through shared discovery and feedback, not impossible certainty about every behavior.
+- [Product Work Graphs Coordinate Agents and Humans](../concepts/product-work-graphs-coordinate-agents-and-humans.md) - agent products can create more value by inhabiting existing work graphs than by forcing separate chat workflows.
+- [Platform-Native Agents Should Behave Like Good Teammates](../concepts/platform-native-agents-should-behave-like-good-teammates.md) - agent product quality includes communication and state-update behavior, not only task completion.
 
 ## Open Questions
 
@@ -70,6 +74,7 @@ Agent-native products add a requirements problem: broad model capability plus fr
 
 ## Sources
 
+- [Building the platform for agent coordination - Tom Moor, Linear](../sources/20250728_UG9IAdmi2Dg.md)
 - [Designing AI-Intensive Applications - swyx](../sources/20250809_IHkyFhU6JEY.md)
 - [AI changes *Nothing* — Dax Raad, OpenCode](../sources/20251123_o3gmwzo-Mik.md)
 - [Taste & Craft: A Conversation with Tuomas Artman, CTO Linear & Gergely Orosz, @pragmaticengineer](../sources/20260421_wjk0ulMAkbc.md)

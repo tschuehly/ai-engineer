@@ -1615,3 +1615,11 @@
 - Updated topics: [Security](topics/security.md), [Tools](topics/tools.md), [Infrastructure](topics/infrastructure.md)
 - Updated concepts: [Enterprise MCP Requires SaaS Security Controls](concepts/enterprise-mcp-requires-saas-security-controls.md), [Dynamic Client Registration Pressures MCP Auth Stacks](concepts/dynamic-client-registration-pressures-mcp-auth-stacks.md), [Authorization Propagation Is the Hard Part of Enterprise Agent Workloads](concepts/authorization-propagation-is-the-hard-part-of-enterprise-agent-workloads.md)
 - Notes: Added WorkOS's enterprise MCP readiness framing: production MCP needs SaaS security controls, MCP-aware auth operations, and enforceable authorization propagation for asynchronous agent workloads.
+
+## [2026-05-07] ingest | Building the platform for agent coordination - Tom Moor, Linear
+
+- Source: [Building the platform for agent coordination - Tom Moor, Linear](sources/20250728_UG9IAdmi2Dg.md)
+- Processed: `UG9IAdmi2Dg`
+- Updated topics: [Agents](topics/agents.md), [Workflows](topics/workflows.md), [Tools](topics/tools.md), [Retrieval](topics/retrieval.md), [Product Strategy](topics/product-strategy.md)
+- Updated concepts: [Product Work Graphs Coordinate Agents and Humans](concepts/product-work-graphs-coordinate-agents-and-humans.md), [First-Class Agent Users Need Identity, Scopes, and Audit Trails](concepts/first-class-agent-users-need-identity-scopes-and-audit-trails.md), [Platform-Native Agents Should Behave Like Good Teammates](concepts/platform-native-agents-should-behave-like-good-teammates.md)
+- Notes: Added Linear's agent-coordination platform patterns for work-graph context, installable governed agent users, and teammate-like platform behavior.

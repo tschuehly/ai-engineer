@@ -116,8 +116,13 @@ Knowledge-base onboarding workflows can move domain setup from manual forms into
 
 Durable workflow engines are also an agent observability boundary. When the workflow records signals, queries, activity calls, retries, and state transitions, teams can inspect how an agent crossed LLM calls, tools, user input, and long-running waits instead of reconstructing behavior from scattered logs.
 
+Work-management platforms can host the agent workflow itself. An agent should acknowledge triggers, state what it understood, move issues through normal status, continue in threads, ask for clarification before acting, and keep output useful enough that the shared workspace remains a coordination surface rather than a dumping ground for model text.
+
 ## Key Concepts
 
+- [Product Work Graphs Coordinate Agents and Humans](../concepts/product-work-graphs-coordinate-agents-and-humans.md) - work graphs let agent actions, reviews, feedback, and issue state stay in the team's normal workflow.
+- [First-Class Agent Users Need Identity, Scopes, and Audit Trails](../concepts/first-class-agent-users-need-identity-scopes-and-audit-trails.md) - workflow platforms need install, access, webhook, and history controls for agent workers.
+- [Platform-Native Agents Should Behave Like Good Teammates](../concepts/platform-native-agents-should-behave-like-good-teammates.md) - agent workflow UX should mirror normal teammate behavior in the host platform.
 - [Plan Asynchronous Authorization for Background Agents](../concepts/plan-asynchronous-authorization-for-background-agents.md) - long-running workflows need ways to request additional access after the user leaves the initial authorization flow.
 - [Compose agents and workflows as interchangeable primitives](../concepts/compose-agents-and-workflows-as-interchangeable-primitives.md) - workflows can call agents, agents can call workflows, and both can appear as steps or tools.
 - [Prefer readable workflow APIs over graph-theory surfaces](../concepts/prefer-readable-workflow-apis-over-graph-theory-surfaces.md) - workflow definitions should be reviewable as ordinary control flow.
@@ -450,6 +455,7 @@ Durable workflow engines are also an agent observability boundary. When the work
 
 ## Sources
 
+- [Building the platform for agent coordination - Tom Moor, Linear](../sources/20250728_UG9IAdmi2Dg.md)
 - [Make your LLM app a Domain Expert: How to Build an Expert System - Christopher Lovejoy, Anterior](../sources/20250728_MRM7oA3JsFs.md)
 
 - [Agents vs Workflows: Why Not Both? - Sam Bhagwat, Mastra.ai](../sources/20250801_8SUJEqQNClw.md)

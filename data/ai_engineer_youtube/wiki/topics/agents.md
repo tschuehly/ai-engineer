@@ -102,8 +102,13 @@ Agent search is not just human search with a bot typing into it. Agents can pass
 
 Exploratory agent demos are also a capability-discovery tool. Early browser and code-generation demos show that agentic behavior can emerge before the model, interface, and context representation are mature. Those demos should not be mistaken for production reliability, but they can reveal which observation spaces, compressed environment representations, and tool apparatuses make new forms of model action possible.
 
+Team work-management platforms add a broader coordination plane for agents. Agents can be mentioned, assigned, interrupted, and reviewed inside the same issue and communication surfaces as humans, but only if they have identity, scoped authority, audit history, event hooks, and teammate-like behavior that keeps shared work state current.
+
 ## Key Concepts
 
+- [Product Work Graphs Coordinate Agents and Humans](../concepts/product-work-graphs-coordinate-agents-and-humans.md) - issues, projects, feedback, related work, and communication threads give agents a shared coordination substrate with humans.
+- [First-Class Agent Users Need Identity, Scopes, and Audit Trails](../concepts/first-class-agent-users-need-identity-scopes-and-audit-trails.md) - agent teammates need governable identity, scoped access, and inspectable history.
+- [Platform-Native Agents Should Behave Like Good Teammates](../concepts/platform-native-agents-should-behave-like-good-teammates.md) - embedded agents should acknowledge, clarify, update shared state, and communicate concisely.
 - [Compose agents and workflows as interchangeable primitives](../concepts/compose-agents-and-workflows-as-interchangeable-primitives.md) - agents and workflows can call each other as tools, steps, and handoff mechanisms.
 - [Add structure where agent reliability fails](../concepts/add-structure-where-agent-reliability-fails.md) - unreliable agent behavior should be surrounded by structure rather than forcing the whole system into one abstraction.
 - [Agent Adoption Trails LLM Adoption in the Workplace](../concepts/agent-adoption-trails-llm-adoption-in-the-workplace.md) - ordinary LLM workplace satisfaction can be much higher than agent satisfaction even when future agent intent is strong.
@@ -412,6 +417,7 @@ Exploratory agent demos are also a capability-discovery tool. Early browser and 
 
 ## Sources
 
+- [Building the platform for agent coordination - Tom Moor, Linear](../sources/20250728_UG9IAdmi2Dg.md)
 - [Agents vs Workflows: Why Not Both? - Sam Bhagwat, Mastra.ai](../sources/20250801_8SUJEqQNClw.md)
 - [Designing AI-Intensive Applications - swyx](../sources/20250809_IHkyFhU6JEY.md)
 - [2025 is the Year of Evals! Just like 2024, and 2023, and ... - John Dickerson, CEO Mozilla AI](../sources/20250806_CQGuvf6gSrM.md)

@@ -2,6 +2,9 @@
 
 ## Agents
 
+- [Product Work Graphs Coordinate Agents and Humans](../concepts/product-work-graphs-coordinate-agents-and-humans.md)
+- [First-Class Agent Users Need Identity, Scopes, and Audit Trails](../concepts/first-class-agent-users-need-identity-scopes-and-audit-trails.md)
+- [Platform-Native Agents Should Behave Like Good Teammates](../concepts/platform-native-agents-should-behave-like-good-teammates.md)
 - [AI-Native Search APIs Serve Agent Query Shapes](../concepts/ai-native-search-apis-serve-agent-query-shapes.md)
 - [Neural Web Search Supports Semantic Agent Queries](../concepts/neural-web-search-supports-semantic-agent-queries.md)
 - [Seller Knowledge Bases Let Agents Pull Business Context at Action Time](../concepts/seller-knowledge-bases-let-agents-pull-business-context-at-action-time.md)
@@ -771,6 +774,8 @@
 
 ## Product Strategy
 
+- [Product Work Graphs Coordinate Agents and Humans](../concepts/product-work-graphs-coordinate-agents-and-humans.md)
+- [Platform-Native Agents Should Behave Like Good Teammates](../concepts/platform-native-agents-should-behave-like-good-teammates.md)
 - [Last-Mile Domain Context Beats Model Chasing](../concepts/last-mile-domain-context-beats-model-chasing.md)
 - [Failure-Mode Ontologies Prioritize Domain AI Work](../concepts/failure-mode-ontologies-prioritize-domain-ai-work.md)
 - [Measure AI intensity by human input to valuable output](../concepts/measure-ai-intensity-by-human-input-to-valuable-output.md)
@@ -1086,6 +1091,7 @@
 
 ## Retrieval
 
+- [Product Work Graphs Coordinate Agents and Humans](../concepts/product-work-graphs-coordinate-agents-and-humans.md)
 - [Neural Web Search Supports Semantic Agent Queries](../concepts/neural-web-search-supports-semantic-agent-queries.md)
 - [AI-Native Search APIs Serve Agent Query Shapes](../concepts/ai-native-search-apis-serve-agent-query-shapes.md)
 - [Expose Search Controls For Agentic Retrieval](../concepts/expose-search-controls-for-agentic-retrieval.md)
@@ -1180,6 +1186,8 @@
 
 ## Tools
 
+- [First-Class Agent Users Need Identity, Scopes, and Audit Trails](../concepts/first-class-agent-users-need-identity-scopes-and-audit-trails.md)
+- [Platform-Native Agents Should Behave Like Good Teammates](../concepts/platform-native-agents-should-behave-like-good-teammates.md)
 - [Expose Search Controls For Agentic Retrieval](../concepts/expose-search-controls-for-agentic-retrieval.md)
 - [Pivot AI Product Interfaces When Platform Defaults Shift](../concepts/pivot-ai-product-interfaces-when-platform-defaults-shift.md)
 - [Model MCP Servers as OAuth Resource Servers](../concepts/model-mcp-servers-as-oauth-resource-servers.md)
@@ -1363,6 +1371,8 @@
 
 ## Workflows
 
+- [Product Work Graphs Coordinate Agents and Humans](../concepts/product-work-graphs-coordinate-agents-and-humans.md)
+- [Platform-Native Agents Should Behave Like Good Teammates](../concepts/platform-native-agents-should-behave-like-good-teammates.md)
 - [Assemble Realtime Multimodal Context for Lab Agents](../concepts/assemble-realtime-multimodal-context-for-lab-agents.md)
 - [Ground Scientific Simulations in Live Experiment Traces](../concepts/ground-scientific-simulations-in-live-experiment-traces.md)
 - [Last-Mile Domain Context Beats Model Chasing](../concepts/last-mile-domain-context-beats-model-chasing.md)

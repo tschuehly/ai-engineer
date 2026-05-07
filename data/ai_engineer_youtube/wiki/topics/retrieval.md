@@ -18,6 +18,8 @@ Operational graphs add a schema-normalization burden before retrieval even start
 
 Private research agents can treat connectors and uploads as complementary retrieval inputs. A connector such as Notion or Microsoft 365 provides durable organizational context, while uploaded receipts, PDFs, screenshots, or task files provide local evidence for the current run. The workflow becomes more useful when the agent can compare both layers and write results back to the right internal page or record. Enterprise deep research applies the same private-context idea to larger document-heavy corpora: the agent runs multi-step or parallel investigation over internal sources, reflects on retrieved evidence, and synthesizes a cited report. That raises the retrieval bar because multimodal ingestion, hybrid search, metadata, reranking, access control, hallucination checks, deployment boundaries, and observability all affect whether the research output can be trusted.
 
+Product work graphs are another retrieval target. A product-intelligence pipeline can combine hybrid search, query rewriting, reranking, deterministic rules, and relationship explanations so issues retrieve related issues, likely owners, duplicates, projects, and customer-feedback clusters. That turns retrieval into coordination infrastructure: the agent does not only need relevant chunks, it needs the work relationships that tell it where an issue belongs and who should act.
+
 ## Key Concepts
 
 - [Dynamic AI Search Evals Need Fresh Grounding Sets](../concepts/dynamic-ai-search-evals-need-fresh-grounding-sets.md) - web-backed retrieval should be tested against fresh evidence, not only static QA rows.
@@ -81,6 +83,7 @@ Private research agents can treat connectors and uploads as complementary retrie
 - [Decompose Domain RAG by Query Structure and Corpus Scale](../concepts/decompose-domain-rag-by-query-structure-and-corpus-scale.md) - expert retrieval should model corpus scale and mixed semantic, lexical, temporal, and domain constraints.
 - [Layer Domain RAG Evals by Fidelity, Cost, and Speed](../concepts/layer-domain-rag-evals-by-fidelity-cost-and-speed.md) - domain RAG needs expert review, curated criteria, and fast retrieval metrics.
 - [AI Data Lakehouses Need Online Retrieval and Offline Iteration Paths](../concepts/ai-data-lakehouses-need-online-retrieval-and-offline-iteration-paths.md) - shared AI data substrates should support search, analytics, preprocessing, and training.
+- [Product Work Graphs Coordinate Agents and Humans](../concepts/product-work-graphs-coordinate-agents-and-humans.md) - work-item retrieval can expose issue relationships, owners, duplicates, projects, and customer feedback as agent context.
 
 Seller-facing agents show a product-specific version of retrieval as onboarding. Instead of asking users to manually prefill product offers, value props, pain points, case studies, and ICP fields, the product can ingest seller materials once and retrieve only the relevant chunks at message-generation time. That makes parsing and chunking part of the user experience: decks, websites, screenshots, calls, and videos need to become structured text before retrieval can help the agent write grounded outbound messages. Because this retrieval directly shapes customer-facing output, the workflow should expose retrieved chunks in the UI and then benchmark parsing accuracy, completeness, hallucinations, hybrid search, and cost once real usage exists.
 
@@ -109,6 +112,7 @@ Expert-domain RAG adds another layer of corpus and query modeling. Legal retriev
 
 ## Sources
 
+- [Building the platform for agent coordination - Tom Moor, Linear](../sources/20250728_UG9IAdmi2Dg.md)
 - [Evaluating AI Search: A Practical Framework for Augmented AI Systems - Quotient AI + Tavily](../sources/20250729_wRJD0inpmjU.md)
 - [Building a Smarter AI Agent with Neural RAG - Will Bryk, Exa.ai](../sources/20250729_xnXqpUW_Kp8.md)
 - [How to look at your data - Jeff Huber (Chroma) + Jason Liu (567)](../sources/20250806_jryZvCuA0Uc.md)
