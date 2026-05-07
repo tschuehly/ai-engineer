@@ -54,6 +54,8 @@ Agent-native organizational workflows start with supervision, dispatch, and revi
 
 AI coworker workflow design should choose interaction mode deliberately. Background personalization can stay invisible, workspace scanning can be ambient, artifact transformation can be inline, and app-building or ambiguous direction can remain conversational. The workflow should also leave room for bounded play: realistic prototypes can reveal when an agent should combine inputs, create follow-up artifacts, or escalate missing information back to a human instead of pretending to complete the task.
 
+Computer-use workflows should be composed around reliable action primitives when the product surface is a browser UI. Nova Act's example shows a useful pattern: let the agent navigate and extract from the screen, bind outputs to a schema, use ordinary code for helper lookups and parallelism, and use data tooling for final comparison. This keeps the model in the perception/action role while deterministic program structure handles repetition, tabulation, and orchestration.
+
 AI-intensive workflows can also be modeled as many model calls organized around one user-facing artifact. SPADE captures a reusable loop: synchronize input sources, plan the work, analyze in parallel, deliver a reduced artifact, and evaluate the result. This is a stronger design unit than a single prompt/response when the product repeatedly scrapes, researches, summarizes, transforms, or publishes from many inputs.
 
 Proactive coding workflows try to remove the prompt/wait/repeat loop without removing human alignment. The useful shape is not a wall of parallel terminals; it is background observation, repository indexing, candidate task discovery, critic review, Playwright-style verification artifacts, editable memory, and just-in-time context that lets the agent handle friction while the human keeps creative and product judgment. Proactivity should be staged: start with bounded maintenance and best-practice work, then move toward system-level proposals only when the agent can connect code, design, telemetry, and outcome signals.
@@ -198,6 +200,8 @@ Brockman's workflow advice is to challenge inherited constraints by first princi
 - [Product engineers need direct customer context](../concepts/product-engineers-need-direct-customer-context.md) - customer feedback surfaces help engineers steer AI-assisted product work.
 - [Practice-driven AI tool fluency beats theory-only adoption](../concepts/practice-driven-ai-tool-fluency-beats-theory-only-adoption.md) - AI workflow competence comes from repeated real-use experimentation.
 - [Treat coding agents as fast junior collaborators](../concepts/treat-coding-agents-as-fast-junior-collaborators.md) - workflow design should preserve human direction around agent execution.
+- [Compose Computer-Use Agents From Reliable Atomic Actions](../concepts/compose-computer-use-agents-from-reliable-atomic-actions.md) - browser workflows can combine small UI actions with structured extraction and ordinary code.
+- [Evaluate Agents By Human-Agent Interaction Outcomes](../concepts/evaluate-agents-by-human-agent-interaction-outcomes.md) - workflow success should include human agency and attention quality, not only task automation.
 - [Keep agent context small, fresh, and task-specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md) - session hygiene prevents old or irrelevant context from steering later work.
 - [Vibe engineering is supervised agentic coding with judgment](../concepts/vibe-engineering-is-supervised-agentic-coding-with-judgment.md) - coding-agent workflows need a human who can steer and accept or reject agent output.
 - [Use voice-dumped UI and code observations as agent feedback](../concepts/use-voice-dumped-ui-and-code-observations-as-agent-feedback.md) - voice feedback can compress UI review and code critique into one agent handoff.
@@ -506,3 +510,4 @@ Brockman's workflow advice is to challenge inherited constraints by first princi
 - [Real World Development with GitHub Copilot and VS Code — Harald Kirschner, Christopher Harrison](../sources/20250803_eOxOzcw70f0.md)
 - [How to Improve your Vibe Coding - Ian Butler](../sources/20250803_g03m-WFEu1U.md)
 - [State of Startups and AI 2025 - Sarah Guo, Conviction](../sources/20250802_3MZS5gNElZM.md)
+- [Useful General Intelligence - Danielle Perszyk, Amazon AGI](../sources/20250802_Dj0b_cEBHBI.md)

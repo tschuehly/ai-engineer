@@ -8,6 +8,8 @@ Agent workflows depend on both model capability and the context substrate around
 
 Agent models themselves can be tuned for this loop shape. M2's training story emphasizes interleaving reasoning with many tool-call turns, perturbing the operational surface around tools and prompts, and using small active-parameter economics to run multiple workplace-agent copies in parallel. Agent RFT adds a production-post-training variant: teams can train a reasoning model over multi-step rollouts that call hosted tool endpoints and receive custom reward signals, as long as rollout IDs and tool-call context are preserved for grading and the workflow is well-defined enough for production-matched rewards.
 
+Computer-use agents add a general-purpose action layer for software that still only exposes visual UI. Nova Act's framing is deliberately granular: train a UI-capable model, expose it through SDK `act` calls, make the smallest interaction units reliable, and let developers compose those actions with structured extraction and ordinary code. That is a useful counterweight to vague autonomy claims. Browser control can reach workflows that APIs do not cover, but it also makes perception, action grounding, and human-agent interaction outcomes part of the agent's reliability story.
+
 As agents move from prediction into decisions and actions, monitoring and evaluation need to follow the whole agent system. A single model score misses failures introduced by perception, reasoning, tool calls, virtual or cyber-physical action loops, and coordination across multiple agents.
 
 GLM 4.6 adds a systems-training detail for those long agent rollouts: short math or code-completion RL can keep training and inference colocated, but slow software-engineering tasks that wait on browsers, APIs, and external environments need decoupled rollout workers, buffers, and periodic weight updates so one slow trajectory does not stall the whole training pipeline.
@@ -266,6 +268,9 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Non-technical collaborators can steer agents with natural work artifacts](../concepts/non-technical-collaborators-can-steer-agents-with-natural-work-artifacts.md) - agents become broader operational leverage when collaborators can use existing design, note, email, and screenshot artifacts as prompts.
 - [Agent experience prioritizes APIs, CLIs, and MCP over dashboards](../concepts/agent-experience-prioritizes-apis-clis-and-mcp-over-dashboards.md) - products should expose machine-friendly surfaces when agents become primary users.
 - [Agent-readable web surfaces guide browsing agents](../concepts/agent-readable-web-surfaces-guide-browsing-agents.md) - websites can expose documentation maps and explicit operations for agents.
+- [Use Browser UI Control When APIs Are Absent](../concepts/use-browser-ui-control-when-apis-are-absent.md) - browser agents can reach human-facing workflows that lack APIs.
+- [Compose Computer-Use Agents From Reliable Atomic Actions](../concepts/compose-computer-use-agents-from-reliable-atomic-actions.md) - complex browser workflows become more controllable when built from small reliable UI actions plus ordinary code.
+- [Evaluate Agents By Human-Agent Interaction Outcomes](../concepts/evaluate-agents-by-human-agent-interaction-outcomes.md) - useful general intelligence should be judged by whether it improves human agency and work outcomes.
 - [Fresh Markdown context mitigates model rot in codegen](../concepts/fresh-markdown-context-mitigates-model-rot-in-codegen.md) - current documentation reduces stale model failures for fast-moving software.
 - [Ask agents after each run what blocked their success](../concepts/ask-agents-after-each-run-what-blocked-their-success.md) - agents can provide cheap feedback about their own missing context or tools.
 - [Constrain sensitive file access with purpose-built tools](../concepts/constrain-sensitive-file-access-with-purpose-built-tools.md) - sensitive file operations should use narrow tools rather than raw reads.
@@ -443,6 +448,7 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Proactive Agents - Kath Korevec, Google Labs](../sources/20251213_v3u8xc0zLec.md)
 - [The Agent Native Company — Rick Blalock, Agentuity](../sources/20250603_0ZPAvzhpGjw.md)
 - [State of Startups and AI 2025 - Sarah Guo, Conviction](../sources/20250802_3MZS5gNElZM.md)
+- [Useful General Intelligence - Danielle Perszyk, Amazon AGI](../sources/20250802_Dj0b_cEBHBI.md)
 - [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](../sources/20251223_LU9KgcZDRfY.md)
 - [The 3 Pillars of Autonomy - Michele Catasta, Replit](../sources/20251222_MLhAA9yguwM.md)
 - [Leadership in AI Assisted Engineering - Justin Reock, DX (acq. Atlassian)](../sources/20251219_PmZDupFP3UM.md)

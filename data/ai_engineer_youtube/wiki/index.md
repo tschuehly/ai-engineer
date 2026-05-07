@@ -5,6 +5,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 ## Current Emphasis
 
 - [Build domain-specific workflow wrappers around models](concepts/build-domain-specific-workflow-wrappers-around-models.md) - defensible AI products package context, orchestration, review, and domain workflow fit around changing models.
+- [Use Browser UI Control When APIs Are Absent](concepts/use-browser-ui-control-when-apis-are-absent.md) - computer-use agents can operate existing visual workflows when no API surface exists.
+- [Compose Computer-Use Agents From Reliable Atomic Actions](concepts/compose-computer-use-agents-from-reliable-atomic-actions.md) - reliable UI action primitives can be embedded in ordinary program structure.
+- [Evaluate Agents By Human-Agent Interaction Outcomes](concepts/evaluate-agents-by-human-agent-interaction-outcomes.md) - useful agents should improve human agency, work quality, and attention, not only model scores.
 - [Plan AI products for a multimodel market](concepts/plan-ai-products-for-a-multimodel-market.md) - model routing and provider flexibility matter as capability and pricing keep moving.
 - [Start with augmentation when autonomous reliability is not ready](concepts/start-with-augmentation-when-autonomous-reliability-is-not-ready.md) - copilots can earn trust before full agent autonomy is reliable enough.
 - [Use AI leapfrogging to find conservative-industry opportunities](concepts/use-ai-leapfrogging-to-find-conservative-industry-opportunities.md) - conservative sectors can adopt quickly when AI solves concrete workflow pain.

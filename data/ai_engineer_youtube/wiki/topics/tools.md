@@ -10,6 +10,8 @@ Domain skills can act as node-level controls by supplying expert handling for sp
 
 Agent-facing products should treat APIs and CLIs as primary interfaces once agents become meaningful users. Dashboards still matter for humans, but agent experience asks whether a feature can be automated, called from a CLI, or used through a stable machine surface. Open model families add a model-tooling version of the same rule: release success depends on meeting developers in their existing runtimes, fine-tuning libraries, quantization paths, and product integrations. Environment tooling applies the same lesson to research workflows: shared Python environment projects, registries, rubrics, async tool definitions, and managed execution make evals and RL artifacts reusable instead of one-off lab infrastructure. For Apple local apps, MLX Swift LM and Hugging Face model IDs form a compact tooling path, while curated app model catalogs prevent users from selecting weights that are available but poor on the target phone.
 
+Browser UI control is the fallback tool surface when a workflow has no suitable API, CLI, or MCP path. Nova Act's SDK treats a natural-language `act` call as a screen-action primitive, then lets developers combine it with structured JSON extraction, Pydantic schemas, Python helper functions, parallel browser sessions, and pandas post-processing. That makes browser automation less like one giant autonomous prompt and more like a programmable tool layer around small model-grounded UI actions.
+
 MCP is one part of the agent connectivity stack, not a universal replacement for every surface. Skills carry reusable domain knowledge, CLIs and computer use fit local sandboxed environments, and MCP fits remote semantics, authorization, governance, resources, long-running tasks, and cross-client application surfaces. MCP applications and skills over MCP point to a richer server-authored surface where an integration can ship UI, tools, and current usage guidance together.
 
 Task-management tools need the same product shape. Backlog.md uses MCP resources to teach agents the task lifecycle and MCP tools to let them search, view, create, update, and complete repo-local Markdown tasks; the resource/tool split keeps workflow guidance explicit while preserving a constrained operation surface.
@@ -89,6 +91,8 @@ AI coworker products add tool surfaces that are neither plain chat nor backend A
 - [Dynamic artifacts make agent work reviewable and reusable](../concepts/dynamic-artifacts-make-agent-work-reviewable-and-reusable.md) - generated plans, recordings, diagrams, and comments are tool outputs for supervision and memory.
 - [Browser-native AI APIs bring local models into web apps](../concepts/browser-native-ai-apis-bring-local-models-into-web-apps.md) - browser-managed local models can become product APIs for summarization, proofreading, and multimodal prompts.
 - [Agent-readable web surfaces guide browsing agents](../concepts/agent-readable-web-surfaces-guide-browsing-agents.md) - `llms.txt` and WebMCP-style surfaces make sites easier for agents to read and operate.
+- [Use Browser UI Control When APIs Are Absent](../concepts/use-browser-ui-control-when-apis-are-absent.md) - browser control reaches existing visual products when no machine-native surface exists.
+- [Compose Computer-Use Agents From Reliable Atomic Actions](../concepts/compose-computer-use-agents-from-reliable-atomic-actions.md) - SDK-level action calls can be embedded in ordinary program structure.
 - [Expose task workflow guidance through MCP resources and tools](../concepts/expose-task-workflow-guidance-through-mcp-resources-and-tools.md) - resources can teach a task workflow while tools mutate task state through the intended interface.
 - [Build internal AI engineering platforms when off-the-shelf tools lack enterprise context](../concepts/build-internal-ai-engineering-platforms-when-off-the-shelf-tools-lack-enterprise-context.md) - enterprise tool platforms may need custom context and integrations around existing engineering systems.
 - [Make internal platforms self-service for agent users](../concepts/make-internal-platforms-self-service-for-agent-users.md) - platform tools should remove person-dependent handoffs from agent workflows.
@@ -321,5 +325,6 @@ AI coworker products add tool surfaces that are neither plain chat nor backend A
 - [Five hard earned lessons about Evals - Ankur Goyal, Braintrust](../sources/20250823_a4BV0gGmXgA.md)
 - [Backlog.md: Terminal Kanban Board for Managing Tasks with AI Agents - Alex Gavrilescu, Funstage](../sources/20251124_zMXKhhwiCIc.md)
 - [Real World Development with GitHub Copilot and VS Code — Harald Kirschner, Christopher Harrison](../sources/20250803_eOxOzcw70f0.md)
+- [Useful General Intelligence - Danielle Perszyk, Amazon AGI](../sources/20250802_Dj0b_cEBHBI.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

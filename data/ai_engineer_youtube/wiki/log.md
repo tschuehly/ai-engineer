@@ -1343,3 +1343,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Inference](topics/inference.md), [Product Strategy](topics/product-strategy.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Plan AI products for a multimodel market](concepts/plan-ai-products-for-a-multimodel-market.md), [Build domain-specific workflow wrappers around models](concepts/build-domain-specific-workflow-wrappers-around-models.md), [Start with augmentation when autonomous reliability is not ready](concepts/start-with-augmentation-when-autonomous-reliability-is-not-ready.md), [Use AI leapfrogging to find conservative-industry opportunities](concepts/use-ai-leapfrogging-to-find-conservative-industry-opportunities.md)
 - Notes: Added Conviction's AI startup framing for competitive multimodel planning, Cursor-style workflow products, pragmatic copilot-first autonomy, and vertical adoption in conservative industries.
+
+## [2026-05-07] ingest | Useful General Intelligence - Danielle Perszyk, Amazon AGI
+
+- Source: [Useful General Intelligence - Danielle Perszyk, Amazon AGI](sources/20250802_Dj0b_cEBHBI.md)
+- Processed: `Dj0b_cEBHBI`
+- Updated topics: [Agents](topics/agents.md), [Tools](topics/tools.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Use Browser UI Control When APIs Are Absent](concepts/use-browser-ui-control-when-apis-are-absent.md), [Compose Computer-Use Agents From Reliable Atomic Actions](concepts/compose-computer-use-agents-from-reliable-atomic-actions.md), [Evaluate Agents By Human-Agent Interaction Outcomes](concepts/evaluate-agents-by-human-agent-interaction-outcomes.md)
+- Notes: Added Amazon AGI's useful-general-intelligence framing for Nova Act: use browser UI control where APIs are absent, compose workflows from reliable action primitives, and evaluate agents by human-agent interaction outcomes.
