@@ -4,6 +4,10 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [AI Product Management Balances Viability, Feasibility, Desirability, and AI Uncertainty](concepts/ai-product-management-balances-viability-feasibility-desirability-and-ai-uncertainty.md) - AI product direction needs product judgment and AI/data/eval fluency in the same loop.
+- [Resolve AI Capability Risk Before Product Surface Commitment](concepts/resolve-ai-capability-risk-before-product-surface-commitment.md) - capability evals should precede product-surface investment when model feasibility is the largest risk.
+- [Explore AI Features Widely Then Cut Back to the User Workflow](concepts/explore-ai-features-widely-then-cut-back-to-the-user-workflow.md) - cheap AI feature prototypes should be tested broadly, then simplified around validated user needs.
+- [Pivot AI Product Interfaces When Platform Defaults Shift](concepts/pivot-ai-product-interfaces-when-platform-defaults-shift.md) - product interfaces should adapt when enterprise AI clients and interoperability standards change distribution.
 - [AI-Native Search APIs Serve Agent Query Shapes](concepts/ai-native-search-apis-serve-agent-query-shapes.md) - agent search differs from human search because agents can issue contextual, repeated, high-recall queries.
 - [Anchor AI Products on One Reliable User Outcome](concepts/anchor-ai-products-on-one-reliable-user-outcome.md) - AI product purpose filters model capabilities by whether they reliably deliver the user's core job.
 - [Earn AI Product Trust Before Asking for Delight](concepts/earn-ai-product-trust-before-asking-for-delight.md) - delightful AI interactions need first-use reliability and honest model edges first.

@@ -1543,3 +1543,11 @@
 - Updated topics: [Product Strategy](topics/product-strategy.md)
 - Updated concepts: [Anchor AI Products on One Reliable User Outcome](concepts/anchor-ai-products-on-one-reliable-user-outcome.md), [Earn AI Product Trust Before Asking for Delight](concepts/earn-ai-product-trust-before-asking-for-delight.md), [Nail Deterministic UX Before Probabilistic Delight](concepts/nail-deterministic-ux-before-probabilistic-delight.md), [Use Agency Instead of Trickery for AI Delight](concepts/use-agency-instead-of-trickery-for-ai-delight.md), [Avoid Kitchen-Sink AI Capability Products](concepts/avoid-kitchen-sink-ai-capability-products.md)
 - Notes: Added Raiza Martin's AI product design guidance on purpose, first-use trust, deterministic UX basics, agency-centered delight, and restraint against capability-first feature sprawl.
+
+## [2026-05-07] ingest | Why your product needs an AI product manager, and why it should be you — James Lowe, i.AI
+
+- Source: [Why your product needs an AI product manager, and why it should be you — James Lowe, i.AI](sources/20250728_xzJdSi2Tsqw.md)
+- Processed: `xzJdSi2Tsqw`
+- Updated topics: [Product Strategy](topics/product-strategy.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md), [Tools](topics/tools.md)
+- Updated concepts: [AI Product Management Balances Viability, Feasibility, Desirability, and AI Uncertainty](concepts/ai-product-management-balances-viability-feasibility-desirability-and-ai-uncertainty.md), [Resolve AI Capability Risk Before Product Surface Commitment](concepts/resolve-ai-capability-risk-before-product-surface-commitment.md), [Explore AI Features Widely Then Cut Back to the User Workflow](concepts/explore-ai-features-widely-then-cut-back-to-the-user-workflow.md), [Pivot AI Product Interfaces When Platform Defaults Shift](concepts/pivot-ai-product-interfaces-when-platform-defaults-shift.md)
+- Notes: Added i.AI's AI product-management patterns for capability-first evaluation, broad but temporary feature exploration, workflow simplification, and platform-interface pivots around MCP and enterprise AI clients.

@@ -777,10 +777,15 @@
 - [Nail Deterministic UX Before Probabilistic Delight](../concepts/nail-deterministic-ux-before-probabilistic-delight.md)
 - [Use Agency Instead of Trickery for AI Delight](../concepts/use-agency-instead-of-trickery-for-ai-delight.md)
 - [Avoid Kitchen-Sink AI Capability Products](../concepts/avoid-kitchen-sink-ai-capability-products.md)
+- [AI Product Management Balances Viability, Feasibility, Desirability, and AI Uncertainty](../concepts/ai-product-management-balances-viability-feasibility-desirability-and-ai-uncertainty.md)
+- [Resolve AI Capability Risk Before Product Surface Commitment](../concepts/resolve-ai-capability-risk-before-product-surface-commitment.md)
+- [Explore AI Features Widely Then Cut Back to the User Workflow](../concepts/explore-ai-features-widely-then-cut-back-to-the-user-workflow.md)
+- [Pivot AI Product Interfaces When Platform Defaults Shift](../concepts/pivot-ai-product-interfaces-when-platform-defaults-shift.md)
 
 ## Evaluation
 
 - [AI-Native Search APIs Serve Agent Query Shapes](../concepts/ai-native-search-apis-serve-agent-query-shapes.md)
+- [Resolve AI Capability Risk Before Product Surface Commitment](../concepts/resolve-ai-capability-risk-before-product-surface-commitment.md)
 - [Dynamic AI Search Evals Need Fresh Grounding Sets](../concepts/dynamic-ai-search-evals-need-fresh-grounding-sets.md)
 - [Reference-Free AI Search Metrics Decompose Answer Quality](../concepts/reference-free-ai-search-metrics-decompose-answer-quality.md)
 - [AI Search Providers Should Return Grounding Documents](../concepts/ai-search-providers-should-return-grounding-documents.md)
@@ -1131,6 +1136,7 @@
 ## Tools
 
 - [Expose Search Controls For Agentic Retrieval](../concepts/expose-search-controls-for-agentic-retrieval.md)
+- [Pivot AI Product Interfaces When Platform Defaults Shift](../concepts/pivot-ai-product-interfaces-when-platform-defaults-shift.md)
 - [Model MCP Servers as OAuth Resource Servers](../concepts/model-mcp-servers-as-oauth-resource-servers.md)
 - [Authenticate Agents With URL-Based PKI Identities](../concepts/authenticate-agents-with-url-based-pki-identities.md)
 - [Authorize High-Impact Agent Actions Transactionally](../concepts/authorize-high-impact-agent-actions-transactionally.md)
@@ -1309,6 +1315,8 @@
 
 ## Workflows
 
+- [AI Product Management Balances Viability, Feasibility, Desirability, and AI Uncertainty](../concepts/ai-product-management-balances-viability-feasibility-desirability-and-ai-uncertainty.md)
+- [Explore AI Features Widely Then Cut Back to the User Workflow](../concepts/explore-ai-features-widely-then-cut-back-to-the-user-workflow.md)
 - [Treat Evals as the Home of Domain Knowledge](../concepts/treat-evals-as-the-home-of-domain-knowledge.md)
 - [Build Scoring Systems From Inspectable Quality Signals](../concepts/build-scoring-systems-from-inspectable-quality-signals.md)
 - [Use Online Candidate Scoring to Lift Generation Quality](../concepts/use-online-candidate-scoring-to-lift-generation-quality.md)

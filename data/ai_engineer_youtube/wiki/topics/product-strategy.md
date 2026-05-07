@@ -12,6 +12,8 @@ AI intensity gives product teams another product-shape lens: compare how much va
 
 AI startup strategy should also assume that raw model capability is a moving commodity surface. The product moat is less likely to be a generic prompt box on one model and more likely to be a thick workflow wrapper: domain knowledge, automatic context collection, model orchestration, output presentation, review affordances, and execution speed that keeps improving as models get cheaper and stronger.
 
+AI product management adds an operating role or mindset around that uncertainty. Someone must connect viability, feasibility, desirability, data, evals, probabilistic behavior, guardrails, and human-in-the-loop design before a team overcommits to a product surface. The product sequence often changes: validate the core AI capability first when feasibility is uncertain, use cheap AI-assisted implementation to explore many feature variants with real users, then remove the extras and focus the workflow. Platform strategy needs the same willingness to pivot; a custom AI client can remain useful while tools and data move behind MCP or other portable interfaces as enterprise defaults change.
+
 ## Key Concepts
 
 - [AI Does Not Replace Shareable Product Marketing](../concepts/ai-does-not-replace-shareable-product-marketing.md) - launch content only matters when it can earn attention and social sharing.
@@ -35,6 +37,10 @@ AI startup strategy should also assume that raw model capability is a moving com
 - [Nail Deterministic UX Before Probabilistic Delight](../concepts/nail-deterministic-ux-before-probabilistic-delight.md) - AI apps still need ordinary product reliability before model magic matters.
 - [Use Agency Instead of Trickery for AI Delight](../concepts/use-agency-instead-of-trickery-for-ai-delight.md) - generated surprises work best when users feel they steered the result.
 - [Avoid Kitchen-Sink AI Capability Products](../concepts/avoid-kitchen-sink-ai-capability-products.md) - shipping many model features without a focused outcome creates demo disease.
+- [AI Product Management Balances Viability, Feasibility, Desirability, and AI Uncertainty](../concepts/ai-product-management-balances-viability-feasibility-desirability-and-ai-uncertainty.md) - AI product direction needs product judgment and AI/data/eval fluency in the same loop.
+- [Resolve AI Capability Risk Before Product Surface Commitment](../concepts/resolve-ai-capability-risk-before-product-surface-commitment.md) - capability evals should precede product-surface investment when model feasibility is the largest risk.
+- [Explore AI Features Widely Then Cut Back to the User Workflow](../concepts/explore-ai-features-widely-then-cut-back-to-the-user-workflow.md) - cheap AI feature prototypes should be tested broadly, then simplified around validated user needs.
+- [Pivot AI Product Interfaces When Platform Defaults Shift](../concepts/pivot-ai-product-interfaces-when-platform-defaults-shift.md) - product interfaces should adapt when enterprise AI clients and interoperability standards change distribution.
 
 ## Open Questions
 
@@ -42,6 +48,7 @@ AI startup strategy should also assume that raw model capability is a moving com
 - Which AI-product surfaces should increase output-per-input, and which need more explicit user steering for trust?
 - How can teams evaluate "shareability" before a launch without reducing product marketing to generic virality formulas?
 - How should teams measure whether a delightful probabilistic feature is expanding agency rather than masking an unclear core job?
+- When should a custom AI client remain the primary product surface, and when should the team prioritize portable tool/data access through MCP or other standards?
 
 ## Sources
 
@@ -53,3 +60,4 @@ AI startup strategy should also assume that raw model capability is a moving com
 - [The Next Unicorns: 7 Top AI startups from the HF0 Residency](../sources/20250821_L8-5ezsoI5A.md)
 - [State of Startups and AI 2025 - Sarah Guo, Conviction](../sources/20250802_3MZS5gNElZM.md)
 - [Everything is ugly, so go build something that isn't - Raiza Martin, Huxe (ex NotebookLM)](../sources/20250728_yG5d5UaGz1M.md)
+- [Why your product needs an AI product manager, and why it should be you — James Lowe, i.AI](../sources/20250728_xzJdSi2Tsqw.md)

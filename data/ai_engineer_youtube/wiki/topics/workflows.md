@@ -56,6 +56,8 @@ Agent-native organizational workflows start with supervision, dispatch, and revi
 
 AI coworker workflow design should choose interaction mode deliberately. Background personalization can stay invisible, workspace scanning can be ambient, artifact transformation can be inline, and app-building or ambiguous direction can remain conversational. The workflow should also leave room for bounded play: realistic prototypes can reveal when an agent should combine inputs, create follow-up artifacts, or escalate missing information back to a human instead of pretending to complete the task.
 
+AI product workflows can deliberately go wide before they narrow. When AI coding assistance makes feature experiments cheap, teams can test many templates, edit paths, chat surfaces, and hidden automations with different user groups, but the workflow must include a cut-back phase. The useful pattern is to pick the user group with strongest evidence, remove unused or confusing controls, and collapse overlapping AI affordances into the simplest validated job flow.
+
 Computer-use workflows should be composed around reliable action primitives when the product surface is a browser UI. Nova Act's example shows a useful pattern: let the agent navigate and extract from the screen, bind outputs to a schema, use ordinary code for helper lookups and parallelism, and use data tooling for final comparison. This keeps the model in the perception/action role while deterministic program structure handles repetition, tabulation, and orchestration.
 
 AI-intensive workflows can also be modeled as many model calls organized around one user-facing artifact. SPADE captures a reusable loop: synchronize input sources, plan the work, analyze in parallel, deliver a reduced artifact, and evaluate the result. This is a stronger design unit than a single prompt/response when the product repeatedly scrapes, researches, summarizes, transforms, or publishes from many inputs.
@@ -172,6 +174,8 @@ Knowledge-base onboarding workflows can move domain setup from manual forms into
 - [Treat long-horizon agents as asynchronous workers with evolving interfaces](../concepts/treat-long-horizon-agents-as-asynchronous-workers-with-evolving-interfaces.md) - longer work horizons need progress, artifact, and review surfaces around the agent loop.
 - [Map external conversation threads to agent task IDs](../concepts/map-external-conversation-threads-to-agent-task-ids.md) - external collaboration threads should correlate to the agent task that owns their context.
 - [Prototype agent workflows in the UI before hardening the API path](../concepts/prototype-agent-workflows-in-the-ui-before-hardening-the-api-path.md) - prove the repeated work in a richer UI before freezing an integration contract.
+- [AI Product Management Balances Viability, Feasibility, Desirability, and AI Uncertainty](../concepts/ai-product-management-balances-viability-feasibility-desirability-and-ai-uncertainty.md) - product workflow ownership needs AI, data, eval, guardrail, and user-impact judgment together.
+- [Explore AI Features Widely Then Cut Back to the User Workflow](../concepts/explore-ai-features-widely-then-cut-back-to-the-user-workflow.md) - wide feature experiments should end in workflow simplification around validated users.
 - [Choose choreography or orchestration by complexity and autonomy](../concepts/choose-choreography-or-orchestration-by-complexity-and-autonomy.md) - workflow control should be selected by dependency complexity, autonomy need, and auditability.
 - [Use immutable versioned state for agent handoffs](../concepts/use-immutable-versioned-state-for-agent-handoffs.md) - workflows become debuggable when each handoff records a sealed state version and contract check.
 - [Wrap agent calls with circuit breakers and compensation](../concepts/wrap-agent-calls-with-circuit-breakers-and-compensation.md) - retry, fail-fast, degradation, and rollback behavior should be planned before production.
@@ -543,4 +547,5 @@ Knowledge-base onboarding workflows can move domain setup from manual forms into
 - [Useful General Intelligence - Danielle Perszyk, Amazon AGI](../sources/20250802_Dj0b_cEBHBI.md)
 - [Building Agents at Cloud Scale - Antje Barth, AWS](../sources/20250802_WJjInLeaJjo.md)
 - [Building Alice's Brain: an AI Sales Rep that Learns Like a Human - Sherwood & Satwik, 11x](../sources/20250729_KWmkMV0FNwQ.md)
+- [Why your product needs an AI product manager, and why it should be you — James Lowe, i.AI](../sources/20250728_xzJdSi2Tsqw.md)
 - [[Full Workshop] Building Metrics that actually work - David Karam, Pi Labs (fmr Google Search)](../sources/20250729_jxrGodnopHo.md)

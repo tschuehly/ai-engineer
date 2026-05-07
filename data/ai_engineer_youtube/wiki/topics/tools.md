@@ -10,6 +10,8 @@ Domain skills can act as node-level controls by supplying expert handling for sp
 
 Agent-facing products should treat APIs and CLIs as primary interfaces once agents become meaningful users. Dashboards still matter for humans, but agent experience asks whether a feature can be automated, called from a CLI, or used through a stable machine surface. Open model families add a model-tooling version of the same rule: release success depends on meeting developers in their existing runtimes, fine-tuning libraries, quantization paths, and product integrations. Environment tooling applies the same lesson to research workflows: shared Python environment projects, registries, rubrics, async tool definitions, and managed execution make evals and RL artifacts reusable instead of one-off lab infrastructure. For Apple local apps, MLX Swift LM and Hugging Face model IDs form a compact tooling path, while curated app model catalogs prevent users from selecting weights that are available but poor on the target phone.
 
+Enterprise AI product surfaces may need to decouple custom clients from the underlying tool and data layer. i.AI's Redbox remained useful as a secure chat client, but Microsoft Copilot Chat's enterprise availability and MCP's tool/data standardization changed the distribution strategy: government-specific tools and data became more valuable when reachable from multiple enterprise clients rather than only one bespoke UI.
+
 Browser UI control is the fallback tool surface when a workflow has no suitable API, CLI, or MCP path. Nova Act's SDK treats a natural-language `act` call as a screen-action primitive, then lets developers combine it with structured JSON extraction, Pydantic schemas, Python helper functions, parallel browser sessions, and pandas post-processing. That makes browser automation less like one giant autonomous prompt and more like a programmable tool layer around small model-grounded UI actions.
 
 MCP is one part of the agent connectivity stack, not a universal replacement for every surface. Skills carry reusable domain knowledge, CLIs and computer use fit local sandboxed environments, and MCP fits remote semantics, authorization, governance, resources, long-running tasks, and cross-client application surfaces. MCP applications and skills over MCP point to a richer server-authored surface where an integration can ship UI, tools, and current usage guidance together.
@@ -163,6 +165,7 @@ Workflow composition adds another tool-design rule: a workflow can be exposed as
 - [Split large automation surfaces into specialized subagents and subworkflows](../concepts/split-large-automation-surfaces-into-specialized-subagents-and-subworkflows.md) - subworkflows and specialist agents keep large tool surfaces manageable.
 - [Delegate complex voice-agent tasks through specialist tools and handoffs](../concepts/delegate-complex-voice-agent-tasks-through-specialist-tools-and-handoffs.md) - voice systems should route harder tool or policy decisions to specialists while preserving context.
 - [Agent experience prioritizes APIs, CLIs, and MCP over dashboards](../concepts/agent-experience-prioritizes-apis-clis-and-mcp-over-dashboards.md) - agent-facing products need machine-friendly control surfaces, not only human dashboards.
+- [Pivot AI Product Interfaces When Platform Defaults Shift](../concepts/pivot-ai-product-interfaces-when-platform-defaults-shift.md) - custom clients should give way to portable tool/data interfaces when platform defaults change.
 - [Compose coding-agent workflows through CLI pipelines](../concepts/compose-coding-agent-workflows-through-cli-pipelines.md) - command-line agents can be piped and chained across SDLC jobs.
 - [Separate agent harnesses from generated-code execution](../concepts/separate-agent-harnesses-from-generated-code-execution.md) - generated code should execute away from the trusted agent harness.
 - [Agent tool loops turn model-required actions into executable results](../concepts/agent-tool-loops-turn-model-required-actions-into-executable-results.md) - tool runtimes need to turn model-selected functions into validated execution and structured results.
@@ -348,6 +351,7 @@ Workflow composition adds another tool-design rule: a workflow can be exposed as
 - [Real World Development with GitHub Copilot and VS Code — Harald Kirschner, Christopher Harrison](../sources/20250803_eOxOzcw70f0.md)
 - [Useful General Intelligence - Danielle Perszyk, Amazon AGI](../sources/20250802_Dj0b_cEBHBI.md)
 - [Building Agents at Cloud Scale - Antje Barth, AWS](../sources/20250802_WJjInLeaJjo.md)
+- [Why your product needs an AI product manager, and why it should be you — James Lowe, i.AI](../sources/20250728_xzJdSi2Tsqw.md)
 - [How we hacked YC Spring 2025 batch's AI agents - Rene Brandel, Casco](../sources/20250730_kv-QAuKWllQ.md)
 - [OpenAI on Securing Code-Executing AI Agents - Fouad Matin (Codex, Agent Robustness)](../sources/20250730_w7IMuYsBNr8.md)
 
