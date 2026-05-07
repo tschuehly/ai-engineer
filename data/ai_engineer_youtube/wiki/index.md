@@ -4,6 +4,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Treat AI coding as safe software change](concepts/treat-ai-coding-as-safe-software-change.md) - judge production AI coding by safe change, ownership, and operations rather than generated-code volume.
+- [Give coding agents the same engineering infrastructure humans need](concepts/give-coding-agents-the-same-engineering-infrastructure-humans-need.md) - agents need documented standards, reproducible environments, fast tests, boundaries, and clear tasks.
+- [Make code review the bottleneck skill for AI-generated code](concepts/make-code-review-the-bottleneck-skill-for-ai-generated-code.md) - review capacity and review tooling become central as agents produce more implementation.
 - [Use fast query-document evals for retrieval changes](concepts/use-fast-query-document-evals-for-retrieval-changes.md) - compare retrieval configurations on local query/document pairs before changing embeddings or chunking.
 - [Cluster conversation outputs to prioritize AI product work](concepts/cluster-conversation-outputs-to-prioritize-ai-product-work.md) - mine conversation logs for use-case and failure clusters that guide product investments.
 - [Avoid premature low-level AI system coupling](concepts/avoid-premature-low-level-ai-system-coupling.md) - keep stable AI application intent separate from fast-changing model and inference mechanics.

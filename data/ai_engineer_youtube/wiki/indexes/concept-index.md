@@ -288,6 +288,9 @@
 
 ## Coding Agents
 
+- [Treat AI coding as safe software change](../concepts/treat-ai-coding-as-safe-software-change.md)
+- [Give coding agents the same engineering infrastructure humans need](../concepts/give-coding-agents-the-same-engineering-infrastructure-humans-need.md)
+- [Make code review the bottleneck skill for AI-generated code](../concepts/make-code-review-the-bottleneck-skill-for-ai-generated-code.md)
 - [Model-shaped codebase architecture for coding agents](../concepts/model-shaped-codebase-architecture-for-coding-agents.md)
 - [Agentic coding transforms existing software](../concepts/agentic-coding-transforms-existing-software.md)
 - [Choose agent observation and action spaces explicitly](../concepts/choose-agent-observation-and-action-spaces-explicitly.md)
@@ -450,6 +453,7 @@
 
 ## Context Engineering
 
+- [Give coding agents the same engineering infrastructure humans need](../concepts/give-coding-agents-the-same-engineering-infrastructure-humans-need.md)
 - [Frequent intentional compaction keeps coding agents in the smart zone](../concepts/frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md)
 - [Assemble per-feature context packages for coding agents](../concepts/assemble-per-feature-context-packages-for-coding-agents.md)
 - [Repo-local Markdown tasks give agents durable scoped work units](../concepts/repo-local-markdown-tasks-give-agents-durable-scoped-work-units.md)
@@ -1123,6 +1127,9 @@
 
 ## Workflows
 
+- [Treat AI coding as safe software change](../concepts/treat-ai-coding-as-safe-software-change.md)
+- [Give coding agents the same engineering infrastructure humans need](../concepts/give-coding-agents-the-same-engineering-infrastructure-humans-need.md)
+- [Make code review the bottleneck skill for AI-generated code](../concepts/make-code-review-the-bottleneck-skill-for-ai-generated-code.md)
 - [Use Fast Query-Document Evals for Retrieval Changes](../concepts/use-fast-query-document-evals-for-retrieval-changes.md)
 - [Cluster Conversation Outputs to Prioritize AI Product Work](../concepts/cluster-conversation-outputs-to-prioritize-ai-product-work.md)
 - [SPADE structures AI-intensive workflows](../concepts/spade-structures-ai-intensive-workflows.md)

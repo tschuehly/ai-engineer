@@ -38,9 +38,12 @@ Architecture copilots add a system-map version of context engineering. Instead o
 
 Repository architecture can turn context engineering into the adoption bottleneck for coding agents. In PR telemetry, highly distributed codebases did not show the same AI-adoption-to-throughput lift as centralized or balanced codebases, plausibly because tools and agents operate best inside one repository while product, service, and ownership relationships span many repositories and remain undocumented.
 
+Production AI coding adds a low-level context hygiene requirement: the agent needs current standards, package choices, development setup, task boundaries, and implementation direction in explicit files rather than in tribal memory. Rules files and Markdown plans can become reusable prompt context when they describe the intended workflow and stack, but they should be paired with tests, linters, and review because the model's fluent statements about what it did are not reliable evidence by themselves.
+
 ## Key Concepts
 
 - [Keep agent context small, fresh, and task-specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md) - context should be externalized, selected, summarized, and isolated so stale or excessive history does not degrade agent work.
+- [Give coding agents the same engineering infrastructure humans need](../concepts/give-coding-agents-the-same-engineering-infrastructure-humans-need.md) - standards, setup, tests, and task boundaries are context agents need before production code changes.
 - [Frequent intentional compaction keeps coding agents in the smart zone](../concepts/frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md) - source-backed compaction controls size, correctness, completeness, and trajectory in coding-agent sessions.
 - [Assemble Per-Feature Context Packages for Coding Agents](../concepts/assemble-per-feature-context-packages-for-coding-agents.md) - planning artifacts should be sliced into feature-specific context packages before implementation.
 - [Repo-local Markdown tasks give agents durable scoped work units](../concepts/repo-local-markdown-tasks-give-agents-durable-scoped-work-units.md) - Markdown task files package scope, progress, and acceptance criteria as durable context.
@@ -135,6 +138,7 @@ Repository architecture can turn context engineering into the adoption bottlenec
 
 ## Sources
 
+- [Vibes won't cut it - Chris Kelly, Augment Code](../sources/20250803_Dc3qOA9WOnE.md)
 - [Context Platform Engineering to Reduce Token Anxiety - Val Bercovici, WEKA](../sources/20251124_NTBX-wxUhHs.md)
 - [No Vibes Allowed: Solving Hard Problems in Complex Codebases - Dex Horthy, HumanLayer](../sources/20251202_rmvDxxNubIg.md)
 - [The Cure for the Vibe Coding Hangover - Corey J. Gallon, Rexmore](../sources/20251124_JsKTQbT58BY.md)

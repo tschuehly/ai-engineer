@@ -1295,3 +1295,11 @@
 - Updated topics: [Evaluation](topics/evaluation.md), [Retrieval](topics/retrieval.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Use Fast Query-Document Evals for Retrieval Changes](concepts/use-fast-query-document-evals-for-retrieval-changes.md), [Align Synthetic Retrieval Queries With Real User Specificity](concepts/align-synthetic-retrieval-queries-with-real-user-specificity.md), [Cluster Conversation Outputs to Prioritize AI Product Work](concepts/cluster-conversation-outputs-to-prioritize-ai-product-work.md)
 - Notes: Added Chroma and Jason Liu's data-inspection workflow for retrieval evals, synthetic query calibration, and conversation-cluster product prioritization.
+
+## [2026-05-07] ingest | Vibes won't cut it - Chris Kelly, Augment Code
+
+- Source: [Vibes won't cut it - Chris Kelly, Augment Code](sources/20250803_Dc3qOA9WOnE.md)
+- Processed: `Dc3qOA9WOnE`
+- Updated topics: [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Treat AI Coding as Safe Software Change](concepts/treat-ai-coding-as-safe-software-change.md), [Give Coding Agents the Same Engineering Infrastructure Humans Need](concepts/give-coding-agents-the-same-engineering-infrastructure-humans-need.md), [Make Code Review the Bottleneck Skill for AI-Generated Code](concepts/make-code-review-the-bottleneck-skill-for-ai-generated-code.md)
+- Notes: Added Augment's production AI coding frame: generated code is still operationally owned code, so agents need ordinary engineering infrastructure and humans need stronger review discipline.

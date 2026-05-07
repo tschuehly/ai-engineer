@@ -48,6 +48,8 @@ For coding agents, this workflow can be attached directly to rule files: run the
 
 Anti-slop workflows should separate quality from provenance. Human and AI work can both be low-quality, inaccurate, or insecure, so the workflow should ask for evidence instead of accepting line count, engagement, or autonomous runtime as progress. AI can still be part of the anti-slop loop when it helps curate what is worth attention, creates code maps that improve codebase understanding, operates development tools through computer use, or sends commoditized work through asynchronous agents while humans keep clear design boundaries.
 
+Production vibe-coding workflows should make safe change the unit of work. A useful loop starts with a Markdown plan or rules file, reviews that context before implementation, runs the agent against a scoped task, uses fast tests and linters for feedback, then spends human attention on review questions that automation cannot settle: whether the change is supportable, secure, production-safe, and aligned with the system's intended direction.
+
 Agent-native organizational workflows start with supervision, dispatch, and review of agent work as a normal daily rhythm. This only works when the organization also adapts hiring and onboarding: employees need enough AI fluency to turn domain expertise into agent instructions, review artifacts, and role-specific agent setup. Inside an AI-native engineering organization, the daily workflow can compress into plan, delegate, assess, and codify. Cheap agentic code also changes product persuasion: instead of writing a memo or deck for every weird idea, a team can build a prototype quickly enough that stakeholders can experience it and decide from the artifact.
 
 AI coworker workflow design should choose interaction mode deliberately. Background personalization can stay invisible, workspace scanning can be ambient, artifact transformation can be inline, and app-building or ambiguous direction can remain conversational. The workflow should also leave room for bounded play: realistic prototypes can reveal when an agent should combine inputs, create follow-up artifacts, or escalate missing information back to a human instead of pretending to complete the task.
@@ -100,6 +102,9 @@ Brockman's workflow advice is to challenge inherited constraints by first princi
 - [Cluster conversation outputs to prioritize AI product work](../concepts/cluster-conversation-outputs-to-prioritize-ai-product-work.md) - output analysis turns logs into decisions about tools, prompts, routing, and refusal behavior.
 - [Research engineering partnership](../concepts/research-engineering-partnership.md) - research and engineering workflows need repeated coordination as systems scale.
 - [Model-shaped codebase architecture for coding agents](../concepts/model-shaped-codebase-architecture-for-coding-agents.md) - workflow speed depends on modules and checks agents can act on.
+- [Treat AI coding as safe software change](../concepts/treat-ai-coding-as-safe-software-change.md) - production workflows should optimize for safe change, not raw generated-code volume.
+- [Give coding agents the same engineering infrastructure humans need](../concepts/give-coding-agents-the-same-engineering-infrastructure-humans-need.md) - agent workflows need reproducible setup, local tests, standards, and scoped tasks.
+- [Make code review the bottleneck skill for AI-generated code](../concepts/make-code-review-the-bottleneck-skill-for-ai-generated-code.md) - review workflows should focus human attention on intent, impact, and quality.
 - [Agentic coding transforms existing software](../concepts/agentic-coding-transforms-existing-software.md) - agent workflows should target mature codebase transformation, not only prototypes.
 - [High-assurance agentic coding needs process, not just generation](../concepts/high-assurance-agentic-coding-needs-process-not-just-generation.md) - workflow design should wrap generated code in requirements, verification, and feedback stages.
 - [Choose AI coworker form factors by interaction mode](../concepts/choose-ai-coworker-form-factors-by-interaction-mode.md) - workflow shape determines whether AI should be invisible, ambient, inline, or conversational.
@@ -388,6 +393,7 @@ Brockman's workflow advice is to challenge inherited constraints by first princi
 
 ## Sources
 
+- [Vibes won't cut it - Chris Kelly, Augment Code](../sources/20250803_Dc3qOA9WOnE.md)
 - [How to look at your data - Jeff Huber (Chroma) + Jason Liu (567)](../sources/20250806_jryZvCuA0Uc.md)
 - [Designing AI-Intensive Applications - swyx](../sources/20250809_IHkyFhU6JEY.md)
 - [#define AI Engineer - Greg Brockman, OpenAI (ft. Jensen Huang)](../sources/20250810_avWhreBUYF0.md)
