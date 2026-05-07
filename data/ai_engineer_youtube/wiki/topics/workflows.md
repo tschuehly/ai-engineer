@@ -118,6 +118,8 @@ Durable workflow engines are also an agent observability boundary. When the work
 
 Work-management platforms can host the agent workflow itself. An agent should acknowledge triggers, state what it understood, move issues through normal status, continue in threads, ask for clarification before acting, and keep output useful enough that the shared workspace remains a coordination surface rather than a dumping ground for model text.
 
+Eval workflows can be staged the same way as software test workflows: start with component checks, then integration and end-to-end checks, and automate the suite in CI/CD as prompts, models, data, and production behavior evolve. This keeps evals tied to real release decisions instead of one-off benchmark exploration.
+
 ## Key Concepts
 
 - [Product Work Graphs Coordinate Agents and Humans](../concepts/product-work-graphs-coordinate-agents-and-humans.md) - work graphs let agent actions, reviews, feedback, and issue state stay in the team's normal workflow.
@@ -127,6 +129,7 @@ Work-management platforms can host the agent workflow itself. An agent should ac
 - [Compose agents and workflows as interchangeable primitives](../concepts/compose-agents-and-workflows-as-interchangeable-primitives.md) - workflows can call agents, agents can call workflows, and both can appear as steps or tools.
 - [Prefer readable workflow APIs over graph-theory surfaces](../concepts/prefer-readable-workflow-apis-over-graph-theory-surfaces.md) - workflow definitions should be reviewable as ordinary control flow.
 - [Add structure where agent reliability fails](../concepts/add-structure-where-agent-reliability-fails.md) - reliability work should target the failing segment of an agentic workflow.
+- [Run eval suites in CI/CD before and during production](../concepts/run-eval-suites-in-cicd-before-and-during-production.md) - eval workflows should become automated checks around model, prompt, data, and production-use-case changes.
 - [AI Engineering Practice Is Heterogeneous and Fast Moving](../concepts/ai-engineering-practice-is-heterogeneous-and-fast-moving.md) - AI workflows need to account for mixed roles, mixed use cases, and frequent model and prompt updates.
 - [Branchable Cloud Workspaces Make Agent Actions Reversible](../concepts/branchable-cloud-workspaces-make-agent-actions-reversible.md) - snapshot-based workflows let agents try stateful actions and backtrack.
 - [Scale Test-Time Search Through Parallel Verifier-Checked Branches](../concepts/scale-test-time-search-through-parallel-verifier-checked-branches.md) - branch-and-verify workflows promote the best attempt into downstream steps.
@@ -575,3 +578,4 @@ Work-management platforms can host the agent workflow itself. An agent should ac
 - [Scaling AI Agents Without Breaking Reliability - Preeti Somal, Temporal](../sources/20250728_1izYWsokr9s.md)
 - [Why your product needs an AI product manager, and why it should be you — James Lowe, i.AI](../sources/20250728_xzJdSi2Tsqw.md)
 - [[Full Workshop] Building Metrics that actually work - David Karam, Pi Labs (fmr Google Search)](../sources/20250729_jxrGodnopHo.md)
+- [Strategies for LLM Evals (GuideLLM, lm-eval-harness, OpenAI Evals Workshop) - Taylor Jordan Smith](../sources/20250727_89NuzmKokIk.md)

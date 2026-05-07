@@ -4,6 +4,10 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Layer LLM evals from serving metrics to application risk](concepts/layer-llm-evals-from-serving-metrics-to-application-risk.md) - production evals should climb from serving metrics to formatting, accuracy, safety, bias, and product-specific risk.
+- [Benchmark inference with use-case-shaped token loads](concepts/benchmark-inference-with-use-case-shaped-token-loads.md) - serving benchmarks should model application request rates, input/output token profiles, and SLO-relevant tail latency.
+- [Customize open benchmark harnesses with proprietary task data](concepts/customize-open-benchmark-harnesses-with-proprietary-task-data.md) - public eval harnesses become more useful when adapted to private domain tasks and custom safety cases.
+- [Run eval suites in CI/CD before and during production](concepts/run-eval-suites-in-cicd-before-and-during-production.md) - eval suites should run like release gates as prompts, models, data, and production use cases change.
 - [Product Work Graphs Coordinate Agents and Humans](concepts/product-work-graphs-coordinate-agents-and-humans.md) - issues, projects, feedback, related work, and communication threads become shared context for agents and humans.
 - [Mechanistic Interpretability Turns Model Internals Into Engineering Surfaces](concepts/mechanistic-interpretability-turns-model-internals-into-engineering-surfaces.md) - learned model features can be inspected and steered as engineering controls.
 - [Activation Steering Can Patch Specific Runtime Behaviors](concepts/activation-steering-can-patch-specific-runtime-behaviors.md) - feature-level steering can target specific runtime behaviors when validated against evals.

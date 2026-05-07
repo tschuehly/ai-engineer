@@ -1639,3 +1639,11 @@
 - Updated topics: [Models](topics/models.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md)
 - Updated concepts: [Mechanistic Interpretability Turns Model Internals Into Engineering Surfaces](concepts/mechanistic-interpretability-turns-model-internals-into-engineering-surfaces.md), [Activation Steering Can Patch Specific Runtime Behaviors](concepts/activation-steering-can-patch-specific-runtime-behaviors.md), [Use Activation Triggers for Dynamic Prompting](concepts/use-activation-triggers-for-dynamic-prompting.md), [Model Diffs Inspect Post-Training Feature Changes](concepts/model-diffs-inspect-post-training-feature-changes.md), [Interpretability-Native Interfaces Expose Concept-Level Model Controls](concepts/interpretability-native-interfaces-expose-concept-level-model-controls.md)
 - Notes: Added Goodfire's interpretability framing for feature attribution, activation steering, dynamic prompt injection, post-training model diffs, and concept-level creative controls.
+
+## [2026-05-07] ingest | Strategies for LLM Evals (GuideLLM, lm-eval-harness, OpenAI Evals Workshop) - Taylor Jordan Smith
+
+- Source: [Strategies for LLM Evals (GuideLLM, lm-eval-harness, OpenAI Evals Workshop) - Taylor Jordan Smith](sources/20250727_89NuzmKokIk.md)
+- Processed: `89NuzmKokIk`
+- Updated topics: [Evaluation](topics/evaluation.md), [Inference](topics/inference.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Layer LLM evals from serving metrics to application risk](concepts/layer-llm-evals-from-serving-metrics-to-application-risk.md), [Benchmark inference with use-case-shaped token loads](concepts/benchmark-inference-with-use-case-shaped-token-loads.md), [Customize open benchmark harnesses with proprietary task data](concepts/customize-open-benchmark-harnesses-with-proprietary-task-data.md), [Run eval suites in CI/CD before and during production](concepts/run-eval-suites-in-cicd-before-and-during-production.md)
+- Notes: Added Smith's production-eval workflow for layering serving benchmarks, factual and formatting checks, safety/bias tests, custom domain data, and CI/CD automation.

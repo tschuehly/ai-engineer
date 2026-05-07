@@ -98,8 +98,12 @@ Open-source realtime TTS adds another concrete serving layer to voice infrastruc
 
 Remote MCP infrastructure can reuse ordinary cloud primitives when the local stdio assumption no longer fits. A simple MCP server can be wrapped behind Lambda and API Gateway with streamable HTTP, an authorizer or Cognito, and DynamoDB-backed session state; the client can then list remote tools and pass them into an agent. This does not remove the need for gateway, authorization, and context-budget design, but it gives teams a serverless path from local MCP demos to shared cloud endpoints.
 
+LLM evaluation infrastructure also needs a CI/CD shape. Manual workshop runs are useful for learning tools, but production teams should turn serving benchmarks, factual checks, formatting checks, safety and bias tests, and custom product evals into repeatable gates that run when prompts, models, data sets, or production use cases change.
+
 ## Key Concepts
 
+- [Benchmark inference with use-case-shaped token loads](../concepts/benchmark-inference-with-use-case-shaped-token-loads.md) - serving infrastructure should be benchmarked with request shapes and tail-latency metrics that match the application.
+- [Run eval suites in CI/CD before and during production](../concepts/run-eval-suites-in-cicd-before-and-during-production.md) - eval infrastructure should become automated release and production-check machinery.
 - [Route LoRA Voice Clones With Sticky GPU Affinity](../concepts/route-lora-voice-clones-with-sticky-gpu-affinity.md) - voice clone serving needs session-sticky, adapter-aware routing over shared GPUs.
 - [Serve Realtime TTS By Audio-Token Throughput](../concepts/serve-realtime-tts-by-audio-token-throughput.md) - realtime TTS capacity depends on generated audio-token rate, batching, quantization, and GPU choice.
 - [Dedicated Vector Databases Remain Common RAG Infrastructure](../concepts/dedicated-vector-databases-remain-common-rag-infrastructure.md) - many teams still choose specialized vector databases as production context stores.
@@ -387,6 +391,7 @@ Remote MCP infrastructure can reuse ordinary cloud primitives when the local std
 - [Your realtime AI is ngmi - Sean DuBois (OpenAI), Kwindla Kramer (Daily)](../sources/20250731_E71YtNbCFXY.md)
 - [Pipecat Cloud: Enterprise Voice Agents Built On Open Source - Kwindla Hultman Kramer, Daily](../sources/20250731_IA4lZjh9sTs.md)
 - [The Unofficial Guide to Apple's Private Cloud Compute - Jmo, CONFSEC](../sources/20250730_CCsWZ5bJlO8.md)
+- [Strategies for LLM Evals (GuideLLM, lm-eval-harness, OpenAI Evals Workshop) - Taylor Jordan Smith](../sources/20250727_89NuzmKokIk.md)
 - [How to defend your sites from AI bots - David Mytton, Arcjet](../sources/20250730_Gi4V8viBGYQ.md)
 - [How to Secure Agents using OAuth - Jared Hanson (Keycard, Passport.js)](../sources/20250730_blmAkayzE8M.md)
 - [(possible dupe but better sound) What does Enterprise Ready MCP mean? - Tobin South, WorkOS](../sources/20250627_0MqYA52iWQU.md)

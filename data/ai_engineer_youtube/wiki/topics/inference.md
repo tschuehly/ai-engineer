@@ -20,6 +20,8 @@ Realtime voice serving adds an audio-token variant of the same discipline. A TTS
 
 Private cloud inference changes the serving contract for sensitive workloads. A PCC-style design does not simply promise retention limits; it asks the client to verify the server's attested hardware and software state, encrypt payloads only for that state, and compare attestation claims against public transparency-log records. That can make remote inference usable for privacy-sensitive requests that outgrow local models, but it adds latency, encryption overhead, reduced observability, and weak per-user telemetry.
 
+Inference evaluation should also be shaped by application traffic rather than generic throughput claims. GuideLLM-style benchmarking can vary request rate and input/output token profiles for chatbot or RAG workloads, then inspect time to first token, inter-token latency, throughput, mean, median, and P99 results. Those numbers are only meaningful against the target SLO, model size, hardware, runtime configuration, and concurrency envelope.
+
 ## Key Concepts
 
 - [Dual-mode AI infrastructure](../concepts/dual-mode-ai-infrastructure.md) - inference fleets should distinguish realtime latency needs from long compute-heavy workloads.
@@ -38,6 +40,7 @@ Private cloud inference changes the serving contract for sensitive workloads. A 
 - [Profile small-model architectures on target hardware](../concepts/profile-small-model-architectures-on-target-hardware.md) - local inference performance should be measured on the intended hardware, not inferred from architecture alone.
 - [Use local AI workstations when iteration, privacy, or latency dominate](../concepts/use-local-ai-workstations-when-iteration-privacy-or-latency-dominate.md) - local serving can complement cloud infrastructure when queueing, data residency, or deterministic latency drive the workflow.
 - [Make local inference benchmarks reproducible artifacts](../concepts/make-local-inference-benchmarks-reproducible-artifacts.md) - benchmark runs should capture environment, responses, timing, and hardware metrics for later verification.
+- [Benchmark inference with use-case-shaped token loads](../concepts/benchmark-inference-with-use-case-shaped-token-loads.md) - serving benchmarks should vary request rate and token shapes to match actual application traffic.
 - [Use hardware-in-the-loop search for AI kernel generation](../concepts/use-hardware-in-the-loop-search-for-ai-kernel-generation.md) - generated kernel variants need target-hardware execution and profiling feedback.
 - [Use AI kernel generation for known optimization patterns, not expert-level breakthroughs](../concepts/use-ai-kernel-generation-for-known-optimization-patterns-not-expert-level-breakthroughs.md) - agents are useful for searching known optimization spaces and ports, not replacing deeply hand-tuned primitives.
 - [Evaluate generated kernels for correctness, performance, and benchmark gaming](../concepts/evaluate-generated-kernels-for-correctness-performance-and-benchmark-gaming.md) - speedups only count when numerical correctness and benchmark methodology hold up.
@@ -101,3 +104,4 @@ Private cloud inference changes the serving contract for sensitive workloads. A 
 - [Hacking the Inference Pareto Frontier - Kyle Kranen, NVIDIA](../sources/20250801_Y2qc0UhDSnc.md)
 - [Serving Voice AI at $1/hr: Open-source, LoRAs, Latency, Load Balancing - Neil Dwyer, Gabber](../sources/20250731_rD23-VZZHOo.md)
 - [The Unofficial Guide to Apple's Private Cloud Compute - Jmo, CONFSEC](../sources/20250730_CCsWZ5bJlO8.md)
+- [Strategies for LLM Evals (GuideLLM, lm-eval-harness, OpenAI Evals Workshop) - Taylor Jordan Smith](../sources/20250727_89NuzmKokIk.md)

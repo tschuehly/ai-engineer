@@ -106,8 +106,14 @@ RAG evaluation can be sequenced with product maturity. A pre-production knowledg
 
 High-stakes domain RAG also needs a fidelity ladder. Expert review can catch legal or regulatory mistakes that engineers and generic metrics miss, but it is expensive; curated expert criteria and automated retrieval metrics provide faster feedback for everyday iteration. Useful automated checks can stay concrete, such as whether retrieval hit the right corpus, folder, section, keywords, or provision before judging the final answer.
 
+General LLM eval programs can be staged as a pyramid. Start with serving performance because a high-quality model still fails production if latency, throughput, concurrency, GPU sizing, or cost do not hold. Add formatting checks when downstream systems need strict JSON or other structured output. Add factual benchmarks such as MMLU-Pro for broad or fine-tuned accuracy checks, then add safety, bias, and application-specific custom evals. Open tools such as GuideLLM, lm-eval-harness, and promptfoo are useful starting points, but the eval surface should be adapted to the product's data, request shape, risk profile, and CI/CD release process.
+
 ## Key Concepts
 
+- [Layer LLM evals from serving metrics to application risk](../concepts/layer-llm-evals-from-serving-metrics-to-application-risk.md) - eval programs can start with serving metrics and grow toward accuracy, safety, bias, and application-specific checks.
+- [Benchmark inference with use-case-shaped token loads](../concepts/benchmark-inference-with-use-case-shaped-token-loads.md) - serving benchmarks should reflect the application's request rates and token profiles.
+- [Customize open benchmark harnesses with proprietary task data](../concepts/customize-open-benchmark-harnesses-with-proprietary-task-data.md) - public benchmark frameworks should be adapted to private task data and product-specific safety cases.
+- [Run eval suites in CI/CD before and during production](../concepts/run-eval-suites-in-cicd-before-and-during-production.md) - eval suites should become automated release and production-monitoring infrastructure.
 - [Dynamic AI Search Evals Need Fresh Grounding Sets](../concepts/dynamic-ai-search-evals-need-fresh-grounding-sets.md) - current web-backed search needs dynamic benchmarks that reflect changing sources and user context.
 - [Reference-Free AI Search Metrics Decompose Answer Quality](../concepts/reference-free-ai-search-metrics-decompose-answer-quality.md) - answer completeness, document relevance, and hallucination checks can diagnose production search quality without labeled ground truth.
 - [AI Search Providers Should Return Grounding Documents](../concepts/ai-search-providers-should-return-grounding-documents.md) - grounding documents make search evaluation and debugging more transparent than citations alone.
@@ -374,6 +380,7 @@ High-stakes domain RAG also needs a fidelity ladder. Expert review can catch leg
 
 ## Sources
 
+- [Strategies for LLM Evals (GuideLLM, lm-eval-harness, OpenAI Evals Workshop) - Taylor Jordan Smith](../sources/20250727_89NuzmKokIk.md)
 - [Evaluating AI Search: A Practical Framework for Augmented AI Systems - Quotient AI + Tavily](../sources/20250729_wRJD0inpmjU.md)
 - [How to look at your data - Jeff Huber (Chroma) + Jason Liu (567)](../sources/20250806_jryZvCuA0Uc.md)
 - [Vision AI in 2025 - Peter Robicheaux, Roboflow](../sources/20250803_IQc05eCvNYE.md)
