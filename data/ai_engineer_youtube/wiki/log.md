@@ -1671,3 +1671,11 @@
 - Updated topics: [Inference](topics/inference.md), [Infrastructure](topics/infrastructure.md), [Models](topics/models.md)
 - Updated concepts: [SGLang Serves Models Through Configured OpenAI-Compatible Servers](concepts/sglang-serves-models-through-configured-openai-compatible-servers.md), [Tune CUDA Graph Batch Capture to Real Decode Concurrency](concepts/tune-cuda-graph-batch-capture-to-real-decode-concurrency.md), [Use Eagle 3 Speculative Decoding With Matched Draft Models](concepts/use-eagle-3-speculative-decoding-with-matched-draft-models.md)
 - Notes: Added SGLang serving patterns for OpenAI-compatible deployment, flag-driven runtime configuration, CUDA graph decode tuning, and Eagle 3 speculative decoding setup.
+
+## [2026-05-07] ingest | Robotics: why now? - Quan Vuong and Jost Tobias Springberg, Physical Intelligence
+
+- Source: [Robotics: why now? - Quan Vuong and Jost Tobias Springberg, Physical Intelligence](sources/20250726_cGLa8DsOYdk.md)
+- Processed: `cGLa8DsOYdk`
+- Updated topics: [Robotics](topics/robotics.md), [Models](topics/models.md), [Infrastructure](topics/infrastructure.md), [Evaluation](topics/evaluation.md)
+- Updated concepts: [Robotics Data Engines Need Operated Teleoperation Pipelines](concepts/robotics-data-engines-need-operated-teleoperation-pipelines.md), [Action Expert Transformers Adapt VLMs For High-Frequency Robot Control](concepts/action-expert-transformers-adapt-vlms-for-high-frequency-robot-control.md), [Test Robot Generalization By Held-Out Locations And Hardware](concepts/test-robot-generalization-by-held-out-locations-and-hardware.md)
+- Notes: Added Physical Intelligence's robotics framing for operated teleoperation data engines, VLM-to-VLA action architecture, and held-out-location plus cross-hardware generalization checks.
