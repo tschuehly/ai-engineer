@@ -32,6 +32,8 @@ Leadership-owned AI adoption adds another constraint: do not confuse adoption ma
 
 Execution-aware code models point to another coding-agent interface: the model can treat the repository as an environment with state transitions rather than only a text corpus. CWM's Bash-oriented setup trains the model in a terminal-like environment, while neural debugging suggests that partial code sketches, local variable traces, and simulated execution can become a more precise collaboration surface than prose-only prompts.
 
+Augment's mentoring-the-machine framing makes the junior-collaborator analogy more operational. A coding agent may be fast and parallel, but it still needs tech-lead-style scaffolding: outcomes, context, constraints, boundaries, and review. The adoption lesson is also team-level: when the knowledge infrastructure captures codebase context, meetings, decisions, task trackers, documentation, and reusable memories, individual agent success can spread instead of staying locked inside one expert user's habits. Once that substrate exists, parallel coding agents can improve decision quality as well as throughput by testing divergent prototypes and converging on measured outcomes.
+
 Coding-agent model training can also target the harness and workflow shape directly. MiniMax M2's framing suggests that a coding model should learn from scaled coding environments, expert developer reward, repeated reasoning/tool-call turns, and scaffold perturbations across prompts, templates, tools, and tool responses. That makes agent robustness a training and evaluation target rather than a property assumed from benchmark rank or raw tool count.
 
 Jules adds a practical cloud-agent parallelism pattern. Once agents run in remote VMs rather than only inside the local IDE, a developer can dispatch multiple background tasks from GitHub or even a phone, then review the results after the agents have cloned the repository, run commands, and tested their changes. Banks separates two useful forms of parallelism: ordinary multitasking across backlog items, and variation search where multiple agents try different approaches to the same hard task. That only works when each task starts with an observable definition of success and ends with merge-and-test infrastructure; otherwise parallelism just produces more PRs to inspect.
@@ -178,6 +180,8 @@ Imbue's Sculptor framing adds a quality loop for moving beyond prototypes: ask w
 - [Interleave reasoning and tool calls for long-horizon agents](../concepts/interleave-reasoning-and-tool-calls-for-long-horizon-agents.md) - coding agents need to reason again after tool responses instead of assuming one tool pass is enough.
 - [Perturb agent scaffolds during training for generalization](../concepts/perturb-agent-scaffolds-during-training-for-generalization.md) - scaffold variation should be part of model robustness testing and training.
 - [Treat coding agents as fast junior collaborators](../concepts/treat-coding-agents-as-fast-junior-collaborators.md) - agent output needs human judgment and local context even when execution is fast.
+- [Mentor Coding Agents Like Perpetual Junior Engineers](../concepts/mentor-coding-agents-like-perpetual-junior-engineers.md) - agents need tech-lead scaffolding because they execute quickly but lack durable local context.
+- [Parallel Agent Prototypes Turn Design Choices Into Measurements](../concepts/parallel-agent-prototypes-turn-design-choices-into-measurements.md) - parallel agent work can compare product and architecture options with evidence.
 - [Low-false-positive bug finding is required for coding-agent trust](../concepts/low-false-positive-bug-finding-is-required-for-coding-agent-trust.md) - false-positive bug floods destroy review trust and can let real defects ship.
 - [Scope bug-hunting rules to specific defect classes](../concepts/scope-bug-hunting-rules-to-specific-defect-classes.md) - named defect classes and test-backed fix validation beat vague repository bug scans.
 - [Use component inventories to preserve bug-hunting context](../concepts/use-component-inventories-to-preserve-bug-hunting-context.md) - explicit class, variable, diff, and usage maps help agents keep cross-file bug logic in view.
@@ -347,6 +351,7 @@ Imbue's Sculptor framing adds a quality loop for moving beyond prototypes: ask w
 
 ## Sources
 
+- [Mentoring the Machine - Eric Hou, Augment Code](../sources/20250724_Zniw5c9_jx8.md)
 - [Beyond the Prototype: Using AI to Write High-Quality Code - Josh Albrecht, Imbue](../sources/20250725_x_1EumTaXeE.md)
 - [Devin 2.0 and the Future of SWE - Scott Wu, Cognition](../sources/20250725_MI83buT_23o.md)
 - [Your Coding Agent Just Got Cloned And Your Brain Isn't Ready - Rustin Banks, Google Jules](../sources/20250725_X4BwOu0GWb8.md)

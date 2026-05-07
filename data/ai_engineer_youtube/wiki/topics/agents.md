@@ -52,6 +52,8 @@ Code mode pushes tool-surface constraints into execution architecture. Model-wri
 
 Agentic engineering adds a pragmatic coding-agent stance: treat the agent as a fast, well-read junior collaborator whose output is only as good as the human direction, context, and review around it. Research-plan-implement loops, fresh task-specific sessions, AGENTS.md rules, scoped modes, worktrees, and explicit permission settings keep speed from turning into context pollution or large unreviewable diffs. Agent prompt improvement should also be treated as a learning loop: collect output traces, capture explanations for missed instructions or context failures, and validate evaluator feedback before letting automated prompt updates steer future behavior.
 
+Augment adds a team-scaling version of that stance: engineers should act as perpetual tech leads for agents that are fast but context-poor. The organizational complement is knowledge infrastructure that makes codebase context, documentation, meetings, decisions, task trackers, and reusable agent memories available across teams. Without that substrate, one person's tacit agent workflow remains hard to replicate as a shared capability.
+
 Coding-agent taste adds a more implicit learning layer to that loop. A model can be correct and still miss the developer's preferred architecture, project conventions, or review instincts; taste models try to learn those preferences from edits and feedback, keep them inspectable, and apply them alongside whichever LLM the user chooses.
 
 Harness engineering treats the agent runtime, repository, documentation, lints, reviewer agents, and tests as the control plane for abundant agent capacity. If implementation becomes cheap, agent work still needs durable team knowledge and distributed prompt surfaces that keep context refreshed as long-running work pages information in and out of the model context window. Human control planes extend that idea beyond coding by making role hierarchies, projects, tasks, memories, budgets, and live handoff state visible so many heterogeneous agents can be supervised without scattering work across independent chat tabs.
@@ -263,6 +265,8 @@ Devin 2.0 frames the same progression as changing human-intervention intervals. 
 - [Grow Agent Organizations Incrementally By Role Quality and Cost](../concepts/grow-agent-organizations-incrementally-by-role-quality-and-cost.md) - start with needed roles, tune behavior, and route model cost by job importance before fanning out.
 - [Harness engineering shifts scarcity from code production to control surfaces](../concepts/harness-engineering-shifts-scarcity-from-code-production-to-control-surfaces.md) - agent abundance increases the importance of systems for steering and validating work.
 - [Treat coding agents as fast junior collaborators](../concepts/treat-coding-agents-as-fast-junior-collaborators.md) - agent speed is useful only when humans supply judgment, business context, and direction.
+- [Mentor Coding Agents Like Perpetual Junior Engineers](../concepts/mentor-coding-agents-like-perpetual-junior-engineers.md) - engineers should scaffold agent work through outcomes, context, constraints, and review.
+- [Institutionalize Knowledge Infrastructure for AI Adoption](../concepts/institutionalize-knowledge-infrastructure-for-ai-adoption.md) - organization-wide agent adoption needs shared current context, decisions, docs, and memories.
 - [Treat prompts as distributed harness surfaces](../concepts/treat-prompts-as-distributed-harness-surfaces.md) - harnesses can refresh instructions through rules, skills, lints, tests, and review comments.
 - [AI pushes software engineers toward broader product and operations ownership](../concepts/ai-pushes-software-engineers-toward-broader-product-and-operations-ownership.md) - agent-augmented engineers need broader ownership and orchestration skills.
 - [Agents expand the economically viable software surface](../concepts/agents-expand-the-economically-viable-software-surface.md) - cheaper agent-based automation can make more useful software worth building.
@@ -467,6 +471,7 @@ Devin 2.0 frames the same progression as changing human-intervention intervals. 
 - [How to build Enterprise Aware Agents - Chau Tran, Glean](../sources/20250724_hxFpUcvWPcU.md)
 - [Rise of the AI Architect - Clay Bavor, Cofounder, Sierra w/ Alessio Fanelli](../sources/20250724_C3geUfBR2js.md)
 - [Building Applications with AI Agents — Michael Albada, Microsoft](../sources/20250724_R30col3UPUg.md)
+- [Mentoring the Machine - Eric Hou, Augment Code](../sources/20250724_Zniw5c9_jx8.md)
 - [Devin 2.0 and the Future of SWE - Scott Wu, Cognition](../sources/20250725_MI83buT_23o.md)
 - [Your Coding Agent Just Got Cloned And Your Brain Isn't Ready - Rustin Banks, Google Jules](../sources/20250725_X4BwOu0GWb8.md)
 - [Ship Production Software in Minutes, Not Months - Eno Reyes, Factory](../sources/20250725_iheWKg2Tkrk.md)

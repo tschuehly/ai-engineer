@@ -30,6 +30,8 @@ AI code review turns context quality into a trust issue. Review and generation t
 
 Taste models turn repeated code edits into another context source. Instead of asking developers to encode every convention in `AGENTS.md`, `CLAUDE.md`, or prompt files, a system can infer preferences from how generated code is corrected, expose the learned taste as a transparent artifact, and inject it only when the current task matches the relevant domain, project, or team scope.
 
+Augment's adoption path treats knowledge infrastructure as the team-scale context substrate for coding agents. Map existing docs, repositories, task trackers, and meeting outputs; capture decision knowledge that would otherwise disappear; connect sources through MCP or native integrations; and share successful memories or task lists so one engineer's agent workflow becomes reusable context for others.
+
 Frequent intentional compaction is a coding-specific context-engineering workflow. It treats the active context window as a limited, trajectory-sensitive working area: preserve correct current facts and intent in reviewed Markdown artifacts, start fresh sessions from those artifacts, and prefer on-demand compressed context from current code over broad static onboarding docs that grow stale. Per-feature context packaging adds a planning-artifact variant of the same idea: after a master specification, feature inventory, specifications, dependencies, and implementation plan exist, the implementation agent should receive only the sections relevant to the current atomic feature plus its dependencies and validation strategy.
 
 Repo-local task files are a smaller-grained version of this context packaging. A Markdown task with acceptance criteria and status can define what one agent run should do, what it should not do, and how completion will be checked; because it is versioned in Git, it remains available after chat context is compacted or discarded.
@@ -58,6 +60,7 @@ Devin 2.0 adds a codebase-intelligence layer to this context problem. Raw source
 - [Offload long-horizon agent state outside the context window](../concepts/offload-long-horizon-agent-state-outside-the-context-window.md) - files, plans, docs, memories, and scoped subagents can hold state until it is relevant.
 - [Context window editing clears stale tool results](../concepts/context-window-editing-clears-stale-tool-results.md) - old tool outputs should be pruned when they stop helping the current task.
 - [Enterprise agent failures often expose missing institutional knowledge](../concepts/enterprise-agent-failures-expose-missing-institutional-knowledge.md) - agent failures can indicate missing or stale enterprise knowledge rather than weak model reasoning.
+- [Institutionalize Knowledge Infrastructure for AI Adoption](../concepts/institutionalize-knowledge-infrastructure-for-ai-adoption.md) - shared docs, decisions, meetings, task trackers, and memories let agent workflows scale beyond individuals.
 - [Encode domain judgment in node-level agent skills](../concepts/encode-domain-judgment-in-node-level-agent-skills.md) - skills can carry expert contingencies into the specific work-tree node where they apply.
 - [Demand-driven context pulls knowledge from failed work rather than pushing a complete knowledge base upfront](../concepts/demand-driven-context-pulls-knowledge-from-failed-work.md) - real tasks reveal the exact context that needs to be documented.
 - [Context blocks turn monolithic enterprise knowledge into reusable agent context](../concepts/context-blocks-turn-monolithic-enterprise-knowledge-into-reusable-agent-context.md) - reusable knowledge units make enterprise context easier for agents to retrieve and apply.
@@ -143,6 +146,7 @@ Devin 2.0 adds a codebase-intelligence layer to this context problem. Raw source
 
 ## Sources
 
+- [Mentoring the Machine - Eric Hou, Augment Code](../sources/20250724_Zniw5c9_jx8.md)
 - [Devin 2.0 and the Future of SWE - Scott Wu, Cognition](../sources/20250725_MI83buT_23o.md)
 - [Piloting agents in GitHub Copilot - Christopher Harrison, Microsoft](../sources/20250726_DdaAABdAqZY.md)
 - [Vibes won't cut it - Chris Kelly, Augment Code](../sources/20250803_Dc3qOA9WOnE.md)

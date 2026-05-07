@@ -128,6 +128,7 @@ Coding-agent code quality needs evaluation while the diff is still forming. Usef
 
 ## Key Concepts
 
+- [Parallel Agent Prototypes Turn Design Choices Into Measurements](../concepts/parallel-agent-prototypes-turn-design-choices-into-measurements.md) - parallel prototypes can compare hypotheses with real metrics before production investment.
 - [AI Diff Review Should Find Problems Before Merge](../concepts/ai-diff-review-should-find-problems-before-merge.md) - generated diffs should be checked for concrete defects before reviewers are forced into full manual inspection or blind trust.
 - [Generated Tests Need Meaningful Plans, Coverage, and Pruning](../concepts/generated-tests-need-meaningful-plans-coverage-and-pruning.md) - AI-generated tests are useful only when behavior plans, coverage, review, sandboxing, and cleanup keep them meaningful.
 - [Custom LLM Checks Turn Team Standards Into Continuous Agent Feedback](../concepts/custom-llm-checks-turn-team-standards-into-continuous-agent-feedback.md) - LLM checks can evaluate branch intent, standards, architecture, specs, implementation gaps, and test quality.
@@ -416,6 +417,7 @@ Coding-agent code quality needs evaluation while the diff is still forming. Usef
 - [How to build Enterprise Aware Agents - Chau Tran, Glean](../sources/20250724_hxFpUcvWPcU.md)
 - [Rise of the AI Architect - Clay Bavor, Cofounder, Sierra w/ Alessio Fanelli](../sources/20250724_C3geUfBR2js.md)
 - [Building Applications with AI Agents — Michael Albada, Microsoft](../sources/20250724_R30col3UPUg.md)
+- [Mentoring the Machine - Eric Hou, Augment Code](../sources/20250724_Zniw5c9_jx8.md)
 - [Beyond the Prototype: Using AI to Write High-Quality Code - Josh Albrecht, Imbue](../sources/20250725_x_1EumTaXeE.md)
 - [Strategies for LLM Evals (GuideLLM, lm-eval-harness, OpenAI Evals Workshop) - Taylor Jordan Smith](../sources/20250727_89NuzmKokIk.md)
 - [Your Coding Agent Just Got Cloned And Your Brain Isn't Ready - Rustin Banks, Google Jules](../sources/20250725_X4BwOu0GWb8.md)

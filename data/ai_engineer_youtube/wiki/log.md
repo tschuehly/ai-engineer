@@ -1815,3 +1815,11 @@
 - Updated topics: [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md), [Security](topics/security.md)
 - Updated concepts: [Carry MCP JSON-RPC Over Internal Transports](concepts/carry-mcp-json-rpc-over-internal-transports.md), [MCP Gateways Create an Enterprise Root of Trust](concepts/mcp-gateways-create-an-enterprise-root-of-trust.md), [Gateway Platform Primitives Let Teams Focus on MCP Business Logic](concepts/gateway-platform-primitives-let-teams-focus-on-mcp-business-logic.md)
 - Notes: Added Anthropic's remote-MCP gateway pattern and the distinction between stable MCP message semantics and organization-specific internal transports.
+
+## [2026-05-07] ingest | Mentoring the Machine - Eric Hou, Augment Code
+
+- Source: [Mentoring the Machine - Eric Hou, Augment Code](sources/20250724_Zniw5c9_jx8.md)
+- Processed: `Zniw5c9_jx8`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Mentor Coding Agents Like Perpetual Junior Engineers](concepts/mentor-coding-agents-like-perpetual-junior-engineers.md), [Institutionalize Knowledge Infrastructure for AI Adoption](concepts/institutionalize-knowledge-infrastructure-for-ai-adoption.md), [Parallel Agent Prototypes Turn Design Choices Into Measurements](concepts/parallel-agent-prototypes-turn-design-choices-into-measurements.md)
+- Notes: Added Augment's coding-agent mentoring model, team knowledge-infrastructure adoption path, and parallel-prototype decision workflow.

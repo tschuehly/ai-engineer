@@ -5,6 +5,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 ## Current Emphasis
 
 - [Raise Agent Agency Only When Efficacy Holds](concepts/raise-agent-agency-only-when-efficacy-holds.md) - autonomy should be added only when it preserves task effectiveness.
+- [Mentor Coding Agents Like Perpetual Junior Engineers](concepts/mentor-coding-agents-like-perpetual-junior-engineers.md) - engineers should scaffold coding-agent work through context, constraints, boundaries, and review.
+- [Institutionalize Knowledge Infrastructure for AI Adoption](concepts/institutionalize-knowledge-infrastructure-for-ai-adoption.md) - shared docs, decisions, meeting outputs, task trackers, and memories let agent success scale across teams.
+- [Parallel Agent Prototypes Turn Design Choices Into Measurements](concepts/parallel-agent-prototypes-turn-design-choices-into-measurements.md) - cheap parallel prototypes can turn product and architecture choices into measured comparisons.
 - [Group Agent Tools by Human-Facing Actions](concepts/group-agent-tools-by-human-facing-actions.md) - agent tool catalogs should be curated around clear actions rather than mirrored from every API endpoint.
 - [Keep Fixed Business Logic Outside the Model](concepts/keep-fixed-business-logic-outside-the-model.md) - hard workflow rules belong in deterministic validation and state gates.
 - [Replace Anecdotal Agent Tuning With Eval and Observability Loops](concepts/replace-anecdotal-agent-tuning-with-eval-and-observability-loops.md) - eval sets, traces, and clustered failures should drive agent improvement.

@@ -108,6 +108,8 @@ Prompt-to-app workflows can sit before implementation as a product ideation loop
 
 Vibe engineering turns agentic coding into a supervised review workflow rather than a slot-machine loop. A practical pattern is to let the agent produce a change, inspect the running UI, voice-dump observations and bugs, inspect the code, then feed back technical patterns and context through rules, docs, commands, and memories. Loose prompting is acceptable for disposable scripts or one-off tools, but durable code needs enough cleanliness and context structure for future agent runs to continue safely.
 
+Mentoring-oriented coding-agent workflows make delegation explicit before implementation starts. The human supplies the outcome, context, constraints, and boundaries, then lets agents explore or execute in the background while the human preserves focus for critical-path decisions. At team scale, the same workflow captures decisions, meeting outputs, task lists, and successful memories so later agents and teammates inherit the lesson rather than rediscovering it.
+
 Yegge and Kim's adoption framing makes production practice part of the workflow. A leader or senior engineer who ships one bounded feature with an agent learns the real context, review, maintenance, and safety constraints in a way that a training session or usage dashboard cannot show. The same source also reframes small valuable work: when an issue can be safely bounded and owned, agentic coding can remove backlog grooming, persuasion, and staffing delays, but the resulting artifact still needs maintainership after the prototype lands.
 
 AI code quality workflows should cover the whole SDLC rather than only generation. Qodo's framing treats testing, review, context, executable standards, and secure validation environments as workflow surfaces that must keep learning as generated-code volume grows. Confident vibe coding adds another workflow shape: use the command line to compose specialized coding agents, and move review, coverage, and best-practice feedback earlier than PR-time inspection.
@@ -176,6 +178,9 @@ Healthcare revenue cycle workflows add a financially measurable version of the s
 - [Prefer readable workflow APIs over graph-theory surfaces](../concepts/prefer-readable-workflow-apis-over-graph-theory-surfaces.md) - workflow definitions should be reviewable as ordinary control flow.
 - [Add structure where agent reliability fails](../concepts/add-structure-where-agent-reliability-fails.md) - reliability work should target the failing segment of an agentic workflow.
 - [Raise Agent Agency Only When Efficacy Holds](../concepts/raise-agent-agency-only-when-efficacy-holds.md) - simpler automation should remain when it is more effective than autonomy.
+- [Mentor Coding Agents Like Perpetual Junior Engineers](../concepts/mentor-coding-agents-like-perpetual-junior-engineers.md) - delegation workflows should scaffold agent work before letting it run.
+- [Institutionalize Knowledge Infrastructure for AI Adoption](../concepts/institutionalize-knowledge-infrastructure-for-ai-adoption.md) - workflow lessons, decisions, and memories should compound across teams.
+- [Parallel Agent Prototypes Turn Design Choices Into Measurements](../concepts/parallel-agent-prototypes-turn-design-choices-into-measurements.md) - cheap parallel prototypes can turn workflow debates into measured convergence.
 - [Keep Fixed Business Logic Outside the Model](../concepts/keep-fixed-business-logic-outside-the-model.md) - workflow gates should enforce hard conditions outside prompt text.
 - [Replace Anecdotal Agent Tuning With Eval and Observability Loops](../concepts/replace-anecdotal-agent-tuning-with-eval-and-observability-loops.md) - workflow changes should be driven by eval sets and traced failure clusters.
 - [Run eval suites in CI/CD before and during production](../concepts/run-eval-suites-in-cicd-before-and-during-production.md) - eval workflows should become automated checks around model, prompt, data, and production-use-case changes.
@@ -516,6 +521,7 @@ Healthcare revenue cycle workflows add a financially measurable version of the s
 - [How to build Enterprise Aware Agents - Chau Tran, Glean](../sources/20250724_hxFpUcvWPcU.md)
 - [Rise of the AI Architect - Clay Bavor, Cofounder, Sierra w/ Alessio Fanelli](../sources/20250724_C3geUfBR2js.md)
 - [Building Applications with AI Agents — Michael Albada, Microsoft](../sources/20250724_R30col3UPUg.md)
+- [Mentoring the Machine - Eric Hou, Augment Code](../sources/20250724_Zniw5c9_jx8.md)
 - [Beyond the Prototype: Using AI to Write High-Quality Code - Josh Albrecht, Imbue](../sources/20250725_x_1EumTaXeE.md)
 - [Devin 2.0 and the Future of SWE - Scott Wu, Cognition](../sources/20250725_MI83buT_23o.md)
 - [Your Coding Agent Just Got Cloned And Your Brain Isn't Ready - Rustin Banks, Google Jules](../sources/20250725_X4BwOu0GWb8.md)
