@@ -172,7 +172,7 @@
 
 - Source: [OpenAI Codex Masterclass  - Vaibhav Srivastav & Katia Gil Guzman](sources/20260429_MhHEGMFCEB0.md)
 - Processed: `MhHEGMFCEB0`
-- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Unified Coding-Agent Harnesses Combine Models, Tools, Environments, and Safety](concepts/unified-coding-agent-harnesses-combine-models-tools-environments-and-safety.md), [Isolate Parallel Coding Work With Project Worktrees](concepts/isolate-parallel-coding-work-with-project-worktrees.md), [Customize Subagents by Task, Model, Tools, and Permissions](concepts/customize-subagents-by-task-model-tools-and-permissions.md), [Use Agent Hooks to Automate Session Rituals](concepts/use-agent-hooks-to-automate-session-rituals.md), [Route High-Impact Agent Actions Through Explicit Human Approval Gates](concepts/route-high-impact-agent-actions-through-explicit-human-approval-gates.md)
 - Notes: Added Codex platform patterns for harness design, isolated parallel work, scoped subagents, privilege approval, and lifecycle hooks.
 
@@ -1047,3 +1047,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Context Engineering](topics/context-engineering.md), [Inference](topics/inference.md), [Infrastructure](topics/infrastructure.md)
 - Updated concepts: [KV-cache hit rate is a production agent SLO](concepts/kv-cache-hit-rate-is-a-production-agent-slo.md), [Agent swarms create reusable KV-cache working sets](concepts/agent-swarms-create-reusable-kv-cache-working-sets.md), [Size KV-cache memory tiers with workload-shaped benchmarks](concepts/size-kv-cache-memory-tiers-with-workload-shaped-benchmarks.md)
 - Notes: Added context-platform engineering guidance for translating agent context reuse into KV-cache hit-rate SLOs, cache TTL choices, and memory-tier benchmark design.
+
+## [2026-05-07] ingest | Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway
+
+- Source: [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](sources/20251124_Q5IVm_CxN2w.md)
+- Processed: `Q5IVm_CxN2w`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Observability-to-PR agents turn incidents into reviewable fixes](concepts/observability-to-pr-agents-turn-incidents-into-reviewable-fixes.md), [Analyze operational health over time slices before invoking repair agents](concepts/analyze-operational-health-over-time-slices-before-invoking-repair-agents.md), [Headless coding-agent servers make agents callable infrastructure](concepts/headless-coding-agent-servers-make-agents-callable-infrastructure.md)
+- Notes: Added Railway Autofix patterns for scheduled health workflows that gather operational context, invoke a headless coding agent, and produce reviewable infrastructure-fix PRs.

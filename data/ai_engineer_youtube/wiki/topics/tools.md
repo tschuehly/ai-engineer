@@ -50,6 +50,7 @@ Shell wrappers can also act as local harness tools. A wrapper around Codex CLI c
 
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - compact tool loops can be the core architecture for coding agents.
 - [Use coding agents as programmable subagents inside products](../concepts/use-coding-agents-as-programmable-subagents-inside-products.md) - coding agents can be called through SDKs, CI/CD, and MCP as product-internal tools.
+- [Headless coding-agent servers make agents callable infrastructure](../concepts/headless-coding-agent-servers-make-agents-callable-infrastructure.md) - terminal coding agents become workflow tools when exposed through a server API and packaged tool environment.
 - [Use stable agent harnesses as model-evolution boundaries](../concepts/use-stable-agent-harnesses-as-model-evolution-boundaries.md) - maintained harnesses keep model and tool churn behind a stable integration surface.
 - [Task-tuned tool sets beat generic integration surfaces for core coding loops](../concepts/task-tuned-tool-sets-beat-generic-integration-surfaces-for-core-coding-loops.md) - core agent tools should be selected and described for the local workflow.
 - [Role-specialized agent systems beat one giant coding agent](../concepts/role-specialized-agent-systems-beat-one-giant-coding-agent.md) - tool and model routing should follow role-specific work rather than one universal worker.
@@ -291,3 +292,5 @@ Shell wrappers can also act as local harness tools. A wrapper around Codex CLI c
 - [Defying Gravity - Kevin Hou, Google DeepMind](../sources/20251202_HN-F-OQe6j0.md)
 - [Katelyn Lesse - Evolving Claude APIs for Agents, Anthropic](../sources/20251204_aqW68Is_Kj4.md)
 - [Context Engineering: Connecting the Dots with Graphs - Stephen Chin, Neo4j](../sources/20251124_LLuKshphGOE.md)
+
+- [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

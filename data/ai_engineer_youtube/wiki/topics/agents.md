@@ -81,6 +81,9 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Build paved paths for enterprise AI engineering tools](../concepts/build-paved-paths-for-enterprise-ai-engineering-tools.md) - scaled adoption needs shared platform routes for model access, MCP discovery, deployment, and governance.
 - [Use one-pizza pods for agentic engineering](../concepts/use-one-pizza-pods-for-agentic-engineering.md) - agent-native roles consolidate execution specialties into smaller orchestration-capable teams.
 - [Target enterprise coding agents at maintenance and incident work](../concepts/target-enterprise-coding-agents-at-maintenance-and-incident-work.md) - enterprise agents can focus on operational and maintenance work with clear evidence surfaces.
+- [Observability-to-PR agents turn incidents into reviewable fixes](../concepts/observability-to-pr-agents-turn-incidents-into-reviewable-fixes.md) - infrastructure agents can convert operational evidence into pull requests for review.
+- [Analyze operational health over time slices before invoking repair agents](../concepts/analyze-operational-health-over-time-slices-before-invoking-repair-agents.md) - repair agents need a window of evidence, not just a single noisy alert.
+- [Headless coding-agent servers make agents callable infrastructure](../concepts/headless-coding-agent-servers-make-agents-callable-infrastructure.md) - terminal coding agents can be embedded behind backend workflow APIs.
 - [Support-led coding agents exploit fresh customer context](../concepts/support-led-coding-agents-exploit-fresh-customer-context.md) - customer-facing operators can supply fresh context and validation for maintenance agents.
 - [Embed agent tools in existing work surfaces](../concepts/embed-agent-tools-in-existing-work-surfaces.md) - agent tools become more useful when embedded where users already triage, code, and review.
 - [Agentic automation can outperform first-tier productivity use cases](../concepts/agentic-automation-can-outperform-first-tier-productivity-use-cases.md) - deeper automation may produce more value than only personal time savings.
@@ -374,3 +377,5 @@ Enterprise analytics agents need especially careful autonomy staging. A GenBI co
 - [Katelyn Lesse - Evolving Claude APIs for Agents, Anthropic](../sources/20251204_aqW68Is_Kj4.md)
 - [Context Engineering: Connecting the Dots with Graphs - Stephen Chin, Neo4j](../sources/20251124_LLuKshphGOE.md)
 - [Defying Gravity - Kevin Hou, Google DeepMind](../sources/20251202_HN-F-OQe6j0.md)
+
+- [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

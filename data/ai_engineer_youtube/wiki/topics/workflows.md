@@ -93,6 +93,8 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 - [Human Control Planes Turn Agent Swarms Into Manageable Organizations](../concepts/human-control-planes-turn-agent-swarms-into-manageable-organizations.md) - workflows need visible organizational state when many agents work in parallel.
 - [Treat multi-agent systems as distributed systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md) - workflow design must account for coordination complexity and shared-state failure modes.
 - [Use durable execution for production agent loops](../concepts/use-durable-execution-for-production-agent-loops.md) - workflow durability prevents crashes or rate limits from resetting long-running agent loops.
+- [Observability-to-PR agents turn incidents into reviewable fixes](../concepts/observability-to-pr-agents-turn-incidents-into-reviewable-fixes.md) - workflows can turn detected infrastructure issues into planned coding-agent PRs.
+- [Analyze operational health over time slices before invoking repair agents](../concepts/analyze-operational-health-over-time-slices-before-invoking-repair-agents.md) - scheduled health windows keep workflow triggers from overreacting to one noisy metric.
 - [Keep workflow orchestration deterministic and put side effects in steps](../concepts/keep-workflow-orchestration-deterministic-and-put-side-effects-in-steps.md) - rerunnable workflow code needs side-effecting agent work isolated in steps.
 - [Control long-running workflow agents through run lifecycle operations](../concepts/control-long-running-workflow-agents-through-run-lifecycle-operations.md) - recurring and waiting agents need cancellation, scheduling, and version controls.
 - [Treat long waits as logical workflow state](../concepts/treat-long-waits-as-logical-workflow-state.md) - long human waits should be resumable workflow state rather than live process occupancy.
@@ -403,3 +405,5 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 - [The State of AI Code Quality: Hype vs Reality — Itamar Friedman, Qodo](../sources/20251211_rgjF5o2Qjsc.md)
 - [Proactive Agents - Kath Korevec, Google Labs](../sources/20251213_v3u8xc0zLec.md)
 - [Moving away from Agile: What's Next - Martin Harrysson & Natasha Maniar, McKinsey & Company](../sources/20251212_SZStlIhyTCY.md)
+
+- [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

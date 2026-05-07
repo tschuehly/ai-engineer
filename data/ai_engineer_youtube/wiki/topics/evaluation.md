@@ -66,6 +66,7 @@ Regulated-agent evaluation adds accountability and deployment-readiness evidence
 - [AI code quality needs full-SDLC workflows](../concepts/ai-code-quality-needs-full-sdlc-workflows.md) - quality evaluation should span code-level and process-level failures across the SDLC.
 - [AI review gates turn standards into executable feedback](../concepts/ai-review-gates-turn-standards-into-executable-feedback.md) - review-time checks can convert standards into measurable PR feedback and trend data.
 - [Evaluate support coding agents by staged failure modes](../concepts/evaluate-support-coding-agents-by-staged-failure-modes.md) - support agents need separate checks for triage, fixability, and generated solution quality.
+- [Analyze operational health over time slices before invoking repair agents](../concepts/analyze-operational-health-over-time-slices-before-invoking-repair-agents.md) - repair triggers should be evaluated against richer time-windowed evidence, not isolated alert thresholds.
 - [Compare models by task, thinking budget, cost, and latency](../concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - side-by-side model comparisons help choose enough reasoning at acceptable speed and cost.
 - [Do not use token volume as a developer productivity metric](../concepts/do-not-use-token-volume-as-a-developer-productivity-metric.md) - adoption dashboards should avoid rewarding visible token spend over task impact.
 - [Measure AI engineering impact across utilization, impact, and cost](../concepts/measure-ai-engineering-impact-across-utilization-impact-and-cost.md) - AI adoption metrics need to connect usage to quality, velocity, and spend.
@@ -307,5 +308,6 @@ Regulated-agent evaluation adds accountability and deployment-readiness evidence
 - [Efficient Reinforcement Learning - Rhythm Garg & Linden Li, Applied Compute](../sources/20251209_o15AaYl7Wu0.md)
 - [Agent Reinforcement Fine Tuning - Will Hang & Cathy Zhou, OpenAI](../sources/20251209_p1CmPZ2j6Lk.md)
 - [Building Cursor Composer - Lee Robinson, Cursor](../sources/20251202_fL1iJHtl51Q.md)
+- [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)
 - [Moving away from Agile: What's Next - Martin Harrysson & Natasha Maniar, McKinsey & Company](../sources/20251212_SZStlIhyTCY.md)
 - [Can you prove AI ROI in Software Eng? (Stanford 120k Devs Study) - Yegor Denisov-Blanch, Stanford](../sources/20251211_JvosMkuNxF8.md)

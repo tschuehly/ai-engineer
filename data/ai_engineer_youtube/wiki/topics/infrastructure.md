@@ -36,6 +36,8 @@ Durable execution infrastructure can wrap even a single agentic loop. Treat LLM 
 
 Durable agent infrastructure also needs a deterministic orchestration boundary. Workflow code should be rerunnable and side-effect-free, while steps perform LLM calls, tool calls, sandbox commands, and external API work; observability then attaches to the step/event log, and lifecycle controls manage cancellation, scheduling, and deployment-version changes for in-flight runs.
 
+Self-healing infrastructure adds an operations-to-code workflow on top of that durable boundary. Railway Autofix uses scheduled workflows to fetch application architecture, resource metrics, HTTP metrics, service logs, build logs, and deployment logs, then passes an analyzed repair plan to a headless coding agent that opens a pull request. The infrastructure lesson is that agent repair needs machine-readable observability and code-execution tools, but the merge boundary can stay human-reviewed.
+
 Developer-platform infrastructure also needs to be consumable by agents. Self-service provisioning, API/CLI/MCP access, standardized development environments, local validation, machine-readable observability, and layered contribution guardrails let agents work against internal platforms without relying on informal human escalation paths. Agent-ready infrastructure should prefer fast local checks over slow CI-only loops because agents will repeatedly run whatever feedback path is available.
 
 Enterprise AI engineering platforms should also reduce duplicate tool building. A model gateway can provide experimentation, visibility, and model-fit guidance; an MCP discovery hub can reveal existing servers before another team builds one; and a standardized deployment/runtime platform can handle authentication, SDLC, and production quality controls while leaving room for easy proofs of concept.
@@ -55,6 +57,9 @@ Web and mobile coding agents add a remote-compute version of that harness proble
 - [Use hosted model playgrounds to prototype before owning infrastructure](../concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md) - hosted tools can validate model and deployment choices before teams own the runtime.
 - [Treat multi-agent systems as distributed systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md) - agent infrastructure needs distributed-systems controls once multiple agents share state and dependencies.
 - [Use durable execution for production agent loops](../concepts/use-durable-execution-for-production-agent-loops.md) - durable execution records completed LLM and tool steps so production agent loops can resume.
+- [Observability-to-PR agents turn incidents into reviewable fixes](../concepts/observability-to-pr-agents-turn-incidents-into-reviewable-fixes.md) - operational workflows can produce reviewable code changes from production evidence.
+- [Analyze operational health over time slices before invoking repair agents](../concepts/analyze-operational-health-over-time-slices-before-invoking-repair-agents.md) - time-windowed health analysis reduces noisy alert-to-agent handoffs.
+- [Headless coding-agent servers make agents callable infrastructure](../concepts/headless-coding-agent-servers-make-agents-callable-infrastructure.md) - coding agents can be deployed as controlled backend services.
 - [Keep workflow orchestration deterministic and put side effects in steps](../concepts/keep-workflow-orchestration-deterministic-and-put-side-effects-in-steps.md) - deterministic orchestration and step boundaries prevent recovery from replaying unsafe effects.
 - [Control long-running workflow agents through run lifecycle operations](../concepts/control-long-running-workflow-agents-through-run-lifecycle-operations.md) - infrastructure should expose cancellation, scheduling, and version handling for long-lived agent runs.
 - [Model LLM calls and tools as durable activities](../concepts/model-llm-calls-and-tools-as-durable-activities.md) - activities are an infrastructure boundary for retries, timeouts, and persisted external work.
@@ -237,3 +242,5 @@ Web and mobile coding agents add a remote-compute version of that harness proble
 - [Future-Proof Coding Agents - Bill Chen & Brian Fioca, OpenAI](../sources/20251205_wVl6ZjELpBk.md)
 - [Katelyn Lesse - Evolving Claude APIs for Agents, Anthropic](../sources/20251204_aqW68Is_Kj4.md)
 - [Building Cursor Composer - Lee Robinson, Cursor](../sources/20251202_fL1iJHtl51Q.md)
+
+- [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)
