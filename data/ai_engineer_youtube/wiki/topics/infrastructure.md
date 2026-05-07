@@ -109,6 +109,9 @@ Dagger-style agent delivery infrastructure packages that feedback path as portab
 ## Key Concepts
 
 - [Prepare Reversible Repository Snapshots for Coding Agents](../concepts/prepare-reversible-repository-snapshots-for-coding-agents.md) - prepared VM snapshots let coding agents validate, reload, and roll back repository work.
+- [Agent-Native SDLC Platforms Need Context, Reliability, and Parallelism](../concepts/agent-native-sdlc-platforms-need-context-reliability-and-parallelism.md) - agent infrastructure needs central context and parallel execution when agents span the full SDLC.
+- [Incident Agents Turn Alerts Into RCA and Operational Memory](../concepts/incident-agents-turn-alerts-into-rca-and-operational-memory.md) - incident infrastructure should expose logs, metrics, runbooks, past incidents, and discussions as agent-readable context.
+- [Enterprise Coding Agents Need Ownership, Auditability, and Action Controls](../concepts/enterprise-coding-agents-need-ownership-auditability-and-action-controls.md) - enterprise platforms need audit and action-control infrastructure around coding agents.
 - [Prepare Copilot Coding Agent Environments With Setup Steps](../concepts/prepare-copilot-coding-agent-environments-with-setup-steps.md) - asynchronous coding agents need reproducible setup steps, dependencies, and tests in their execution environment.
 - [Package Agent Delivery Workflows as Portable Code](../concepts/package-agent-delivery-workflows-as-portable-code.md) - coding-agent infrastructure can share local and CI execution through one portable workflow runtime.
 - [Return Typed Workspace Outputs From Coding Agents](../concepts/return-typed-workspace-outputs-from-coding-agents.md) - infrastructure should make agent outputs concrete artifacts that validation and PR automation can consume.
@@ -408,6 +411,7 @@ Dagger-style agent delivery infrastructure packages that feedback path as portab
 - [Strategies for LLM Evals (GuideLLM, lm-eval-harness, OpenAI Evals Workshop) - Taylor Jordan Smith](../sources/20250727_89NuzmKokIk.md)
 - [Introduction to LLM serving with SGLang - Philip Kiely and Yineng Zhang, Baseten](../sources/20250726_Ahtaha9fEM0.md)
 - [Ship Agents that Ship: A Hands-On Workshop - Kyle Penfound, Jeremy Adams, Dagger](../sources/20250727_Fzb1a24hF-o.md)
+- [Ship Production Software in Minutes, Not Months - Eno Reyes, Factory](../sources/20250725_iheWKg2Tkrk.md)
 - [How to defend your sites from AI bots - David Mytton, Arcjet](../sources/20250730_Gi4V8viBGYQ.md)
 - [How to Secure Agents using OAuth - Jared Hanson (Keycard, Passport.js)](../sources/20250730_blmAkayzE8M.md)
 - [(possible dupe but better sound) What does Enterprise Ready MCP mean? - Tobin South, WorkOS](../sources/20250627_0MqYA52iWQU.md)

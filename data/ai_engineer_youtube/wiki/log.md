@@ -1727,3 +1727,11 @@
 - Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Parallel Coding Agents Support Multitasking and Variation Search](concepts/parallel-coding-agents-support-multitasking-and-variation-search.md), [Verification-First Prompts Make Parallel Agent Work Reviewable](concepts/verification-first-prompts-make-parallel-agent-work-reviewable.md), [Cloud Agents Turn Coding Work Into Asynchronous VM-Backed Queues](concepts/cloud-agents-turn-coding-work-into-asynchronous-vm-backed-queues.md)
 - Notes: Added Jules-specific guidance for cloud VM coding agents, parallel variation search, success-condition prompting, and merge/test requirements for asynchronous work.
+
+## [2026-05-07] ingest | Ship Production Software in Minutes, Not Months - Eno Reyes, Factory
+
+- Source: [Ship Production Software in Minutes, Not Months - Eno Reyes, Factory](sources/20250725_iheWKg2Tkrk.md)
+- Processed: `iheWKg2Tkrk`
+- Updated topics: [Agents](topics/agents.md), [Coding Agents](topics/coding-agents.md), [Workflows](topics/workflows.md), [Infrastructure](topics/infrastructure.md), [Security](topics/security.md)
+- Updated concepts: [Agent-Native SDLC Platforms Need Context, Reliability, and Parallelism](concepts/agent-native-sdlc-platforms-need-context-reliability-and-parallelism.md), [Agent Planning Should Mine Feedback Before Producing PRDs and Tickets](concepts/agent-planning-should-mine-feedback-before-producing-prds-and-tickets.md), [Incident Agents Turn Alerts Into RCA and Operational Memory](concepts/incident-agents-turn-alerts-into-rca-and-operational-memory.md), [Enterprise Coding Agents Need Ownership, Auditability, and Action Controls](concepts/enterprise-coding-agents-need-ownership-auditability-and-action-controls.md)
+- Notes: Added Factory's agent-native SDLC framing for lifecycle-wide delegation, feedback-backed planning, incident learning loops, and enterprise governance controls.

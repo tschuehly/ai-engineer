@@ -82,6 +82,8 @@ GitHub Copilot's agent modes make workflow selection concrete inside a mainstrea
 
 Devin 2.0 adds a product-evolution view of the same trajectory. As coding agents move from tab completion to migrations, isolated bugs, broader feature work, and backlog-scale PR delivery, each tier changes the engineering bottleneck: playbooks and memory help repeatable migrations, prepared repository snapshots support isolated work, structural codebase intelligence supports cross-file changes, and confidence plus self-testing determine when agents can work asynchronously across many queued tasks.
 
+Factory adds an enterprise SDLC orchestration layer to the same trend. Agent-native coding is not just asking for code: agents can mine customer transcripts, meeting notes, architecture context, and product assumptions before producing PRDs, then turn those PRDs into dependent Linear or Jira tickets that multiple code agents can execute. That makes process documents a future-agent knowledge base, but it also raises enterprise questions about security, audit logs, command controls, and responsibility for agent actions.
+
 ## Key Concepts
 
 - [Coding-Agent Capability Tiers Change the Bottleneck](../concepts/coding-agent-capability-tiers-change-the-bottleneck.md) - agent interfaces and infrastructure should change as tasks grow from text prediction to long-horizon work.
@@ -92,6 +94,9 @@ Devin 2.0 adds a product-evolution view of the same trajectory. As coding agents
 - [Parallel Coding Agents Support Multitasking and Variation Search](../concepts/parallel-coding-agents-support-multitasking-and-variation-search.md) - parallelism can mean many backlog items or many approaches to one complex task.
 - [Verification-First Prompts Make Parallel Agent Work Reviewable](../concepts/verification-first-prompts-make-parallel-agent-work-reviewable.md) - asynchronous coding work needs explicit observable success criteria before dispatch.
 - [Cloud Agents Turn Coding Work Into Asynchronous VM-Backed Queues](../concepts/cloud-agents-turn-coding-work-into-asynchronous-vm-backed-queues.md) - VM-backed agents let work run in the background while humans review plans, tests, and diffs.
+- [Agent-Native SDLC Platforms Need Context, Reliability, and Parallelism](../concepts/agent-native-sdlc-platforms-need-context-reliability-and-parallelism.md) - lifecycle-wide delegation needs platform context and parallel execution.
+- [Agent Planning Should Mine Feedback Before Producing PRDs and Tickets](../concepts/agent-planning-should-mine-feedback-before-producing-prds-and-tickets.md) - planning agents should research feedback and constraints before decomposing implementation work.
+- [Enterprise Coding Agents Need Ownership, Auditability, and Action Controls](../concepts/enterprise-coding-agents-need-ownership-auditability-and-action-controls.md) - enterprise coding agents need evidence and controls around high-impact actions.
 - [Choose Copilot Mode By Autonomy and Feedback Need](../concepts/choose-copilot-mode-by-autonomy-and-feedback-need.md) - Copilot ask, edit, local agent, and asynchronous coding-agent modes fit different supervision levels.
 - [Layer Copilot Context Through Issues, Instructions, and Repository Structure](../concepts/layer-copilot-context-through-issues-instructions-and-repository-structure.md) - issue text, repository instructions, scoped instruction files, and code structure shape Copilot output.
 - [Prepare Copilot Coding Agent Environments With Setup Steps](../concepts/prepare-copilot-coding-agent-environments-with-setup-steps.md) - GitHub Actions setup steps give background Copilot work the dependencies and scripts it needs.
@@ -334,6 +339,7 @@ Devin 2.0 adds a product-evolution view of the same trajectory. As coding agents
 
 - [Devin 2.0 and the Future of SWE - Scott Wu, Cognition](../sources/20250725_MI83buT_23o.md)
 - [Your Coding Agent Just Got Cloned And Your Brain Isn't Ready - Rustin Banks, Google Jules](../sources/20250725_X4BwOu0GWb8.md)
+- [Ship Production Software in Minutes, Not Months - Eno Reyes, Factory](../sources/20250725_iheWKg2Tkrk.md)
 - [Piloting agents in GitHub Copilot - Christopher Harrison, Microsoft](../sources/20250726_DdaAABdAqZY.md)
 - [Ship Agents that Ship: A Hands-On Workshop - Kyle Penfound, Jeremy Adams, Dagger](../sources/20250727_Fzb1a24hF-o.md)
 - [Vibes won't cut it - Chris Kelly, Augment Code](../sources/20250803_Dc3qOA9WOnE.md)

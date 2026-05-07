@@ -2,6 +2,8 @@
 
 ## Agents
 
+- [Agent-Native SDLC Platforms Need Context, Reliability, and Parallelism](../concepts/agent-native-sdlc-platforms-need-context-reliability-and-parallelism.md)
+- [Incident Agents Turn Alerts Into RCA and Operational Memory](../concepts/incident-agents-turn-alerts-into-rca-and-operational-memory.md)
 - [Coding-Agent Capability Tiers Change the Bottleneck](../concepts/coding-agent-capability-tiers-change-the-bottleneck.md)
 - [Backlog-Scale Coding Agents Need Confidence and Self-Testing](../concepts/backlog-scale-coding-agents-need-confidence-and-self-testing.md)
 - [Choose Copilot Mode By Autonomy and Feedback Need](../concepts/choose-copilot-mode-by-autonomy-and-feedback-need.md)
@@ -339,6 +341,9 @@
 
 ## Coding Agents
 
+- [Agent-Native SDLC Platforms Need Context, Reliability, and Parallelism](../concepts/agent-native-sdlc-platforms-need-context-reliability-and-parallelism.md)
+- [Agent Planning Should Mine Feedback Before Producing PRDs and Tickets](../concepts/agent-planning-should-mine-feedback-before-producing-prds-and-tickets.md)
+- [Enterprise Coding Agents Need Ownership, Auditability, and Action Controls](../concepts/enterprise-coding-agents-need-ownership-auditability-and-action-controls.md)
 - [Coding-Agent Capability Tiers Change the Bottleneck](../concepts/coding-agent-capability-tiers-change-the-bottleneck.md)
 - [Use Playbooks for Repetitive Codebase Migrations](../concepts/use-playbooks-for-repetitive-codebase-migrations.md)
 - [Prepare Reversible Repository Snapshots for Coding Agents](../concepts/prepare-reversible-repository-snapshots-for-coding-agents.md)
@@ -598,6 +603,9 @@
 
 ## Infrastructure
 
+- [Agent-Native SDLC Platforms Need Context, Reliability, and Parallelism](../concepts/agent-native-sdlc-platforms-need-context-reliability-and-parallelism.md)
+- [Incident Agents Turn Alerts Into RCA and Operational Memory](../concepts/incident-agents-turn-alerts-into-rca-and-operational-memory.md)
+- [Enterprise Coding Agents Need Ownership, Auditability, and Action Controls](../concepts/enterprise-coding-agents-need-ownership-auditability-and-action-controls.md)
 - [Prepare Reversible Repository Snapshots for Coding Agents](../concepts/prepare-reversible-repository-snapshots-for-coding-agents.md)
 - [Prepare Copilot Coding Agent Environments With Setup Steps](../concepts/prepare-copilot-coding-agent-environments-with-setup-steps.md)
 - [Package Agent Delivery Workflows as Portable Code](../concepts/package-agent-delivery-workflows-as-portable-code.md)
@@ -1235,6 +1243,7 @@
 
 ## Security
 
+- [Enterprise Coding Agents Need Ownership, Auditability, and Action Controls](../concepts/enterprise-coding-agents-need-ownership-auditability-and-action-controls.md)
 - [Vet MCP Servers As Action-Capable Extensions](../concepts/vet-mcp-servers-as-action-capable-extensions.md)
 - [Model MCP Servers as OAuth Resource Servers](../concepts/model-mcp-servers-as-oauth-resource-servers.md)
 - [Enterprise MCP Requires SaaS Security Controls](../concepts/enterprise-mcp-requires-saas-security-controls.md)
@@ -1448,6 +1457,9 @@
 
 ## Workflows
 
+- [Agent Planning Should Mine Feedback Before Producing PRDs and Tickets](../concepts/agent-planning-should-mine-feedback-before-producing-prds-and-tickets.md)
+- [Incident Agents Turn Alerts Into RCA and Operational Memory](../concepts/incident-agents-turn-alerts-into-rca-and-operational-memory.md)
+- [Agent-Native SDLC Platforms Need Context, Reliability, and Parallelism](../concepts/agent-native-sdlc-platforms-need-context-reliability-and-parallelism.md)
 - [Use Playbooks for Repetitive Codebase Migrations](../concepts/use-playbooks-for-repetitive-codebase-migrations.md)
 - [Backlog-Scale Coding Agents Need Confidence and Self-Testing](../concepts/backlog-scale-coding-agents-need-confidence-and-self-testing.md)
 - [Choose Copilot Mode By Autonomy and Feedback Need](../concepts/choose-copilot-mode-by-autonomy-and-feedback-need.md)

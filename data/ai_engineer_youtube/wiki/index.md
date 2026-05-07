@@ -4,6 +4,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Agent-Native SDLC Platforms Need Context, Reliability, and Parallelism](concepts/agent-native-sdlc-platforms-need-context-reliability-and-parallelism.md) - lifecycle-wide agent delegation needs central context, reliable execution, and parallel infrastructure.
+- [Agent Planning Should Mine Feedback Before Producing PRDs and Tickets](concepts/agent-planning-should-mine-feedback-before-producing-prds-and-tickets.md) - planning agents should research user feedback and technical constraints before decomposing work.
+- [Incident Agents Turn Alerts Into RCA and Operational Memory](concepts/incident-agents-turn-alerts-into-rca-and-operational-memory.md) - incident agents can turn operational evidence into RCA, mitigation, runbooks, and team memory.
 - [Parallel Coding Agents Support Multitasking and Variation Search](concepts/parallel-coding-agents-support-multitasking-and-variation-search.md) - cloned coding agents can run independent backlog work or competing approaches to the same complex task.
 - [Verification-First Prompts Make Parallel Agent Work Reviewable](concepts/verification-first-prompts-make-parallel-agent-work-reviewable.md) - asynchronous agent tasks need observable success conditions before dispatch.
 - [Cloud Agents Turn Coding Work Into Asynchronous VM-Backed Queues](concepts/cloud-agents-turn-coding-work-into-asynchronous-vm-backed-queues.md) - remote VM-backed agents make coding work dispatchable from GitHub, phones, and review queues.

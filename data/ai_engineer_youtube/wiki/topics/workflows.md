@@ -129,6 +129,9 @@ Devin-style coding-agent workflows evolve with task horizon. Repeatable migratio
 ## Key Concepts
 
 - [Use Playbooks for Repetitive Codebase Migrations](../concepts/use-playbooks-for-repetitive-codebase-migrations.md) - repeatable migration workflows can be encoded as clear procedural steps for agents.
+- [Agent Planning Should Mine Feedback Before Producing PRDs and Tickets](../concepts/agent-planning-should-mine-feedback-before-producing-prds-and-tickets.md) - product planning workflows can use agents to mine feedback, constraints, and assumptions before ticket decomposition.
+- [Incident Agents Turn Alerts Into RCA and Operational Memory](../concepts/incident-agents-turn-alerts-into-rca-and-operational-memory.md) - incident workflows can turn scattered operational evidence into RCA, mitigation, runbooks, and memory.
+- [Agent-Native SDLC Platforms Need Context, Reliability, and Parallelism](../concepts/agent-native-sdlc-platforms-need-context-reliability-and-parallelism.md) - SDLC workflows need platform support when agents operate across planning, coding, testing, and monitoring.
 - [Backlog-Scale Coding Agents Need Confidence and Self-Testing](../concepts/backlog-scale-coding-agents-need-confidence-and-self-testing.md) - asynchronous issue queues need confidence, escalation, and local verification.
 - [Choose Copilot Mode By Autonomy and Feedback Need](../concepts/choose-copilot-mode-by-autonomy-and-feedback-need.md) - Copilot work can stay conversational, local-agentic, or asynchronous depending on task feedback needs.
 - [Layer Copilot Context Through Issues, Instructions, and Repository Structure](../concepts/layer-copilot-context-through-issues-instructions-and-repository-structure.md) - background coding-agent work needs workflow context in issues and instruction files.
@@ -480,6 +483,7 @@ Devin-style coding-agent workflows evolve with task horizon. Repeatable migratio
 
 - [Devin 2.0 and the Future of SWE - Scott Wu, Cognition](../sources/20250725_MI83buT_23o.md)
 - [Your Coding Agent Just Got Cloned And Your Brain Isn't Ready - Rustin Banks, Google Jules](../sources/20250725_X4BwOu0GWb8.md)
+- [Ship Production Software in Minutes, Not Months - Eno Reyes, Factory](../sources/20250725_iheWKg2Tkrk.md)
 - [Piloting agents in GitHub Copilot - Christopher Harrison, Microsoft](../sources/20250726_DdaAABdAqZY.md)
 - [Building the platform for agent coordination - Tom Moor, Linear](../sources/20250728_UG9IAdmi2Dg.md)
 - [Make your LLM app a Domain Expert: How to Build an Expert System - Christopher Lovejoy, Anterior](../sources/20250728_MRM7oA3JsFs.md)
