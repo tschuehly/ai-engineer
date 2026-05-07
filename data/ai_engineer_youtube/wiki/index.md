@@ -7,6 +7,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Workflow Search Retrieves Enterprise Practice at Runtime](concepts/workflow-search-retrieves-enterprise-practice-at-runtime.md) - prior task-workflow examples can steer enterprise agents with current company practice.
 - [Golden Workflows Evaluate Agent Trajectories](concepts/golden-workflows-evaluate-agent-trajectories.md) - known processes can evaluate agent steps, not just final answers.
 - [Dynamic Workflow Prompting Fits Changing Enterprise Behavior](concepts/dynamic-workflow-prompting-fits-changing-enterprise-behavior.md) - runtime workflow retrieval is more adaptable than retraining for changing enterprise procedures.
+- [AI Architects Combine Technical, Brand, and Business Judgment](concepts/ai-architects-combine-technical-brand-and-business-judgment.md) - customer-facing agents need role ownership across capability, persona, and business outcome.
+- [Start Customer-Facing Agents With Narrow Valuable Outcomes](concepts/start-customer-facing-agents-with-narrow-valuable-outcomes.md) - production agent rollout should begin with one concrete customer task.
+- [Simulated Conversations Test Customer-Facing Agents Before Launch](concepts/simulated-conversations-test-customer-facing-agents-before-launch.md) - simulated users and live handoff review make support-agent behavior testable.
 
 - [Enterprise Open-Model Adoption Follows Task Pressure](concepts/enterprise-open-model-adoption-follows-task-pressure.md) - open models become attractive when enterprise workloads expose task-specific quality, latency, cost, or differentiation pressure.
 - [Self-Hosted Inference Needs a Platform Beyond Runtime and GPUs](concepts/self-hosted-inference-needs-a-platform-beyond-runtime-and-gpus.md) - model weights, serving runtimes, and GPUs still need production platform work for mission-critical inference.

@@ -134,6 +134,8 @@ High-quality coding-agent workflows can prevent defects before generation by for
 
 Enterprise-aware agent workflows can be compiled from agent traces themselves. When an agent successfully completes a novel task, the trace can become a candidate workflow; when a future task resembles it, workflow search can retrieve that process and steer the agent toward known company practice. This creates a feedback loop where agents discover workflows, humans edit or approve them, and retrieval keeps the current process available without turning every workflow into fixed code or retrained weights.
 
+Customer-facing agent workflows should be narrow before they are broad. Sierra's rollout pattern starts from one valuable customer journey, models the path in code, preserves flexibility for topic shifts, makes compliance language deterministic when needed, and then uses pre-launch simulations plus post-launch conversation review to expand capability. The organizational workflow also changes: CX and support teams may become agent coaches who review conversations and update behavior rather than only handling escalations.
+
 ## Key Concepts
 
 - [Specs and Style Guides Steer Coding Agents Toward Maintainable Code](../concepts/specs-and-style-guides-steer-coding-agents-toward-maintainable-code.md) - plan-first work, current docs, and style guidance prevent predictable agent mistakes.
@@ -142,6 +144,9 @@ Enterprise-aware agent workflows can be compiled from agent traces themselves. W
 - [Incident Agents Turn Alerts Into RCA and Operational Memory](../concepts/incident-agents-turn-alerts-into-rca-and-operational-memory.md) - incident workflows can turn scattered operational evidence into RCA, mitigation, runbooks, and memory.
 - [Agent-Native SDLC Platforms Need Context, Reliability, and Parallelism](../concepts/agent-native-sdlc-platforms-need-context-reliability-and-parallelism.md) - SDLC workflows need platform support when agents operate across planning, coding, testing, and monitoring.
 - [Workflow Search Retrieves Enterprise Practice at Runtime](../concepts/workflow-search-retrieves-enterprise-practice-at-runtime.md) - enterprise workflows can be retrieved and composed as task guidance.
+- [AI Architects Combine Technical, Brand, and Business Judgment](../concepts/ai-architects-combine-technical-brand-and-business-judgment.md) - role ownership ties customer agent workflows to brand, technology, and business outcomes.
+- [Start Customer-Facing Agents With Narrow Valuable Outcomes](../concepts/start-customer-facing-agents-with-narrow-valuable-outcomes.md) - start with one valuable journey and let the workflow grow from evidence.
+- [Simulated Conversations Test Customer-Facing Agents Before Launch](../concepts/simulated-conversations-test-customer-facing-agents-before-launch.md) - simulation and live handoff review form a closed-loop improvement workflow.
 - [Golden Workflows Evaluate Agent Trajectories](../concepts/golden-workflows-evaluate-agent-trajectories.md) - known workflows provide trace-level process checks for agent runs.
 - [Dynamic Workflow Prompting Fits Changing Enterprise Behavior](../concepts/dynamic-workflow-prompting-fits-changing-enterprise-behavior.md) - dynamic prompt examples fit workflows that vary by team or change over time.
 - [Backlog-Scale Coding Agents Need Confidence and Self-Testing](../concepts/backlog-scale-coding-agents-need-confidence-and-self-testing.md) - asynchronous issue queues need confidence, escalation, and local verification.
@@ -496,6 +501,7 @@ Enterprise-aware agent workflows can be compiled from agent traces themselves. W
 ## Sources
 
 - [How to build Enterprise Aware Agents - Chau Tran, Glean](../sources/20250724_hxFpUcvWPcU.md)
+- [Rise of the AI Architect - Clay Bavor, Cofounder, Sierra w/ Alessio Fanelli](../sources/20250724_C3geUfBR2js.md)
 - [Beyond the Prototype: Using AI to Write High-Quality Code - Josh Albrecht, Imbue](../sources/20250725_x_1EumTaXeE.md)
 - [Devin 2.0 and the Future of SWE - Scott Wu, Cognition](../sources/20250725_MI83buT_23o.md)
 - [Your Coding Agent Just Got Cloned And Your Brain Isn't Ready - Rustin Banks, Google Jules](../sources/20250725_X4BwOu0GWb8.md)

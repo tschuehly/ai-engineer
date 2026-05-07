@@ -8,6 +8,8 @@ Agent workflows depend on both model capability and the context substrate around
 
 Workflow search adds a process-specific enterprise context layer for agents. Instead of choosing between fixed workflows and open-ended agents, teams can retrieve similar task-to-workflow examples at runtime so the agent sees current company protocols, internal metrics, and team-specific practices before planning. Successful agent traces can also become candidate workflows, giving the system a path to discover new practice while keeping known work predictable and reviewable.
 
+Customer-facing agents create an ownership role around the agent as a branded company surface. Sierra's "AI architect" framing says the owner needs technical capability sense, brand and persona taste, and business-outcome responsibility; the work is not only choosing an LLM or framework. The first production surface should start from a narrow valuable customer outcome, then grow through review and coaching. At platform level, the hidden burden includes testing, model migration, voice edge cases, no-code coaching tools, and live handoff analysis.
+
 Factory's agent-native SDLC framing adds a platform-level version of this shift. The argument is that agents become transformative when they operate across planning, coding, testing, monitoring, and incident response with centralized engineering context, reliable execution, and parallel infrastructure, not when they are merely sprinkled onto human-first IDEs. The strongest agents should ground themselves in codebase state, recent changes, machine capabilities, and organizational memory, then ask clarifying questions before acting.
 
 Typed agent frameworks add another reliability lever to the basic loop. Pydantic AI's examples show structured outputs as validated final-result tools, explicit loop termination through final text or structured output, validation-error retries, and typed dependency injection for tools. This does not remove the need for prompts or evals, but it gives humans, coding agents, static type checkers, and runtime validators a shared contract when the application is refactored.
@@ -177,6 +179,9 @@ Devin 2.0 frames the same progression as changing human-intervention intervals. 
 - [Workflow Search Retrieves Enterprise Practice at Runtime](../concepts/workflow-search-retrieves-enterprise-practice-at-runtime.md) - task-to-workflow retrieval gives agents current company process examples at runtime.
 - [Golden Workflows Evaluate Agent Trajectories](../concepts/golden-workflows-evaluate-agent-trajectories.md) - known workflows can judge whether an agent followed the right intermediate steps.
 - [Dynamic Workflow Prompting Fits Changing Enterprise Behavior](../concepts/dynamic-workflow-prompting-fits-changing-enterprise-behavior.md) - search-time workflow examples suit changing and personalized enterprise practices.
+- [AI Architects Combine Technical, Brand, and Business Judgment](../concepts/ai-architects-combine-technical-brand-and-business-judgment.md) - customer-facing agent ownership spans capability, persona, experience, and business outcomes.
+- [Start Customer-Facing Agents With Narrow Valuable Outcomes](../concepts/start-customer-facing-agents-with-narrow-valuable-outcomes.md) - production agent rollout should begin with one concrete customer task.
+- [Agent Icebergs Hide Platform and Lifecycle Burden](../concepts/agent-icebergs-hide-platform-and-lifecycle-burden.md) - production agents need lifecycle infrastructure beyond model and framework selection.
 - [Incident Agents Turn Alerts Into RCA and Operational Memory](../concepts/incident-agents-turn-alerts-into-rca-and-operational-memory.md) - operational agents can gather incident context and turn it into RCA, runbooks, and team memory.
 - [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md) - tools, VMs, browsers, OS access, and files are the digital body through which agents act.
 - [Choose AI coworker form factors by interaction mode](../concepts/choose-ai-coworker-form-factors-by-interaction-mode.md) - AI agents can appear as invisible, ambient, inline, or conversational coworkers depending on the workflow.
@@ -453,6 +458,7 @@ Devin 2.0 frames the same progression as changing human-intervention intervals. 
 ## Sources
 
 - [How to build Enterprise Aware Agents - Chau Tran, Glean](../sources/20250724_hxFpUcvWPcU.md)
+- [Rise of the AI Architect - Clay Bavor, Cofounder, Sierra w/ Alessio Fanelli](../sources/20250724_C3geUfBR2js.md)
 - [Devin 2.0 and the Future of SWE - Scott Wu, Cognition](../sources/20250725_MI83buT_23o.md)
 - [Your Coding Agent Just Got Cloned And Your Brain Isn't Ready - Rustin Banks, Google Jules](../sources/20250725_X4BwOu0GWb8.md)
 - [Ship Production Software in Minutes, Not Months - Eno Reyes, Factory](../sources/20250725_iheWKg2Tkrk.md)

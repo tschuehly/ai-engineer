@@ -1775,3 +1775,11 @@
 - Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Retrieval](topics/retrieval.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Workflow Search Retrieves Enterprise Practice at Runtime](concepts/workflow-search-retrieves-enterprise-practice-at-runtime.md), [Golden Workflows Evaluate Agent Trajectories](concepts/golden-workflows-evaluate-agent-trajectories.md), [Dynamic Workflow Prompting Fits Changing Enterprise Behavior](concepts/dynamic-workflow-prompting-fits-changing-enterprise-behavior.md)
 - Notes: Added Glean's workflow-search pattern for retrieving, evaluating, and reusing enterprise task workflows as agent context.
+
+## [2026-05-07] ingest | Rise of the AI Architect - Clay Bavor, Cofounder, Sierra w/ Alessio Fanelli
+
+- Source: [Rise of the AI Architect - Clay Bavor, Cofounder, Sierra w/ Alessio Fanelli](sources/20250724_C3geUfBR2js.md)
+- Processed: `C3geUfBR2js`
+- Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [AI Architects Combine Technical, Brand, and Business Judgment](concepts/ai-architects-combine-technical-brand-and-business-judgment.md), [Start Customer-Facing Agents With Narrow Valuable Outcomes](concepts/start-customer-facing-agents-with-narrow-valuable-outcomes.md), [Agent Icebergs Hide Platform and Lifecycle Burden](concepts/agent-icebergs-hide-platform-and-lifecycle-burden.md), [Simulated Conversations Test Customer-Facing Agents Before Launch](concepts/simulated-conversations-test-customer-facing-agents-before-launch.md)
+- Notes: Added Sierra's customer-facing agent ownership model, incremental rollout guidance, hidden platform burden, and simulation-plus-coaching evaluation loop.

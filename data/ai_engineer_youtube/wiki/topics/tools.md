@@ -10,6 +10,8 @@ Domain skills can act as node-level controls by supplying expert handling for sp
 
 Typed tool surfaces can make the runtime contract stricter. Pydantic AI's tool examples register functions against an agent, pass a typed run context into those functions, and validate final structured output before downstream code receives it. Validation errors can also become tool responses that the model sees during a retry, turning schema failures into a narrow repair loop rather than untyped downstream exceptions.
 
+Customer-facing agent platforms need both code-facing and nontechnical behavior tools. Sierra's "agent iceberg" warns that the obvious tool choices, such as model, framework, embeddings, vector store, and integrations, miss the platform surfaces needed for regression testing, model upgrades, voice edge cases, and CX-led coaching. A production platform may therefore pair in-code journey modeling with no-code tools for agent architects to build, refine, edit, coach, and update the agent.
+
 Agent-facing products should treat APIs and CLIs as primary interfaces once agents become meaningful users. Dashboards still matter for humans, but agent experience asks whether a feature can be automated, called from a CLI, or used through a stable machine surface. Open model families add a model-tooling version of the same rule: release success depends on meeting developers in their existing runtimes, fine-tuning libraries, quantization paths, and product integrations. Environment tooling applies the same lesson to research workflows: shared Python environment projects, registries, rubrics, async tool definitions, and managed execution make evals and RL artifacts reusable instead of one-off lab infrastructure. For Apple local apps, MLX Swift LM and Hugging Face model IDs form a compact tooling path, while curated app model catalogs prevent users from selecting weights that are available but poor on the target phone.
 
 Enterprise AI product surfaces may need to decouple custom clients from the underlying tool and data layer. i.AI's Redbox remained useful as a secure chat client, but Microsoft Copilot Chat's enterprise availability and MCP's tool/data standardization changed the distribution strategy: government-specific tools and data became more valuable when reachable from multiple enterprise clients rather than only one bespoke UI.
@@ -73,6 +75,7 @@ GitHub Copilot's MCP integration reinforces that external tool access is not pas
 - [Vet MCP Servers As Action-Capable Extensions](../concepts/vet-mcp-servers-as-action-capable-extensions.md) - MCP servers should be vetted as tools that can act through the agent, not just as data feeds.
 - [Type-Safe Agent Schemas Make Refactoring and Validation Easier](../concepts/type-safe-agent-schemas-make-refactoring-and-validation-easier.md) - typed tool dependencies and outputs keep framework contracts refactorable.
 - [Trace Agent Tool Arguments to Debug Real Failures](../concepts/trace-agent-tool-arguments-to-debug-real-failures.md) - tool traces should expose selected arguments, responses, latency, and cost.
+- [Agent Icebergs Hide Platform and Lifecycle Burden](../concepts/agent-icebergs-hide-platform-and-lifecycle-burden.md) - customer-facing agent tools include hidden lifecycle, testing, migration, voice, and coaching surfaces.
 - [Product Work Graphs Coordinate Agents and Humans](../concepts/product-work-graphs-coordinate-agents-and-humans.md) - product tools can expose issues, feedback, projects, and relationships as an agent coordination surface.
 - [Choose A2A and MCP by Ownership Boundary](../concepts/choose-a2a-and-mcp-by-ownership-boundary.md) - tool protocols should be introduced where ownership, deployment, or third-party integration boundaries justify them.
 - [Harden Third-Party MCP Tools Against Silent Failure and Endpoint Risk](../concepts/harden-third-party-mcp-tools-against-silent-failure-and-endpoint-risk.md) - remote MCP tools require output validation and endpoint-security controls outside the protocol.
@@ -292,6 +295,7 @@ GitHub Copilot's MCP integration reinforces that external tool access is not pas
 
 ## Sources
 
+- [Rise of the AI Architect - Clay Bavor, Cofounder, Sierra w/ Alessio Fanelli](../sources/20250724_C3geUfBR2js.md)
 - [Piloting agents in GitHub Copilot - Christopher Harrison, Microsoft](../sources/20250726_DdaAABdAqZY.md)
 - [Building the platform for agent coordination - Tom Moor, Linear](../sources/20250728_UG9IAdmi2Dg.md)
 - [Agents vs Workflows: Why Not Both? - Sam Bhagwat, Mastra.ai](../sources/20250801_8SUJEqQNClw.md)

@@ -8,6 +8,9 @@
 - [Workflow Search Retrieves Enterprise Practice at Runtime](../concepts/workflow-search-retrieves-enterprise-practice-at-runtime.md)
 - [Golden Workflows Evaluate Agent Trajectories](../concepts/golden-workflows-evaluate-agent-trajectories.md)
 - [Dynamic Workflow Prompting Fits Changing Enterprise Behavior](../concepts/dynamic-workflow-prompting-fits-changing-enterprise-behavior.md)
+- [AI Architects Combine Technical, Brand, and Business Judgment](../concepts/ai-architects-combine-technical-brand-and-business-judgment.md)
+- [Start Customer-Facing Agents With Narrow Valuable Outcomes](../concepts/start-customer-facing-agents-with-narrow-valuable-outcomes.md)
+- [Agent Icebergs Hide Platform and Lifecycle Burden](../concepts/agent-icebergs-hide-platform-and-lifecycle-burden.md)
 - [Incident Agents Turn Alerts Into RCA and Operational Memory](../concepts/incident-agents-turn-alerts-into-rca-and-operational-memory.md)
 - [Coding-Agent Capability Tiers Change the Bottleneck](../concepts/coding-agent-capability-tiers-change-the-bottleneck.md)
 - [Backlog-Scale Coding Agents Need Confidence and Self-Testing](../concepts/backlog-scale-coding-agents-need-confidence-and-self-testing.md)
@@ -880,6 +883,7 @@
 
 ## Evaluation
 
+- [Simulated Conversations Test Customer-Facing Agents Before Launch](../concepts/simulated-conversations-test-customer-facing-agents-before-launch.md)
 - [AI Diff Review Should Find Problems Before Merge](../concepts/ai-diff-review-should-find-problems-before-merge.md)
 - [Generated Tests Need Meaningful Plans, Coverage, and Pruning](../concepts/generated-tests-need-meaningful-plans-coverage-and-pruning.md)
 - [Custom LLM Checks Turn Team Standards Into Continuous Agent Feedback](../concepts/custom-llm-checks-turn-team-standards-into-continuous-agent-feedback.md)
@@ -1286,6 +1290,7 @@
 
 ## Tools
 
+- [Agent Icebergs Hide Platform and Lifecycle Burden](../concepts/agent-icebergs-hide-platform-and-lifecycle-burden.md)
 - [Vet MCP Servers As Action-Capable Extensions](../concepts/vet-mcp-servers-as-action-capable-extensions.md)
 - [Choose A2A and MCP by Ownership Boundary](../concepts/choose-a2a-and-mcp-by-ownership-boundary.md)
 - [Turn Webhooks Into Host-Agent Task Delegation](../concepts/turn-webhooks-into-host-agent-task-delegation.md)
@@ -1477,6 +1482,9 @@
 
 ## Workflows
 
+- [AI Architects Combine Technical, Brand, and Business Judgment](../concepts/ai-architects-combine-technical-brand-and-business-judgment.md)
+- [Start Customer-Facing Agents With Narrow Valuable Outcomes](../concepts/start-customer-facing-agents-with-narrow-valuable-outcomes.md)
+- [Simulated Conversations Test Customer-Facing Agents Before Launch](../concepts/simulated-conversations-test-customer-facing-agents-before-launch.md)
 - [Specs and Style Guides Steer Coding Agents Toward Maintainable Code](../concepts/specs-and-style-guides-steer-coding-agents-toward-maintainable-code.md)
 - [Agent Planning Should Mine Feedback Before Producing PRDs and Tickets](../concepts/agent-planning-should-mine-feedback-before-producing-prds-and-tickets.md)
 - [Incident Agents Turn Alerts Into RCA and Operational Memory](../concepts/incident-agents-turn-alerts-into-rca-and-operational-memory.md)
