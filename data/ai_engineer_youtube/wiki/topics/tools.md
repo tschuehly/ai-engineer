@@ -50,9 +50,14 @@ Shell wrappers can also act as local harness tools. A wrapper around Codex CLI c
 
 Model-client wrappers are another tool-surface pattern. When a compiled local model can be invoked through the same `embeddings.create`-style call shape as a hosted model, application and agent code can stay stable while runtime-specific resolution, FFI loading, and output shaping move behind the client boundary.
 
+AI coworker products add tool surfaces that are neither plain chat nor backend APIs. A tool can be invisible background work, ambient affordances in a workspace, inline transformation controls, or a conversational builder. When an agent acts inline, the tool UX should show what it is doing, ask for alignment at meaningful checkpoints, keep snapshots and rollback paths visible, and hand control back to the user when the model cannot safely complete the work.
+
 ## Key Concepts
 
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - compact tool loops can be the core architecture for coding agents.
+- [Choose AI coworker form factors by interaction mode](../concepts/choose-ai-coworker-form-factors-by-interaction-mode.md) - agent tool surfaces can be invisible, ambient, inline, or conversational rather than only chat.
+- [Prototype AI UX by feeling the model material](../concepts/prototype-ai-ux-by-feeling-the-model-material.md) - runnable tools reveal whether a model fits the proposed interaction surface.
+- [Design agent presence with visual alignment and handoff](../concepts/design-agent-presence-with-visual-alignment-and-handoff.md) - inline tools need visible progress, alignment, rollback, and handoff.
 - [Use coding agents as programmable subagents inside products](../concepts/use-coding-agents-as-programmable-subagents-inside-products.md) - coding agents can be called through SDKs, CI/CD, and MCP as product-internal tools.
 - [Headless coding-agent servers make agents callable infrastructure](../concepts/headless-coding-agent-servers-make-agents-callable-infrastructure.md) - terminal coding agents become workflow tools when exposed through a server API and packaged tool environment.
 - [Use stable agent harnesses as model-evolution boundaries](../concepts/use-stable-agent-harnesses-as-model-evolution-boundaries.md) - maintained harnesses keep model and tool churn behind a stable integration surface.
@@ -231,6 +236,7 @@ Model-client wrappers are another tool-surface pattern. When a compiled local mo
 
 ## Sources
 
+- [Form factors for your new AI coworkers - Craig Wattrus, Flatfile](../sources/20250822_CiMVKnX-CNI.md)
 - [Your Support Team Should Ship Code - Lisa Orr, Zapier](../sources/20251216_RmJ4rTLV_x4.md)
 - [Compilers in the Age of LLMs - Yusuf Olokoba, Muna](../sources/20251124_q2nHsJVy4FE.md)
 - [Hacking Subagents Into Codex CLI - Brian John, Betterup](../sources/20251124_5eJqXtevlXg.md)

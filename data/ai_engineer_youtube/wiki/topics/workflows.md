@@ -46,6 +46,8 @@ Anti-slop workflows should separate quality from provenance. Human and AI work c
 
 Agent-native organizational workflows start with supervision, dispatch, and review of agent work as a normal daily rhythm. This only works when the organization also adapts hiring and onboarding: employees need enough AI fluency to turn domain expertise into agent instructions, review artifacts, and role-specific agent setup. Inside an AI-native engineering organization, the daily workflow can compress into plan, delegate, assess, and codify. Cheap agentic code also changes product persuasion: instead of writing a memo or deck for every weird idea, a team can build a prototype quickly enough that stakeholders can experience it and decide from the artifact.
 
+AI coworker workflow design should choose interaction mode deliberately. Background personalization can stay invisible, workspace scanning can be ambient, artifact transformation can be inline, and app-building or ambiguous direction can remain conversational. The workflow should also leave room for bounded play: realistic prototypes can reveal when an agent should combine inputs, create follow-up artifacts, or escalate missing information back to a human instead of pretending to complete the task.
+
 Proactive coding workflows try to remove the prompt/wait/repeat loop without removing human alignment. The useful shape is not a wall of parallel terminals; it is background observation, repository indexing, candidate task discovery, critic review, Playwright-style verification artifacts, editable memory, and just-in-time context that lets the agent handle friction while the human keeps creative and product judgment. Proactivity should be staged: start with bounded maintenance and best-practice work, then move toward system-level proposals only when the agent can connect code, design, telemetry, and outcome signals.
 
 Enterprise AI research workflows can be made fundable by turning each uncertain phase into a small productizable bet. For GenBI, the useful pattern is to work with production-like but controlled data, involve expert users early, ship six-week deliverables such as metadata enrichment or report discovery, and preserve stop/go decision points so leadership can keep funding tied to measurable value instead of sunk cost.
@@ -87,6 +89,9 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 ## Key Concepts
 
 - [High-assurance agentic coding needs process, not just generation](../concepts/high-assurance-agentic-coding-needs-process-not-just-generation.md) - workflow design should wrap generated code in requirements, verification, and feedback stages.
+- [Choose AI coworker form factors by interaction mode](../concepts/choose-ai-coworker-form-factors-by-interaction-mode.md) - workflow shape determines whether AI should be invisible, ambient, inline, or conversational.
+- [Design agent presence with visual alignment and handoff](../concepts/design-agent-presence-with-visual-alignment-and-handoff.md) - inline agent workflows need visual checks, snapshots, rollback, and safe handoff.
+- [Court agent emergence with bounded play](../concepts/court-agent-emergence-with-bounded-play.md) - exploratory workflow prototypes can reveal useful behaviors beyond automating known steps.
 - [Separate generation and verification prompts or models](../concepts/separate-generation-and-verification-prompts-or-models.md) - implementation and validation can run through separate agent contexts.
 - [Run coding agents through a simple master loop](../concepts/run-coding-agents-through-a-simple-master-loop.md) - simple loops can replace over-specified DAGs when exploration is the work.
 - [Scientific agents should execute against domain infrastructure](../concepts/scientific-agents-should-execute-against-domain-infrastructure.md) - scientific workflows should connect research synthesis to executable validation.
@@ -358,6 +363,7 @@ AI code quality workflows should cover the whole SDLC rather than only generatio
 
 ## Sources
 
+- [Form factors for your new AI coworkers - Craig Wattrus, Flatfile](../sources/20250822_CiMVKnX-CNI.md)
 - [How BlackRock Builds Custom Knowledge Apps at Scale — Vaibhav Page & Infant Vasanth, BlackRock](../sources/20250823_08mH36_NVos.md)
 - [Building an Agentic Platform - Ben Kus, CTO Box](../sources/20250824_12v5S1n1eOY.md)
 

@@ -4,6 +4,10 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Choose AI coworker form factors by interaction mode](concepts/choose-ai-coworker-form-factors-by-interaction-mode.md) - AI product UX can be invisible, ambient, inline, or conversational depending on the work.
+- [Prototype AI UX by feeling the model material](concepts/prototype-ai-ux-by-feeling-the-model-material.md) - runnable model probes expose behavior and fit that static mockups cannot.
+- [Design agent presence with visual alignment and handoff](concepts/design-agent-presence-with-visual-alignment-and-handoff.md) - inline agents need visible checks, snapshots, rollback, and graceful control return.
+- [Court agent emergence with bounded play](concepts/court-agent-emergence-with-bounded-play.md) - exploratory prototypes can reveal useful agent behaviors beyond automating tedious steps.
 - [Map expert decision taxonomies into knowledge graphs](concepts/map-expert-decision-taxonomies-into-knowledge-graphs.md) - advisory KAG systems can encode the decision structure that turns knowledge into recommendations.
 - [Use graph-backed KAG for quantitative advisory questions](concepts/use-graph-backed-kag-for-quantitative-advisory-questions.md) - graph retrieval can select exact values and support deterministic calculations for evidence-backed advice.
 - [Prune LLM-extracted graphs with domain experts](concepts/prune-llm-extracted-graphs-with-domain-experts.md) - LLM graph extraction should be reviewed against expert taxonomy before it drives retrieval.

@@ -2,9 +2,11 @@
 
 ## Overview
 
-AI engineering does not remove product strategy work; it makes weak product judgment easier to turn into shipped artifacts. Product success still depends on earning attention, guiding users to a clear first proof, and retaining advanced users through durable abstractions. For AI products and developer tools, that means generated copy, quick prototypes, and fast coding agents are not substitutes for taste, positioning, onboarding discipline, or architecture-level product primitives.
+AI engineering does not remove product strategy work; it makes weak product judgment easier to turn into shipped artifacts. Product success still depends on earning attention, guiding users to a clear first proof, and retaining advanced users through durable abstractions. For AI products and developer tools, that means generated copy, quick prototypes, and fast coding agents are not substitutes for taste, positioning, onboarding discipline, architecture-level product primitives, or deliberate AI coworker form factors.
 
 The funnel is a useful operating model. Top-of-funnel work should create something worth sharing, not merely announce another feature. Onboarding should identify one aha moment and remove every step that delays it. Retention should avoid the false choice between simple and capable: build powerful primitives first, assemble the beginner path from them, and expose deeper controls as users grow.
+
+AI-native product strategy also includes deciding where model behavior belongs in the experience. Invisible background work, ambient surfacing, inline artifact manipulation, and conversational build flows carry different trust, interruption, and control costs. Teams should prototype those choices with runnable model probes because static screens cannot reveal whether the model is fast, accurate, aligned, awkward, or surprisingly capable in the proposed surface.
 
 ## Key Concepts
 
@@ -14,6 +16,9 @@ The funnel is a useful operating model. Top-of-funnel work should create somethi
 - [AI-amplified shipping speed needs stronger product taste](../concepts/ai-amplified-shipping-speed-needs-stronger-product-taste.md) - faster implementation raises the cost of saying yes to incoherent product work.
 - [Product Engineers Need Direct Customer Context](../concepts/product-engineers-need-direct-customer-context.md) - product judgment improves when engineers see customer pain directly.
 - [Treat model behavior as a product craft](../concepts/treat-model-behavior-as-a-product-craft.md) - AI-native products need product ownership over behavior, prompts, evals, model choices, and personality.
+- [Choose AI coworker form factors by interaction mode](../concepts/choose-ai-coworker-form-factors-by-interaction-mode.md) - product teams should choose whether AI is invisible, ambient, inline, or conversational based on the workflow.
+- [Prototype AI UX by feeling the model material](../concepts/prototype-ai-ux-by-feeling-the-model-material.md) - AI UX choices need runnable probes that expose model behavior, latency, and fit.
+- [Court agent emergence with bounded play](../concepts/court-agent-emergence-with-bounded-play.md) - exploratory prototypes can reveal useful product behavior beyond automating an existing step.
 
 ## Open Questions
 
@@ -25,3 +30,4 @@ The funnel is a useful operating model. Top-of-funnel work should create somethi
 - [AI changes *Nothing* — Dax Raad, OpenCode](../sources/20251123_o3gmwzo-Mik.md)
 - [Taste & Craft: A Conversation with Tuomas Artman, CTO Linear & Gergely Orosz, @pragmaticengineer](../sources/20260421_wjk0ulMAkbc.md)
 - [From Arc to Dia: Lessons learned building AI Browsers - Samir Mody, The Browser Company of New York](../sources/20251219_o4scJaQgnFA.md)
+- [Form factors for your new AI coworkers - Craig Wattrus, Flatfile](../sources/20250822_CiMVKnX-CNI.md)

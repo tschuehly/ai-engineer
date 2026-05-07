@@ -3,6 +3,9 @@
 ## Agents
 
 - [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md)
+- [Choose AI coworker form factors by interaction mode](../concepts/choose-ai-coworker-form-factors-by-interaction-mode.md)
+- [Design agent presence with visual alignment and handoff](../concepts/design-agent-presence-with-visual-alignment-and-handoff.md)
+- [Court agent emergence with bounded play](../concepts/court-agent-emergence-with-bounded-play.md)
 - [Robotics policy failures can originate below the model](../concepts/robotics-policy-failures-can-originate-below-the-model.md)
 - [Expose task workflow guidance through MCP resources and tools](../concepts/expose-task-workflow-guidance-through-mcp-resources-and-tools.md)
 - [Close agent loops around live action feedback](../concepts/close-agent-loops-around-live-action-feedback.md)
@@ -650,6 +653,9 @@
 
 ## Product Strategy
 
+- [Prototype AI UX by feeling the model material](../concepts/prototype-ai-ux-by-feeling-the-model-material.md)
+- [Choose AI coworker form factors by interaction mode](../concepts/choose-ai-coworker-form-factors-by-interaction-mode.md)
+- [Court agent emergence with bounded play](../concepts/court-agent-emergence-with-bounded-play.md)
 - [AI Does Not Replace Shareable Product Marketing](../concepts/ai-does-not-replace-shareable-product-marketing.md)
 - [Optimize Onboarding Around One Aha Moment](../concepts/optimize-onboarding-around-one-aha-moment.md)
 - [Build Product Primitives Before Feature Surfaces](../concepts/build-product-primitives-before-feature-surfaces.md)
@@ -922,6 +928,9 @@
 
 ## Tools
 
+- [Choose AI coworker form factors by interaction mode](../concepts/choose-ai-coworker-form-factors-by-interaction-mode.md)
+- [Prototype AI UX by feeling the model material](../concepts/prototype-ai-ux-by-feeling-the-model-material.md)
+- [Design agent presence with visual alignment and handoff](../concepts/design-agent-presence-with-visual-alignment-and-handoff.md)
 - [Environment registries make AI research more accessible](../concepts/environment-registries-make-ai-research-more-accessible.md)
 - [Headless coding-agent servers make agents callable infrastructure](../concepts/headless-coding-agent-servers-make-agents-callable-infrastructure.md)
 - [Treat environments as eval, data, and training substrates](../concepts/treat-environments-as-eval-data-and-training-substrates.md)
@@ -1064,6 +1073,9 @@
 
 ## Workflows
 
+- [Choose AI coworker form factors by interaction mode](../concepts/choose-ai-coworker-form-factors-by-interaction-mode.md)
+- [Design agent presence with visual alignment and handoff](../concepts/design-agent-presence-with-visual-alignment-and-handoff.md)
+- [Court agent emergence with bounded play](../concepts/court-agent-emergence-with-bounded-play.md)
 - [Agentic document extraction decomposes complex fields](../concepts/agentic-document-extraction-decomposes-complex-fields.md)
 - [Domain-expert sandboxes accelerate knowledge-app iteration](../concepts/domain-expert-sandboxes-accelerate-knowledge-app-iteration.md)
 - [App factories turn sandbox artifacts into governed knowledge apps](../concepts/app-factories-turn-sandbox-artifacts-into-governed-knowledge-apps.md)

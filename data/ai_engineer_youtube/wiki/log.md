@@ -1199,3 +1199,11 @@
 - Updated topics: [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Retrieval](topics/retrieval.md)
 - Updated concepts: [Map Expert Decision Taxonomies Into Knowledge Graphs](concepts/map-expert-decision-taxonomies-into-knowledge-graphs.md), [Use Graph-Backed KAG For Quantitative Advisory Questions](concepts/use-graph-backed-kag-for-quantitative-advisory-questions.md), [Use Supervisory Graph Agents To Update Shared Knowledge State](concepts/use-supervisory-graph-agents-to-update-shared-knowledge-state.md), [Prune LLM-Extracted Graphs With Domain Experts](concepts/prune-llm-extracted-graphs-with-domain-experts.md)
 - Notes: Added Patho AI's KAG pattern for turning expert decision taxonomies, structured quantitative evidence, and supervised graph-agent updates into source-backed advisory systems.
+
+## [2026-05-07] ingest | Form factors for your new AI coworkers - Craig Wattrus, Flatfile
+
+- Source: [Form factors for your new AI coworkers - Craig Wattrus, Flatfile](sources/20250822_CiMVKnX-CNI.md)
+- Processed: `CiMVKnX-CNI`
+- Updated topics: [Agents](topics/agents.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md), [Product Strategy](topics/product-strategy.md)
+- Updated concepts: [Choose AI coworker form factors by interaction mode](concepts/choose-ai-coworker-form-factors-by-interaction-mode.md), [Prototype AI UX by feeling the model material](concepts/prototype-ai-ux-by-feeling-the-model-material.md), [Design agent presence with visual alignment and handoff](concepts/design-agent-presence-with-visual-alignment-and-handoff.md), [Court agent emergence with bounded play](concepts/court-agent-emergence-with-bounded-play.md)
+- Notes: Added Flatfile's AI coworker UX patterns for invisible, ambient, inline, and conversational form factors, runnable model probes, inline alignment controls, and emergent human-escalation behavior.
