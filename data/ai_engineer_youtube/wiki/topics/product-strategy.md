@@ -26,6 +26,8 @@ AI product strategy should also accept that the full behavior surface cannot be 
 
 Agent coordination platforms add a product-strategy constraint: agent functionality should often be embedded into the system where users already manage work instead of shipped as a separate copilot shell. Linear's approach favors small hidden AI assists, product-intelligence relationships, and first-class agent teammates inside issues, projects, Slack handoffs, and customer-feedback workflows, while rejecting visible AI surfaces that do not meet the product's quality bar.
 
+Commerce gives the same distribution problem a consumer-facing shape. As shopping starts inside AI chat products, merchants still need surfaces they can own, brand, measure, and update. A practical transition path is not to assume websites disappear, but to make product data, brand systems, generated UI components, and checkout flows transportable into chat clients while preserving the merchant's representation and control.
+
 AI-engineer founders also need to translate technical taste into a market narrative when raising early capital. At pre-seed or seed, investors may not require revenue or even a finished product, but they still need to understand why this team has a timely, non-obvious insight and how the first wedge can become a company rather than a feature. Design partners, customer interviews, ICP hypotheses, pricing hypotheses, and product-velocity plans help convert early conviction into a credible path from prototype to scale.
 
 AI team design is also a product-strategy decision. The right team depends on the company's bottleneck: domain/data gaps, weak technology capability, missing customer empathy, product integration, monetization, reliability, observability, or specialist model performance all imply different staffing. Generalist AI engineers often fit early transformation work because they can build, use available platforms, understand tradeoffs, and talk to customers, while narrow specialists are most valuable after the baseline is strong and the remaining constraint is specialized performance.
@@ -70,6 +72,8 @@ AI team design is also a product-strategy decision. The right team depends on th
 - [Evals Only Cover Known AI Product Failures](../concepts/evals-only-cover-known-ai-product-failures.md) - product quality needs production discovery beyond known-case evals.
 - [Turn AI Product Intents Into Contained Workflows](../concepts/turn-ai-product-intents-into-contained-workflows.md) - intent-driven workflow containment makes probabilistic behavior easier to improve.
 - [Product Work Graphs Coordinate Agents and Humans](../concepts/product-work-graphs-coordinate-agents-and-humans.md) - agent products can create more value by inhabiting existing work graphs than by forcing separate chat workflows.
+- [Agentic Commerce Moves From Static Stores to Intent Infrastructure](../concepts/agentic-commerce-moves-from-static-stores-to-intent-infrastructure.md) - AI shopping changes the product surface from browsing pages to negotiating explicit intent.
+- [Merchant-Owned Generative Surfaces Travel Into Chat Interfaces](../concepts/merchant-owned-generative-surfaces-travel-into-chat-interfaces.md) - merchants can keep brand control by making commerce components portable.
 - [Platform-Native Agents Should Behave Like Good Teammates](../concepts/platform-native-agents-should-behave-like-good-teammates.md) - agent product quality includes communication and state-update behavior, not only task completion.
 - [Fundraising Pitches Should Explain Why You and Why Now](../concepts/fundraising-pitches-should-explain-why-you-and-why-now.md) - technical AI founders need a founder-market-time narrative, not only a model or product demo.
 - [Treat Investor Outreach Like Specific Go-To-Market](../concepts/treat-investor-outreach-like-specific-go-to-market.md) - investor relationships work like sales: use warm signals, specific asks, and response-oriented messages.
@@ -112,3 +116,4 @@ AI team design is also a product-strategy decision. The right team depends on th
 - [Structuring a modern AI team - Denys Linkov, Wisedocs](../sources/20250724_SbUxRluVRwk.md)
 - [AI That Pays: Lessons from Revenue Cycle - Nathan Wan, Ensemble Health](../sources/20250724_TquUsN1QsWs.md)
 - [Building AI Products That Actually Work - Ben Hylak (Raindrop), Sid Bendre (Oleve)](../sources/20250724_eSvXbb2EBYc.md)
+- [Machines of Buying and Selling Grace - Adam Behrens, New Generation](../sources/20250723_zlZz0mDF2eg.md)

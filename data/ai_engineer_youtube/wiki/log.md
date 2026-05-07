@@ -1838,3 +1838,11 @@
 - Updated topics: [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md), [Product Strategy](topics/product-strategy.md)
 - Updated concepts: [Evals Only Cover Known AI Product Failures](concepts/evals-only-cover-known-ai-product-failures.md), [AI Product Issues Need Signals and Intents](concepts/ai-product-issues-need-signals-and-intents.md), [Turn AI Product Intents Into Contained Workflows](concepts/turn-ai-product-intents-into-contained-workflows.md)
 - Notes: Added product-reliability patterns for using production signals, user intents, and contained workflows alongside known-case evals.
+
+## [2026-05-07] ingest | Machines of Buying and Selling Grace - Adam Behrens, New Generation
+
+- Source: [Machines of Buying and Selling Grace - Adam Behrens, New Generation](sources/20250723_zlZz0mDF2eg.md)
+- Processed: `zlZz0mDF2eg`
+- Updated topics: [Agents](topics/agents.md), [Tools](topics/tools.md), [Infrastructure](topics/infrastructure.md), [Product Strategy](topics/product-strategy.md), [Security](topics/security.md), [AI Monetization](topics/ai-monetization.md)
+- Updated concepts: [Agentic Commerce Moves From Static Stores to Intent Infrastructure](concepts/agentic-commerce-moves-from-static-stores-to-intent-infrastructure.md), [Expose Commerce Data Through Agent-Native Product APIs](concepts/expose-commerce-data-through-agent-native-product-apis.md), [Delegate Agentic Commerce Transactions With Explicit Payment Authority](concepts/delegate-agentic-commerce-transactions-with-explicit-payment-authority.md), [Merchant-Owned Generative Surfaces Travel Into Chat Interfaces](concepts/merchant-owned-generative-surfaces-travel-into-chat-interfaces.md)
+- Notes: Added agentic commerce as a transaction-oriented agent domain requiring structured product access, delegated payment authority, merchant-owned portable surfaces, and market-design attention around buyer and seller intent.

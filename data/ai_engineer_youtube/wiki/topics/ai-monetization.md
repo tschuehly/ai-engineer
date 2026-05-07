@@ -12,6 +12,8 @@ Engineering services face a parallel incentive problem. Story points can become 
 
 At the fundraising stage, monetization can start as a testable hypothesis rather than a finished pricing table. Early customer conversations, design partners, likely ACV ranges, and whether buyers expect seat-based or usage-based pricing can all help founders explain how an AI product might become a large business before revenue exists.
 
+Agentic commerce adds a market-level monetization problem: buyer agents may arrive with higher explicit intent, while merchant agents need to expose data, preferences, and offers in a way that creates transactions without defaulting to advertising. Revenue share may look more like affiliate economics or attribution for high-quality data and answers than like traditional ad placement.
+
 ## Key Concepts
 
 - [Treat AI pricing as a fast-moving product hypothesis](../concepts/treat-ai-pricing-as-a-fast-moving-product-hypothesis.md) - pricing should evolve with product capabilities, cost structure, and customer feedback.
@@ -21,6 +23,8 @@ At the fundraising stage, monetization can start as a testable hypothesis rather
 - [Use hybrid AI pricing to balance predictable revenue and margin protection](../concepts/use-hybrid-ai-pricing-to-balance-predictable-revenue-and-margin-protection.md) - base plus scaling fees avoid the extremes of pure subscriptions and pure usage billing.
 - [Prevent AI billing surprises with caps, notifications, and rate limits](../concepts/prevent-ai-billing-surprises-with-caps-notifications-and-rate-limits.md) - variable usage pricing needs controls that keep customers in charge of spend.
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md) - early buyer conversations can support ACV and pricing hypotheses before revenue exists.
+- [Agentic Commerce Moves From Static Stores to Intent Infrastructure](../concepts/agentic-commerce-moves-from-static-stores-to-intent-infrastructure.md) - explicit buying and selling intent becomes the unit that commerce infrastructure optimizes.
+- [Delegate Agentic Commerce Transactions With Explicit Payment Authority](../concepts/delegate-agentic-commerce-transactions-with-explicit-payment-authority.md) - agentic payment rails need bounded authority and spending controls.
 
 ## Open Questions
 
@@ -31,6 +35,7 @@ At the fundraising stage, monetization can start as a testable hypothesis rather
 - Which delivery metrics are hard enough to price against without distorting engineering quality?
 - Which buyer signals are strong enough to support an early ACV or pricing hypothesis before the product is generally available?
 - Which healthcare operations metrics are reliable enough to separate AI-caused payment improvement from ordinary claim-mix or payer-policy variation?
+- What attribution and revenue-share models can reward merchant data quality in chat-mediated commerce without recreating ad-driven ranking incentives?
 
 ## Sources
 
@@ -39,3 +44,4 @@ At the fundraising stage, monetization can start as a testable hypothesis rather
 - [Paying Engineers like Salespeople - Arman Hezarkhani, Tenex](../sources/20251219_4mRekpZpBZs.md)
 - [The AI Engineer's Guide to Raising VC - Dani Grant (Jam), Chelcie Taylor (Notable)](../sources/20250727_YYNXFsUutbM.md)
 - [AI That Pays: Lessons from Revenue Cycle - Nathan Wan, Ensemble Health](../sources/20250724_TquUsN1QsWs.md)
+- [Machines of Buying and Selling Grace - Adam Behrens, New Generation](../sources/20250723_zlZz0mDF2eg.md)

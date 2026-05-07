@@ -38,6 +38,8 @@ Production MCP servers should be designed as agent-facing interfaces, not as dum
 
 Agent-native MCP design is product design, not endpoint publishing. A useful server starts from the workflow outcome an agent should achieve, then curates tools around agent discovery, iteration, and context limits. Auto-generated REST mirrors can bootstrap experiments, but they should be reduced into agent stories before production: known multi-call choreography belongs behind a server-side tool, while the model should be reserved for judgment-heavy steps where the algorithm is not already known.
 
+Commerce agents add a domain-specific tool-design case. Product feeds and scraped product pages can bootstrap shopping experiences, but they scale poorly when many chat clients and agents need current merchant data. A stronger tool surface abstracts product catalogs, inventory representations, brand context, and checkout operations into cohesive APIs or MCP servers, then lets chat clients render generated product components or execute transaction flows without forcing every agent through brittle website automation.
+
 Enterprise tool ecosystems also need registry metadata once many teams publish MCP servers and A2A agents. A private registry can start from public MCP catalog conventions, add approved internal and public servers, and enrich each entry with owner, environment, authentication, cost attribution, and use-case links. A paired A2A registry can use agent cards as the discoverable contract for agent identity, endpoint, capabilities, modalities, and auth requirements. These registries should be connected to DevOps pipelines so publishing an MCP server or agent updates both the runtime artifact and the governance catalog.
 
 Internal platform tools should be designed so agents can call the same intended paths humans use. APIs are the base layer, while CLIs or MCP servers can wrap those APIs for agent use; logs, metrics, traces, and relevant documentation should also be exposed through machine-friendly surfaces instead of only dashboards or full HTML pages.
@@ -136,6 +138,8 @@ Anthropic's remote-MCP experience adds two practical tool-surface lessons. First
 - [Agent-readable web surfaces guide browsing agents](../concepts/agent-readable-web-surfaces-guide-browsing-agents.md) - `llms.txt` and WebMCP-style surfaces make sites easier for agents to read and operate.
 - [Agent Experience Means Autonomous Access, Understanding, and Operation](../concepts/agent-experience-means-autonomous-access-understanding-and-operation.md) - agent-facing tool quality depends on end-to-end autonomous operation, not only exposed endpoints.
 - [Use Browser UI Control When APIs Are Absent](../concepts/use-browser-ui-control-when-apis-are-absent.md) - browser control reaches existing visual products when no machine-native surface exists.
+- [Expose Commerce Data Through Agent-Native Product APIs](../concepts/expose-commerce-data-through-agent-native-product-apis.md) - shopping agents need structured catalog and checkout surfaces instead of scraping merchant sites.
+- [Merchant-Owned Generative Surfaces Travel Into Chat Interfaces](../concepts/merchant-owned-generative-surfaces-travel-into-chat-interfaces.md) - brand and product components can become transportable agent-facing UI.
 - [Compose Computer-Use Agents From Reliable Atomic Actions](../concepts/compose-computer-use-agents-from-reliable-atomic-actions.md) - SDK-level action calls can be embedded in ordinary program structure.
 - [Expose task workflow guidance through MCP resources and tools](../concepts/expose-task-workflow-guidance-through-mcp-resources-and-tools.md) - resources can teach a task workflow while tools mutate task state through the intended interface.
 - [Build internal AI engineering platforms when off-the-shelf tools lack enterprise context](../concepts/build-internal-ai-engineering-platforms-when-off-the-shelf-tools-lack-enterprise-context.md) - enterprise tool platforms may need custom context and integrations around existing engineering systems.
@@ -399,5 +403,6 @@ Anthropic's remote-MCP experience adds two practical tool-surface lessons. First
 - [A2A & MCP Workshop: Automating Business Processes with LLMs - Damien Murphy, Bench](../sources/20250726_wXVvfFMTyzY.md)
 - [Human seeded Evals - Samuel Colvin, Pydantic](../sources/20250725_o_LRtAomJCs.md)
 - [AX is the only Experience that Matters - Ivan Burazin, Daytona](../sources/20250724_e9sLVMN76qU.md)
+- [Machines of Buying and Selling Grace - Adam Behrens, New Generation](../sources/20250723_zlZz0mDF2eg.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)
