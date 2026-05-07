@@ -975,3 +975,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md)
 - Updated concepts: [Unified coding-agent harnesses combine models, tools, environments, and safety](concepts/unified-coding-agent-harnesses-combine-models-tools-environments-and-safety.md), [Use stable agent harnesses as model-evolution boundaries](concepts/use-stable-agent-harnesses-as-model-evolution-boundaries.md), [Prompt coding agents around learned model habits](concepts/prompt-coding-agents-around-learned-model-habits.md), [Use coding agents as programmable subagents inside products](concepts/use-coding-agents-as-programmable-subagents-inside-products.md)
 - Notes: Added OpenAI's future-proofing guidance for stable coding-agent harnesses, model-habit-aware prompting, and SDK-based product embedding.
+
+## [2026-05-07] ingest | Katelyn Lesse - Evolving Claude APIs for Agents, Anthropic
+
+- Source: [Katelyn Lesse - Evolving Claude APIs for Agents, Anthropic](sources/20251204_aqW68Is_Kj4.md)
+- Processed: `aqW68Is_Kj4`
+- Updated topics: [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md), [Infrastructure](topics/infrastructure.md), [Tools](topics/tools.md)
+- Updated concepts: [Compare Models by Task, Thinking Budget, Cost, and Latency](concepts/compare-models-by-task-thinking-budget-cost-and-latency.md), [Offload Long-Horizon Agent State Outside the Context Window](concepts/offload-long-horizon-agent-state-outside-the-context-window.md), [Context Window Editing Clears Stale Tool Results](concepts/context-window-editing-clears-stale-tool-results.md), [Sandboxed Code Execution Turns Model Reasoning Into Inspectable Computation](concepts/sandboxed-code-execution-turns-model-reasoning-into-inspectable-computation.md), [Use skills for workflow guidance and MCP for integrations](concepts/use-skills-for-workflow-guidance-and-mcp-for-integrations.md)
+- Notes: Added Anthropic's Claude API platform framing around reasoning budgets, tool schemas, memory, context editing, sandboxed code execution, and skills/MCP composition.

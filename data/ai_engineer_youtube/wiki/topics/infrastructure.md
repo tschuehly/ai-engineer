@@ -46,6 +46,8 @@ RL training infrastructure has a similar systems-modeling requirement. Synchrono
 
 Coding-agent harnesses are another infrastructure layer when teams want products to survive rapid model and API churn. The harness absorbs model-facing details such as tool loops, compaction, sandboxing, permissions, MCP support, parallel tool calls, port forwarding, and image handling. A stable SDK boundary can let product teams integrate the harness into IDEs, CI/CD, GitHub Actions, or product agents while leaving model/harness maintenance to a shared provider.
 
+Web and mobile coding agents add a remote-compute version of that harness problem. When the user starts work away from a local terminal and returns later, the platform needs secure sandboxed execution, container orchestration, and session persistence so generated code can run without depending on the user's machine.
+
 ## Key Concepts
 
 - [Use hosted model playgrounds to prototype before owning infrastructure](../concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md) - hosted tools can validate model and deployment choices before teams own the runtime.
@@ -58,6 +60,7 @@ Coding-agent harnesses are another infrastructure layer when teams want products
 - [Use immutable versioned state for agent handoffs](../concepts/use-immutable-versioned-state-for-agent-handoffs.md) - append-only handoff state supports rollback, replay, and root-cause analysis.
 - [Wrap agent calls with circuit breakers and compensation](../concepts/wrap-agent-calls-with-circuit-breakers-and-compensation.md) - serving-layer failure controls and rollback contracts are part of production agent infrastructure.
 - [Choose choreography or orchestration by complexity and autonomy](../concepts/choose-choreography-or-orchestration-by-complexity-and-autonomy.md) - infrastructure shape depends on whether event-driven autonomy or centralized control is the stronger requirement.
+- [Sandboxed Code Execution Turns Model Reasoning Into Inspectable Computation](../concepts/sandboxed-code-execution-turns-model-reasoning-into-inspectable-computation.md) - remote code execution lets agents compute and verify while the platform owns isolation.
 - [Use local AI workstations when iteration, privacy, or latency dominate](../concepts/use-local-ai-workstations-when-iteration-privacy-or-latency-dominate.md) - local workstations can move development closer to the engineer while preserving a later scale-out path.
 - [Make local inference benchmarks reproducible artifacts](../concepts/make-local-inference-benchmarks-reproducible-artifacts.md) - reproducible local serving tests need container isolation, warmups, hardware metrics, and stored run outputs.
 - [Use hardware-in-the-loop search for AI kernel generation](../concepts/use-hardware-in-the-loop-search-for-ai-kernel-generation.md) - kernel-generation harnesses need target hardware in the optimization loop.
@@ -224,3 +227,4 @@ Coding-agent harnesses are another infrastructure layer when teams want products
 - [Efficient Reinforcement Learning - Rhythm Garg & Linden Li, Applied Compute](../sources/20251209_o15AaYl7Wu0.md)
 - [VoiceVision RAG - Integrating Visual Document Intelligence with Voice Response - Suman Debnath, AWS](../sources/20251206_hwCmfThIiS4.md)
 - [Future-Proof Coding Agents - Bill Chen & Brian Fioca, OpenAI](../sources/20251205_wVl6ZjELpBk.md)
+- [Katelyn Lesse - Evolving Claude APIs for Agents, Anthropic](../sources/20251204_aqW68Is_Kj4.md)

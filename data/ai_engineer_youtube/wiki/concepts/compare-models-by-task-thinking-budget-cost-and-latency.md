@@ -10,6 +10,7 @@ Details:
 - AI Studio exposes thinking levels from minimal to high; Bailey keeps thinking low or minimal during time-sensitive demos and turns it up only when extra reasoning tokens are worth the latency or spend.
 - Bailey frames Gemini 3.1 Pro as the largest, slower, and more expensive model, Gemini 3 Flash as a production workhorse, and Gemini 3.1 Flash-Lite as a lower-cost, fast option gaining adoption from older Flash users.
 - Compare mode lets engineers test model variants side by side under similar tool settings, including code execution, which makes routing decisions more empirical.
+- Anthropic describes thinking as an API-controlled budget: developers can decide whether Claude should spend more tokens reasoning for complex debugging or answer quickly for simpler work. 02:20-03:09
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -22,3 +23,4 @@ Related concepts:
 
 Sources:
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md), 12:25-14:08, 18:35-19:11
+- [Katelyn Lesse - Evolving Claude APIs for Agents, Anthropic](../sources/20251204_aqW68Is_Kj4.md), 02:20-03:09

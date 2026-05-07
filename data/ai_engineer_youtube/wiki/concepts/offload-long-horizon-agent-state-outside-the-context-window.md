@@ -12,6 +12,7 @@ Details:
 - Plans, task lists, and memories can be persisted on the file system and reloaded when relevant rather than continuously included in the active prompt. 16:08-16:35
 - Subagents provide separation of concerns: each starts from fresh context, receives only the subset needed for its task, runs to completion, and returns compact results to the main loop. 17:00-17:41
 - Replit reported fewer context recompressions after moving work into subagent orchestration because less context pollution stayed in the main loop. 17:41-18:16
+- Anthropic's Claude API talk describes memory as a client-side file-system-like tool that keeps codebase patterns and git workflow preferences outside the active context window, then lets Claude pull them back only when relevant. 05:12-05:55
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -22,7 +23,8 @@ Related concepts:
 - [Use subagents to isolate context-heavy subtasks](use-subagents-to-isolate-context-heavy-subtasks.md)
 - [Keep agent context small, fresh, and task-specific](keep-agent-context-small-fresh-and-task-specific.md)
 - [Do not treat long context as durable model memory](do-not-treat-long-context-as-durable-model-memory.md)
+- [Context Window Editing Clears Stale Tool Results](context-window-editing-clears-stale-tool-results.md)
 
 Sources:
 - [The 3 Pillars of Autonomy - Michele Catasta, Replit](../sources/20251222_MLhAA9yguwM.md), 15:13-18:16
-
+- [Katelyn Lesse - Evolving Claude APIs for Agents, Anthropic](../sources/20251204_aqW68Is_Kj4.md), 05:12-05:55
