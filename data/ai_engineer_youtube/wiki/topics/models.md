@@ -40,6 +40,8 @@ Autonomous driving adds a route-conditioned multimodal planning variant. Waymo's
 
 Mechanistic interpretability adds a model-internal engineering surface. Instead of treating the model as only a prompt-response box, feature attribution can show which learned concepts contributed to a token, activation steering can adjust a behavior at inference time, dynamic prompting can trigger instructions when internal features fire, and model diffs can inspect post-training changes. These controls should be evaluated like any other model intervention because they can be powerful, hidden from users, and narrower than ordinary prompt or fine-tuning changes.
 
+Hosted model upgrades should be treated as production migrations when prompts and domain rules carry business meaning. Intuit's TurboTax experience shows that long-term contracts, prompt dependence, fine-tuned variants, and even same-vendor model changes can create migration work; the practical release gate is whether the new model preserves quality, latency, and regulated-domain correctness against established evals.
+
 ## Key Concepts
 
 - [Use Eagle 3 Speculative Decoding With Matched Draft Models](../concepts/use-eagle-3-speculative-decoding-with-matched-draft-models.md) - speculative decoding draft models need to be matched to the target model rather than treated as arbitrary smaller substitutes.
@@ -135,6 +137,7 @@ Mechanistic interpretability adds a model-internal engineering surface. Instead 
 - [Train long-tail knowledge into weights with curated synthetic data](../concepts/train-long-tail-knowledge-into-weights-with-curated-synthetic-data.md) - specialized knowledge can be trained into weights when raw fine-tuning is converted into a safer data and update process.
 - [Neural weather models can target operational forecast variables directly](../concepts/neural-weather-models-can-target-operational-forecast-variables-directly.md) - forecasting models should match architecture and target variables to operational use.
 - [Interactive world models need memory, control, and live prompting](../concepts/interactive-world-models-need-memory-control-and-live-prompting.md) - generated environments need stateful interaction, not only plausible frames.
+- [Treat Model and Prompt Upgrades as Regulated Migrations](../concepts/treat-model-and-prompt-upgrades-as-regulated-migrations.md) - high-stakes model changes require eval-gated rollout because prompts, vendors, and latency create real migration cost.
 
 ## Open Questions
 
@@ -204,3 +207,4 @@ Mechanistic interpretability adds a model-internal engineering surface. Instead 
 - [Building Cursor Composer - Lee Robinson, Cursor](../sources/20251202_fL1iJHtl51Q.md)
 - [Z.ai GLM 4.6: What We Learned From 100 Million Open Source Downloads - Yuxuan Zhang, Z.ai](../sources/20251122_m6MF1OR_9kM.md)
 - [The Rise of Open Models in the Enterprise — Amir Haghighat, Baseten](../sources/20250724_3WV1vT0B0cg.md)
+- [How Intuit uses LLMs to explain taxes to millions of taxpayers - Jaspreet Singh, Intuit](../sources/20250723__zl_zimMRak.md)

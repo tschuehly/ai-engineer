@@ -456,6 +456,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Seller Knowledge Bases Let Agents Pull Business Context at Action Time](concepts/seller-knowledge-bases-let-agents-pull-business-context-at-action-time.md) - domain agents can replace manual context forms with source ingestion and action-time retrieval.
 - [Show Retrieved Chunks Inside Agent Workflows](concepts/show-retrieved-chunks-inside-agent-workflows.md) - retrieval-backed products should expose the evidence used for generated actions.
 - [Benchmark RAG Pipelines After Production Usage Exists](concepts/benchmark-rag-pipelines-after-production-usage-exists.md) - real usage should drive parser, retrieval, hallucination, hybrid-search, and cost benchmarks.
+- [Ground Regulated Explanations in Deterministic Engines](concepts/ground-regulated-explanations-in-deterministic-engines.md) - high-liability explanations should cite deterministic system outputs rather than let the model invent calculations.
+- [Stage Regulated LLM Evals From Experts to Automated Judges](concepts/stage-regulated-llm-evals-from-experts-to-automated-judges.md) - expert review can seed golden data and automated judges while major changes return to manual review.
+- [Treat Model and Prompt Upgrades as Regulated Migrations](concepts/treat-model-and-prompt-upgrades-as-regulated-migrations.md) - model and prompt changes need eval-gated rollout when vendor, latency, and domain-year changes matter.
 
 ## Topics
 

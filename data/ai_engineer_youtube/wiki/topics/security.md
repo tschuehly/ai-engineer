@@ -18,6 +18,8 @@ OpenHands reinforces that sandboxing is only one layer. Docker containers can se
 
 Enterprise coding-agent rollouts also need an accountability layer around ordinary development actions. Security review should ask where audit logs live, who owns an agent's actions, how destructive commands are constrained, and what responsibility model applies when a codebase-changing agent acts on behalf of a team.
 
+Regulated consumer AI also needs output-integrity controls, not only access controls. In tax explanations, legal and privacy risk make it important that LLM text does not hallucinate numbers or unsupported advice; authoritative values should come from tax engines, and guardrails should inspect raw model responses before users see them.
+
 ## Key Concepts
 
 - [Vet MCP Servers As Action-Capable Extensions](../concepts/vet-mcp-servers-as-action-capable-extensions.md) - MCP servers connected to coding agents can access data and act for users, so trust and scope are security decisions.
@@ -43,6 +45,7 @@ Enterprise coding-agent rollouts also need an accountability layer around ordina
 - [Enterprise Coding Agents Need Ownership, Auditability, and Action Controls](../concepts/enterprise-coding-agents-need-ownership-auditability-and-action-controls.md) - enterprise agent security needs audit logs, responsibility boundaries, and controls for destructive actions.
 - [Human Ownership Keeps Agent Pull Requests From Bypassing Review](../concepts/human-ownership-keeps-agent-pull-requests-from-bypassing-review.md) - agent PR identity should not bypass second-human review or leave failures ownerless.
 - [Delegate Agentic Commerce Transactions With Explicit Payment Authority](../concepts/delegate-agentic-commerce-transactions-with-explicit-payment-authority.md) - commerce agents need bounded payment authority before buying for users.
+- [Ground Regulated Explanations in Deterministic Engines](../concepts/ground-regulated-explanations-in-deterministic-engines.md) - high-liability answers should keep authoritative calculations outside the model and check generated text for invented values.
 
 ## Open Questions
 
@@ -62,3 +65,4 @@ Enterprise coding-agent rollouts also need an accountability layer around ordina
 - [Ship Production Software in Minutes, Not Months - Eno Reyes, Factory](../sources/20250725_iheWKg2Tkrk.md)
 - [Software Development Agents: What Works and What Doesn't - Robert Brennan, OpenHands](../sources/20250725_o_hhkJtlbSs.md)
 - [Machines of Buying and Selling Grace - Adam Behrens, New Generation](../sources/20250723_zlZz0mDF2eg.md)
+- [How Intuit uses LLMs to explain taxes to millions of taxpayers - Jaspreet Singh, Intuit](../sources/20250723__zl_zimMRak.md)

@@ -1846,3 +1846,11 @@
 - Updated topics: [Agents](topics/agents.md), [Tools](topics/tools.md), [Infrastructure](topics/infrastructure.md), [Product Strategy](topics/product-strategy.md), [Security](topics/security.md), [AI Monetization](topics/ai-monetization.md)
 - Updated concepts: [Agentic Commerce Moves From Static Stores to Intent Infrastructure](concepts/agentic-commerce-moves-from-static-stores-to-intent-infrastructure.md), [Expose Commerce Data Through Agent-Native Product APIs](concepts/expose-commerce-data-through-agent-native-product-apis.md), [Delegate Agentic Commerce Transactions With Explicit Payment Authority](concepts/delegate-agentic-commerce-transactions-with-explicit-payment-authority.md), [Merchant-Owned Generative Surfaces Travel Into Chat Interfaces](concepts/merchant-owned-generative-surfaces-travel-into-chat-interfaces.md)
 - Notes: Added agentic commerce as a transaction-oriented agent domain requiring structured product access, delegated payment authority, merchant-owned portable surfaces, and market-design attention around buyer and seller intent.
+
+## [2026-05-07] ingest | How Intuit uses LLMs to explain taxes to millions of taxpayers - Jaspreet Singh, Intuit
+
+- Source: [How Intuit uses LLMs to explain taxes to millions of taxpayers - Jaspreet Singh, Intuit](sources/20250723__zl_zimMRak.md)
+- Processed: `_zl_zimMRak`
+- Updated topics: [Evaluation](topics/evaluation.md), [Retrieval](topics/retrieval.md), [Product Strategy](topics/product-strategy.md), [Security](topics/security.md), [Models](topics/models.md)
+- Updated concepts: [Ground Regulated Explanations in Deterministic Engines](concepts/ground-regulated-explanations-in-deterministic-engines.md), [Stage Regulated LLM Evals From Experts to Automated Judges](concepts/stage-regulated-llm-evals-from-experts-to-automated-judges.md), [Treat Model and Prompt Upgrades as Regulated Migrations](concepts/treat-model-and-prompt-upgrades-as-regulated-migrations.md)
+- Notes: Added Intuit's regulated tax-explanation patterns for deterministic numeric grounding, expert-seeded evals, GraphRAG personalization, and eval-gated model/prompt migrations.

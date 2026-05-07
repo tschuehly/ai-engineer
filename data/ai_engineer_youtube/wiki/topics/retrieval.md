@@ -99,6 +99,8 @@ Seller-facing agents show a product-specific version of retrieval as onboarding.
 
 Expert-domain RAG adds another layer of corpus and query modeling. Legal retrieval may need to work across on-demand uploads, project vaults, and global law or regulation corpora, while a single query can combine semantic intent, jurisdiction, dates, named directives, multiple provisions, and domain abbreviations. Dense retrieval alone is not the architecture; the system needs domain experts to shape representation, preprocessing, categorization, sparse and dense matching, filters, reranking, and evaluation.
 
+Tax explanation systems add a regulated consumer version of expert-domain retrieval. Static summary explanations can use prepared prompts over known user state, while dynamic tax Q&A may need RAG or GraphRAG over yearly IRS changes, proprietary tax knowledge, and internal tax engines. The retrieval layer is still subordinate to product usefulness and deterministic correctness: GraphRAG can improve response quality for relationship-heavy tax knowledge, but personalized answers and authoritative numbers matter more than adding graph traversal by default.
+
 ## Open Questions
 
 - How should retrieval systems route between source-of-truth systems and curated context blocks when they disagree?
@@ -156,3 +158,4 @@ Expert-domain RAG adds another layer of corpus and query modeling. Legal retriev
 - [Layering every technique in RAG, one query at a time - David Karam, Pi Labs (fmr. Google Search)](../sources/20250729_w9u11ioHGA0.md)
 - [Information Retrieval from the Ground Up - Philipp Krenn, Elastic](../sources/20250727_4Xe_iMYxBQc.md)
 - [How to build Enterprise Aware Agents - Chau Tran, Glean](../sources/20250724_hxFpUcvWPcU.md)
+- [How Intuit uses LLMs to explain taxes to millions of taxpayers - Jaspreet Singh, Intuit](../sources/20250723__zl_zimMRak.md)
