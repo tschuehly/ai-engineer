@@ -10,9 +10,12 @@ Application builders should treat that routing layer as a strategic default, not
 
 Brockman's infrastructure view adds a serving-shape warning: realtime AI interfaces and long compute-heavy jobs are different workloads. Inference platforms need to account for both low-latency interaction and longer test-time or agentic compute, because a fleet balanced for the wrong mix can waste scarce accelerator capacity.
 
+Morph's reasoning-time branching pattern adds another long-running inference shape: instead of one model call consuming more hidden thinking tokens, the system can branch the external environment, run parallel agents against the same state, and choose verifier-passing branches. Capacity planning then has to include workspace snapshot overhead, branch fanout, verifier cost, and the wall-clock goal of finding a good branch faster than a single linear run.
+
 ## Key Concepts
 
 - [Dual-mode AI infrastructure](../concepts/dual-mode-ai-infrastructure.md) - inference fleets should distinguish realtime latency needs from long compute-heavy workloads.
+- [Scale Test-Time Search Through Parallel Verifier-Checked Branches](../concepts/scale-test-time-search-through-parallel-verifier-checked-branches.md) - test-time compute can fan out into external branch attempts scored by verifiers.
 - [Profile small-model architectures on target hardware](../concepts/profile-small-model-architectures-on-target-hardware.md) - local inference performance should be measured on the intended hardware, not inferred from architecture alone.
 - [Use local AI workstations when iteration, privacy, or latency dominate](../concepts/use-local-ai-workstations-when-iteration-privacy-or-latency-dominate.md) - local serving can complement cloud infrastructure when queueing, data residency, or deterministic latency drive the workflow.
 - [Make local inference benchmarks reproducible artifacts](../concepts/make-local-inference-benchmarks-reproducible-artifacts.md) - benchmark runs should capture environment, responses, timing, and hardware metrics for later verification.
@@ -70,3 +73,4 @@ Brockman's infrastructure view adds a serving-shape warning: realtime AI interfa
 - [Z.ai GLM 4.6: What We Learned From 100 Million Open Source Downloads - Yuxuan Zhang, Z.ai](../sources/20251122_m6MF1OR_9kM.md)
 - [The Next Unicorns: 7 Top AI startups from the HF0 Residency](../sources/20250821_L8-5ezsoI5A.md)
 - [State of Startups and AI 2025 - Sarah Guo, Conviction](../sources/20250802_3MZS5gNElZM.md)
+- [Infrastructure for the Singularity - Jesse Han, Morph](../sources/20250801_2goSS66XRBk.md)

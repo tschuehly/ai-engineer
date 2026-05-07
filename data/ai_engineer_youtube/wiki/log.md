@@ -1367,3 +1367,11 @@
 - Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Models](topics/models.md), [Retrieval](topics/retrieval.md), [Workflows](topics/workflows.md)
 - Updated concepts: [AI Engineering Practice Is Heterogeneous and Fast Moving](concepts/ai-engineering-practice-is-heterogeneous-and-fast-moving.md), [Prompt Management Lags Prompt Iteration](concepts/prompt-management-lags-prompt-iteration.md), [Multimodal Models Have a Production Adoption Gap](concepts/multimodal-models-have-a-production-adoption-gap.md), [Agent Adoption Trails LLM Adoption in the Workplace](concepts/agent-adoption-trails-llm-adoption-in-the-workplace.md), [AI System Evaluation Still Depends on Human Review](concepts/ai-system-evaluation-still-depends-on-human-review.md), [Dedicated Vector Databases Remain Common RAG Infrastructure](concepts/dedicated-vector-databases-remain-common-rag-infrastructure.md)
 - Notes: Added Amplify survey findings on how AI engineering is currently practiced across prompts, models, agents, multimodal systems, evals, and context infrastructure.
+
+## [2026-05-07] ingest | Infrastructure for the Singularity - Jesse Han, Morph
+
+- Source: [Infrastructure for the Singularity - Jesse Han, Morph](sources/20250801_2goSS66XRBk.md)
+- Processed: `2goSS66XRBk`
+- Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Inference](topics/inference.md), [Models](topics/models.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Branchable Cloud Workspaces Make Agent Actions Reversible](concepts/branchable-cloud-workspaces-make-agent-actions-reversible.md), [Scale Test-Time Search Through Parallel Verifier-Checked Branches](concepts/scale-test-time-search-through-parallel-verifier-checked-branches.md), [Train Reasoning Models For Verified Environment Branching](concepts/train-reasoning-models-for-verified-environment-branching.md)
+- Notes: Added Morph's branchable cloud-workspace pattern for reversible agent actions, parallel verifier-checked test-time search, and model/environment co-design for verified reasoning.

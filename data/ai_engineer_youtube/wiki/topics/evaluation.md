@@ -84,6 +84,8 @@ PR-derived field telemetry adds a practical adoption dashboard shape for AI codi
 
 Retrieval-specific evals should be fast enough to change engineering behavior. Query-document pair checks can compare chunking, embedding models, and top-k parameters on the application's own data without waiting for slow judge pipelines. Synthetic query generation can bootstrap that benchmark, but only if the generated questions are aligned with realistic user specificity; otherwise the eval can reward retrieval systems that only handle clean document-shaped questions. Once real traffic exists, conversation logs add an output-side eval surface: extracting tools, errors, frustration, satisfaction, and use-case metadata lets teams compare KPIs across clusters instead of staring at one aggregate factuality score.
 
+Verifier-backed branching adds an evaluation pattern for test-time search. A shared snapshot can fan out to multiple agents or subagents, each branch mutates its own environment, and a verifier selects branches that satisfy the target condition. This is useful only when the verifier captures the desired outcome; otherwise parallel branching scales the wrong signal.
+
 ## Key Concepts
 
 - [AI System Evaluation Still Depends on Human Review](../concepts/ai-system-evaluation-still-depends-on-human-review.md) - production AI quality checks still combine observability, offline evals, benchmarks, user data, and human review.
@@ -94,6 +96,8 @@ Retrieval-specific evals should be fast enough to change engineering behavior. Q
 - [Align synthetic retrieval queries with real user specificity](../concepts/align-synthetic-retrieval-queries-with-real-user-specificity.md) - generated benchmark queries should match production query shape rather than overfitting to documents.
 - [Cluster conversation outputs to prioritize AI product work](../concepts/cluster-conversation-outputs-to-prioritize-ai-product-work.md) - conversation metadata and KPI clusters turn aggregate scores into roadmap decisions.
 - [Use formal specifications and proofs for critical generated code](../concepts/use-formal-specifications-and-proofs-for-critical-generated-code.md) - verification can prove selected properties before generated code executes.
+- [Scale Test-Time Search Through Parallel Verifier-Checked Branches](../concepts/scale-test-time-search-through-parallel-verifier-checked-branches.md) - branch fanout should be judged by verifier-passing outcomes, cost, and wall-clock latency.
+- [Train Reasoning Models For Verified Environment Branching](../concepts/train-reasoning-models-for-verified-environment-branching.md) - verified reasoning needs external checks that the model can use during its branch-and-recombine loop.
 - [Separate generation and verification prompts or models](../concepts/separate-generation-and-verification-prompts-or-models.md) - independent verifier contexts can reduce confirmation bias in agent-coded changes.
 - [Agentic coding economics shift attention from writing cost to assurance cost](../concepts/agentic-coding-economics-shift-attention-from-writing-cost-to-assurance-cost.md) - ROI analysis must include verification and defect-correction cost.
 - [Evaluate agent trajectories with backtests and smell metrics](../concepts/evaluate-agent-trajectories-with-backtests-and-smell-metrics.md) - flexible tool-loop agents need historical and trajectory-level checks.
@@ -333,6 +337,7 @@ Retrieval-specific evals should be fast enough to change engineering behavior. Q
 - [Multi Agent AI and Network Knowledge Graphs for Change — Ola Mabadeje, Cisco](../sources/20250822_m0dxZ-NDKHo.md)
 - [Fuzzing in the GenAI Era — Leonard Tang, Haize Labs](../sources/20250822_OMGPvW8TBHc.md)
 - [The 2025 AI Engineering Report - Barr Yaron, Amplify](../sources/20250801_mQ7_Zje7WKE.md)
+- [Infrastructure for the Singularity - Jesse Han, Morph](../sources/20250801_2goSS66XRBk.md)
 
 - [Government Agents: AI Agents Meet Tough Regulations - Mark Myshatyn, Los Alamos National Lab](../sources/20251206_TnSGx36Ly0Q.md)
 - [Your Support Team Should Ship Code - Lisa Orr, Zapier](../sources/20251216_RmJ4rTLV_x4.md)

@@ -14,6 +14,8 @@ As agents move from prediction into decisions and actions, monitoring and evalua
 
 GLM 4.6 adds a systems-training detail for those long agent rollouts: short math or code-completion RL can keep training and inference colocated, but slow software-engineering tasks that wait on browsers, APIs, and external environments need decoupled rollout workers, buffers, and periodic weight updates so one slow trajectory does not stall the whole training pipeline.
 
+Morph's Infinibranch talk adds a concrete substrate for agent embodiment: if the agent's world is a branchable VM or container, it can take stateful browser and shell actions, fork identical copies for subagents, and keep the branch that satisfies a verifier. That makes agent parallelism more like stateful search over software environments than independent chat completions.
+
 Robotics adds a useful discipline for digital-agent design: treat the agent as an embodied action system. The model is only one part of the loop; APIs, MCP servers, terminal, browser, VM, OS access, persistent files, monitoring, simulation, retraining, and human feedback form the digital body and offline stack. This also makes action feedback a first-class design problem: long-running commands, browser pop-ups, and stateful VMs should expose enough live observation and interruption control for the agent to close the loop after acting, not merely predict a plan and hope the world matches.
 
 Physical robotics sharpens that lesson because the policy is separated from the world by hard realtime communication and scheduling paths. A stuttering actuator can look like a model or control-policy problem even when the root cause is CAN-bus saturation, RX/TX thread drift, stale sensor data, logging overhead, or priority inversion in the kernel reception path. Embodied AI systems therefore need runtime diagnostics that inspect the whole sensor-policy-actuator pipeline before blaming model behavior.
@@ -150,6 +152,9 @@ Cloud-scale assistant systems add a specialist-service pattern. Alexa Plus is de
 - [Vault and exchange tokens for scoped upstream agent access](../concepts/vault-and-exchange-tokens-for-scoped-upstream-agent-access.md) - delegated API access should be scope-bound and token-managed outside the model loop.
 - [Model MCP servers as OAuth clients in downstream API chains](../concepts/model-mcp-servers-as-oauth-clients-in-downstream-api-chains.md) - MCP servers may need first-class client identity when they call upstream APIs.
 - [Build RL environments as software artifacts](../concepts/build-rl-environments-as-software-artifacts.md) - agent gyms make tool, code, and multi-step behavior evaluable and trainable through rollouts.
+- [Branchable Cloud Workspaces Make Agent Actions Reversible](../concepts/branchable-cloud-workspaces-make-agent-actions-reversible.md) - stateful agent actions can become branchable environment mutations rather than one-way commitments.
+- [Scale Test-Time Search Through Parallel Verifier-Checked Branches](../concepts/scale-test-time-search-through-parallel-verifier-checked-branches.md) - parallel agent attempts can be selected by verifier outcomes from a common snapshot.
+- [Train Reasoning Models For Verified Environment Branching](../concepts/train-reasoning-models-for-verified-environment-branching.md) - reasoning models can be trained to branch environments, delegate subproblems, and use verification tools.
 - [Sandboxed code execution turns model reasoning into inspectable computation](../concepts/sandboxed-code-execution-turns-model-reasoning-into-inspectable-computation.md) - executable sandboxes let agents compute and verify without touching the user's environment.
 - [Human Control Planes Turn Agent Swarms Into Manageable Organizations](../concepts/human-control-planes-turn-agent-swarms-into-manageable-organizations.md) - org-chart, project, task, budget, and memory surfaces make large agent organizations supervisable.
 - [Treat multi-agent systems as distributed systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md) - multi-agent scale introduces coordination, stale state, and failure-propagation problems.
@@ -472,5 +477,6 @@ Cloud-scale assistant systems add a specialist-service pattern. Alexa Plus is de
 - [Multi Agent AI and Network Knowledge Graphs for Change — Ola Mabadeje, Cisco](../sources/20250822_m0dxZ-NDKHo.md)
 - [Fuzzing in the GenAI Era — Leonard Tang, Haize Labs](../sources/20250822_OMGPvW8TBHc.md)
 - [The 2025 AI Engineering Report - Barr Yaron, Amplify](../sources/20250801_mQ7_Zje7WKE.md)
+- [Infrastructure for the Singularity - Jesse Han, Morph](../sources/20250801_2goSS66XRBk.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

@@ -52,6 +52,8 @@ Graph-backed retrieval becomes infrastructure when relationship traversal is on 
 
 AI-generated kernels turn low-level optimization into an infrastructure workflow. A useful system needs a supervisor that accepts source code, target hardware, and human guidance; synthesis agents that search optimization ideas; and a verification agent that executes candidates on actual hardware with strict correctness and timing checks. This infrastructure is most valuable when heterogeneous agentic inference workloads need to move across CUDA, Triton, Metal, Pallas, or new device generations faster than scarce kernel experts can hand-port every path.
 
+Morph's Infinibranch talk adds branchable cloud state as infrastructure for agent reasoning. If full VM or container workspaces can be snapshotted, branched, replicated, rehydrated, and moved with low overhead, agents can treat stateful computer-use actions as reversible branches, run many parallel attempts from the same starting state, and promote only verifier-passing results.
+
 Compiler pipelines can also be infrastructure for model portability, not only for optimization. Muna's Python-to-native path treats model-serving code as an artifact that can be traced, typed, lowered, compiled, and loaded through FFI, then exposed through an OpenAI-compatible client. LLMs fit this pipeline best when they generate bounded operation lowerings that the compiler can compose and verify, not when they replace representation, typing, compilation, and runtime packaging.
 
 RL training infrastructure has a similar systems-modeling requirement. Synchronous RL wastes accelerator capacity when long-tail samples keep the whole step waiting, while asynchronous pipeline RL keeps sampling and training workers busy through queues and in-flight weight updates. The infrastructure problem is to allocate GPUs between sampling and training so production and consumption rates match, KV-cache memory is respected, and policy staleness stays within the algorithm's tolerance.
@@ -83,6 +85,9 @@ Remote MCP infrastructure can reuse ordinary cloud primitives when the local std
 - [Deploy Remote MCP Servers on Serverless Cloud Infrastructure](../concepts/deploy-remote-mcp-servers-on-serverless-cloud-infrastructure.md) - serverless compute and API routing can host remote MCP tools with auth and session persistence.
 - [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](../concepts/retrieve-tool-descriptions-before-loading-large-tool-catalogs.md) - search infrastructure can keep large tool catalogs out of the default context window.
 - [Dual-mode AI infrastructure](../concepts/dual-mode-ai-infrastructure.md) - infrastructure planning must balance long compute-heavy work against low-latency realtime workloads.
+- [Branchable Cloud Workspaces Make Agent Actions Reversible](../concepts/branchable-cloud-workspaces-make-agent-actions-reversible.md) - snapshot and branch infrastructure lets agents explore stateful software actions without committing every mutation.
+- [Scale Test-Time Search Through Parallel Verifier-Checked Branches](../concepts/scale-test-time-search-through-parallel-verifier-checked-branches.md) - cloud infrastructure can convert parallel branch attempts into verifier-backed test-time search.
+- [Train Reasoning Models For Verified Environment Branching](../concepts/train-reasoning-models-for-verified-environment-branching.md) - model-training infrastructure can target branchable environments and external verification loops.
 - [Test realtime voice services with bot-to-bot release evals](../concepts/test-realtime-voice-services-with-bot-to-bot-release-evals.md) - networked voice providers need integration checks at release time.
 - [Research engineering partnership](../concepts/research-engineering-partnership.md) - frontier model progress depends on systems engineering that makes research ideas executable.
 - [Use formal specifications and proofs for critical generated code](../concepts/use-formal-specifications-and-proofs-for-critical-generated-code.md) - proof-capable languages and verifiers can become infrastructure around generated critical components.
@@ -315,5 +320,6 @@ Remote MCP infrastructure can reuse ordinary cloud primitives when the local std
 - [Agents are Robots Too: What Self-Driving Taught Me About Building Agents - Jesse Hu, Abundant](../sources/20251124_qqXdLf3wy1E.md)
 - [Rishabh Garg, Tesla Optimus — Challenges in High Performance Robotics Systems](../sources/20250825_bCGbuyv8PMk.md)
 - [The 2025 AI Engineering Report - Barr Yaron, Amplify](../sources/20250801_mQ7_Zje7WKE.md)
+- [Infrastructure for the Singularity - Jesse Han, Morph](../sources/20250801_2goSS66XRBk.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

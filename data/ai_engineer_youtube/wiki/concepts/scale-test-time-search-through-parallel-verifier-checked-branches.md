@@ -1,0 +1,27 @@
+# Scale Test-Time Search Through Parallel Verifier-Checked Branches
+
+Summary: Test-time scaling for agents can run many branched attempts from a shared starting workspace, evaluate them with verifiers, and promote the branch that satisfies the condition. The pattern converts more wall-clock compute into broader solution-space search without requiring every branch to succeed.
+
+Use when:
+- Evaluating agent architectures that use parallel attempts, subagents, or branch-and-bound style search.
+- Designing verification conditions for test-time compute over stateful environments.
+
+Details:
+- Han frames the cloud-for-agents requirement as declaratively specifying workspaces, passing them among humans and agents, and scaling test-time search against verifiers to find the best answer. 07:23-07:50
+- The server demo starts from a prepared snapshot, hands the same environment to multiple parallel agents, lets them try different methods for starting a server on port 8000, and keeps the successful solution when another branch fails. 07:54-09:28
+- In the chess demo, a tool-using reasoning agent interacts with a restricted chess engine treated as a verifier; reasoning-time branching then lets it explore more of the solution space and escape a local minimum. 11:35-13:38
+- The talk identifies the infrastructure bottleneck as creating branchable environments that support large-scale reinforcement learning and multi-agent coordination with less wall-clock time. 13:44-14:36
+
+Related topics:
+- [Agents](../topics/agents.md)
+- [Evaluation](../topics/evaluation.md)
+- [Infrastructure](../topics/infrastructure.md)
+- [Inference](../topics/inference.md)
+
+Related concepts:
+- [Build RL Environments as Software Artifacts](build-rl-environments-as-software-artifacts.md)
+- [Evaluate Agent Loops With Correctness, Cost, Latency, and Step Counts](evaluate-agent-loops-with-correctness-cost-latency-and-step-counts.md)
+- [Prefer outcome verifiers over ground-truth path checks](prefer-outcome-verifiers-over-ground-truth-path-checks.md)
+
+Sources:
+- [Infrastructure for the Singularity - Jesse Han, Morph](../sources/20250801_2goSS66XRBk.md), 07:23-14:36

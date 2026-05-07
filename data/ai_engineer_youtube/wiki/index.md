@@ -5,6 +5,9 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 ## Current Emphasis
 
 - [Agent Adoption Trails LLM Adoption in the Workplace](concepts/agent-adoption-trails-llm-adoption-in-the-workplace.md) - workplace LLM usage can look mature while LLM-controlled workflows still need separate reliability, permission, and evaluation gates.
+- [Branchable Cloud Workspaces Make Agent Actions Reversible](concepts/branchable-cloud-workspaces-make-agent-actions-reversible.md) - fast VM and container snapshots let stateful agent actions become reversible branches.
+- [Scale Test-Time Search Through Parallel Verifier-Checked Branches](concepts/scale-test-time-search-through-parallel-verifier-checked-branches.md) - agents can fan out attempts from one snapshot and promote verifier-passing branches.
+- [Train Reasoning Models For Verified Environment Branching](concepts/train-reasoning-models-for-verified-environment-branching.md) - some reasoning behavior needs model and execution-environment co-design.
 - [Prompt Management Lags Prompt Iteration](concepts/prompt-management-lags-prompt-iteration.md) - frequent prompt edits need ownership, versioning, and evals because unmanaged prompts are still common.
 - [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](concepts/retrieve-tool-descriptions-before-loading-large-tool-catalogs.md) - large agent systems can search tool descriptions and load only relevant tools into model context.
 - [Deploy Remote MCP Servers on Serverless Cloud Infrastructure](concepts/deploy-remote-mcp-servers-on-serverless-cloud-infrastructure.md) - local MCP tools can become streamable HTTP cloud services with auth and session persistence.

@@ -100,9 +100,13 @@ Brockman's workflow advice is to challenge inherited constraints by first princi
 
 Cloud-scale agent workflow can still start with local iteration. The Strands pattern is to define a prompt and tools in code, test locally, then deploy the same model-tool shape into cloud infrastructure when the workflow is ready. For very large tool catalogs, the workflow adds a retrieval step before tool selection so the model sees task-relevant tools instead of every possible integration.
 
+Branchable cloud workspaces create a workflow primitive for stateful agent exploration. A human or orchestrator can declare a starting snapshot, hand it to multiple agents, let branches mutate independently, and pass the successful branch into later workflow steps. This works best when the branch outcome is verifiable and the workspace can be moved between humans, agents, and other agents without losing provenance.
+
 ## Key Concepts
 
 - [AI Engineering Practice Is Heterogeneous and Fast Moving](../concepts/ai-engineering-practice-is-heterogeneous-and-fast-moving.md) - AI workflows need to account for mixed roles, mixed use cases, and frequent model and prompt updates.
+- [Branchable Cloud Workspaces Make Agent Actions Reversible](../concepts/branchable-cloud-workspaces-make-agent-actions-reversible.md) - snapshot-based workflows let agents try stateful actions and backtrack.
+- [Scale Test-Time Search Through Parallel Verifier-Checked Branches](../concepts/scale-test-time-search-through-parallel-verifier-checked-branches.md) - branch-and-verify workflows promote the best attempt into downstream steps.
 - [Prompt Management Lags Prompt Iteration](../concepts/prompt-management-lags-prompt-iteration.md) - fast prompt iteration should be treated as a managed workflow rather than an ad hoc editing habit.
 - [Agent Adoption Trails LLM Adoption in the Workplace](../concepts/agent-adoption-trails-llm-adoption-in-the-workplace.md) - agent workflows need maturity gates distinct from general LLM adoption.
 - [Specialist Expert Systems Bundle Capabilities, APIs, and Instructions](../concepts/specialist-expert-systems-bundle-capabilities-apis-and-instructions.md) - workflow specialists can package task-specific instructions and APIs for orchestration.
@@ -511,6 +515,7 @@ Cloud-scale agent workflow can still start with local iteration. The Strands pat
 - [Enterprise Deep Research: The Next Killer App for Enterprise AI — Ofer Mendelevitch, Vectara](../sources/20251124_fh9LgKXBGnQ.md)
 - [AI changes *Nothing* — Dax Raad, OpenCode](../sources/20251123_o3gmwzo-Mik.md)
 - [The 2025 AI Engineering Report - Barr Yaron, Amplify](../sources/20250801_mQ7_Zje7WKE.md)
+- [Infrastructure for the Singularity - Jesse Han, Morph](../sources/20250801_2goSS66XRBk.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)
 - [Vision: Zero Bugs — Johann Schleier-Smith, Temporal](../sources/20251124_qLqttdO33UM.md)

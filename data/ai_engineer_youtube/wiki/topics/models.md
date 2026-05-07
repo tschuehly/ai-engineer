@@ -28,6 +28,8 @@ GLM 4.6 adds a staged open-model training recipe for long-context coding and age
 
 Brockman's research-engineering framing keeps model progress tied to executable systems. The AlexNet example combines an idea with fast GPU kernels, and current frontier work adds 100,000-GPU systems plus complex RL orchestration. Model capability should therefore be understood as the product of research direction, data, training method, runtime systems, and infrastructure rather than a research paper or parameter count alone.
 
+Morph's Magi 1 framing pushes that idea toward branch-aware reasoning models: the model is intended to be trained from the ground up to use a branchable cloud substrate, delegate to subagents, run verified environment searches, and call external verification software. The reusable model lesson is that some capabilities may require co-designing the model objective with the execution environment rather than adding a tool after training.
+
 Computer-vision models add a visual-fidelity caveat to multimodal model selection. Caption-aligned VLMs can look semantically competent while missing fine details that captions never supervised, such as object part pose, direction, clock hands, or domain-specific visual classes. Vision-only self-supervised backbones such as DINOv2 can preserve richer visual feature structure, but the useful engineering target is aligning those features with language and object-detection heads without reducing them to caption-level semantics.
 
 ## Key Concepts
@@ -35,6 +37,7 @@ Computer-vision models add a visual-fidelity caveat to multimodal model selectio
 - [AI Engineering Practice Is Heterogeneous and Fast Moving](../concepts/ai-engineering-practice-is-heterogeneous-and-fast-moving.md) - model strategy must tolerate frequent updates and multiple concurrent use cases.
 - [Multimodal Models Have a Production Adoption Gap](../concepts/multimodal-models-have-a-production-adoption-gap.md) - image, video, and audio capabilities still trail text in workplace production use.
 - [Research engineering partnership](../concepts/research-engineering-partnership.md) - model progress requires ideas and engineering systems to land together.
+- [Train Reasoning Models For Verified Environment Branching](../concepts/train-reasoning-models-for-verified-environment-branching.md) - branch-aware reasoning depends on model training and execution substrate co-design.
 - [Compare models by task, thinking budget, cost, and latency](../concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - model choice should be routed by workload constraints rather than by size alone.
 - [Update coding eval sets dynamically as model capability changes](../concepts/update-coding-eval-sets-dynamically-as-model-capability-changes.md) - coding-model comparisons need fresh tasks and calibrated difficulty to stay meaningful.
 - [Grow Agent Organizations Incrementally By Role Quality and Cost](../concepts/grow-agent-organizations-incrementally-by-role-quality-and-cost.md) - agent roles should use models whose quality and price fit the work.
@@ -161,6 +164,7 @@ Computer-vision models add a visual-fidelity caveat to multimodal model selectio
 - [Minimax M2: Building the #1 Open Model - Olive Song, MiniMax](../sources/20251213_lY1iFbDPRlw.md)
 - [Hard Won Lessons from Building Effective AI Coding Agents - Nik Pash, Cline](../sources/20251212_I8fs4omN1no.md)
 - [The 2025 AI Engineering Report - Barr Yaron, Amplify](../sources/20250801_mQ7_Zje7WKE.md)
+- [Infrastructure for the Singularity - Jesse Han, Morph](../sources/20250801_2goSS66XRBk.md)
 - [RL Environments at Scale - Will Brown, Prime Intellect](../sources/20251209__IzZWeuTx7I.md)
 - [Efficient Reinforcement Learning - Rhythm Garg & Linden Li, Applied Compute](../sources/20251209_o15AaYl7Wu0.md)
 - [Agent Reinforcement Fine Tuning - Will Hang & Cathy Zhou, OpenAI](../sources/20251209_p1CmPZ2j6Lk.md)
