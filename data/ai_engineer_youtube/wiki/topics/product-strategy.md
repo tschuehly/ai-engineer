@@ -14,6 +14,8 @@ AI startup strategy should also assume that raw model capability is a moving com
 
 AI product management adds an operating role or mindset around that uncertainty. Someone must connect viability, feasibility, desirability, data, evals, probabilistic behavior, guardrails, and human-in-the-loop design before a team overcommits to a product surface. The product sequence often changes: validate the core AI capability first when feasibility is uncertain, use cheap AI-assisted implementation to explore many feature variants with real users, then remove the extras and focus the workflow. Platform strategy needs the same willingness to pivot; a custom AI client can remain useful while tools and data move behind MCP or other portable interfaces as enterprise defaults change.
 
+Demos are one of the fastest ways to search that uncertain product space. A demo does not need production completeness to be useful; it can reveal a latent model capability, make a new interaction mode imaginable, or show that an old computing idea has become newly practical. The risk is treating demos as proof of reliability. Their product value is strongest when they are used as capability probes and shared artifacts, then followed by the usual work of narrowing, evaluating, and hardening the product.
+
 ## Key Concepts
 
 - [AI Does Not Replace Shareable Product Marketing](../concepts/ai-does-not-replace-shareable-product-marketing.md) - launch content only matters when it can earn attention and social sharing.
@@ -41,6 +43,7 @@ AI product management adds an operating role or mindset around that uncertainty.
 - [Resolve AI Capability Risk Before Product Surface Commitment](../concepts/resolve-ai-capability-risk-before-product-surface-commitment.md) - capability evals should precede product-surface investment when model feasibility is the largest risk.
 - [Explore AI Features Widely Then Cut Back to the User Workflow](../concepts/explore-ai-features-widely-then-cut-back-to-the-user-workflow.md) - cheap AI feature prototypes should be tested broadly, then simplified around validated user needs.
 - [Pivot AI Product Interfaces When Platform Defaults Shift](../concepts/pivot-ai-product-interfaces-when-platform-defaults-shift.md) - product interfaces should adapt when enterprise AI clients and interoperability standards change distribution.
+- [Share Demos To Reveal Latent Model Capabilities](../concepts/share-demos-to-reveal-latent-model-capabilities.md) - runnable demos expose model behaviors and product surfaces that are hard to infer from labels or specs.
 
 ## Open Questions
 
@@ -49,6 +52,7 @@ AI product management adds an operating role or mindset around that uncertainty.
 - How can teams evaluate "shareability" before a launch without reducing product marketing to generic virality formulas?
 - How should teams measure whether a delightful probabilistic feature is expanding agency rather than masking an unclear core job?
 - When should a custom AI client remain the primary product surface, and when should the team prioritize portable tool/data access through MCP or other standards?
+- How should teams distinguish demos that reveal real latent capability from demos that only succeed through brittle scaffolding?
 
 ## Sources
 
@@ -61,3 +65,4 @@ AI product management adds an operating role or mindset around that uncertainty.
 - [State of Startups and AI 2025 - Sarah Guo, Conviction](../sources/20250802_3MZS5gNElZM.md)
 - [Everything is ugly, so go build something that isn't - Raiza Martin, Huxe (ex NotebookLM)](../sources/20250728_yG5d5UaGz1M.md)
 - [Why your product needs an AI product manager, and why it should be you — James Lowe, i.AI](../sources/20250728_xzJdSi2Tsqw.md)
+- [On Curiosity -- Sharif Shameem, Lexica](../sources/20250719_0F8mnGPUycY.md)

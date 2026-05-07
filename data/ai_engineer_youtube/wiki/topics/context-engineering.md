@@ -42,6 +42,7 @@ Production AI coding adds a low-level context hygiene requirement: the agent nee
 
 ## Key Concepts
 
+- [Compress Environment Context For Early Agent Experiments](../concepts/compress-environment-context-for-early-agent-experiments.md) - shrink or decompose large web, GUI, or code contexts so model experiments can run within available context windows.
 - [Keep agent context small, fresh, and task-specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md) - context should be externalized, selected, summarized, and isolated so stale or excessive history does not degrade agent work.
 - [Give coding agents the same engineering infrastructure humans need](../concepts/give-coding-agents-the-same-engineering-infrastructure-humans-need.md) - standards, setup, tests, and task boundaries are context agents need before production code changes.
 - [Frequent intentional compaction keeps coding agents in the smart zone](../concepts/frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md) - source-backed compaction controls size, correctness, completeness, and trajectory in coding-agent sessions.
@@ -183,3 +184,4 @@ Production AI coding adds a low-level context hygiene requirement: the agent nee
 - [Backlog.md: Terminal Kanban Board for Managing Tasks with AI Agents - Alex Gavrilescu, Funstage](../sources/20251124_zMXKhhwiCIc.md)
 - [Five hard earned lessons about Evals - Ankur Goyal, Braintrust](../sources/20250823_a4BV0gGmXgA.md)
 - [Wisdom-Driven Knowledge Augmented Generation at Scale - Chin Keong Lam, Patho AI](../sources/20250822_9AQOvT8LnMI.md)
+- [On Curiosity -- Sharif Shameem, Lexica](../sources/20250719_0F8mnGPUycY.md)

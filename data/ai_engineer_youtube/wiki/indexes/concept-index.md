@@ -490,6 +490,7 @@
 
 ## Context Engineering
 
+- [Compress Environment Context For Early Agent Experiments](../concepts/compress-environment-context-for-early-agent-experiments.md)
 - [Give coding agents the same engineering infrastructure humans need](../concepts/give-coding-agents-the-same-engineering-infrastructure-humans-need.md)
 - [Frequent intentional compaction keeps coding agents in the smart zone](../concepts/frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md)
 - [Assemble per-feature context packages for coding agents](../concepts/assemble-per-feature-context-packages-for-coding-agents.md)
@@ -769,6 +770,7 @@
 - [Prototype AI UX by feeling the model material](../concepts/prototype-ai-ux-by-feeling-the-model-material.md)
 - [Choose AI coworker form factors by interaction mode](../concepts/choose-ai-coworker-form-factors-by-interaction-mode.md)
 - [Court agent emergence with bounded play](../concepts/court-agent-emergence-with-bounded-play.md)
+- [Share Demos To Reveal Latent Model Capabilities](../concepts/share-demos-to-reveal-latent-model-capabilities.md)
 - [AI Does Not Replace Shareable Product Marketing](../concepts/ai-does-not-replace-shareable-product-marketing.md)
 - [Optimize Onboarding Around One Aha Moment](../concepts/optimize-onboarding-around-one-aha-moment.md)
 - [Build Product Primitives Before Feature Surfaces](../concepts/build-product-primitives-before-feature-surfaces.md)

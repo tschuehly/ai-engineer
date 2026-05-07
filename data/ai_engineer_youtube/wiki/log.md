@@ -1559,3 +1559,11 @@
 - Updated topics: [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Use Durable Execution for Production Agent Loops](concepts/use-durable-execution-for-production-agent-loops.md), [Model LLM Calls and Tools as Durable Activities](concepts/model-llm-calls-and-tools-as-durable-activities.md), [Record Workflow History for Agent Debugging and Compliance](concepts/record-workflow-history-for-agent-debugging-and-compliance.md)
 - Notes: Added Temporal's code-first reliability framing for production agents as distributed workflows with activity-wrapped tools, signal/query interactions, durable retries, and exportable workflow history.
+
+## [2026-05-07] ingest | On Curiosity -- Sharif Shameem, Lexica
+
+- Source: [On Curiosity -- Sharif Shameem, Lexica](sources/20250719_0F8mnGPUycY.md)
+- Processed: `0F8mnGPUycY`
+- Updated topics: [Product Strategy](topics/product-strategy.md), [Agents](topics/agents.md), [Context Engineering](topics/context-engineering.md)
+- Updated concepts: [Share Demos To Reveal Latent Model Capabilities](concepts/share-demos-to-reveal-latent-model-capabilities.md), [Compress Environment Context For Early Agent Experiments](concepts/compress-environment-context-for-early-agent-experiments.md)
+- Notes: Added demos as exploratory capability probes and captured early GPT-3 context-compression patterns for browser and code-generation agent experiments.

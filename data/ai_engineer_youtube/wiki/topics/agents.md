@@ -94,6 +94,8 @@ Sales-development agents add a non-coding version of the same context problem. T
 
 Agent search is not just human search with a bot typing into it. Agents can pass large context blocks into search, issue many related queries, ask for thousands of results, and inspect pages faster than a person. That shifts the search API design toward semantic matching, exact task fit, result-count control, domain/date filters, and explicit neural versus keyword modes.
 
+Exploratory agent demos are also a capability-discovery tool. Early browser and code-generation demos show that agentic behavior can emerge before the model, interface, and context representation are mature. Those demos should not be mistaken for production reliability, but they can reveal which observation spaces, compressed environment representations, and tool apparatuses make new forms of model action possible.
+
 ## Key Concepts
 
 - [Compose agents and workflows as interchangeable primitives](../concepts/compose-agents-and-workflows-as-interchangeable-primitives.md) - agents and workflows can call each other as tools, steps, and handoff mechanisms.
@@ -141,6 +143,8 @@ Agent search is not just human search with a bot typing into it. Agents can pass
 - [Robotics policy failures can originate below the model](../concepts/robotics-policy-failures-can-originate-below-the-model.md) - embodied AI behavior must be debugged across policy, software, communication, and hardware layers.
 - [Close agent loops around live action feedback](../concepts/close-agent-loops-around-live-action-feedback.md) - agent actions need observable results, completion state, and interruption paths.
 - [Choose agent observation and action spaces explicitly](../concepts/choose-agent-observation-and-action-spaces-explicitly.md) - tool calls, terminal streams, browser control, and desktop frames encode different agent capabilities.
+- [Compress Environment Context For Early Agent Experiments](../concepts/compress-environment-context-for-early-agent-experiments.md) - environment representations can be compressed or decomposed to make early agent loops runnable under tight context budgets.
+- [Share Demos To Reveal Latent Model Capabilities](../concepts/share-demos-to-reveal-latent-model-capabilities.md) - exploratory demos expose agentic model behaviors before they become mature products.
 - [Ground agent simulation and evaluation in production logs](../concepts/ground-agent-simulation-and-evaluation-in-production-logs.md) - logs and categorized failures should feed simulation and improvement loops.
 - [Universal AI Adoption Changes Engineering Coordination](../concepts/universal-ai-adoption-changes-engineering-coordination.md) - full-team adoption lets engineering coordination move from editor-centric handoffs toward delegated agent work.
 - [Move enterprise AI adoption beyond spot experiments](../concepts/move-enterprise-ai-adoption-beyond-spot-experiments.md) - portfolio adoption gives agent work a better chance of changing organizational outcomes.
@@ -514,5 +518,6 @@ Agent search is not just human search with a bot typing into it. Agents can pass
 - [OpenAI on Securing Code-Executing AI Agents - Fouad Matin (Codex, Agent Robustness)](../sources/20250730_w7IMuYsBNr8.md)
 - [Building Alice's Brain: an AI Sales Rep that Learns Like a Human - Sherwood & Satwik, 11x](../sources/20250729_KWmkMV0FNwQ.md)
 - [Scaling AI Agents Without Breaking Reliability - Preeti Somal, Temporal](../sources/20250728_1izYWsokr9s.md)
+- [On Curiosity -- Sharif Shameem, Lexica](../sources/20250719_0F8mnGPUycY.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)
