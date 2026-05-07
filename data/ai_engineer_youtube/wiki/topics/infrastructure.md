@@ -40,6 +40,8 @@ Graph-backed retrieval becomes infrastructure when relationship traversal is on 
 
 AI-generated kernels turn low-level optimization into an infrastructure workflow. A useful system needs a supervisor that accepts source code, target hardware, and human guidance; synthesis agents that search optimization ideas; and a verification agent that executes candidates on actual hardware with strict correctness and timing checks. This infrastructure is most valuable when heterogeneous agentic inference workloads need to move across CUDA, Triton, Metal, Pallas, or new device generations faster than scarce kernel experts can hand-port every path.
 
+RL training infrastructure has a similar systems-modeling requirement. Synchronous RL wastes accelerator capacity when long-tail samples keep the whole step waiting, while asynchronous pipeline RL keeps sampling and training workers busy through queues and in-flight weight updates. The infrastructure problem is to allocate GPUs between sampling and training so production and consumption rates match, KV-cache memory is respected, and policy staleness stays within the algorithm's tolerance.
+
 ## Key Concepts
 
 - [Use hosted model playgrounds to prototype before owning infrastructure](../concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md) - hosted tools can validate model and deployment choices before teams own the runtime.
@@ -61,6 +63,8 @@ AI-generated kernels turn low-level optimization into an infrastructure workflow
 - [Treat quantization as a memory-bandwidth lever](../concepts/treat-quantization-as-a-memory-bandwidth-lever.md) - memory capacity and memory bandwidth should be treated as separate infrastructure constraints.
 - [Open model families need ecosystem-compatible tooling](../concepts/open-model-families-need-ecosystem-compatible-tooling.md) - open model infrastructure includes license, runtime, fine-tuning, and distribution support.
 - [Environment registries make AI research more accessible](../concepts/environment-registries-make-ai-research-more-accessible.md) - shared environment infrastructure lets teams run evals, inference, fine-tuning, and RL without rebuilding the execution stack.
+- [Pipeline RL trades policy staleness for GPU throughput](../concepts/pipeline-rl-trades-policy-staleness-for-gpu-throughput.md) - async RL infrastructure turns straggler waiting into a queueing and staleness-control problem.
+- [Simulate RL run layouts before spending GPU budget](../concepts/simulate-rl-run-layouts-before-spending-gpu-budget.md) - RL runs should be sized with workload simulations before using expensive accelerator fleets.
 - [Use MLX Swift LM for Apple local model integration](../concepts/use-mlx-swift-lm-for-apple-local-model-integration.md) - native Apple app infrastructure can use MLX-compatible Hugging Face models without building a cloud service first.
 - [Build internal AI engineering platforms when off-the-shelf tools lack enterprise context](../concepts/build-internal-ai-engineering-platforms-when-off-the-shelf-tools-lack-enterprise-context.md) - internal platforms can connect agents to monorepos, service catalogs, operational tools, and review systems.
 - [Build paved paths for enterprise AI engineering tools](../concepts/build-paved-paths-for-enterprise-ai-engineering-tools.md) - shared model, MCP, deployment, and enablement infrastructure prevents fragmented enterprise AI tooling.
@@ -151,6 +155,8 @@ AI-generated kernels turn low-level optimization into an infrastructure workflow
 - Which AI asset registry fields should be enforced by CI/CD rather than manually maintained after deployment?
 - Which BI catalog and semantic-layer metadata should be mandatory before an analytics agent can generate or execute SQL?
 - Which local workstation workloads should stay local because privacy, queueing, or latency matter more than elastic scale?
+- Which RL workloads benefit from dedicated async sampling and training pools, and which are too staleness-sensitive for pipeline execution?
+- Which response-length distributions, KV-cache limits, and throughput measurements are needed before sizing an RL training fleet?
 - Which CI-only checks should be converted into development-time commands before agents rely on them repeatedly?
 - Which kernel-generation verification controls are needed before generated low-level code can become an API-compatible production replacement?
 - Which agent handoff contracts, state versions, and recovery transitions should be persisted for audit and replay?
@@ -205,3 +211,4 @@ AI-generated kernels turn low-level optimization into an infrastructure workflow
 - [AI Kernel Generation: What's working, what's not, what's next - Natalie Serrino, Gimlet Labs](../sources/20251217_6guQG_tGt0o.md)
 - [Building in the Gemini Era - Kat Kampf & Ammaar Reshi, Google DeepMind](../sources/20251215_fgkXEIbZpGc.md)
 - [RL Environments at Scale - Will Brown, Prime Intellect](../sources/20251209__IzZWeuTx7I.md)
+- [Efficient Reinforcement Learning - Rhythm Garg & Linden Li, Applied Compute](../sources/20251209_o15AaYl7Wu0.md)

@@ -18,6 +18,8 @@ Coding and workplace-agent models also need training signals that look like the 
 
 Cline's RL environment factory adds a data-production pattern for that training pressure: real coding-agent sessions can be converted into portable environments with start states, prompts, solved end states, traces, and outcome verifiers. In that framing, the agent product is not only an interface around current models; it is also a source of hard tasks that can shape future model capability. Prime Intellect generalizes this environment pattern beyond RL: a product harness with tasks and rewards can become an eval, synthetic-data generator, SFT or distillation source, RL training loop, and model-customization substrate.
 
+Applied Compute adds the enterprise specialization and systems-efficiency layer for RL. In that framing, RL turns private customer workflows into private benchmarks, then improves a specialized model through repeated use and data flywheels. Because those runs serve customer delivery rather than open-ended lab research, speed, cost, and low-variance runtime are product requirements. Asynchronous pipeline RL can improve GPU utilization by decoupling sampling from training, but it introduces stale-policy tokens and a throughput/stability tradeoff that has to be modeled before launch.
+
 ## Key Concepts
 
 - [Compare models by task, thinking budget, cost, and latency](../concepts/compare-models-by-task-thinking-budget-cost-and-latency.md) - model choice should be routed by workload constraints rather than by size alone.
@@ -56,6 +58,9 @@ Cline's RL environment factory adds a data-production pattern for that training 
 - [Perturb agent scaffolds during training for generalization](../concepts/perturb-agent-scaffolds-during-training-for-generalization.md) - robust agent models should tolerate variation in tools, prompts, templates, environments, and responses.
 - [Small agentic models make parallel workplace agents economical](../concepts/small-agentic-models-make-parallel-workplace-agents-economical.md) - small active-parameter models can make multi-copy agent workflows affordable.
 - [Use verifiable rewards for language-model RL](../concepts/use-verifiable-rewards-for-language-model-rl.md) - automatic outcome checks can turn task success, format compliance, and action validity into training signals.
+- [Specialize models against private benchmarks with RL](../concepts/specialize-models-against-private-benchmarks-with-rl.md) - enterprise RL should target measurable private workflows, not only public leaderboards.
+- [Pipeline RL trades policy staleness for GPU throughput](../concepts/pipeline-rl-trades-policy-staleness-for-gpu-throughput.md) - async RL improves utilization only when the algorithm can tolerate stale-policy data.
+- [Simulate RL run layouts before spending GPU budget](../concepts/simulate-rl-run-layouts-before-spending-gpu-budget.md) - GPU allocation, response lengths, KV-cache limits, and staleness should be modeled before expensive runs.
 - [Bootstrap RL with targeted SFT before reinforcement learning](../concepts/bootstrap-rl-with-targeted-sft-before-reinforcement-learning.md) - small models may need a syntax and valid-action warm-up before RL can improve strategy.
 - [Control environment noise for group-based RL](../concepts/control-environment-noise-for-group-based-rl.md) - grouped rollout methods need comparable environments, controlled difficulty, and stable batch sizing.
 - [Mitigate small-model doom loops during preference alignment and RL](../concepts/mitigate-small-model-doom-loops-during-preference-alignment-and-rl.md) - tiny reasoning models need post-training checks for repetitive loops that SFT may not remove.
@@ -80,6 +85,8 @@ Cline's RL environment factory adds a data-production pattern for that training 
 - When is a modular set of fine-tuned tiny models preferable to one larger model with prompting or skills?
 - Which small-model failures should be fixed with architecture, post-training data, runtime tools, or product task narrowing?
 - Which interactive tasks have reward signals clear enough to justify building an RL environment rather than collecting more SFT examples?
+- Which private workflow benchmarks have enough measurable ROI and repeated use to justify enterprise RL instead of prompting, RAG, or ordinary fine-tuning?
+- How much policy staleness can a given language-model RL algorithm tolerate before asynchronous throughput gains stop improving useful learning?
 - How should teams evaluate sparse MoE, effective on-device, and dense long-context models against the same agent workflow without hiding deployment cost differences?
 - When should a team fine-tune an open model directly, start from a domain variant, or rely on a hosted API model for maximum raw capability?
 - What evaluation suite is sufficient before promoting a weight-updated long-tail model over RAG or full-context prompting?
@@ -116,3 +123,4 @@ Cline's RL environment factory adds a data-production pattern for that training 
 - [Minimax M2: Building the #1 Open Model - Olive Song, MiniMax](../sources/20251213_lY1iFbDPRlw.md)
 - [Hard Won Lessons from Building Effective AI Coding Agents - Nik Pash, Cline](../sources/20251212_I8fs4omN1no.md)
 - [RL Environments at Scale - Will Brown, Prime Intellect](../sources/20251209__IzZWeuTx7I.md)
+- [Efficient Reinforcement Learning - Rhythm Garg & Linden Li, Applied Compute](../sources/20251209_o15AaYl7Wu0.md)

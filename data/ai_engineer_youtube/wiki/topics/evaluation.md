@@ -24,6 +24,8 @@ Contact-center voice evaluation should inspect each pipeline stage, not only the
 
 RL environments add an evaluation shape for interactive model behavior: the same environment can generate rollouts, compute deterministic or weighted rewards, and become the training loop. That makes the environment itself part of the eval artifact. Teams should control environment noise, inspect trajectories, check for hidden opponent or simulator bias, and try the trained model in the real task before trusting reward curves or benchmark scores. Environment design also prevents vague agent validation: once a harness must include tasks and rewards, teams can compare models, prompts, hyperparameters, and training methods against a named optimization target instead of relying on a vibe check.
 
+Enterprise RL adds a private-benchmark version of the same evaluation discipline. The target is not a public math score by itself, but a company-specific workflow whose success can be graded, reinforced, and tied back to measurable ROI. Systems simulations also become part of evaluation before training begins: candidate RL layouts should be scored for throughput, queue balance, response-length behavior, KV-cache feasibility, and maximum policy staleness so teams do not mistake fast hardware utilization for stable learning.
+
 Code world models add execution traces as both training data and evaluation evidence. If a model claims to understand code behavior, useful checks include whether it can trace local variable values, predict state transitions, use terminal feedback, and simulate expensive program paths without confusing approximation with formal guarantees.
 
 Coding-agent model evaluation should also vary the harness around the model. MiniMax M2's scaffold-generalization lesson is that scaling tools is not enough: useful evals should perturb tool descriptions, system prompts, user prompts, chat templates, environment behavior, and tool-response shape to see whether the model adapts or only memorized one agent scaffold.
@@ -105,6 +107,8 @@ AI code quality evaluation should also distinguish generated-code speed from SDL
 - [Train coding-agent models with environments and expert developer reward](../concepts/train-coding-agent-models-with-environments-and-expert-developer-reward.md) - expert developer feedback can evaluate whether coding behavior is trusted and useful.
 - [Use neural debugging to fill code by simulated execution](../concepts/use-neural-debugging-to-fill-code-by-simulated-execution.md) - code assistants can be evaluated on whether simulated execution supports accurate completions.
 - [Use verifiable rewards for language-model RL](../concepts/use-verifiable-rewards-for-language-model-rl.md) - deterministic rewards make environment outcomes usable as eval and training signals.
+- [Specialize models against private benchmarks with RL](../concepts/specialize-models-against-private-benchmarks-with-rl.md) - private workflow success and ROI can define the reward target for enterprise post-training.
+- [Simulate RL run layouts before spending GPU budget](../concepts/simulate-rl-run-layouts-before-spending-gpu-budget.md) - RL infrastructure choices can be evaluated with throughput and staleness simulations before a costly run.
 - [Treat environments as eval, data, and training substrates](../concepts/treat-environments-as-eval-data-and-training-substrates.md) - one task harness can support evaluation, data creation, and training loops.
 - [Product harnesses can become model customization environments](../concepts/product-harnesses-can-become-model-customization-environments.md) - product-specific evals should match the harness where the model will actually operate.
 - [Control environment noise for group-based RL](../concepts/control-environment-noise-for-group-based-rl.md) - grouped rollout evals need differences to come from model behavior rather than simulator randomness.
@@ -205,6 +209,8 @@ AI code quality evaluation should also distinguish generated-code speed from SDL
 - How should GraphRAG evals isolate ontology errors, triplet extraction errors, traversal-depth misses, and final generation errors?
 - Which metadata fields most improve BI-agent accuracy, and which only make catalog documentation look better without changing task outcomes?
 - Which RL environment scores should require manual rollout review before they are allowed to drive training decisions?
+- Which private enterprise benchmarks have reward functions reliable enough to train against, and which should remain offline evals or human-reviewed decision aids?
+- Which simulated RL-layout metrics best predict real run stability after response lengths and policy behavior shift during training?
 - How should contact-center systems measure whether operator edits are correcting model errors, STT errors, schema mapping errors, or policy preferences?
 - Which user-outcome metrics are strong enough to replace generic AI quality scores as release gates for each product workflow?
 - Which DSPy optimization metrics are stable enough to drive prompt changes automatically, and which should only surface diagnostics for human review?
@@ -282,5 +288,6 @@ AI code quality evaluation should also distinguish generated-code speed from SDL
 - [Minimax M2: Building the #1 Open Model - Olive Song, MiniMax](../sources/20251213_lY1iFbDPRlw.md)
 - [Hard Won Lessons from Building Effective AI Coding Agents - Nik Pash, Cline](../sources/20251212_I8fs4omN1no.md)
 - [RL Environments at Scale - Will Brown, Prime Intellect](../sources/20251209__IzZWeuTx7I.md)
+- [Efficient Reinforcement Learning - Rhythm Garg & Linden Li, Applied Compute](../sources/20251209_o15AaYl7Wu0.md)
 - [Moving away from Agile: What's Next - Martin Harrysson & Natasha Maniar, McKinsey & Company](../sources/20251212_SZStlIhyTCY.md)
 - [Can you prove AI ROI in Software Eng? (Stanford 120k Devs Study) - Yegor Denisov-Blanch, Stanford](../sources/20251211_JvosMkuNxF8.md)

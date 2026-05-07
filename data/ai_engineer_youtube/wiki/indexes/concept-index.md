@@ -411,6 +411,8 @@
 ## Infrastructure
 
 - [Environment registries make AI research more accessible](../concepts/environment-registries-make-ai-research-more-accessible.md)
+- [Pipeline RL trades policy staleness for GPU throughput](../concepts/pipeline-rl-trades-policy-staleness-for-gpu-throughput.md)
+- [Simulate RL run layouts before spending GPU budget](../concepts/simulate-rl-run-layouts-before-spending-gpu-budget.md)
 - [Treat Multi-Agent Systems As Distributed Systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md)
 - [Use Durable Execution for Production Agent Loops](../concepts/use-durable-execution-for-production-agent-loops.md)
 - [Keep Workflow Orchestration Deterministic and Put Side Effects in Steps](../concepts/keep-workflow-orchestration-deterministic-and-put-side-effects-in-steps.md)
@@ -591,6 +593,8 @@
 - [Perturb agent scaffolds during training for generalization](../concepts/perturb-agent-scaffolds-during-training-for-generalization.md)
 - [Small agentic models make parallel workplace agents economical](../concepts/small-agentic-models-make-parallel-workplace-agents-economical.md)
 - [Use verifiable rewards for language-model RL](../concepts/use-verifiable-rewards-for-language-model-rl.md)
+- [Specialize models against private benchmarks with RL](../concepts/specialize-models-against-private-benchmarks-with-rl.md)
+- [Simulate RL run layouts before spending GPU budget](../concepts/simulate-rl-run-layouts-before-spending-gpu-budget.md)
 - [Control environment noise for group-based RL](../concepts/control-environment-noise-for-group-based-rl.md)
 - [Inspect rollouts before trusting RL environment scores](../concepts/inspect-rollouts-before-trusting-rl-environment-scores.md)
 - [Make local inference benchmarks reproducible artifacts](../concepts/make-local-inference-benchmarks-reproducible-artifacts.md)
@@ -671,6 +675,9 @@
 - [Train code models on execution traces, not only syntax](../concepts/train-code-models-on-execution-traces-not-only-syntax.md)
 - [Use neural debugging to fill code by simulated execution](../concepts/use-neural-debugging-to-fill-code-by-simulated-execution.md)
 - [Use verifiable rewards for language-model RL](../concepts/use-verifiable-rewards-for-language-model-rl.md)
+- [Specialize models against private benchmarks with RL](../concepts/specialize-models-against-private-benchmarks-with-rl.md)
+- [Pipeline RL trades policy staleness for GPU throughput](../concepts/pipeline-rl-trades-policy-staleness-for-gpu-throughput.md)
+- [Simulate RL run layouts before spending GPU budget](../concepts/simulate-rl-run-layouts-before-spending-gpu-budget.md)
 - [Bootstrap RL with targeted SFT before reinforcement learning](../concepts/bootstrap-rl-with-targeted-sft-before-reinforcement-learning.md)
 - [Control environment noise for group-based RL](../concepts/control-environment-noise-for-group-based-rl.md)
 - [Mitigate small-model doom loops during preference alignment and RL](../concepts/mitigate-small-model-doom-loops-during-preference-alignment-and-rl.md)

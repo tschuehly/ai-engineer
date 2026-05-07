@@ -919,3 +919,11 @@
 - Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Models](topics/models.md), [Tools](topics/tools.md)
 - Updated concepts: [Treat Environments as Eval, Data, and Training Substrates](concepts/treat-environments-as-eval-data-and-training-substrates.md), [Product Harnesses Can Become Model Customization Environments](concepts/product-harnesses-can-become-model-customization-environments.md), [Environment Registries Make AI Research More Accessible](concepts/environment-registries-make-ai-research-more-accessible.md), [Build RL Environments as Software Artifacts](concepts/build-rl-environments-as-software-artifacts.md)
 - Notes: Added Prime Intellect's environment abstraction for turning product harnesses into reusable eval, data-generation, model-customization, and RL artifacts.
+
+## [2026-05-07] ingest | Efficient Reinforcement Learning - Rhythm Garg & Linden Li, Applied Compute
+
+- Source: [Efficient Reinforcement Learning - Rhythm Garg & Linden Li, Applied Compute](sources/20251209_o15AaYl7Wu0.md)
+- Processed: `o15AaYl7Wu0`
+- Updated topics: [Evaluation](topics/evaluation.md), [Infrastructure](topics/infrastructure.md), [Models](topics/models.md)
+- Updated concepts: [Specialize Models Against Private Benchmarks With RL](concepts/specialize-models-against-private-benchmarks-with-rl.md), [Pipeline RL Trades Policy Staleness for GPU Throughput](concepts/pipeline-rl-trades-policy-staleness-for-gpu-throughput.md), [Simulate RL Run Layouts Before Spending GPU Budget](concepts/simulate-rl-run-layouts-before-spending-gpu-budget.md)
+- Notes: Added Applied Compute's enterprise RL framing and pipeline-RL systems model for balancing GPU throughput, response-length behavior, and policy staleness before costly runs.
