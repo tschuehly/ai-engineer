@@ -205,6 +205,7 @@ The agent-versus-workflow debate is a false binary for production design. A flex
 - [Use decision logs to keep uncertain agents moving](../concepts/use-decision-logs-to-keep-uncertain-agents-moving.md) - reversible assumptions keep long runs moving while preserving later review.
 - [Encode domain judgment in node-level agent skills](../concepts/encode-domain-judgment-in-node-level-agent-skills.md) - skills can add expert contingencies at the moment a work-tree node needs them.
 - [Realtime multimodal models should plan over specialized local actuators](../concepts/realtime-multimodal-models-should-plan-over-specialized-local-actuators.md) - realtime models can plan from speech and vision while local components handle low-level physical control.
+- [Choose WebRTC topologies by realtime application shape](../concepts/choose-webrtc-topologies-by-realtime-application-shape.md) - voice agents can connect local devices, cloud models, or multiparty rooms through different realtime media topologies.
 - [Use omnimodal embeddings for cross-modal retrieval and comparison](../concepts/use-omnimodal-embeddings-for-cross-modal-retrieval-and-comparison.md) - agents that work over mixed media need retrieval representations that preserve concepts across modalities.
 - [Interactive world models need memory, control, and live prompting](../concepts/interactive-world-models-need-memory-control-and-live-prompting.md) - agents and users need generated environments that remain consistent under action and live changes.
 - [On-device agents can combine local reasoning with tool and API calls](../concepts/on-device-agents-can-combine-local-reasoning-with-tool-and-api-calls.md) - local inference can still support function calling, JSON output, and selected API-backed skills.
@@ -487,5 +488,6 @@ The agent-versus-workflow debate is a false binary for production design. A flex
 - [The 2025 AI Engineering Report - Barr Yaron, Amplify](../sources/20250801_mQ7_Zje7WKE.md)
 - [Infrastructure for the Singularity - Jesse Han, Morph](../sources/20250801_2goSS66XRBk.md)
 - [Hacking the Inference Pareto Frontier - Kyle Kranen, NVIDIA](../sources/20250801_Y2qc0UhDSnc.md)
+- [Your realtime AI is ngmi - Sean DuBois (OpenAI), Kwindla Kramer (Daily)](../sources/20250731_E71YtNbCFXY.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

@@ -78,7 +78,7 @@ Architecture-copilot infrastructure needs a live system model before recommendat
 
 Brockman's AI infrastructure framing adds a fleet-shape constraint at frontier scale. AGI-scale work is not only model software; it can require massive physical infrastructure, and the workloads split between long compute-heavy jobs and low-latency realtime interactions. A fleet can use different accelerator shapes for each mode, but the ratio matters: if planning overestimates one mode, expensive capacity can become idle or mismatched.
 
-Realtime voice infrastructure adds a smaller but concrete version of that constraint. Development and production depend on live network transport, low-latency provider calls, VAD or semantic turn detection, synchronized audio/text events, and release evals that exercise real services end to end.
+Realtime voice infrastructure adds a smaller but concrete version of that constraint. Development and production depend on live network transport, low-latency provider calls, VAD or semantic turn detection, synchronized audio/text events, and release evals that exercise real services end to end. WebRTC is the preferred transport layer for realtime audio/video streams because it can prioritize fresh media under packet loss and jitter, adapt bandwidth, and expose stats without forcing each app to rebuild media networking on top of TCP.
 
 Remote MCP infrastructure can reuse ordinary cloud primitives when the local stdio assumption no longer fits. A simple MCP server can be wrapped behind Lambda and API Gateway with streamable HTTP, an authorizer or Cognito, and DynamoDB-backed session state; the client can then list remote tools and pass them into an agent. This does not remove the need for gateway, authorization, and context-budget design, but it gives teams a serverless path from local MCP demos to shared cloud endpoints.
 
@@ -214,6 +214,9 @@ Remote MCP infrastructure can reuse ordinary cloud primitives when the local std
 - [Preserve speaker channels before voice-agent transcription](../concepts/preserve-speaker-channels-before-voice-agent-transcription.md) - audio infrastructure should retain speaker separation, denoise, normalize, and mask PII before model processing.
 - [Evaluate vision models on domain adaptability and few-shot grounding](../concepts/evaluate-vision-models-on-domain-adaptability-and-few-shot-grounding.md) - camera, domain, and few-shot benchmark design should match the deployment contexts where visual inference runs.
 - [Extract contact-center intelligence as structured JSON](../concepts/extract-contact-center-intelligence-as-structured-json.md) - low-latency voice infrastructure can turn transcripts into CRM-ready structured records through prompt templates, STT tuning, and schema mapping.
+- [Design voice agents around voice-to-voice latency budgets](../concepts/design-voice-agents-around-voice-to-voice-latency-budgets.md) - realtime voice infrastructure should budget the full spoken round trip, not only model latency.
+- [Use WebRTC instead of WebSockets for realtime media streams](../concepts/use-webrtc-instead-of-websockets-for-realtime-media-streams.md) - WebRTC provides media transport behavior that TCP/WebSocket paths do not.
+- [Choose WebRTC topologies by realtime application shape](../concepts/choose-webrtc-topologies-by-realtime-application-shape.md) - realtime infrastructure can connect local devices, cloud AI, or multiparty sessions.
 - [LLM guardrails need checkpoints at every untrusted boundary](../concepts/llm-guardrails-need-checkpoints-at-every-untrusted-boundary.md) - guardrail infrastructure should be placed around all untrusted context and action boundaries.
 - [Hybrid retrieval should support filters and embedding migration](../concepts/hybrid-retrieval-should-support-filters-and-embedding-migration.md) - retrieval infrastructure needs lexical/vector search, filters, and migration paths for changing embedding models.
 - [Choose HybridRAG when relationship structure matters](../concepts/choose-hybridrag-when-relationship-structure-matters.md) - graph/vector retrieval should be an infrastructure choice driven by corpus structure and query needs.
@@ -263,6 +266,7 @@ Remote MCP infrastructure can reuse ordinary cloud primitives when the local std
 - Which graph algorithms, acceleration paths, and traversal limits keep HybridRAG latency acceptable as graphs grow to millions of nodes?
 - How much PII masking and operator verification can voice infrastructure add before latency undermines the realtime workflow?
 - What workload measurements are needed before splitting accelerator fleets between realtime and long-compute AI jobs?
+- Which realtime voice paths can use local peer-to-peer WebRTC, and which need cloud or multiparty media infrastructure?
 
 ## Sources
 
@@ -336,5 +340,6 @@ Remote MCP infrastructure can reuse ordinary cloud primitives when the local std
 - [Infrastructure for the Singularity - Jesse Han, Morph](../sources/20250801_2goSS66XRBk.md)
 - [Why We Don't Need More Data Centers - Dr. Jasper Zhang, Hyperbolic](../sources/20250801_M6Vbaig1TsM.md)
 - [Hacking the Inference Pareto Frontier - Kyle Kranen, NVIDIA](../sources/20250801_Y2qc0UhDSnc.md)
+- [Your realtime AI is ngmi - Sean DuBois (OpenAI), Kwindla Kramer (Daily)](../sources/20250731_E71YtNbCFXY.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

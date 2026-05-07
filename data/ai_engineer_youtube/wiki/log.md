@@ -1407,3 +1407,11 @@
 - Updated topics: [Inference](topics/inference.md), [Infrastructure](topics/infrastructure.md), [Agents](topics/agents.md)
 - Updated concepts: [Tune inference to the application Pareto point](concepts/tune-inference-to-the-application-pareto-point.md), [Disaggregate prefill and decode workers by workload shape](concepts/disaggregate-prefill-and-decode-workers-by-workload-shape.md), [Route inference requests by KV locality and worker load](concepts/route-inference-requests-by-kv-locality-and-worker-load.md), [Exploit structured agent waits for KV-cache manipulation](concepts/exploit-structured-agent-waits-for-kv-cache-manipulation.md), [Autoscale specialized inference workers as traffic mix changes](concepts/autoscale-specialized-inference-workers-as-traffic-mix-changes.md)
 - Notes: Added NVIDIA Dynamo's inference-frontier patterns for serving applications at a chosen quality, latency, and cost point through disaggregation, KV-aware routing, structured KV reuse, and dynamic worker pools.
+
+## [2026-05-07] ingest | Your realtime AI is ngmi - Sean DuBois (OpenAI), Kwindla Kramer (Daily)
+
+- Source: [Your realtime AI is ngmi - Sean DuBois (OpenAI), Kwindla Kramer (Daily)](sources/20250731_E71YtNbCFXY.md)
+- Processed: `E71YtNbCFXY`
+- Updated topics: [Voice Agents](topics/voice-agents.md), [Infrastructure](topics/infrastructure.md), [Agents](topics/agents.md)
+- Updated concepts: [Design Voice Agents Around Voice-To-Voice Latency Budgets](concepts/design-voice-agents-around-voice-to-voice-latency-budgets.md), [Use WebRTC Instead Of WebSockets For Realtime Media Streams](concepts/use-webrtc-instead-of-websockets-for-realtime-media-streams.md), [Choose WebRTC Topologies By Realtime Application Shape](concepts/choose-webrtc-topologies-by-realtime-application-shape.md)
+- Notes: Added realtime voice networking guidance: budget the full voice-to-voice path, use WebRTC for media streams rather than TCP/WebSockets, and choose local, cloud, or multiparty WebRTC topologies by product shape.

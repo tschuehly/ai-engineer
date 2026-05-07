@@ -306,6 +306,7 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Use omnimodal embeddings for cross-modal retrieval and comparison](concepts/use-omnimodal-embeddings-for-cross-modal-retrieval-and-comparison.md) - retrieval and agent context can preserve concepts across text, audio, video, and documents.
 - [Interactive world models need memory, control, and live prompting](concepts/interactive-world-models-need-memory-control-and-live-prompting.md) - generated environments require consistency and controllability when users act inside them.
 - [Ground generated media with current search context](concepts/ground-generated-media-with-current-search-context.md) - image-generation workflows can use current retrieval before synthesis.
+- [Use WebRTC instead of WebSockets for realtime media streams](concepts/use-webrtc-instead-of-websockets-for-realtime-media-streams.md) - realtime voice and video agents need transport semantics built for fresh media under jitter and packet loss.
 
 ## Topics
 
