@@ -1007,3 +1007,11 @@
 - Updated topics: [Coding Agents](topics/coding-agents.md), [Models](topics/models.md), [Infrastructure](topics/infrastructure.md), [Evaluation](topics/evaluation.md)
 - Updated concepts: [Production-Matched RL Environments Train Coding Agents on Real Tool Surfaces](concepts/production-matched-rl-environments-train-coding-agents-on-real-tool-surfaces.md), [Latency Shapes Coding-Agent Interaction Mode](concepts/latency-shapes-coding-agent-interaction-mode.md), [Product Harnesses Can Become Model Customization Environments](concepts/product-harnesses-can-become-model-customization-environments.md), [Train Coding-Agent Models with Environments and Expert Developer Reward](concepts/train-coding-agent-models-with-environments-and-expert-developer-reward.md), [Cloud Agents Turn Coding Work Into Asynchronous VM-Backed Queues](concepts/cloud-agents-turn-coding-work-into-asynchronous-vm-backed-queues.md)
 - Notes: Added Cursor Composer's production-matched coding-agent RL workflow, latency tradeoffs, and training-infrastructure synthesis.
+
+## [2026-05-07] ingest | Music from AIE Code Summit - Instrumentals
+
+- Source: [Music from AIE Code Summit - Instrumentals](sources/20251127_xAfp-znTRx8.md)
+- Processed: `xAfp-znTRx8`
+- Updated topics: None
+- Updated concepts: None
+- Notes: Filed the instrumental music upload as transcript-available but conceptually low-signal, without adding unsupported topic or concept claims.
