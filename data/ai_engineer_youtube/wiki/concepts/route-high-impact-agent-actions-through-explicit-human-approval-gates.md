@@ -16,6 +16,7 @@ Details:
 - Carpentero adds a caveat for approval UX: a human may approve a simplified operation while the model reads a fuller tool description or hidden parameter that changes the actual action. 10:53-12:04, 15:28-15:39
 - Auth0 describes an async approval pattern for long-running agents: the agent initiates an authorization request for a risky operation, the user receives structured transaction details, and approval returns as an access token containing the exact approved details. 09:02-10:40
 - BlackRock's regulated financial-app framing argues for designing human-in-the-loop review first because compliance and four-eyes checks remain necessary even when agentic automation is tempting. 13:44-14:05
+- Kozlov's Cloudflare/Knock example wraps an `issueCard` tool in required human input, defers execution until approval, routes the approval webhook back to the correct durable object, and stores status so the same card cannot be provisioned twice. 15:58-18:44
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -35,3 +36,4 @@ Sources:
 - [$1 AI Guardrails: The Unreasonable Effectiveness of Finetuned ModernBERTs - Diego Carpentero](../sources/20260416_YZHPEkfy2kc.md), 10:53-12:04, 15:28-15:39
 - [Identity for AI Agents - Patrick Riley & Carlos Galan, Auth0](../sources/20260114_VSdV-AdSlis.md), 09:02-10:40
 - [How BlackRock Builds Custom Knowledge Apps at Scale — Vaibhav Page & Infant Vasanth, BlackRock](../sources/20250823_08mH36_NVos.md), 13:44-14:05
+- [Building Agents (the hard parts!) - Rita Kozlov, Cloudflare](../sources/20250723_j_TKDweOsYE.md), 15:58-18:44

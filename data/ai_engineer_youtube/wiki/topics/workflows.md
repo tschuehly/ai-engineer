@@ -134,6 +134,8 @@ Knowledge-base onboarding workflows can move domain setup from manual forms into
 
 Durable workflow engines are also an agent observability boundary. When the workflow records signals, queries, activity calls, retries, and state transitions, teams can inspect how an agent crossed LLM calls, tools, user input, and long-running waits instead of reconstructing behavior from scattered logs.
 
+Approval-gated tool execution adds a concrete state-machine requirement to agent workflows. If a model proposes a sensitive action such as issuing a card, the workflow should defer the actual tool call, send the approval through the right notification channel, route the approval event back to the correct agent instance, resume only after approval, and persist enough status to prevent duplicate side effects from repeated or out-of-order events.
+
 Work-management platforms can host the agent workflow itself. An agent should acknowledge triggers, state what it understood, move issues through normal status, continue in threads, ask for clarification before acting, and keep output useful enough that the shared workspace remains a coordination surface rather than a dumping ground for model text.
 
 Eval workflows can be staged the same way as software test workflows: start with component checks, then integration and end-to-end checks, and automate the suite in CI/CD as prompts, models, data, and production behavior evolve. This keeps evals tied to real release decisions instead of one-off benchmark exploration.
@@ -195,6 +197,8 @@ Healthcare revenue cycle workflows add a financially measurable version of the s
 - [Institutionalize Knowledge Infrastructure for AI Adoption](../concepts/institutionalize-knowledge-infrastructure-for-ai-adoption.md) - workflow lessons, decisions, and memories should compound across teams.
 - [Parallel Agent Prototypes Turn Design Choices Into Measurements](../concepts/parallel-agent-prototypes-turn-design-choices-into-measurements.md) - cheap parallel prototypes can turn workflow debates into measured convergence.
 - [Keep Fixed Business Logic Outside the Model](../concepts/keep-fixed-business-logic-outside-the-model.md) - workflow gates should enforce hard conditions outside prompt text.
+- [Defer Sensitive Tool Execution Until Approval Resumes](../concepts/defer-sensitive-tool-execution-until-approval-resumes.md) - approval workflows should pause tool execution and resume from persisted state.
+- [Compose Agents From Client, Reasoning, Workflow, and Tools](../concepts/compose-agents-from-client-reasoning-workflow-and-tools.md) - workflow coordination is the stateful layer between model plans and tool actions.
 - [Replace Anecdotal Agent Tuning With Eval and Observability Loops](../concepts/replace-anecdotal-agent-tuning-with-eval-and-observability-loops.md) - workflow changes should be driven by eval sets and traced failure clusters.
 - [Run eval suites in CI/CD before and during production](../concepts/run-eval-suites-in-cicd-before-and-during-production.md) - eval workflows should become automated checks around model, prompt, data, and production-use-case changes.
 - [AI Engineering Practice Is Heterogeneous and Fast Moving](../concepts/ai-engineering-practice-is-heterogeneous-and-fast-moving.md) - AI workflows need to account for mixed roles, mixed use cases, and frequent model and prompt updates.
@@ -682,3 +686,4 @@ Healthcare revenue cycle workflows add a financially measurable version of the s
 - [Build Dynamic Products, and Stop the AI Sideshow - Eliza Cabrera (Workday) + Jeremy Silva (Freeplay)](../sources/20250723_CB-4NKDYnRs.md)
 - [How agents will unlock the $500B promise of AI - Donald Hruska, Retool](../sources/20250723_Lqq_LcBaJCc.md)
 - [The Billable Hour is Dead; Long Live the Billable Hour - Kevin Madura + Mo Bhasin, Alix Partners](../sources/20250723_Wv1tAxKYLeE.md)
+- [Building Agents (the hard parts!) - Rita Kozlov, Cloudflare](../sources/20250723_j_TKDweOsYE.md)

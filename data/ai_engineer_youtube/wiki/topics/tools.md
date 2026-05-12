@@ -22,6 +22,8 @@ Browser UI control is the fallback tool surface when a workflow has no suitable 
 
 MCP is one part of the agent connectivity stack, not a universal replacement for every surface. Skills carry reusable domain knowledge, CLIs and computer use fit local sandboxed environments, and MCP fits remote semantics, authorization, governance, resources, long-running tasks, and cross-client application surfaces. MCP applications and skills over MCP point to a richer server-authored surface where an integration can ship UI, tools, and current usage guidance together.
 
+Remote MCP also changes client strategy. A single stateful MCP server can be exposed through existing clients such as Cursor, Claude, and ChatGPT, then later through a custom app or voice client when the product needs tighter control over modality and workflow. The server-side tool surface should therefore own resources, prompts, tools, memory, and side-effect state rather than assuming one chat UI owns the whole agent.
+
 Task-management tools need the same product shape. Backlog.md uses MCP resources to teach agents the task lifecycle and MCP tools to let them search, view, create, update, and complete repo-local Markdown tasks; the resource/tool split keeps workflow guidance explicit while preserving a constrained operation surface.
 
 RAG stacks are another tool surface when their internals are inspectable and editable. OpenRAG's LangFlow layer exposes ingestion, retrieval, guardrails, parsers, URL ingestion, calculators, prompt templates, and OpenSearch tools as flow components; its API keys and MCP server let other applications or agents call the same retrieval system instead of duplicating it.
@@ -86,6 +88,10 @@ Anthropic's remote-MCP experience adds two practical tool-surface lessons. First
 - [Type-Safe Agent Schemas Make Refactoring and Validation Easier](../concepts/type-safe-agent-schemas-make-refactoring-and-validation-easier.md) - typed tool dependencies and outputs keep framework contracts refactorable.
 - [Trace Agent Tool Arguments to Debug Real Failures](../concepts/trace-agent-tool-arguments-to-debug-real-failures.md) - tool traces should expose selected arguments, responses, latency, and cost.
 - [Group Agent Tools by Human-Facing Actions](../concepts/group-agent-tools-by-human-facing-actions.md) - action-level tool grouping reduces semantic collisions from raw API catalogs.
+- [Compose Agents From Client, Reasoning, Workflow, and Tools](../concepts/compose-agents-from-client-reasoning-workflow-and-tools.md) - tool design is one layer in a broader agent system.
+- [Stateful Remote MCP Servers Persist Agent Memory Across Clients](../concepts/stateful-remote-mcp-servers-persist-agent-memory-across-clients.md) - remote MCP tools can preserve memory across client surfaces.
+- [Agent Clients Can Be Custom or Existing MCP Surfaces](../concepts/agent-clients-can-be-custom-or-existing-mcp-surfaces.md) - the same MCP service can meet users in existing or purpose-built clients.
+- [Defer Sensitive Tool Execution Until Approval Resumes](../concepts/defer-sensitive-tool-execution-until-approval-resumes.md) - approval-gated tools should defer execution rather than only ask the model to be careful.
 - [Keep Fixed Business Logic Outside the Model](../concepts/keep-fixed-business-logic-outside-the-model.md) - deterministic gates should enforce hard rules around model-driven state updates.
 - [Agent Icebergs Hide Platform and Lifecycle Burden](../concepts/agent-icebergs-hide-platform-and-lifecycle-burden.md) - customer-facing agent tools include hidden lifecycle, testing, migration, voice, and coaching surfaces.
 - [Product Work Graphs Coordinate Agents and Humans](../concepts/product-work-graphs-coordinate-agents-and-humans.md) - product tools can expose issues, feedback, projects, and relationships as an agent coordination surface.
@@ -413,5 +419,6 @@ Anthropic's remote-MCP experience adds two practical tool-surface lessons. First
 - [Machines of Buying and Selling Grace - Adam Behrens, New Generation](../sources/20250723_zlZz0mDF2eg.md)
 - [How agents will unlock the $500B promise of AI - Donald Hruska, Retool](../sources/20250723_Lqq_LcBaJCc.md)
 - [The Billable Hour is Dead; Long Live the Billable Hour - Kevin Madura + Mo Bhasin, Alix Partners](../sources/20250723_Wv1tAxKYLeE.md)
+- [Building Agents (the hard parts!) - Rita Kozlov, Cloudflare](../sources/20250723_j_TKDweOsYE.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

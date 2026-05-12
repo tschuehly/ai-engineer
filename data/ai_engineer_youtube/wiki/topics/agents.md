@@ -18,6 +18,8 @@ Typed agent frameworks add another reliability lever to the basic loop. Pydantic
 
 Production agent design should optimize for efficacy before autonomy. Agency is useful when changing inputs make fixed automation brittle, but it should be raised only when the resulting system still reliably solves the user task. Tool calling, orchestration, multi-agent routing, evals, observability, and safety trip wires are therefore not optional extras; they are the controls that keep agentic behavior from turning into low-efficacy autonomy.
 
+Cloudflare's agent-building framing decomposes that control surface into client, reasoning, workflow coordination, and tools. The client owns human interaction, the model owns planning, workflow infrastructure tracks executed and pending actions, and tools carry side effects or retrieval. Remote MCP servers can make those tools reusable across clients, while server-side state keeps memory and approval status outside any single chat session.
+
 Agent models themselves can be tuned for this loop shape. M2's training story emphasizes interleaving reasoning with many tool-call turns, perturbing the operational surface around tools and prompts, and using small active-parameter economics to run multiple workplace-agent copies in parallel. Agent RFT adds a production-post-training variant: teams can train a reasoning model over multi-step rollouts that call hosted tool endpoints and receive custom reward signals, as long as rollout IDs and tool-call context are preserved for grading and the workflow is well-defined enough for production-matched rewards.
 
 Agent serving infrastructure can also use the structure of agent work. Re-query loops and tool-call waits are not just application behavior; they reveal when KV-cache state will be reused, moved out of GPU memory during a wait, and restored before the next model call, which can reduce repeated prefill cost without changing the agent's visible workflow.
@@ -142,6 +144,10 @@ Devin 2.0 frames the same progression as changing human-intervention intervals. 
 - [Trace Agent Tool Arguments to Debug Real Failures](../concepts/trace-agent-tool-arguments-to-debug-real-failures.md) - trace-level tool arguments reveal why a tool-using run failed.
 - [Raise Agent Agency Only When Efficacy Holds](../concepts/raise-agent-agency-only-when-efficacy-holds.md) - autonomy should increase only when the system remains effective on the task.
 - [Group Agent Tools by Human-Facing Actions](../concepts/group-agent-tools-by-human-facing-actions.md) - curated action-level tools reduce confusion from broad API catalogs.
+- [Compose Agents From Client, Reasoning, Workflow, and Tools](../concepts/compose-agents-from-client-reasoning-workflow-and-tools.md) - separates interaction, planning, state coordination, and action execution.
+- [Stateful Remote MCP Servers Persist Agent Memory Across Clients](../concepts/stateful-remote-mcp-servers-persist-agent-memory-across-clients.md) - remote MCP services can hold memory independently of any single client.
+- [Defer Sensitive Tool Execution Until Approval Resumes](../concepts/defer-sensitive-tool-execution-until-approval-resumes.md) - sensitive side effects should pause until an approval event resumes the workflow.
+- [Agent Clients Can Be Custom or Existing MCP Surfaces](../concepts/agent-clients-can-be-custom-or-existing-mcp-surfaces.md) - agent services can ship through existing MCP clients or custom app and voice clients.
 - [Backlog-Scale Coding Agents Need Confidence and Self-Testing](../concepts/backlog-scale-coding-agents-need-confidence-and-self-testing.md) - agents working many queued tasks need confidence thresholds and escalation paths.
 - [Choose Copilot Mode By Autonomy and Feedback Need](../concepts/choose-copilot-mode-by-autonomy-and-feedback-need.md) - Copilot exposes multiple coding-agent autonomy levels inside a developer workflow.
 - [Vet MCP Servers As Action-Capable Extensions](../concepts/vet-mcp-servers-as-action-capable-extensions.md) - Copilot MCP servers can read external data and perform actions, so trust and scope matter.
@@ -625,5 +631,6 @@ Devin 2.0 frames the same progression as changing human-intervention intervals. 
 - [Build Dynamic Products, and Stop the AI Sideshow - Eliza Cabrera (Workday) + Jeremy Silva (Freeplay)](../sources/20250723_CB-4NKDYnRs.md)
 - [How agents will unlock the $500B promise of AI - Donald Hruska, Retool](../sources/20250723_Lqq_LcBaJCc.md)
 - [The Billable Hour is Dead; Long Live the Billable Hour - Kevin Madura + Mo Bhasin, Alix Partners](../sources/20250723_Wv1tAxKYLeE.md)
+- [Building Agents (the hard parts!) - Rita Kozlov, Cloudflare](../sources/20250723_j_TKDweOsYE.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

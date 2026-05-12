@@ -1894,3 +1894,11 @@
 - Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Retrieval](topics/retrieval.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Enterprise AI Productivity Needs Workflow-Level Outcomes](concepts/enterprise-ai-productivity-needs-workflow-level-outcomes.md), [Schema-First Classification Turns LLMs Into Enterprise Categorization Tools](concepts/schema-first-classification-turns-llms-into-enterprise-categorization-tools.md), [Enterprise RAG Becomes More Useful With API Tool Access](concepts/enterprise-rag-becomes-more-useful-with-api-tool-access.md), [Use Field-Level Confidence Signals for Human Review](concepts/use-field-level-confidence-signals-for-human-review.md)
 - Notes: Added AlixPartners' enterprise knowledge-work patterns for full-corpus productivity, validated structured classification, API-augmented RAG, and confidence-guided extraction review.
+
+## [2026-05-12] ingest | Building Agents (the hard parts!) - Rita Kozlov, Cloudflare
+
+- Source: [Building Agents (the hard parts!) - Rita Kozlov, Cloudflare](sources/20250723_j_TKDweOsYE.md)
+- Processed: `j_TKDweOsYE`
+- Updated topics: [Agents](topics/agents.md), [Tools](topics/tools.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Compose Agents From Client, Reasoning, Workflow, and Tools](concepts/compose-agents-from-client-reasoning-workflow-and-tools.md), [Stateful Remote MCP Servers Persist Agent Memory Across Clients](concepts/stateful-remote-mcp-servers-persist-agent-memory-across-clients.md), [Defer Sensitive Tool Execution Until Approval Resumes](concepts/defer-sensitive-tool-execution-until-approval-resumes.md), [Agent Clients Can Be Custom or Existing MCP Surfaces](concepts/agent-clients-can-be-custom-or-existing-mcp-surfaces.md)
+- Notes: Added Cloudflare's four-layer agent architecture, stateful remote MCP deployment pattern, and approval-resumed tool execution workflow.
