@@ -16,6 +16,7 @@
 - [Start Customer-Facing Agents With Narrow Valuable Outcomes](../concepts/start-customer-facing-agents-with-narrow-valuable-outcomes.md)
 - [Build Core Agents and Buy Commodity Agent Workflows](../concepts/build-core-agents-and-buy-commodity-agent-workflows.md)
 - [Production Agent Platforms Need Enterprise Controls](../concepts/production-agent-platforms-need-enterprise-controls.md)
+- [Schema-First Classification Turns LLMs Into Enterprise Categorization Tools](../concepts/schema-first-classification-turns-llms-into-enterprise-categorization-tools.md)
 - [Agent Icebergs Hide Platform and Lifecycle Burden](../concepts/agent-icebergs-hide-platform-and-lifecycle-burden.md)
 - [Incident Agents Turn Alerts Into RCA and Operational Memory](../concepts/incident-agents-turn-alerts-into-rca-and-operational-memory.md)
 - [Coding-Agent Capability Tiers Change the Bottleneck](../concepts/coding-agent-capability-tiers-change-the-bottleneck.md)
@@ -932,6 +933,8 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Enterprise AI Productivity Needs Workflow-Level Outcomes](../concepts/enterprise-ai-productivity-needs-workflow-level-outcomes.md)
+- [Use Field-Level Confidence Signals for Human Review](../concepts/use-field-level-confidence-signals-for-human-review.md)
 
 - [Evals Only Cover Known AI Product Failures](../concepts/evals-only-cover-known-ai-product-failures.md)
 - [AI Product Issues Need Signals and Intents](../concepts/ai-product-issues-need-signals-and-intents.md)
@@ -1244,6 +1247,7 @@
 - [Interactive world models need memory, control, and live prompting](../concepts/interactive-world-models-need-memory-control-and-live-prompting.md)
 
 ## Retrieval
+- [Enterprise RAG Becomes More Useful With API Tool Access](../concepts/enterprise-rag-becomes-more-useful-with-api-tool-access.md)
 
 - [Codebase Intelligence Needs Structural and Historical Signals](../concepts/codebase-intelligence-needs-structural-and-historical-signals.md)
 - [Product Work Graphs Coordinate Agents and Humans](../concepts/product-work-graphs-coordinate-agents-and-humans.md)
@@ -1350,6 +1354,7 @@
 - [Keep Human Review on High-Risk Agent Operations](../concepts/keep-human-review-on-high-risk-agent-operations.md)
 
 ## Tools
+- [Enterprise RAG Becomes More Useful With API Tool Access](../concepts/enterprise-rag-becomes-more-useful-with-api-tool-access.md)
 
 - [Production Agent Platforms Need Enterprise Controls](../concepts/production-agent-platforms-need-enterprise-controls.md)
 - [Build Core Agents and Buy Commodity Agent Workflows](../concepts/build-core-agents-and-buy-commodity-agent-workflows.md)
@@ -1549,6 +1554,9 @@
 - [Verify AI call summaries before CRM sync](../concepts/verify-ai-call-summaries-before-crm-sync.md)
 
 ## Workflows
+- [Enterprise AI Productivity Needs Workflow-Level Outcomes](../concepts/enterprise-ai-productivity-needs-workflow-level-outcomes.md)
+- [Schema-First Classification Turns LLMs Into Enterprise Categorization Tools](../concepts/schema-first-classification-turns-llms-into-enterprise-categorization-tools.md)
+- [Use Field-Level Confidence Signals for Human Review](../concepts/use-field-level-confidence-signals-for-human-review.md)
 
 - [Build Core Agents and Buy Commodity Agent Workflows](../concepts/build-core-agents-and-buy-commodity-agent-workflows.md)
 - [Production Agent Platforms Need Enterprise Controls](../concepts/production-agent-platforms-need-enterprise-controls.md)

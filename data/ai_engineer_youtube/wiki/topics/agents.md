@@ -46,6 +46,8 @@ Cline's coding-agent lesson separates harness progress from model progress. A st
 
 Business-agent adoption adds a build-versus-buy boundary. A simple ReAct loop can be small, but enterprise production agents need SSO, RBAC, secure connectors, audit trails, compliance posture, observability, evals, cost controls, and sometimes on-prem or air-gapped deployment. Strategic agents tied to core product or competitive edge justify handbuilt ownership; commodity business workflows that need to ship quickly are better candidates for managed agent platforms or vertical agents.
 
+Enterprise agent workflows should also earn reliability at the step level before teams chain them into broader autonomy. Schema-first classification can turn vendor, ticket, or spend categorization into an accurate building block, but only after the taxonomy, tool lookups, and business validation are strong enough to trust.
+
 Proactive coding agents shift the interface again: instead of waiting for prompts or forcing humans to babysit many asynchronous terminals, they observe work patterns, personalize to the user and project, intervene at the right time, and live inside existing terminals, repositories, and IDEs. A practical maturity ladder starts with concrete maintenance signals such as missing tests, unused dependencies, and unsafe patterns; moves into project-aware help based on frameworks, deployment style, and user role; then connects code, design, telemetry, analytics, and conversion signals so agents can propose cross-boundary improvements. The human control point does not disappear: higher proactivity still needs visible agent activity, editable memory, critic review, verification artifacts, and redirection when the agent is misaligned.
 
 Remote coding agents add a concrete asynchronous-worker form factor. Jules-style agents clone the repository into their own cloud VMs, run commands and tests away from the local laptop, and make development possible from lightweight clients such as a phone. Their leverage comes from bounded parallelism: agents can execute separate backlog items, or try alternative approaches to one problem, while the human or another agent compares outputs against tests, coverage, accessibility audits, Lighthouse scores, and merge checks.
@@ -222,6 +224,7 @@ Devin 2.0 frames the same progression as changing human-intervention intervals. 
 - [Support-led coding agents exploit fresh customer context](../concepts/support-led-coding-agents-exploit-fresh-customer-context.md) - customer-facing operators can supply fresh context and validation for maintenance agents.
 - [Build Core Agents and Buy Commodity Agent Workflows](../concepts/build-core-agents-and-buy-commodity-agent-workflows.md) - agent implementation strategy should follow business criticality and engineering leverage.
 - [Production Agent Platforms Need Enterprise Controls](../concepts/production-agent-platforms-need-enterprise-controls.md) - enterprise agents require identity, permission, compliance, observability, cost, and deployment controls beyond the model loop.
+- [Schema-First Classification Turns LLMs Into Enterprise Categorization Tools](../concepts/schema-first-classification-turns-llms-into-enterprise-categorization-tools.md) - validated structured classification can become a dependable step inside larger agentic workflows.
 - [Embed agent tools in existing work surfaces](../concepts/embed-agent-tools-in-existing-work-surfaces.md) - agent tools become more useful when embedded where users already triage, code, and review.
 - [Agentic automation can outperform first-tier productivity use cases](../concepts/agentic-automation-can-outperform-first-tier-productivity-use-cases.md) - deeper automation may produce more value than only personal time savings.
 - [Fractured Attention Becomes Usable With Delegated Agents](../concepts/fractured-attention-becomes-usable-with-delegated-agents.md) - agent delegation can turn short attention windows into productive investigation and fix loops.
@@ -621,5 +624,6 @@ Devin 2.0 frames the same progression as changing human-intervention intervals. 
 - [Machines of Buying and Selling Grace - Adam Behrens, New Generation](../sources/20250723_zlZz0mDF2eg.md)
 - [Build Dynamic Products, and Stop the AI Sideshow - Eliza Cabrera (Workday) + Jeremy Silva (Freeplay)](../sources/20250723_CB-4NKDYnRs.md)
 - [How agents will unlock the $500B promise of AI - Donald Hruska, Retool](../sources/20250723_Lqq_LcBaJCc.md)
+- [The Billable Hour is Dead; Long Live the Billable Hour - Kevin Madura + Mo Bhasin, Alix Partners](../sources/20250723_Wv1tAxKYLeE.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

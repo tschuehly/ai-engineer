@@ -26,6 +26,8 @@ Task-management tools need the same product shape. Backlog.md uses MCP resources
 
 RAG stacks are another tool surface when their internals are inspectable and editable. OpenRAG's LangFlow layer exposes ingestion, retrieval, guardrails, parsers, URL ingestion, calculators, prompt templates, and OpenSearch tools as flow components; its API keys and MCP server let other applications or agents call the same retrieval system instead of duplicating it.
 
+Enterprise RAG tools can also expose proprietary API access when source data lives outside the indexed document store. A practical pattern is to make API specifications model-accessible so the LLM can call licensed databases directly, replacing manual web UI exports and spreadsheet handoffs with a controlled tool path.
+
 LLM programming frameworks can make prompt format itself a tool layer. DSPy signatures and modules describe the workflow intent, while adapters choose how that intent is rendered to the model, so teams can compare JSON, BAML, compressed formats, or model-specific formatting without rewriting the program. This matters because prompt strings otherwise become a low-level tool surface that entangles durable task intent with model-specific wording, examples, output-format instructions, parsing assumptions, and inference-strategy choices.
 
 Open-source agent tools need extension points as well as integrations. Plugin architecture can keep memory, wiki, dreaming, and other experimental capabilities installable without forcing every idea into core or overloading maintainers with unrelated pull requests. Ordinary package-manager distribution can be enough for harness extensions when extensions are just code modules that add tools, commands, events, providers, or compaction behavior. Routine systems are another tool layer: they package repeated prompts as scheduled or manually parameterized workflows, often invoking skills for specialized domain guidance while keeping the trigger, variables, and project or agent ownership explicit.
@@ -221,6 +223,7 @@ Anthropic's remote-MCP experience adds two practical tool-surface lessons. First
 - [Agent rules should emerge from observed off-rail behavior](../concepts/agent-rules-should-emerge-from-observed-off-rail-behavior.md) - rules, checks, and hooks are tool-context controls that should be grounded in local agent failures.
 - [Cross-app access centralizes MCP authentication through the identity provider](../concepts/cross-app-access-centralizes-mcp-authentication-through-the-identity-provider.md) - IdP-mediated trust can make enterprise MCP access less repetitive and more governable.
 - [Production Agent Platforms Need Enterprise Controls](../concepts/production-agent-platforms-need-enterprise-controls.md) - enterprise tool platforms need built-in identity, connectors, audit, observability, and cost visibility.
+- [Enterprise RAG Becomes More Useful With API Tool Access](../concepts/enterprise-rag-becomes-more-useful-with-api-tool-access.md) - API tools can extend RAG beyond internal document chunks.
 - [Build Core Agents and Buy Commodity Agent Workflows](../concepts/build-core-agents-and-buy-commodity-agent-workflows.md) - tool-platform selection should follow whether the agent workflow is strategic or commodity.
 - [Short-lived IdP-derived tokens reduce standing MCP access](../concepts/short-lived-idp-derived-tokens-reduce-standing-mcp-access.md) - short token lifetimes tie MCP access to active SSO sessions.
 - [Identify the human subject behind agent actions](../concepts/identify-the-human-subject-behind-agent-actions.md) - tool policy needs a subject to bind delegated actions and audit records.
@@ -409,5 +412,6 @@ Anthropic's remote-MCP experience adds two practical tool-surface lessons. First
 - [AX is the only Experience that Matters - Ivan Burazin, Daytona](../sources/20250724_e9sLVMN76qU.md)
 - [Machines of Buying and Selling Grace - Adam Behrens, New Generation](../sources/20250723_zlZz0mDF2eg.md)
 - [How agents will unlock the $500B promise of AI - Donald Hruska, Retool](../sources/20250723_Lqq_LcBaJCc.md)
+- [The Billable Hour is Dead; Long Live the Billable Hour - Kevin Madura + Mo Bhasin, Alix Partners](../sources/20250723_Wv1tAxKYLeE.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

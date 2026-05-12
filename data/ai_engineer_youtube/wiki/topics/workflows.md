@@ -128,6 +128,8 @@ Agentic workflows should be designed as composable primitives, not as allegiance
 
 Business workflows also need an ownership decision before implementation. Core or differentiating workflows may justify handbuilt agents, while commodity workflows often benefit from managed platforms that already provide connectors, permissioning, auditability, observability, notifications, and hosting. The workflow decision should include risk assessment for sensitive data, SLAs, deployment model, and whether engineers should spend time on business logic or platform plumbing.
 
+Enterprise productivity workflows should start from the shape of the engagement. In advisory and investigation work, AI often pays off first by ingesting, normalizing, classifying, retrieving, and extracting across the whole corpus so experts can spend more time on the recommendation. Those steps should become validated workflow components, not one-off demos: taxonomy classification needs business review, RAG needs stepwise design, and extraction needs confidence and validation surfaces for human review.
+
 Knowledge-base onboarding workflows can move domain setup from manual forms into source ingestion. A practical seller-agent flow lets the user upload decks, websites, images, calls, and videos; stores the raw artifact; parses asynchronously by source type; chunks and embeds the parsed Markdown; updates the UI; retrieves relevant chunks at generation time; and shows the retrieved evidence beside generated messages for review.
 
 Durable workflow engines are also an agent observability boundary. When the workflow records signals, queries, activity calls, retries, and state transitions, teams can inspect how an agent crossed LLM calls, tools, user input, and long-running waits instead of reconstructing behavior from scattered logs.
@@ -154,6 +156,9 @@ Healthcare revenue cycle workflows add a financially measurable version of the s
 
 - [Build Core Agents and Buy Commodity Agent Workflows](../concepts/build-core-agents-and-buy-commodity-agent-workflows.md) - workflow criticality should decide whether to build, platform-host, or buy an agent.
 - [Production Agent Platforms Need Enterprise Controls](../concepts/production-agent-platforms-need-enterprise-controls.md) - production workflows need identity, permission, audit, compliance, observability, eval, and deployment controls.
+- [Enterprise AI Productivity Needs Workflow-Level Outcomes](../concepts/enterprise-ai-productivity-needs-workflow-level-outcomes.md) - workflow-level compression matters more than isolated individual productivity claims.
+- [Schema-First Classification Turns LLMs Into Enterprise Categorization Tools](../concepts/schema-first-classification-turns-llms-into-enterprise-categorization-tools.md) - classification can become a reusable workflow component when grounded in business taxonomies and validation.
+- [Use Field-Level Confidence Signals for Human Review](../concepts/use-field-level-confidence-signals-for-human-review.md) - review workflows can focus attention on lower-confidence extracted fields.
 - [Specs and Style Guides Steer Coding Agents Toward Maintainable Code](../concepts/specs-and-style-guides-steer-coding-agents-toward-maintainable-code.md) - plan-first work, current docs, and style guidance prevent predictable agent mistakes.
 - [Use Playbooks for Repetitive Codebase Migrations](../concepts/use-playbooks-for-repetitive-codebase-migrations.md) - repeatable migration workflows can be encoded as clear procedural steps for agents.
 - [Agent Planning Should Mine Feedback Before Producing PRDs and Tickets](../concepts/agent-planning-should-mine-feedback-before-producing-prds-and-tickets.md) - product planning workflows can use agents to mine feedback, constraints, and assumptions before ticket decomposition.
@@ -676,3 +681,4 @@ Healthcare revenue cycle workflows add a financially measurable version of the s
 - [Building AI Products That Actually Work - Ben Hylak (Raindrop), Sid Bendre (Oleve)](../sources/20250724_eSvXbb2EBYc.md)
 - [Build Dynamic Products, and Stop the AI Sideshow - Eliza Cabrera (Workday) + Jeremy Silva (Freeplay)](../sources/20250723_CB-4NKDYnRs.md)
 - [How agents will unlock the $500B promise of AI - Donald Hruska, Retool](../sources/20250723_Lqq_LcBaJCc.md)
+- [The Billable Hour is Dead; Long Live the Billable Hour - Kevin Madura + Mo Bhasin, Alix Partners](../sources/20250723_Wv1tAxKYLeE.md)

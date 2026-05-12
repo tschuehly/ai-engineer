@@ -1886,3 +1886,11 @@
 - Updated topics: [Agents](topics/agents.md), [Tools](topics/tools.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Build Core Agents and Buy Commodity Agent Workflows](concepts/build-core-agents-and-buy-commodity-agent-workflows.md), [Production Agent Platforms Need Enterprise Controls](concepts/production-agent-platforms-need-enterprise-controls.md), [Agent tool loops turn model-required actions into executable results](concepts/agent-tool-loops-turn-model-required-actions-into-executable-results.md)
 - Notes: Added Retool's production-agent build-versus-buy decision model, enterprise platform checklist, and cost-bounded ReAct loop guidance.
+
+## [2026-05-12] ingest | The Billable Hour is Dead; Long Live the Billable Hour - Kevin Madura + Mo Bhasin, Alix Partners
+
+- Source: [The Billable Hour is Dead; Long Live the Billable Hour - Kevin Madura + Mo Bhasin, Alix Partners](sources/20250723_Wv1tAxKYLeE.md)
+- Processed: `Wv1tAxKYLeE`
+- Updated topics: [Agents](topics/agents.md), [Evaluation](topics/evaluation.md), [Retrieval](topics/retrieval.md), [Tools](topics/tools.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Enterprise AI Productivity Needs Workflow-Level Outcomes](concepts/enterprise-ai-productivity-needs-workflow-level-outcomes.md), [Schema-First Classification Turns LLMs Into Enterprise Categorization Tools](concepts/schema-first-classification-turns-llms-into-enterprise-categorization-tools.md), [Enterprise RAG Becomes More Useful With API Tool Access](concepts/enterprise-rag-becomes-more-useful-with-api-tool-access.md), [Use Field-Level Confidence Signals for Human Review](concepts/use-field-level-confidence-signals-for-human-review.md)
+- Notes: Added AlixPartners' enterprise knowledge-work patterns for full-corpus productivity, validated structured classification, API-augmented RAG, and confidence-guided extraction review.
