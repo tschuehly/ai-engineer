@@ -46,6 +46,8 @@ Internal platform tools should be designed so agents can call the same intended 
 
 For coding agents, tool boundaries should be chosen by what needs hard semantics. Read tools can control token load, grep/glob can support exact codebase search, edit tools can enforce read-before-write and diff-shaped changes, Bash can compose project commands inside a sandbox, and brittle edge cases can be moved into versioned tools that are easier to evaluate than broad prompt guidance. When an action can be exposed as a CLI or API, that text-native surface is usually a better agent tool than browser automation, especially when accuracy matters. CLI surfaces are also workflow composition tools: they can run in the background, emit logs, accept pipes, call specialist agents, and chain generation, coverage, and review stages in a way that is awkward for IDE-only plugins.
 
+Managed agent platforms should be evaluated as tool bundles, not only as model wrappers. Connector coverage, permissioning, compliance, audit trails, observability, email or notification support, token accounting, and infrastructure ownership determine whether the tool surface lets teams focus on business logic or forces them to rebuild platform plumbing.
+
 Agent-first IDEs show how browser and editor tools can be combined without hiding their authority. Antigravity gives the agent a Chrome browser for authenticated context retrieval, UI interaction, JavaScript execution, DOM inspection, and screen recording, while keeping terminal-command approvals and editor handoff visible in the agent manager.
 
 The post-IDE direction adds another tool-design constraint: putting every request through one all-purpose coding agent wastes context and model budget. A better tool surface can route trivial checks, product exploration, implementation, review, tests, and merges through narrower roles and interfaces, while the human sees orchestration state and evidence instead of a raw terminal transcript.
@@ -218,6 +220,8 @@ Anthropic's remote-MCP experience adds two practical tool-surface lessons. First
 - [Treat Agents As Users For Authorization](../concepts/treat-agents-as-users-for-authorization.md) - object lookup tools need requester-scoped authorization checks.
 - [Agent rules should emerge from observed off-rail behavior](../concepts/agent-rules-should-emerge-from-observed-off-rail-behavior.md) - rules, checks, and hooks are tool-context controls that should be grounded in local agent failures.
 - [Cross-app access centralizes MCP authentication through the identity provider](../concepts/cross-app-access-centralizes-mcp-authentication-through-the-identity-provider.md) - IdP-mediated trust can make enterprise MCP access less repetitive and more governable.
+- [Production Agent Platforms Need Enterprise Controls](../concepts/production-agent-platforms-need-enterprise-controls.md) - enterprise tool platforms need built-in identity, connectors, audit, observability, and cost visibility.
+- [Build Core Agents and Buy Commodity Agent Workflows](../concepts/build-core-agents-and-buy-commodity-agent-workflows.md) - tool-platform selection should follow whether the agent workflow is strategic or commodity.
 - [Short-lived IdP-derived tokens reduce standing MCP access](../concepts/short-lived-idp-derived-tokens-reduce-standing-mcp-access.md) - short token lifetimes tie MCP access to active SSO sessions.
 - [Identify the human subject behind agent actions](../concepts/identify-the-human-subject-behind-agent-actions.md) - tool policy needs a subject to bind delegated actions and audit records.
 - [Vault and exchange tokens for scoped upstream agent access](../concepts/vault-and-exchange-tokens-for-scoped-upstream-agent-access.md) - token vaults keep delegated API scopes managed outside model context.
@@ -404,5 +408,6 @@ Anthropic's remote-MCP experience adds two practical tool-surface lessons. First
 - [Human seeded Evals - Samuel Colvin, Pydantic](../sources/20250725_o_LRtAomJCs.md)
 - [AX is the only Experience that Matters - Ivan Burazin, Daytona](../sources/20250724_e9sLVMN76qU.md)
 - [Machines of Buying and Selling Grace - Adam Behrens, New Generation](../sources/20250723_zlZz0mDF2eg.md)
+- [How agents will unlock the $500B promise of AI - Donald Hruska, Retool](../sources/20250723_Lqq_LcBaJCc.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

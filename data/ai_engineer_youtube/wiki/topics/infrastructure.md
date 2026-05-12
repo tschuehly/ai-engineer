@@ -56,6 +56,8 @@ Enterprise analytics infrastructure needs a governed data and metadata layer bef
 
 Multi-agent orchestration is also infrastructure once workflows leave the demo stage. A production system needs a workflow engine, state store, contract registry, serving layer, observability layer, and recovery controls around agent calls. Immutable append-only state versions make handoffs replayable; schema contracts catch malformed or low-confidence outputs at boundaries; circuit breakers, timeouts, rate limits, and compensation methods keep one failing agent or API from cascading through the full workflow.
 
+Business-agent platforms add ordinary enterprise infrastructure requirements to the agent loop. SSO, RBAC, secrets handling, secure connectors, audit logs, SOC 2-style compliance, observability, token and runtime accounting, and regulated deployment modes can dominate the work even when the agent logic is a short reason-act loop. Build-versus-buy decisions should price token cost, infrastructure cost, and engineering cost together.
+
 Durable execution infrastructure can wrap even a single agentic loop. Treat LLM calls, tool invocations, and external APIs as workflow activities with configured retry and timeout behavior, and persist successful results so crash recovery does not repeat token spend or side effects. For human-in-the-loop agents, the infrastructure should support logical waits that can leave active memory and later rehydrate state when approval or clarification arrives.
 
 PydanticAI's Temporal path adds a Python-specific implementation: wrap agents in Temporal-backed agents, keep IO in activities, and use Logfire to inspect workflow IDs, model calls, nested tool activities, parallel branches, costs, and cached replay behavior. The key infrastructure boundary is not only "can the process restart"; it is whether completed LLM calls and tool calls can replay instantly while unfinished activities rerun normally.
@@ -195,6 +197,8 @@ Dagger-style agent delivery infrastructure packages that feedback path as portab
 - [Build internal AI engineering platforms when off-the-shelf tools lack enterprise context](../concepts/build-internal-ai-engineering-platforms-when-off-the-shelf-tools-lack-enterprise-context.md) - internal platforms can connect agents to monorepos, service catalogs, operational tools, and review systems.
 - [App factories turn sandbox artifacts into governed knowledge apps](../concepts/app-factories-turn-sandbox-artifacts-into-governed-knowledge-apps.md) - sandbox definitions can become deployed internal apps through shared platform controls.
 - [Build paved paths for enterprise AI engineering tools](../concepts/build-paved-paths-for-enterprise-ai-engineering-tools.md) - shared model, MCP, deployment, and enablement infrastructure prevents fragmented enterprise AI tooling.
+- [Production Agent Platforms Need Enterprise Controls](../concepts/production-agent-platforms-need-enterprise-controls.md) - enterprise agent infrastructure includes identity, connectors, audit, observability, cost, and deployment controls.
+- [Build Core Agents and Buy Commodity Agent Workflows](../concepts/build-core-agents-and-buy-commodity-agent-workflows.md) - platform ownership should be reserved for strategic agents when commodity workflows can use managed infrastructure.
 - [MCP Gateways Create an Enterprise Root of Trust](../concepts/mcp-gateways-create-an-enterprise-root-of-trust.md) - gateway infrastructure centralizes trust, secure connectivity, credentials, policy, and observability across MCP clients and servers.
 - [Gateway Platform Primitives Let Teams Focus on MCP Business Logic](../concepts/gateway-platform-primitives-let-teams-focus-on-mcp-business-logic.md) - shared gateway primitives keep domain teams focused on integration behavior instead of platform plumbing.
 - [Carry MCP JSON-RPC Over Internal Transports](../concepts/carry-mcp-json-rpc-over-internal-transports.md) - internal stream transports can adapt to local infrastructure while preserving MCP protocol semantics.
@@ -445,5 +449,6 @@ Dagger-style agent delivery infrastructure packages that feedback path as portab
 - [AX is the only Experience that Matters - Ivan Burazin, Daytona](../sources/20250724_e9sLVMN76qU.md)
 - [From Hype to Habit: How We're Building an AI-First SaaS Company-While Still Shipping the Roadmap](../sources/20250723_3YGRcgZJ3yc.md)
 - [Machines of Buying and Selling Grace - Adam Behrens, New Generation](../sources/20250723_zlZz0mDF2eg.md)
+- [How agents will unlock the $500B promise of AI - Donald Hruska, Retool](../sources/20250723_Lqq_LcBaJCc.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)

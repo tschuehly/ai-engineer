@@ -12,6 +12,7 @@ Details:
 - The demo maps tool schemas to executable Python functions for reading files, writing files, and running commands, then checks whether each requested function exists before executing it. 32:23-33:54
 - Tool results are returned as function-result events using the same interaction schema, then the run method recurses until the model returns final text instead of another tool call. 33:54-34:23
 - The source highlights a safety boundary through the coding-agent demo: writing, reading, and running `date` are acceptable tool actions, while a joking "delete all files" prompt is explicitly rejected rather than executed. 34:39-34:58, 42:31-42:46
+- Hruska describes the same ReAct-style production skeleton as an execution loop where the model reads, decides, calls tools, receives tool results, and stops when it reaches a final answer; the loop should have a maximum iteration count so it cannot think forever and burn token budget. 04:10-05:43
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -26,3 +27,4 @@ Related concepts:
 
 Sources:
 - [Building Conversational Agents - Thor Schaeff and Philipp Schmid, Google DeepMind](../sources/20260430_cVzf49yg0D8.md), 14:33-17:09, 32:23-34:58, 42:31-42:46
+- [How agents will unlock the $500B promise of AI - Donald Hruska, Retool](../sources/20250723_Lqq_LcBaJCc.md), 04:10-05:43

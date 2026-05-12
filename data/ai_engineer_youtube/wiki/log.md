@@ -1878,3 +1878,11 @@
 - Updated topics: [Product Strategy](topics/product-strategy.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md), [Agents](topics/agents.md)
 - Updated concepts: [Integrate AI Strategy Into Core Product Strategy](concepts/integrate-ai-strategy-into-core-product-strategy.md), [Mature AI Products Through Crawl-Walk-Run Integration](concepts/mature-ai-products-through-crawl-walk-run-integration.md), [Plan AI Reliability Risk Inside Product Work](concepts/plan-ai-reliability-risk-inside-product-work.md)
 - Notes: Added the AI sideshow failure mode, staged dynamic-product integration, and product-planning guidance for AI reliability risk.
+
+## [2026-05-12] ingest | How agents will unlock the $500B promise of AI - Donald Hruska, Retool
+
+- Source: [How agents will unlock the $500B promise of AI - Donald Hruska, Retool](sources/20250723_Lqq_LcBaJCc.md)
+- Processed: `Lqq_LcBaJCc`
+- Updated topics: [Agents](topics/agents.md), [Tools](topics/tools.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
+- Updated concepts: [Build Core Agents and Buy Commodity Agent Workflows](concepts/build-core-agents-and-buy-commodity-agent-workflows.md), [Production Agent Platforms Need Enterprise Controls](concepts/production-agent-platforms-need-enterprise-controls.md), [Agent tool loops turn model-required actions into executable results](concepts/agent-tool-loops-turn-model-required-actions-into-executable-results.md)
+- Notes: Added Retool's production-agent build-versus-buy decision model, enterprise platform checklist, and cost-bounded ReAct loop guidance.
