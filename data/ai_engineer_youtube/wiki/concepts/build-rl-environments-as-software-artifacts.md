@@ -16,6 +16,7 @@ Details:
 - CWM adds a large-scale code-agent training example: samplers execute terminal actions in an environment, trajectories are scored, trainers compute gradients, checkpoints are pushed to samplers, and queued models plus queued trajectories keep asynchronous RL throughput high. 08:43-10:31
 - The talk notes that mid-trajectory checkpoint updates can make a trajectory somewhat off-policy, but the system accepts that risk to remove bottlenecks and process more interaction data. 10:34-11:31
 - Cline's coding-agent environment recipe starts from a real repository snapshot and user prompt, reconstructs the real solved state, documents dependencies, removes Git from the Dockerized environment to reduce reward hacking, and records traces for repeatable scoring. 05:07-10:01
+- Snorkel's FinQA environment shows the same artifact pattern for a financial-analysis tool task: it is fully self-contained with no external dependencies (no remote data center the trainer cannot reach), provides a fixed set of tools (`get_table_names`, `get_table_info`, query), and packages two benchmarks inside one environment — FinQA (290 samples) and the harder multi-table FinQA-reasoning (79 samples). It is published on Prime Intellect's infrastructure, saved into the OpenEnv repo on GitHub, and hosted in Hugging Face spaces (PyTorch and Hugging Face co-host), and a ~21-hour GRPO run inside it cost under $500. (12:10-13:30)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -30,9 +31,11 @@ Related concepts:
 - [Train code models on execution traces, not only syntax](train-code-models-on-execution-traces-not-only-syntax.md)
 - [Treat environments as eval, data, and training substrates](treat-environments-as-eval-data-and-training-substrates.md)
 - [Environment registries make AI research more accessible](environment-registries-make-ai-research-more-accessible.md)
+- [Fix Tool Discipline Before Reaching for a Bigger Model](fix-tool-discipline-before-reaching-for-a-bigger-model.md)
 
 Sources:
 - [Let LLMs Wander: Engineering RL Environments - Stefano Fiorucci](../sources/20260408_71V3fTaUp2Q.md), 00:45-20:52
 - [Code World Model: Building World Models for Computation - Jacob Kahn, FAIR Meta](../sources/20251217_sYgE4ppDFOQ.md), 08:43-11:31
 - [Hard Won Lessons from Building Effective AI Coding Agents - Nik Pash, Cline](../sources/20251212_I8fs4omN1no.md), 05:07-10:01
 - [RL Environments at Scale - Will Brown, Prime Intellect](../sources/20251209__IzZWeuTx7I.md), 05:42-12:05
+- [Stop Making Models Bigger, Make Them Behave — Kobie Crawford, Snorkel](../sources/20260610_TNwJ1LMiENk.md), 12:10-13:30

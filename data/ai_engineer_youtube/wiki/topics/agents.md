@@ -20,7 +20,7 @@ Production agent design should optimize for efficacy before autonomy. Agency is 
 
 Cloudflare's agent-building framing decomposes that control surface into client, reasoning, workflow coordination, and tools. The client owns human interaction, the model owns planning, workflow infrastructure tracks executed and pending actions, and tools carry side effects or retrieval. Remote MCP servers can make those tools reusable across clients, while server-side state keeps memory and approval status outside any single chat session.
 
-Agent models themselves can be tuned for this loop shape. M2's training story emphasizes interleaving reasoning with many tool-call turns, perturbing the operational surface around tools and prompts, and using small active-parameter economics to run multiple workplace-agent copies in parallel. Agent RFT adds a production-post-training variant: teams can train a reasoning model over multi-step rollouts that call hosted tool endpoints and receive custom reward signals, as long as rollout IDs and tool-call context are preserved for grading and the workflow is well-defined enough for production-matched rewards.
+Agent models themselves can be tuned for this loop shape. M2's training story emphasizes interleaving reasoning with many tool-call turns, perturbing the operational surface around tools and prompts, and using small active-parameter economics to run multiple workplace-agent copies in parallel. Agent RFT adds a production-post-training variant: teams can train a reasoning model over multi-step rollouts that call hosted tool endpoints and receive custom reward signals, as long as rollout IDs and tool-call context are preserved for grading and the workflow is well-defined enough for production-matched rewards. Snorkel's FinQA result narrows what such training should target: when a tool-using agent fails, the gap is frequently tool *discipline* — discovering available tools and schemas, inspecting before querying, and self-correcting on tool errors — rather than reasoning depth, so a cheap behavior-focused RL run on a small model can beat a much larger reasoning model that skips those steps and hallucinates.
 
 Agent serving infrastructure can also use the structure of agent work. Re-query loops and tool-call waits are not just application behavior; they reveal when KV-cache state will be reused, moved out of GPU memory during a wait, and restored before the next model call, which can reduce repeated prefill cost without changing the agent's visible workflow.
 
@@ -140,6 +140,7 @@ Taking enterprise agents to production also has a recurring failure shape: teams
 
 ## Key Concepts
 
+- [Fix Tool Discipline Before Reaching for a Bigger Model](../concepts/fix-tool-discipline-before-reaching-for-a-bigger-model.md) - a tool-using agent's failure is often poor tool discipline (no schema discovery, no self-correction), fixable with cheap RL rather than a larger model.
 - [Coding-Agent Capability Tiers Change the Bottleneck](../concepts/coding-agent-capability-tiers-change-the-bottleneck.md) - longer agent work horizons require different interfaces, context, and verification.
 - [Type-Safe Agent Schemas Make Refactoring and Validation Easier](../concepts/type-safe-agent-schemas-make-refactoring-and-validation-easier.md) - typed outputs and dependencies make agent application contracts visible to static tooling and runtime validation.
 - [Validation Errors Can Drive Agent Self-Repair Loops](../concepts/validation-errors-can-drive-agent-self-repair-loops.md) - validation failures can be fed back into the model as structured retry feedback.
@@ -495,6 +496,7 @@ Taking enterprise agents to production also has a recurring failure shape: teams
 
 ## Sources
 
+- [Stop Making Models Bigger, Make Them Behave — Kobie Crawford, Snorkel](../sources/20260610_TNwJ1LMiENk.md)
 - [How to build Enterprise Aware Agents - Chau Tran, Glean](../sources/20250724_hxFpUcvWPcU.md)
 - [Rise of the AI Architect - Clay Bavor, Cofounder, Sierra w/ Alessio Fanelli](../sources/20250724_C3geUfBR2js.md)
 - [Building Applications with AI Agents — Michael Albada, Microsoft](../sources/20250724_R30col3UPUg.md)
