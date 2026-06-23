@@ -873,6 +873,7 @@
 - [Stack Memory Optimizations to Train Long-Context Transformers](../concepts/stack-memory-optimizations-to-train-long-context-transformers.md)
 - [Untied Ulysses Reuses Attention Buffers Across Head Chunks](../concepts/untied-ulysses-reuses-attention-buffers-across-head-chunks.md)
 - [Give agents a vent tool to report platform friction](../concepts/give-agents-a-vent-tool-to-report-platform-friction.md)
+- [Separate Engine Latency From Network Latency in Voice Pipelines](../concepts/separate-engine-latency-from-network-latency-in-voice-pipelines.md)
 
 ## Healthcare Operations
 
@@ -1386,6 +1387,7 @@
 - [Generate Text by Iterative Denoising, Not Left-to-Right](../concepts/generate-text-by-iterative-denoising-not-left-to-right.md)
 - [Diffusion Models Self-Correct by Revising Earlier Tokens](../concepts/diffusion-models-self-correct-by-revising-earlier-tokens.md)
 - [Scale Text-Diffusion Quality With More Denoising Steps](../concepts/scale-text-diffusion-quality-with-more-denoising-steps.md)
+- [Size the Voice-Agent LLM to the Time-to-First-Token Budget](../concepts/size-the-voice-agent-llm-to-the-time-to-first-token-budget.md)
 
 ## Retrieval
 - [Evaluate Agent Retrieval by Trajectory, Not Task Success](../concepts/evaluate-agent-retrieval-by-trajectory-not-task-success.md)
@@ -1738,6 +1740,8 @@
 - [Reconcile Diarization and STT for Speaker-Attributed Transcription](../concepts/reconcile-diarization-and-stt-for-speaker-attributed-transcription.md)
 - [Benchmark Voice AI on Distant-Mic Multi-Speaker Audio, Not Headset Single-Speaker](../concepts/benchmark-voice-ai-on-distant-mic-multi-speaker-audio.md)
 - [Pair Low-Bandwidth Voice Input With High-Density Multimodal Output](../concepts/pair-voice-input-with-high-density-multimodal-output.md)
+- [Size the Voice-Agent LLM to the Time-to-First-Token Budget](../concepts/size-the-voice-agent-llm-to-the-time-to-first-token-budget.md)
+- [Separate Engine Latency From Network Latency in Voice Pipelines](../concepts/separate-engine-latency-from-network-latency-in-voice-pipelines.md)
 
 ## Workflows
 - [Enforce Agent Rules in Git Hooks and CI, Not the Prompt](../concepts/enforce-agent-rules-in-git-hooks-and-ci-not-the-prompt.md)

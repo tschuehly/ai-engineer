@@ -17,6 +17,10 @@ Details:
 - Gemini 3.1 Flash Live is a concrete native sound-to-sound example: full-duplex, multimodal real-time ingest of text/audio/video over a WebSocket with audio plus a text transcript returned, and thinking/reasoning/intelligence baked directly into the model rather than cascaded through a separate text LLM; it is reachable for no-cost trial at `ai.studio/live`, with video-frame ingest capped at one frame per second. (`Bc6Ojl2XS1w`) 02:42-02:57, 12:08-13:27, 14:54-15:08.
 - Even a native model still needs explicit instruction control: in the live demo an Irish-accent system instruction bled into a German-language response, so language-scoped accent instructions remain necessary. (`Bc6Ojl2XS1w`) 14:31-14:46.
 - Audio-space benchmarks are explicitly called untrustworthy, reinforcing that architecture choice should rest on product behavior and evals rather than published audio scores. (`Bc6Ojl2XS1w`) 12:31-12:34.
+- Together AI confirms the cascading pipeline (STT → LLM → TTS, fronted by an agent orchestrator such as Pipecat, LiveKit, or homegrown) as "the dominant way to build agents in production today." (`N7b1PJc7SFc`) 04:22-04:50
+- The production reason speech-to-speech is not yet default: single-model S2S systems (OpenAI Realtime API; NVIDIA's recently launched "voice chat") still struggle with instruction following and tool calling, so the real-world path is "try them → prompt-engineer to patch issues → eventually move back to a pipeline." (`N7b1PJc7SFc`) 14:24-15:35
+- The upside that will pull teams toward S2S as it matures: it preserves speech nuance (tone, emotion, hesitation) that STT→text destroys, and it is full-duplex — the model can produce audio while still receiving audio, enabling native backchannels ("I see," "aha") and far easier interruption/barge-in handling than a pipeline's bespoke engineering. (`N7b1PJc7SFc`) 15:35-16:22
+- Even within the cascaded path, the STT stage is evolving from batch to streaming-native: Whisper was trained on 30-second clips (too long for live, forcing chunking/silence-padding/multi-call stitching), whereas a recent NVIDIA streaming encoder trains with variable look-ahead (~80 ms up to ~1 s) and caches activations so stepping forward by small audio frames only does the heavy compute once. (`N7b1PJc7SFc`) 07:06-08:16
 
 Related topics:
 - [Voice Agents](../topics/voice-agents.md)
@@ -35,3 +39,4 @@ Sources:
 - [Building Conversational Agents - Thor Schaeff and Philipp Schmid, Google DeepMind](../sources/20260430_cVzf49yg0D8.md), 57:04-57:28, 62:06-62:30
 - [Pipecat Cloud: Enterprise Voice Agents Built On Open Source - Kwindla Hultman Kramer, Daily](../sources/20250731_IA4lZjh9sTs.md), 19:16-20:51, 24:03-26:39
 - [From Transcription to Live Music: Gemini's Audio Stack — Thor Schaeff, Google DeepMind](../sources/20260609_Bc6Ojl2XS1w.md), 02:42-02:57, 12:08-15:08
+- [Engineering voice agents: Latency, quality, and scale — Rishabh Bhargava, Together AI](../sources/20260531_N7b1PJc7SFc.md), 04:22-04:50, 07:06-08:16, 14:24-16:22
