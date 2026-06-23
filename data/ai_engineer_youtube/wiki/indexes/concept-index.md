@@ -1,6 +1,7 @@
 # Concept Index
 
 ## Agents
+- [Build Agents on Addressable Stateful-Serverless Instances](../concepts/build-agents-on-addressable-stateful-serverless-instances.md)
 - [Split Discovery and Validation Across Reasoning and Deterministic Models](../concepts/split-discovery-and-validation-across-reasoning-and-deterministic-models.md)
 - [Reconcile Specialist Agent Outputs With a Feedback-Weighted Judge](../concepts/reconcile-specialist-agent-outputs-with-a-feedback-weighted-judge.md)
 - [Redefine RAG as Iterative Multi-Tool Retrieval, Not Vector Search](../concepts/redefine-rag-as-iterative-multi-tool-retrieval.md)
@@ -669,6 +670,7 @@
 
 ## Infrastructure
 
+- [Build Agents on Addressable Stateful-Serverless Instances](../concepts/build-agents-on-addressable-stateful-serverless-instances.md)
 - [Production Agent Platforms Need Enterprise Controls](../concepts/production-agent-platforms-need-enterprise-controls.md)
 - [Build Core Agents and Buy Commodity Agent Workflows](../concepts/build-core-agents-and-buy-commodity-agent-workflows.md)
 - [Scale AI Fluency With Self-Service Platforms](../concepts/scale-ai-fluency-with-self-service-platforms.md)

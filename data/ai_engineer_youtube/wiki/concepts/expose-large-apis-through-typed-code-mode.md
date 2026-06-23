@@ -16,6 +16,7 @@ Details:
 - The approach depends on MCP clients or agent runtimes supporting code execution; Cloudflare found client support lagged because running untrusted model-written code is an obvious security concern. (09:06-10:08)
 - Programmatic tool calling can also compose MCP tool results inside a REPL-like execution environment instead of spending a latency-sensitive inference turn after every low-level tool call. (09:39-10:56)
 - MCP structured output can give the model return-value type information, making code-mode composition more reliable than parsing opaque natural-language tool results. (10:56-11:49)
+- A later Cloudflare session restates the headline figure: code mode in an MCP server can expose all 2,600 Cloudflare API endpoints in just ~1,000 tokens of tool interface, the same "we fixed MCP twice" claim that pairs with capability-scoped Dynamic Workers for safe execution. (SKDJo2CopRs 09:44-10:22)
 
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
@@ -29,3 +30,4 @@ Sources:
 - [Code Mode: Let the Code do the Talking - Sunil Pai, Cloudflare](../sources/20260419_8txf05vVVl4.md), 01:31-05:18
 - [MCP = Mega Context Problem - Matt Carey](../sources/20260425_YBYUvGOuotE.md), 07:20-10:08
 - [The Future of MCP - David Soria Parra, Anthropic](../sources/20260419_v3Fr2JR47KA.md), 09:39-11:49
+- [Why Eval++ Is the Next Great Compute Primitive — Sunil Pai & Matt Carey, Cloudflare](../sources/20260608_SKDJo2CopRs.md), 09:44-10:22
