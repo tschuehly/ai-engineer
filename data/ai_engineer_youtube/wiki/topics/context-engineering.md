@@ -44,12 +44,15 @@ Production AI coding adds a low-level context hygiene requirement: the agent nee
 
 Devin 2.0 adds a codebase-intelligence layer to this context problem. Raw source text is not enough for broader bug and feature work; agents and humans need structural and historical representations such as call hierarchies, language-server output, commit history, lint feedback, and generated codebase explanations before they can plan consistent cross-file changes.
 
+Data-and-tool agents add a just-in-time injection discipline at the level of individual tools. WorkOS's Studio runs a preflight checklist (are tools connected, is there enough context, otherwise ask) and then injects each tool's heavy schema/usage context only at the moment that tool is invoked, explicitly to avoid preloading every tool's instructions and blowing out the window — the single-agent runtime counterpart to MCP tool-budget discipline. The prompt is layered (base defaults, org rules, per-tool context preserved across edits) and includes a primary-source rule: distrust the model's own knowledge of a fast-moving product because training data is stale, and look up docs instead. Notably this needs no RAG store; LLMs read self-descriptive table schemas well, so a hand-written context block encoding join quirks is enough to "just invoke tools with context on top."
+
 ## Key Concepts
 
 - [Codebase Intelligence Needs Structural and Historical Signals](../concepts/codebase-intelligence-needs-structural-and-historical-signals.md) - multi-file coding work needs codebase relationships and history in context.
 - [Layer Copilot Context Through Issues, Instructions, and Repository Structure](../concepts/layer-copilot-context-through-issues-instructions-and-repository-structure.md) - Copilot shows how issue text, repository rules, scoped instructions, and code structure combine into task context.
 - [Compress Environment Context For Early Agent Experiments](../concepts/compress-environment-context-for-early-agent-experiments.md) - shrink or decompose large web, GUI, or code contexts so model experiments can run within available context windows.
 - [Keep agent context small, fresh, and task-specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md) - context should be externalized, selected, summarized, and isolated so stale or excessive history does not degrade agent work.
+- [Inject Tool Context Just-in-Time During Agent Sequencing](../concepts/inject-tool-context-just-in-time-during-agent-sequencing.md) - preflight sequencing, per-tool context injected at invoke time, layered prompts, and primary-source grounding keep a data agent's window clean.
 - [Give coding agents the same engineering infrastructure humans need](../concepts/give-coding-agents-the-same-engineering-infrastructure-humans-need.md) - standards, setup, tests, and task boundaries are context agents need before production code changes.
 - [Frequent intentional compaction keeps coding agents in the smart zone](../concepts/frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md) - source-backed compaction controls size, correctness, completeness, and trajectory in coding-agent sessions.
 - [Assemble Per-Feature Context Packages for Coding Agents](../concepts/assemble-per-feature-context-packages-for-coding-agents.md) - planning artifacts should be sliced into feature-specific context packages before implementation.
@@ -146,6 +149,7 @@ Devin 2.0 adds a codebase-intelligence layer to this context problem. Raw source
 
 ## Sources
 
+- [Why Can't Anyone Answer Questions About the Business? — Garrett Galow, WorkOS](../sources/20260611_iUWwcG-C8OU.md)
 - [Mentoring the Machine - Eric Hou, Augment Code](../sources/20250724_Zniw5c9_jx8.md)
 - [Devin 2.0 and the Future of SWE - Scott Wu, Cognition](../sources/20250725_MI83buT_23o.md)
 - [Piloting agents in GitHub Copilot - Christopher Harrison, Microsoft](../sources/20250726_DdaAABdAqZY.md)

@@ -378,6 +378,8 @@
 - [Fund enterprise AI through incremental productizable bets](../concepts/fund-enterprise-ai-through-incremental-productizable-bets.md)
 - [Start GenBI with certified assets before autonomous SQL](../concepts/start-genbi-with-certified-assets-before-autonomous-sql.md)
 - [Evaluate BI agents with real metadata and expert feedback](../concepts/evaluate-bi-agents-with-real-metadata-and-expert-feedback.md)
+- [Compile Natural-Language Analytics Into Reusable Deterministic Widgets](../concepts/compile-natural-language-analytics-into-reusable-deterministic-widgets.md)
+- [Validate Generated SQL by Execution Before Trusting It](../concepts/validate-generated-sql-by-execution-before-trusting-it.md)
 
 ## Coding Agents
 
@@ -579,6 +581,7 @@
 - [Assemble per-feature context packages for coding agents](../concepts/assemble-per-feature-context-packages-for-coding-agents.md)
 - [Repo-local Markdown tasks give agents durable scoped work units](../concepts/repo-local-markdown-tasks-give-agents-durable-scoped-work-units.md)
 - [Keep Agent Context Small, Fresh, and Task-Specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md)
+- [Inject Tool Context Just-in-Time During Agent Sequencing](../concepts/inject-tool-context-just-in-time-during-agent-sequencing.md)
 - [Proactive agent systems need observation, personalization, timing, and workflow embedding](../concepts/proactive-agent-systems-need-observation-personalization-timing-and-workflow-embedding.md)
 - [Use subagents to isolate context-heavy subtasks](../concepts/use-subagents-to-isolate-context-heavy-subtasks.md)
 - [Agent swarms create reusable KV-cache working sets](../concepts/agent-swarms-create-reusable-kv-cache-working-sets.md)
@@ -956,6 +959,7 @@
 ## Evaluation
 - [Enterprise AI Productivity Needs Workflow-Level Outcomes](../concepts/enterprise-ai-productivity-needs-workflow-level-outcomes.md)
 - [Use Field-Level Confidence Signals for Human Review](../concepts/use-field-level-confidence-signals-for-human-review.md)
+- [Validate Generated SQL by Execution Before Trusting It](../concepts/validate-generated-sql-by-execution-before-trusting-it.md)
 
 - [Evals Only Cover Known AI Product Failures](../concepts/evals-only-cover-known-ai-product-failures.md)
 - [Silent Web-Access Failure Produces Confident Hallucination](../concepts/silent-web-access-failure-produces-confident-hallucination.md)
@@ -1389,6 +1393,7 @@
 
 ## Tools
 - [Enterprise RAG Becomes More Useful With API Tool Access](../concepts/enterprise-rag-becomes-more-useful-with-api-tool-access.md)
+- [Inject Tool Context Just-in-Time During Agent Sequencing](../concepts/inject-tool-context-just-in-time-during-agent-sequencing.md)
 - [Ground Agents With Managed Web-Access Infrastructure](../concepts/ground-agents-with-managed-web-access-infrastructure.md)
 - [Render Third-Party Generative UI Through a Double Iframe](../concepts/render-third-party-generative-ui-through-a-double-iframe.md)
 - [Declare Every External Domain Your MCP App Touches](../concepts/declare-every-external-domain-your-mcp-app-touches.md)
@@ -1598,6 +1603,7 @@
 
 ## Workflows
 - [Enterprise AI Productivity Needs Workflow-Level Outcomes](../concepts/enterprise-ai-productivity-needs-workflow-level-outcomes.md)
+- [Compile Natural-Language Analytics Into Reusable Deterministic Widgets](../concepts/compile-natural-language-analytics-into-reusable-deterministic-widgets.md)
 - [Schema-First Classification Turns LLMs Into Enterprise Categorization Tools](../concepts/schema-first-classification-turns-llms-into-enterprise-categorization-tools.md)
 - [Use Field-Level Confidence Signals for Human Review](../concepts/use-field-level-confidence-signals-for-human-review.md)
 

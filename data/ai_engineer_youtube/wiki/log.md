@@ -1950,3 +1950,11 @@
 - Updated topics: [Tools](topics/tools.md), [Agents](topics/agents.md)
 - Updated concepts: [Expose Site Capabilities to In-Browser Agents With WebMCP](concepts/expose-site-capabilities-to-in-browser-agents-with-webmcp.md), [Make Web Foundations Agent-Ready Before Adopting WebMCP](concepts/make-web-foundations-agent-ready-before-adopting-webmcp.md), [Agent-readable web surfaces guide browsing agents](concepts/agent-readable-web-surfaces-guide-browsing-agents.md)
 - Notes: Added two new concepts on WebMCP (page-scoped in-browser tools via declarative HTML-form and imperative `registerTool` APIs, the client-side tools-part-of-MCP relationship) and the foundations-first prerequisite, and strengthened the agent-readable-web-surfaces concept with this dedicated WebMCP source; updated Tools and Agents topics; selected one new processed source `ghJmWQCIHRM`.
+
+## [2026-06-23] ingest | Why Can't Anyone Answer Questions About the Business? — Garrett Galow, WorkOS
+
+- Source: [Why Can't Anyone Answer Questions About the Business? — Garrett Galow, WorkOS](sources/20260611_iUWwcG-C8OU.md)
+- Processed: `iUWwcG-C8OU`
+- Updated topics: [Business Intelligence](topics/business-intelligence.md), [Context Engineering](topics/context-engineering.md), [Evaluation](topics/evaluation.md), [Workflows](topics/workflows.md), [Tools](topics/tools.md)
+- Updated concepts: [Compile Natural-Language Analytics Into Reusable Deterministic Widgets](concepts/compile-natural-language-analytics-into-reusable-deterministic-widgets.md), [Inject Tool Context Just-in-Time During Agent Sequencing](concepts/inject-tool-context-just-in-time-during-agent-sequencing.md), [Validate Generated SQL by Execution Before Trusting It](concepts/validate-generated-sql-by-execution-before-trusting-it.md)
+- Notes: Added three new concepts from WorkOS Studio — compiling natural-language analytics into reusable deterministic JavaScript widgets (LLM-free reruns), just-in-time per-tool context injection with preflight sequencing and primary-source layering (no RAG store), and execution-based SQL validation catching valid-SQL-zero-rows from missing status filters; integrated across Business Intelligence (with a contrast to certified-asset-first GenBI), Context Engineering, Evaluation, Workflows, and Tools; selected one new processed source `iUWwcG-C8OU`.
