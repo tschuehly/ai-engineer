@@ -30,6 +30,8 @@ Workflow search treats prior enterprise processes as retrieval units. A task can
 
 Retrieval freshness is also an operational reliability concern, not only a quality dial. A Databricks production case shows the failure mode concretely: after a bank changed its interest-rate policy, the new policy document was never re-embedded into the vector database, so the RAG agent confidently served stale answers and customer satisfaction dropped until tracing localized the cause. The durable lesson is that the retrieval index is part of a data foundation that needs an embedding-refresh and lineage plan; metadata such as table, column, and PII descriptions further helps agents query enterprise data correctly.
 
+What you embed matters as much as which model embeds it, especially when the corpus is not uniform. PostHog found that off-the-shelf embedding models cluster heterogeneous product signals (errors, logs, Slack messages, session replays) by structural similarity rather than meaning, so all errors land in one region of embedding space and all chat messages in another, and cross-format signals describing the same problem never group together. The fix is an indexing-side rewrite: instead of embedding the raw signal, ask an LLM what the signal is about, generate a short query or description, and embed that meaning-bearing surrogate so clustering reflects semantics. This is the indexing counterpart to query rewriting, and it underlines that normalization is a prerequisite for clustering when source formats differ.
+
 ## Key Concepts
 
 - [Codebase Intelligence Needs Structural and Historical Signals](../concepts/codebase-intelligence-needs-structural-and-historical-signals.md) - codebase search should combine structure, history, and lint signals with text retrieval.
@@ -37,6 +39,7 @@ Retrieval freshness is also an operational reliability concern, not only a quali
 - [Dynamic AI Search Evals Need Fresh Grounding Sets](../concepts/dynamic-ai-search-evals-need-fresh-grounding-sets.md) - web-backed retrieval should be tested against fresh evidence, not only static QA rows.
 - [Reference-Free AI Search Metrics Decompose Answer Quality](../concepts/reference-free-ai-search-metrics-decompose-answer-quality.md) - search quality needs separate signals for complete answers, relevant retrieved documents, and unsupported claims.
 - [AI Search Providers Should Return Grounding Documents](../concepts/ai-search-providers-should-return-grounding-documents.md) - retrieved evidence should be available for debugging and evaluation, not hidden behind final citations.
+- [Embed LLM-Generated Queries, Not Raw Heterogeneous Signals](../concepts/embed-llm-generated-queries-not-raw-heterogeneous-signals.md) - off-the-shelf embeddings cluster mixed-format data by structure, so embed an LLM-generated description to cluster by meaning.
 - [Silent Web-Access Failure Produces Confident Hallucination](../concepts/silent-web-access-failure-produces-confident-hallucination.md) - blocked or empty web fetches are not reported, so the model fabricates instead of refusing.
 - [The Open Web Is Adversarial to Agent Access](../concepts/the-open-web-is-adversarial-to-agent-access.md) - default crawling is blocked or poisoned, so much of the web is not freely fetchable by agents.
 - [Ground Agents With Managed Web-Access Infrastructure](../concepts/ground-agents-with-managed-web-access-infrastructure.md) - residential IPs, human-like browsers, CAPTCHA solving, scrape-to-markdown, and public datasets restore reliable web grounding.
@@ -122,6 +125,7 @@ Tax explanation systems add a regulated consumer version of expert-domain retrie
 - How should personal retrieval distinguish durable notes from stale bookmarks and noisy saved material?
 - What status metadata should retrieval systems use to demote closed PRDs and historical planning artifacts?
 - When should cross-modal retrieval use one omnimodal embedding space instead of separate modality-specific indexes plus fusion?
+- For heterogeneous-signal clustering, when is embedding an LLM-generated description better than fine-tuning an embedding model on the mixed corpus?
 - When should visual-document RAG preserve page images instead of extracting OCR text and structured table/image chunks?
 - Which RAG pipeline changes should be exposed as user-facing filters, operator settings, or internal LangFlow-style flow edits?
 - Which private corpora are too sensitive to expose through third-party or loosely protected embedding stores?
@@ -173,3 +177,4 @@ Tax explanation systems add a regulated consumer version of expert-domain retrie
 - [The Billable Hour is Dead; Long Live the Billable Hour - Kevin Madura + Mo Bhasin, Alix Partners](../sources/20250723_Wv1tAxKYLeE.md)
 - [The Production AI Playbook: Deploying Agents at Enterprise Scale — Sandipan Bhaumik, Databricks](../sources/20260618_ObTPqBGsEbA.md)
 - [Your Agent's Biggest Lie: "I Searched the Web" — Rafael Levi, Bright Data](../sources/20260617_btxGmN8RvNU.md)
+- [Self Driving Products: Product Signals to Pull Requests — Joshua Snyder, PostHog](../sources/20260610_zMiSRliEzv4.md)

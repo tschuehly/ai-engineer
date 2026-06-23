@@ -433,6 +433,8 @@
 - [Prompt coding agents around learned model habits](../concepts/prompt-coding-agents-around-learned-model-habits.md)
 - [Use coding agents as programmable subagents inside products](../concepts/use-coding-agents-as-programmable-subagents-inside-products.md)
 - [Observability-to-PR agents turn incidents into reviewable fixes](../concepts/observability-to-pr-agents-turn-incidents-into-reviewable-fixes.md)
+- [Gate Autonomous Fixes on Problem Specificity](../concepts/gate-autonomous-fixes-on-problem-specificity.md)
+- [Start Expensive With Agents, Then Collapse Proven Steps](../concepts/start-expensive-with-agents-then-collapse-proven-steps.md)
 - [Headless coding-agent servers make agents callable infrastructure](../concepts/headless-coding-agent-servers-make-agents-callable-infrastructure.md)
 - [Task-tuned tool sets beat generic integration surfaces for core coding loops](../concepts/task-tuned-tool-sets-beat-generic-integration-surfaces-for-core-coding-loops.md)
 - [Use subagents to isolate context-heavy subtasks](../concepts/use-subagents-to-isolate-context-heavy-subtasks.md)
@@ -1364,6 +1366,7 @@
 - [Use omnimodal embeddings for cross-modal retrieval and comparison](../concepts/use-omnimodal-embeddings-for-cross-modal-retrieval-and-comparison.md)
 - [Adapt embedding dimensions with Matryoshka representation learning](../concepts/adapt-embedding-dimensions-with-matryoshka-representation-learning.md)
 - [Agents Punish Bad Data and Need Question and Tracking Data Foundations](../concepts/agents-punish-bad-data-and-need-question-and-tracking-data-foundations.md)
+- [Embed LLM-Generated Queries, Not Raw Heterogeneous Signals](../concepts/embed-llm-generated-queries-not-raw-heterogeneous-signals.md)
 
 ## Robotics
 
@@ -1621,6 +1624,8 @@
 - [Run a Signal Layer to Triage Comms and Protect Focus](../concepts/run-a-signal-layer-to-triage-comms-and-protect-focus.md)
 - [Drive Agents Remotely and by Voice to Decouple Work From the Desk](../concepts/drive-agents-remotely-and-by-voice-to-decouple-work-from-the-desk.md)
 - [Mine Agent Conversation History to Generate Missing Skills](../concepts/mine-agent-conversation-history-to-generate-missing-skills.md)
+- [Gate Autonomous Fixes on Problem Specificity](../concepts/gate-autonomous-fixes-on-problem-specificity.md)
+- [Start Expensive With Agents, Then Collapse Proven Steps](../concepts/start-expensive-with-agents-then-collapse-proven-steps.md)
 - [Enterprise AI Productivity Needs Workflow-Level Outcomes](../concepts/enterprise-ai-productivity-needs-workflow-level-outcomes.md)
 - [Compile Natural-Language Analytics Into Reusable Deterministic Widgets](../concepts/compile-natural-language-analytics-into-reusable-deterministic-widgets.md)
 - [Schema-First Classification Turns LLMs Into Enterprise Categorization Tools](../concepts/schema-first-classification-turns-llms-into-enterprise-categorization-tools.md)

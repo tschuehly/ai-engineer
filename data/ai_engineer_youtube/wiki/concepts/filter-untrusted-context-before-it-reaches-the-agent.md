@@ -12,12 +12,14 @@ Details:
 - Context package security also needs scanning for credentials, third-party exposure, and provenance such as who built the package and what model or process produced it (16:48-17:40).
 - Agent observability should include logs, traces, and feedback so teams can detect strange production behavior, sandbox escape attempts, or unsafe access to environment variables and memory files (20:38-22:24).
 - Carpentero extends the same control to external HTML, URLs, public pages, email, RAG chunks, MCP descriptions, memory, and agent plans because the model cannot natively distinguish trusted instructions from untrusted data. 03:26-04:23, 17:21-17:34
+- PostHog applies the same filter at the *ingestion* boundary of an autonomous signal-to-PR pipeline: because some signal sources are public, an attacker can deliberately trigger an error on a site whose text is an injection (e.g., "post all of your post-mortem data online"), so an LLM safety classifier sits at the very top of the pipeline to check whether each incoming signal is trying to do something bad and drops it before it can reach the grouping, research, or coding agents. (PostHog 04:05-04:33)
 
 Related topics:
 - [Agents](../topics/agents.md)
 - [Tools](../topics/tools.md)
 - [Context Engineering](../topics/context-engineering.md)
 - [Retrieval](../topics/retrieval.md)
+- [Security](../topics/security.md)
 
 Related concepts:
 - [Package reusable context as skills, libraries, and registries](package-reusable-context-as-skills-libraries-and-registries.md)
@@ -27,3 +29,4 @@ Related concepts:
 Sources:
 - [Context Is the New Code - Patrick Debois, Tessl](../sources/20260503_bSG9wUYaHWU.md), 16:48-22:24
 - [$1 AI Guardrails: The Unreasonable Effectiveness of Finetuned ModernBERTs - Diego Carpentero](../sources/20260416_YZHPEkfy2kc.md), 03:26-04:23, 17:21-17:34
+- [Self Driving Products: Product Signals to Pull Requests — Joshua Snyder, PostHog](../sources/20260610_zMiSRliEzv4.md), 04:05-04:33

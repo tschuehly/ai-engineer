@@ -4,6 +4,8 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Observability-to-PR Agents Turn Incidents Into Reviewable Fixes](concepts/observability-to-pr-agents-turn-incidents-into-reviewable-fixes.md) - PostHog's signal-to-PR pipeline turns heterogeneous product observability (errors, replays, Slack) into review-ready PRs by grouping signals into weighted reports, researching the codebase in a sandbox, and iterating until CI is green.
+- [Embed LLM-Generated Queries, Not Raw Heterogeneous Signals](concepts/embed-llm-generated-queries-not-raw-heterogeneous-signals.md) - off-the-shelf embeddings cluster mixed-format data by structure (errors with errors, chat with chat), so embed an LLM-generated description of each signal to cluster by meaning instead.
 - [Fix Tool Discipline Before Reaching for a Bigger Model](concepts/fix-tool-discipline-before-reaching-for-a-bigger-model.md) - a 4B model RL-tuned for tool discipline (discover, inspect, self-correct) beat Qwen 3 235B on a financial tool task for under $500, because the gap was behavior, not reasoning depth.
 - [Own Open Models for Sovereignty and Permissionless Adoption](concepts/own-open-models-for-sovereignty-and-permissionless-adoption.md) - owning open weights gives sovereignty and data locality, and an Apache 2.0 license clears the ~18-month procurement barrier that blocked sovereign and regulated adoption.
 - [Decide open-model ownership by capability, hardware, latency, and cost thresholds](concepts/decide-open-model-ownership-by-capability-hardware-latency-and-cost-thresholds.md) - owning or offloading a workload is a four-axis threshold call where on-device cost is energy, not tokens, and agentic token volume tips the math.
@@ -20,8 +22,6 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Group Agent Tools by Human-Facing Actions](concepts/group-agent-tools-by-human-facing-actions.md) - agent tool catalogs should be curated around clear actions rather than mirrored from every API endpoint.
 - [Keep Fixed Business Logic Outside the Model](concepts/keep-fixed-business-logic-outside-the-model.md) - hard workflow rules belong in deterministic validation and state gates.
 - [Replace Anecdotal Agent Tuning With Eval and Observability Loops](concepts/replace-anecdotal-agent-tuning-with-eval-and-observability-loops.md) - eval sets, traces, and clustered failures should drive agent improvement.
-- [Shape AI Teams Around the Bottleneck](concepts/shape-ai-teams-around-the-bottleneck.md) - team composition should follow the current product, domain, infrastructure, or business constraint.
-- [Prefer Generalist AI Engineers Before Narrow Specialists](concepts/prefer-generalist-ai-engineers-before-narrow-specialists.md) - early AI transformation often needs adaptable builders before frontier specialists.
 
 - [Workflow Search Retrieves Enterprise Practice at Runtime](concepts/workflow-search-retrieves-enterprise-practice-at-runtime.md) - prior task-workflow examples can steer enterprise agents with current company practice.
 - [Golden Workflows Evaluate Agent Trajectories](concepts/golden-workflows-evaluate-agent-trajectories.md) - known processes can evaluate agent steps, not just final answers.
