@@ -21,6 +21,7 @@ Related concepts:
 - [Profile small-model architectures on target hardware](profile-small-model-architectures-on-target-hardware.md)
 - [Compare models by task, thinking budget, cost, and latency](compare-models-by-task-thinking-budget-cost-and-latency.md)
 - [Treat edge models as their own architecture class](treat-edge-models-as-their-own-architecture-class.md)
+- [Text Diffusion Trades Serving Throughput for Low Latency](text-diffusion-trades-serving-throughput-for-low-latency.md)
 
 Sources:
 - [Running LLMs locally: Practical LLM Performance on DGX Spark - Mozhgan Kabiri chimeh, NVIDIA](../sources/20260410_c5-kx2bwoCk.md), 05:34-09:18

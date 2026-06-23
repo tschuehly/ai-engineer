@@ -25,6 +25,7 @@ Related concepts:
 - [Use guidance to trade diffusion sample diversity for conditional quality](use-guidance-to-trade-diffusion-sample-diversity-for-conditional-quality.md)
 - [Stack Additive Diffusion Optimizations for Real-Time Generation](stack-additive-diffusion-optimizations-for-real-time-generation.md)
 - [Production inference combines model support with cluster operations](production-inference-combines-model-support-with-cluster-operations.md)
+- [Scale Text-Diffusion Quality With More Denoising Steps](scale-text-diffusion-quality-with-more-denoising-steps.md) - the same denoising-step lever in the text modality, where more steps trade latency for quality.
 
 Sources:
 - [Building Generative Image & Video models at Scale - Sander Dieleman, Google DeepMind](../sources/20260421_xOP1PM8fwnk.md), 02:17-02:27, 28:04-29:50

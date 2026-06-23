@@ -683,6 +683,7 @@
 - [Evaluate context changes with lint, task scenarios, and probabilistic budgets](../concepts/evaluate-context-changes-with-lint-task-scenarios-and-probabilistic-budgets.md)
 - [Use agent logs and review feedback as context observability signals](../concepts/use-agent-logs-and-review-feedback-as-context-observability-signals.md)
 - [Modular tiny-model pipelines reuse specialized models across mobile app workflows](../concepts/modular-tiny-model-pipelines-reuse-specialized-models-across-mobile-app-workflows.md)
+- [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md)
 
 ## Infrastructure
 
@@ -916,6 +917,9 @@
 - [Stack Additive Diffusion Optimizations for Real-Time Generation](../concepts/stack-additive-diffusion-optimizations-for-real-time-generation.md)
 - [Quantize Diffusion Models for Memory and Throughput Despite Attention Heaviness](../concepts/quantize-diffusion-models-for-memory-and-throughput-despite-attention-heaviness.md)
 - [Cache Unchanged Computation Between Diffusion Denoising Steps](../concepts/cache-unchanged-computation-between-diffusion-denoising-steps.md)
+- [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md)
+- [Generate Text by Iterative Denoising, Not Left-to-Right](../concepts/generate-text-by-iterative-denoising-not-left-to-right.md)
+- [Scale Text-Diffusion Quality With More Denoising Steps](../concepts/scale-text-diffusion-quality-with-more-denoising-steps.md)
 
 ## Generative Media
 
@@ -1346,6 +1350,9 @@
 - [Treat Speaker Diarization as a Distinct, Unsolved Task](../concepts/treat-speaker-diarization-as-a-distinct-unsolved-task.md)
 - [Reconcile Diarization and STT for Speaker-Attributed Transcription](../concepts/reconcile-diarization-and-stt-for-speaker-attributed-transcription.md)
 - [Benchmark Voice AI on Distant-Mic Multi-Speaker Audio, Not Headset Single-Speaker](../concepts/benchmark-voice-ai-on-distant-mic-multi-speaker-audio.md)
+- [Generate Text by Iterative Denoising, Not Left-to-Right](../concepts/generate-text-by-iterative-denoising-not-left-to-right.md)
+- [Diffusion Models Self-Correct by Revising Earlier Tokens](../concepts/diffusion-models-self-correct-by-revising-earlier-tokens.md)
+- [Scale Text-Diffusion Quality With More Denoising Steps](../concepts/scale-text-diffusion-quality-with-more-denoising-steps.md)
 
 ## Retrieval
 - [Curate Context Strategically Because Models Drop the Middle](../concepts/curate-context-strategically-because-models-drop-the-middle.md)

@@ -6,6 +6,8 @@ Edge inference is most useful when latency, privacy, offline access, or cloud-to
 
 Physical robotics is a sharper edge-inference case because deployment means running action-producing models on the robot itself. GR00T N1's lifecycle separates simulation/data generation, training, and edge deployment, with the deployed model needing to be efficient enough for AGX-like robot hardware while still translating perception and language into continuous motion.
 
+Generation paradigm is itself an edge lever. Text diffusion is much lower latency per request than autoregressive decoding but loses big-batch throughput, so its natural first home is on-device serving (phones, robotics in the Alphabet ecosystem) where you serve batch-of-1 and throughput is a non-issue — and since a diffusion model's quality is "the same basically" as a frontier autoregressive model, you pick the lowest-latency option. This is the same latency-dominant logic as the four-axis ownership decision, applied to how a model generates rather than where it runs.
+
 ## Key Concepts
 
 - [Use edge inference when latency, privacy, offline access, or token cost dominate](../concepts/use-edge-inference-when-latency-privacy-offline-access-or-token-cost-dominate.md) - local execution is strongest when responsiveness, data locality, connectivity, or cost matter more than maximum model capability.
@@ -22,6 +24,7 @@ Physical robotics is a sharper edge-inference case because deployment means runn
 - [Constrained decoding makes small-model tool calls production-usable](../concepts/constrained-decoding-makes-small-model-tool-calls-production-usable.md) - narrowing generation to valid tool-call shapes improves reliability for small local models.
 - [Modular tiny-model pipelines reuse specialized models across mobile app workflows](../concepts/modular-tiny-model-pipelines-reuse-specialized-models-across-mobile-app-workflows.md) - mobile apps can compose specialized tiny models for speech, personalization, and text generation.
 - [Physical AI Has a Three-Stage Compute Lifecycle](../concepts/physical-ai-has-a-three-stage-compute-lifecycle.md) - robot foundation models need edge deployment planned alongside simulation and training.
+- [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md) - low-latency, low-throughput text diffusion fits on-device serving where batch-of-1 makes throughput a non-issue.
 
 ## Open Questions
 
@@ -40,3 +43,4 @@ Physical robotics is a sharper edge-inference case because deployment means runn
 - [Sovereign Escape Velocity: Ownership w Open Models — Gus Martins, & Ian Ballantyne, Google DeepMind](../sources/20260610_SS-A8sE7hkw.md)
 - [Running LLMs on your iPhone: 40 tok/s Gemma 4 with MLX - Adrien Grondin, Locally AI](../sources/20260420_a2muGkT4WD4.md)
 - [What Is a Humanoid Foundation Model? An Introduction to GR00T N1 - Annika & Aastha](../sources/20250728_mWKYvT9Lc50.md)
+- [Text Diffusion — Brendan O'Donoghue, Google DeepMind](../sources/20260604_r305-aQTaU0.md)
