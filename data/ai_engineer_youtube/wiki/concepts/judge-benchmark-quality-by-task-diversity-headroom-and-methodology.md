@@ -13,6 +13,7 @@ Details:
 - Difficulty / model headroom: the benchmark must stay unsaturated, expose real soft spots, and reliably separate models at the frontier. ARC-AGI 2 stayed unsaturated for months/years, then the reasoning push (o1-style, ~18-24 months earlier) produced a leap that *corresponded to a real capability leap*; ARC-AGI 3 launched with every task human-solvable but frontier models under 1%. Headroom is what makes a new model's score on it meaningful. (09:52-11:24)
 - Robust eval methodology: go beyond accuracy to capture cost, latency, reasoning-trace quality, intermediate steps, and tool use as reward/supervision signals — and verify the benchmark actually measures what it claims (non-trivial for reproducibility). τ-bench evaluates multi-turn agents on both task completion (via a user simulator) *and* policy-constraint adherence: a model that books the right flight but violates fare-class rules still fails. (11:27-12:52)
 - These four are "the science" — the empirically meaningful measuring-stick properties — and are necessary but not sufficient; the field-shaping differentiators ("the art") sit on top. (12:55-13:23)
+- The "task quality" axis is not just hygiene for the measuring stick — a separate Snorkel controlled experiment (Crawford) shows it is a real training lever: holding model, compute, and task count fixed, high-quality agentic tasks produced ~5x the RL uplift of low-quality ones (6% vs 1%), because "task quality and data quality are largely the same thing." ([Task Fidelity Scaling Laws](../sources/20260602_YYH0DMQr30A.md), 09:09-10:21)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -24,6 +25,9 @@ Related concepts:
 - [Benchmark saturation pushes capability evals toward human time horizons](benchmark-saturation-pushes-capability-evals-toward-human-time-horizons.md)
 - [Evaluate Agent Loops With Correctness, Cost, Latency, and Step Counts](evaluate-agent-loops-with-correctness-cost-latency-and-step-counts.md)
 - [Golden Workflows Evaluate Agent Trajectories](golden-workflows-evaluate-agent-trajectories.md)
+- [Task Quality Drives a 5x RL Training Uplift](task-quality-drives-rl-training-uplift.md)
+- [Accept Agentic Training Tasks by Clean Failures, Not Ambiguous Specs](accept-agentic-tasks-by-clean-failures-not-ambiguous-specs.md)
 
 Sources:
 - [The Art & Science of Benchmarking Agents — Vincent Chen, Snorkel AI](../sources/20260604_iNkFlCiij0U.md), 06:34-12:52
+- [Task Fidelity Scaling Laws — Kobie Crawford, Snorkel](../sources/20260602_YYH0DMQr30A.md), 09:09-10:21
