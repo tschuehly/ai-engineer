@@ -1910,3 +1910,11 @@
 - Updated topics: [AI Monetization](topics/ai-monetization.md), [Product Strategy](topics/product-strategy.md)
 - Updated concepts: [Treat Token Spend as a Strategic Axis](concepts/treat-token-spend-as-a-strategic-axis.md), [Target High-Value AI Verticals as Capability Matures](concepts/target-high-value-ai-verticals.md)
 - Notes: Distilled field-structure signal from an event promo: organizational token economics (token billionaires, maxing-vs-reduction "ZL spectrum," AI factories) and the deployment shift from horizontal tracks to high-value verticals led by finance.
+
+## [2026-06-23] ingest | The Production AI Playbook: Deploying Agents at Enterprise Scale — Sandipan Bhaumik, Databricks
+
+- Source: [The Production AI Playbook: Deploying Agents at Enterprise Scale — Sandipan Bhaumik, Databricks](sources/20260618_ObTPqBGsEbA.md)
+- Processed: `ObTPqBGsEbA`
+- Updated topics: [Evaluation](topics/evaluation.md), [Agents](topics/agents.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md), [Retrieval](topics/retrieval.md)
+- Updated concepts: [Sequence Production AI by Pillars and Choose the Model Last](concepts/sequence-production-ai-by-pillars-and-choose-the-model-last.md), [Layer Agent Evals as Deterministic, Semantic, and Behavioral Checks](concepts/layer-agent-evals-as-deterministic-semantic-and-behavioral-checks.md), [Agents Punish Bad Data and Need Question and Tracking Data Foundations](concepts/agents-punish-bad-data-and-need-question-and-tracking-data-foundations.md), [Run a Production AI Incident Playbook](concepts/run-a-production-ai-incident-playbook.md), [Choose choreography or orchestration by complexity and autonomy](concepts/choose-choreography-or-orchestration-by-complexity-and-autonomy.md), [Treat Model and Prompt Upgrades as Regulated Migrations](concepts/treat-model-and-prompt-upgrades-as-regulated-migrations.md), [Continuously reconcile eval datasets with user reality](concepts/continuously-reconcile-eval-datasets-with-user-reality.md)
+- Notes: Added Databricks' five-pillar production playbook with three new concepts (pillar sequencing/model-last, three-layer agent evals, question/tracking data foundation) and an incident-playbook concept, and strengthened orchestration, regulated-migration, and living-eval-dataset concepts; selected one new processed source `ObTPqBGsEbA`.

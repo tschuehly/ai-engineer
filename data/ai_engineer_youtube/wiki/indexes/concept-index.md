@@ -346,6 +346,8 @@
 - [Scope personal and team agents by reachable authority](../concepts/scope-personal-and-team-agents-by-reachable-authority.md)
 - [Plugin architectures let agent systems absorb experiments](../concepts/plugin-architectures-let-agent-systems-absorb-experiments.md)
 - [Let agent harnesses extend through ordinary code packages](../concepts/let-agent-harnesses-extend-through-ordinary-code-packages.md)
+- [Sequence Production AI by Pillars and Choose the Model Last](../concepts/sequence-production-ai-by-pillars-and-choose-the-model-last.md)
+- [Layer Agent Evals as Deterministic, Semantic, and Behavioral Checks](../concepts/layer-agent-evals-as-deterministic-semantic-and-behavioral-checks.md)
 
 ## AI Monetization
 
@@ -804,6 +806,8 @@
 - [Neural weather models can target operational forecast variables directly](../concepts/neural-weather-models-can-target-operational-forecast-variables-directly.md)
 - [AI-generated security reports need maintainer triage](../concepts/ai-generated-security-reports-need-maintainer-triage.md)
 - [Gate AI-generated open-source contributions through human-effort filters](../concepts/gate-ai-generated-open-source-contributions-through-human-effort-filters.md)
+- [Agents Punish Bad Data and Need Question and Tracking Data Foundations](../concepts/agents-punish-bad-data-and-need-question-and-tracking-data-foundations.md)
+- [Run a Production AI Incident Playbook](../concepts/run-a-production-ai-incident-playbook.md)
 
 ## Healthcare Operations
 
@@ -1160,6 +1164,10 @@
 - [Neural weather models can target operational forecast variables directly](../concepts/neural-weather-models-can-target-operational-forecast-variables-directly.md)
 - [RAG Stacks Need Modular Baselines Instead Of One Fixed Recipe](../concepts/rag-stacks-need-modular-baselines-instead-of-one-fixed-recipe.md)
 - [Agentic Retrieval Lets Models Plan Search Steps](../concepts/agentic-retrieval-lets-models-plan-search-steps.md)
+- [Sequence Production AI by Pillars and Choose the Model Last](../concepts/sequence-production-ai-by-pillars-and-choose-the-model-last.md)
+- [Layer Agent Evals as Deterministic, Semantic, and Behavioral Checks](../concepts/layer-agent-evals-as-deterministic-semantic-and-behavioral-checks.md)
+- [Agents Punish Bad Data and Need Question and Tracking Data Foundations](../concepts/agents-punish-bad-data-and-need-question-and-tracking-data-foundations.md)
+- [Run a Production AI Incident Playbook](../concepts/run-a-production-ai-incident-playbook.md)
 
 ## Models
 
@@ -1324,6 +1332,7 @@
 - [Retire completed planning docs before they become agent doc rot](../concepts/retire-completed-planning-docs-before-they-become-agent-doc-rot.md)
 - [Use omnimodal embeddings for cross-modal retrieval and comparison](../concepts/use-omnimodal-embeddings-for-cross-modal-retrieval-and-comparison.md)
 - [Adapt embedding dimensions with Matryoshka representation learning](../concepts/adapt-embedding-dimensions-with-matryoshka-representation-learning.md)
+- [Agents Punish Bad Data and Need Question and Tracking Data Foundations](../concepts/agents-punish-bad-data-and-need-question-and-tracking-data-foundations.md)
 
 ## Robotics
 
@@ -1841,3 +1850,5 @@
 - [Label LLM Judge Outputs Before Mapping Them to Scores](../concepts/label-llm-judge-outputs-before-mapping-them-to-scores.md)
 - [Prevent Revenue Cycle Denials Upstream](../concepts/prevent-revenue-cycle-denials-upstream.md)
 - [Expert-Reviewed GenAI Appeals Beat Off-the-Shelf Letters](../concepts/expert-reviewed-genai-appeals-beat-off-the-shelf-letters.md)
+- [Sequence Production AI by Pillars and Choose the Model Last](../concepts/sequence-production-ai-by-pillars-and-choose-the-model-last.md)
+- [Run a Production AI Incident Playbook](../concepts/run-a-production-ai-incident-playbook.md)

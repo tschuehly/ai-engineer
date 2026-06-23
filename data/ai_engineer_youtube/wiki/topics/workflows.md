@@ -154,9 +154,13 @@ Customer-facing agent workflows should be narrow before they are broad. Sierra's
 
 Healthcare revenue cycle workflows add a financially measurable version of the same pattern. Late failures such as denials should not only trigger faster appeal generation; they should feed upstream checks for missing data, prior authorization gaps, policy changes, and registration errors. When a denial becomes a clinical-necessity dispute, the workflow should assemble patient records, guidelines, and payer policies for GenAI drafting while preserving expert approval before submission.
 
+Production AI also needs a defined incident workflow, not ad hoc firefighting. A Databricks playbook connects the production pillars into one loop: detect on the eval dashboard (for example a customer-satisfaction drop), diagnose with tracing (such as a policy document never re-embedded into the vector store), contain by rolling back a versioned prompt or applying saga, compensation, and circuit-breaker fault tolerance, fix from the LLM-judge reports and eval-set library, then add the case back so the living test set grows. This response loop should integrate with the organization's existing ITSM alerting so the right person is paged and downstream systems are protected. The same engagement also inverts the usual build order — evaluation, observability, and data foundation come first, and the model is chosen last from the eval dataset — which is why the playbook can localize regressions instead of guessing.
+
 ## Key Concepts
 
 - [Build Core Agents and Buy Commodity Agent Workflows](../concepts/build-core-agents-and-buy-commodity-agent-workflows.md) - workflow criticality should decide whether to build, platform-host, or buy an agent.
+- [Run a Production AI Incident Playbook](../concepts/run-a-production-ai-incident-playbook.md) - a detect, diagnose, contain, fix, and grow-tests loop connects evals, tracing, and orchestration into incident response.
+- [Sequence Production AI by Pillars and Choose the Model Last](../concepts/sequence-production-ai-by-pillars-and-choose-the-model-last.md) - the production build order should put evaluation, observability, and data before model choice.
 - [Production Agent Platforms Need Enterprise Controls](../concepts/production-agent-platforms-need-enterprise-controls.md) - production workflows need identity, permission, audit, compliance, observability, eval, and deployment controls.
 - [Enterprise AI Productivity Needs Workflow-Level Outcomes](../concepts/enterprise-ai-productivity-needs-workflow-level-outcomes.md) - workflow-level compression matters more than isolated individual productivity claims.
 - [Schema-First Classification Turns LLMs Into Enterprise Categorization Tools](../concepts/schema-first-classification-turns-llms-into-enterprise-categorization-tools.md) - classification can become a reusable workflow component when grounded in business taxonomies and validation.
@@ -591,6 +595,7 @@ Healthcare revenue cycle workflows add a financially measurable version of the s
 - [How to Secure Agents using OAuth - Jared Hanson (Keycard, Passport.js)](../sources/20250730_blmAkayzE8M.md)
 - [Building Effective Voice Agents - Toki Sherbakov + Anoop Kotha, OpenAI](../sources/20250720_-OXiljTJxQU.md)
 - [Shipping complex AI applications - Braintrust & Trainline](../sources/20260501_ZdheJTfLu-s.md)
+- [The Production AI Playbook: Deploying Agents at Enterprise Scale — Sandipan Bhaumik, Databricks](../sources/20260618_ObTPqBGsEbA.md)
 - [Agents for Everything Else - swyx](../sources/20260501_zepu8Kk6FBQ.md)
 - [Agents on the Canvas in tldraw - Steve Ruiz, tldraw](../sources/20260501_sPUjIBH5Cwg.md)
 - [Replacing 12K LoC with a 200 LoC Skill - David Gomes, Cursor](../sources/20260430_WE_Gnowy3uw.md)

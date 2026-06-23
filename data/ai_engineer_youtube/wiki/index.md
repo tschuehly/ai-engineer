@@ -476,6 +476,11 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Stage Regulated LLM Evals From Experts to Automated Judges](concepts/stage-regulated-llm-evals-from-experts-to-automated-judges.md) - expert review can seed golden data and automated judges while major changes return to manual review.
 - [Treat Model and Prompt Upgrades as Regulated Migrations](concepts/treat-model-and-prompt-upgrades-as-regulated-migrations.md) - model and prompt changes need eval-gated rollout when vendor, latency, and domain-year changes matter.
 
+- [Sequence Production AI by Pillars and Choose the Model Last](concepts/sequence-production-ai-by-pillars-and-choose-the-model-last.md) - build evaluation, observability, data, orchestration, and governance before picking a model.
+- [Layer Agent Evals as Deterministic, Semantic, and Behavioral Checks](concepts/layer-agent-evals-as-deterministic-semantic-and-behavioral-checks.md) - behavioral checks over tool calls and loops catch correct-but-expensive agent trajectories.
+- [Agents Punish Bad Data and Need Question and Tracking Data Foundations](concepts/agents-punish-bad-data-and-need-question-and-tracking-data-foundations.md) - data quality dominates production effort and tracking data needs its own schema and collection strategy.
+- [Run a Production AI Incident Playbook](concepts/run-a-production-ai-incident-playbook.md) - detect, diagnose, contain, fix, and grow-tests connects evals and tracing into ITSM-wired incident response.
+
 ## Topics
 
 - [Agents](topics/agents.md) - agent workflows that combine reasoning, tools, APIs, and local state.

@@ -136,6 +136,8 @@ GitHub Copilot adds a mainstream example of mode-dependent autonomy. A user can 
 
 Devin 2.0 frames the same progression as changing human-intervention intervals. Longer coding-agent horizons do not only make the model "smarter"; they force new agent-product surfaces for task scoping, Slack or issue-system collaboration, codebase exploration, confidence estimates, human escalation, and self-testing before autonomous backlog work can be trusted.
 
+Taking enterprise agents to production also has a recurring failure shape: teams start at model choice, build a demo on controlled data, ship it, and then cannot explain why it underperforms. A Databricks production playbook reframes the work as five pillars that should exist before code — evaluation, observability, a data foundation, multi-agent orchestration, and governance — and selects the model last using the evaluation dataset those pillars produce. The pillars map to three gaps that strand demos: no way to trace decisions, no defined business number being measured, and no accountability when the agent fails. Orchestration only becomes a real concern as a system grows from one agent to several, where coordination complexity rises sharply and the team must choose orchestrator-worker, choreography, or human-in-the-loop patterns.
+
 ## Key Concepts
 
 - [Coding-Agent Capability Tiers Change the Bottleneck](../concepts/coding-agent-capability-tiers-change-the-bottleneck.md) - longer agent work horizons require different interfaces, context, and verification.
@@ -143,6 +145,8 @@ Devin 2.0 frames the same progression as changing human-intervention intervals. 
 - [Validation Errors Can Drive Agent Self-Repair Loops](../concepts/validation-errors-can-drive-agent-self-repair-loops.md) - validation failures can be fed back into the model as structured retry feedback.
 - [Trace Agent Tool Arguments to Debug Real Failures](../concepts/trace-agent-tool-arguments-to-debug-real-failures.md) - trace-level tool arguments reveal why a tool-using run failed.
 - [Raise Agent Agency Only When Efficacy Holds](../concepts/raise-agent-agency-only-when-efficacy-holds.md) - autonomy should increase only when the system remains effective on the task.
+- [Sequence Production AI by Pillars and Choose the Model Last](../concepts/sequence-production-ai-by-pillars-and-choose-the-model-last.md) - evaluation, observability, data, orchestration, and governance should precede model choice in enterprise agent work.
+- [Layer Agent Evals as Deterministic, Semantic, and Behavioral Checks](../concepts/layer-agent-evals-as-deterministic-semantic-and-behavioral-checks.md) - behavioral checks over tool calls and loops catch correct-but-expensive agent trajectories.
 - [Group Agent Tools by Human-Facing Actions](../concepts/group-agent-tools-by-human-facing-actions.md) - curated action-level tools reduce confusion from broad API catalogs.
 - [Compose Agents From Client, Reasoning, Workflow, and Tools](../concepts/compose-agents-from-client-reasoning-workflow-and-tools.md) - separates interaction, planning, state coordination, and action execution.
 - [Stateful Remote MCP Servers Persist Agent Memory Across Clients](../concepts/stateful-remote-mcp-servers-persist-agent-memory-across-clients.md) - remote MCP services can hold memory independently of any single client.
@@ -634,3 +638,4 @@ Devin 2.0 frames the same progression as changing human-intervention intervals. 
 - [Building Agents (the hard parts!) - Rita Kozlov, Cloudflare](../sources/20250723_j_TKDweOsYE.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)
+- [The Production AI Playbook: Deploying Agents at Enterprise Scale — Sandipan Bhaumik, Databricks](../sources/20260618_ObTPqBGsEbA.md)

@@ -26,9 +26,12 @@ Product work graphs are another retrieval target. A product-intelligence pipelin
 
 Workflow search treats prior enterprise processes as retrieval units. A task can retrieve similar task-workflow examples and pass their steps to the agent as dynamic prompt context; this is especially useful when the desired behavior depends on current company protocols, team practice, or executive metrics. The retrieval layer needs ordinary similarity signals plus authoritativeness signals such as who created the workflow, whether it succeeded, and whether trusted coworkers discussed it.
 
+Retrieval freshness is also an operational reliability concern, not only a quality dial. A Databricks production case shows the failure mode concretely: after a bank changed its interest-rate policy, the new policy document was never re-embedded into the vector database, so the RAG agent confidently served stale answers and customer satisfaction dropped until tracing localized the cause. The durable lesson is that the retrieval index is part of a data foundation that needs an embedding-refresh and lineage plan; metadata such as table, column, and PII descriptions further helps agents query enterprise data correctly.
+
 ## Key Concepts
 
 - [Codebase Intelligence Needs Structural and Historical Signals](../concepts/codebase-intelligence-needs-structural-and-historical-signals.md) - codebase search should combine structure, history, and lint signals with text retrieval.
+- [Agents Punish Bad Data and Need Question and Tracking Data Foundations](../concepts/agents-punish-bad-data-and-need-question-and-tracking-data-foundations.md) - stale embeddings and missing metadata make retrieval-backed agents serve confidently wrong answers.
 - [Dynamic AI Search Evals Need Fresh Grounding Sets](../concepts/dynamic-ai-search-evals-need-fresh-grounding-sets.md) - web-backed retrieval should be tested against fresh evidence, not only static QA rows.
 - [Reference-Free AI Search Metrics Decompose Answer Quality](../concepts/reference-free-ai-search-metrics-decompose-answer-quality.md) - search quality needs separate signals for complete answers, relevant retrieved documents, and unsupported claims.
 - [AI Search Providers Should Return Grounding Documents](../concepts/ai-search-providers-should-return-grounding-documents.md) - retrieved evidence should be available for debugging and evaluation, not hidden behind final citations.
@@ -163,3 +166,4 @@ Tax explanation systems add a regulated consumer version of expert-domain retrie
 - [How to build Enterprise Aware Agents - Chau Tran, Glean](../sources/20250724_hxFpUcvWPcU.md)
 - [How Intuit uses LLMs to explain taxes to millions of taxpayers - Jaspreet Singh, Intuit](../sources/20250723__zl_zimMRak.md)
 - [The Billable Hour is Dead; Long Live the Billable Hour - Kevin Madura + Mo Bhasin, Alix Partners](../sources/20250723_Wv1tAxKYLeE.md)
+- [The Production AI Playbook: Deploying Agents at Enterprise Scale — Sandipan Bhaumik, Databricks](../sources/20260618_ObTPqBGsEbA.md)

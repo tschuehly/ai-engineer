@@ -12,6 +12,8 @@ Details:
 - A move from Claude Instant to Claude Haiku for tax year 2024 required clear evals to test the change before rollout, 09:25-09:47.
 - Fine-tuning Claude 3 Haiku on AWS Bedrock was explored to reduce prompt size and latency while preserving response quality, but specialization and training effort made evals necessary, 07:20-08:04.
 - LLM latency differs from ordinary backend-service latency; complex tax profiles and peak filing traffic require fallback and product-design strategies, 10:52-12:10.
+- A Databricks production playbook formalizes this as governance: model change management means treating provider upgrades as risk, never relying on a single model, and testing each candidate on the team's own evaluation dataset because vendor leaderboard benchmarks are not useful in the enterprise's context. (`ObTPqBGsEbA`, 23:30-23:56)
+- The same playbook treats prompt versioning as enterprise change management ("prompt as code"): commits cannot be terse, and should document why a prompt changed, which failure caused it, and what it is expected to correct, so later versions remain traceable. (`ObTPqBGsEbA`, 23:02-23:30, 33:50-34:45)
 
 Related topics:
 - [Models](../topics/models.md)
@@ -25,3 +27,4 @@ Related concepts:
 
 Sources:
 - [How Intuit uses LLMs to explain taxes to millions of taxpayers - Jaspreet Singh, Intuit](../sources/20250723__zl_zimMRak.md), 07:20-08:04, 09:25-10:49, 10:52-12:10
+- [The Production AI Playbook: Deploying Agents at Enterprise Scale — Sandipan Bhaumik, Databricks](../sources/20260618_ObTPqBGsEbA.md), 23:02-23:56, 33:50-34:45

@@ -116,6 +116,8 @@ LLM evaluation infrastructure also needs a CI/CD shape. Manual workshop runs are
 
 Dagger-style agent delivery infrastructure packages that feedback path as portable workflow code. Containers, source directories, repositories, LLM calls, build functions, and test functions can share one runtime and cache, so the agent gets the same tool surface locally and in GitHub Actions. That reduces environment drift and makes the CI path a continuation of the local agent workflow rather than a separate automation.
 
+The data foundation is often the largest hidden infrastructure layer for production agents. Because agents return wrong answers confidently when fed bad data (unlike forgiving humans who correct a wrong report), data quality can consume roughly 60% of an enterprise project. It splits into question data (what the agent answers from) and tracking data (the traces), and the tracking data needs its own schema and a centralized collection layer because enterprises run multiple frameworks (CrewAI, LangChain) and clouds. A lakehouse pattern (cloud storage, a Delta Lake table layer, then a catalog such as Unity Catalog) centralizes permissions and, crucially, metadata: table and column descriptions plus PII tags give agents the context they need to query data correctly, while one trace store can serve dashboards, health monitoring, text-to-SQL, and automated judges. Observability is the paired layer: tracing every agent decision is not only a debugging aid but a regulatory precondition in Europe, and a stale embedding (a policy document never re-embedded after a change) is the kind of failure only tracing can localize.
+
 ## Key Concepts
 
 - [Prepare Reversible Repository Snapshots for Coding Agents](../concepts/prepare-reversible-repository-snapshots-for-coding-agents.md) - prepared VM snapshots let coding agents validate, reload, and roll back repository work.
@@ -123,6 +125,8 @@ Dagger-style agent delivery infrastructure packages that feedback path as portab
 - [Stateful Remote MCP Servers Persist Agent Memory Across Clients](../concepts/stateful-remote-mcp-servers-persist-agent-memory-across-clients.md) - server-side MCP state can preserve memory and workflow status across clients.
 - [Defer Sensitive Tool Execution Until Approval Resumes](../concepts/defer-sensitive-tool-execution-until-approval-resumes.md) - approval infrastructure needs persisted state and idempotency around deferred side effects.
 - [Incident Agents Turn Alerts Into RCA and Operational Memory](../concepts/incident-agents-turn-alerts-into-rca-and-operational-memory.md) - incident infrastructure should expose logs, metrics, runbooks, past incidents, and discussions as agent-readable context.
+- [Agents Punish Bad Data and Need Question and Tracking Data Foundations](../concepts/agents-punish-bad-data-and-need-question-and-tracking-data-foundations.md) - a production data foundation must separate question data from tracking data and centralize trace collection across frameworks.
+- [Run a Production AI Incident Playbook](../concepts/run-a-production-ai-incident-playbook.md) - production AI needs a defined detect, diagnose, contain, fix, and grow-tests loop wired into ITSM alerting.
 - [Enterprise Coding Agents Need Ownership, Auditability, and Action Controls](../concepts/enterprise-coding-agents-need-ownership-auditability-and-action-controls.md) - enterprise platforms need audit and action-control infrastructure around coding agents.
 - [Prepare Copilot Coding Agent Environments With Setup Steps](../concepts/prepare-copilot-coding-agent-environments-with-setup-steps.md) - asynchronous coding agents need reproducible setup steps, dependencies, and tests in their execution environment.
 - [Package Agent Delivery Workflows as Portable Code](../concepts/package-agent-delivery-workflows-as-portable-code.md) - coding-agent infrastructure can share local and CI execution through one portable workflow runtime.
@@ -369,6 +373,7 @@ Dagger-style agent delivery infrastructure packages that feedback path as portab
 - [Government Agents: AI Agents Meet Tough Regulations - Mark Myshatyn, Los Alamos National Lab](../sources/20251206_TnSGx36Ly0Q.md)
 - [What We Learned Deploying AI within Bloomberg's Engineering Organization - Lei Zhang, Bloomberg](../sources/20251216_Q81AzlA-VE8.md)
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md)
+- [The Production AI Playbook: Deploying Agents at Enterprise Scale — Sandipan Bhaumik, Databricks](../sources/20260618_ObTPqBGsEbA.md)
 - [Gemma 4 Deep Dive - Cassidy Hardin, Researcher, Google DeepMind](../sources/20260427__A367W_qvc8.md)
 - [Why building eval platforms is hard - Phil Hetzel, Braintrust](../sources/20260428__fQ7Z_Wfouk.md)
 - [Accelerating AI on Edge - Chintan Parikh and Weiyi Wang, Google DeepMind](../sources/20260505_Lm8BLHkxiAo.md)
