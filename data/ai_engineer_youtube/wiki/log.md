@@ -1942,3 +1942,11 @@
 - Updated topics: [Tools](topics/tools.md), [Security](topics/security.md)
 - Updated concepts: [Render Third-Party Generative UI Through a Double Iframe](concepts/render-third-party-generative-ui-through-a-double-iframe.md), [Declare Every External Domain Your MCP App Touches](concepts/declare-every-external-domain-your-mcp-app-touches.md), [MCP Applications Ship UI and Tools Together](concepts/mcp-applications-ship-ui-and-tools-together.md)
 - Notes: Added two new concepts on the double-iframe isolation architecture for MCP-app generative UI (origin/CSP elimination chain, per-app subdomain storage isolation, inner `srcdoc` frame) and the CSP-domain declaration practice (metadata declaration, dev-mode-strips-CSP trap, Skybridge live CSP inspector); strengthened the MCP-applications concept with how "views" render from tool calls; updated Tools and Security topics; selected one new processed source `c-2eEv2ou7Y`.
+
+## [2026-06-23] ingest | The agent-ready web: Simplify user actions with WebMCP — Tara Agyemang, Google
+
+- Source: [The agent-ready web: Simplify user actions with WebMCP — Tara Agyemang, Google](sources/20260611_ghJmWQCIHRM.md)
+- Processed: `ghJmWQCIHRM`
+- Updated topics: [Tools](topics/tools.md), [Agents](topics/agents.md)
+- Updated concepts: [Expose Site Capabilities to In-Browser Agents With WebMCP](concepts/expose-site-capabilities-to-in-browser-agents-with-webmcp.md), [Make Web Foundations Agent-Ready Before Adopting WebMCP](concepts/make-web-foundations-agent-ready-before-adopting-webmcp.md), [Agent-readable web surfaces guide browsing agents](concepts/agent-readable-web-surfaces-guide-browsing-agents.md)
+- Notes: Added two new concepts on WebMCP (page-scoped in-browser tools via declarative HTML-form and imperative `registerTool` APIs, the client-side tools-part-of-MCP relationship) and the foundations-first prerequisite, and strengthened the agent-readable-web-surfaces concept with this dedicated WebMCP source; updated Tools and Agents topics; selected one new processed source `ghJmWQCIHRM`.

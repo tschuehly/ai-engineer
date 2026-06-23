@@ -348,6 +348,8 @@
 - [Let agent harnesses extend through ordinary code packages](../concepts/let-agent-harnesses-extend-through-ordinary-code-packages.md)
 - [Sequence Production AI by Pillars and Choose the Model Last](../concepts/sequence-production-ai-by-pillars-and-choose-the-model-last.md)
 - [Layer Agent Evals as Deterministic, Semantic, and Behavioral Checks](../concepts/layer-agent-evals-as-deterministic-semantic-and-behavioral-checks.md)
+- [Expose Site Capabilities to In-Browser Agents With WebMCP](../concepts/expose-site-capabilities-to-in-browser-agents-with-webmcp.md)
+- [Make Web Foundations Agent-Ready Before Adopting WebMCP](../concepts/make-web-foundations-agent-ready-before-adopting-webmcp.md)
 
 ## AI Monetization
 
@@ -1506,6 +1508,8 @@
 - [Browser DevTools MCP turns runtime debugging into agent tools](../concepts/browser-devtools-mcp-turns-runtime-debugging-into-agent-tools.md)
 - [Browser-native AI APIs bring local models into web apps](../concepts/browser-native-ai-apis-bring-local-models-into-web-apps.md)
 - [Agent-readable web surfaces guide browsing agents](../concepts/agent-readable-web-surfaces-guide-browsing-agents.md)
+- [Expose Site Capabilities to In-Browser Agents With WebMCP](../concepts/expose-site-capabilities-to-in-browser-agents-with-webmcp.md)
+- [Make Web Foundations Agent-Ready Before Adopting WebMCP](../concepts/make-web-foundations-agent-ready-before-adopting-webmcp.md)
 - [Agent skills should point to current docs instead of embedding every API detail](../concepts/agent-skills-should-point-to-current-docs-instead-of-embedding-every-api-detail.md)
 - [Realtime multimodal agents use stateful streams for audio, vision, and tools](../concepts/realtime-multimodal-agents-use-stateful-streams-for-audio-vision-and-tools.md)
 - [Constrain sensitive file access with purpose-built tools](../concepts/constrain-sensitive-file-access-with-purpose-built-tools.md)

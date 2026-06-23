@@ -4,6 +4,7 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Expose Site Capabilities to In-Browser Agents With WebMCP](concepts/expose-site-capabilities-to-in-browser-agents-with-webmcp.md) - WebMCP lets a site declare page-scoped tools (declarative HTML-form attributes or imperative `registerTool`) so browser agents call actions directly instead of scraping the DOM and guessing coordinates.
 - [Render Third-Party Generative UI Through a Double Iframe](concepts/render-third-party-generative-ui-through-a-double-iframe.md) - chat hosts isolate MCP-app views in a nested per-app iframe because every simpler single-frame design leaks host storage or escapes the sandbox.
 - [Stack Additive Diffusion Optimizations for Real-Time Generation](concepts/stack-additive-diffusion-optimizations-for-real-time-generation.md) - quantization, caching, and step distillation compose to cut diffusion latency toward real-time generation.
 - [Raise Agent Agency Only When Efficacy Holds](concepts/raise-agent-agency-only-when-efficacy-holds.md) - autonomy should be added only when it preserves task effectiveness.

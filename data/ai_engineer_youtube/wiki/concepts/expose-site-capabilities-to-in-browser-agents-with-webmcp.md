@@ -1,0 +1,30 @@
+# Expose Site Capabilities to In-Browser Agents With WebMCP
+
+Summary: WebMCP is a proposed web standard that lets a site declare its capabilities as named, typed, described tools for in-browser AI agents, replacing the scrape-the-DOM-then-guess-coordinates pattern with direct, page-scoped tool calls. It is the client-side implementation of the tools part of MCP, so the browser must be open and the tools live in the page.
+
+Use when:
+- Building a complex multi-step site (booking, filtering, medical/financial forms, hidden actions) where you want browser agents to act reliably instead of inferring buttons from screenshots and DOM text.
+- Deciding how a web app should publish agent-callable actions, and where WebMCP fits relative to server-side MCP, `llms.txt`, and pixel-level browser control.
+
+Details:
+- Motivating failure: agents typically pass the entire DOM, then read the accessibility tree, then take a screenshot to catch missing elements, then compute how far to click — a long, brittle, token-heavy chain that can still miss when an ad loads and shifts the layout. WebMCP replaces guessing with a "menu" of explicit actions, framed as "the USB-C of AI agent interactions," which the talk says significantly improves agent performance and reliability on a site. (02:08-04:42)
+- Relationship to MCP: WebMCP is "the implementation of the tools part of the MCP" — inspired by MCP "like JavaScript is inspired by Java." It is complementary, not a replacement: MCP connects agents to applications server-side (you host a service the agent can reach anywhere, anytime), while WebMCP is client-side — all tools live in the browser and the browser window must be open for it to work. (09:58-11:23)
+- Tools are page-scoped. In the maze demo the landing page exposed only `start maze game`; after starting, the maze page exposed a new tool set (move N/S/E/W, look, pick up / drop / use items). The agent maps natural language ("down then right", "complete the maze") onto the registered tools and can repeat calls until it judges the task done; prompt quality affects efficiency. (04:47-08:59)
+- Declarative API: add a few attributes (tool name, tool description) to a normal HTML form and the browser auto-generates a JSON schema using the form fields as parameters. Additional attributes exist, e.g. an `agent-invoked` boolean to record whether a form was filled by an agent or a human. Use it for standard form elements. (12:35-13:35)
+- Imperative API: call `registerTool` with an object — manually author the schema, give a descriptive name and description so the agent knows when to call it, and an `execute` block of normal JavaScript (wrap existing functions, validate/trim input, create and append DOM nodes) that returns information to the agent on success for its next steps. It is the more-used path because real flows are usually complex/multi-step. (13:41-15:13)
+- End-to-end shape: the concert demo bought tickets in three tool calls — `search concerts` (by name → returns info including an ID), `open concert page` (with the ID → loads a page exposing its own tools), and `purchase ticket` (quantity, section). Keep the UI in sync with each tool call so the user sees what is happening, and leave the final checkout for the user to do manually so they know they are spending real money. (15:16-17:43)
+- Status and tooling (as of the talk): experimental early preview, API changing weekly; enabled in Chrome 146+ (Chrome Canary recommended, else an experimental URL flag). The Model Context Tool Inspector is a Chrome Web Store extension that lists every tool found on a page and lets you prompt or call tools directly for debugging; a GitHub repo ships ~6-7 demos and an eval CLI for testing WebMCP tools on your own sites. (04:53-05:54, 17:46-20:01)
+
+Related topics:
+- [Tools](../topics/tools.md)
+- [Agents](../topics/agents.md)
+
+Related concepts:
+- [Agent-readable web surfaces guide browsing agents](agent-readable-web-surfaces-guide-browsing-agents.md)
+- [Make Web Foundations Agent-Ready Before Adopting WebMCP](make-web-foundations-agent-ready-before-adopting-webmcp.md)
+- [Use Browser UI Control When APIs Are Absent](use-browser-ui-control-when-apis-are-absent.md)
+- [MCP applications ship UI and tools together](mcp-applications-ship-ui-and-tools-together.md)
+- [Group Agent Tools by Human-Facing Actions](group-agent-tools-by-human-facing-actions.md)
+
+Sources:
+- [The agent-ready web: Simplify user actions with WebMCP — Tara Agyemang, Google](../sources/20260611_ghJmWQCIHRM.md), 02:08-20:01
