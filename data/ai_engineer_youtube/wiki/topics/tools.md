@@ -82,9 +82,12 @@ GitHub Copilot's MCP integration reinforces that external tool access is not pas
 
 Anthropic's remote-MCP experience adds two practical tool-surface lessons. First, a gateway should create a pit of success: one `connect to MCP` call can route to internal or external servers, retrieve stored credentials, return a normal MCP SDK client session, and keep product teams from reimplementing OAuth and tool plumbing. Second, MCP's JSON-RPC messages can travel over internal websockets, gRPC, Unix sockets, or other stream carriers while preserving the standard SDK boundary; external interoperability and internal routing do not have to be the same design problem.
 
+Web access is itself a tool surface that the default `fetch` does much worse than a managed MCP. Bright Data's web-access MCP bundles a real search-engine tool (Google, Bing, DuckDuckGo), scrape-to-markdown that avoids spending tokens on HTML, batch search, per-site APIs, and a remote scraping browser that solves CAPTCHA and runs parallel sessions without getting blocked, because a raw fetch silently fails on the roughly 20% of the web that blocks AI crawling. The same surface shows the tool-budget discipline concretely: it exposes 66-69 tools but the speaker loads only the two a task needs (scrape-markdown plus search) so the agent is not flooded with irrelevant tool context.
+
 ## Key Concepts
 
 - [Vet MCP Servers As Action-Capable Extensions](../concepts/vet-mcp-servers-as-action-capable-extensions.md) - MCP servers should be vetted as tools that can act through the agent, not just as data feeds.
+- [Ground Agents With Managed Web-Access Infrastructure](../concepts/ground-agents-with-managed-web-access-infrastructure.md) - web access is a tool surface that needs anti-blocking infrastructure, not a raw fetch.
 - [Type-Safe Agent Schemas Make Refactoring and Validation Easier](../concepts/type-safe-agent-schemas-make-refactoring-and-validation-easier.md) - typed tool dependencies and outputs keep framework contracts refactorable.
 - [Trace Agent Tool Arguments to Debug Real Failures](../concepts/trace-agent-tool-arguments-to-debug-real-failures.md) - tool traces should expose selected arguments, responses, latency, and cost.
 - [Group Agent Tools by Human-Facing Actions](../concepts/group-agent-tools-by-human-facing-actions.md) - action-level tool grouping reduces semantic collisions from raw API catalogs.
@@ -380,6 +383,7 @@ Anthropic's remote-MCP experience adds two practical tool-surface lessons. First
 - [Let LLMs Wander: Engineering RL Environments - Stefano Fiorucci](../sources/20260408_71V3fTaUp2Q.md)
 - [Why, and how you need to sandbox AI-Generated Code? - Harshil Agrawal, Cloudflare](../sources/20260408_AHtGAgQ0Q_Q.md)
 - [Building in the Gemini Era - Kat Kampf & Ammaar Reshi, Google DeepMind](../sources/20251215_fgkXEIbZpGc.md)
+- [Your Agent's Biggest Lie: "I Searched the Web" — Rafael Levi, Bright Data](../sources/20260617_btxGmN8RvNU.md)
 - [Your Insecure MCP Server Won't Survive Production - Tun Shwe, Lenses](../sources/20260408_BurJvbqFr4c.md)
 - [Bending a Public MCP Server Without Breaking It — Nimrod Hauser, Baz](../sources/20260408_U00AOI1eJUE.md)
 - [Platforms for Humans and Machines: Engineering for the Age of Agents - Juan Herreros Elorza](../sources/20260408_cCRO3ChaYhM.md)

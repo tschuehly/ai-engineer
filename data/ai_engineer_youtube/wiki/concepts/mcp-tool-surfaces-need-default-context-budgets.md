@@ -16,6 +16,7 @@ Details:
 - A visible tool count above roughly 50 tools per agent is a performance smell unless the team invests in routing, splitting, namespacing, and evaluation; the budget is per agent, not per individual server. 35:32-37:14
 - Amp adds a coding-agent-specific version of this failure mode: irrelevant tools increase context confusion, and generic MCP server descriptions may not be tuned to the feedback loops a particular coding agent needs to close. 04:40-05:58
 - AWS describes an internal agent with more than 6,000 tools and uses a retrieval step over stored tool descriptions so only relevant tools enter the model context. (10:57-11:30)
+- Bright Data's web-access MCP exposes 66-69 tools but the speaker only loads all of them to demo the surface; for a real task he loads just the two needed (for example scrape-markdown plus search), warning that loading everything floods the context with irrelevant data. (13:41-14:03)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -35,3 +36,4 @@ Sources:
 - [Your MCP Server is Bad (and you should feel bad) - Jeremiah Lowin, Prefect](../sources/20260112_96G7FLab8xc.md), 06:12-06:56, 28:25-29:24, 35:32-37:14
 - [Amp Code: Next Generation AI Coding - Beyang Liu, Amp Code](../sources/20251222_gvIAkmZUEZY.md), 04:40-05:58
 - [Building Agents at Cloud Scale - Antje Barth, AWS](../sources/20250802_WJjInLeaJjo.md), 10:57-11:30
+- [Your Agent's Biggest Lie: "I Searched the Web" — Rafael Levi, Bright Data](../sources/20260617_btxGmN8RvNU.md), 13:41-14:03

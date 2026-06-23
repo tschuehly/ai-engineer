@@ -481,6 +481,10 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Agents Punish Bad Data and Need Question and Tracking Data Foundations](concepts/agents-punish-bad-data-and-need-question-and-tracking-data-foundations.md) - data quality dominates production effort and tracking data needs its own schema and collection strategy.
 - [Run a Production AI Incident Playbook](concepts/run-a-production-ai-incident-playbook.md) - detect, diagnose, contain, fix, and grow-tests connects evals and tracing into ITSM-wired incident response.
 
+- [Silent Web-Access Failure Produces Confident Hallucination](concepts/silent-web-access-failure-produces-confident-hallucination.md) - blocked or empty web fetches go unreported, so the model fabricates instead of refusing.
+- [The Open Web Is Adversarial to Agent Access](concepts/the-open-web-is-adversarial-to-agent-access.md) - default crawling is blocked or poisoned, so much of the web is not freely fetchable by agents.
+- [Ground Agents With Managed Web-Access Infrastructure](concepts/ground-agents-with-managed-web-access-infrastructure.md) - residential IPs, human-like browsers, CAPTCHA solving, scrape-to-markdown, and public datasets restore reliable web grounding.
+
 ## Topics
 
 - [Agents](topics/agents.md) - agent workflows that combine reasoning, tools, APIs, and local state.

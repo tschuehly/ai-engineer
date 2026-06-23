@@ -950,6 +950,7 @@
 - [Use Field-Level Confidence Signals for Human Review](../concepts/use-field-level-confidence-signals-for-human-review.md)
 
 - [Evals Only Cover Known AI Product Failures](../concepts/evals-only-cover-known-ai-product-failures.md)
+- [Silent Web-Access Failure Produces Confident Hallucination](../concepts/silent-web-access-failure-produces-confident-hallucination.md)
 - [AI Product Issues Need Signals and Intents](../concepts/ai-product-issues-need-signals-and-intents.md)
 - [Turn AI Product Intents Into Contained Workflows](../concepts/turn-ai-product-intents-into-contained-workflows.md)
 - [Plan AI Reliability Risk Inside Product Work](../concepts/plan-ai-reliability-risk-inside-product-work.md)
@@ -1274,6 +1275,9 @@
 - [Dynamic AI Search Evals Need Fresh Grounding Sets](../concepts/dynamic-ai-search-evals-need-fresh-grounding-sets.md)
 - [Reference-Free AI Search Metrics Decompose Answer Quality](../concepts/reference-free-ai-search-metrics-decompose-answer-quality.md)
 - [AI Search Providers Should Return Grounding Documents](../concepts/ai-search-providers-should-return-grounding-documents.md)
+- [Silent Web-Access Failure Produces Confident Hallucination](../concepts/silent-web-access-failure-produces-confident-hallucination.md)
+- [The Open Web Is Adversarial to Agent Access](../concepts/the-open-web-is-adversarial-to-agent-access.md)
+- [Ground Agents With Managed Web-Access Infrastructure](../concepts/ground-agents-with-managed-web-access-infrastructure.md)
 - [Seller Knowledge Bases Let Agents Pull Business Context at Action Time](../concepts/seller-knowledge-bases-let-agents-pull-business-context-at-action-time.md)
 - [Parse Multimodal Business Sources Into Structured Markdown](../concepts/parse-multimodal-business-sources-into-structured-markdown.md)
 - [Show Retrieved Chunks Inside Agent Workflows](../concepts/show-retrieved-chunks-inside-agent-workflows.md)
@@ -1363,6 +1367,7 @@
 - [Layer Bot Detection Signals Instead Of Trusting One Header](../concepts/layer-bot-detection-signals-instead-of-trusting-one-header.md)
 - [Treat CAPTCHA And Proof Of Work As Economic Friction](../concepts/treat-captcha-and-proof-of-work-as-economic-friction.md)
 - [Key Rate Limits By Fingerprint Or Session Instead Of IP Alone](../concepts/key-rate-limits-by-fingerprint-or-session-instead-of-ip-alone.md)
+- [The Open Web Is Adversarial to Agent Access](../concepts/the-open-web-is-adversarial-to-agent-access.md)
 - [Treat Agents As Users For Authorization](../concepts/treat-agents-as-users-for-authorization.md)
 - [Do Not Roll Your Own Agent Code Sandbox](../concepts/do-not-roll-your-own-agent-code-sandbox.md)
 - [Server-Side Request Forgery Exfiltrates Agent Credentials](../concepts/server-side-request-forgery-exfiltrates-agent-credentials.md)
@@ -1373,6 +1378,7 @@
 
 ## Tools
 - [Enterprise RAG Becomes More Useful With API Tool Access](../concepts/enterprise-rag-becomes-more-useful-with-api-tool-access.md)
+- [Ground Agents With Managed Web-Access Infrastructure](../concepts/ground-agents-with-managed-web-access-infrastructure.md)
 
 - [Production Agent Platforms Need Enterprise Controls](../concepts/production-agent-platforms-need-enterprise-controls.md)
 - [Build Core Agents and Buy Commodity Agent Workflows](../concepts/build-core-agents-and-buy-commodity-agent-workflows.md)
