@@ -13,6 +13,7 @@ Details:
 - Cursor's trace pays a one-time upfront cost to parse, chunk, and embed the codebase, then exposes a lightweight semantic-search tool at runtime; the agent queries "how is metadata filtered?" and gets results cheaply, saving tokens, time, and money and making the agent faster. (07:47-08:14)
 - The clarifying frame: embeddings and semantic search are *cached compute*. Whether to cache (index) depends on query volume — repeated retrieval of the same corpus amortizes the index, while a single discovery pass does not. Claude Code's grep-per-session is "not wrong, it is a deliberate tradeoff," and the indexed approach is the opposite tradeoff. (06:30, 08:14)
 - Evidence the cache pays off: Turbopuffer team members who were heavy Claude Code users switched to Cursor for speed once composer-2 plus its semantic understanding became "really really good." (08:19-08:36)
+- An earlier benchmark talk by the same speaker is where this cached-compute frame was first articulated, and it adds direct evidence that the cache improves retrieval quality, not just speed: adding a Turbopuffer semantic-search tool to Claude Code raised file precision from a 65% baseline to 87% — cutting wasted file reads from 1-in-3 to 1-in-8 — on a 50-task ContextBench run. The caveat is that the cache only pays off if the model knows when to query it (see "Native Tool Integration Beats a Bolted-On Tool the Model Can't Time"). (zKk7sDMGDEQ, 06:26-07:30, 09:55-10:36)
 
 Related topics:
 - [Retrieval](../topics/retrieval.md)
@@ -23,6 +24,9 @@ Related concepts:
 - [Share Codebase Indexes Across a Team With Merkle-Tree Diffing](share-codebase-indexes-across-a-team-with-merkle-tree-diffing.md)
 - [Agentic Retrieval Lets Models Plan Search Steps](agentic-retrieval-lets-models-plan-search-steps.md)
 - [Codebase Intelligence Needs Structural and Historical Signals](codebase-intelligence-needs-structural-and-historical-signals.md)
+- [Evaluate Agent Retrieval by Trajectory, Not Task Success](evaluate-agent-retrieval-by-trajectory-not-task-success.md)
+- [Native Tool Integration Beats a Bolted-On Tool the Model Can't Time](native-tool-integration-beats-a-bolted-on-tool.md)
 
 Sources:
 - [RAG is dead, right?? - Kuba Rogut, Turbopuffer](../sources/20260609_UM6sFg_jdlE.md), 06:08-08:36
+- [Benchmarking semantic code retrieval on Claude Code — Kuba Rogut, Turbopuffer](../sources/20260603_zKk7sDMGDEQ.md), 02:34-04:08, 06:26-07:30

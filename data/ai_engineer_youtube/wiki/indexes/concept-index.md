@@ -400,6 +400,7 @@
 
 ## Coding Agents
 
+- [Native Tool Integration Beats a Bolted-On Tool the Model Can't Time](../concepts/native-tool-integration-beats-a-bolted-on-tool.md)
 - [Enforce Agent Rules in Git Hooks and CI, Not the Prompt](../concepts/enforce-agent-rules-in-git-hooks-and-ci-not-the-prompt.md)
 - [Lint Module Imports to Make Failure Classes Structurally Impossible](../concepts/lint-module-imports-to-make-failure-classes-structurally-impossible.md)
 - [Verify Spec Adherence With Executable, Readable BDD Scenarios](../concepts/verify-spec-adherence-with-executable-readable-bdd-scenarios.md)
@@ -1014,6 +1015,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Evaluate Agent Retrieval by Trajectory, Not Task Success](../concepts/evaluate-agent-retrieval-by-trajectory-not-task-success.md)
 - [Verify Spec Adherence With Executable, Readable BDD Scenarios](../concepts/verify-spec-adherence-with-executable-readable-bdd-scenarios.md)
 - [Run Agentic Coding Evals as an Infrastructure-Reliability Problem](../concepts/run-agentic-coding-evals-as-an-infrastructure-problem.md)
 - [Seal Eval Environments Against Agents That Read the Leaked Answer](../concepts/seal-eval-environments-against-answer-leaking-agents.md)
@@ -1366,6 +1368,7 @@
 - [Scale Text-Diffusion Quality With More Denoising Steps](../concepts/scale-text-diffusion-quality-with-more-denoising-steps.md)
 
 ## Retrieval
+- [Evaluate Agent Retrieval by Trajectory, Not Task Success](../concepts/evaluate-agent-retrieval-by-trajectory-not-task-success.md)
 - [Curate Context Strategically Because Models Drop the Middle](../concepts/curate-context-strategically-because-models-drop-the-middle.md)
 - [Enterprise RAG Becomes More Useful With API Tool Access](../concepts/enterprise-rag-becomes-more-useful-with-api-tool-access.md)
 - [Redefine RAG as Iterative Multi-Tool Retrieval, Not Vector Search](../concepts/redefine-rag-as-iterative-multi-tool-retrieval.md)
@@ -1487,6 +1490,7 @@
 - [Render Third-Party Generative UI Through a Double Iframe](../concepts/render-third-party-generative-ui-through-a-double-iframe.md)
 
 ## Tools
+- [Native Tool Integration Beats a Bolted-On Tool the Model Can't Time](../concepts/native-tool-integration-beats-a-bolted-on-tool.md)
 - [Place Agent UI Generation on a Static–Declarative–Generative Spectrum](../concepts/place-agent-ui-on-the-static-declarative-generative-spectrum.md)
 - [Measure Agent Interface Efficiency With Tokens Per Successful Outcome](../concepts/measure-agent-interface-efficiency-with-tokens-per-successful-outcome.md)
 - [Turn Tool Errors Into Agent Self-Healing Recovery](../concepts/turn-tool-errors-into-agent-self-healing-recovery.md)

@@ -12,6 +12,7 @@ Details:
 - The fix is to not match the signals themselves in embedding space: ask an LLM "what is this signal about?", have it generate a few queries, and match those queries in embedding space instead; this "worked much much better" (06:40-07:14).
 - The generalized lesson: embedding models match on structural, not just semantic, similarity, so when your clustering data is not all the same format, think carefully about what the data looks like and how to normalize it before embedding (11:43-12:04).
 - This is an indexing-side counterpart to writing better queries: the LLM-generated description is a meaning-bearing surrogate that the embedding model can compare across formats, rather than the format-bearing raw artifact.
+- The same principle bridges the query↔code format gap in code retrieval. Turbopuffer notes that "semantic search is just similarity search," so a natural-language query ("authentication flow") and raw code are different formats and carry innate distance; embedding code that already has good inline comments/docstrings works much better because the comments give the embedding model the meaning, and "the embedding is not the hard part, it's figuring out what the meaning really is of that chunk." Cursor reportedly *injects synthetic comments* on top of code and embeds code-with-comments to lift recall, and a parent-child chunking scheme (parent = a query-ish natural-language description, child = the raw code) is another way to align the indexed representation with the query (zKk7sDMGDEQ, 12:00-14:38).
 
 Related topics:
 - [Retrieval](../topics/retrieval.md)
@@ -22,6 +23,8 @@ Related concepts:
 - [Align Synthetic Retrieval Queries With Real User Specificity](align-synthetic-retrieval-queries-with-real-user-specificity.md)
 - [Search Engines Shift Retrieval Work to Ingestion](search-engines-shift-retrieval-work-to-ingestion.md)
 - [Cluster conversation outputs to prioritize AI product work](cluster-conversation-outputs-to-prioritize-ai-product-work.md)
+- [Choose Lexical, Vector, and Reranking Retrieval by Query Shape](choose-lexical-vector-and-reranking-retrieval-by-query-shape.md)
 
 Sources:
 - [Self Driving Products: Product Signals to Pull Requests — Joshua Snyder, PostHog](../sources/20260610_zMiSRliEzv4.md), 05:53-07:14, 11:43-12:04
+- [Benchmarking semantic code retrieval on Claude Code — Kuba Rogut, Turbopuffer](../sources/20260603_zKk7sDMGDEQ.md), 12:00-14:38
