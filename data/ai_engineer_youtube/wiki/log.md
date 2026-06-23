@@ -2006,3 +2006,11 @@
 - Updated topics: [Retrieval](topics/retrieval.md), [Coding Agents](topics/coding-agents.md), [Agents](topics/agents.md)
 - Updated concepts: [Redefine RAG as Iterative Multi-Tool Retrieval, Not Vector Search](concepts/redefine-rag-as-iterative-multi-tool-retrieval.md), [Treat Embeddings as Cached Compute Decided by Query Volume](concepts/treat-embeddings-as-cached-compute-decided-by-query-volume.md), [Share Codebase Indexes Across a Team With Merkle-Tree Diffing](concepts/share-codebase-indexes-across-a-team-with-merkle-tree-diffing.md), [Agentic Retrieval Lets Models Plan Search Steps](concepts/agentic-retrieval-lets-models-plan-search-steps.md)
 - Notes: Added three new concepts from Turbopuffer's "RAG is dead" reframe — retrieval is iterative multi-tool search (vector + full-text/BM25 + grep + glob + regex + filters), so agentic search is a superset of RAG not its replacement, and staged retrieval survives long context (Jeff Dean's "you need the right million"); embeddings are cached compute, so grep-per-session (Claude Code, ~6,000 tokens/sub-step, no index) vs persistent index (Cursor, one-time parse/chunk/embed + lightweight runtime tool) is a query-volume tradeoff rather than a correctness one; and Cursor shares codebase indexes across a team via Merkle-tree diffing (copy + re-embed only changed files) with measured semantic-search gains (~24% composer answer-accuracy, ~2.6% retention, ~2.2% fewer dissatisfied requests, not fired on every query). Strengthened the agentic-retrieval concept with Turbopuffer's grep→read→assess→repeat definition and the search-to-understand loop. Integrated across Retrieval, Coding Agents, and Agents; selected one new processed source `UM6sFg_jdlE`.
+
+## [2026-06-23] ingest | 2026 AI Engineer Vibe Reel
+
+- Source: [2026 AI Engineer Vibe Reel](sources/20260609_gUMwt4-5kn0.md)
+- Processed: `gUMwt4-5kn0`
+- Updated topics: None
+- Updated concepts: None
+- Notes: Filed the 67-second World's Fair promotional vibe reel as transcript-available but conceptually low-signal (transcript is `[music]` captions and the repeated word "Heat"), without adding unsupported topic or concept claims; follows the `xAfp-znTRx8` music-source precedent.
