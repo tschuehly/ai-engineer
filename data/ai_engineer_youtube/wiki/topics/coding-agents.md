@@ -90,6 +90,8 @@ Factory adds an enterprise SDLC orchestration layer to the same trend. Agent-nat
 
 Imbue's Sculptor framing adds a quality loop for moving beyond prototypes: ask what is wrong with the generated diff while the change is being created, require plans before code when the task needs structure, feed specs and style guides into the workflow, compare lint state before and after agent runs, generate tests from meaning-level plans, and use custom LLM checks plus sandboxed repair attempts when issues are clearly stated.
 
+WorkOS's sustainability framing adds the human side of the same shift. Once agents can loop infinitely until they hit your verification criteria, the binding constraint is no longer agent capability but human attention, which degrades under load and does not scale; the symptom is firing up four parallel agents and being wiped out by 11am. The corrective is to design the personal workflow to conserve attention rather than maximize agent throughput: run a signal layer where an agent reads Slack and Linear on a loop, deduplicates asks, and surfaces only the real high-priority tickets so the developer never opens those apps and gets pulled off task; decouple agent direction from the desk through voice dictation (~184 wpm enabling parallel prompting) and remote control of a session that runs on the dev machine but is driven from a phone, so diffuse-mode insight is captured and PRs are reviewed while walking; and mine the locally stored JSONL conversation history on a schedule to find struggle and churn patterns and generate the missing skills or MCP servers. "Speed requires safety" stays the throttle: a verification ladder escalates from lint/build/unit-test hooks, to agent browser click-through (e.g. confirming login still works), to a constitutional critic agent that checks the work against a stated standard and returns actionable feedback. The default path with these tools is faster burnout; the intentional path delegates the minutiae while the human stays responsible for quality, review, and shipping, and can even fold biometric signals (an Oura ring over MCP) into the decision to stop.
+
 ## Key Concepts
 
 - [AI Diff Review Should Find Problems Before Merge](../concepts/ai-diff-review-should-find-problems-before-merge.md) - generated diffs need concrete defect-finding checks before merge-time trust decisions.
@@ -293,6 +295,10 @@ Imbue's Sculptor framing adds a quality loop for moving beyond prototypes: ask w
 - [Use Compounding Engineering Loops](../concepts/use-compounding-engineering-loops.md) - plan, delegate, assess, and codify loops turn agent work into reusable engineering leverage.
 - [Demo Culture Replaces Memo-First Product Persuasion](../concepts/demo-culture-replaces-memo-first-product-persuasion.md) - cheap prototypes let product arguments move from abstract persuasion to concrete trials.
 - [Fractured Attention Becomes Usable With Delegated Agents](../concepts/fractured-attention-becomes-usable-with-delegated-agents.md) - coding agents can make small time slices useful for investigation and production fixes.
+- [Treat Human Attention as the Bottleneck for Agentic Work](../concepts/treat-human-attention-as-the-agentic-bottleneck.md) - agents scale but human attention does not, so workflows should conserve attention or default to faster burnout.
+- [Run a Signal Layer to Triage Comms and Protect Focus](../concepts/run-a-signal-layer-to-triage-comms-and-protect-focus.md) - an agent loop over Slack and Linear surfaces only real high-priority work so the human is not pulled off task.
+- [Drive Agents Remotely and by Voice to Decouple Work From the Desk](../concepts/drive-agents-remotely-and-by-voice-to-decouple-work-from-the-desk.md) - voice dictation and remote control let a developer direct agents and review PRs away from the keyboard.
+- [Mine Agent Conversation History to Generate Missing Skills](../concepts/mine-agent-conversation-history-to-generate-missing-skills.md) - a scheduled pass over JSONL session logs turns struggle and churn patterns into new skills, MCP servers, or rules.
 - [Align teams before agents implement](../concepts/align-teams-before-agents-implement.md) - unaligned agentic speed can create wrong features, duplicated work, and late PR rejection.
 - [Shared cloud workspaces make agent sessions collaborative](../concepts/shared-cloud-workspaces-make-agent-sessions-collaborative.md) - shared micro-VM sessions let teammates inspect and continue agent work without local checkout friction.
 - [Collaborative plans become executable agent context](../concepts/collaborative-plans-become-executable-agent-context.md) - plan mode should be shareable and editable before the coding agent starts implementation.
@@ -350,6 +356,7 @@ Imbue's Sculptor framing adds a quality loop for moving beyond prototypes: ask w
 - Which outcome verifiers are broad enough to accept valid alternate fixes while still blocking reward hacks and shallow workarounds?
 - How can teams measure the right compaction frequency before context cleanup becomes either too sparse to help or too heavy to read?
 - Which codebase decomposition choices most improve agent success without over-fragmenting human architecture?
+- Which attention-conserving layers (comms triage, voice, remote control, history mining) give the most sustainability benefit before they add their own monitoring overhead?
 
 ## Sources
 
@@ -437,3 +444,4 @@ Imbue's Sculptor framing adds a quality loop for moving beyond prototypes: ask w
 - [Developing Taste in Coding Agents: Applied Meta Neuro-Symbolic RL - Ahmad Awais, CommandCode](../sources/20251124_kWOQS3XPZ10.md)
 - [OpenAI on Securing Code-Executing AI Agents - Fouad Matin (Codex, Agent Robustness)](../sources/20250730_w7IMuYsBNr8.md)
 - [AX is the only Experience that Matters - Ivan Burazin, Daytona](../sources/20250724_e9sLVMN76qU.md)
+- [Your Attention Is the Bottleneck, Not Your Agents — Zack Proser, WorkOS](../sources/20260611_so9l_MwS2yg.md)

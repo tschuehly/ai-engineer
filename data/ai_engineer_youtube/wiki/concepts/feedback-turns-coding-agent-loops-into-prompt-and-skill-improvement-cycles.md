@@ -20,6 +20,7 @@ Related topics:
 Related concepts:
 - [Ralph loops process one ticket at a time with fresh context](ralph-loops-process-one-ticket-at-a-time-with-fresh-context.md)
 - [Use independent validation contexts to reduce agent confirmation bias](use-independent-validation-contexts-to-reduce-agent-confirmation-bias.md)
+- [Mine Agent Conversation History to Generate Missing Skills](mine-agent-conversation-history-to-generate-missing-skills.md)
 
 Sources:
 - [Ralph Loops: Build Dumb AI Loops That Ship - Chris Parsons, Cherrypick](../sources/20260504_2TLXsxkz0zI.md), 06:57-07:08, 33:33-35:10, 39:35-41:04

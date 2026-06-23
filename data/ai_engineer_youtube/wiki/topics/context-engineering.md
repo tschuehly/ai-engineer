@@ -44,11 +44,14 @@ Production AI coding adds a low-level context hygiene requirement: the agent nee
 
 Devin 2.0 adds a codebase-intelligence layer to this context problem. Raw source text is not enough for broader bug and feature work; agents and humans need structural and historical representations such as call hierarchies, language-server output, commit history, lint feedback, and generated codebase explanations before they can plan consistent cross-file changes.
 
+Stored agent conversations are themselves a context source worth engineering. WorkOS's sustainability talk treats locally saved JSONL session logs as "gold": a scheduled pass over them finds where the human and agent spent many thinking tokens or went back and forth to remove ambiguity, then converts that delta into the skills, MCP servers, or rules that were missing — so the harness improves its own future context from real usage rather than from speculative upfront curation. The caveat is that raw JSONL is not built for AI consumption, so a session-end or PR-merge hook can extract the key bits (especially the struggles) into a cleaner store before the analysis runs.
+
 Data-and-tool agents add a just-in-time injection discipline at the level of individual tools. WorkOS's Studio runs a preflight checklist (are tools connected, is there enough context, otherwise ask) and then injects each tool's heavy schema/usage context only at the moment that tool is invoked, explicitly to avoid preloading every tool's instructions and blowing out the window — the single-agent runtime counterpart to MCP tool-budget discipline. The prompt is layered (base defaults, org rules, per-tool context preserved across edits) and includes a primary-source rule: distrust the model's own knowledge of a fast-moving product because training data is stale, and look up docs instead. Notably this needs no RAG store; LLMs read self-descriptive table schemas well, so a hand-written context block encoding join quirks is enough to "just invoke tools with context on top."
 
 ## Key Concepts
 
 - [Codebase Intelligence Needs Structural and Historical Signals](../concepts/codebase-intelligence-needs-structural-and-historical-signals.md) - multi-file coding work needs codebase relationships and history in context.
+- [Mine Agent Conversation History to Generate Missing Skills](../concepts/mine-agent-conversation-history-to-generate-missing-skills.md) - stored JSONL session logs are a context source that a scheduled pass can convert into new skills, MCP servers, or rules.
 - [Layer Copilot Context Through Issues, Instructions, and Repository Structure](../concepts/layer-copilot-context-through-issues-instructions-and-repository-structure.md) - Copilot shows how issue text, repository rules, scoped instructions, and code structure combine into task context.
 - [Compress Environment Context For Early Agent Experiments](../concepts/compress-environment-context-for-early-agent-experiments.md) - shrink or decompose large web, GUI, or code contexts so model experiments can run within available context windows.
 - [Keep agent context small, fresh, and task-specific](../concepts/keep-agent-context-small-fresh-and-task-specific.md) - context should be externalized, selected, summarized, and isolated so stale or excessive history does not degrade agent work.
@@ -199,3 +202,4 @@ Data-and-tool agents add a just-in-time injection discipline at the level of ind
 - [Five hard earned lessons about Evals - Ankur Goyal, Braintrust](../sources/20250823_a4BV0gGmXgA.md)
 - [Wisdom-Driven Knowledge Augmented Generation at Scale - Chin Keong Lam, Patho AI](../sources/20250822_9AQOvT8LnMI.md)
 - [On Curiosity -- Sharif Shameem, Lexica](../sources/20250719_0F8mnGPUycY.md)
+- [Your Attention Is the Bottleneck, Not Your Agents — Zack Proser, WorkOS](../sources/20260611_so9l_MwS2yg.md)

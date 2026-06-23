@@ -383,6 +383,10 @@
 
 ## Coding Agents
 
+- [Treat Human Attention as the Bottleneck for Agentic Work](../concepts/treat-human-attention-as-the-agentic-bottleneck.md)
+- [Run a Signal Layer to Triage Comms and Protect Focus](../concepts/run-a-signal-layer-to-triage-comms-and-protect-focus.md)
+- [Drive Agents Remotely and by Voice to Decouple Work From the Desk](../concepts/drive-agents-remotely-and-by-voice-to-decouple-work-from-the-desk.md)
+- [Mine Agent Conversation History to Generate Missing Skills](../concepts/mine-agent-conversation-history-to-generate-missing-skills.md)
 - [AI Diff Review Should Find Problems Before Merge](../concepts/ai-diff-review-should-find-problems-before-merge.md)
 - [Specs and Style Guides Steer Coding Agents Toward Maintainable Code](../concepts/specs-and-style-guides-steer-coding-agents-toward-maintainable-code.md)
 - [Generated Tests Need Meaningful Plans, Coverage, and Pruning](../concepts/generated-tests-need-meaningful-plans-coverage-and-pruning.md)
@@ -572,6 +576,7 @@
 
 ## Context Engineering
 
+- [Mine Agent Conversation History to Generate Missing Skills](../concepts/mine-agent-conversation-history-to-generate-missing-skills.md)
 - [Codebase Intelligence Needs Structural and Historical Signals](../concepts/codebase-intelligence-needs-structural-and-historical-signals.md)
 - [Layer Copilot Context Through Issues, Instructions, and Repository Structure](../concepts/layer-copilot-context-through-issues-instructions-and-repository-structure.md)
 - [Assemble Realtime Multimodal Context for Lab Agents](../concepts/assemble-realtime-multimodal-context-for-lab-agents.md)
@@ -1392,6 +1397,7 @@
 - [Render Third-Party Generative UI Through a Double Iframe](../concepts/render-third-party-generative-ui-through-a-double-iframe.md)
 
 ## Tools
+- [Run a Signal Layer to Triage Comms and Protect Focus](../concepts/run-a-signal-layer-to-triage-comms-and-protect-focus.md)
 - [Enterprise RAG Becomes More Useful With API Tool Access](../concepts/enterprise-rag-becomes-more-useful-with-api-tool-access.md)
 - [Inject Tool Context Just-in-Time During Agent Sequencing](../concepts/inject-tool-context-just-in-time-during-agent-sequencing.md)
 - [Ground Agents With Managed Web-Access Infrastructure](../concepts/ground-agents-with-managed-web-access-infrastructure.md)
@@ -1602,6 +1608,10 @@
 - [Verify AI call summaries before CRM sync](../concepts/verify-ai-call-summaries-before-crm-sync.md)
 
 ## Workflows
+- [Treat Human Attention as the Bottleneck for Agentic Work](../concepts/treat-human-attention-as-the-agentic-bottleneck.md)
+- [Run a Signal Layer to Triage Comms and Protect Focus](../concepts/run-a-signal-layer-to-triage-comms-and-protect-focus.md)
+- [Drive Agents Remotely and by Voice to Decouple Work From the Desk](../concepts/drive-agents-remotely-and-by-voice-to-decouple-work-from-the-desk.md)
+- [Mine Agent Conversation History to Generate Missing Skills](../concepts/mine-agent-conversation-history-to-generate-missing-skills.md)
 - [Enterprise AI Productivity Needs Workflow-Level Outcomes](../concepts/enterprise-ai-productivity-needs-workflow-level-outcomes.md)
 - [Compile Natural-Language Analytics Into Reusable Deterministic Widgets](../concepts/compile-natural-language-analytics-into-reusable-deterministic-widgets.md)
 - [Schema-First Classification Turns LLMs Into Enterprise Categorization Tools](../concepts/schema-first-classification-turns-llms-into-enterprise-categorization-tools.md)
