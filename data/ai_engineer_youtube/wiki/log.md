@@ -2014,3 +2014,11 @@
 - Updated topics: None
 - Updated concepts: None
 - Notes: Filed the 67-second World's Fair promotional vibe reel as transcript-available but conceptually low-signal (transcript is `[music]` captions and the repeated word "Heat"), without adding unsupported topic or concept claims; follows the `xAfp-znTRx8` music-source precedent.
+
+## [2026-06-23] ingest | GPU Cloud Deployment Without Leaving Your IDE — Audry Hsu, RunPod
+
+- Source: [GPU Cloud Deployment Without Leaving Your IDE — Audry Hsu, RunPod](sources/20260609_zDGHt0LB-dA.md)
+- Processed: `zDGHt0LB-dA`
+- Updated topics: [Infrastructure](topics/infrastructure.md), [Inference](topics/inference.md)
+- Updated concepts: [Deploy GPU Functions From the IDE With a Decorator and Hot Reload](concepts/deploy-gpu-functions-from-the-ide-with-a-decorator-and-hot-reload.md), [Choose Reserved Pods for Iteration, Serverless for Autoscaling Load](concepts/choose-reserved-pods-for-iteration-and-serverless-for-autoscaling-load.md)
+- Notes: Added two new concepts from RunPod's Flash demo. The first captures the serverless-GPU developer loop — a `@flash.endpoint` decorator on an async Python function deploys only that function to GPU cloud while `main`/helper code stays local, and hot file reload makes a model swap (SDXL Turbo → DreamShaper) a one-line edit, collapsing the commit→push→Docker-build→registry-pull→server-load→GPU-allocate cycle, with `flash run` exposing a local FastAPI dev server and decorator config for name/GPU-family/max-workers/active-workers/timeout. The second captures the commitment rule: serverless bills only per running second (H100 = $0.00116/sec, scale-to-zero) at a premium over pods, so experiment on reserved pods or a low worker count (1–2 GPUs) and move to serverless for hundreds of autoscaling workers across data centers. Cross-linked to match-gpu-commitments, autoscale-specialized-inference-workers, compile-python-inference-functions, and local-first-platform-workflows; integrated across Infrastructure and Inference; selected one new processed source `zDGHt0LB-dA`.

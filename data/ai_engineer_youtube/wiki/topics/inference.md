@@ -28,6 +28,8 @@ SGLang adds a concrete runtime-configuration layer to that serving discipline. A
 
 Diffusion serving adds a non-autoregressive variant of the same optimization discipline. NVIDIA frames image/video diffusion latency as the cost of running 20-50 denoising steps and attacks it with three additive, stackable levers rather than one: quantization (cheapest, but less impactful than in LLMs because diffusion is attention-heavy), caching that skips recomputing latent regions barely changing between steps (the diffusion analogue of KV caching, keyed on inter-step similarity), and step distillation that trains a same-size student to match teacher quality in far fewer steps. Recommended escalation is quantization first, then multi-GPU/context parallelism and caching, then distillation last as the most impactful lever — together reaching 10x-200x speedups and near-real-time video on a single Blackwell B200. The framework FastGen packages the post-training and GPU scale-sharding work distillation needs, and unlike LLM step-count tuning, diffusion distillation keeps the parameter count fixed.
 
+Serverless GPU clouds add a deployment-ergonomics and unit-cost layer to serving. RunPod's Flash SDK lets a developer deploy an inference function to GPU cloud by decorating an async Python function (`@flash.endpoint`) while orchestration runs locally, with hot reload so a model swap is a one-line edit rather than a container rebuild — useful when the application is multi-model orchestration (e.g. Qwen 3 prompts → DreamShaper render → Nano Banana 2 compose) and not a single call. On cost, serverless workers bill only per second of running request time (H100 ≈ $0.00116/sec) and scale to zero when idle, at a premium over reserved pods; the practical rule is to experiment on pods or a low worker count when you only need one or two GPUs and move to serverless when load is variable enough to need hundreds of autoscaling workers across data centers.
+
 ## Key Concepts
 
 - [Dual-mode AI infrastructure](../concepts/dual-mode-ai-infrastructure.md) - inference fleets should distinguish realtime latency needs from long compute-heavy workloads.
@@ -70,6 +72,8 @@ Diffusion serving adds a non-autoregressive variant of the same optimization dis
 - [Plan AI products for a multimodel market](../concepts/plan-ai-products-for-a-multimodel-market.md) - application infrastructure should assume model choice, pricing, and capability will keep changing.
 - [Match GPU Commitments To Workload Lifecycle](../concepts/match-gpu-commitments-to-workload-lifecycle.md) - compute access should match training, experiment, online inference, and offline inference phases.
 - [Aggregate Idle GPU Supply Through Compute Marketplaces](../concepts/aggregate-idle-gpu-supply-through-compute-marketplaces.md) - pooled accelerator supply can change the cost envelope for model training and serving.
+- [Choose Reserved Pods for Iteration, Serverless for Autoscaling Load](../concepts/choose-reserved-pods-for-iteration-and-serverless-for-autoscaling-load.md) - serverless GPU bills per running second and scales to zero at a premium, so experiment on pods and scale on serverless.
+- [Deploy GPU Functions From the IDE With a Decorator and Hot Reload](../concepts/deploy-gpu-functions-from-the-ide-with-a-decorator-and-hot-reload.md) - a decorator deploys an inference function to GPU cloud with hot reload, keeping orchestration local.
 - [Open model families need ecosystem-compatible tooling](../concepts/open-model-families-need-ecosystem-compatible-tooling.md) - open-weight models need serving, fine-tuning, and integration support before developers can use them.
 - [Per-layer embeddings move effective-model capacity out of VRAM](../concepts/per-layer-embeddings-move-effective-model-capacity-out-of-vram.md) - flash-backed PLE changes the memory profile of effective on-device models.
 - [Hot-swap small models to avoid one-model-per-GPU waste](../concepts/hot-swap-small-models-to-avoid-one-model-per-gpu-waste.md) - many small models can share accelerator capacity when the runtime supports dynamic loading and eviction.
@@ -120,6 +124,7 @@ Diffusion serving adds a non-autoregressive variant of the same optimization dis
 - [Infrastructure for the Singularity - Jesse Han, Morph](../sources/20250801_2goSS66XRBk.md)
 - [Why We Don't Need More Data Centers - Dr. Jasper Zhang, Hyperbolic](../sources/20250801_M6Vbaig1TsM.md)
 - [Hacking the Inference Pareto Frontier - Kyle Kranen, NVIDIA](../sources/20250801_Y2qc0UhDSnc.md)
+- [GPU Cloud Deployment Without Leaving Your IDE — Audry Hsu, RunPod](../sources/20260609_zDGHt0LB-dA.md)
 - [Serving Voice AI at $1/hr: Open-source, LoRAs, Latency, Load Balancing - Neil Dwyer, Gabber](../sources/20250731_rD23-VZZHOo.md)
 - [The Unofficial Guide to Apple's Private Cloud Compute - Jmo, CONFSEC](../sources/20250730_CCsWZ5bJlO8.md)
 - [Strategies for LLM Evals (GuideLLM, lm-eval-harness, OpenAI Evals Workshop) - Taylor Jordan Smith](../sources/20250727_89NuzmKokIk.md)
