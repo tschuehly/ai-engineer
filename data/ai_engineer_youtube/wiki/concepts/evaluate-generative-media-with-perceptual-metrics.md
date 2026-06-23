@@ -11,6 +11,7 @@ Details:
 - A generative-image example shows an advanced model doing OpenCV-style analysis yet failing to identify an obviously unnatural hand the way humans do immediately (00:50-01:25).
 - The speaker cites Clean-FID/FID behavior where adding JPEG artifacts can sharply worsen the score even when the compared images look perceptually similar to humans, making the metric suspect as a product-quality proxy (07:00-07:40).
 - Easy-to-measure signals such as CLIP prompt adherence, object counts, and color presence can miss whether an image makes visual or artistic sense (07:44-08:09).
+- Pruna's Bertrand Charpentier reinforces the metric-instability warning with a concrete ranking failure: a CLIP-score ranking of 8 image models flipped across different datasets, and the between-model variations were tiny (the score is supposed to span 0–1 or 0–100), so the "best" model was indeterminate. The fix is to understand what a metric actually measures and to match it to the use case — a text-rendering metric ranked the same models consistently and with significant variation — and to use multiple metrics rather than stopping at one benchmark (hqHC6Z_lXyo, 10:28-12:18).
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -19,6 +20,8 @@ Related topics:
 Related concepts:
 - [Write custom scorers as product specifications](write-custom-scorers-as-product-specifications.md)
 - [Curate generative-media data before tuning model internals](curate-generative-media-data-before-tuning-model-internals.md)
+- [Select State of the Art on a Quality-Efficiency Pareto Front](select-state-of-the-art-on-a-quality-efficiency-pareto-front.md)
 
 Sources:
 - [Perceptual Evaluations: Evals for Aesthetics - Diego Rodriguez, Krea.ai](../sources/20250823_h5ItAJuB3Fc.md), 00:36-01:25, 07:00-08:09
+- [20 days of compute vs 7 hours: rethinking what state-of-the-art means — Bertrand Charpentier, Pruna](../sources/20260601_hqHC6Z_lXyo.md), 10:28-12:18

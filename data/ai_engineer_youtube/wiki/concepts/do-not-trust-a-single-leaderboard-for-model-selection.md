@@ -1,0 +1,27 @@
+# Don't Trust a Single Leaderboard for Model Selection
+
+Summary: A single public leaderboard rank is a weak basis for choosing a model. Boards disagree with each other, are built on small samples relative to production load, aggregate over tasks that hide per-use-case variance, and report win rates where most models lose ≥40% of their battles — so the top-ranked model is the wrong choice for a large fraction of real use cases.
+
+Use when:
+- Picking a model from a public leaderboard (image, video, or LLM) and tempted to take the top entry.
+- Explaining why two leaderboards rank the same models differently, or why a top model underperforms on your traffic.
+- Designing internal model-selection evaluation that has to be trustworthy for a specific application.
+
+Details:
+- Leaderboards disagree. Three image-editing leaderboards (LM Arena/"Arena", Design Arena, Artificial Analysis) produce different rankings; the "Human" model is rank 10 on Artificial Analysis but rank 5 on Arena. Elo/quality scores also span different ranges (~1,100–1,300 on one, a different range on another), so cross-board relative strength is unreliable, and boards have duplicate entries plus models present on some and absent on others (02:33-03:47, 03:11-03:23). Look at multiple boards, not one; large disagreement means some models are approximately equivalent, so being top-1 on one board is not "best overall" (03:52-04:15).
+- Aggregate scores hide per-sub-task variance. Per-use-case leaderboards (removing objects, changing background, editing text) rank models differently, ChatGPT image is never top-1 on the per-sub-task rankings, and no model consistently outperforms because models are trained more on some tasks than others — so target the leaderboard that matches your end use case (04:24-05:21, 05:30-05:44).
+- Sample size matters. Leaderboards are built on a few thousand samples, which is small versus real inference load; a provider with millions of requests per day gets more information by evaluating on its own API traffic than from a public board (05:55-06:30). Average on many samples under conditions close to the final use-case setup (07:10-07:24).
+- Win-rate distribution is the sharpest argument: no model is near 100% win rate, and most models lose at least 40% of their head-to-head battles, so if your use case falls in that 40%, taking the top-ranked model gives you the wrong model for nearly half of real use cases (06:30-07:05).
+- Internal benchmarks fail the same way when naive: manual inspection is doubly biased (by your own preference and by the few samples you look at), and automated metrics can be inconsistent (a CLIP-score ranking of 8 models flipped across datasets with tiny between-model variation) — so understand what a metric measures, match it to the use case, and use several (07:37-12:18).
+
+Related topics:
+- [Evaluation](../topics/evaluation.md)
+
+Related concepts:
+- [Select State of the Art on a Quality-Efficiency Pareto Front](select-state-of-the-art-on-a-quality-efficiency-pareto-front.md)
+- [Track User Dissatisfaction Alongside Pairwise Model Preference](track-user-dissatisfaction-alongside-pairwise-model-preference.md)
+- [Benchmark narrow slices separately from real expert work](benchmark-narrow-slices-separately-from-real-expert-work.md)
+- [Specialize models against private benchmarks with RL](specialize-models-against-private-benchmarks-with-rl.md)
+
+Sources:
+- [20 days of compute vs 7 hours: rethinking what state-of-the-art means — Bertrand Charpentier, Pruna](../sources/20260601_hqHC6Z_lXyo.md), 02:33-12:18

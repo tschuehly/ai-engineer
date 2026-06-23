@@ -1024,6 +1024,8 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Select State of the Art on a Quality-Efficiency Pareto Front](../concepts/select-state-of-the-art-on-a-quality-efficiency-pareto-front.md)
+- [Don't Trust a Single Leaderboard for Model Selection](../concepts/do-not-trust-a-single-leaderboard-for-model-selection.md)
 - [Evaluate Agent Retrieval by Trajectory, Not Task Success](../concepts/evaluate-agent-retrieval-by-trajectory-not-task-success.md)
 - [Verify Spec Adherence With Executable, Readable BDD Scenarios](../concepts/verify-spec-adherence-with-executable-readable-bdd-scenarios.md)
 - [Run Agentic Coding Evals as an Infrastructure-Reliability Problem](../concepts/run-agentic-coding-evals-as-an-infrastructure-problem.md)
@@ -1270,6 +1272,7 @@
 
 ## Models
 
+- [Select State of the Art on a Quality-Efficiency Pareto Front](../concepts/select-state-of-the-art-on-a-quality-efficiency-pareto-front.md)
 - [Tune Coding-Agent Harnesses Per Model Family](../concepts/tune-coding-agent-harnesses-per-model-family.md)
 - [Split Discovery and Validation Across Reasoning and Deterministic Models](../concepts/split-discovery-and-validation-across-reasoning-and-deterministic-models.md)
 - [Use Eagle 3 Speculative Decoding With Matched Draft Models](../concepts/use-eagle-3-speculative-decoding-with-matched-draft-models.md)
