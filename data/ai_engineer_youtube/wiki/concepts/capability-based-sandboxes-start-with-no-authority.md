@@ -29,6 +29,7 @@ Related concepts:
 - [Treat AI-generated code as untrusted code](treat-ai-generated-code-as-untrusted-code.md)
 - [Choose isolates or containers by generated-code workload](choose-isolates-or-containers-by-generated-code-workload.md)
 - [Build Agents on Addressable Stateful-Serverless Instances](build-agents-on-addressable-stateful-serverless-instances.md)
+- [Move Agent Access Control to the Network Layer So the Sandbox Holds No Credential](move-agent-access-control-to-the-network-layer.md)
 
 Sources:
 - [Code Mode: Let the Code do the Talking - Sunil Pai, Cloudflare](../sources/20260419_8txf05vVVl4.md), 12:33-14:15, 17:50-18:17

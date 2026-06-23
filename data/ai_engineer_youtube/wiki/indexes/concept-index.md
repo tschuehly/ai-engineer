@@ -699,6 +699,8 @@
 
 ## Infrastructure
 
+- [Move Agent Access Control to the Network Layer So the Sandbox Holds No Credential](../concepts/move-agent-access-control-to-the-network-layer.md)
+- [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 - [Run Agentic Coding Evals as an Infrastructure-Reliability Problem](../concepts/run-agentic-coding-evals-as-an-infrastructure-problem.md)
 - [Build Agents on Addressable Stateful-Serverless Instances](../concepts/build-agents-on-addressable-stateful-serverless-instances.md)
 - [Production Agent Platforms Need Enterprise Controls](../concepts/production-agent-platforms-need-enterprise-controls.md)
@@ -1502,8 +1504,11 @@
 - [Restrict Agent Internet Access With Allowlists](../concepts/restrict-agent-internet-access-with-allowlists.md)
 - [Keep Human Review on High-Risk Agent Operations](../concepts/keep-human-review-on-high-risk-agent-operations.md)
 - [Render Third-Party Generative UI Through a Double Iframe](../concepts/render-third-party-generative-ui-through-a-double-iframe.md)
+- [Move Agent Access Control to the Network Layer So the Sandbox Holds No Credential](../concepts/move-agent-access-control-to-the-network-layer.md)
+- [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 - [Native Tool Integration Beats a Bolted-On Tool the Model Can't Time](../concepts/native-tool-integration-beats-a-bolted-on-tool.md)
 - [Place Agent UI Generation on a Static–Declarative–Generative Spectrum](../concepts/place-agent-ui-on-the-static-declarative-generative-spectrum.md)
 - [Measure Agent Interface Efficiency With Tokens Per Successful Outcome](../concepts/measure-agent-interface-efficiency-with-tokens-per-successful-outcome.md)
