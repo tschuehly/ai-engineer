@@ -835,6 +835,8 @@
 - [Gate AI-generated open-source contributions through human-effort filters](../concepts/gate-ai-generated-open-source-contributions-through-human-effort-filters.md)
 - [Agents Punish Bad Data and Need Question and Tracking Data Foundations](../concepts/agents-punish-bad-data-and-need-question-and-tracking-data-foundations.md)
 - [Run a Production AI Incident Playbook](../concepts/run-a-production-ai-incident-playbook.md)
+- [Stack Memory Optimizations to Train Long-Context Transformers](../concepts/stack-memory-optimizations-to-train-long-context-transformers.md)
+- [Untied Ulysses Reuses Attention Buffers Across Head Chunks](../concepts/untied-ulysses-reuses-attention-buffers-across-head-chunks.md)
 
 ## Healthcare Operations
 
@@ -1310,6 +1312,8 @@
 - [Interactive world models need memory, control, and live prompting](../concepts/interactive-world-models-need-memory-control-and-live-prompting.md)
 - [Extract a Rich Structured Audio Profile in One Multimodal Call](../concepts/extract-a-rich-structured-audio-profile-in-one-multimodal-call.md)
 - [Direct TTS Voices With a Director's Note, Not a Voice Catalogue](../concepts/direct-tts-voices-with-a-directors-note.md)
+- [Stack Memory Optimizations to Train Long-Context Transformers](../concepts/stack-memory-optimizations-to-train-long-context-transformers.md)
+- [Untied Ulysses Reuses Attention Buffers Across Head Chunks](../concepts/untied-ulysses-reuses-attention-buffers-across-head-chunks.md)
 
 ## Retrieval
 - [Curate Context Strategically Because Models Drop the Middle](../concepts/curate-context-strategically-because-models-drop-the-middle.md)
