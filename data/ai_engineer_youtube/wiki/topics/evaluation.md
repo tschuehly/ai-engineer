@@ -156,6 +156,8 @@ Verifying agent-built software is itself an evaluation-design problem, and revie
 
 Retrieval evaluation has its own trajectory-scoped version of "inspect the process, not just the answer." Turbopuffer's benchmark of Claude Code used ContextBench, which scores whether the agent read the right files, lines, and symbols *along the way* rather than whether it solved the task, on the thesis that "how you get there" matters. It reports two metrics at file/line/symbol granularity — precision (of what was read, how much was golden) and recall (of the golden targets, how many were found) — and the split is diagnostic: raw Claude Code *wins* file recall by reading everything but loses file precision (wastes 1-in-3 reads) and line recall, so "explored a lot" is not "explored the right things." A measurement-design detail travels with it: capping reads at 50 lines makes the conditions distinguishable, because whole-file reads are too noisy to differentiate. This is the same lesson as golden-workflow trajectory evals and the span/multispan/trajectory/session scope axis, applied to retrieval quality specifically.
 
+Lovable's self-improvement loops add two production evaluation patterns. The first turns the user's behavior into a label: an LLM judge scores whether a session is "stuck" (a user asking the same thing more than once, complaining, failing explicitly, or abandoning a project), and the stuck→solved transition becomes the high-signal training example. The second is a blank-injection holdout for measuring whether an injected context entry actually helps: for a small sample of cases where the entry *would* fire, the system injects nothing, then compares downstream project success between the injected and held-out groups — an online A/B that ranks each entry by measured outcome rather than assumed value, and feeds the same problem bank back as an internal model-ranking set. This is the production-A/B counterpart to offline scorers, gated on a real user-outcome metric (project completion/deploy) rather than a proxy.
+
 ## Key Concepts
 
 - [Evaluate Agent Retrieval by Trajectory, Not Task Success](../concepts/evaluate-agent-retrieval-by-trajectory-not-task-success.md) - score file/line/symbol precision and recall along the agent's path (ContextBench), not solve/no-solve, to measure retrieval quality and expose wasted reads.
@@ -414,6 +416,7 @@ Retrieval evaluation has its own trajectory-scoped version of "inspect the proce
 - [Agentic retrieval lets models plan search steps](../concepts/agentic-retrieval-lets-models-plan-search-steps.md) - evals should inspect model-selected search actions and final answers.
 - [Enterprise deep research needs trustworthy retrieval and governance controls](../concepts/enterprise-deep-research-needs-trustworthy-retrieval-and-governance-controls.md) - private-corpus research evals must cover factuality, citations, access boundaries, retrieval quality, and traceability.
 - [Benchmark Voice AI on Distant-Mic Multi-Speaker Audio, Not Headset Single-Speaker](../concepts/benchmark-voice-ai-on-distant-mic-multi-speaker-audio.md) - leaderboard ASR/diarization numbers measured on close-talk single-speaker audio overstate real multi-speaker, distant-mic performance, so benchmark on conditions that match deployment.
+- [Mine stuck-then-solved sessions for injectable fixes](../concepts/mine-stuck-then-solved-sessions-for-injectable-fixes.md) - an LLM judge labels "stuck" sessions and a blank-injection holdout A/B measures each injected context entry's real production value against project completion.
 ## Open Questions
 
 - Which task-level signals best distinguish a bad retrieval result from an incomplete underlying knowledge base?
@@ -474,6 +477,7 @@ Retrieval evaluation has its own trajectory-scoped version of "inspect the proce
 
 ## Sources
 
+- [How Lovable self-improves every hour — Benjamin Verbeek, Lovable](../sources/20260602_KA5kPbdkK2E.md)
 - [SWE-rebench: Lessons from Evaluating Coding Agents — Ibragim Badertdinov, Nebius](../sources/20260604_wcUJWP6WpGM.md)
 - [The Art & Science of Benchmarking Agents — Vincent Chen, Snorkel AI](../sources/20260604_iNkFlCiij0U.md)
 - [Evals Are Broken, Use Them Anyway — Ara Khan, Cline](../sources/20260606_QuuIywMG4s8.md)

@@ -154,6 +154,8 @@ Treating the agent as its own user class also reframes interface quality as some
 
 How agents are *measured* also shapes how they are built, and Snorkel argues the benchmarks that matter most for agents are still missing three axes: environment complexity (a real codebase carries org policies, Slack context, flaky CI, and many parallel contributors, where today's benchmarks capture a fraction), autonomy horizon (how long an agent runs before reliability breaks down, across the co-pilot↔fully-autonomous slider, in continual-learning settings where specs and priorities shift midstream), and output complexity beyond plain text (nuanced reward signals for subjective artifacts, plus "trustworthy outputs" where the agent reports its own uncertainty and stops or asks rather than always answering). These are design targets for agents as much as for the benchmarks that score them.
 
+An agent can also be wired to report on its own working conditions. Lovable gives its coding agent a "vent" tool — a self-triggered, frustration-gated channel to complain directly to its creators in Slack when tooling, docs, or platform behavior block its work. The design choice is to fire only when the agent is *really* frustrated rather than to ask a reviewer "what could be better?" on every turn, because most turns work and a forced answer overfits to noise. The payoff is that the agent out-diagnoses the user (it has worked the issue across several turns and knows the cause, where the user usually does not) and surfaces silent failures invisible in logs — within an hour of launch it filed ~20 complaints about a copy tool that silently failed on filenames with a space, a real production bug the team didn't know about. Vent-volume spikes also became a reliable incident detector, and a second monitoring agent now dedupes the vents and opens PRs that humans review and often merge — an agent-authored feedback loop that complements observability-to-PR pipelines fed by infra and product signals.
+
 ## Key Concepts
 
 - [Read an Agent's Reasoning to Catch It Bullshitting](../concepts/read-an-agents-reasoning-to-catch-it-bullshitting.md) - supervise an agent by the quality of its reasoning narration; waffling or incoherent self-explanation is the tell that a session has lost the plot and should be cut.
@@ -478,6 +480,7 @@ How agents are *measured* also shapes how they are built, and Snorkel argues the
 - [Agentic retrieval lets models plan search steps](../concepts/agentic-retrieval-lets-models-plan-search-steps.md) - retrieval agents can decide which searches to perform and how to use the results.
 - [Use explanatory feedback to optimize prompts](../concepts/use-explanatory-feedback-to-optimize-prompts.md) - agent prompts improve from failure explanations that identify what the agent missed.
 - [Evaluator quality is a dependency of prompt optimization](../concepts/evaluator-quality-is-a-dependency-of-prompt-optimization.md) - automated agent prompt updates need trustworthy eval signals.
+- [Give agents a vent tool to report platform friction](../concepts/give-agents-a-vent-tool-to-report-platform-friction.md) - a frustration-gated channel for the agent to report tooling/docs/platform limitations surfaces silent failures and doubles as an incident detector.
 
 ## Open Questions
 
@@ -526,6 +529,7 @@ How agents are *measured* also shapes how they are built, and Snorkel argues the
 
 ## Sources
 
+- [How Lovable self-improves every hour — Benjamin Verbeek, Lovable](../sources/20260602_KA5kPbdkK2E.md)
 - [The Art & Science of Benchmarking Agents — Vincent Chen, Snorkel AI](../sources/20260604_iNkFlCiij0U.md)
 - [From MCP to Scale: Pipelines That Build Themselves — Rafael Levi, Bright Data](../sources/20260607_zTZ0qunQXnM.md)
 - [Stop Making Models Bigger, Make Them Behave — Kobie Crawford, Snorkel](../sources/20260610_TNwJ1LMiENk.md)

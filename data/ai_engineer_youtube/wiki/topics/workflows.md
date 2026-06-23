@@ -172,6 +172,8 @@ A one-person, many-agent workflow can be managed as a factory floor rather than 
 
 Safe Intelligence's "capturing decisions" workflow shows the opposite discipline: a single agent kept on-policy for hours by a loop built out of git hooks, CI, linters, and skills rather than prompt instructions. The loop is generic — do work, push, get rejected at the commit, get linked back to the architecture-decision record, read it, fix it, iterate — but skills change its *focus* (an ADR skill, a PRD skill, a UI loop that skips checks for fast browser iteration, a test skill that runs only the tests implicated by coverage and file changes, a goal-execution skill that records decisions for review). Two enforcement choices keep the loop from depending on the prompt: the rules survive 20–50 context compacts because they live outside the prompt and the agent re-looks-them-up, and the most reliable rules are structural — lint module imports so a failure class is impossible (templates can't touch the database → no N+1 ever) rather than detectable, because "what you cannot find, you cannot enforce." Verification is carried by executable, human-readable BDD/Cucumber scenarios linked to PRDs and critical user journeys, and the decision documents (ADRs capturing why and how-to-enforce, light PRDs capturing why/problem/goal/journey) serve both the agent and "you 6 weeks from now."
 
+Lovable runs two parallel continuous-improvement workflows aimed at "make a mistake once, then never again" at ~200,000 projects/day. The first is a demand-driven knowledge loop: an LLM judge detects stuck→solved transitions, the system captures and clusters the fix into a generalized entry, eval-verifies it, and a lightweight model injects it just-in-time into future runs — with each entry A/B-ranked by a blank-injection holdout and pruned as it goes stale, so the workflow stays at the frontier of what is solvable. The second is an agent-authored incident-to-PR loop: the coding agent uses a frustration-gated "vent" tool to report tooling/platform friction to Slack, a second monitoring agent dedupes the vents and opens PRs for human review and merge, and vent-volume spikes serve as the incident-detection trigger. Both are the same detect → fix → continuously-review-and-eval shape as PostHog's signal-to-PR pipeline and the Databricks incident playbook, with the distinguishing twist that the *agent's own experience* is one of the signal sources, not just infra metrics and product events.
+
 ## Key Concepts
 
 - [Let an Agent Build and Maintain Self-Healing Scrapers](../concepts/let-agents-build-and-maintain-self-healing-scrapers.md) - an agent builds a reusable parser script once and repairs it on a scheduled validation loop, so a data pipeline self-heals instead of paging a human when a site changes.
@@ -529,6 +531,8 @@ Safe Intelligence's "capturing decisions" workflow shows the opposite discipline
 - [Integrate AI Strategy Into Core Product Strategy](../concepts/integrate-ai-strategy-into-core-product-strategy.md) - roadmap workflow should pair top-level AI strategy with bottom-up product discovery.
 - [Mature AI Products Through Crawl-Walk-Run Integration](../concepts/mature-ai-products-through-crawl-walk-run-integration.md) - AI workflows can mature from embedded acceleration to contextual help and agentic cross-product operation.
 - [Plan AI Reliability Risk Inside Product Work](../concepts/plan-ai-reliability-risk-inside-product-work.md) - product workflows should test, evaluate, and prototype AI risk before broad launch.
+- [Mine stuck-then-solved sessions for injectable fixes](../concepts/mine-stuck-then-solved-sessions-for-injectable-fixes.md) - a continuous-improvement workflow that turns stuck→solved sessions into clustered, eval-verified, just-in-time-injected fixes ranked by holdout A/B.
+- [Give agents a vent tool to report platform friction](../concepts/give-agents-a-vent-tool-to-report-platform-friction.md) - an agent-authored incident-to-PR loop where the agent reports platform friction and a monitoring agent dedupes and opens PRs.
 
 ## Open Questions
 
@@ -579,6 +583,7 @@ Safe Intelligence's "capturing decisions" workflow shows the opposite discipline
 
 ## Sources
 
+- [How Lovable self-improves every hour — Benjamin Verbeek, Lovable](../sources/20260602_KA5kPbdkK2E.md)
 - [From MCP to Scale: Pipelines That Build Themselves — Rafael Levi, Bright Data](../sources/20260607_zTZ0qunQXnM.md)
 - [Building safe Payment Infrastructure for the autonomous economy — Steve Kaliski, Stripe](../sources/20260606_KLSuFPj2ld0.md)
 - [How to build Enterprise Aware Agents - Chau Tran, Glean](../sources/20250724_hxFpUcvWPcU.md)

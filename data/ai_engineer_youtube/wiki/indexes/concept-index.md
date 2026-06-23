@@ -365,6 +365,7 @@
 - [Layer Agent Evals as Deterministic, Semantic, and Behavioral Checks](../concepts/layer-agent-evals-as-deterministic-semantic-and-behavioral-checks.md)
 - [Expose Site Capabilities to In-Browser Agents With WebMCP](../concepts/expose-site-capabilities-to-in-browser-agents-with-webmcp.md)
 - [Make Web Foundations Agent-Ready Before Adopting WebMCP](../concepts/make-web-foundations-agent-ready-before-adopting-webmcp.md)
+- [Give agents a vent tool to report platform friction](../concepts/give-agents-a-vent-tool-to-report-platform-friction.md)
 
 ## AI Monetization
 
@@ -606,6 +607,8 @@
 - [Delegate implementations behind reviewed module interfaces](../concepts/delegate-implementations-behind-reviewed-module-interfaces.md)
 - [Run parallel issue agents in sandboxes with review and merge loops](../concepts/run-parallel-issue-agents-in-sandboxes-with-review-and-merge-loops.md)
 - [Human taste limits fully dark coding factories](../concepts/human-taste-limits-fully-dark-coding-factories.md)
+- [Mine stuck-then-solved sessions for injectable fixes](../concepts/mine-stuck-then-solved-sessions-for-injectable-fixes.md)
+- [Give agents a vent tool to report platform friction](../concepts/give-agents-a-vent-tool-to-report-platform-friction.md)
 
 ## Context Engineering
 
@@ -672,6 +675,7 @@
 - [Use prompt mutation loops to hill-climb product behavior](../concepts/use-prompt-mutation-loops-to-hill-climb-product-behavior.md)
 - [Use eval agents to improve prompts, datasets, and scorers](../concepts/use-eval-agents-to-improve-prompts-datasets-and-scorers.md)
 - [System Prompt Learning Updates Agent Rules From Eval Explanations](../concepts/system-prompt-learning-updates-agent-rules-from-eval-explanations.md)
+- [Mine stuck-then-solved sessions for injectable fixes](../concepts/mine-stuck-then-solved-sessions-for-injectable-fixes.md)
 
 ## Edge Inference
 
@@ -866,6 +870,7 @@
 - [Run a Production AI Incident Playbook](../concepts/run-a-production-ai-incident-playbook.md)
 - [Stack Memory Optimizations to Train Long-Context Transformers](../concepts/stack-memory-optimizations-to-train-long-context-transformers.md)
 - [Untied Ulysses Reuses Attention Buffers Across Head Chunks](../concepts/untied-ulysses-reuses-attention-buffers-across-head-chunks.md)
+- [Give agents a vent tool to report platform friction](../concepts/give-agents-a-vent-tool-to-report-platform-friction.md)
 
 ## Healthcare Operations
 
@@ -1257,6 +1262,7 @@
 - [Agents Punish Bad Data and Need Question and Tracking Data Foundations](../concepts/agents-punish-bad-data-and-need-question-and-tracking-data-foundations.md)
 - [Run a Production AI Incident Playbook](../concepts/run-a-production-ai-incident-playbook.md)
 - [Benchmark Voice AI on Distant-Mic Multi-Speaker Audio, Not Headset Single-Speaker](../concepts/benchmark-voice-ai-on-distant-mic-multi-speaker-audio.md)
+- [Mine stuck-then-solved sessions for injectable fixes](../concepts/mine-stuck-then-solved-sessions-for-injectable-fixes.md)
 
 ## Models
 
@@ -2010,3 +2016,5 @@
 - [Expert-Reviewed GenAI Appeals Beat Off-the-Shelf Letters](../concepts/expert-reviewed-genai-appeals-beat-off-the-shelf-letters.md)
 - [Sequence Production AI by Pillars and Choose the Model Last](../concepts/sequence-production-ai-by-pillars-and-choose-the-model-last.md)
 - [Run a Production AI Incident Playbook](../concepts/run-a-production-ai-incident-playbook.md)
+- [Mine stuck-then-solved sessions for injectable fixes](../concepts/mine-stuck-then-solved-sessions-for-injectable-fixes.md)
+- [Give agents a vent tool to report platform friction](../concepts/give-agents-a-vent-tool-to-report-platform-friction.md)
