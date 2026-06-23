@@ -19,6 +19,7 @@ Related concepts:
 - [Compare Models by Task, Thinking Budget, Cost, and Latency](compare-models-by-task-thinking-budget-cost-and-latency.md)
 - [Calibrate LLM Judges Like Binary Classifiers](calibrate-llm-judges-like-binary-classifiers.md)
 - [Evaluate Agent Trajectories With Backtests and Smell Metrics](evaluate-agent-trajectories-with-backtests-and-smell-metrics.md)
+- [Measure Agent Interface Efficiency With Tokens Per Successful Outcome](measure-agent-interface-efficiency-with-tokens-per-successful-outcome.md)
 
 Sources:
 - [From Stateless Nightmares to Durable Agents - Samuel Colvin, Pydantic](../sources/20251124_flf_IKnFYnE.md), 02:55-03:24, 11:05-12:20

@@ -17,6 +17,9 @@ Details:
 - Amp adds a coding-agent-specific version of this failure mode: irrelevant tools increase context confusion, and generic MCP server descriptions may not be tuned to the feedback loops a particular coding agent needs to close. 04:40-05:58
 - AWS describes an internal agent with more than 6,000 tools and uses a retrieval step over stored tool descriptions so only relevant tools enter the model context. (10:57-11:30)
 - Bright Data's web-access MCP exposes 66-69 tools but the speaker only loads all of them to demo the surface; for a real task he loads just the two needed (for example scrape-markdown plus search), warning that loading everything floods the context with irrelevant data. (13:41-14:03)
+- Chrome DevTools shows the budget trade-off from both ends. Too few: its monolithic `debug_webpage` tool failed because agents couldn't compose behaviors, but decomposing into 25 tools only traded the problem — agents then had 25 tools and no reliable way to pick the right one. Too many: "the schema is the UI for the agent," and a cited paper found ~97% of MCP tool descriptions have quality smells, while richer descriptions raise context size and bias smaller models toward calling tools they shouldn't (an "endless quest for minimum viable description"). (Chrome DevTools, 15:28-18:00)
+- Chrome DevTools manages the budget with three levers: tool categorization (hide niche tools such as Chrome-extension debugging behind command-line parameters instead of the default context), a "slim mode" that exposes only ~3 tools (select page, navigate page, evaluate script) at the cost of extra turns or a missing capability, and a CLI alongside the MCP server so the agent chains commands and does post-processing locally (grep the accessibility tree, pipe the control ID into a click) to keep tokens off the model. (Chrome DevTools, 11:10-13:12)
+- Output payloads are the other half of the budget: a performance-tracing tool that returned a ~50,000-line JSON trace blew through the context window, so it returns markdown plus a semantic summary instead — "point the agent at the right sentence, not the whole book" — while still allowing raw output for separate post-processing. (Chrome DevTools, 03:58-05:20)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -37,3 +40,4 @@ Sources:
 - [Amp Code: Next Generation AI Coding - Beyang Liu, Amp Code](../sources/20251222_gvIAkmZUEZY.md), 04:40-05:58
 - [Building Agents at Cloud Scale - Antje Barth, AWS](../sources/20250802_WJjInLeaJjo.md), 10:57-11:30
 - [Your Agent's Biggest Lie: "I Searched the Web" — Rafael Levi, Bright Data](../sources/20260617_btxGmN8RvNU.md), 13:41-14:03
+- [Building Agent Interfaces: Lessons from Chrome DevTools (MCP) for Agents — Michael Hablich, Google](../sources/20260605__B4Pv9ttFgY.md), 03:58-18:00

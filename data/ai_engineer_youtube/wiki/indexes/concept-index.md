@@ -1,6 +1,8 @@
 # Concept Index
 
 ## Agents
+- [Measure Agent Interface Efficiency With Tokens Per Successful Outcome](../concepts/measure-agent-interface-efficiency-with-tokens-per-successful-outcome.md)
+- [Turn Tool Errors Into Agent Self-Healing Recovery](../concepts/turn-tool-errors-into-agent-self-healing-recovery.md)
 - [Let an Agent Build and Maintain Self-Healing Scrapers](../concepts/let-agents-build-and-maintain-self-healing-scrapers.md)
 - [Separate Non-Deterministic Discovery From Deterministic Payment Execution](../concepts/separate-non-deterministic-discovery-from-deterministic-payment.md)
 - [Bound Agent Payments With Processor-Enforced Mandate Tokens](../concepts/bound-agent-payments-with-processor-enforced-mandate-tokens.md)
@@ -996,6 +998,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Measure Agent Interface Efficiency With Tokens Per Successful Outcome](../concepts/measure-agent-interface-efficiency-with-tokens-per-successful-outcome.md)
 - [Portfolio-Allocate Eval Failures With a Triage Agent](../concepts/portfolio-allocate-eval-failures-with-a-triage-agent.md)
 - [Tune Coding-Agent Harnesses Per Model Family](../concepts/tune-coding-agent-harnesses-per-model-family.md)
 - [Reconcile Specialist Agent Outputs With a Feedback-Weighted Judge](../concepts/reconcile-specialist-agent-outputs-with-a-feedback-weighted-judge.md)
@@ -1425,6 +1428,7 @@
 
 ## Security
 
+- [Browser agents sit in the prompt-injection lethal trifecta](../concepts/browser-agents-sit-in-the-prompt-injection-lethal-trifecta.md)
 - [Enterprise Coding Agents Need Ownership, Auditability, and Action Controls](../concepts/enterprise-coding-agents-need-ownership-auditability-and-action-controls.md)
 - [Vet MCP Servers As Action-Capable Extensions](../concepts/vet-mcp-servers-as-action-capable-extensions.md)
 - [Model MCP Servers as OAuth Resource Servers](../concepts/model-mcp-servers-as-oauth-resource-servers.md)
@@ -1453,6 +1457,8 @@
 - [Render Third-Party Generative UI Through a Double Iframe](../concepts/render-third-party-generative-ui-through-a-double-iframe.md)
 
 ## Tools
+- [Measure Agent Interface Efficiency With Tokens Per Successful Outcome](../concepts/measure-agent-interface-efficiency-with-tokens-per-successful-outcome.md)
+- [Turn Tool Errors Into Agent Self-Healing Recovery](../concepts/turn-tool-errors-into-agent-self-healing-recovery.md)
 - [Settle Agent Payments Over HTTP With 402 and Checkout Protocols](../concepts/settle-agent-payments-over-http-with-402-and-checkout-protocols.md)
 - [Run a Signal Layer to Triage Comms and Protect Focus](../concepts/run-a-signal-layer-to-triage-comms-and-protect-focus.md)
 - [Enterprise RAG Becomes More Useful With API Tool Access](../concepts/enterprise-rag-becomes-more-useful-with-api-tool-access.md)
