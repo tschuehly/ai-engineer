@@ -10,6 +10,7 @@ Details:
 - Pydantic Evals is used to compare GPT-4.1, Gemini, and Claude Sonnet 4.5 on a toy agent loop with pass/fail assertions, average cost, latency, and question-count metrics, 11:05-11:45.
 - The speaker later found that Gemini's apparently faster, cheaper performance was partly because it invented wrong answers that were not being checked, showing that operational metrics need correctness validation before ranking models, 11:45-12:13.
 - The same toy loop can take dozens of steps and still fail to infer the target object, which makes step count useful as an efficiency signal but insufficient as a quality measure, 02:55-03:24, 12:13-12:20.
+- Report distributions, not a single mean. SWE-rebench publishes tokens per problem and tries per problem alongside the resolved rate, runs each task five times for confidence intervals, and separates pass@5 (solved at least once = the model's *potential*) from pass-all-5 (solved in every run = *reliability*) so a flattering average does not hide an unreliable model. ([SWE-rebench](../sources/20260604_wcUJWP6WpGM.md), 12:53-13:27)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -20,6 +21,8 @@ Related concepts:
 - [Calibrate LLM Judges Like Binary Classifiers](calibrate-llm-judges-like-binary-classifiers.md)
 - [Evaluate Agent Trajectories With Backtests and Smell Metrics](evaluate-agent-trajectories-with-backtests-and-smell-metrics.md)
 - [Measure Agent Interface Efficiency With Tokens Per Successful Outcome](measure-agent-interface-efficiency-with-tokens-per-successful-outcome.md)
+- [Run Agentic Coding Evals as an Infrastructure-Reliability Problem](run-agentic-coding-evals-as-an-infrastructure-problem.md)
 
 Sources:
 - [From Stateless Nightmares to Durable Agents - Samuel Colvin, Pydantic](../sources/20251124_flf_IKnFYnE.md), 02:55-03:24, 11:05-12:20
+- [SWE-rebench: Lessons from Evaluating Coding Agents — Ibragim Badertdinov, Nebius](../sources/20260604_wcUJWP6WpGM.md), 12:53-13:27

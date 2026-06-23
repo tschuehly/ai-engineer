@@ -399,6 +399,8 @@
 
 ## Coding Agents
 
+- [Seal Eval Environments Against Agents That Read the Leaked Answer](../concepts/seal-eval-environments-against-answer-leaking-agents.md)
+- [Run Agentic Coding Evals as an Infrastructure-Reliability Problem](../concepts/run-agentic-coding-evals-as-an-infrastructure-problem.md)
 - [Run Parallel Coding Sessions as Typed Swim Lanes](../concepts/run-parallel-coding-sessions-as-typed-swim-lanes.md)
 - [Read an Agent's Reasoning to Catch It Bullshitting](../concepts/read-an-agents-reasoning-to-catch-it-bullshitting.md)
 - [Scaffold MCP Apps From a Repo Skill With a Coding Agent](../concepts/scaffold-mcp-apps-from-a-repo-skill-with-a-coding-agent.md)
@@ -687,6 +689,7 @@
 
 ## Infrastructure
 
+- [Run Agentic Coding Evals as an Infrastructure-Reliability Problem](../concepts/run-agentic-coding-evals-as-an-infrastructure-problem.md)
 - [Build Agents on Addressable Stateful-Serverless Instances](../concepts/build-agents-on-addressable-stateful-serverless-instances.md)
 - [Production Agent Platforms Need Enterprise Controls](../concepts/production-agent-platforms-need-enterprise-controls.md)
 - [Build Core Agents and Buy Commodity Agent Workflows](../concepts/build-core-agents-and-buy-commodity-agent-workflows.md)
@@ -1006,6 +1009,8 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Run Agentic Coding Evals as an Infrastructure-Reliability Problem](../concepts/run-agentic-coding-evals-as-an-infrastructure-problem.md)
+- [Seal Eval Environments Against Agents That Read the Leaked Answer](../concepts/seal-eval-environments-against-answer-leaking-agents.md)
 - [Design Benchmarks as Forward Bets That Shape the Field](../concepts/design-benchmarks-as-forward-bets-that-shape-the-field.md)
 - [Judge Benchmark Quality by Task Quality, Diversity, Headroom, and Methodology](../concepts/judge-benchmark-quality-by-task-diversity-headroom-and-methodology.md)
 - [Treat Researcher UX as a First-Class Benchmark Feature](../concepts/treat-researcher-ux-as-a-first-class-benchmark-feature.md)

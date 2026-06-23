@@ -24,6 +24,7 @@ Related concepts:
 - [Trace Agent Tool Arguments to Debug Real Failures](trace-agent-tool-arguments-to-debug-real-failures.md)
 - [Decompose Evals Into Rubrics to Target the Failing Behavior](decompose-evals-into-rubrics-to-target-the-failing-behavior.md)
 - [Detect Reward Hacking in Code Optimization Evals](detect-reward-hacking-in-code-optimization-evals.md)
+- [Run Agentic Coding Evals as an Infrastructure-Reliability Problem](run-agentic-coding-evals-as-an-infrastructure-problem.md)
 
 Sources:
 - [Evals Are Broken, Use Them Anyway — Ara Khan, Cline](../sources/20260606_QuuIywMG4s8.md), 13:03-17:21
