@@ -14,7 +14,7 @@ DeepSeek R1/V3 adds a reasoning-model version of that post-training lesson. The 
 
 Code world models add an execution-aware variant of model training for software. Instead of treating code only as syntax, CWM trains around program execution traces: local variables, memory, line-by-line state, repository-level test and CI traces, and state/action/state transitions. This makes code a constrained world-modeling substrate where a model can learn to simulate program behavior, support neural-debugger interfaces, and reason about expensive execution paths before every real-world action is run.
 
-Coding-model evaluation needs model-family progress to be measured against fresh and appropriately difficult tasks. Dynamic code benchmarks can use post-training-window problem releases and changing difficulty distributions to avoid confusing memorized or saturated task sets with genuine model improvement. As coding models move from completions to repository optimization and translation, evals should also measure whether the model's apparent improvement survives real task distributions, runtime checks, and reward-hack detection.
+Coding-model evaluation needs model-family progress to be measured against fresh and appropriately difficult tasks. Dynamic code benchmarks can use post-training-window problem releases and changing difficulty distributions to avoid confusing memorized or saturated task sets with genuine model improvement. As coding models move from completions to repository optimization and translation, evals should also measure whether the model's apparent improvement survives real task distributions, runtime checks, and reward-hack detection. Sonar's cross-model code-quality benchmark adds a model-selection caveat for code generation: capability and conciseness diverge. Running 4,444+ Java assignments through 53+ models showed newer/larger models bloat output (GPT-4o < 250,000 lines; GPT-5.4 ~1.2 million; Claude Sonnet 4.6 627,000 with the highest security-issue rate at 300 per million LOC) while the pass-rate leader (Gemini 3.1 Pro High, 84.17%) stayed concise, so picking a code model on pass rate alone ignores the bug density, complexity, and security cost that scales with the lines emitted.
 
 Coding and workplace-agent models also need training signals that look like the work they will do. MiniMax M2 adds a compact open-weight model pattern: train against scaled coding environments and verifiable goals, use expert developers as a reward/evaluation source, teach repeated reasoning-tool loops for noisy environments, perturb scaffolds so the behavior is not tied to one harness, and exploit small active-parameter cost when many parallel agent copies are useful.
 
@@ -206,6 +206,7 @@ Model-size selection for agents also has a safety axis that cuts against "bigger
 
 ## Sources
 
+- [Can LLMs generate Enterprise Quality Code? — Prasenjit Sarkar, Sonar](../sources/20260531_NuePCNMpWGc.md)
 - [Evals Are Broken, Use Them Anyway — Ara Khan, Cline](../sources/20260606_QuuIywMG4s8.md)
 - [You Might Not Need 50 Diffusion Steps — Ziv Ilan, Nvidia](../sources/20260616_gHs5ZiY80PM.md)
 - [Engineering voice agents: Latency, quality, and scale — Rishabh Bhargava, Together AI](../sources/20260531_N7b1PJc7SFc.md)

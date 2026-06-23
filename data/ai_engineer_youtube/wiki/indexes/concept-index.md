@@ -401,6 +401,7 @@
 
 ## Coding Agents
 
+- [Shift Code Quality Left With a Pre-Commit Analysis and Remediation Loop](../concepts/shift-code-quality-left-with-precommit-analysis-loop.md)
 - [Native Tool Integration Beats a Bolted-On Tool the Model Can't Time](../concepts/native-tool-integration-beats-a-bolted-on-tool.md)
 - [Enforce Agent Rules in Git Hooks and CI, Not the Prompt](../concepts/enforce-agent-rules-in-git-hooks-and-ci-not-the-prompt.md)
 - [Lint Module Imports to Make Failure Classes Structurally Impossible](../concepts/lint-module-imports-to-make-failure-classes-structurally-impossible.md)
@@ -1026,6 +1027,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Measure Generated Code Quality Beyond Pass Rate](../concepts/measure-generated-code-quality-beyond-pass-rate.md)
 - [Spec-Driven Agent Validation Goes Beyond the Test Set](../concepts/spec-driven-agent-validation-goes-beyond-the-test-set.md)
 - [A Bigger Model Is Not Automatically a Safer or Better Agent](../concepts/a-bigger-model-is-not-automatically-a-safer-or-better-agent.md)
 - [Select State of the Art on a Quality-Efficiency Pareto Front](../concepts/select-state-of-the-art-on-a-quality-efficiency-pareto-front.md)
