@@ -50,6 +50,8 @@ Extending a model's context is also a training-systems problem, not only an arch
 
 Choosing and switching models is itself a disciplined process, not a leaderboard reflex. Cline's eval framing warns against reading similar benchmark numbers as model equivalence ("GPT 5.4 ≈ Gemini 3.1 Pro" — they're not), against believing a lab's launch number, and against being the earliest adopter: let a new model settle for a couple weeks and switch only if it stands the test of time. Just as important, a model that underperforms in your product is often a harness gap, not a model gap — prompt-engineering techniques are model-family-specific (Anthropic ≠ Codex ≠ Gemini), so adopting a new family means hill-climbing its own harness tuning, which then unlocks the users who prefer that family. This complements the role-routing concepts above: model selection has to account for how a model interacts with your harness, not only its raw capability.
 
+Audio models add a specialist-vs-generalist composition choice. Speaker diarization ("who speaks when") is a distinct model class from speech-to-text, with its own pipeline (voice activity detection → segmentation/overlap → speaker assignment) and its own error metric (diarization error rate), and it stays unsolved precisely where production audio lives: the number of speakers is unknown a priori, labels are permutation-invariant, and overlap, short backchannels, and distant mics break naive systems. Building "who said what" by composing a diarization model with a single-speaker-trained STT is therefore not a timestamp join — pyannoteAI reconciles the two with an STT-agnostic orchestration layer, the architectural alternative to collapsing diarization and transcription into one frontier multimodal call. This is also a benchmarking caution that generalizes beyond audio: a leaderboard number is only meaningful with its measurement conditions, since NVIDIA Parakeet's 11.4% AMI word error rate (close-talk headset mic) becomes 26% on the same model and data through the distant table mic.
+
 ## Key Concepts
 
 - [Tune Coding-Agent Harnesses Per Model Family](../concepts/tune-coding-agent-harnesses-per-model-family.md) - underperformance on a model is usually a harness gap; prompt techniques don't transfer across families, so a model swap alone rarely moves the score and adopting a new family is its own tuning effort.
@@ -156,6 +158,8 @@ Choosing and switching models is itself a disciplined process, not a leaderboard
 - [Neural weather models can target operational forecast variables directly](../concepts/neural-weather-models-can-target-operational-forecast-variables-directly.md) - forecasting models should match architecture and target variables to operational use.
 - [Interactive world models need memory, control, and live prompting](../concepts/interactive-world-models-need-memory-control-and-live-prompting.md) - generated environments need stateful interaction, not only plausible frames.
 - [Treat Model and Prompt Upgrades as Regulated Migrations](../concepts/treat-model-and-prompt-upgrades-as-regulated-migrations.md) - high-stakes model changes require eval-gated rollout because prompts, vendors, and latency create real migration cost.
+- [Treat Speaker Diarization as a Distinct, Unsolved Task](../concepts/treat-speaker-diarization-as-a-distinct-unsolved-task.md) - diarization is its own model class with its own pipeline and DER metric, separate from speech-to-text.
+- [Reconcile Diarization and STT for Speaker-Attributed Transcription](../concepts/reconcile-diarization-and-stt-for-speaker-attributed-transcription.md) - composing a diarization model with any STT needs an STT-agnostic orchestration layer rather than retraining either model.
 
 ## Open Questions
 
@@ -232,3 +236,4 @@ Choosing and switching models is itself a disciplined process, not a leaderboard
 - [How Intuit uses LLMs to explain taxes to millions of taxpayers - Jaspreet Singh, Intuit](../sources/20250723__zl_zimMRak.md)
 - [Why More Context Makes Your Agent Dumber and What to Do About It — Nupur Sharma, Qodo](../sources/20260608_EcqMYoIV57A.md)
 - [Road to 5 Million Tokens: Breaking Barriers in Long Context Training — Max Ryabinin, Together AI](../sources/20260608_TUnPNY4E2fw.md)
+- [Beyond Transcription: Building Voice AI That Understands Conversations — Hervé Bredin, pyannoteAI](../sources/20260605_mFLlVpnGpds.md)

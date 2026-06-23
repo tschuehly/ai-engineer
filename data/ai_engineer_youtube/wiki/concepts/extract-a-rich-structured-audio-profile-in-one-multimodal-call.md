@@ -13,6 +13,7 @@ Details:
 - The capability rests on the frontier model's audio understanding (the Gemini 3 base research), which is the same foundation that powers speech generation and real-time conversation, so one model family covers understanding and generation, 07:32-08:08.
 - Speaker-by-name labeling depends on in-audio context (e.g. someone introducing themselves); without context it falls back to generic speaker labels, 04:58-05:10, 06:44-06:53.
 - Contrast with preprocessing-heavy pipelines: where contact-center stacks preserve separate speaker channels before STT, a multimodal call can diarize from a single mixed stream — useful when channels are not separable, but channel separation remains more robust when available.
+- This single-call approach is the architectural opposite of orchestrating two separate specialist models: pyannoteAI reconciles a dedicated diarization model with any STT, which keeps STT choice open and exposes a dedicated diarization error metric (DER) but requires solving the timestamp-reconciliation problem the multimodal call hides.
 
 Related topics:
 - [Voice Agents](../topics/voice-agents.md)
@@ -23,6 +24,8 @@ Related concepts:
 - [Extract contact-center intelligence as structured JSON](extract-contact-center-intelligence-as-structured-json.md)
 - [Multilingual Voice Agents Need Language Detection and Switching](multilingual-voice-agents-need-language-detection-and-switching.md)
 - [Direct TTS Voices With a Director's Note, Not a Voice Catalogue](direct-tts-voices-with-a-directors-note.md)
+- [Reconcile Diarization and STT for Speaker-Attributed Transcription](reconcile-diarization-and-stt-for-speaker-attributed-transcription.md)
+- [Treat Speaker Diarization as a Distinct, Unsolved Task](treat-speaker-diarization-as-a-distinct-unsolved-task.md)
 
 Sources:
 - [From Transcription to Live Music: Gemini's Audio Stack — Thor Schaeff, Google DeepMind](../sources/20260609_Bc6Ojl2XS1w.md), 03:17-08:08

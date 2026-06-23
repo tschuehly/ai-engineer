@@ -1229,6 +1229,7 @@
 - [Layer Agent Evals as Deterministic, Semantic, and Behavioral Checks](../concepts/layer-agent-evals-as-deterministic-semantic-and-behavioral-checks.md)
 - [Agents Punish Bad Data and Need Question and Tracking Data Foundations](../concepts/agents-punish-bad-data-and-need-question-and-tracking-data-foundations.md)
 - [Run a Production AI Incident Playbook](../concepts/run-a-production-ai-incident-playbook.md)
+- [Benchmark Voice AI on Distant-Mic Multi-Speaker Audio, Not Headset Single-Speaker](../concepts/benchmark-voice-ai-on-distant-mic-multi-speaker-audio.md)
 
 ## Models
 
@@ -1334,6 +1335,9 @@
 - [Direct TTS Voices With a Director's Note, Not a Voice Catalogue](../concepts/direct-tts-voices-with-a-directors-note.md)
 - [Stack Memory Optimizations to Train Long-Context Transformers](../concepts/stack-memory-optimizations-to-train-long-context-transformers.md)
 - [Untied Ulysses Reuses Attention Buffers Across Head Chunks](../concepts/untied-ulysses-reuses-attention-buffers-across-head-chunks.md)
+- [Treat Speaker Diarization as a Distinct, Unsolved Task](../concepts/treat-speaker-diarization-as-a-distinct-unsolved-task.md)
+- [Reconcile Diarization and STT for Speaker-Attributed Transcription](../concepts/reconcile-diarization-and-stt-for-speaker-attributed-transcription.md)
+- [Benchmark Voice AI on Distant-Mic Multi-Speaker Audio, Not Headset Single-Speaker](../concepts/benchmark-voice-ai-on-distant-mic-multi-speaker-audio.md)
 
 ## Retrieval
 - [Curate Context Strategically Because Models Drop the Middle](../concepts/curate-context-strategically-because-models-drop-the-middle.md)
@@ -1676,6 +1680,9 @@
 - [Extract a Rich Structured Audio Profile in One Multimodal Call](../concepts/extract-a-rich-structured-audio-profile-in-one-multimodal-call.md)
 - [Direct TTS Voices With a Director's Note, Not a Voice Catalogue](../concepts/direct-tts-voices-with-a-directors-note.md)
 - [Orchestrate Generative Media From a Real-Time Voice Agent via Tool Use](../concepts/orchestrate-generative-media-from-a-realtime-voice-agent.md)
+- [Treat Speaker Diarization as a Distinct, Unsolved Task](../concepts/treat-speaker-diarization-as-a-distinct-unsolved-task.md)
+- [Reconcile Diarization and STT for Speaker-Attributed Transcription](../concepts/reconcile-diarization-and-stt-for-speaker-attributed-transcription.md)
+- [Benchmark Voice AI on Distant-Mic Multi-Speaker Audio, Not Headset Single-Speaker](../concepts/benchmark-voice-ai-on-distant-mic-multi-speaker-audio.md)
 
 ## Workflows
 - [Let an Agent Build and Maintain Self-Healing Scrapers](../concepts/let-agents-build-and-maintain-self-healing-scrapers.md)

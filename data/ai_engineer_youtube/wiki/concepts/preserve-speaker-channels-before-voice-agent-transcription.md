@@ -19,6 +19,8 @@ Related topics:
 Related concepts:
 - [Choose Voice-Agent Architecture by Latency, Accuracy, and Semantics](choose-voice-agent-architecture-by-latency-accuracy-and-semantics.md)
 - [Evaluate Voice Agents with Traces, Transcripts, Audio Checks, and Simulations](evaluate-voice-agents-with-traces-transcripts-audio-checks-and-simulations.md)
+- [Treat Speaker Diarization as a Distinct, Unsolved Task](treat-speaker-diarization-as-a-distinct-unsolved-task.md)
+- [Reconcile Diarization and STT for Speaker-Attributed Transcription](reconcile-diarization-and-stt-for-speaker-attributed-transcription.md)
 
 Sources:
 - [Contact Center Voice AI: Low-Latency Intelligence Extraction from Messy Audio Streams - Dippu Singh](../sources/20260408_IEF842ZEU5A.md), 01:12-09:48

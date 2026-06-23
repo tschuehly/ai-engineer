@@ -146,6 +146,8 @@ Evaluation also applies to the tool interface an agent calls, not only the model
 
 A judge node can also serve as a calibrated quality gate over a fleet of specialist agents, and Qodo's code-review system shows how to make that judge trustworthy rather than another opaque LLM-as-judge. Instead of scoring against a fixed rubric, the judge weighs each specialist suggestion against organizational signals: indexed PR history (how reviewers and developers commented on similar past changes), uploaded architecture and compliance guidelines, and a running accept/reject tally where every accepted suggestion gains weight for the next run and every rejection loses it. The system also separates "rules" (flagged regardless of accept history) from "bugs" (weighted by repeated reviewer agreement), which guards against the failure of treating "it happened in past PRs" as ground truth — past code can be wrong (hard-coded API keys), so historical frequency must not silently become the quality bar.
 
+A benchmark number is only meaningful with the conditions it was measured under, a trap that is sharpest in audio. pyannoteAI shows NVIDIA Parakeet's 11.4% word error rate on the AMI meeting dataset (the Hugging Face open ASR leaderboard figure) becomes 26% on the same model and the same recordings when you score the central table microphone instead of each speaker's headset mic — "most voice AI benchmarks are measuring single-speaker speech and calling it solved." Diarization shows the same use-case sensitivity: state-of-the-art diarization error rate is single-digit on clean two-party telephone calls but ~41% in a noisy restaurant. The eval discipline is to benchmark on audio (and conditions) that match deployment, and to read leaderboard numbers as measured under a specific microphone, speaker count, and noise level rather than as a model-wide capability.
+
 ## Key Concepts
 
 - [Portfolio-Allocate Eval Failures With a Triage Agent](../concepts/portfolio-allocate-eval-failures-with-a-triage-agent.md) - read failures, not the score: send a second agent through the failure traces to categorize causes and find the small levers, sorting fixes into obvious-bug / nuance-tuning / overfitting zones.
@@ -395,6 +397,7 @@ A judge node can also serve as a calibrated quality gate over a fleet of special
 - [Prune LLM-extracted graphs with domain experts](../concepts/prune-llm-extracted-graphs-with-domain-experts.md) - graph extraction quality needs expert taxonomy review and relationship pruning.
 - [Agentic retrieval lets models plan search steps](../concepts/agentic-retrieval-lets-models-plan-search-steps.md) - evals should inspect model-selected search actions and final answers.
 - [Enterprise deep research needs trustworthy retrieval and governance controls](../concepts/enterprise-deep-research-needs-trustworthy-retrieval-and-governance-controls.md) - private-corpus research evals must cover factuality, citations, access boundaries, retrieval quality, and traceability.
+- [Benchmark Voice AI on Distant-Mic Multi-Speaker Audio, Not Headset Single-Speaker](../concepts/benchmark-voice-ai-on-distant-mic-multi-speaker-audio.md) - leaderboard ASR/diarization numbers measured on close-talk single-speaker audio overstate real multi-speaker, distant-mic performance, so benchmark on conditions that match deployment.
 ## Open Questions
 
 - Which task-level signals best distinguish a bad retrieval result from an incomplete underlying knowledge base?
@@ -591,3 +594,4 @@ A judge node can also serve as a calibrated quality gate over a fleet of special
 - [Why More Context Makes Your Agent Dumber and What to Do About It — Nupur Sharma, Qodo](../sources/20260608_EcqMYoIV57A.md)
 - [LLM Observability, Evaluation, Experimentation Platform — Dat Ngo, Arize](../sources/20260607_JsCCrBF7F1g.md)
 - [Building Agent Interfaces: Lessons from Chrome DevTools (MCP) for Agents — Michael Hablich, Google](../sources/20260605__B4Pv9ttFgY.md)
+- [Beyond Transcription: Building Voice AI That Understands Conversations — Hervé Bredin, pyannoteAI](../sources/20260605_mFLlVpnGpds.md)
