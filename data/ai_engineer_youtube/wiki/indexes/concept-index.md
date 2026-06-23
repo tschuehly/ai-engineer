@@ -2,6 +2,7 @@
 
 ## Agents
 - [Build Agents on Addressable Stateful-Serverless Instances](../concepts/build-agents-on-addressable-stateful-serverless-instances.md)
+- [Choose Eval Scope Across Span, Multispan, Trajectory, and Session](../concepts/choose-eval-scope-across-span-multispan-trajectory-and-session.md)
 - [Split Discovery and Validation Across Reasoning and Deterministic Models](../concepts/split-discovery-and-validation-across-reasoning-and-deterministic-models.md)
 - [Reconcile Specialist Agent Outputs With a Feedback-Weighted Judge](../concepts/reconcile-specialist-agent-outputs-with-a-feedback-weighted-judge.md)
 - [Redefine RAG as Iterative Multi-Tool Retrieval, Not Vector Search](../concepts/redefine-rag-as-iterative-multi-tool-retrieval.md)
@@ -987,6 +988,8 @@
 
 ## Evaluation
 - [Reconcile Specialist Agent Outputs With a Feedback-Weighted Judge](../concepts/reconcile-specialist-agent-outputs-with-a-feedback-weighted-judge.md)
+- [Catalog Eval Signal Sources Across Judge, Human, Golden, Deterministic, and Business](../concepts/catalog-eval-signal-sources-judge-human-golden-deterministic-business.md)
+- [Choose Eval Scope Across Span, Multispan, Trajectory, and Session](../concepts/choose-eval-scope-across-span-multispan-trajectory-and-session.md)
 - [Enterprise AI Productivity Needs Workflow-Level Outcomes](../concepts/enterprise-ai-productivity-needs-workflow-level-outcomes.md)
 - [Use Field-Level Confidence Signals for Human Review](../concepts/use-field-level-confidence-signals-for-human-review.md)
 - [Validate Generated SQL by Execution Before Trusting It](../concepts/validate-generated-sql-by-execution-before-trusting-it.md)

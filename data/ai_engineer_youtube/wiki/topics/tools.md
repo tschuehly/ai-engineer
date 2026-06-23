@@ -92,6 +92,8 @@ Tool connections can also be wired as an inbound attention filter rather than on
 
 How tool context is loaded is itself a tool-surface decision. WorkOS's Studio shows the runtime, single-agent version of the tool-budget problem: rather than choosing which of many tools to expose, it injects each tool's heavy schema/usage context only at the moment that tool is invoked, after a preflight checklist decides which tools to use — explicitly to avoid preloading every tool's instructions and blowing out the window. The per-tool context block is also where data-consistency guardrails live: encoding join quirks and active-status/non-deleted filters in the tool's context is what makes a generated query against a sprawling Snowflake schema reliable, and removes the need for any RAG store because LLMs read self-descriptive schemas well.
 
+Observability platforms are reshaping their tool surface the same way. Arize's bet is that most people do not want to live in dashboards or buttons, so it exposes all of its primitives — observability, evals, experiments — through a CLI plus a set of tools and skills, so a coding agent (Claude Code, Codex) can drive the platform programmatically rather than a human clicking. It also ships a platform agent ("Alex") reachable from those same surfaces that, with access to all the trace data and hooks, can be asked "do you see any issues with my application?" and then plans and runs the work itself.
+
 ## Key Concepts
 
 - [Vet MCP Servers As Action-Capable Extensions](../concepts/vet-mcp-servers-as-action-capable-extensions.md) - MCP servers should be vetted as tools that can act through the agent, not just as data feeds.
@@ -447,3 +449,4 @@ How tool context is loaded is itself a tool-surface decision. WorkOS's Studio sh
 - [Why Eval++ Is the Next Great Compute Primitive — Sunil Pai & Matt Carey, Cloudflare](../sources/20260608_SKDJo2CopRs.md)
 
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md)
+- [LLM Observability, Evaluation, Experimentation Platform — Dat Ngo, Arize](../sources/20260607_JsCCrBF7F1g.md)
