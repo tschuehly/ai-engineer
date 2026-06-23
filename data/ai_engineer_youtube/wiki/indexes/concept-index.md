@@ -1,6 +1,7 @@
 # Concept Index
 
 ## Agents
+- [Place Agent UI Generation on a Static–Declarative–Generative Spectrum](../concepts/place-agent-ui-on-the-static-declarative-generative-spectrum.md)
 - [Push Agent Benchmarks on Environment Complexity, Autonomy Horizon, and Output Complexity](../concepts/push-agent-benchmarks-on-environment-autonomy-and-output-complexity.md)
 - [Read an Agent's Reasoning to Catch It Bullshitting](../concepts/read-an-agents-reasoning-to-catch-it-bullshitting.md)
 - [Measure Agent Interface Efficiency With Tokens Per Successful Outcome](../concepts/measure-agent-interface-efficiency-with-tokens-per-successful-outcome.md)
@@ -1486,6 +1487,7 @@
 - [Render Third-Party Generative UI Through a Double Iframe](../concepts/render-third-party-generative-ui-through-a-double-iframe.md)
 
 ## Tools
+- [Place Agent UI Generation on a Static–Declarative–Generative Spectrum](../concepts/place-agent-ui-on-the-static-declarative-generative-spectrum.md)
 - [Measure Agent Interface Efficiency With Tokens Per Successful Outcome](../concepts/measure-agent-interface-efficiency-with-tokens-per-successful-outcome.md)
 - [Turn Tool Errors Into Agent Self-Healing Recovery](../concepts/turn-tool-errors-into-agent-self-healing-recovery.md)
 - [Settle Agent Payments Over HTTP With 402 and Checkout Protocols](../concepts/settle-agent-payments-over-http-with-402-and-checkout-protocols.md)
