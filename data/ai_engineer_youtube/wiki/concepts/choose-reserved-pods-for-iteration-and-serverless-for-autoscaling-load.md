@@ -24,6 +24,7 @@ Related concepts:
 - [Autoscale specialized inference workers as traffic mix changes](autoscale-specialized-inference-workers-as-traffic-mix-changes.md)
 - [Deploy GPU Functions From the IDE With a Decorator and Hot Reload](deploy-gpu-functions-from-the-ide-with-a-decorator-and-hot-reload.md)
 - [Plan Serverless GPU Inference Around the Cold-Start Tax](plan-serverless-gpu-inference-around-the-cold-start-tax.md)
+- [Run Elastic Training on Serverless GPU, Not a Reserved Cluster](run-elastic-training-on-serverless-gpu-not-a-reserved-cluster.md)
 
 Sources:
 - [GPU Cloud Deployment Without Leaving Your IDE — Audry Hsu, RunPod](../sources/20260609_zDGHt0LB-dA.md), 03:55-18:36

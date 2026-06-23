@@ -21,6 +21,7 @@ Related concepts:
 - [Open Model Families Need Ecosystem-Compatible Tooling](open-model-families-need-ecosystem-compatible-tooling.md)
 - [Compare models by task, thinking budget, cost, and latency](compare-models-by-task-thinking-budget-cost-and-latency.md)
 - [Domain Gemma variants package specialized policy and task behavior](domain-gemma-variants-package-specialized-policy-and-task-behavior.md)
+- [Decide When to Fine-Tune From Three Business Signals](decide-when-to-fine-tune-from-three-signals.md)
 
 Sources:
 - [The Rise of Open Models in the Enterprise — Amir Haghighat, Baseten](../sources/20250724_3WV1vT0B0cg.md), 03:16-10:37

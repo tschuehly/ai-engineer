@@ -12,6 +12,9 @@ Details:
 - The reusable pattern is to take a harness representing the product and train the model inside that harness as an RL environment, with tasks and rewards aligned to product behavior. 05:42-05:55
 - Building the environment forces teams to name the agent, product, harness, and optimization target before they tune prompts, select models, fine-tune, or run RL. 13:42-14:12
 - Cursor Composer is a concrete instance of this pattern: the IDE, cloud-agent VM fleet, tool loop, semantic-search tool, and training setup were co-designed so RL rollouts could match the production product environment. 08:15-09:05
+- Modal's Benjamin Cowen sharpens the readiness implication: if you've already built a product you've probably touched everything you need to train, and specifically "if you've built an agent harness, then you have what you need" for a new model to learn (through RL) how to provide your service — the harness supplies the environment and the eval data you collect on what's working supplies the training signal, so the prerequisite to start RL is something product teams often already have. 07:08-07:46
+
+
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -23,7 +26,9 @@ Related concepts:
 - [Train coding-agent models with environments and expert developer reward](train-coding-agent-models-with-environments-and-expert-developer-reward.md)
 - [Production-Matched RL Environments Train Coding Agents on Real Tool Surfaces](production-matched-rl-environments-train-coding-agents-on-real-tool-surfaces.md)
 - [Treat environments as eval, data, and training substrates](treat-environments-as-eval-data-and-training-substrates.md)
+- [Decide When to Fine-Tune From Three Business Signals](decide-when-to-fine-tune-from-three-signals.md)
 
 Sources:
 - [RL Environments at Scale - Will Brown, Prime Intellect](../sources/20251209__IzZWeuTx7I.md), 04:46-14:12
 - [Building Cursor Composer - Lee Robinson, Cursor](../sources/20251202_fL1iJHtl51Q.md), 08:15-09:05
+- [What Lies Beneath the API — Benjamin Cowen, Modal](../sources/20260602_HvZXAOZ3iv8.md), 07:08-07:46
