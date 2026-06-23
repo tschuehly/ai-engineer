@@ -94,6 +94,8 @@ How tool context is loaded is itself a tool-surface decision. WorkOS's Studio sh
 
 Observability platforms are reshaping their tool surface the same way. Arize's bet is that most people do not want to live in dashboards or buttons, so it exposes all of its primitives — observability, evals, experiments — through a CLI plus a set of tools and skills, so a coding agent (Claude Code, Codex) can drive the platform programmatically rather than a human clicking. It also ships a platform agent ("Alex") reachable from those same surfaces that, with access to all the trace data and hooks, can be asked "do you see any issues with my application?" and then plans and runs the work itself.
 
+Payment is becoming a tool surface too. Stripe's framing is that tool calls are just HTTP requests and HTTP requests should be payable, so rather than pre-provisioning an API key for every ephemeral interaction, a protected endpoint can answer with an HTTP 402 ("payment required") plus an encoded payload of what is being bought, who is being paid, and the mechanism — the agent then pays (the Machine Payments Protocol demo settles a one-cent charge on the Tempo blockchain) and retries. For richer commerce where tax, quantity, and shipping must be exact, the Agentic Commerce Protocol replaces browser stumbling with a structured agent/seller/PSP exchange: the seller exposes a product catalog as JSON and relays cart state on each create-checkout, update-quantity, or pick-shipping call, like any other tool-call response. Both keep the deterministic-tool discipline already seen elsewhere — descriptions and structured payloads carry the contract, and the seller stays in control with the risk signals it needs.
+
 ## Key Concepts
 
 - [Vet MCP Servers As Action-Capable Extensions](../concepts/vet-mcp-servers-as-action-capable-extensions.md) - MCP servers should be vetted as tools that can act through the agent, not just as data feeds.
@@ -102,6 +104,7 @@ Observability platforms are reshaping their tool surface the same way. Arize's b
 - [Fix Tool Discipline Before Reaching for a Bigger Model](../concepts/fix-tool-discipline-before-reaching-for-a-bigger-model.md) - using tools well (discover, inspect, self-correct) is a trainable behavior; a small RL-tuned model can beat a much larger one that skips those steps.
 - [Ground Agents With Managed Web-Access Infrastructure](../concepts/ground-agents-with-managed-web-access-infrastructure.md) - web access is a tool surface that needs anti-blocking infrastructure, not a raw fetch.
 - [Let an Agent Build and Maintain Self-Healing Scrapers](../concepts/let-agents-build-and-maintain-self-healing-scrapers.md) - keep the LLM out of the per-page data path by having the agent build a reusable scraper script once and run/repair that deterministic script on a schedule.
+- [Settle Agent Payments Over HTTP With 402 and Checkout Protocols](../concepts/settle-agent-payments-over-http-with-402-and-checkout-protocols.md) - tool calls are payable HTTP requests, so an HTTP 402 plus an encoded pay payload charges for ephemeral calls and a structured agent/seller/PSP exchange relays cart state for exact checkout.
 - [Type-Safe Agent Schemas Make Refactoring and Validation Easier](../concepts/type-safe-agent-schemas-make-refactoring-and-validation-easier.md) - typed tool dependencies and outputs keep framework contracts refactorable.
 - [Trace Agent Tool Arguments to Debug Real Failures](../concepts/trace-agent-tool-arguments-to-debug-real-failures.md) - tool traces should expose selected arguments, responses, latency, and cost.
 - [Group Agent Tools by Human-Facing Actions](../concepts/group-agent-tools-by-human-facing-actions.md) - action-level tool grouping reduces semantic collisions from raw API catalogs.
@@ -344,6 +347,7 @@ Observability platforms are reshaping their tool surface the same way. Arize's b
 ## Sources
 
 - [Stop Making Models Bigger, Make Them Behave — Kobie Crawford, Snorkel](../sources/20260610_TNwJ1LMiENk.md)
+- [Building safe Payment Infrastructure for the autonomous economy — Steve Kaliski, Stripe](../sources/20260606_KLSuFPj2ld0.md)
 - [Rise of the AI Architect - Clay Bavor, Cofounder, Sierra w/ Alessio Fanelli](../sources/20250724_C3geUfBR2js.md)
 - [Building Applications with AI Agents — Michael Albada, Microsoft](../sources/20250724_R30col3UPUg.md)
 - [Piloting agents in GitHub Copilot - Christopher Harrison, Microsoft](../sources/20250726_DdaAABdAqZY.md)

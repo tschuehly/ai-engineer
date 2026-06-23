@@ -14,7 +14,7 @@ Engineering services face a parallel incentive problem. Story points can become 
 
 At the fundraising stage, monetization can start as a testable hypothesis rather than a finished pricing table. Early customer conversations, design partners, likely ACV ranges, and whether buyers expect seat-based or usage-based pricing can all help founders explain how an AI product might become a large business before revenue exists.
 
-Agentic commerce adds a market-level monetization problem: buyer agents may arrive with higher explicit intent, while merchant agents need to expose data, preferences, and offers in a way that creates transactions without defaulting to advertising. Revenue share may look more like affiliate economics or attribution for high-quality data and answers than like traditional ad placement.
+Agentic commerce adds a market-level monetization problem: buyer agents may arrive with higher explicit intent, while merchant agents need to expose data, preferences, and offers in a way that creates transactions without defaulting to advertising. Revenue share may look more like affiliate economics or attribution for high-quality data and answers than like traditional ad placement. Underneath that market shift sits a payment-rails layer that has to make agent transactions safe before they can scale: Stripe's primitives share a processor-enforced mandate token (currency, amount, time, seller) rather than a raw card, make ephemeral tool calls payable over an HTTP 402, and standardize an agent/seller/PSP checkout exchange — and across all of them the seller keeps the customer relationship and receives the risk signals it needs, so monetizing agent traffic does not mean surrendering control or fraud defenses.
 
 At scale, the cost side of monetization is itself becoming a strategic discipline. Organizational LLM spend has grown large enough (some reportedly consuming on the order of trillions of tokens per month) that leaders treat token consumption as a deliberate axis rather than a passive bill, splitting between spending more in smarter ways ("token maxing," "AI factories") and spending less for equivalent value. Margin and pricing decisions increasingly depend on where a team chooses to sit on that spectrum.
 
@@ -31,6 +31,8 @@ At scale, the cost side of monetization is itself becoming a strategic disciplin
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md) - early buyer conversations can support ACV and pricing hypotheses before revenue exists.
 - [Agentic Commerce Moves From Static Stores to Intent Infrastructure](../concepts/agentic-commerce-moves-from-static-stores-to-intent-infrastructure.md) - explicit buying and selling intent becomes the unit that commerce infrastructure optimizes.
 - [Delegate Agentic Commerce Transactions With Explicit Payment Authority](../concepts/delegate-agentic-commerce-transactions-with-explicit-payment-authority.md) - agentic payment rails need bounded authority and spending controls.
+- [Bound Agent Payments With Processor-Enforced Mandate Tokens](../concepts/bound-agent-payments-with-processor-enforced-mandate-tokens.md) - a shared token carrying a processor-enforced mandate lets businesses accept agent spend across hundreds of payment methods while keeping risk signals and limits intact.
+- [Settle Agent Payments Over HTTP With 402 and Checkout Protocols](../concepts/settle-agent-payments-over-http-with-402-and-checkout-protocols.md) - an HTTP 402 monetizes ephemeral tool calls and an agent/seller/PSP exchange relays cart state so checkout details stay exact.
 - [Treat Token Spend as a Strategic Axis](../concepts/treat-token-spend-as-a-strategic-axis.md) - large-scale LLM spend is a deliberate maxing-vs-reduction decision, not just a cost line.
 
 ## Open Questions
@@ -49,6 +51,7 @@ At scale, the cost side of monetization is itself becoming a strategic disciplin
 ## Sources
 
 - [Mastering AI Pricing: Flexible & Agile Monetization - Mayank Pant, Stripe](../sources/20260501_CrqPcIZOOXA.md)
+- [Building safe Payment Infrastructure for the autonomous economy — Steve Kaliski, Stripe](../sources/20260606_KLSuFPj2ld0.md)
 - [Small Bets, Big Impact Building GenBI at a Fortune 100 - Asaf Bord, Northwestern Mutual](../sources/20251223_LU9KgcZDRfY.md)
 - [Paying Engineers like Salespeople - Arman Hezarkhani, Tenex](../sources/20251219_4mRekpZpBZs.md)
 - [The AI Engineer's Guide to Raising VC - Dani Grant (Jam), Chelcie Taylor (Notable)](../sources/20250727_YYNXFsUutbM.md)

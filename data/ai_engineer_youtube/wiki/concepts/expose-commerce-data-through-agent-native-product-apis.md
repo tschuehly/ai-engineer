@@ -19,6 +19,7 @@ Related topics:
 - [Agents](../topics/agents.md)
 
 Related concepts:
+- [Settle Agent Payments Over HTTP With 402 and Checkout Protocols](settle-agent-payments-over-http-with-402-and-checkout-protocols.md)
 - [Agent experience prioritizes APIs, CLIs, and MCP over dashboards](agent-experience-prioritizes-apis-clis-and-mcp-over-dashboards.md)
 - [Use Browser UI Control When APIs Are Absent](use-browser-ui-control-when-apis-are-absent.md)
 - [AI-Native Search APIs Serve Agent Query Shapes](ai-native-search-apis-serve-agent-query-shapes.md)

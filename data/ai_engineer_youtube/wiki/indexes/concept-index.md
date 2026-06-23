@@ -2,6 +2,9 @@
 
 ## Agents
 - [Let an Agent Build and Maintain Self-Healing Scrapers](../concepts/let-agents-build-and-maintain-self-healing-scrapers.md)
+- [Separate Non-Deterministic Discovery From Deterministic Payment Execution](../concepts/separate-non-deterministic-discovery-from-deterministic-payment.md)
+- [Bound Agent Payments With Processor-Enforced Mandate Tokens](../concepts/bound-agent-payments-with-processor-enforced-mandate-tokens.md)
+- [Settle Agent Payments Over HTTP With 402 and Checkout Protocols](../concepts/settle-agent-payments-over-http-with-402-and-checkout-protocols.md)
 - [Build Agents on Addressable Stateful-Serverless Instances](../concepts/build-agents-on-addressable-stateful-serverless-instances.md)
 - [Choose Eval Scope Across Span, Multispan, Trajectory, and Session](../concepts/choose-eval-scope-across-span-multispan-trajectory-and-session.md)
 - [Split Discovery and Validation Across Reasoning and Deterministic Models](../concepts/split-discovery-and-validation-across-reasoning-and-deterministic-models.md)
@@ -371,6 +374,8 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 - [Agentic Commerce Moves From Static Stores to Intent Infrastructure](../concepts/agentic-commerce-moves-from-static-stores-to-intent-infrastructure.md)
 - [Delegate Agentic Commerce Transactions With Explicit Payment Authority](../concepts/delegate-agentic-commerce-transactions-with-explicit-payment-authority.md)
+- [Bound Agent Payments With Processor-Enforced Mandate Tokens](../concepts/bound-agent-payments-with-processor-enforced-mandate-tokens.md)
+- [Settle Agent Payments Over HTTP With 402 and Checkout Protocols](../concepts/settle-agent-payments-over-http-with-402-and-checkout-protocols.md)
 - [Treat Token Spend as a Strategic Axis](../concepts/treat-token-spend-as-a-strategic-axis.md)
 
 ## Architecture Copilots
@@ -1425,6 +1430,8 @@
 - [Authorize High-Impact Agent Actions Transactionally](../concepts/authorize-high-impact-agent-actions-transactionally.md)
 - [Preserve Authorization Chain of Custody Across Agent Hops](../concepts/preserve-authorization-chain-of-custody-across-agent-hops.md)
 - [Delegate Agentic Commerce Transactions With Explicit Payment Authority](../concepts/delegate-agentic-commerce-transactions-with-explicit-payment-authority.md)
+- [Bound Agent Payments With Processor-Enforced Mandate Tokens](../concepts/bound-agent-payments-with-processor-enforced-mandate-tokens.md)
+- [Separate Non-Deterministic Discovery From Deterministic Payment Execution](../concepts/separate-non-deterministic-discovery-from-deterministic-payment.md)
 - [Classify AI Bot Traffic By Intent And Benefit](../concepts/classify-ai-bot-traffic-by-intent-and-benefit.md)
 - [Layer Bot Detection Signals Instead Of Trusting One Header](../concepts/layer-bot-detection-signals-instead-of-trusting-one-header.md)
 - [Treat CAPTCHA And Proof Of Work As Economic Friction](../concepts/treat-captcha-and-proof-of-work-as-economic-friction.md)
@@ -1440,6 +1447,7 @@
 - [Render Third-Party Generative UI Through a Double Iframe](../concepts/render-third-party-generative-ui-through-a-double-iframe.md)
 
 ## Tools
+- [Settle Agent Payments Over HTTP With 402 and Checkout Protocols](../concepts/settle-agent-payments-over-http-with-402-and-checkout-protocols.md)
 - [Run a Signal Layer to Triage Comms and Protect Focus](../concepts/run-a-signal-layer-to-triage-comms-and-protect-focus.md)
 - [Enterprise RAG Becomes More Useful With API Tool Access](../concepts/enterprise-rag-becomes-more-useful-with-api-tool-access.md)
 - [Inject Tool Context Just-in-Time During Agent Sequencing](../concepts/inject-tool-context-just-in-time-during-agent-sequencing.md)
@@ -1658,6 +1666,7 @@
 
 ## Workflows
 - [Let an Agent Build and Maintain Self-Healing Scrapers](../concepts/let-agents-build-and-maintain-self-healing-scrapers.md)
+- [Separate Non-Deterministic Discovery From Deterministic Payment Execution](../concepts/separate-non-deterministic-discovery-from-deterministic-payment.md)
 - [Split Discovery and Validation Across Reasoning and Deterministic Models](../concepts/split-discovery-and-validation-across-reasoning-and-deterministic-models.md)
 - [Treat Human Attention as the Bottleneck for Agentic Work](../concepts/treat-human-attention-as-the-agentic-bottleneck.md)
 - [Run a Signal Layer to Triage Comms and Protect Focus](../concepts/run-a-signal-layer-to-triage-comms-and-protect-focus.md)
