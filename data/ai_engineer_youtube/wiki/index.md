@@ -4,6 +4,8 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Extract a Rich Structured Audio Profile in One Multimodal Call](concepts/extract-a-rich-structured-audio-profile-in-one-multimodal-call.md) - one Gemini 3 Flash call with a response schema returns speaker-by-name diarization, timestamps, per-segment language + translation, emotion, and a summary, replacing a chain of ASR, diarization, language-ID, and emotion models.
+- [Direct TTS Voices With a Director's Note, Not a Voice Catalogue](concepts/direct-tts-voices-with-a-directors-note.md) - a small set of base voices steered by a natural-language director's note (audio profile, scene, performance guidance) synthesizes accents and personas on demand instead of filtering a large voice library.
 - [Observability-to-PR Agents Turn Incidents Into Reviewable Fixes](concepts/observability-to-pr-agents-turn-incidents-into-reviewable-fixes.md) - PostHog's signal-to-PR pipeline turns heterogeneous product observability (errors, replays, Slack) into review-ready PRs by grouping signals into weighted reports, researching the codebase in a sandbox, and iterating until CI is green.
 - [Embed LLM-Generated Queries, Not Raw Heterogeneous Signals](concepts/embed-llm-generated-queries-not-raw-heterogeneous-signals.md) - off-the-shelf embeddings cluster mixed-format data by structure (errors with errors, chat with chat), so embed an LLM-generated description of each signal to cluster by meaning instead.
 - [Fix Tool Discipline Before Reaching for a Bigger Model](concepts/fix-tool-discipline-before-reaching-for-a-bigger-model.md) - a 4B model RL-tuned for tool discipline (discover, inspect, self-correct) beat Qwen 3 235B on a financial tool task for under $500, because the gap was behavior, not reasoning depth.
@@ -20,8 +22,6 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Institutionalize Knowledge Infrastructure for AI Adoption](concepts/institutionalize-knowledge-infrastructure-for-ai-adoption.md) - shared docs, decisions, meeting outputs, task trackers, and memories let agent success scale across teams.
 - [Parallel Agent Prototypes Turn Design Choices Into Measurements](concepts/parallel-agent-prototypes-turn-design-choices-into-measurements.md) - cheap parallel prototypes can turn product and architecture choices into measured comparisons.
 - [Group Agent Tools by Human-Facing Actions](concepts/group-agent-tools-by-human-facing-actions.md) - agent tool catalogs should be curated around clear actions rather than mirrored from every API endpoint.
-- [Keep Fixed Business Logic Outside the Model](concepts/keep-fixed-business-logic-outside-the-model.md) - hard workflow rules belong in deterministic validation and state gates.
-- [Replace Anecdotal Agent Tuning With Eval and Observability Loops](concepts/replace-anecdotal-agent-tuning-with-eval-and-observability-loops.md) - eval sets, traces, and clustered failures should drive agent improvement.
 
 - [Workflow Search Retrieves Enterprise Practice at Runtime](concepts/workflow-search-retrieves-enterprise-practice-at-runtime.md) - prior task-workflow examples can steer enterprise agents with current company practice.
 - [Golden Workflows Evaluate Agent Trajectories](concepts/golden-workflows-evaluate-agent-trajectories.md) - known processes can evaluate agent steps, not just final answers.

@@ -14,6 +14,9 @@ Details:
 - To offset the latency of a cascaded architecture, the workshop says the speech, LLM, and voice models are deployed close together. 10:41-10:49.
 - Gemini Live API is described as a native audio approach where the model reasons sound-token to sound-token rather than cascading through transcription, text LLM reasoning, and speech synthesis; the workshop also notes that higher thinking levels improve reasoning at the cost of latency. 57:04-57:28, 62:06-62:30.
 - Native speech-to-speech models preserve information that transcription can lose and can reduce chained inference calls, but the talk warns that current audio-mode models can be less reliable for enterprise instruction following, function calling, and language control than text-mode models. 19:16-20:51, 24:03-26:39.
+- Gemini 3.1 Flash Live is a concrete native sound-to-sound example: full-duplex, multimodal real-time ingest of text/audio/video over a WebSocket with audio plus a text transcript returned, and thinking/reasoning/intelligence baked directly into the model rather than cascaded through a separate text LLM; it is reachable for no-cost trial at `ai.studio/live`, with video-frame ingest capped at one frame per second. (`Bc6Ojl2XS1w`) 02:42-02:57, 12:08-13:27, 14:54-15:08.
+- Even a native model still needs explicit instruction control: in the live demo an Irish-accent system instruction bled into a German-language response, so language-scoped accent instructions remain necessary. (`Bc6Ojl2XS1w`) 14:31-14:46.
+- Audio-space benchmarks are explicitly called untrustworthy, reinforcing that architecture choice should rest on product behavior and evals rather than published audio scores. (`Bc6Ojl2XS1w`) 12:31-12:34.
 
 Related topics:
 - [Voice Agents](../topics/voice-agents.md)
@@ -24,9 +27,11 @@ Related concepts:
 - [Realtime multimodal agents use stateful streams for audio, vision, and tools](realtime-multimodal-agents-use-stateful-streams-for-audio-vision-and-tools.md)
 - [Evaluate Speech-To-Speech Models Against Enterprise Control Needs](evaluate-speech-to-speech-models-against-enterprise-control-needs.md)
 - [Multilingual Voice Agents Need Language Detection and Switching](multilingual-voice-agents-need-language-detection-and-switching.md)
+- [Orchestrate Generative Media From a Real-Time Voice Agent via Tool Use](orchestrate-generative-media-from-a-realtime-voice-agent.md)
 
 Sources:
 - [Building Effective Voice Agents - Toki Sherbakov + Anoop Kotha, OpenAI](../sources/20250720_-OXiljTJxQU.md), 04:16-07:19
 - [[Full Workshop] Building Conversational AI Agents - Thor Schaeff, ElevenLabs](../sources/20250731_MPtCBaZn84A.md), 08:29-10:49
 - [Building Conversational Agents - Thor Schaeff and Philipp Schmid, Google DeepMind](../sources/20260430_cVzf49yg0D8.md), 57:04-57:28, 62:06-62:30
 - [Pipecat Cloud: Enterprise Voice Agents Built On Open Source - Kwindla Hultman Kramer, Daily](../sources/20250731_IA4lZjh9sTs.md), 19:16-20:51, 24:03-26:39
+- [From Transcription to Live Music: Gemini's Audio Stack — Thor Schaeff, Google DeepMind](../sources/20260609_Bc6Ojl2XS1w.md), 02:42-02:57, 12:08-15:08

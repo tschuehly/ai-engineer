@@ -899,6 +899,7 @@
 - [Account for compression artifacts in media model data and evals](../concepts/account-for-compression-artifacts-in-media-model-data-and-evals.md)
 - [Personalize aesthetic evals with preference classifiers](../concepts/personalize-aesthetic-evals-with-preference-classifiers.md)
 - [Interactive world models need memory, control, and live prompting](../concepts/interactive-world-models-need-memory-control-and-live-prompting.md)
+- [Orchestrate Generative Media From a Real-Time Voice Agent via Tool Use](../concepts/orchestrate-generative-media-from-a-realtime-voice-agent.md)
 
 ## Vision AI
 
@@ -1292,6 +1293,8 @@
 - [Enterprise deep research needs trustworthy retrieval and governance controls](../concepts/enterprise-deep-research-needs-trustworthy-retrieval-and-governance-controls.md)
 - [Neural weather models can target operational forecast variables directly](../concepts/neural-weather-models-can-target-operational-forecast-variables-directly.md)
 - [Interactive world models need memory, control, and live prompting](../concepts/interactive-world-models-need-memory-control-and-live-prompting.md)
+- [Extract a Rich Structured Audio Profile in One Multimodal Call](../concepts/extract-a-rich-structured-audio-profile-in-one-multimodal-call.md)
+- [Direct TTS Voices With a Director's Note, Not a Voice Catalogue](../concepts/direct-tts-voices-with-a-directors-note.md)
 
 ## Retrieval
 - [Enterprise RAG Becomes More Useful With API Tool Access](../concepts/enterprise-rag-becomes-more-useful-with-api-tool-access.md)
@@ -1586,6 +1589,7 @@
 - [Enterprise deep research runs multi-step synthesis over private corpora](../concepts/enterprise-deep-research-runs-multi-step-synthesis-over-private-corpora.md)
 - [Enterprise deep research needs trustworthy retrieval and governance controls](../concepts/enterprise-deep-research-needs-trustworthy-retrieval-and-governance-controls.md)
 - [Split exploratory research agents from constrained writing workflows](../concepts/split-exploratory-research-agents-from-constrained-writing-workflows.md)
+- [Orchestrate Generative Media From a Real-Time Voice Agent via Tool Use](../concepts/orchestrate-generative-media-from-a-realtime-voice-agent.md)
 
 ## Voice Agents
 
@@ -1618,6 +1622,9 @@
 - [Preserve speaker channels before voice-agent transcription](../concepts/preserve-speaker-channels-before-voice-agent-transcription.md)
 - [Extract contact-center intelligence as structured JSON](../concepts/extract-contact-center-intelligence-as-structured-json.md)
 - [Verify AI call summaries before CRM sync](../concepts/verify-ai-call-summaries-before-crm-sync.md)
+- [Extract a Rich Structured Audio Profile in One Multimodal Call](../concepts/extract-a-rich-structured-audio-profile-in-one-multimodal-call.md)
+- [Direct TTS Voices With a Director's Note, Not a Voice Catalogue](../concepts/direct-tts-voices-with-a-directors-note.md)
+- [Orchestrate Generative Media From a Real-Time Voice Agent via Tool Use](../concepts/orchestrate-generative-media-from-a-realtime-voice-agent.md)
 
 ## Workflows
 - [Treat Human Attention as the Bottleneck for Agentic Work](../concepts/treat-human-attention-as-the-agentic-bottleneck.md)

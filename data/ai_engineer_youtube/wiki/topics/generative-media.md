@@ -6,6 +6,8 @@ Generative media covers the model and product patterns behind image, video, and 
 
 Serving cost is its own discipline once a media model is good enough to use. NVIDIA's view is that diffusion latency comes mainly from the default 20-50 denoising steps and that the diffusion serving stack is less mature than the autoregressive LLM/VLM stack, so optimization ideas are borrowed from LLMs and adapted. Three levers are presented as additive and stackable rather than mutually exclusive: quantization is the easiest lever but pays off less than in LLMs because diffusion is attention-heavy; caching skips recomputing latent regions that barely change between denoising steps; and step distillation trains a same-size student to match teacher quality in far fewer steps (50 down to 4, 8, or one), the most impactful lever and currently the only path to good-quality real-time generation. Teams are advised to start with quantization, add caching and multi-GPU/context parallelism if needed, and finish with distillation, which together can reach the 10x-200x speedup that produced near-real-time video on a single Blackwell B200.
 
+Generative media also includes music: Google DeepMind's Lyria 3 now generates full songs with lyrics and ships as two variants — a clip model and a Pro full-length-song model. How media generation is invoked is itself a product pattern: rather than a single static prompt, a real-time conversational model can expose the media generator as a tool, gather the creative brief through dialogue, and then call it — demonstrated by a "jukebox" where Gemini Live calls Lyria on request. This composes a native sound-to-sound interaction model with a dedicated media-generation model through ordinary tool use, and generalizes to image and video endpoints behind an agent.
+
 ## Key Concepts
 
 - [Stack Additive Diffusion Optimizations for Real-Time Generation](../concepts/stack-additive-diffusion-optimizations-for-real-time-generation.md) - quantization, caching, and step distillation are incremental, combinable levers ordered from easy to most impactful.
@@ -22,6 +24,7 @@ Serving cost is its own discipline once a media model is good enough to use. NVI
 - [Personalize aesthetic evals with preference classifiers](../concepts/personalize-aesthetic-evals-with-preference-classifiers.md) - creative products may need user-specific taste models rather than one universal aesthetic score.
 - [Design AI creative systems for generated-asset retrieval](../concepts/design-ai-creative-systems-for-generated-asset-retrieval.md) - generated-media products need indexing and search when output volume grows with personalization.
 - [Interactive world models need memory, control, and live prompting](../concepts/interactive-world-models-need-memory-control-and-live-prompting.md) - generated environments need state and action consistency when users navigate inside them.
+- [Orchestrate Generative Media From a Real-Time Voice Agent via Tool Use](../concepts/orchestrate-generative-media-from-a-realtime-voice-agent.md) - a conversational model can gather a creative brief and invoke a media generator (e.g. Lyria 3 music) as a tool.
 
 ## Open Questions
 
@@ -41,3 +44,4 @@ Serving cost is its own discipline once a media model is good enough to use. NVI
 - [Building in the Gemini Era - Kat Kampf & Ammaar Reshi, Google DeepMind](../sources/20251215_fgkXEIbZpGc.md)
 - [Perceptual Evaluations: Evals for Aesthetics - Diego Rodriguez, Krea.ai](../sources/20250823_h5ItAJuB3Fc.md)
 - [The Next Unicorns: 7 Top AI startups from the HF0 Residency](../sources/20250821_L8-5ezsoI5A.md)
+- [From Transcription to Live Music: Gemini's Audio Stack — Thor Schaeff, Google DeepMind](../sources/20260609_Bc6Ojl2XS1w.md)
