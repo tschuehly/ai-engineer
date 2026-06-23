@@ -4,6 +4,8 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Own Open Models for Sovereignty and Permissionless Adoption](concepts/own-open-models-for-sovereignty-and-permissionless-adoption.md) - owning open weights gives sovereignty and data locality, and an Apache 2.0 license clears the ~18-month procurement barrier that blocked sovereign and regulated adoption.
+- [Decide open-model ownership by capability, hardware, latency, and cost thresholds](concepts/decide-open-model-ownership-by-capability-hardware-latency-and-cost-thresholds.md) - owning or offloading a workload is a four-axis threshold call where on-device cost is energy, not tokens, and agentic token volume tips the math.
 - [Treat Human Attention as the Bottleneck for Agentic Work](concepts/treat-human-attention-as-the-agentic-bottleneck.md) - agents scale infinitely but human attention degrades under load, so personal workflows should conserve attention or the default outcome is faster burnout.
 - [Drive Agents Remotely and by Voice to Decouple Work From the Desk](concepts/drive-agents-remotely-and-by-voice-to-decouple-work-from-the-desk.md) - voice dictation and remote control let a developer direct agents and review PRs away from the keyboard, capturing diffuse-mode insight while reducing desk time.
 - [Compile Natural-Language Analytics Into Reusable Deterministic Widgets](concepts/compile-natural-language-analytics-into-reusable-deterministic-widgets.md) - an NL-to-data agent answers a question once, then writes a widget as declarative code so every later run is deterministic, cheap, and LLM-free.

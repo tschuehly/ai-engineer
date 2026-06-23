@@ -14,6 +14,7 @@ Details:
 - PLE uses a smaller 256-dimensional embedding and projects it up to the full embedding size expected by the model at each layer. (09:57-10:48)
 - Omar Sanseviero describes E2B as effectively 2B parameters even though the model has more total parameters, because PLE lookup data does not need the same GPU-resident matrix multiplication path as ordinary transformer weights. (05:28-06:44)
 - The same talk notes that llama.cpp can move per-layer embeddings to CPU or disk with an override tensor flag, which is a concrete runtime implementation path for the memory tradeoff. (06:45-06:55)
+- A separate Gemma 4 talk gives the same account in product terms: an E2B uses roughly the memory a 2B model would (the ~2B that must sit on the GPU) while actually having ~5B parameters, and the extra parameters are token-mapping rather than transformer parameters, so they can stay in other memory. (02:48-03:16)
 
 Related topics:
 - [Edge Inference](../topics/edge-inference.md)
@@ -27,3 +28,4 @@ Related concepts:
 Sources:
 - [Gemma 4 Deep Dive - Cassidy Hardin, Researcher, Google DeepMind](../sources/20260427__A367W_qvc8.md), 07:42-10:56
 - [Gemma, DeepMind's Family of Open Models - Omar Sanseviero, Google DeepMind](../sources/20260420__gVFUEdhCyI.md), 05:28-06:55
+- [Sovereign Escape Velocity: Ownership w Open Models — Gus Martins, & Ian Ballantyne, Google DeepMind](../sources/20260610_SS-A8sE7hkw.md), 02:48-03:16

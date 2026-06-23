@@ -641,6 +641,7 @@
 ## Edge Inference
 
 - [Use edge inference when latency, privacy, offline access, or token cost dominate](../concepts/use-edge-inference-when-latency-privacy-offline-access-or-token-cost-dominate.md)
+- [Decide open-model ownership by capability, hardware, latency, and cost thresholds](../concepts/decide-open-model-ownership-by-capability-hardware-latency-and-cost-thresholds.md)
 - [Treat edge models as their own architecture class](../concepts/treat-edge-models-as-their-own-architecture-class.md)
 - [Route Gemma 4 model variants by deployment and workflow shape](../concepts/route-gemma-4-model-variants-by-deployment-and-workflow-shape.md)
 - [Per-layer embeddings move effective-model capacity out of VRAM](../concepts/per-layer-embeddings-move-effective-model-capacity-out-of-vram.md)
@@ -774,6 +775,8 @@
 - [Browser DevTools MCP turns runtime debugging into agent tools](../concepts/browser-devtools-mcp-turns-runtime-debugging-into-agent-tools.md)
 - [Browser-native AI APIs bring local models into web apps](../concepts/browser-native-ai-apis-bring-local-models-into-web-apps.md)
 - [Use hosted model playgrounds to prototype before owning infrastructure](../concepts/use-hosted-model-playgrounds-to-prototype-before-owning-infrastructure.md)
+- [Own Open Models for Sovereignty and Permissionless Adoption](../concepts/own-open-models-for-sovereignty-and-permissionless-adoption.md)
+- [Decide open-model ownership by capability, hardware, latency, and cost thresholds](../concepts/decide-open-model-ownership-by-capability-hardware-latency-and-cost-thresholds.md)
 - [Open model families need ecosystem-compatible tooling](../concepts/open-model-families-need-ecosystem-compatible-tooling.md)
 - [Enterprise Open-Model Adoption Follows Task Pressure](../concepts/enterprise-open-model-adoption-follows-task-pressure.md)
 - [Use MLX Swift LM for Apple local model integration](../concepts/use-mlx-swift-lm-for-apple-local-model-integration.md)
@@ -1192,6 +1195,7 @@
 - [Use Eagle 3 Speculative Decoding With Matched Draft Models](../concepts/use-eagle-3-speculative-decoding-with-matched-draft-models.md)
 - [SGLang Serves Models Through Configured OpenAI-Compatible Servers](../concepts/sglang-serves-models-through-configured-openai-compatible-servers.md)
 - [Enterprise Open-Model Adoption Follows Task Pressure](../concepts/enterprise-open-model-adoption-follows-task-pressure.md)
+- [Own Open Models for Sovereignty and Permissionless Adoption](../concepts/own-open-models-for-sovereignty-and-permissionless-adoption.md)
 - [Treat Model and Prompt Upgrades as Regulated Migrations](../concepts/treat-model-and-prompt-upgrades-as-regulated-migrations.md)
 - [Mechanistic Interpretability Turns Model Internals Into Engineering Surfaces](../concepts/mechanistic-interpretability-turns-model-internals-into-engineering-surfaces.md)
 - [Activation Steering Can Patch Specific Runtime Behaviors](../concepts/activation-steering-can-patch-specific-runtime-behaviors.md)
