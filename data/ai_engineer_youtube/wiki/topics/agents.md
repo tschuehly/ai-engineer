@@ -146,12 +146,15 @@ Two more agent-design failure modes come from Qodo's agentic-code-review experie
 
 Debugging and evaluating a non-deterministic agent depends on telemetry, not code: Arize's framing is that a trace or span is the audit record of what the agent actually did, and the agent should be viewed distributionally across all its runs (paths, branches, loops) rather than as one call. Evals then attach at a chosen scope — a single span, a multispan slice (e.g. how well agents pass data to each other), the full trajectory ("did we call things in the right order to finish the business process," catching the B-before-A dependency failure), or the whole session (was the user frustrated, were all questions answered). This scope axis is what turns the distributional observability view into agent-level evaluation rather than a dashboard.
 
+Agents can also own the maintenance of long-running data work, not just one-shot tasks. Bright Data's follow-on talk reframes web scraping as a maintenance problem — writing a scraper is easy, but sites change selectors and structure, so keeping it working often costs more than building it. An agent with managed web access can run the whole loop: explore the site, write a reusable parser script, run it, and — on a schedule with a data validation — re-explore and repair it in minutes when it breaks, so collection becomes self-healing and no one is paged at 2am. The reasoning that closes the talk is simply "if it can build a scraper, it can maintain the scraper," and the same scheduled "listener" pattern serves personal automation (watch a marketplace, auto-book a table) as readily as enterprise-scale collection.
+
 ## Key Concepts
 
 - [Split Discovery and Validation Across Reasoning and Deterministic Models](../concepts/split-discovery-and-validation-across-reasoning-and-deterministic-models.md) - high-reasoning models hop between methods instead of solving, so route open-ended discovery to them and deterministic validation to cheaper models behind hard gates and loop guards.
 - [Reconcile Specialist Agent Outputs With a Feedback-Weighted Judge](../concepts/reconcile-specialist-agent-outputs-with-a-feedback-weighted-judge.md) - one overloaded agent drops tasks, so split into specialists and recombine with a judge weighted by PR history, guidelines, and accept/reject feedback.
 - [Build Agents on Addressable Stateful-Serverless Instances](../concepts/build-agents-on-addressable-stateful-serverless-instances.md) - one persistent addressable instance per agent ID makes resumable streaming, multi-client sync, and scheduling emergent properties of the runtime rather than userland distributed-systems work.
 - [Choose Eval Scope Across Span, Multispan, Trajectory, and Session](../concepts/choose-eval-scope-across-span-multispan-trajectory-and-session.md) - a non-deterministic agent is evaluated at a chosen scope of its execution tree, with trajectory and session scopes catching sequencing and conversation failures that output checks miss.
+- [Let an Agent Build and Maintain Self-Healing Scrapers](../concepts/let-agents-build-and-maintain-self-healing-scrapers.md) - an agent that builds a scraper can also run, validate, and repair it on a schedule, so data collection becomes a self-healing pipeline instead of a 2am page.
 - [Fix Tool Discipline Before Reaching for a Bigger Model](../concepts/fix-tool-discipline-before-reaching-for-a-bigger-model.md) - a tool-using agent's failure is often poor tool discipline (no schema discovery, no self-correction), fixable with cheap RL rather than a larger model.
 - [Redefine RAG as Iterative Multi-Tool Retrieval, Not Vector Search](../concepts/redefine-rag-as-iterative-multi-tool-retrieval.md) - serious agents retrieve iteratively across vector, full-text, grep, glob, regex, and filters, so agentic search is a superset of RAG rather than its replacement.
 - [Coding-Agent Capability Tiers Change the Bottleneck](../concepts/coding-agent-capability-tiers-change-the-bottleneck.md) - longer agent work horizons require different interfaces, context, and verification.
@@ -509,6 +512,7 @@ Debugging and evaluating a non-deterministic agent depends on telemetry, not cod
 
 ## Sources
 
+- [From MCP to Scale: Pipelines That Build Themselves — Rafael Levi, Bright Data](../sources/20260607_zTZ0qunQXnM.md)
 - [Stop Making Models Bigger, Make Them Behave — Kobie Crawford, Snorkel](../sources/20260610_TNwJ1LMiENk.md)
 - [How to build Enterprise Aware Agents - Chau Tran, Glean](../sources/20250724_hxFpUcvWPcU.md)
 - [Rise of the AI Architect - Clay Bavor, Cofounder, Sierra w/ Alessio Fanelli](../sources/20250724_C3geUfBR2js.md)

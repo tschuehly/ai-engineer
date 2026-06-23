@@ -14,6 +14,9 @@ Details:
 - Legal posture is part of the design: only public data, never behind-login content, because logging in means accepting terms and conditions, and scrapers have faced lawsuits (LinkedIn, Amazon); a public-data provider keeps the user from being sued. (06:50-08:42)
 - Token efficiency at scale: do not parse 10,000 pages with the LLM; have the LLM build a parser once and run it as a script, which the speaker claims saves about 99% of tokens versus per-page LLM parsing. (12:38-13:38)
 - Even with the access layer, the broad tool catalog (66-69 tools in the demo) should be filtered to the few a task needs, or it floods the context with irrelevant data. (13:41-14:03)
+- The follow-on talk details the primitives further: a "web unlocker" curls any URL and returns the HTML with the correct headers, cookies, and a solved-CAPTCHA token so the server thinks it is a real browser; ~500 pre-built per-site APIs return structured JSON (more token-efficient than markdown — e.g. an Amazon product API) so the agent need not build a scraper at all; and the remote browser can geo-target its IP ("IP from the United States") and perform actions — fill and submit forms, click buttons when the URL is an un-constructable hash (flight search) — with everything allowed except logging in. (20260607: 10:15-11:23, 16:03-16:10, 22:55-23:45)
+- Anti-detection at the browser layer is pre-recorded human mouse movement and human-like typing (slower, speeding up, even mistakes), so a low-cost model such as Claude Haiku is enough for browsing because the human-masking, not the model, defeats trackers; the provider runs ~150M IPs and can open ~1,000 remote browsers from one laptop on its servers. (20260607: 09:28-09:46, 23:47-24:24)
+- Legal posture, reinforced: the provider won lawsuits from Meta and X (Elon Musk) on the principle "public data is public data — it doesn't matter how you collect it or what you do with it," and the MCP is most valuable on the ~20% of domains behind Akamai/DataDome/Cloudflare, which are the "juiciest" (real estate, big e-commerce). (20260607: 18:57-19:18, 21:54-22:16)
 
 Related topics:
 - [Retrieval](../topics/retrieval.md)
@@ -27,6 +30,8 @@ Related concepts:
 - [Use Browser UI Control When APIs Are Absent](use-browser-ui-control-when-apis-are-absent.md)
 - [MCP tool surfaces need default context budgets](mcp-tool-surfaces-need-default-context-budgets.md)
 - [Expose Search Controls For Agentic Retrieval](expose-search-controls-for-agentic-retrieval.md)
+- [Let an Agent Build and Maintain Self-Healing Scrapers](let-agents-build-and-maintain-self-healing-scrapers.md)
 
 Sources:
 - [Your Agent's Biggest Lie: "I Searched the Web" — Rafael Levi, Bright Data](../sources/20260617_btxGmN8RvNU.md), 04:56-09:44, 10:51-14:03
+- [From MCP to Scale: Pipelines That Build Themselves — Rafael Levi, Bright Data](../sources/20260607_zTZ0qunQXnM.md), 09:28-11:23, 16:03-24:24

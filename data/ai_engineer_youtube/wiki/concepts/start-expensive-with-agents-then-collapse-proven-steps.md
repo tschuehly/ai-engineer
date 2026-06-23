@@ -22,6 +22,7 @@ Related concepts:
 - [Distill reasoning traces into small models](distill-reasoning-traces-into-small-models.md)
 - [Parallel agent prototypes turn design choices into measurements](parallel-agent-prototypes-turn-design-choices-into-measurements.md)
 - [Observability-to-PR Agents Turn Incidents Into Reviewable Fixes](observability-to-pr-agents-turn-incidents-into-reviewable-fixes.md)
+- [Let an Agent Build and Maintain Self-Healing Scrapers](let-agents-build-and-maintain-self-healing-scrapers.md)
 
 Sources:
 - [Self Driving Products: Product Signals to Pull Requests — Joshua Snyder, PostHog](../sources/20260610_zMiSRliEzv4.md), 12:35-13:34

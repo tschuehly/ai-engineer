@@ -1,6 +1,7 @@
 # Concept Index
 
 ## Agents
+- [Let an Agent Build and Maintain Self-Healing Scrapers](../concepts/let-agents-build-and-maintain-self-healing-scrapers.md)
 - [Build Agents on Addressable Stateful-Serverless Instances](../concepts/build-agents-on-addressable-stateful-serverless-instances.md)
 - [Choose Eval Scope Across Span, Multispan, Trajectory, and Session](../concepts/choose-eval-scope-across-span-multispan-trajectory-and-session.md)
 - [Split Discovery and Validation Across Reasoning and Deterministic Models](../concepts/split-discovery-and-validation-across-reasoning-and-deterministic-models.md)
@@ -1444,6 +1445,7 @@
 - [Inject Tool Context Just-in-Time During Agent Sequencing](../concepts/inject-tool-context-just-in-time-during-agent-sequencing.md)
 - [Fix Tool Discipline Before Reaching for a Bigger Model](../concepts/fix-tool-discipline-before-reaching-for-a-bigger-model.md)
 - [Ground Agents With Managed Web-Access Infrastructure](../concepts/ground-agents-with-managed-web-access-infrastructure.md)
+- [Let an Agent Build and Maintain Self-Healing Scrapers](../concepts/let-agents-build-and-maintain-self-healing-scrapers.md)
 - [Render Third-Party Generative UI Through a Double Iframe](../concepts/render-third-party-generative-ui-through-a-double-iframe.md)
 - [Declare Every External Domain Your MCP App Touches](../concepts/declare-every-external-domain-your-mcp-app-touches.md)
 
@@ -1655,6 +1657,7 @@
 - [Orchestrate Generative Media From a Real-Time Voice Agent via Tool Use](../concepts/orchestrate-generative-media-from-a-realtime-voice-agent.md)
 
 ## Workflows
+- [Let an Agent Build and Maintain Self-Healing Scrapers](../concepts/let-agents-build-and-maintain-self-healing-scrapers.md)
 - [Split Discovery and Validation Across Reasoning and Deterministic Models](../concepts/split-discovery-and-validation-across-reasoning-and-deterministic-models.md)
 - [Treat Human Attention as the Bottleneck for Agentic Work](../concepts/treat-human-attention-as-the-agentic-bottleneck.md)
 - [Run a Signal Layer to Triage Comms and Protect Focus](../concepts/run-a-signal-layer-to-triage-comms-and-protect-focus.md)
