@@ -1,6 +1,8 @@
 # Concept Index
 
 ## Agents
+- [Split Discovery and Validation Across Reasoning and Deterministic Models](../concepts/split-discovery-and-validation-across-reasoning-and-deterministic-models.md)
+- [Reconcile Specialist Agent Outputs With a Feedback-Weighted Judge](../concepts/reconcile-specialist-agent-outputs-with-a-feedback-weighted-judge.md)
 - [Redefine RAG as Iterative Multi-Tool Retrieval, Not Vector Search](../concepts/redefine-rag-as-iterative-multi-tool-retrieval.md)
 - [Scale AI Fluency With Self-Service Platforms](../concepts/scale-ai-fluency-with-self-service-platforms.md)
 - [Hire Humans for Context, Verification, and Accountability](../concepts/hire-humans-for-context-verification-and-accountability.md)
@@ -385,6 +387,7 @@
 
 ## Coding Agents
 
+- [Reconcile Specialist Agent Outputs With a Feedback-Weighted Judge](../concepts/reconcile-specialist-agent-outputs-with-a-feedback-weighted-judge.md)
 - [Treat Embeddings as Cached Compute Decided by Query Volume](../concepts/treat-embeddings-as-cached-compute-decided-by-query-volume.md)
 - [Share Codebase Indexes Across a Team With Merkle-Tree Diffing](../concepts/share-codebase-indexes-across-a-team-with-merkle-tree-diffing.md)
 - [Treat Human Attention as the Bottleneck for Agentic Work](../concepts/treat-human-attention-as-the-agentic-bottleneck.md)
@@ -582,6 +585,7 @@
 
 ## Context Engineering
 
+- [Curate Context Strategically Because Models Drop the Middle](../concepts/curate-context-strategically-because-models-drop-the-middle.md)
 - [Mine Agent Conversation History to Generate Missing Skills](../concepts/mine-agent-conversation-history-to-generate-missing-skills.md)
 - [Codebase Intelligence Needs Structural and Historical Signals](../concepts/codebase-intelligence-needs-structural-and-historical-signals.md)
 - [Layer Copilot Context Through Issues, Instructions, and Repository Structure](../concepts/layer-copilot-context-through-issues-instructions-and-repository-structure.md)
@@ -976,6 +980,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Reconcile Specialist Agent Outputs With a Feedback-Weighted Judge](../concepts/reconcile-specialist-agent-outputs-with-a-feedback-weighted-judge.md)
 - [Enterprise AI Productivity Needs Workflow-Level Outcomes](../concepts/enterprise-ai-productivity-needs-workflow-level-outcomes.md)
 - [Use Field-Level Confidence Signals for Human Review](../concepts/use-field-level-confidence-signals-for-human-review.md)
 - [Validate Generated SQL by Execution Before Trusting It](../concepts/validate-generated-sql-by-execution-before-trusting-it.md)
@@ -1204,6 +1209,7 @@
 
 ## Models
 
+- [Split Discovery and Validation Across Reasoning and Deterministic Models](../concepts/split-discovery-and-validation-across-reasoning-and-deterministic-models.md)
 - [Use Eagle 3 Speculative Decoding With Matched Draft Models](../concepts/use-eagle-3-speculative-decoding-with-matched-draft-models.md)
 - [SGLang Serves Models Through Configured OpenAI-Compatible Servers](../concepts/sglang-serves-models-through-configured-openai-compatible-servers.md)
 - [Enterprise Open-Model Adoption Follows Task Pressure](../concepts/enterprise-open-model-adoption-follows-task-pressure.md)
@@ -1304,6 +1310,7 @@
 - [Direct TTS Voices With a Director's Note, Not a Voice Catalogue](../concepts/direct-tts-voices-with-a-directors-note.md)
 
 ## Retrieval
+- [Curate Context Strategically Because Models Drop the Middle](../concepts/curate-context-strategically-because-models-drop-the-middle.md)
 - [Enterprise RAG Becomes More Useful With API Tool Access](../concepts/enterprise-rag-becomes-more-useful-with-api-tool-access.md)
 - [Redefine RAG as Iterative Multi-Tool Retrieval, Not Vector Search](../concepts/redefine-rag-as-iterative-multi-tool-retrieval.md)
 - [Treat Embeddings as Cached Compute Decided by Query Volume](../concepts/treat-embeddings-as-cached-compute-decided-by-query-volume.md)
@@ -1637,6 +1644,7 @@
 - [Orchestrate Generative Media From a Real-Time Voice Agent via Tool Use](../concepts/orchestrate-generative-media-from-a-realtime-voice-agent.md)
 
 ## Workflows
+- [Split Discovery and Validation Across Reasoning and Deterministic Models](../concepts/split-discovery-and-validation-across-reasoning-and-deterministic-models.md)
 - [Treat Human Attention as the Bottleneck for Agentic Work](../concepts/treat-human-attention-as-the-agentic-bottleneck.md)
 - [Run a Signal Layer to Triage Comms and Protect Focus](../concepts/run-a-signal-layer-to-triage-comms-and-protect-focus.md)
 - [Drive Agents Remotely and by Voice to Decouple Work From the Desk](../concepts/drive-agents-remotely-and-by-voice-to-decouple-work-from-the-desk.md)

@@ -44,8 +44,11 @@ Mechanistic interpretability adds a model-internal engineering surface. Instead 
 
 Hosted model upgrades should be treated as production migrations when prompts and domain rules carry business meaning. Intuit's TurboTax experience shows that long-term contracts, prompt dependence, fine-tuned variants, and even same-vendor model changes can create migration work; the practical release gate is whether the new model preserves quality, latency, and regulated-domain correctness against established evals.
 
+Model-tier selection should also track how deterministic a step is, not only its difficulty. Qodo's 80/20 framing pairs frontier high-reasoning models with the open-ended discovery 80% of a task, but deliberately uses lighter, cheaper models for the deterministic validation 20% — a critic node that checks goal versus result needs no research, so spending frontier reasoning on it is waste. This sharpens the role-routing concepts in this topic (choose a model by role intelligence needs, quality bar, budget, and latency): a "needs reasoning" axis and a "needs determinism" axis can point to different model tiers within the same multi-agent workflow.
+
 ## Key Concepts
 
+- [Split Discovery and Validation Across Reasoning and Deterministic Models](../concepts/split-discovery-and-validation-across-reasoning-and-deterministic-models.md) - route open-ended discovery to high-reasoning models and deterministic validation to cheaper models, because the validation 20% does not need a reasoning model.
 - [Use Eagle 3 Speculative Decoding With Matched Draft Models](../concepts/use-eagle-3-speculative-decoding-with-matched-draft-models.md) - speculative decoding draft models need to be matched to the target model rather than treated as arbitrary smaller substitutes.
 - [SGLang Serves Models Through Configured OpenAI-Compatible Servers](../concepts/sglang-serves-models-through-configured-openai-compatible-servers.md) - model availability depends on serving-framework support, hardware settings, and API-compatible deployment paths.
 - [AI Engineering Practice Is Heterogeneous and Fast Moving](../concepts/ai-engineering-practice-is-heterogeneous-and-fast-moving.md) - model strategy must tolerate frequent updates and multiple concurrent use cases.
@@ -219,3 +222,4 @@ Hosted model upgrades should be treated as production migrations when prompts an
 - [Z.ai GLM 4.6: What We Learned From 100 Million Open Source Downloads - Yuxuan Zhang, Z.ai](../sources/20251122_m6MF1OR_9kM.md)
 - [The Rise of Open Models in the Enterprise — Amir Haghighat, Baseten](../sources/20250724_3WV1vT0B0cg.md)
 - [How Intuit uses LLMs to explain taxes to millions of taxpayers - Jaspreet Singh, Intuit](../sources/20250723__zl_zimMRak.md)
+- [Why More Context Makes Your Agent Dumber and What to Do About It — Nupur Sharma, Qodo](../sources/20260608_EcqMYoIV57A.md)
