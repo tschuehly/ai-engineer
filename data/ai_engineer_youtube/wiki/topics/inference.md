@@ -26,6 +26,8 @@ Inference evaluation should also be shaped by application traffic rather than ge
 
 SGLang adds a concrete runtime-configuration layer to that serving discipline. A production model server can expose OpenAI-compatible chat completions while hiding model and GPU setup behind launch flags, but the flags are not decorative: CUDA graph batch capture, speculative decoding, quantization, attention backends, and batch sizing interact with model support and hardware. Decode performance in particular needs log-driven validation against realistic concurrency, because a CUDA graph max batch size below the active decode batch can silently disable the intended fast path.
 
+Diffusion serving adds a non-autoregressive variant of the same optimization discipline. NVIDIA frames image/video diffusion latency as the cost of running 20-50 denoising steps and attacks it with three additive, stackable levers rather than one: quantization (cheapest, but less impactful than in LLMs because diffusion is attention-heavy), caching that skips recomputing latent regions barely changing between steps (the diffusion analogue of KV caching, keyed on inter-step similarity), and step distillation that trains a same-size student to match teacher quality in far fewer steps. Recommended escalation is quantization first, then multi-GPU/context parallelism and caching, then distillation last as the most impactful lever — together reaching 10x-200x speedups and near-real-time video on a single Blackwell B200. The framework FastGen packages the post-training and GPU scale-sharding work distillation needs, and unlike LLM step-count tuning, diffusion distillation keeps the parameter count fixed.
+
 ## Key Concepts
 
 - [Dual-mode AI infrastructure](../concepts/dual-mode-ai-infrastructure.md) - inference fleets should distinguish realtime latency needs from long compute-heavy workloads.
@@ -77,6 +79,9 @@ SGLang adds a concrete runtime-configuration layer to that serving discipline. A
 - [Train image and video diffusion models in learned latent spaces](../concepts/train-image-and-video-diffusion-models-in-learned-latent-spaces.md) - latent media representations shrink inference tensors while keeping useful topology.
 - [Use guidance to trade diffusion sample diversity for conditional quality](../concepts/use-guidance-to-trade-diffusion-sample-diversity-for-conditional-quality.md) - sampling parameters shape output quality and failure modes.
 - [Distill diffusion models to reduce sampling steps](../concepts/distill-diffusion-models-to-reduce-sampling-steps.md) - step reduction is a direct latency lever for diffusion serving.
+- [Stack Additive Diffusion Optimizations for Real-Time Generation](../concepts/stack-additive-diffusion-optimizations-for-real-time-generation.md) - quantization, caching, and distillation compose into a real-time diffusion serving stack.
+- [Quantize Diffusion Models for Memory and Throughput Despite Attention Heaviness](../concepts/quantize-diffusion-models-for-memory-and-throughput-despite-attention-heaviness.md) - quantization is the easiest diffusion lever but limited by attention heaviness.
+- [Cache Unchanged Computation Between Diffusion Denoising Steps](../concepts/cache-unchanged-computation-between-diffusion-denoising-steps.md) - inter-step similarity lets the serving layer skip redundant denoising compute.
 
 ## Open Questions
 
@@ -92,9 +97,11 @@ SGLang adds a concrete runtime-configuration layer to that serving discipline. A
 - Which inference metrics distinguish realtime user interaction from long-running agentic compute in capacity plans?
 - Which workloads are safe to route through lower-cost marketplace GPUs, and which require reserved, benchmarked, or reliability-backed capacity?
 - How should inference platforms expose prefill/decode, KV-routing, and worker-specialization controls without making every application team become serving-infrastructure experts?
+- How should a diffusion serving team decide when quantization alone is enough versus when to invest in caching and step distillation for its quality/latency target?
 
 ## Sources
 
+- [You Might Not Need 50 Diffusion Steps — Ziv Ilan, Nvidia](../sources/20260616_gHs5ZiY80PM.md)
 - [#define AI Engineer - Greg Brockman, OpenAI (ft. Jensen Huang)](../sources/20250810_avWhreBUYF0.md)
 - [Context Platform Engineering to Reduce Token Anxiety - Val Bercovici, WEKA](../sources/20251124_NTBX-wxUhHs.md)
 - [Compilers in the Age of LLMs - Yusuf Olokoba, Muna](../sources/20251124_q2nHsJVy4FE.md)

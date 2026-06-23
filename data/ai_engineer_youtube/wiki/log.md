@@ -1926,3 +1926,11 @@
 - Updated topics: [Retrieval](topics/retrieval.md), [Tools](topics/tools.md), [Evaluation](topics/evaluation.md), [Security](topics/security.md)
 - Updated concepts: [Silent Web-Access Failure Produces Confident Hallucination](concepts/silent-web-access-failure-produces-confident-hallucination.md), [The Open Web Is Adversarial to Agent Access](concepts/the-open-web-is-adversarial-to-agent-access.md), [Ground Agents With Managed Web-Access Infrastructure](concepts/ground-agents-with-managed-web-access-infrastructure.md), [MCP tool surfaces need default context budgets](concepts/mcp-tool-surfaces-need-default-context-budgets.md)
 - Notes: Added three new concepts on silent web-access failure as a hallucination source, the adversarial open web (Cloudflare blocking plus AI Labyrinth poisoning), and managed web-access grounding infrastructure; strengthened the MCP tool-budget concept with the 66-69-tool filter-to-two data point; selected one new processed source `btxGmN8RvNU`.
+
+## [2026-06-23] ingest | You Might Not Need 50 Diffusion Steps — Ziv Ilan, Nvidia
+
+- Source: [You Might Not Need 50 Diffusion Steps — Ziv Ilan, Nvidia](sources/20260616_gHs5ZiY80PM.md)
+- Processed: `gHs5ZiY80PM`
+- Updated topics: [Generative Media](topics/generative-media.md), [Inference](topics/inference.md), [Models](topics/models.md)
+- Updated concepts: [Stack Additive Diffusion Optimizations for Real-Time Generation](concepts/stack-additive-diffusion-optimizations-for-real-time-generation.md), [Cache Unchanged Computation Between Diffusion Denoising Steps](concepts/cache-unchanged-computation-between-diffusion-denoising-steps.md), [Quantize Diffusion Models for Memory and Throughput Despite Attention Heaviness](concepts/quantize-diffusion-models-for-memory-and-throughput-despite-attention-heaviness.md), [Distill diffusion models to reduce sampling steps](concepts/distill-diffusion-models-to-reduce-sampling-steps.md)
+- Notes: Added three new concepts on the additive diffusion optimization stack, inter-step denoising caching, and attention-heavy diffusion quantization, and strengthened the diffusion step-distillation concept with trajectory-vs-distribution distillation, FastGen's hybrid recipe, and post-training compute/hardware detail; updated Generative Media, Inference, and Models topics; selected one new processed source `gHs5ZiY80PM`.

@@ -4,8 +4,13 @@
 
 Generative media covers the model and product patterns behind image, video, and other audiovisual generation. The current sources frame large-scale media systems as more than a diffusion backbone: data curation, learned latent representations, denoising architecture, sampling procedure, step distillation, explicit controls, and interactive state all shape whether the model is practical and steerable. Compared with language models, media diffusion can exploit spatial or temporal topology, bidirectional attention, perceptual frequency weighting, and coarse-to-fine generation instead of strict token-by-token causality. Media evaluation has the same perceptual constraint: codecs, internet artifacts, FID-style scores, and object-count metrics may not match what humans notice or what a creative user values. Media products also need retrieval over their own outputs: once a studio or campaign generates many personalized variants, finding the right asset and preserving provenance can become as important as creating another image. World models add a different bar from passive generation: when users act inside generated environments, the system needs memory, consistency, controllability, and live prompting so the world remains coherent under interaction.
 
+Serving cost is its own discipline once a media model is good enough to use. NVIDIA's view is that diffusion latency comes mainly from the default 20-50 denoising steps and that the diffusion serving stack is less mature than the autoregressive LLM/VLM stack, so optimization ideas are borrowed from LLMs and adapted. Three levers are presented as additive and stackable rather than mutually exclusive: quantization is the easiest lever but pays off less than in LLMs because diffusion is attention-heavy; caching skips recomputing latent regions that barely change between denoising steps; and step distillation trains a same-size student to match teacher quality in far fewer steps (50 down to 4, 8, or one), the most impactful lever and currently the only path to good-quality real-time generation. Teams are advised to start with quantization, add caching and multi-GPU/context parallelism if needed, and finish with distillation, which together can reach the 10x-200x speedup that produced near-real-time video on a single Blackwell B200.
+
 ## Key Concepts
 
+- [Stack Additive Diffusion Optimizations for Real-Time Generation](../concepts/stack-additive-diffusion-optimizations-for-real-time-generation.md) - quantization, caching, and step distillation are incremental, combinable levers ordered from easy to most impactful.
+- [Quantize Diffusion Models for Memory and Throughput Despite Attention Heaviness](../concepts/quantize-diffusion-models-for-memory-and-throughput-despite-attention-heaviness.md) - the cheapest serving lever, with PTQ/QAT, static/dynamic, and pre-quantized-checkpoint choices.
+- [Cache Unchanged Computation Between Diffusion Denoising Steps](../concepts/cache-unchanged-computation-between-diffusion-denoising-steps.md) - inter-step similarity, not per-token reuse, is the cacheable signal in diffusion.
 - [Curate generative-media data before tuning model internals](../concepts/curate-generative-media-data-before-tuning-model-internals.md) - data quality can dominate model and optimizer tweaks for large-scale media generation.
 - [Train image and video diffusion models in learned latent spaces](../concepts/train-image-and-video-diffusion-models-in-learned-latent-spaces.md) - autoencoder latents make high-resolution and video diffusion tractable while preserving useful topology.
 - [Use guidance to trade diffusion sample diversity for conditional quality](../concepts/use-guidance-to-trade-diffusion-sample-diversity-for-conditional-quality.md) - guidance is a sampling-time lever for prompt adherence, quality, diversity, and artifact risk.
@@ -26,9 +31,11 @@ Generative media covers the model and product patterns behind image, video, and 
 - Which generated-world failures should be evaluated as media quality problems, interaction-control problems, or long-horizon memory problems?
 - How should perceptual media evals combine universal human-visible defects with user-specific aesthetic preferences?
 - What retrieval and provenance metadata should generated-media tools attach before personalized asset volume becomes unmanageable?
+- How should diffusion serving teams measure quality regression as they stack quantization, caching, and step distillation toward a real-time target?
 
 ## Sources
 
+- [You Might Not Need 50 Diffusion Steps — Ziv Ilan, Nvidia](../sources/20260616_gHs5ZiY80PM.md)
 - [Building Generative Image & Video models at Scale - Sander Dieleman, Google DeepMind](../sources/20260421_xOP1PM8fwnk.md)
 - [How Google DeepMind is researching the next Frontier of AI for Gemini - Raia Hadsell, VP of Research](../sources/20260418_zZsTVBXcbow.md)
 - [Building in the Gemini Era - Kat Kampf & Ammaar Reshi, Google DeepMind](../sources/20251215_fgkXEIbZpGc.md)

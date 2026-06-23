@@ -4,6 +4,7 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Stack Additive Diffusion Optimizations for Real-Time Generation](concepts/stack-additive-diffusion-optimizations-for-real-time-generation.md) - quantization, caching, and step distillation compose to cut diffusion latency toward real-time generation.
 - [Raise Agent Agency Only When Efficacy Holds](concepts/raise-agent-agency-only-when-efficacy-holds.md) - autonomy should be added only when it preserves task effectiveness.
 - [Mentor Coding Agents Like Perpetual Junior Engineers](concepts/mentor-coding-agents-like-perpetual-junior-engineers.md) - engineers should scaffold coding-agent work through context, constraints, boundaries, and review.
 - [Institutionalize Knowledge Infrastructure for AI Adoption](concepts/institutionalize-knowledge-infrastructure-for-ai-adoption.md) - shared docs, decisions, meeting outputs, task trackers, and memories let agent success scale across teams.

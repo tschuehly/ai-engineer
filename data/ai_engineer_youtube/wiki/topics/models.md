@@ -59,6 +59,8 @@ Hosted model upgrades should be treated as production migrations when prompts an
 - [Train image and video diffusion models in learned latent spaces](../concepts/train-image-and-video-diffusion-models-in-learned-latent-spaces.md) - learned latents reduce media tensor size while preserving spatial or temporal topology.
 - [Use guidance to trade diffusion sample diversity for conditional quality](../concepts/use-guidance-to-trade-diffusion-sample-diversity-for-conditional-quality.md) - diffusion sampling settings are part of model behavior, not a cosmetic afterthought.
 - [Distill diffusion models to reduce sampling steps](../concepts/distill-diffusion-models-to-reduce-sampling-steps.md) - diffusion distillation targets latency by shortening the denoising path.
+- [Stack Additive Diffusion Optimizations for Real-Time Generation](../concepts/stack-additive-diffusion-optimizations-for-real-time-generation.md) - quantization, caching, and step distillation are post-training levers that compose toward real-time generation.
+- [Quantize Diffusion Models for Memory and Throughput Despite Attention Heaviness](../concepts/quantize-diffusion-models-for-memory-and-throughput-despite-attention-heaviness.md) - precision choices for diffusion models are shaped by their attention-heavy compute profile.
 - [Expose explicit control signals for generative media models](../concepts/expose-explicit-control-signals-for-generative-media-models.md) - text prompts should be complemented by structured controls when users need predictable media outputs.
 - [Ground generated media with current search context](../concepts/ground-generated-media-with-current-search-context.md) - grounded image models combine retrieval, text rendering, localization, and generation.
 - [Use vision-only features when captions erase visual distinctions](../concepts/use-vision-only-features-when-captions-erase-visual-distinctions.md) - caption supervision can miss visual distinctions that self-supervised visual features preserve.
@@ -164,6 +166,7 @@ Hosted model upgrades should be treated as production migrations when prompts an
 
 ## Sources
 
+- [You Might Not Need 50 Diffusion Steps — Ziv Ilan, Nvidia](../sources/20260616_gHs5ZiY80PM.md)
 - [#define AI Engineer - Greg Brockman, OpenAI (ft. Jensen Huang)](../sources/20250810_avWhreBUYF0.md)
 
 - [Building an Agentic Platform - Ben Kus, CTO Box](../sources/20250824_12v5S1n1eOY.md)
