@@ -16,6 +16,8 @@ Details:
 - LiveKit's semantic end-of-utterance model is described as taking the last four conversation turns into a transformer and predicting whether an end-of-utterance token has occurred; if not, it extends the silence algorithm instead of letting VAD trigger too early. 08:50-10:42
 - STT-integrated end-of-utterance models can emit both transcript and completion likelihood from audio, but a model embedded only in speech-to-text may see just the user's side of the conversation rather than the full agent/user context. 12:59-14:39
 - Backchannel handling is a separate turn-taking failure mode: a simple duration threshold can distinguish brief acknowledgements from real user barge-in, but the talk identifies learned backchannel-versus-interruption classification as a still-needed model capability. 24:54-26:44
+- Human-factors complement (ElevenLabs / statue app): even when detection works, people are *too polite* to interrupt, so the ML turn-detection problem is paired with a UX one — push-to-talk / hold-to-talk (whisper-flow style) is a reliable production workaround precisely because purely audio-driven interruptibility is unreliable, and an "agent-wants-to-interject" visual nudge (signaling the agent has something to add and *which topic*) can make agent barge-in richer than a human's. 11:30-11:55, 25:30-26:10
+- Interrupting also mutates agent state, not just timing: platforms usually generate the full text then start TTS, so a mid-speech interruption merely *appends* the user's reply after the whole generated message; but with audio-playback timestamps you know how far it got, so you can edit the transcript to truncate at the interruption point and make the model "forget it even generated more text." 28:40-29:15
 
 Related topics:
 - [Voice Agents](../topics/voice-agents.md)
@@ -26,7 +28,9 @@ Related concepts:
 - [Evaluate voice agents with traces, transcripts, audio checks, and simulations](evaluate-voice-agents-with-traces-transcripts-audio-checks-and-simulations.md)
 - [Prompt voice agents for persona, prosody, and brand fit](prompt-voice-agents-for-persona-prosody-and-brand-fit.md)
 - [Full-duplex speech models make turn-taking a learned behavior](full-duplex-speech-models-make-turn-taking-a-learned-behavior.md)
+- [Pair Low-Bandwidth Voice Input With High-Density Multimodal Output](pair-voice-input-with-high-density-multimodal-output.md)
 
 Sources:
 - [Full Workshop: Realtime Voice AI - Mark Backman, Daily](../sources/20250803_nxuTVd7v7dg.md), 59:52-01:00:23, 01:01:05-01:02:46
 - [Why ChatGPT Keeps Interrupting You - Dr. Tom Shapland, LiveKit](../sources/20250731_1v9zBiZKlIY.md), 01:07-04:08, 04:20-07:04, 08:50-14:39, 24:54-26:44
+- [How to talk to statues — Joe Reeve, ElevenLabs](../sources/20260601_u-rJwPPU3QA.md), 11:30-11:55, 25:30-26:10, 28:40-29:15

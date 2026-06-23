@@ -11,6 +11,9 @@ Details:
 - "Good products sell themselves" is rejected as an excuse; even strong products still need deliberate attention work. (03:20-03:56)
 - Useful top-of-funnel attempts should have a plausible chance of being shared because they are surprising, funny, deep, or emotionally resonant; ordinary feature posts and influencer-style announcements usually fail that bar. (04:00-05:54)
 - Raad says AI brainstorming tends to produce corny ideas and has not helped him generate genuinely cool product marketing; he treats coolness as a human skill teams must practice. (06:15-06:37)
+- ElevenLabs corroboration ("getting easier and easier to make tools … the main differentiator now is getting your word out there"): the viral mechanic for the statue app was the *story*, not the app — the first post got 50,000 impressions but the next-day repost framed as "I vibe coded this in two hours, not a brag, just this is interesting" hit 1.5M; publishing the one-shot prompt openly was part of the shareable hook. 29:30-29:50, 03:50-04:40
+- Concrete distribution craft for short video (the medium where AI demos spread): front-load a hook because median view time is only 6–12 seconds before drop-off; captions help a lot; music is "massively underrated" — generate it (ElevenLabs music) and either make the video first then try genres or generate the music first and match speech to its vibe; phone editing (CapCut) is faster and cheaper than desktop, an 80/20 that reaches "good enough" quickly. 30:30-32:31
+- Social-virality template: the (deprecated) Facebook Instant Games API bundled social-gaming primitives — get friends, leaderboards, key-value storage, rewarded/interstitial ads, async/await — and instrumenting a £15 Fruit Ninja clone with them produced 15M users overnight (tested in low-value ad regions first); something with those social primitives is the likely template for what wins "social vibe coding." 17:56-19:10
 
 Related topics:
 - [Product Strategy](../topics/product-strategy.md)
@@ -19,6 +22,8 @@ Related topics:
 Related concepts:
 - [AI-amplified shipping speed needs stronger product taste](ai-amplified-shipping-speed-needs-stronger-product-taste.md)
 - [Treat model behavior as a product craft](treat-model-behavior-as-a-product-craft.md)
+- [Compete on Glue and Distribution When Building on Managed APIs](compete-on-glue-and-distribution-when-building-on-managed-apis.md)
 
 Sources:
 - [AI changes *Nothing* — Dax Raad, OpenCode](../sources/20251123_o3gmwzo-Mik.md), 02:18-06:37
+- [How to talk to statues — Joe Reeve, ElevenLabs](../sources/20260601_u-rJwPPU3QA.md), 03:50-04:40, 17:56-19:10, 29:30-32:31

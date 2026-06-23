@@ -999,6 +999,7 @@
 - [Court agent emergence with bounded play](../concepts/court-agent-emergence-with-bounded-play.md)
 - [Share Demos To Reveal Latent Model Capabilities](../concepts/share-demos-to-reveal-latent-model-capabilities.md)
 - [AI Does Not Replace Shareable Product Marketing](../concepts/ai-does-not-replace-shareable-product-marketing.md)
+- [Compete on Glue and Distribution When Building on Managed APIs](../concepts/compete-on-glue-and-distribution-when-building-on-managed-apis.md)
 - [Optimize Onboarding Around One Aha Moment](../concepts/optimize-onboarding-around-one-aha-moment.md)
 - [Build Product Primitives Before Feature Surfaces](../concepts/build-product-primitives-before-feature-surfaces.md)
 - [AI-amplified shipping speed needs stronger product taste](../concepts/ai-amplified-shipping-speed-needs-stronger-product-taste.md)
@@ -1736,6 +1737,7 @@
 - [Treat Speaker Diarization as a Distinct, Unsolved Task](../concepts/treat-speaker-diarization-as-a-distinct-unsolved-task.md)
 - [Reconcile Diarization and STT for Speaker-Attributed Transcription](../concepts/reconcile-diarization-and-stt-for-speaker-attributed-transcription.md)
 - [Benchmark Voice AI on Distant-Mic Multi-Speaker Audio, Not Headset Single-Speaker](../concepts/benchmark-voice-ai-on-distant-mic-multi-speaker-audio.md)
+- [Pair Low-Bandwidth Voice Input With High-Density Multimodal Output](../concepts/pair-voice-input-with-high-density-multimodal-output.md)
 
 ## Workflows
 - [Enforce Agent Rules in Git Hooks and CI, Not the Prompt](../concepts/enforce-agent-rules-in-git-hooks-and-ci-not-the-prompt.md)
