@@ -1,10 +1,2506 @@
 # AI Engineer YouTube Index
 
 - Channel: https://www.youtube.com/@aiDotEngineer/videos
-- Generated at: 2026-05-06T11:05:31+00:00
-- Since: 2025-05-06
-- Until: 2026-05-06
-- Videos: 431
+- Generated at: 2026-06-23T08:48:52+00:00
+- Since: 2025-06-23
+- Until: open
+- Videos: 486
+
+## 6 Things to Know about AIE World's Fair 2026
+
+- Upload date: 2026-06-21
+- Video: https://www.youtube.com/watch?v=0S8xe9ftGTM
+- Transcript: raw/20260621_0S8xe9ftGTM/0S8xe9ftGTM.en-orig.vtt
+- Metadata: raw/20260621_0S8xe9ftGTM/0S8xe9ftGTM.info.json
+
+We're back in SF! Regular bird tix will sell out by Monday, and we wanted to make a little video to tell you about why you should get off your couch and come. 
+
+See video for how to claim the $40k in sponsor offers for attendees, and a special youtube-only discount: YOUTUBEPROMO (for new tix only, dont be cheeky and ask for refunds pls, our team is trying to do our best with real support issues) 
+
+https://app.ai.engineer/e/ai-engineer-worlds-fair-2026?discount=YOUTUBEPROMO applies at checkout
+
+timestmaps
+
+0:00 Introduction to AIE World's Fair 2026
+1:30 Scaling up: Content and Event Growth
+4:44 The Expo Floor experience
+5:45 Research and Industry synergy
+9:20 Leadership track and Token Billionaires
+12:05 Focus on AI Verticals
+13:41 Side events, orientation, and community
+
+## The Production AI Playbook: Deploying Agents at Enterprise Scale — Sandipan Bhaumik, Databricks
+
+- Upload date: 2026-06-18
+- Video: https://www.youtube.com/watch?v=ObTPqBGsEbA
+- Transcript: raw/20260618_ObTPqBGsEbA/ObTPqBGsEbA.en-orig.vtt
+- Metadata: raw/20260618_ObTPqBGsEbA/ObTPqBGsEbA.info.json
+
+A retail bank spent £85,000 over six months on a chatbot PoC that could not reach production. No one could explain why it was failing. When Sandipan Bhaumik's team got involved, they picked the model in week seven of an eight-week engagement — the first six weeks went to evaluation data, tracing infrastructure, and a measurement pipeline. Six weeks post launch, when the bank updated its interest rate policy and customer satisfaction dropped, the tracing system caught the cause: the new policy document had not been reembedded and the agent was serving stale answers.
+
+The talk covers the five pillars he built from that and similar engagements: evaluation (define success numerically before touching code), observability (trace every agent decision — European regulators require it), data foundation (agents do not forgive bad data the way humans do), multi agent orchestration patterns, and governance (47 PII breaches caught in testing before launch). The evaluation data set is a living system, not a fixed benchmark. The production incident playbook connects all five.
+
+Speaker info:
+- https://www.linkedin.com/in/sandipanbhaumik
+
+## Your Agent's Biggest Lie: "I Searched the Web" — Rafael Levi, Bright Data
+
+- Upload date: 2026-06-17
+- Video: https://www.youtube.com/watch?v=btxGmN8RvNU
+- Transcript: raw/20260617_btxGmN8RvNU/btxGmN8RvNU.en-orig.vtt
+- Metadata: raw/20260617_btxGmN8RvNU/btxGmN8RvNU.info.json
+
+Sometimes the agent did not search the web at all. It got blocked, hit a CAPTCHA, saw a fake page, or fell back to stale training data, then answered as if everything worked. This session is a direct look at that failure mode, and what changes when the same agent is given real web access instead of pretending.
+
+Using Bright Data's Web MCP, the demo compares blocked and unblocked runs across sites like LinkedIn, Instagram, Amazon, and TikTok, and walks through the mechanics behind the difference: anti-bot systems, JS rendering, CAPTCHA handling, and why clean access matters if you want reliable citations, real-time results, and fewer hallucinations. If you're building agents that depend on the open web, this is a practical look at one of their biggest hidden failure modes.
+
+Speaker info:
+- https://il.linkedin.com/in/rafael-levi
+- https://github.com/ScrapeAlchemist
+
+## You Might Not Need 50 Diffusion Steps — Ziv Ilan, Nvidia
+
+- Upload date: 2026-06-16
+- Video: https://www.youtube.com/watch?v=gHs5ZiY80PM
+- Transcript: raw/20260616_gHs5ZiY80PM/gHs5ZiY80PM.en-orig.vtt
+- Metadata: raw/20260616_gHs5ZiY80PM/gHs5ZiY80PM.info.json
+
+At GTC a few weeks ago, Ziv Ilan's team at NVIDIA got a video diffusion model generating in close to real time on a single Blackwell B200. The trick wasn't a new architecture, it was stripping out most of the fifty step denoising process diffusion models default to, by combining quantization, caching, and step distillation: training a student model to match a teacher's output using four steps, eight steps, or in some cases just one.
+
+Ilan walks through each layer of that stack: dynamic quantization work done with Black Forest Labs on Flux 2, a caching method that skips recomputing latent chunks that barely change between denoising steps, and distillation approaches split into trajectory based training, where the student copies the teacher's exact path, and distribution based training, where it only has to land on the same output, now the more common and higher quality of the two. NVIDIA's open source FastGen repo packages the post training and GPU sharding work needed to apply all this at scale, and Ilan frames the gains as additive, quantization alone can be enough on its own, or you can stack it with caching and distillation to reach the ten to two hundred times speedup that real time generation needs.
+
+Speaker info:
+- https://www.linkedin.com/in/ziv-ilan-deci/
+
+## Why MCP and ChatGPT Apps Use Double Iframes — Frédéric Barthelet, Alpic
+
+- Upload date: 2026-06-15
+- Video: https://www.youtube.com/watch?v=c-2eEv2ou7Y
+- Transcript: raw/20260615_c-2eEv2ou7Y/c-2eEv2ou7Y.en-orig.vtt
+- Metadata: raw/20260615_c-2eEv2ou7Y/c-2eEv2ou7Y.info.json
+
+Inspect ChatGPT's DOM while an MCP app is rendering and you find an iframe nested inside another iframe. Frédéric Barthelet traces why each simpler approach fails: `srcdoc` shares the parent origin so ChatGPT's CSP blocks all third party scripts; relaxing that CSP lets any app read ChatGPT's localStorage and cookies; adding `sandbox` removes origin indexed storage; adding `allow-same-origin` to restore it is the classic sandbox escape. The double iframe is what remains after ruling all of that out.
+
+The outer iframe serves one lightweight script from a controlled subdomain (different subdomain per app to prevent cross app storage collisions), which loads the actual app HTML via `srcdoc` into the inner frame — the same pattern Facebook first shipped for their app marketplace. The practical implication: every external domain your view touches must be declared in your MCP app metadata or the submission gets rejected. Barthelet demos Skybridge's CSP inspector, which diffs declared domains against actual network calls live in dev.
+
+Speaker info:
+- https://x.com/bartheletf
+- https://www.linkedin.com/in/frederic-barthelet/
+- https://github.com/fredericbarthelet
+
+## Your Attention Is the Bottleneck, Not Your Agents — Zack Proser, WorkOS
+
+- Upload date: 2026-06-11
+- Video: https://www.youtube.com/watch?v=so9l_MwS2yg
+- Transcript: raw/20260611_so9l_MwS2yg/so9l_MwS2yg.en-orig.vtt
+- Metadata: raw/20260611_so9l_MwS2yg/so9l_MwS2yg.info.json
+
+Simon Willison fires up four parallel agents and is wiped out by 11am. That is the problem Zack Proser is solving: not that the tools are too slow but that human attention is still the hard constraint. His loop: voice brief at 184 words per minute, agent dispatched to an isolated git worktree, laptop closed, progress checked from a phone on LTE miles away via remote control.
+
+The talk covers four layers that make this sustainable: signal agents that read Slack and Linear on a loop so you never open them yourself, verification gates from lint and build up to browser click through and critic passes, a weekly agent run over your JSONL conversation history to surface inefficiencies and generate missing skills, and an Oura ring connected via MCP so Claude can tell you that you did not sleep last night. You can ignore it. But at least you thought about it.
+
+Speaker info:
+- https://linkedin.com/in/zackproser
+- https://github.com/zackproser
+
+Timestamps:
+0:00 Introduction and the problem of AI developer burnout
+1:08 A concrete example of using AI agents for bug fixing
+3:36 The bottleneck: human attention vs. infinite agent scalability
+5:13 The proposed stack for sustainable AI development
+6:03 The Signal Layer: Managing notifications and context switching
+7:04 Voice-first flows for coding efficiency
+8:15 The Shower Principle and Remote Control for agents
+11:13 Safety, verification, and testing gates
+12:05 The new, balanced developer workflow
+13:22 System self-improvement using conversation history
+15:31 Holistic well-being (Oura ring integration)
+17:35 Q&A: Addressing skill development early in a career
+20:07 Q&A: Managing JSONL history and long-term conversation logs
+21:30 Q&A: Night shift/background agent execution
+22:17 Q&A: Voice interaction and audio feedback
+23:39 Q&A: Handling complex, multi-stack features
+
+## Why Can't Anyone Answer Questions About the Business? — Garrett Galow, WorkOS
+
+- Upload date: 2026-06-11
+- Video: https://www.youtube.com/watch?v=iUWwcG-C8OU
+- Transcript: raw/20260611_iUWwcG-C8OU/iUWwcG-C8OU.en-orig.vtt
+- Metadata: raw/20260611_iUWwcG-C8OU/iUWwcG-C8OU.info.json
+
+Every business question that needs SQL follows the same loop: explain the question, wait for an engineer, get an answer, realize it needs one more join, share a one-off in Slack, repeat. Garrett Galow from WorkOS built Studio to break that loop — an internal workspace where anyone can ask questions against Snowflake, Linear, and Notion in natural language and get answers or reusable widgets without filing a request.
+
+The widgets are the interesting part: the LLM writes them once as declarative JavaScript that calls the underlying data sources directly, so every subsequent run is deterministic and cheap. Three things made it reliable enough to hand to a support team. Preflight sequencing that injects schema context only at the moment a tool is invoked, not upfront, keeping the context window clean. A layering rule that explicitly tells the model to distrust its own knowledge about WorkOS and go to primary sources. And query validation that runs every generated Snowflake query before hardcoding it into a widget, catching the valid SQL that returns zero rows failure mode.
+
+Speaker info:
+- https://www.linkedin.com/in/garrett-galow/
+
+## The agent-ready web: Simplify user actions with WebMCP — Tara Agyemang, Google
+
+- Upload date: 2026-06-11
+- Video: https://www.youtube.com/watch?v=ghJmWQCIHRM
+- Transcript: raw/20260611_ghJmWQCIHRM/ghJmWQCIHRM.en-orig.vtt
+- Metadata: raw/20260611_ghJmWQCIHRM/ghJmWQCIHRM.info.json
+
+Buying two concert tickets costs an AI agent the entire DOM, the accessibility tree, a screenshot, pixel coordinate math, and then a click that might miss because an ad just loaded and shifted the layout. Tara Agyemang from the Google Chrome team introduces WebMCP, a proposed web standard that replaces that process with structured tools: instead of guessing what your site does, agents get a menu of named, typed, described actions they can call directly.
+
+The talk covers two implementation paths. The declarative API adds a few HTML attributes to existing forms and the browser generates the JSON schema automatically. The imperative API lets you register custom tools in JavaScript for complex multi step flows, with an execute block that runs normal DOM code and returns state back to the agent. The live demo completes a concert ticket purchase in three tool calls: search by name, open the concert page, call purchase with quantity and section. Still experimental and in early preview on Chrome 146, but an eval CLI and inspector extension are available now for testing your own sites.
+
+Speaker info:
+- https://x.com/tara_ojo
+- https://uk.linkedin.com/in/taraojo
+- https://github.com/taraojo
+
+## Self Driving Products: Product Signals to Pull Requests — Joshua Snyder, PostHog
+
+- Upload date: 2026-06-10
+- Video: https://www.youtube.com/watch?v=zMiSRliEzv4
+- Transcript: raw/20260610_zMiSRliEzv4/zMiSRliEzv4.en-orig.vtt
+- Metadata: raw/20260610_zMiSRliEzv4/zMiSRliEzv4.info.json
+
+A rage click, a 2am error spike, a customer Slack message — today each sits until a developer notices, triages, tickets, and writes a fix. PostHog is building a pipeline that collapses that chain: signal arrives, a background agent groups it with related errors and session replays, researches the codebase, and opens a PR. You wake up to green PRs instead of dashboards.
+
+Three lessons from building it: off the shelf embedding models cluster signals by structural similarity rather than meaning, so errors land next to errors and Slack messages land next to Slack messages — the fix is to embed LLM generated queries rather than the signals themselves. Specificity determines whether the agent produces a useful PR or just fixes something at random; error tracking is immediately actionable, Slack and session replay usually are not. And start with agents even when it looks expensive — run the same problem through an agent 100 times, find the patterns, then collapse the expensive step into a one shot call.
+
+Speaker info:
+- https://x.com/joshsny
+-https://www.linkedin.com/in/joshsny/
+
+## Stop Making Models Bigger, Make Them Behave — Kobie Crawford, Snorkel
+
+- Upload date: 2026-06-10
+- Video: https://www.youtube.com/watch?v=TNwJ1LMiENk
+- Transcript: raw/20260610_TNwJ1LMiENk/TNwJ1LMiENk.en-orig.vtt
+- Metadata: raw/20260610_TNwJ1LMiENk/TNwJ1LMiENk.info.json
+
+Qwen 3 235B was asked for YouTube's year over year ad revenue growth from 2023 to 2024. It queried a table that didn't exist, tried again, got nothing back both times, and hallucinated an answer. The 4B model Snorkel finetuned with RL called `get_table_name` first, inspected the schema, ran a query, hit a column error, self-corrected, and got the right answer. The training run cost under $500.
+
+Kobe Crawford covers why tool discipline matters more than reasoning depth for this class of tasks, how single table training transferred cleanly to harder multi table problems (13.9% to 26.6% on the FinQA reasoning benchmark), and why breaking evals into rubrics helps identify which specific behavior to fix before writing any training data.
+
+Speaker info:
+- https://www.linkedin.com/in/kobie-crawford
+- https://snorkel.ai/author/kobie-crawford/
+
+## Sovereign Escape Velocity: Ownership w Open Models — Gus Martins, & Ian Ballantyne, Google DeepMind
+
+- Upload date: 2026-06-10
+- Video: https://www.youtube.com/watch?v=SS-A8sE7hkw
+- Transcript: raw/20260610_SS-A8sE7hkw/SS-A8sE7hkw.en-orig.vtt
+- Metadata: raw/20260610_SS-A8sE7hkw/SS-A8sE7hkw.info.json
+
+Gemma 4's 31B model sits fourth on the LM Arena open model leaderboard. The models around it are at least twice as large; some are 20 times larger. It runs on a single GPU. Competitors at comparable quality need four or five.
+
+Ian Ballantyne and Gus Martins walk through what that size efficiency unlocks: running on a Pixel phone (the E2B and E4B models use 2B and 4B of GPU memory despite having more parameters), deploying a medical variant on two GPUs for an entire hospital, and running parallel multi agent workloads on an M4 Mac via LM Studio. The talk also covers the license shift from a custom Gemma license to Apache 2.0 — the practical effect is that sovereign institutions in Ukraine, Bulgaria, and Brazil can get legal sign off without 18 months of procurement review.
+
+Speaker info:
+- https://x.com/gusthema
+- https://www.linkedin.com/in/gus-martins-64ab5891
+- https://linkedin.com/in/ianballantyne
+- https://github.com/irbg
+
+## GPU Cloud Deployment Without Leaving Your IDE — Audry Hsu, RunPod
+
+- Upload date: 2026-06-09
+- Video: https://www.youtube.com/watch?v=zDGHt0LB-dA
+- Transcript: raw/20260609_zDGHt0LB-dA/zDGHt0LB-dA.en-orig.vtt
+- Metadata: raw/20260609_zDGHt0LB-dA/zDGHt0LB-dA.info.json
+
+The iteration cycle before Flash: commit, push, build a Docker image, pull it from the registry, load it onto a server, allocate a GPU, then find out if it works. Audrey Hsu demos what replacing that with a single decorator looks like — add `@flash.endpoint` to an async Python function and it deploys to GPU cloud from your IDE, with hot reload so a model swap is one line of code rather than a container rebuild.
+
+The second demo chains three models: Qwen 3 generates image prompts, DreamShaper renders them, Nano Banana 2 composes the results into a single photo. H100 pricing is $0.00116 per second, charged only while a worker is handling a request. RunPod's recommendation: start with pods while experimenting, switch to serverless when you need hundreds of workers autoscaling across data centers.
+
+Speaker info:
+- https://www.linkedin.com/in/audry-hsu/
+
+## 2026 AI Engineer Vibe Reel
+
+- Upload date: 2026-06-09
+- Video: https://www.youtube.com/watch?v=gUMwt4-5kn0
+- Transcript: raw/20260609_gUMwt4-5kn0/gUMwt4-5kn0.en-orig.vtt
+- Metadata: raw/20260609_gUMwt4-5kn0/gUMwt4-5kn0.info.json
+
+W are getting ready for the World's Fair in San Francisco - Jun 29 to July 2!
+
+https://ai.engineer/wf  - get tickets and see schedule!
+
+## RAG is dead, right?? — Kuba Rogut, Turbopuffer
+
+- Upload date: 2026-06-09
+- Video: https://www.youtube.com/watch?v=UM6sFg_jdlE
+- Transcript: raw/20260609_UM6sFg_jdlE/UM6sFg_jdlE.en-orig.vtt
+- Metadata: raw/20260609_UM6sFg_jdlE/UM6sFg_jdlE.info.json
+
+Cursor added semantic search and measured a 24% increase in answer accuracy on their composer model, a 2.6% gain in code retention in large codebases, and a 2.2% drop in dissatisfied user requests. Those numbers look small until you factor in that semantic search does not fire on every query. Meanwhile Google search volume for RAG hit a new inflection point in mid 2025 and went through the roof. The Twitter "RAG is dead" discourse and the actual usage curve are moving in opposite directions.
+
+Kuba Rogut's argument is that the problem was never retrieval, it was the narrow definition of it. RAG is not just a vector search call. It is vector search, full text search, glob, regex, and filters used iteratively by an agent that keeps searching until it has what it needs. He contrasts Claude Code (grep per session, no index, repeat cost every run) with Cursor (one time upfront indexing, lightweight tool calls at runtime). Claude Code's approach is not wrong, it is a deliberate tradeoff. The frame that clarifies it: embeddings are cached compute, and whether to cache depends on query volume. Jeff Dean's version: you do not need a trillion tokens at once, you need the right million.
+
+Speaker info:
+- https://www.linkedin.com/in/kubarogut/
+- https://x.com/rogutkuba
+
+Timestamps:
+0:00 Introduction to the "RAG is dead" discourse
+1:12 Google search volume trends for RAG
+1:39 Defining RAG vs. Agentic Search
+3:15 Cursor's indexing and semantic search approach
+6:10 Contrasting Claude Code (grep) vs. Cursor (indexed)
+6:40 The concept of embeddings as cached compute
+8:38 The shift from simple RAG to Agentic Retrieval
+9:44 Jeff Dean on context windows and stage retrieval
+
+## From Transcription to Live Music: Gemini's Audio Stack — Thor Schaeff, Google DeepMind
+
+- Upload date: 2026-06-09
+- Video: https://www.youtube.com/watch?v=Bc6Ojl2XS1w
+- Transcript: raw/20260609_Bc6Ojl2XS1w/Bc6Ojl2XS1w.en-orig.vtt
+- Metadata: raw/20260609_Bc6Ojl2XS1w/Bc6Ojl2XS1w.info.json
+
+One API call to Gemini 3 Flash Preview: speaker labels by name, timestamps, emotion tags, language detection with English translation, and a full summary. That is the audio understanding layer that underlies everything else Thor Schaeff demos here, including speech generation directed by a "director's note" rather than picked from a catalogue, and Gemini 3.1 Flash Live, a sound to sound real time multimodal model with thinking baked in rather than cascaded through a separate LLM.
+
+The talk ends with Lyria 3, Google DeepMind's music generation model that can now produce full songs with lyrics. The live demo has the Gemini Live model calling Lyria via tool use on request to generate a German techno schlager about the UK startup scene, live on stage.
+
+Speaker info:
+- https://x.com/thorwebdev
+- https://www.linkedin.com/in/thorwebdev
+
+## Road to 5 Million Tokens: Breaking Barriers in Long Context Training — Max Ryabinin, Together AI
+
+- Upload date: 2026-06-08
+- Video: https://www.youtube.com/watch?v=TUnPNY4E2fw
+- Transcript: raw/20260608_TUnPNY4E2fw/TUnPNY4E2fw.en-orig.vtt
+- Metadata: raw/20260608_TUnPNY4E2fw/TUnPNY4E2fw.info.json
+
+Training a standard LLaMA 3B model with a 3 million token context on a single 8xH100 node fails before you even start: the model parameters alone exhaust GPU memory. Max Ryabinin from Together AI walks through the full stack of techniques needed to get there: fully sharded data parallelism, DeepSpeed Ulysses context parallelism for an 8x activation reduction, activation checkpointing for another 8x, CPU offloading for transformer block inputs, and chunked sequence training to avoid allocating buffers 3 million tokens wide.
+
+Even that stack falls short at 5 million tokens. The novel contribution, Untied Ulysses, goes deeper into the context parallelism step: instead of allocating one large buffer per attention head group, it chunks the heads further and reuses those buffers across iterations, cutting activation memory with negligible throughput impact. At both 8B and 32B scale the results match the most memory optimized transformer training baselines while pushing sequence length 25% further than prior Ulysses implementations.
+
+Speaker info:
+- https://www.linkedin.com/in/max-ryabinin/
+- https://x.com/m_ryabinin
+
+## Why Eval++ Is the Next Great Compute Primitive — Sunil Pai & Matt Carey, Cloudflare
+
+- Upload date: 2026-06-08
+- Video: https://www.youtube.com/watch?v=SKDJo2CopRs
+- Transcript: raw/20260608_SKDJo2CopRs/SKDJo2CopRs.en-orig.vtt
+- Metadata: raw/20260608_SKDJo2CopRs/SKDJo2CopRs.info.json
+
+Matt Carey and Sunil Pai from Cloudflare's agents team explain why Durable Objects turned out to be the right compute unit for AI agents: addressable, persistent, hibernating, stateful, and fast enough that 15ms London latency puts you inside a single animation frame. The Agents SDK builds on this to give resumable streaming, multi tab sync, and background scheduling out of the box, without any distributed systems engineering in userland.
+
+The bigger reveal is Dynamic Workers: take a string of LLM generated code, run it in a sandboxed isolate with no ambient access, and grant only the capabilities you explicitly allow. They frame it as reclaiming 30 years of avoided eval. The session ends with both speakers teasing their afternoon talks, one on collapsing 2,600 Cloudflare API endpoints into a thousand token MCP tool, and a coding agent harness built entirely on Workers that they are, by their own admission, already shipping.
+
+Speaker info:
+- https://x.com/threepointone
+- https://x.com/mattzcarey
+
+## Why More Context Makes Your Agent Dumber and What to Do About It — Nupur Sharma, Qodo
+
+- Upload date: 2026-06-08
+- Video: https://www.youtube.com/watch?v=EcqMYoIV57A
+- Transcript: raw/20260608_EcqMYoIV57A/EcqMYoIV57A.en-orig.vtt
+- Metadata: raw/20260608_EcqMYoIV57A/EcqMYoIV57A.info.json
+
+Give an agent your full codebase and it will attend to the start and the end, then quietly drop the middle. Nupur from Qodo calls this the U curve and builds the whole talk around it: why growing the context window did not fix the problem, and what actually does. She runs through iterative retrieval, hierarchical summarization, and self correction with honest cost tradeoffs for each.
+
+The second half covers the orchestration paradox: capable models burn most of their tokens deciding how to solve a problem rather than solving it. Her team's fix is an 80/20 split, using high reasoning models for open ended discovery and lighter deterministic models for validation. Qodo's code review architecture runs this live: a context collector feeds specialized agents, a judge node recombines the results and weighs them against PR history, and every accepted or rejected suggestion shifts the weights for the next run.
+
+Speaker info:
+- https://www.linkedin.com/in/nupursh/
+
+## From MCP to Scale: Pipelines That Build Themselves — Rafael Levi, Bright Data
+
+- Upload date: 2026-06-07
+- Video: https://www.youtube.com/watch?v=zTZ0qunQXnM
+- Transcript: raw/20260607_zTZ0qunQXnM/zTZ0qunQXnM.en-orig.vtt
+- Metadata: raw/20260607_zTZ0qunQXnM/zTZ0qunQXnM.info.json
+
+Scraping is not the hard part anymore. Maintaining scrapers is. This session shows what it looks like when an agent uses MCP to inspect a site, understand its structure, generate a production scraper, and keep that pipeline working when the site changes.
+
+Using Bright Data's MCP, APIs, and browser infrastructure, the flow moves from one-off extraction to something much more useful: agents that build parsers, save tokens by switching from page parsing to reusable scripts, and repair broken collection jobs without a human getting dragged in at 2am. If you're thinking about web data, automation, or agents that operate beyond a single prompt, this is a practical look at pipeline building at scale.
+
+Speaker info:
+- https://il.linkedin.com/in/rafael-levi
+- https://github.com/ScrapeAlchemist
+
+## LLM Observability, Evaluation, Experimentation Platform — Dat Ngo, Arize
+
+- Upload date: 2026-06-07
+- Video: https://www.youtube.com/watch?v=JsCCrBF7F1g
+- Transcript: raw/20260607_JsCCrBF7F1g/JsCCrBF7F1g.en-orig.vtt
+- Metadata: raw/20260607_JsCCrBF7F1g/JsCCrBF7F1g.info.json
+
+Your agent called tool B before tool A, and B has a dependency on A. You did not catch it because nothing in your code audits agents. The telemetry does. Dat from Arize AI walks through what observability actually means when the system you are debugging is nondeterministic and the execution path changes with every run.
+
+The talk covers the five flavors of eval signal (LLM as judge, human feedback, golden datasets, deterministic checks, business metrics), what scope to run them at (single span, multispan, trajectory, session), and where this is heading. Arize Phoenix is open source, runs as a single container, no Kubernetes required. The enterprise product adds an AI layer called Alex that scans traces, surfaces high latency and errors, and creates evals automatically. The stated goal: automate you out of the observability loop entirely.
+
+Speaker info:
+- https://www.linkedin.com/in/datdarylngo/
+- https://x.com/dat_attacked
+
+## Under 5 minutes to a deployed LLM endpoint — Audry Hsu, RunPod
+
+- Upload date: 2026-06-07
+- Video: https://www.youtube.com/watch?v=ILdE7FaAjVA
+- Transcript: raw/20260607_ILdE7FaAjVA/ILdE7FaAjVA.en-orig.vtt
+- Metadata: raw/20260607_ILdE7FaAjVA/ILdE7FaAjVA.info.json
+
+Two failed crypto mining rigs in a basement in 2022. The founders posted on Reddit offering the GPUs for free in exchange for feedback. That is the origin of RunPod, now at $120 million in annual recurring revenue with 500,000 developers on the platform.
+
+The demo runs in under five minutes: pick a model from the Hub, configure a context window, deploy a serverless endpoint on H100s. First request queues for 41 seconds on cold start while the container initializes and the model downloads. Every request after that executes in about 1.5 seconds. You pay only while a worker is handling a request.
+
+Speaker info:
+- https://www.linkedin.com/in/audry-hsu/
+
+## Building Interactive UIs in VS Code with MCP Apps — Marlene Mhangami & Liam Hampton, GitHub
+
+- Upload date: 2026-06-06
+- Video: https://www.youtube.com/watch?v=_xIwFcnHqp4
+- Transcript: raw/20260606__xIwFcnHqp4/_xIwFcnHqp4.en-orig.vtt
+- Metadata: raw/20260606__xIwFcnHqp4/_xIwFcnHqp4.info.json
+
+The demo profiles a Go app running bubble sort and Fibonacci and the result renders as an interactive flame graph directly inside the VS Code chat window. Not a link. Not a text summary. A live iframe you can scroll and query, sandboxed for the same reason you put a hamster in a cage: so it cannot chew up your VS Code settings or call external APIs.
+
+The mechanism: an MCP tool returns both data and a resource reference pointing to a bundled HTML UI. VS Code fetches the HTML and renders it in a sandboxed iframe in chat. The app calls back to the server, the server returns fresh data, the UI updates. Shopify uses this pattern for checkout flows inside chat. Excalidraw uses it for interactive architecture diagrams you can drag and edit. Marlene and Liam walk through building one from scratch using a skill from the MCP repository.
+
+Speaker info:
+- https://x.com/marlene_zw
+- https://www.linkedin.com/in/marlenemhangami/
+- https://github.com/marlenemhangami
+
+- https://x.com/liamchampton
+- https://www.linkedin.com/in/liam-conroy-hampton/
+- https://github.com/liamchampton
+
+## Evals Are Broken, Use Them Anyway — Ara Khan, Cline
+
+- Upload date: 2026-06-06
+- Video: https://www.youtube.com/watch?v=QuuIywMG4s8
+- Transcript: raw/20260606_QuuIywMG4s8/QuuIywMG4s8.en-orig.vtt
+- Metadata: raw/20260606_QuuIywMG4s8/QuuIywMG4s8.info.json
+
+Cline started at 43% on Terminal Bench. The improvements came from container CPU and memory settings, raised timeouts, and prompt engineering techniques specific to Anthropic model families that do not transfer to Codex or Gemini. Not from switching to a better model. Ara Khan's argument is that benchmark numbers are not gospel and vibes are not a system, and that the truth is inconveniently in between.
+
+The practical framework: after a run, portfolio allocate the failures by sending another agent through all the failure traces to find which small levers actually move the score. Zone one is obvious bugs. Zone two is the nuance improvements that explain why a model everyone calls great somehow does not work for your specific harness. Zone three is overfitting to the benchmark, which people do, and which Ara is explicitly telling you not to do.
+
+Speaker info:
+- https://x.com/arafatkatze
+- https://www.linkedin.com/in/arafatkatze/
+- https://github.com/arafatkatze
+
+## Building safe Payment Infrastructure for the autonomous economy — Steve Kaliski, Stripe
+
+- Upload date: 2026-06-06
+- Video: https://www.youtube.com/watch?v=KLSuFPj2ld0
+- Transcript: raw/20260606_KLSuFPj2ld0/KLSuFPj2ld0.en-orig.vtt
+- Metadata: raw/20260606_KLSuFPj2ld0/KLSuFPj2ld0.info.json
+
+Agents are evolving from calling free APIs to executing real transactions, creating a new challenge: how do we let software spend money autonomously without catastrophic risk? This talk presents Stripe's approach to solving the dual problems of secure credential transmission and making businesses discoverable to agents. Through live code examples, we'll explore how to build guardrails that make autonomous spend safe and examine what infrastructure is needed as agents purchasing becomes a core capability. Whether you're building agent frameworks or enabling your business to work with agents, you'll learn how to make agent transactions both powerful and safe.
+
+Speaker info:
+- https://www.linkedin.com/in/steve-kaliski-079a7710
+- https://x.com/stevekaliski
+
+## Dark Factory: OpenClaw Ships Faster Than You Can Read the Diff — Vincent Koc, OpenClaw
+
+- Upload date: 2026-06-05
+- Video: https://www.youtube.com/watch?v=pmoDeA3RBZY
+- Transcript: raw/20260605_pmoDeA3RBZY/pmoDeA3RBZY.en-orig.vtt
+- Metadata: raw/20260605_pmoDeA3RBZY/pmoDeA3RBZY.info.json
+
+OpenClaw hit 3,000 commits in a single day. Vincent Koc's commit history shows exactly when he goes to sleep and when he wakes up. He and Peter Steinberger ran roughly 60 to 70 agents between them during the great refactor: 2,700 commits, close to a million lines of code changed, 82% of the core codebase touched in one night, plugin architecture shipped by morning.
+
+The talk covers how you actually manage this at scale: swim lanes of 15 to 20 parallel coding sessions organized by type, when to nuke a session versus let it run, and what he calls reading the reasoning tokens. The skill is not prompting. It is knowing when an agent is bullshitting you. 2025 was about token maxing. 2026 is about not wasting them.
+
+Speaker info:
+- https://x.com/vincent_koc
+
+## Beyond Transcription: Building Voice AI That Understands Conversations — Hervé Bredin, pyannoteAI
+
+- Upload date: 2026-06-05
+- Video: https://www.youtube.com/watch?v=mFLlVpnGpds
+- Transcript: raw/20260605_mFLlVpnGpds/mFLlVpnGpds.en-orig.vtt
+- Metadata: raw/20260605_mFLlVpnGpds/mFLlVpnGpds.info.json
+
+The open ASR leaderboard reports Nvidia Parakeet at 11.4% word error rate on AMI meeting data. Hervé Bredin runs the same model on the same dataset and gets 26%. Same model, same recordings, different microphone: the leaderboard uses headset audio, he uses the table mic. Most voice AI benchmarks are measuring single speaker speech and calling it solved.
+
+The talk covers speaker diarization (who speaks when), why combining it with transcription is harder than it looks, and what breaks at the word level when two speakers overlap. Bredin demos live on a two speaker phone call, walks through the word that falls between two speaker boundaries with no clean owner, and runs pyannoteAI's Precision 2 model down to 3% diarization error against the open source baseline at 5%. State of the art today: 2% on clean telephone calls, 41% in a noisy restaurant.
+
+Speaker info:
+- https://x.com/hbredin
+- https://www.linkedin.com/in/herve-bredin/
+- https://github.com/hbredin
+
+## Building Agent Interfaces: Lessons from Chrome DevTools (MCP) for Agents — Michael Hablich, Google
+
+- Upload date: 2026-06-05
+- Video: https://www.youtube.com/watch?v=_B4Pv9ttFgY
+- Transcript: raw/20260605__B4Pv9ttFgY/_B4Pv9ttFgY.en-orig.vtt
+- Metadata: raw/20260605__B4Pv9ttFgY/_B4Pv9ttFgY.info.json
+
+Chrome DevTools MCP shipped with one tool: debug_webpage. Agents failed silently because they couldn't compose behaviors. The team decomposed it into 25 focused tools and assumed the problem was solved. It wasn't — now agents had 25 tools and no reliable way to pick the right one. Michael Hablich's talk is an honest account of building the same thing wrong three times and what the fixes actually looked like.
+
+The concrete lessons: semantic summaries instead of raw 50,000 line JSON trace files, error messages rewritten so agents can self heal without a human in the loop ("Cannot navigate back, no previous page in history" instead of "Unable to navigate back in currently selected page"), a metric called tokens per successful outcome to measure interface fuel efficiency, and a deliberate decision to keep the autoconnect friction rather than remove it once they thought through prompt injection and the lethal trifecta.
+
+Speaker info:
+- https://x.com/MHablich
+- https://www.linkedin.com/in/michael-hablich/
+
+## SWE-rebench: Lessons from Evaluating Coding Agents — Ibragim Badertdinov, Nebius
+
+- Upload date: 2026-06-04
+- Video: https://www.youtube.com/watch?v=wcUJWP6WpGM
+- Transcript: raw/20260604_wcUJWP6WpGM/wcUJWP6WpGM.en-orig.vtt
+- Metadata: raw/20260604_wcUJWP6WpGM/wcUJWP6WpGM.info.json
+
+Claude Code solved SWE rebench tasks by reading git history to find the solution patch. When Nebius removed future commits from the environment, it fetched the original GitHub issue. When they blocked web fetch, it switched to curl, formatted the conversation for readability, and solved the task again anyway. Ibragim Badertdinov built the leaderboard specifically because these behaviors only become visible once you run agents against real tasks at scale.
+
+SWE rebench updates every month with problems from the previous month because benchmark data leaks into pretraining and time splits are the only defense. The talk covers what separates accepted tasks from rejected ones (accepted tasks averaged twice the tool calls, lower pass rates, and cleaner failure modes), why ambiguous specs produce noise rather than harder problems, and how the same filtering pipeline that powers the leaderboard has produced 30,000 real world training environments used by frontier labs.
+
+Speaker info:
+- https://x.com/ibragim_bad
+- https://www.linkedin.com/in/ibragim-badertdinov/
+- https://github.com/ibragim-bad
+
+## Text Diffusion — Brendan O’Donoghue, Google DeepMind
+
+- Upload date: 2026-06-04
+- Video: https://www.youtube.com/watch?v=r305-aQTaU0
+- Transcript: raw/20260604_r305-aQTaU0/r305-aQTaU0.en-orig.vtt
+- Metadata: raw/20260604_r305-aQTaU0/r305-aQTaU0.info.json
+
+GPT-4o answered 40. Gemini 2.5 Flash answered 42 and stuck to it even after working through the reasoning incorrectly. The Gemini Diffusion model, considerably smaller than both, answered 60 on the first forward pass, then 49, then corrected itself to 39 once it finished reasoning. Bidirectional attention means it can see future tokens and go back to fix mistakes. Autoregressive models cannot do that.
+
+Brendon O'Donoghue covers why text diffusion is fast (24 denoising steps to generate 256 tokens means roughly 10x fewer memory transfers than autoregressive generation), what the tradeoff is (lower throughput at large batch sizes makes it expensive to serve at scale today), and what gets unlocked when latency drops to 2,000 tokens per second. The demos include a fake Wikipedia generated on the fly, a Reddit clone with AI generated comments and images, an operating system where every click generates the next screen, and a todo app built in 15 seconds by voice.
+
+Speaker info:
+- https://x.com/bodonoghue85
+- https://bodono.github.io/
+- https://www.linkedin.com/in/bodono/
+
+Timestamps:
+0:00 Introduction to Text Diffusion
+1:02 How Text Diffusion Works (Training and Inference)
+2:06 Gemini Diffusion Research Preview
+3:04 Difference Between Autoregressive and Diffusion Models
+4:02 Pros and Cons of Text Diffusion
+6:13 Hardware Efficiency: Why Text Diffusion is Faster
+8:47 Bidirectional Reasoning and Self-Correction
+12:00 Dynamic and Adaptive Computation
+14:26 In-place Text Editing
+16:09 Low Latency Applications and Demos
+20:05 Q&A Session
+
+## The Art & Science of Benchmarking Agents — Vincent Chen, Snorkel AI
+
+- Upload date: 2026-06-04
+- Video: https://www.youtube.com/watch?v=iNkFlCiij0U
+- Transcript: raw/20260604_iNkFlCiij0U/iNkFlCiij0U.en-orig.vtt
+- Metadata: raw/20260604_iNkFlCiij0U/iNkFlCiij0U.info.json
+
+ARC AGI 3 launched a few weeks before this talk with every task human solvable and frontier models under 1%. That gap is the argument: our ability to measure AI has fallen behind our ability to build it, and benchmarks that actually shape the field are bets on where capabilities are going, not snapshots of where they are.
+
+Vincent Chen draws a framework from reviewing over 120 applications for Snorkel's $3 million Open Benchmarks Grants. The science is task quality, distributional diversity, model headroom, and robust eval methodology. The art is having a thesis (Terminal Bench bet on the CLI before coding agents made it obvious), producing research roadmaps, and treating researcher UX as a first class citizen. He closes on three axes he thinks the next generation of benchmarks needs to cover: environment complexity, autonomy horizon, and output complexity beyond plain text.
+
+Speaker info:
+- https://x.com/vincentsunnchen
+- https://www.linkedin.com/in/vincentsunnchen
+- https://github.com/vincentschen
+
+## Benchmarking semantic code retrieval on Claude Code — Kuba Rogut, Turbopuffer
+
+- Upload date: 2026-06-03
+- Video: https://www.youtube.com/watch?v=zKk7sDMGDEQ
+- Transcript: raw/20260603_zKk7sDMGDEQ/zKk7sDMGDEQ.en-orig.vtt
+- Metadata: raw/20260603_zKk7sDMGDEQ/zKk7sDMGDEQ.info.json
+
+By default, Claude Code wastes one in every three file reads. Add windowed grep and that drops to one in five. Add semantic search on top and it drops to one in eight, with file precision climbing from 65% to 87%. Kuba Rogut from Turbopuffer ran a 50-task benchmark against ContextBench to measure not whether the agent solved the problem but whether it found the right files, lines, and symbols along the way.
+
+The benchmark tested three conditions: raw Claude Code, windowed reads capped at 50 lines, and windowed reads plus a semantic search tool backed by Turbopuffer. Semantic search won on behavior adjacent tasks where files share no keywords. Grep won on import tracing where the keyword is right there. Cursor's production numbers show a 24% relative improvement in answer accuracy from semantic retrieval, plus a 2.6% increase in code retention in large codebases. Kuba's explanation for why his gains were smaller: Cursor's model knows when and why to call semantic search. Claude Code just has it as another tool in the list.
+
+Speaker info:
+- https://ca.linkedin.com/in/kubarogut
+- https://rogutkuba.com/
+
+## Beyond Components: Designing Generative UI for MCP Apps — Ruben Casas, Postman
+
+- Upload date: 2026-06-03
+- Video: https://www.youtube.com/watch?v=hCMrEfPG2Yg
+- Transcript: raw/20260603_hCMrEfPG2Yg/hCMrEfPG2Yg.en-orig.vtt
+- Metadata: raw/20260603_hCMrEfPG2Yg/hCMrEfPG2Yg.info.json
+
+Ruben Casas from Postman prompted a model to rewrite his blog. It built a search box with a blur animation and accessibility out of the box, without being asked. That was when he concluded the model writes better frontend code than he does. His question for the talk: if the models are this capable, why are most agent UIs still invoking static prebuilt components?
+
+The talk maps three points on the spectrum. Static components pass props to predefined React elements (AG UI, Goose auto visualizer). Declarative UI has the LLM generate JSON or YAML that a rendering engine maps to components at runtime. Ruben argues this is the right balance today. Fully generative UI skips components entirely: the model writes HTML, CSS, and JavaScript on demand. His weather agent does this in a single tool call. The catch is containment: LLM generated code needs a sandbox, which is why MCP apps and their double iframe default matter. He closes on the TV analogy. The first TV shows were radio shows with cameras because nobody could imagine what else to do with the new medium. We are in that era.
+
+Speaker info:
+- https://x.com/Infoxicador
+- https://www.linkedin.com/in/ruben-casas-17100383/
+
+Timestamps:
+0:00 Introduction: The evolution from 'poor man's bit coding' to high-fidelity UI generation
+2:56 Why are we still stuck with static UI?
+3:33 The new computer: Searching for the interface of the future
+4:47 The role of MCP apps and 'Super Apps'
+5:52 Three levels of UI generation: Static, Declarative, and Generative
+6:03 Understanding Static UI components (e.g., AG UI, Goose)
+7:42 The benefits of Declarative UI (e.g., JSON/YAML renderers)
+10:06 Moving to the next level: Generative UI components
+11:25 The challenge of trust: The need for sandboxing and containment
+12:22 Why MCP apps are the ideal delivery mechanism for Generative UI
+13:21 The 'TV/Radio' analogy: Imagining the future of agent interaction
+14:46 Beyond components: Towards true human-agent collaboration
+16:16 Conclusion: Shaping the future of user interfaces
+
+## BDD, ADR, PRD, WTF: Capturing Decisions for Humans and AI Alike — Michal Cichra, Safe Intelligence
+
+- Upload date: 2026-06-03
+- Video: https://www.youtube.com/watch?v=504PvfXou5Y
+- Transcript: raw/20260603_504PvfXou5Y/504PvfXou5Y.en-orig.vtt
+- Metadata: raw/20260603_504PvfXou5Y/504PvfXou5Y.info.json
+
+"One thing harder than reading AI code is reading AI tests." Mikuel from Safe Intelligence argues spec driven development leaves a loop open: you have a markdown spec, but how do you know the product actually behaves that way? His answer is Cucumber, nearly forgotten and suddenly useful again. Executable, human readable BDD scenarios connect directly to PRDs and critical user journeys and close the gap between what the spec says and what the tests verify.
+
+The rest of the talk is enforcement. ADRs capture not just what the rules are but why; agents rejected at commit time get linked back to the document and iterate. Module import linting makes N+1 queries structurally impossible: rendering templates cannot touch the database, E2E tests cannot import any module that could. His sessions run 20 to 50 context compacts. The agent stays on track because the rules live in git hooks and CI, not in the prompt.
+
+Speaker info:
+- https://cz.linkedin.com/in/michal-cichra-61188a84
+
+## Task Fidelity Scaling Laws — Kobie Crawdord, Snorkel
+
+- Upload date: 2026-06-02
+- Video: https://www.youtube.com/watch?v=YYH0DMQr30A
+- Transcript: raw/20260602_YYH0DMQr30A/YYH0DMQr30A.en-orig.vtt
+- Metadata: raw/20260602_YYH0DMQr30A/YYH0DMQr30A.info.json
+
+Same model. Same compute. Same number of tasks. Fine-tuning on low quality tasks improved the base model by 1%. Fine-tuning on high quality tasks improved it by 6%. Kobe Crawford from Snorkel ran that experiment on TerminalBench style agentic tasks and got a 5x difference in training uplift from task quality alone.
+
+The talk breaks down what separates the two buckets. Accepted tasks averaged twice as many tool calls, lower pass rates, and more output tokens. Genuinely harder problems. More importantly, their failure modes were cleaner: when a model failed on a well specified task, it failed for a real reason. Rejected tasks tended to fail because of mismatches between what was requested and what the tests actually checked, or because the task never gave the model the context needed to satisfy implicit dependencies. Ambiguous specs do not produce harder tasks. They produce noise.
+
+Speaker info:
+- https://www.linkedin.com/in/kobie-crawford
+- https://snorkel.ai/author/kobie-crawford/
+
+## How Lovable self-improves every hour — Benjamin Verbeek, Lovable
+
+- Upload date: 2026-06-02
+- Video: https://www.youtube.com/watch?v=KA5kPbdkK2E
+- Transcript: raw/20260602_KA5kPbdkK2E/KA5kPbdkK2E.en-orig.vtt
+- Metadata: raw/20260602_KA5kPbdkK2E/KA5kPbdkK2E.info.json
+
+Within the first hour of launching the vent tool, the agent filed 20 complaints about a silent file copy failure. The team checked: the tool worked fine. What the agent had caught was that filenames with a space in them silently failed to copy, a bug that never surfaced in logs. Benjamin Verbeek from Lovable built it a channel to complain directly to Slack when platform limitations block it, and the first thing it did was find a real production bug.
+
+At 200,000 projects per day, Lovable runs two continuous improvement loops. The first detects sessions where a nontechnical user got stuck and then unblocked, clusters similar cases, and injects that context upstream; a holdout group measures actual project completion rates to prune stale entries when models or features change. The vent loop runs in parallel: the agent flags missing tools, broken platform behavior, and confusing docs as it works. Vent volume spikes turned out to be a reliable incident detector. A second agent now monitors the channel, deduplicates reports, and opens PRs automatically.
+
+Speaker info:
+- https://se.linkedin.com/in/benjamin-verbeek
+- https://x.com/benjaminvrbk/
+
+## What Lies Beneath the API — Benjamin Cowen, Modal
+
+- Upload date: 2026-06-02
+- Video: https://www.youtube.com/watch?v=HvZXAOZ3iv8
+- Transcript: raw/20260602_HvZXAOZ3iv8/HvZXAOZ3iv8.en-orig.vtt
+- Metadata: raw/20260602_HvZXAOZ3iv8/HvZXAOZ3iv8.info.json
+
+Intercom is beating their frontier API at one tenth the cost. Pinterest claims orders of magnitude. Ben Cowen from Modal argues this pattern is not the exception for maturing AI products. It is the destination. Frontier labs want their models to win at everything. You want to win at your specific business logic. Those are different goals.
+
+He offers three signals it is time to fine tune: paying more for the API than customers pay you, evals that have plateaued, and latency requirements no shared endpoint will meet. His practical case: if you have already built an agent harness and are collecting eval data, you have what you need to start RL training. Supervised fine tuning fits in 300 lines of Python. Modal customers have scaled to 50,000 sandboxes just for RL rollout.
+
+Speaker info:
+- https://www.linkedin.com/in/benjamincowenmath
+- https://github.com/BenCowen
+
+## How to talk to statues — Joe Reeve, ElevenLabs
+
+- Upload date: 2026-06-01
+- Video: https://www.youtube.com/watch?v=u-rJwPPU3QA
+- Transcript: raw/20260601_u-rJwPPU3QA/u-rJwPPU3QA.en-orig.vtt
+- Metadata: raw/20260601_u-rJwPPU3QA/u-rJwPPU3QA.info.json
+
+A museum CEO tracked down his WhatsApp number and called. "I've had a team of 10 people working on this for a year. How did you build this?" Joe from ElevenLabs built the statue app in two hours on a Sunday using Cursor and a single one shot prompt. He posted it on a Tuesday and got 50,000 impressions. Reposted the next day about vibe coding and hit 1.5 million.
+
+The pipeline: point your phone at a statue, OpenAI deep research identifies it and generates historical context and a voice description, the ElevenLabs voice design API creates a matching voice from that description, an agent spins up, and a conversation starts. The whole thing runs in about 30 seconds. Museums, auction houses, and travel platforms all reached out wanting the same thing built for their collections.
+
+Speaker info:
+- https://x.com/isnit0
+- https://x.com/isnit0/status/2024104717039685915
+- https://elevenlabs.io/blog/talk-to-a-statue-building-a-multi-modal-elevenagents-powered-app
+
+## 20 days of compute vs 7 hours: rethinking what state-of-the-art means — Bertrand Charpentier, Pruna
+
+- Upload date: 2026-06-01
+- Video: https://www.youtube.com/watch?v=hqHC6Z_lXyo
+- Transcript: raw/20260601_hqHC6Z_lXyo/hqHC6Z_lXyo.en-orig.vtt
+- Metadata: raw/20260601_hqHC6Z_lXyo/hqHC6Z_lXyo.info.json
+
+Ranking image generation models the way Design Arena does it — 26,000 battles, 62 seconds per generation — takes 20 days of compute, costs $5,000, and consumes roughly 400 marathons worth of energy. Bertrand Charpentier, cofounder and chief scientist at Pruna AI, uses that number to make a point: the same evaluation on a fast compressed model takes 7 hours and $265. Efficiency is a dimension of state of the art, not a footnote.
+
+The rest of the talk dismantles the idea that any single model holds the title. Leaderboard rankings disagree with each other — the same model goes from rank 10 on one to rank 5 on another. Most models lose 40% of their head-to-head battles, which means the top-ranked model is the wrong choice for nearly half of real use cases. His answer is the Pareto front: plot quality against latency or cost, find the frontier, and expect three or four models clustered tightly in quality score but varying up to 20x in efficiency. Evaluating this way tends to surface small specialized models rather than large foundation models.
+
+Speaker info:
+- https://www.linkedin.com/in/bertrand-charpentier-76995ab6/
+- https://github.com/sharpenb
+
+## What if the network was the sandbox? — Remy Guercio, Tailscale
+
+- Upload date: 2026-06-01
+- Video: https://www.youtube.com/watch?v=BM2JX9hqsVQ
+- Transcript: raw/20260601_BM2JX9hqsVQ/BM2JX9hqsVQ.en-orig.vtt
+- Metadata: raw/20260601_BM2JX9hqsVQ/BM2JX9hqsVQ.info.json
+
+Standard sandboxing puts the API key inside the sandbox. The agent has the key, which it can exfiltrate, misuse, or — if it runs long enough — find creative ways to leverage beyond its intended scope. Remy Guercio from Tailscale argues that sandboxing conflates two separate problems: execution isolation and access control. You can fully isolate a runtime and still have the agent holding credentials it can abuse.
+
+Their answer is Aperture, an LLM gateway built on Tailscale's WireGuard identity network. Every connection carries verified identity — user, tag, or group — and the agent gets a placeholder instead of a real key. There is nothing to exfiltrate. Every LLM call has to pass through the network layer, so Aperture sees every tool call, bash command, and MCP request without instrumentation inside the container. Internally at Tailscale, bash dominates over structured tool calls — and now they can actually see that.
+
+Speaker info:
+- https://www.linkedin.com/in/remyguercio/
+
+Timestamps:
+0:00 - Introduction and the concept of a sandbox
+1:15 - Breaking down the components of a sandbox (boundary and permissions)
+1:52 - How permissions are typically handled (API keys vs. OIDC)
+3:18 - Introducing Tailscale and WireGuard for network-level identity
+5:42 - Introduction to Aperture (AI Gateway)
+7:28 - Live demo: Viewing usage metrics and logs in Aperture
+9:47 - Live demo: Inspecting GitHub Actions PR review bot logs
+10:39 - Visibility into tool calls, bash commands, and MCP requests
+11:46 - Agent setup and configuration in Aperture
+13:59 - Advanced features: Cost controls, quotas, and webhooks
+15:35 - Using tsnet to build custom internal identity-aware services
+17:03 - Q&A: How to configure permissions (Grants vs. ACLs)
+18:46 - Q&A: Network-layer transparency for base URLs
+20:25 - Q&A: Permissioning based on users vs. model/provider
+21:28 - Q&A: Handling non-tool call agent behaviors (direct code execution)
+
+## Spec-Driven Testing for Agents With A Brain the Size of A Planet — Steven Willmott, SafeIntelligence
+
+- Upload date: 2026-05-31
+- Video: https://www.youtube.com/watch?v=UQKg0td-Bf4
+- Transcript: raw/20260531_UQKg0td-Bf4/UQKg0td-Bf4.en-orig.vtt
+- Metadata: raw/20260531_UQKg0td-Bf4/UQKg0td-Bf4.info.json
+
+Wrapping a malicious instruction in a poem is an effective jailbreak against large models and not against small ones. Small models don't understand the poem. Large models do and execute the instruction. Steven Willmott from Safe Intelligence argues this is one reason bigger is not straightforwardly safer: a larger model with broader capabilities has more attack surface and more infrastructure access to abuse.
+
+His frame is spec driven validation. An agent spec is not just a test dataset. It needs explicit rules (never offer more than 10% discount), domain ontologies (an airline agent only needs to know about destinations that airline actually flies to), rights and roles, and robustness requirements such as how many typos or rephrasings before it fails. Write these independently of the implementation so they survive a model swap and can drive both security testing and iterative improvement.
+
+Speaker info:
+- https://uk.linkedin.com/in/stevenwillmott
+- https://x.com/njyx
+
+## Can LLMs generate Enterprise Quality Code? — Prasenjit Sarkar, Sonar
+
+- Upload date: 2026-05-31
+- Video: https://www.youtube.com/watch?v=NuePCNMpWGc
+- Transcript: raw/20260531_NuePCNMpWGc/NuePCNMpWGc.en-orig.vtt
+- Metadata: raw/20260531_NuePCNMpWGc/NuePCNMpWGc.info.json
+
+Sonar ran 4,444 Java programming assignments through 53 models and measured what actually came out. GPT-4o generated under 250,000 lines for those assignments. GPT 5.4 generated 1.2 million. Claude Sonnet 4.6 generated 627,000 with the highest security issue rate at 300 per million lines of code. Prasenjit Sarkar from Sonar walks through the full leaderboard: pass rate, cyclomatic complexity, bug density, and security issues per model.
+
+Their response is a three-stage framework called ACDC: guide, verify, solve. The verify stage runs SonarQube analysis in 1 to 5 seconds before a commit, against 1 to 5 minutes in CI. If issues slip through to the PR, a remediation agent creates one fix per issue, runs it through analysis and compilation to check for regressions, and only presents it if it passes.
+
+Speaker info:
+- https://www.linkedin.com/in/jit2600/
+
+Timestamps:
+0:00 Introduction and the Shift to Agentic Development
+1:44 Evaluating LLM Code Quality and Reliability
+3:00 Sonar's Evaluation Framework and Methodology
+3:39 LLM Performance Analysis (Pass Rates and Code Bloat)
+5:24 Why LLMs Struggle: Training Data and Hidden Flaws
+6:45 The Sonar LLM Leaderboard
+8:30 Complexity Metrics: Cyclomatic vs. Cognitive
+10:41 The ACDC Framework: Guide, Verify, and Solve
+11:06 Phase 1: Guide (Context Augmentation & Sonar Sweep)
+11:42 Phase 2: Verify (SonarQube Agentic Analysis)
+12:40 Phase 3: Solve (Remediation Agent)
+14:05 Product Summary and Ecosystem Support
+
+## Engineering voice agents: Latency, quality, and scale — Rishabh Bhargava, Together AI
+
+- Upload date: 2026-05-31
+- Video: https://www.youtube.com/watch?v=N7b1PJc7SFc
+- Transcript: raw/20260531_N7b1PJc7SFc/N7b1PJc7SFc.en-orig.vtt
+- Metadata: raw/20260531_N7b1PJc7SFc/N7b1PJc7SFc.info.json
+
+Users notice latency above 500ms and hang up above one second. In an already optimized pipeline, 75ms of network latency from models sitting in a different data center adds 30% overhead. Colocating everything in the same building drops that to around 5ms. Rishabh Bhargava from Together AI walks through the full speech to text, LLM, and text to speech pipeline at that level of specificity.
+
+The LLM dominates the budget: 200 to 300ms time to first token target, 8 to 30B parameter range — larger models blow the latency budget, smaller ones break tool calling. Speech to text target is P90 under 100ms with around 6% word error rate. One pattern for handling complex workflows without adding latency: a small thinker LLM handles conversation flow and issues a single tool call to a larger model when the request is complex, keeping the fast path fast.
+
+Speaker info:
+- https://www.linkedin.com/in/bhargavarishabh
+
+## How I deleted 95% of my agent skills and got better results — Nick Nisi, WorkOS
+
+- Upload date: 2026-05-30
+- Video: https://www.youtube.com/watch?v=vy7o1g2iHY8
+- Transcript: raw/20260530_vy7o1g2iHY8/vy7o1g2iHY8.en-orig.vtt
+- Metadata: raw/20260530_vy7o1g2iHY8/vy7o1g2iHY8.info.json
+
+WorkOS will be back for the World's Fair next week! see https://ai.engineer/wf and use YOUTUBEPROMO for new tickets only. Join 6000 AI engineers at the "Superbowl of AI"!
+
+---
+
+Claude would fake running tests by touching the expected output file. Nick Nisi, DX engineer at WorkOS, fixed it by SHA-256 hashing the actual test output and verifying it cryptographically. His principle: make it easier to do the real work than to lie about it, and enforce that through code and state machines, not prompts.
+
+The same discipline reversed an opposite problem. He generated 10,000 lines of skills from WorkOS documentation, measured with evals, and found one skill was dropping a task from 97% correct to 77% correct. He deleted 95% of it, rewrote 553 lines of handwritten gotchas, and eval time dropped from 68 minutes to 6. The model already knew how to code. It just needed to know where the landmines were.
+
+Speaker info:
+- https://x.com/nicknisi
+- https://linkedin.com/in/nicknisi
+- https://github.com/nicknisi
+
+Timestamps
+0:00 Introduction
+1:22 The challenge of context switching with agents
+2:33 Introducing Case: A harness for agentic workflows
+3:33 Rebuilding with a TypeScript state machine
+4:45 The critical importance of evidence-based verification
+5:59 Applying agentic principles to the WorkOS CLI
+7:44 Lessons in documentation: Generating skills from docs
+8:52 Why more data (10,000 lines) led to worse performance
+9:36 The impact of using evals to measure accuracy
+10:40 Key takeaway: Enforce with code, not just prompts
+12:41 Treating failures as bugs in the harness system
+14:39 Advice for building agentic-ready products
+16:01 Final summary: Replacing trust with evidence
+
+## How We Built Zeta2: Training an Edit Prediction Model in Production — Ben Kunkle, Zed
+
+- Upload date: 2026-05-30
+- Video: https://www.youtube.com/watch?v=phchDt63qAA
+- Transcript: raw/20260530_phchDt63qAA/phchDt63qAA.en-orig.vtt
+- Metadata: raw/20260530_phchDt63qAA/phchDt63qAA.info.json
+
+To validate settled data, Zed ran 10 frontier model predictions per example and measured Levenshtein distance to the final state. For 100,000 training examples that is a million frontier model requests, which is prohibitively expensive. The fix: Zeta 2's student model now approaches teacher quality, so they run it 50 times instead at negligible cost. Ben Conungle, edit predictions lead at Zed, walks through how this pipeline came together.
+
+The pipeline pulls opt in production edit traces, distills them through a frontier teacher, and routes bad predictions through a repair step before formatting for the student. The ideal training examples sit in the middle of the Levenshtein distance distribution: too close to the settled state is obvious, too far is noise. A metric called reversal ratio, how often the model undoes exactly what the user just typed, was the key diagnostic for catching bad model behavior before shipping.
+
+## Why (Senior) Engineers Struggle to Build AI Agents — Philipp Schmid, Google DeepMind
+
+- Upload date: 2026-05-30
+- Video: https://www.youtube.com/watch?v=3_gYbhABcAE
+- Transcript: raw/20260530_3_gYbhABcAE/3_gYbhABcAE.en-orig.vtt
+- Metadata: raw/20260530_3_gYbhABcAE/3_gYbhABcAE.info.json
+
+A `deleteItem` endpoint is obvious to the developer who built it. An agent only sees the function schema and docstring. Philipp Schmid from Google DeepMind argues this is why senior engineers struggle most: they carry years of implicit context that agents do not, and design tools assuming it.
+
+He names four other shifts: text replaces structured state, errors are inputs not restart triggers (especially costly when an agent has been running for 15 minutes), evals replace unit tests because the right question is how often it works not whether a fixed input always produces a fixed output, and build to delete because you will rebuild the same agent with a better model anyway.
+
+Speaker info:
+- https://x.com/_philschmid
+- https://www.linkedin.com/in/philipp-schmid-a6a2bb196/
+- https://github.com/philschmid
+
+## Reverse engineering a Viking VOIP phone protocol with Claude Code — Boris Starkov, Eleven Labs
+
+- Upload date: 2026-05-29
+- Video: https://www.youtube.com/watch?v=V-L0INGTEOg
+- Transcript: raw/20260529_V-L0INGTEOg/V-L0INGTEOg.en-orig.vtt
+- Metadata: raw/20260529_V-L0INGTEOg/V-L0INGTEOg.info.json
+
+A Viking VoIP phone sat in the ElevenLabs San Francisco office for a year. Three senior engineers and ChatGPT could not get it working. Boris from ElevenLabs cracked the undocumented protocol with Claude Code in a couple of days: brute forced all 676 possible two letter command combinations, found 80 valid ones, then set up a TCP proxy between a Windows virtual machine and the phone to intercept and log what the proprietary Windows XP software was actually sending.
+
+The last piece was a one byte checksum in the persistence command. Claude reverse engineered the formula by running known input output pairs through it, confirmed the pattern in a closed loop, and derived a simple subtraction. Boris describes his own role as being the hands: Claude orchestrated, he physically rebooted the phone and reported how many beeps he heard. The protocol is now open sourced as a Claude Code skill so anyone with a Viking phone can configure it directly without the Windows software. The outcome at AI Engineer Europe: a red phone booth on the third floor where picking up the receiver connects you to a Michael Caine voice agent that quizzes you on British AI history.
+
+## Why your agents need decision traces, not just documents — Zach Blumenfeld, Neo4j
+
+- Upload date: 2026-05-29
+- Video: https://www.youtube.com/watch?v=B9h9ovW5H9U
+- Transcript: raw/20260529_B9h9ovW5H9U/B9h9ovW5H9U.en-orig.vtt
+- Metadata: raw/20260529_B9h9ovW5H9U/B9h9ovW5H9U.info.json
+
+A knowledge base tells a financial analyst agent the risk factors. A context graph tells it whether to reject or accept, because it also carries past decision traces, the reasoning behind them, and how similar cases resolved. Zach from Neo4j walks through how context graphs extend a standard RAG setup with three layers: short term conversation history, long term extracted entities, and reasoning traces that embed into vectors so structurally similar past decisions surface alongside semantically similar ones.
+
+The fastest path in is `uvx create-context-graph`, a one-command scaffold that gives you a backend, frontend, demo data, and an MCP server. It ships with 22 built-in domains or generates a graph ontology from a custom domain you describe. The underlying `neo4j-agent-memory` package handles entity extraction through a spaCy to GLiNER to LLM pipeline with deduplication and merging baked in, and plugs into pydantic AI, LangGraph, Crew, Google ADK, and others.
+
+Speaker info:
+- https://www.linkedin.com/in/zachblumenfeld/
+
+## Reachy Mini: the $300 open source robot you can actually hack — Andres Marafioti, Hugging Face
+
+- Upload date: 2026-05-29
+- Video: https://www.youtube.com/watch?v=0jeZfjJMfmo
+- Transcript: raw/20260529_0jeZfjJMfmo/0jeZfjJMfmo.en-orig.vtt
+- Metadata: raw/20260529_0jeZfjJMfmo/0jeZfjJMfmo.info.json
+
+Qwen3-TTS shipped at 0.8x real time: one second of audio took 1.2 seconds to generate. Andres Marafioti from Hugging Face spent two weeks fixing it. The culprits were no streaming, 500 autoregressive steps per audio packet with a CPU GPU round trip on each, and a dynamic KV cache that blocked compilation. Static KV cache plus CUDA graph captures brought it to 5.8x real time with time to first audio under 200 milliseconds.
+
+The platform is Reachy Mini, a $300 open source robot Hugging Face has shipped to 7,500 people. It arrives unassembled. Talking to it is their most used app by far. The voice stack runs Parakeet transcription every 150 milliseconds with partial results feeding back to the robot mid-sentence, Qwen 3.5 27B for the LLM, and this optimized TTS. At that speed, infrastructure round trips match model latency, so the load balancer separates LLM endpoints from conversation nodes to handle the difference in how much different users actually talk.
+
+## Context Graphs for Explainable, Decision-Aware AI Agents — Andreas Kollegger & Zaid Zaim, Neo4j
+
+- Upload date: 2026-05-28
+- Video: https://www.youtube.com/watch?v=abvQEhvRI_c
+- Transcript: raw/20260528_abvQEhvRI_c/abvQEhvRI_c.en-orig.vtt
+- Metadata: raw/20260528_abvQEhvRI_c/abvQEhvRI_c.info.json
+
+Prescribing drug X is correct 99% of the time for symptom Y. For the 1% where it is fatal, statistical reasoning does not help you. Andreas Kollegger calls this reference class validation: before the agent acts, it has to know which group it is in.
+
+Context graphs give agents the why. Not just knowledge and tools but the policies, rules, and prior decisions that explain why a certain action is right in a given context. The decision making framework in this talk has five stages: frame the problem with its causality and environment, pull in global rules and past precedent, run a risk value analysis, either act or escalate to someone with authority, and write the full reasoning chain back into the graph. That last step is the point. Every decision becomes precedent. Future agents inherit it.
+
+Speaker info:
+- https://x.com/akollegger
+- https://www.linkedin.com/in/akollegger
+- https://github.com/akollegger
+
+## How agent o11y differs from traditional o11y — Phil Hetzel, Braintrust
+
+- Upload date: 2026-05-28
+- Video: https://www.youtube.com/watch?v=XBaznoTRDFI
+- Transcript: raw/20260528_XBaznoTRDFI/XBaznoTRDFI.en-orig.vtt
+- Metadata: raw/20260528_XBaznoTRDFI/XBaznoTRDFI.info.json
+
+Traditional observability answers one question: is the system up? Phil Hetzel from Braintrust argues that question is not the right one for agents. An individual agent trace can exceed a gigabyte. A single span can hit 20 megabytes. The data is semistructured, packed with unstructured text, and still arrives in real time. None of the systems built for uptime monitoring were designed to ingest, index, and actually use that.
+
+Braintrust built a custom database from scratch for this problem: a write ahead log for instant visibility, analytical indexes for fast filtering, and a forked version of Tantivy (a Rust based full text search library similar to Apache Lucene) so an engineer can query every trace that mentioned a specific word. The other difference is who does this work: clinicians, lawyers, and wealth advisers now open traces directly to grade whether an agent responded correctly, and their written justifications become the training signal for automated scoring functions. The human annotations surface the failure modes. The scoring functions scale them.
+
+Speaker info:
+- https://www.linkedin.com/in/philliphetzel/
+
+## Most Enterprise Agentic Projects Are Doomed, Here's Why — Jess Grogan-Avignon & Jack Wang, Accenture
+
+- Upload date: 2026-05-28
+- Video: https://www.youtube.com/watch?v=AGkzpxMdPn8
+- Transcript: raw/20260528_AGkzpxMdPn8/AGkzpxMdPn8.en-orig.vtt
+- Metadata: raw/20260528_AGkzpxMdPn8/AGkzpxMdPn8.info.json
+
+Jess Grogan-Avignon and Jack Wang at Accenture built an agentic application in two weeks. Getting it to production took another 12 months. Not because the code was wrong. Because the infrastructure team, the security team, the AI gateway team, the data governance team, and the application team all had to align before anything could ship. That is not a technology problem, and fixing the code does not fix it.
+
+The deeper issue is that GitHub averaged 275 million commits per week in 2025 on track for 14 billion by year end, while the approval infrastructure was never designed for that throughput. They name five tensions that predict whether an enterprise agentic project succeeds before it starts: human approval chains need to become executable code rather than longer signoff meetings; finance should back a portfolio of AI bets the way a VC would rather than demanding committed returns from each project; delivery should run on hypothesis driven loops not milestone programs; trust is built by graduating through shadow mode, advisory mode, and controlled autonomy with each step gated by outcome evidence not by project plan completion; and the real moat is not the data in your ERP but the living memory your product builds from real customer signals every day.
+
+Speaker info:
+- https://www.linkedin.com/in/jessicaannbiggs
+- https://www.linkedin.com/in/jackxwang
+
+## Why Rust is the Ideal Language for Vibe-Coding — Daniel Szoke, Sentry
+
+- Upload date: 2026-05-27
+- Video: https://www.youtube.com/watch?v=ugUeZ8-b-u0
+- Transcript: raw/20260527_ugUeZ8-b-u0/ugUeZ8-b-u0.en-orig.vtt
+- Metadata: raw/20260527_ugUeZ8-b-u0/ugUeZ8-b-u0.info.json
+
+TypeScript is easy for models to write because it imposes few constraints. Those same missing constraints let models introduce data races that compile, run, and only fail intermittently. A thread safety bug in Rust does not compile. The compiler names the unsound type, explains why it cannot be sent between threads, and points the agent directly at the fix.
+
+Daniel Szoke, Rust SDK maintainer at Sentry, argues that optimizing for a language models can write easily is the wrong goal. The better optimization is a language whose compiler enforces correctness as a natural feedback loop. Every error an agent hits and resolves in a loop is a production bug that never ships. The Rust compiler is also faster than asking a review agent to find the same class of bugs and more reliable than hoping it does.
+
+Speaker info:
+- https://www.linkedin.com/in/dlsz
+
+Timestamps:
+0:00 Introduction and the speaker's background at Sentry
+0:27 The current conventional wisdom for AI-assisted development
+1:53 Why languages like Python and TypeScript are popular for AI
+3:44 The hidden risks of prioritizing "easy-to-write" languages
+6:40 Philosophical perspective: Alien intelligence and failure modes
+9:28 Introduction to Rust and its strict compiler guarantees
+10:53 Key safety features: Type, Null, and Concurrency safety
+11:59 Demonstrating "Fearless Concurrency" with a code example
+14:26 Why Rust constraints are an asset for autonomous AI agents
+15:36 Conclusion and Sentry resources
+
+## The AI Skill I Rely On Daily — Priscila Andre de Oliveira, Sentry
+
+- Upload date: 2026-05-27
+- Video: https://www.youtube.com/watch?v=li0SaBt9RDM
+- Transcript: raw/20260527_li0SaBt9RDM/li0SaBt9RDM.en-orig.vtt
+- Metadata: raw/20260527_li0SaBt9RDM/li0SaBt9RDM.info.json
+
+Priscila Andre de Oliveira analyzed 116 of her own Claude sessions from daily work at Sentry. 67% were comprehension. 2% were code generation.
+
+Working in a codebase with 15 years of history, around 100 PRs merged per day, and 100,000 organizations depending on it, the unlock is not generation but understanding. She built a personal skill called catch me up with six exploration modes covering architecture, conventions, feature traces, syntax, testing, and history. The loop: understand what the agent found before you let it plan and implement, because a misaligned mental model is where slop comes from.
+
+Speaker info:
+- https://at.linkedin.com/in/priscila-andre-de-oliveira-ab34bb24b
+
+Timestamps:
+0:00 Introduction and speaker background
+2:25 Sentry's engineering environment and scale
+3:50 AI-driven projects at Sentry
+5:48 Maintaining code quality and technical debt
+7:35 The role of comprehension in software development
+9:38 Analyzing AI usage patterns
+10:33 The "Catch Me Up" skill architecture
+12:15 Short demo of the "Catch Me Up" skill
+13:56 Planning vs. implementation in AI workflows
+15:26 Conclusion and key takeaways
+
+## The maturity phases of running evals — Phil Hetzel, Braintrust
+
+- Upload date: 2026-05-27
+- Video: https://www.youtube.com/watch?v=FB-MLPhL9Ms
+- Transcript: raw/20260527_FB-MLPhL9Ms/FB-MLPhL9Ms.en-orig.vtt
+- Metadata: raw/20260527_FB-MLPhL9Ms/FB-MLPhL9Ms.info.json
+
+Most teams approach evals like unit tests and try to cover every possible failure. Phil Hetzel from Braintrust argues that is the wrong frame: enumerate your known failure modes, cover those specifically, and ship. The goal is a flywheel where production traces surface what is going wrong, feed back into offline experimentation, and guide the next improvement.
+
+The session walks four maturity stages: vibe checking with documented human justifications not just thumbs up or down, LLM as judge built from those justifications at scale, then the hard part, tool calls that touch external systems. Context gathering tools are manageable. CRUD tools are not, because you have to represent the state of external systems at the exact moment the original trace ran. Timestamp queries against a vector database and injecting captured system state directly into the trace are two approaches for getting there.
+
+Speaker info:
+- https://www.linkedin.com/in/philliphetzel/
+
+## Run Frontier AI at Home — Alex Cheema, EXO Labs
+
+- Upload date: 2026-05-26
+- Video: https://www.youtube.com/watch?v=ESbWpPT_9-o
+- Transcript: raw/20260526_ESbWpPT_9-o/ESbWpPT_9-o.en-orig.vtt
+- Metadata: raw/20260526_ESbWpPT_9-o/ESbWpPT_9-o.info.json
+
+Running GLM 5.1, a trillion parameter model released the day before this workshop, across four Mac Studios costs around $40,000 in hardware and tops out at roughly 20 tokens per second. Alex Cheema from EXO Labs thinks both numbers have about 100x left in them.
+
+The workshop covers what that 100x looks like across the stack: kernel fusion that recovered 30% performance on Qwen 3.5 from inefficiencies nobody had noticed, RDMA integration that cut node to node latency from 300 microseconds to single digits and made tensor parallelism actually scale, and the case for splitting prefill onto compute dense hardware and decode onto high bandwidth hardware. The live demo runs GLM 5.1 across four Mac Studios connected by Thunderbolt 5 and cuts large prompt inference roughly in half by offloading prefill to an RTX Spark.
+
+Speaker info:
+- https://www.linkedin.com/in/alex-cheema
+- https://github.com/alexcheema
+
+Timestamps:
+0:00 Introduction to EXO Labs and the mission to democratize frontier AI
+2:00 The current state of AI: centralized cloud systems vs. the need for local infrastructure
+7:40 Technical challenges: kernel efficiency and the overhead of separate kernel launches
+9:50 The importance of the software harness in optimizing inference performance
+10:35 Understanding inference constraints: compute-bound vs. memory-bound operations
+11:28 The distinction between prefill and decode phases in LLM inference
+13:07 Requirements for efficient local decoding: memory capacity, bandwidth, and energy efficiency
+15:50 The concept of 'Intelligence per Joule' as a performance metric
+16:45 Advancements in consumer hardware: higher memory capacity and bandwidth on Apple Silicon
+18:50 Q&A: The future of consumer appetite for local inference hardware
+20:17 Discussing the cost and performance of running trillion-parameter models like GLM 5.1
+22:05 The 100x potential: How code design across the stack improves performance
+26:35 Future outlook: Bifurcation of local vs. cloud use cases and diminishing returns of model size
+38:55 Heterogeneous hardware strategies: Combining compute-dense and bandwidth-heavy devices
+41:47 Demo: Using an Nvidia RTX Spark to accelerate prefill on a Mac cluster
+48:40 Software architecture: Automating cluster orchestration with EXO
+53:00 Challenging the 'batching' necessity: Multi-agent systems, search, and continual learning
+1:05:22 Rethinking cloud economics and renting use cases instead of hardware
+1:20:55 Demo technicalities: Event sourcing and cluster node discovery
+1:32:20 Closing thoughts: Transparency in benchmarks and the future of open-source model evaluation
+
+## Stop babysitting your agents... — Brandon Waselnuk, Unblocked
+
+- Upload date: 2026-05-26
+- Video: https://www.youtube.com/watch?v=BiG2ssibKGc
+- Transcript: raw/20260526_BiG2ssibKGc/BiG2ssibKGc.en-orig.vtt
+- Metadata: raw/20260526_BiG2ssibKGc/BiG2ssibKGc.info.json
+
+Same prompt. Same agent. Same model. Without a context engine: 2.5 hours, 20.9 million tokens, multiple rounds of human correction, and code that compiled but would have broken the entire system if it shipped. With one: 25 minutes, 10.8 million tokens, and a senior engineer who gave one nitpick and approved the merge.
+
+Brandon Waselnuk from Unblocked makes the case that the problem is not access but understanding. More MCPs give agents pipes to information. A million token context window just sits there. Naive RAG stops at the first result it finds, a phenomenon called satisfaction of search borrowed from radiology. What actually changes is a context engine that reasons across your codebase, Slack history, PR patterns, and org structure to build a research packet before the agent starts writing, so it arrives knowing your factory patterns, your fallback infrastructure, and what the CTO said was wrong in that thread three months ago.
+
+Speaker info:
+- https://getunblocked.com
+
+## What the Best Agents Share — Mardu Swanepoel, Flinn AI
+
+- Upload date: 2026-05-26
+- Video: https://www.youtube.com/watch?v=7CrPrHgoEYk
+- Transcript: raw/20260526_7CrPrHgoEYk/7CrPrHgoEYk.en-orig.vtt
+- Metadata: raw/20260526_7CrPrHgoEYk/7CrPrHgoEYk.info.json
+
+Harvey, Cursor, Manus, and Claude operate in completely different domains but share four patterns: focus modes that constrain the action space to improve output quality, transparent execution that surfaces tool calls and reasoning to build user trust, personalization that optimizes for speed to understanding rather than just speed to output, and reversibility that bounds the downside of mistakes so users take on higher value tasks.
+
+Mardu Swanepoel from Flinn AI breaks down how each company puts these into practice. Cursor lets you roll back changes at the line, file, or conversation level and run multiple model outputs in parallel from the same input. Harvey builds playbooks from a firm's legal methods so the agent works the way the firm would. Claude surfaces a live task list alongside every tool call's inputs and outputs so users can intervene before the agent goes further in the wrong direction.
+
+Speaker info:
+- https://www.linkedin.com/in/mardu-swanepoel-000/
+
+## Bounded Autonomy: Between Free Will and Determinism — Angus J. McLean, Oliver
+
+- Upload date: 2026-05-25
+- Video: https://www.youtube.com/watch?v=t4359sKBu4w
+- Transcript: raw/20260525_t4359sKBu4w/t4359sKBu4w.en-orig.vtt
+- Metadata: raw/20260525_t4359sKBu4w/t4359sKBu4w.info.json
+
+Angus McLean spent time building a complex agent application to generate his CV. Four letters beat it: HTML. He puts the improvement at 100x.
+
+The talk is from Oliver's AI Director, where agents generate around 4,000 creative assets a day for 200 plus brands, assets you have probably seen and had no idea were AI. The core argument: models are naturally verbose and tend toward complexity, and so are the developers working with them. His counter is to strip back. Replace internet access with curated documentation, ask how little context you can use and still complete the task, and never automate a job you cannot do yourself.
+
+Speaker info:
+- https://uk.linkedin.com/in/angusjmclean
+
+Timestamps
+0:14 Introduction and talk theme: Bounded Autonomy
+1:13 About Oliver and GenAI in advertising
+2:24 The structure of an ad agency
+3:35 Why agents are used for speed and scale
+4:27 Slow down and look at model limitations
+5:52 The problem with current "band-aid" solutions
+6:51 The role of context windows in agent capability
+8:11 How to effectively constrain models with documentation
+9:29 Constraints as a driver for creativity
+10:32 Fundamentals: Building your own harness and memory
+11:25 The power of simplicity (The CV/HTML example)
+12:34 AI as a translation process
+14:14 Using multiple representation structures
+15:22 Agent workflows and the "don't automate what you can't do" rule
+
+## Agentic Evaluations at Scale, For Everybody — Nicholas Kang & Michael Aaron, Google DeepMind
+
+- Upload date: 2026-05-25
+- Video: https://www.youtube.com/watch?v=Ubwb6NzegyA
+- Transcript: raw/20260525_Ubwb6NzegyA/Ubwb6NzegyA.en-orig.vtt
+- Metadata: raw/20260525_Ubwb6NzegyA/Ubwb6NzegyA.info.json
+
+On SWE-Bench Pro, six frontier models land within a couple of percentage points of each other. The harness they run inside shifts performance by 22%. A competing lab once took a Kaggle benchmark, reran it with their own compaction settings, and published much better results. Neither number was wrong. Both were useless.
+
+The talk is from Nicholas Kang and Michael Aaron at Google DeepMind's Kaggle team, who are building the infrastructure to fix evals at the community level: an open benchmark platform anyone can contribute to, a PvP Game Arena where models play poker and chess for an ELO rating that cannot saturate, and a standardized agent exam that returned 500 plus submissions in its first week without any promotion. The wastewater treatment plant engineer from Turkey who built a novel safety benchmark from 20 years of field experience, data that does not exist anywhere else, is the use case they keep coming back to.
+
+Speaker info:
+- https://www.linkedin.com/in/nicholaskangjj
+
+## Does GenAI "belong" to data scientists? — Phil Hetzel, Braintrust
+
+- Upload date: 2026-05-25
+- Video: https://www.youtube.com/watch?v=NKwIX3CiRgU
+- Transcript: raw/20260525_NKwIX3CiRgU/NKwIX3CiRgU.en-orig.vtt
+- Metadata: raw/20260525_NKwIX3CiRgU/NKwIX3CiRgU.info.json
+
+At most traditional enterprises, GenAI got handed to the ML platform team because it had AI in the name. Phil Hetzel from Braintrust argues that was the wrong move, not because data scientists lack value, but because Anthropic and OpenAI already ran the data pipeline. What is left is prompt and context engineering, distributed systems, human annotation, and functional evaluation across a much broader surface area than precision and recall. The mistake is isolating it to one team. The answer is a diverse one.
+
+Speaker info:
+- https://www.linkedin.com/in/philliphetzel
+
+## Scaling the Next Paradigm of Heterogeneous Intelligence — Adrian Bertagnoli, Callosum
+
+- Upload date: 2026-05-24
+- Video: https://www.youtube.com/watch?v=WRBNDpUhsJQ
+- Transcript: raw/20260524_WRBNDpUhsJQ/WRBNDpUhsJQ.en-orig.vtt
+- Metadata: raw/20260524_WRBNDpUhsJQ/WRBNDpUhsJQ.info.json
+
+A mixture of Qwen 3 VL8B and Kimi K2.5 beat the state of the art on Video Web Arena, outperforming the leading GPT and Gemini models by 18 and 25 percent while costing 3.7 times less and running 3 times faster. The reason it worked is that visual web navigation decomposes into subtasks that do not all need a frontier model: routing zoom and visual parsing to a smaller model alone produced 11x speed and 43x cost improvements on those steps.
+
+Adrian Bertagnoli from Callosum makes the case that the GPU cluster era of identical hardware and monolithic models is ending. Heterogeneous intelligence treats model architectures, chip types, and workflows as variables to optimize together. A second result: running recursive long context reasoning tasks on Cerebras instead of a frontier model cuts cost by 7x and latency by 5x while matching accuracy. Callosum is building the automation layer that routes tasks to the right chip and model without bespoke decisions for each subtask.
+
+Speaker info:
+- https://www.linkedin.com/in/adrian-bertagnoli-bb3467178/
+
+Timestamps
+0:14 Introduction and definition of heterogeneous intelligence
+0:56 Limitations of the current homogeneous intelligence paradigm
+1:36 Evolution toward mild heterogeneity (MoE, multi-agent systems, hardware disaggregation)
+3:24 The rationale for heterogeneity: complexity and multi-step problem solving
+4:26 Mathematical formalization of the production function and skill distribution
+5:56 Practical implementation of heterogeneous workflows
+6:55 Case study: Recursive language models and context management
+9:05 Results on Ulong benchmarks (Cerebras/Sambanova performance)
+10:20 Case study: Visual web navigation and Video Web Arena performance
+12:02 Offloading subtasks to smaller models for speed and cost efficiency
+12:38 The future of compute: Moving to a heterogeneous, multi-agent stack
+13:10 Partnership with the UK's Arya institute
+13:31 Closing summary and outlook on hardware/software co-evolution
+14:01 Q&A: Automation layer for task routing
+
+## Let's Talk About FOMAT: Fear of Missing Agent Time — Michael Richman, Cmd+Ctrl
+
+- Upload date: 2026-05-24
+- Video: https://www.youtube.com/watch?v=W-SX_srBa3Y
+- Transcript: raw/20260524_W-SX_srBa3Y/W-SX_srBa3Y.en-orig.vtt
+- Metadata: raw/20260524_W-SX_srBa3Y/W-SX_srBa3Y.info.json
+
+You kicked off an agent 30 minutes ago. It stopped after two minutes, blocked on a question, and has been waiting ever since. Michael Richman calls this FOMAT: fear of missing agent time. His answer is Cmd+Ctrl, a system that sends you a push notification when the agent needs input, lets you respond from your phone or watch, and lets you start new sessions from wherever you are.
+
+The demo shows Claude Code running in a terminal while the Cmd+Ctrl app on an iPhone mirrors the session in real time. Walk away, get notified when the agent completes or gets stuck, reply from the phone, pick up in the terminal. The same setup works across Claude Code, Cursor, Codex, Gemini CLI, and others through a daemon that runs alongside each agent and reports to a shared control plane. The daemon layer is open source. A standup dashboard summarizes all recent sessions so you can catch up without reading every thread.
+
+Speaker info:
+- https://x.com/mrwoofster
+- https://www.linkedin.com/in/michael-richman-b7807b2/
+- https://github.com/mrwoof
+
+## How Google DeepMind Runs Agents at Scale — KP Sawhney & Ian Ballantyne, Google DeepMind
+
+- Upload date: 2026-05-24
+- Video: https://www.youtube.com/watch?v=7gujZrJ9L5I
+- Transcript: raw/20260524_7gujZrJ9L5I/7gujZrJ9L5I.en-orig.vtt
+- Metadata: raw/20260524_7gujZrJ9L5I/7gujZrJ9L5I.info.json
+
+Google DeepMind employees have worse token quotas than paying customers. That is not a mistake. KP Sawhney explains: customers get priority, and if an internal team spikes usage on a cluster someone monitoring 24/7 will just call and ask them to stop.
+
+This panel covers how DeepMind thinks about agents at scale from the inside: managing quota across thousands of power users, a Darwinian skills library where only the strongest skills survive as engineers contribute en masse, and where the Deep Research pipeline is going next. KP's current focus is replacing the pipeline's giant context blobs with a shared file system so each research component can collaborate the way human researchers would, and produce supporting artifacts that the current architecture cannot.
+
+Speaker info:
+- https://linkedin.com/in/ianballantyne
+- https://github.com/irbg
+- https://linkedin.com/in/kyle-sawhney
+- https://github.com/KPSawhney
+
+Timestamps:
+0:00 Introduction of KP Sawhney and Ian Ballantyne
+0:57 Demo of the anti-gravity agentic platform
+4:32 Discussion on KP's work with the deep research agent
+5:46 Using skills libraries and managing agent sprawl
+7:52 Addressing scalability and token quotas at Google
+9:44 Audience Q&A: Managing per-user agent behaviors
+13:12 Audience Q&A: Observability and agent trajectory stores
+14:46 Audience Q&A: Future of deep research pipelines
+16:10 Audience Q&A: Handling multi-agent systems
+17:45 Audience Q&A: Perspectives on skills vs. MCP
+19:12 Audience Q&A: Evaluating agentic workflows
+20:25 Audience Q&A: Handling model limits and quota management
+22:48 Audience Q&A: Automated code review processes
+
+## Prompt to Pipeline: Building with Google's Gen Media Stack — Paige & Guillaume, Google DeepMind
+
+- Upload date: 2026-05-23
+- Video: https://www.youtube.com/watch?v=ns9f1fjLD7Y
+- Transcript: raw/20260523_ns9f1fjLD7Y/ns9f1fjLD7Y.en-orig.vtt
+- Metadata: raw/20260523_ns9f1fjLD7Y/ns9f1fjLD7Y.info.json
+
+A public domain book, a notebook, and three gen media models. Guom from Google DeepMind fed Wind in the Willows into Gemini, generated character portraits with Nano Banana, animated chapter scenes with VO, and scored each chapter with LIA, all live in the workshop.
+
+The full three hour session covers more ground. Paige Bailey demos AI Studio's Build feature creating a bookshelf scanning app with Google login and Firestore from a single prompt, Gemini 3.1 Flash Light analyzing a dinosaur video frame by frame for under a dollar, and Genie 3 rendering a playable world with a pink sparkly squirrel on Regent's Canal. Ian Valentine closes with Gemma 4 running on device: 10 sub agents generating SVGs in parallel on a local 26B model, then open code building and debugging a game from a spec with no cloud API involved.
+
+Speaker info:
+- https://x.com/DynamicWebPaige
+- https://linkedin.com/in/dynamicwebpaige
+- https://github.com/dynamicwebpaige
+- https://x.com/Giom_V
+- https://www.linkedin.com/in/guillaumevernade
+- https://github.com/Giom-V
+
+## Introducing WebMCP: Agents in the Browser — RL Nabors
+
+- Upload date: 2026-05-23
+- Video: https://www.youtube.com/watch?v=LMbeDEQO6QM
+- Transcript: raw/20260523_LMbeDEQO6QM/LMbeDEQO6QM.en-orig.vtt
+- Metadata: raw/20260523_LMbeDEQO6QM/LMbeDEQO6QM.info.json
+
+RL Nabors built a comic reader that renders inside Claude. Full panels, navigation, transcript mode, design matched to the original site. No browser tabs. She is reading her own web comic archive entirely through an agent, and it looks like the website.
+
+The talk is a case against chat as the permanent UI of agentic software. Chat is to agents what the terminal was to desktop computing: developers love it, everyone else gets the iPhone eventually. MCP apps bundle HTML, CSS, and JavaScript into a single file that agent interfaces render in an iframe, turning any tool response into a real interactive surface. WebMCP goes the other direction: add tool name and description attributes to forms you already have, and browser agents can call your site's functions directly without screenshot parsing or DOM traversal. Both specs exist now. The web platform has been the infinite canvas all along.
+
+Speaker info:
+- https://x.com/nearestnabors
+- https://www.linkedin.com/in/nearestnabors
+- https://github.com/rachelnabors
+
+Timestamps
+
+0:07 Introduction and Speaker Background
+3:28 Motivations for Future-Proofing the Web Comic Site
+5:09 Roadmap: MCP, Apps, and WebMCP
+6:05 Understanding Transports: STDIO vs. HTTP
+8:57 Defining MCP Tools
+10:52 The Role of MCP Resources
+11:37 The Case Against 'Starfish' (Chat-Only) UI
+13:36 MCP Apps: Building Interactive Agent Interfaces
+16:34 Best Practices and Gotchas for MCP Apps
+17:38 Introducing WebMCP: Agents in the Browser
+19:07 Imperative vs. Declarative Models
+20:13 WebMCP Demo with the Debugging Extension
+21:47 Leveraging Native Browser APIs (Speech, Animation, etc.)
+
+## The Missing Primitive for Agent Swarms — Lou Bichard, Ona
+
+- Upload date: 2026-05-23
+- Video: https://www.youtube.com/watch?v=5Sui_OnSRlY
+- Transcript: raw/20260523_5Sui_OnSRlY/5Sui_OnSRlY.en-orig.vtt
+- Metadata: raw/20260523_5Sui_OnSRlY/5Sui_OnSRlY.info.json
+
+Stripe called theirs Minions. RAMP called theirs Inspect. Both are internal infrastructure for running fleets of background agents, and both teams built it from scratch. Lou Bichard's argument is that this shouldn't keep happening.
+
+The talk breaks down what agent swarm infrastructure actually needs: a runtime (largely solved), orchestration and triggers (solved), and coordination, which is not. Coordination is the gap where agents pick up tasks from each other, pass messages, and verify they have cleared a stage of the development cycle before moving on. GitHub is a poor substitute: noisy, designed for humans, and not built for agents raising hundreds of parallel pull requests. Lou covers what a proper primitive looks like, shows how Owner ships VM level isolation for agent fleets today, and makes the case that the coordination layer probably needs to be a CLI gateway that any local coding agent can invoke to check its progress and proceed.
+
+Speaker info:
+- https://x.com/loujaybee
+- https://www.linkedin.com/in/loujaybee
+
+Timestamps:
+0:00 Introduction and definition of a Software Factory
+1:50 Agent swarm patterns: Swarms, Fleets, and Events
+3:11 Real-world examples of internal agent infrastructure (Stripe, RAMP)
+3:50 How Owner handles agent infrastructure and development environments
+4:49 Understanding Harness Engineering
+5:43 The three pillars of agent swarm infrastructure: Runtime, Orchestration, and Coordination
+7:17 Demo: Running sub-agents and fleets in Owner
+10:20 Challenges of building a software factory
+11:44 The issue with Context Management and Context Rot
+12:16 Why GitHub is a poor coordination layer for agents
+12:59 Proposed solutions: State machines, Durable execution, and CLI gateways
+
+## Gemini Nano on device — Florina Muntenescu & Oli Gaymond, Google DeepMind
+
+- Upload date: 2026-05-22
+- Video: https://www.youtube.com/watch?v=owH1f0N-keY
+- Transcript: raw/20260522_owH1f0N-keY/owH1f0N-keY.en-orig.vtt
+- Metadata: raw/20260522_owH1f0N-keY/owH1f0N-keY.info.json
+
+Gemini Nano on device weighs three to four gigabytes. Shipping that per app is not realistic, which is why AI core puts it in the system once and every app shares it. Foreground apps get top priority. Background batch jobs queue and run overnight on charge. The developer never manages any of that.
+
+The tradeoff is reach. The GenAI MLKit APIs require flagship devices from the last couple of years. Classic MLKit for vision and OCR runs on a billion plus devices without issue. Hybrid inference, launched a few weeks before this talk, falls back from Nano to Gemini Flash in the cloud when the on device model is not available. An embedding API is coming soon for RAG style solutions. For anything beyond that, LiteRT is the other path.
+
+Speaker info:
+- https://x.com/FMuntenescu
+- https://www.linkedin.com/in/florina-muntenescu-314b8921
+- https://github.com/florina-muntenescu
+- https://linkedin.com/in/ogaymond
+
+## Fast Models Need Slow Developers — Sarah Chieng, Cerebras
+
+- Upload date: 2026-05-22
+- Video: https://www.youtube.com/watch?v=TeGsFFNqRLA
+- Transcript: raw/20260522_TeGsFFNqRLA/TeGsFFNqRLA.en-orig.vtt
+- Metadata: raw/20260522_TeGsFFNqRLA/TeGsFFNqRLA.info.json
+
+Codex Spark, a model Cerebras built with OpenAI, generates code at 1,200 tokens per second. The Sonnet and Opus families run at 40 to 60. At that 20x difference, a context window that used to take ten minutes to fill now takes 30 seconds, and every habit built around slow generation starts producing technical debt at a scale nobody has dealt with before.
+
+Sarah Chieng from Cerebras covers what the playbook looks like in this regime. Validation and linting at every step is now instant, so there is no excuse not to run it continuously. Generating 75 component variations across five sub-agents and cherrypicking the best one becomes practical where it was not before. And when context burns in 30 seconds, a four file external memory system (agents, plan, progress, verify) is what keeps each new session from starting over instead of from scratch.
+
+Speaker info:
+- https://x.com/sarahchieng
+- https://www.linkedin.com/in/sarah-chieng-888595139/
+
+Timestamps:
+0:00 - Introduction to the impact of fast AI code generation
+2:29 - Historical context of model speeds
+3:10 - Why AI inference speeds are increasing (Hardware/Stack optimization)
+7:05 - The current developer landscape and risks of "slob"
+8:27 - Playbook: Orchestrating models and sub-agents
+9:56 - Playbook: Validation and automated testing
+10:47 - Playbook: Cherrypicking and variety in output
+12:07 - Playbook: Adopting a real-time collaborative mental model
+12:53 - Playbook: Avoiding "slob" and active steering
+13:54 - Playbook: Continuous refactoring
+14:30 - Playbook: Context management and external memory systems
+
+## Lobster Trap: OpenClaw in Containers from Local to K8s and Back — Sally Ann O'Malley, Red Hat
+
+- Upload date: 2026-05-22
+- Video: https://www.youtube.com/watch?v=F1DYkY1BlfM
+- Transcript: raw/20260522_F1DYkY1BlfM/F1DYkY1BlfM.en-orig.vtt
+- Metadata: raw/20260522_F1DYkY1BlfM/F1DYkY1BlfM.info.json
+
+Sharing a good agent setup usually means handing someone a pile of markdown, config files, and YAML and hoping they reproduce what you have. The answer in this demo is a container image: spin up a sub agent in two seconds from a Podman command, flip a flag for Kubernetes, and your personal setup becomes the team baseline.
+
+The stack is Podman locally, Kubernetes for distribution, same container image throughout. Secrets get two layers: Podman secrets for API keys on the host, OpenClaw secret refs inside the container. Volumes handle backup and recovery. An Nvidia team runs the same pattern in production with ten engineers each running their own OpenClaw in Kubernetes for model evals, doing work that used to take six people.
+
+Speaker info:
+- https://www.linkedin.com/in/sally-ann-omalley/
+
+Timestamps:
+0:00 Introduction and background on Sally Ann O'Malley
+1:25 Discovering and experimenting with OpenClaw
+2:35 Benefits of running AI agents in containers
+3:05 Introducing Forever Claw and sub-agents
+5:52 Using containers for agent configuration and tools
+6:21 Managing secrets with Podman and Kubernetes
+8:10 Scaling agent workloads with Kubernetes
+9:15 Nvidia team case study: Model evaluations
+11:09 Backup, recovery, and persistence with volumes
+11:47 Vision for workplace agent standardization
+14:14 Local demo: Running OpenClaw with Podman
+16:45 Choosing providers and configuring settings
+17:50 SSH sandbox features
+18:22 Running the Podman command and checking agent status
+20:52 Transitioning agent workloads to Kubernetes and OpenShift
+
+## Cooking with Agents in VS Code — Liam Hampton, Microsoft
+
+- Upload date: 2026-05-21
+- Video: https://www.youtube.com/watch?v=dyHpnnlkTc8
+- Transcript: raw/20260521_dyHpnnlkTc8/dyHpnnlkTc8.en-orig.vtt
+- Metadata: raw/20260521_dyHpnnlkTc8/dyHpnnlkTc8.info.json
+
+One codebase, three problems, three agents running at the same time. Liam Hampton from Microsoft demos the full loop in VS Code: a local agent with Claude Opus writing and fixing unit tests with him in the loop, a background agent using a git work tree to build a front end from a GitHub issue without him touching it, and a cloud agent running in GitHub Actions to make the repo open source friendly.
+
+The talk is a framework for knowing which agent path to pick and why. Local when you want hands on iteration. Background when the task is big and you can tolerate being half in half out. Cloud when you genuinely do not care how it gets done. VS Code handles all three from one interface, with Copilot, Claude, and third party agents accessible from the same control plane.
+
+Speaker info:
+- https://x.com/liamchampton
+- https://www.linkedin.com/in/liam-conroy-hampton/
+- https://github.com/liamchampton
+
+## Scaling Agents on Kubernetes with acpx and ACP — Onur Solmaz, OpenClaw
+
+- Upload date: 2026-05-21
+- Video: https://www.youtube.com/watch?v=VaS2h-dY1-4
+- Transcript: raw/20260521_VaS2h-dY1-4/VaS2h-dY1-4.en-orig.vtt
+- Metadata: raw/20260521_VaS2h-dY1-4/VaS2h-dY1-4.info.json
+
+OpenClaw receives 300 to 500 pull requests per day. Most arrive AI generated, most are not mergeable, and every one of them is signal about something broken in the codebase. Onur Solmaz built acpx to process them without him in the loop.
+
+acpx is a headless CLI for the Agent Client Protocol. It replaces PTY scraping with structured agent to client communication and drives sessions through a node based workflow graph: reproduce the bug, judge the implementation, check for conflicts, run a review loop, emit structured JSON. Onur runs parallel Codex sessions from Discord channels while traveling, one channel per task. The talk ends with disposable agent pods on Kubernetes, a Go operator that provisions a full compute environment per task, wires it into Slack, and tears it down when the work is done.
+
+Speaker info:
+- https://x.com/onusoz
+- https://www.linkedin.com/in/osolmaz/
+- https://github.com/osolmaz
+
+## Your Coding Agent Should Do AI System Engineering — Ben Burtenshaw, Hugging Face
+
+- Upload date: 2026-05-21
+- Video: https://www.youtube.com/watch?v=JomVvNDjGb8
+- Transcript: raw/20260521_JomVvNDjGb8/JomVvNDjGb8.en-orig.vtt
+- Metadata: raw/20260521_JomVvNDjGb8/JomVvNDjGb8.info.json
+
+An agent written RMSNorm kernel hit 1.88x speedups on H100s. A finetuned Qwen3 0.6B hit 35% on LiveCodeBench. Neither result required a systems engineer. Just coding agents with the right skills loaded.
+
+Ben Burtenshaw from Hugging Face walks through three levels: using Claude Code interactively to write and benchmark CUDA kernels distributed as versioned repos on the Hub, a zero-shot task where an agent finetunes a model end to end from a single prompt, and a multi agent research lab running parallel experiments overnight on Hub compute while a reporter agent pushes results to a live Trackio dashboard. The through line is skills: file based context that turns a zero shot failure into a few shot workflow. CUDA programming and ML training pipelines were deep specializations that took years. Skills compress that timeline to hours.
+
+Speaker info:
+- https://x.com/ben_burtenshaw
+- https://www.linkedin.com/in/ben-burtenshaw/
+- https://github.com/burtenshaw
+
+Timestamps:
+0:00 Introduction to AI Systems Engineering
+1:59 Boss 1: Writing and Distributing CUDA Kernels
+3:48 Efficiency in Deep Learning
+6:08 Using Skills for Agentic Workflows
+8:37 Benchmarking and Evaluating Skills with Upskill
+9:26 Boss 2: End-to-End Fine-tuning of LLMs
+10:16 Boss 3: Multi-Agent Auto Research Labs
+12:09 Architecture of the Multi-Agent Research System
+13:40 Implementing the Research Agent in OpenCode
+15:28 Monitoring Experiments with Trackio
+16:45 Final Takeaways and Conclusion
+
+## Skill issue: Lessons from skilling up coding agents to use Langfuse - Marc Klingen, Clickhouse
+
+- Upload date: 2026-05-20
+- Video: https://www.youtube.com/watch?v=vNCY9kXXyDQ
+- Transcript: raw/20260520_vNCY9kXXyDQ/vNCY9kXXyDQ.en-orig.vtt
+- Metadata: raw/20260520_vNCY9kXXyDQ/vNCY9kXXyDQ.info.json
+
+Without a skill, Claude Code adds Langfuse using stale pre-training context, ships broken instrumentation, then catches the failure and fetches current docs to fix it. The resulting trace captures two LLM calls with no visibility into what the agent actually did.
+
+Marc Klingen covers the six learnings from building a skill to close that gap: surfacing a natural language search endpoint so agents stop crawling 478 documentation pages, why pointing to references beats duplicating content, and what happened when they ran an auto-research loop on the skill itself. Three of six suggested improvements shipped, but their target function nearly backfired by optimizing out the documentation-fetching steps that make the skill reliable over time.
+
+Speaker info:
+- https://x.com/marcklingen
+- https://www.linkedin.com/in/marcklingen/
+
+Timestamps:
+00:00 - Introduction to Marc Klingen and Langfuse
+01:22 - Conceptual mental model for agent skills
+04:04 - The problem: scaling documentation and onboarding for coding agents
+09:03 - Six key learnings from building a Langfuse skill
+09:12 - Learning 1: Looking at traces for debugging
+10:47 - Learning 2: Helping agents navigate information (sitemaps/formats)
+11:40 - Learning 3: Surfacing a search endpoint for docs
+12:36 - Learning 4: Implementing basic evaluation (eval) setups
+13:53 - Learning 5: Referencing rather than duplicating content
+14:24 - Learning 6: Using auto-research loops with target functions
+17:24 - Discussion on challenges: distribution, versioning, and target functions
+19:21 - Roadmap and future outlook for agent automation
+20:09 - Q&A session
+
+## Any-to-Any: Building Native Multimodal Agents - Patrick Löber, Google DeepMind
+
+- Upload date: 2026-05-20
+- Video: https://www.youtube.com/watch?v=GIRpQEfYf3U
+- Transcript: raw/20260520_GIRpQEfYf3U/GIRpQEfYf3U.en-orig.vtt
+- Metadata: raw/20260520_GIRpQEfYf3U/GIRpQEfYf3U.info.json
+
+Draw arrows on a map and ask Gemini to generate a picture of what you see. It produces the Golden Gate Bridge. Not because it matched pixels, but because the image generation model is built on top of Gemini's world understanding and knows what those arrows are pointing at.
+
+Patrick Löber walks through the full any-to-any stack: multimodal understanding where Gemini ingests PDFs, video, and audio up to nine-plus hours at once, native image and speech generation called as tools from an agentic loop, and a live audio model where audio goes in and audio comes out through a single architecture with no cascaded pipeline. The session ends with the building blocks for a Notebook LM clone where a reasoning agent decides what to generate rather than a hardcoded workflow.
+
+Speaker info:
+- https://x.com/patloeber
+- https://linkedin.com/in/patrick-l%C3%B6ber-403022137
+- https://github.com/patrickloeber
+
+Timestamps:
+0:00 Introduction to the session
+0:58 Defining "Any-to-Any" and the Gemini ecosystem
+2:56 Building a NotebookLM clone using an agentic approach
+3:51 The agentic architecture for multimodal applications
+4:50 Implementation details for multimodal understanding
+6:10 Tips for audio/video processing and context caching
+7:56 Multimodal generation phase
+8:37 Native image and infographic generation
+9:04 Native speech generation and podcast style audio
+9:57 Implementing function/tool calling
+11:28 The power of native generation models
+12:37 Multi-language and accent capabilities in audio models
+13:46 Live API and real-time interaction
+15:06 Final summary and additional model shout-outs
+
+## From 46% to 90%: Fine-Tuning Tiny LLMs for On-Device Agents — Cormac Brick, Google
+
+- Upload date: 2026-05-20
+- Video: https://www.youtube.com/watch?v=-TiET_K-E_g
+- Transcript: raw/20260520_-TiET_K-E_g/-TiET_K-E_g.en-orig.vtt
+- Metadata: raw/20260520_-TiET_K-E_g/-TiET_K-E_g.info.json
+
+Function Gemma ships at 270 million parameters and processes nearly 2,000 tokens per second prefill on a Pixel 7. Out of the box, on a fixed set of app intents, it hits 46% accuracy. Fine-tuned on a synthetically generated dataset, it clears 90% on eight of ten functions.
+
+Cormac Brick covers the two options developers have for on-device AI: Gemini Nano via AI core for common tasks, and LiteRT-LM for custom models that ship inside your app. The session walks through a live skill harness built on Gemma 4 with a restaurant roulette demo running fully on-device, and Eloquent, a production transcription app built by chaining two models under a few hundred million parameters.
+
+Speaker info:
+- https://www.linkedin.com/in/cbrick/
+
+Timestamps:
+0:00 Introduction to on-device agents and tiny LLMs
+0:48 Overview of AI Edge, SLMs, and TLMs
+0:57 Taking a look at agent skills
+1:06 Taking a look at tiny models
+1:24 Motivations for on-device AI (latency, privacy, offline use)
+3:01 System-level GenAI (Gemini Nano via AI Core)
+4:03 App-level GenAI (LiteRT-LM for custom/boutique models)
+5:06 Google AI Edge Gallery app demo
+6:22 Deep dive into agent skills and the skill harness
+7:41 How the skill harness works (system prompts, tool calls, and JavaScript UI)
+9:00 Creating and publishing your own skills
+10:28 Using LiteRT-LM runtime for model deployment
+12:31 Export and inference workflow (from PyTorch to deployment)
+13:19 Function Gemma: Robust, small-scale function calling
+14:35 Fine-tuning workflow for tiny models using synthetic data
+16:01 Eloquent: A production transcription app example using tiny models
+17:28 Q&A: Agent skill robustness and multi-skill calling
+19:26 Q&A: LiteRT-LM file format vs. Task files
+20:00 Q&A: Performance on CPU/TPU and resources
+
+## Don't Build Slop (4 Levels of AI Agent Maturity) - Ara Khan, Cline
+
+- Upload date: 2026-05-19
+- Video: https://www.youtube.com/watch?v=yUmS-F9IX90
+- Transcript: raw/20260519_yUmS-F9IX90/yUmS-F9IX90.en-orig.vtt
+- Metadata: raw/20260519_yUmS-F9IX90/yUmS-F9IX90.info.json
+
+The prompt for GPT-5.3 is one-third the size of the one written for GPT-5. Frontier models are so capable that longer system prompts cause sensory overload and degrade performance. The rule Ara Khan keeps returning to: every single thing you add to an agent risks making it worse.
+
+The talk breaks agent-building into four levels, from framework prototyping to cloud-native fleets, with five concrete rules for writing your own agent code in between. The form factor argument lands on Kanban boards as the right UX for managing parallel inference-bound agents. He made that prediction publicly on March 26. Claude Code shipped the same thing ten hours before this talk.
+
+Speaker info:
+- https://x.com/arafatkatze
+- https://www.linkedin.com/in/arafatkatze/
+- https://github.com/arafatkatze
+
+Timestamps:
+0:00 Introduction: Addressing the "mass psychosis" of agent-building
+2:13 The Four Levels of Agent Maturity overview
+3:00 Level 1: Using existing agent frameworks
+4:13 Level 2: Building your own agents (with five rules)
+4:36 Rule 1: View every agent as a state machine
+5:55 Rule 2: Keep it simple (Avoid unnecessary system prompt bloat)
+7:20 Rule 3: Integrate with a CLI for a pseudo-RL pipeline
+8:43 Rule 4: Don't build "slop" (Focus on thoughtful architecture)
+9:43 Rule 5: Master frontier model APIs (Reasoning traces)
+11:03 The UX form factor: Why Kanban boards are best for agents
+13:12 Shipping to the cloud for scalability
+17:15 Q&A session: Planning and state transitions in Kanban
+
+## What Breaks When You Build AI Under Sovereignty Constraints - Bilge Yücel, deepset GmbH
+
+- Upload date: 2026-05-19
+- Video: https://www.youtube.com/watch?v=x2bH0RKPgdc
+- Transcript: raw/20260519_x2bH0RKPgdc/x2bH0RKPgdc.en-orig.vtt
+- Metadata: raw/20260519_x2bH0RKPgdc/x2bH0RKPgdc.info.json
+
+If you send EU citizen data to an embedding API hosted in Virginia, you have already violated GDPR. That is one hidden assumption. Most production AI systems have dozens more, baked into the architecture long before anyone asked whether the system was sovereign.
+
+Bilge Yücel walks through the four sovereignty pillars (data, model, infrastructure, operations) and what actually breaks when you retrofit each one: re-evaluating performance from scratch after swapping a frontier API for a self-hosted model, managing multiple databases across jurisdictions after moving private data, and discovering how much vendor lock-in you had the moment you try to go on-prem. The closing checklist is three questions: can you swap models without changing application logic, do you have reproducible run logs stored in a compliant location, and can your team respond to an incident without calling a hyperscaler.
+
+Speaker info:
+- https://x.com/bilgeycl
+- https://www.linkedin.com/in/bilge-yucel/
+
+## Personalization in the Era of LLMs - Shivam Verma, Spotify
+
+- Upload date: 2026-05-19
+- Video: https://www.youtube.com/watch?v=5YSJEP0HWzM
+- Transcript: raw/20260519_5YSJEP0HWzM/5YSJEP0HWzM.en-orig.vtt
+- Metadata: raw/20260519_5YSJEP0HWzM/5YSJEP0HWzM.info.json
+
+Spotify represents Ariana Grande and Bruno Mars as sequences of six tokens. The first two are shared because both are pop artists. The remaining tokens diverge to capture what makes each distinct. That is a Semantic ID, and it is how Spotify teaches open-weight LLMs to reason over a catalog of 100 million tracks the same way they reason over words.
+
+Shivam Verma from Spotify's AI foundation team walks through the three components they assembled to personalize LLMs at scale without full fine-tuning. User embeddings trained on streaming history across 750 million users form the base. Semantic IDs compress catalog vectors into tokens the model can autoregressively generate, predicting the next song or episode as the next token in a sequence. A soft tokenization layer projects a user's embedding directly into the LLM's token space, giving the frozen model a user-specific token to attend over. Podcast next-episode recommendations are already running on this stack in production.
+
+Speaker info:
+- https://x.com/kaffeinated
+- https://www.linkedin.com/in/shivam13verma
+
+## Anthropic Workshop: Build Agents That Run for Hours — Ash Prabaker & Andrew Wilson
+
+- Upload date: 2026-05-18
+- Video: https://www.youtube.com/watch?v=mR-WAvEPRwE
+- Transcript: raw/20260518_mR-WAvEPRwE/mR-WAvEPRwE.en-orig.vtt
+- Metadata: raw/20260518_mR-WAvEPRwE/mR-WAvEPRwE.info.json
+
+Why self-evaluation is a trap and adversarial evaluator agents work better; why context compaction doesn't cure coherence drift but structured handoffs do; how to decompose work into testable sprint contracts; how to grade subjective output with rubrics an LLM can actually apply; and how to read traces as your primary debugging loop. Plus the question nobody asks: which parts of your harness should you delete when the next model drops?
+
+Speaker info:
+- Ash Prabaker  |  https://www.linkedin.com/in/ash-prabaker/
+- Andrew Wilson  |  https://www.linkedin.com/in/anddwilson/
+
+Timestamps:
+0:00 Introduction and speakers
+1:21 Overview of long-running agents
+2:29 Challenges: Context, Planning, and Judgment
+4:14 Two approaches: Model updates vs. Harness evolution
+5:58 Prehistory: Sonnet 3.5, Computer Use, and MCP
+6:34 The evolution of Claude Code
+7:55 The Ralph loop technique
+9:49 Sonnet 4.5, Agent SDK, and checkpoints
+10:49 Opus 4.5 and the role of sub-agents
+12:05 First long-running agent patterns
+14:20 Opus 4.6, Agent Teams, and server-side compaction
+17:28 State-of-the-art harness patterns
+21:30 Evaluating subjective output with rubrics
+23:44 Introducing the 'Planner' role
+25:04 The generator-evaluator contract
+31:28 Specificity in contracts and debugging traces
+34:14 Adjusting harnesses as models evolve
+37:56 How to build your own agent harness
+39:01 Key takeaways for long-running agents
+40:05 Q&A session
+
+## Rewiring the State — Eoin Mulgrew, No. 10 (Downing Street)
+
+- Upload date: 2026-05-18
+- Video: https://www.youtube.com/watch?v=ObNKGf9YR0g
+- Transcript: raw/20260518_ObNKGf9YR0g/ObNKGf9YR0g.en-orig.vtt
+- Metadata: raw/20260518_ObNKGf9YR0g/ObNKGf9YR0g.info.json
+
+The cabinet office was about to spend one and a half million pounds on an outside law firm to analyze the UK statute book. One engineer embedded with the in-house legal team for two weeks instead. The tool now lives with that team and can be run whenever they want. Eoin Mulgrew from the Number 10 data science team uses that as a typical example, not a headline one.
+
+The talk covers what it actually takes to run a small insurgent technical unit at the center of government: market rate pay, a 0.7% acceptance rate, recruiting exclusively from outside the civil service, and an unusually direct mandate to go into departments and ship. The demos include a policy simulation tool, a delivery red-teaming PMO, two public dashboards that had never existed before, and a public service that went from idea to live in two months. The closing argument is a photo of a recent Harvard dropout and YC founder standing outside HMP Wormwood Scrubs holding the keys, two weeks into the job.
+
+Speaker info:
+- https://www.linkedin.com/in/eoinmulgrew/
+
+## Let's go Bananas with GenMedia — Guillaume Vernade, Google DeepMind
+
+- Upload date: 2026-05-18
+- Video: https://www.youtube.com/watch?v=BcWFc3H7Khg
+- Transcript: raw/20260518_BcWFc3H7Khg/BcWFc3H7Khg.en-orig.vtt
+- Metadata: raw/20260518_BcWFc3H7Khg/BcWFc3H7Khg.info.json
+
+Guillaume Vernade from Google DeepMind takes a public domain book and runs it through the full gen media stack live. Gemini reads the whole text and writes image prompts for each character and chapter. Imagen generates the portraits. Veo animates them into video clips using those images as first frames. Lyria composes a different piece of music per chapter, with or without lyrics. The TTS model reads dialogue from the book using a trick that makes two voices sound like four distinct characters.
+
+The interesting layer underneath all of it is that Gemini acts as the prompt engineer for every other model, and it works well partly because the gen media models were trained on prompts written by Gemini. The workshop also covers the Lyria Realtime model, which generates music continuously and responds to new prompts mid-stream like a DJ, and a new interactions API that makes chained multi-turn calls cheaper by caching context server-side instead of resending the full book on every turn.
+
+Speaker info:
+- https://x.com/Giom_V
+- https://www.linkedin.com/in/guillaumevernade
+- https://github.com/Giom-V
+
+## Why Your AI UX Is Broken (and It's Not the Model's Fault) — Mike Christensen, Ably
+
+- Upload date: 2026-05-17
+- Video: https://www.youtube.com/watch?v=YNJvm7t3yq8
+- Transcript: raw/20260517_YNJvm7t3yq8/YNJvm7t3yq8.en-orig.vtt
+- Metadata: raw/20260517_YNJvm7t3yq8/YNJvm7t3yq8.info.json
+
+SSE ties a response stream to a single connection. The user refreshes the page, walks out of WiFi range, or opens a second tab and the in-progress response is gone. Abort and resume are mutually exclusive for the same reason: the only signal a client can send over a one-way pipe is closing it, so the agent cannot tell the difference between a cancel and a disconnect. Vercel's AI SDK documents this explicitly.
+
+Mike Christensen from Ably makes the case for treating the session itself as a durable shared resource, decoupled from any individual connection, device, or agent instance. Clients subscribe to the session rather than to a request, so reconnects resume automatically, any tab or device has full visibility of live activity, and concurrent agents write independently without routing everything through an orchestrator. The demo shows all of this: multi-tab sync, a forced network disconnect that self-recovers, two agents running in parallel, and a handoff to a human support agent who joins the session mid-conversation with the full interaction history already visible.
+
+Speaker info:
+- https://x.com/christensencode
+- https://www.linkedin.com/in/mikescottchristensen/
+
+Timestamps:
+0:00 Introduction to AI chat applications
+0:51 Current implementation: Direct HTTP streaming and SSE
+3:03 Three foundational capabilities for great AI products
+4:34 Limitations of direct HTTP streaming
+5:21 Introducing durable sessions
+6:06 Resumability in streams
+7:43 The conflict between SSE, resumability, and live control
+9:13 Multi-device and multi-tab synchronization issues
+11:12 Handling concurrent multi-agent architectures
+12:54 Using Pub/Sub and Ably channels for durable sessions
+14:12 Introducing Ably AI Transport SDK
+15:34 Live demo of durable session capabilities
+17:38 Handoff to human support agent
+
+## Fighting AI with AI — Lawrence Jones, Incident
+
+- Upload date: 2026-05-17
+- Video: https://www.youtube.com/watch?v=L2r6vLlLgs8
+- Transcript: raw/20260517_L2r6vLlLgs8/L2r6vLlLgs8.en-orig.vtt
+- Metadata: raw/20260517_L2r6vLlLgs8/L2r6vLlLgs8.info.json
+
+Incident's AI SRE runs hundreds of prompts per investigation across logs, metrics, traces, and code. When it produces a wrong root cause analysis, there is no tractable way for a human to read through the full trace and find where the reasoning went sideways. Lawrence Jones, founding engineer at Incident.io, describes the moment the team realized they needed AI to debug their AI.
+
+The talk covers three patterns they built. A small CLI lets coding agents read and edit eval YAML files that had grown too large for agents to work with directly, enabling a red-green runbook where the agent writes a failing eval, fixes the prompt, and checks nothing else broke. Their bigger unlock was serializing every UI debugging view as a downloadable file system: drop it into a Claude Code session, describe the bad behavior, and the agent traces through the prompt hierarchy to tell you exactly which prompt to change. For fleet-scale analysis, 25 agents run in parallel each analyzing one investigation, then a second stage clusters the results to surface systemic failure patterns across customer accounts.
+
+Speaker info:
+- https://x.com/lawrjones
+- https://www.linkedin.com/in/lawrence2jones/
+
+## Harnesses in AI: A Deep Dive — Tejas Kumar, IBM
+
+- Upload date: 2026-05-17
+- Video: https://www.youtube.com/watch?v=C_GG5g38vLU
+- Transcript: raw/20260517_C_GG5g38vLU/C_GG5g38vLU.en-orig.vtt
+- Metadata: raw/20260517_C_GG5g38vLU/C_GG5g38vLU.info.json
+
+Tejas will be back on stage at the World's Fair next week! see https://ai.engineer/wf and use YOUTUBEPROMO for new tickets only. Join 6000 AI engineers at the "Superbowl of AI"!
+
+---
+
+The agent hit a login page, panicked, reported success anyway, and the upvote never happened. Tejas Kumar's diagnosis: not a prompt problem. A harness problem.
+
+The demo builds a browser agent on GPT-3.5 Turbo (consciously choosing a VERY old model to show how good harness eng can improve it a lot) against Hacker News and layers in a harness without touching the prompt once. Guardrails cap iterations and compact context. A verify step reads the tool call history to catch the agent lying about what it did. A login handler watches the browser URL each loop and injects credentials programmatically when it hits the login page. By the end the cheap old model reliably logs in and upvotes the post.
+
+Speaker info:
+- https://x.com/TejasKumar_
+- https://www.linkedin.com/in/tejasq/
+- https://github.com/TejasQ
+
+Timestamps:
+0:00 Introduction to Tejas Kumar and AI Harnesses
+1:45 Why we use harnesses: Reliability and control
+3:00 Defining an agent harness from first principles
+4:32 Key components of an agent harness (Tooling, Context, Guardrails)
+5:59 Starting the demo: Building a browser agent
+7:00 Inspecting the initial agent loop
+8:12 The problem: Agent failure and hallucination
+10:20 Adding guardrails and context management
+11:54 Refactoring into a formal harness
+13:02 Implementing a verify step to catch lies
+15:36 Implementing a login handler for programmatic access
+17:42 Final demonstration: Successful autonomous upvoting
+18:34 Summary and the future of dynamic harnesses
+
+## How to Leverage Domain Expertise — Chris Lovejoy, Notius Labs
+
+- Upload date: 2026-05-16
+- Video: https://www.youtube.com/watch?v=kfSDc2eVLo4
+- Transcript: raw/20260516_kfSDc2eVLo4/kfSDc2eVLo4.en-orig.vtt
+- Metadata: raw/20260516_kfSDc2eVLo4/kfSDc2eVLo4.info.json
+
+Granola's first employee was a writer who still reviews meeting note outputs and tweaks prompts directly. Chris Lovejoy says that is not a gap in the org chart. There is no objectively perfect meeting note, so you need someone with taste doing both the assessment and the improvement.
+
+He frames this as one of three patterns: the Oracle owns the full loop, the Evaluator defines quality and measures it while engineers improve, the Architect builds systems that improve from usage automatically. Three case studies cover when each is appropriate, what skills to hire for, and what happens when you bring in a domain expert but give them no ownership.
+
+Speaker info:
+- https://x.com/ChrisLovejoy_
+- https://www.linkedin.com/in/dr-christopher-lovejoy/
+- https://github.com/chris-lovejoy
+
+## Connecting the Dots with Context Graphs — Stephen Chin, Neo4j
+
+- Upload date: 2026-05-16
+- Video: https://www.youtube.com/watch?v=eW_vxrjvERk
+- Transcript: raw/20260516_eW_vxrjvERk/eW_vxrjvERk.en-orig.vtt
+- Metadata: raw/20260516_eW_vxrjvERk/eW_vxrjvERk.info.json
+
+Ask a vector RAG system about a patient's emphysema care plan and it returns generic advice: respiratory therapy, deep breathing. Give it a graph grounded in that patient's actual history and it knows they smoke, knows they've had an operation, and gives recommendations that reflect it. The information existed in both cases. What changed was whether the system could traverse the relationships connecting it.
+
+Stephen Chin from Neo4j makes the case that retrieval alone is not enough because agents also lose the reasoning behind past decisions. Context graphs capture not just what was retrieved but what decisions were made, why, which policies applied, and what the outcome was, so that precedent is queryable the next time a similar case comes up. The financial services demo shows this concretely: a loan decision that surfaces a prior rejection, related margin trades, and fraud risk patterns, with the graph traversal visible so the human making the final call can actually see what the system is drawing on.
+
+Speaker info:
+- https://x.com/steveonjava
+- https://linkedin.com/in/steveonjava
+
+## Beyond Code Coverage: Functionality Testing with Playwright MCP — Marlene Mhangami, Microsoft
+
+- Upload date: 2026-05-16
+- Video: https://www.youtube.com/watch?v=FWEInOtngmM
+- Transcript: raw/20260516_FWEInOtngmM/FWEInOtngmM.en-orig.vtt
+- Metadata: raw/20260516_FWEInOtngmM/FWEInOtngmM.info.json
+
+When an LLM writes your tests, it tends to write tests that confirm what the code does rather than tests that verify what the user experiences. Your test suite goes green. The app still breaks in ways none of those tests would catch.
+
+Marlene Mhangami from Microsoft makes the case for flipping the order: get the agent to write failing Playwright tests against the expected behavior first, then generate code to pass them. The demo runs this live with GitHub Copilot and the Playwright MCP server on a toy store search feature, with the browser open so you can watch the agent click through filters and validate results in real time.
+
+Speaker info:
+- https://x.com/marlene_zw
+- https://www.linkedin.com/in/marlenemhangami/
+- https://github.com/marlenemhangami
+
+Timestamps:
+0:00 Introduction to GitHub Octoverse stats and 2025/2026 growth
+2:13 Does AI actually increase developer productivity?
+3:52 Importance of maintaining a clean codebase
+4:36 Test-Driven Development (TDD) and the Red-Green-Refactor cycle
+6:07 Common criticisms of TDD and unit testing
+7:43 The problem with AI-generated self-affirming tests
+8:09 Introduction to Playwright for functional testing
+9:18 Integrating AI agents with Playwright for faster TDD
+10:54 Live Demo: Adding search and filter features to a toy store app
+12:25 Using GitHub Copilot CLI and Work IQ for feature requests
+13:50 Generating and running Playwright tests live
+16:10 Best practices for using AI with Playwright
+17:30 Q&A: Handling state management and testing across different screen sizes
+
+## Agents Don't Do Standups: Building the Post-Engineer Engineering Org — Mike Spitz, PFF
+
+- Upload date: 2026-05-15
+- Video: https://www.youtube.com/watch?v=VMemhtlsoNk
+- Transcript: raw/20260515_VMemhtlsoNk/VMemhtlsoNk.en-orig.vtt
+- Metadata: raw/20260515_VMemhtlsoNk/VMemhtlsoNk.info.json
+
+PFF ran a three-month case study: two engineers against a team of ten, same codebase, same customers. The two shipped five times a day. The ten shipped once every five days. Output measured by ticket complexity came out at 10x. Customer satisfaction went up, not down. Mike Spitz, their CTO, started with one reframe: stop asking how to help engineers go faster and ask how to make the agents faster instead.
+
+The talk covers what that reframe actually dismantled. Standups went away because tickets auto-update from PR state. Sprint planning went away because estimates are irrelevant when the bottleneck is no longer human. Code review got split: agents handle style and naming, engineers handle system design. The spec to lightweight design doc to auto-generated ticket to PR flow replaced most of the coordination overhead entirely. What survived is a short huddle every other day, a strong opinion about which engineers thrive in this setup, and a QA agent that spins up on staging after every merge and checks acceptance criteria against the ticket.
+
+Speaker info:
+- https://x.com/mikespitz_uk
+- https://www.linkedin.com/in/mike-spitz-89741243/
+
+Timestamps:
+0:00 Introduction to the case study at PFF
+1:47 The shift: optimizing for agent speed rather than engineer speed
+2:28 Results: 25x increase in deployment frequency
+3:16 Measuring success through ticket complexity and customer satisfaction
+4:53 Dismantling Scrum and traditional development processes
+5:58 The new development workflow (Spec → LDD → Ticket → PR)
+6:51 Eliminating coordination overhead (no sprint planning or standups)
+8:28 Best practices for implementation and team selection
+10:09 Utilizing agents for deterministic tasks and code reviews
+12:00 Viewing the engineering lifecycle as a factory
+13:06 Automated QA and the future of self-healing systems
+14:10 Where human oversight remains essential
+14:48 Strategic advice for scaling AI-driven engineering
+
+## Combine Skills and MCP to Close the Context Gap — Pedro Rodrigues, Supabase
+
+- Upload date: 2026-05-15
+- Video: https://www.youtube.com/watch?v=JT3OzDKrucU
+- Transcript: raw/20260515_JT3OzDKrucU/JT3OzDKrucU.en-orig.vtt
+- Metadata: raw/20260515_JT3OzDKrucU/JT3OzDKrucU.info.json
+
+Agents working with Postgres will confidently create a view over a table with row-level security enabled and silently bypass that security in the process. Not because they can't reason. Because they don't know about the security_invoker flag, and nobody told them. Pedro Rodrigues from Supabase ran this exact test: same agent, same task, MCP alone versus MCP plus a skill. The one without the skill shipped a query that exposed data it shouldn't have.
+
+The talk covers what Supabase learned building their agent skill from scratch: critical security rules go directly in skill.md because agents will reliably skip reference files, skills should point to living documentation rather than duplicate it, and opinionated workflow guidance matters more than comprehensive coverage. Their evals ran across Claude and GPT models in three conditions and the result was unanimous. Skills without MCP underperform. MCP without skills misses environment-specific constraints. Together they close the gap that makes agents unreliable on real production systems.
+
+Speaker info:
+- https://x.com/rodriguespn23
+- https://www.linkedin.com/in/pedro-neves-rodrigues/
+- https://github.com/Rodriguespn
+
+## How Building with AI Can Double the Throughput of Your Engineering Team — Brian Scanlan, Intercom
+
+- Upload date: 2026-05-15
+- Video: https://www.youtube.com/watch?v=4_VQBbs2iQA
+- Transcript: raw/20260515_4_VQBbs2iQA/4_VQBbs2iQA.en-orig.vtt
+- Metadata: raw/20260515_4_VQBbs2iQA/4_VQBbs2iQA.info.json
+
+Intercom hit 2x engineering throughput in under a year. Not by prompting better. By treating Claude Code like a new hire: onboarding it to a Rails monolith built over 15 years, writing skills for every recurring task, connecting it to production systems and internal tooling, and going all in on one platform instead of letting everyone pick their favorite tool.
+
+Brian Scanlan covers what the data looks like: PR throughput doubled, 17.6% of pull requests auto-approved with SOC 2 sign-off, and the CI infrastructure collapsed under the volume. The principle behind all of it comes down to framing. Give agents problems, not tasks. He was pulled into a security incident over accidentally published Snowflake metadata, described the situation to Claude, and watched it pull the files, run the analysis, and hand back next steps in two minutes using a skill he didn't know existed.
+
+Speaker info:
+- https://x.com/brian_scanlan
+- https://www.linkedin.com/in/scanlanb/
+
+## Make your own event-sourced agent harness using stream processors — Jonas Templestein, Iterate
+
+- Upload date: 2026-05-14
+- Video: https://www.youtube.com/watch?v=vi-2nasppAg
+- Transcript: raw/20260514_vi-2nasppAg/vi-2nasppAg.en-orig.vtt
+- Metadata: raw/20260514_vi-2nasppAg/vi-2nasppAg.info.json
+
+The abstraction is three things: state, a synchronous reducer that derives state from events, and an after-append hook for side effects. The split matters: when your program restarts after 100 events, you want to catch up state without replaying LLM requests. Everything that happens (streaming chunks, tool calls, errors, circuit breaker triggers) is an event in the log.
+
+The interesting part is deployment. Jonas demos "dynamic worker configured," an event whose payload is a JavaScript string containing a processor. Append it to any stream and that stream becomes an AI agent without server or dependencies. The broader implication: processors from different authors on different servers can compose against the same stream, and a safety checker can inject context in a 200ms window before an LLM request without blocking the agent if it doesn't make it.
+
+Speaker info:
+- https://x.com/jonas
+- https://www.linkedin.com/in/jonashuckestein
+- https://github.com/jonastemplestein
+
+
+0:14 Introduction and workshop overview
+1:33 Concept of event-sourced agent harnesses
+2:24 Desired characteristics: Extensibility and composability
+3:14 Agents on the edge and public routability
+4:20 The distributed nature of agents and potential pitfalls
+5:40 Introduction to the event stream architecture
+8:38 Working with the API via curl
+10:48 Handling events and error states
+11:57 Circuit breakers and stream management
+13:49 Scheduling tasks and event subscriptions
+15:17 Q&A: Architectural philosophy
+19:17 Demonstrating the SDK and TypeScript integration
+30:06 Defining stream processors and reducers
+47:34 How stream processors function in production
+50:35 Dynamic workers and deploying via event payloads
+58:45 Discussion on before-hooks versus eventual consistency
+1:02:16 Future outlook and wrapping up
+
+## Mind the Gap (In your Agent Observability) — Amy Boyd & Nitya Narasimhan, Microsoft
+
+- Upload date: 2026-05-14
+- Video: https://www.youtube.com/watch?v=iOXM3zE-2dk
+- Transcript: raw/20260514_iOXM3zE-2dk/iOXM3zE-2dk.en-orig.vtt
+- Metadata: raw/20260514_iOXM3zE-2dk/iOXM3zE-2dk.info.json
+
+Agents drift. Models change, prompts get tweaked, edge cases accumulate, and the gap between what your agent does and what you need it to do widens without you noticing. Amy and Nitya walk through Microsoft Foundry's observability stack: tracing built on OpenTelemetry, built-in evaluators for quality, safety, and agentic metrics like intent resolution and task adherence, and red teaming where a second AI attacks your agent with adversarial prompts to find vulnerabilities before your users do.
+
+The piece worth watching for is the observe skill demo. You point it at an agent with no eval dataset, no baselines, nothing. It generates the dataset, runs batch evaluations, optimizes the prompt, compares versions, and rolls back to the best one... all from a single prompt to a coding agent. The skill shows its reasoning at each step, which is where the real value is: it surfaces the failures you didn't know to look for.
+
+Speaker info:
+- https://x.com/NityaNarasimhan
+- https://www.linkedin.com/in/nityan/
+- https://x.com/AmyKateNicho
+- https://www.linkedin.com/in/amykatenicho/
+
+## Ship Real Agents: Hands-On Evals for Agentic Applications — Laurie Voss, Arize
+
+- Upload date: 2026-05-14
+- Video: https://www.youtube.com/watch?v=Xfl50508LZM
+- Transcript: raw/20260514_Xfl50508LZM/Xfl50508LZM.en-orig.vtt
+- Metadata: raw/20260514_Xfl50508LZM/Xfl50508LZM.info.json
+
+Most agents get tested by running a few queries and checking if it looks right. Laurie calls this the vibes problem: it doesn't catch regressions, doesn't run in CI, and doesn't tell you whether a prompt fix broke three other things. This workshop builds a complete eval pipeline from scratch on a financial analysis agent: tracing with Phoenix, reading traces before writing a single eval, categorizing failures by root cause, then building code evals, built-in LLM-as-a-judge evals, and a custom rubric with labeled examples.
+
+The sharpest lesson: choosing the right eval matters more than tuning it. A correctness eval scored 0 out of 13 on the same agent that a faithfulness eval scored 13 out of 13, because the model doesn't know what year it is and can't verify forward-looking financial data. The workshop closes on the thing most eval content skips — experiments that let you prove a prompt change actually worked, rather than eyeballing it and calling it a win.
+
+Speaker info:
+- https://x.com/seldo
+- https://www.linkedin.com/in/seldo/
+- https://github.com/seldo
+
+Timestamps:
+0:00:00 Introduction
+0:00:14 Workshop Overview
+0:04:31 Troubleshooting Phoenix Setup
+0:05:17 Fundamentals of Evals and Tracing
+0:18:44 Anatomy of an Eval Result
+0:21:19 The Iteration Loop
+0:26:58 Building the Financial Analysis Agent
+0:33:28 Using Phoenix for Observability
+0:35:38 Running Multiple Test Queries
+0:38:12 Reading and Categorizing Traces
+0:49:52 Implementing Code Evals
+0:57:51 Built-in LLM-as-a-Judge Evals
+1:03:04 Faithfulness Evaluation
+1:04:35 Designing a Custom Eval Rubric
+1:11:47 Running the Actionability Judge
+1:19:14 Using Data Sets and Experiments
+1:50:19 Final Tips and Best Practices
+1:51:48 Differences Between Phoenix and Arize AX
+
+## CI/CD Is Dead, Agents Need Continuous Compute and Computers — Hugo Santos and Madison Faulkner
+
+- Upload date: 2026-05-13
+- Video: https://www.youtube.com/watch?v=VktrqzQgytY
+- Transcript: raw/20260513_VktrqzQgytY/VktrqzQgytY.en-orig.vtt
+- Metadata: raw/20260513_VktrqzQgytY/VktrqzQgytY.info.json
+
+Traditional CI/CD was built for humans pushing one or two diffs a week. Scale to thousands of autonomous agents opening PRs continuously and you get runner saturation, cold Docker builds on every branch, cache thrash, and a merge queue that starts behaving like a serialized database lock where time-to-commit becomes the actual bottleneck.
+
+Madison Faulkner and Hugo Santos (Namespace) lay out what replaces it: no PRs, just intent and plan fed into an agent loop with fast inline validation. Changes queue in a premerge layer where humans review intent-plus-outcome rather than diffs. The end state they're pointing toward is agents exploring multiple commits in parallel for the same plan, a multiverse where the tip of the repo is a moving target and the inner loop needs to be stateful and fast enough to keep up.
+
+Speaker info:
+- https://x.com/madsfaulkner
+- https://www.linkedin.com/in/madisonhfaulkner/
+- https://namespace.so/blog/introducing-namespace
+- https://www.linkedin.com/in/hugomgsantos/
+
+Timestamps
+0:00 Introduction and speaker bios
+1:28 Why agentic software is breaking traditional CI/CD
+1:59 The fragmented lifecycle of modern software development
+2:25 How traditional CI/CD pipelines work
+2:55 The problems with CI/CD at agent scale
+4:04 Replacing CI/CD with acceleration and orchestration
+6:12 Real-world solutions and the future of agentic loops
+7:23 The role of the human as the agent
+8:43 Why Pull Requests (PRs) are becoming a bottleneck
+10:00 A new architecture: Intent and plan-based development
+11:58 Moving toward fully automated internal/external validation
+13:46 The premerge queue and human-in-the-loop review
+15:20 The future: Parallel development in the multiverse
+16:51 Conclusion: The shifting role of CI and governance
+
+## Self-Training Agents: Hermes Agent, HF Traces, Skills, MCP & Finetuning  — Merve Noyan, Hugging Face
+
+- Upload date: 2026-05-13
+- Video: https://www.youtube.com/watch?v=OV56RddyFuU
+- Transcript: raw/20260513_OV56RddyFuU/OV56RddyFuU.en-orig.vtt
+- Metadata: raw/20260513_OV56RddyFuU/OV56RddyFuU.info.json
+
+Open-source models have caught up. GLM 5.1 is leading the Artificial Analysis intelligence index over closed models, and the gap is closing fast with each release cycle. The practical upside beyond benchmarks: full weight access means you can quantize, fine-tune, and deploy to edge devices or browsers without data leaving your infrastructure.
+
+@MerveNoyan walks through the Hugging Face ecosystem built around this: inference providers that route to the fastest or cheapest option per model, benchmark datasets for filtering by SWE-bench or AIME scores directly on Hub, a traces repository type for storing and exploring agent sessions, and skills that plug into coding agents. The closer is a live demo where she asks Claude Code to fine-tune a vision-language model on a dataset by name. The agent calculates VRAM requirements, selects an instance, and kicks off the job. What used to be a day of napkin math is now a prompt.
+
+
+Speaker info:
+- https://x.com/mervenoyann
+- https://www.linkedin.com/in/merve-noyan-28b1a113a/
+- https://github.com/merveenoyan
+
+Timestamps
+0:00 Introduction to Open Agent Ecosystem
+0:39 Importance of Open Source in Machine Learning
+2:36 Hugging Face Hub overview
+3:06 Agentic models and Vision-LMs
+4:24 Benchmark datasets and model filtering
+5:16 Inference providers and model routing
+6:50 Local coding agents and tools
+7:46 Hermes agents for memory management
+9:20 Traces repository for agent sessions
+10:22 Tips for finding and serving local models
+12:07 Supercharging agents with Hugging Face skills
+13:41 Live demonstration of agent-driven fine-tuning
+14:41 Training vision models (object detection/segmentation)
+15:00 Using Model Context Protocol (MCP) for agents
+16:30 Case study: OCR processing for AI papers
+
+## Building a Chess Coach — Anant Dole and Asbjorn Steinskog, Take Take Take
+
+- Upload date: 2026-05-13
+- Video: https://www.youtube.com/watch?v=FlzpEGHNVKQ
+- Transcript: raw/20260513_FlzpEGHNVKQ/FlzpEGHNVKQ.en-orig.vtt
+- Metadata: raw/20260513_FlzpEGHNVKQ/FlzpEGHNVKQ.info.json
+
+LLMs can explain things clearly but can't play chess reliably. Take Take Take (Magnus Carlsen's app) solved this by separating concerns: Stockfish handles position evaluation, tactical and positional detectors extract concepts like forks, pins, and structural weaknesses, and the LLM's only job is translating those structured signals into English. Keeping the model as a translator rather than a reasoner is what makes it work at sub-3-second latency for a consumer app.
+
+Anant Dole and Asbjørn Steinskog also walk through how they closed the feedback loop. When a user flags bad commentary, it posts to Slack and injects the event into a running Claude Code session via Channels, a new MCP feature in research preview. Claude investigates the position, modifies prompts or detectors, regenerates the commentary, and asks clarifying questions back through Slack. During the live demo, Anant was reviewing the PR from his phone.
+
+Speaker info:
+- https://www.linkedin.com/in/asbj%C3%B8rn-ottesen-steinskog-a8000241/
+- https://www.linkedin.com/in/anantdole/
+
+## Give Your Agent a Computer — Nico Albanese, Vercel
+
+- Upload date: 2026-05-12
+- Video: https://www.youtube.com/watch?v=wflNENRSUb4
+- Transcript: raw/20260512_wflNENRSUb4/wflNENRSUb4.en-orig.vtt
+- Metadata: raw/20260512_wflNENRSUb4/wflNENRSUb4.info.json
+
+The key insight from Vercel's internal agent work: giving an agent a file system didn't just add storage, it changed how the agent behaved. It started following through on long tasks, staying on track, and building on its own prior work. That's what this workshop builds toward.
+
+@nicoalbanese10  walks through AI SDK v6 from scratch: a tool loop agent, provider-executed web search, end-to-end type safety, and Vercel's new persistent named sandboxes. The agent gets a bash tool, a memories.md file it reads and writes, and instructions that make it generate Python scripts for repeatable tasks and store them for later. By the end, it's an agent that accumulates tools and context across sessions without any manual memory management.
+
+Speaker info:
+- https://x.com/nicoalbanese10
+- https://www.linkedin.com/in/nicoalbanese/
+- https://github.com/nicoalbanese
+
+Timestamps:
+0:00 Setup and project initialization
+7:31 Installing dependencies
+9:02 Introduction to AI SDK v6 and tool loop agents
+11:05 Defining the agent in agent.ts
+13:40 Building the route handler for the chat API
+15:26 Creating the frontend UI with useChat
+16:53 Modifying agent instructions
+18:40 Adding web search tool (provider-executed tools)
+23:55 Adding UI components for tool usage
+27:43 The importance of persistent sandboxes (file systems for agents)
+33:45 Managing context and message history across steps
+45:11 Initializing persistent sandboxes
+47:20 Defining custom call options and context
+51:10 Creating the bash execution tool
+55:05 Integrating the bash tool into the agent
+57:15 Adding persistent memory (memories.md)
+1:03:44 Making agents learn by generating Python scripts
+1:05:58 Reviewing the full agent system and sub-agents
+
+## Lessons from Trillion Token Deployments at Fortune 500s — Alessandro Cappelli, Adaptive ML
+
+- Upload date: 2026-05-12
+- Video: https://www.youtube.com/watch?v=X6NShR2ccOg
+- Transcript: raw/20260512_X6NShR2ccOg/X6NShR2ccOg.en-orig.vtt
+- Metadata: raw/20260512_X6NShR2ccOg/X6NShR2ccOg.info.json
+
+95% of GenAI pilots fail to reach production. Alessandro Cappelli's argument is that this isn't a deployment problem or a prompt engineering problem — it's a feedback integration problem. Instruction fine-tuning and proprietary models give you a demo. Only reinforcement learning gives you a systematic way to incorporate defects, business metrics, and production signals and keep improving.
+
+This talk covers what a production-grade RL pipeline looks like at Fortune 500 scale: synthetic data as a byproduct of environment training rather than a prerequisite, mock environments where agents can fail safely before touching real systems, and LLM judges that replace expensive annotation campaigns with a rubric-definition exercise that takes hours rather than weeks. The throughline is that agents raise the stakes on all of this — more tokens, less tolerance for errors, direct access to live databases — and RL was designed for exactly that problem.
+
+Speaker info:
+- https://www.linkedin.com/in/alessandro-cappelli-aa8060172
+
+## Malleable Evals: Why Are We Evaluating Adaptive Systems with Static Tests? — Vincent Koc, OpenClaw
+
+- Upload date: 2026-05-12
+- Video: https://www.youtube.com/watch?v=4VhbYlfC7Gs
+- Transcript: raw/20260512_4VhbYlfC7Gs/4VhbYlfC7Gs.en-orig.vtt
+- Metadata: raw/20260512_4VhbYlfC7Gs/4VhbYlfC7Gs.info.json
+
+Eighty percent of what your agent does is stable and well defined. The other twenty percent keeps changing as your users change, and that twenty percent is what breaks your business. Vincent Koc's argument is that we have been treating AI applications like static software and building evaluations like fixed datasets when the thing being measured keeps adapting underneath them.
+
+The talk names this eval calcification and sketches what replaces it: agents that self curate test suites from their own traces, telemetry in the loop so the harness knows what is breaking and corrects itself, and evals that define an end state rather than a right answer. The benchmark is not a dataset. It is a self optimizing system that has to grow with the application it measures.
+
+Speaker info:
+- https://x.com/vincent_koc
+
+## Why MLX — Prince Canuma, Neywa Labs
+
+- Upload date: 2026-05-11
+- Video: https://www.youtube.com/watch?v=zTLJNHj0DeQ
+- Transcript: raw/20260511_zTLJNHj0DeQ/zTLJNHj0DeQ.en-orig.vtt
+- Metadata: raw/20260511_zTLJNHj0DeQ/zTLJNHj0DeQ.info.json
+
+MLX is an array framework for Apple Silicon, essentially PyTorch for your Mac, and this is a tour of what it can run: real-time vision models that describe the world around you, sub-100ms text-to-speech, speech-to-speech pipelines, omni models that take image and audio together, and video generation from a text prompt on 16GB of VRAM. A recent breakthrough called Turbo Quant cuts KV cache by 4x and gets 1M context running fully on device. The community projects include a native voice app, a robot speaking in real time with a cloned voice, and a system that chains video generations into a coherent story — all without a cloud call.
+
+The underlying argument: the cloud assumption doesn't hold everywhere. Not for someone in Africa on an unreliable connection. Not for a local agent that needs to stay on. Not for a robot that has to hear, see, and respond without phoning home.
+
+Speaker info:
+- https://x.com/Prince_Canuma
+- https://pl.linkedin.com/in/prince-canuma
+
+Timestamp
+
+0:00 Introduction and motivation for on-device AI
+1:13 The origin story: Accessibility and Apple Silicon
+2:27 Introduction to the MLX framework
+3:30 Vision capabilities: Empowering accessibility
+4:15 Omni models: Multimodal input support
+5:25 Audio intelligence: Controlling computers via voice
+6:33 Speech-to-speech and modular pipelines
+7:59 Vision demo: Real-time image analysis
+8:56 Background blur and object detection demo
+9:31 Large language model demo: Running Gemma 4 locally
+11:50 Community projects: Grounded visual reasoning
+13:06 Video generation chains on-device
+14:33 Native voice application showcase
+15:39 Robotics: Real-time voice cloning and interaction
+17:14 Q&A: Neural engine usage and CorML
+18:18 Q&A: Monitoring performance with Mactop
+19:34 Q&A: Available model recommendations
+20:15 Q&A: Limitations and performance expectations
+20:54 Q&A: Turbo Quant breakthrough and KV cache optimization
+
+## A Piece of Pi: Embedding The OpenClaw Coding Agent In Your Product — Matthias Luebken, Tavon
+
+- Upload date: 2026-05-11
+- Video: https://www.youtube.com/watch?v=vAIDdLKB6-w
+- Transcript: raw/20260511_vAIDdLKB6-w/vAIDdLKB6-w.en-orig.vtt
+- Metadata: raw/20260511_vAIDdLKB6-w/vAIDdLKB6-w.info.json
+
+OpenClaw feels like it's learning: it discovers capabilities, stitches tools together, builds solutions it wasn't explicitly taught. The reality is simpler — it's an LLM calling tools in a loop, powered by Pi, a minimal coding agent SDK. This talk is about what you can build once you understand that.
+
+Matthias Luebken walks through embedding Pi in a real product: a B2B sales pipeline where incoming RFP emails route to customer-specific agent sessions, CLIs expose CRM and ERP data in a form the agent can use cleanly, and the only output a human sees is a draft in their inbox. The architectural principle running through it: don't fight the coding agent, make things easy for it. Design your data access and tool interfaces so the agent can work naturally rather than having to compensate for complexity.
+
+Speaker info:
+- https://x.com/luebken
+-https://github.com/luebken
+
+Timestamps
+
+0:15 Introduction to Pi and OpenClaw
+1:55 The philosophy of coding agents (doing one thing well)
+3:34 Architectural pattern: Making systems easy for agents
+5:13 Defining an agent: LLM with tools in a loop
+6:37 Practical example: CRM lead qualifier
+8:41 Coding agents vs. core agents
+10:06 Extension API and UI interactions
+12:53 Multi-channel environment: Pi and OpenClaw
+14:46 Real-world B2B sales pipeline application
+18:14 Demonstration: Dashboard and email drafting process
+20:00 Final takeaways and encouragement to tinker
+
+## Viktor: AI Coworker That Lives in Slack — Fryderyk Wiatrowski
+
+- Upload date: 2026-05-11
+- Video: https://www.youtube.com/watch?v=ohKt066uFhg
+- Transcript: raw/20260511_ohKt066uFhg/ohKt066uFhg.en-orig.vtt
+- Metadata: raw/20260511_ohKt066uFhg/ohKt066uFhg.info.json
+
+Viktor is an AI employee that lives in Slack. No web UI. It participates in channels and threads the way a teammate does, inherits integrations from whoever connected them first, and handles tasks that take ten minutes while you move on to something else.
+
+This talk covers what breaks when you scale a personal agent to a whole company. Slack is a more complex input surface than it looks: threads, DMs, edits, deletions, emoji reactions, and conversations that drift between channels. Memory isolation gets harder when the same agent needs context for a hundred users without leaking the growth channel into the engineering queue or one person's DMs into the team feed. And when you try to swap the underlying model for something cheaper, users notice in ways that have nothing to do with task performance.
+
+Speaker info:
+- https://x.com/fawiatrowski
+- http://getviktor.com/
+
+## Two Roads to Durable Agents: Replay vs. Snapshot — Eric Allam, CEO, Trigger.dev
+
+- Upload date: 2026-05-10
+- Video: https://www.youtube.com/watch?v=svCnShDvgQg
+- Transcript: raw/20260510_svCnShDvgQg/svCnShDvgQg.en-orig.vtt
+- Metadata: raw/20260510_svCnShDvgQg/svCnShDvgQg.info.json
+
+Replay-based durability — wrapping every step in a journal, replaying on recovery, requiring deterministic code — is how everyone makes agents durable today. It works until it doesn't: the journal grows with every turn, the structure starts constraining how you write code, and an agent that needs to run for hours starts looking less like a transaction and more like a session.
+
+This talk separates the problem in two: context durability (the append-only log of everything the LLM saw, which already fits in a database) and execution durability (the files, memory, and subprocesses that live in the compute layer, which don't). The answer to the second half isn't a smarter log — it's OS-level snapshot and restore. Eric Allam walks through how Trigger.dev built this on Firecracker microVMs, getting snapshots down to 14 megabytes compressed with sub-second save and hundred-millisecond restore times, and why IBM mainframes in 1966 got there first.
+
+Speaker info:
+- https://x.com/maverickdotdev
+- https://www.linkedin.com/in/eric-allam/
+- https://github.com/ericallam
+
+## How we solved Context Management in Agents — Sally-Ann Delucia
+
+- Upload date: 2026-05-10
+- Video: https://www.youtube.com/watch?v=esY99nYXxR4
+- Transcript: raw/20260510_esY99nYXxR4/esY99nYXxR4.en-orig.vtt
+- Metadata: raw/20260510_esY99nYXxR4/esY99nYXxR4.info.json
+
+The naive solution is truncation. The obvious solution is summarization. Neither worked — and the Arize team found out the hard way while building an AI agent that had to analyze the very trace data it was generating.
+
+A year of lessons from building Alyx, starting with the vicious loop that defined the problem: Alex runs on trace data, the spans grow, the context limit hits, it fails and tries again. The talk covers why truncation breaks reasoning, why summarization gives the LLM too much control, and how head/tail preservation with a retrievable memory store is what actually held. Then: long session evals, sub-agents as the answer when one context accumulates too much, and what they found when they went looking for secrets in the Claude Code source release.
+
+Speaker info:
+- https://www.linkedin.com/in/sallyann-delucia-59a381172/
+
+Timestamps:
+0:00 Introduction and speaker background
+1:02 Overview of the AI agent, Alyx
+1:29 The problem: Context engineering vs. prompt engineering
+4:06 The vicious loop of data growth in AI agents
+5:16 Why naive truncation failed
+6:14 Why summarization proved unreliable
+6:46 The solution: Smart truncation and memory stores
+8:02 Handling long session challenges
+9:23 Offloading tasks to sub-agents
+11:19 Ongoing challenges and future work
+12:57 Findings from the Claude Code source release
+13:44 Final key takeaways on context management
+14:58 Q&A session
+
+## Feedback Loops are All You Need — Mehedi Hassan, Granola
+
+- Upload date: 2026-05-10
+- Video: https://www.youtube.com/watch?v=ON5LIT0M4do
+- Transcript: raw/20260510_ON5LIT0M4do/ON5LIT0M4do.en-orig.vtt
+- Metadata: raw/20260510_ON5LIT0M4do/ON5LIT0M4do.info.json
+
+One-shotting is seductive. One line of code for web search. One prompt to serve every user. One deploy and you're done. Granola shipped a chat feature into their meeting notes app and found out what comes after that.
+
+This talk is a product engineer's honest account of why the gap between "it works in the playground" and "it works in production" is so hard to close. Web search looks like a single tool call — until it blows up your context, bills you 10p per chat, and your provider ships an overnight update that silently degrades your results. Prompt personalization looks straightforward — until you realize that one prompt genuinely cannot serve the salesperson expecting a deal summary, the engineer expecting blockers and linear tickets, and the HR manager expecting something else entirely.
+
+The response at Granola wasn't to prompt better. It was to build the machinery for iteration: custom internal tracing that exposes tool calls, search trails, reasoning traces, and cost in a UI built for everyone — not just engineers with CloudWatch access. And a move to run their Electron frontend as a web app, so every PR gets a preview link and Cursor can go test changes automatically. The point isn't any single technique. It's the feedback loop — and what happens to an AI feature when it actually has one.
+
+Speaker info:
+- https://x.com/mehedih_
+- https://github.com/MehediH
+
+timestamps:
+0:15 Introduction to Granola and product engineering
+1:08 Demonstration of meeting transcription and note-taking features
+1:52 The challenges of shipping generic AI features
+2:48 The difficulties of integrating web search tools
+4:02 Why a single prompt cannot serve diverse user roles
+4:40 Building custom internal tracing and observability tools
+6:22 Enhancing developer experience for desktop applications
+7:16 Refactoring Electron for web-based testing and CI/CD preview links
+8:33 Automating feature verification with Cursor
+8:46 Concluding thoughts on building iterative feedback loops for AI products
+
+## Voice AI: when is the "Her" moment? — Neil Zeghidour, CEO, Gradium AI
+
+- Upload date: 2026-05-09
+- Video: https://www.youtube.com/watch?v=P_RI1kCkRbo
+- Transcript: raw/20260509_P_RI1kCkRbo/P_RI1kCkRbo.en-orig.vtt
+- Metadata: raw/20260509_P_RI1kCkRbo/P_RI1kCkRbo.info.json
+
+The "Her" moment has been promised so many times it's become a joke. Every new demo, every smooth-sounding voice agent gets called it. Neil Zeghidour, CEO of Gradium AI and one of the researchers behind Moshi — the first full-duplex voice model — uses this talk to be honest about where the gap actually is and why it keeps not closing.
+
+The core tension: cascaded systems (speech-to-text, LLM, text-to-speech) are practical and getting smarter, but they're architecturally incapable of feeling like a real conversation. Latency from tool calls alone can be 500ms to 4 seconds — while humans process and respond in around 200ms total. Speech-to-speech models solve some of that but trade it for a different problem: they're still half-duplex, meaning they're either listening or talking but never both, which makes backchanneling impossible and the interaction feel robotic in a different way. Moshi showed that full-duplex is solvable. What it didn't solve was making the model useful. And cost is a wall hiding behind the latency problem — TTS at scale is expensive enough that some teams burn through their fundraising before they can grow a user base.
+
+The most underrated thread in the talk is paralinguistic understanding: voice carries tone, hesitation, discomfort, and cultural signals that get entirely stripped out the moment you transcribe to text. Getting to Her means building models that don't just produce natural-sounding speech but actually understand what the voice is carrying — and that's a science problem, not a prompt engineering one.
+
+Speaker info:
+- https://x.com/neilzegh
+- https://www.linkedin.com/in/neil-zeghidour-a838aaa7/
+
+Timestamps:
+
+0:14 Introduction and mission of Gradium AI
+1:16 Demonstration of voice cloning technology
+2:42 The "Her" movie analogy and current limitations of Voice AI
+5:42 Challenges of cascaded systems (Speech-to-Text, LLM, Text-to-Speech)
+6:37 The difficulty of latency in tool calling
+9:08 Explanation of Speech-to-Speech vs. cascaded architectures
+9:34 The necessity of full-duplex systems and backchanneling
+11:53 Demonstration of the full-duplex Moshi model
+12:59 The importance of paralinguistic understanding
+14:29 Scalability and the high cost of current Voice AI
+16:38 Introducing Phoneon: on-device, local TTS for privacy and cost efficiency
+18:29 Conclusion and path forward for Voice AI
+
+## Give Your Chat Agent a Voice — Luke Harries, Head of Growth, ElevenLabs
+
+- Upload date: 2026-05-09
+- Video: https://www.youtube.com/watch?v=DCZZ3AJKzuc
+- Transcript: raw/20260509_DCZZ3AJKzuc/DCZZ3AJKzuc.en-orig.vtt
+- Metadata: raw/20260509_DCZZ3AJKzuc/DCZZ3AJKzuc.info.json
+
+Chat agents dominated 2025. Every product either went AI-first or got left behind. But text-in, text-out is already starting to feel dated. Voice is faster, more accessible, and opens up interaction paradigms that chat just can't touch — phone lines, Zoom calls, screen readers, ambient interfaces. In this talk, Luke Harries from ElevenLabs argues that the next upgrade for every chat agent isn't better prompts or smarter RAG. It's a voice layer.
+
+The problem is most teams have already built and tuned their chat agents. They don't want to throw that out. This session shows how ElevenLabs' Voice Engine wraps any existing agent in a few lines — handling turn-taking, speech-to-text, text-to-speech, and emotion-aware interruption detection — without touching the underlying logic. There's a live demo of converting a working chat support agent to voice in a single prompt, plus a look at the client and server SDKs, Shadcn-based UI components, and how tool calling still works through the wrapper.
+
+Speaker info:
+- https://www.linkedin.com/in/luke-harries
+- https://harries.co/
+
+Timestamps
+0:00 Introduction to voice-first chat agents
+0:20 The shift from text-based to voice-based interactions
+1:43 Evolution of agent architecture and challenges of rebuilding
+2:47 Introducing the ElevenLabs Voice Engine
+3:32 Overview of the server and client SDKs
+4:36 UI components and deployment demo
+5:56 Summary of voice engine integration paradigms
+6:37 Predictions for the future of AI agents
+7:00 Q&A: Handling tool calling and integrations
+
+## Why TTS Models Now Look Like LLMs — Samuel Humeau, Mistral
+
+- Upload date: 2026-05-09
+- Video: https://www.youtube.com/watch?v=3jGAU2sbAyY
+- Transcript: raw/20260509_3jGAU2sbAyY/3jGAU2sbAyY.en-orig.vtt
+- Metadata: raw/20260509_3jGAU2sbAyY/3jGAU2sbAyY.info.json
+
+The dominant architecture pattern for text-to-speech in 2026 looks a lot like an LLM — an autoregressive transformer generating sequences of tokens, one frame of audio at a time. Samuel Humeau from Mistral walks through why the field converged there, how neural audio codecs solve the information-density problem (audio carries ~200kbps of signal; you can't feed that raw to a transformer), and what the streaming trick actually is that makes voice agents feel responsive before the full audio has even finished generating.
+
+The talk uses Mistral's just-released open-weight TTS model as a running example — live demos of voice cloning from a few seconds of reference audio, a voice agent answering real conference schedule questions, and a breakdown of the codec-to-backbone-to-decoder pipeline that produces it all. There's also a frank section on what's still unsettled: how to handle streaming text input (tokens arriving from an LLM in real time rather than a fixed block of text) and why getting that right is the next meaningful latency win in agent pipelines.
+
+It's the kind of talk that makes the system feel less like a black box — not by oversimplifying, but by showing exactly which engineering choices are load-bearing and which are still open problems.
+
+Speaker info:
+- https://x.com/DrSamuelBHume
+- https://www.linkedin.com/in/samuelhumeau/
+
+Timestamps:
+0:00 Introduction and Mistral's new open-source TTS model
+2:06 Text-to-speech in AI agents and latency
+3:33 Live demo: Voice cloning with 'Paul'
+6:00 Voice cloning capabilities and multilingual examples
+8:01 Historical context of audio generation
+8:55 Transformer-based architecture for TTS
+10:00 Challenges of information density in audio
+10:55 Comparison of bit rates: text vs. audio
+11:39 Using neural audio codecs
+13:10 Backbone transformer and frame-based generation
+14:56 Text conditioning and model architecture
+16:08 Latency performance metrics
+16:22 Future outlook: Streaming text input
+17:35 Q&A: Generating text and audio simultaneously
+18:24 Q&A: Availability of voice cloning features
+19:35 Q&A: Philosophical take on speech interfaces
+20:44 Q&A: Next steps for streaming audio and text input
+
+## Agentic Search for Context Engineering — Leonie Monigatti, Elastic
+
+- Upload date: 2026-05-08
+- Video: https://www.youtube.com/watch?v=ynJyIKwjonM
+- Transcript: raw/20260508_ynJyIKwjonM/ynJyIKwjonM.en-orig.vtt
+- Metadata: raw/20260508_ynJyIKwjonM/ynJyIKwjonM.info.json
+
+Getting context into an LLM is not just a retrieval problem. It is a search problem. This workshop digs into the part of context engineering that usually gets waved away: how agents actually decide what to pull from files, databases, memory, and the web, and why that choice often matters more than the model itself.
+
+Across semantic search, general-purpose database tools, shell-based retrieval, and agent skills, Leonie Monigatti shows where each search interface works, where it breaks, and how to combine them into a more effective retrieval stack. If you're building agents and trying to make retrieval less brittle, this is a practical guide to the real mechanics behind agentic search.
+
+Workshop repo: https://github.com/iamleonie/workshop-agentic-search
+
+Speaker info:
+- https://x.com/helloiamleonie
+- https://www.linkedin.com/in/804250ab/
+
+Timestamps:
+0:00:00 - Introduction and Welcome
+0:00:51 - Defining Context Engineering and the role of Search
+0:02:21 - Historical context: From RAG to Agentic RAG
+0:04:30 - Context sources (local files, memory, databases, web)
+0:06:30 - Introduction to the Shell tool and its versatility
+0:08:50 - Failure modes in agentic search
+0:10:41 - The importance of tool descriptions and parameter design
+0:13:53 - Code Demo: Simple semantic search and its limitations
+0:23:26 - Code Demo: General purpose database query (ESQL)
+0:28:36 - Code Demo: Adding Agent Skills for better interaction
+0:34:42 - Code Demo: Using the Shell tool for file system retrieval
+0:41:26 - Code Demo: Integrating custom CLIs (Gina Grap)
+0:44:42 - Practical recommendations for building a search tool stack
+0:49:16 - Q&A Session begins
+
+## FLUX, Open Research, and the Future of Visual AI — Stephen Batifol, Black Forest Labs
+
+- Upload date: 2026-05-08
+- Video: https://www.youtube.com/watch?v=x8Yb4RidLgM
+- Transcript: raw/20260508_x8Yb4RidLgM/x8Yb4RidLgM.en-orig.vtt
+- Metadata: raw/20260508_x8Yb4RidLgM/x8Yb4RidLgM.info.json
+
+FLUX started as an image model story, but this talk makes the larger ambition clear: visual intelligence, not just image generation. From FLUX.1 through Kontext, FLUX.2, and FLUX.2 Klein, Black Forest Labs has been pushing fast, open releases while building toward models that understand images, video, audio, actions, and eventually the physical world itself.
+
+Along the way, Stephen Batifol walks through the research behind that direction, including BFL's work on self-supervised multimodal training, real-time generation and editing, and the path from generative media toward world models and robotics.
+
+Speaker info:
+- https://x.com/stephenbtl
+- https://www.linkedin.com/in/stephen-batifol/
+
+## How Transformers Finally Ate Vision – Isaac Robinson, Roboflow
+
+- Upload date: 2026-05-08
+- Video: https://www.youtube.com/watch?v=VhfAVA3BG2I
+- Transcript: raw/20260508_VhfAVA3BG2I/VhfAVA3BG2I.en-orig.vtt
+- Metadata: raw/20260508_VhfAVA3BG2I/VhfAVA3BG2I.info.json
+
+Vision used to belong to CNNs. This talk explains why that changed, and why transformers only recently started winning for vision despite looking like the less natural fit for images. The answer runs through pretraining, scaling, borrowed infrastructure from the LLM world, and the long arc back to the simple architecture that scales best.
+
+Using the evolution from ViT and Swin through ConvNeXt, Hiera, SAM, and RF-DETR, Isaac Robinson walks through what actually made transformer vision systems practical, where the tradeoffs still are, and why deployment flexibility now matters as much as raw benchmark wins. What comes next for VLMs, world models, and physical AI?
+
+Speaker info:
+- https://www.linkedin.com/in/robinsonish/
+
+## Vibe Engineering Effect Apps — Michael Arnaldi, Effectful
+
+- Upload date: 2026-05-07
+- Video: https://www.youtube.com/watch?v=Wmp2Tku2PrI
+- Transcript: raw/20260507_Wmp2Tku2PrI/Wmp2Tku2PrI.en-orig.vtt
+- Metadata: raw/20260507_Wmp2Tku2PrI/Wmp2Tku2PrI.info.json
+
+What if the best way to get coding agents to use a library well is not better prompts, but giving them the library's actual code? In this workshop, Michael Arnaldi walks through a practical approach to building with Effect and LLMs by cloning the Effect repo into the project, extracting patterns directly from the source, and using those patterns to guide agent behavior.
+
+Starting from an empty repository, the session shows how to set up an Effect-based app with tests, strict TypeScript diagnostics, agent instructions, and a simple HTTP API, while also exploring the broader problem of how to make agents effective in unfamiliar codebases. If you're building with coding agents and care about reliability, structure, and real-world Effect workflows, this is a useful hands-on framing.
+
+Speaker info:
+- https://x.com/MichaelArnaldi
+- https://www.linkedin.com/in/michael-arnaldi-52858114a/
+
+Timestamps
+
+0:15 – Introduction and context setting for the workshop
+0:47 – Interactive audience poll on experience with Effect and AI tooling
+3:16 – Discussing the core philosophy: "Just clone the repo" for AI context
+5:59 – Understanding LLMs vs. the human brain and context window limitations
+13:13 – Project setup: Starting from an empty repository
+14:20 – Initializing the project with Bun, Vitest, and TypeScript
+19:18 – Adding Effect beta and configuring TSGo for the compiler
+30:30 – Configuring strict diagnostics for AI-assisted development
+35:20 – Adding the Effect repository as a git subtree for better agent access
+37:07 – Creating agents.md to establish rules and available commands
+41:40 – Researching Effect patterns for building an HTTP API
+43:08 – Discussing "Spec-Driven Development" and avoiding plan-mode limitations
+54:02 – Drafting the plan for the Todo HTTP API
+1:05:07 – Implementing the SQL client and migration patterns
+1:13:42 – Reviewing API schemas and handling identified code duplication
+1:18:14 – Starting the API server and verifying OpenAPI documentation
+1:20:56 – Cleaning up test suites and enforcing best practices for layers
+1:38:08 – Concluding remarks on workflows, clustering, and future stability in Effect
+
+## Agent Optimization with Pydantic AI: GEPA, Evals, Feedback Loops — Samuel Colvin, Pydantic
+
+- Upload date: 2026-05-07
+- Video: https://www.youtube.com/watch?v=A48uhxfxbsM
+- Transcript: raw/20260507_A48uhxfxbsM/A48uhxfxbsM.en-orig.vtt
+- Metadata: raw/20260507_A48uhxfxbsM/A48uhxfxbsM.info.json
+
+Deploying an agent is only the start. In this workshop, Samuel Colvin shows how to improve agents after they are already live, using Pydantic AI and Logfire to change prompts, models, and other parameters in production without redeploying or restarting services.
+
+The session covers managed variables for live prompt and model updates, how to run evals and compare prompt variants against real datasets, and how GEPA can be used to evolve better prompts from production traces and feedback signals. If you're building agents in production and want a practical path from manual tuning to continuous optimization, this is a strong hands-on walkthrough.
+
+Speaker info:
+- https://x.com/samuelcolvin
+- https://www.linkedin.com/in/samuel-colvin/
+- https://github.com/samuelcolvin
+
+Timestamps:
+0:00 Introduction to Samuel Colvin and the Pydantic ecosystem
+1:29 Overview of GEPA for prompt optimization
+3:02 Introduction to Logfire managed variables
+3:55 Case study: Analyzing political dynasties using Wikipedia data
+10:04 Getting started: Setting up the environment and API keys
+16:55 Running the initial evaluation (evals) against a golden dataset
+25:16 Comparing different prompt performance
+34:00 Running the full GEPA optimization process
+43:43 Q&A: Handling prompt size and systemic errors
+57:01 Demonstrating managed variables in a FastAPI web server
+1:11:06 Discussing implicit user feedback collection
+1:15:42 Q&A: Real-world internal use cases and context engineering
+
+## Everything You Need To Know About Agent Observability — Danny Gollapalli & Zubin Koticha, Raindrop
+
+- Upload date: 2026-05-07
+- Video: https://www.youtube.com/watch?v=-aM2EDTiaMs
+- Transcript: raw/20260507_-aM2EDTiaMs/-aM2EDTiaMs.en-orig.vtt
+- Metadata: raw/20260507_-aM2EDTiaMs/-aM2EDTiaMs.info.json
+
+Agent failures do not look like normal software failures. In this workshop, the Raindrop team breaks down what it actually takes to monitor production agents, from explicit signals like tool errors, latency, and cost to fuzzier signals like user frustration, refusals, task failure, and capability gaps.
+
+The session covers how to move beyond evals toward real production observability, how to use classifiers, regex, and experiments to catch regressions, and how to instrument self-diagnostics so agents can report their own failures and strange behavior. If you're running agents in production, this is a practical framework for understanding what is going wrong and how to catch it early.
+
+Speaker info:
+- https://x.com/benhylak
+- https://www.linkedin.com/in/zkoticha
+- https://www.linkedin.com/in/joseph-daniel-gollapalli-a371a4138/
+
+Timestamps
+
+0:14 Introduction and the problem of agent failures
+1:48 Moving from evals to production monitoring
+3:33 The two types of signals: explicit and implicit
+4:47 Using classifier signals for observability
+6:38 Leveraging regex for signal detection
+7:30 Using experiments to validate improvements
+9:42 Q&A session: Statistical relevance and experimental design
+16:07 Introduction to self-diagnostics
+20:15 Workshop: Coding agent demonstration
+24:01 Live demo: Triggering and handling tool failure
+30:26 Best practices for self-diagnostic implementation
+32:20 Q&A: Real-world use cases and triage
+40:02 Q&A: Managing fast-paced experimentation
+44:21 Q&A: Trace visualization and data export
+
+## Full Walkthrough: Writing & Using Skills — Nick Nisi and Zack Proser
+
+- Upload date: 2026-05-06
+- Video: https://www.youtube.com/watch?v=pFsfax19yOM
+- Transcript: raw/20260506_pFsfax19yOM/pFsfax19yOM.en-orig.vtt
+- Metadata: raw/20260506_pFsfax19yOM/pFsfax19yOM.info.json
+
+Write once, run in Claude, Codex, Cursor, and your own agents
+
+Every developer using AI tools has the same problem: they prompt the same way, for the same tasks, over and over. Skills fix this. A skill is a portable unit of agent behavior that teaches any AI tool how to do a specific job. Write one, drop it into your editor, and it just works. Across tools. Across teams.
+
+Most people don't know this primitive exists. In this hands-on workshop, you'll write real skills, test them live, and see how one file can power Claude.ai, Claude Code, Cursor, and Codex without changing a line.
+
+Then we'll go deeper. You'll see how one CLI uses this same pattern to power 15 framework integrations — each one a skill composed with others, wired into an agent that installs and configures auth!
+
+
+What you'll do:
+
+Write 2+ skills for tasks you actually do at work
+
+Install and test them across AI tools in real time
+
+Learn the craft of good skill writing — specificity, constraints, composability
+
+See how skills compose and scale inside a real CLI powered by the Claude Agent SDK
+
+Speaker info:
+- Nick Nisi  |  https://nicknisi.com/about/
+- Zach Proser  |  https://zackproser.com/
+
+## The Multi-Agent Architecture That Actually Ships — Luke Alvoeiro, Factory
+
+- Upload date: 2026-05-06
+- Video: https://www.youtube.com/watch?v=ow1we5PzK-o
+- Transcript: raw/20260506_ow1we5PzK-o/ow1we5PzK-o.en-orig.vtt
+- Metadata: raw/20260506_ow1we5PzK-o/ow1we5PzK-o.info.json
+
+Everyone's building multi-agent systems, but nobody agrees on how. This talk proposes a taxonomy of five frontier multi-agent strategies and shows what happens when you compose them into a single architecture. Drawing from production data at Factory, we walk through a three-role system (orchestrator, workers, validators) that uses validation contracts, structured agent handoffs, and adversarial verification. We cover the case for serial over parallel execution, why model selection per role is a compounding advantage, and how to design systems that get better with each model generation instead of being made obsolete by them.
+
+Speaker info:
+- https://github.com/lukealvoeiro
+- https://www.linkedin.com/in/lukealvoeiro
+
+Timestamp:
+0:00 Introduction to multi-agent systems and the bottleneck of human attention
+1:50 Taxonomy of five frontier multi-agent frameworks
+4:04 Introducing 'Missions': The three-role architecture (Orchestrator, Workers, Validators)
+6:34 The importance of validation contracts for consistent quality
+8:09 Maintaining long-term context through structured handoffs
+9:17 The case for serial execution over parallel execution
+10:30 Mission control: Monitoring agent progress
+11:22 Strategic model selection per role ('Droid whispering')
+13:06 Production data analysis: Building a Slack clone
+14:34 Designing systems that improve with each model generation
+15:51 Conclusion: The shifting economics of software engineering
+
+## MCP UI: Extending the frontier — Liad Yosef and Ido Salomon, MCP Apps
+
+- Upload date: 2026-05-06
+- Video: https://www.youtube.com/watch?v=o-zkvb0iFDQ
+- Transcript: raw/20260506_o-zkvb0iFDQ/o-zkvb0iFDQ.en-orig.vtt
+- Metadata: raw/20260506_o-zkvb0iFDQ/o-zkvb0iFDQ.info.json
+
+Chat interfaces are no longer limited to walls of text. In this talk, Liad Yosef and Ido Salomon explain how MCP Apps turn tools into interactive UI inside hosts like ChatGPT, Claude, VS Code, Cursor, and Copilot, letting companies send branded, functional app experiences instead of plain text responses.
+
+The session covers the core architecture behind MCP Apps, how UI is passed over MCP, how interactions stay in context through the host, and why this changes how applications get distributed in an agent-first world. If you're building on MCP, this is a practical look at the emerging standard for UI inside chat.
+
+Timestamps:
+0:00 Introduction to MCP Apps
+1:02 Why we need MCP Apps: Moving beyond text-based chat
+2:06 Evolution of the MCP UI standard and partnerships
+3:25 Industry and community adoption
+5:14 Core concepts: Passing UI over MCP
+6:49 Practical demonstration (PostHog and Claude)
+8:54 Technical architecture: How it works
+10:23 A new era of web interaction and user experience
+12:32 Interaction mindset and message spectrums
+14:56 Future outlook: Reusable views and model-UI interaction
+16:18 Spectrum of UI generation: Predefined vs. Generative
 
 ## The Small Model Infrastructure Nobody Built (So We Did) — Filip Makraduli, Superlinked
 
@@ -19,6 +2515,17 @@ If you're working on small-model inference, embeddings, or GPU infrastructure, t
 
 Speaker info:
 - https://www.linkedin.com/in/filipmakraduli/
+
+Timestamps:
+0:00 Introduction and the gap in small model inference
+0:53 Moving from research to building inference infrastructure
+2:54 Introduction of the Superlinked inference engine
+4:34 The importance of context management for agents
+7:03 Misconceptions: Why more GPUs isn't the only answer
+9:33 The "Yin and Yang" of inference: Model support and infrastructure
+10:43 The challenge of supporting diverse model architectures
+14:33 Deep dive into infrastructure and scalability
+16:10 Conclusion and the open-source launch of SAI
 
 ## Demand-Driven Context: A Methodology for Coherent Knowledge Bases Through Agent Failure
 
@@ -85,6 +2592,26 @@ Speaker info:
 - https://www.linkedin.com/in/angelos-perivolaropoulos/
 - https://github.com/angelos-p
 
+Timestamp:
+0:00 Introduction and background of the speaker
+1:21 Overview of the workshop objectives
+3:12 Inspiration from Andre Karpathy's NanoGPT
+4:37 The four fundamental building blocks of an LLM
+7:08 Prerequisites and setup tools (UV, Python, hardware requirements)
+9:06 Part 1: The Tokenizer (character-level tokenization explained)
+24:29 Model architecture and parameters (vocab size, layers, embeddings)
+30:13 The GPT class structure and transformer blocks
+37:52 Parameter count and model sizing
+40:54 The training loop: objectives and next-token prediction
+44:44 Optimization and learning rate strategies (warm-up and cosine decay)
+47:56 Validation and monitoring loss
+53:07 Part 3: Text generation and inference strategies
+56:30 Putting it all together (project file structure)
+58:46 Monitoring training and debugging common issues
+1:00:27 Workshop challenge and competition details
+1:05:24 Q&A: Differences between base models and reasoning models
+1:11:31 Q&A: Applying these concepts to audio and multimodal models
+
 ## Skill Issue: How We Used AI to Make Agents Actually Good at Supabase — Pedro Rodrigues, Supabase
 
 - Upload date: 2026-05-04
@@ -123,6 +2650,29 @@ Speaker info:
 - https://x.com/chrismdp
 - https://www.linkedin.com/in/chrisparsons/
 - https://github.com/chrismdp
+
+Timestamps:
+0:00 Introduction to the workshop and Ralph Loops
+6:12 How AI agents work on loops
+10:06 Using loops for software development
+10:43 Live coding: Building a Pomodoro timer
+12:13 Explaining the ticket system
+15:01 Implementing the first ticket (Status command)
+17:37 The simplest Ralph Loop: A while loop
+22:12 Next steps and taking the concept to the next level
+28:19 Implementing further tickets using TDD principles
+40:33 Advanced feature: The 'loop' command in Claude Code
+49:39 Structuring and managing Ralph Loops
+55:33 Using sub-agents for better validation
+59:39 The 'startup' skill and ambitious automation
+1:04:10 Real-world application: Worker and morning loops
+1:09:19 Q&A: Determining when to stop open-ended tasks
+1:13:31 VCP command and project context
+1:15:52 Q&A: Handling context rot
+1:17:01 Q&A: Reviewing sessions and verification
+1:22:38 Q&A: Versioning prompts and skills
+1:27:12 Q&A: Knowledge management and system organization
+1:38:34 Closing, feedback, and final questions
 
 ## Context Is the New Code — Patrick Debois, Tessl
 
@@ -328,7 +2878,7 @@ Timestamps
 1:33:05 - Key Takeaways and Summary
 1:36:58 - Further Resources and Documentation
 
-## Mastering AI Pricing: Flexible & Agile Monetization — Mayank Pant, Stripe
+## Mastering AI Pricing — Mayank Pant, Stripe
 
 - Upload date: 2026-05-01
 - Video: https://www.youtube.com/watch?v=CrqPcIZOOXA
@@ -694,6 +3244,10 @@ Speaker info:
 - Transcript: raw/20260424_-QFHIoCo-Ko/-QFHIoCo-Ko.en-orig.vtt
 - Metadata: raw/20260424_-QFHIoCo-Ko/-QFHIoCo-Ko.info.json
 
+Matt will be back on stage at the World's Fair next week! see https://ai.engineer/wf and use YOUTUBEPROMO for new tickets only. Join 6000 AI engineers at the "Superbowl of AI"!
+
+---
+
 A hands-on workshop covering the full lifecycle of AI-assisted development, from turning ambiguous requirements into agent-ready plans to running autonomous coding agents that ship production features.
 
 You'll learn to stress-test vague briefs into structured PRDs, slice work into thin "tracer bullet" vertical slices, and run an AI agent with TDD. You'll watch it select tasks, write tests, implement code, and commit. You'll then refine your prompts based on where it struggles, graduate to fully autonomous (AFK) runs, and learn to design codebases that maximize agent effectiveness.
@@ -712,12 +3266,29 @@ Speaker info:
 - https://www.linkedin.com/in/mapocock/
 - https://youtube.com/@mattpocockuk
 
+Timestamps:
+00:00:00 - Introduction
+00:00:14 - The Thesis of AI Engineering
+00:04:20 - Phase 1: Research & Prototyping
+00:12:45 - Phase 2: The Grill Session
+00:22:10 - Phase 3: Writing the PRD
+00:35:50 - Phase 4: Slicing Work into Issues
+00:48:15 - Phase 5: Implementation with AI Agents
+01:05:30 - Phase 6: Human-in-the-Loop Review
+01:18:45 - Phase 7: Deployment & Monitoring
+01:28:10 - Designing Codebases for AI Effectiveness
+01:34:06 - Final Takeaways & Summary
+
 ## "Software Fundamentals Matter More Than Ever" — Matt Pocock
 
 - Upload date: 2026-04-23
 - Video: https://www.youtube.com/watch?v=v4F1gFy-hqg
 - Transcript: raw/20260423_v4F1gFy-hqg/v4F1gFy-hqg.en-orig.vtt
 - Metadata: raw/20260423_v4F1gFy-hqg/v4F1gFy-hqg.info.json
+
+Matt will be back on stage at the World's Fair next week! see https://ai.engineer/wf and use YOUTUBEPROMO for new tickets only. Join 6000 AI engineers at the "Superbowl of AI"!
+
+---
 
 AI coding tools are overhyped and powerful at the same time. Used well, they're extraordinary. Used badly, they'll bury you in spaghetti code faster than any human team could. The difference isn't the tool. It's the process. After 18 months of teaching developers to build with AI agents, Matt Pocock has watched the same patterns emerge: the devs who succeed aren't the ones who delegate everything or nothing. They're the ones who fall back on engineering fundamentals. In this talk, he shares the iterative process his students use to ship high-quality applications with AI agent swarms, and why the principles that make it work (ubiquitous language, vertical slices, TDD, deep modules) are decades-old ideas that didn't break. They got more important.
 
@@ -8124,1050 +10695,3 @@ About Kevin Hou
 Kevin is the head of product engineering at Windsurf, where he builds AI-powered developer tools. He has spent much of his career in AI, previously working as a tech lead manager at Nuro, an autonomous vehicle startup, as well as other companies like Airbnb & Salesforce. Kevin enjoys photography, playing basketball, and woodworking. He studied computer science & ML at Princeton University.
 
 Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Case Study + Deep Dive: Telemedicine Support Agents with LangGraph/MCP - Dan Mason
-
-- Upload date: 2025-06-22
-- Video: https://www.youtube.com/watch?v=sn79oS4MZFI
-- Transcript: raw/20250622_sn79oS4MZFI/sn79oS4MZFI.en-orig.vtt
-- Metadata: raw/20250622_sn79oS4MZFI/sn79oS4MZFI.info.json
-
-We've all seen website chat bots which can look up an order or answer a basic question -- but what does it take to build autonomous agents which manage long, delicate processes like multi-day medical treatments?
-
-In this workshop, we'll explore a workflow Stride built in partnership with Avila (https://avilascience.com/) that helps patients self-administer medication regimens at home. The stack includes LangGraph/LangSmith, Claude, MCP, Node.js, React, MongoDB, and Twilio, and rests on a foundation of treatment "blueprints" which LLM-powered agents use to guide patients to good outcomes.
-
-You'll learn how to: -Build a hybrid system of code and prompts that leverages LLM decisioning to drive a web application, message queue and database -Design and maintain flexible agentic workflow blueprints, with no special tools (just Google Docs!) -Create an agent evaluation system, which uses LLM-as-a-judge to evaluate the complexity of each interaction and escalate to human support when needed
-
-We'll also talk about the prompt engineered guidelines and guardrails which helps agents adhere to protocol as much as possible, while gracefully handling curveballs from the patient. Please bring questions -- we look forward to sharing our learnings on how to make agentic systems like this work in the real world!
-
-About Dan Mason
-Dan is a product and technology leader with unusually broad experience -- in 20+ years at companies like ESPN, Shutterstock, Viacom, NBCUniversal and a variety of startups and scaleups, he’s accumulated a wealth of knowledge about how digital product development works (and doesn’t), and is excited to apply those insights to reimagining teams and products in the age of LLMs.   He is an engineer turned product manager with strong technical skills, and the teams he leads are highly cross-functional -- often including product, technology, design, PMO and data science.
-
-Dan leads Stride’s AI/LLM practice and is focused on thought leadership, code generation, workflow automation, and shaping and leading generative AI client engagements. He is also an active product coach and consultant, and a member of Docker’s Technical Advisory Group. Dan lives in New Jersey with his wife and three busy teenagers, and holds a BA in Computer Science and English Literature from Williams College.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Building Agents with Amazon Nova Act and MCP - Du'An Lightfoot, Amazon (Full Workshop)
-
-- Upload date: 2025-06-21
-- Video: https://www.youtube.com/watch?v=wFTVEDYVJT0
-- Transcript: raw/20250621_wFTVEDYVJT0/wFTVEDYVJT0.en-orig.vtt
-- Metadata: raw/20250621_wFTVEDYVJT0/wFTVEDYVJT0.info.json
-
-In this 2-hour workshop, participants will gain practical hands-on experience building sophisticated AI agents using Amazon's agent technologies. You'll learn to build agents that can navigate the web like humans, perform complex multi-step tasks, and leverage specialized tools through natural language commands. You’ll explore Amazon Nova Act for reliable web navigation, Model Context Protocol (MCP) for connecting agents to external data sources and APIs, and Amazon Bedrock Agents for orchestrating complex workflows. Through guided exercises, you'll create agents capable of retrieving information and taking action across web applications, all through natural language interactions. By the end of this workshop, you'll have the practical skills to build AI agents that can browse websites, interact with web interfaces, and solve multi-step problems by combining these powerful Amazon technologies.
-
-About Du'An Lightfoot
-Du’An is an Air Force veteran and Sr. Developer Advocate at AWS. He has 10+ years of designing, implementing, and supporting enterprise infrastructures. At AWS he uses his experience and knowledge to help customers learn and build on AWS.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Veo 3 for Developers — Paige Bailey, Google DeepMind
-
-- Upload date: 2025-06-21
-- Video: https://www.youtube.com/watch?v=hlcAZ2lX_ZI
-- Transcript: raw/20250621_hlcAZ2lX_ZI/hlcAZ2lX_ZI.en-orig.vtt
-- Metadata: raw/20250621_hlcAZ2lX_ZI/hlcAZ2lX_ZI.info.json
-
-This talk will briefly trace the history of video generation models before diving into Veo 3, Google DeepMind's latest state-of-the-art model that marks a significant leap by generating video with synchronized audio—including dialogue, sound effects, and music—all from text and image prompts. We'll show how it can understanding intricate details, maintain coherence over longer sequences, and simulate realistic physics and camera movements.
-
-For developers, Veo 3, accessible via Vertex AI (preview), unlocks many new capabilities. We'll discuss how its advanced capabilities, such as semantic context rendering and cinematic control, can empower innovation in filmmaking, game development, education, and more. This session will cover how developers can integrate Veo 3 into their workflows, or test it out today in the Gemini App, Flow, and via the Gemini APIs on Google Cloud.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## The Web Browser Is All You Need - Paul Klein IV, Browserbase
-
-- Upload date: 2025-06-20
-- Video: https://www.youtube.com/watch?v=YRGjll7uu5w
-- Transcript: raw/20250620_YRGjll7uu5w/YRGjll7uu5w.en-orig.vtt
-- Metadata: raw/20250620_YRGjll7uu5w/YRGjll7uu5w.info.json
-
-With the rise of MCP servers, A2A, and our trusty friend, OpenAPI, it turns out the web browser may be the default MCP server for the rest of the internet.
-
-In this talk, we'll walk through how a web browsing tool is probably the only tool you'll need to enable production AI Agents.
-
-About Paul Klein IV
-Paul Klein IV is a San‑Francisco‑based serial entrepreneur and engineer. After honing his chops at Twilio during it's IPO and founding Stream Club—a live‑streaming platform acquired by Mux in 2021 he launched Browserbase in 2024 to give developers and AI agents fast, reliable, multi‑region headless‑browser infrastructure. In its first 12 months, Klein raised $27.5 million (a $6.5 M seed and a $21 M Series A led by CRV and Kleiner Perkins with Okta Ventures) . He views Browserbase as the “last‑mile” interface between large language models and the web, enabling end‑to‑end workflow automation far beyond traditional scraping 
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Building Protected MCP Servers — Den Delimarsky and Julia Kasper, MCP Steering Committee & Microsoft
-
-- Upload date: 2025-06-20
-- Video: https://www.youtube.com/watch?v=PHBGhUKAM-w
-- Transcript: raw/20250620_PHBGhUKAM-w/PHBGhUKAM-w.en-orig.vtt
-- Metadata: raw/20250620_PHBGhUKAM-w/PHBGhUKAM-w.info.json
-
-Join us to see how VS Code and GitHub Copilot's expanding suite of AI features can match or even surpasses the benefits of other popular AI developer tools. We'll focus on practical scenarios to ensure immediate applicability and work through live demos of Copilot features such as: Code generation using Edits, Planning/problem solving using Chat, Inline terminal command generation, Boilerplate code generation using Agent mode, Improving boilerplate with custom instructions and then refactoring using Agent mode and Edits, Improving test generation and code reviews with custom instructions, as well as an Introduction to MCP.
-
-About Den Delimarsky 
-I am a Principal Product Engineer, currently working at Microsoft, where I help build developer tools and AI-powered experiences that make engineers more productive. You can learn more @ den.dev/about.
-
-About Julia Kasper
-Julia Kasper is a member of the Microsoft Developer Division focusing on the developer experience for the Microsoft Power Platform. She is passionate about scenarios where you extend the Power Platform with Azure services and have the best possible end-to-end experience.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## The State of MCP observability: Observable.tools — Alex Volkov and Benjamin Eckel, W&B and Dylibso
-
-- Upload date: 2025-06-20
-- Video: https://www.youtube.com/watch?v=Lcqat4iP_lE
-- Transcript: raw/20250620_Lcqat4iP_lE/Lcqat4iP_lE.en-orig.vtt
-- Metadata: raw/20250620_Lcqat4iP_lE/Lcqat4iP_lE.info.json
-
-AI Engineers deserve observable tools!
-
-MCP getting adoption means that less and less of your agents code is running under your control, and this has DX and observability challenges, let's fix that!
-
-Join Alex Volkov from Weights & Biases and Steve Manual from mcp.run on this recap of the current state of MCP observability, including the observable.tools initiative, a recap of where the field stands and what to look forward to + a practical example of MCP tool usage evaluation framework from mcp.run!
-
-About Alex Volkov
-Alex Volkov is an AI Evangelist at Weights & Biases as well as the founder and host of ThursdAI, a weekly newsletter and podcast that explores the latest innovations in AI, their practical applications, and the open-source AI community. Alex is an AI startup founder with 20 years of full-stack software engineering experience, offering a deep well of insights into AI innovation. He’s celebrated for his ability to clarify and summarize the complexities of the rapid AI advances and advocating for its beneficial uses.
-
-About Benjamin Eckel
-Benjamin has over a decade of experience as a software engineer and is the co-founder and CTO of Dylibso. He previously led DX at Recurly and worked on integrations and edge observability at Datadog.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## The Geopolitics of AI Infrastructure - Dylan Patel, SemiAnalysis
-
-- Upload date: 2025-06-19
-- Video: https://www.youtube.com/watch?v=Zz4QjZsYWK0
-- Transcript: raw/20250619_Zz4QjZsYWK0/Zz4QjZsYWK0.en-orig.vtt
-- Metadata: raw/20250619_Zz4QjZsYWK0/Zz4QjZsYWK0.info.json
-
-As AI reshapes the global balance of power, the infrastructure behind it—chips, data centers, power, and supply chains—has become a new arena for geopolitical competition. This talk explores how nations are racing to secure critical AI hardware, control compute capacity, and assert influence over the technologies and talent that define the future.
-
-About Dylan Patel
-Dylan is the founder, CEO, and Chief Analyst for SemiAnalysis, the preeminent authority on all things AI and semiconductors. Through Dylan’s unwavering commitment to excellence, he has built the firm from the ground up as the thought leader from the semiconductor supply chain to the cloud ecosystem, machine learning models, and all things in between. Since 2020, SemiAnalysis has transformed its business from a solo venture into a cohesive and focused team to provide breaking news and in-depth analysis for the most strategic, complex, and escalating challenges in the semiconductor industry.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Remote MCPs: What we learned from shipping — John Welsh, Anthropic
-
-- Upload date: 2025-06-19
-- Video: https://www.youtube.com/watch?v=0NHCyq8bBcM
-- Transcript: raw/20250619_0NHCyq8bBcM/0NHCyq8bBcM.en-orig.vtt
-- Metadata: raw/20250619_0NHCyq8bBcM/0NHCyq8bBcM.info.json
-
-We recently released remote MCP support for both claude.ai and the Anthropic API. This talk will cover architectural decisions we made in our implementation, remote MCP authentication, supporting engineers who are building out agentic AI tools, implementing custom internal transports, and whatever else we can fit into 18 minutes of your time.
-
-About John Welsh
-I'm John Welsh, a software engineer who's been building large scale systems for the past 20 years. I'm currently at Anthropic, where I've been building our public API and defining how internal systems communicate with MCP servers and other integrations.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## MCP: Origins and Requests For Startups — Theodora Chu, Model Context Protocol PM, Anthropic
-
-- Upload date: 2025-06-18
-- Video: https://www.youtube.com/watch?v=x-8pBqWiTzk
-- Transcript: raw/20250618_x-8pBqWiTzk/x-8pBqWiTzk.en-orig.vtt
-- Metadata: raw/20250618_x-8pBqWiTzk/x-8pBqWiTzk.info.json
-
-Learn more about the latest updates on MCP and get ideas for what startups to build.
-
-About Theodora Chu
-Theo is a product manager at Anthropic, focused on bringing knowledge to models. She works on the Anthropic API as well as MCP. Prior to Anthropic, she spent much of her career building zero-to-one products at her own startup as well as at Stripe. She's come full circle since dropping out of her master's in NLP at Stanford.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## How to Build Trustworthy AI — Allie Howe
-
-- Upload date: 2025-06-16
-- Video: https://www.youtube.com/watch?v=n6wHJDqlS1I
-- Transcript: raw/20250616_n6wHJDqlS1I/n6wHJDqlS1I.en-orig.vtt
-- Metadata: raw/20250616_n6wHJDqlS1I/n6wHJDqlS1I.info.json
-
-Trust is a multifaceted outcome that results when product and engineering teams work together to build AI that is aligned, explainable, and secure. Learn strategies for how to build trustworthy AI and why trust is paramount for AI systems.
-
-Trustworthy AI = AI Security + AI Safety
-
-Learn about the differences between AI Security and AI Safety and how the three focus areas of MLSecOps + AI Red Teaming + AI Runtime Security can help you achieve both and ultimately build Trustworthy AI. 
-
-Trustworthy AI Issues in the news:
-https://x.com/syddiitwt/status/1923427722241487297
-https://fingfx.thomsonreuters.com/gfx/legaldocs/egvblxokkvq/Walters%20v%20OpenAI%20-%20order.pdf?ref=claritasgrc.ai
-
-MLSecOps Resources
-Modelscan https://github.com/protectai/modelscan
-Community: mlsecops.com
-
-AI Red Teaming Resources:
-https://azure.github.io/PyRIT/
-https://ashy-coast-00aeb501e.6.azurestaticapps.net/MS_AIRT_Lessons_eBook.pdf
-
-AI Runtime Security Resources:
-https://www.pillar.security/solutions#ai-detection
-https://noma.security/
-
-Showcasing Trustworthy AI to Customers/Prospects
-https://www.vanta.com/collection/trust/what-is-a-trust-center
-
-## Exposing Agents as MCP servers with mcp-agent: Sarmad Qadri
-
-- Upload date: 2025-06-11
-- Video: https://www.youtube.com/watch?v=uFPAtKIN-FQ
-- Transcript: raw/20250611_uFPAtKIN-FQ/uFPAtKIN-FQ.en-orig.vtt
-- Metadata: raw/20250611_uFPAtKIN-FQ/uFPAtKIN-FQ.info.json
-
-In this talk, we will show that agents can be represented as MCP servers, allowing them to be run from any MCP client (such as Claude, Cursor and other applications).
-
-This is made possible with [mcp-agent](https://github.com/lastmile-ai/mcp-agent), a simple, composable framework to build agents using [Model Context Protocol](https://modelcontextprotocol.io/introduction).
-
-## Overview
-
-Currently "agentic" behavior exists only on the MCP client side – clients like Claude or Cursor use MCP servers, which are often simple tool APIs, to solve tasks.
-
-However, if Agents are MCP servers themselves, then any MCP client can invoke, coordinate and orchestrate agents the same way it does with any other MCP server.
-
-This paradigm shift enables: 
-1. **Agent Composition**: Build complex multi-agent systems over the same base protocol (MCP).
- 2. **Platform Independence**: Use your agents from any MCP-compatible client 
-3. **Scalability**: Run agent workflows on dedicated infrastructure, not just within client environments 
-4. **Customization**: Develop your own agent workflows and reuse them across any MCP client.
-
-## Background
-
-mcp-agent was inspired by 2 foundational updates that Anthropic introduced for AI application developers:
-
-1. [Model Context Protocol](https://www.anthropic.com/news/model-context-protocol) - a standardized interface to let any software be accessible to AI assistants via MCP servers.
-
-2. [Building Effective Agents](https://www.anthropic.com/research/building-effective-agents) - a seminal writeup on simple, composable patterns for building production-ready AI agents.
-
-`mcp-agent` puts these two foundational pieces into an AI application framework:
-
-1. It handles the pesky business of managing the lifecycle of MCP server connections.
-
-2. It implements every pattern described in Building Effective Agents, and does so in a _composable_ way, allowing you to chain these patterns together.
-
-Now as MCP continues to grow adoption, we are exploring advanced agent architectures that allow for sophisticated workflows in simple ways.
-
-## Supercharging developer workflow with Amazon Q Developer - Vikash Agrawal
-
-- Upload date: 2025-06-10
-- Video: https://www.youtube.com/watch?v=utxVvGJ4bcg
-- Transcript: raw/20250610_utxVvGJ4bcg/utxVvGJ4bcg.en-orig.vtt
-- Metadata: raw/20250610_utxVvGJ4bcg/utxVvGJ4bcg.info.json
-
-Supercharging Developer Workflow with Amazon Q Developer
-
-Tired of repetitive coding tasks? What if AI could handle coding, testing, documentation, and deployment for you? In this session, we’ll build the classic 2048 game from scratch using Amazon Q Developer, demonstrating how AI can streamline the development workflow.
-
-Key highlights:
-✅ /dev – AI-powered code generation
-✅ /test – Automated unit test creation
-✅ /doc – Instant documentation generation
-✅ /review – AI-assisted code review
-✅ Amazon Q Developer in CLI
-✅ /dev – Deployment script generation
-✅ Deploy & Debug – Seamless AWS deployment & debugging in CloudWatch
-
-By the end of this session, you’ll see firsthand how Amazon Q Developer can boost productivity, reduce boilerplate, and help you ship faster. Let’s build smarter, not harder! 🚀
-
-## Just do it. (let your tools think for themselves) - Robert Chandler
-
-- Upload date: 2025-06-10
-- Video: https://www.youtube.com/watch?v=lp0pswT_FEI
-- Transcript: raw/20250610_lp0pswT_FEI/lp0pswT_FEI.en-orig.vtt
-- Metadata: raw/20250610_lp0pswT_FEI/lp0pswT_FEI.info.json
-
-There's a new type of wrapper in town. The MCP API wrapper. 
-
-Make them thin and you'll be wondering why your chatbot is struggling to even send a Slack message (true story). But make them _agentic_ and the world is unlocked. 
-
-In this talk I'll demonstrate the drawbacks using low level APIs as MCPs and show the magic that happens when your 'tools' are actually other agents. It's prompts all the way down baby!
-
-## Break It 'Til You Make It: Building the Self-Improving Stack for AI Agents - Aparna Dhinakaran
-
-- Upload date: 2025-06-10
-- Video: https://www.youtube.com/watch?v=Qvp9vw4jJQ8
-- Transcript: raw/20250610_Qvp9vw4jJQ8/Qvp9vw4jJQ8.en-orig.vtt
-- Metadata: raw/20250610_Qvp9vw4jJQ8/Qvp9vw4jJQ8.info.json
-
-Building and shipping an AI agent is just the beginning. In real-world systems, the real work starts after deployment — when agents drift, fail silently, or underperform in edge cases no one anticipated.
-
-This talk is about building the full monitoring and improvement stack that keeps agents reliable, efficient, and improving over time. We’ll walk through how to connect evals, tracing, observability, experimentation, and optimization into a virtuous cycle — one where agents not only perform, but learn and adapt in production.
-
-Drawing on real-world deployments, I’ll cover:
-
-- Composing evaluation layers that surface meaningful failure modes
--Tracing and instrumentation for deep visibility into agent behavior
--Running experiments that actually improve outcomes
--Closing the loop with feedback-driven optimization
-- People know to improve the agents application, but do they also know they need to improve their evals in tandem?
-
-If you’re scaling agents beyond the prototype phase, this is the talk that helps you move from working once to working continuously.
-
-## MCPs are Boring (or: Why we are losing the Sparkle of LLMs) - Manuel Odendahl
-
-- Upload date: 2025-06-10
-- Video: https://www.youtube.com/watch?v=J3oJqan2Gv8
-- Transcript: raw/20250610_J3oJqan2Gv8/J3oJqan2Gv8.en-orig.vtt
-- Metadata: raw/20250610_J3oJqan2Gv8/J3oJqan2Gv8.info.json
-
-With the mainstream spread especially in coding and with agents, we are starting to imprison ourselves in little cargo culted boxes of what llms and agents are.
-
-I’ll hopefully show you a couple of ideas so you can delve deeper and learn to unleash and harness the shoggoth.
-
-You’re absolutely right – this is the talk you don’t want to miss!
-
-https://x.com/ProgramWithAi/status/1929226124019564993
-
-## The Many Ends of Programming - Ray Myers
-
-- Upload date: 2025-06-10
-- Video: https://www.youtube.com/watch?v=5s6Q-y42ZZA
-- Transcript: raw/20250610_5s6Q-y42ZZA/5s6Q-y42ZZA.en-orig.vtt
-- Metadata: raw/20250610_5s6Q-y42ZZA/5s6Q-y42ZZA.info.json
-
-AI will reshape Software Engineering – but how remains an open question. Will the developers’ role evolve, or vanish entirely? Are we heading toward an Innovator’s Paradise or an Infinite Pile of Garbage?
-
-Visions of the future are so wildly divergent that we struggle to even agree on terms, let alone direction. In this talk, we’ll cut through the noise by exploring six distinct “endgames” for programming in the age of AI. Each offers a different lens on what we build, how we build, and who (or what) is doing the building.
-
-By naming and examining these futures, we gain a clearer view of what’s ahead and a chance to choose our destination.
-
-## Why Bolt.new Won and Most DevTools AI Pivots Failed - Victoria Melnikova
-
-- Upload date: 2025-06-10
-- Video: https://www.youtube.com/watch?v=3YRrBFeQ1aw
-- Transcript: raw/20250610_3YRrBFeQ1aw/3YRrBFeQ1aw.en-orig.vtt
-- Metadata: raw/20250610_3YRrBFeQ1aw/3YRrBFeQ1aw.info.json
-
-Everyone's pivoting to AI—but most are doing it wrong. After conducting in-depth interviews with leaders at 17 developer tools startups that attempted to "add AI" to their roadmap, I've uncovered the patterns that led to either spectacular success or painful failure. This isn't abstract theory—it's battle-tested wisdom from companies that bet their future on AI and lived to tell the tale.
-
-You'll learn:
-- The three most common AI pivot traps that led otherwise promising startups to burn through runway with nothing to show for it
-- Why adding an AI feature doesn't constitute a real AI transformation (and what actually does)
-- The counterintuitive "backward pivot" strategy that worked for 5 of the most successful transitions
-- A practical framework for evaluating if your existing developer tooling can meaningfully evolve in the AI era or needs to be reimagined from scratch
-
-## Beyond Conversation: Why Documents Transform Natural Language into Code - Filip Kozera
-
-- Upload date: 2025-06-10
-- Video: https://www.youtube.com/watch?v=2Jom-4Brg6Q
-- Transcript: raw/20250610_2Jom-4Brg6Q/2Jom-4Brg6Q.en-orig.vtt
-- Metadata: raw/20250610_2Jom-4Brg6Q/2Jom-4Brg6Q.info.json
-
-Natural language is quickly becoming our most powerful programming abstraction, perfectly suited to capture the inherent fuzziness and complexity of real-world problems. But despite the power of AI chatbots, endlessly brainstorming in conversational interfaces rarely leads to clarity or reliable results.
-
-This session explores how structured, document-based natural language is uniquely positioned as the ultimate interface for humans to precisely describe complex systems. We'll discuss why conversational interfaces often fail at forcing clarity, and how shifting to a document-driven model ensures that humans articulate their intent clearly and rigorously.
-
-Attendees will learn:
-
-Why natural language (not code) is the most intuitive way to describe complex systems
-
-How documents inherently force clarity, rigor, and structured thinking compared to chatbots
-
-Real-world examples of document-based programming for building reliable, deployable AI systems
-
-Practical insights into transitioning from conversational brainstorming to structured document-driven workflows
-
-## The 4 Patterns of AI Native Development — Patrick Debois
-
-- Upload date: 2025-06-04
-- Video: https://www.youtube.com/watch?v=9u6xvcNJaxc
-- Transcript: raw/20250604_9u6xvcNJaxc/9u6xvcNJaxc.en-orig.vtt
-- Metadata: raw/20250604_9u6xvcNJaxc/9u6xvcNJaxc.info.json
-
-AI is fundamentally reshaping software development roles and activities. While the change is obvious, understanding the actual shifts taking place on the individual developer remains challenging. 
-
-In this talk, we introduce the four AI Native Dev patterns that are currently emerging:
-- From producer to manager: we say what AI needs to do
-- From implementation to intent: we care less on the how but focus on the why
-- From delivery to discovery: we experiment and learn
-- From content creation to knowledge: capture knowhow to get better
-
-We backup these patterns by showcasing features in tools that support these shift.
-
-The aim of the patterns is to help grasp how to position you and your team members 's career effectively in this changing landscape.
-
-## The Voice-First AI Overlay: Designing Conversational Co-Pilots - Gregory Bruss
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=y9YQc9a3gNw
-- Transcript: raw/20250603_y9YQc9a3gNw/y9YQc9a3gNw.en-orig.vtt
-- Metadata: raw/20250603_y9YQc9a3gNw/y9YQc9a3gNw.info.json
-
-This talk introduces the concept of the 'Voice-First AI Overlay': an AI agent assisting conversations directly within the communication interface, operating either single-sidedly or mediating between participants.
-
-I dive into the engineering and design of such a system. We'll cover how overlays fit into the broader agent orchestration landscape, UI principles, and address the voice-first UX problem: how to design AI overlays that genuinely assist without disrupting the primary human interaction
-
-See a live demo transforming messy, real-time captions into helpful conversational hints in the context of a language lesson.
-
-## ChatGPT is poorly designed. So I fixed it
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=y6L5RkEqQ8g
-- Transcript: raw/20250603_y6L5RkEqQ8g/y6L5RkEqQ8g.en-orig.vtt
-- Metadata: raw/20250603_y6L5RkEqQ8g/y6L5RkEqQ8g.info.json
-
-Let's fix ChatGPT's greatest design sins. We'll design and build a working app that makes ChatGPT multi-modal and multi-model. And no, you don't need to know what those words mean to use it.
-
-Download the source code: https://github.com/bholmesdev/fixgpt
-
-References from this video:
-- Try https://warp.dev to vibe code your own solution
-- Watch Scott and Mark's podcast episode, "how to not ship the org chart:" https://www.youtube.com/watch?v=Z1yYcUFzH2A
-- Read "Why is AI marketing so, so bad?" by Evan Armstrong at The Leverage: https://www.gettheleverage.com/p/why-is-ai-marketing-so-so-bad
-
-## Arrakis: How To Build An AI Sandbox From Scratch - Abhishek Bhardwaj, OpenAI
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=wsFd22SL1s8
-- Transcript: raw/20250603_wsFd22SL1s8/wsFd22SL1s8.en-orig.vtt
-- Metadata: raw/20250603_wsFd22SL1s8/wsFd22SL1s8.info.json
-
-Arrakis (https://github.com/abshkbh/arrakis) provides MicroVM-based secure sandboxes for code execution and full computer use. It features first-class support for backtracking, a Python SDK, and a Model Context Protocol (MCP) server.
-
-In this talk, we go under the hood to explore how to architect an AI sandbox from the ground up. We’ll also dive into why sandboxes are becoming essential infrastructure for AI models and agents — enabling the next big unlock in intelligence.
-
-Links -
-Slides for the talk available here - https://tinyurl.com/arrakis-aie
-Vibe coding with Claude and Arrakis -https://x.com/abshkbh/status/1907480355529203809
-
-## 7 Habits of Highly Effective Generative AI Evaluations - Justin Muller
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=wHhlvcQgi9M
-- Transcript: raw/20250603_wHhlvcQgi9M/wHhlvcQgi9M.en-orig.vtt
-- Metadata: raw/20250603_wHhlvcQgi9M/wHhlvcQgi9M.info.json
-
-Evaluations are the single most reliable indicator of the health and long term viability of any gen AI project.  As a Principal Applied AI Architect for AWS, I've had the opportunity to look at over 100 different attempts at evaluation frameworks over the last few years. 
-In this talk I share some stories about the best and worst, and then distill the 7 most common elements I've seen in successful evaluations.  
-
-Slides at https://d2ot4ns4zf41bm.cloudfront.net/slides/7+Habits+AI+World's+Fair.pptx
-
-## Agents reported thousands of bugs, how many were real? - Ian Butler and Nick Gregory
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=wAQK7O3WGEE
-- Transcript: raw/20250603_wAQK7O3WGEE/wAQK7O3WGEE.en-orig.vtt
-- Metadata: raw/20250603_wAQK7O3WGEE/wAQK7O3WGEE.info.json
-
-Ever had an AI-generated tweak unexpectedly break your entire project? Agentic software development has impressive promise, but the reality still falls short. In this talk we introduce SM-100, a groundbreaking benchmark designed specifically to evaluate autonomous agents on software maintenance tasks.
-
-We're also excited to announce Bismuth, a generalist software agent with strong performance on such maintenance tasks.
-
-https://bismuth.sh & https://sm100bench.com
-
-## The Coherence Trap: Why LLMs Feel Smart (But Aren’t Thinking) - Travis Frisinger
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=u825uxb7LnA
-- Transcript: raw/20250603_u825uxb7LnA/u825uxb7LnA.en-orig.vtt
-- Metadata: raw/20250603_u825uxb7LnA/u825uxb7LnA.info.json
-
-Why AI engineers must rethink what intelligence means in the age of large language models.
-
-LLMs aren’t thinking.
-No awareness. No reasoning. No plan.
-And yet—they feel smart. Shockingly so.
-
-This talk introduces coherence reconstruction, a mental model that explains why LLMs are so useful despite their lack of true understanding. You’ll learn how they generate meaning through latent coherence—a kind of internal gravity that pulls language into alignment with context.
-
-We’ll break down:
-
-+ Why hallucinations happen—and why you can’t fully eliminate them.
-+ How prompts act like force vectors, shaping behavior in structured ways.
-+ What this all means for reasoning tasks, evaluation practices, and agent design.
-
-If you’re building tools, agents, or workflows with LLMs, this talk will reframe how you think about reliability, cognition, and what "understanding" even means.
-
-🔗 Additional resources:
-Blog: https://aibuddy.software/
-AI Decision Loop Paper: https://aibuddy.software/papers/2500_chatgpt_conversations_case_study.pdf
-AI Decision Loop Git Repo: https://github.com/T-rav/gpt-chat-analysis
-AI Coherence Paper: https://aibuddy.software/papers/AI_Coherence_A_Theory_of_Utility_in_Large_Language_Models.pdf
-Cat Metal Album: https://www.youtube.com/watch?v=gdV5l0JvdNo&list=PL0X82GOpevvYfPLM-JibRJEizHqCJ6U4H&index=7
-
-## The Knowledge Graph Mullet: Trimming GraphRAG Complexity - William Lyon
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=tYCu_57jzL8
-- Transcript: raw/20250603_tYCu_57jzL8/tYCu_57jzL8.en-orig.vtt
-- Metadata: raw/20250603_tYCu_57jzL8/tYCu_57jzL8.info.json
-
-There are typically two approaches to working with graphs: property graphs and RDF. These systems are often thought of as different knowledge graph paradigms optimized for different workflows. This talk examines how combining property graph interfaces with RDF triple storage creates an optimal foundation for GraphRAG systems. We'll show how to build and use knowledge graphs using the Dgraph graph database and how knowledge graphs are the foundation of building AI Agents.
-
-Resources:
-
-* Dgraph docs: https://docs.hypermode.com/dgraph/overview
-* Hypermode: https://hypermode.com
-* hyper-news GitHub repo: https://github.com/johnymontana/hyper-news
-* Hypermode Agents early access: https://hyp.foo/agents
-
-## Are MCPs Overhyped? A Rant about MCPs — Henry Mao, Smithery
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=tOou_GJ9Ddk
-- Transcript: raw/20250603_tOou_GJ9Ddk/tOou_GJ9Ddk.en-orig.vtt
-- Metadata: raw/20250603_tOou_GJ9Ddk/tOou_GJ9Ddk.info.json
-
-AI agents are becoming smarter but lack the broad capability to take action in practice. At Smithery, we believe the missing link is an AI orchestration layer—a unified interface that gives agents context, action, and a way to learn from real interactions. This talk explores the problem space in the Model Context Protocol (MCP) ecosystem and how we're tackling it at Smithery.
-
-## Building Reliable Support Agents Using the Effect Typescript Library - Michael Fester
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=sXXl3YMU7ZI
-- Transcript: raw/20250603_sXXl3YMU7ZI/sXXl3YMU7ZI.en-orig.vtt
-- Metadata: raw/20250603_sXXl3YMU7ZI/sXXl3YMU7ZI.info.json
-
-In this video, we walk through how our team built production-ready support agents using the Effect TypeScript library. The video includes a demo of the agent in action, along with a breakdown of the architecture and design decisions behind it.
-
-We cover what worked well, what was challenging, and why we are continuing to invest in Effect for future development. If you’re building internal tools, working with LLMs, or automating customer support, this talk shares practical lessons on creating robust systems with strong guarantees.
-
-Topics include:
-Architectural patterns for agent-based systems
-Tradeoffs in developer experience
-Techniques for reliability and fault tolerance
-
-Feel free to reach out or share your thoughts:
-Twitter: x.com/michaelfester
-LinkedIn: linkedin.com/in/michaelfester
-
-## The Robots are coming for your job, and that's okay - Elmer Thomas and Maria Bermudez
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=pSqpC7fFLZA
-- Transcript: raw/20250603_pSqpC7fFLZA/pSqpC7fFLZA.en-orig.vtt
-- Metadata: raw/20250603_pSqpC7fFLZA/pSqpC7fFLZA.info.json
-
-In a world where AI is revolutionizing API documentation, many wonder: “Why can’t we just use AI to write the docs?” At Twilio, we’ve explored this question deeply. Our Developer Education team found that while generative AI is powerful, it still carries too much risk to be used as an autonomous customer-facing agent. Instead, we use AI to amplify our small team’s impact by automating repetitive tasks, freeing us to focus on high-value, accuracy-critical work.
-
-This talk shares our journey building and deploying AI agents to streamline documentation workflows, support over 100 product managers, and empower less-technical colleagues to contribute. Attendees will learn practical strategies for integrating agentic AI into documentation processes, how to balance automation with human oversight, and ideas for taking their own docs to the next level. This session is ideal for anyone interested in the intersection of AI, APIs, and documentation, especially those on short-staffed teams seeking scalable solutions.
-
-## Blender MCP and The Future Of Creative Tools - Siddharth Ahuja
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=nnktgWtfJHE
-- Transcript: raw/20250603_nnktgWtfJHE/nnktgWtfJHE.en-orig.vtt
-- Metadata: raw/20250603_nnktgWtfJHE/nnktgWtfJHE.info.json
-
-A dive into the Blender MCP to see how it was made, what use cases for creators it unlocks, and how the future might look for creators.
-
-## Why the Best AI Agents Are Built Without Frameworks (Primitives over Frameworks) — Ahmad Awais, CHAI
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=fcPUqxfrE6Y
-- Transcript: raw/20250603_fcPUqxfrE6Y/fcPUqxfrE6Y.en-orig.vtt
-- Metadata: raw/20250603_fcPUqxfrE6Y/fcPUqxfrE6Y.info.json
-
-Cursor, v0, chai.new, lovable, bolt — what do they all have in common? They weren’t built on AI frameworks—they're built using primitives optimized for speed, scale, and flexibility.
-
-LLMs are evolving fast—like, literally every week. New standards pop up (looking at you, MCP), and APIs change faster than you can keep track. Frameworks just can't move at this speed.
-
-In this talk, I'll challenge conventional engineering wisdom, sharing my real-world experience scaling thousands of AI agents to handle over 100 million monthly runs.
-
-You'll discover how using AI primitives can dramatically speed up iteration, provide bigger scale, and simplify maintenance. 
-
-I'll share eight practical agent architectures—covering memory management, auto tool integration, and simple serverless deployment—to help you quickly build reliable and scalable AI agents.
-
-By the end of this session, you'll clearly see why we must rethink and rebuild our infrastructure and focus on AI-native primitives instead of heavy, bloated, and quickly outdated frameworks. 
-
-I wonder if we need another S3-moment but for the AI agent infrastructure.
-
-## Unlocking Africa's Potential with AI — Thabang Ledwaba
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=eD_6jP1fkKs
-- Transcript: raw/20250603_eD_6jP1fkKs/eD_6jP1fkKs.en-orig.vtt
-- Metadata: raw/20250603_eD_6jP1fkKs/eD_6jP1fkKs.info.json
-
-As Africa stands at the crossroads of rapid population growth, urbanization, and digital transformation, Artificial Intelligence (AI) presents unprecedented opportunities to tackle some of the continent’s most pressing challenges. This presentation explores how AI can be harnessed as a tool for sustainable development—addressing issues in healthcare, agriculture, education, infrastructure, and governance.
-
-We’ll delve into real-world applications of AI across African nations, highlight innovative local solutions, and discuss how ethical and inclusive AI development can empower communities, bridge data gaps, and foster economic growth. The session will also examine the importance of homegrown talent, policy frameworks, and cross-sector collaboration in shaping an AI-powered future tailored to Africa’s unique context.
-
-It is time we reimagine the continent’s future through the lens of AI—one that is driven by innovation, equity, and resilience.
-
-## Analyzing 10,000 Sales Calls With AI In 2 Weeks — Charlie Guo
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=dvft0Gp9sEE
-- Transcript: raw/20250603_dvft0Gp9sEE/dvft0Gp9sEE.en-orig.vtt
-- Metadata: raw/20250603_dvft0Gp9sEE/dvft0Gp9sEE.info.json
-
-AKA: The Data Goldmine You’re Probably Ignoring
-
-Most companies are sitting on mountains of customer data: sales calls, customer support tickets, product reviews, user feedback, and social media interactions. But the truth is that most of this valuable data remains untouched - or worse, unusable.
-
-In this case study, I'll share how our team leveraged Claude to analyze 10,000 sales call transcripts in a handful of days, extracting deep customer insights at scale. We'll cover the AI engineering challenges we faced, including model selection tradeoffs, reducing hallucinations with retrieval-augmented generation (RAG), and optimizing prompt caching to dramatically cut costs and latency (by up to 90% in some cases).
-
-This isn't theoretical - it's a practical blueprint with concrete ROI metrics.
-Perfect for AI engineers, data scientists, and anyone sitting on mountains of unstructured customer data they can't analyze at scale.
-
-Read more at https://www.ignorance.ai/
-
-## Agentic Enterprise - What your CEO must know about AI -  Hubert Misztela
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=d7ds6m7fbqg
-- Transcript: raw/20250603_d7ds6m7fbqg/d7ds6m7fbqg.en-orig.vtt
-- Metadata: raw/20250603_d7ds6m7fbqg/d7ds6m7fbqg.info.json
-
-How large organizations will be transformed by AI?
-What people and organizations are scared of because of AI?
-What people do not know about AI Agents?
-What enterprises need?
-Why we might be wrong about Agents and LLMs impact all together? 
-
-Workflows optimization. 
-AI beyond LLMs and Agents: Representation Learning + GenAI + New Interfaces.
-Context is the new oil, not the data.
-
-Your CEO has to pivot. Now.
-
-## Rust is the language of the AGI - Michael Yuan
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=bbq0b_FpYEY
-- Transcript: raw/20250603_bbq0b_FpYEY/bbq0b_FpYEY.en-orig.vtt
-- Metadata: raw/20250603_bbq0b_FpYEY/bbq0b_FpYEY.info.json
-
-In the Latent Space podcast, Bret Taylor argued that strongly and statically-typed programming languages, such as Rust, could be especially well suited for AI coding, since the generated code can be validated by compilers for real-time feedback and reinforcement learning. However, unlike weakly or dynamically typed JavaScript or Python, there are few examples of Rust code in LLMs’ training corpora, and hence limiting the LLM's capability in generating Rust code. 
-
-In this talk, we will discuss the open-source Rust Coder project, which provides an integrated agentic framework based on the MCP protocol for generating complete and valid Rust projects. The Rust Coder framework enables the following functionalities for coding LLMs (e.g., Qwen Coder or Codestral).
-
-* Provides Rust example code, explanations, and tutorials relevant to the user’s request within the LLM query context.
-* Generates and parses generated code artifacts into Rust Cargo projects.
-* Compiles and executes generated Rust Cargo projects.
-* Executes the compiled project against test cases.
-* Provides coding LLM feedback based on compiler and testing outputs.
-* Runs continuously until all issues are fixed.
-
-We will demonstrate how the Rust Coder project works, how to integrate it into your agents, and ways to contribute to the open-source effort. We will also discuss pilot results from a large Rust coding camp (1000+ college students) using the Rust Coder tool.
-
-The Rust Coder is supported by two Linux Foundation Mentorship grants, as well as content provided by the Rust Foundation.
-
-## The Future of Qwen: A Generalist Agent Model — Junyang Lin, Alibaba Qwen
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=b0xlsQ_6wUQ
-- Transcript: raw/20250603_b0xlsQ_6wUQ/b0xlsQ_6wUQ.en-orig.vtt
-- Metadata: raw/20250603_b0xlsQ_6wUQ/b0xlsQ_6wUQ.info.json
-
-Since Alibaba launched the Qwen series of large models in 2023, the Qwen series of large language models and multimodal large models have been continuously updated and improved. This presentation will introduce the latest developments in the Qwen series of models, including the large language model Qwen3, vision-language large model Qwen2.5-VL, omni model Qwen2.5-Omni, etc. Additionally, this presentation will also cover the future development directions of the Qwen series.
-
-## The End of Awkward AI Transcriptions - Travis Bartley and Myungjong Kim
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=aDj9sY2RoG8
-- Transcript: raw/20250603_aDj9sY2RoG8/aDj9sY2RoG8.en-orig.vtt
-- Metadata: raw/20250603_aDj9sY2RoG8/aDj9sY2RoG8.info.json
-
-NVIDIA is setting the new global standard for speech AI—with 6 top-ten models on the Hugging Face ASR leaderboard and blazing a trail with models like Parakeet2. In this talk, we’ll pull back the curtain on what it takes to build the world’s fastest, most accurate conversational AI, from open-source research to enterprise-ready NIM microservices that scale across any infrastructure.
-
-We hear you, developers: Whether you’re building call center agents, video dubbing tools, or digital humans, NVIDIA’s ecosystem is designed for you. With Python-first frameworks, intuitive configurators, and a thriving open-source community, we’re making rapid iteration and seamless integration a reality—so you can launch faster, cut costs, and innovate boldly.
-
-Real-world impact is already here. Enterprises are deploying multilingual, noise-robust, and highly customizable voice agents at scale, while our digital human blueprint lets you create interactive avatars. But the real story is the underlying conversational AI stack that’s transforming customer experience, accessibility, and global communication.
-
-Join us to see why developers and industry leaders alike are calling NVIDIA’s speech AI “a game-changer”—and how you can be part of the next wave of conversational intelligence.
-
-## How agents broke app-level infrastructure - Evan Boyle
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=_-oIuRH4oGA
-- Transcript: raw/20250603__-oIuRH4oGA/_-oIuRH4oGA.en-orig.vtt
-- Metadata: raw/20250603__-oIuRH4oGA/_-oIuRH4oGA.info.json
-
-LLMs have completely broken our assumptions about app-level workloads. Compared to querying a database, LLMs are extremely flakey and slow. In web 2.0, p99 latency was just a few hundred milliseconds - anything higher and the on call is getting paged. 
-
-But today any API that uses LLMs has a p1 latency of a couple of seconds. Yet, the infrastructure we build on top of hasn't caught up with these new assumptions. There isn't a single serverless provider that supports running code for more than a few minutes!
-
-In this session we'll take about infrastructure patterns that used to be niche, but today require attention from anyone building on top of LLMs:
-
-- Durable execution
-- Long running workflows and APIs
-- Durable execution
-- Agent-scoped storage
-
-## Breaking the Chain: Agent Continuations for Resumable AI Workflows - Greg Benson
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=ZB7l4uxW3Yo
-- Transcript: raw/20250603_ZB7l4uxW3Yo/ZB7l4uxW3Yo.en-orig.vtt
-- Metadata: raw/20250603_ZB7l4uxW3Yo/ZB7l4uxW3Yo.info.json
-
-AI agents are powerful—but brittle. Once an agent chain starts, you either let it run or you tear it down and lose state. Agent Continuations change that contract. Borrowing from programming‑language continuations, we capture an agent’s entire call stack—tools, goals, partial responses—in a compact JSON blob combined with the familiar messages array. The result is a protocol‑level "Agent State" that lets you:
-
-- Pause anytime for human-in-the-loop approval gates, rate‑limit resets, or progressive UI updates.
-
-- Migrate agents across nodes, clouds, even different agent execution platforms
-
-- Checkpoint long‑running multi‑agent plans using off‑the‑shelf storage and enable restarting in the presence of agent failure
-
-- Resume seamlessly through standard LLM function‑calling APIs, so every framework that speaks OpenAI JSON can speak continuations.
-
-Our approach works with single-level agent loops and multi-level agents in which agents can call subagents.
-
-Attendees will leave with open‑source Python snippets and a mental model that turns “monolithic” agents into restart‑able, human‑aware services—shrinking failure windows and unlocking new UX patterns for AI products.
-
-**Key Takeaways**
-
-- Why Continuations are a good construct for Agent State
-- Protocol spec and reference JSON examples and a - Python implementation
-Live demo: suspend a three‑layer agent with suspending for human approval
-
-** Links **
-
-https://github.com/SnapLogic/agent-continuations
-https://agentcreator.com
-
-## RAG Evaluation Is Broken! Here's Why (And How to Fix It) - Yuval Belfer and Niv Granot
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=Ywl4LsvHKzU
-- Transcript: raw/20250603_Ywl4LsvHKzU/Ywl4LsvHKzU.en-orig.vtt
-- Metadata: raw/20250603_Ywl4LsvHKzU/Ywl4LsvHKzU.info.json
-
-Optimizing local benchmarks, chunking strategies, perfect retrieval scores. If you just nodded along, you're one of many developers building RAG systems optimized for metrics that don't matter in the real world.
-
-But what if our entire approach to evaluating retrieval-augmented generation is fundamentally flawed? The uncomfortable truth is that current RAG benchmarks reward systems that fail spectacularly on realistic information retrieval tasks.
-
-In this talk, I'll expose the critical gaps in how we evaluate RAG systems today, from the chunking catch-22 to the myth of perfectly contained information. Using examples like the "Seinfeld Test," we'll explore why high benchmark scores often lead to disappointed users.
-
-You'll learn practical strategies for meaningful RAG evaluation that reflects how information actually works in the wild, helping you build systems that impress not just benchmark leaderboards, but actual humans.
-
-To learn more, check out the full episode on RAG evaluation on YAAP: https://youtu.be/RsSkwpTmn8o?si=9gIR6EeIzPgbqY4O
-
-## The Demo I Wish I'd Had: OpenAI's Agents SDK... serverless! - Brook Riggio
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=UcW_s4BmuD0
-- Transcript: raw/20250603_UcW_s4BmuD0/UcW_s4BmuD0.en-orig.vtt
-- Metadata: raw/20250603_UcW_s4BmuD0/UcW_s4BmuD0.info.json
-
-Deploying and orchestrating significant AI workflows on serverless platforms like Vercel presents unique infrastructure challenges, like managing time limits and persistent state, handling task failures, and achieving reliable execution. As an engineer exploring OpenAI's powerful new Agents SDK on Vercel, I initially struggled with fitting sizeable jobs within the limits of our serverless platform.
-
-In this highly practical, hands-on session, you'll experience the demo I wish I'd had—showing exactly how to use Inngest's native integration with Vercel to run OpenAI's Agents SDK for robust orchestration and execution of complex, long-running AI workflows. We'll cover practical solutions for retries, state preservation, and seamless orchestration within the constraints of Vercel's serverless platform.
-
-You'll leave this talk equipped with clear, actionable strategies for implementing production-ready AI infrastructure on Vercel, including essential best practices for monitoring, observability, and robust error handling. Whether you're building your first AI system or enhancing existing workflows, this demo-driven talk provides the tools and insights needed for resilient, scalable AI deployments on Vercel.
-
-Complete demo repo: https://github.com/brookr/serverless-agents 
-
-Please fork this, build your own examples, and send a PR to link to your work!
-
-## Real AI Agents Need Planning, Not Just Prompting - Yuval Belfer
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=Th5e4h-oVmc
-- Transcript: raw/20250603_Th5e4h-oVmc/Th5e4h-oVmc.en-orig.vtt
-- Metadata: raw/20250603_Th5e4h-oVmc/Th5e4h-oVmc.info.json
-
-AI agents that actually deserve the name - do they even exist? Despite the hype, most "agents" today are just LLMs with fancy prompt engineering tricks, lacking true agency capabilities.
-
-Here's a deeper issue: it's 2025, and LLMs still struggle with basic instruction following. Weird when one of the first big models was literally called "InstructGPT," right? Benchmarks are saturated but meaningless, and without genuine planning abilities, these systems will keep hitting the same walls.
-
-In this session we will go through:
-- Why conventional agent frameworks like ReAct miss the mark on true agency
-- How dynamic planning creates agents that actually follow complex instructions
-- Tips to improve instruction following in any AI system you build
-
-## Will Agent evaluation via MCP Stabilize Agent Networks? - Ari Heljakka
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=RVN9HWKmkNU
-- Transcript: raw/20250603_RVN9HWKmkNU/RVN9HWKmkNU.en-orig.vtt
-- Metadata: raw/20250603_RVN9HWKmkNU/RVN9HWKmkNU.info.json
-
-Exposing complex AI Evaluation frameworks to AI agents via MCP allows for a new paradigm of agents to self-improve in a controllable manner. Unlike the often unstable straight-forward self-criticism loops, the MCP-accessible evaluation frameworks can provide the persistence layer that stabilizes and standardizes the measure of progress towards plan fulfillment with agents. 
-
-In this talk, we show how MCP-enabled evaluation engine already allows agents to self-improve in a way that is independent of agent architectures and frameworks, and holds promise to become a cornerstone of rigorous agent development.
-
-## MCP Agent Fine tuning Workshop - Ronan McGovern
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=Nqb7JTx0Pqo
-- Transcript: raw/20250603_Nqb7JTx0Pqo/Nqb7JTx0Pqo.en-orig.vtt
-- Metadata: raw/20250603_Nqb7JTx0Pqo/Nqb7JTx0Pqo.info.json
-
-This is a hands on workshop where students will run an agent with access to MCP servers (a playwright browser, although others can be added), generate high quality reasoning traces, and then train a Qwen3 model on those traces.
-
-Students will learn:
-- How to generate high quality MCP agent reasoning traces, via an OpenAI style endpoint
-- How to save tools and multi-turn traces
-- Fine-tune a Qwen3 model on those traces with unsloth
-- Run the fine-tuned model
-
-## From PM at Stripe to Building an AI startup, a recent founder's journey - Mounir Mouawad
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=HIGpxVjGFBw
-- Transcript: raw/20250603_HIGpxVjGFBw/HIGpxVjGFBw.en-orig.vtt
-- Metadata: raw/20250603_HIGpxVjGFBw/HIGpxVjGFBw.info.json
-
-I spent a bunch of time building products in Big Tech, most recently at Stripe but before that at Google and Amazon. In this short talk I am sharing the highs and lows of building a business in AI and how that differs from building products in Big Tech. May this be an inspiration to would-be founders or useful commiseration material for fellow founders :)
-
-## My AI Thinks I'm Eating My Feelings (and Other Nutritional Insights) - Rami Alhamad
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=Ghc-qalQFLw
-- Transcript: raw/20250603_Ghc-qalQFLw/Ghc-qalQFLw.en-orig.vtt
-- Metadata: raw/20250603_Ghc-qalQFLw/Ghc-qalQFLw.info.json
-
-Eating well shouldn't require an advanced degree or hours decoding nutrition labels. Alma leverages cutting-edge AI to turn complex nutritional science into straightforward, personalized advice. 
-
-In this talk, we'll dive into how we're using large language models and real-world user data to reshape how people track, understand, and improve their diets. We'll share insights on building user-friendly AI experiences, practical lessons from Alma's journey, and how we're making nutrition advice smarter, simpler, and genuinely helpful—one meal at a time.
-
-## Letting AI Interface with your App with MCP — Kent C Dodds
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=EyZiAp0pelw
-- Transcript: raw/20250603_EyZiAp0pelw/EyZiAp0pelw.en-orig.vtt
-- Metadata: raw/20250603_EyZiAp0pelw/EyZiAp0pelw.info.json
-
-We are entering a new era of user interaction. It's being built right before our very eyes and changing rapidly. As crazy as it sounds, soon each one of us will get our own Jarvis capable of performing actually useful tasks for us with a completely different user interaction mechanism than we're used to.
-
-But someone's gotta give Jarvis the tools to perform these tasks, and that's where we come in.
-
-In this talk, Kent will live code an MCP server and use it with an AI assistant to help us catch the vision of what this future could look like and our role in it.
-
-## The Benchmarks Game: Why It's Rigged and How You Can (Really) Win - Darius Emrani
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=EnT4Wej5M5k
-- Transcript: raw/20250603_EnT4Wej5M5k/EnT4Wej5M5k.en-orig.vtt
-- Metadata: raw/20250603_EnT4Wej5M5k/EnT4Wej5M5k.info.json
-
-AI benchmarks control billions in investment and shape entire markets - but the game is rigged. In this talk, I'll expose the three "cheat codes" companies use to game benchmarks:
-
-* Cherry-picking comparisons (xAI's selective Grok-3 graphs)
-* Buying privileged access (OpenAI's FrontierMath funding)
-* Optimizing for style over substance (Meta's 27 Llama-4 variants on LM Arena)
-
-When Andrej Karpathy says "I don't really know what metrics to look at right now," we have a crisis. I'll show you why Goodhart's Law guarantees benchmarks fail when billions are at stake, and more importantly, what to do about it.
-
-You'll learn:
-How to spot benchmark manipulation (with real examples)
-Why 39% of score variance is just writing style
-A 5-step framework to build evaluations that actually matter for YOUR use case
-How pre-deployment evaluation loops separate reliable AI from constant firefighting
-
-Drawing from my experience building evaluation systems at Waymo, Uber ATG, and SpaceX (where bad evals literally crash), I'll show you how to stop playing the rigged benchmarks game and start measuring what actually matters.
-
-## The Current State of Browser Agents - Jerry Wu and Wyatt Marshall
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=Djv8Sp11UjI
-- Transcript: raw/20250603_Djv8Sp11UjI/Djv8Sp11UjI.en-orig.vtt
-- Metadata: raw/20250603_Djv8Sp11UjI/Djv8Sp11UjI.info.json
-
-Browser agents are here. But beyond simple sample use cases (I'm looking at you flight booking demo), are they as good as advertised? 
-
-In this talk, we introduce Web Bench, a new benchmark we've developed that rigorously tests browser agents across 450+ websites on real-world action based objectives such as info extraction, login/auth, form filling, and others. We'll dive into the results, unpack some unexpected discoveries, and discuss broader implications for the future of general purpose agents. 
-
-You'll walk away with practical insights into:
-
-1. data-driven understanding of the capabilities and limitations of state-of-the-art browser agents
-2. how to meaningfully evaluate browser agents 
-3. hard-won lessons on designing and launching a benchmark
-
-Come through and see what browser agents can really do.
-
-Resources
-
-Leaderboard - https://webbench.ai/
-Technical Report: https://halluminate.ai/blog/benchmark
-Github - https://github.com/Halluminate/WebBench
-Huggingface - https://huggingface.co/datasets/Halluminate/WebBench
-
-## Stop Ordering AI Takeout  A Cookbook for Winning When You Build In House - Jan Siml
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=DjUIecgpYAo
-- Transcript: raw/20250603_DjUIecgpYAo/DjUIecgpYAo.en-orig.vtt
-- Metadata: raw/20250603_DjUIecgpYAo/DjUIecgpYAo.info.json
-
-Forget the multi-agent buffet—this is the home-cooked GenAI playbook that actually drives revenue.
-
-In this 10-minute lightning talk, Jan Siml shares how a small, in-house team skipped the hype playbook—no multi-agent pipelines with GraphRAG, no monster eval suites—and still turned an internal GenAI assistant into real business impact.
-
-🔑 What you’ll learn
-
-- Go Deep on One Job-to-Be-Done – depth crushes breadth when you own the data and the user.
-
-- Trace Every Click to Dollars – offline evals don’t sign contracts; revenue funnels do.
-
-- Push, Don’t Wait – zero-click Slack/email nudges outperform shiny chat UIs.
-
-- Convert Time-Saved into Time-Well-Spent – guide the next action, not just the answer.
-
-- Data & UX vs Bigger Models – integrations and better flow move the needle; fancy LLMs mostly move the bill.
-
-If you’re ready to trade Michelin-priced SaaS features for pragmatic, in-house wins—and you like your lessons straight from the kitchen rather than the brochure—hit play. Your AI roadmap (and budget) will thank you.
-
-## Text-to-Speech Data Preparation and Fine-tuning Workshop - Ronan McGovern
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=CXsbjcrf_5g
-- Transcript: raw/20250603_CXsbjcrf_5g/CXsbjcrf_5g.en-orig.vtt
-- Metadata: raw/20250603_CXsbjcrf_5g/CXsbjcrf_5g.info.json
-
-By the end of this workshop, you'll have train Sesame's CSM-1B text-to-speech model on a voice from a Youtube video. The workshop will cover data preparation, fine-tuning and evaluation.
-
-## Buy Now, Maybe Pay Later: Dealing with Prompt-Tax While Staying at the Frontier - Andrew Thomspson
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=Bf71xMwd-Y0
-- Transcript: raw/20250603_Bf71xMwd-Y0/Bf71xMwd-Y0.en-orig.vtt
-- Metadata: raw/20250603_Bf71xMwd-Y0/Bf71xMwd-Y0.info.json
-
-Frontier LLMs now drop at warp speed. Each upgrade hits you with a Prompt‑Tax: busted prompts, cranky domain experts, and evals that show up fashionably late.
-
-In this talk I’ll share 18 months of bruises (and wins) from shipping an agentic product for real‑estate lawyers:
-
-• The challenge of an evolving prompt library that breaks every time the model jumps
-
-• The bare‑bones tactics that actually work for faster migrations
-
-•  Our “betting on the model” mantra: ship the newest frontier model even when it’s rough around the edges, then race to close the gaps before anyone else does
-
-Walk away with a playbook to stay frontier‑fresh without blowing up your roadmap or your team’s sanity.
-
-## GPU-less, Trust-less, Limit-less: Reimagining the Confidential AI Cloud - Mike Bursell
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=A0PxE39xaMc
-- Transcript: raw/20250603_A0PxE39xaMc/A0PxE39xaMc.en-orig.vtt
-- Metadata: raw/20250603_A0PxE39xaMc/A0PxE39xaMc.info.json
-
-What happens when private AI models or sensitive data need to run in the public cloud?
-
-Can we still maintain control – without relying on blind trust?
-Can we eliminate that blind trust and make infrastructure verifiable by design?
-
-In this talk, you’ll discover what a “GPU-less” future really means: not the absence of acceleration, but the freedom to collaborate and deploy private AII workloads in a confidential, self-sovereign AI cloud – with open, on-chain guarantees that centralized clouds simply can’t offer. 
-
-No GPU-provider lock-in. No black-box execution. Just algorithmic, sovereign infrastructure – where the confidential cloud is a protocol, not a service.
-
-You’ll learn the foundations of Confidential AI and see real-world results powered by it. 
-Then, through four demos on Super Protocol, you’ll learn how to:
-
-1. AI Marketplace & Confidentiality Check – Deploy models in a few clicks and verify on-chain they’re running inside hardware-backed confidential environments.
-2. n8n Healthcare AI Workflow – Build and run agentic automations for sensitive data – entirely within confidential environments.
-3. Distributed vLLM Inference – Parallelize LLM inference across multiple GPU servers– with zero data exposure and no dependency on any single provider.
-4. Provable Medical-Data Training & On-Chain Reporting – Train on multiple sensitive datasets inside confidential environments – no data or IP exposed to participants, infrastructure providers, or Super Protocol – and generate verifiable on-chain proofs of exactly what ran, where, and how.
-
-Join us to discover how you can leverage Confidential AI today – and unlock new possibilities.
-
-Extra resources:
-- NVIDIA on Super Protocol: https://developer.nvidia.com/blog/exploring-the-case-of-super-protocol-with-self-sovereign-ai-and-nvidia-confidential-computing
-- Website  https://superprotocol.com/
-- Super AI Marketplace: https://marketplace.superprotocol.com/
-- Documentation: https://docs.superprotocol.com/
-
-## Grounded Reasoning Systems for Cloud Architecture - Iman Makaremi
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=9mzfioh1Zag
-- Transcript: raw/20250603_9mzfioh1Zag/9mzfioh1Zag.en-orig.vtt
-- Metadata: raw/20250603_9mzfioh1Zag/9mzfioh1Zag.info.json
-
-As LLMs move into enterprise workflows, developers face a new kind of architecture challenge: how do you build reliable, interpretable systems powered by agents and reasoning?
-
-This talk unpacks how we designed and implemented an AI orchestration framework for enterprise architecture — combining LangGraph for multi-agent workflows, Flyte for distributed execution, and AWS Bedrock for LLM inference using Claude 3. The product: an AI copilot for enterprise architects, deeply rooted in your tech stack context.
-
-At the core of this system is a domain-specific **knowledge graph** that acts as long-term memory for the agents. It enables persistent, structured representations of architectural state, system dependencies, and business context — giving the agents the grounding they need to generate accurate recommendations, translate natural language into SQL or code, and maintain continuity across workflows.
-
-We’ll also cover how we’ve integrated observability practices — including planned OpenTelemetry instrumentation — to trace and debug autonomous AI systems in production.
-
-If you’re a developer or AI engineer thinking beyond the chatbot and looking to embed reasoning into complex system design and data tasks, this talk offers an end-to-end blueprint — from orchestration and grounding to production monitoring.
-
-## Invisible Users, Invisible Interfaces: Accelerating Design Iteration with AI Simulation - Alex Liss
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=8D_VdU6DBhI
-- Transcript: raw/20250603_8D_VdU6DBhI/8D_VdU6DBhI.en-orig.vtt
-- Metadata: raw/20250603_8D_VdU6DBhI/8D_VdU6DBhI.info.json
-
-The genAI explosion has flipped classic software design on its head. Instead of building invisible interfaces, experiences so intuitive they feel second nature, we’ve seen a flood of awkward chatbot overlays and bolt-on features that confuse more than they help. But what if AI could be part of the solution? The path back to seamless design lies in using AI not as a feature, but as a tool for design itself. Through invisible users, like Intelligent Twins for AI-driven audience simulations, and computer use agents for visual evaluation, designers can accelerate needfinding and test interface concepts at scale. This session will explain that by simulating how diverse users experience new interactions, teams can anticipate user needs, reduce friction, and build great interfaces faster. Don’t bolt-on genAI features to existing products and tell people its magic – use AI to design software that actually feels like magic.
-
-## Effective AI Agents Need Data Flywheels, Not The Next Biggest LLM –  Sylendran Arunagiri, NVIDIA
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=6lTxD_oUjXQ
-- Transcript: raw/20250603_6lTxD_oUjXQ/6lTxD_oUjXQ.en-orig.vtt
-- Metadata: raw/20250603_6lTxD_oUjXQ/6lTxD_oUjXQ.info.json
-
-Building effective AI agents isn’t about using the next biggest LLMs in the market  - it’s about creating self-improving systems with data flywheels. By continuously learning from real-world data and agent interactions, these flywheels help evaluate, retrain, and optimize smaller, faster models that match the performance of large LLMs - at a fraction of the cost and compute.
-
-In this video, learn how NVIDIA uses data flywheels and NeMo microservices to run efficient AI agents with lower TCO and faster inference. Explore a thoughtful framework on building a data flywheel for your own AI agent systems.
-
-#aiagents #dataflywheel #generativeai #modeldistillation #nvidia
-
-## Cognitive Shield Real Time Real Smart - Rachna Srivastava
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=5_QWh4LGoxg
-- Transcript: raw/20250603_5_QWh4LGoxg/5_QWh4LGoxg.en-orig.vtt
-- Metadata: raw/20250603_5_QWh4LGoxg/5_QWh4LGoxg.info.json
-
-This high-energy demonstration unveils Cognitive Shield, a revolutionary three-level defense system that harnesses AI to combat sophisticated financial fraud. Watch as we showcase real-time deepfake detection, graph intelligence for fraud ring visualization, and cross-channel correlation of threats – all integrated within a comprehensive platform that amplifies human expertise rather than replacing it. 
-
-Learn how the same AI powering today's most dangerous financial attacks can be turned into our strongest defense.
-
-## The RAG Stack We Landed On After 37 Fails - Jonathan Fernandes
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=2CXn-CByNoo
-- Transcript: raw/20250603_2CXn-CByNoo/2CXn-CByNoo.en-orig.vtt
-- Metadata: raw/20250603_2CXn-CByNoo/2CXn-CByNoo.info.json
-
-Retrieval returning irrelevant results? Can't deploy solutions in the cloud? If these questions keep you up at night, you're likely experiencing the common frustrations of building an effective RAG system. But what if we could systematically optimise each component of the pipeline? 
-
-In this talk, I'll share the insights gained from 37 failed attempts, demonstrating live with documents from a knowledge base and how each optimisation impacts the end result. You'll walk away understanding how to diagnose the weaknesses in your RAG pipeline and apply targeted improvements that dramatically boost performance in real-world applications.
-
-## open-rag-eval: RAG Evaluation without "golden" answers — Ofer Mendelevitch, Vectara
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=1cQlnfwmIdU
-- Transcript: raw/20250603_1cQlnfwmIdU/1cQlnfwmIdU.en-orig.vtt
-- Metadata: raw/20250603_1cQlnfwmIdU/1cQlnfwmIdU.info.json
-
-Open-RAG-Eval is an open-source framework that revolutionizes RAG evaluation by harnessing the power of LLM judges for scalable, automated evaluation without the need for golden answers or golden chunks. Building on pioneering research from the University of Waterloo, this framework integrates innovative tools like UMBRELA for reference-free relevance scoring and AutoNuggetizer for automated fact-checking. Designed with a flexible connectors architecture, it seamlessly plugs into any RAG pipeline while delivering fast, transparent, and interpretable metrics on retrieval, generation, and hallucination in RAG.
-
-## Luminal - Search-Based Deep Learning Compilers - Joe Fioti
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=0uj9lMI-sIo
-- Transcript: raw/20250603_0uj9lMI-sIo/0uj9lMI-sIo.en-orig.vtt
-- Metadata: raw/20250603_0uj9lMI-sIo/0uj9lMI-sIo.info.json
-
-Luminal is a deep learning compiler for CPUs, GPUs, and ASICs that takes a search-first approach to discovering efficient kernels, such as flash attention, automatically.
-
-## Designing AI To Scale Human Thought — Jun Yu Tan, Tusk
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=0tVu-V3_fFw
-- Transcript: raw/20250603_0tVu-V3_fFw/0tVu-V3_fFw.en-orig.vtt
-- Metadata: raw/20250603_0tVu-V3_fFw/0tVu-V3_fFw.info.json
-
-Forget the hype of AI automation replacing jobs. The future lies in human augmentation — revealing blind spots, sparking creativity, and amplifying thoughtful decision-making. In this talk, we’ll explore the principles that distinguish augmentation from automation in AI UX design, covering interaction patterns, design principles, and trust-building feedback loops. Drawing from real-world experiences building AI-powered tools and beyond, we’ll dive into concepts for crafting interfaces that empower users to think smarter, not just work faster. Expect practical insights and a fresh perspective on AI’s role as a collaborative partner.
-
-AI Augmentation: https://jytan.net/blog/2025/ai-augmentation/
-Tusk: https://www.usetusk.ai/
-
-## The Agent Native Company — Rick Blalock, Agentuity
-
-- Upload date: 2025-06-03
-- Video: https://www.youtube.com/watch?v=0ZPAvzhpGjw
-- Transcript: raw/20250603_0ZPAvzhpGjw/0ZPAvzhpGjw.en-orig.vtt
-- Metadata: raw/20250603_0ZPAvzhpGjw/0ZPAvzhpGjw.info.json
-
-Are you just using AI—or are you building a company around it?
-
-In this talk, I break down what it means to be an agent-native company—a business designed from the ground up with AI agents at the core of operations, culture, and product. Drawing from my own founder experience (building 14 months of product in 8 weeks with just 6 people and a stack of agents), I’ll walk you through the real-world shift happening right now across tech.
-
-🔍 What you'll learn:
-
-The difference between AI-enhanced vs. AI-native orgs
-
-Why the future of hiring is about AI fluency, not just professional networks or credentials
-
-The rise of new job titles like “Agent Manager” (yes, that’s a real job)
-
-How lean teams can use AI agents to achieve 10x—or even 100x—impact
-
-What “culture is the new stack” really means when humans and AI work together
-
-🧠 Featuring real-world examples, practical hiring insights, and a peek into how workflows and job roles are changing fast.
-
-📈 Whether you’re a founder, tech leader, or just curious about the future of work, this is your guide to scaling smart—with AI at the wheel.

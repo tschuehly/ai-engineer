@@ -32,10 +32,10 @@ python3 scripts/build_ai_engineer_youtube_index.py --no-fetch
 
 ## Build the Wiki
 
-Run `gnhf` with the committed prompt:
+Run `gnhf` with the committed prompt. The `--agent` flag selects the coding agent; `claude` and `codex` are both supported:
 
 ```bash
-cat prompts/gnhf-build-knowledge-base.md | gnhf --agent codex --max-iterations 1
+cat prompts/gnhf-build-knowledge-base.md | gnhf --agent claude --max-iterations 1
 ```
 
 Each iteration analyzes exactly one previously unprocessed transcript from `data/ai_engineer_youtube/index.jsonl` and updates the compiled wiki under:
@@ -55,7 +55,14 @@ The wiki uses:
 Run more iterations when you want the wiki to grow:
 
 ```bash
-cat prompts/gnhf-build-knowledge-base.md | gnhf --agent codex --max-iterations 10
+cat prompts/gnhf-build-knowledge-base.md | gnhf --agent claude --max-iterations 10
+```
+
+For a long unattended loop on the current branch, keep the machine awake and let
+`gnhf` resume the existing run:
+
+```bash
+cat prompts/gnhf-build-knowledge-base.md | gnhf --agent claude --current-branch --prevent-sleep on --max-iterations 20
 ```
 
 ## Requirements
@@ -70,8 +77,10 @@ Install or upgrade `yt-dlp` with:
 python3 -m pip install --upgrade yt-dlp
 ```
 
-Install `gnhf` with:
+- `claude` on `PATH` (when using `--agent claude`)
+
+Install or upgrade `gnhf` with:
 
 ```bash
-npm install -g gnhf
+npm install -g gnhf@latest
 ```
