@@ -399,6 +399,9 @@
 
 ## Coding Agents
 
+- [Enforce Agent Rules in Git Hooks and CI, Not the Prompt](../concepts/enforce-agent-rules-in-git-hooks-and-ci-not-the-prompt.md)
+- [Lint Module Imports to Make Failure Classes Structurally Impossible](../concepts/lint-module-imports-to-make-failure-classes-structurally-impossible.md)
+- [Verify Spec Adherence With Executable, Readable BDD Scenarios](../concepts/verify-spec-adherence-with-executable-readable-bdd-scenarios.md)
 - [Seal Eval Environments Against Agents That Read the Leaked Answer](../concepts/seal-eval-environments-against-answer-leaking-agents.md)
 - [Run Agentic Coding Evals as an Infrastructure-Reliability Problem](../concepts/run-agentic-coding-evals-as-an-infrastructure-problem.md)
 - [Run Parallel Coding Sessions as Typed Swim Lanes](../concepts/run-parallel-coding-sessions-as-typed-swim-lanes.md)
@@ -604,6 +607,7 @@
 
 ## Context Engineering
 
+- [Enforce Agent Rules in Git Hooks and CI, Not the Prompt](../concepts/enforce-agent-rules-in-git-hooks-and-ci-not-the-prompt.md)
 - [Curate Context Strategically Because Models Drop the Middle](../concepts/curate-context-strategically-because-models-drop-the-middle.md)
 - [Mine Agent Conversation History to Generate Missing Skills](../concepts/mine-agent-conversation-history-to-generate-missing-skills.md)
 - [Codebase Intelligence Needs Structural and Historical Signals](../concepts/codebase-intelligence-needs-structural-and-historical-signals.md)
@@ -1009,6 +1013,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Verify Spec Adherence With Executable, Readable BDD Scenarios](../concepts/verify-spec-adherence-with-executable-readable-bdd-scenarios.md)
 - [Run Agentic Coding Evals as an Infrastructure-Reliability Problem](../concepts/run-agentic-coding-evals-as-an-infrastructure-problem.md)
 - [Seal Eval Environments Against Agents That Read the Leaked Answer](../concepts/seal-eval-environments-against-answer-leaking-agents.md)
 - [Design Benchmarks as Forward Bets That Shape the Field](../concepts/design-benchmarks-as-forward-bets-that-shape-the-field.md)
@@ -1705,6 +1710,9 @@
 - [Benchmark Voice AI on Distant-Mic Multi-Speaker Audio, Not Headset Single-Speaker](../concepts/benchmark-voice-ai-on-distant-mic-multi-speaker-audio.md)
 
 ## Workflows
+- [Enforce Agent Rules in Git Hooks and CI, Not the Prompt](../concepts/enforce-agent-rules-in-git-hooks-and-ci-not-the-prompt.md)
+- [Lint Module Imports to Make Failure Classes Structurally Impossible](../concepts/lint-module-imports-to-make-failure-classes-structurally-impossible.md)
+- [Verify Spec Adherence With Executable, Readable BDD Scenarios](../concepts/verify-spec-adherence-with-executable-readable-bdd-scenarios.md)
 - [Run Parallel Coding Sessions as Typed Swim Lanes](../concepts/run-parallel-coding-sessions-as-typed-swim-lanes.md)
 - [Let an Agent Build and Maintain Self-Healing Scrapers](../concepts/let-agents-build-and-maintain-self-healing-scrapers.md)
 - [Separate Non-Deterministic Discovery From Deterministic Payment Execution](../concepts/separate-non-deterministic-discovery-from-deterministic-payment.md)

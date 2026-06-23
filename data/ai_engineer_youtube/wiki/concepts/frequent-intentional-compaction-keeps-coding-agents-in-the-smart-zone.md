@@ -13,6 +13,7 @@ Details:
 - The "smart zone" framing warns that heavily filled context windows can degrade tool-call quality before the nominal model limit is reached; too many always-on MCP servers or JSON-heavy tools can push work into the degraded region. 05:48-06:25
 - Subagents are a context-control mechanism: let a separate context window search and read broadly, then return a concise result so the parent agent only loads what matters. 06:35-07:27
 - On-demand compressed context can beat broad static onboarding docs because it creates a task-specific snapshot from current code rather than relying on long documentation that may be stale or incomplete. 12:14-14:10
+- A complementary mechanism is to keep the durable rules and decisions *outside* the prompt entirely: Michal Cichra runs sessions through 20–50 context compacts with "no fear of context compacts" because the rules live in git hooks, CI, and ADRs, so the important things survive a compact and the agent always re-looks-them-up — externalized enforcement and reviewed-artifact compaction are two ways to keep agents on track across a context reset. ([Capturing Decisions](../sources/20260603_504PvfXou5Y.md), 11:04-11:44)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -23,6 +24,8 @@ Related concepts:
 - [Keep agent context small, fresh, and task-specific](keep-agent-context-small-fresh-and-task-specific.md)
 - [Use subagents to isolate context-heavy subtasks](use-subagents-to-isolate-context-heavy-subtasks.md)
 - [Use research-plan-implement loops for coding agents](use-research-plan-implement-loops-for-coding-agents.md)
+- [Enforce Agent Rules in Git Hooks and CI, Not the Prompt](enforce-agent-rules-in-git-hooks-and-ci-not-the-prompt.md)
 
 Sources:
 - [No Vibes Allowed: Solving Hard Problems in Complex Codebases - Dex Horthy, HumanLayer](../sources/20251202_rmvDxxNubIg.md), 03:47-07:27, 12:14-14:10
+- [BDD, ADR, PRD, WTF: Capturing Decisions for Humans and AI Alike — Michal Cichra, Safe Intelligence](../sources/20260603_504PvfXou5Y.md), 11:04-11:44
