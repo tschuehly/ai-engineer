@@ -16,6 +16,8 @@ At the fundraising stage, monetization can start as a testable hypothesis rather
 
 Agentic commerce adds a market-level monetization problem: buyer agents may arrive with higher explicit intent, while merchant agents need to expose data, preferences, and offers in a way that creates transactions without defaulting to advertising. Revenue share may look more like affiliate economics or attribution for high-quality data and answers than like traditional ad placement.
 
+At scale, the cost side of monetization is itself becoming a strategic discipline. Organizational LLM spend has grown large enough (some reportedly consuming on the order of trillions of tokens per month) that leaders treat token consumption as a deliberate axis rather than a passive bill, splitting between spending more in smarter ways ("token maxing," "AI factories") and spending less for equivalent value. Margin and pricing decisions increasingly depend on where a team chooses to sit on that spectrum.
+
 ## Key Concepts
 
 - [Treat AI pricing as a fast-moving product hypothesis](../concepts/treat-ai-pricing-as-a-fast-moving-product-hypothesis.md) - pricing should evolve with product capabilities, cost structure, and customer feedback.
@@ -29,6 +31,7 @@ Agentic commerce adds a market-level monetization problem: buyer agents may arri
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md) - early buyer conversations can support ACV and pricing hypotheses before revenue exists.
 - [Agentic Commerce Moves From Static Stores to Intent Infrastructure](../concepts/agentic-commerce-moves-from-static-stores-to-intent-infrastructure.md) - explicit buying and selling intent becomes the unit that commerce infrastructure optimizes.
 - [Delegate Agentic Commerce Transactions With Explicit Payment Authority](../concepts/delegate-agentic-commerce-transactions-with-explicit-payment-authority.md) - agentic payment rails need bounded authority and spending controls.
+- [Treat Token Spend as a Strategic Axis](../concepts/treat-token-spend-as-a-strategic-axis.md) - large-scale LLM spend is a deliberate maxing-vs-reduction decision, not just a cost line.
 
 ## Open Questions
 
@@ -52,3 +55,4 @@ Agentic commerce adds a market-level monetization problem: buyer agents may arri
 - [AI That Pays: Lessons from Revenue Cycle - Nathan Wan, Ensemble Health](../sources/20250724_TquUsN1QsWs.md)
 - [Machines of Buying and Selling Grace - Adam Behrens, New Generation](../sources/20250723_zlZz0mDF2eg.md)
 - [Monetizing AI - Alvaro Morales, Orb](../sources/20250723_6WQYLQB0odc.md)
+- [6 Things to Know about AIE World's Fair 2026](../sources/20260621_0S8xe9ftGTM.md)

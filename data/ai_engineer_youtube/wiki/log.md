@@ -1902,3 +1902,11 @@
 - Updated topics: [Agents](topics/agents.md), [Tools](topics/tools.md), [Infrastructure](topics/infrastructure.md), [Workflows](topics/workflows.md)
 - Updated concepts: [Compose Agents From Client, Reasoning, Workflow, and Tools](concepts/compose-agents-from-client-reasoning-workflow-and-tools.md), [Stateful Remote MCP Servers Persist Agent Memory Across Clients](concepts/stateful-remote-mcp-servers-persist-agent-memory-across-clients.md), [Defer Sensitive Tool Execution Until Approval Resumes](concepts/defer-sensitive-tool-execution-until-approval-resumes.md), [Agent Clients Can Be Custom or Existing MCP Surfaces](concepts/agent-clients-can-be-custom-or-existing-mcp-surfaces.md)
 - Notes: Added Cloudflare's four-layer agent architecture, stateful remote MCP deployment pattern, and approval-resumed tool execution workflow.
+
+## [2026-06-23] ingest | 6 Things to Know about AIE World's Fair 2026
+
+- Source: [6 Things to Know about AIE World's Fair 2026](sources/20260621_0S8xe9ftGTM.md)
+- Processed: `0S8xe9ftGTM`
+- Updated topics: [AI Monetization](topics/ai-monetization.md), [Product Strategy](topics/product-strategy.md)
+- Updated concepts: [Treat Token Spend as a Strategic Axis](concepts/treat-token-spend-as-a-strategic-axis.md), [Target High-Value AI Verticals as Capability Matures](concepts/target-high-value-ai-verticals.md)
+- Notes: Distilled field-structure signal from an event promo: organizational token economics (token billionaires, maxing-vs-reduction "ZL spectrum," AI factories) and the deployment shift from horizontal tracks to high-value verticals led by finance.

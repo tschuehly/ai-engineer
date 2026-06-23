@@ -49,6 +49,7 @@
 - [Measure AI intensity by human input to valuable output](../concepts/measure-ai-intensity-by-human-input-to-valuable-output.md)
 - [Start with augmentation when autonomous reliability is not ready](../concepts/start-with-augmentation-when-autonomous-reliability-is-not-ready.md)
 - [Use AI leapfrogging to find conservative-industry opportunities](../concepts/use-ai-leapfrogging-to-find-conservative-industry-opportunities.md)
+- [Target High-Value AI Verticals as Capability Matures](../concepts/target-high-value-ai-verticals.md)
 - [Standard models guide AI engineering practice](../concepts/standard-models-guide-ai-engineering-practice.md)
 - [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md)
 - [Choose AI coworker form factors by interaction mode](../concepts/choose-ai-coworker-form-factors-by-interaction-mode.md)
@@ -359,6 +360,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 - [Agentic Commerce Moves From Static Stores to Intent Infrastructure](../concepts/agentic-commerce-moves-from-static-stores-to-intent-infrastructure.md)
 - [Delegate Agentic Commerce Transactions With Explicit Payment Authority](../concepts/delegate-agentic-commerce-transactions-with-explicit-payment-authority.md)
+- [Treat Token Spend as a Strategic Axis](../concepts/treat-token-spend-as-a-strategic-axis.md)
 
 ## Architecture Copilots
 
@@ -907,6 +909,7 @@
 - [Build domain-specific workflow wrappers around models](../concepts/build-domain-specific-workflow-wrappers-around-models.md)
 - [Start with augmentation when autonomous reliability is not ready](../concepts/start-with-augmentation-when-autonomous-reliability-is-not-ready.md)
 - [Use AI leapfrogging to find conservative-industry opportunities](../concepts/use-ai-leapfrogging-to-find-conservative-industry-opportunities.md)
+- [Target High-Value AI Verticals as Capability Matures](../concepts/target-high-value-ai-verticals.md)
 - [Standard models guide AI engineering practice](../concepts/standard-models-guide-ai-engineering-practice.md)
 - [Design AI creative systems for generated-asset retrieval](../concepts/design-ai-creative-systems-for-generated-asset-retrieval.md)
 - [Prototype AI UX by feeling the model material](../concepts/prototype-ai-ux-by-feeling-the-model-material.md)
