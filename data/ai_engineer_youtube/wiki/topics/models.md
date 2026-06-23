@@ -48,8 +48,11 @@ Model-tier selection should also track how deterministic a step is, not only its
 
 Extending a model's context is also a training-systems problem, not only an architecture choice. Together AI's "road to 5M tokens" work frames long-context training as incremental memory engineering: a standard LLaMA 3B at a 3M-token context out-of-memories on an 8×H100 node before any activations exist, and no single trick fixes it. The reusable lesson is to layer FSDP, DeepSpeed Ulysses context parallelism, activation checkpointing, CPU offloading of transformer-block inputs, and Arctic-style chunked sequence training until 3M tokens fits, then go deeper into context parallelism with "Untied Ulysses" — chunking attention heads and reusing one smaller buffer across iterations because one head-group already saturates GPU compute — to reach 5M while matching the most memory-optimized training baselines at 8B and 32B. This complements the local-training and long-context-RL concepts in this topic: where local from-scratch training exposes the tokenizer/architecture/loop pieces and single-stage RL preserves long-context ability, the memory stack is what makes a multi-million-token training run physically fit on the hardware at all, and bottlenecks (per the talk) appear where you least expect, so profiling memory comes before optimizing it.
 
+Choosing and switching models is itself a disciplined process, not a leaderboard reflex. Cline's eval framing warns against reading similar benchmark numbers as model equivalence ("GPT 5.4 ≈ Gemini 3.1 Pro" — they're not), against believing a lab's launch number, and against being the earliest adopter: let a new model settle for a couple weeks and switch only if it stands the test of time. Just as important, a model that underperforms in your product is often a harness gap, not a model gap — prompt-engineering techniques are model-family-specific (Anthropic ≠ Codex ≠ Gemini), so adopting a new family means hill-climbing its own harness tuning, which then unlocks the users who prefer that family. This complements the role-routing concepts above: model selection has to account for how a model interacts with your harness, not only its raw capability.
+
 ## Key Concepts
 
+- [Tune Coding-Agent Harnesses Per Model Family](../concepts/tune-coding-agent-harnesses-per-model-family.md) - underperformance on a model is usually a harness gap; prompt techniques don't transfer across families, so a model swap alone rarely moves the score and adopting a new family is its own tuning effort.
 - [Split Discovery and Validation Across Reasoning and Deterministic Models](../concepts/split-discovery-and-validation-across-reasoning-and-deterministic-models.md) - route open-ended discovery to high-reasoning models and deterministic validation to cheaper models, because the validation 20% does not need a reasoning model.
 - [Use Eagle 3 Speculative Decoding With Matched Draft Models](../concepts/use-eagle-3-speculative-decoding-with-matched-draft-models.md) - speculative decoding draft models need to be matched to the target model rather than treated as arbitrary smaller substitutes.
 - [SGLang Serves Models Through Configured OpenAI-Compatible Servers](../concepts/sglang-serves-models-through-configured-openai-compatible-servers.md) - model availability depends on serving-framework support, hardware settings, and API-compatible deployment paths.
@@ -179,6 +182,7 @@ Extending a model's context is also a training-systems problem, not only an arch
 
 ## Sources
 
+- [Evals Are Broken, Use Them Anyway — Ara Khan, Cline](../sources/20260606_QuuIywMG4s8.md)
 - [You Might Not Need 50 Diffusion Steps — Ziv Ilan, Nvidia](../sources/20260616_gHs5ZiY80PM.md)
 - [#define AI Engineer - Greg Brockman, OpenAI (ft. Jensen Huang)](../sources/20250810_avWhreBUYF0.md)
 

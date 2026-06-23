@@ -395,6 +395,8 @@
 
 ## Coding Agents
 
+- [Tune Coding-Agent Harnesses Per Model Family](../concepts/tune-coding-agent-harnesses-per-model-family.md)
+- [Portfolio-Allocate Eval Failures With a Triage Agent](../concepts/portfolio-allocate-eval-failures-with-a-triage-agent.md)
 - [Reconcile Specialist Agent Outputs With a Feedback-Weighted Judge](../concepts/reconcile-specialist-agent-outputs-with-a-feedback-weighted-judge.md)
 - [Treat Embeddings as Cached Compute Decided by Query Volume](../concepts/treat-embeddings-as-cached-compute-decided-by-query-volume.md)
 - [Share Codebase Indexes Across a Team With Merkle-Tree Diffing](../concepts/share-codebase-indexes-across-a-team-with-merkle-tree-diffing.md)
@@ -993,6 +995,8 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Portfolio-Allocate Eval Failures With a Triage Agent](../concepts/portfolio-allocate-eval-failures-with-a-triage-agent.md)
+- [Tune Coding-Agent Harnesses Per Model Family](../concepts/tune-coding-agent-harnesses-per-model-family.md)
 - [Reconcile Specialist Agent Outputs With a Feedback-Weighted Judge](../concepts/reconcile-specialist-agent-outputs-with-a-feedback-weighted-judge.md)
 - [Catalog Eval Signal Sources Across Judge, Human, Golden, Deterministic, and Business](../concepts/catalog-eval-signal-sources-judge-human-golden-deterministic-business.md)
 - [Choose Eval Scope Across Span, Multispan, Trajectory, and Session](../concepts/choose-eval-scope-across-span-multispan-trajectory-and-session.md)
@@ -1224,6 +1228,7 @@
 
 ## Models
 
+- [Tune Coding-Agent Harnesses Per Model Family](../concepts/tune-coding-agent-harnesses-per-model-family.md)
 - [Split Discovery and Validation Across Reasoning and Deterministic Models](../concepts/split-discovery-and-validation-across-reasoning-and-deterministic-models.md)
 - [Use Eagle 3 Speculative Decoding With Matched Draft Models](../concepts/use-eagle-3-speculative-decoding-with-matched-draft-models.md)
 - [SGLang Serves Models Through Configured OpenAI-Compatible Servers](../concepts/sglang-serves-models-through-configured-openai-compatible-servers.md)
