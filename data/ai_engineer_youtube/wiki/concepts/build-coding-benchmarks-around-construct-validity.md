@@ -20,6 +20,7 @@ Related topics:
 Related concepts:
 - [Evaluate generated kernels for correctness, performance, and benchmark gaming](evaluate-generated-kernels-for-correctness-performance-and-benchmark-gaming.md)
 - [Benchmark narrow slices separately from real expert work](benchmark-narrow-slices-separately-from-real-expert-work.md)
+- [Judge Benchmark Quality by Task Quality, Diversity, Headroom, and Methodology](judge-benchmark-quality-by-task-diversity-headroom-and-methodology.md)
 
 Sources:
 - [Coding Evals: From Code Snippets to Codebases - Naman Jain, Cursor](../sources/20251215_tHN44yJoeS8.md), 07:07-10:18

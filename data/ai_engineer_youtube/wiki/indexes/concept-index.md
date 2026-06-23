@@ -1,6 +1,7 @@
 # Concept Index
 
 ## Agents
+- [Push Agent Benchmarks on Environment Complexity, Autonomy Horizon, and Output Complexity](../concepts/push-agent-benchmarks-on-environment-autonomy-and-output-complexity.md)
 - [Read an Agent's Reasoning to Catch It Bullshitting](../concepts/read-an-agents-reasoning-to-catch-it-bullshitting.md)
 - [Measure Agent Interface Efficiency With Tokens Per Successful Outcome](../concepts/measure-agent-interface-efficiency-with-tokens-per-successful-outcome.md)
 - [Turn Tool Errors Into Agent Self-Healing Recovery](../concepts/turn-tool-errors-into-agent-self-healing-recovery.md)
@@ -1001,6 +1002,10 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Design Benchmarks as Forward Bets That Shape the Field](../concepts/design-benchmarks-as-forward-bets-that-shape-the-field.md)
+- [Judge Benchmark Quality by Task Quality, Diversity, Headroom, and Methodology](../concepts/judge-benchmark-quality-by-task-diversity-headroom-and-methodology.md)
+- [Treat Researcher UX as a First-Class Benchmark Feature](../concepts/treat-researcher-ux-as-a-first-class-benchmark-feature.md)
+- [Push Agent Benchmarks on Environment Complexity, Autonomy Horizon, and Output Complexity](../concepts/push-agent-benchmarks-on-environment-autonomy-and-output-complexity.md)
 - [Measure Agent Interface Efficiency With Tokens Per Successful Outcome](../concepts/measure-agent-interface-efficiency-with-tokens-per-successful-outcome.md)
 - [Portfolio-Allocate Eval Failures With a Triage Agent](../concepts/portfolio-allocate-eval-failures-with-a-triage-agent.md)
 - [Tune Coding-Agent Harnesses Per Model Family](../concepts/tune-coding-agent-harnesses-per-model-family.md)

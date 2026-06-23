@@ -152,6 +152,8 @@ Agents can also own the maintenance of long-running data work, not just one-shot
 
 Treating the agent as its own user class also reframes interface quality as something to measure and to engineer for recovery. Chrome DevTools' team frames an agent as a separate user segment that shares the human's goal but has different cognitive bottlenecks, so its tool interface gets its own non-functional requirements and a fuel-efficiency metric — tokens per successful outcome, compared within a user journey. Because every error costs an agent retry and reasoning tokens, the recovery surface is part of that efficiency: actionable error messages that add the missing fact let the agent self-heal without a human, proactive detours counteract a model's training-data priors by steering it to the right tool, and a diagnostic-playbook skill fixes recurring setup mistakes. The same talk reinforces the friction-by-design lesson — a local browsing agent sits in the lethal trifecta, so trust should never be traded for convenience.
 
+How agents are *measured* also shapes how they are built, and Snorkel argues the benchmarks that matter most for agents are still missing three axes: environment complexity (a real codebase carries org policies, Slack context, flaky CI, and many parallel contributors, where today's benchmarks capture a fraction), autonomy horizon (how long an agent runs before reliability breaks down, across the co-pilot↔fully-autonomous slider, in continual-learning settings where specs and priorities shift midstream), and output complexity beyond plain text (nuanced reward signals for subjective artifacts, plus "trustworthy outputs" where the agent reports its own uncertainty and stops or asks rather than always answering). These are design targets for agents as much as for the benchmarks that score them.
+
 ## Key Concepts
 
 - [Read an Agent's Reasoning to Catch It Bullshitting](../concepts/read-an-agents-reasoning-to-catch-it-bullshitting.md) - supervise an agent by the quality of its reasoning narration; waffling or incoherent self-explanation is the tell that a session has lost the plot and should be cut.
@@ -162,6 +164,7 @@ Treating the agent as its own user class also reframes interface quality as some
 - [Let an Agent Build and Maintain Self-Healing Scrapers](../concepts/let-agents-build-and-maintain-self-healing-scrapers.md) - an agent that builds a scraper can also run, validate, and repair it on a schedule, so data collection becomes a self-healing pipeline instead of a 2am page.
 - [Measure Agent Interface Efficiency With Tokens Per Successful Outcome](../concepts/measure-agent-interface-efficiency-with-tokens-per-successful-outcome.md) - treat the agent as a separate user class and measure its interface as tokens per successful outcome, per user journey.
 - [Turn Tool Errors Into Agent Self-Healing Recovery](../concepts/turn-tool-errors-into-agent-self-healing-recovery.md) - design the tool's error surface so the agent recovers on its own — actionable messages, proactive detours, and diagnostic-playbook skills.
+- [Push Agent Benchmarks on Environment Complexity, Autonomy Horizon, and Output Complexity](../concepts/push-agent-benchmarks-on-environment-autonomy-and-output-complexity.md) - the three axes where agent benchmarks lag real deployment, which double as design targets for the agents being scored.
 - [Separate Non-Deterministic Discovery From Deterministic Payment Execution](../concepts/separate-non-deterministic-discovery-from-deterministic-payment.md) - discovery benefits from agent non-determinism but payments require determinism, so a non-deterministic planner should feed a deterministic, verifiable transaction path.
 - [Bound Agent Payments With Processor-Enforced Mandate Tokens](../concepts/bound-agent-payments-with-processor-enforced-mandate-tokens.md) - share a token carrying a processor-enforced mandate (currency, amount, time, seller) instead of a raw card so limits hold even when the agent is duped or mis-parses the amount.
 - [Settle Agent Payments Over HTTP With 402 and Checkout Protocols](../concepts/settle-agent-payments-over-http-with-402-and-checkout-protocols.md) - make agent payment programmatic: an HTTP 402 makes ephemeral tool calls payable, and a structured agent/seller/PSP exchange relays cart state so checkout details are not mis-relayed.
@@ -522,6 +525,7 @@ Treating the agent as its own user class also reframes interface quality as some
 
 ## Sources
 
+- [The Art & Science of Benchmarking Agents — Vincent Chen, Snorkel AI](../sources/20260604_iNkFlCiij0U.md)
 - [From MCP to Scale: Pipelines That Build Themselves — Rafael Levi, Bright Data](../sources/20260607_zTZ0qunQXnM.md)
 - [Stop Making Models Bigger, Make Them Behave — Kobie Crawford, Snorkel](../sources/20260610_TNwJ1LMiENk.md)
 - [How to build Enterprise Aware Agents - Chau Tran, Glean](../sources/20250724_hxFpUcvWPcU.md)
