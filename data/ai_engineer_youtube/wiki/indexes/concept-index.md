@@ -1,6 +1,7 @@
 # Concept Index
 
 ## Agents
+- [Read an Agent's Reasoning to Catch It Bullshitting](../concepts/read-an-agents-reasoning-to-catch-it-bullshitting.md)
 - [Measure Agent Interface Efficiency With Tokens Per Successful Outcome](../concepts/measure-agent-interface-efficiency-with-tokens-per-successful-outcome.md)
 - [Turn Tool Errors Into Agent Self-Healing Recovery](../concepts/turn-tool-errors-into-agent-self-healing-recovery.md)
 - [Let an Agent Build and Maintain Self-Healing Scrapers](../concepts/let-agents-build-and-maintain-self-healing-scrapers.md)
@@ -397,6 +398,8 @@
 
 ## Coding Agents
 
+- [Run Parallel Coding Sessions as Typed Swim Lanes](../concepts/run-parallel-coding-sessions-as-typed-swim-lanes.md)
+- [Read an Agent's Reasoning to Catch It Bullshitting](../concepts/read-an-agents-reasoning-to-catch-it-bullshitting.md)
 - [Scaffold MCP Apps From a Repo Skill With a Coding Agent](../concepts/scaffold-mcp-apps-from-a-repo-skill-with-a-coding-agent.md)
 - [Tune Coding-Agent Harnesses Per Model Family](../concepts/tune-coding-agent-harnesses-per-model-family.md)
 - [Portfolio-Allocate Eval Failures With a Triage Agent](../concepts/portfolio-allocate-eval-failures-with-a-triage-agent.md)
@@ -1685,6 +1688,7 @@
 - [Benchmark Voice AI on Distant-Mic Multi-Speaker Audio, Not Headset Single-Speaker](../concepts/benchmark-voice-ai-on-distant-mic-multi-speaker-audio.md)
 
 ## Workflows
+- [Run Parallel Coding Sessions as Typed Swim Lanes](../concepts/run-parallel-coding-sessions-as-typed-swim-lanes.md)
 - [Let an Agent Build and Maintain Self-Healing Scrapers](../concepts/let-agents-build-and-maintain-self-healing-scrapers.md)
 - [Separate Non-Deterministic Discovery From Deterministic Payment Execution](../concepts/separate-non-deterministic-discovery-from-deterministic-payment.md)
 - [Split Discovery and Validation Across Reasoning and Deterministic Models](../concepts/split-discovery-and-validation-across-reasoning-and-deterministic-models.md)

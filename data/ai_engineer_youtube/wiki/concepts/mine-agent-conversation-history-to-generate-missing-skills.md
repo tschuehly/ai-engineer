@@ -14,6 +14,7 @@ Details:
 - A single retrospective pass with a capable model (Opus 4.6) can reveal many skills that would make next week's work faster and more reliable, which is the payoff for keeping session context instead of discarding it. (15:01-15:31)
 - Caveat: raw JSONL is "not really meant for AI consumption" — it gets long and full of junk. Pointing the model straight at it works, but a more robust path uses hooks that fire at session-end or PR-merge to extract the key bits (especially where you struggled) into a separate store (Obsidian, a flat weekly markdown file, or an archive) before the periodic analysis runs. (20:07-21:30)
 - This is a different cadence from per-run loop feedback: it is a periodic batch retrospective across many stored sessions, aimed at discovering missing capabilities rather than fixing the current run.
+- A continuous, agent-driven variant runs the same idea per skill rather than as a backlog-wide pass: at OpenClaw, skills live as `.skills` (open-sourced on GitHub, analogous to dotfiles), and a "Go Codex" skill goes through the agent's own Codex session logs, reads them, and edits that skill to make it better, after which the improved skill is redeployed into the open core or personal environment — so the agent maintains its own skills from real usage instead of a human authoring each revision (tooling named, auto-caption approximate: a skills "gem" like Geppetto, `vercel.skills.sh`). (Koc, 13:20-14:21)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -27,6 +28,8 @@ Related concepts:
 - [Skills turn procedural feedback into transferable agent memory](skills-turn-procedural-feedback-into-transferable-agent-memory.md)
 - [Use agent hooks to automate session rituals](use-agent-hooks-to-automate-session-rituals.md)
 - [Treat Human Attention as the Bottleneck for Agentic Work](treat-human-attention-as-the-agentic-bottleneck.md)
+- [Run Parallel Coding Sessions as Typed Swim Lanes](run-parallel-coding-sessions-as-typed-swim-lanes.md)
 
 Sources:
 - [Your Attention Is the Bottleneck, Not Your Agents — Zack Proser, WorkOS](../sources/20260611_so9l_MwS2yg.md), 13:22-15:31, 20:07-21:30
+- [Dark Factory: OpenClaw Ships Faster Than You Can Read the Diff — Vincent Koc, OpenClaw](../sources/20260605_pmoDeA3RBZY.md), 13:20-14:21

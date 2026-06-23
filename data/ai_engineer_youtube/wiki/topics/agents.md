@@ -154,6 +154,7 @@ Treating the agent as its own user class also reframes interface quality as some
 
 ## Key Concepts
 
+- [Read an Agent's Reasoning to Catch It Bullshitting](../concepts/read-an-agents-reasoning-to-catch-it-bullshitting.md) - supervise an agent by the quality of its reasoning narration; waffling or incoherent self-explanation is the tell that a session has lost the plot and should be cut.
 - [Split Discovery and Validation Across Reasoning and Deterministic Models](../concepts/split-discovery-and-validation-across-reasoning-and-deterministic-models.md) - high-reasoning models hop between methods instead of solving, so route open-ended discovery to them and deterministic validation to cheaper models behind hard gates and loop guards.
 - [Reconcile Specialist Agent Outputs With a Feedback-Weighted Judge](../concepts/reconcile-specialist-agent-outputs-with-a-feedback-weighted-judge.md) - one overloaded agent drops tasks, so split into specialists and recombine with a judge weighted by PR history, guidelines, and accept/reject feedback.
 - [Build Agents on Addressable Stateful-Serverless Instances](../concepts/build-agents-on-addressable-stateful-serverless-instances.md) - one persistent addressable instance per agent ID makes resumable streaming, multi-client sync, and scheduling emergent properties of the runtime rather than userland distributed-systems work.
@@ -677,3 +678,4 @@ Treating the agent as its own user class also reframes interface quality as some
 - [LLM Observability, Evaluation, Experimentation Platform — Dat Ngo, Arize](../sources/20260607_JsCCrBF7F1g.md)
 - [Building safe Payment Infrastructure for the autonomous economy — Steve Kaliski, Stripe](../sources/20260606_KLSuFPj2ld0.md)
 - [Building Agent Interfaces: Lessons from Chrome DevTools (MCP) for Agents — Michael Hablich, Google](../sources/20260605__B4Pv9ttFgY.md)
+- [Dark Factory: OpenClaw Ships Faster Than You Can Read the Diff — Vincent Koc, OpenClaw](../sources/20260605_pmoDeA3RBZY.md)
