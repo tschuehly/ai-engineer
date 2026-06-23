@@ -1026,6 +1026,8 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Spec-Driven Agent Validation Goes Beyond the Test Set](../concepts/spec-driven-agent-validation-goes-beyond-the-test-set.md)
+- [A Bigger Model Is Not Automatically a Safer or Better Agent](../concepts/a-bigger-model-is-not-automatically-a-safer-or-better-agent.md)
 - [Select State of the Art on a Quality-Efficiency Pareto Front](../concepts/select-state-of-the-art-on-a-quality-efficiency-pareto-front.md)
 - [Don't Trust a Single Leaderboard for Model Selection](../concepts/do-not-trust-a-single-leaderboard-for-model-selection.md)
 - [Evaluate Agent Retrieval by Trajectory, Not Task Success](../concepts/evaluate-agent-retrieval-by-trajectory-not-task-success.md)
@@ -1274,6 +1276,7 @@
 
 ## Models
 
+- [A Bigger Model Is Not Automatically a Safer or Better Agent](../concepts/a-bigger-model-is-not-automatically-a-safer-or-better-agent.md)
 - [Select State of the Art on a Quality-Efficiency Pareto Front](../concepts/select-state-of-the-art-on-a-quality-efficiency-pareto-front.md)
 - [Tune Coding-Agent Harnesses Per Model Family](../concepts/tune-coding-agent-harnesses-per-model-family.md)
 - [Split Discovery and Validation Across Reasoning and Deterministic Models](../concepts/split-discovery-and-validation-across-reasoning-and-deterministic-models.md)
@@ -1483,6 +1486,8 @@
 
 ## Security
 
+- [A Bigger Model Is Not Automatically a Safer or Better Agent](../concepts/a-bigger-model-is-not-automatically-a-safer-or-better-agent.md)
+- [Spec-Driven Agent Validation Goes Beyond the Test Set](../concepts/spec-driven-agent-validation-goes-beyond-the-test-set.md)
 - [Browser agents sit in the prompt-injection lethal trifecta](../concepts/browser-agents-sit-in-the-prompt-injection-lethal-trifecta.md)
 - [Enterprise Coding Agents Need Ownership, Auditability, and Action Controls](../concepts/enterprise-coding-agents-need-ownership-auditability-and-action-controls.md)
 - [Vet MCP Servers As Action-Capable Extensions](../concepts/vet-mcp-servers-as-action-capable-extensions.md)

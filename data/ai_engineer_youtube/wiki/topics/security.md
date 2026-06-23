@@ -30,8 +30,12 @@ Enterprise coding-agent rollouts also need an accountability layer around ordina
 
 Regulated consumer AI also needs output-integrity controls, not only access controls. In tax explanations, legal and privacy risk make it important that LLM text does not hallucinate numbers or unsupported advice; authoritative values should come from tax engines, and guardrails should inspect raw model responses before users see them.
 
+Agent security also has a model-sizing dimension that runs counter to intuition. A more capable model is not automatically safer: poem-wrapped jailbreaks succeed precisely because a large model decodes and executes the hidden instruction while a small model cannot, and a broad-remit agent widens both the exploit surface and the test surface. Safe Intelligence's framing is to target a model good enough to perform but not capable of arbitrary harm, where harm decomposes into the instructions the agent can receive and the tools/tasks it can carry out in your infrastructure. The same spec that defines correct behavior also drives security testing: knowing the domains an agent engages and where it has power to act tells you where it is most vulnerable, so security tests should be generated from the spec rather than bolted on.
+
 ## Key Concepts
 
+- [A Bigger Model Is Not Automatically a Safer or Better Agent](../concepts/a-bigger-model-is-not-automatically-a-safer-or-better-agent.md) - capability cuts both ways for security: poem jailbreaks work better on large models and broad remit widens attack surface, so aim for good-enough-to-perform but not arbitrary-harm capability.
+- [Spec-Driven Agent Validation Goes Beyond the Test Set](../concepts/spec-driven-agent-validation-goes-beyond-the-test-set.md) - the agent spec (rules, ontologies, rights/roles, robustness) drives security and penetration testing because it marks the domains the agent engages and where it has power to act.
 - [Vet MCP Servers As Action-Capable Extensions](../concepts/vet-mcp-servers-as-action-capable-extensions.md) - MCP servers connected to coding agents can access data and act for users, so trust and scope are security decisions.
 - [Classify AI Bot Traffic By Intent And Benefit](../concepts/classify-ai-bot-traffic-by-intent-and-benefit.md) - access rules should distinguish search, training, user-triggered, and operator-style AI traffic.
 - [Layer Bot Detection Signals Instead Of Trusting One Header](../concepts/layer-bot-detection-signals-instead-of-trusting-one-header.md) - bot identity needs multiple request, IP, and reputation signals.
