@@ -18,6 +18,8 @@ Code-executing agents add another security boundary because the useful capabilit
 
 OpenHands reinforces that sandboxing is only one layer. Docker containers can separate autonomous shell work from the user's workstation, but credentials such as GitHub tokens or AWS access still need least-privilege scoping because they grant authority outside the container.
 
+Embedding third-party generative UI inside an agent host is its own browser-level isolation problem, and the same-origin/CSP failure modes are concrete. When ChatGPT or Claude renders an MCP-app "view," it cannot put untrusted app HTML in a single iframe: a shared-origin `srcdoc` frame inherits the host's content-security-policy and is blocked by the host's per-request script nonce; relaxing that CSP lets the app read the host's origin-indexed `localStorage` and cookies and exfiltrate them; adding `sandbox` moves the frame to a null origin that breaks all origin-indexed storage; and adding `allow-same-origin` to restore storage is the classic sandbox escape back into the parent DOM. The surviving design — an outer loader frame on a host-controlled per-app subdomain injecting an inner `srcdoc` frame — is what keeps each app on its own origin so apps cannot read each other's storage, and is the same pattern Facebook used for its app marketplace. The lesson generalizes: running third-party code inside a trusted web app is an origin-isolation problem first, and the per-app subdomain is the security primitive that prevents cross-app storage collisions.
+
 Enterprise coding-agent rollouts also need an accountability layer around ordinary development actions. Security review should ask where audit logs live, who owns an agent's actions, how destructive commands are constrained, and what responsibility model applies when a codebase-changing agent acts on behalf of a team.
 
 Regulated consumer AI also needs output-integrity controls, not only access controls. In tax explanations, legal and privacy risk make it important that LLM text does not hallucinate numbers or unsupported advice; authoritative values should come from tax engines, and guardrails should inspect raw model responses before users see them.
@@ -49,6 +51,7 @@ Regulated consumer AI also needs output-integrity controls, not only access cont
 - [Human Ownership Keeps Agent Pull Requests From Bypassing Review](../concepts/human-ownership-keeps-agent-pull-requests-from-bypassing-review.md) - agent PR identity should not bypass second-human review or leave failures ownerless.
 - [Delegate Agentic Commerce Transactions With Explicit Payment Authority](../concepts/delegate-agentic-commerce-transactions-with-explicit-payment-authority.md) - commerce agents need bounded payment authority before buying for users.
 - [Ground Regulated Explanations in Deterministic Engines](../concepts/ground-regulated-explanations-in-deterministic-engines.md) - high-liability answers should keep authoritative calculations outside the model and check generated text for invented values.
+- [Render Third-Party Generative UI Through a Double Iframe](../concepts/render-third-party-generative-ui-through-a-double-iframe.md) - hosting untrusted app UI is an origin-isolation problem where simpler single-frame designs leak host storage or escape the sandbox.
 
 ## Open Questions
 
@@ -70,3 +73,4 @@ Regulated consumer AI also needs output-integrity controls, not only access cont
 - [Machines of Buying and Selling Grace - Adam Behrens, New Generation](../sources/20250723_zlZz0mDF2eg.md)
 - [How Intuit uses LLMs to explain taxes to millions of taxpayers - Jaspreet Singh, Intuit](../sources/20250723__zl_zimMRak.md)
 - [Your Agent's Biggest Lie: "I Searched the Web" — Rafael Levi, Bright Data](../sources/20260617_btxGmN8RvNU.md)
+- [Why MCP and ChatGPT Apps Use Double Iframes — Frédéric Barthelet, Alpic](../sources/20260615_c-2eEv2ou7Y.md)

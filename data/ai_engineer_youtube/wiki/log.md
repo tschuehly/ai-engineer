@@ -1934,3 +1934,11 @@
 - Updated topics: [Generative Media](topics/generative-media.md), [Inference](topics/inference.md), [Models](topics/models.md)
 - Updated concepts: [Stack Additive Diffusion Optimizations for Real-Time Generation](concepts/stack-additive-diffusion-optimizations-for-real-time-generation.md), [Cache Unchanged Computation Between Diffusion Denoising Steps](concepts/cache-unchanged-computation-between-diffusion-denoising-steps.md), [Quantize Diffusion Models for Memory and Throughput Despite Attention Heaviness](concepts/quantize-diffusion-models-for-memory-and-throughput-despite-attention-heaviness.md), [Distill diffusion models to reduce sampling steps](concepts/distill-diffusion-models-to-reduce-sampling-steps.md)
 - Notes: Added three new concepts on the additive diffusion optimization stack, inter-step denoising caching, and attention-heavy diffusion quantization, and strengthened the diffusion step-distillation concept with trajectory-vs-distribution distillation, FastGen's hybrid recipe, and post-training compute/hardware detail; updated Generative Media, Inference, and Models topics; selected one new processed source `gHs5ZiY80PM`.
+
+## [2026-06-23] ingest | Why MCP and ChatGPT Apps Use Double Iframes — Frédéric Barthelet, Alpic
+
+- Source: [Why MCP and ChatGPT Apps Use Double Iframes — Frédéric Barthelet, Alpic](sources/20260615_c-2eEv2ou7Y.md)
+- Processed: `c-2eEv2ou7Y`
+- Updated topics: [Tools](topics/tools.md), [Security](topics/security.md)
+- Updated concepts: [Render Third-Party Generative UI Through a Double Iframe](concepts/render-third-party-generative-ui-through-a-double-iframe.md), [Declare Every External Domain Your MCP App Touches](concepts/declare-every-external-domain-your-mcp-app-touches.md), [MCP Applications Ship UI and Tools Together](concepts/mcp-applications-ship-ui-and-tools-together.md)
+- Notes: Added two new concepts on the double-iframe isolation architecture for MCP-app generative UI (origin/CSP elimination chain, per-app subdomain storage isolation, inner `srcdoc` frame) and the CSP-domain declaration practice (metadata declaration, dev-mode-strips-CSP trap, Skybridge live CSP inspector); strengthened the MCP-applications concept with how "views" render from tool calls; updated Tools and Security topics; selected one new processed source `c-2eEv2ou7Y`.

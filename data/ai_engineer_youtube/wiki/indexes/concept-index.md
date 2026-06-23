@@ -1383,10 +1383,13 @@
 - [Give Code-Executing Agents Isolated Computers](../concepts/give-code-executing-agents-isolated-computers.md)
 - [Restrict Agent Internet Access With Allowlists](../concepts/restrict-agent-internet-access-with-allowlists.md)
 - [Keep Human Review on High-Risk Agent Operations](../concepts/keep-human-review-on-high-risk-agent-operations.md)
+- [Render Third-Party Generative UI Through a Double Iframe](../concepts/render-third-party-generative-ui-through-a-double-iframe.md)
 
 ## Tools
 - [Enterprise RAG Becomes More Useful With API Tool Access](../concepts/enterprise-rag-becomes-more-useful-with-api-tool-access.md)
 - [Ground Agents With Managed Web-Access Infrastructure](../concepts/ground-agents-with-managed-web-access-infrastructure.md)
+- [Render Third-Party Generative UI Through a Double Iframe](../concepts/render-third-party-generative-ui-through-a-double-iframe.md)
+- [Declare Every External Domain Your MCP App Touches](../concepts/declare-every-external-domain-your-mcp-app-touches.md)
 
 - [Production Agent Platforms Need Enterprise Controls](../concepts/production-agent-platforms-need-enterprise-controls.md)
 - [Build Core Agents and Buy Commodity Agent Workflows](../concepts/build-core-agents-and-buy-commodity-agent-workflows.md)
