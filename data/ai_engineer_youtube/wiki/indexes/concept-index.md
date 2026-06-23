@@ -395,6 +395,7 @@
 
 ## Coding Agents
 
+- [Scaffold MCP Apps From a Repo Skill With a Coding Agent](../concepts/scaffold-mcp-apps-from-a-repo-skill-with-a-coding-agent.md)
 - [Tune Coding-Agent Harnesses Per Model Family](../concepts/tune-coding-agent-harnesses-per-model-family.md)
 - [Portfolio-Allocate Eval Failures With a Triage Agent](../concepts/portfolio-allocate-eval-failures-with-a-triage-agent.md)
 - [Reconcile Specialist Agent Outputs With a Feedback-Weighted Judge](../concepts/reconcile-specialist-agent-outputs-with-a-feedback-weighted-judge.md)
@@ -1461,6 +1462,7 @@
 - [Let an Agent Build and Maintain Self-Healing Scrapers](../concepts/let-agents-build-and-maintain-self-healing-scrapers.md)
 - [Render Third-Party Generative UI Through a Double Iframe](../concepts/render-third-party-generative-ui-through-a-double-iframe.md)
 - [Declare Every External Domain Your MCP App Touches](../concepts/declare-every-external-domain-your-mcp-app-touches.md)
+- [Scaffold MCP Apps From a Repo Skill With a Coding Agent](../concepts/scaffold-mcp-apps-from-a-repo-skill-with-a-coding-agent.md)
 
 - [Production Agent Platforms Need Enterprise Controls](../concepts/production-agent-platforms-need-enterprise-controls.md)
 - [Build Core Agents and Buy Commodity Agent Workflows](../concepts/build-core-agents-and-buy-commodity-agent-workflows.md)
