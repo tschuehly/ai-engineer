@@ -1,6 +1,7 @@
 # Concept Index
 
 ## Agents
+- [Redefine RAG as Iterative Multi-Tool Retrieval, Not Vector Search](../concepts/redefine-rag-as-iterative-multi-tool-retrieval.md)
 - [Scale AI Fluency With Self-Service Platforms](../concepts/scale-ai-fluency-with-self-service-platforms.md)
 - [Hire Humans for Context, Verification, and Accountability](../concepts/hire-humans-for-context-verification-and-accountability.md)
 - [Type-Safe Agent Schemas Make Refactoring and Validation Easier](../concepts/type-safe-agent-schemas-make-refactoring-and-validation-easier.md)
@@ -384,6 +385,8 @@
 
 ## Coding Agents
 
+- [Treat Embeddings as Cached Compute Decided by Query Volume](../concepts/treat-embeddings-as-cached-compute-decided-by-query-volume.md)
+- [Share Codebase Indexes Across a Team With Merkle-Tree Diffing](../concepts/share-codebase-indexes-across-a-team-with-merkle-tree-diffing.md)
 - [Treat Human Attention as the Bottleneck for Agentic Work](../concepts/treat-human-attention-as-the-agentic-bottleneck.md)
 - [Run a Signal Layer to Triage Comms and Protect Focus](../concepts/run-a-signal-layer-to-triage-comms-and-protect-focus.md)
 - [Drive Agents Remotely and by Voice to Decouple Work From the Desk](../concepts/drive-agents-remotely-and-by-voice-to-decouple-work-from-the-desk.md)
@@ -1298,6 +1301,9 @@
 
 ## Retrieval
 - [Enterprise RAG Becomes More Useful With API Tool Access](../concepts/enterprise-rag-becomes-more-useful-with-api-tool-access.md)
+- [Redefine RAG as Iterative Multi-Tool Retrieval, Not Vector Search](../concepts/redefine-rag-as-iterative-multi-tool-retrieval.md)
+- [Treat Embeddings as Cached Compute Decided by Query Volume](../concepts/treat-embeddings-as-cached-compute-decided-by-query-volume.md)
+- [Share Codebase Indexes Across a Team With Merkle-Tree Diffing](../concepts/share-codebase-indexes-across-a-team-with-merkle-tree-diffing.md)
 
 - [Codebase Intelligence Needs Structural and Historical Signals](../concepts/codebase-intelligence-needs-structural-and-historical-signals.md)
 - [Product Work Graphs Coordinate Agents and Humans](../concepts/product-work-graphs-coordinate-agents-and-humans.md)

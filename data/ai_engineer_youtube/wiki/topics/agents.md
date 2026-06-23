@@ -138,9 +138,12 @@ Devin 2.0 frames the same progression as changing human-intervention intervals. 
 
 Taking enterprise agents to production also has a recurring failure shape: teams start at model choice, build a demo on controlled data, ship it, and then cannot explain why it underperforms. A Databricks production playbook reframes the work as five pillars that should exist before code — evaluation, observability, a data foundation, multi-agent orchestration, and governance — and selects the model last using the evaluation dataset those pillars produce. The pillars map to three gaps that strand demos: no way to trace decisions, no defined business number being measured, and no accountability when the agent fails. Orchestration only becomes a real concern as a system grows from one agent to several, where coordination complexity rises sharply and the team must choose orchestrator-worker, choreography, or human-in-the-loop patterns.
 
+How an agent fetches its own context is part of that production shape. Turbopuffer's reframe of the "RAG is dead" debate is that retrieval was never just a one-shot vector lookup: serious agents do iterative multi-tool retrieval — vector search, full-text/BM25, grep, glob, regex, and filters used across several reasoning steps, fetching only what each step needs. That makes "agentic search" a superset of RAG rather than its replacement, and it survives long context windows because staged retrieval (narrowing to "the right million" tokens) only grows more important as windows scale.
+
 ## Key Concepts
 
 - [Fix Tool Discipline Before Reaching for a Bigger Model](../concepts/fix-tool-discipline-before-reaching-for-a-bigger-model.md) - a tool-using agent's failure is often poor tool discipline (no schema discovery, no self-correction), fixable with cheap RL rather than a larger model.
+- [Redefine RAG as Iterative Multi-Tool Retrieval, Not Vector Search](../concepts/redefine-rag-as-iterative-multi-tool-retrieval.md) - serious agents retrieve iteratively across vector, full-text, grep, glob, regex, and filters, so agentic search is a superset of RAG rather than its replacement.
 - [Coding-Agent Capability Tiers Change the Bottleneck](../concepts/coding-agent-capability-tiers-change-the-bottleneck.md) - longer agent work horizons require different interfaces, context, and verification.
 - [Type-Safe Agent Schemas Make Refactoring and Validation Easier](../concepts/type-safe-agent-schemas-make-refactoring-and-validation-easier.md) - typed outputs and dependencies make agent application contracts visible to static tooling and runtime validation.
 - [Validation Errors Can Drive Agent Self-Repair Loops](../concepts/validation-errors-can-drive-agent-self-repair-loops.md) - validation failures can be fed back into the model as structured retry feedback.
@@ -644,3 +647,4 @@ Taking enterprise agents to production also has a recurring failure shape: teams
 - [The Production AI Playbook: Deploying Agents at Enterprise Scale — Sandipan Bhaumik, Databricks](../sources/20260618_ObTPqBGsEbA.md)
 - [The agent-ready web: Simplify user actions with WebMCP — Tara Agyemang, Google](../sources/20260611_ghJmWQCIHRM.md)
 - [Self Driving Products: Product Signals to Pull Requests — Joshua Snyder, PostHog](../sources/20260610_zMiSRliEzv4.md)
+- [RAG is dead, right?? — Kuba Rogut, Turbopuffer](../sources/20260609_UM6sFg_jdlE.md)

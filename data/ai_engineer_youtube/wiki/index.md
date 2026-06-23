@@ -4,6 +4,8 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 
 ## Current Emphasis
 
+- [Redefine RAG as Iterative Multi-Tool Retrieval, Not Vector Search](concepts/redefine-rag-as-iterative-multi-tool-retrieval.md) - "RAG is dead" only beats a strawman; real retrieval is vector + full-text + grep + glob + regex + filters used iteratively by an agent, so agentic search is a superset of RAG, and staged retrieval matters more as context windows grow ("you need the right million").
+- [Treat Embeddings as Cached Compute Decided by Query Volume](concepts/treat-embeddings-as-cached-compute-decided-by-query-volume.md) - indexing is a cache of retrieval compute, so Claude Code's grep-per-session vs Cursor's persistent index is a query-volume tradeoff, not a correctness one; Cursor shares indexes across a team via Merkle-tree diffing.
 - [Extract a Rich Structured Audio Profile in One Multimodal Call](concepts/extract-a-rich-structured-audio-profile-in-one-multimodal-call.md) - one Gemini 3 Flash call with a response schema returns speaker-by-name diarization, timestamps, per-segment language + translation, emotion, and a summary, replacing a chain of ASR, diarization, language-ID, and emotion models.
 - [Direct TTS Voices With a Director's Note, Not a Voice Catalogue](concepts/direct-tts-voices-with-a-directors-note.md) - a small set of base voices steered by a natural-language director's note (audio profile, scene, performance guidance) synthesizes accents and personas on demand instead of filtering a large voice library.
 - [Observability-to-PR Agents Turn Incidents Into Reviewable Fixes](concepts/observability-to-pr-agents-turn-incidents-into-reviewable-fixes.md) - PostHog's signal-to-PR pipeline turns heterogeneous product observability (errors, replays, Slack) into review-ready PRs by grouping signals into weighted reports, researching the codebase in a sandbox, and iterating until CI is green.
@@ -21,7 +23,6 @@ This wiki is compiled from local AI Engineer YouTube transcripts. Start with a t
 - [Mentor Coding Agents Like Perpetual Junior Engineers](concepts/mentor-coding-agents-like-perpetual-junior-engineers.md) - engineers should scaffold coding-agent work through context, constraints, boundaries, and review.
 - [Institutionalize Knowledge Infrastructure for AI Adoption](concepts/institutionalize-knowledge-infrastructure-for-ai-adoption.md) - shared docs, decisions, meeting outputs, task trackers, and memories let agent success scale across teams.
 - [Parallel Agent Prototypes Turn Design Choices Into Measurements](concepts/parallel-agent-prototypes-turn-design-choices-into-measurements.md) - cheap parallel prototypes can turn product and architecture choices into measured comparisons.
-- [Group Agent Tools by Human-Facing Actions](concepts/group-agent-tools-by-human-facing-actions.md) - agent tool catalogs should be curated around clear actions rather than mirrored from every API endpoint.
 
 - [Workflow Search Retrieves Enterprise Practice at Runtime](concepts/workflow-search-retrieves-enterprise-practice-at-runtime.md) - prior task-workflow examples can steer enterprise agents with current company practice.
 - [Golden Workflows Evaluate Agent Trajectories](concepts/golden-workflows-evaluate-agent-trajectories.md) - known processes can evaluate agent steps, not just final answers.
