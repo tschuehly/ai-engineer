@@ -690,6 +690,8 @@
 - [Human taste limits fully dark coding factories](../concepts/human-taste-limits-fully-dark-coding-factories.md)
 - [Mine stuck-then-solved sessions for injectable fixes](../concepts/mine-stuck-then-solved-sessions-for-injectable-fixes.md)
 - [Give agents a vent tool to report platform friction](../concepts/give-agents-a-vent-tool-to-report-platform-friction.md)
+- [Match the Agent's Output Medium to Its Native Representation](../concepts/match-agent-output-medium-to-its-native-representation.md)
+- [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
 
@@ -1885,6 +1887,8 @@
 - [Split exploratory research agents from constrained writing workflows](../concepts/split-exploratory-research-agents-from-constrained-writing-workflows.md)
 - [Orchestrate Generative Media From a Real-Time Voice Agent via Tool Use](../concepts/orchestrate-generative-media-from-a-realtime-voice-agent.md)
 - [Spec-driven development is a tool-portable pattern, not a single product](../concepts/spec-driven-development-is-a-tool-portable-pattern.md)
+- [Match the Agent's Output Medium to Its Native Representation](../concepts/match-agent-output-medium-to-its-native-representation.md)
+- [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Voice Agents
 
