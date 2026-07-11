@@ -427,6 +427,9 @@
 
 ## Coding Agents
 
+- [Treat the Specification as the Product and Derive Bespoke Implementations](../concepts/treat-the-specification-as-the-product-and-derive-bespoke-implementations.md)
+- [Use Deterministic Simulation as Executable Design for Agents](../concepts/use-deterministic-simulation-as-executable-design-for-agents.md)
+- [Expose Forbidden-Fruit Facts in Simulation for Agent Debugging](../concepts/expose-forbidden-fruit-facts-in-simulation-for-agent-debugging.md)
 - [Capture AI-Build Requirements With Story Maps and User Stories](../concepts/capture-ai-build-requirements-with-story-maps-and-user-stories.md)
 - [Staff Agent Operations With a Team of Agents](../concepts/staff-agent-operations-with-a-team-of-agents.md)
 - [Capability Overhang: Tools Decide Which Model Spikes You Reach](../concepts/capability-overhang-tools-decide-which-model-spikes-you-reach.md)
@@ -766,6 +769,7 @@
 
 ## Infrastructure
 
+- [Treat the Specification as the Product and Derive Bespoke Implementations](../concepts/treat-the-specification-as-the-product-and-derive-bespoke-implementations.md)
 - [Build an Agentic Control Plane So the Model Proposes and the Platform Decides](../concepts/build-an-agentic-control-plane.md)
 - [Contain Retry Amplification Before It Becomes a Compute Incident](../concepts/contain-retry-amplification-in-agent-loops.md)
 - [The Frozen-Artifact Pipeline Is a Cost Constraint, Not a Law](../concepts/frozen-artifact-pipeline-is-a-cost-constraint-not-a-law.md)
@@ -1122,6 +1126,8 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Use Deterministic Simulation as Executable Design for Agents](../concepts/use-deterministic-simulation-as-executable-design-for-agents.md)
+- [Expose Forbidden-Fruit Facts in Simulation for Agent Debugging](../concepts/expose-forbidden-fruit-facts-in-simulation-for-agent-debugging.md)
 - [Score Every Production Conversation to Judge Agent Health](../concepts/score-every-production-conversation-to-judge-agent-health.md)
 - [Operate Agent Products as the Missing Post-Launch Layer](../concepts/operate-agent-products-as-the-missing-post-launch-layer.md)
 - [Verifiable Continual Learning: Prove Each Agent Fix Helps and Breaks Nothing](../concepts/verifiable-continual-learning-prove-each-fix-helps-and-breaks-nothing.md)
