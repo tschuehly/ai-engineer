@@ -1,0 +1,31 @@
+# Run a Jury of Analysts and a Consensus Judge for No-Ground-Truth Questions
+
+Summary: For subjective questions where no single pass can be trusted and there is no empirically correct answer, don't let one agent answer directly. Spin up several independent analysts who each examine the data and return an evidence-cited opinion, then have a consensus judge treat those opinions as input (not fact), weigh their reasoning quality, and synthesize the final answer — escalating and expanding the jury when consensus is weak.
+
+Use when:
+- A question is high-stakes and subjective with no objective ground truth (e.g. multi-touch attribution credit, litigation strategy, prioritization calls).
+- A single agent pass "perseverates" or produces a confident answer you can't verify.
+- You want the *same* question judged from multiple independent angles, not several different subtasks reconciled.
+
+Details:
+- Motivation: a class of go-to-market challenges "has no empirically correct answer"; the real-world model for these is a trial by a jury of peers, so the agent workflow mirrors it. (13:49-14:06)
+- Jury: instead of answering immediately, the agent spins up a team of independent analysts who "all look at the data independently and come up with an evidence-cited opinion" for the answer (e.g. the attribution credit of a deal). None is necessarily correct; each is independent research. (14:11-14:33)
+- Consensus judge: a judge node receives the analysts' opinions, "not treating these as fact… treating them as input," weighs the *reasoning quality* of each analyst, and produces the final version. Its job "is not to do research on my own" but to synthesize a team of independent analysts each doing a good job of research. (14:33-15:01)
+- Escalation: "if there's not enough consensus, then I'll escalate and expand the jury" — widen the panel until the judge can reach a defensible result. (14:44-14:50)
+- Why it works: "multiple researchers with somebody who helps at the end is better than a single person kind of perseverating on that forever" — this is a human pattern reused for agents. (15:01-15:15)
+- Upside runs this for multi-touch attribution ("the holy grail of go-to-market"), "enabled by Opus," after two years building the underlying AI-native data layer. (13:16-13:49)
+- Distinct from reconciling *heterogeneous* specialist outputs (a security agent + a Jira agent + a diff agent combined by a judge): here every juror attempts the *same* subjective task independently, and the judge weights reasoning quality rather than stitching different slices together.
+
+Related topics:
+- [Agents](../topics/agents.md)
+- [Evaluation](../topics/evaluation.md)
+- [Business Intelligence](../topics/business-intelligence.md)
+
+Related concepts:
+- [Reconcile specialist agent outputs with a feedback-weighted judge](reconcile-specialist-agent-outputs-with-a-feedback-weighted-judge.md)
+- [Use parent agents to compare and merge parallel subagent outputs](use-parent-agents-to-compare-and-merge-parallel-subagent-outputs.md)
+- [Use independent validation contexts to reduce agent confirmation bias](use-independent-validation-contexts-to-reduce-agent-confirmation-bias.md)
+- [Make agent work more trustworthy by making it verifiable](make-agent-work-more-trustworthy-by-making-it-verifiable.md)
+
+Sources:
+- [Design Patterns for AI Trust: Juries, Libraries, and Agent Tiers — Alex Bauer, Upside.tech](../sources/20260711_YZQsWVeN3rE.md), 13:16-15:15

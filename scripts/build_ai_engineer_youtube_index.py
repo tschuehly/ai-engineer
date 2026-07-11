@@ -62,6 +62,15 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Only rebuild indexes from existing downloaded metadata.",
     )
+    parser.add_argument(
+        "--refresh",
+        action="store_true",
+        help=(
+            "Re-fetch and overwrite metadata for every video in the window "
+            "instead of only fetching new uploads. Use this to pick up "
+            "descriptions or subtitles that were added after the first fetch."
+        ),
+    )
     return parser.parse_args()
 
 
@@ -93,6 +102,24 @@ def resolve_date_range(args: argparse.Namespace) -> DateRange:
     return DateRange(since=since, until=until)
 
 
+ARCHIVE_FILENAME = ".download-archive.txt"
+
+
+def known_video_ids(raw_dir: Path) -> set[str]:
+    ids: set[str] = set()
+    for path in info_json_files(raw_dir):
+        info = load_json(path)
+        if info and info.get("id"):
+            ids.add(str(info["id"]))
+    return ids
+
+
+def write_download_archive(ids: set[str], path: Path) -> None:
+    # yt-dlp archive lines are "<extractor> <id>"; the YouTube extractor is "youtube".
+    lines = "".join(f"youtube {video_id}\n" for video_id in sorted(ids))
+    path.write_text(lines, encoding="utf-8")
+
+
 def run_yt_dlp(args: argparse.Namespace, date_range: DateRange, raw_dir: Path) -> None:
     executable = shutil.which(args.yt_dlp) or args.yt_dlp
     if shutil.which(executable) is None and not Path(executable).exists():
@@ -115,10 +142,29 @@ def run_yt_dlp(args: argparse.Namespace, date_range: DateRange, raw_dir: Path) -
         "vtt",
         "--break-match-filters",
         f"upload_date >= {yt_dlp_date(date_range.since)}",
-        "--force-overwrites",
         "-o",
         str(output_template),
     ]
+
+    if args.refresh:
+        # Re-pull the whole window and overwrite existing files on disk.
+        command.append("--force-overwrites")
+    else:
+        # Incremental: rebuild the archive from what is already on disk, then
+        # let yt-dlp skip known uploads and stop paging at the first one it
+        # recognizes (the channel lists newest-first).
+        archive_path = raw_dir / ARCHIVE_FILENAME
+        known = known_video_ids(raw_dir)
+        write_download_archive(known, archive_path)
+        command.extend(
+            ["--download-archive", str(archive_path), "--break-on-existing"]
+        )
+        if known:
+            print(
+                f"Incremental fetch: {len(known)} videos already on disk; "
+                "stopping at the first known upload. Use --refresh to re-pull all."
+            )
+
     if date_range.until:
         command.extend(["--datebefore", yt_dlp_date(date_range.until)])
     command.append(args.channel_url)
@@ -284,6 +330,7 @@ def main() -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     raw_dir.mkdir(parents=True, exist_ok=True)
 
+    ids_before_fetch = known_video_ids(raw_dir)
     if not args.no_fetch:
         run_yt_dlp(args, date_range, raw_dir)
 
@@ -303,10 +350,12 @@ def main() -> None:
     write_jsonl(output_dir / "index.jsonl", entries)
     write_markdown(output_dir / "index.md", entries, index)
 
+    new_ids = [entry["video_id"] for entry in entries if entry["video_id"] not in ids_before_fetch]
     missing_transcripts = sum(1 for entry in entries if not entry["transcript_link"])
     print(f"Wrote {len(entries)} videos to {output_dir / 'index.json'}")
     print(f"Wrote JSONL to {output_dir / 'index.jsonl'}")
     print(f"Wrote Markdown to {output_dir / 'index.md'}")
+    print(f"New videos this run: {len(new_ids)}")
     if missing_transcripts:
         print(f"Warning: {missing_transcripts} videos have no downloaded transcript file")
 

@@ -1,6 +1,9 @@
 # Concept Index
 
 ## Agents
+- [Manage AI Agents Like Humans With Commander's Intent](../concepts/manage-ai-agents-like-humans-with-commanders-intent.md)
+- [Preflight Agents Through a Business-Definitions Librarian](../concepts/preflight-agents-through-a-business-definitions-librarian.md)
+- [Run a Jury of Analysts and a Consensus Judge for No-Ground-Truth Questions](../concepts/run-a-jury-of-analysts-and-a-consensus-judge-for-no-ground-truth-questions.md)
 - [Place Agent UI Generation on a Static–Declarative–Generative Spectrum](../concepts/place-agent-ui-on-the-static-declarative-generative-spectrum.md)
 - [Push Agent Benchmarks on Environment Complexity, Autonomy Horizon, and Output Complexity](../concepts/push-agent-benchmarks-on-environment-autonomy-and-output-complexity.md)
 - [Read an Agent's Reasoning to Catch It Bullshitting](../concepts/read-an-agents-reasoning-to-catch-it-bullshitting.md)
@@ -392,6 +395,8 @@
 
 ## Business Intelligence
 
+- [Preflight Agents Through a Business-Definitions Librarian](../concepts/preflight-agents-through-a-business-definitions-librarian.md)
+- [Run a Jury of Analysts and a Consensus Judge for No-Ground-Truth Questions](../concepts/run-a-jury-of-analysts-and-a-consensus-judge-for-no-ground-truth-questions.md)
 - [Extract enterprise interaction data into structured graphs](../concepts/extract-enterprise-interaction-data-into-structured-graphs.md)
 - [Fund enterprise AI through incremental productizable bets](../concepts/fund-enterprise-ai-through-incremental-productizable-bets.md)
 - [Start GenBI with certified assets before autonomous SQL](../concepts/start-genbi-with-certified-assets-before-autonomous-sql.md)
@@ -1027,6 +1032,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Run a Jury of Analysts and a Consensus Judge for No-Ground-Truth Questions](../concepts/run-a-jury-of-analysts-and-a-consensus-judge-for-no-ground-truth-questions.md)
 - [Measure Generated Code Quality Beyond Pass Rate](../concepts/measure-generated-code-quality-beyond-pass-rate.md)
 - [Spec-Driven Agent Validation Goes Beyond the Test Set](../concepts/spec-driven-agent-validation-goes-beyond-the-test-set.md)
 - [A Bigger Model Is Not Automatically a Safer or Better Agent](../concepts/a-bigger-model-is-not-automatically-a-safer-or-better-agent.md)
