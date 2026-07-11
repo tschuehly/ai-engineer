@@ -409,6 +409,8 @@
 
 ## Coding Agents
 
+- [Wrap Agent Completion in an Automatic Deterministic Verification Gate](../concepts/wrap-agent-completion-in-an-automatic-deterministic-verification-gate.md)
+- [Verification Guardrails Let You Downshift to Cheaper Models](../concepts/verification-guardrails-let-you-downshift-to-cheaper-models.md)
 - [Standardize the Editor–Agent Boundary With a Client-Agent Protocol](../concepts/standardize-the-editor-agent-boundary-with-a-client-agent-protocol.md)
 - [Stream Agent Progress to Clients as Session-Update Notifications](../concepts/stream-agent-progress-to-clients-as-session-update-notifications.md)
 - [Give Agents a Persistent-State REPL Instead of Many Tools](../concepts/give-agents-a-persistent-state-repl-instead-of-many-tools.md)
@@ -909,6 +911,7 @@
 
 ## Inference
 
+- [Verification Guardrails Let You Downshift to Cheaper Models](../concepts/verification-guardrails-let-you-downshift-to-cheaper-models.md)
 - [Benchmark inference with use-case-shaped token loads](../concepts/benchmark-inference-with-use-case-shaped-token-loads.md)
 - [SGLang Serves Models Through Configured OpenAI-Compatible Servers](../concepts/sglang-serves-models-through-configured-openai-compatible-servers.md)
 - [Self-Hosted Inference Needs a Platform Beyond Runtime and GPUs](../concepts/self-hosted-inference-needs-a-platform-beyond-runtime-and-gpus.md)
@@ -1558,6 +1561,7 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Wrap Agent Completion in an Automatic Deterministic Verification Gate](../concepts/wrap-agent-completion-in-an-automatic-deterministic-verification-gate.md)
 - [Standardize the Editor–Agent Boundary With a Client-Agent Protocol](../concepts/standardize-the-editor-agent-boundary-with-a-client-agent-protocol.md)
 - [Stream Agent Progress to Clients as Session-Update Notifications](../concepts/stream-agent-progress-to-clients-as-session-update-notifications.md)
 - [Give Agents a Persistent-State REPL Instead of Many Tools](../concepts/give-agents-a-persistent-state-repl-instead-of-many-tools.md)
@@ -1794,6 +1798,7 @@
 - [Separate Engine Latency From Network Latency in Voice Pipelines](../concepts/separate-engine-latency-from-network-latency-in-voice-pipelines.md)
 
 ## Workflows
+- [Wrap Agent Completion in an Automatic Deterministic Verification Gate](../concepts/wrap-agent-completion-in-an-automatic-deterministic-verification-gate.md)
 - [Automate a Nightly Generate-and-Publish Media Pipeline With Sampled QA](../concepts/automate-a-nightly-generate-and-publish-media-pipeline-with-sampled-qa.md)
 - [Manage an Agent Manager Instead of Polling Parallel Agents](../concepts/manage-an-agent-manager-instead-of-polling-parallel-agents.md)
 - [Route Each Change to the Proof It Needs](../concepts/route-each-change-to-the-proof-it-needs.md)
