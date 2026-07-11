@@ -40,6 +40,8 @@ Agentic workflow design should start simple and add autonomy only when it beats 
 
 Python agent workflows can keep ordinary imperative structure while becoming durable. PydanticAI's Temporal demo wraps agents, keeps non-IO orchestration deterministic, places LLM and tool calls behind activity boundaries, and uses normal `TaskGroup`-style parallelism for search branches. That matters for deep research and similar workflows because a crash after planning and search should not require paying for those steps again before final analysis resumes.
 
+Unattended content pipelines are a workflow shape with their own QA economics. TNG's chess channel runs a nightly loop — pull source data, agent-analyze it against grounding tools, emit a structured intermediate artifact, render to narrated video, auto-upload — and once volume exceeds what a human can hand-review, the reliability strategy shifts from gating to sampling: at a low, recoverable per-item error rate (~1-in-20) the operator publishes and takes down mistakes afterward rather than pre-reviewing every asset, treating errors as learning signal about missing tool calls. Two reusable structure choices sit underneath: decoupling the reasoning stage from the rendering stage via a machine-readable intermediate format, and letting the agent own presentation decisions (highlights, arrows, emphasis) instead of a downstream template. The tradeoff — accept a small, reversible defect rate to unlock scale and personalization — is the generate-and-publish analogue of the coding-agent principle that mechanical defects can be sent back automatically while only irreversible steps deserve a human gate.
+
 Pydantic AI's shorter typed-agent demo adds the non-durable inner-loop contract: model calls can produce structured final-result tool calls, Pydantic validation can reject invalid output, and the harness can return the validation error to the model for a corrected retry. The same workflow benefits from observability: traces reveal the model exchanges, tool arguments, validation retries, cost, and latency that explain why a run failed or passed.
 
 Workflow-backed TypeScript agents should keep orchestration deterministic and put LLM calls, sandbox commands, and external APIs behind step boundaries. That makes the running agent easier to inspect through step spans, easier to connect to a resumable UI stream, and easier to control through scheduling, cancellation, and run-version operations when it waits beyond one request.
@@ -548,6 +550,7 @@ OpenAI's Peter Steinberger gives the loop an organizational shape. Running many 
 - [Plan AI Reliability Risk Inside Product Work](../concepts/plan-ai-reliability-risk-inside-product-work.md) - product workflows should test, evaluate, and prototype AI risk before broad launch.
 - [Mine stuck-then-solved sessions for injectable fixes](../concepts/mine-stuck-then-solved-sessions-for-injectable-fixes.md) - a continuous-improvement workflow that turns stuck→solved sessions into clustered, eval-verified, just-in-time-injected fixes ranked by holdout A/B.
 - [Give agents a vent tool to report platform friction](../concepts/give-agents-a-vent-tool-to-report-platform-friction.md) - an agent-authored incident-to-PR loop where the agent reports platform friction and a monitoring agent dedupes and opens PRs.
+- [Automate a Nightly Generate-and-Publish Media Pipeline With Sampled QA](../concepts/automate-a-nightly-generate-and-publish-media-pipeline-with-sampled-qa.md) - an unattended source-to-video-to-upload loop whose low, recoverable error rate is managed by publish-then-take-down sampling rather than pre-review.
 
 ## Open Questions
 
@@ -598,6 +601,7 @@ OpenAI's Peter Steinberger gives the loop an organizational shape. Running many 
 
 ## Sources
 
+- [Running a Chess YouTube Channel entirely by AI — Stephan Steinfurt, TNG](../sources/20260708_BqZrTdgBaPw.md)
 - [I Run a Fleet of AI Agents Across Three Machines. Here's What Broke. - Kyle Jaejun Lee, KRAFTON](../sources/20260708_4kYl2_mqmnQ.md)
 
 - [The Golden Age of AI Engineering — Alexander Embiricos & Romain Huet & Peter Steinberger, OpenAI](../sources/20260709_pMggiOb18tc.md)

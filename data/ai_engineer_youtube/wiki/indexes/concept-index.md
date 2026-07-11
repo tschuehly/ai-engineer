@@ -964,6 +964,8 @@
 
 ## Generative Media
 
+- [Automate a Nightly Generate-and-Publish Media Pipeline With Sampled QA](../concepts/automate-a-nightly-generate-and-publish-media-pipeline-with-sampled-qa.md)
+- [Pair an LLM Narrator With a Domain Solver Via Tools](../concepts/pair-an-llm-narrator-with-a-domain-solver-via-tools.md)
 - [Design AI creative systems for generated-asset retrieval](../concepts/design-ai-creative-systems-for-generated-asset-retrieval.md)
 - [Curate generative-media data before tuning model internals](../concepts/curate-generative-media-data-before-tuning-model-internals.md)
 - [Train image and video diffusion models in learned latent spaces](../concepts/train-image-and-video-diffusion-models-in-learned-latent-spaces.md)
@@ -1546,6 +1548,8 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Pair an LLM Narrator With a Domain Solver Via Tools](../concepts/pair-an-llm-narrator-with-a-domain-solver-via-tools.md)
+- [Feed Agents Diverse and Conflicting Tool Signals to Broaden Exploration](../concepts/feed-agents-diverse-and-conflicting-tool-signals-to-broaden-exploration.md)
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 - [Native Tool Integration Beats a Bolted-On Tool the Model Can't Time](../concepts/native-tool-integration-beats-a-bolted-on-tool.md)
 - [Place Agent UI Generation on a Static–Declarative–Generative Spectrum](../concepts/place-agent-ui-on-the-static-declarative-generative-spectrum.md)
@@ -1776,6 +1780,7 @@
 - [Separate Engine Latency From Network Latency in Voice Pipelines](../concepts/separate-engine-latency-from-network-latency-in-voice-pipelines.md)
 
 ## Workflows
+- [Automate a Nightly Generate-and-Publish Media Pipeline With Sampled QA](../concepts/automate-a-nightly-generate-and-publish-media-pipeline-with-sampled-qa.md)
 - [Manage an Agent Manager Instead of Polling Parallel Agents](../concepts/manage-an-agent-manager-instead-of-polling-parallel-agents.md)
 - [Route Each Change to the Proof It Needs](../concepts/route-each-change-to-the-proof-it-needs.md)
 - [Self-Verifying Agent Loops Hide Review Rather Than Remove It](../concepts/self-verifying-agent-loops-hide-review-rather-than-remove-it.md)
