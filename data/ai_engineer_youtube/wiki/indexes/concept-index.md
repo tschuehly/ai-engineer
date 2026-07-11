@@ -409,6 +409,8 @@
 
 ## Coding Agents
 
+- [Standardize the Editor–Agent Boundary With a Client-Agent Protocol](../concepts/standardize-the-editor-agent-boundary-with-a-client-agent-protocol.md)
+- [Stream Agent Progress to Clients as Session-Update Notifications](../concepts/stream-agent-progress-to-clients-as-session-update-notifications.md)
 - [Give Agents a Persistent-State REPL Instead of Many Tools](../concepts/give-agents-a-persistent-state-repl-instead-of-many-tools.md)
 - [Build High-Fidelity Engines to Create Verification Loops in Non-Code Domains](../concepts/build-high-fidelity-engines-to-create-verification-loops-in-non-code-domains.md)
 - [Converge Agent Fleets on Cluster-Scheduling Primitives](../concepts/converge-agent-fleets-on-cluster-scheduling-primitives.md)
@@ -1551,6 +1553,8 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Standardize the Editor–Agent Boundary With a Client-Agent Protocol](../concepts/standardize-the-editor-agent-boundary-with-a-client-agent-protocol.md)
+- [Stream Agent Progress to Clients as Session-Update Notifications](../concepts/stream-agent-progress-to-clients-as-session-update-notifications.md)
 - [Give Agents a Persistent-State REPL Instead of Many Tools](../concepts/give-agents-a-persistent-state-repl-instead-of-many-tools.md)
 - [Build High-Fidelity Engines to Create Verification Loops in Non-Code Domains](../concepts/build-high-fidelity-engines-to-create-verification-loops-in-non-code-domains.md)
 - [Pair an LLM Narrator With a Domain Solver Via Tools](../concepts/pair-an-llm-narrator-with-a-domain-solver-via-tools.md)
