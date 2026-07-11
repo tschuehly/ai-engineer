@@ -1,0 +1,29 @@
+# Gate Generated Output With a Deterministic Post-Generation Veto
+
+Summary: Prompt instructions are probabilistic — the model "usually listens," but "a prompt will eventually lose." For failures a real person will act on, add a deterministic layer that reads what actually came out (not what you asked for) and checks its specifics against reality before it ships. Instructions are a *request*; the veto is *permission*.
+
+Use when:
+- A generated response can assert an actionable fact — a date, price, policy, or promise — that a user will trust and act on, and a confident-but-wrong answer is worse than a refusal.
+- Prompt-level guardrails ("do not invent numbers," "never say X") keep leaking the same failure into production.
+- You need a hard boundary on outbound content that must not depend on model compliance, alongside the prompt that tries to prevent the failure.
+
+Details:
+- The core distinction: "the first three layers are all instructions… things you tell the model, and the model usually listens. Usually, they are a request. The fourth layer is not a request. It is reading what actually came out and decides whether to allow it to leave your business." Restated: "instructions are probabilistic, permission is deterministic. Everything before layer four is prompt engineering — you're asking nicely and hoping. Layer four is systems engineering — you're checking, and you are sure." ([Isadora Martin-Dye](../sources/20260626_ij-AU9dpJjc.md), 17:52-20:00)
+- "Usually" is calibrated by stakes: it is "completely fine when the cost of being wrong is a slightly off-brand sentence" but "not fine when the model is confidently inventing a fact that a real person is about to act on. A date, a price, a policy, a promise." The triggering failure was an agent offering a wedding date that was booked — "the model didn't know that, it was never given the calendar" — where a warm, confident offer of a fabricated date is "worse than a cold one," because the couple now believes they have it: "you've given them a disappointment with a 48-hour delay on it." ([Isadora Martin-Dye](../sources/20260626_ij-AU9dpJjc.md), 13:36-16:01)
+- **Prevention and the check are both required:** "prevention is the prompt, the veto is the check — you need both, because the prompt will eventually lose, and you don't want to find out that it lost by reading a couple's reply." The veto checks the actual output's specifics against ground truth: "a date the model offered that isn't in the allow list doesn't ship." ([Isadora Martin-Dye](../sources/20260626_ij-AU9dpJjc.md), 16:01-16:34)
+- **Two veto types.** A *soft flag* — an "honesty inspector" that flags a response that slipped a rail (e.g. "did it actually answer the question? It should not hedge"). A *hard reject* — a "numbers guard" that rejects a confidently-stated figure that was never given, "even though the prompt asked it not to invert numbers." The build justifies itself by cost asymmetry: a false positive means "someone double-checked a response," a false negative "remains a hallucinated number or a privacy violation that ships to a client" — "obvious once you say it out loud, but often not written in as its own layer." ([Isadora Martin-Dye](../sources/20260626_ij-AU9dpJjc.md), 13:45-16:15)
+- **Determinism vs coverage is a real trade-off.** The veto is deterministic pattern-matching: "it either matches or it doesn't… never gets it wrong on the patterns it covers." A small classifier "might catch more edge cases including the ones I haven't thought to write a pattern for yet, but it is a classifier that is probabilistic — sometimes it gets it wrong. And right now I'm choosing determinism over coverage" — "a real trade-off and not an obvious win." She also notes the veto "should be its own service" and a shared default gate "everything passes through" so "you can't opt out by accident," rather than being wired per surface. ([Isadora Martin-Dye](../sources/20260626_ij-AU9dpJjc.md), 19:25-20:53)
+
+Related topics:
+- [Evaluation](../topics/evaluation.md)
+- [Context Engineering](../topics/context-engineering.md)
+
+Related concepts:
+- [Layer Brand Voice Into Four Composable Prompt Tiers](layer-brand-voice-into-composable-prompt-tiers.md)
+- [Enforce Deterministic Guardrails Around Sensitive Tool Calls](enforce-deterministic-guardrails-around-sensitive-tool-calls.md)
+- [Wrap Agent Completion in an Automatic Deterministic Verification Gate](wrap-agent-completion-in-an-automatic-deterministic-verification-gate.md)
+- [Separate generation and verification prompts or models](separate-generation-and-verification-prompts-or-models.md)
+- [LLM Guardrails Need Checkpoints at Every Untrusted Boundary](llm-guardrails-need-checkpoints-at-every-untrusted-boundary.md)
+
+Sources:
+- [Stop Writing Tone Instructions. Layer Them. - Isadora Martin-Dye, Isadora & Co](../sources/20260626_ij-AU9dpJjc.md), 13:36-20:53

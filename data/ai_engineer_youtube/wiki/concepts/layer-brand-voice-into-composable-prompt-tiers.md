@@ -1,0 +1,29 @@
+# Layer Brand Voice Into Four Composable Prompt Tiers
+
+Summary: A single "write in our brand's voice" system prompt holds on the happy path but breaks the first time a case falls outside the examples, because it is being asked to do four incompatible jobs at once. Split the persona into ordered layers — immutable identity, situational mode, example-anchored voice, and a post-generation veto — composed in a fixed order through one assembly function, so each job lives in the tier built for it.
+
+Use when:
+- Building a relationship-brand or high-stakes conversational agent where "the voice is the product" and a single off-brand or fabricated sentence is expensive.
+- A persona system prompt works in testing but drifts, contradicts itself, or produces "technically correct but not us" output over long conversations ("turn 21").
+- Serving multiple tenants/brands from one codebase without forking the prompt per customer.
+
+Details:
+- The failure diagnosis: examples "work for what I call the happy path… every question you have anticipated," but the first uncovered turn produces "something technically correct that your brand would just never say." It "keeps failing" not because the examples are bad but because "you're asking one prompt to do four completely different jobs" — be situational, be inviolable, be expressive, and check itself. The prior state was "24 different system prompts scattered across the code base" with personas named Sage, Less, Venue, each with "its own idea as to who it was." ([Isadora Martin-Dye](../sources/20260626_ij-AU9dpJjc.md), 01:04-03:54)
+- **Layer 1 — immutable identity:** hard constraints "the brand structurally cannot say," overridable by "not venue config, not user instruction, not anything." Examples: mandatory AI self-disclosure "in its very first response… not if asked, but before they ask" (a product/trust decision — disclosing up front beats being discovered "on turn seven," where trust "doesn't just dip, it inverts"); a physical-presence boundary ("you are software, you do not have a body," so "I'd love to show you around" is forbidden but "the team would love to host you for a tour" is allowed). Cross-product proof from a missing-persons tool: forbid "confirmed, identified, matched, proven, linked, solved," because "match" said to a grieving parent is "the single most damaging thing a product could ever do" — "same architecture, wildly different stakes." ([Isadora Martin-Dye](../sources/20260626_ij-AU9dpJjc.md), 02:26-08:23)
+- **Layer 2 — situational mode:** real-time signals "built into the prompt before it runs," the layer most teams skip. Two conditions: *who* you're talking to (same agent addresses couples vs briefs staff "like a colleague, not a customer" — same identity/voice, different route) and *what they're going through* (soft-context notes used "for tone, empathy, and what not to say. Never quote them verbatim" — grief gets gentleness "not a quote about loss"). Ordering within the assembly matters: the couple-note block renders "before the numbers guard block" so tone is set from soft context first, then numeric constraints are satisfied; reversing "makes the prose feel mechanically slotted because the model is already committed to the numeric framing." ([Isadora Martin-Dye](../sources/20260626_ij-AU9dpJjc.md), 08:23-11:44)
+- **Layer 3 — example-anchored voice:** the tone guide, phrase list, and dials — "the induction pack" — and "where most teams start and stop" because it reads as a marketing problem, not a technical one. It teaches "what good looks like on the happy path" but has "nothing to say" on the uncovered turn; "examples are not the right tool for guarantees, they were never designed to be." ([Isadora Martin-Dye](../sources/20260626_ij-AU9dpJjc.md), 11:44-13:20)
+- **Layer 4 — post-generation veto:** the deterministic check that reads the actual output; see [Gate Generated Output With a Deterministic Post-Generation Veto](gate-generated-output-with-a-deterministic-veto.md). Ordering is the load-bearing property of the whole stack ("hard rules first, task to last"), analogized to Google Maps routing: constraints → real-time conditions → journey preferences → a check before you pull away, because "you don't check for roadworks after you've already taken the wrong turn." ([Isadora Martin-Dye](../sources/20260626_ij-AU9dpJjc.md), 03:54-04:47, 13:16-16:15)
+- **Multi-tenant seam:** "one architecture with completely different voices," where "the seam is calling one function" — Layer 1 identical for every tenant, Layers 2-3 per-tenant. A concrete failure: brand-identity fields defaulted silently, so "every venue shipped as sage@hawthornemanner.com… a critical white label leak." The principle: "in a multi-tenant system, identity must never have a default. A missing brand identity is a crash, not a fallback. It must fail loud," because the quiet failure is a tenant speaking in a stranger's voice and trust eroding before anyone notices. ([Isadora Martin-Dye](../sources/20260626_ij-AU9dpJjc.md), 16:15-17:52)
+
+Related topics:
+- [Context Engineering](../topics/context-engineering.md)
+- [Product Strategy](../topics/product-strategy.md)
+
+Related concepts:
+- [Gate Generated Output With a Deterministic Post-Generation Veto](gate-generated-output-with-a-deterministic-veto.md)
+- [Prompt Voice Agents for Persona, Prosody, and Brand Fit](prompt-voice-agents-for-persona-prosody-and-brand-fit.md)
+- [Treat prompts as distributed harness surfaces](treat-prompts-as-distributed-harness-surfaces.md)
+- [Prompt-coded product behavior reduces code but weakens hard guarantees](prompt-coded-product-behavior-reduces-code-but-weakens-hard-guarantees.md)
+
+Sources:
+- [Stop Writing Tone Instructions. Layer Them. - Isadora Martin-Dye, Isadora & Co](../sources/20260626_ij-AU9dpJjc.md), 01:04-17:52

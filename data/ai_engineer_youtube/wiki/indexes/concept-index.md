@@ -712,6 +712,8 @@
 
 ## Context Engineering
 
+- [Layer Brand Voice Into Four Composable Prompt Tiers](../concepts/layer-brand-voice-into-composable-prompt-tiers.md)
+- [Gate Generated Output With a Deterministic Post-Generation Veto](../concepts/gate-generated-output-with-a-deterministic-veto.md)
 - [Build a File-Based Research Wiki With Progressive-Disclosure Retrieval](../concepts/file-based-research-wiki-with-progressive-disclosure-retrieval.md)
 - [The Fat-Agent Tool Overload Collapses Accuracy and Inflates Latency](../concepts/fat-agent-tool-overload-collapses-accuracy-and-latency.md)
 - [Shrink the Per-Step Payload the Agent Loop Re-Sends](../concepts/shrink-the-per-step-payload-the-agent-loop-re-sends.md)
@@ -1104,6 +1106,7 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Layer Brand Voice Into Four Composable Prompt Tiers](../concepts/layer-brand-voice-into-composable-prompt-tiers.md)
 - [Design AI Systems Requirements-First With a Four-Phase Framework](../concepts/design-ai-systems-requirements-first-with-a-four-phase-framework.md)
 - [Elicit Requirements as the Non-Automatable Bottleneck](../concepts/elicit-requirements-as-the-non-automatable-bottleneck.md)
 - [Capture AI-Build Requirements With Story Maps and User Stories](../concepts/capture-ai-build-requirements-with-story-maps-and-user-stories.md)
@@ -1184,6 +1187,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Gate Generated Output With a Deterministic Post-Generation Veto](../concepts/gate-generated-output-with-a-deterministic-veto.md)
 - [Tune a Tool Router With a K-Sweep and Guard Its Failure Modes](../concepts/tune-a-tool-router-with-k-sweep-and-guard-its-failure-modes.md)
 - [Optimize an Agent With a Branch-per-Hypothesis Coding-Agent Loop](../concepts/optimize-an-agent-with-a-branch-per-hypothesis-coding-agent-loop.md)
 - [Promote Validated Live-Trace Failure Clusters Into the Golden Dataset](../concepts/promote-validated-live-trace-failure-clusters-into-the-golden-dataset.md)
