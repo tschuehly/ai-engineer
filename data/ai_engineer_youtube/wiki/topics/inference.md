@@ -36,6 +36,7 @@ Serverless GPU clouds add a deployment-ergonomics and unit-cost layer to serving
 
 ## Key Concepts
 
+- [Domain-Specific Agents Unlock Small Models and Tight Permissions](../concepts/domain-specific-agents-unlock-small-models-and-tight-permissions.md) - narrowing each agent to one task with minimal context makes very cheap models (reported ~137× cheaper per task) viable and cuts tokens ~80%, amid a claimed 2026 reversal in falling token cost.
 - [Dual-mode AI infrastructure](../concepts/dual-mode-ai-infrastructure.md) - inference fleets should distinguish realtime latency needs from long compute-heavy workloads.
 - [Design Private AI Serving Around Verifiable Remote Compute](../concepts/design-private-ai-serving-around-verifiable-remote-compute.md) - privacy-sensitive inference should verify the remote compute path before releasing data.
 - [Bind Sensitive Payloads To Remote Attestation Claims](../concepts/bind-sensitive-payloads-to-remote-attestation-claims.md) - attestation-bound encryption makes payload release depend on the server still running trusted code.
@@ -144,3 +145,4 @@ Serverless GPU clouds add a deployment-ergonomics and unit-cost layer to serving
 - [Introduction to LLM serving with SGLang - Philip Kiely and Yineng Zhang, Baseten](../sources/20250726_Ahtaha9fEM0.md)
 - [Latent Space Paper Club: AIEWF Special Edition (Test of Time, DeepSeek R1/V3) — VIbhu Sapra](../sources/20250725_9k3xPh-40mo.md)
 - [The Rise of Open Models in the Enterprise — Amir Haghighat, Baseten](../sources/20250724_3WV1vT0B0cg.md)
+- [The Future Is Domain-Specific Agents - Justin Schroeder, StandardAgents](../sources/20260629_spNAUEgq_A8.md)

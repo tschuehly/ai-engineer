@@ -1,6 +1,8 @@
 # Concept Index
 
 ## Agents
+- [Compose Domain-Specific Agents Instead of Inflating One Agent's Context](../concepts/compose-domain-specific-agents-instead-of-inflating-one-context.md)
+- [Domain-Specific Agents Unlock Small Models and Tight Permissions](../concepts/domain-specific-agents-unlock-small-models-and-tight-permissions.md)
 - [Automate the Agent-Building Loop With an Agentic AI Engineer](../concepts/automate-the-agent-building-loop-with-an-agentic-ai-engineer.md)
 - [Diagnose Agent Failures With Code-Checkable Indicators and Sampling](../concepts/diagnose-agent-failures-with-code-checkable-indicators-and-sampling.md)
 - [Record and Replay Agent Runs at Node Boundaries](../concepts/record-and-replay-agent-runs-at-node-boundaries.md)

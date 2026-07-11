@@ -62,6 +62,7 @@ Thariq Shihipar (Anthropic) adds a system-prompt corollary that inverts as model
 
 ## Key Concepts
 
+- [Compose Domain-Specific Agents Instead of Inflating One Agent's Context](../concepts/compose-domain-specific-agents-instead-of-inflating-one-context.md) - inflating one agent's context with more skills/MCP (inheritance) degrades it; splitting into domain-expert sub-agents keeps every context window small.
 - [Choose a skill's trigger by trading context load against cognitive load](../concepts/choose-skill-trigger-by-trading-context-load-against-cognitive-load.md) - user-invoked vs model-invoked is a symmetric-cost decision, not a default: descriptions and unpredictability load the agent, remembering skills loads the pilot.
 - [Steer agents with leading words that surface in reasoning traces](../concepts/steer-agents-with-leading-words-that-surface-in-reasoning-traces.md) - dense phrases the agent repeats back change its behavior, and the traces let you verify the steer landed.
 - [Split skills to hide future steps and force more leg work per step](../concepts/split-skills-to-hide-future-steps-and-force-leg-work.md) - one-step-at-a-time skills stop the agent shortcutting an early phase toward a visible goal.
@@ -231,3 +232,4 @@ Thariq Shihipar (Anthropic) adds a system-prompt corollary that inverts as model
 - [Why More Context Makes Your Agent Dumber and What to Do About It — Nupur Sharma, Qodo](../sources/20260608_EcqMYoIV57A.md)
 - [BDD, ADR, PRD, WTF: Capturing Decisions for Humans and AI Alike — Michal Cichra, Safe Intelligence](../sources/20260603_504PvfXou5Y.md)
 - [How Lovable self-improves every hour — Benjamin Verbeek, Lovable](../sources/20260602_KA5kPbdkK2E.md)
+- [The Future Is Domain-Specific Agents - Justin Schroeder, StandardAgents](../sources/20260629_spNAUEgq_A8.md)
