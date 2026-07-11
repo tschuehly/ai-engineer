@@ -1,6 +1,9 @@
 # Concept Index
 
 ## Agents
+- [Route Agent Repairs to the Right Layer With the Smallest Durable Change](../concepts/route-agent-repairs-to-the-right-layer-smallest-durable-change.md)
+- [Verifiable Continual Learning: Prove Each Agent Fix Helps and Breaks Nothing](../concepts/verifiable-continual-learning-prove-each-fix-helps-and-breaks-nothing.md)
+- [Make Regression-Aware Optimization Part of the Continual-Learning Loop](../concepts/make-regression-aware-optimization-part-of-the-continual-learning-loop.md)
 - [Capability Overhang: Tools Decide Which Model Spikes You Reach](../concepts/capability-overhang-tools-decide-which-model-spikes-you-reach.md)
 - [Let the Agent Harness Emerge at Runtime (Adaptive Engineering)](../concepts/let-the-agent-harness-emerge-at-runtime-adaptive-engineering.md)
 - [Match the Harness to Complicated vs Complex Problems](../concepts/match-the-harness-to-complicated-vs-complex-problems.md)
@@ -1102,6 +1105,9 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Verifiable Continual Learning: Prove Each Agent Fix Helps and Breaks Nothing](../concepts/verifiable-continual-learning-prove-each-fix-helps-and-breaks-nothing.md)
+- [Route Agent Repairs to the Right Layer With the Smallest Durable Change](../concepts/route-agent-repairs-to-the-right-layer-smallest-durable-change.md)
+- [Make Regression-Aware Optimization Part of the Continual-Learning Loop](../concepts/make-regression-aware-optimization-part-of-the-continual-learning-loop.md)
 - [Evaluate Coding Agents on Project-Scale, Billion-Token Tasks](../concepts/evaluate-coding-agents-on-project-scale-billion-token-tasks.md)
 - [At Long Horizons a Weak Verifier Becomes an Attack Surface](../concepts/at-long-horizons-a-weak-verifier-becomes-an-attack-surface.md)
 - [Verify the Process, Not Just the Answer, in Judgment-Heavy Domains](../concepts/verify-the-process-not-just-the-answer-in-judgment-heavy-domains.md)
