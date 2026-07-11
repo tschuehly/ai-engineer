@@ -796,6 +796,8 @@
 
 ## Infrastructure
 
+- [Structure the ML Codebase as Decoupled Per-Researcher Microservices](../concepts/structure-the-ml-codebase-as-decoupled-per-researcher-microservices.md)
+- [Bridge ML Research to Production With a Taxonomy Handoff Document](../concepts/bridge-ml-research-to-production-with-a-taxonomy-handoff-document.md)
 - [Choose a Document-Extraction Tier by Cost, Determinism, and Scale](../concepts/choose-document-extraction-tier-by-cost-determinism-and-scale.md)
 - [Treat the Specification as the Product and Derive Bespoke Implementations](../concepts/treat-the-specification-as-the-product-and-derive-bespoke-implementations.md)
 - [Build an Agentic Control Plane So the Model Proposes and the Platform Decides](../concepts/build-an-agentic-control-plane.md)
@@ -1943,6 +1945,8 @@
 - [Separate Engine Latency From Network Latency in Voice Pipelines](../concepts/separate-engine-latency-from-network-latency-in-voice-pipelines.md)
 
 ## Workflows
+- [Bridge ML Research to Production With a Taxonomy Handoff Document](../concepts/bridge-ml-research-to-production-with-a-taxonomy-handoff-document.md)
+- [Structure the ML Codebase as Decoupled Per-Researcher Microservices](../concepts/structure-the-ml-codebase-as-decoupled-per-researcher-microservices.md)
 - [Automate the Agent-Building Loop With an Agentic AI Engineer](../concepts/automate-the-agent-building-loop-with-an-agentic-ai-engineer.md)
 - [Staff Agent Operations With a Team of Agents](../concepts/staff-agent-operations-with-a-team-of-agents.md)
 - [Operate Agent Products as the Missing Post-Launch Layer](../concepts/operate-agent-products-as-the-missing-post-launch-layer.md)
