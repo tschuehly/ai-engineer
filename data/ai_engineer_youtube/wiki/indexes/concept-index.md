@@ -1,6 +1,7 @@
 # Concept Index
 
 ## Agents
+- [Think Wider, Not Bigger: Compete on Breadth via User Extensibility](../concepts/think-wider-not-bigger-compete-on-breadth-via-extensibility.md)
 - [Converge Agent Fleets on Cluster-Scheduling Primitives](../concepts/converge-agent-fleets-on-cluster-scheduling-primitives.md)
 - [Drive Game NPCs and Difficulty With Runtime LLMs](../concepts/drive-game-npcs-and-difficulty-with-runtime-llms.md)
 - [Externalize Agent State to Files and Reset Instead of Compact](../concepts/externalize-agent-state-to-files-and-reset-instead-of-compact.md)
@@ -410,6 +411,8 @@
 
 ## Coding Agents
 
+- [Rescope Ambition Down a Tier as Models Improve](../concepts/rescope-ambition-down-a-tier-as-models-improve.md)
+- [Reject Skeuomorphic Dev Tooling and Legacy Workflow Constraints](../concepts/reject-skeuomorphic-dev-tooling-and-legacy-constraints.md)
 - [Give Your Agent Eyes With a Product-Specific Observation Tool](../concepts/give-your-agent-eyes-with-a-product-specific-observation-tool.md)
 - [Reproduce the Bug Before Fixing to Earn Agent Trust](../concepts/reproduce-the-bug-before-fixing-to-earn-agent-trust.md)
 - [Wrap Agent Completion in an Automatic Deterministic Verification Gate](../concepts/wrap-agent-completion-in-an-automatic-deterministic-verification-gate.md)
@@ -1002,6 +1005,8 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Rescope Ambition Down a Tier as Models Improve](../concepts/rescope-ambition-down-a-tier-as-models-improve.md)
+- [Think Wider, Not Bigger: Compete on Breadth via User Extensibility](../concepts/think-wider-not-bigger-compete-on-breadth-via-extensibility.md)
 - [Dogfood the Same Stack You Ship to Developers](../concepts/dogfood-the-same-stack-you-ship-to-developers.md)
 - [Shape Agent Products as Chat-First With a Hands-On Surface](../concepts/shape-agent-products-as-chat-first-with-a-hands-on-surface.md)
 - [AI-First Strategy Reimagines Value Across Workflows](../concepts/ai-first-strategy-reimagines-value-across-workflows.md)
@@ -1804,6 +1809,7 @@
 - [Separate Engine Latency From Network Latency in Voice Pipelines](../concepts/separate-engine-latency-from-network-latency-in-voice-pipelines.md)
 
 ## Workflows
+- [Rescope Ambition Down a Tier as Models Improve](../concepts/rescope-ambition-down-a-tier-as-models-improve.md)
 - [Wrap Agent Completion in an Automatic Deterministic Verification Gate](../concepts/wrap-agent-completion-in-an-automatic-deterministic-verification-gate.md)
 - [Automate a Nightly Generate-and-Publish Media Pipeline With Sampled QA](../concepts/automate-a-nightly-generate-and-publish-media-pipeline-with-sampled-qa.md)
 - [Manage an Agent Manager Instead of Polling Parallel Agents](../concepts/manage-an-agent-manager-instead-of-polling-parallel-agents.md)

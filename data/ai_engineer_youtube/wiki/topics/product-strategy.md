@@ -42,6 +42,8 @@ When the core capability is itself a managed, already-scalable API, the strategi
 
 When the product *is* the agent platform, two more strategy choices come to the fore. OpenAI's Codex keynote makes a single-stack dogfooding bet: build your own product on the exact primitives you sell — same responses API, open-source harness, `AGENTS.md`, and app server — instead of a privileged internal path plus a simplified external one, because "at every layer we use the thing we give to you" turns every external fork and edge-finding into a learning signal, and a reference implementation beats leaving developers to reverse-engineer you. The companion surface bet is chat-first with a hands-on collaborative UI: since the model beats the user on the average task, the empowering shape is a single ask-anywhere entity plus a place to inspect/steer/shape (not a CLI, which is "mostly chat," nor an IDE, where "the order is wrong"), designed to preserve the human's "feeling of mastery" rather than to automate engineers away. Both extend the primitives-before-features stance: reject the simple-versus-capable tradeoff by doing more upfront design.
 
+A closing-keynote provocation reframes ambition-sizing itself as the strategic variable. Theo Browne argues that each model jump (framed as tool-call → long-running-task → orchestration eras) doesn't just make the same work faster — it shifts what scope a solo builder or small team can own down one tier, so a former startup becomes a side project and a whole class of former services collapses to a "markdown file on a cron" piped to an agent. The strategic response is to *rescope ambition up* to whatever now feels oversized ("if your idea doesn't feel stupid, it's not big enough"), because the gain is wasted on work the previous model already handled. He also reframes "bigger" as "wider": AI collapses the cost of *breadth*, so small teams can span an incumbent's surface area (build a database platform in a day or two of prompting) if they architect for user-driven extensibility — cover enough of the spectrum to onboard most users, then let users build the vertical features you don't support (Slack accidentally became "the platform people run their agents in" because it was the right *shape*, not the most complete product). This is the demand-side complement to build-for-a-multimodel-market and workflow-wrapper moats: the same commoditizing capability that erodes a thin prompt-box also lowers the cost of owning wide, extensible product surface.
+
 ## Key Concepts
 
 - [AI Does Not Replace Shareable Product Marketing](../concepts/ai-does-not-replace-shareable-product-marketing.md) - launch content only matters when it can earn attention and social sharing.
@@ -104,6 +106,8 @@ When the product *is* the agent platform, two more strategy choices come to the 
 - [Integrate AI Strategy Into Core Product Strategy](../concepts/integrate-ai-strategy-into-core-product-strategy.md) - AI work should solve core customer problems rather than run as a separate capability showcase.
 - [Mature AI Products Through Crawl-Walk-Run Integration](../concepts/mature-ai-products-through-crawl-walk-run-integration.md) - embedded assists can grow into contextual copilots and cross-product agents without becoming bolt-ons.
 - [Plan AI Reliability Risk Inside Product Work](../concepts/plan-ai-reliability-risk-inside-product-work.md) - product planning should include AI evals, testing, prototypes, and reliability thresholds.
+- [Rescope Ambition Down a Tier as Models Improve](../concepts/rescope-ambition-down-a-tier-as-models-improve.md) - each capability jump shifts what a small team can own down a tier, so attempt what was "too big."
+- [Think Wider, Not Bigger: Compete on Breadth via User Extensibility](../concepts/think-wider-not-bigger-compete-on-breadth-via-extensibility.md) - AI collapses the cost of breadth, so architect for user-built extensions instead of matching a giant's depth.
 
 ## Open Questions
 
@@ -146,3 +150,4 @@ When the product *is* the agent platform, two more strategy choices come to the 
 - [Machines of Buying and Selling Grace - Adam Behrens, New Generation](../sources/20250723_zlZz0mDF2eg.md)
 - [6 Things to Know about AIE World's Fair 2026](../sources/20260621_0S8xe9ftGTM.md)
 - [How to talk to statues — Joe Reeve, ElevenLabs](../sources/20260601_u-rJwPPU3QA.md)
+- [Everything we knew about software has changed — Theo Browne, @t3dotgg](../sources/20260708_xUnRQ9vLXxo.md)

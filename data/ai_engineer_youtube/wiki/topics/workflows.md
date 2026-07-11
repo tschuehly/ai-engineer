@@ -186,8 +186,11 @@ OpenAI's Peter Steinberger gives the loop an organizational shape. Running many 
 
 Talha Sheikh (Checkout.com) closes the loop with an automated enforcement step. Left alone, the human is the enforcement layer: the agent reports "task completed," but "when you actually try to run it… something else failed," so you keep hand-issuing "fix this, fix that." His harness moves that check into the workflow itself — a deterministic verification gate wired to the agent's completion event (a Claude Stop hook) that runs a config of test cases and loops "try again" back into the agent until they pass. Unlike the self-verifying loops caution above, this is *deterministic* verification: capability ≠ reliability and instructions ≠ verification, so a better model does not remove the need for a check, and the same gate should run at every level (in-conversation, conversation-end, pre-commit, multi-agent, async, plus optional LLM-as-judge) as a language-agnostic, bring-your-own-enforcement contract. It is the workflow embodiment of this topic's recurring theme — value has moved from "the code that we create" to "the verification that we design," so "work on the harness, not on the code."
 
+Theo Browne pushes the "better loops" idea to its minimal form: a whole class of former standing services can collapse to a "markdown file on a cron." His PR-triage service is now one markdown file that instructs an agent to read open PRs across several repos, assess status, prioritize, then write a static HTML report to S3 and return the URL — piped to Codex/Claude and fired by a 9 a.m. cron so his work list is ready by ~9:15. The durable point for this topic is that executable natural language on a schedule is now a legitimate workflow tier below a coded service, and it belongs to the same tier-collapse logic that lowers the scope of every buildable artifact as models improve.
+
 ## Key Concepts
 
+- [Rescope Ambition Down a Tier as Models Improve](../concepts/rescope-ambition-down-a-tier-as-models-improve.md) - each capability jump shifts buildable scope down a tier, and a new bottom tier is executable markdown on a cron.
 - [Have Agents Write Literate Explainer Docs for Their Changes](../concepts/have-agents-write-literate-explainer-docs-for-their-changes.md) - turn a raw diff into an agent-authored teaching doc ordered by education principles so a large change is understandable, and reviewable away from the IDE.
 - [Gate Agent Code on a Comprehension Quiz You Must Pass](../concepts/gate-agent-code-on-a-comprehension-quiz-you-must-pass.md) - a short agent-written quiz you must pass before forwarding code to review, acting as a speed regulator so understanding keeps pace with correctness.
 - [Build Ephemeral Microworlds to Feel How Code Works](../concepts/build-ephemeral-microworlds-to-feel-how-code-works.md) - have the agent build throwaway debuggers, simulations, and step-through UIs whose purpose is understanding, not shipping.
@@ -606,6 +609,7 @@ Talha Sheikh (Checkout.com) closes the loop with an automated enforcement step. 
 
 - [Your coding agent doesn't always follow your rules — Talha Sheikh, Checkout.com](../sources/20260708_MpZzWMdmQCE.md)
 - [Running a Chess YouTube Channel entirely by AI — Stephan Steinfurt, TNG](../sources/20260708_BqZrTdgBaPw.md)
+- [Everything we knew about software has changed — Theo Browne, @t3dotgg](../sources/20260708_xUnRQ9vLXxo.md)
 - [I Run a Fleet of AI Agents Across Three Machines. Here's What Broke. - Kyle Jaejun Lee, KRAFTON](../sources/20260708_4kYl2_mqmnQ.md)
 
 - [The Golden Age of AI Engineering — Alexander Embiricos & Romain Huet & Peter Steinberger, OpenAI](../sources/20260709_pMggiOb18tc.md)

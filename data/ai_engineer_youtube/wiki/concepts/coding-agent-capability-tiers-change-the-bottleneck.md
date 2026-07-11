@@ -10,6 +10,7 @@ Details:
 - Wu measures agent capacity by how much work an AI can do before a human must intervene or steer it; for code, he says the practical task length had been doubling roughly every 70 days, creating 16x-64x annual capacity growth over the observed period.
 - The early interface was tab completion because the task was mostly a single-file text-prediction problem; later tiers needed playbooks, memory, repository snapshots, codebase intelligence, IDE collaboration, and backlog orchestration.
 - Each capability tier changes the bottleneck: repetitive migrations emphasize instruction following, isolated bug fixes emphasize repo setup and local checks, broader issues emphasize cross-file context, and backlog-scale work emphasizes confidence, escalation, and asynchronous testing.
+- Theo Browne gives an independent field framing of the same tier progression as three model "eras": Sonnet 3.5 = the tool-call era (first model to do tool calls consistently enough for day-to-day codebase work), Opus 4.5 = the long-running-task era (tests its own work and completes hour-scale tasks without losing track), and Mythos = the orchestration era where the model "understands itself," spawns and verifies subagents, and does so from a prompt with "no fancy software factory" needed — reinforcing that new tiers deliver value only on work sized to match them ("My previous work would not benefit from a model like Mythos"). [Theo Browne, 00:54-03:34]
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -20,6 +21,8 @@ Related concepts:
 - [Treat long-horizon agents as asynchronous workers with evolving interfaces](treat-long-horizon-agents-as-asynchronous-workers-with-evolving-interfaces.md)
 - [Measure AI intensity by human input to valuable output](measure-ai-intensity-by-human-input-to-valuable-output.md)
 - [Reliability thresholds determine whether coding agents save time](reliability-thresholds-determine-whether-coding-agents-save-time.md)
+- [Rescope Ambition Down a Tier as Models Improve](rescope-ambition-down-a-tier-as-models-improve.md)
 
 Sources:
 - [Devin 2.0 and the Future of SWE - Scott Wu, Cognition](../sources/20250725_MI83buT_23o.md), 00:47-03:06
+- [Everything we knew about software has changed — Theo Browne, @t3dotgg](../sources/20260708_xUnRQ9vLXxo.md), 00:54-03:34
