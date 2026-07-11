@@ -746,6 +746,8 @@
 
 ## Infrastructure
 
+- [The Frozen-Artifact Pipeline Is a Cost Constraint, Not a Law](../concepts/frozen-artifact-pipeline-is-a-cost-constraint-not-a-law.md)
+- [Deploy a Canonical Stem Plus Bounded Per-User Divergences](../concepts/deploy-a-canonical-stem-plus-bounded-per-user-divergences.md)
 - [Converge Agent Fleets on Cluster-Scheduling Primitives](../concepts/converge-agent-fleets-on-cluster-scheduling-primitives.md)
 - [Move Agent Access Control to the Network Layer So the Sandbox Holds No Credential](../concepts/move-agent-access-control-to-the-network-layer.md)
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
@@ -1019,6 +1021,8 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [The Frozen-Artifact Pipeline Is a Cost Constraint, Not a Law](../concepts/frozen-artifact-pipeline-is-a-cost-constraint-not-a-law.md)
+- [Deploy a Canonical Stem Plus Bounded Per-User Divergences](../concepts/deploy-a-canonical-stem-plus-bounded-per-user-divergences.md)
 - [Run a Time-Boxed Roadmap Pause to Shift AI Work Habits](../concepts/run-a-time-boxed-roadmap-pause-to-shift-ai-work-habits.md)
 - [Founder Personal Brand Is the GTM Moat](../concepts/founder-personal-brand-is-the-gtm-moat.md)
 - [Distribution Is the New Bottleneck for Developer Tools](../concepts/distribution-is-the-new-bottleneck-for-devtools.md)
@@ -1840,6 +1844,8 @@
 - [Separate Engine Latency From Network Latency in Voice Pipelines](../concepts/separate-engine-latency-from-network-latency-in-voice-pipelines.md)
 
 ## Workflows
+- [The Frozen-Artifact Pipeline Is a Cost Constraint, Not a Law](../concepts/frozen-artifact-pipeline-is-a-cost-constraint-not-a-law.md)
+- [Deploy a Canonical Stem Plus Bounded Per-User Divergences](../concepts/deploy-a-canonical-stem-plus-bounded-per-user-divergences.md)
 - [Make the Running Prototype the Primary Design Artifact](../concepts/make-the-running-prototype-the-primary-design-artifact.md)
 - [On Mixed-Ability AI Teams, Specialists Should Enable Not Do](../concepts/on-mixed-ability-ai-teams-specialists-should-enable-not-do.md)
 - [Run a Time-Boxed Roadmap Pause to Shift AI Work Habits](../concepts/run-a-time-boxed-roadmap-pause-to-shift-ai-work-habits.md)

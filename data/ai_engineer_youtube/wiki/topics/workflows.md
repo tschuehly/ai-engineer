@@ -190,8 +190,12 @@ Talha Sheikh (Checkout.com) closes the loop with an automated enforcement step. 
 
 Theo Browne pushes the "better loops" idea to its minimal form: a whole class of former standing services can collapse to a "markdown file on a cron." His PR-triage service is now one markdown file that instructs an agent to read open PRs across several repos, assess status, prioritize, then write a static HTML report to S3 and return the URL — piped to Codex/Claude and fired by a 9 a.m. cron so his work list is ready by ~9:15. The durable point for this topic is that executable natural language on a schedule is now a legitimate workflow tier below a coded service, and it belongs to the same tier-collapse logic that lowers the scope of every buildable artifact as models improve.
 
+Iris ten Teije (Differ) pushes the loop past the build step and into distribution: [the frozen-artifact pipeline was a cost constraint, not a law](../concepts/frozen-artifact-pipeline-is-a-cost-constraint-not-a-law.md), so "when the agent is the runtime… development and distribution stop being two phases" and the freeze-verify-ship-once workflow that CI, packagers, and registries encode is no longer forced. The workflow that replaces it is to [deploy a canonical stem plus bounded per-user divergences](../concepts/deploy-a-canonical-stem-plus-bounded-per-user-divergences.md) and treat coordination differently: with a million per-user versions you "don't merge code, merge intent, merge outcome" — everyone converges on the same goal through their own path rather than the same commit. This shifts the review/verification burden this topic keeps circling: correctness must now be reasoned about across "the stem and every possible divergence," provenance means every divergence stays "immutable, inspectable, attributable" back to the signal that produced it, and the harder step is *desirability* (was a correct change actually an uplift), which is the runtime-distribution analogue of the deterministic verification gates and review-routing patterns above — generation is the easy 80%, and "observability, validation, coordination… is the entire business."
+
 ## Key Concepts
 
+- [The Frozen-Artifact Pipeline Is a Cost Constraint, Not a Law](../concepts/frozen-artifact-pipeline-is-a-cost-constraint-not-a-law.md) - when change-production cost collapses and the agent is the runtime, the freeze-verify-ship-once distribution workflow is no longer forced and development and distribution merge.
+- [Deploy a Canonical Stem Plus Bounded Per-User Divergences](../concepts/deploy-a-canonical-stem-plus-bounded-per-user-divergences.md) - coordinating a million per-user versions means "merge intent, not code": converge on shared goals through per-user paths, with provenance and desirability as the hard steps.
 - [Make the Running Prototype the Primary Design Artifact](../concepts/make-the-running-prototype-the-primary-design-artifact.md) - iterate on a running coded prototype and demote Figma to late fine-tuning; record exploration in a Cloud Code project folder to speed collaboration and build.
 - [On Mixed-Ability AI Teams, Specialists Should Enable Not Do](../concepts/on-mixed-ability-ai-teams-specialists-should-enable-not-do.md) - once non-engineers contribute in code, a specialist's highest-leverage move is to teach and enable teammates.
 - [Run a Time-Boxed Roadmap Pause to Shift AI Work Habits](../concepts/run-a-time-boxed-roadmap-pause-to-shift-ai-work-habits.md) - a fixed-window roadmap-pause sprint with autonomous pairs is a concrete reserved-capacity cadence for changing how people work.
@@ -612,6 +616,7 @@ Theo Browne pushes the "better loops" idea to its minimal form: a whole class of
 
 ## Sources
 
+- [The Pipeline Is Dead - Iris ten Teije, Sky Valley Ambient Computing](../sources/20260707_bRnoEpoK5m4.md)
 - [500 people vibe-coded for 30 days. I was one of them. - Sanja Grbic, Automattic](../sources/20260707_UcYoMg-8-L8.md)
 - [Your coding agent doesn't always follow your rules — Talha Sheikh, Checkout.com](../sources/20260708_MpZzWMdmQCE.md)
 - [Running a Chess YouTube Channel entirely by AI — Stephan Steinfurt, TNG](../sources/20260708_BqZrTdgBaPw.md)
