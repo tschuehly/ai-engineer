@@ -410,6 +410,8 @@
 
 ## Coding Agents
 
+- [Give Your Agent Eyes With a Product-Specific Observation Tool](../concepts/give-your-agent-eyes-with-a-product-specific-observation-tool.md)
+- [Reproduce the Bug Before Fixing to Earn Agent Trust](../concepts/reproduce-the-bug-before-fixing-to-earn-agent-trust.md)
 - [Wrap Agent Completion in an Automatic Deterministic Verification Gate](../concepts/wrap-agent-completion-in-an-automatic-deterministic-verification-gate.md)
 - [Verification Guardrails Let You Downshift to Cheaper Models](../concepts/verification-guardrails-let-you-downshift-to-cheaper-models.md)
 - [Standardize the Editor–Agent Boundary With a Client-Agent Protocol](../concepts/standardize-the-editor-agent-boundary-with-a-client-agent-protocol.md)
@@ -1564,6 +1566,7 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Give Your Agent Eyes With a Product-Specific Observation Tool](../concepts/give-your-agent-eyes-with-a-product-specific-observation-tool.md)
 - [Wrap Agent Completion in an Automatic Deterministic Verification Gate](../concepts/wrap-agent-completion-in-an-automatic-deterministic-verification-gate.md)
 - [Standardize the Editor–Agent Boundary With a Client-Agent Protocol](../concepts/standardize-the-editor-agent-boundary-with-a-client-agent-protocol.md)
 - [Stream Agent Progress to Clients as Session-Update Notifications](../concepts/stream-agent-progress-to-clients-as-session-update-notifications.md)
