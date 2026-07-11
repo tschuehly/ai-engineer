@@ -1,6 +1,8 @@
 # Concept Index
 
 ## Agents
+- [Own the Agent Loop on a Typed Effects Runtime](../concepts/own-the-agent-loop-on-a-typed-effects-runtime.md)
+- [Adopt A2A's Spec as an Internal Front-End/Back-End Contract](../concepts/adopt-a2a-as-an-internal-front-end-back-end-contract.md)
 - [The Fat-Agent Tool Overload Collapses Accuracy and Inflates Latency](../concepts/fat-agent-tool-overload-collapses-accuracy-and-latency.md)
 - [Shrink the Per-Step Payload the Agent Loop Re-Sends](../concepts/shrink-the-per-step-payload-the-agent-loop-re-sends.md)
 - [Route Each Request to the Cheapest Sufficient Model by Difficulty](../concepts/route-each-request-to-the-cheapest-sufficient-model-by-difficulty.md)
@@ -812,6 +814,7 @@
 
 ## Infrastructure
 
+- [Own the Agent Loop on a Typed Effects Runtime](../concepts/own-the-agent-loop-on-a-typed-effects-runtime.md)
 - [Keep inference off the microcontroller: build the AI-native device as a thin client over a backend](../concepts/keep-inference-off-the-microcontroller-thin-device-over-a-backend.md)
 - [Structure the ML Codebase as Decoupled Per-Researcher Microservices](../concepts/structure-the-ml-codebase-as-decoupled-per-researcher-microservices.md)
 - [Bridge ML Research to Production With a Taxonomy Handoff Document](../concepts/bridge-ml-research-to-production-with-a-taxonomy-handoff-document.md)
@@ -1724,6 +1727,7 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Adopt A2A's Spec as an Internal Front-End/Back-End Contract](../concepts/adopt-a2a-as-an-internal-front-end-back-end-contract.md)
 - [The Fat-Agent Tool Overload Collapses Accuracy and Inflates Latency](../concepts/fat-agent-tool-overload-collapses-accuracy-and-latency.md)
 - [Tune a Tool Router With a K-Sweep and Guard Its Failure Modes](../concepts/tune-a-tool-router-with-k-sweep-and-guard-its-failure-modes.md)
 - [Choose a skill's trigger by trading context load against cognitive load](../concepts/choose-skill-trigger-by-trading-context-load-against-cognitive-load.md)
