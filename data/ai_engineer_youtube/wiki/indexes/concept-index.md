@@ -1,6 +1,9 @@
 # Concept Index
 
 ## Agents
+- [Operate Agent Products as the Missing Post-Launch Layer](../concepts/operate-agent-products-as-the-missing-post-launch-layer.md)
+- [Staff Agent Operations With a Team of Agents](../concepts/staff-agent-operations-with-a-team-of-agents.md)
+- [Score Every Production Conversation to Judge Agent Health](../concepts/score-every-production-conversation-to-judge-agent-health.md)
 - [Route Agent Repairs to the Right Layer With the Smallest Durable Change](../concepts/route-agent-repairs-to-the-right-layer-smallest-durable-change.md)
 - [Verifiable Continual Learning: Prove Each Agent Fix Helps and Breaks Nothing](../concepts/verifiable-continual-learning-prove-each-fix-helps-and-breaks-nothing.md)
 - [Make Regression-Aware Optimization Part of the Continual-Learning Loop](../concepts/make-regression-aware-optimization-part-of-the-continual-learning-loop.md)
@@ -422,6 +425,7 @@
 
 ## Coding Agents
 
+- [Staff Agent Operations With a Team of Agents](../concepts/staff-agent-operations-with-a-team-of-agents.md)
 - [Capability Overhang: Tools Decide Which Model Spikes You Reach](../concepts/capability-overhang-tools-decide-which-model-spikes-you-reach.md)
 - [Shrink the System Prompt and Drop Examples as Models Improve](../concepts/shrink-the-system-prompt-and-drop-examples-as-models-improve.md)
 - [Use the Agent to Surface Your Own Unknowns](../concepts/use-the-agent-to-surface-your-own-unknowns.md)
@@ -1107,6 +1111,8 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Score Every Production Conversation to Judge Agent Health](../concepts/score-every-production-conversation-to-judge-agent-health.md)
+- [Operate Agent Products as the Missing Post-Launch Layer](../concepts/operate-agent-products-as-the-missing-post-launch-layer.md)
 - [Verifiable Continual Learning: Prove Each Agent Fix Helps and Breaks Nothing](../concepts/verifiable-continual-learning-prove-each-fix-helps-and-breaks-nothing.md)
 - [Route Agent Repairs to the Right Layer With the Smallest Durable Change](../concepts/route-agent-repairs-to-the-right-layer-smallest-durable-change.md)
 - [Make Regression-Aware Optimization Part of the Continual-Learning Loop](../concepts/make-regression-aware-optimization-part-of-the-continual-learning-loop.md)
@@ -1863,6 +1869,9 @@
 - [Separate Engine Latency From Network Latency in Voice Pipelines](../concepts/separate-engine-latency-from-network-latency-in-voice-pipelines.md)
 
 ## Workflows
+- [Staff Agent Operations With a Team of Agents](../concepts/staff-agent-operations-with-a-team-of-agents.md)
+- [Operate Agent Products as the Missing Post-Launch Layer](../concepts/operate-agent-products-as-the-missing-post-launch-layer.md)
+- [Score Every Production Conversation to Judge Agent Health](../concepts/score-every-production-conversation-to-judge-agent-health.md)
 - [Use the Agent to Surface Your Own Unknowns](../concepts/use-the-agent-to-surface-your-own-unknowns.md)
 - [Let the Agent Harness Emerge at Runtime (Adaptive Engineering)](../concepts/let-the-agent-harness-emerge-at-runtime-adaptive-engineering.md)
 - [Match the Harness to Complicated vs Complex Problems](../concepts/match-the-harness-to-complicated-vs-complex-problems.md)
