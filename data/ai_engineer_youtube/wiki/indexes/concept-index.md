@@ -406,6 +406,10 @@
 
 ## Coding Agents
 
+- [Understand Agent Work to Participate, Not Just to Verify](../concepts/understand-agent-work-to-participate-not-just-to-verify.md)
+- [Have Agents Write Literate Explainer Docs for Their Changes](../concepts/have-agents-write-literate-explainer-docs-for-their-changes.md)
+- [Gate Agent Code on a Comprehension Quiz You Must Pass](../concepts/gate-agent-code-on-a-comprehension-quiz-you-must-pass.md)
+- [Build Ephemeral Microworlds to Feel How Code Works](../concepts/build-ephemeral-microworlds-to-feel-how-code-works.md)
 - [Shift Code Quality Left With a Pre-Commit Analysis and Remediation Loop](../concepts/shift-code-quality-left-with-precommit-analysis-loop.md)
 - [Native Tool Integration Beats a Bolted-On Tool the Model Can't Time](../concepts/native-tool-integration-beats-a-bolted-on-tool.md)
 - [Enforce Agent Rules in Git Hooks and CI, Not the Prompt](../concepts/enforce-agent-rules-in-git-hooks-and-ci-not-the-prompt.md)
@@ -1757,6 +1761,10 @@
 - [Separate Engine Latency From Network Latency in Voice Pipelines](../concepts/separate-engine-latency-from-network-latency-in-voice-pipelines.md)
 
 ## Workflows
+- [Have Agents Write Literate Explainer Docs for Their Changes](../concepts/have-agents-write-literate-explainer-docs-for-their-changes.md)
+- [Gate Agent Code on a Comprehension Quiz You Must Pass](../concepts/gate-agent-code-on-a-comprehension-quiz-you-must-pass.md)
+- [Build Ephemeral Microworlds to Feel How Code Works](../concepts/build-ephemeral-microworlds-to-feel-how-code-works.md)
+- [Understand Agent Work to Participate, Not Just to Verify](../concepts/understand-agent-work-to-participate-not-just-to-verify.md)
 - [Enforce Agent Rules in Git Hooks and CI, Not the Prompt](../concepts/enforce-agent-rules-in-git-hooks-and-ci-not-the-prompt.md)
 - [Lint Module Imports to Make Failure Classes Structurally Impossible](../concepts/lint-module-imports-to-make-failure-classes-structurally-impossible.md)
 - [Verify Spec Adherence With Executable, Readable BDD Scenarios](../concepts/verify-spec-adherence-with-executable-readable-bdd-scenarios.md)
