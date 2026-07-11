@@ -1,6 +1,8 @@
 # Concept Index
 
 ## Agents
+- [Automation Bias Turns Human-in-the-Loop Into a Rubber Stamp](../concepts/automation-bias-turns-human-in-the-loop-into-a-rubber-stamp.md)
+- [Engineer the Interaction, Not the Model, for Discernment](../concepts/engineer-the-interaction-not-the-model-for-discernment.md)
 - [Build Agent Harnesses Incrementally Up a Capability Ladder](../concepts/build-agent-harnesses-incrementally-up-a-capability-ladder.md)
 - [Pre-Bind Tool Arguments to Give Agents Safe Autonomy](../concepts/pre-bind-tool-arguments-to-give-agents-safe-autonomy.md)
 - [Co-Design Agents to Write Natural-Language Queries for Strong Retrieval](../concepts/co-design-agents-to-write-natural-language-queries-for-strong-retrieval.md)
@@ -1010,6 +1012,8 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Engineer the Interaction, Not the Model, for Discernment](../concepts/engineer-the-interaction-not-the-model-for-discernment.md)
+- [Treat Every Human-AI Interaction as a Training Label](../concepts/treat-every-human-ai-interaction-as-a-training-label.md)
 - [Rescope Ambition Down a Tier as Models Improve](../concepts/rescope-ambition-down-a-tier-as-models-improve.md)
 - [Think Wider, Not Bigger: Compete on Breadth via User Extensibility](../concepts/think-wider-not-bigger-compete-on-breadth-via-extensibility.md)
 - [Dogfood the Same Stack You Ship to Developers](../concepts/dogfood-the-same-stack-you-ship-to-developers.md)
@@ -1074,6 +1078,8 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Automation Bias Turns Human-in-the-Loop Into a Rubber Stamp](../concepts/automation-bias-turns-human-in-the-loop-into-a-rubber-stamp.md)
+- [Treat Every Human-AI Interaction as a Training Label](../concepts/treat-every-human-ai-interaction-as-a-training-label.md)
 - [Retrieval, Not Reasoning, Is the Knowledge-Work Bottleneck](../concepts/retrieval-not-reasoning-is-the-knowledge-work-bottleneck.md)
 - [Behavioral Evals Cannot Catch Sleeper-Agent Backdoors](../concepts/behavioral-evals-cannot-catch-sleeper-agent-backdoors.md)
 - [Detect Fine-Tuning Backdoors With an Activation-Difference SAE](../concepts/detect-fine-tuning-backdoors-with-an-activation-difference-sae.md)

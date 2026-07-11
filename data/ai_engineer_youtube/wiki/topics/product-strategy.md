@@ -44,6 +44,8 @@ When the product *is* the agent platform, two more strategy choices come to the 
 
 A closing-keynote provocation reframes ambition-sizing itself as the strategic variable. Theo Browne argues that each model jump (framed as tool-call → long-running-task → orchestration eras) doesn't just make the same work faster — it shifts what scope a solo builder or small team can own down one tier, so a former startup becomes a side project and a whole class of former services collapses to a "markdown file on a cron" piped to an agent. The strategic response is to *rescope ambition up* to whatever now feels oversized ("if your idea doesn't feel stupid, it's not big enough"), because the gain is wasted on work the previous model already handled. He also reframes "bigger" as "wider": AI collapses the cost of *breadth*, so small teams can span an incumbent's surface area (build a database platform in a day or two of prompting) if they architect for user-driven extensibility — cover enough of the spectrum to onboard most users, then let users build the vertical features you don't support (Slack accidentally became "the platform people run their agents in" because it was the right *shape*, not the most complete product). This is the demand-side complement to build-for-a-multimodel-market and workflow-wrapper moats: the same commoditizing capability that erodes a thin prompt-box also lowers the cost of owning wide, extensible product surface.
 
+Angel Ortmann Lee (Duolingo) makes the interaction surface itself a strategic lever, not just a UX finish. Her thesis is that "every AI system trains its users, the question is whether you're doing it deliberately": the interaction loop is a compounding flywheel (model → interaction → human behavior → data → evals → model), so how you frame a decision determines both how good the human's judgment is *and* what data you can learn from. Two product-design principles generalize. First, **match friction to the stakes** — high-consequence flows should add deliberate review gates so a human never becomes a rubber stamp, while low-oversight delightful surfaces should be frictionless; the same AI output can be surfaced as an overwhelming wall of text or as a hover-for-detail markup UI, and the surfacing is the product decision. Second, treat every interaction as an already-existing label and design it to capture honest, structured signals (splitting conflated yes/no questions, capturing the diff a user actually made, collecting explicit feedback at the right touch points) so the product improves itself. The strategic point echoes "nail deterministic UX before probabilistic delight" and "earn trust before delight," but sharpens it: the highest-leverage fix for an underperforming AI product is often the interaction design, not a better model or more human oversight.
+
 ## Key Concepts
 
 - [AI Does Not Replace Shareable Product Marketing](../concepts/ai-does-not-replace-shareable-product-marketing.md) - launch content only matters when it can earn attention and social sharing.
@@ -108,6 +110,8 @@ A closing-keynote provocation reframes ambition-sizing itself as the strategic v
 - [Plan AI Reliability Risk Inside Product Work](../concepts/plan-ai-reliability-risk-inside-product-work.md) - product planning should include AI evals, testing, prototypes, and reliability thresholds.
 - [Rescope Ambition Down a Tier as Models Improve](../concepts/rescope-ambition-down-a-tier-as-models-improve.md) - each capability jump shifts what a small team can own down a tier, so attempt what was "too big."
 - [Think Wider, Not Bigger: Compete on Breadth via User Extensibility](../concepts/think-wider-not-bigger-compete-on-breadth-via-extensibility.md) - AI collapses the cost of breadth, so architect for user-built extensions instead of matching a giant's depth.
+- [Engineer the Interaction, Not the Model, for Discernment](../concepts/engineer-the-interaction-not-the-model-for-discernment.md) - the interaction surface is a product lever: reframe the human as investigator, surface assumptions and tradeoffs, and match friction to the stakes.
+- [Treat Every Human-AI Interaction as a Training Label](../concepts/treat-every-human-ai-interaction-as-a-training-label.md) - design the interaction as a compounding data flywheel that captures honest structured labels instead of skewed accept/reject clicks.
 
 ## Open Questions
 
@@ -125,6 +129,7 @@ A closing-keynote provocation reframes ambition-sizing itself as the strategic v
 
 ## Sources
 
+- [Build AI Systems for Discernment, Not Approval - Angel Ortmann Lee, Duolingo](../sources/20260707_CDqzWpwkSls.md)
 - [The Golden Age of AI Engineering — Alexander Embiricos & Romain Huet & Peter Steinberger, OpenAI](../sources/20260709_pMggiOb18tc.md)
 - [Building the platform for agent coordination - Tom Moor, Linear](../sources/20250728_UG9IAdmi2Dg.md)
 - [Designing AI-Intensive Applications - swyx](../sources/20250809_IHkyFhU6JEY.md)
