@@ -593,6 +593,8 @@
 - [Spec-driven development turns prompts into requirements, design, and tasks](../concepts/spec-driven-development-turns-prompts-into-requirements-design-and-tasks.md)
 - [Translate structured requirements into property-based tests](../concepts/translate-structured-requirements-into-property-based-tests.md)
 - [Keep spec artifacts feature-scoped, mutable, and context-backed](../concepts/keep-spec-artifacts-feature-scoped-mutable-and-context-backed.md)
+- [Spec-driven development is a tool-portable pattern, not a single product](../concepts/spec-driven-development-is-a-tool-portable-pattern.md)
+- [Reorder the generated task list to ship an MVP first](../concepts/reorder-the-generated-task-list-to-ship-an-mvp-first.md)
 - [Ralph loops process one ticket at a time with fresh context](../concepts/ralph-loops-process-one-ticket-at-a-time-with-fresh-context.md)
 - [Use Reviewer and Approver Roles To Make Agent Workflows Reliable](../concepts/use-reviewer-and-approver-roles-to-make-agent-workflows-reliable.md)
 - [Reusable Routines Turn Prompts Into Operational Agent Workflows](../concepts/reusable-routines-turn-prompts-into-operational-agent-workflows.md)
@@ -1878,6 +1880,7 @@
 - [Enterprise deep research needs trustworthy retrieval and governance controls](../concepts/enterprise-deep-research-needs-trustworthy-retrieval-and-governance-controls.md)
 - [Split exploratory research agents from constrained writing workflows](../concepts/split-exploratory-research-agents-from-constrained-writing-workflows.md)
 - [Orchestrate Generative Media From a Real-Time Voice Agent via Tool Use](../concepts/orchestrate-generative-media-from-a-realtime-voice-agent.md)
+- [Spec-driven development is a tool-portable pattern, not a single product](../concepts/spec-driven-development-is-a-tool-portable-pattern.md)
 
 ## Voice Agents
 
@@ -2103,6 +2106,8 @@
 - [Spec-driven development turns prompts into requirements, design, and tasks](../concepts/spec-driven-development-turns-prompts-into-requirements-design-and-tasks.md)
 - [Translate structured requirements into property-based tests](../concepts/translate-structured-requirements-into-property-based-tests.md)
 - [Keep spec artifacts feature-scoped, mutable, and context-backed](../concepts/keep-spec-artifacts-feature-scoped-mutable-and-context-backed.md)
+- [Spec-driven development is a tool-portable pattern, not a single product](../concepts/spec-driven-development-is-a-tool-portable-pattern.md)
+- [Reorder the generated task list to ship an MVP first](../concepts/reorder-the-generated-task-list-to-ship-an-mvp-first.md)
 - [Configure Agent Modes, Rules, and Permissions as the Workflow Evolves](../concepts/configure-agent-modes-rules-and-permissions-as-the-workflow-evolves.md)
 - [Treat Multi-Agent Systems As Distributed Systems](../concepts/treat-multi-agent-systems-as-distributed-systems.md)
 - [Use Durable Execution for Production Agent Loops](../concepts/use-durable-execution-for-production-agent-loops.md)

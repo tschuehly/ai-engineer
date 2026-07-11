@@ -328,6 +328,8 @@ Matt Pocock supplies the authoring craft beneath the skills that make up much of
 - [Spec-driven development turns prompts into requirements, design, and tasks](../concepts/spec-driven-development-turns-prompts-into-requirements-design-and-tasks.md) - spec artifacts make coding-agent work reviewable before implementation.
 - [Translate structured requirements into property-based tests](../concepts/translate-structured-requirements-into-property-based-tests.md) - acceptance criteria can become executable invariants for agent-generated code.
 - [Keep spec artifacts feature-scoped, mutable, and context-backed](../concepts/keep-spec-artifacts-feature-scoped-mutable-and-context-backed.md) - spec folders should stay current, scoped, and enriched with the right context.
+- [Spec-driven development is a tool-portable pattern, not a single product](../concepts/spec-driven-development-is-a-tool-portable-pattern.md) - the requirements→design→tasks discipline runs manually, via Spec Kit, or via Kiro; the value is the artifact chain plus human review, not lock-in.
+- [Reorder the generated task list to ship an MVP first](../concepts/reorder-the-generated-task-list-to-ship-an-mvp-first.md) - front-load the top few tasks into an MVP so a running slice appears before the full spec is implemented.
 - [Ralph loops process one ticket at a time with fresh context](../concepts/ralph-loops-process-one-ticket-at-a-time-with-fresh-context.md) - simple repeated ticket execution can ship more reliably than broad multi-agent plans.
 - [Repo-local Markdown tasks give agents durable scoped work units](../concepts/repo-local-markdown-tasks-give-agents-durable-scoped-work-units.md) - versioned task files preserve scope, state, and acceptance criteria outside one long agent chat.
 - [Review coding-agent work at task, plan, and code checkpoints](../concepts/review-coding-agent-work-at-task-plan-and-code-checkpoints.md) - early task and plan review catches wrong intent before implementation expands.
@@ -521,6 +523,7 @@ Matt Pocock supplies the authoring craft beneath the skills that make up much of
 - [Why Agent Hype can fall short of reality - Joel Becker, METR](../sources/20251224_RhfqQKe22ZA.md)
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md)
 - [Spec-Driven Development: Agentic Coding at FAANG Scale and Quality - Al Harris, Amazon Kiro](../sources/20260109_HY_JyxAZsiE.md)
+- [Using Spec-Driven Development for Production Workflows - Erik Hanchett, AWS](../sources/20260628_IddXPepIAS4.md)
 - [How METR measures Long Tasks and Experienced Open Source Dev Productivity - Joel Becker, METR](../sources/20260119_k1t2xyWMUdY.md)
 - [Ralph Loops: Build Dumb AI Loops That Ship - Chris Parsons, Cherrypick](../sources/20260504_2TLXsxkz0zI.md)
 - [Mergeable by default: Building the context engine to save time and tokens — Peter Werry, Unblocked](../sources/20260503_5ID22ACI7IM.md)

@@ -353,6 +353,7 @@ Skills are themselves a tool surface, and Matt Pocock's authoring rubric makes o
 - [Feed Agents Diverse and Conflicting Tool Signals to Broaden Exploration](../concepts/feed-agents-diverse-and-conflicting-tool-signals-to-broaden-exploration.md) - give the agent the best answer, the human-likely one, and a beginner heuristic so it explores and explains wrong options, not just the optimum.
 - [Give Agents a Persistent-State REPL Instead of Many Tools](../concepts/give-agents-a-persistent-state-repl-instead-of-many-tools.md) - collapse many narrow tools into one sandboxed REPL (code mode + persistent state) so the agent composes them in one call, builds on prior variables, and gains capabilities via type defs, not new schema.
 - [Build High-Fidelity Engines to Create Verification Loops in Non-Code Domains](../concepts/build-high-fidelity-engines-to-create-verification-loops-in-non-code-domains.md) - build the calculation/render engine yourself to give a non-code domain the compile/lint/test feedback loop agents thrive on — and make it high fidelity or it backfires.
+- [Spec-driven development is a tool-portable pattern, not a single product](../concepts/spec-driven-development-is-a-tool-portable-pattern.md) - the requirements→design→tasks pattern is delivered by several tools (Kiro's spec/plan modes, GitHub's open-source Spec Kit) or none at all, so it is not vendor-locked.
 
 ## Open Questions
 
@@ -469,6 +470,7 @@ Skills are themselves a tool surface, and Matt Pocock's authoring rubric makes o
 - [Your MCP Server is Bad (and you should feel bad) - Jeremiah Lowin, Prefect](../sources/20260112_96G7FLab8xc.md)
 - [OpenAI + @Temporalio : Building Durable, Production Ready Agents - Cornelia Davis, Temporal](../sources/20260112_k8cnVCMYmNc.md)
 - [Spec-Driven Development: Agentic Coding at FAANG Scale and Quality - Al Harris, Amazon Kiro](../sources/20260109_HY_JyxAZsiE.md)
+- [Using Spec-Driven Development for Production Workflows - Erik Hanchett, AWS](../sources/20260628_IddXPepIAS4.md)
 - [Building durable Agents with Workflow DevKit & AI SDK - Peter Wielander, Vercel](../sources/20260106_kmV-qg4uoNI.md)
 - [Claude Agent SDK [Full Workshop] - Thariq Shihipar, Anthropic](../sources/20260105_TqC1qOfiVcQ.md)
 - [Building Intelligent Research Agents with Manus - Ivan Leo, Manus AI (now Meta Superintelligence)](../sources/20251230_xz0-brt56L8.md)
