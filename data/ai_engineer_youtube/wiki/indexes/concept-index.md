@@ -445,6 +445,8 @@
 
 ## Coding Agents
 
+- [Stage Agentic-Engineering Adoption With a Delegation Maturity Model](../concepts/stage-agentic-engineering-adoption-with-a-delegation-maturity-model.md)
+- [Drive Org-Wide Agentic Adoption Through Champions and AI-Ready Repos](../concepts/drive-org-wide-agentic-adoption-through-champions-and-ai-ready-repos.md)
 - [Cut Coding-Agent Cost by Fixing the Input, Not the Model or Output](../concepts/cut-coding-agent-cost-by-fixing-the-input-not-the-model-or-output.md)
 - [Insert a Local Code-Index Retrieval Layer Between the Codebase and the Coding Agent](../concepts/insert-a-local-code-index-retrieval-layer-between-codebase-and-agent.md)
 - [Optimize an Agent With a Branch-per-Hypothesis Coding-Agent Loop](../concepts/optimize-an-agent-with-a-branch-per-hypothesis-coding-agent-loop.md)
@@ -1973,6 +1975,8 @@
 - [Separate Engine Latency From Network Latency in Voice Pipelines](../concepts/separate-engine-latency-from-network-latency-in-voice-pipelines.md)
 
 ## Workflows
+- [Stage Agentic-Engineering Adoption With a Delegation Maturity Model](../concepts/stage-agentic-engineering-adoption-with-a-delegation-maturity-model.md)
+- [Drive Org-Wide Agentic Adoption Through Champions and AI-Ready Repos](../concepts/drive-org-wide-agentic-adoption-through-champions-and-ai-ready-repos.md)
 - [Design AI Systems Requirements-First With a Four-Phase Framework](../concepts/design-ai-systems-requirements-first-with-a-four-phase-framework.md)
 - [Layer AI Application Metrics From Guardrail Compliance to System Health](../concepts/layer-ai-application-metrics-from-guardrail-compliance-to-system-health.md)
 - [Bridge ML Research to Production With a Taxonomy Handoff Document](../concepts/bridge-ml-research-to-production-with-a-taxonomy-handoff-document.md)

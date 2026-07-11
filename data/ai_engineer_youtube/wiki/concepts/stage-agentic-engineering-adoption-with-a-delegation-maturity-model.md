@@ -1,0 +1,27 @@
+# Stage Agentic-Engineering Adoption With a Delegation Maturity Model
+
+Summary: Measure and drive an engineering org's agentic transformation with a Stage 0–5 ladder that ranks each engineer by their delegation and orchestration *relationship* with AI agents, not by whether they use AI at all — because high IDE-level usage can produce no faster shipping.
+
+Use when:
+- Diagnosing why broad AI-tool adoption has not translated into faster delivery.
+- Defining a concrete target and measurement axis for an agentic-engineering rollout across many teams.
+
+Details:
+- The gap that motivates the model: within months ~90% of Block's engineers used Goose and Claude Code, and metrics plus token bills proved it, yet "features certainly weren't making it to our customers any faster" because usage was stuck at IDE-level autocomplete and chat. Framed as three enablement phases — experimentation, adoption, impact — where 90% usage clears experimentation but not impact. (00:57-01:51)
+- The target state is defined by *how work is produced*, not tool presence: engineers "leverage AI agents as their primary means of producing engineering outcomes" — decomposing problems, delegating, and reviewing/verifying — as their default way of operating. (02:28-03:03)
+- The ladder measures how engineers "think and delegate and orchestrate" (reorganized with help from Steve Yegge's "Gas Town" article): **Stage 0** no AI in the workflow; **Stage 1** AI autocomplete only, never agent mode; **Stage 2** chatting with agents but producing no PRs; **Stage 3** delegating tasks to agents and reviewing the output; **Stage 4** running multiple agents in parallel; **Stage 5** ("final boss") delegating complete tasks where the agent produces shippable results without the human needing to guide it. (03:03-04:10)
+- Placement is the planning tool: the bulk of 3,500 engineers sat at Stage 1–2, and the stated goal was to move them to Stage 5 — the ladder both locates the org and names the next rung to climb. (04:10-04:18)
+- The model is a *relationship/capability* axis, complementary to outcome dashboards: it explains why usage and token-bill metrics can look "all in on AI" while shipping velocity is flat, so it should be paired with outcome measurement rather than replacing it.
+
+Related topics:
+- [Coding Agents](../topics/coding-agents.md)
+- [Workflows](../topics/workflows.md)
+
+Related concepts:
+- [Drive Org-Wide Agentic Adoption Through Champions and AI-Ready Repos](drive-org-wide-agentic-adoption-through-champions-and-ai-ready-repos.md)
+- [Measure Feature Adoption Not Shipping Velocity](measure-feature-adoption-not-shipping-velocity.md)
+- [Measure AI Transformation by Outcomes Instead of Adoption](measure-ai-transformation-by-outcomes-instead-of-adoption.md)
+- [Universal AI Adoption Changes Engineering Coordination](universal-ai-adoption-changes-engineering-coordination.md)
+
+Sources:
+- [Building an Autonomous Engineering Org - Angie Jones, Agentic AI Foundation](../sources/20260628_whue9_YquGA.md), 00:57-04:18
