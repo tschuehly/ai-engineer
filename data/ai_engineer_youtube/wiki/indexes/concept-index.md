@@ -990,6 +990,7 @@
 
 ## Inference
 
+- [Shard Cache-Augmented Generation Into Parallel Buckets With a Supervisor](../concepts/shard-cache-augmented-generation-into-parallel-buckets-with-a-supervisor.md)
 - [Hit Soft-Realtime Latency With a Fast Model, Eager Inference, and Prefix Caching](../concepts/hit-realtime-latency-with-fast-models-eager-inference-and-prefix-caching.md)
 - [LLM Inference Is Non-Deterministic Even at Temperature Zero](../concepts/llm-inference-is-non-deterministic-even-at-temperature-zero.md)
 - [Verification Guardrails Let You Downshift to Cheaper Models](../concepts/verification-guardrails-let-you-downshift-to-cheaper-models.md)
@@ -1561,6 +1562,8 @@
 - [Size the Voice-Agent LLM to the Time-to-First-Token Budget](../concepts/size-the-voice-agent-llm-to-the-time-to-first-token-budget.md)
 
 ## Retrieval
+- [Shard Cache-Augmented Generation Into Parallel Buckets With a Supervisor](../concepts/shard-cache-augmented-generation-into-parallel-buckets-with-a-supervisor.md)
+- [Distribute Documents Across Cache Buckets in No Particular Order](../concepts/distribute-documents-across-cache-buckets-in-no-particular-order.md)
 - [Rank Agent Memory by Outcome Utility, Not Just Similarity](../concepts/rank-agent-memory-by-outcome-utility-not-just-similarity.md)
 - [Structure Documents Offline to Avoid the Multimodal Token Tax](../concepts/structure-documents-offline-to-avoid-the-multimodal-token-tax.md)
 - [Match Chunking Strategy to Document Type](../concepts/match-chunking-strategy-to-document-type.md)

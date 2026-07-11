@@ -36,6 +36,8 @@ Serverless GPU clouds add a deployment-ergonomics and unit-cost layer to serving
 
 At the opposite end of the cost curve, a framework-free local RAG chatbot (Abed Matini, Ogilvy) shows how little inference a well-engineered retrieval product needs: the whole system runs on CPU via Ollama with just two small models — a smallest chat model (Qwen 2.5 0.5B instruct, ~400MB) and a small embedding model (BGE) — no GPU required. Matini started at 7B, found it slower and too wordy, and dropped to 0.5B; his finding is that if you vet and clean the retrieved context before sending it, the smallest model gives good answers, hallucinates less, and safely abstains ("I don't have that information") instead of fabricating — a payoff that comes from moving work out of the model, including [structuring documents offline](../concepts/structure-documents-offline-to-avoid-the-multimodal-token-tax.md) so the model only ever sees clean, pre-chunked context.
 
+The KV cache can also become the retrieval substrate rather than only a decode-latency optimization. Cache Augmented Generation (CAG) loads a whole document set into a large-context model and caches the context by storing the model's KV matrix, and Orbis's Extended CAG (ECAG) runs many such caches in parallel as sharded "context buckets" behind a supervisor (see [Retrieval](retrieval.md)). This makes cache *lifetime* an explicit cost dial: KV cache is expensive to hold, so the operational lever is optimizing how long each cache lives against how often the underlying documents are replaced — the same time-to-live concern that shapes agentic KV-cache serving, applied to a knowledge-retrieval workload instead of an agent loop.
+
 ## Key Concepts
 
 - [Hit soft-realtime latency with a fast model, eager inference, and prefix caching](../concepts/hit-realtime-latency-with-fast-models-eager-inference-and-prefix-caching.md) - a latency-prioritized fast model with async handoff, eager 1-2 s inference, and stable prefix caching keep interactive experiences inside a ~1 s envelope.
@@ -99,6 +101,7 @@ At the opposite end of the cost curve, a framework-free local RAG chatbot (Abed 
 - [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md) - the memory-bound reason diffusion is ~10x lower latency, the big-batch throughput cost that keeps it out of production, and the on-device sweet spot.
 - [Generate Text by Iterative Denoising, Not Left-to-Right](../concepts/generate-text-by-iterative-denoising-not-left-to-right.md) - the non-autoregressive generation loop whose iterative refinement shapes its serving profile.
 - [Scale Text-Diffusion Quality With More Denoising Steps](../concepts/scale-text-diffusion-quality-with-more-denoising-steps.md) - denoising-step count is a predictable-latency test-time compute knob for diffusion endpoints.
+- [Shard Cache-Augmented Generation Into Parallel Buckets With a Supervisor](../concepts/shard-cache-augmented-generation-into-parallel-buckets-with-a-supervisor.md) - CAG/ECAG turn the stored KV matrix into a retrieval substrate whose cost is tuned by each cache's lifetime.
 
 ## Open Questions
 
@@ -151,3 +154,4 @@ At the opposite end of the cost curve, a framework-free local RAG chatbot (Abed 
 - [The Rise of Open Models in the Enterprise — Amir Haghighat, Baseten](../sources/20250724_3WV1vT0B0cg.md)
 - [The Future Is Domain-Specific Agents - Justin Schroeder, StandardAgents](../sources/20260629_spNAUEgq_A8.md)
 - [Bypassing the Multimodal Tax: Hybrid RAG, SQL RRF & UI Telemetry - Abed Matini, Ogilvy](../sources/20260628_Akm1sqvWG4A.md)
+- [When All Context Matters: Extended Cache Augmented Generation - Luis Romero-Sevilla, Orbis](../sources/20260628_XovaGv4f39A.md)
