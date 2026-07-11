@@ -1080,6 +1080,7 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Design AI Systems Requirements-First With a Four-Phase Framework](../concepts/design-ai-systems-requirements-first-with-a-four-phase-framework.md)
 - [Elicit Requirements as the Non-Automatable Bottleneck](../concepts/elicit-requirements-as-the-non-automatable-bottleneck.md)
 - [Capture AI-Build Requirements With Story Maps and User Stories](../concepts/capture-ai-build-requirements-with-story-maps-and-user-stories.md)
 - [Measure Feature Adoption, Not Shipping Velocity](../concepts/measure-feature-adoption-not-shipping-velocity.md)
@@ -1159,6 +1160,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Layer AI Application Metrics From Guardrail Compliance to System Health](../concepts/layer-ai-application-metrics-from-guardrail-compliance-to-system-health.md)
 - [Close the Eval-to-Action Loop So Signal Survives the Dashboard](../concepts/close-the-eval-to-action-loop-so-signal-survives-the-dashboard.md)
 - [Automate the Agent-Building Loop With an Agentic AI Engineer](../concepts/automate-the-agent-building-loop-with-an-agentic-ai-engineer.md)
 - [Diagnose Agent Failures With Code-Checkable Indicators and Sampling](../concepts/diagnose-agent-failures-with-code-checkable-indicators-and-sampling.md)
@@ -1945,6 +1947,8 @@
 - [Separate Engine Latency From Network Latency in Voice Pipelines](../concepts/separate-engine-latency-from-network-latency-in-voice-pipelines.md)
 
 ## Workflows
+- [Design AI Systems Requirements-First With a Four-Phase Framework](../concepts/design-ai-systems-requirements-first-with-a-four-phase-framework.md)
+- [Layer AI Application Metrics From Guardrail Compliance to System Health](../concepts/layer-ai-application-metrics-from-guardrail-compliance-to-system-health.md)
 - [Bridge ML Research to Production With a Taxonomy Handoff Document](../concepts/bridge-ml-research-to-production-with-a-taxonomy-handoff-document.md)
 - [Structure the ML Codebase as Decoupled Per-Researcher Microservices](../concepts/structure-the-ml-codebase-as-decoupled-per-researcher-microservices.md)
 - [Automate the Agent-Building Loop With an Agentic AI Engineer](../concepts/automate-the-agent-building-loop-with-an-agentic-ai-engineer.md)

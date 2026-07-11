@@ -8,6 +8,8 @@ The funnel is a useful operating model. Top-of-funnel work should create somethi
 
 AI-native product strategy also includes deciding where model behavior belongs in the experience. Invisible background work, ambient surfacing, inline artifact manipulation, conversational build flows, adaptive websites, and personalized creative pipelines carry different trust, interruption, and control costs. Teams should prototype those choices with runnable model probes because static screens cannot reveal whether the model is fast, accurate, aligned, awkward, or surprisingly capable in the proposed surface. Prototype energy still needs product restraint: a pile of model capabilities is not a product unless it is anchored to one reliable user outcome, earns trust in the first attempted job, exposes model edges honestly, and makes AI delight feel user-steered rather than like a trick.
 
+The product-judgment work also has a concrete front end in an AI system's requirements phase. Before any architecture is chosen, the durable move is to quantify a *solution-agnostic* business problem — user-specific, current state, quantified pain, and no prescribed agent/multi-agent shape — and to classify the role of AI along three axes (critical vs complementary, reactive vs proactive, level of autonomy) before writing 1–2 SMART success metrics tied to that problem. Naming who the user is, what they do today, and by how much it hurts keeps the eventual system anchored to a reliable outcome rather than a pile of model capabilities, and treating denial-type or high-consequence steps as human-mandatory caps autonomy at the level the domain actually allows. This is the product-strategy foundation that the four-phase [requirements-first design framework](../concepts/design-ai-systems-requirements-first-with-a-four-phase-framework.md) builds on.
+
 AI intensity gives product teams another product-shape lens: compare how much valuable output the system can produce for each human steering action. A higher ratio is not automatically better; it is useful only when the output is valuable, reviewable, and not annoying to control.
 
 AI startup strategy should also assume that raw model capability is a moving commodity surface. The product moat is less likely to be a generic prompt box on one model and more likely to be a thick workflow wrapper: domain knowledge, automatic context collection, model orchestration, output presentation, review affordances, and execution speed that keeps improving as models get cheaper and stronger.
@@ -62,6 +64,7 @@ Balázs Horváth (VisualLabs) locates the durable product work upstream of all o
 
 ## Key Concepts
 
+- [Design AI Systems Requirements-First With a Four-Phase Framework](../concepts/design-ai-systems-requirements-first-with-a-four-phase-framework.md) - the requirements phase (solution-agnostic business problem, constraints, role-of-AI along three dimensions, SMART success metric) is where product judgment enters before code and architecture.
 - [Treat AI as an Interface Technology That Removes Human Burden](../concepts/treat-ai-as-an-interface-technology-that-removes-human-burden.md) - the interface is the product lever; make the AI participate and pick the channel/timing so the human stops packaging every turn.
 - [Treat the Prompt as a Batch Protocol, Not a Conversation](../concepts/treat-the-prompt-as-a-batch-protocol-not-a-conversation.md) - channel/expression/protocol frame: LLMs exploded expression but the prompt kept the punch-card batch protocol, so "prompt engineering" hides an unchanged interaction.
 - [Explain an AI Product as a Wound → Click → Transformation Story](../concepts/explain-ai-products-as-a-wound-click-transformation-story.md) - complex AI products get understood and bought when pitched as pain → instant click → proven before/after, not as a category label.
@@ -192,3 +195,4 @@ Balázs Horváth (VisualLabs) locates the durable product work upstream of all o
 - [6 Things to Know about AIE World's Fair 2026](../sources/20260621_0S8xe9ftGTM.md)
 - [How to talk to statues — Joe Reeve, ElevenLabs](../sources/20260601_u-rJwPPU3QA.md)
 - [Everything we knew about software has changed — Theo Browne, @t3dotgg](../sources/20260708_xUnRQ9vLXxo.md)
+- [AI System Design: From Idea to Production - Apoorva Joshi, MongoDB](../sources/20260628_T0HhO4YtTfE.md)
