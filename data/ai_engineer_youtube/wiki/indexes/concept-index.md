@@ -1,6 +1,8 @@
 # Concept Index
 
 ## Agents
+- [Build Agent Harnesses Incrementally Up a Capability Ladder](../concepts/build-agent-harnesses-incrementally-up-a-capability-ladder.md)
+- [Pre-Bind Tool Arguments to Give Agents Safe Autonomy](../concepts/pre-bind-tool-arguments-to-give-agents-safe-autonomy.md)
 - [Co-Design Agents to Write Natural-Language Queries for Strong Retrieval](../concepts/co-design-agents-to-write-natural-language-queries-for-strong-retrieval.md)
 - [Think Wider, Not Bigger: Compete on Breadth via User Extensibility](../concepts/think-wider-not-bigger-compete-on-breadth-via-extensibility.md)
 - [Converge Agent Fleets on Cluster-Scheduling Primitives](../concepts/converge-agent-fleets-on-cluster-scheduling-primitives.md)
@@ -412,6 +414,8 @@
 
 ## Coding Agents
 
+- [Invest in the Harness to Run Weaker and Local Models](../concepts/invest-in-the-harness-to-run-weaker-and-local-models.md)
+- [Build Agent Harnesses Incrementally Up a Capability Ladder](../concepts/build-agent-harnesses-incrementally-up-a-capability-ladder.md)
 - [Rescope Ambition Down a Tier as Models Improve](../concepts/rescope-ambition-down-a-tier-as-models-improve.md)
 - [Reject Skeuomorphic Dev Tooling and Legacy Workflow Constraints](../concepts/reject-skeuomorphic-dev-tooling-and-legacy-constraints.md)
 - [Give Your Agent Eyes With a Product-Specific Observation Tool](../concepts/give-your-agent-eyes-with-a-product-specific-observation-tool.md)
@@ -1577,6 +1581,7 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Pre-Bind Tool Arguments to Give Agents Safe Autonomy](../concepts/pre-bind-tool-arguments-to-give-agents-safe-autonomy.md)
 - [Give Your Agent Eyes With a Product-Specific Observation Tool](../concepts/give-your-agent-eyes-with-a-product-specific-observation-tool.md)
 - [Wrap Agent Completion in an Automatic Deterministic Verification Gate](../concepts/wrap-agent-completion-in-an-automatic-deterministic-verification-gate.md)
 - [Standardize the Editor–Agent Boundary With a Client-Agent Protocol](../concepts/standardize-the-editor-agent-boundary-with-a-client-agent-protocol.md)

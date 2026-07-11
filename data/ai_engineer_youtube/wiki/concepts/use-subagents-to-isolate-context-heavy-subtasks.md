@@ -14,6 +14,7 @@ Details:
 - Amp's named examples include a finder for codebase search with a limited tool set and smaller model, an oracle for slower deep reasoning, a librarian for dependency/framework context, and a codemod-oriented agent for large refactors. (07:30-09:06)
 - The pattern qualifies generic subagent guidance: role-specific model, tool, and permission choices matter, but context isolation is also a first-order reason to introduce a subagent.
 - A Codex CLI retrofit shows the same context-isolation pattern can be approximated with a wrapper script that launches a child agent process and returns only the child answer to the parent session. 01:35-03:22
+- Aditya Bhargava (Etsy) reaches the same conclusion from the tool-selection side: agents fail not only from context bloat but from "too many unrelated concepts in their context" and "too many tools that are unrelated," which makes it hard to pick the right tool. Grouping tools under sub-agents makes selection cleaner — the top agent just "picks the sub-agent you want to call" and each sub-agent owns a coherent tool set. In his framing a sub-agent is "just another function" you call like a tool (its own LLM call, its own tools, callable in parallel), so context isolation adds capability "without bloating context." ([Aditya Bhargava](../sources/20260707_2e9ANoOEn28.md), 21:29-25:21)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -29,3 +30,4 @@ Related concepts:
 Sources:
 - [Amp Code: Next Generation AI Coding - Beyang Liu, Amp Code](../sources/20251222_gvIAkmZUEZY.md), 06:00-09:06
 - [Hacking Subagents Into Codex CLI - Brian John, Betterup](../sources/20251124_5eJqXtevlXg.md), 01:35-03:22
+- [What if the harness mattered more than the model? - Aditya Bhargava, Etsy](../sources/20260707_2e9ANoOEn28.md), 21:29-25:21
