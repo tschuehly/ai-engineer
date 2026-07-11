@@ -425,6 +425,7 @@
 
 ## Coding Agents
 
+- [Capture AI-Build Requirements With Story Maps and User Stories](../concepts/capture-ai-build-requirements-with-story-maps-and-user-stories.md)
 - [Staff Agent Operations With a Team of Agents](../concepts/staff-agent-operations-with-a-team-of-agents.md)
 - [Capability Overhang: Tools Decide Which Model Spikes You Reach](../concepts/capability-overhang-tools-decide-which-model-spikes-you-reach.md)
 - [Shrink the System Prompt and Drop Examples as Models Improve](../concepts/shrink-the-system-prompt-and-drop-examples-as-models-improve.md)
@@ -1038,6 +1039,9 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Elicit Requirements as the Non-Automatable Bottleneck](../concepts/elicit-requirements-as-the-non-automatable-bottleneck.md)
+- [Capture AI-Build Requirements With Story Maps and User Stories](../concepts/capture-ai-build-requirements-with-story-maps-and-user-stories.md)
+- [Measure Feature Adoption, Not Shipping Velocity](../concepts/measure-feature-adoption-not-shipping-velocity.md)
 - [Treat AI as an Interface Technology That Removes Human Burden](../concepts/treat-ai-as-an-interface-technology-that-removes-human-burden.md)
 - [Treat the Prompt as a Batch Protocol, Not a Conversation](../concepts/treat-the-prompt-as-a-batch-protocol-not-a-conversation.md)
 - [Distribute MCP Apps Through Stores and Dynamic Discovery](../concepts/distribute-mcp-apps-through-stores-and-dynamic-discovery.md)
