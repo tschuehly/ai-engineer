@@ -760,6 +760,8 @@
 ## Edge Inference
 
 - [Use edge inference when latency, privacy, offline access, or token cost dominate](../concepts/use-edge-inference-when-latency-privacy-offline-access-or-token-cost-dominate.md)
+- [Right-size models with prototype-big, deploy-small](../concepts/right-size-models-with-prototype-big-deploy-small.md)
+- [Close the small-model gap with prompt variants and harness post-processing](../concepts/close-the-small-model-gap-with-prompt-variants-and-harness-post-processing.md)
 - [Decide open-model ownership by capability, hardware, latency, and cost thresholds](../concepts/decide-open-model-ownership-by-capability-hardware-latency-and-cost-thresholds.md)
 - [Treat edge models as their own architecture class](../concepts/treat-edge-models-as-their-own-architecture-class.md)
 - [Route Gemma 4 model variants by deployment and workflow shape](../concepts/route-gemma-4-model-variants-by-deployment-and-workflow-shape.md)
@@ -1137,6 +1139,9 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Right-size models with prototype-big, deploy-small](../concepts/right-size-models-with-prototype-big-deploy-small.md)
+- [LLM judges show self-preference and family bias](../concepts/llm-judges-show-self-preference-and-family-bias.md)
+- [Close the small-model gap with prompt variants and harness post-processing](../concepts/close-the-small-model-gap-with-prompt-variants-and-harness-post-processing.md)
 - [Record and Replay Agent Runs at Node Boundaries](../concepts/record-and-replay-agent-runs-at-node-boundaries.md)
 - [Turn Recorded Agent Traces Into Free Replay Test Cases](../concepts/turn-recorded-agent-traces-into-free-replay-test-cases.md)
 - [LLM Inference Is Non-Deterministic Even at Temperature Zero](../concepts/llm-inference-is-non-deterministic-even-at-temperature-zero.md)
@@ -1409,6 +1414,7 @@
 
 ## Models
 
+- [Right-size models with prototype-big, deploy-small](../concepts/right-size-models-with-prototype-big-deploy-small.md)
 - [Capability Overhang: Tools Decide Which Model Spikes You Reach](../concepts/capability-overhang-tools-decide-which-model-spikes-you-reach.md)
 - [Train a Small Retrieval Agent With SFT Plus Search-Reward RL](../concepts/train-a-small-retrieval-agent-with-sft-and-search-reward-rl.md)
 - [Detect Fine-Tuning Backdoors With an Activation-Difference SAE](../concepts/detect-fine-tuning-backdoors-with-an-activation-difference-sae.md)
