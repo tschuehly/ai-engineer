@@ -1,6 +1,7 @@
 # Concept Index
 
 ## Agents
+- [Design LLM-native interactive experiences around narrative state, not numeric mechanics](../concepts/design-llm-native-experiences-around-narrative-state-not-numbers.md)
 - [Optimize an Agent With a Branch-per-Hypothesis Coding-Agent Loop](../concepts/optimize-an-agent-with-a-branch-per-hypothesis-coding-agent-loop.md)
 - [Promote Validated Live-Trace Failure Clusters Into the Golden Dataset](../concepts/promote-validated-live-trace-failure-clusters-into-the-golden-dataset.md)
 - [Close the Eval-to-Action Loop So Signal Survives the Dashboard](../concepts/close-the-eval-to-action-loop-so-signal-survives-the-dashboard.md)
@@ -777,6 +778,7 @@
 
 ## Edge Inference
 
+- [Keep inference off the microcontroller: build the AI-native device as a thin client over a backend](../concepts/keep-inference-off-the-microcontroller-thin-device-over-a-backend.md)
 - [Use edge inference when latency, privacy, offline access, or token cost dominate](../concepts/use-edge-inference-when-latency-privacy-offline-access-or-token-cost-dominate.md)
 - [Right-size models with prototype-big, deploy-small](../concepts/right-size-models-with-prototype-big-deploy-small.md)
 - [Close the small-model gap with prompt variants and harness post-processing](../concepts/close-the-small-model-gap-with-prompt-variants-and-harness-post-processing.md)
@@ -799,6 +801,7 @@
 
 ## Infrastructure
 
+- [Keep inference off the microcontroller: build the AI-native device as a thin client over a backend](../concepts/keep-inference-off-the-microcontroller-thin-device-over-a-backend.md)
 - [Structure the ML Codebase as Decoupled Per-Researcher Microservices](../concepts/structure-the-ml-codebase-as-decoupled-per-researcher-microservices.md)
 - [Bridge ML Research to Production With a Taxonomy Handoff Document](../concepts/bridge-ml-research-to-production-with-a-taxonomy-handoff-document.md)
 - [Choose a Document-Extraction Tier by Cost, Determinism, and Scale](../concepts/choose-document-extraction-tier-by-cost-determinism-and-scale.md)
@@ -1057,6 +1060,7 @@
 ## Generative Media
 
 - [Anchor Generative Asset Cohesion on One Key-Art Image](../concepts/anchor-generative-asset-cohesion-on-one-key-art-image.md)
+- [Design LLM-native interactive experiences around narrative state, not numeric mechanics](../concepts/design-llm-native-experiences-around-narrative-state-not-numbers.md)
 - [Drive Game NPCs and Difficulty With Runtime LLMs](../concepts/drive-game-npcs-and-difficulty-with-runtime-llms.md)
 - [Automate a Nightly Generate-and-Publish Media Pipeline With Sampled QA](../concepts/automate-a-nightly-generate-and-publish-media-pipeline-with-sampled-qa.md)
 - [Pair an LLM Narrator With a Domain Solver Via Tools](../concepts/pair-an-llm-narrator-with-a-domain-solver-via-tools.md)

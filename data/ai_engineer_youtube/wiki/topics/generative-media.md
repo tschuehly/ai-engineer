@@ -18,6 +18,7 @@ Games are becoming a generative-media surface in their own right. Meta's AI-game
 
 - [Anchor Generative Asset Cohesion on One Key-Art Image](../concepts/anchor-generative-asset-cohesion-on-one-key-art-image.md) - a single key-art image anchors art style and gameplay across a session so generated assets feel like one universe.
 - [Drive Game NPCs and Difficulty With Runtime LLMs](../concepts/drive-game-npcs-and-difficulty-with-runtime-llms.md) - an LLM running during play drives emergent NPC behavior and personalizes difficulty, newly viable because inference is fast/cheap.
+- [Design LLM-native interactive experiences around narrative state, not numeric mechanics](../concepts/design-llm-native-experiences-around-narrative-state-not-numbers.md) - an LLM-native game tracks mood, NPCs, and generated worlds as narrative state instead of HP and dice.
 - [Stack Additive Diffusion Optimizations for Real-Time Generation](../concepts/stack-additive-diffusion-optimizations-for-real-time-generation.md) - quantization, caching, and step distillation are incremental, combinable levers ordered from easy to most impactful.
 - [Quantize Diffusion Models for Memory and Throughput Despite Attention Heaviness](../concepts/quantize-diffusion-models-for-memory-and-throughput-despite-attention-heaviness.md) - the cheapest serving lever, with PTQ/QAT, static/dynamic, and pre-quantized-checkpoint choices.
 - [Cache Unchanged Computation Between Diffusion Denoising Steps](../concepts/cache-unchanged-computation-between-diffusion-denoising-steps.md) - inter-step similarity, not per-token reuse, is the cacheable signal in diffusion.
@@ -49,6 +50,7 @@ Games are becoming a generative-media surface in their own right. Meta's AI-game
 ## Sources
 
 - [Think You Can Build a Game with AI? Think Again! - Danielle An & David Hoe, Meta](../sources/20260708_grdoOC1BT1s.md)
+- [OpenClaw in Your Hand: Building a Physical AI Terminal - Lech Kalinowski, Callstack](../sources/20260628_akk6KRlcwW4.md)
 - [Running a Chess YouTube Channel entirely by AI — Stephan Steinfurt, TNG](../sources/20260708_BqZrTdgBaPw.md)
 - [You Might Not Need 50 Diffusion Steps — Ziv Ilan, Nvidia](../sources/20260616_gHs5ZiY80PM.md)
 - [Building Generative Image & Video models at Scale - Sander Dieleman, Google DeepMind](../sources/20260421_xOP1PM8fwnk.md)
