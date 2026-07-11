@@ -1,6 +1,8 @@
 # Concept Index
 
 ## Agents
+- [Build an Agentic Control Plane So the Model Proposes and the Platform Decides](../concepts/build-an-agentic-control-plane.md)
+- [Contain Retry Amplification Before It Becomes a Compute Incident](../concepts/contain-retry-amplification-in-agent-loops.md)
 - [Operate Agent Products as the Missing Post-Launch Layer](../concepts/operate-agent-products-as-the-missing-post-launch-layer.md)
 - [Staff Agent Operations With a Team of Agents](../concepts/staff-agent-operations-with-a-team-of-agents.md)
 - [Score Every Production Conversation to Judge Agent Health](../concepts/score-every-production-conversation-to-judge-agent-health.md)
@@ -764,6 +766,8 @@
 
 ## Infrastructure
 
+- [Build an Agentic Control Plane So the Model Proposes and the Platform Decides](../concepts/build-an-agentic-control-plane.md)
+- [Contain Retry Amplification Before It Becomes a Compute Incident](../concepts/contain-retry-amplification-in-agent-loops.md)
 - [The Frozen-Artifact Pipeline Is a Cost Constraint, Not a Law](../concepts/frozen-artifact-pipeline-is-a-cost-constraint-not-a-law.md)
 - [Deploy a Canonical Stem Plus Bounded Per-User Divergences](../concepts/deploy-a-canonical-stem-plus-bounded-per-user-divergences.md)
 - [Converge Agent Fleets on Cluster-Scheduling Primitives](../concepts/converge-agent-fleets-on-cluster-scheduling-primitives.md)

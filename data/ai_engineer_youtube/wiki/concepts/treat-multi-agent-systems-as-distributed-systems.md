@@ -11,6 +11,8 @@ Details:
 - Coordination complexity grows through pairwise relationships: five agents can create at least ten potential coordination paths, and each path can become a failure point, race condition, or state synchronization problem.
 - In the credit-decisioning example, a credit-score agent wrote an updated score, but a downstream risk agent read stale cached data and produced incorrect risk ratings; the root problem was cache invalidation and architecture, not prompt quality.
 - Multi-agent production work should include distributed-systems practices such as explicit coordination patterns, state lineage, handoff contracts, failure isolation, retries, and observability.
+- Meta Superintelligence Labs (Nishant Gupta) reaches the same conclusion from the infrastructure side: "AI agents should be treated as distributed systems… models are stochastic, infrastructure must be deterministic." Once multiple agents share state, familiar distributed-systems issues appear (stale reads, conflicting updates, context drift, inconsistent views), made worse when memory itself is probabilistic and retrieval-based — so "many multi-agent failures are actually consistency failures masquerading as reasoning failures," a direct generalization of the stale-cache credit-decisioning example above.
+- The reliability primitives map one-to-one from distributed systems onto agents rather than being invented anew: circuit breakers → tool isolation, rate limits → agent limits, retries → controlled recovery, resource quotas → cost governance, observability → agent tracing.
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -21,6 +23,9 @@ Related concepts:
 - [Choose choreography or orchestration by complexity and autonomy](choose-choreography-or-orchestration-by-complexity-and-autonomy.md)
 - [Use immutable versioned state for agent handoffs](use-immutable-versioned-state-for-agent-handoffs.md)
 - [Wrap agent calls with circuit breakers and compensation](wrap-agent-calls-with-circuit-breakers-and-compensation.md)
+- [Build an Agentic Control Plane So the Model Proposes and the Platform Decides](build-an-agentic-control-plane.md)
+- [Contain Retry Amplification Before It Becomes a Compute Incident](contain-retry-amplification-in-agent-loops.md)
 
 Sources:
 - [From Chaos to Choreography: Multi-Agent Orchestration Patterns That Actually Work - Sandipan Bhaumik](../sources/20260408_2czYyrTzILg.md), 01:32-05:28
+- [Deterministic Infra for Non-Deterministic AI Agents - Nishant Gupta, Meta Superintelligence Labs](../sources/20260629_APh1Vx0oLmQ.md), 04:23-06:26
