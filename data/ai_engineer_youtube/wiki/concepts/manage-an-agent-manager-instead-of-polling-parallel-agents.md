@@ -16,6 +16,8 @@ Details:
 - Real instance: a pinned "chief of staff" agent wakes every 10 minutes, coordinates GitHub work, and creates sidebar threads the human can jump into. (23:16-23:28)
 - Location independence is the next gap: once the manager is long-lived, "tying it to a laptop just feels wrong" — Codex can move work between hosts and Open Claw has a gateway and nodes, but "neither feels like the final form"; the manager should connect to any of your machines, know which work is cloud vs. local, and be steerable from Slack or wherever you are (Embiricos frames the same idea as removing the local/cloud distinction — "just have an agent… and it should figure out which environment is right"). (16:51-17:54, 23:38-24:29)
 - The forward-looking constraint: "models are advancing faster than the harnesses and organizations around them. Designing those things is the next engineering problem… The future is not 20 terminals. It's better loops." (24:37-24:57)
+- Independent field report of the same failure mode (Kyle Jaejun Lee, KRAFTON): a few tmux panes grew to six live contexts and "I'm not running agents anymore. I've become the scheduler, deciding who does what. I'm the memory, holding what every one of them is doing, and I'm the reviewer, checking all of it. One human, three roles, six contexts. It does not scale." ([I Run a Fleet of AI Agents Across Three Machines](../sources/20260708_4kYl2_mqmnQ.md), 00:45-01:28)
+- A concrete realization of the manager shape as a **scoped-context org hierarchy**: instead of a flat pile, structure agents as CEO/VP/manager/worker — "real entity types in the system. It is not a cute metaphor." Each is its own agent with its own scoped context and its own approval boundary; context flows down (each layer gets only the slice it needs), results flow back up, and the human reviews only what reaches the top — "instead of holding six contexts in my head, I hold exactly one." The design analogy is how a handful of executives run a company of thousands: they don't hold all of it, they separate context so each person sees only their slice. (20260708_4kYl2_mqmnQ, 01:28-02:12)
 - Relationship to the bottleneck: this delegation move is *why* attention becomes the binding constraint — see [Treat Human Attention as the Bottleneck for Agentic Work](treat-human-attention-as-the-agentic-bottleneck.md) (Steinberger frames the same tokens → compute → attention progression).
 
 Related topics:
@@ -29,6 +31,9 @@ Related concepts:
 - [Fractured Attention Becomes Usable With Delegated Agents](fractured-attention-becomes-usable-with-delegated-agents.md)
 - [Run parallel issue agents in sandboxes with review and merge loops](run-parallel-issue-agents-in-sandboxes-with-review-and-merge-loops.md)
 - [Manage AI agents like humans with commander's intent](manage-ai-agents-like-humans-with-commanders-intent.md)
+- [Converge agent fleets on cluster-scheduling primitives](converge-agent-fleets-on-cluster-scheduling-primitives.md)
+- [Externalize agent state to files and reset instead of compact](externalize-agent-state-to-files-and-reset-instead-of-compact.md)
 
 Sources:
 - [The Golden Age of AI Engineering — Alexander Embiricos & Romain Huet & Peter Steinberger, OpenAI](../sources/20260709_pMggiOb18tc.md), 16:51-17:54, 18:56-24:57
+- [I Run a Fleet of AI Agents Across Three Machines. Here's What Broke. - Kyle Jaejun Lee, KRAFTON](../sources/20260708_4kYl2_mqmnQ.md), 00:45-02:12

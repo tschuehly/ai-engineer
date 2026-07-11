@@ -17,6 +17,7 @@ Details:
 - Auth0 describes an async approval pattern for long-running agents: the agent initiates an authorization request for a risky operation, the user receives structured transaction details, and approval returns as an access token containing the exact approved details. 09:02-10:40
 - BlackRock's regulated financial-app framing argues for designing human-in-the-loop review first because compliance and four-eyes checks remain necessary even when agentic automation is tempting. 13:44-14:05
 - Kozlov's Cloudflare/Knock example wraps an `issueCard` tool in required human input, defers execution until approval, routes the approval webhook back to the correct durable object, and stores status so the same card cannot be provisioned twice. 15:58-18:44
+- Kyle Jaejun Lee (KRAFTON) runs a fleet-wide **review gateway** to catch plan drift as plans flow down an agent hierarchy: any layer that wants to act submits its plan and then blocks — "Nothing runs until I approve. And the second I approve, a hook fires the work off automatically." This collapses per-pane inspection into "One web inbox, one control point, I never walk into the work windows anymore," and as the fleet grows every machine sends its review requests over SSH into one main gateway hosted on an always-on box, "because… Your one point of control can't be a thing that falls asleep." ([I Run a Fleet of AI Agents Across Three Machines. Here's What Broke. - Kyle Jaejun Lee, KRAFTON](../sources/20260708_4kYl2_mqmnQ.md), 03:20-04:11, 07:04-07:27)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -37,3 +38,4 @@ Sources:
 - [Identity for AI Agents - Patrick Riley & Carlos Galan, Auth0](../sources/20260114_VSdV-AdSlis.md), 09:02-10:40
 - [How BlackRock Builds Custom Knowledge Apps at Scale — Vaibhav Page & Infant Vasanth, BlackRock](../sources/20250823_08mH36_NVos.md), 13:44-14:05
 - [Building Agents (the hard parts!) - Rita Kozlov, Cloudflare](../sources/20250723_j_TKDweOsYE.md), 15:58-18:44
+- [I Run a Fleet of AI Agents Across Three Machines. Here's What Broke. - Kyle Jaejun Lee, KRAFTON](../sources/20260708_4kYl2_mqmnQ.md), 03:20-04:11, 07:04-07:27

@@ -1,6 +1,8 @@
 # Concept Index
 
 ## Agents
+- [Converge Agent Fleets on Cluster-Scheduling Primitives](../concepts/converge-agent-fleets-on-cluster-scheduling-primitives.md)
+- [Externalize Agent State to Files and Reset Instead of Compact](../concepts/externalize-agent-state-to-files-and-reset-instead-of-compact.md)
 - [Manage an Agent Manager Instead of Polling Parallel Agents](../concepts/manage-an-agent-manager-instead-of-polling-parallel-agents.md)
 - [Manage AI Agents Like Humans With Commander's Intent](../concepts/manage-ai-agents-like-humans-with-commanders-intent.md)
 - [Preflight Agents Through a Business-Definitions Librarian](../concepts/preflight-agents-through-a-business-definitions-librarian.md)
@@ -407,7 +409,9 @@
 
 ## Coding Agents
 
+- [Converge Agent Fleets on Cluster-Scheduling Primitives](../concepts/converge-agent-fleets-on-cluster-scheduling-primitives.md)
 - [Dogfood the Same Stack You Ship to Developers](../concepts/dogfood-the-same-stack-you-ship-to-developers.md)
+- [Externalize Agent State to Files and Reset Instead of Compact](../concepts/externalize-agent-state-to-files-and-reset-instead-of-compact.md)
 - [Manage an Agent Manager Instead of Polling Parallel Agents](../concepts/manage-an-agent-manager-instead-of-polling-parallel-agents.md)
 - [Shape Agent Products as Chat-First With a Hands-On Surface](../concepts/shape-agent-products-as-chat-first-with-a-hands-on-surface.md)
 - [Route Each Change to the Proof It Needs](../concepts/route-each-change-to-the-proof-it-needs.md)
@@ -629,6 +633,7 @@
 ## Context Engineering
 
 - [Enforce Agent Rules in Git Hooks and CI, Not the Prompt](../concepts/enforce-agent-rules-in-git-hooks-and-ci-not-the-prompt.md)
+- [Externalize Agent State to Files and Reset Instead of Compact](../concepts/externalize-agent-state-to-files-and-reset-instead-of-compact.md)
 - [Curate Context Strategically Because Models Drop the Middle](../concepts/curate-context-strategically-because-models-drop-the-middle.md)
 - [Mine Agent Conversation History to Generate Missing Skills](../concepts/mine-agent-conversation-history-to-generate-missing-skills.md)
 - [Codebase Intelligence Needs Structural and Historical Signals](../concepts/codebase-intelligence-needs-structural-and-historical-signals.md)
@@ -715,6 +720,7 @@
 
 ## Infrastructure
 
+- [Converge Agent Fleets on Cluster-Scheduling Primitives](../concepts/converge-agent-fleets-on-cluster-scheduling-primitives.md)
 - [Move Agent Access Control to the Network Layer So the Sandbox Holds No Credential](../concepts/move-agent-access-control-to-the-network-layer.md)
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 - [Run Agentic Coding Evals as an Infrastructure-Reliability Problem](../concepts/run-agentic-coding-evals-as-an-infrastructure-problem.md)
