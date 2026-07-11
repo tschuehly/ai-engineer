@@ -416,6 +416,9 @@
 
 ## Coding Agents
 
+- [Constrain Agent Effects, Not Expression, With a Typed SDK](../concepts/constrain-agent-effects-not-expression-with-a-typed-sdk.md)
+- [Produce Domain-Shaped Review Artifacts for Non-Coder Verification](../concepts/produce-domain-shaped-review-artifacts-for-non-coder-verification.md)
+- [Verify the Process, Not Just the Answer, in Judgment-Heavy Domains](../concepts/verify-the-process-not-just-the-answer-in-judgment-heavy-domains.md)
 - [Invest in the Harness to Run Weaker and Local Models](../concepts/invest-in-the-harness-to-run-weaker-and-local-models.md)
 - [Build Agent Harnesses Incrementally Up a Capability Ladder](../concepts/build-agent-harnesses-incrementally-up-a-capability-ladder.md)
 - [Rescope Ambition Down a Tier as Models Improve](../concepts/rescope-ambition-down-a-tier-as-models-improve.md)
@@ -1078,6 +1081,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Verify the Process, Not Just the Answer, in Judgment-Heavy Domains](../concepts/verify-the-process-not-just-the-answer-in-judgment-heavy-domains.md)
 - [Automation Bias Turns Human-in-the-Loop Into a Rubber Stamp](../concepts/automation-bias-turns-human-in-the-loop-into-a-rubber-stamp.md)
 - [Treat Every Human-AI Interaction as a Training Label](../concepts/treat-every-human-ai-interaction-as-a-training-label.md)
 - [Retrieval, Not Reasoning, Is the Knowledge-Work Bottleneck](../concepts/retrieval-not-reasoning-is-the-knowledge-work-bottleneck.md)
@@ -1587,6 +1591,7 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Constrain Agent Effects, Not Expression, With a Typed SDK](../concepts/constrain-agent-effects-not-expression-with-a-typed-sdk.md)
 - [Pre-Bind Tool Arguments to Give Agents Safe Autonomy](../concepts/pre-bind-tool-arguments-to-give-agents-safe-autonomy.md)
 - [Give Your Agent Eyes With a Product-Specific Observation Tool](../concepts/give-your-agent-eyes-with-a-product-specific-observation-tool.md)
 - [Wrap Agent Completion in an Automatic Deterministic Verification Gate](../concepts/wrap-agent-completion-in-an-automatic-deterministic-verification-gate.md)
