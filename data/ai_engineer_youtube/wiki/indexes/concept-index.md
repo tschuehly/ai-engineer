@@ -1015,6 +1015,8 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Founder Personal Brand Is the GTM Moat](../concepts/founder-personal-brand-is-the-gtm-moat.md)
+- [Distribution Is the New Bottleneck for Developer Tools](../concepts/distribution-is-the-new-bottleneck-for-devtools.md)
 - [Engineer the Interaction, Not the Model, for Discernment](../concepts/engineer-the-interaction-not-the-model-for-discernment.md)
 - [Treat Every Human-AI Interaction as a Training Label](../concepts/treat-every-human-ai-interaction-as-a-training-label.md)
 - [Rescope Ambition Down a Tier as Models Improve](../concepts/rescope-ambition-down-a-tier-as-models-improve.md)
