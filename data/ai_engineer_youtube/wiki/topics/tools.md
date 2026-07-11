@@ -515,3 +515,4 @@ Skills are themselves a tool surface, and Matt Pocock's authoring rubric makes o
 - [Building an ACP-Compatible Agent Live — Bennet Fenner, Zed](../sources/20260708_HsxQICTLF84.md)
 - [Your agent is blindfolded — Johan Lajili, Poolside AI](../sources/20260708_iRcX54EO5g8.md)
 - [Respect The Process - Andrew Dumit, Watershed Technology Inc.](../sources/20260707_CLttOU7n6sI.md)
+- [Structuring the Unstructured - Cedric Clyburn, Red Hat](../sources/20260628_-x5GEVnkuRw.md)

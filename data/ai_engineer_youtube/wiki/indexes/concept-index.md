@@ -785,6 +785,7 @@
 
 ## Infrastructure
 
+- [Choose a Document-Extraction Tier by Cost, Determinism, and Scale](../concepts/choose-document-extraction-tier-by-cost-determinism-and-scale.md)
 - [Treat the Specification as the Product and Derive Bespoke Implementations](../concepts/treat-the-specification-as-the-product-and-derive-bespoke-implementations.md)
 - [Build an Agentic Control Plane So the Model Proposes and the Platform Decides](../concepts/build-an-agentic-control-plane.md)
 - [Contain Retry Amplification Before It Becomes a Compute Incident](../concepts/contain-retry-amplification-in-agent-loops.md)
@@ -1541,6 +1542,8 @@
 - [Size the Voice-Agent LLM to the Time-to-First-Token Budget](../concepts/size-the-voice-agent-llm-to-the-time-to-first-token-budget.md)
 
 ## Retrieval
+- [Choose a Document-Extraction Tier by Cost, Determinism, and Scale](../concepts/choose-document-extraction-tier-by-cost-determinism-and-scale.md)
+- [Use a Document Outline as the Retrieval Index for Chunkless Agentic RAG](../concepts/use-a-document-outline-as-the-retrieval-index-for-chunkless-agentic-rag.md)
 - [Retrieval, Not Reasoning, Is the Knowledge-Work Bottleneck](../concepts/retrieval-not-reasoning-is-the-knowledge-work-bottleneck.md)
 - [Co-Design Agents to Write Natural-Language Queries for Strong Retrieval](../concepts/co-design-agents-to-write-natural-language-queries-for-strong-retrieval.md)
 - [Train a Small Retrieval Agent With SFT Plus Search-Reward RL](../concepts/train-a-small-retrieval-agent-with-sft-and-search-reward-rl.md)
