@@ -484,6 +484,7 @@ Benedikt Sanftl and Burak (Mutagent) make the eval suite the load-bearing artifa
 - [Mine stuck-then-solved sessions for injectable fixes](../concepts/mine-stuck-then-solved-sessions-for-injectable-fixes.md) - an LLM judge labels "stuck" sessions and a blank-injection holdout A/B measures each injected context entry's real production value against project completion.
 - [Build High-Fidelity Engines to Create Verification Loops in Non-Code Domains](../concepts/build-high-fidelity-engines-to-create-verification-loops-in-non-code-domains.md) - the verification loop (a calculation/render engine as source of truth) is the durable part of an agent system, but a partial engine yields worse results than none.
 - [Retrieval, Not Reasoning, Is the Knowledge-Work Bottleneck](../concepts/retrieval-not-reasoning-is-the-knowledge-work-bottleneck.md) - the Oracle gap (score with correct documents vs over the real corpus) isolates whether a failure is a retrieval problem or a reasoning problem.
+- [Learn risk scoring from audit feedback for predictive compliance](../concepts/learn-risk-scoring-from-audit-feedback-for-predictive-compliance.md) - confirmed frauds and false positives from human audits become training signal that continuously refines a probabilistic detection model, replacing static rules with a self-improving score.
 
 ## Open Questions
 
@@ -705,3 +706,4 @@ Benedikt Sanftl and Burak (Mutagent) make the eval suite the load-bearing artifa
 - [Teaching Coding Agents to do Spreadsheets - Nuno Campos, Witan Labs](../sources/20260708_HEFSExa0xl0.md)
 - [Respect The Process - Andrew Dumit, Watershed Technology Inc.](../sources/20260707_CLttOU7n6sI.md)
 - [The Missing Layer After Launch - Raphael Kalandadze, Wandero AI](../sources/20260705_kZsf_Sfm7RU.md)
+- [AI-Driven Multi-Document Correlation for Financial Compliance - Varsha Shah, Independent](../sources/20260628_Iwe_RY-fYgI.md)

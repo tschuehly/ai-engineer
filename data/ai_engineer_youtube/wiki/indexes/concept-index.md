@@ -430,6 +430,8 @@
 - [Evaluate BI agents with real metadata and expert feedback](../concepts/evaluate-bi-agents-with-real-metadata-and-expert-feedback.md)
 - [Compile Natural-Language Analytics Into Reusable Deterministic Widgets](../concepts/compile-natural-language-analytics-into-reusable-deterministic-widgets.md)
 - [Validate Generated SQL by Execution Before Trusting It](../concepts/validate-generated-sql-by-execution-before-trusting-it.md)
+- [Correlate entities across documents to surface cross-document risk](../concepts/correlate-entities-across-documents-to-surface-cross-document-risk.md)
+- [Learn risk scoring from audit feedback for predictive compliance](../concepts/learn-risk-scoring-from-audit-feedback-for-predictive-compliance.md)
 
 ## Coding Agents
 
@@ -1168,6 +1170,7 @@
 - [Automation Bias Turns Human-in-the-Loop Into a Rubber Stamp](../concepts/automation-bias-turns-human-in-the-loop-into-a-rubber-stamp.md)
 - [Treat Every Human-AI Interaction as a Training Label](../concepts/treat-every-human-ai-interaction-as-a-training-label.md)
 - [Retrieval, Not Reasoning, Is the Knowledge-Work Bottleneck](../concepts/retrieval-not-reasoning-is-the-knowledge-work-bottleneck.md)
+- [Learn risk scoring from audit feedback for predictive compliance](../concepts/learn-risk-scoring-from-audit-feedback-for-predictive-compliance.md)
 - [Behavioral Evals Cannot Catch Sleeper-Agent Backdoors](../concepts/behavioral-evals-cannot-catch-sleeper-agent-backdoors.md)
 - [Detect Fine-Tuning Backdoors With an Activation-Difference SAE](../concepts/detect-fine-tuning-backdoors-with-an-activation-difference-sae.md)
 - [Build High-Fidelity Engines to Create Verification Loops in Non-Code Domains](../concepts/build-high-fidelity-engines-to-create-verification-loops-in-non-code-domains.md)
@@ -1619,6 +1622,7 @@
 - [Agentic GraphRAG Uses Schema-Aware Multi-Step Graph Queries](../concepts/agentic-graphrag-uses-schema-aware-multi-step-graph-queries.md)
 - [Treat ontology and triplet quality as GraphRAG bottlenecks](../concepts/treat-ontology-and-triplet-quality-as-graphrag-bottlenecks.md)
 - [Balance GraphRAG hop depth against production latency](../concepts/balance-graphrag-hop-depth-against-production-latency.md)
+- [Correlate entities across documents to surface cross-document risk](../concepts/correlate-entities-across-documents-to-surface-cross-document-risk.md)
 - [Use graph-backed KAG for quantitative advisory questions](../concepts/use-graph-backed-kag-for-quantitative-advisory-questions.md)
 - [Prune LLM-extracted graphs with domain experts](../concepts/prune-llm-extracted-graphs-with-domain-experts.md)
 - [Agentic Retrieval Lets Models Plan Search Steps](../concepts/agentic-retrieval-lets-models-plan-search-steps.md)
