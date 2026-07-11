@@ -1,6 +1,7 @@
 # Concept Index
 
 ## Agents
+- [The Fat-Agent Tool Overload Collapses Accuracy and Inflates Latency](../concepts/fat-agent-tool-overload-collapses-accuracy-and-latency.md)
 - [Shrink the Per-Step Payload the Agent Loop Re-Sends](../concepts/shrink-the-per-step-payload-the-agent-loop-re-sends.md)
 - [Route Each Request to the Cheapest Sufficient Model by Difficulty](../concepts/route-each-request-to-the-cheapest-sufficient-model-by-difficulty.md)
 - [Design LLM-native interactive experiences around narrative state, not numeric mechanics](../concepts/design-llm-native-experiences-around-narrative-state-not-numbers.md)
@@ -707,6 +708,7 @@
 
 ## Context Engineering
 
+- [The Fat-Agent Tool Overload Collapses Accuracy and Inflates Latency](../concepts/fat-agent-tool-overload-collapses-accuracy-and-latency.md)
 - [Shrink the Per-Step Payload the Agent Loop Re-Sends](../concepts/shrink-the-per-step-payload-the-agent-loop-re-sends.md)
 - [Cut Coding-Agent Cost by Fixing the Input, Not the Model or Output](../concepts/cut-coding-agent-cost-by-fixing-the-input-not-the-model-or-output.md)
 - [Insert a Local Code-Index Retrieval Layer Between the Codebase and the Coding Agent](../concepts/insert-a-local-code-index-retrieval-layer-between-codebase-and-agent.md)
@@ -1176,6 +1178,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Tune a Tool Router With a K-Sweep and Guard Its Failure Modes](../concepts/tune-a-tool-router-with-k-sweep-and-guard-its-failure-modes.md)
 - [Optimize an Agent With a Branch-per-Hypothesis Coding-Agent Loop](../concepts/optimize-an-agent-with-a-branch-per-hypothesis-coding-agent-loop.md)
 - [Promote Validated Live-Trace Failure Clusters Into the Golden Dataset](../concepts/promote-validated-live-trace-failure-clusters-into-the-golden-dataset.md)
 - [Layer AI Application Metrics From Guardrail Compliance to System Health](../concepts/layer-ai-application-metrics-from-guardrail-compliance-to-system-health.md)
@@ -1719,6 +1722,8 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [The Fat-Agent Tool Overload Collapses Accuracy and Inflates Latency](../concepts/fat-agent-tool-overload-collapses-accuracy-and-latency.md)
+- [Tune a Tool Router With a K-Sweep and Guard Its Failure Modes](../concepts/tune-a-tool-router-with-k-sweep-and-guard-its-failure-modes.md)
 - [Choose a skill's trigger by trading context load against cognitive load](../concepts/choose-skill-trigger-by-trading-context-load-against-cognitive-load.md)
 - [Use MCP App Primitives for Bidirectional Model–UI State](../concepts/use-mcp-app-primitives-for-bidirectional-model-ui-state.md)
 - [Distribute MCP Apps Through Stores and Dynamic Discovery](../concepts/distribute-mcp-apps-through-stores-and-dynamic-discovery.md)
