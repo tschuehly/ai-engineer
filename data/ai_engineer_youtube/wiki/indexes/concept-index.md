@@ -2,6 +2,7 @@
 
 ## Agents
 - [Converge Agent Fleets on Cluster-Scheduling Primitives](../concepts/converge-agent-fleets-on-cluster-scheduling-primitives.md)
+- [Drive Game NPCs and Difficulty With Runtime LLMs](../concepts/drive-game-npcs-and-difficulty-with-runtime-llms.md)
 - [Externalize Agent State to Files and Reset Instead of Compact](../concepts/externalize-agent-state-to-files-and-reset-instead-of-compact.md)
 - [Manage an Agent Manager Instead of Polling Parallel Agents](../concepts/manage-an-agent-manager-instead-of-polling-parallel-agents.md)
 - [Manage AI Agents Like Humans With Commander's Intent](../concepts/manage-ai-agents-like-humans-with-commanders-intent.md)
@@ -971,6 +972,8 @@
 
 ## Generative Media
 
+- [Anchor Generative Asset Cohesion on One Key-Art Image](../concepts/anchor-generative-asset-cohesion-on-one-key-art-image.md)
+- [Drive Game NPCs and Difficulty With Runtime LLMs](../concepts/drive-game-npcs-and-difficulty-with-runtime-llms.md)
 - [Automate a Nightly Generate-and-Publish Media Pipeline With Sampled QA](../concepts/automate-a-nightly-generate-and-publish-media-pipeline-with-sampled-qa.md)
 - [Pair an LLM Narrator With a Domain Solver Via Tools](../concepts/pair-an-llm-narrator-with-a-domain-solver-via-tools.md)
 - [Design AI creative systems for generated-asset retrieval](../concepts/design-ai-creative-systems-for-generated-asset-retrieval.md)
