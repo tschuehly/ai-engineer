@@ -36,6 +36,17 @@ Create or update:
 
 Prefer strengthening existing topic and concept pages over creating new pages. Create a new page only when the knowledge is meaningfully distinct and likely to be reused.
 
+### Transcript-Unavailable Videos
+
+If the selected video has no local transcript (no WebVTT on disk and `transcript_link` is `None` in `index.jsonl`), do not fabricate knowledge from the description alone. Instead:
+
+- create a provenance-only source note in `sources/` with `Transcript: unavailable`, a description-derived summary, and empty Extracted Concepts / Topic Links sections;
+- append a `transcript: unavailable` row to `indexes/processed-sources.md`;
+- append one `ingest` entry to `log.md` recording the unavailable transcript;
+- add no concept pages, make no topic-page edits, and add no `index.md`/`concept-index.md` entries (no source-backed claims exist to synthesize).
+
+This still counts as processing exactly one video for the iteration.
+
 ## Page Semantics
 
 Source notes preserve provenance and summarize what a video contributes.
