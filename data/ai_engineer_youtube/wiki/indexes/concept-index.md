@@ -429,6 +429,10 @@
 
 ## Coding Agents
 
+- [Choose a skill's trigger by trading context load against cognitive load](../concepts/choose-skill-trigger-by-trading-context-load-against-cognitive-load.md)
+- [Steer agents with leading words that surface in reasoning traces](../concepts/steer-agents-with-leading-words-that-surface-in-reasoning-traces.md)
+- [Split skills to hide future steps and force more leg work per step](../concepts/split-skills-to-hide-future-steps-and-force-leg-work.md)
+- [Prune skills with single source of truth, sediment removal, and no-op deletion tests](../concepts/prune-skills-with-single-source-of-truth-sediment-and-no-op-deletion-tests.md)
 - [Treat the Specification as the Product and Derive Bespoke Implementations](../concepts/treat-the-specification-as-the-product-and-derive-bespoke-implementations.md)
 - [Use Deterministic Simulation as Executable Design for Agents](../concepts/use-deterministic-simulation-as-executable-design-for-agents.md)
 - [Expose Forbidden-Fruit Facts in Simulation for Agent Debugging](../concepts/expose-forbidden-fruit-facts-in-simulation-for-agent-debugging.md)
@@ -681,6 +685,10 @@
 
 ## Context Engineering
 
+- [Choose a skill's trigger by trading context load against cognitive load](../concepts/choose-skill-trigger-by-trading-context-load-against-cognitive-load.md)
+- [Steer agents with leading words that surface in reasoning traces](../concepts/steer-agents-with-leading-words-that-surface-in-reasoning-traces.md)
+- [Split skills to hide future steps and force more leg work per step](../concepts/split-skills-to-hide-future-steps-and-force-leg-work.md)
+- [Prune skills with single source of truth, sediment removal, and no-op deletion tests](../concepts/prune-skills-with-single-source-of-truth-sediment-and-no-op-deletion-tests.md)
 - [Shrink the System Prompt and Drop Examples as Models Improve](../concepts/shrink-the-system-prompt-and-drop-examples-as-models-improve.md)
 - [Use the Agent to Surface Your Own Unknowns](../concepts/use-the-agent-to-surface-your-own-unknowns.md)
 - [Enforce Agent Rules in Git Hooks and CI, Not the Prompt](../concepts/enforce-agent-rules-in-git-hooks-and-ci-not-the-prompt.md)
@@ -1652,6 +1660,7 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Choose a skill's trigger by trading context load against cognitive load](../concepts/choose-skill-trigger-by-trading-context-load-against-cognitive-load.md)
 - [Use MCP App Primitives for Bidirectional Model–UI State](../concepts/use-mcp-app-primitives-for-bidirectional-model-ui-state.md)
 - [Distribute MCP Apps Through Stores and Dynamic Discovery](../concepts/distribute-mcp-apps-through-stores-and-dynamic-discovery.md)
 - [Constrain Agent Effects, Not Expression, With a Typed SDK](../concepts/constrain-agent-effects-not-expression-with-a-typed-sdk.md)
