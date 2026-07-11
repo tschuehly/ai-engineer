@@ -15,6 +15,7 @@ Details:
 - Replit combines browser interaction, database checks, logs, API calls, screenshots, and Playwright scripts; generated Playwright is expressive, LLM-manageable, and reusable as a regression suite. 12:05-14:56
 - Antigravity adds a productized browser-verification surface: an agent-controlled Chrome browser can click, scroll, run JavaScript, retrieve DOM state, and produce a screen recording so the human can review what the agent actually tested rather than only a code diff. 03:14-04:24, 09:48-10:27
 - Multimodal model understanding makes browser recordings and screenshots reusable feedback: the model can inspect the visual evidence it produced and iterate from there. 10:16-11:05
+- The same browser-driving idea works as a *third-party benchmark verifier*, not only as the coding agent's own self-check: SWE-Marathon is "the first benchmark to use a computer use agent or CUA verifier" for full-stack product-clone tasks, because "unit test can pass, but the product is probably still unusable and the front end looks terrible." For a Slack-clone task, deterministic unit tests check the API/back-end, then a CUA "uses the browser like a human" — logging in, creating channels, posting messages, reacting with emotes — and scores the app against a rubric. The durable framing: "full stack evals are hard because correctness is not just an API contract. It's whether the user can actually complete the product's intended workflow." (SWE-Marathon 03:49-05:03)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -30,3 +31,4 @@ Related concepts:
 Sources:
 - [The 3 Pillars of Autonomy - Michele Catasta, Replit](../sources/20251222_MLhAA9yguwM.md), 08:31-14:56
 - [Defying Gravity - Kevin Hou, Google DeepMind](../sources/20251202_HN-F-OQe6j0.md), 03:14-04:24, 09:48-11:05
+- [SWE-Marathon: Evaluating Coding Agents at Billion-Token Scale - Rishi Desai, Abundant AI](../sources/20260707_Rx8f05JI_WA.md), 03:49-05:03

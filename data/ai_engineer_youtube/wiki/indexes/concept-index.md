@@ -416,6 +416,8 @@
 
 ## Coding Agents
 
+- [Evaluate Coding Agents on Project-Scale, Billion-Token Tasks](../concepts/evaluate-coding-agents-on-project-scale-billion-token-tasks.md)
+- [At Long Horizons a Weak Verifier Becomes an Attack Surface](../concepts/at-long-horizons-a-weak-verifier-becomes-an-attack-surface.md)
 - [Constrain Agent Effects, Not Expression, With a Typed SDK](../concepts/constrain-agent-effects-not-expression-with-a-typed-sdk.md)
 - [Produce Domain-Shaped Review Artifacts for Non-Coder Verification](../concepts/produce-domain-shaped-review-artifacts-for-non-coder-verification.md)
 - [Verify the Process, Not Just the Answer, in Judgment-Heavy Domains](../concepts/verify-the-process-not-just-the-answer-in-judgment-heavy-domains.md)
@@ -1083,6 +1085,8 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Evaluate Coding Agents on Project-Scale, Billion-Token Tasks](../concepts/evaluate-coding-agents-on-project-scale-billion-token-tasks.md)
+- [At Long Horizons a Weak Verifier Becomes an Attack Surface](../concepts/at-long-horizons-a-weak-verifier-becomes-an-attack-surface.md)
 - [Verify the Process, Not Just the Answer, in Judgment-Heavy Domains](../concepts/verify-the-process-not-just-the-answer-in-judgment-heavy-domains.md)
 - [Automation Bias Turns Human-in-the-Loop Into a Rubber Stamp](../concepts/automation-bias-turns-human-in-the-loop-into-a-rubber-stamp.md)
 - [Treat Every Human-AI Interaction as a Training Label](../concepts/treat-every-human-ai-interaction-as-a-training-label.md)
