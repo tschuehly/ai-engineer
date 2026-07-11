@@ -1,6 +1,8 @@
 # Concept Index
 
 ## Agents
+- [Let the Agent Harness Emerge at Runtime (Adaptive Engineering)](../concepts/let-the-agent-harness-emerge-at-runtime-adaptive-engineering.md)
+- [Match the Harness to Complicated vs Complex Problems](../concepts/match-the-harness-to-complicated-vs-complex-problems.md)
 - [Automation Bias Turns Human-in-the-Loop Into a Rubber Stamp](../concepts/automation-bias-turns-human-in-the-loop-into-a-rubber-stamp.md)
 - [Engineer the Interaction, Not the Model, for Discernment](../concepts/engineer-the-interaction-not-the-model-for-discernment.md)
 - [Build Agent Harnesses Incrementally Up a Capability Ladder](../concepts/build-agent-harnesses-incrementally-up-a-capability-ladder.md)
@@ -416,6 +418,8 @@
 
 ## Coding Agents
 
+- [Let the Agent Harness Emerge at Runtime (Adaptive Engineering)](../concepts/let-the-agent-harness-emerge-at-runtime-adaptive-engineering.md)
+- [Match the Harness to Complicated vs Complex Problems](../concepts/match-the-harness-to-complicated-vs-complex-problems.md)
 - [On Mixed-Ability AI Teams, Specialists Should Enable Not Do](../concepts/on-mixed-ability-ai-teams-specialists-should-enable-not-do.md)
 - [Make the Running Prototype the Primary Design Artifact](../concepts/make-the-running-prototype-the-primary-design-artifact.md)
 - [Evaluate Coding Agents on Project-Scale, Billion-Token Tasks](../concepts/evaluate-coding-agents-on-project-scale-billion-token-tasks.md)
@@ -1844,6 +1848,8 @@
 - [Separate Engine Latency From Network Latency in Voice Pipelines](../concepts/separate-engine-latency-from-network-latency-in-voice-pipelines.md)
 
 ## Workflows
+- [Let the Agent Harness Emerge at Runtime (Adaptive Engineering)](../concepts/let-the-agent-harness-emerge-at-runtime-adaptive-engineering.md)
+- [Match the Harness to Complicated vs Complex Problems](../concepts/match-the-harness-to-complicated-vs-complex-problems.md)
 - [The Frozen-Artifact Pipeline Is a Cost Constraint, Not a Law](../concepts/frozen-artifact-pipeline-is-a-cost-constraint-not-a-law.md)
 - [Deploy a Canonical Stem Plus Bounded Per-User Divergences](../concepts/deploy-a-canonical-stem-plus-bounded-per-user-divergences.md)
 - [Make the Running Prototype the Primary Design Artifact](../concepts/make-the-running-prototype-the-primary-design-artifact.md)
