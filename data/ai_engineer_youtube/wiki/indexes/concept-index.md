@@ -1,6 +1,8 @@
 # Concept Index
 
 ## Agents
+- [Optimize an Agent With a Branch-per-Hypothesis Coding-Agent Loop](../concepts/optimize-an-agent-with-a-branch-per-hypothesis-coding-agent-loop.md)
+- [Promote Validated Live-Trace Failure Clusters Into the Golden Dataset](../concepts/promote-validated-live-trace-failure-clusters-into-the-golden-dataset.md)
 - [Close the Eval-to-Action Loop So Signal Survives the Dashboard](../concepts/close-the-eval-to-action-loop-so-signal-survives-the-dashboard.md)
 - [Rank Agent Memory by Outcome Utility, Not Just Similarity](../concepts/rank-agent-memory-by-outcome-utility-not-just-similarity.md)
 - [Compose Domain-Specific Agents Instead of Inflating One Agent's Context](../concepts/compose-domain-specific-agents-instead-of-inflating-one-context.md)
@@ -439,6 +441,7 @@
 
 ## Coding Agents
 
+- [Optimize an Agent With a Branch-per-Hypothesis Coding-Agent Loop](../concepts/optimize-an-agent-with-a-branch-per-hypothesis-coding-agent-loop.md)
 - [Choose a skill's trigger by trading context load against cognitive load](../concepts/choose-skill-trigger-by-trading-context-load-against-cognitive-load.md)
 - [Steer agents with leading words that surface in reasoning traces](../concepts/steer-agents-with-leading-words-that-surface-in-reasoning-traces.md)
 - [Split skills to hide future steps and force more leg work per step](../concepts/split-skills-to-hide-future-steps-and-force-leg-work.md)
@@ -1161,6 +1164,8 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Optimize an Agent With a Branch-per-Hypothesis Coding-Agent Loop](../concepts/optimize-an-agent-with-a-branch-per-hypothesis-coding-agent-loop.md)
+- [Promote Validated Live-Trace Failure Clusters Into the Golden Dataset](../concepts/promote-validated-live-trace-failure-clusters-into-the-golden-dataset.md)
 - [Layer AI Application Metrics From Guardrail Compliance to System Health](../concepts/layer-ai-application-metrics-from-guardrail-compliance-to-system-health.md)
 - [Close the Eval-to-Action Loop So Signal Survives the Dashboard](../concepts/close-the-eval-to-action-loop-so-signal-survives-the-dashboard.md)
 - [Automate the Agent-Building Loop With an Agentic AI Engineer](../concepts/automate-the-agent-building-loop-with-an-agentic-ai-engineer.md)
