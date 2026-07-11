@@ -1,6 +1,8 @@
 # Concept Index
 
 ## Agents
+- [Shrink the Per-Step Payload the Agent Loop Re-Sends](../concepts/shrink-the-per-step-payload-the-agent-loop-re-sends.md)
+- [Route Each Request to the Cheapest Sufficient Model by Difficulty](../concepts/route-each-request-to-the-cheapest-sufficient-model-by-difficulty.md)
 - [Design LLM-native interactive experiences around narrative state, not numeric mechanics](../concepts/design-llm-native-experiences-around-narrative-state-not-numbers.md)
 - [Optimize an Agent With a Branch-per-Hypothesis Coding-Agent Loop](../concepts/optimize-an-agent-with-a-branch-per-hypothesis-coding-agent-loop.md)
 - [Promote Validated Live-Trace Failure Clusters Into the Golden Dataset](../concepts/promote-validated-live-trace-failure-clusters-into-the-golden-dataset.md)
@@ -705,6 +707,7 @@
 
 ## Context Engineering
 
+- [Shrink the Per-Step Payload the Agent Loop Re-Sends](../concepts/shrink-the-per-step-payload-the-agent-loop-re-sends.md)
 - [Cut Coding-Agent Cost by Fixing the Input, Not the Model or Output](../concepts/cut-coding-agent-cost-by-fixing-the-input-not-the-model-or-output.md)
 - [Insert a Local Code-Index Retrieval Layer Between the Codebase and the Coding Agent](../concepts/insert-a-local-code-index-retrieval-layer-between-codebase-and-agent.md)
 - [Choose a skill's trigger by trading context load against cognitive load](../concepts/choose-skill-trigger-by-trading-context-load-against-cognitive-load.md)
@@ -1000,6 +1003,7 @@
 
 ## Inference
 
+- [Route Each Request to the Cheapest Sufficient Model by Difficulty](../concepts/route-each-request-to-the-cheapest-sufficient-model-by-difficulty.md)
 - [Shard Cache-Augmented Generation Into Parallel Buckets With a Supervisor](../concepts/shard-cache-augmented-generation-into-parallel-buckets-with-a-supervisor.md)
 - [Hit Soft-Realtime Latency With a Fast Model, Eager Inference, and Prefix Caching](../concepts/hit-realtime-latency-with-fast-models-eager-inference-and-prefix-caching.md)
 - [LLM Inference Is Non-Deterministic Even at Temperature Zero](../concepts/llm-inference-is-non-deterministic-even-at-temperature-zero.md)
