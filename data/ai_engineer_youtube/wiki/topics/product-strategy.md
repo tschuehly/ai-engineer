@@ -40,12 +40,16 @@ AI-first SaaS strategy adds a roadmap-level version of that judgment. The produc
 
 When the core capability is itself a managed, already-scalable API, the strategic center of gravity shifts again. A viral "talk to a statue" app built in two hours from one Cursor prompt — gluing OpenAI deep research, the ElevenLabs Voice Design API, and a managed agents platform — illustrates that stitching such APIs collapses the prototype-to-production gap (a single app cannot dent the providers' API volume, and remaining surface like auth can be one-shot with Supabase), so the durable work and the differentiation move to the integration glue and the *story about the glue* rather than to solving a hard technical problem the APIs already solved. This sharpens the existing point that distribution, not implementation, is the scarce skill once tools are easy: the launch that mattered was the vibe-coding repost (50k → 1.5M impressions), and the practical craft is concrete (publish the prompt, front-load a hook for a 6–12s median view time, add captions and generated music, edit on a phone). The same example carries the standing caveat that managed-API content is a demo shortcut — production needs curator-designed narratives grounded in first-party data, not ad-hoc web research.
 
+When the product *is* the agent platform, two more strategy choices come to the fore. OpenAI's Codex keynote makes a single-stack dogfooding bet: build your own product on the exact primitives you sell — same responses API, open-source harness, `AGENTS.md`, and app server — instead of a privileged internal path plus a simplified external one, because "at every layer we use the thing we give to you" turns every external fork and edge-finding into a learning signal, and a reference implementation beats leaving developers to reverse-engineer you. The companion surface bet is chat-first with a hands-on collaborative UI: since the model beats the user on the average task, the empowering shape is a single ask-anywhere entity plus a place to inspect/steer/shape (not a CLI, which is "mostly chat," nor an IDE, where "the order is wrong"), designed to preserve the human's "feeling of mastery" rather than to automate engineers away. Both extend the primitives-before-features stance: reject the simple-versus-capable tradeoff by doing more upfront design.
+
 ## Key Concepts
 
 - [AI Does Not Replace Shareable Product Marketing](../concepts/ai-does-not-replace-shareable-product-marketing.md) - launch content only matters when it can earn attention and social sharing.
 - [Compete on Glue and Distribution When Building on Managed APIs](../concepts/compete-on-glue-and-distribution-when-building-on-managed-apis.md) - building on managed scalable APIs collapses the prototype-to-production gap, moving the differentiator to integration glue and distribution.
 - [Optimize Onboarding Around One Aha Moment](../concepts/optimize-onboarding-around-one-aha-moment.md) - first-use workflows should get users to the product's core proof before asking for nonessential setup.
 - [Build Product Primitives Before Feature Surfaces](../concepts/build-product-primitives-before-feature-surfaces.md) - durable products use primitives to combine simple onboarding with deep long-term capability.
+- [Dogfood the Same Stack You Ship to Developers](../concepts/dogfood-the-same-stack-you-ship-to-developers.md) - build your own product on the same API, harness, file format, and app server you sell, so external usage becomes a learning signal.
+- [Shape Agent Products as Chat-First With a Hands-On Surface](../concepts/shape-agent-products-as-chat-first-with-a-hands-on-surface.md) - a single ask-anywhere chat entity plus a collaborative UI to dig in, preserving the user's feeling of mastery.
 - [AI-amplified shipping speed needs stronger product taste](../concepts/ai-amplified-shipping-speed-needs-stronger-product-taste.md) - faster implementation raises the cost of saying yes to incoherent product work.
 - [Product Engineers Need Direct Customer Context](../concepts/product-engineers-need-direct-customer-context.md) - product judgment improves when engineers see customer pain directly.
 - [Treat model behavior as a product craft](../concepts/treat-model-behavior-as-a-product-craft.md) - AI-native products need product ownership over behavior, prompts, evals, model choices, and personality.
@@ -117,6 +121,7 @@ When the core capability is itself a managed, already-scalable API, the strategi
 
 ## Sources
 
+- [The Golden Age of AI Engineering — Alexander Embiricos & Romain Huet & Peter Steinberger, OpenAI](../sources/20260709_pMggiOb18tc.md)
 - [Building the platform for agent coordination - Tom Moor, Linear](../sources/20250728_UG9IAdmi2Dg.md)
 - [Designing AI-Intensive Applications - swyx](../sources/20250809_IHkyFhU6JEY.md)
 - [AI changes *Nothing* — Dax Raad, OpenCode](../sources/20251123_o3gmwzo-Mik.md)

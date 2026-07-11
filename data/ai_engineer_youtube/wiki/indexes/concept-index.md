@@ -1,6 +1,7 @@
 # Concept Index
 
 ## Agents
+- [Manage an Agent Manager Instead of Polling Parallel Agents](../concepts/manage-an-agent-manager-instead-of-polling-parallel-agents.md)
 - [Manage AI Agents Like Humans With Commander's Intent](../concepts/manage-ai-agents-like-humans-with-commanders-intent.md)
 - [Preflight Agents Through a Business-Definitions Librarian](../concepts/preflight-agents-through-a-business-definitions-librarian.md)
 - [Run a Jury of Analysts and a Consensus Judge for No-Ground-Truth Questions](../concepts/run-a-jury-of-analysts-and-a-consensus-judge-for-no-ground-truth-questions.md)
@@ -406,6 +407,9 @@
 
 ## Coding Agents
 
+- [Dogfood the Same Stack You Ship to Developers](../concepts/dogfood-the-same-stack-you-ship-to-developers.md)
+- [Manage an Agent Manager Instead of Polling Parallel Agents](../concepts/manage-an-agent-manager-instead-of-polling-parallel-agents.md)
+- [Shape Agent Products as Chat-First With a Hands-On Surface](../concepts/shape-agent-products-as-chat-first-with-a-hands-on-surface.md)
 - [Route Each Change to the Proof It Needs](../concepts/route-each-change-to-the-proof-it-needs.md)
 - [Self-Verifying Agent Loops Hide Review Rather Than Remove It](../concepts/self-verifying-agent-loops-hide-review-rather-than-remove-it.md)
 - [Understand Agent Work to Participate, Not Just to Verify](../concepts/understand-agent-work-to-participate-not-just-to-verify.md)
@@ -978,6 +982,8 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Dogfood the Same Stack You Ship to Developers](../concepts/dogfood-the-same-stack-you-ship-to-developers.md)
+- [Shape Agent Products as Chat-First With a Hands-On Surface](../concepts/shape-agent-products-as-chat-first-with-a-hands-on-surface.md)
 - [AI-First Strategy Reimagines Value Across Workflows](../concepts/ai-first-strategy-reimagines-value-across-workflows.md)
 - [Ritualized Discovery Keeps AI Roadmaps Adaptive](../concepts/ritualized-discovery-keeps-ai-roadmaps-adaptive.md)
 - [Treat Process as a Product During AI Transformation](../concepts/treat-process-as-a-product-during-ai-transformation.md)
@@ -1764,6 +1770,7 @@
 - [Separate Engine Latency From Network Latency in Voice Pipelines](../concepts/separate-engine-latency-from-network-latency-in-voice-pipelines.md)
 
 ## Workflows
+- [Manage an Agent Manager Instead of Polling Parallel Agents](../concepts/manage-an-agent-manager-instead-of-polling-parallel-agents.md)
 - [Route Each Change to the Proof It Needs](../concepts/route-each-change-to-the-proof-it-needs.md)
 - [Self-Verifying Agent Loops Hide Review Rather Than Remove It](../concepts/self-verifying-agent-loops-hide-review-rather-than-remove-it.md)
 - [Have Agents Write Literate Explainer Docs for Their Changes](../concepts/have-agents-write-literate-explainer-docs-for-their-changes.md)

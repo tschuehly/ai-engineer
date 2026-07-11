@@ -158,9 +158,12 @@ An agent can also be wired to report on its own working conditions. Lovable give
 
 Trust patterns for agents can often be borrowed wholesale from how organizations already manage people. Upside's GTM work frames hallucination's "older sibling" as a trust problem — an agent asked for revenue returns a wrong number "that looks exactly like being right" — and answers it with three human-management moves. Prompt with **commander's intent** (tell the agent *why*, not just *how*), while watching for the trained-in habit of self-micromanagement. Onboard every agent through a **librarian** it consults before acting, so it inherits the business's real definitions instead of guessing. Get a **second opinion** on subjective calls via a jury of independent analysts weighed by a consensus judge. And staff important work at the right **tier**: a weak harness or a model crowbarred into per-seat pricing can't be trusted for it — a tier-two harness needs a powerful reasoning model plus sub-agents, plan mode, full MCP support, and file editing.
 
+The management metaphor also reshapes how a single operator relates to *many* agents. OpenAI's Peter Steinberger reframes juggling ~10 terminals as polling, not orchestration — the human becomes "the scheduler, the router, and the memory" — and argues the durable pattern is to "manage the manager of a small company of agents": a long-lived manager agent delegates to workers while the human sets direction in an outer loop and drops down to pair only on hard problems. What makes it work is three harness capabilities — server-side compaction (persistent context), coordination (delegation), and triggers (automation that wakes the manager on an event) — after which the binding constraint is no longer tokens or compute but human attention. This complements the human-management trust moves above (commander's intent, tiers): the agents' inner execution loop runs autonomously, and the human's leverage is entirely in where they spend judgment on the outer loop.
+
 ## Key Concepts
 
 - [Manage AI agents like humans with commander's intent](../concepts/manage-ai-agents-like-humans-with-commanders-intent.md) - reuse people-management patterns for agents: prompt the *why*, get second opinions, and onboard on the business.
+- [Manage an Agent Manager Instead of Polling Parallel Agents](../concepts/manage-an-agent-manager-instead-of-polling-parallel-agents.md) - scale one operator across many agents by managing a long-lived manager-of-agents while working the outer loop, not hand-polling terminals.
 - [Preflight agents through a business-definitions librarian](../concepts/preflight-agents-through-a-business-definitions-librarian.md) - a service agents consult before querying that injects just-in-time definitions and prior-failed-query knowledge.
 - [Run a jury of analysts and a consensus judge for no-ground-truth questions](../concepts/run-a-jury-of-analysts-and-a-consensus-judge-for-no-ground-truth-questions.md) - independent analysts weighed by a consensus judge for subjective questions with no objective answer.
 - [Read an Agent's Reasoning to Catch It Bullshitting](../concepts/read-an-agents-reasoning-to-catch-it-bullshitting.md) - supervise an agent by the quality of its reasoning narration; waffling or incoherent self-explanation is the tell that a session has lost the plot and should be cut.
@@ -534,6 +537,7 @@ Trust patterns for agents can often be borrowed wholesale from how organizations
 
 ## Sources
 
+- [The Golden Age of AI Engineering — Alexander Embiricos & Romain Huet & Peter Steinberger, OpenAI](../sources/20260709_pMggiOb18tc.md)
 - [How Lovable self-improves every hour — Benjamin Verbeek, Lovable](../sources/20260602_KA5kPbdkK2E.md)
 - [The Art & Science of Benchmarking Agents — Vincent Chen, Snorkel AI](../sources/20260604_iNkFlCiij0U.md)
 - [From MCP to Scale: Pipelines That Build Themselves — Rafael Levi, Bright Data](../sources/20260607_zTZ0qunQXnM.md)

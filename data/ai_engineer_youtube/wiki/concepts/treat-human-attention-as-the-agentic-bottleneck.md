@@ -14,12 +14,15 @@ Details:
 - Two paths follow: the default mindless path is "burnout turbo" — super fast and easier than ever, enabled by LLMs — while the intentional path delegates the minutiae to agents while the human stays responsible for quality, review, and shipping. (16:18-16:50)
 - The recommended starting move is to build one single layer (e.g. plug Slack or Linear into your preferred pane of glass, or add one verification gate) and spend the recovered margin on time away from the desk, rather than reinvesting all gains into more work. (16:50-17:35)
 - A holistic-wellbeing extension treats the developer's body as part of the loop: an Oura ring connected via MCP lets the model flag poor sleep and propose stopping early; the human can override it, but at least the tradeoff was considered. (15:31-16:18)
+- OpenAI's Peter Steinberger frames attention as the *end of a moving bottleneck*: last year the constraint was tokens, then compute (parallel threads made "my MacBook start sounding like a jet engine," fixed by running tests on separate test boxes), and "now I'm primarily constrained by attention. And unlike tokens or compute, I can't simply add more of it," so "the most important skill… is deciding where to spend it." ([The Golden Age of AI Engineering — Alexander Embiricos & Romain Huet & Peter Steinberger, OpenAI](../sources/20260709_pMggiOb18tc.md), 20:37-21:36)
+- A concrete way to reclaim attention: stop staring at the agent. With earlier models, escape-and-steer was necessary; "the latest generation of models is so good at understanding intent that it's a little bit of a waste of time" to watch every step — spend the recovered attention on the outer loop (direction and review) instead (20260709_pMggiOb18tc, 21:37-22:03).
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Workflows](../topics/workflows.md)
 
 Related concepts:
+- [Manage an Agent Manager Instead of Polling Parallel Agents](manage-an-agent-manager-instead-of-polling-parallel-agents.md)
 - [Run a Signal Layer to Triage Comms and Protect Focus](run-a-signal-layer-to-triage-comms-and-protect-focus.md)
 - [Drive Agents Remotely and by Voice to Decouple Work From the Desk](drive-agents-remotely-and-by-voice-to-decouple-work-from-the-desk.md)
 - [Fractured Attention Becomes Usable With Delegated Agents](fractured-attention-becomes-usable-with-delegated-agents.md)
@@ -29,3 +32,4 @@ Related concepts:
 
 Sources:
 - [Your Attention Is the Bottleneck, Not Your Agents — Zack Proser, WorkOS](../sources/20260611_so9l_MwS2yg.md), 00:50-05:12, 15:31-17:35
+- [The Golden Age of AI Engineering — Alexander Embiricos & Romain Huet & Peter Steinberger, OpenAI](../sources/20260709_pMggiOb18tc.md), 20:37-22:03
