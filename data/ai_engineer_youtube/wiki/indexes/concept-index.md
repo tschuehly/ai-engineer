@@ -1,6 +1,8 @@
 # Concept Index
 
 ## Agents
+- [Automate the Agent-Building Loop With an Agentic AI Engineer](../concepts/automate-the-agent-building-loop-with-an-agentic-ai-engineer.md)
+- [Diagnose Agent Failures With Code-Checkable Indicators and Sampling](../concepts/diagnose-agent-failures-with-code-checkable-indicators-and-sampling.md)
 - [Record and Replay Agent Runs at Node Boundaries](../concepts/record-and-replay-agent-runs-at-node-boundaries.md)
 - [Turn Recorded Agent Traces Into Free Replay Test Cases](../concepts/turn-recorded-agent-traces-into-free-replay-test-cases.md)
 - [Build an Agentic Control Plane So the Model Proposes and the Platform Decides](../concepts/build-an-agentic-control-plane.md)
@@ -1139,6 +1141,8 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Automate the Agent-Building Loop With an Agentic AI Engineer](../concepts/automate-the-agent-building-loop-with-an-agentic-ai-engineer.md)
+- [Diagnose Agent Failures With Code-Checkable Indicators and Sampling](../concepts/diagnose-agent-failures-with-code-checkable-indicators-and-sampling.md)
 - [Right-size models with prototype-big, deploy-small](../concepts/right-size-models-with-prototype-big-deploy-small.md)
 - [LLM judges show self-preference and family bias](../concepts/llm-judges-show-self-preference-and-family-bias.md)
 - [Close the small-model gap with prompt variants and harness post-processing](../concepts/close-the-small-model-gap-with-prompt-variants-and-harness-post-processing.md)
@@ -1911,6 +1915,7 @@
 - [Separate Engine Latency From Network Latency in Voice Pipelines](../concepts/separate-engine-latency-from-network-latency-in-voice-pipelines.md)
 
 ## Workflows
+- [Automate the Agent-Building Loop With an Agentic AI Engineer](../concepts/automate-the-agent-building-loop-with-an-agentic-ai-engineer.md)
 - [Staff Agent Operations With a Team of Agents](../concepts/staff-agent-operations-with-a-team-of-agents.md)
 - [Operate Agent Products as the Missing Post-Launch Layer](../concepts/operate-agent-products-as-the-missing-post-launch-layer.md)
 - [Score Every Production Conversation to Judge Agent Health](../concepts/score-every-production-conversation-to-judge-agent-health.md)
