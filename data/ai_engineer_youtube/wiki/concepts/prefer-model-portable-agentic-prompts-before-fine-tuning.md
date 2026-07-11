@@ -10,6 +10,8 @@ Details:
 - Box supports multiple model families, including Gemini, Llama, OpenAI, and Anthropic, which makes consistent fine-tuning across all supported providers and future model versions operationally difficult.
 - For Box's extraction and content-agent use cases, prompts, cached prompts, and agentic workflow design have been preferred over fine-tuning because newer base models often improve and the workflow must remain provider-portable.
 - This is a use-case-specific stance rather than a general rejection of model adaptation: it applies when model portability, rapid provider evolution, and workflow orchestration dominate the optimization problem.
+- The prompt can be the most *architecture-portable* layer, not just the most provider-portable: Witan Labs found that adding domain knowledge to the prompt "survived all of the different iterations of the tools" and "always produced improved results," and "almost the exact same prompt would work for the REPL or the individual tools or any of the other approaches" — so investment in the prompt outlasts churn in the tool/interface layer beneath it. ([Witan Labs](../sources/20260708_HEFSExa0xl0.md), 12:37-13:25, 18:01-18:16)
+- The mechanism is reminding, not teaching: LLMs already "know many many things," so domain knowledge in the prompt exists to "pigeonhole them a little bit into what you want them to focus on… remind it to pay more attention to that than other things" for the specific task — a cheaper and more portable lever than baking that focus into weights. ([Witan Labs](../sources/20260708_HEFSExa0xl0.md), 12:46-13:16, 18:01-18:16)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -23,3 +25,4 @@ Related concepts:
 
 Sources:
 - [Building an Agentic Platform - Ben Kus, CTO Box](../sources/20250824_12v5S1n1eOY.md), 18:18-18:54
+- [Teaching Coding Agents to do Spreadsheets - Nuno Campos, Witan Labs](../sources/20260708_HEFSExa0xl0.md), 12:37-13:25, 18:01-18:16

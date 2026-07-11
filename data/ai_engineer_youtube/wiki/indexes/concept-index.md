@@ -409,6 +409,8 @@
 
 ## Coding Agents
 
+- [Give Agents a Persistent-State REPL Instead of Many Tools](../concepts/give-agents-a-persistent-state-repl-instead-of-many-tools.md)
+- [Build High-Fidelity Engines to Create Verification Loops in Non-Code Domains](../concepts/build-high-fidelity-engines-to-create-verification-loops-in-non-code-domains.md)
 - [Converge Agent Fleets on Cluster-Scheduling Primitives](../concepts/converge-agent-fleets-on-cluster-scheduling-primitives.md)
 - [Dogfood the Same Stack You Ship to Developers](../concepts/dogfood-the-same-stack-you-ship-to-developers.md)
 - [Externalize Agent State to Files and Reset Instead of Compact](../concepts/externalize-agent-state-to-files-and-reset-instead-of-compact.md)
@@ -1052,6 +1054,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Build High-Fidelity Engines to Create Verification Loops in Non-Code Domains](../concepts/build-high-fidelity-engines-to-create-verification-loops-in-non-code-domains.md)
 - [Self-Verifying Agent Loops Hide Review Rather Than Remove It](../concepts/self-verifying-agent-loops-hide-review-rather-than-remove-it.md)
 - [Run a Jury of Analysts and a Consensus Judge for No-Ground-Truth Questions](../concepts/run-a-jury-of-analysts-and-a-consensus-judge-for-no-ground-truth-questions.md)
 - [Measure Generated Code Quality Beyond Pass Rate](../concepts/measure-generated-code-quality-beyond-pass-rate.md)
@@ -1548,6 +1551,8 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Give Agents a Persistent-State REPL Instead of Many Tools](../concepts/give-agents-a-persistent-state-repl-instead-of-many-tools.md)
+- [Build High-Fidelity Engines to Create Verification Loops in Non-Code Domains](../concepts/build-high-fidelity-engines-to-create-verification-loops-in-non-code-domains.md)
 - [Pair an LLM Narrator With a Domain Solver Via Tools](../concepts/pair-an-llm-narrator-with-a-domain-solver-via-tools.md)
 - [Feed Agents Diverse and Conflicting Tool Signals to Broaden Exploration](../concepts/feed-agents-diverse-and-conflicting-tool-signals-to-broaden-exploration.md)
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
