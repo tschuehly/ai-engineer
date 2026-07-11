@@ -1,6 +1,8 @@
 # Concept Index
 
 ## Agents
+- [Close the Eval-to-Action Loop So Signal Survives the Dashboard](../concepts/close-the-eval-to-action-loop-so-signal-survives-the-dashboard.md)
+- [Rank Agent Memory by Outcome Utility, Not Just Similarity](../concepts/rank-agent-memory-by-outcome-utility-not-just-similarity.md)
 - [Compose Domain-Specific Agents Instead of Inflating One Agent's Context](../concepts/compose-domain-specific-agents-instead-of-inflating-one-context.md)
 - [Domain-Specific Agents Unlock Small Models and Tight Permissions](../concepts/domain-specific-agents-unlock-small-models-and-tight-permissions.md)
 - [Automate the Agent-Building Loop With an Agentic AI Engineer](../concepts/automate-the-agent-building-loop-with-an-agentic-ai-engineer.md)
@@ -1155,6 +1157,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Close the Eval-to-Action Loop So Signal Survives the Dashboard](../concepts/close-the-eval-to-action-loop-so-signal-survives-the-dashboard.md)
 - [Automate the Agent-Building Loop With an Agentic AI Engineer](../concepts/automate-the-agent-building-loop-with-an-agentic-ai-engineer.md)
 - [Diagnose Agent Failures With Code-Checkable Indicators and Sampling](../concepts/diagnose-agent-failures-with-code-checkable-indicators-and-sampling.md)
 - [Right-size models with prototype-big, deploy-small](../concepts/right-size-models-with-prototype-big-deploy-small.md)
@@ -1554,6 +1557,7 @@
 - [Size the Voice-Agent LLM to the Time-to-First-Token Budget](../concepts/size-the-voice-agent-llm-to-the-time-to-first-token-budget.md)
 
 ## Retrieval
+- [Rank Agent Memory by Outcome Utility, Not Just Similarity](../concepts/rank-agent-memory-by-outcome-utility-not-just-similarity.md)
 - [Structure Documents Offline to Avoid the Multimodal Token Tax](../concepts/structure-documents-offline-to-avoid-the-multimodal-token-tax.md)
 - [Match Chunking Strategy to Document Type](../concepts/match-chunking-strategy-to-document-type.md)
 - [Choose a Document-Extraction Tier by Cost, Determinism, and Scale](../concepts/choose-document-extraction-tier-by-cost-determinism-and-scale.md)
