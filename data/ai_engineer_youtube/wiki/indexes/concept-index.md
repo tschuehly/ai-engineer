@@ -1034,6 +1034,8 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Explain an AI Product as a Wound → Click → Transformation Story](../concepts/explain-ai-products-as-a-wound-click-transformation-story.md)
+- [Give a Concrete Mental Image Instead of a Category Label](../concepts/give-a-concrete-mental-image-instead-of-a-category-label.md)
 - [The Frozen-Artifact Pipeline Is a Cost Constraint, Not a Law](../concepts/frozen-artifact-pipeline-is-a-cost-constraint-not-a-law.md)
 - [Deploy a Canonical Stem Plus Bounded Per-User Divergences](../concepts/deploy-a-canonical-stem-plus-bounded-per-user-divergences.md)
 - [Run a Time-Boxed Roadmap Pause to Shift AI Work Habits](../concepts/run-a-time-boxed-roadmap-pause-to-shift-ai-work-habits.md)
