@@ -505,6 +505,7 @@ Raphael Kalandadze (Wandero AI) names the layer that has to exist for any of tha
 - [Move mandatory brittle tool steps outside the agent loop](../concepts/move-mandatory-brittle-tool-steps-outside-the-agent-loop.md) - fixed setup steps can be handled before the agent receives control.
 - [Agent connectivity stack combines skills, MCP, CLIs, and computer use](../concepts/agent-connectivity-stack-combines-skills-mcp-clis-and-computer-use.md) - production agents should combine connectivity methods instead of treating MCP, CLIs, computer use, or skills as universal replacements.
 - [MCP applications ship UI and tools together](../concepts/mcp-applications-ship-ui-and-tools-together.md) - MCP can let an agent server provide both a human-facing interface and model-facing tools.
+- [Use MCP App Primitives for Bidirectional Model–UI State](../concepts/use-mcp-app-primitives-for-bidirectional-model-ui-state.md) - the widget can push its state into the model, message the conversation, call tools, and stream args live, keeping the human UI and the model's context in sync.
 - [Discover large API tool surfaces progressively](../concepts/discover-large-api-tool-surfaces-progressively.md) - agents need broad APIs to be discoverable without loading every endpoint upfront.
 - [Treat AI-generated code as untrusted code](../concepts/treat-ai-generated-code-as-untrusted-code.md) - hallucination, over-helpfulness, and prompt injection can make generated code dangerous without malicious model intent.
 - [Run agent-written API code inside programmable sandboxes](../concepts/run-agent-written-api-code-inside-programmable-sandboxes.md) - generated code gives agents flexible API access but needs hard runtime boundaries.
@@ -574,6 +575,7 @@ Raphael Kalandadze (Wandero AI) names the layer that has to exist for any of tha
 
 ## Sources
 
+- [MCP Apps: Primitives, discovery, and the Future of Software - Pietro Zullo, Manufact, Inc](../sources/20260705_sAOBXCDiDOs.md)
 - [Continual Learning for AI Agents: From Failures to Durable Improvements - Soheil Feizi, RELAI](../sources/20260705_2IxD9OB3XuQ.md)
 - [Field Guide to Fable — Thariq Shihipar, Anthropic](../sources/20260706_9fubhllmsBU.md)
 - [Build AI Systems for Discernment, Not Approval - Angel Ortmann Lee, Duolingo](../sources/20260707_CDqzWpwkSls.md)

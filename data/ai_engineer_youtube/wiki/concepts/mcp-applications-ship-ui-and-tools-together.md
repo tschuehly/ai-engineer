@@ -18,6 +18,8 @@ Details:
 - The host renders, not the client: in VS Code the host (VS Code) fetches the HTML and renders the iframe, "not the client, it wouldn't be GitHub Copilot" — a useful role split because the same MCP app can ship to any host while the client only brokers tool calls. ([GitHub] 05:53-06:11)
 - The sandbox is a security boundary, not styling: the iframe exists "the same reason you put a hamster in a cage" — to stop the app from touching the host's settings, external APIs, or anything outside the chat window. ([GitHub] 14:48-15:10)
 - Adopters span commerce and design surfaces: Shopify renders in-chat checkout that preserves its on-site brand experience, Excalidraw renders interactive architecture diagrams (and Claude Code uses its MCP app), and Figma generates components on the fly. ([GitHub] 08:10-09:30)
+- Independent confirmation of the lineage and mechanics (Manufact/`mcp-use`): MCP UI began ~May 2025 (Manufact co-founder Ido Solomon), OpenAI shipped the Apps SDK, and in January 2026 MCP UI converged into MCP Apps as "the official extension of the Model Context Protocol" for returning UI; the tool returns a `ui://` widget in a sandboxed iframe, declared at initialization and populated with the tool's arguments, with a bidirectional channel back to the host. ([Zullo] 03:00-07:32)
+- Beyond the initial render, the App is a stateful two-way interaction layer with a distinct set of primitives — see [Use MCP App Primitives for Bidirectional Model–UI State](use-mcp-app-primitives-for-bidirectional-model-ui-state.md); and store submission plus dynamic discovery make it a distribution channel — see [Distribute MCP Apps Through Stores and Dynamic Discovery](distribute-mcp-apps-through-stores-and-dynamic-discovery.md). ([Zullo] 06:01-26:07)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -26,6 +28,8 @@ Related topics:
 Related concepts:
 - [Render Third-Party Generative UI Through a Double Iframe](render-third-party-generative-ui-through-a-double-iframe.md)
 - [Declare Every External Domain Your MCP App Touches](declare-every-external-domain-your-mcp-app-touches.md)
+- [Use MCP App Primitives for Bidirectional Model–UI State](use-mcp-app-primitives-for-bidirectional-model-ui-state.md)
+- [Distribute MCP Apps Through Stores and Dynamic Discovery](distribute-mcp-apps-through-stores-and-dynamic-discovery.md)
 - [Scaffold MCP Apps From a Repo Skill With a Coding Agent](scaffold-mcp-apps-from-a-repo-skill-with-a-coding-agent.md)
 - [Agent Experience Prioritizes APIs, CLIs, and MCP Over Dashboards](agent-experience-prioritizes-apis-clis-and-mcp-over-dashboards.md)
 - [Collaborate with Complex Agents Through High-Bandwidth Artifacts](collaborate-with-complex-agents-through-high-bandwidth-artifacts.md)
@@ -35,3 +39,4 @@ Sources:
 - [The Future of MCP - David Soria Parra, Anthropic](../sources/20260419_v3Fr2JR47KA.md), 00:22-01:32, 16:16-16:32
 - [Why MCP and ChatGPT Apps Use Double Iframes — Frédéric Barthelet, Alpic](../sources/20260615_c-2eEv2ou7Y.md), 01:43-13:39
 - [Building Interactive UIs in VS Code with MCP Apps — Marlene Mhangami & Liam Hampton, GitHub](../sources/20260606__xIwFcnHqp4.md), 05:15-15:10
+- [MCP Apps: Primitives, discovery, and the Future of Software - Pietro Zullo, Manufact, Inc](../sources/20260705_sAOBXCDiDOs.md), 03:00-26:07

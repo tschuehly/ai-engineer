@@ -1038,6 +1038,7 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Distribute MCP Apps Through Stores and Dynamic Discovery](../concepts/distribute-mcp-apps-through-stores-and-dynamic-discovery.md)
 - [Explain an AI Product as a Wound → Click → Transformation Story](../concepts/explain-ai-products-as-a-wound-click-transformation-story.md)
 - [Give a Concrete Mental Image Instead of a Category Label](../concepts/give-a-concrete-mental-image-instead-of-a-category-label.md)
 - [The Frozen-Artifact Pipeline Is a Cost Constraint, Not a Law](../concepts/frozen-artifact-pipeline-is-a-cost-constraint-not-a-law.md)
@@ -1629,6 +1630,8 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Use MCP App Primitives for Bidirectional Model–UI State](../concepts/use-mcp-app-primitives-for-bidirectional-model-ui-state.md)
+- [Distribute MCP Apps Through Stores and Dynamic Discovery](../concepts/distribute-mcp-apps-through-stores-and-dynamic-discovery.md)
 - [Constrain Agent Effects, Not Expression, With a Typed SDK](../concepts/constrain-agent-effects-not-expression-with-a-typed-sdk.md)
 - [Pre-Bind Tool Arguments to Give Agents Safe Autonomy](../concepts/pre-bind-tool-arguments-to-give-agents-safe-autonomy.md)
 - [Give Your Agent Eyes With a Product-Specific Observation Tool](../concepts/give-your-agent-eyes-with-a-product-specific-observation-tool.md)
