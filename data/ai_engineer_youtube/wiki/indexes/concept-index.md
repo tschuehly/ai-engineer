@@ -406,6 +406,8 @@
 
 ## Coding Agents
 
+- [Route Each Change to the Proof It Needs](../concepts/route-each-change-to-the-proof-it-needs.md)
+- [Self-Verifying Agent Loops Hide Review Rather Than Remove It](../concepts/self-verifying-agent-loops-hide-review-rather-than-remove-it.md)
 - [Understand Agent Work to Participate, Not Just to Verify](../concepts/understand-agent-work-to-participate-not-just-to-verify.md)
 - [Have Agents Write Literate Explainer Docs for Their Changes](../concepts/have-agents-write-literate-explainer-docs-for-their-changes.md)
 - [Gate Agent Code on a Comprehension Quiz You Must Pass](../concepts/gate-agent-code-on-a-comprehension-quiz-you-must-pass.md)
@@ -1036,6 +1038,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Self-Verifying Agent Loops Hide Review Rather Than Remove It](../concepts/self-verifying-agent-loops-hide-review-rather-than-remove-it.md)
 - [Run a Jury of Analysts and a Consensus Judge for No-Ground-Truth Questions](../concepts/run-a-jury-of-analysts-and-a-consensus-judge-for-no-ground-truth-questions.md)
 - [Measure Generated Code Quality Beyond Pass Rate](../concepts/measure-generated-code-quality-beyond-pass-rate.md)
 - [Spec-Driven Agent Validation Goes Beyond the Test Set](../concepts/spec-driven-agent-validation-goes-beyond-the-test-set.md)
@@ -1761,6 +1764,8 @@
 - [Separate Engine Latency From Network Latency in Voice Pipelines](../concepts/separate-engine-latency-from-network-latency-in-voice-pipelines.md)
 
 ## Workflows
+- [Route Each Change to the Proof It Needs](../concepts/route-each-change-to-the-proof-it-needs.md)
+- [Self-Verifying Agent Loops Hide Review Rather Than Remove It](../concepts/self-verifying-agent-loops-hide-review-rather-than-remove-it.md)
 - [Have Agents Write Literate Explainer Docs for Their Changes](../concepts/have-agents-write-literate-explainer-docs-for-their-changes.md)
 - [Gate Agent Code on a Comprehension Quiz You Must Pass](../concepts/gate-agent-code-on-a-comprehension-quiz-you-must-pass.md)
 - [Build Ephemeral Microworlds to Feel How Code Works](../concepts/build-ephemeral-microworlds-to-feel-how-code-works.md)
