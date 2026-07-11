@@ -1,6 +1,8 @@
 # Concept Index
 
 ## Agents
+- [Record and Replay Agent Runs at Node Boundaries](../concepts/record-and-replay-agent-runs-at-node-boundaries.md)
+- [Turn Recorded Agent Traces Into Free Replay Test Cases](../concepts/turn-recorded-agent-traces-into-free-replay-test-cases.md)
 - [Build an Agentic Control Plane So the Model Proposes and the Platform Decides](../concepts/build-an-agentic-control-plane.md)
 - [Contain Retry Amplification Before It Becomes a Compute Incident](../concepts/contain-retry-amplification-in-agent-loops.md)
 - [Operate Agent Products as the Missing Post-Launch Layer](../concepts/operate-agent-products-as-the-missing-post-launch-layer.md)
@@ -959,6 +961,7 @@
 
 ## Inference
 
+- [LLM Inference Is Non-Deterministic Even at Temperature Zero](../concepts/llm-inference-is-non-deterministic-even-at-temperature-zero.md)
 - [Verification Guardrails Let You Downshift to Cheaper Models](../concepts/verification-guardrails-let-you-downshift-to-cheaper-models.md)
 - [Benchmark inference with use-case-shaped token loads](../concepts/benchmark-inference-with-use-case-shaped-token-loads.md)
 - [SGLang Serves Models Through Configured OpenAI-Compatible Servers](../concepts/sglang-serves-models-through-configured-openai-compatible-servers.md)
@@ -1126,6 +1129,9 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Record and Replay Agent Runs at Node Boundaries](../concepts/record-and-replay-agent-runs-at-node-boundaries.md)
+- [Turn Recorded Agent Traces Into Free Replay Test Cases](../concepts/turn-recorded-agent-traces-into-free-replay-test-cases.md)
+- [LLM Inference Is Non-Deterministic Even at Temperature Zero](../concepts/llm-inference-is-non-deterministic-even-at-temperature-zero.md)
 - [Use Deterministic Simulation as Executable Design for Agents](../concepts/use-deterministic-simulation-as-executable-design-for-agents.md)
 - [Expose Forbidden-Fruit Facts in Simulation for Agent Debugging](../concepts/expose-forbidden-fruit-facts-in-simulation-for-agent-debugging.md)
 - [Score Every Production Conversation to Judge Agent Health](../concepts/score-every-production-conversation-to-judge-agent-health.md)
