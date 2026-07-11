@@ -17,6 +17,8 @@ Details:
 - Turn-taking friction cuts both ways: people are too polite to interrupt voice agents (interrupting aggressively actually improves the experience, but there's no good way to "give people permission to interrupt"), and an "agent-wants-to-interject" nudge (a small visual cue signaling the agent has something to add *and which topic*) can make the agent's barge-in richer than a human's. 11:30-11:55, 25:44-26:10
 - Push-to-talk / hold-to-talk (whisper-flow style) is a reliable production workaround because purely audio-driven interruptibility detection is unreliable; augment the raw audio stream with another explicit cue rather than depending on the model to detect turn boundaries. 25:30-25:45
 - Barge-in handling can edit the agent's internals: platforms usually generate the full text then start TTS, and a mid-speech interruption merely *appends* the user's reply after the whole generated message — but with audio playback timestamps you know how far it got, so you can truncate the transcript at the interruption point and make the model "forget it even generated more text" (treating the conversation transcript as an editable internal, not a black box). 28:40-29:15
+- Independent corroboration (Pike, Forestwalk, following Karpathy): voice is the highest-bandwidth human *input* — more words per minute than typing *and* more meaning per word ("okay" vs "okay") — while rich visuals (HTML, interactive controls, illustrations, now generatable via tool calling) are the preferred *output*; the winning shape is voice-in/visuals-out, not symmetric voice-in/voice-out. (`65X0pQ6Lmbg`) 00:17-04:00
+- The asymmetry is also an engineering win, not only a preference: the visual response envelope (~1 s on screen feels seamless) is ~5x more forgiving than the ~200 ms voice-out envelope, so visuals-out ships responsive experiences without novel realtime architectures. (`65X0pQ6Lmbg`) 05:22-08:20
 
 Related topics:
 - [Voice Agents](../topics/voice-agents.md)
@@ -25,6 +27,8 @@ Related concepts:
 - [Semantic turn detection improves voice interruption timing](semantic-turn-detection-improves-voice-interruption-timing.md)
 - [Realtime multimodal agents use stateful streams for audio, vision, and tools](realtime-multimodal-agents-use-stateful-streams-for-audio-vision-and-tools.md)
 - [Use voice-dumped UI and code observations as agent feedback](use-voice-dumped-ui-and-code-observations-as-agent-feedback.md)
+- [Relax the latency budget by choosing voice-in, visuals-out over voice-out](relax-the-latency-budget-with-voice-in-visuals-out.md)
 
 Sources:
 - [How to talk to statues — Joe Reeve, ElevenLabs](../sources/20260601_u-rJwPPU3QA.md), 10:30-11:15, 21:00-23:00, 25:30-26:10, 28:40-29:15
+- [Voice In, Visuals Out: The Agony and the Ecstasy - Allen Pike, Forestwalk Labs](../sources/20260628_65X0pQ6Lmbg.md), 00:17-08:20

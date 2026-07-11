@@ -976,6 +976,7 @@
 
 ## Inference
 
+- [Hit Soft-Realtime Latency With a Fast Model, Eager Inference, and Prefix Caching](../concepts/hit-realtime-latency-with-fast-models-eager-inference-and-prefix-caching.md)
 - [LLM Inference Is Non-Deterministic Even at Temperature Zero](../concepts/llm-inference-is-non-deterministic-even-at-temperature-zero.md)
 - [Verification Guardrails Let You Downshift to Cheaper Models](../concepts/verification-guardrails-let-you-downshift-to-cheaper-models.md)
 - [Benchmark inference with use-case-shaped token loads](../concepts/benchmark-inference-with-use-case-shaped-token-loads.md)
@@ -1878,6 +1879,7 @@
 
 ## Voice Agents
 
+- [Relax the Latency Budget by Choosing Voice-In, Visuals-Out Over Voice-Out](../concepts/relax-the-latency-budget-with-voice-in-visuals-out.md)
 - [Treat AI as an Interface Technology That Removes Human Burden](../concepts/treat-ai-as-an-interface-technology-that-removes-human-burden.md)
 - [Treat the Prompt as a Batch Protocol, Not a Conversation](../concepts/treat-the-prompt-as-a-batch-protocol-not-a-conversation.md)
 - [Make voice AI devices developer-extensible](../concepts/make-voice-ai-devices-developer-extensible.md)
