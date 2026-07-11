@@ -1038,6 +1038,8 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Treat AI as an Interface Technology That Removes Human Burden](../concepts/treat-ai-as-an-interface-technology-that-removes-human-burden.md)
+- [Treat the Prompt as a Batch Protocol, Not a Conversation](../concepts/treat-the-prompt-as-a-batch-protocol-not-a-conversation.md)
 - [Distribute MCP Apps Through Stores and Dynamic Discovery](../concepts/distribute-mcp-apps-through-stores-and-dynamic-discovery.md)
 - [Explain an AI Product as a Wound → Click → Transformation Story](../concepts/explain-ai-products-as-a-wound-click-transformation-story.md)
 - [Give a Concrete Mental Image Instead of a Category Label](../concepts/give-a-concrete-mental-image-instead-of-a-category-label.md)
@@ -1832,6 +1834,8 @@
 
 ## Voice Agents
 
+- [Treat AI as an Interface Technology That Removes Human Burden](../concepts/treat-ai-as-an-interface-technology-that-removes-human-burden.md)
+- [Treat the Prompt as a Batch Protocol, Not a Conversation](../concepts/treat-the-prompt-as-a-batch-protocol-not-a-conversation.md)
 - [Make voice AI devices developer-extensible](../concepts/make-voice-ai-devices-developer-extensible.md)
 - [VoiceVision agents wrap visual RAG with retrieval, image-reading, and speech tools](../concepts/voicevision-agents-wrap-visual-rag-with-retrieval-image-reading-and-speech-tools.md)
 - [Choose voice-agent architecture by latency, accuracy, and semantics](../concepts/choose-voice-agent-architecture-by-latency-accuracy-and-semantics.md)
