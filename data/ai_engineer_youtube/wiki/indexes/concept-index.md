@@ -712,6 +712,7 @@
 
 ## Context Engineering
 
+- [Build a File-Based Research Wiki With Progressive-Disclosure Retrieval](../concepts/file-based-research-wiki-with-progressive-disclosure-retrieval.md)
 - [The Fat-Agent Tool Overload Collapses Accuracy and Inflates Latency](../concepts/fat-agent-tool-overload-collapses-accuracy-and-latency.md)
 - [Shrink the Per-Step Payload the Agent Loop Re-Sends](../concepts/shrink-the-per-step-payload-the-agent-loop-re-sends.md)
 - [Cut Coding-Agent Cost by Fixing the Input, Not the Model or Output](../concepts/cut-coding-agent-cost-by-fixing-the-input-not-the-model-or-output.md)
@@ -1587,6 +1588,8 @@
 - [Size the Voice-Agent LLM to the Time-to-First-Token Budget](../concepts/size-the-voice-agent-llm-to-the-time-to-first-token-budget.md)
 
 ## Retrieval
+- [Build a File-Based Research Wiki With Progressive-Disclosure Retrieval](../concepts/file-based-research-wiki-with-progressive-disclosure-retrieval.md)
+- [Choose the Research Tool by Reuse and Ownership, Not Just Speed](../concepts/choose-the-research-tool-by-reuse-and-ownership.md)
 - [Insert a Local Code-Index Retrieval Layer Between the Codebase and the Coding Agent](../concepts/insert-a-local-code-index-retrieval-layer-between-codebase-and-agent.md)
 - [Shard Cache-Augmented Generation Into Parallel Buckets With a Supervisor](../concepts/shard-cache-augmented-generation-into-parallel-buckets-with-a-supervisor.md)
 - [Distribute Documents Across Cache Buckets in No Particular Order](../concepts/distribute-documents-across-cache-buckets-in-no-particular-order.md)
@@ -1979,6 +1982,7 @@
 - [Separate Engine Latency From Network Latency in Voice Pipelines](../concepts/separate-engine-latency-from-network-latency-in-voice-pipelines.md)
 
 ## Workflows
+- [Choose the Research Tool by Reuse and Ownership, Not Just Speed](../concepts/choose-the-research-tool-by-reuse-and-ownership.md)
 - [Stage Agentic-Engineering Adoption With a Delegation Maturity Model](../concepts/stage-agentic-engineering-adoption-with-a-delegation-maturity-model.md)
 - [Drive Org-Wide Agentic Adoption Through Champions and AI-Ready Repos](../concepts/drive-org-wide-agentic-adoption-through-champions-and-ai-ready-repos.md)
 - [Design AI Systems Requirements-First With a Four-Phase Framework](../concepts/design-ai-systems-requirements-first-with-a-four-phase-framework.md)
