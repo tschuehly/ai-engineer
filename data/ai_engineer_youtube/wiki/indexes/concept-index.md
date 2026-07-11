@@ -442,6 +442,8 @@
 
 ## Coding Agents
 
+- [Cut Coding-Agent Cost by Fixing the Input, Not the Model or Output](../concepts/cut-coding-agent-cost-by-fixing-the-input-not-the-model-or-output.md)
+- [Insert a Local Code-Index Retrieval Layer Between the Codebase and the Coding Agent](../concepts/insert-a-local-code-index-retrieval-layer-between-codebase-and-agent.md)
 - [Optimize an Agent With a Branch-per-Hypothesis Coding-Agent Loop](../concepts/optimize-an-agent-with-a-branch-per-hypothesis-coding-agent-loop.md)
 - [Choose a skill's trigger by trading context load against cognitive load](../concepts/choose-skill-trigger-by-trading-context-load-against-cognitive-load.md)
 - [Steer agents with leading words that surface in reasoning traces](../concepts/steer-agents-with-leading-words-that-surface-in-reasoning-traces.md)
@@ -703,6 +705,8 @@
 
 ## Context Engineering
 
+- [Cut Coding-Agent Cost by Fixing the Input, Not the Model or Output](../concepts/cut-coding-agent-cost-by-fixing-the-input-not-the-model-or-output.md)
+- [Insert a Local Code-Index Retrieval Layer Between the Codebase and the Coding Agent](../concepts/insert-a-local-code-index-retrieval-layer-between-codebase-and-agent.md)
 - [Choose a skill's trigger by trading context load against cognitive load](../concepts/choose-skill-trigger-by-trading-context-load-against-cognitive-load.md)
 - [Steer agents with leading words that surface in reasoning traces](../concepts/steer-agents-with-leading-words-that-surface-in-reasoning-traces.md)
 - [Split skills to hide future steps and force more leg work per step](../concepts/split-skills-to-hide-future-steps-and-force-leg-work.md)
@@ -1571,6 +1575,7 @@
 - [Size the Voice-Agent LLM to the Time-to-First-Token Budget](../concepts/size-the-voice-agent-llm-to-the-time-to-first-token-budget.md)
 
 ## Retrieval
+- [Insert a Local Code-Index Retrieval Layer Between the Codebase and the Coding Agent](../concepts/insert-a-local-code-index-retrieval-layer-between-codebase-and-agent.md)
 - [Shard Cache-Augmented Generation Into Parallel Buckets With a Supervisor](../concepts/shard-cache-augmented-generation-into-parallel-buckets-with-a-supervisor.md)
 - [Distribute Documents Across Cache Buckets in No Particular Order](../concepts/distribute-documents-across-cache-buckets-in-no-particular-order.md)
 - [Rank Agent Memory by Outcome Utility, Not Just Similarity](../concepts/rank-agent-memory-by-outcome-utility-not-just-similarity.md)
