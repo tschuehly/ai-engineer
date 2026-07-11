@@ -416,6 +416,8 @@
 
 ## Coding Agents
 
+- [On Mixed-Ability AI Teams, Specialists Should Enable Not Do](../concepts/on-mixed-ability-ai-teams-specialists-should-enable-not-do.md)
+- [Make the Running Prototype the Primary Design Artifact](../concepts/make-the-running-prototype-the-primary-design-artifact.md)
 - [Evaluate Coding Agents on Project-Scale, Billion-Token Tasks](../concepts/evaluate-coding-agents-on-project-scale-billion-token-tasks.md)
 - [At Long Horizons a Weak Verifier Becomes an Attack Surface](../concepts/at-long-horizons-a-weak-verifier-becomes-an-attack-surface.md)
 - [Constrain Agent Effects, Not Expression, With a Typed SDK](../concepts/constrain-agent-effects-not-expression-with-a-typed-sdk.md)
@@ -1017,6 +1019,7 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Run a Time-Boxed Roadmap Pause to Shift AI Work Habits](../concepts/run-a-time-boxed-roadmap-pause-to-shift-ai-work-habits.md)
 - [Founder Personal Brand Is the GTM Moat](../concepts/founder-personal-brand-is-the-gtm-moat.md)
 - [Distribution Is the New Bottleneck for Developer Tools](../concepts/distribution-is-the-new-bottleneck-for-devtools.md)
 - [Engineer the Interaction, Not the Model, for Discernment](../concepts/engineer-the-interaction-not-the-model-for-discernment.md)
@@ -1837,6 +1840,9 @@
 - [Separate Engine Latency From Network Latency in Voice Pipelines](../concepts/separate-engine-latency-from-network-latency-in-voice-pipelines.md)
 
 ## Workflows
+- [Make the Running Prototype the Primary Design Artifact](../concepts/make-the-running-prototype-the-primary-design-artifact.md)
+- [On Mixed-Ability AI Teams, Specialists Should Enable Not Do](../concepts/on-mixed-ability-ai-teams-specialists-should-enable-not-do.md)
+- [Run a Time-Boxed Roadmap Pause to Shift AI Work Habits](../concepts/run-a-time-boxed-roadmap-pause-to-shift-ai-work-habits.md)
 - [Rescope Ambition Down a Tier as Models Improve](../concepts/rescope-ambition-down-a-tier-as-models-improve.md)
 - [Wrap Agent Completion in an Automatic Deterministic Verification Gate](../concepts/wrap-agent-completion-in-an-automatic-deterministic-verification-gate.md)
 - [Automate a Nightly Generate-and-Publish Media Pipeline With Sampled QA](../concepts/automate-a-nightly-generate-and-publish-media-pipeline-with-sampled-qa.md)
