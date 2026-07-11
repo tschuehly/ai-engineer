@@ -1,6 +1,7 @@
 # Concept Index
 
 ## Agents
+- [Capability Overhang: Tools Decide Which Model Spikes You Reach](../concepts/capability-overhang-tools-decide-which-model-spikes-you-reach.md)
 - [Let the Agent Harness Emerge at Runtime (Adaptive Engineering)](../concepts/let-the-agent-harness-emerge-at-runtime-adaptive-engineering.md)
 - [Match the Harness to Complicated vs Complex Problems](../concepts/match-the-harness-to-complicated-vs-complex-problems.md)
 - [Automation Bias Turns Human-in-the-Loop Into a Rubber Stamp](../concepts/automation-bias-turns-human-in-the-loop-into-a-rubber-stamp.md)
@@ -418,6 +419,9 @@
 
 ## Coding Agents
 
+- [Capability Overhang: Tools Decide Which Model Spikes You Reach](../concepts/capability-overhang-tools-decide-which-model-spikes-you-reach.md)
+- [Shrink the System Prompt and Drop Examples as Models Improve](../concepts/shrink-the-system-prompt-and-drop-examples-as-models-improve.md)
+- [Use the Agent to Surface Your Own Unknowns](../concepts/use-the-agent-to-surface-your-own-unknowns.md)
 - [Let the Agent Harness Emerge at Runtime (Adaptive Engineering)](../concepts/let-the-agent-harness-emerge-at-runtime-adaptive-engineering.md)
 - [Match the Harness to Complicated vs Complex Problems](../concepts/match-the-harness-to-complicated-vs-complex-problems.md)
 - [On Mixed-Ability AI Teams, Specialists Should Enable Not Do](../concepts/on-mixed-ability-ai-teams-specialists-should-enable-not-do.md)
@@ -662,6 +666,8 @@
 
 ## Context Engineering
 
+- [Shrink the System Prompt and Drop Examples as Models Improve](../concepts/shrink-the-system-prompt-and-drop-examples-as-models-improve.md)
+- [Use the Agent to Surface Your Own Unknowns](../concepts/use-the-agent-to-surface-your-own-unknowns.md)
 - [Enforce Agent Rules in Git Hooks and CI, Not the Prompt](../concepts/enforce-agent-rules-in-git-hooks-and-ci-not-the-prompt.md)
 - [Externalize Agent State to Files and Reset Instead of Compact](../concepts/externalize-agent-state-to-files-and-reset-instead-of-compact.md)
 - [Curate Context Strategically Because Models Drop the Middle](../concepts/curate-context-strategically-because-models-drop-the-middle.md)
@@ -1358,6 +1364,7 @@
 
 ## Models
 
+- [Capability Overhang: Tools Decide Which Model Spikes You Reach](../concepts/capability-overhang-tools-decide-which-model-spikes-you-reach.md)
 - [Train a Small Retrieval Agent With SFT Plus Search-Reward RL](../concepts/train-a-small-retrieval-agent-with-sft-and-search-reward-rl.md)
 - [Detect Fine-Tuning Backdoors With an Activation-Difference SAE](../concepts/detect-fine-tuning-backdoors-with-an-activation-difference-sae.md)
 - [A Bigger Model Is Not Automatically a Safer or Better Agent](../concepts/a-bigger-model-is-not-automatically-a-safer-or-better-agent.md)
@@ -1848,6 +1855,7 @@
 - [Separate Engine Latency From Network Latency in Voice Pipelines](../concepts/separate-engine-latency-from-network-latency-in-voice-pipelines.md)
 
 ## Workflows
+- [Use the Agent to Surface Your Own Unknowns](../concepts/use-the-agent-to-surface-your-own-unknowns.md)
 - [Let the Agent Harness Emerge at Runtime (Adaptive Engineering)](../concepts/let-the-agent-harness-emerge-at-runtime-adaptive-engineering.md)
 - [Match the Harness to Complicated vs Complex Problems](../concepts/match-the-harness-to-complicated-vs-complex-problems.md)
 - [The Frozen-Artifact Pipeline Is a Cost Constraint, Not a Law](../concepts/frozen-artifact-pipeline-is-a-cost-constraint-not-a-law.md)

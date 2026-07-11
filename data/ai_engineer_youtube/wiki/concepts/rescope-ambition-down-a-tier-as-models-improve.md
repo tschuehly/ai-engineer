@@ -13,6 +13,7 @@ Details:
 - The gain is wasted if you don't scale ambition to match: "Most of the Jira tickets I closed in my previous job could be trivially solved with Opus 4.5. My previous work would not benefit from Mythos." Since models improve faster than humans do, the response is to "go bigger," not to get better at the old tier. 02:59-03:34
 - Caveat: the old ceiling has genuinely blurred — "I don't know what too big means anymore" (training your own model? an OS? competing with NPM directly?) — so finding the new limit requires deliberately attempting projects that feel oversized. 12:22-13:05
 - The tier collapse rests on the orchestration-era model handling large implementations from a prompt with no custom "software factory" — see the model-eras framing in the related capability-tiers concept.
+- Thariq Shihipar (Anthropic) reaches the same "scale ambition up" conclusion from a mindset angle he calls *being unreasonable*: Anthropic's culture holds that "tradeoffs are not real," so instead of prioritizing one thing against another you "just do all of it… force reality to show you the tradeoff." Good/fast/cheap stops being "pick two" and becomes "pick three," and the durable move is to "reframe and make ourselves more ambitious… do the best work of our lives faster than ever" (he built a full keynote deck in ~4 hours with Fable). The Fable talk's caveat also sharpens the payoff: "building is easier, but generating value is still hard" — cheap implementation doesn't remove the many swings it takes to find the valuable thing, so scale ambition toward *value*, not just output. [Thariq Shihipar, 16:28-19:05]
 
 Related topics:
 - [Product Strategy](../topics/product-strategy.md)
@@ -27,3 +28,4 @@ Related concepts:
 
 Sources:
 - [Everything we knew about software has changed — Theo Browne, @t3dotgg](../sources/20260708_xUnRQ9vLXxo.md), 02:59-13:05
+- [Field Guide to Fable — Thariq Shihipar, Anthropic](../sources/20260706_9fubhllmsBU.md), 16:28-19:05

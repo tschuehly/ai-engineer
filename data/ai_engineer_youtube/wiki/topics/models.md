@@ -64,8 +64,11 @@ Model-size selection for agents also has a safety axis that cuts against "bigger
 
 The small-specialized-model conclusion extends to purpose-trained agents, not only single-call inference. Mixedbread distills a *retrieval agent* into a small fast LLM (for latency) via supervised fine-tuning from a larger teacher, then tunes it with on-policy RL against a composite search reward — a retrieval term (NDCG plus an LLM rubric judge) and a trajectory term (an LLM judge rewarding natural-sentence queries and the right exploration depth). A small trained agent given a strong search tool beat much larger models with default tools (top-1 on Snowflake's DocQA with Gemini 2.5 Flash as the answer model), reinforcing that task-specific training plus the right tools can outperform raw model scale — the trajectory reward, which specifically shapes *how the agent searches*, is what closes the query-quality gap that a bigger general model does not.
 
+Thariq Shihipar (Anthropic) adds a model-behavior framing for reasoning about a new release: "the models are grown, not designed," so a new model should be treated "closer to a biology than a physics" — empirical and organic, with rules not fully known (he points to Anthropic's "Biology of a Large Language Model" paper). The practically important property is that capability arrives *spiky*, not uniformly, so there is a [capability overhang](../concepts/capability-overhang-tools-decide-which-model-spikes-you-reach.md): the model knows every Pokémon but can't name the ones ending in "aw" until a tool lets it filter, and much of a new model's real gain is unlocked at the harness rather than read off a benchmark. This complements this topic's efficiency/right-sizing thread from the other direction — those conclusions are about *not overpaying* for scale you don't need, while capability overhang is about *not underusing* the scale you already have because the tools don't reach its spikes; both reject "the leaderboard number is the model's value."
+
 ## Key Concepts
 
+- [Capability Overhang: Tools Decide Which Model Spikes You Reach](../concepts/capability-overhang-tools-decide-which-model-spikes-you-reach.md) - models get smarter in spiky ways and much capability is latent until the harness reaches it; treat a new model as biology-not-physics and discover its spikes rather than reading the benchmark.
 - [A Bigger Model Is Not Automatically a Safer or Better Agent](../concepts/a-bigger-model-is-not-automatically-a-safer-or-better-agent.md) - a smart-vs-safe tradeoff for deployed agents: capable models decode poem jailbreaks, broad remit widens attack surface, and cost/latency rise, so target good-enough-to-perform but not arbitrary-harm capability.
 - [Tune Coding-Agent Harnesses Per Model Family](../concepts/tune-coding-agent-harnesses-per-model-family.md) - underperformance on a model is usually a harness gap; prompt techniques don't transfer across families, so a model swap alone rarely moves the score and adopting a new family is its own tuning effort.
 - [Split Discovery and Validation Across Reasoning and Deterministic Models](../concepts/split-discovery-and-validation-across-reasoning-and-deterministic-models.md) - route open-ended discovery to high-reasoning models and deterministic validation to cheaper models, because the validation 20% does not need a reasoning model.
@@ -210,6 +213,7 @@ The small-specialized-model conclusion extends to purpose-trained agents, not on
 
 ## Sources
 
+- [Field Guide to Fable — Thariq Shihipar, Anthropic](../sources/20260706_9fubhllmsBU.md)
 - [Can LLMs generate Enterprise Quality Code? — Prasenjit Sarkar, Sonar](../sources/20260531_NuePCNMpWGc.md)
 - [Evals Are Broken, Use Them Anyway — Ara Khan, Cline](../sources/20260606_QuuIywMG4s8.md)
 - [You Might Not Need 50 Diffusion Steps — Ziv Ilan, Nvidia](../sources/20260616_gHs5ZiY80PM.md)
