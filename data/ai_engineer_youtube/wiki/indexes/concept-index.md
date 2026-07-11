@@ -1543,6 +1543,8 @@
 - [Size the Voice-Agent LLM to the Time-to-First-Token Budget](../concepts/size-the-voice-agent-llm-to-the-time-to-first-token-budget.md)
 
 ## Retrieval
+- [Structure Documents Offline to Avoid the Multimodal Token Tax](../concepts/structure-documents-offline-to-avoid-the-multimodal-token-tax.md)
+- [Match Chunking Strategy to Document Type](../concepts/match-chunking-strategy-to-document-type.md)
 - [Choose a Document-Extraction Tier by Cost, Determinism, and Scale](../concepts/choose-document-extraction-tier-by-cost-determinism-and-scale.md)
 - [Use a Document Outline as the Retrieval Index for Chunkless Agentic RAG](../concepts/use-a-document-outline-as-the-retrieval-index-for-chunkless-agentic-rag.md)
 - [Retrieval, Not Reasoning, Is the Knowledge-Work Bottleneck](../concepts/retrieval-not-reasoning-is-the-knowledge-work-bottleneck.md)
