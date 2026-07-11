@@ -1,6 +1,7 @@
 # Concept Index
 
 ## Agents
+- [Co-Design Agents to Write Natural-Language Queries for Strong Retrieval](../concepts/co-design-agents-to-write-natural-language-queries-for-strong-retrieval.md)
 - [Think Wider, Not Bigger: Compete on Breadth via User Extensibility](../concepts/think-wider-not-bigger-compete-on-breadth-via-extensibility.md)
 - [Converge Agent Fleets on Cluster-Scheduling Primitives](../concepts/converge-agent-fleets-on-cluster-scheduling-primitives.md)
 - [Drive Game NPCs and Difficulty With Runtime LLMs](../concepts/drive-game-npcs-and-difficulty-with-runtime-llms.md)
@@ -1069,6 +1070,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Retrieval, Not Reasoning, Is the Knowledge-Work Bottleneck](../concepts/retrieval-not-reasoning-is-the-knowledge-work-bottleneck.md)
 - [Behavioral Evals Cannot Catch Sleeper-Agent Backdoors](../concepts/behavioral-evals-cannot-catch-sleeper-agent-backdoors.md)
 - [Detect Fine-Tuning Backdoors With an Activation-Difference SAE](../concepts/detect-fine-tuning-backdoors-with-an-activation-difference-sae.md)
 - [Build High-Fidelity Engines to Create Verification Loops in Non-Code Domains](../concepts/build-high-fidelity-engines-to-create-verification-loops-in-non-code-domains.md)
@@ -1325,6 +1327,7 @@
 
 ## Models
 
+- [Train a Small Retrieval Agent With SFT Plus Search-Reward RL](../concepts/train-a-small-retrieval-agent-with-sft-and-search-reward-rl.md)
 - [Detect Fine-Tuning Backdoors With an Activation-Difference SAE](../concepts/detect-fine-tuning-backdoors-with-an-activation-difference-sae.md)
 - [A Bigger Model Is Not Automatically a Safer or Better Agent](../concepts/a-bigger-model-is-not-automatically-a-safer-or-better-agent.md)
 - [Select State of the Art on a Quality-Efficiency Pareto Front](../concepts/select-state-of-the-art-on-a-quality-efficiency-pareto-front.md)
@@ -1443,6 +1446,9 @@
 - [Size the Voice-Agent LLM to the Time-to-First-Token Budget](../concepts/size-the-voice-agent-llm-to-the-time-to-first-token-budget.md)
 
 ## Retrieval
+- [Retrieval, Not Reasoning, Is the Knowledge-Work Bottleneck](../concepts/retrieval-not-reasoning-is-the-knowledge-work-bottleneck.md)
+- [Co-Design Agents to Write Natural-Language Queries for Strong Retrieval](../concepts/co-design-agents-to-write-natural-language-queries-for-strong-retrieval.md)
+- [Train a Small Retrieval Agent With SFT Plus Search-Reward RL](../concepts/train-a-small-retrieval-agent-with-sft-and-search-reward-rl.md)
 - [Evaluate Agent Retrieval by Trajectory, Not Task Success](../concepts/evaluate-agent-retrieval-by-trajectory-not-task-success.md)
 - [Curate Context Strategically Because Models Drop the Middle](../concepts/curate-context-strategically-because-models-drop-the-middle.md)
 - [Enterprise RAG Becomes More Useful With API Tool Access](../concepts/enterprise-rag-becomes-more-useful-with-api-tool-access.md)

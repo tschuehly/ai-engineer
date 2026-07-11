@@ -174,6 +174,8 @@ The same independence requirement applies to the emerging "loops" primitive. Ale
 
 Witan Labs' spreadsheet work grounds two pragmatic eval lessons. First, prefer deterministic evaluation over LLM-as-judge where possible: they started judge-only ("sometimes the only option"), but the confound is that when a score changes "you can't tell if it's because the agent changed something or the evaluator changed what it outputs" — so a judge can't separate agent regressions from judge drift, whereas a deterministic check (a golden spreadsheet used as a black box: same inputs → compare outputs against the model's spreadsheet) is "sometimes more trustworthy." Getting evaluation right was what actually let them tell whether alternative representations (CSV, SQL) were any good. Second, treat evaluation as a debugging surface, not just a scoring gate: infrastructure bugs "many times end up looking like reasoning failures" — a broken tool the model retries around, or a wrong example in the prompt the model follows faithfully — so "there's a lot of juice to get out of just really looking at those traces" to separate genuine model limits from fixable plumbing.
 
+Mixedbread contributes a retrieval-specific evaluation frame that isolates the retrieval variable from the reasoning variable: the *Oracle gap*. Score a model when handed the correct documents (the reasoning ceiling — 93% on BrowseComp Plus, 64% on FinanceQA Pro) versus over the real noisy corpus (single digits for a default-tool agent), and the delta attributes the failure to retrieval rather than reasoning, telling you whether to spend on a better search tool or a better answer model. Their training loop also shows a composite retrieval eval used as a reward signal — a hard metric (NDCG over the final ranked list) plus an LLM rubric judge (is the result relevant, are all chunks relevant, is the ranking plausible) plus a trajectory judge (is the query a natural sentence, is the exploration depth right) — a reminder that retrieval quality decomposes into output-ranking and search-behavior signals, not a single answer-correctness score.
+
 ## Key Concepts
 
 - [Run a jury of analysts and a consensus judge for no-ground-truth questions](../concepts/run-a-jury-of-analysts-and-a-consensus-judge-for-no-ground-truth-questions.md) - for subjective questions with no objective answer, weigh several independent evidence-cited opinions with a consensus judge rather than trusting one pass.
@@ -445,6 +447,8 @@ Witan Labs' spreadsheet work grounds two pragmatic eval lessons. First, prefer d
 - [Benchmark Voice AI on Distant-Mic Multi-Speaker Audio, Not Headset Single-Speaker](../concepts/benchmark-voice-ai-on-distant-mic-multi-speaker-audio.md) - leaderboard ASR/diarization numbers measured on close-talk single-speaker audio overstate real multi-speaker, distant-mic performance, so benchmark on conditions that match deployment.
 - [Mine stuck-then-solved sessions for injectable fixes](../concepts/mine-stuck-then-solved-sessions-for-injectable-fixes.md) - an LLM judge labels "stuck" sessions and a blank-injection holdout A/B measures each injected context entry's real production value against project completion.
 - [Build High-Fidelity Engines to Create Verification Loops in Non-Code Domains](../concepts/build-high-fidelity-engines-to-create-verification-loops-in-non-code-domains.md) - the verification loop (a calculation/render engine as source of truth) is the durable part of an agent system, but a partial engine yields worse results than none.
+- [Retrieval, Not Reasoning, Is the Knowledge-Work Bottleneck](../concepts/retrieval-not-reasoning-is-the-knowledge-work-bottleneck.md) - the Oracle gap (score with correct documents vs over the real corpus) isolates whether a failure is a retrieval problem or a reasoning problem.
+
 ## Open Questions
 
 - Which task-level signals best distinguish a bad retrieval result from an incomplete underlying knowledge base?
@@ -538,6 +542,7 @@ Witan Labs' spreadsheet work grounds two pragmatic eval lessons. First, prefer d
 - [How Claude Code Works - Jared Zoneraich, PromptLayer](../sources/20251226_RFKCzGlAU6Q.md)
 - [Why Agent Hype can fall short of reality - Joel Becker, METR](../sources/20251224_RhfqQKe22ZA.md)
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md)
+- [How we taught agents to use good retrieval - Hanna Lichtenberg, Mixedbread AI](../sources/20260707_1IdzkRVmWAA.md)
 - [Spec-Driven Development: Agentic Coding at FAANG Scale and Quality - Al Harris, Amazon Kiro](../sources/20260109_HY_JyxAZsiE.md)
 - [How METR measures Long Tasks and Experienced Open Source Dev Productivity - Joel Becker, METR](../sources/20260119_k1t2xyWMUdY.md)
 - [The State of AI Code Quality: Hype vs Reality — Itamar Friedman, Qodo](../sources/20251211_rgjF5o2Qjsc.md)

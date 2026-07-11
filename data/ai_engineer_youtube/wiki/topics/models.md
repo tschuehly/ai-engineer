@@ -62,6 +62,8 @@ Model selection should also resist the "pick the biggest model at the top of the
 
 Model-size selection for agents also has a safety axis that cuts against "bigger is better." Safe Intelligence's Steven Willmott notes that a more capable model can be *easier* to jailbreak — a malicious instruction wrapped in a poem is decoded and acted on by a large model but is opaque to a small one — and that a broad-remit agent widens both the exploit and the test surface, on top of the usual cost and latency penalty of using a large model for simple work. For automated deployment this is a smart-vs-safe tradeoff, and the target is a model good enough to perform the task but not capable of arbitrary harm. This sharpens the efficiency and small-specialized-model conclusions above with a security-driven reason to right-size: the smallest sufficient model is often safer as well as cheaper.
 
+The small-specialized-model conclusion extends to purpose-trained agents, not only single-call inference. Mixedbread distills a *retrieval agent* into a small fast LLM (for latency) via supervised fine-tuning from a larger teacher, then tunes it with on-policy RL against a composite search reward — a retrieval term (NDCG plus an LLM rubric judge) and a trajectory term (an LLM judge rewarding natural-sentence queries and the right exploration depth). A small trained agent given a strong search tool beat much larger models with default tools (top-1 on Snowflake's DocQA with Gemini 2.5 Flash as the answer model), reinforcing that task-specific training plus the right tools can outperform raw model scale — the trajectory reward, which specifically shapes *how the agent searches*, is what closes the query-quality gap that a bigger general model does not.
+
 ## Key Concepts
 
 - [A Bigger Model Is Not Automatically a Safer or Better Agent](../concepts/a-bigger-model-is-not-automatically-a-safer-or-better-agent.md) - a smart-vs-safe tradeoff for deployed agents: capable models decode poem jailbreaks, broad remit widens attack surface, and cost/latency rise, so target good-enough-to-perform but not arbitrary-harm capability.
@@ -181,6 +183,7 @@ Model-size selection for agents also has a safety axis that cuts against "bigger
 - [Generate Text by Iterative Denoising, Not Left-to-Right](../concepts/generate-text-by-iterative-denoising-not-left-to-right.md) - text diffusion denoises the whole output block bidirectionally instead of emitting one token at a time, enabling in-place editing.
 - [Diffusion Models Self-Correct by Revising Earlier Tokens](../concepts/diffusion-models-self-correct-by-revising-earlier-tokens.md) - bidirectional iteration lets a diffusion model fix an early answer that an autoregressive model would lock in.
 - [Scale Text-Diffusion Quality With More Denoising Steps](../concepts/scale-text-diffusion-quality-with-more-denoising-steps.md) - denoising-step count is a test-time compute knob with roughly monotonic quality gains and model-decided adaptive computation.
+- [Train a Small Retrieval Agent With SFT Plus Search-Reward RL](../concepts/train-a-small-retrieval-agent-with-sft-and-search-reward-rl.md) - distill a small fast search agent from a teacher and RL-tune it on a composite retrieval + trajectory reward, beating larger default-tool models.
 
 ## Open Questions
 
@@ -265,3 +268,4 @@ Model-size selection for agents also has a safety axis that cuts against "bigger
 - [Task Fidelity Scaling Laws — Kobie Crawford, Snorkel](../sources/20260602_YYH0DMQr30A.md)
 - [20 days of compute vs 7 hours: rethinking what state-of-the-art means — Bertrand Charpentier, Pruna](../sources/20260601_hqHC6Z_lXyo.md)
 - [Your LLM Deception Monitor Is Broken. The Fix Is in the Training Data - Sachin Kumar, LexisNexis](../sources/20260708_IQkVMvXQKLY.md)
+- [How we taught agents to use good retrieval - Hanna Lichtenberg, Mixedbread AI](../sources/20260707_1IdzkRVmWAA.md)

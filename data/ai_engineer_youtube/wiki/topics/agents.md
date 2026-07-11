@@ -166,6 +166,8 @@ Kyle Jaejun Lee (KRAFTON) independently reaches the same conclusion from a perso
 
 Theo Browne extends the agents-as-product-primitive view to how far a small team's product can now *reach*. Because agents can do significant implementation on demand, he argues you can architect a product for user-driven extensibility — cover enough breadth to onboard most users, then let them build the vertical features you don't support themselves — with Slack as the accidental example ("the platform people run their agents in half the time... it's the right shape for people to build the features they want into it"). The agent-native corollary is that the "right shape" for extension (functional bot/tool APIs users can wire agents into) can matter more than feature completeness.
 
+Agent behavior is also shaped by what a model was *trained* to do, which surfaces as a query-writing bias when agents drive retrieval. Mixedbread found that models emit keyword-salad search queries — because they were trained on coding agents (grep/regex) and human-optimized web tools, and against BM25-favoring benchmarks — so a strong semantic retriever is starved of sentence-shaped intent unless the harness corrects it. The durable agent-design lesson is to co-design the agent with its tools: give it separable retrieval tools (wide overview, full-payload semantic, metadata filter, grep), a bounded loop with parallel per-round searches, and prompt levers that steer natural-language queries (asking it to "write one concise sentence describing what it wants to find" rather than "write a search query"). This is a general reminder that an agent's default tool-use behavior reflects its training distribution, and mismatched tools need harness or training intervention, not just a better tool.
+
 ## Key Concepts
 
 - [Drive Game NPCs and Difficulty With Runtime LLMs](../concepts/drive-game-npcs-and-difficulty-with-runtime-llms.md) - a runtime LLM drives emergent NPC behavior and personalizes difficulty during play, an agentic-decision pattern for interactive experiences.
@@ -499,6 +501,7 @@ Theo Browne extends the agents-as-product-primitive view to how far a small team
 - [Use explanatory feedback to optimize prompts](../concepts/use-explanatory-feedback-to-optimize-prompts.md) - agent prompts improve from failure explanations that identify what the agent missed.
 - [Evaluator quality is a dependency of prompt optimization](../concepts/evaluator-quality-is-a-dependency-of-prompt-optimization.md) - automated agent prompt updates need trustworthy eval signals.
 - [Give agents a vent tool to report platform friction](../concepts/give-agents-a-vent-tool-to-report-platform-friction.md) - a frustration-gated channel for the agent to report tooling/docs/platform limitations surfaces silent failures and doubles as an incident detector.
+- [Co-Design Agents to Write Natural-Language Queries for Strong Retrieval](../concepts/co-design-agents-to-write-natural-language-queries-for-strong-retrieval.md) - an agent's default tool-use behavior reflects its training distribution, so a harness must steer keyword-biased models into sentence-shaped queries and the right tool per intent.
 
 ## Open Questions
 
@@ -712,3 +715,4 @@ Theo Browne extends the agents-as-product-primitive view to how far a small team
 - [Dark Factory: OpenClaw Ships Faster Than You Can Read the Diff — Vincent Koc, OpenClaw](../sources/20260605_pmoDeA3RBZY.md)
 - [Beyond Components: Designing Generative UI for MCP Apps — Ruben Casas, Postman](../sources/20260603_hCMrEfPG2Yg.md)
 - [Design Patterns for AI Trust: Juries, Libraries, and Agent Tiers — Alex Bauer, Upside.tech](../sources/20260711_YZQsWVeN3rE.md)
+- [How we taught agents to use good retrieval - Hanna Lichtenberg, Mixedbread AI](../sources/20260707_1IdzkRVmWAA.md)
