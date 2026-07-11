@@ -1056,6 +1056,8 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Behavioral Evals Cannot Catch Sleeper-Agent Backdoors](../concepts/behavioral-evals-cannot-catch-sleeper-agent-backdoors.md)
+- [Detect Fine-Tuning Backdoors With an Activation-Difference SAE](../concepts/detect-fine-tuning-backdoors-with-an-activation-difference-sae.md)
 - [Build High-Fidelity Engines to Create Verification Loops in Non-Code Domains](../concepts/build-high-fidelity-engines-to-create-verification-loops-in-non-code-domains.md)
 - [Self-Verifying Agent Loops Hide Review Rather Than Remove It](../concepts/self-verifying-agent-loops-hide-review-rather-than-remove-it.md)
 - [Run a Jury of Analysts and a Consensus Judge for No-Ground-Truth Questions](../concepts/run-a-jury-of-analysts-and-a-consensus-judge-for-no-ground-truth-questions.md)
@@ -1310,6 +1312,7 @@
 
 ## Models
 
+- [Detect Fine-Tuning Backdoors With an Activation-Difference SAE](../concepts/detect-fine-tuning-backdoors-with-an-activation-difference-sae.md)
 - [A Bigger Model Is Not Automatically a Safer or Better Agent](../concepts/a-bigger-model-is-not-automatically-a-safer-or-better-agent.md)
 - [Select State of the Art on a Quality-Efficiency Pareto Front](../concepts/select-state-of-the-art-on-a-quality-efficiency-pareto-front.md)
 - [Tune Coding-Agent Harnesses Per Model Family](../concepts/tune-coding-agent-harnesses-per-model-family.md)
@@ -1520,6 +1523,8 @@
 
 ## Security
 
+- [Behavioral Evals Cannot Catch Sleeper-Agent Backdoors](../concepts/behavioral-evals-cannot-catch-sleeper-agent-backdoors.md)
+- [Detect Fine-Tuning Backdoors With an Activation-Difference SAE](../concepts/detect-fine-tuning-backdoors-with-an-activation-difference-sae.md)
 - [A Bigger Model Is Not Automatically a Safer or Better Agent](../concepts/a-bigger-model-is-not-automatically-a-safer-or-better-agent.md)
 - [Spec-Driven Agent Validation Goes Beyond the Test Set](../concepts/spec-driven-agent-validation-goes-beyond-the-test-set.md)
 - [Browser agents sit in the prompt-injection lethal trifecta](../concepts/browser-agents-sit-in-the-prompt-injection-lethal-trifecta.md)
