@@ -396,6 +396,8 @@
 - [Expose Site Capabilities to In-Browser Agents With WebMCP](../concepts/expose-site-capabilities-to-in-browser-agents-with-webmcp.md)
 - [Make Web Foundations Agent-Ready Before Adopting WebMCP](../concepts/make-web-foundations-agent-ready-before-adopting-webmcp.md)
 - [Give agents a vent tool to report platform friction](../concepts/give-agents-a-vent-tool-to-report-platform-friction.md)
+- [Fix the Browser-Agent Runtime Interface Before Reaching for a Better Model](../concepts/fix-the-browser-agent-runtime-interface-before-reaching-for-a-better-model.md)
+- [Give Browser Agents a Compact Whole-Page Representation](../concepts/give-browser-agents-a-compact-whole-page-representation.md)
 
 ## AI Monetization
 
@@ -766,6 +768,7 @@
 - [Use eval agents to improve prompts, datasets, and scorers](../concepts/use-eval-agents-to-improve-prompts-datasets-and-scorers.md)
 - [System Prompt Learning Updates Agent Rules From Eval Explanations](../concepts/system-prompt-learning-updates-agent-rules-from-eval-explanations.md)
 - [Mine stuck-then-solved sessions for injectable fixes](../concepts/mine-stuck-then-solved-sessions-for-injectable-fixes.md)
+- [Give Browser Agents a Compact Whole-Page Representation](../concepts/give-browser-agents-a-compact-whole-page-representation.md)
 
 ## Edge Inference
 
@@ -973,6 +976,7 @@
 - [Untied Ulysses Reuses Attention Buffers Across Head Chunks](../concepts/untied-ulysses-reuses-attention-buffers-across-head-chunks.md)
 - [Give agents a vent tool to report platform friction](../concepts/give-agents-a-vent-tool-to-report-platform-friction.md)
 - [Separate Engine Latency From Network Latency in Voice Pipelines](../concepts/separate-engine-latency-from-network-latency-in-voice-pipelines.md)
+- [Fix the Browser-Agent Runtime Interface Before Reaching for a Better Model](../concepts/fix-the-browser-agent-runtime-interface-before-reaching-for-a-better-model.md)
 
 ## Healthcare Operations
 
