@@ -613,7 +613,7 @@ Steering (11:54 - 16:47): Use leading words—specific terms that pack dense mea
 
 Pruning (16:48 - 19:05): Maintain a clean skill set by ensuring a single source of truth, removing "sediment" (irrelevant legacy material), and eliminating "no-ops" (instructions that don't actually change agent behavior).
 
-https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-great-skills/SKILL.md
+https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-for-agents/SKILL.md
 
 ## Using RL Agent to Detect and Remediate ETL Pipeline Failures - Anna Marie Benzon
 
