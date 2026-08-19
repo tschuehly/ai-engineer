@@ -408,6 +408,7 @@
 - [Give agents a vent tool to report platform friction](../concepts/give-agents-a-vent-tool-to-report-platform-friction.md)
 - [Fix the Browser-Agent Runtime Interface Before Reaching for a Better Model](../concepts/fix-the-browser-agent-runtime-interface-before-reaching-for-a-better-model.md)
 - [Give Browser Agents a Compact Whole-Page Representation](../concepts/give-browser-agents-a-compact-whole-page-representation.md)
+- [Run Parallel Specialist Models Behind a Speak-Up Gate](../concepts/run-parallel-specialist-models-with-a-speak-up-gate.md)
 
 ## AI Monetization
 
@@ -1010,6 +1011,9 @@
 - [Revenue Cycle AI Targets Administrative Friction](../concepts/revenue-cycle-ai-targets-administrative-friction.md)
 - [Prevent Revenue Cycle Denials Upstream](../concepts/prevent-revenue-cycle-denials-upstream.md)
 - [Expert-Reviewed GenAI Appeals Beat Off-the-Shelf Letters](../concepts/expert-reviewed-genai-appeals-beat-off-the-shelf-letters.md)
+- [Condition ASR on Conversation Context and Domain Vocabulary](../concepts/condition-asr-on-conversation-context-and-domain-vocabulary.md)
+- [Run Parallel Specialist Models Behind a Speak-Up Gate](../concepts/run-parallel-specialist-models-with-a-speak-up-gate.md)
+- [Size Eval Suites to the Error Rate the Consequence Demands](../concepts/size-eval-suites-to-the-error-rate-the-consequence-demands.md)
 
 ## Inference
 
@@ -1468,6 +1472,7 @@
 - [Run a Production AI Incident Playbook](../concepts/run-a-production-ai-incident-playbook.md)
 - [Benchmark Voice AI on Distant-Mic Multi-Speaker Audio, Not Headset Single-Speaker](../concepts/benchmark-voice-ai-on-distant-mic-multi-speaker-audio.md)
 - [Mine stuck-then-solved sessions for injectable fixes](../concepts/mine-stuck-then-solved-sessions-for-injectable-fixes.md)
+- [Size Eval Suites to the Error Rate the Consequence Demands](../concepts/size-eval-suites-to-the-error-rate-the-consequence-demands.md)
 
 ## Models
 
@@ -1590,6 +1595,7 @@
 - [Diffusion Models Self-Correct by Revising Earlier Tokens](../concepts/diffusion-models-self-correct-by-revising-earlier-tokens.md)
 - [Scale Text-Diffusion Quality With More Denoising Steps](../concepts/scale-text-diffusion-quality-with-more-denoising-steps.md)
 - [Size the Voice-Agent LLM to the Time-to-First-Token Budget](../concepts/size-the-voice-agent-llm-to-the-time-to-first-token-budget.md)
+- [Condition ASR on Conversation Context and Domain Vocabulary](../concepts/condition-asr-on-conversation-context-and-domain-vocabulary.md)
 
 ## Retrieval
 - [Build a File-Based Research Wiki With Progressive-Disclosure Retrieval](../concepts/file-based-research-wiki-with-progressive-disclosure-retrieval.md)
@@ -1984,6 +1990,8 @@
 - [Pair Low-Bandwidth Voice Input With High-Density Multimodal Output](../concepts/pair-voice-input-with-high-density-multimodal-output.md)
 - [Size the Voice-Agent LLM to the Time-to-First-Token Budget](../concepts/size-the-voice-agent-llm-to-the-time-to-first-token-budget.md)
 - [Separate Engine Latency From Network Latency in Voice Pipelines](../concepts/separate-engine-latency-from-network-latency-in-voice-pipelines.md)
+- [Condition ASR on Conversation Context and Domain Vocabulary](../concepts/condition-asr-on-conversation-context-and-domain-vocabulary.md)
+- [Run Parallel Specialist Models Behind a Speak-Up Gate](../concepts/run-parallel-specialist-models-with-a-speak-up-gate.md)
 
 ## Workflows
 - [Choose the Research Tool by Reuse and Ownership, Not Just Speed](../concepts/choose-the-research-tool-by-reuse-and-ownership.md)

@@ -1,10 +1,5896 @@
 # AI Engineer YouTube Index
 
 - Channel: https://www.youtube.com/@aiDotEngineer/videos
-- Generated at: 2026-07-11T13:23:40+00:00
-- Since: 2025-07-11
+- Generated at: 2026-08-19T19:39:01+00:00
+- Since: 2025-08-19
 - Until: open
-- Videos: 476
+- Videos: 537
+
+## AI is the World’s largest Relationship Therapist — Clay Cockrell & Tony Fabrikant, CoupleWork AI
+
+- Upload date: 2026-08-19
+- Video: https://www.youtube.com/watch?v=yoONZwV2smc
+- Transcript: raw/20260819_yoONZwV2smc/yoONZwV2smc.en-orig.vtt
+- Metadata: raw/20260819_yoONZwV2smc/yoONZwV2smc.info.json
+
+The springs in the middle of the loveseat in Clay Cockrell's counseling office gave out years ago, so gravity now tips a couple toward each other however hard they grip the arms. He kept it. The harder argument arrives with two numbers. BetterHelp spent a decade assembling roughly 35,000 licensed clinicians and reaching 5 million users. ChatGPT sees roughly 900 million weekly active users, and enough open it at 11pm after a fight that Cockrell calls the world's largest relationship therapist a language model optimized to keep you engaged.
+
+His objection is not that the model is unqualified but that it is agreeable. Ask why your partner never listens and it validates you, which he calls a very expensive mirror that only shows you in your best light. Sycophancy here is a clinical failure mode. The user does not get more self aware, they get more certain, and they return with a cleaner case and less curiosity about what their partner experienced. Against that he sets the real standard of care, John Gottman's lab predicting divorce from a 15 minute conversation with over 90% accuracy, and emotionally focused therapy, both largely absent from commercial products. The safety gap is sharper, since a general assistant cannot hear the difference between we fight a lot and I am afraid of what happens when I disagree with him. Tony Fabrikant closes on the engineering: start with the clinician rather than the prompt, encode what good looks like as hundreds of evals, and treat one failing safety test as disqualifying.
+
+Speaker info:
+- https://www.linkedin.com/in/clay-cockrell-906b0b4/
+- https://www.linkedin.com/in/tony-fabrikant
+- https://www.walkandtalk.com/
+
+Timestamps:
+0:00 - The couch that leans a couple toward each other
+1:42 - A show of hands, and who is already doing this
+3:12 - BetterHelp's decade against ChatGPT's week
+4:29 - Optimizing for engagement is a clinical fire alarm
+5:21 - Why being validated is not therapy
+6:37 - Sycophancy as a clinical failure mode
+7:52 - Gottman, EFT, and the real standard of care
+9:33 - What a general assistant cannot hear
+10:37 - The data you hand a relationship coach
+11:40 - Building Maxine to know when to stop coaching
+14:27 - Tony Fabrikant on evals when safety is on the line
+
+## From Ambient Documentation to Clinical Intelligence — Chaitanya Asawa, Abridge
+
+- Upload date: 2026-08-19
+- Video: https://www.youtube.com/watch?v=u6q-byPWUuo
+- Transcript: raw/20260819_u6q-byPWUuo/u6q-byPWUuo.en-orig.vtt
+- Metadata: raw/20260819_u6q-byPWUuo/u6q-byPWUuo.info.json
+
+Clinicians call it pajama time: the roughly two hours a day spent writing visit notes after work has finished. Abridge started there, and within two to three years the documentation product alone reached 300 of the largest health systems in the United States. Chaitanya Asawa's framing is that everything in healthcare sits downstream of a single conversation between a doctor and a patient, and that the administrative machinery got built around that conversation rather than out of it. The notes are high stakes in both directions. They are the basis of billing, and they are the context the next clinician inherits.
+
+The engineering problem he stays with longest is evaluation, because clinical decision support leaves almost no gap between generating an answer and checking one. Sudoku is hard to solve and trivial to verify. Here, a verifier good enough to trust would already be your generator. Their approach abandons the idea of a single correct answer, since many different responses can be right. Two physicians independently write rubrics describing the elements a good response should contain, a third adjudicates those into one rubric, a fourth runs quality assurance, and only then does a judge score responses against those elements. Separate judges cover safety, adversarial boundaries and tone. On cost, at a run rate near 100 million medical conversations a year, they decompose the note into its sections and post train smaller models per section rather than running frontier intelligence over everything, betting that a dataset nobody else holds plus a narrow enough problem can outrun the frontier's rate of change.
+
+Speaker info:
+- https://x.com/c_asawa
+- https://www.linkedin.com/in/casawa
+
+Timestamps:
+0:00 - Reading the room, and hearing from clinicians
+2:08 - Why healthcare gets dismissed as a technical domain
+2:59 - From robotics to search to healthcare
+5:25 - Costs that only go up, and a productivity paradox
+6:14 - Closures, thin margins, and clinician burnout
+7:04 - The note after every visit, and pajama time
+7:56 - Why documentation was the wedge
+8:48 - Everything is downstream of the conversation
+9:38 - Asking about trials and placing an order by voice
+10:27 - What context the system actually reads
+11:27 - Quality, latency and cost on hard mode
+13:08 - Evaluation as the operating system
+13:57 - Encoding clinician judgment into judges
+14:48 - Contextual clinical decision support
+15:38 - When the generator and verifier gap collapses
+16:27 - Four physicians to build one rubric
+18:05 - Cost at 100 million conversations a year
+18:56 - Smaller models per section of the note
+19:49 - Catching orders spoken during a visit
+
+## Why Your Enterprise Tech Stack Isn’t Ready for AI Agents — Christopher Lovejoy & Saul Howard
+
+- Upload date: 2026-08-19
+- Video: https://www.youtube.com/watch?v=mav15aW9lLM
+- Transcript: raw/20260819_mav15aW9lLM/mav15aW9lLM.en-orig.vtt
+- Metadata: raw/20260819_mav15aW9lLM/mav15aW9lLM.info.json
+
+The proof of concept works. It hits the accuracy targets, it is fast, it is cheap, and the room is happy. Then someone from compliance raises a hand and asks to see the audit trail, and the whole thing stops. Christopher Lovejoy and Saul Howard have watched that meeting happen repeatedly, and their point is that an audit trail is not a developer log. Under the frameworks enterprises actually answer to, it is a complete record of every action an agent took, every place it touched data, and the authorization behind each one, durable enough to stand up as a chain of evidence if the decision were ever examined in court.
+
+Their answer is to take the constraints seriously first and rebuild toward the accuracy afterwards, rather than bolting requirements onto a demo. An immutable append only event log makes auditability fall out of the storage model instead of being reconstructed later, at the cost of harder reads. Patient data lives in schema driven object storage alongside that log rather than inside it, so the events hold only references, which lets engineers debug what an agent did without being exposed to the health data itself, and gives a natural place to enforce zero trust and constrain prompt injection. Escalation works because humans and models are both treated as agents, so any action either can take, the other can take too. Evaluation then emerges from those three primitives rather than being attached to the side, including on production data that never leaves the customer's environment.
+
+Speaker info:
+- https://x.com/ChrisLovejoy_
+- https://www.chrislovejoy.me
+- https://x.com/saulhoward
+- https://linkedin.com/in/saulhoward
+
+Timestamps:
+0:00 - Why healthcare is hard, and what transfers to other regulated work
+1:57 - The enterprise proof of concept
+2:49 - What the buildout actually connects to
+3:39 - Everyone assumes the hard part is done
+4:28 - The questions that arrive the next day
+5:19 - An audit trail is not a developer log
+7:03 - The immutable event log, and its tradeoff
+8:46 - What shape healthcare data actually has
+10:28 - Object storage beside the log, not inside it
+11:20 - Debugging an agent without seeing the data
+12:15 - Zero trust and the lethal trifecta
+13:07 - Escalation when you cannot predict it
+13:58 - Treating humans and models as the same kind of agent
+14:49 - Why evals are hard here
+15:39 - Evaluation as a byproduct of the primitives
+17:20 - Architecture as choosing what stays simple
+18:08 - Where it goes wrong, and where it goes right
+
+## Trading Desks to Clinical Trials: Parallels in Applied Vertical AI — Ayush Bhardwaj, Allos AI
+
+- Upload date: 2026-08-19
+- Video: https://www.youtube.com/watch?v=Yphdry8ttAQ
+- Transcript: raw/20260819_Yphdry8ttAQ/Yphdry8ttAQ.en-orig.vtt
+- Metadata: raw/20260819_Yphdry8ttAQ/Yphdry8ttAQ.info.json
+
+Ayush Bhardwaj could build the agent. What he could not do was tell whether it was any good. He moved from applied AI at a hedge fund to a pharma tech company expecting a different world, and found the job identical, including the wall. An engineer glances at generated code and knows instantly that it is weak, because years of training built that judgment. Nobody on his team had the equivalent instinct for a trade thesis or a drug candidate. He calls this the point where vertical AI projects quietly die, because the thing looks finished and then nobody buys it.
+
+Judging his way out with a model was, in his words, a stupid mistake, since it jargons its way through without knowing what alpha means. Verifiable rewards work for math and code because answer keys exist. Worse, the data that would teach a model to reason in these fields is deliberately withheld. Funds must file their holdings quarterly, and their returns drop once competitors reverse engineer them. Disclosing every clinical trial is legally required, yet roughly 30% of firms never do, and in 2026 the FDA publicly reminded more than 2,000 sponsors. The frontier labs do not have it either. So his answer is to hire the user, which for a team of young engineers meant hiring a senior scientist, after which their tools started speaking big pharma's language. That expert curates sources, sharpens prompts and does the judging, starting from error analysis as the cheapest rung. The moat is never the model or the infrastructure. Both are commodities.
+
+Speaker info:
+- https://x.com/aybh08
+- https://www.linkedin.com/in/aybh/
+- https://ayushb.me/
+
+Timestamps:
+0:00 - Reading the room
+1:04 - What applied vertical AI actually means
+2:43 - Leaving a hedge fund for pharma and changing nothing
+3:34 - The wrong question about agents in production
+4:27 - Step one, make the task narrow
+5:18 - Proprietary data is the only real differentiator
+6:57 - The easy part fits on one screen
+7:50 - Why you cannot iterate on what you cannot judge
+9:30 - Trying to use a model as the judge
+10:21 - The data was never there, by design
+12:05 - Hire the user
+12:55 - Building the learning loop around a domain expert
+14:39 - From error analysis up to preference training
+16:20 - Reaching production is not the same as working
+17:10 - The seven steps
+18:00 - AI in the loop, not human in the loop
+19:00 - Your moat is domain expertise and data
+
+## Guardrails First: Engineering Member-Facing Health AI — Rashi Agrawal, Hinge Health
+
+- Upload date: 2026-08-19
+- Video: https://www.youtube.com/watch?v=YXEqC05WEI0
+- Transcript: raw/20260819_YXEqC05WEI0/YXEqC05WEI0.en-orig.vtt
+- Metadata: raw/20260819_YXEqC05WEI0/YXEqC05WEI0.info.json
+
+A healthy 60 year old man asked a popular AI assistant how to cut salt from his diet. It pointed him at sodium bromide. Three months later he arrived in an emergency room with paranoia and hallucinations, bromide at 200 times the safe level, and stayed three weeks. Rashi Agrawal stacks that against the first independent safety test of a consumer health AI, out of Mount Sinai, which under triaged life threatening emergencies half the time, and against ECRI naming chatbot misuse the top health technology hazard of 2026. Roughly 40 million people already triage themselves this way. None of it is a frontier problem. It is the production baseline.
+
+Her argument is that most healthcare AI safety failures are architectural decisions made before a single token is generated. PHI is stripped at the pipeline boundary on ingestion, so a developer who opens a dashboard finds nothing to redact because it was never stored. Anything that can never be wrong lives in a code layer above the model rather than in its prompt: routing to 911 or 988, deciding which capability owns a turn, verifying who is on the other end. The frontier labs publish an authority hierarchy in which every layer above the user sits one prompt injection from being overridden, and her reading is blunt: if they will not treat a prompt as a security boundary, neither should you. Safety then runs as a continuous layer of judges scoring live traffic, with one discipline attached. When a score drops, first ask whether the judge is right.
+
+Speaker info:
+- https://www.linkedin.com/in/rashi283/
+- https://sessionize.com/rashiagrawal/
+
+Timestamps:
+0:00 - The state of healthcare AI, and 40 million self triagers
+1:04 - Poisoned by a chatbot
+1:30 - Under triaging emergencies half the time
+2:35 - Three non negotiable foundations
+3:41 - Where PHI actually lives
+5:53 - Deterministic rules belong above the model
+7:27 - If the labs will not trust the prompt, neither should you
+7:54 - Escalation, intent routing, identity
+9:39 - Safety as a continuous evaluation layer
+12:47 - Five stakeholders, five risks, five days to launch
+14:02 - The five rules for deciding
+18:10 - Verify the scorer before you trust the score
+20:24 - The whole talk in one slide
+
+## Don’t be data poor — Anuj Iravane, Anterior
+
+- Upload date: 2026-08-19
+- Video: https://www.youtube.com/watch?v=XAsb7MIAzm8
+- Transcript: raw/20260819_XAsb7MIAzm8/XAsb7MIAzm8.en-orig.vtt
+- Metadata: raw/20260819_XAsb7MIAzm8/XAsb7MIAzm8.info.json
+
+Roughly 70% of medical communication still moves by fax. What reaches Anterior is scanned fax bundles that can run past 300 pages, carrying handwriting, checkboxes, tables and images across one patient's entire clinical trajectory. Anuj Iravane calls it an observation through a fuzzy lens over a lifespan. It is exactly the data his evals need, and the data he is least allowed to keep: their contracts rule out retaining it, deriving from it, or holding redacted or anonymized copies. Nothing survives into a dataset. In a domain where 95% accuracy is not good enough, that is a real problem.
+
+So they generate it, by running the inference workflow backwards. The forward task takes unstructured data plus a policy, follows a reasoning trace and arrives at a label. Reversed, you sample a label, sample a reasoning trace, then build the record that would have produced it. That works because Anterior already models policies explicitly as decision trees, so traces come from a far more uniform distribution than a model asked to invent variety, which tends to collapse onto the same few cases. A coarse to fine pipeline layers patient invariants into a journey of provider encounters, then fans out into documents, with a consistency eval catching contradictions between documents written in parallel. Because generation starts from the label, labels are correct by construction and ground truthing disappears. Clinicians own the pipeline as skills rather than code. Roughly 90% of their datasets are now synthetic, and in a blind review clinicians separated synthetic from real only about 60% of the time.
+
+Speaker info:
+- https://x.com/anujiravane
+- https://www.linkedin.com/in/anujiravane/
+- https://www.anterior.com/
+
+Timestamps:
+0:00 - Policy guided decisions over highly unstructured data
+1:05 - Most medical communication still arrives by fax
+2:11 - Why 95% is not good enough
+2:37 - The data you need most is the data you cannot keep
+3:05 - Betting on generating it instead
+3:55 - Why one shotting a 300 page record fails
+5:00 - Reversing the forward task
+5:51 - Policies as decision trees you can sample from
+7:19 - Testing the edge cases production data never had
+8:09 - Building a record coarse to fine
+9:54 - The refinement loop and the round trip check
+11:09 - Why it never becomes a PDF
+11:34 - Giving clinicians the keys through skills
+14:12 - Results, and datasets built just in time
+
+## How to build an AI-Native Health Company — Dan Feng, Maven Clinic
+
+- Upload date: 2026-08-19
+- Video: https://www.youtube.com/watch?v=WJRdLNhrsLQ
+- Transcript: raw/20260819_WJRdLNhrsLQ/WJRdLNhrsLQ.en-orig.vtt
+- Metadata: raw/20260819_WJRdLNhrsLQ/WJRdLNhrsLQ.info.json
+
+Implementation used to be the expensive step, so teams spent weeks settling requirements before anyone wrote code. Dan Feng's observation is that the cost moved. Building takes minutes now, and arguing is what is expensive. Planning at Maven Clinic changed to match. A one year view survives only as direction, assuming models will handle whatever you need by then, while real commitment runs two to four weeks. Long requirement documents gave way to a page or two meant to be argued with. The awkward casualty is the three to six month plan, which he treats as close to unplannable when nobody knows what models will do by then.
+
+The rest is what breaks at that speed. Engineers who once wrote hundreds of lines a day now write thousands, so review had to change rather than scale. Engineers self certify which pull requests need a second reader and stay accountable either way, requests are capped near 500 lines, and large features are stacked into several. The failure he names is the rubber stamp, which buys false confidence rather than none. On reliability he refuses a single bar and sorts failures into tolerable and not. A scheduling action that fails one time in 10,000 is survivable, since the user clicks again. A reimbursement claim is not, because asking for $50 and receiving $200 is an escalation in either direction, so several models read the same receipt and it proceeds only if they agree. Integration tests run many times rather than once, since passing a nondeterministic system on one attempt proves very little.
+
+Speaker info:
+- https://www.linkedin.com/in/dan-feng-2bb5703/
+- https://www.mavenclinic.com/
+
+Timestamps:
+0:00 - Who here is already AI native
+0:51 - Maven Clinic, and starting the journey two years ago
+1:29 - Tractors do not replace farmers
+2:08 - Adopting internally, then building it into the product
+3:25 - Early adopters, the majority, and the reluctant
+4:04 - Meeting engineers on whichever tool they moved to
+4:43 - Why senior engineers stopped delegating implementation
+6:03 - The blurring line between product and engineering
+6:42 - Rewarding it in performance reviews
+7:21 - When building is cheap and arguing is expensive
+8:00 - Dream big for the year, commit for the sprint
+9:16 - Why three to six month plans became the hard part
+9:56 - Starting with the lowest risk coding tasks
+10:36 - Pushing it to the whole team
+11:13 - Code review when volume goes up tenfold
+11:54 - Self certifying, capping size, stacking changes
+12:34 - The rubber stamp problem
+13:57 - Deciding which failures are acceptable
+14:35 - Claims, where the tolerance is zero
+15:54 - Automated evaluation plus human spot checks
+
+## Healthcare’s Agent Bytecode: X12 as the Harness for AI Agents — Vasant Kearney, Onlay
+
+- Upload date: 2026-08-19
+- Video: https://www.youtube.com/watch?v=UyyOoJmuATU
+- Transcript: raw/20260819_UyyOoJmuATU/UyyOoJmuATU.en-orig.vtt
+- Metadata: raw/20260819_UyyOoJmuATU/UyyOoJmuATU.info.json
+
+Call the payer, open their web portal, and read their X12 feed, and all three can tell you the patient is covered. You treat the patient anyway, and the claim comes back denied because they were not covered at the time. Vasant Kearney's point is that none of those surfaces is ground truth. A payer's phone system, portal and X12 layer are often built by different teams, sometimes by different contractors entirely, so they can contradict each other and they can just as easily agree on the wrong answer together.
+
+His response is to treat X12 as a harness rather than a file format. Models do their best work confined, the way a strict language confines, and X12 already encodes the contract between a provider and a payer. Every stage of the claim lifecycle has an X12 correspondence, from an eligibility check as a 270 through the 999 that acknowledges syntax to the 835 that records payment, so an agent placing a phone call or driving a portal is emitting the same transaction by another route. Everything normalizes into an internal representation held as correct only until downstream evidence says otherwise. Two constraints travel with it. Memory has to live in a database rather than on local disk the way coding agents do it, for logical separation. And a stronger model cannot simply be dropped in, because better on a benchmark is not the same as better inside a system built around the model it replaces. He describes the posture as being AI pilled and AI skeptical at once.
+
+Speaker info:
+- https://x.com/vasantkearney
+- https://www.linkedin.com/in/vasant-kearney-7b7a48b3
+- https://onlay.ai/
+
+Timestamps:
+0:00 - Reading the room
+1:06 - The goal is cost and patient experience
+1:58 - How we arrived at an execution layer
+3:06 - Solving handwritten digits does not cash the check
+4:42 - What gets lost when you flatten a multimodal record
+6:16 - What the agentic execution layer actually touches
+7:23 - Why enterprise memory cannot live on local disk
+7:49 - A better model is not automatically better for you
+8:31 - Harness, and why X12 belongs in it
+9:44 - Fifty steps, error propagation, and the cost of pure reasoning
+11:16 - Memory that helps without steering the user
+12:36 - The claim lifecycle, transaction by transaction
+13:29 - A phone call is an X12 transaction underneath
+14:47 - The schema is public, so agents can look it up
+15:30 - X12 is a system of rules, not ground truth
+16:47 - Normalizing to an internal representation
+19:02 - Be AI pilled and AI skeptical
+
+## Shipping AI to a Million Patients Without an A/B Test — Jared Joselowitz, Ufonia
+
+- Upload date: 2026-08-19
+- Video: https://www.youtube.com/watch?v=McknwOzbmyg
+- Transcript: raw/20260819_McknwOzbmyg/McknwOzbmyg.en-orig.vtt
+- Metadata: raw/20260819_McknwOzbmyg/McknwOzbmyg.info.json
+
+You cannot A/B test on patients, because randomizing someone into the worse variant is unethical and often illegal. You cannot undo a call once spoken. And a vendor's benchmark number is not a defense at a post incident review. Jared Joselowitz builds the safety and evaluation stack behind Dora, a Ufonia voice agent that phones patients for post op follow ups and pre op checks. It has made roughly 200,000 real clinical calls across 20 UK hospitals and is contracted to reach a million patients within two years. Because it asks about symptoms and gives advice, it is a regulated medical device.
+
+Ship to 5% and watch the dashboard does not survive that. 5% is thousands of patients, and a dashboard turning red means someone was already harmed. So the reactive loop moves into simulation, as self driving did with millions of simulated miles. Their framework has one model play the patient against hazards written with clinicians, and a second model judge every dialogue. Both were validated rather than assumed. In a patient and public involvement study, real patients shown a genuine consultation beside a simulated one picked the simulated patient as more realistic in three of four sets. The judge, checked against 10 clinicians from 10 specialties on 240 cases, matched or beat them at near perfect sensitivity, the metric that counts when a missed red flag is catastrophic and a false alarm is merely annoying. Prompts are then optimized against a cost matrix instead of hand tuned. You do not ship the model, you ship the evidence.
+
+Speaker info:
+- https://x.com/JaredJoselowitz
+- https://www.linkedin.com/in/jaredjoselowitz/
+- https://jossy.co.za/
+
+Timestamps:
+0:00 - Proving a product is safe before a patient hears it
+1:28 - What Dora is, and the scale it runs at
+2:18 - A call with a patient after cataract surgery
+3:22 - Giving advice makes it a regulated medical device
+3:59 - Starting from what could actually harm someone
+4:35 - Why ship to 5% and roll back breaks here
+5:53 - Borrowing the simulation playbook from self driving
+6:32 - Matrix, and a model that plays the patient
+8:24 - Can real patients tell which one is simulated
+9:43 - An automated judge, and validating it against clinicians
+11:35 - How brittle prompts really are
+12:50 - Optimizing prompts instead of hand tuning them
+13:30 - Making the metric a real cost function
+14:42 - The flywheel that replaces the reactive loop
+15:20 - Simulation is necessary, not sufficient
+16:38 - Shipping the evidence, not the model
+17:14 - New modalities bring new hazards, same framework
+
+## 200 Million Patient Interactions Later — Vivek Muppalla, Hippocratic AI
+
+- Upload date: 2026-08-19
+- Video: https://www.youtube.com/watch?v=AN65uc645mE
+- Transcript: raw/20260819_AN65uc645mE/AN65uc645mE.en-orig.vtt
+- Metadata: raw/20260819_AN65uc645mE/AN65uc645mE.info.json
+
+Asked how many in the room had ever received a proactive call from their healthcare provider, almost no hands went up. Vivek Muppalla treats that as the signature of scarcity: too few clinicians and too few hours, so the system triages and only the sickest get called. Hippocratic AI is past 200 million clinical conversations across more than 60 health systems, which is what changes the arithmetic. The tradeoff they refused is the familiar one: models accurate enough for this work can take tens of seconds to answer, and models fast enough for a phone call are not safe enough to make one.
+
+So the stack was built end to end. Polaris runs 31 models on every conversation, one holding the thread and 30 specialists covering labs, medications and scheduling, executed in parallel with each specialist first making a fast check on whether it has anything to say at all. A single model would be a single point of failure. Their speech recognition is a decoder only audio system fed the conversation so far and the domain context alongside the audio, so a drug name resolves against a finite list rather than an unbounded one, and prosody survives the projection so it hears the how as well as the what. Single word answers get a second scoring pass, because a heard as no is catastrophic. On evaluation he does the arithmetic that makes 99% unacceptable: at 10,000 calls a day that is 100 people sent to the wrong appointment, and catching a 1% failure rate takes roughly 450 tests.
+
+Speaker info:
+- https://x.com/vim1up
+- https://www.linkedin.com/in/vivekmuppalla/
+- https://hippocraticai.com/
+
+Timestamps:
+0:00 - Who has ever been called by their provider
+1:05 - Triage as a math problem, and what flips it
+1:54 - The oath every employee takes
+2:44 - A call with a patient, start to escalation
+5:12 - Why a generic voice stack does not work
+6:04 - Building vertically to get speed and intelligence
+7:44 - Latency and intelligence as a compounding flywheel
+8:36 - Polaris, and running 31 models at once
+9:29 - What speech recognition gets wrong in the real world
+10:27 - Feeding context and domain knowledge into the audio model
+11:19 - A finite list of medications instead of an infinite one
+12:10 - Rescoring single word answers
+13:51 - How a specialist decides to speak up
+14:43 - Verifiers for tool calls
+15:34 - Quantization, speculative decoding, cache
+16:25 - Why 99% is a bad number here
+17:14 - The tests needed to catch a 1% failure
+18:03 - Grading on the scale used for humans
+18:55 - Building a benchmark for empathy
+
+## Voice agents with Realtime Video — Sidney Primas, LemonSlice
+
+- Upload date: 2026-08-18
+- Video: https://www.youtube.com/watch?v=z1dqv74SpUs
+- Transcript: raw/20260818_z1dqv74SpUs/z1dqv74SpUs.en-orig.vtt
+- Metadata: raw/20260818_z1dqv74SpUs/z1dqv74SpUs.info.json
+
+An avatar of Teddy Roosevelt holds court in a replica Oval Office, generating video continuously for eight hours with no reset, and a second deployment is being built to run for sixteen. That duration is the hard part. Sidney Primas explains that a real time avatar can only look backward, because the future frames do not exist yet, so every block it generates inherits the errors of the blocks before it and compounds them. LemonSlice trains with an attention mask that enforces this during training rather than discovering it at inference, and collapses roughly 30 denoising steps down to a single step to hit real time.
+
+The less obvious bottleneck is audio. Emotion and facial expression turn out to depend on the audio embedding, and most audio encoders are trained on audiobooks, which are monotone by construction, so an expressive model needs its own. The wider bet is to take a world model and point it at humans, paying a harder training and deployment cost up front in exchange for full body movement, object interaction, and physics arriving closer to free. Two things surprised him. Serving this costs about what serving a voice model costs, despite the difference in pixels. And the model harness, meaning the orchestration of threads and queues across GPU and CPU so that video never stutters through an interrupt, is where he now thinks much of the durable value will sit.
+
+Speaker info:
+- https://www.linkedin.com/in/sidneyprimas/
+
+Timestamps:
+0:00 - Breaking the avatar Turing test
+2:26 - Teddy Roosevelt in a replica Oval Office
+4:40 - Why the visual layer matters
+5:46 - Pointing a world model at humans
+6:58 - One image in, any style out, and being the API layer
+9:12 - Audio is what makes it expressive
+10:15 - Making a video model interactive, then real time
+12:22 - Error accumulation over hours of generation
+14:34 - Cost parity with a voice model
+15:36 - The model harness nobody talks about
+16:38 - An emotion engine for the next model
+19:55 - A single end to end EQ layer
+22:09 - Questions: internal state, and a real Turing test
+
+## Building an Agentic Video Editor for Mass Consumer — Ekaterina Deyneka, Reelful
+
+- Upload date: 2026-08-18
+- Video: https://www.youtube.com/watch?v=pPj_tjlvYjA
+- Transcript: raw/20260818_pPj_tjlvYjA/pPj_tjlvYjA.en-orig.vtt
+- Metadata: raw/20260818_pPj_tjlvYjA/pPj_tjlvYjA.info.json
+
+Nearly every hand in the room went up when she asked who had recorded video at the conference. Almost none stayed up for who had actually posted any of it. Ekaterina Deyneka counts herself in that gap, and Reelful is her answer to it: drop in raw footage with a line of direction, and an agent finds the usable moments, cuts them together, and generates captions, music, voiceover, and b roll around them.
+
+Her framing for an AI engineering audience is that an agentic video editor is structurally the same thing as an agentic app builder. A prompt goes in, a sandbox spins up, an agent works inside it with tools and skills, and something renders out the other end. The difference that matters is editing rather than generating. A blank canvas lets an agent do anything it likes, while real footage forces it to judge which take is best and what to drop, and to produce something polished from material that is often messy or incomplete. The composition layer is Remotion, which expresses video as React code, chosen precisely because agents write code well. Skills carry the taste: cut rules, font pairings, when a cutaway actually helps. A verification pass catches compositions that will not render and sends the agent back around. All of it hides behind mobile templates, since the point is that a consumer never sees the pipeline at all.
+
+Speaker info:
+- https://x.com/katedeyneka
+- https://www.linkedin.com/in/katedeyneka
+- https://www.katedeyneka.com
+
+Timestamps:
+0:00 - Who recorded video here, and who actually posted it
+1:29 - What agentic video editing means
+3:33 - The same shape as an agentic app builder
+4:10 - Editing real footage is harder than generating
+5:30 - The pipeline, from media understanding to a creative plan
+6:50 - Remotion, video as React code, and the verification layer
+8:49 - Hiding all of it behind mobile templates
+
+## Infra behind Krea 2: How to train and serve at scale — Gabriel Jorge Menezes, Krea.ai
+
+- Upload date: 2026-08-18
+- Video: https://www.youtube.com/watch?v=byn9PURoBNY
+- Transcript: raw/20260818_byn9PURoBNY/byn9PURoBNY.en-orig.vtt
+- Metadata: raw/20260818_byn9PURoBNY/byn9PURoBNY.info.json
+
+GPU utilization is a lie. It read 100% straight through pretraining while the cluster was nowhere near well used, so Gabriel Jorge Menezes tracks tensor core utilization instead, and watched it climb as training resolution stepped from 128 pixels up to 1024. That is one of several numbers he argues you cannot train at this scale without. InfiniBand counters are exported by nothing off the shelf, and most of their failures turned out to be cross node communication, so they built that collection themselves. Any GPU running hotter than 78 degrees gets pulled rather than debugged, because one warm card throttles and destabilizes the entire run.
+
+This is the infrastructure half of Krea 2, the model trained from scratch on thousands of GPUs. Crashes scaled with the cluster and often failed silently, with communication timing out while every dashboard stayed green, and the practical answer was to stop treating each one as a mystery. Let it crash, and the same nodes running the same code will frequently go 24 hours on the next attempt. What made that survivable was checkpointing aggressively against a filesystem quick enough to write a terabyte in under 30 seconds. Production and training then share one cluster, with training holding priority and inference evicted to outside providers through a fake Kubernetes node, migrated back gradually rather than all at once so the site never drops.
+
+Speaker info:
+- https://www.linkedin.com/in/gabriel-jorge-menezes/
+- https://gab-menezes.github.io/
+
+Timestamps:
+0:00 - Krea 2, trained from scratch, and two open checkpoints
+3:26 - Crashes at scale, and the silent ones
+4:18 - Metrics are everything, starting with temperature
+5:58 - GPU utilization is a lie, use tensor cores
+6:48 - InfiniBand and NVLink metrics you have to build yourself
+8:29 - Checkpointing hard against a fast filesystem
+9:21 - Gang scheduling, and training outranking production
+11:01 - Flipping inference out through a fake node
+14:23 - Taints that stop you wasting GPUs
+16:03 - Inference runs on almost any GPU
+
+## Generative Video at the Speed of Light — Keegan McCallum, uRun
+
+- Upload date: 2026-08-18
+- Video: https://www.youtube.com/watch?v=Xln-On3syJk
+- Transcript: raw/20260818_Xln-On3syJk/Xln-On3syJk.en-orig.vtt
+- Metadata: raw/20260818_Xln-On3syJk/Xln-On3syJk.info.json
+
+Ten dollars now buys roughly three hours of continuously generated video, and fifty buys fifteen. Keegan McCallum sets that against the room's own habits, since plenty of hands went up for burning that much on coding tokens inside a single hour. His argument is that the interesting axis in generative video stopped being quality a while ago. Put a real time generation next to one that took minutes and the slower clip still has better motion, but it cost on the order of a hundred times more to produce.
+
+Helios, the model he serves, is a distillation of a 14 billion parameter open model, and it is one of at least forty released this year carrying real time or long horizon capability. What that unlocks has less to do with better clips than with a different interaction shape. A webcam that shows you the haircut you are considering. A visual medium for people who do not think in text, which is most of what working with AI currently demands. Content creation that stops being a slot machine where you spend ten dollars a minute on a prompt and some keyframes and hope for the shot. Steering a generation in under a second is a different job entirely. What is left is the serving problem: GPUs positioned globally, WebRTC with ICE and TURN, and several models wired into one continuous streaming pipeline that stays synchronized with user controls frame by frame.
+
+Speaker info:
+- https://x.com/keeganmccallum3
+- https://linkedin.com/in/keeganmccallum3
+- https://urun.sh
+
+Timestamps:
+0:00 - Generative video along the quality axis
+1:24 - The other axis: efficiency and long horizons
+3:23 - What ten dollars of generation buys now
+4:38 - Magic mirrors, accessibility, and steering shots live
+6:33 - The hard part is serving it
+
+## The Next Game Engine Won't Have a Manual — Arturo Nunez, Nereu
+
+- Upload date: 2026-08-18
+- Video: https://www.youtube.com/watch?v=VBCDhRrvlYo
+- Transcript: raw/20260818_VBCDhRrvlYo/VBCDhRrvlYo.en-orig.vtt
+- Metadata: raw/20260818_VBCDhRrvlYo/VBCDhRrvlYo.info.json
+
+Ask a coding agent for a camera that follows your character and it will reinvent that camera from scratch, every time, slightly differently. Arturo Nunez's diagnosis is that the context sits on the game engine's vocabulary rather than the game's. Controlling a character in a conventional engine means a mesh, a renderer, an animator, a rigid body, a collider, an audio source, and only then your actual movement logic, nearly all of which is boilerplate that every character in every game already carries.
+
+Nereu inverts that. Everything is an asset, and you attach tags describing intent instead of implementation: character, animated, double jump. Systems then query by tag and move everything marked vehicle and drivable, which is Entity Component System thinking lifted from data oriented design. The pleasant consequence is that nothing stops you tagging a building as drivable and dropping it into a Mario Kart style race. The assistant is there to get you unstuck rather than to one shot a finished game, and the vocabulary it expects is the one tutorials already use: press A to jump, press A again in the air.
+
+The engineering detail worth stealing is how context gets assembled. Rather than feed the whole scene to a model, he borrows level of detail from rendering. Assets near whatever you are editing arrive with their full tag values, distant ones collapse to a position and a type, and the hundred pieces of grass are simply left out.
+
+Speaker info:
+- https://x.com/arturonereu
+- https://www.linkedin.com/in/arturonereu/
+- https://www.arturonereu.com/
+
+Timestamps:
+0:00 - Building a game live by describing it
+2:45 - Why making games is hard
+4:27 - Ten years at Unity watching the same struggles repeat
+6:59 - Powerful engines and LLMs that still do not compose
+7:49 - The boilerplate behind controlling a character
+8:45 - Everything is an asset, and tags describe intent
+9:37 - The asset tag system, and tagging a building as drivable
+11:21 - How the prompt gets its context
+14:52 - Level of detail, applied to context assembly
+16:37 - Getting unstuck rather than one shotting a game
+17:28 - World models are a different medium
+
+## While my guitar gently speaks — Todd Fisher, Philo Ventures
+
+- Upload date: 2026-08-18
+- Video: https://www.youtube.com/watch?v=E_Txocq-Lrw
+- Transcript: raw/20260818_E_Txocq-Lrw/E_Txocq-Lrw.en-orig.vtt
+- Metadata: raw/20260818_E_Txocq-Lrw/E_Txocq-Lrw.info.json
+
+Someone in the audience asked the guitar what reality is, and the guitar answered. Todd Fisher's build routes a microphone through speech recognition into a local model and pushes the reply back out through the strings, which is the most recent step in a project that began with a much simpler question: how hard could it be to make a guitar speak?
+
+The lineage he draws runs from a pickup and an amplifier, through stomp boxes, to Peter Frampton sending guitar sound down a physical hose into his mouth. His own version is a plugin built with JUCE that drops into a DAW like any other effect. Getting it to say one word was straightforward. Getting it to say several meant slicing synthesized speech into words automatically, and that turned out to be the hard part. Energy gap segmentation cuts wherever the signal falls toward silence, which fails because running speech often has no silence between words at all. A sonority peak syllabifier looks for vowels instead. Combining the two got close enough that he finished by dragging segment boundaries by hand. Singing needed a different stack again: the YIN algorithm to pull a fundamental frequency off each fretted note, a synthesized tone shaped by an envelope, then a vocoder, with pitch shifted samples from an open singing dataset baked ahead of time because the processing is far too heavy to run live. He also declines to play the song his title alludes to, on the grounds that this recording was going online.
+
+Speaker info:
+- https://www.linkedin.com/in/todd-b-fisher
+
+Timestamps:
+0:00 - Live performances that stayed with him
+2:44 - The guitar's evolution, up to the talk box
+4:24 - A Halloween project on a garage door
+6:06 - Building it as a JUCE plugin, and saying one word
+7:50 - Slicing speech into words, and why that is hard
+10:23 - Pitch detection with the YIN algorithm
+11:15 - Synthesis, vocoder, and jamming with it
+13:28 - A guitar that answers questions from the room
+16:01 - Pitch shifted samples, and getting closer to singing
+17:51 - Go build your passion project
+
+## The Next Medium: Why Real-Time Interactive Video Changes Everything — Ahmed Ahres, Reactor
+
+- Upload date: 2026-08-18
+- Video: https://www.youtube.com/watch?v=5dCAmSDOAjI
+- Transcript: raw/20260818_5dCAmSDOAjI/5dCAmSDOAjI.en-orig.vtt
+- Metadata: raw/20260818_5dCAmSDOAjI/5dCAmSDOAjI.info.json
+
+Uber could not exist without GPS. Ahmed Ahres uses that to argue real time is a change of medium rather than a speedup: before GPS you consulted a map somebody else had already made, and afterwards your own position became something you could act on continuously. He runs the same argument through film. Once a viewfinder showed you what you were shooting, you could adjust while shooting, and that is the reason Instagram and TikTok were possible at all.
+
+Generated video today sits on the wrong side of that line. You prompt, you wait, you get a file back, and there is nothing further to do with it. His definition of world models is not Gaussian splatting and not a longer clip, but video that is interactive, effectively infinite, and generated fast enough to steer, which he demonstrates by prompting a cat into a scene while that scene is still generating. What it unlocks divides three ways: control, which he sums up as instant feedback being the ultimate form of it; character driven worlds that reach past games into robotics training data and into education; and live avatars, which he is refreshingly candid are still not working properly. The engineering consequence is that none of the batch playbook carries over. You are streaming pixels rather than returning files, every session is stateful and has to remember what happened when a character looked away, and sub 100 millisecond latency means putting GPUs near users rather than in one region.
+
+Speaker info:
+- https://x.com/Boudatw
+- https://www.linkedin.com/in/ahmedahres/
+- https://www.ahmedahres.com
+
+Timestamps:
+0:00 - World models, defined as real time interactive video
+1:44 - What happens when video becomes programmable
+3:25 - Maps to GPS, and film to viewfinder
+5:04 - Model one: infinite, interactive, real time
+5:52 - Control, advertising, and instant feedback
+7:32 - Model two: controllable worlds, robotics, education
+9:13 - Model three: live avatars, not cracked yet
+10:06 - What people are actually building on it
+12:37 - Why real time infrastructure is not batch infrastructure
+16:10 - Evaluation is still an unsolved problem
+
+## Training Krea 2: What matters in generative model training — Sangwu Lee, Krea.ai
+
+- Upload date: 2026-08-18
+- Video: https://www.youtube.com/watch?v=-tviRdpmHvs
+- Transcript: raw/20260818_-tviRdpmHvs/-tviRdpmHvs.en-orig.vtt
+- Metadata: raw/20260818_-tviRdpmHvs/-tviRdpmHvs.info.json
+
+The most reliable way to render a person is to render the most boring average person and put them in the center of the frame. Sangwu Lee offers that as the price the big image models pay for consistency: ask a production model for a burning skull and every output comes back clean, competent, and nearly identical. Krea 2, whose medium variant is now open source, trades the other way, optimizing for fast generation and stylistic range so that a studio that does not yet know what it wants can actually explore.
+
+Most of the talk is about data, which he says twice over is basically everything once the architecture is locked. The examples are specific. A painting photographed on a wall is perfectly good training data except that captioners consistently omit the frame and the white wall behind it, so the model learns to hang every painting it generates. They refuse to train on AI generated images at all, because the aesthetic is sticky and you inherit somebody else's model. Deduplication runs on hashes first across two to ten billion images, then on embeddings for near duplicates. A large vision language model's judgment gets distilled down into a classifier cheap enough to sweep a billion images. Sparse autoencoders double as an unsupervised tagging system for catching watermarks and border artifacts. World knowledge coverage is checked against Wikipedia concepts ranked by PageRank. Thirty to forty in house filters in total.
+
+Speaker info:
+- https://github.com/RE-N-Y
+- https://re-n-y.github.io/devlog/
+- https://github.com/krea-ai/krea-2
+
+Timestamps:
+0:00 - Open sourcing Krea 2 medium
+1:40 - Consistency versus diversity in production models
+3:23 - How diffusion models train, and why latent space
+5:59 - Data is basically everything
+6:53 - Bad data, and why they refuse AI images
+8:34 - The captioning pipeline, and the painting on a white wall
+10:15 - Deduplication and cheap classifiers at billion image scale
+11:56 - Sparse autoencoders as an unsupervised tagging system
+13:39 - Wikipedia PageRank for world knowledge coverage
+14:35 - The training pipeline, borrowed wholesale from LLMs
+18:54 - What actually mattered for iterating fast
+19:46 - The stack is inverting back toward DALL-E 2
+
+## How to Kill the Code Review — Ankit Jain, Aviator
+
+- Upload date: 2026-08-17
+- Video: https://www.youtube.com/watch?v=YgEv7IQzGdM
+- Transcript: raw/20260817_YgEv7IQzGdM/YgEv7IQzGdM.en-orig.vtt
+- Metadata: raw/20260817_YgEv7IQzGdM/YgEv7IQzGdM.info.json
+
+Over 30% of changes now merge with no review at all, and the wait on the ones that do get reviewed is four times what it used to be. Ankit Jain's read is that the debate about when we stop reading code line by line is already over, because we stopped. His sharper point is what replaced it: an AI writes the code, an AI reviews the code, the two go back and forth in a web UI, and a human skims the thread and merges. When AI reviews and nobody reads, he says, we have configured the wrong thing.
+
+He is also here to correct his own five layer trust model from a few months earlier, which missed that review was never only about correctness. It also carries knowledge sharing, mentorship, architectural feedback, and onboarding, and that half has to survive. Spec driven development does not rescue it, because a spec written up front with no feedback loop is the 1970 waterfall model, and the decisions that actually matter end up in the prompts, which teams throw away the moment the pull request opens. His proposal keeps them: capture the session, turn those decisions into acceptance criteria, pair that with a registry built from your own recurring review comments, and generate a test plan that a verification system runs against a live preview. The review surface becomes intent and evidence instead of the diff.
+
+Speaker info:
+- https://x.com/ankitxg
+- https://www.linkedin.com/in/ankitjaindce/
+- https://www.latent.space/p/reviews-dead
+
+Timestamps:
+0:00 - The five layer trust model, and what it got wrong
+1:17 - We already stopped reviewing, and AI reviews nobody reads
+3:05 - What code review was actually for
+4:21 - Spec driven development is waterfall again
+5:53 - Intent lives in the prompts, which we throw away
+6:42 - The AI slop registry
+7:58 - Session to acceptance criteria to test plan
+11:51 - Deterministic where you can, and reviewing intent not the diff
+14:12 - Homework: mine your last 1,000 review comments
+
+## Context Engineering in 2026 — Louis-François Bouchard, Omar Solano & Samridhi Vaid, Towards AI
+
+- Upload date: 2026-08-17
+- Video: https://www.youtube.com/watch?v=WP3hjUXd918
+- Transcript: raw/20260817_WP3hjUXd918/WP3hjUXd918.en-orig.vtt
+- Metadata: raw/20260817_WP3hjUXd918/WP3hjUXd918.info.json
+
+The cheapest configuration they tested was the one sending the most tokens. Across 11 presets run against their open source AI tutor, doing nothing at all to the context beat every compaction technique on recall, cost, and latency at once, and their own production defaults scored worse than leaving the history alone. Prompt caching is why. With 97% of tokens served from cache, and cached tokens up to 50 times cheaper on some APIs, compaction has to shrink a context by more than 50 times before it pays for itself, because rewriting the context invalidates the cache. Louis-François Bouchard's framing is that summarization is potentially a trap.
+
+Omar Solano walks through the architecture and the first run, including a knowledge base browsing tool they built, measured, and found returned identical recall while running 50% slower. Samridhi Vaid extends it: keeping the full history recovered specific details 95% of the time against 32% after summarizing, and distinctive facts survived to 800,000 tokens without visible rot. Hardware changes the answer, though. Capped locally at a 32k window, keeping everything stops being possible, and a larger parameter count does not buy a larger context window. Dense retrieval fell to 0% recall on facts buried at 400k tokens where BM25 still found them every time. The rule they land on is to name the constraint you actually have before reaching for compaction, rather than compacting by default.
+
+Speaker info:
+Louis-François Bouchard (Towards AI):
+- https://x.com/Whats_AI
+- https://www.linkedin.com/in/whats-ai/
+- https://www.louisbouchard.ai
+
+Omar Solano (Towards AI):
+- https://x.com/omar_solano1
+- https://www.linkedin.com/in/omar-solano1
+
+Samridhi Vaid (Towards AI):
+- https://x.com/samridhivaid
+- https://www.linkedin.com/in/samridhivaid/
+
+Project:
+- https://github.com/towardsai/ai-tutor-app
+
+Timestamps:
+0:00 - The problem is the context, not the model
+1:30 - The AI tutor, and its five requirements
+5:21 - Two root problems: a finite window, a stateless model
+7:52 - Context rot, cost, and latency
+9:13 - The compaction toolkit, with and without an LLM
+12:58 - Offloading to files, the LLM wiki, progressive disclosure
+16:47 - Prompt caching, and why compaction can backfire
+19:20 - When to clear, compact, and optimize for cache hits
+21:53 - The tutor's architecture, a single ReAct agent
+25:49 - Hybrid search over an 8 million token corpus
+28:28 - Letting the agent browse the knowledge base
+31:01 - The browse tool measured: same recall, 50% slower
+36:23 - The experiment setup: presets, tasks, harness
+42:55 - Results: doing nothing wins on all three fronts
+48:13 - Should you ever compact?
+49:32 - DeepSeek, and a 50 times cache discount
+50:53 - Memory: 95% against 32% after summarizing
+54:38 - Cost at scale, and going local
+57:09 - Local limits: bigger models, same window
+58:25 - Where dense retrieval fails and BM25 holds
+1:01:01 - What they finally chose
+
+## Security Firewall for Agents — Ryan Dahl, Deno
+
+- Upload date: 2026-08-17
+- Video: https://www.youtube.com/watch?v=MkRYPFIMCSA
+- Transcript: raw/20260817_MkRYPFIMCSA/MkRYPFIMCSA.en-orig.vtt
+- Metadata: raw/20260817_MkRYPFIMCSA/MkRYPFIMCSA.info.json
+
+Deno gives its incident response agents read and write access to production Postgres, Kubernetes, ClickHouse, AWS, GitHub, and Slack, and it works. Agents now close incidents that used to wake a human up. Ryan Dahl's problem is what happens when one of those agents gets prompt injected through the support system it is wired into. He grants that Opus refuses to drop the users table no matter how hard you push it, then says the part that matters out loud: security cannot be wishful thinking that a model stays obedient. The agent is untrusted software, so the guard cannot live inside it.
+
+Claw Patrol is their answer, an MIT licensed proxy that sits in front of the agent and parses every byte leaving it, below the HTTP layer, because the dangerous path frequently is not HTTP. An agent can spawn psql as a subprocess and tunnel to a production database through an EKS endpoint, and no MCP tool definition or HTTP rule will see it. Rules live in HCL, the Terraform configuration language, checked into git and unit tested against fixture requests, with Deno's own file running about a thousand lines. The proxy holds credentials so the agent never sees them, covering cookies, OAuth, and AWS SigV4, and can route an action to an LLM judge, a human in Slack, or both before it is allowed. The demo is Codex in yolo mode cheerfully obeying an order to delete the users table, and the proxy killing it at the Postgres wire protocol.
+
+Speaker info:
+- https://x.com/rough__sea
+- https://github.com/ry
+- https://tinyclouds.org/
+- https://deno.com
+
+Timestamps:
+0:00 - Deno Deploy, incidents, and the pager
+1:28 - Giving agents write access to production
+2:47 - Opus refuses, and why that is not enough
+3:28 - Prompt injection through the support system
+4:05 - Every action is bytes on the wire
+5:24 - The hard case: psql through an EKS endpoint
+6:47 - Why credentials and ACLs are not sufficient
+7:26 - Where MCP tool permissions break down
+8:48 - The existing landscape of proxies and sandboxes
+10:09 - Claw Patrol
+10:50 - Writing rules in HCL
+12:07 - Protocol plugins
+12:52 - Demo: blocking a dropped users table
+13:34 - The dashboard
+14:14 - Approvals by LLM judge or by human
+14:58 - Credential injection
+15:38 - Running it over Tailscale or WireGuard
+16:58 - Agents cannot police themselves
+17:42 - Q&A: testing the rule file
+18:22 - Q&A: does this get easier as models improve
+
+## The Rise of CaaS: Context-as-a-Service for Agentic AI — Omer Primor, Bright Data
+
+- Upload date: 2026-08-14
+- Video: https://www.youtube.com/watch?v=Ot4OPrPH4xY
+- Transcript: raw/20260814_Ot4OPrPH4xY/Ot4OPrPH4xY.en-orig.vtt
+- Metadata: raw/20260814_Ot4OPrPH4xY/Ot4OPrPH4xY.info.json
+
+Just past 15,000 queries, renting context stopped being the cheaper option. Omer Primor gets that number from a small experiment he is careful to call a test rather than a benchmark: enrich one company across 25 fields, run it 100 times against this event's sponsors, and compare AI search products, context as a service vendors, and a scraper pipeline built in roughly a day. Pricing a week of setup at $5,000, the build it yourself path crossed over a little above 15,000 entities, and he expects the real crossover sits lower than most teams assume.
+
+The argument underneath is about frequency rather than volume. Web data decays fast, with social content stale inside a day and news, finance, and retail largely irrelevant after 30 days, so context is never a snapshot you take once. Every repeated query costs what the first one did, even when nothing has changed and the answer comes back identical. What he sees teams do about that is quietly cut scope: check a company weekly instead of daily, take 10 results instead of all of them, skip the question entirely. Owning the pipeline inverts the shape, paying upfront so that retrieval afterwards is effectively free. One result surprised him. The dedicated context vendors scored lower on coverage than general search, because they can only answer from what they already hold, and a question outside that set has no answer at any price.
+
+Speaker info:
+- https://www.linkedin.com/in/omer-primor/
+
+Timestamps:
+0:00 - Web scale, and the web as context rather than data
+2:43 - Data decay, and why context is not a snapshot
+3:37 - Search fragments, from Google to the AI search companies
+5:42 - What search cannot answer about change over time
+6:32 - Context as a service, and the vertical search shape
+10:01 - The test: 25 fields, 100 companies
+11:04 - Coverage, and why the context vendors placed lower
+12:32 - Cost, and frequency as the real killer
+15:22 - Cutting corners, renting versus owning
+15:59 - Building it yourself in a day
+18:34 - The tipping point just above 15,000 queries
+21:31 - Owned context compounds, rented context decays
+
+## Computer-use models will agentify the web, not APIs — Dhruv Batra, Yutori
+
+- Upload date: 2026-08-14
+- Video: https://www.youtube.com/watch?v=Ki980nV0__0
+- Transcript: raw/20260814_Ki980nV0__0/Ki980nV0__0.en-orig.vtt
+- Metadata: raw/20260814_Ki980nV0__0/Ki980nV0__0.info.json
+
+To learn what a US school district is buying, you file a Freedom of Information Act request. Someone scans the email you sent, puts the scan on Google Drive, and attaches the relevant PDFs. Dhruv Batra's question is whether anyone seriously expects that office to publish an MCP server. He grants the popular claim that agents will drive most of the action on the web, then rejects its usual next step, that the web will meet them with APIs. The head of the distribution might. The long tail, some 200 million active sites where infrastructure changes over decades, will not.
+
+Reading the HTML instead does not save you, because much of what you see was never written down anywhere. A basketball score is missing from the page that first loads and arrives later as JSON. A product page contains no text reading sold out, only a quantity of zero and a script that grays the option out. State is calculated and rendered rather than stored, which makes the browser closer to a game engine than a document and makes pixels the source of truth. He calls this the bitter lesson for web agents: scaffolding built per site does not generalize, and the general solution is the one the web was actually built for. Their Navigator model runs screenshot in and clicks out, now writes JavaScript when that is quicker, and checks the result on screen. It misses 8 of 300 trajectories on a benchmark he thinks should be retired.
+
+Speaker info:
+- https://x.com/DhruvBatra_
+- https://www.linkedin.com/in/dhruv-batra-dbatra/
+- https://dhruvbatra.com
+
+Timestamps:
+0:00 - The argument, and the part of it that is wrong
+3:23 - Restaurant menus on easy, medium, and hard mode
+5:31 - School district procurement, up to a FOIA request
+7:38 - 200 million active sites that change slowly
+8:42 - Why reading the HTML does not rescue it
+10:14 - Sold out is not text, it is a rendered zero
+11:33 - The browser is a rendering engine, pixels are the truth
+12:53 - Navigator, and writing JavaScript when that is faster
+15:51 - Are computer use models actually good enough
+17:20 - Latency and cost per task
+18:28 - Another layer of mess that we will call an API
+
+## Bringing agents onto the world wide web — Paul Klein IV, Browserbase
+
+- Upload date: 2026-08-14
+- Video: https://www.youtube.com/watch?v=GqoNrUz8hEU
+- Transcript: raw/20260814_GqoNrUz8hEU/GqoNrUz8hEU.en-orig.vtt
+- Metadata: raw/20260814_GqoNrUz8hEU/GqoNrUz8hEU.info.json
+
+When OpenClaw shipped, people started buying Mac minis to run it from home, SSHing in and clearing captchas off a residential IP. Paul Klein IV points out he has yet to see a SOC 2 compliant Mac Mini setup at scale, and that this felt like a reasonable answer is itself the problem. His argument is that browser agents are no longer held back by the models. The capability is already there and the engineering around it is missing, which makes the overhang something any team can close rather than wait on a lab for.
+
+That engineering has three parts. The most reliable browser agents in production are multimodal and write code alongside clicking, often intercepting network requests and replaying them rather than driving pixels. They carry a real harness, with skills and memory so a site is not rediscovered every run, and with page context compressed rather than dumped whole into the model. And they sit on infrastructure that renders a page identically every time, since a layout that comes back mobile on one run and desktop on the next produces results the agent cannot account for. He then turns to what the web owes agents: accessibility trees, Chrome's new Web MCP, and two unsolved problems, how an agent logs in on your behalf and who certifies that an agent can be trusted. The payoff is not in San Francisco. It is the logistics company in Singapore, the bank in South Africa, and the lumber factory in Mexico, all running on PHP forms with people clicking buttons every day.
+
+Speaker info:
+- https://x.com/pk_iv
+- https://www.linkedin.com/in/paulkleiniv/
+- https://github.com/browserbase/stagehand
+
+Timestamps:
+0:00 - Why web agents have not happened yet, and is it the models
+3:17 - The missing piece is the harness
+4:32 - Harnesses that beat the baseline model
+6:01 - The capabilities overhang in computer use
+7:05 - Multimodal agents, skills, and token efficiency
+9:09 - Infrastructure, and the SOC 2 Mac Mini problem
+10:24 - What the web owes agents: accessibility and Web MCP
+11:40 - Authentication, trust, and who issues the certificate
+14:07 - What a real platform has to provide
+15:45 - The real economy runs on PHP forms
+
+## From RL to IRL — Gaurav Mishra, Amazon AGI Lab
+
+- Upload date: 2026-08-14
+- Video: https://www.youtube.com/watch?v=Cc0_nyxROBA
+- Transcript: raw/20260814_Cc0_nyxROBA/Cc0_nyxROBA.en-orig.vtt
+- Metadata: raw/20260814_Cc0_nyxROBA/Cc0_nyxROBA.info.json
+
+Asked to file an expense, the agent gets signed out mid task, reasons that it can infer the password, guesses twice, and locks the account. In a second run it clicks a sponsored button styled like the real submit button, lands on a different site, and begins typing personal details into it. Both are real trajectories from early browser training runs at the Amazon AGI Lab, and Gaurav Mishra's summary is that RL worked while the world was a game, and IRL starts when the game fights back.
+
+The talk catalogues what a reward function meets on contact with a real login screen. Observability is partial, since the DOM misses content baked into images and the screenshot misses whatever needs scrolling. Actions are irreversible, credentials expire mid trajectory, and done routinely does not mean successful. His answer is flight school rather than exams. Sandboxes train on layout shift, slow loads, pop ups, focus stealing, and stale tabs, and recovery becomes a native model action instead of an infra reset, so the agent refreshes, backtracks, waits, or escalates. A process reward model penalizes dangerous steps along the path instead of scoring only the outcome, and calibrated confidence teaches the agent to weigh whether an action is authorized, reversible, and visible before committing. The closing trajectory runs the same task correctly, including the agent refusing to guess the password and handing control back. Over time the model gets better and the harness gets thinner.
+
+Speaker info:
+- https://www.linkedin.com/in/gaurav-mishra-b307a437
+
+Timestamps:
+0:00 - RL to IRL, and a lightning review of RL for agents
+3:26 - Why coding agents can do computer use at all
+4:05 - The agent that guesses its own password
+5:47 - The sponsored button that looks like submit
+6:37 - Partial observability, irreversibility, expiring credentials
+8:29 - Flight school, not exams
+9:54 - Process rewards and calibrated confidence
+11:11 - The pilot and the cockpit
+14:07 - Assumption versus reality, point by point
+15:11 - The same task, done right
+
+## Computer Use at the Edge of the Statistical Precipice — Pierluca D'Oro, Programma Labs
+
+- Upload date: 2026-08-14
+- Video: https://www.youtube.com/watch?v=CTLa_p6iOiY
+- Transcript: raw/20260814_CTLa_p6iOiY/CTLa_p6iOiY.en-orig.vtt
+- Metadata: raw/20260814_CTLa_p6iOiY/CTLa_p6iOiY.info.json
+
+A script under one megabyte that never looks at the screen matches or beats the frontier model it was copied from. Pierluca D'Oro builds it by recording one successful trajectory per task and then replaying those actions blindly, and on deterministic benchmarks like OSWorld that counts as a valid agent and it scores at the top. The paper goes further and proves that pass@k on a deterministic environment is exactly the success rate of that replay script, so a metric the field leans on turns out to be a formal measure of the exploit.
+
+The fix has two halves. Environments get the PRISM principles: privileged verification, realism, integrity checked configurations, sandboxed execution, and multifactorial variation across data, theme, and starting screen. DIGIWORLD instantiates them in 15 sandboxed mobile apps and 3.2 million verified configurations, generated by a compiler that produces every combination and rejects the broken ones, because a coding agent emitting a lot of software is not the same thing as a good environment. Metrics get honest uncertainty. Naive rollouts on a single base case yield confidence intervals that actually contain the true performance around 20% of the time rather than 95%, and he prices the consequence: a 4% gap between two models, hidden under intervals that look tight, costs hundreds of thousands of dollars a month across a million tasks.
+
+Speaker info:
+- https://x.com/proceduralia
+- https://www.linkedin.com/in/pierluca-doro/
+- https://www.proceduralia.com
+- https://arxiv.org/abs/2605.08261
+
+Timestamps:
+0:00 - The replay agent, a script that never sees the screen
+1:41 - It matches the model it was copied from
+2:22 - Why pass@k measures exactly that exploit
+3:50 - The PRISM principles for environment design
+5:31 - DIGIWORLD, 15 apps and 3.2 million verified configs
+7:25 - The compiler that rejects invalid combinations
+9:21 - Replay stops working, and frontier models look fragile
+11:05 - Two sources of variance, actions and environment
+12:31 - Intervals that cover 20% of the time, not 95%
+14:56 - A benchmark without rigor is a misleading one
+
+## The Dark Arts of Web Automation: Teaching Agents to Use Websites Like Humans — Corey Gallon, Rexmore
+
+- Upload date: 2026-08-14
+- Video: https://www.youtube.com/watch?v=26RtyAm9y_Q
+- Transcript: raw/20260814_26RtyAm9y_Q/26RtyAm9y_Q.en-orig.vtt
+- Metadata: raw/20260814_26RtyAm9y_Q/26RtyAm9y_Q.info.json
+
+Preparing this talk got Corey Gallon a warning from OpenAI that his account faced a ban for cyber abuse with a web browser. The offending work was an agent clearing Cloudflare Turnstile, two image captchas, and finally reCAPTCHA v2 with no human in the loop. His premise fits on one slide: a browser driven through the Chrome DevTools Protocol is just a meat bag with a mouse, because the agent's clicks and keystrokes travel the same path inside Chrome that yours do. Chrome stamps every event as trusted or untrusted, which is why a synthetic JavaScript click that works fine in Outlook gets silently dropped by Amazon's add to cart button.
+
+The method is a loop of sense, act, verify, climbed up a three rung ladder only as high as the page forces. A synthetic click first, then a real CDP input event, then a human mouse path with jitter and a deliberate overshoot. He argues for a CLI over an MCP server on speed rather than capability, citing a study where both cleared tasks about 83% of the time while MCP took 71 round trips and eight minutes against seven turns and under a minute. That gap decides the last fight, because reCAPTCHA rounds expire on a clock. His solution splits the work: deterministic code drives the whole challenge and rearms itself, and the agent is called in only to look at the grid and name the tiles. Everything demonstrated runs on infrastructure and accounts he owns.
+
+Speaker info:
+- https://x.com/coreygallon
+- https://www.linkedin.com/in/coreygallon
+- https://gallon.me
+- https://github.com/captivus/chrome-agent
+
+Timestamps:
+0:00 - Threatened with a ban for preparing this talk
+1:50 - The premise: a CDP browser is a meat bag with a mouse
+2:43 - Why a CLI beats an MCP server
+4:06 - The DevTools Protocol and the agent's digital senses
+5:47 - The loop: sense, act, verify
+6:38 - The three rung ladder
+8:27 - Rung one: batch emails, and the web UI as a permissionless API
+10:44 - Rung two: trusted clicks and the add to cart button
+12:51 - Rung three: Cloudflare Turnstile
+14:26 - Image captchas, drag puzzles, and human motion
+16:36 - Final boss: reCAPTCHA v2, solver and operator
+19:47 - The methodology is the takeaway
+
+## How Web Data Infrastructure Powers the Next Generation of AI — Patricija Žemaitytė, Oxylabs
+
+- Upload date: 2026-08-14
+- Video: https://www.youtube.com/watch?v=1UmZHb_E_SM
+- Transcript: raw/20260814_1UmZHb_E_SM/1UmZHb_E_SM.en-orig.vtt
+- Metadata: raw/20260814_1UmZHb_E_SM/1UmZHb_E_SM.info.json
+
+Minutes into a call to demo a search API rebuilt to answer in under a second, the system got blocked, badly, in front of the client. Patricija Žemaitytė treats that as the useful distinction: something that works in development, something that passes tests, and something that survives reality are three different systems. The rebuild had no trick to it. Browsers are slow, expensive, and incompatible with low latency, and they were unavoidable, so the team went hunting for time across layouts, parsers, sessions, and proxies until the seconds were gone. It averages 550 milliseconds now, against a 4 second baseline.
+
+Two other stories run the same way. A video API request arrived with a two week deadline and a floor of 5 petabytes a month, then kept moving. The transcripts the client asked for turned out to be subtitles, then came search, then metadata, until a one off feature request had quietly become a product suite. The punchline she offers is that the client has since collected 30 petabytes and has not paid yet. Scaling the unblocker from 10,000 to 60,000 requests per second hit a wall around 20,000 in load testing, where the real difficulty was not generating synthetic traffic but knowing whether the number meant anything, since telemetry at that volume becomes part of the load it measures. Project 60 is already Project 150. Her argument throughout is that this is not a build once business, it is an adapt forever one.
+
+Speaker info:
+- https://www.linkedin.com/in/patricijazemaityte
+- https://oxylabs.io/press-area/from-web-to-artificial-intelligence
+
+Timestamps:
+0:00 - Infrastructure, not models, as the starting point
+2:23 - A video API with a two week deadline
+4:08 - Transcripts, subtitles, search, metadata
+5:51 - Thirty petabytes later, still unpaid
+7:25 - A subsecond request, built and then shelved
+8:42 - The rebuild, and getting blocked live on the call
+10:53 - Hunting for time, second by second
+12:26 - Scaling the unblocker to 60,000 per second
+14:09 - Load testing, and the wall at 20,000
+15:31 - Project 60 becomes Project 150
+
+## Scaling up Continual Learning — Ronak Malde, Trajectory
+
+- Upload date: 2026-08-12
+- Video: https://www.youtube.com/watch?v=zL1kLftVTlo
+- Transcript: raw/20260812_zL1kLftVTlo/zL1kLftVTlo.en-orig.vtt
+- Metadata: raw/20260812_zL1kLftVTlo/zL1kLftVTlo.info.json
+
+Scale on policy self distillation to trajectories with a hundred tool calls and the model collapses into hedging. The tokens it learns to favor fill up with wait, but, and maybe, until, as Ronak Malde puts it, everything just turns into maybe. He calls it the but wait problem, and it happens because the student drifts far enough on a long task that the teacher course corrects at every opportunity, leaving the model parked between two divergent distributions.
+
+The algorithm underneath is a good trick. At the frontier there is no smarter model to distill from, so you make the model its own teacher: put privileged information, a hint, in the teacher's prompt, and match the log probs of the student that never saw it. Malde scores post training methods against four properties, an online task distribution, on policy sampling, no parallel rollouts, and a per token reward, and shows SFT, RLHF, and GRPO each buying some at the cost of others. GRPO gets on policy sampling but explodes parallelism and collapses feedback into one sequence level score, which he compares to being handed 87 out of 100 on an essay and told to work out why. Self distillation gets all four, and it optimizes across the entire vocabulary at every token instead of sharpening the one that was sampled, which is why it keeps climbing past where GRPO plateaus while tokens to solve go down rather than up. The failure modes are the useful part: step level KL weighting to handle divergence, and residual guidance for hint leakage, the self distillation analogue of reward hacking, where a hint containing the answer teaches the model to state it and back fill the reasoning afterward.
+
+Speaker info:
+- https://x.com/rronak_
+- https://www.linkedin.com/in/ronak-malde
+
+Timestamps:
+0:00 - From Windsurf to Trajectory
+1:05 - Benchmarks are saturating and getting expensive
+1:58 - The signal we throw away every day
+2:51 - Four things a training algorithm should have
+3:42 - SFT, and what it got right
+4:31 - DPO and RLHF
+5:22 - GRPO and the Faustian bargain
+6:15 - How GRPO actually works
+7:04 - Scored 87 out of 100 and told to figure it out
+7:52 - Distillation, then on policy distillation
+8:43 - Self distillation: make the model its own teacher
+10:21 - Optimizing the whole vocabulary, not the top token
+11:11 - Results on short horizon tasks
+12:52 - What breaks at 120B and a hundred tool calls
+13:41 - The but wait problem
+14:31 - Step level divergence weighting
+16:11 - Hint leakage, the new reward hacking
+17:51 - Residual guidance
+19:35 - All four properties, finally
+20:25 - What Trajectory is building
+21:16 - Q&A: how continual is continual learning
+22:08 - Q&A: model and harness improving together
+
+## Designing Agents (The Floor Is the Frontier) — Ben Hylak, Raindrop
+
+- Upload date: 2026-08-12
+- Video: https://www.youtube.com/watch?v=jHMiYtjoJfA
+- Transcript: raw/20260812_jHMiYtjoJfA/jHMiYtjoJfA.en-orig.vtt
+- Metadata: raw/20260812_jHMiYtjoJfA/jHMiYtjoJfA.info.json
+
+Build the thousand example eval suite everyone tells you to build, switch harnesses, and 80% of it stops meaning anything. Ben Hylak's complaint is that eval advice is still written for the chatbot era, back when you knew the answer to nearly every question a user would ask. His reframing is that the useful question is not what issues your agent has, since it will have effectively infinite issues, but which ones matter. That turns on the gap between your ceiling, the most impressive thing your agent can do, and your floor, the worst. The floor is what breaks trust: recommending a competitor, deleting data, sending slop to a customer because the agent happened to have email access.
+
+The practical core is two numbers per issue, when it started and what share of users it hits. Learning that something began yesterday is what makes you ask what changed. Learning it hit three users rather than a hundred thousand is what tells you whether to care at all. From there he offers three findings from running this at Raindrop. Clustering traces is not issue detection, because boundaries drift, you do not control them, and what counts as one issue is specific to your product, so a cluster called price issues quietly merges a wrong quote with a wrong refund that have nothing in common. Code mode scales to traces, meaning you write classifiers and run them in a sandbox at production volume. And agents are poor at finding anomalies while being good at investigating them, so surface something deterministic like a keyword spike first and hand them that. Underneath all of it is the argument that evals now belong in your repo as tests rather than in a prompt playground, because the harness is the product.
+
+Speaker info:
+- https://x.com/benhylak
+- https://www.linkedin.com/in/benhylak/
+
+Timestamps:
+0:00 - Raising the floor, and how little continual learning is real
+2:07 - What agents looked like a year ago
+3:23 - Why agent creativity cuts both ways
+4:01 - Eval advice stuck in the chatbot era
+4:38 - Switch harnesses and 80% of your evals break
+5:16 - Safety without theater
+5:57 - What Raindrop sees in production
+7:12 - The real question: how do you make it better
+8:26 - Benchmark maxer or floor raiser
+9:05 - Why labs and companies have different jobs
+9:42 - How much responsibility sits with the user
+10:56 - Ceiling against floor, and which breaks trust
+11:35 - Offline evals should look like tests
+12:52 - Keep evals as code
+13:30 - Two things you must know about every issue
+14:45 - How many users do you actually have
+16:02 - Lesson one: clusters are not issues
+17:17 - Why cluster boundaries fail you
+18:35 - Lesson two: code mode scales to traces
+19:14 - Lesson three: agents cannot spot anomalies
+
+## Beyond Static Intelligence: Evaluating Continual Learning — Parth Asawa, UC Berkeley
+
+- Upload date: 2026-08-12
+- Video: https://www.youtube.com/watch?v=iqloyWCGYQQ
+- Transcript: raw/20260812_iqloyWCGYQQ/iqloyWCGYQQ.en-orig.vtt
+- Metadata: raw/20260812_iqloyWCGYQQ/iqloyWCGYQQ.info.json
+
+Every leaderboard you have seen was built by asking a model to do one task, wiping its memory, and asking it another. Parth Asawa's objection is that this quietly assumes learning across instances does not count. His benchmark measures what that assumption hides, using a metric called gain: run a system with state, then run the identical system reset between every single instance, and take the difference. Cumulative reward cannot show you this, because a stronger base model can post a higher total while learning less than a weaker one that genuinely improves.
+
+Building tasks that can measure learning turns out to be the hard part, and he sets three requirements. Headroom, so the task is not already solved by pretraining. Shared latent structure across instances, since standard benchmarks are deliberately independent and therefore offer nothing to improve on, which is why chaining existing benchmarks together does not work. And a learning signal in the environment, whether reward, error messages, or plain text. Continual Learning Bench 1.0 spans six domains including database exploration, where a system should need fewer SQL queries by the tenth question, after which a schema migration tests whether it can throw away stale knowledge without throwing away the useful kind. The headline result is uncomfortable: plain in context learning tops the leaderboard, beating the more elaborate context management systems on reward, on gain, and on cost. Failure modes land on either side of stability and plasticity, including a forecasting model that overpredicts, is corrected, underpredicts, is corrected again, and then jumps straight back to its original overprediction instead of splitting the difference.
+
+Speaker info:
+- https://x.com/pgasawa
+- https://www.linkedin.com/in/pgasawa/
+- https://pgasawa.github.io/
+
+Timestamps:
+0:00 - How we evaluate models today
+1:28 - Imagine forgetting everything after every task
+2:05 - What continual learning actually means
+2:42 - In context, external memory, or parametric
+3:18 - The case that we are not measuring it at all
+3:58 - What the existing literature does
+4:37 - Why those evaluations are not enough
+5:13 - Why you cannot chain existing benchmarks
+5:51 - Design criterion one: headroom
+7:06 - Shared structure and a learning mechanism
+7:42 - Reward, and why cumulative reward misleads
+8:58 - Gain: the same system with memory wiped
+10:15 - Isolating learning from base capability
+10:54 - The database exploration task
+12:06 - Adding concept drift with a migration
+13:20 - Six domains in the benchmark
+13:57 - Results, and the in context learning surprise
+15:12 - Failure modes on stability and plasticity
+15:51 - A forecast that forgets its own correction
+16:28 - A notepad that refuses to update
+17:07 - Why the training stack was never built for this
+17:47 - The sunk cost fallacy in continual learning
+19:02 - Rethinking third party AI research
+19:38 - Roadmap
+
+## Bringing Continual Learning into Enterprises — Samuel Denton, Applied Compute
+
+- Upload date: 2026-08-12
+- Video: https://www.youtube.com/watch?v=ZTA0GwpAUak
+- Transcript: raw/20260812_ZTA0GwpAUak/ZTA0GwpAUak.en-orig.vtt
+- Metadata: raw/20260812_ZTA0GwpAUak/ZTA0GwpAUak.info.json
+
+A Qwen thinking model was taking up to 80 turns to submit on SWE bench. Applied Compute wanted it wrapping up by turn 40 and got the submit tool call rate from 22% to 60% with test pass rate flat. The interesting part is the mechanism: because the rollout was conditioned on an old production trace that never called the tool, the teacher never touched the tool call tokens at all. It moved the reasoning path toward the call instead, and the call followed.
+
+Sam Denton's frame is a grid. One axis is how online the traces are, from a single dump of production traces to a unified engine where serving and training are the same loop. The other is where the hint comes from, either static priors, such as knowing a support agent is too quick to refund, or a hint built dynamically from what the on policy model just did. Applied Compute works two corners of that grid. Offline hints on offline traces need no replayable environment and can improve an enterprise agent from a data dump on day one. Online hints on online traces have the far higher ceiling, and that is what fixed a customer whose harness required unusual hyperlink formatting: rewarding the format directly and finetuning on correct examples both degraded coding ability, while a hint written against each rollout took correct formatting from 15% to 80%. Two things he says make it work in practice. Let a judge pick where in the rollout the hint goes and distill only the next few steps, since the learning signal decays with distance from the hint. And mask which tokens you learn from, because the teacher has strong opinions about connector words that have nothing to do with the lesson. Throughout, the constraint he keeps is doing all of this without a golden answer to distill toward.
+
+Speaker info:
+- https://x.com/samueldenton
+- https://www.linkedin.com/in/sam-denton-161b50126/
+
+Timestamps:
+0:00 - The distillation spectrum, offline to online
+2:46 - The holy grail: serving and training as one loop
+4:00 - Where the hint comes from
+4:42 - Online hints built from the rollout
+5:19 - Four quadrants of distillation
+7:50 - The two corners they actually work in
+9:44 - Improve for free today, raise ceilings tomorrow
+10:22 - Doing it without a golden answer
+11:00 - SWE bench: wrapping up by turn 40
+11:38 - The three metrics that matter
+12:17 - What the hint actually says
+12:55 - Moving the reasoning path, not the tool call
+13:36 - Adding a single on policy step
+14:17 - The hyperlink formatting problem
+14:56 - Why rewards and finetuning both failed
+15:34 - From 15% to 80% with online hints
+16:13 - Per step hinting
+16:50 - Why the signal decays with distance
+17:27 - Relevance masked self distillation
+18:07 - What it adds up to
+
+## Adaption Labs: Gradient-Free Continual Learning — Sara Hooker, Adaption
+
+- Upload date: 2026-08-12
+- Video: https://www.youtube.com/watch?v=XEd_SRVHBgU
+- Transcript: raw/20260812_XEd_SRVHBgU/XEd_SRVHBgU.en-orig.vtt
+- Metadata: raw/20260812_XEd_SRVHBgU/XEd_SRVHBgU.info.json
+
+Fewer than five thousand people in the world know how to train a frontier model at scale, by Sara Hooker's estimate, and that knowledge travels like an apprenticeship rather than a literature. Modern computer science is 77 years old, two generations, and in that time the route to contributing at the frontier narrowed into one funnel: the right PhD, the right industry lab, the right problem at the right moment. She calls it the unreasonably narrow path, and notes it got compounded in this field by compute, so that a handful of labs build what everyone else uses and whole regions of the world appear nowhere on the map of where breakthroughs happen.
+
+Her case that the funnel is about to widen rests on two things. AutoScientist automates the training of models, optimizing the whole loop together from data through alignment and evolving itself per domain, and it beats research staff partly because people carry priors about particular architectures while the search ranges across sizes and across dense and mixture of experts designs. It only started paying off once they controlled data quality alongside the model rather than leaving that to the agent. One nice piece of honesty: the win rates all sit just above 60% because the budget was set to stop there, and lifting that ceiling let them keep climbing. The second reason is her slow death of scaling argument, that pretraining size is no longer the most rewarding axis. That matters for access, because pretraining compute has to be colocated and enormous while the compute that now pays off is distributable. If no lab is going to quadruple model size again on this architecture, recipes and algorithms start to matter more than hoarded GPUs.
+
+Speaker info:
+- https://x.com/sarahookr
+- https://www.linkedin.com/in/sararosehooker/
+- https://www.sarahooker.me/
+
+Timestamps:
+0:00 - Seventy seven years of computer science
+1:15 - From gentleman scientists to professional labs
+1:56 - The unreasonably narrow path
+3:13 - GPU poor and GPU rich
+3:52 - Where breakthroughs come from, and where they do not
+4:30 - Why we are ripe for a revolution
+5:08 - AutoScientist
+5:47 - Why it beats research staff
+6:24 - It only worked once they controlled the data
+7:02 - The 60% that was a budget stop
+7:41 - Where the demand is: medical, legal, science, code
+8:59 - Languages from day one, and non verifiable tasks
+10:16 - The compute problem that would undo all this
+10:53 - The slow death of scaling
+11:31 - Smaller models overtaking larger ones
+12:09 - A broader action space, and why that opens the field
+12:47 - Q&A begins
+14:06 - Fewer than five thousand people
+14:43 - Why the cost of asking shapes what gets asked
+15:57 - Q&A: the safety objection to open frontier AI
+17:10 - Q&A: parametric against nonparametric storage
+18:28 - Q&A: are large models still needed for distillation
+19:04 - Why this architecture has hit its size ceiling
+
+## Scaling Compute on Context — Jack Morris, Engram
+
+- Upload date: 2026-08-12
+- Video: https://www.youtube.com/watch?v=WiqDvX6isc4
+- Transcript: raw/20260812_WiqDvX6isc4/WiqDvX6isc4.en-orig.vtt
+- Metadata: raw/20260812_WiqDvX6isc4/WiqDvX6isc4.info.json
+
+Train a model directly on ten thousand financial reports and you can drive the loss to 0.00001. It knows the documents perfectly. Then you generate from it and it collapses. Jack Morris uses that failure to set up the real problem. The three axes that powered the entire deep learning revolution, more data, more compute, bigger models, all run on public data. Models are superb on Wikipedia, arXiv, and GitHub, and know nothing about your emails, your meetings, or your company. Against your own corpus the data axis is fixed and training from scratch is off the table, which leaves compute as the only axis you can still push, and that is what he means by scaling compute on context.
+
+The rest is a tour of what people try and exactly where each one stops. KV compaction only reaches what already fits in context and skips the gradients entirely. On policy distillation works, but raises the question of what you distill, since raw documents will not do, which is the gap self study in the cartridges paper is aimed at. Continued pretraining on synthetic data conditioned on your corpus is promising, but it overwrites some of the pretraining and assumes you have a base model rather than the post trained one most people actually start from. Every approach shares a ceiling: you define a dataset, you train, and unless the model is underparameterized it eventually absorbs everything you made. A synthetic data wall, with none of pretraining's scaling behavior. The property he wants is the one that made AlphaGo work, where getting better makes the training questions harder, so that adding compute keeps buying depth instead of flattening out.
+
+Speaker info:
+- https://x.com/jxmnop
+- https://jxmo.io
+- https://substack.com/@jxmnop
+
+Timestamps:
+0:00 - Scaling compute on context, and Engram
+1:28 - Terence Tao on breadth against depth
+2:43 - What models cannot know after training
+3:22 - Long tail skills and AMD kernels
+3:59 - Why a model knows nothing about you
+4:37 - The many names for this problem
+5:14 - Three axes of scaling
+5:52 - Even post training data is public by definition
+6:30 - Applying scale to your data
+7:45 - Why compute is the only axis left
+8:21 - The data budget is less fixed than it looks
+9:40 - Stating the problem properly
+10:55 - Just train on it, and why that fails
+11:34 - Perfect loss, collapsed generation
+12:13 - Making the model think the data is in context
+12:52 - KV compaction
+13:31 - On policy distillation and what to distill
+14:46 - Simulating pretraining with synthetic data
+16:00 - Unsupervised RL environments
+16:38 - The synthetic data wall
+17:54 - Self improvement, and what AlphaGo had
+18:33 - The curve they are chasing
+
+## Memory Harnesses for Long-Running Research Agents — Stefania Druga, Sakana.ai
+
+- Upload date: 2026-08-12
+- Video: https://www.youtube.com/watch?v=R3-anFK1YM8
+- Transcript: raw/20260812_R3-anFK1YM8/R3-anFK1YM8.en-orig.vtt
+- Metadata: raw/20260812_R3-anFK1YM8/R3-anFK1YM8.info.json
+
+On a literature review task where every paper already fit inside the context window, adding a memory harness changed nothing: the same accuracy, at higher cost. That negative result is the most useful thing in Stefania Druga's experiment, because it marks the boundary. Move to a long horizon task where the answer sits at step 124 and the question arrives at step 500, far outside the window, and the harness becomes the entire game.
+
+Her framing is that memory is a write, manage, read control loop wrapped around the model, not a database you attach to it. She held the model fixed and varied only the recall policy across a ladder: no recall at all, vector RAG, a decisions ledger that tracks and prioritizes what was decided each turn, and an oracle handed the correct memory outright. Across 68 xbench questions the ranked ledger won, beating even the approach of gating the harness on whether memory seemed necessary. The oracle pointedly does not reach the ceiling, because giving a model the right memory does not make it use the right memory. Ranked recall was also cheaper, which is the line worth keeping: bad memory is expensive, since it burns tokens and sends the agent the wrong way. The whole thing runs on a local M3 Ultra in Tokyo that she is driving from her phone, with fans stacked around it because the evals have not stopped.
+
+Speaker info:
+- https://x.com/Stefania_druga
+- https://www.linkedin.com/in/drugastefania/
+- https://stefania11.github.io/
+
+Timestamps:
+0:00 - Context rot on long horizon tasks
+1:04 - Longer tasks, fewer model releases
+1:56 - Cutting spend by moving work local
+2:24 - Local models crossing the usefulness line
+2:50 - The machine in Tokyo, and the fans
+3:44 - Memory as a write, manage, read loop
+4:11 - The harness: core, recall, archival
+4:36 - The recall ladder, from nothing to an oracle
+5:27 - Task one: a retracted claim in a literature review
+6:19 - When everything fits, memory only adds cost
+6:47 - Task two: an answer 376 steps out of reach
+8:08 - Results across 68 questions
+8:35 - Why the oracle does not reach the ceiling
+8:59 - Ablations, and generalizing across models
+9:49 - Bad memory is expensive
+10:16 - Treat recall policy as a first class metric
+11:07 - The wider memory landscape
+11:33 - What running locally bought her
+12:29 - Sovereign AI at Sakana
+
+## Intelligence + Continual Learning = Expertise — Yu Su, NeoCognition
+
+- Upload date: 2026-08-12
+- Video: https://www.youtube.com/watch?v=I6aiEf3aEFQ
+- Transcript: raw/20260812_I6aiEf3aEFQ/I6aiEf3aEFQ.en-orig.vtt
+- Metadata: raw/20260812_I6aiEf3aEFQ/I6aiEf3aEFQ.info.json
+
+Scheduling a meeting is not finding a shared slot on everyone's calendar. It is a constraint optimization over authority, priority, and urgency, and an expert sees that immediately where a very capable model does not. Yu Su uses examples like that one to separate two things the field keeps collapsing together. Intelligence is reasoning through an unfamiliar problem from the context you were handed, which frontier models keep getting better at and where each episode stands alone. Expertise is accumulated, situated competence, and almost nobody is scaling it.
+
+His account of why coding agents work while everything else stays brittle is a modern Moravec's paradox. Code is already a language native world, symbolic and structured, with tests standing in for rewards. The rest of digital work is millions of micro worlds, each with its own local physics, far too heterogeneous for one static model to compress. The slide he calls the most important plots raw intelligence against expertise and finds them roughly orthogonal: scale intelligence alone and you get what he calls the world's smartest novice, brilliant at whatever is put in front of it and accumulating nothing between problems. Intelligence expands the search, spinning up a hundred parallel attempts. Expertise compresses it, because the shortcuts are already learned. The provocation he leaves is unbounded expertise from bounded intelligence: if continual learning gets good enough past some threshold of raw capability, the thing worth scaling stops being the model.
+
+Speaker info:
+- https://x.com/ysu_nlp
+- https://www.linkedin.com/in/ysu1989/
+- https://ysu1989.github.io/
+
+Timestamps:
+0:00 - Why coding agents work and little else does
+1:30 - Agents before language models
+2:06 - What multimodal language agents changed
+3:26 - Why code was the ideal first market
+4:06 - Leaving the privileged world of code
+4:46 - A modern Moravec's paradox
+5:25 - Millions of micro worlds, each with local physics
+6:44 - Defining intelligence
+7:20 - Defining expertise
+8:00 - Experts see differently, not just more
+8:39 - Conditionality, judgment, and knowing when to stop
+9:53 - Expanding the search against compressing it
+10:32 - Continual learning as the bridge
+11:08 - Four parts of a working definition
+13:10 - The world's smartest novice
+14:32 - Unbounded expertise from bounded intelligence
+15:51 - Reliability against plasticity
+16:32 - Parametric and nonparametric learning together
+17:08 - Specialization as the next data opportunity
+17:53 - Making expertise abundant
+
+## LLM Knowledge Bases: a practical guide — Ben Holmes, Warp
+
+- Upload date: 2026-08-12
+- Video: https://www.youtube.com/watch?v=I3bpdgFJCUY
+- Transcript: raw/20260812_I3bpdgFJCUY/I3bpdgFJCUY.en-orig.vtt
+- Metadata: raw/20260812_I3bpdgFJCUY/I3bpdgFJCUY.info.json
+
+Talking runs about 200 words a minute and typing does not, which is why Ben Holmes starts a knowledge base with voice dictation rather than with organization. The pipeline only works if there is enough raw material, so the capture step is deliberately sloppy: ramble into your phone after a podcast or a meeting, skip the formatting, and let agents impose structure afterward. He points at Handy and Voice Ink as local, on device options, so none of it needs a subscription.
+
+Structure then arrives in passes. An enrich note skill stamps each file with a timestamp so later runs know what has been processed, assigns tags from a fixed reference list instead of inventing new ones, since as he puts it Claude loves to get creative, researches the source on the web, and adds backlinks found by key term search. On top of that pile, a wiki generated from a Karpathy gist produces browsable entries for the people, concepts, organizations, and sources buried in your own notes. Then the whole thing runs on a schedule in a cloud sandbox: the Obsidian headless CLI syncs the markdown down, the agent enriches whatever is not yet stamped, and it syncs back, so you wake up to a refreshed wiki he describes as the daily paper except it is yours. The closing trick is a graph view of every note, built in HTML and Tailwind purely by asking an agent for it, which turns out to be a decent map of where your own thinking has gaps.
+
+Speaker info:
+- https://x.com/bholmesdev
+- https://bholmes.dev
+- https://linkedin.com/in/bholmesdev
+
+Timestamps:
+0:00 - The disorganized notes folder problem
+1:30 - Where we are going: raw notes to a browsable wiki
+2:46 - Getting raw thoughts down is the hard part
+3:25 - Why dictation beats typing
+4:02 - Local voice tools that need no subscription
+5:17 - Be scrappy, you need volume
+5:53 - What an enriched note looks like
+6:32 - The enrich note skill
+7:11 - Tagging from a fixed list, not inventing new ones
+7:49 - Running the skill
+9:07 - Following your own rabbit holes
+9:45 - Generating a wiki over the notes
+11:40 - The Karpathy gist behind the idea
+12:54 - Wikis for work: people, meetings, sources
+13:31 - Making it run without you
+14:10 - Local automations against cloud ones
+15:29 - Syncing markdown into a sandbox and back
+16:45 - Waking up to a fresh wiki
+18:01 - Visualizing the whole notebook
+18:39 - A graph view built by asking for it
+19:17 - Finding the gaps in your own thinking
+20:30 - Tools mentioned
+
+## Improving Agents is a Data Mining Problem — Vivek Trivedy, LangChain
+
+- Upload date: 2026-08-12
+- Video: https://www.youtube.com/watch?v=CvRngaQZQ3Y
+- Transcript: raw/20260812_CvRngaQZQ3Y/CvRngaQZQ3Y.en-orig.vtt
+- Metadata: raw/20260812_CvRngaQZQ3Y/CvRngaQZQ3Y.info.json
+
+Does your agent get dumber after the first compaction? After the second? You cannot read that off the code, only off the traces, and there are far too many to read yourself. So LangChain points agents at the traces of other agents and asks exactly that, alongside questions like where users got upset and what a different model would have done at the same step. Vivek Trivedy's argument is that observability and continual learning are the same problem in different clothing, because an agent acting in an environment produces the only real record of what happened, and that record is the substrate everything else is built on.
+
+The economics fall out of reading it. Working with Harvey on a legal benchmark, they found an open model could match their frontier model's trace judging at one to two orders of magnitude lower cost, arrived at through harness engineering that the traces themselves pointed to. His rule for when to stop tuning prompts and start finetuning is speed of feedback: harness engineering answers in about two minutes, so you exhaust that ceiling first, finetune to break through it, then return to harness engineering. He also argues that dense feedback is what agents lack most, since a benchmark returning only pass or fail gives an agent nothing to act on, while traces already hold the fine grained signal. The claim worth arguing with is that you can describe an agent's behavior just by showing the evals it was measured against, because those are what it hill climbs.
+
+Speaker info:
+- https://x.com/Vtrivedy10
+- https://www.linkedin.com/in/vivek-trivedy-433509134/
+- https://www.vtrivedy.com/
+
+Timestamps:
+0:00 - My agent made mistakes, now what
+1:28 - Ship it, collect traces, mine them
+2:44 - Observability and continual learning are the same problem
+4:00 - Why agents are harder to reason about than code
+4:36 - Trading determinism for autonomy
+5:15 - Sending agents to read other agents' traces
+6:29 - Today's data is the least we will ever have
+7:09 - When a trace no longer fits in context
+7:48 - Not reaching for a frontier model every time
+8:24 - Matching frontier trace judging with an open model
+9:02 - Where harness engineering stops paying
+9:40 - Finetuning on a narrow vertical
+10:17 - Trading token costs for hardware costs
+11:34 - Distillation from your own good traces
+12:10 - Evals as a description of behavior
+12:48 - What scikit learn has to do with any of this
+13:28 - Model, harness, task fit
+14:07 - Finding fit functions and finding data
+15:24 - Why dense feedback matters
+16:01 - Harness engineer, finetune, harness engineer again
+17:22 - Updating agent state across three axes
+18:39 - Sleep time compute and memory that is not append only
+19:17 - Takeaways
+
+## Lessons from Studying Every Memory System — Shlok Khemani, Independent
+
+- Upload date: 2026-08-12
+- Video: https://www.youtube.com/watch?v=5ZGyKWjQDr0
+- Transcript: raw/20260812_5ZGyKWjQDr0/5ZGyKWjQDr0.en-orig.vtt
+- Metadata: raw/20260812_5ZGyKWjQDr0/5ZGyKWjQDr0.info.json
+
+A profile ChatGPT keeps on Shlok Khemani says he travelled to Turkey in 2025. He never has. The memory came from conversations where he was choosing between Turkey and Thailand, he went to Thailand, and the profile kept both with overlapping dates. What bothers him is not the mistake but the incuriosity: nothing notices the conflict, and the evidence to settle it was sitting in his email as flight and hotel bookings. He calls that a product problem, not a technology one.
+
+The rest is a year of reverse engineering how consumer memory systems are built, all of it his reading from the outside rather than anything documented. By his account ChatGPT went from a user managed list of facts to a running profile rebuilt in the background, roughly 4,000 tokens of dense keyword clues he could only inspect by jailbreaking his way to it. Claude started opposite, with no profile and two retrieval tools over past conversations, then added one about a quarter the size, in full sentences, refreshed daily and visible in settings. His frame for the difference is that memory is a function of compute: a profile costs to maintain and costs again in every context window it enters, so a large profile updated rarely and a small one updated daily are two answers to one budget question.
+
+Speaker info:
+- https://x.com/shloked
+- https://www.linkedin.com/in/shlokkhemani/
+- https://shloked.com
+
+Timestamps:
+0:00 - What memory means here: consumer personalization
+2:09 - ChatGPT memory v1, a list of facts
+4:08 - The running profile arrives
+6:04 - The trip that never happened
+6:45 - A profile you cannot look at
+7:23 - Claude's first version, tools instead of a profile
+8:03 - Publishing that they were opposites
+9:18 - Three years of convergence
+11:14 - There is no single way to do memory
+12:30 - Memory is a function of compute
+13:47 - Continual learning is already here
+15:39 - The context problem no architecture solves
+17:34 - Products that each know you separately
+
+## Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab
+
+- Upload date: 2026-08-11
+- Video: https://www.youtube.com/watch?v=aeTb5BdmTTc
+- Transcript: raw/20260811_aeTb5BdmTTc/aeTb5BdmTTc.en-orig.vtt
+- Metadata: raw/20260811_aeTb5BdmTTc/aeTb5BdmTTc.info.json
+
+Leave agent adoption to individuals and the engineer shipping two PRs a day ends up reviewing the ten that the early adopter ships. They fall further behind, the code they are reading is worse, and they conclude the agents are the problem. Aditya Khandelwal's argument, from leading a team of ten through this, is that adoption is therefore a leadership problem and not an IC one, because the changes that actually work, restructuring a codebase for progressive disclosure and converging on a shared setup, are not changes one engineer can make alone.
+
+The symptoms of a bad setup are specific. Engineers babysit runs. A simple task burns through 500k of context and hits auto compaction. Someone says the model got dumb today, when the model did not change and the harness did. Their fix centered on one high value skill, called ship it, that carries a change from code done to PR ready, handling the description, the review comments, and CI failures, and often runs for over an hour. That duration scared people until they saw what it bought them. Around it they wired issues and boards into the repo, agentic reviews, and a code gardener that runs nightly. It was not clean: agents filing against each other took the repo to roughly 4,500 open issues in a couple of weeks. Stay for the Q&A, which lands a hard limit near 100 lines in a skill file and offers first prompt context burn as the test of whether progressive disclosure is actually working.
+
+Speaker info:
+- https://www.linkedin.com/in/aditya-khandelwal/
+- https://github.com/adityak6798
+- https://adityak6798.github.io/
+
+Timestamps:
+0:00 - Why solo agent advice breaks on a team
+1:30 - The adoption journey, from mandates to slop
+2:10 - Fear against confidence, the two axes
+4:02 - Is a CLAUDE.md and some skills enough
+4:38 - Symptoms that your setup is wrong
+5:52 - Why this is leadership's job, not an IC's
+6:31 - The review burden trap
+7:09 - Harness engineering principles
+7:45 - Smart prompt injection
+8:25 - Close the loop and keep iterating
+9:08 - The playbook: start with the basics
+9:47 - Ship it, the one high value skill
+11:02 - Winning over the skeptics
+12:18 - What went wrong along the way
+12:57 - Let prototypes opt out of the standards
+13:34 - Stop saying the model is dumb
+14:10 - Commit to the turn
+14:47 - Q&A: strategies for progressive disclosure
+16:03 - Measuring context burn on the first prompt
+
+## Anthropic's Applied AI team on the Evolution of Agentic Surfaces
+
+- Upload date: 2026-08-11
+- Video: https://www.youtube.com/watch?v=K0X9QDRkIdg
+- Transcript: raw/20260811_K0X9QDRkIdg/K0X9QDRkIdg.en-orig.vtt
+- Metadata: raw/20260811_K0X9QDRkIdg/K0X9QDRkIdg.info.json
+
+Sonnet 4.5 developed what Anthropic's Applied AI team came to call context anxiety: approaching its context window limit, it would wrap work up early and stop with room to spare. They built context resets into the harness to compensate. Then Opus 4.5 shipped without the behavior, and the fix turned into pure overhead, adding latency and discarding cache it should have kept. That is the principle Gagan Bhat and Isabella Kai He build the whole session on: a harness encodes assumptions about what the model cannot do on its own, and those assumptions go stale as models improve.
+
+The architectural consequence is decoupling the brain, meaning the agent loop, from the hands, meaning the tool execution environment. Both started in one container, so the model could not begin reasoning until setup finished and either half failing took the whole agent down. Splitting them lets reasoning start while the container builds in parallel, which they measured at 60% faster time to first token at P50 and over 90% at P95. It also changes failure into something recoverable: a dead sandbox is simply retried, and a dead brain resumes from a durable session log. That log ends up doing triple duty, providing observability, letting the harness read context slices back in after Claude discards them mid run, and feeding a periodic batch process they call dreaming that rewrites the agent's memory so the next day's sessions start smarter.
+
+Speaker info:
+Gagan Bhat (Anthropic):
+- https://www.linkedin.com/in/gagan-bhat/
+
+Isabella Kai He (Anthropic):
+- https://x.com/IsabellaKHe
+- https://www.linkedin.com/in/isabella-kai-he/
+
+Timestamps:
+0:00 - Who the Applied AI team is
+1:52 - From simple questions to owning outcomes
+2:45 - The Messages API and the hand rolled agentic loop
+4:29 - Six production infrastructure problems
+5:20 - The Claude Agent SDK
+6:13 - What managed agents takes off your plate
+7:02 - Harnesses encode assumptions that go stale
+7:51 - Context anxiety, and the fix that outlived its need
+9:34 - Designing for the model capabilities of tomorrow
+10:25 - What long running agents demand
+11:16 - Decoupling the brain from the hands
+12:59 - Three primitives: agent, environment, session
+13:51 - Reliability and the four session states
+15:32 - Recovering discarded context from the session log
+16:23 - What the developer still owns
+17:14 - Demo: an SRE agent for a latency spike
+18:58 - Defining the environment and its network limits
+19:49 - Kicking off a session
+20:38 - Root cause, and the observability trace
+22:25 - Lesson one: keep credentials away from the agent
+23:15 - Lesson two: where the latency went
+24:58 - Lesson three: session logs as memory
+25:47 - Lesson four: self hosted sandboxes and MCP tunnels
+27:28 - Dreaming
+29:08 - Outcomes and grader agents
+30:49 - Harnesses as the limiting factor
+
+## Codex, Behind the Harness — Dominik Kundel, OpenAI
+
+- Upload date: 2026-08-10
+- Video: https://www.youtube.com/watch?v=shRR1e2HXMk
+- Transcript: raw/20260810_shRR1e2HXMk/shRR1e2HXMk.en-orig.vtt
+- Metadata: raw/20260810_shRR1e2HXMk/shRR1e2HXMk.info.json
+
+Once GPT 5.3 Codex Spark started serving a thousand tokens per second on Cerebras, inference stopped being the bottleneck and the network became it. The answer was websocket mode: a persistent connection replacing server sent events over HTTP, carrying stateful context so a turn ships back only the tool call result instead of resending every item. The same pressure shapes context construction, which fights size, flexibility and cachability at once. Tools can be marked deferred so they never enter the context window and surface through tool search when the model actually wants them, and the available skills list is capped at 2% of the context window, with descriptions trimmed as it grows past that.
+
+Actions are where a harness earns its keep. File edits go through an apply patch tool the models were trained on, everything else through a shell the model instinctively drives with ripgrep, and all of it inside a sandbox: seatbelt on macOS, bubblewrap on Linux, and a custom open source sandbox on Windows the team had to build themselves. Approval fatigue pushes people into full access, which their own security team hates, so an escalation now spins up an auto review subagent with read only permissions and no ability to spawn others, judging the action against the transcript and how explicitly the user authorized it. Deleting a file you asked for reads differently from deleting a .git folder you never mentioned. Long horizon goals run by injecting a continuation prompt until the model calls an update goal tool, which is why concrete verifiable objectives beat essays. Dominik Kundel's closing point is that the harness is Apache 2 and written in Rust, and most of what makes it distinct lives in the responses API, so you can borrow any of it.
+
+Speaker info:
+- https://x.com/dkundel
+- https://linkedin.com/in/dkundel
+- https://github.com/openai/codex
+
+## Taking Reinforcement Learning Cross Datacenter — Nan Jiang, Modal
+
+- Upload date: 2026-08-10
+- Video: https://www.youtube.com/watch?v=maRzp4kImJ4
+- Transcript: raw/20260810_maRzp4kImJ4/maRzp4kImJ4.en-orig.vtt
+- Metadata: raw/20260810_maRzp4kImJ4/maRzp4kImJ4.info.json
+
+A frontier scale checkpoint is around 500 GB, so shipping one to a rollout fleet in another region takes minutes to hours and kills any hope of weight updates landing in seconds. Nan Jiang's claim is that you can send roughly 500 MB instead and have the rollout engine reconstruct a bitwise identical weights version. Fewer than 1% of rollout visible weights actually change between consecutive versions, and the reason is not that gradients are sparse. Gradients are dense, about 99% of parameters get a nonzero gradient and the FP32 master update is dense too. It is just small.
+
+The mechanism is a small Adam step meeting finite precision. The rollout engine serves a BF16 view whose rounding boundary sits near theta over 256, about 0.0039 for a weight around 1, while a typical Adam step at RL post training learning rates runs around 3 millionths, more than a thousand times too small to cross it. The master weights move and the served value does not, which he calls Adam absorption. Lower precision serving makes it sharper still: an internal run serving GLM 4.7 Air in FP8 saw 0.15% of weights change on the first step and settle near 0.05%. Once a lossless patch is the unit of synchronization instead of a checkpoint, the rollout fleet stops needing to live in the trainer's cluster. Training keeps its all reduce and its fast fabric, rollout islands scatter across whatever regions and providers have GPUs right now, a sidecar makes any engine version aware, and scattered inference capacity becomes one elastic rollout fleet. Modal's implementation is called Stitch.
+
+Speaker info:
+- https://x.com/nanjiangwill
+- https://www.linkedin.com/in/nanjiangwill/
+- https://www.nanjiangwill.com/
+- https://github.com/nanjiangwill
+
+Timestamps:
+0:00 - Where the GPUs actually are
+1:29 - The standard RL post training loop
+2:06 - The cathedral and the bazaar
+2:43 - RL wants four things at once
+3:22 - What can leave the cluster and what cannot
+3:59 - The rollout serving island as the movable unit
+5:16 - Why a full checkpoint is the wrong unit of sync
+6:33 - The bet: under 1% of served weights change
+7:10 - Ingredient one, the precision floor
+8:30 - Ingredient two, the size of an Adam step
+9:48 - Adam absorption, visualized
+11:06 - Shipping a lossless patch, not a delta
+12:21 - What the measurements show
+12:58 - Why this is not gradient sparsity
+13:35 - FP8, NVFP4, and group scaled formats
+14:54 - An internal run on GLM 4.7 Air
+15:33 - The bulletin board architecture
+16:48 - The sidecar that makes engines version aware
+17:26 - 500 GB down to 500 MB
+18:02 - Stitch
+18:43 - Open questions: Muon, fully async RL, and beyond
+
+## Always-on agents run production without the on-call tax — Justin Smith, Resolve AI
+
+- Upload date: 2026-08-09
+- Video: https://www.youtube.com/watch?v=vSx5IULvBns
+- Transcript: raw/20260809_vSx5IULvBns/vSx5IULvBns.en-orig.vtt
+- Metadata: raw/20260809_vSx5IULvBns/vSx5IULvBns.info.json
+
+Someone drops a GitHub release tag into Slack and the agent decides on its own that this is a deploy worth watching. It reads what actually changed, works out which telemetry would expose trouble for that particular change, and writes a check plan for this release alone: checkout is replacing the currency service, so watch checkout latency and error rates, then follow the causal chain into the Kafka pipeline. None of the timing is hardcoded. It can decide to look again in an hour because this class of failure only surfaces intermittently, or come back in three days to ask whether the deploy is still healthy. Justin Smith is careful to say CI/CD already handles the baseline well. The gap is everything routed around it, the feature flags and infrastructure changes that ship with no monitoring at all and get caught only when an alert wakes somebody up.
+
+The premise underneath is that around 70% of an engineer's time goes to running code rather than writing it, and coding agents made that worse by raising the volume of change flowing into production. Resolve's background agents are defined by three questions: when they run, on a schedule or an event stream or just a message; how they run, in the cloud inside a sandbox with its own file system, so closing your laptop changes nothing; and how they know what to do. The one Smith clearly enjoys most watches Slack channels and answers engineering questions without being addressed, staying quiet when it lacks confidence, and DMing him to confirm an answer before it replies in public. His sharpest point is that execution is the easy half. Loading a dashboard is execution. Deciding a metric smells wrong is production context, and building the knowledge system that keeps up with an environment changing faster every month is where the real work sits.
+
+Speaker info:
+- https://www.linkedin.com/in/justin-smith-7b1534a8/
+- https://resolve.ai/events/behind-the-build/agents-for-engineering-workflows
+
+## Multiplayer agentic engineering — Arjun Singh, Superconductor
+
+- Upload date: 2026-08-09
+- Video: https://www.youtube.com/watch?v=OL7kfezynJM
+- Transcript: raw/20260809_OL7kfezynJM/OL7kfezynJM.en-orig.vtt
+- Metadata: raw/20260809_OL7kfezynJM/OL7kfezynJM.info.json
+
+Superconductor left a meeting bot sitting in a Google Meet at their expo booth for four hours, just listening. Someone passing through said they wanted coding agents to have clear acceptance criteria before declaring work finished. Nobody filed a ticket. The bot picked the idea out of the conversation, opened one itself, started working, and added two acceptance criteria fields to the product's own ticket form, then produced a screenshot when asked. Arjun Singh is not pretending that change ships as written. The claim is narrower and more useful: every customer call, onboarding session and team meeting now yields dozens of prototyped ideas and usually a few genuinely shippable pull requests, with nobody hand carrying a request from one system into another.
+
+Most of the talk is what has to be true underneath. One agent session has to be reachable from Slack, the desktop app and GitHub at once, so reviewing a teammate's work means asking the agent inside the thread instead of waiting for the author to wake up. The work runs in an isolated cloud environment, and Singh argues the real reason is not closing your laptop, it is least privilege. An agent told to wipe the staging database, resourceful and eager to comply, can find a token on a developer's machine that happens to point at production. A configurable network sandbox blocks exfiltration and asks before reaching anywhere new, and that same isolation is what lets support and growth people trigger real work without a development environment. Rather than trusting public benchmarks, they replay pull requests that represent good work from their own repository and plot quality against cost and time, because SWE bench is Python and they are Ruby on Rails. Their numbers for one month: 10.5 billion tokens, 3,300 Claude Code runs worth about $10,000 in token value, and Codex running four times as many sessions for less money.
+
+Speaker info:
+- https://x.com/singharjun51293
+- https://www.linkedin.com/in/arjun-singh-629216105
+
+## Velocity Sickness: What Happens When Your Whole Team Gets 10x Faster — Matt Dailey, Ref.
+
+- Upload date: 2026-08-09
+- Video: https://www.youtube.com/watch?v=Kz4QJmNrVXU
+- Transcript: raw/20260809_Kz4QJmNrVXU/Kz4QJmNrVXU.en-orig.vtt
+- Metadata: raw/20260809_Kz4QJmNrVXU/Kz4QJmNrVXU.info.json
+
+A newsletter writer walked Matt Dailey through an agentic pipeline good enough to amplify their own voice instead of flattening it, then mentioned they were now effectively writing a book every week. Dailey asked whether the audience was reading a book every week. They were not. Those pages go unread, and that gap is what he calls velocity sickness: the stress of a sudden output increase that delivers output without impact. On engineering teams it arrives as too many pull requests to merge, work sprinting in too many directions at once, and the ritual of declaring agent bankruptcy, walking back to twelve terminals the next morning, recognizing none of it, throwing all of it out and paying for the same work twice.
+
+The failure that actually worries him is critical decisions getting made by agents, because an engineer who lets that happen has stopped owning the code, and a team doing it at scale no longer owns the product. His fix is to separate the decision layer from the implementation layer and give the decision layer its own primitive: a document rather than a chat. Chats are isolated, ephemeral and built for implementation, so the decisions made inside one evaporate while only the code survives. A durable shared doc holds the state and the agent supplies the action, which keeps agents effectively stateless, lets several start from identical context, and turns rebuilding your own understanding into rereading a file. The tell that it is working, he says, is people writing plans they never implement, which is what prioritizing looks like once idea velocity replaces code velocity. Three things to try immediately: notice which gear you are in, treat the plan as a portal into the system rather than a prompt, and hand a plan to a teammate before you hand it to an agent.
+
+Speaker info:
+- https://www.linkedin.com/in/matthewjdailey
+- https://ref.tools/
+
+## Guide, Verify, Solve — Anirban Chatterjee, Sonar
+
+- Upload date: 2026-08-09
+- Video: https://www.youtube.com/watch?v=03l29gJXpCE
+- Transcript: raw/20260809_03l29gJXpCE/03l29gJXpCE.en-orig.vtt
+- Metadata: raw/20260809_03l29gJXpCE/03l29gJXpCE.info.json
+
+A Carnegie Mellon study sorted GitHub projects by whether an AI tool wrote the code, and found the productivity gain ran out after about three months while the static analysis warnings and the added complexity stayed. That residue is verification debt, and how much it costs scales with criticality: a short lived internal tool can live with the gap between the quality a model gives you and the quality the application needs, a large codebase with adversarial users cannot. The obvious backstop is human review, and a Wharton study suggests it leaks badly. Participants took the AI's advice 92.7% of the time when it was correct, and still followed it nearly 80% of the time when it had been instructed to lie confidently.
+
+Anirban Chatterjee's argument is that the check has to be zero trust and multi layered. Zero trust means assuming the code could have come from anywhere and verifying it by a different method than the one that wrote it, since a model grading its own output inherits its own blind spots. Multi layered means computational review running alongside reasoning based review, because no single technique catches syntax, data flow, architecture and control flow at once. Sonar's leaderboard makes the blind spots concrete: across their metrics one Claude model rates well on correctness and reliability while the other is the better choice when maintainability, security or lower complexity is what matters. The loop he proposes wraps generation on both sides, handing the agent architectural constraints and coding standards before it starts, running verification inside the inner loop so issues get fixed before they propagate into later loops, and giving the agent the tools to remediate what comes back instead of queueing it for a person who is already rubber stamping too much.
+
+Speaker info:
+- https://www.linkedin.com/in/anirbanc/
+- https://www.sonarsource.com/the-coding-personalities-of-leading-llms/leaderboard/
+
+## Realtime multiplayer, automation, and you! — Idan Gazit, GitHub
+
+- Upload date: 2026-08-08
+- Video: https://www.youtube.com/watch?v=iQ5xldZ9StU
+- Transcript: raw/20260808_iQ5xldZ9StU/iQ5xldZ9StU.en-orig.vtt
+- Metadata: raw/20260808_iQ5xldZ9StU/iQ5xldZ9StU.info.json
+
+Idan Gazit's personal site runs on Astro, which ships often enough to keep him permanently on the upgrade treadmill, so he wrote an agentic workflow in about three lines of plain English, the kind of message you would send a teammate. Copilot expanded it into a full playbook: check for new releases, read the changelog and upgrade guide, apply the changes, open a pull request. It then carried him from Astro 5 to Astro 7, two major versions at once, found and fixed the code that broke, verified the build, and flagged the manual steps it could not take itself. The workflow is a Markdown document. The YAML actions file is a compiled artifact nobody reads, so changing how the automation behaves means editing the English.
+
+The guardrails are the part he wants remembered. Prompting an agent to behave is not a guardrail, because anyone who can prompt inject it can undo the instruction, and you have let the fox into the henhouse. Permissions, allowed tools, reachable network destinations and safe outputs get declared deterministically in front matter instead. His upgrade workflow may open exactly one pull request, and is explicitly allowed to do nothing at all, since an automation that cannot stay quiet turns into a denial of service against its own owner. Secrets stay outside the agent's jail entirely, because a secret an agent can see should be treated as already compromised. The second prototype, ACE, runs every session in a cloud microVM and deliberately resembles a chat app, on the theory that what belongs in the shared surface is everything not already in the code: the political constraints, the infrastructure deal that quietly picks your cloud provider, the plan two people edit together before telling the agent to go make the document true. He ends on a study of around a hundred developers over thousands of hours which found that hands on keyboard typing is about 5% of the work, and that is the only 5% the tools have helped with so far.
+
+Speaker info:
+- https://twitter.com/idangazit
+- https://linkedin.com/in/idangazit
+- https://githubnext.com
+
+## Anthropic's CCA Exam as a Field-Guide for Agentic Engineering — Frank Coyle, UC Berkeley
+
+- Upload date: 2026-08-08
+- Video: https://www.youtube.com/watch?v=Z-c11pV_uvU
+- Transcript: raw/20260808_Z-c11pV_uvU/Z-c11pV_uvU.en-orig.vtt
+- Metadata: raw/20260808_Z-c11pV_uvU/Z-c11pV_uvU.info.json
+
+The Claude Certified Architect exam hands you six production scenarios and picks four at random, and Frank Coyle walks through them backwards, leading with the anti pattern in each one. Knowing what not to do is what points you toward what to do, the same way the design patterns movement of the early 1990s came with a catalog of the moves that quietly ruin you. Scenario one is a customer support loop, and the anti pattern is calling the model, taking the response, and using it. What you want instead is to branch on the stop reason, because the model cannot execute a tool at all. It only hands back the parameters your own code runs, and the stop reason is also how you learn you ran out of tokens and the answer in your hands is partial.
+
+The rest is context discipline. Loading one agent with every tool is the carpenter who turns up with plumbing and electrical gear too, so specialized subagents with one or two tools each win, and every agent should see only its own slice. Coyle gives a critic agent the claim and the evidence but withholds the reasoning that produced them, because agents that watch each other think converge on a single idea the way a group talks itself into pizza. Subtask output gets forked into its own context so only the summary returns to the main thread, with a token count check that triggers compaction past a threshold. He closes on a cheap win most people skip: batch mode runs the same work for half the token cost if you can wait a day for it.
+
+Speaker info:
+- https://x.com/coyle_frankp
+- https://www.linkedin.com/in/frank-coyle/
+- https://www.frank-coyle.ai/
+
+## Benchmarking Coding Agents on New vs Legacy Codebases — Denys Linkov, Wisedocs
+
+- Upload date: 2026-08-08
+- Video: https://www.youtube.com/watch?v=7vn4WpqNpck
+- Transcript: raw/20260808_7vn4WpqNpck/7vn4WpqNpck.en-orig.vtt
+- Metadata: raw/20260808_7vn4WpqNpck/7vn4WpqNpck.info.json
+
+Wisedocs processes medical claims that arrive as PDFs over 10,000 pages long, some of them larger than video files, through a pipeline of ML models spread across ten repositories nobody enjoyed touching. Denys Linkov's team spent six months collapsing that into a monorepo, and this talk is an honest audit of whether they should have just waited for the models to get good enough to do it for them. The benchmark he keeps coming back to is a single refactor task. With o3 it took three hours of back and forth in Cursor and still shipped ten major mistakes. Rerun on newer models, Sonnet 4.6 needed one extra iteration and Opus 4.8 essentially got it in one pass, at roughly a fifth of the original effort.
+
+The counterweight is what happens when you hand a current model the whole job. GPT 5.5 extra high declared the refactor done in 10 minutes 22 seconds and wrote 2,000 lines, which turned out to be scaffolding with the actual models missing, something it admitted in its own output by noting it had not added the deployment or bootstrap command yet. That gap is why Linkov reads the METR task length curve at 80% or 90% success instead of the usual 50%. Launching an hour long agent run on coin flip odds mostly buys you a wasted hour and a broken attention span. His verdict is that doing the refactor beat deferring it, and the evidence is as much social as technical: commit velocity rose and never flattened, work that used to take months ships in under a week, and developers across the company now volunteer into the repo even outside their own area, which was never true of the ten it replaced.
+
+Speaker info:
+- https://x.com/denyslinkov
+- https://www.linkedin.com/in/denyslinkov/
+
+## The New Primitives: Building AI Native Software — Kwindla Kramer, Daily
+
+- Upload date: 2026-08-07
+- Video: https://www.youtube.com/watch?v=LZuWZRze3MU
+- Transcript: raw/20260807_LZuWZRze3MU/LZuWZRze3MU.en-orig.vtt
+- Metadata: raw/20260807_LZuWZRze3MU/LZuWZRze3MU.info.json
+
+In 1945 Vannevar Bush described document scanning, OCR, speech to text, hypertext, search engines, a head mounted camera, and voice interfaces, in a single essay, before any of it existed. Kwindla Hultman Kramer uses As We May Think to set up the uncomfortable part: he was a baby programmer in 1995 writing HTML by hand and web servers in C, as excited about web pages then as he is about agents now. Web pages turned out to be a primitive, not a destination. His argument is that agents are the web page of this era, and the thing worth building is the AI native software that comes after.
+
+The tour through the decades is the evidence. Each one had a job: programming languages to carry human intent into the machine, interactivity in the 1960s, abstractions for scale in the 1970s, then the personal computer. VisiCalc is the example he keeps returning to, because it did not put accountants out of work, it made vastly more accounting possible and invented categories of work nobody could have described when a screen of calculations took a room full of people. He offers that as the reply to the mass unemployment worry. The talk closes on Gradient Bang, a massively multiplayer game with an LLM at the core of every interaction and hundreds of inference calls in flight, built specifically to exercise the primitives he thinks come next: asynchronous non blocking context compression, long running subagents that share context, progressive skills loading, dynamic interface generation, and conversational voice.
+
+Speaker info:
+- https://x.com/kwindla
+- https://www.linkedin.com/in/kwkramer/
+- https://machine-theory.com/
+- https://github.com/pipecat-ai/pipecat
+
+Timestamps:
+0:00 - Daily, Pipecat, and what comes after agents
+1:31 - What Vannevar Bush predicted in 1945
+2:13 - Nadella on multimodel harnesses
+4:12 - Agents are the web pages of 1995
+5:25 - From the abacus to the stored program computer
+6:46 - The 1950s: getting human intent into the machine
+7:30 - The 1960s: interactivity, Sketchpad, and Star Trek
+8:51 - The 1970s: abstractions that scale
+9:32 - VisiCalc and why it did not replace accountants
+10:49 - Knowledge Navigator, Apple's 1987 prediction
+12:46 - The web was multimodal from the start
+13:24 - Minority Report, Iron Man, and building it for real
+17:10 - Cloud, then agents, then what
+18:24 - Knowledge Navigator rebuilt on real technology
+19:38 - Gradient Bang and the primitives it exercises
+20:52 - Closing
+
+## Compression at the Edge — NVIDIA, Unsloth, HuggingFace, Ollama
+
+- Upload date: 2026-08-07
+- Video: https://www.youtube.com/watch?v=J4_jCrTxMkk
+- Transcript: raw/20260807_J4_jCrTxMkk/J4_jCrTxMkk.en-orig.vtt
+- Metadata: raw/20260807_J4_jCrTxMkk/J4_jCrTxMkk.info.json
+
+Quantize a single number in a model and it gets 20% dumber. That finding, from the super weights paper, is why Daniel Han's claim is less absurd than it sounds: GLM 5.2 goes from 1.5 terabytes to 250 GB, 86% smaller, without being 86% dumber. Layers are wildly unequal. The first and last carry enormous weight, the middle ones barely matter, and a model trained on 30 trillion tokens never saturates its parameters, so many sit near zero and can simply be set there. Choosing which layers stay in high precision is a combinatorial search, not a setting.
+
+NVFP4 is the format the NVIDIA side leans on, a 4 bit float where every group of 16 values shares one FP8 scale, targeting under 1% accuracy loss. New architectures keep breaking the old heuristics: quantize the linear attention layers and the model looks fine right up until a long context turns it to gibberish. Post training quantization works out of the box above roughly 20 billion parameters and needs quantization aware distillation below that. The panel is blunt that benchmarks only cover verifiable tasks, so the real test is running the model in an actual harness, and Han's preferred signal is KL divergence between the BF16 and quantized output logits rather than any accuracy score.
+
+Speaker info:
+Chris Alexiuk, moderator (NVIDIA):
+- https://x.com/llm_wizard
+- https://www.linkedin.com/in/csalexiuk
+
+Daniel Han (Unsloth):
+- https://x.com/danielhanchen
+- https://unsloth.ai
+
+Asma Beevi (NVIDIA):
+- https://www.linkedin.com/in/asma-beevi-k-t-433053a2
+- https://realasma.github.io
+
+Merve Noyan (Hugging Face):
+- https://x.com/mervenoyann
+- https://hf.co/merve
+
+Parth Sareen (Ollama):
+- https://github.com/parthsareen
+- https://parthsareen.com
+
+Timestamps:
+0:00 - Welcome and the panel
+0:53 - What compression means to each of them
+3:05 - GLM 5.2 from 1.5 terabytes to 250 GB
+4:08 - When each of them got the compression bug
+8:19 - QLoRA and finetuning on a T4
+11:44 - 86% smaller without being 86% dumber
+12:46 - Why layer importance is so uneven
+14:26 - The super weight: one number, 20% dumber
+14:51 - Evaluating the quantized checkpoints
+16:37 - What NVFP4 actually is
+17:55 - Does compression matter beyond the toaster
+21:49 - Why compress a big model instead of using a small one
+24:30 - Where Ollama fits
+28:54 - How hard NVFP4 is to produce
+32:46 - The cursed era of model architectures
+35:17 - Why linear attention layers break quantization
+37:22 - Where compression goes next
+43:22 - How do you know a quant is any good
+
+## Local Models: Trust, Control, Optimization — Carter Abdallah, NVIDIA
+
+- Upload date: 2026-08-07
+- Video: https://www.youtube.com/watch?v=FWMJQDH3iK0
+- Transcript: raw/20260807_FWMJQDH3iK0/FWMJQDH3iK0.en-orig.vtt
+- Metadata: raw/20260807_FWMJQDH3iK0/FWMJQDH3iK0.info.json
+
+When Fable was pulled back and access to frontier systems stopped looking guaranteed, Lucas Atkins watched enterprises move to Chinese open models, not because they scored better but because availability could be counted on. That is his working definition of trust, and he separates it hard from safety: an open model is a directory of files you can inspect, running on code you can read, while the same claim about a closed API is unverifiable by construction. Arcee's response was to reorient the whole company and pretrain a 400 billion parameter model in six months, which he says plenty of people called impossible.
+
+The rest is control. Vincent Weisser describes a customer specializing an open model to automate finance work in a week or two and landing better results than Opus at a fraction of Haiku's cost. Closed terms of service bar you from training on outputs, so owning the model also means owning the traces, which is what makes a data flywheel possible at all; Nemotron and Trinity both adopted the open MDW license to put that permission in writing. Chris Alexiuk's framing is the mismanaged genius: a model tuned to be good across every harness is optimal for nobody's, and open weights let you fit it to the one or two things you actually do. The predictions land where you would expect from this panel, including open models reaching Fable level capability inside a year, and Atkins hoping the share of people who have ever run a model locally climbs from a rounding error to 10% to 15%.
+
+Speaker info:
+Carter Abdallah, moderator (NVIDIA):
+- https://x.com/Baxate
+- https://baxate.com
+
+Vincent Weisser (Prime Intellect):
+- https://www.linkedin.com/in/vincentweisser
+- https://www.primeintellect.ai/
+
+Lucas Atkins (Arcee AI):
+- https://x.com/latkins
+- https://arcee.ai
+
+Chris Alexiuk (NVIDIA):
+- https://x.com/llm_wizard
+- https://www.alexi.uk/
+
+Timestamps:
+0:00 - Welcome and why this panel is the whole stack
+1:14 - Prime Intellect: keeping the training stack open
+2:15 - Arcee: why the west was losing the open model lead
+3:22 - Pretraining a 400 billion parameter model in six months
+4:23 - Nemotron: faster models are smarter models
+6:35 - Is open source actually less trustworthy
+7:40 - Trust is not safety
+9:48 - When access stopped being guaranteed
+10:56 - Releasing the data sets alongside the weights
+11:59 - The open superintelligence stack
+13:02 - Post training as the accessible layer
+14:07 - Beating frontier models on a specific use case
+15:11 - Making your costs predictable
+16:11 - When the model and the harness blend together
+18:15 - The mismanaged genius
+19:19 - A call to action for builders
+20:24 - Who owns the data you generate
+21:27 - Owning your outputs, not just your weights
+22:35 - The open MDW license
+23:36 - Where post training unlocks new use cases
+27:46 - You do not need frontier intelligence for most tasks
+28:53 - Why efficiency has to happen in the open
+29:55 - Closed models are not the enemy
+33:05 - Predictions for the next year
+38:22 - Running everything on your laptop
+39:29 - Agent operating systems and the next Siri moment
+41:36 - Closing
+
+## Open Source Is Dead. Long Live Open Source. — Saoud Rizwan, Cline
+
+- Upload date: 2026-08-07
+- Video: https://www.youtube.com/watch?v=CoEIs6Xm8m8
+- Transcript: raw/20260807_CoEIs6Xm8m8/CoEIs6Xm8m8.en-orig.vtt
+- Metadata: raw/20260807_CoEIs6Xm8m8/CoEIs6Xm8m8.info.json
+
+A compromised release of litellm, a Python package pulling three and a half million downloads a day, sat live for three hours installing a credential harvester for API keys, SSH keys and crypto keys along with a backdoor for remote command execution. It was caught by pure luck: the malware had a bug that crashed Cursor, and a researcher went looking. Saoud Rizwan uses it to mark how far the trust model has fallen. Zig's code of conduct now bans AI from pull requests, issues and even comments, because the team values growing contributors over collecting contributions. curl is weighing the end of a decades old bug bounty as AI generated reports drown it. tldraw closes pull requests on sight. GitHub shipped a switch to disable third party pull requests altogether, which is the feature that made GitHub what it is. He built Cline in the open, and his claim is that the community half of open source is the half that died.
+
+The half that survives is open weights, and the case is economic. Cline pitted GLM against Opus on a real bug in their own repository: GLM spent twice the tokens at half the cost, cleaned up dead code and confirmed the build compiled, while Opus finished faster with fewer tool calls but left type errors that broke the production build. Coinbase defaulted its internal gateway to GLM and Kimi and cut AI spend nearly in half. The precedent Rizwan reaches for is Open Compute: Facebook gave away its data center designs, the supply chain standardized on them, manufacturers moved to huge uniform production runs, and the commoditization that followed drove Facebook's own costs down by billions. His closing ask goes to the American labs. Release open weights models, because once the industry standardizes on foreign ones, marginal quality gains may not be enough to bring anyone back.
+
+Speaker info:
+- https://x.com/sdrzn
+- https://github.com/saoudrizwan
+- https://cline.bot
+
+Timestamps
+0:00 Introduction to Cline and the early open source coding agent era.
+1:30 The decline of the open source community and the rise of AI-driven distrust.
+2:22 How projects like Zig, curl, and tldraw are responding to AI-generated noise.
+3:45 Systemic risks: The litellm supply chain compromise example.
+5:22 The economic case for the survival of "open weights" models.
+5:49 Real-world impact: Corporate AI spending and infrastructure lock-in.
+8:50 Comparing model intelligence vs. system-level AI verification (GLM vs. Opus).
+10:57 The Open Compute precedent: How open standards commoditize the industry.
+12:36 Future projections for AI inference costs and hardware capacity.
+14:22 A call to action for American labs regarding open weights models.
+16:01 Cline's shift to an open weights subscription model.
+
+Quotes
+(1:48) "GitHub is effectively an archive of SLOP PRs and issues and security reports."
+(3:47) "When I say that open source is dead, I mean some parts of it—like the community—it's just not worth cultivating anymore."
+(7:00) "They're essentially going to subsidize this until they have as many engineers dependent on their tooling as possible... and then inevitably the price gouging."
+(14:35) "Before we know it, all this infrastructure that we're investing in could be built on foreign models that take the world by a storm."
+
+## The State of Model Routing — NVIDIA, Cognition, OpenRouter
+
+- Upload date: 2026-08-06
+- Video: https://www.youtube.com/watch?v=QHBjufYK8TA
+- Transcript: raw/20260806_QHBjufYK8TA/QHBjufYK8TA.en-orig.vtt
+- Metadata: raw/20260806_QHBjufYK8TA/QHBjufYK8TA.info.json
+
+Run terminal bench on Opus and on Haiku and Opus scores about three times better at a tenth of the cost, even though Haiku is far cheaper per token. Alex Atallah's point is that a small model pushed outside its training distribution thrashes, calling tools in loops until it costs more than the expensive model ever would. That inverts the obvious version of model routing, where you send each task to whichever model benchmarks best on it. Walden Yan calls that approach fragile for exactly the reason agents make it worse: a session starts as a question about a codebase, becomes a feature request, then becomes live debugging, and the model you picked at the start is stranded.
+
+Cognition's answer keeps a frontier model planning and delegates the implementation, which cut the cost of Fable level intelligence by 40% while going deeper, because a cheaper model can afford to spin off three sub agents to explore a codebase. They also avoid sub agents in favor of one sidekick with a continuous running context, so the KV cache stays warm and cached tokens cost roughly ten times less. Compaction, Yan argues, is worth doing for intelligence rather than cost, since compacting forces a cache miss and model quality falls off a cliff well before the advertised million token window. The most telling story is OpenRouter's: its auto router sat almost unused for two years until openclaw began sending heartbeats every ten minutes, creating one popular app with two completely different intelligence needs.
+
+Speaker info:
+Nader Khalil, moderator (NVIDIA):
+- https://x.com/naderlikeladder
+- https://nader.coffee
+
+Walden Yan (Cognition):
+- https://x.com/walden_yan
+- https://www.linkedin.com/in/waldenyan
+
+Alex Atallah (OpenRouter):
+- https://x.com/alexatallah
+- https://openrouter.ai
+
+Tanay Varshney (NVIDIA):
+- https://www.linkedin.com/in/tanayvarshney
+
+Carter Abdallah (NVIDIA):
+- https://x.com/Baxate
+- https://www.linkedin.com/in/carter-abdallah
+
+Timestamps:
+0:00 - Welcome and the multimodel premise
+1:16 - Panel introductions
+3:24 - How Devin Fusion beats the frontier models
+4:25 - Let the frontier model plan and delegate the work
+6:31 - Jagged capabilities: no one model wins everything
+9:42 - Why naive task based routing is fragile
+11:48 - Sharing context without paying for it twice
+13:56 - Should the orchestrator be the big or the small model
+16:01 - In distribution versus out of distribution
+19:12 - Training models to collaborate
+20:12 - Flex Run and flexible model sizes
+22:24 - Lossy context and the systems you fall back to
+26:41 - How a heartbeat created the auto router
+29:43 - Routing between local and cloud
+31:51 - Compaction versus routing
+32:55 - How a small model signals it is out of its depth
+35:00 - Cache duration and self hosting economics
+40:12 - Are prompts portable across models
+43:20 - Is the router a product or plumbing
+
+## Gadgets: Personal app vibe coding that is actually safe — Kenton Varda, Cloudflare
+
+- Upload date: 2026-08-05
+- Video: https://www.youtube.com/watch?v=RmS5s6Wbin4
+- Transcript: raw/20260805_RmS5s6Wbin4/RmS5s6Wbin4.en-orig.vtt
+- Metadata: raw/20260805_RmS5s6Wbin4/RmS5s6Wbin4.info.json
+
+*Note: Kenton has just released Cloudflare OS today: https://x.com/KentonVarda/status/2084990137180590572 This talk was recorded a month prior to launch.*
+
+Claude needed a strikethrough the slide app did not have, so it added one to the app. Asked to build a deck from a Google doc, it also added text centering and a box that accepts raw SVG, then generated the SVG for a diagram the app could not otherwise draw. That is Kenton Varda's argument in a single move. Software today ships from a developer to users whose feature requests die in Jira, and the escape hatch developers reach for is a plugin architecture rewrite that takes years and never lands. If a user's own agent can add the feature, the core app stays clean and nobody waits.
+
+Nothing in current infrastructure supports that. Mobile platforms will not run unsigned code, and 25 years of cloud architecture put one blessed version of every app on the developer's server. Gadgets is his answer, built on Cloudflare Workers with no containers and no database. Each gadget is a single instance of an app, one deck or one board, and sharing is implemented by the platform so the app itself cannot get access control wrong. The UI runs in a null origin iframe that can only postMessage to its parent, over a Cap'n Web RPC session to server code in a dynamic worker sandbox, so an XSS bug in vibecoded code has nothing left to leak. The whole demo ran locally on workerd, so a dead conference network cost him only the one call that needed a model.
+
+Speaker info:
+- https://x.com/KentonVarda
+- https://lanparty.house
+- https://github.com/cloudflare/workerd
+
+Timestamps:
+0:00 - Personal AI codegen breaks cloud infrastructure
+1:16 - How feature requests die today
+2:35 - The plugin system rewrite trap
+3:27 - What if users could add their own features
+5:11 - Gatekeeping, and why the web is the escape hatch
+7:11 - Kenton Varda and Cloudflare Workers
+8:39 - Gadgets as an office suite, not a deploy target
+9:58 - Blueprints and the slide builder
+11:03 - One gadget per document, sharing built into the platform
+12:21 - Claude adds features to the app to build the slides
+14:04 - Why an XSS bug does not matter here
+16:22 - No containers, no database, running on workerd
+17:24 - Why it is not open source yet
+
+
+Quotes
+
+"Personal AI codegen breaks traditional cloud infrastructure." (0:38)
+"It's almost easier to buy a gun in the United States than it is to get access to your own phone to install unsigned software." (5:11)
+"I want to know where in Claude's training data it learned that you could make words wiggle to give them emphasis." (6:33)
+"The reason they're bad is entirely my fault. It's not the software's fault." (11:57)
+"If you have an XSS bug, it actually doesn't end up mattering because these can't leak anything." (15:26)
+
+## Building Turbopuffer: Gergely Orosz (@pragmaticengineer ) × Simon Eskildsen (CEO)
+
+- Upload date: 2026-08-03
+- Video: https://www.youtube.com/watch?v=jQDXzEVHMSE
+- Transcript: raw/20260803_jQDXzEVHMSE/jQDXzEVHMSE.en-orig.vtt
+- Metadata: raw/20260803_jQDXzEVHMSE/jQDXzEVHMSE.info.json
+
+This fireside chat between Gergely Orosz and Simon Eskildsen explores the technical journey and engineering philosophy behind the database company Turbopuffer.
+
+Video Timestamps
+0:00 Introduction and Simon’s early history with computers
+3:02 The International Olympiad in Informatics and early competitive programming
+4:13 How Simon was recruited by Shopify while still in high school
+8:46 Engineering challenges and scaling infrastructure at Shopify
+14:56 Decision to leave Shopify and the creation of the "napkin math" project
+20:40 The origin and technical motivations behind Turbopuffer
+24:46 Design challenges of building a database on top of S3
+28:41 Cursor becoming the first major customer
+35:36 The meeting with Jensen Huang and Nvidia’s push for GPUs
+39:01 The competitive reality of cloud infrastructure and CPU scarcity
+43:06 Philosophical perspective on venture capital and funding
+51:45 Building a remote-first culture with the "campfire" concept
+
+Quotes
+
+(19:49) "Because you batch. So an f-sync happens on usually a 4K... it's not intuitive. It's actually—I got caught—I just got obsessed with this question."
+(30:33) "Yeah, you could do a million vectors for a dollar. And before that, I think the cheapest was maybe $100 per million for something that actually worked."
+(36:56) "[Jensen Huang] said, 'Judging by your slide, maybe you should [pivot into vapes].'"
+(43:53) "I promised Cursor that Justine and I could get their bill to 4K a month... that's the pricing we ship with."
+(49:54) "The third reason to raise capital is for the founder's ego... I wish that it was more talked about because you're diluting all of your employees when you do it."
+
+## Speakers
+
+### Gergely Orosz
+Author / Founder, The Pragmatic Engineer · The Pragmatic Engineer
+[X/Twitter](https://twitter.com/gergelyorosz) · [LinkedIn](https://www.linkedin.com/in/gergelyorosz/) · [Website](https://pragmaticengineer.com)
+
+Software engineer, engineering leader, and author of The Software Engineer's Guidebook; best known for The Pragmatic Engineer newsletter and blog covering software engineering practices, engineering leadership, and the tech industry. Previously held engineering leadership roles at Uber and worked at companies including Skype and Skyscanner.
+
+### Simon Eskildsen
+CEO and co-founder · turbopuffer
+[X/Twitter](https://x.com/Sirupsen) · [LinkedIn](https://www.linkedin.com/in/sirupsen/) · [Website](https://sirupsen.com) · [Blog](https://sirupsen.com/napkin)
+
+Co-founder and CEO at turbopuffer. Formerly Principal Engineer at Shopify, where he helped scale infra from 1K → 1M RPS.
+
+— [View on the schedule](https://www.ai.engineer/worldsfair/schedule?session=asn_slot_2026_06_30_main_stage_1230_2026_06_25t07_57_06_000z)
+
+## MCP Tasks (async): Why Aren't Any Agents Supporting Them? — Cornelia Davis, Temporal
+
+- Upload date: 2026-08-02
+- Video: https://www.youtube.com/watch?v=s4r6nk5WsZw
+- Transcript: raw/20260802_s4r6nk5WsZw/s4r6nk5WsZw.en-orig.vtt
+- Metadata: raw/20260802_s4r6nk5WsZw/s4r6nk5WsZw.info.json
+
+You invoke a tool and expect an answer, but real work takes time, and over that time connections drop, networks blip, and processes crash. Cornelia Davis, a distributed systems veteran who wrote the book on cloud native patterns, argues that this is exactly the gap the MCP tasks specification exists to close, and walks through why almost no agents support it yet. A task lets a tool run long, report progress, and pause for human input without losing its place, which means the interaction has to be durable: it survives the client disconnecting and picks up right where it left off.
+
+She demonstrates it with an invoice processing flow, a dashboard tracking task state, and a step that waits for a human to submit input before the backend continues, then traces how the spec evolved from V1 to V2. The design she keeps returning to is a stateless core with the harder long running behavior layered on as an extension, RPC requests replaced by the server pushing updates, and life cycle state carefully mapped so clients know what to resume. Her honest takeaway is that just because you can open a long lived stateful connection does not mean you should, and that getting durable long running tasks right is what will finally let agents handle work that does not finish in a single call.
+
+Speaker info:
+- https://x.com/cdavisafc
+- https://www.linkedin.com/in/corneliadavis/
+
+Timestamps:
+0:00 - What MCP tasks are, and why they're hard
+1:29 - A distributed systems point of view
+2:34 - A first look at a task running
+4:03 - What a task actually allows
+4:43 - Why long running work breaks
+6:02 - Durability across disconnections
+7:04 - Demo: invoice processing dashboard
+9:10 - Waiting for human input
+11:18 - What changed in tasks V1
+12:35 - The stateless core
+16:37 - Extensions and server pushed updates
+20:09 - V2 and what you need to implement
+
+## When Will The Benchmaxxing Plague End? — Nick Heiner, Surge AI
+
+- Upload date: 2026-08-02
+- Video: https://www.youtube.com/watch?v=-npY6XjM8CQ
+- Transcript: raw/20260802_-npY6XjM8CQ/-npY6XjM8CQ.en-orig.vtt
+- Metadata: raw/20260802_-npY6XjM8CQ/-npY6XjM8CQ.info.json
+
+Every time a model launches there is a gap between the benchmark numbers and what the thing can actually do, and Nick Heiner argues the existence of the word benchmaxxing is the tell. When labs openly brag about scores, teams stop asking whether a benchmark reflects reality, and the whole field drifts into an avalanche of numbers that measure the wrong thing. His talk is a field guide to reading a benchmark fairly, starting from the antipatterns that quietly break them.
+
+The failure modes are specific. A large share of tasks in a typical benchmark are simply broken; contamination means models have memorized test content, so a SWE-bench style score partly measures recall; and reward hacking lets a lazy policy satisfy the verifier without doing the task. The nastiest is misalignment between the prompt and the grader, like an eval that asks for no commas and an answer in Hindi at once, or a verifier whose sentence splitter cannot parse the format, so the only way to a perfect score is to game it. Heiner's prescription is to bring domain expertise, align tools with prompts, and pay for real human evaluation, holding both benchmark writers and the labs to a higher standard.
+
+Speaker info:
+- https://x.com/nickheiner
+- https://www.linkedin.com/in/nick-heiner-3874055a/
+- https://www.nickheiner.com/
+
+Timestamps:
+0:00 - The benchmark versus reality gap
+0:55 - Why the word benchmaxxing exists
+2:38 - Reading a benchmark fairly
+3:14 - Antipattern: broken tasks
+4:41 - Antipattern: contamination
+5:57 - Antipattern: reward hacking
+6:23 - Misaligned prompts and verifiers
+10:40 - Benchmaxxing as a two way street
+13:14 - Domain expertise and getting it right
+15:47 - Human eval and a higher standard
+
+## MCP Apps: Extending the Frontier — Ido Salomon & Liad Yosef
+
+- Upload date: 2026-08-02
+- Video: https://www.youtube.com/watch?v=-jY2T2PiJBE
+- Transcript: raw/20260802_-jY2T2PiJBE/-jY2T2PiJBE.en-orig.vtt
+- Metadata: raw/20260802_-jY2T2PiJBE/-jY2T2PiJBE.info.json
+
+Chat and coding assistants still hand you walls of text when a button, a chart, or a small interactive view would say it faster. Liad Yosef, who co created MCP UI, walks through MCP Apps: a way for an MCP server to return a real interactive interface instead of a block of text, built on the MCP UI project he started and now shaped through an open working group in the MCP committee. A tool call links to a registered resource, the host renders it as a web component, and clicks flow back into the agentic loop, so the same funnel that would take a paragraph to explain becomes something you can see and act on at a glance.
+
+The payoff is write once, run anywhere. Because it is a standard rather than a bespoke integration, a UI a server ships shows up across every host that supports it, and Yosef points to adoption by hosts and tools already in the ecosystem. He is candid that the spec is still evolving, with live work on how the app and the chat talk to each other and how apps interoperate, and an open invitation to contribute. The bigger bet is distribution: when a host reaches hundreds of millions of weekly users, a server that speaks MCP Apps reaches all of them at once.
+
+Speaker info:
+Liad Yosef
+- https://x.com/liadyosef
+- https://linkedin.com/in/liadyosef
+- https://ora.ai
+
+Ido Salomon
+- https://x.com/idosal1
+- https://www.linkedin.com/in/ido-salomon/
+
+Timestamps:
+0:00 - Why we need MCP Apps
+1:52 - From walls of text to interactive views
+2:29 - MCP UI, created and adopted
+4:26 - An open working group in the MCP committee
+5:04 - How a tool call becomes an interface
+6:31 - Standardizing the flow
+8:52 - The architecture: resources and web components
+10:10 - Consuming apps through the browser
+14:29 - What's still evolving in the spec
+16:07 - Interoperability across hosts
+17:14 - Write once, reach hundreds of millions
+
+## Teaching AI to Find Real Vulnerabilities — Prof. David Brumley, Bugcrowd
+
+- Upload date: 2026-08-01
+- Video: https://www.youtube.com/watch?v=ZFxh7sqbUZo
+- Transcript: raw/20260801_ZFxh7sqbUZo/ZFxh7sqbUZo.en-orig.vtt
+- Metadata: raw/20260801_ZFxh7sqbUZo/ZFxh7sqbUZo.info.json
+
+David Brumley has spent two decades turning people into hackers, from founding picoCTF to recruiting pwn2own winners at Carnegie Mellon, and his argument is that you teach a model to hack the same way: a ladder of tasks that climbs from triggering a crash to reading and writing arbitrary memory to a full working exploit. The catch is measurement. Hacking has no single answer, so the usual benchmark setup breaks down when a target has multiple vulnerabilities and a language model can always claim it found one, and grading oracles that just ask the model whether it succeeded are hopeless.
+
+So Brumley's team builds real reinforcement learning environments instead: reproducible, sandboxed, and scored by deterministic graders that check whether an exploit actually triggers the specific bug, borrowing precision and recall from his DARPA Cyber Challenge work where he designed the scoring. He shows it on V8, the JavaScript engine in Chrome, running against 41 real vulnerabilities where the strongest models reached about 95% and, in the hard cases, produced genuine out of sandbox exploits including a real zero day. The point that lands is a warning against benchmaxxing security: build environments grounded in real bugs and honest graders, because that is what separates a model that looks like it can hack from one that actually can.
+
+Speaker info:
+- https://www.linkedin.com/in/thedavidbrumley
+
+Timestamps:
+0:00 - Two decades of teaching hacking
+1:54 - From CTF scoreboards to CMU
+3:34 - A ladder of exploitation tasks
+6:44 - Why measuring hacking is hard
+7:46 - Flawed grading oracles
+10:30 - When a target has many bugs
+13:22 - Deterministic graders and AIXCC scoring
+14:49 - Precision and recall for vulnerabilities
+17:35 - Attacking V8 in Chrome
+21:10 - 41 vulnerabilities and a real zero day
+25:24 - Don't benchmaxx security
+
+## Rethinking Environments for Long-Horizon Work — Rayan Garg, Theta Software
+
+- Upload date: 2026-08-01
+- Video: https://www.youtube.com/watch?v=2aS7aKoXn64
+- Transcript: raw/20260801_2aS7aKoXn64/2aS7aKoXn64.en-orig.vtt
+- Metadata: raw/20260801_2aS7aKoXn64/2aS7aKoXn64.info.json
+
+Everyone wants agents that handle long horizon work, but Rayan Garg starts with the awkward question of what long horizon even means. One popular answer measures the time horizon as the task length at which an agent crosses a success threshold, like the sixteen hour mark, which is a useful endpoint but a noisy one, since human time estimates vary and the same wall clock hides very different amounts of real difficulty. How you choose to measure this has an outsized effect on what you conclude about a model.
+
+From there Theta Software's work is about designing the environments and verifiers that make those measurements honest. A task can be artificially stretched by forcing serial dependencies, or made genuinely hard when a bad early query cascades through everything after it, and as environments grow more complex, standardized evaluation gets harder and correctness is best verified from the final state rather than a judge's guess. Garg walks through collapsing a huge state space with sample trajectories, being careful that judges do not see information they should not, and reusing agents to sift artifacts like CI logs. The recurring principle is that long horizon progress lives or dies on environment and verifier design, not on the headline benchmark number.
+
+Speaker info:
+- https://x.com/RayanGarg
+- https://www.linkedin.com/in/rayan-garg/
+
+Timestamps:
+0:00 - What does long horizon mean?
+1:13 - Time horizon and the threshold metric
+3:17 - Why the metric is noisy
+4:20 - Measuring what actually matters
+6:38 - Creating tasks and environments
+7:42 - When a bad early step cascades
+10:01 - Why standardized evaluation is hard
+11:17 - Verifying from the final state
+13:46 - Judges, tools, and reused agents
+17:45 - Rubrics, QA, and careful grading
+
+## Emulated: The Data for Fully Autonomous Software Engineers and Companies — Joseph Wang
+
+- Upload date: 2026-07-31
+- Video: https://www.youtube.com/watch?v=zkX03APVj0M
+- Transcript: raw/20260731_zkX03APVj0M/zkX03APVj0M.en-orig.vtt
+- Metadata: raw/20260731_zkX03APVj0M/zkX03APVj0M.info.json
+
+To train an agent that can run production software, you need training data that looks like production, and that is what Joseph Wang's team at Emulated builds. Coming from network infrastructure backgrounds, they know what happens when something like a database goes down at scale, and they argue that current post training environments do not capture it. A real task is not a tidy code diff; it is fifty to a hundred turns of solving live traffic while distributed nodes fail, configs conflict, and unforeseen problems appear mid incident.
+
+So Emulated simulates whole companies. Imagine acting as an engineer inside a cloud provider or an infrastructure service, provisioning resources across VPCs, subnets, and security groups, meeting real bars around cost and deployment, and keeping a service alive as it grows, all inside a high fidelity environment rather than a stub. Wang's bet is that domain expertise plus faithful simulation is what lets agents learn the messy, end to end reality of infrastructure work, and he closes looking for people who have trained models or run real infrastructure to help push that fidelity further across more domains.
+
+Speaker info:
+- https://emulated.so/
+
+Timestamps:
+0:00 - Useful work over longer horizons
+1:20 - Backgrounds in network infrastructure
+2:26 - How environments shape capability
+3:16 - Fifty to a hundred turn tasks
+4:59 - Why real incidents are messy
+7:11 - Real infrastructure isn't a code diff
+7:40 - Acting as an engineer inside the cloud
+9:37 - Deployment, cost, and scaling bars
+13:29 - Why it's called Emulated
+15:01 - Simulating full companies
+
+## The Base Model Is Dead — Varun Singh, Arcee AI
+
+- Upload date: 2026-07-31
+- Video: https://www.youtube.com/watch?v=xbPriQWXtWM
+- Transcript: raw/20260731_xbPriQWXtWM/xbPriQWXtWM.en-orig.vtt
+- Metadata: raw/20260731_xbPriQWXtWM/xbPriQWXtWM.info.json
+
+The old story is that a base model is a mirror of the internet, a good model of human web text that everything else gets bolted onto. Varun Singh, who leads pre-training at Arcee AI, argues that story is dead: no modern base model reflects the web the way GPT-3 once did. Instruction data and synthetic reasoning traces have moved earlier and earlier into training, and a distinct mid-training stage has emerged for longer datapoints that look much more like the downstream capabilities you actually want. Reading recent open recipes, from Nemotron to Kimi K2, the pattern is clear: raw web text is taking a backseat.
+
+The rest of the talk is what that shift does to how you build. Once reinforcement learning became the thing that got models to reason, the base model stopped being a cherry on top and started needing to carry the prior that RL builds on, which changes the data mix and pulls post-training-flavored data forward. Singh walks through the practical pitfalls his team hit training the Trinity series, like getting the balancing coefficients right and establishing stable representations early so the model is prepared for what it must compose during RL. The message is that as capabilities advance, the base model's job keeps redefining itself, and pretending it still just mirrors the internet will cost you.
+
+Speaker info:
+- https://x.com/stochasticchasm
+- https://www.linkedin.com/in/varun-singh-cs
+
+Timestamps:
+0:00 - The base model as a mirror of the web
+1:26 - How knowledge accumulates in training
+2:49 - When instruction data moves earlier
+4:11 - After o1: RL and reasoning
+5:41 - What prior the base model must carry
+6:18 - Filtering web text, adding synthetic
+8:01 - Reading the open data recipes
+9:41 - Lessons from training Trinity
+12:02 - Balancing coefficients and early stability
+13:30 - Why RL keeps raising the stakes
+15:55 - The base model's shifting job
+
+## Ending AI Slop — Thais Castello Branco, Taste Labs
+
+- Upload date: 2026-07-31
+- Video: https://www.youtube.com/watch?v=lCBf9slCanI
+- Transcript: raw/20260731_lCBf9slCanI/lCBf9slCanI.en-orig.vtt
+- Metadata: raw/20260731_lCBf9slCanI/lCBf9slCanI.info.json
+
+Thais Castello Branco's starting point is that AI is still badly behind on the subjective work, the writing and design where quality is real but hard to pin down, and that ending the slop means building data and reinforcement environments for taste. She sorts domains along a spectrum: at one end things that verify and execute cleanly, at the other pure preference with no ground truth, and most valuable work sits in between. The move that makes taste tractable is decomposition, breaking something like a brand or a page into elements that can each be graded against an original rather than judged whole.
+
+The deeper problem she names is collapse to the mean. A model optimizing for the most likely output drifts toward the average and quietly kills the creativity that good design depends on, so the goal is data and rewards that reward breaking from the obvious when the situation calls for it. Taste Labs builds this by turning expert judgment into structured, high signal preference data, pairing it with human QA where reviewers tie their commentary to specific choices, and being careful that preference signal stays rich instead of noisy. Her argument is that as more subjective domains become measurable this way, taste becomes something you can actually train.
+
+Speaker info:
+- https://x.com/thaiscbranco_
+- https://www.linkedin.com/in/thais-castello-branco/
+
+Timestamps:
+0:00 - What ending AI slop means
+1:06 - Working with frontier labs on taste
+2:33 - The verifiable to preference spectrum
+3:38 - Decomposing design to grade it
+5:30 - Verifying whether something is on brand
+7:40 - Collapse to the mean
+9:18 - Shifting preference toward verifiable
+11:25 - Building a preference vector
+13:05 - Human QA tied to specific choices
+15:00 - Training taste in subjective domains
+
+## Learning on the Job: The Future of Post-Training — Raymond Feng, Applied Compute
+
+- Upload date: 2026-07-31
+- Video: https://www.youtube.com/watch?v=k35LeKZEhiE
+- Transcript: raw/20260731_k35LeKZEhiE/k35LeKZEhiE.en-orig.vtt
+- Metadata: raw/20260731_k35LeKZEhiE/k35LeKZEhiE.info.json
+
+The next step after a model ships is teaching it to keep learning on the job, and Raymond Feng lays out how Applied Compute trains custom models with reinforcement learning that plug into whatever harness an enterprise already runs. The setup is an orchestrator that fans interactions out to inference engines, collects the graded rollouts, and feeds a training engine that updates the weights, the same GRPO style loop used for RL today, but pointed at real multi turn, long horizon work rather than toy question and answer pairs. The promise is a model you deploy once that adapts to a specific company's tasks.
+
+The hard parts are all about the environment. Feng is candid about reward hacking, where a model learns to time out a tool or exploit a scoring gap instead of doing the task, and about the trouble of faithfully replicating a production environment so training reflects reality. He walks through why replaying real customer interactions is tempting but breaks on non replayability and off policy data, and where automated data pipelines and self evaluation might take this. The vision at the end is a model that learns from every interaction it has, treating each nook and cranny of the job as new training signal.
+
+Speaker info:
+- https://x.com/raymondmfeng
+
+Timestamps:
+0:00 - Learning on the job
+0:39 - Custom models inside your harness
+2:37 - Deploy once and adapt
+2:49 - The RL training loop
+4:40 - Toward longer horizon tasks
+6:48 - Reward hacking in practice
+9:06 - Replicating production environments
+9:45 - Why replaying real traffic is hard
+11:57 - Non-replayability and off-policy data
+13:41 - Automated data pipelines
+15:24 - A model that learns every interaction
+
+## Benchmarks: The Good, the Bad, and the Ugly — Ali Khial, G2i
+
+- Upload date: 2026-07-31
+- Video: https://www.youtube.com/watch?v=jWq-aZIU0kM
+- Transcript: raw/20260731_jWq-aZIU0kM/jWq-aZIU0kM.en-orig.vtt
+- Metadata: raw/20260731_jWq-aZIU0kM/jWq-aZIU0kM.info.json
+
+Ali Khial took three of the best engineers at G2i, pointed them at popular coding benchmarks, and hit a wall of tasks that were either too ambiguous to grade or quietly broken. That experience is the spine of this talk: a benchmark starts as a spec, solutions get verified and graded, and the results rank models, but only if the harness is actually creating a fair test rather than an unfair one. He shows real examples where an instruction is so vague that a correct patch gets rejected, or a test checks something as arbitrary as how a variable is named, and notes that a meaningful share of tasks he examined had genuinely good answers marked wrong.
+
+The danger is that models are increasingly good at gaming exactly this, hunting down the test and satisfying it rather than solving the problem, which opens a quality gap that public leaderboards hide. Khial lays out the principles he now uses for benchmarks worth trusting: be precise where precision matters and loose where it does not, keep a private held out set so nothing leaks from public GitHub repos, and hold the whole thing to production grade. His point is not that benchmarks are useless but that the ones we lean on are not there yet, and building better ones is the work.
+
+Speaker info:
+- https://www.linkedin.com/in/ali-khial/
+
+Timestamps:
+0:00 - The good, the bad, and the ugly
+1:27 - Testing with our best engineers
+2:30 - A benchmark as a spec
+3:37 - When instructions are too ambiguous
+4:44 - Tests that check the wrong thing
+6:12 - Good answers marked wrong
+7:03 - Models learning to game the test
+8:08 - The quality gap leaderboards hide
+9:03 - Precise where it matters
+10:47 - Keeping a private held out set
+11:13 - Principles for benchmarks worth trusting
+
+## Data and Environment Curation for Post-Training LLMs — Mahesh Sathiamoorthy, Bespoke Labs
+
+- Upload date: 2026-07-31
+- Video: https://www.youtube.com/watch?v=ewtOo0scUh0
+- Transcript: raw/20260731_ewtOo0scUh0/ewtOo0scUh0.en-orig.vtt
+- Metadata: raw/20260731_ewtOo0scUh0/ewtOo0scUh0.info.json
+
+Mahesh Sathiamoorthy's pitch is to stand in the researcher's shoes: the hard part of post-training is not the algorithm but the data and the environments that feed it. As agents get pushed to run autonomously for hours, something eventually falls over, and reinforcement learning is the tool for stretching that reliability, but RL environments are really just data in a different shape. Bespoke Labs works on curating both, from supervised fine-tuning sets to the environments models learn in.
+
+He grounds it in OpenThoughts, the widely used reasoning dataset his team built, and the counterintuitive lessons that came out of curating it: diversity of reasoning traces matters, keeping multiple answers per question helps, and the obvious recipe often is not the best one. A favorite example is teaching a model to reason about credit card compliance, where fine-tuning on the right tagged data lifted the compliance metrics that a raw model kept getting wrong. The through line, supported by their Curator tooling, is that a disciplined curation stack, not just more compute, is what turns a base model into a capable post-trained one.
+
+Speaker info:
+- https://x.com/madiator
+- https://linkedin.com/in/smaheswaran
+- https://smahesh.com
+
+Timestamps:
+0:00 - Standing in the researcher's shoes
+1:30 - Post-training at Bespoke Labs
+3:13 - When agents fall over on long tasks
+4:44 - RL environments as data
+6:29 - Building OpenThoughts
+7:36 - Finding a curation recipe
+10:27 - Counterintuitive lessons
+13:49 - A credit card compliance example
+16:13 - Curating reasoning data with Curator
+17:16 - The full curation stack
+
+## What's Next After RLHF? — Diogo Almeida, TypeSafe AI
+
+- Upload date: 2026-07-31
+- Video: https://www.youtube.com/watch?v=cJ0EOzey--o
+- Transcript: raw/20260731_cJ0EOzey--o/cJ0EOzey--o.en-orig.vtt
+- Metadata: raw/20260731_cJ0EOzey--o/cJ0EOzey--o.info.json
+
+RLHF made models that are extraordinary at pleasing the human in the loop, and Diogo Almeida, a GPT-4 co author, argues that is exactly the problem. Optimizing for human preference optimizes for engagement and for overpromising, the same pressure that makes a model confidently agree that a fart audio file is a symphony. That produces two camps: one where models act as assistants with a human catching mistakes, where RLHF shines, and one where they operate autonomously with real stakes, where the same instinct to please quietly becomes a liability.
+
+So what comes next is not the Claude Code era but a shift in what you optimize. Almeida frames it through Sutton's bitter lesson: the task matters more than the data, and reinforcement learning with verifiable rewards points the model at real automation instead of human approval. He is careful that pre trained models are already incredibly capable and that the trap is bolting preference optimization on top, which teaches confidence and drops modes. The through line is that assistance and automation pull in different directions in optimization space, and the field is only starting to say plainly which one it is building.
+
+Speaker info:
+- https://x.com/CompleteSkeptic
+- https://www.linkedin.com/in/diogomda/
+- https://typesafe.ai/
+
+Timestamps:
+0:00 - Not the Claude Code era
+1:40 - The state of the field
+3:14 - Two camps: assistance and autonomy
+4:31 - Why models please the human in the loop
+6:37 - How RLHF actually works
+7:31 - Preference versus what's true
+8:10 - When the consequences get real
+8:47 - So what's next
+9:35 - Assistance is not automation
+14:31 - Is pre-training the problem?
+15:43 - RLVR and Sutton's bitter lesson
+
+## Data Quality Is the Compute Multiplier — Ari Morcos, DatologyAI
+
+- Upload date: 2026-07-31
+- Video: https://www.youtube.com/watch?v=_PdK6x7PQNM
+- Transcript: raw/20260731__PdK6x7PQNM/_PdK6x7PQNM.en-orig.vtt
+- Metadata: raw/20260731__PdK6x7PQNM/_PdK6x7PQNM.info.json
+
+Swap compute for data on the scaling curve and the same money buys a better model, which is why Ari Morcos calls data quality the compute multiplier and the most underinvested part of training. His frame is an oil refinery for data rather than a firehose: clean, curate, create, and compose, with quality classifiers, deduplication, and synthetic generation each earning their place, and the sequencing across stages mattering as much as any single step. The scarce resource now is not tokens but signal per token, and finding data that is optimal for a given target is where the leverage hides.
+
+The proof points are concrete. Better curated data lets a small multilingual model beat far larger ones trained on many more tokens, and it buys real inference efficiency because a model reaches the same quality with less. Morcos points to DatologyAI's customer results, from Thomson Reuters gaining on proprietary legal data in mid-training to Arcee's Trinity reaching the open frontier on public data alone. The closing argument is blunt: it is cheaper to manufacture high quality data than to buy more compute, so data curation is quietly shaping the future of model training.
+
+Speaker info:
+- https://x.com/arimorcos
+- https://www.linkedin.com/in/arimorcos/
+- http://www.arimorcos.com/
+
+Timestamps:
+0:00 - Data is all we think about
+0:52 - Why good data became scarce
+2:19 - Swapping compute for data on the curve
+3:48 - An oil refinery for data
+5:52 - Curation work at DatologyAI
+6:54 - Proof: small models beating bigger ones
+8:58 - Inference efficiency from better data
+9:24 - Multilingual gains
+12:16 - Synthetic data done right
+14:10 - Thomson Reuters and Arcee results
+17:43 - Cheaper than buying compute
+
+## Agents at Scale: Inside MiniMax's Model and the Infrastructure Behind It — Dan Fu and Olive Song
+
+- Upload date: 2026-07-31
+- Video: https://www.youtube.com/watch?v=AVMr9PMINyo
+- Transcript: raw/20260731_AVMr9PMINyo/AVMr9PMINyo.en-orig.vtt
+- Metadata: raw/20260731_AVMr9PMINyo/AVMr9PMINyo.info.json
+
+In this conversation, Olive Song, who leads reinforcement learning at MiniMax, opens up the stack behind the company's open weight models and the infrastructure that serves them. Her starting point is a belief in open source: put the weights out, let builders optimize on them, and share the capability widely. From there she walks through what it takes for a model to land well, from agentic coding that also understands and builds games, to computer use problems trained with RL against environments like OS World.
+
+Much of the discussion is the unglamorous engineering that makes a launch real. When a model ships, the team wants the inference stack ready on day zero, which means writing and tuning GPU kernels, working through benchmarks like a parallel kernel bench, and threading optimization into everything from KV cache handling to routing. Song also talks through multimodality and the training pitfalls that come with it, such as text and vision collapsing after training unless you train both modalities together, and reflects on longer horizon tasks like replicating a twelve hour run. She closes optimistic that open models are closing the gap faster than a year ago would have suggested.
+
+Speaker info:
+- https://x.com/olive_jy_song
+
+Timestamps:
+0:00 - Introducing the RL lead at MiniMax
+1:17 - Why open source and open weights
+3:45 - What builders are doing with the model
+4:11 - A model that builds games
+5:12 - Computer use and OS World
+5:49 - Writing GPU kernels
+6:25 - Parallel kernel bench
+7:28 - A day zero inference stack
+9:34 - Optimization across the stack
+10:47 - Multimodality and training collapse
+14:10 - Replicating a twelve hour run
+17:22 - Where open models go next
+
+## Reinforcement Learning without Verifiable Rewards — Will Brown, Prime Intellect
+
+- Upload date: 2026-07-31
+- Video: https://www.youtube.com/watch?v=AQv3qRCG6Gw
+- Transcript: raw/20260731_AQv3qRCG6Gw/AQv3qRCG6Gw.en-orig.vtt
+- Metadata: raw/20260731_AQv3qRCG6Gw/AQv3qRCG6Gw.info.json
+
+Reinforcement learning has been easy to sell where the answer is checkable, like math or code, and Will Brown's talk is about everything else. Most valuable tasks have no clean verifier, so Prime Intellect's work is on how you build reward signal when there is no ground truth waiting. He frames RL simply first, a model acting in a harness with tools and skills, getting a reward, and nudging its weights, then asks how you keep climbing once you leave the verifiable island behind.
+
+His answer leans on environments as the anchor. You can set up judges, generate question and answer pairs grounded in real documents and repos, and use a reverse direction trick where you hide something, like a bug or a backdoor, so the model can learn to find it again, which conveniently gives you a difficulty dial to keep tasks not too easy and not too hard. He is direct about the dangers: reward hacking will find you if you are not careful, so you inspect traces, run small experiments, and bring in expert understanding. The goal he keeps returning to is making this a real science, with open models and shared benchmarks, where environments turn into new tasks and higher levels of ability.
+
+Speaker info:
+- https://x.com/willccbb
+- https://www.linkedin.com/in/willcb/
+- https://willcb.com
+
+Timestamps:
+0:00 - RL without verifiable rewards
+1:17 - How RL works, simply
+2:43 - The tooling that powers it
+4:13 - Where verifiable rewards run out
+6:24 - Being careful about reward design
+8:04 - Making RL a science
+9:20 - Judges and grounded question answer pairs
+10:46 - The reverse direction trick
+14:19 - Calibrating difficulty
+15:08 - Hunting for reward hacks
+18:27 - Environments as the anchor
+
+## fighting slop with slop — Vaibhav Gupta, Boundary
+
+- Upload date: 2026-07-31
+- Video: https://www.youtube.com/watch?v=AMiyLItEtLA
+- Transcript: raw/20260731_AMiyLItEtLA/AMiyLItEtLA.en-orig.vtt
+- Metadata: raw/20260731_AMiyLItEtLA/AMiyLItEtLA.info.json
+
+You cannot tell great engineers what to do, and you increasingly cannot tell what an agent did either, so Vaibhav Gupta's answer is to fight slop with slop. At Boundary the team turns the same cheap, sloppy generation loose as a tool: agents that run constantly over the transcripts of other agents, flagging hallucinations, spotting which tool calls produced errors, and comparing which approaches produced fewer. He pairs that with hard invariants, the design docs, rules, and CLI checks that do not change for months and tell you exactly where a codebase stops converging, so the messy detection layer sits on top of something stable.
+
+The deeper move is to attack the foundational layer from first principles. Instead of trusting generated code, he leans on type systems that make whole classes of mistakes impossible: types get inferred without you writing them, a division by zero is guaranteed to be handled or the code will not build, and there are no silent unknowns left for an agent to guess at. That is the bet behind BAML, which lets you work across Python, TypeScript, or Rust with strong boundaries around each function so an agent can move fast inside walls it cannot breach. His closing challenge is to go build these sloppy tools yourself and constrain the systems underneath them, because that is what actually wins the war on slop.
+
+Speaker info:
+- https://x.com/vaibcode
+- https://www.linkedin.com/in/vaigup
+- https://www.youtube.com/@boundaryml
+
+Timestamps:
+0:00 - Fighting slop with slop
+0:27 - Code reviews and invariants
+2:08 - Building rules that don't change
+3:00 - Design docs with notifications
+4:03 - CLI tools that catch where things break
+5:08 - Agents reading agent transcripts
+5:57 - Detecting hallucinations and errors
+9:24 - Attacking the foundational layer
+11:03 - Execution traces from first principles
+14:26 - Type safe tools across platforms
+15:42 - Making whole error classes impossible
+17:57 - BAML across languages
+20:37 - Go build the sloppy tools
+
+## Verifiable Environments for AI in Biology — Kenny Workman, LatchBio
+
+- Upload date: 2026-07-31
+- Video: https://www.youtube.com/watch?v=3ZMUiFaQ3qg
+- Transcript: raw/20260731_3ZMUiFaQ3qg/3ZMUiFaQ3qg.en-orig.vtt
+- Metadata: raw/20260731_3ZMUiFaQ3qg/3ZMUiFaQ3qg.info.json
+
+A single spatial biology run can yield two to six terabytes of data, far more than a scientist can eyeball, and Kenny Workman argues that this is the raw material for teaching AI to actually do science. LatchBio, five years deep in pharma, treats experimental biology as a verifiable substrate: lay a chunk of a tumor over a sequencing surface and you get a giant matrix of numbers whose analysis has a right answer, which is exactly what you need to benchmark and improve a model. They adapted coding models into biology tools and built benchmarks like sequencing based spatial analysis, and found what everyone in post training now knows, that frontier models cannot yet be trusted with this and that measurement is what drives progress.
+
+The reason biology is hard is that it is messy and the field rarely agrees on the answer, so much of the work is designing tasks where reasoning, not memorized knowledge, is what gets rewarded. Workman walks through trajectory data from real scientists, tasks like finding the part of a tumor that matters, and why an ambiguous prompt quietly makes a benchmark uninformative. He also gets candid about biosecurity, where model refusals are their own evaluation problem and red team tasks have to be handled carefully, and frames the whole effort as a flywheel: better benchmarks, better tools, more of the program landscape indexed, repeat.
+
+Speaker info:
+- https://x.com/kenbwork
+- https://www.linkedin.com/in/kennyworkman
+- https://kenbw.com/
+
+Timestamps:
+0:00 - Terabytes of experimental data
+1:41 - Decomposing a new paper into tasks
+2:44 - A verifiable substrate for science
+3:23 - Five years in pharma
+4:13 - Coding models as biology tools
+5:40 - Why frontier models can't be trusted yet
+6:44 - Sequencing based spatial analysis
+9:16 - Reasoning, not memorized knowledge
+10:07 - Trajectory data from real scientists
+12:14 - Why biology tasks are messy
+15:36 - Biosecurity and refusals
+
+## Scaling to Long Horizons — Ross Taylor & Chengxi Taylor, General Reasoning
+
+- Upload date: 2026-07-31
+- Video: https://www.youtube.com/watch?v=2bvtay8wGYI
+- Transcript: raw/20260731_2bvtay8wGYI/2bvtay8wGYI.en-orig.vtt
+- Metadata: raw/20260731_2bvtay8wGYI/2bvtay8wGYI.info.json
+
+Ross Taylor opens with some history: back in 2022 he worked on Galactica, an early large model for science that briefly crossed the Rubicon on curated high quality data and intermediate reasoning tokens before the reaction overshadowed the work. That obsession, optimizing what happens between the question and the answer, is where this talk on long horizon reinforcement learning picks up. He and Chengxi Taylor of General Reasoning treat long horizon less as a benchmark and more as a mindset: if you want agents that stay coherent over hours, you have to be patient about signal and deliberate about how you spend tokens.
+
+The mechanics they walk through are the ones that make long rollouts trainable. Value models reduce variance and help with credit assignment, bootstrapping pulls signal out of sparse rewards, and the real constraint becomes the tradeoff between off policy staleness and GPU utilization as sequences get longer. They make it concrete with a task where frontier models were handed real money to trade football matches and did poorly, exposing how little the environment was actually simulated. The takeaway is that scaling to long horizons demands better environments and simulation, not just bigger context windows, and they point listeners to openreward.ai to go deeper.
+
+Speaker info:
+- Ross Taylor (General Reasoning):
+  - https://x.com/rosstaylor90
+  - https://www.linkedin.com/in/rosstaylor90/
+  - https://rossjtaylor.com
+- Chengxi Taylor (General Reasoning):
+  - https://x.com/chengxitaylor
+  - https://www.linkedin.com/in/chengxi-taylor/
+  - https://www.chengxitaylor.com/
+
+Timestamps:
+0:00 - Introduction and a look back
+1:57 - The Galactica story
+5:15 - Curated data and thinking tokens
+8:09 - What got RL cooking
+9:12 - Long horizon as a mindset
+10:16 - Why value models help
+11:08 - Credit assignment and bootstrapping
+12:38 - Trading football matches for real money
+13:44 - Why models struggled
+14:36 - Off policy staleness versus GPU use
+16:18 - openreward.ai and what's next
+
+## Your Finance Agent's Bottleneck Is You — Ramana Siddanth Emani, Auditoria AI
+
+- Upload date: 2026-07-30
+- Video: https://www.youtube.com/watch?v=z0sh8HyTrDo
+- Transcript: raw/20260730_z0sh8HyTrDo/z0sh8HyTrDo.en-orig.vtt
+- Metadata: raw/20260730_z0sh8HyTrDo/z0sh8HyTrDo.info.json
+
+The slowest part of shipping a production finance agent is not the model or the GPUs, it is you, the developer in the loop. Ramana Siddanth Emani's point is that the same agent harnesses you use to build products can automate your own developer loop. Coding agents can multiply how much you ship; run an army of them across separate git worktrees and they clear tasks in parallel, with skills making sure each one uses the right patterns.
+
+The tasks come from where they already live, QA reports, Jira tickets, GitHub pull requests, and a sub agent pulls the traces and logs, writes and runs end to end tests, builds, and reports back, needing your context only at a few steps. Point this at your bug queue and a month later you have shipped far more, having stepped further out of the loop as the agents improve, while keeping a human as the final verifier. At Auditoria, where the work is finance, that means agents talking to agents and reconciling source data, so you spend your time verifying rather than grinding.
+
+Speaker info:
+- https://x.com/siddanth2486
+- https://www.linkedin.com/in/siddanth-emani
+
+Timestamps:
+0:00 - Your bottleneck is you
+1:05 - From bugs to pilots to production
+2:37 - Automating the developer loop
+3:03 - Coding agents that multiply output
+3:39 - Skills for the right patterns
+4:22 - Sub agents and where tasks come from
+5:18 - Pulling traces, testing, reporting back
+7:56 - Auditoria in the finance sector
+9:04 - Stepping out of the loop safely
+11:35 - Turning customer patterns into features
+13:04 - Keep a human as verifier
+
+## Build for the Memo, Not the Demo — Shawn Chan, China Resources Holdings
+
+- Upload date: 2026-07-30
+- Video: https://www.youtube.com/watch?v=tJFjeMBKbIY
+- Transcript: raw/20260730_tJFjeMBKbIY/tJFjeMBKbIY.en-orig.vtt
+- Metadata: raw/20260730_tJFjeMBKbIY/tJFjeMBKbIY.info.json
+
+When a company is about to spend $100 million, Shawn Chan is the person in the room deciding whether it happens, and after fifteen years and roughly 200 investment committees he can spot the flaw fast. Now some of the decks in front of him are AI generated: cleaner formatting, never defensive, and confidently wrong. His frame is the difference between a demo and a memo. A demo is a beautiful confident slice built to impress; a memo is what survives a room whose entire job is to find what breaks. One marketing demo with a single wrong sentence, he reminds you, once erased enormous value the moment the market noticed.
+
+So he lays out what an AI product needs to pass the memo test. Not every source deserves equal trust, since an audited filing is not a number from a group chat. Figures have to reconcile, and a contradiction between two numbers is not a bug but the most important signal in the room. Facts and guesses must stay labeled, because across three drafts an estimate quietly hardens into a fact nobody remembers assuming. Attach provenance rather than a citation tab, lock who claimed what, and the product that wins is the one that lets someone approve a deal without opening seven tabs at midnight.
+
+Speaker info:
+- https://www.linkedin.com/in/shawn-chan-2b58a9129/
+
+Timestamps:
+0:00 - A fifteen year confession
+3:27 - Two hundred investment committees
+4:22 - Money follows trust
+5:46 - Two machines: the demo and the memo
+7:31 - When one wrong sentence costs billions
+9:45 - Not every source deserves equal trust
+11:22 - The numbers have to agree
+14:59 - Facts and guesses stay separate
+17:06 - When fake citations reach a court
+19:21 - The airline chatbot that made a promise
+21:30 - Attach provenance, not a citation tab
+22:52 - The products that will win
+
+## First Steps Toward Automated AI Research — Richard Socher, CEO Recursive AI
+
+- Upload date: 2026-07-30
+- Video: https://www.youtube.com/watch?v=pWXUkLP9uWM
+- Transcript: raw/20260730_pWXUkLP9uWM/pWXUkLP9uWM.en-orig.vtt
+- Metadata: raw/20260730_pWXUkLP9uWM/pWXUkLP9uWM.info.json
+
+Humanity compressed the road from the enlightenment to the moon landing into a few hundred years, and Richard Socher's wager is that automating research compresses it again. He frames it through open ended evolution and Popper: science advances by trying things, finding the shortcomings, and fixing them, and an agent swarm can run that loop across medicine, economics, astrophysics, and more without any single person bottlenecking a field. He calls the goal a Eureka machine, and argues that rethinking the tools around it, web search that returns usable context instead of ten blue links, browsers, and GPUs, is part of building it.
+
+The proof points are recursive self improvement, where a system improves its own code, harness, and results and then does it again over longer horizons. He shows small but concrete wins: an automated loop that lifts a model's accuracy well past a naive baseline, architecture search that trades hand tuning for a system that finds better designs, and CUDA kernel work that surfaced real improvements. He is careful that these are early samples, not a finished machine, and that the field is far from general across all of science, but the direction is the point, and he ends with an open invitation to help build it.
+
+Speaker info:
+- https://x.com/RichardSocher
+- https://www.linkedin.com/in/richardsocher
+- https://you.com
+
+Timestamps:
+0:00 - Automating research for humanity
+1:41 - Why this matters now
+2:19 - Compressing the timeline of progress
+4:28 - Technoptimism and material limits
+6:22 - Popper and open ended evolution
+9:07 - The Eureka machine
+10:39 - Rethinking search, browsers, and GPUs
+13:41 - Recursive self improvement
+14:46 - Proof point: improving a model
+16:39 - Proof point: architecture search
+17:16 - Proof point: CUDA kernels
+19:11 - How far we still are, and an invitation
+
+## Let's integrate AI Agents in Event-Sourced Systems — Divakar Kumar, FlyersSoft
+
+- Upload date: 2026-07-30
+- Video: https://www.youtube.com/watch?v=o6U_2vd967Y
+- Transcript: raw/20260730_o6U_2vd967Y/o6U_2vd967Y.en-orig.vtt
+- Metadata: raw/20260730_o6U_2vd967Y/o6U_2vd967Y.info.json
+
+A card gets declined and no one, including the customer, can say exactly why. That gray zone is where Divakar Kumar points his agents. In a payments and fraud system, a rule based engine and an ML model already score most transactions cleanly; the hard cases are the ambiguous ones that neither can resolve. His approach adds an agentic layer on top of an existing event sourced architecture rather than replacing it, so the bounded contexts already in the system, transaction, device, and account, become the context the agents reason over.
+
+Events flow through change feeds into projections and a semantic layer that the agents read, communicating asynchronously through a message broker in a saga style loop. A risk analyzer agent, a second agent that reaches a verdict, and a third work the case while guarding against infinite loops and keeping memory short, all runnable serverless. The takeaway is architectural: event sourcing already carries the state and history an agent needs, so the cleanest way to add judgment to a production system is to layer agents onto the events you are already emitting.
+
+Speaker info:
+- https://www.linkedin.com/in/divakar-kumar/
+- https://iamdivakarkumar.com
+
+Timestamps:
+0:00 - Introduction: adding agents to an existing system
+1:20 - A declined transaction you can't explain
+3:04 - Where rule based and ML systems fall short
+5:40 - Handling the gray zone with agents
+5:53 - Bounded contexts: transaction, device, account
+8:24 - Event sourcing and change feeds
+10:57 - Building the semantic layer
+13:16 - Avoiding infinite loops
+14:07 - The risk analyzer and verdict agents
+15:24 - The saga orchestration loop
+19:00 - Putting the architecture together
+
+## Wearing the Agent: From Group Chats to Glasses — Sai Krishna Rallabandi
+
+- Upload date: 2026-07-29
+- Video: https://www.youtube.com/watch?v=s67bE2Ur3bY
+- Transcript: raw/20260729_s67bE2Ur3bY/s67bE2Ur3bY.en-orig.vtt
+- Metadata: raw/20260729_s67bE2Ur3bY/s67bE2Ur3bY.info.json
+
+Almost every agent today is built for one user, and Sai Krishna Rallabandi has spent about eight months on what breaks when you drop one into a group chat instead. Running a personal agent across a real group, and eventually onto glasses, forces two hard problems. The first is memory: conversations that last for days across several people, where the agent has to track who said what and surface only what is relevant without bloating its context.
+
+The second is security, and it is where the talk digs in. He points to a finding that two skills, each safe on its own, can collide once they share infrastructure, so a reporting agent leaks information at low frequency. His defense is to have an agent read everything and design a guard, then fine tune a small model with a per user adapter that only releases information appropriate to the context and catches prompt injection that regex would miss. The through line is that group and wearable settings break the single user assumptions most agent harnesses are built on, so memory and security have to be redesigned around the group.
+
+Speaker info:
+- https://x.com/Saikallis9012
+- https://www.linkedin.com/in/sai-krishna-rallabandi-8595418b/
+- https://saikrishnarallabandi.github.io/
+
+Timestamps:
+0:00 - Introduction: agents for groups, not one user
+1:28 - Why single user agents fall short
+2:45 - Eight months in a real group chat
+3:47 - What changes when the agent joins a group
+5:17 - Two problems: guarding and memory
+5:55 - Securing an agentic system
+7:44 - When two safe skills collide
+9:27 - Designing a guard agent
+10:21 - A small model with per user adapters
+11:49 - Catching prompt injection
+12:29 - Designing memory for groups
+15:29 - Context growth and token cost
+
+## Morgan Stanley's ALPHALAB: Multi-Agent Research Across Optimization Domains — Brendan Rappazzo
+
+- Upload date: 2026-07-29
+- Video: https://www.youtube.com/watch?v=kiqubc5b5Yo
+- Transcript: raw/20260729_kiqubc5b5Yo/kiqubc5b5Yo.en-orig.vtt
+- Metadata: raw/20260729_kiqubc5b5Yo/kiqubc5b5Yo.info.json
+
+When coding agents got good enough at the end of 2025, Morgan Stanley's roughly thirty person research group asked what would happen if agents ran the research, not just wrote the code. The result is AlphaLab, a multi agent system they built and open sourced. You hand it a problem in plain language and it writes the code, sets up back tests and evals, configures and submits cluster jobs, and runs the statistical tests, managing its own context as it goes. They skipped every off the shelf framework and wrote their own harness so they could watch how it reasons and bake in their own standards.
+
+The shape is a strategist that proposes experiments and workers that run them, laid out as a board of cards people can read, edit, and approve before the loop optimizes against a weak eval. Rappazzo shows it finding real gains now used internally, from fine tuning a model to predicting credit bonds, and argues the lasting human job is designing the verifiable environment the agents compete in, like a private Kaggle, while they handle the middle.
+
+Speaker info:
+- https://x.com/brendanh0gan
+- https://www.linkedin.com/in/brendan-rappazzo-hogan-763734115/
+- https://www.bhogan.net
+
+Timestamps:
+0:00 - Introduction: a thirty person research group
+1:30 - What changed when coding agents arrived
+2:55 - Building AlphaLab 1.0, open sourced
+4:34 - Encoding enterprise standards into the system
+6:40 - Why they skipped off the shelf harnesses
+8:21 - How the research loop runs
+9:36 - Strategist and worker agents
+10:40 - Guarding against a bad eval
+13:23 - Finding real improvements
+16:12 - Verifiable environments, like Kaggle
+18:45 - The human job in the limit
+
+## We Vetted 2000 AI Skills Before They Reached Developers — Lucas Palma, Nubank
+
+- Upload date: 2026-07-29
+- Video: https://www.youtube.com/watch?v=iKQ78wyJEXU
+- Transcript: raw/20260729_iKQ78wyJEXU/iKQ78wyJEXU.en-orig.vtt
+- Metadata: raw/20260729_iKQ78wyJEXU/iKQ78wyJEXU.info.json
+
+An AI skill is a piece of code you hand a model to extend what it can do, and once engineers start sharing skills with each other, each one becomes a supply chain risk, more so inside a regulated bank. Lucas Palma's security team at Nubank built Skill Vector to sit between a skill and the internal marketplace, so nothing reaches developers unvetted. Every skill is scanned first with deterministic checks, for destructive shell commands and the like, then with an LLM for the context those checks miss, and only then does it get a decision and permissions scoped to who will use it.
+
+Running that gate over more than 2,000 skills surfaced real problems, since a single skill can carry many, and fed them into the bank's vulnerability management program with approval gates and human confirmation. What worked was pairing deterministic scans with LLM review; what needed work was the guidance the system gave and the habit of running skills locally before vetting. The lesson he leaves is simple: treat skills like any other dependency, and only what clears the gate belongs in the marketplace.
+
+Speaker info:
+- https://www.linkedin.com/in/lucaspalma/
+
+Timestamps:
+0:00 - Introduction: making code safe at a bank
+1:32 - AI skills as a supply chain risk
+2:50 - What counts as an AI skill
+3:57 - The extra weight of a regulated environment
+6:07 - From plugins to a vetted marketplace
+6:58 - What Skill Vector does
+7:37 - Deterministic checks, then the LLM
+10:00 - Scanning over two thousand skills
+11:22 - What worked and what needed improvement
+13:30 - Approval gates and human confirmation
+14:23 - Next steps and policies
+
+## Persona Engineering: A Field Guide to AI Synthetic Personas — Ishan Anand, InsightSciences.ai
+
+- Upload date: 2026-07-29
+- Video: https://www.youtube.com/watch?v=YnNF55QV0zs
+- Transcript: raw/20260729_YnNF55QV0zs/YnNF55QV0zs.en-orig.vtt
+- Metadata: raw/20260729_YnNF55QV0zs/YnNF55QV0zs.info.json
+
+A team ran about a thousand people through a market research survey, then had LLM agents replay the same questions, and the agents matched the humans closely while carrying less noise than the humans did themselves. That is exactly the tell: a synthetic respondent smooths over the messiness that makes a real population real. Ishan Anand walks through where it breaks. Nudge one variable in the prompt template and purchase probability swings, because the model infers latent confounders nobody stated, a little like it is playing improv. So how you ask matters as much as which model you pick, and the persona and the study have to be specified richly, from the participant's point of view.
+
+Accuracy can hide the damage. A model that looks right on average can still distort subgroups and flatten the shape of the distribution, collapsing the variation that mattered. The fix here is a noise floor: score humans against other humans first, so you know the best agreement any method could reach, then judge synthetic against human relative to that floor rather than against a perfect match that never existed. Treat a synthetic persona as an economic actor, not ground truth, since even the human study is not ground truth, and validate it against real outcomes before you let it drive a decision.
+
+Speaker info:
+- https://x.com/ianand
+- https://www.linkedin.com/in/ishananand/
+- https://ishananand.com/
+
+Timestamps:
+0:00 - Introduction: synthetic personas for market research
+1:43 - Why this talk: separating signal from noise
+2:46 - Forecasting people like we forecast the weather
+4:04 - A thousand humans vs their agent replicas
+5:22 - Purchase probability and prompt sensitivity
+6:41 - Invented confounders and specifying the persona
+7:45 - Question order and framing effects
+8:50 - Predicting stated attitudes vs experts
+10:07 - Prompting techniques and subpopulation methods
+13:08 - Reconstructing and scoring the full distribution
+16:09 - Calibrating personas against real forecasts
+17:38 - Setting a noise floor with human vs human
+18:40 - Treat personas as economic actors, and what's next
+
+## How Kepler Built Verifiable AI for Financial Services — Vinoo Ganesh
+
+- Upload date: 2026-07-29
+- Video: https://www.youtube.com/watch?v=Tt2kX2sgQio
+- Transcript: raw/20260729_Tt2kX2sgQio/Tt2kX2sgQio.en-orig.vtt
+- Metadata: raw/20260729_Tt2kX2sgQio/Tt2kX2sgQio.info.json
+
+In finance a number is worthless until you can say where it came from. Vinoo Ganesh, CEO of Kepler, starts from the fact that language models are probability machines, brilliant at next token prediction and unreliable at the deterministic work, like arithmetic, that finance actually runs on. So Kepler treats the model as one part of a system rather than the whole answer, wrapping it in a deterministic substrate that makes every figure traceable.
+
+It rests on three tenets. Atomic provenance means every number is tied to its source and stripped out if it cannot be independently verified. Scope determinism keeps the model on the nondeterministic tasks it is good at and pulls the actual figure, say revenue from a 10K filing, deterministically behind the scenes, with reconciliation on top. The third is treating every extracted number like a pull request that gets reviewed, so entities are caught and nothing is invented. The result is a grounded system where the edge comes not from producing content but from verifying it.
+
+Speaker info:
+- https://x.com/vinooganesh
+- https://www.linkedin.com/in/vinoo-ganesh/
+- https://vinoo.io
+
+Timestamps:
+0:00 - Introduction: a data background in finance
+1:42 - Why trust and verifiability matter now
+2:57 - Models are probability machines
+4:27 - Why analysts still put in the hours
+8:22 - Modeling AI like an overworked VP
+9:26 - Atomic provenance
+12:01 - Scope determinism
+13:52 - Reconciliation and pulling real numbers
+15:06 - Extracting entities without misses
+16:34 - Toward zero invented securities
+20:31 - Where a number really comes from
+
+## Why Off-the-Shelf AI Doesn't Understand Money — Udi Menkes, Intuit
+
+- Upload date: 2026-07-29
+- Video: https://www.youtube.com/watch?v=Owb8g3yDyzo
+- Transcript: raw/20260729_Owb8g3yDyzo/Owb8g3yDyzo.en-orig.vtt
+- Metadata: raw/20260729_Owb8g3yDyzo/Owb8g3yDyzo.info.json
+
+Ask any LLM a financial question about your business. You'll get a fluent, confident, generic answer — one that doesn't truly know your business, or what happened when businesses like yours made that same decision. We build financial AI at Intuit serving 100M+ customers. Our custom LLMs outperform general-purpose models on accuracy while cutting latency in half. But that's the foundation, not the destination. I'll cover where financial intelligence goes when AI stops reporting what happened and starts helping you decide what to do next (and does it for you).
+
+Speaker info:
+- https://x.com/menkesu
+- https://www.linkedin.com/in/udimenkes/
+
+Timestamps:
+0:00 - A three year old's theory of money
+2:21 - Why off the shelf models fail at money
+2:48 - The rental property example
+4:34 - The fluent bluff
+6:42 - The Princeton million dollar study
+9:45 - Context is not experience
+11:03 - Correlation versus causation in pricing
+13:37 - Building state, action, outcome data
+15:17 - Testing it head to head
+16:37 - The era of outcome driven finance
+17:55 - Three things to remember
+
+## SimulationMaxxing: How we ship agents 20× faster — Aman Gupta (Nubank) + Shreya Rajpal (Snowglobe)
+
+- Upload date: 2026-07-29
+- Video: https://www.youtube.com/watch?v=KMR_RBoCa4M
+- Transcript: raw/20260729_KMR_RBoCa4M/KMR_RBoCa4M.en-orig.vtt
+- Metadata: raw/20260729_KMR_RBoCa4M/KMR_RBoCa4M.info.json
+
+Nubank serves 135 million customers, so an AI agent that mishandles a support conversation fails at scale. The talk opens with the result: five agents in production, higher customer satisfaction, and roughly 20 times faster shipping. Shreya Rajpal, CEO of Snowglobe, argues the thing that unlocked that pace was evals, and specifically simulated data standing in for real conversations. Good agent evals are hard because the data is multi turn and stateful, not single turn question and answer, and hand curating it and waiting on production to confirm can take forever.
+
+Snowglobe points at the agent and generates grounded simulations, a customer like Maria trying to order a credit card, complete with account context, tone, and intent, so you can ship, observe, simulate, and feed the results back in a tight loop. Human review found the simulated conversations comparable to real ones about 80% of the time, enough to bring up new agents, derisk changes, and protect the self service rate. With aligned metrics and cheap simulation, the team now tests open models and variant agents freely, because the eval bottleneck is gone.
+
+Speaker info:
+- https://x.com/aman2304
+- https://x.com/ShreyaR
+- https://www.linkedin.com/in/shreya-rajpal/
+- http://shreya-rajpal.com
+
+Timestamps:
+0:00 - Opening with the results
+0:39 - Nubank at 135 million customers
+2:34 - Why evals matter most
+2:47 - Why simulated data works
+3:49 - What makes agent eval data hard
+4:49 - How teams get eval data today
+6:44 - Simulations in minutes, not weeks
+7:35 - Pointing Snowglobe at your agent
+8:48 - A grounded simulation: Maria orders a card
+10:31 - Ship, observe, simulate, repeat
+11:34 - How close simulations are to real
+13:43 - Testing models and variants
+
+## Your Agent Didn't Fail. Your Harness Did. — Vinoth Govindarajan, OpenAI
+
+- Upload date: 2026-07-29
+- Video: https://www.youtube.com/watch?v=BInpv7lGp1o
+- Transcript: raw/20260729_BInpv7lGp1o/BInpv7lGp1o.en-orig.vtt
+- Metadata: raw/20260729_BInpv7lGp1o/BInpv7lGp1o.info.json
+
+Two runs touch the same session, the second write silently erases the first, and the agent keeps answering with total confidence from stale state. Nothing crashed and the model did not hallucinate, so this is a harness failure, the kind that lives in the system around the model rather than in the weights. Using OpenClaw as a public case study, Vinoth Govindarajan walks the usual suspects: state that was never persisted, overlapping writers with no single writer lane, a tool call that never returns because nothing set a deadline, and an approval that outlived the action it was supposed to authorize.
+
+The through line is that a model only proposes; the harness has to commit, and a receipt has to prove it. A transcript shows what the agent said, but a receipt is the evidence that survives: it records the mutation, the authority used, and whether the message actually reached the user, since an internal success that never becomes visible proof is its own failure. You leave with a run receipt audit to run on your own agents, five questions per incident: what woke it up, what state did it inherit, what authority did it use, what executed, and what evidence survived.
+
+Speaker info:
+- https://x.com/iamvinoth
+- https://www.linkedin.com/in/vinothgovindarajan/
+- https://theagentstack.substack.com/
+
+Timestamps:
+0:00 - Introduction: harness failures vs model failures
+1:32 - Delivery can succeed while the truth fails
+2:46 - A model proposes, the harness commits, the receipt proves
+4:14 - How events enter and state is rehydrated
+5:48 - Idempotency, locks, and ordering
+7:22 - Ownership: who persists the turn
+8:28 - Single writer lanes and overlapping writes
+10:09 - Time, deadlines, and cancellation
+11:23 - Approval drift and bounded authority
+13:05 - Internal success vs user-visible proof
+14:08 - The run receipt audit: five questions
+
+## Skills are new features: Building Skill-Centric Harness — Yogendra Miraje, FactSet
+
+- Upload date: 2026-07-29
+- Video: https://www.youtube.com/watch?v=7jjudsEhBtM
+- Transcript: raw/20260729_7jjudsEhBtM/7jjudsEhBtM.en-orig.vtt
+- Metadata: raw/20260729_7jjudsEhBtM/7jjudsEhBtM.info.json
+
+Since skills were open sourced, Yogendra Miraje's team at FactSet stopped thinking about shipping features and started thinking about shipping skills. A skill is a capability you hand the agent, and its heart is a short skill.md whose name and description are really routing signals: get them distinct and the agent triggers the right one, blur them and it fires the wrong skill or none at all. He walks through a minimal skill registry, progressive disclosure so the agent only loads what it needs, and trigger words, like asking for a PDF versus an HTML report, that decide which skill runs.
+
+The harder lessons show up at scale. Skills without evals drift, because a new model quietly stops obeying them, so he treats skills as contracts you test. Past ten skills you need search and embeddings to keep the library coherent; past a hundred you need real governance, admission, ownership, periodic audits, change management, and a human deciding whether a skill should exist at all. His close is that skills are the interface to your agentic products, and at enterprise scale governing them matters as much as writing them.
+
+Speaker info:
+- https://x.com/YogiNotTheBear
+- https://www.linkedin.com/in/mirajey/
+- https://yogimiraje.com
+
+Timestamps:
+0:00 - From blueprints to skills
+1:46 - Building skill centric agents
+2:52 - Skills in context at enterprise scale
+3:46 - Skills as the new features
+5:04 - Inside a skill: the skill.md
+6:37 - A minimal skill registry
+7:42 - Progressive disclosure
+9:13 - Trigger words and routing
+12:17 - Skills without evals drift
+12:56 - Search and embeddings past ten skills
+13:46 - Governance past a hundred skills
+16:36 - Skills as the product interface
+
+## How Forward Deployed Engineering is done at Factory — Eno Reyes
+
+- Upload date: 2026-07-28
+- Video: https://www.youtube.com/watch?v=wpOA-UXynoM
+- Transcript: raw/20260728_wpOA-UXynoM/wpOA-UXynoM.en-orig.vtt
+- Metadata: raw/20260728_wpOA-UXynoM/wpOA-UXynoM.info.json
+
+Factory's forward deployed engineers sit at the tip of the product, embedded with the largest customers and piping a constant stream of real world signals back into how the agent, Droid, gets built. Eno Reyes frames the whole thing as a software factory: signals flow in from the outside, become plans, pass through validation stages, and come out as shipped outcomes, a loop most orgs run badly until they actually invest in the system around it. The non negotiable piece is a model independent harness the customer owns, so the traces and the data stay theirs and Droid can even run air gapped inside their environment.
+
+The frontier is autonomy. Factory scores a codebase on how agent ready it is, whether it runs linters and type checkers and how much of the work an agent can finish and verify without a human, and the payoff shows up on jobs like migrating 30 to 50 million line equities systems at a bank. Push too hard, though, and you hit the trap Eno Reyes borrows from city planning: an exemplar city built too far ahead of its time becomes a theme park, not a place people live. So the forward deployed job is a balancing act, moving customers up the autonomy curve fast enough to matter but not so fast that nothing holds, which is why the role now leans as much on business judgment as on engineering.
+
+Speaker info:
+- https://x.com/EnoReyes
+- https://www.linkedin.com/in/enoreyes/
+- https://enoreyes.com/
+
+Timestamps:
+0:00 - Introduction: where forward deployed sits
+2:08 - The role inside the customer's environment
+3:49 - The tip of the spear of the product
+5:03 - The software factory: signals in, outcomes out
+6:57 - Why you own the agent harness
+8:11 - Air gapping Droid inside the customer
+10:08 - The autonomy maturity model
+12:05 - Making a codebase agent ready
+14:53 - Migrating 40 million line codebases
+16:38 - The city of the future analogy
+18:34 - Constrained autonomy and legal droid
+20:04 - Redefining the forward deployed role
+
+## Serving 2 Million Models Without Melting: Scaling the Hugging Face Hub — Arek Borucki, Hugging Face
+
+- Upload date: 2026-07-28
+- Video: https://www.youtube.com/watch?v=lyL5QhgIOxc
+- Transcript: raw/20260728_lyL5QhgIOxc/lyL5QhgIOxc.en-orig.vtt
+- Metadata: raw/20260728_lyL5QhgIOxc/lyL5QhgIOxc.info.json
+
+Type llama into a catalog of 3 million public models and the result still has to feel instant. At 20,000 models any query is fast; at Hugging Face's scale, 14 million users and a million datasets on top, search becomes the hard part. Arek Borucki shows how the Hub keeps it quick: full text search on Apache Lucene, served through MongoDB Atlas, which stores only the metadata while the model artifacts sit in S3 so compute scales on its own. Regex ranking did not hold, so relevance now runs through one unified query with the $search operator, sorted by downloads, likes, and trending.
+
+Underneath is a seven node MongoDB cluster where only the primary takes writes, with a hidden analytics node soaking up the heavy queries so production traffic never feels them. Keep queries light, push everything else elsewhere, and once the catalog outgrows a single primary, shard the data across nodes by key. The front end scales the same way: Kubernetes goes from 10 to 500 pods and CastAI adds machines underneath, and because HPA only watches CPU and memory, they scale on event loop utilization through KEDA, which sees the request queue HPA cannot.
+
+Speaker info:
+- https://x.com/_Aras_B
+- https://www.linkedin.com/in/arekborucki/
+- https://arekborucki.cloud/
+
+Timestamps:
+0:00 - Introduction: scaling the Hugging Face Hub
+1:44 - The numbers: 14 million users, millions of models
+3:57 - Why search at scale is the hard part
+5:09 - Full text search on Apache Lucene
+5:46 - Request flow: autoscaling, MongoDB Atlas, and S3
+7:55 - How a search for "llama" works
+10:11 - Ranking and Atlas Search with the $search operator
+13:00 - The seven node cluster and a hidden analytics node
+16:42 - Sharding the database
+18:14 - Kubernetes autoscaling: 10 to 500 pods and CastAI
+20:07 - Scaling on event loop utilization with KEDA
+
+## AI tools for Forward Deployed Engineering — Vasuman Moza, Varick Agents
+
+- Upload date: 2026-07-28
+- Video: https://www.youtube.com/watch?v=l0FLhNqBOic
+- Transcript: raw/20260728_l0FLhNqBOic/l0FLhNqBOic.en-orig.vtt
+- Metadata: raw/20260728_l0FLhNqBOic/l0FLhNqBOic.info.json
+
+A customer spent five million dollars and five years migrating to SAP, and has zero appetite to rip anything out again. That constraint is the whole design at Varick Agents: instead of asking an enterprise to migrate, you drop forward deployed agents on top of the systems they already run. Vasuman Moza's version of the role maps how a department actually works today, the reconciliations between a purchase order and an invoice, the handoffs nobody documented, and then automates those processes end to end. It answers the stat everyone cites, that most AI projects never reach production, by starting from the customer's real workflow instead of a generic tool.
+
+Making one forward deployed engineer that productive takes tooling of its own. Varick builds a spec from the raw material of an engagement, the granola notes and Slack threads, then lets the engineer shape the workflow with Claude or Codex against a single source of truth that can just live in Postgres. The harder problem is context: frontier models are surprisingly bad at traversing a messy enterprise and knowing that person A and person B are the same entity, so Varick post trains its own models to extract the right context and strip the redundancy, and only then does the agent run autonomously. Every engagement starts by finding the bottleneck and grows out from there.
+
+Speaker info:
+- https://x.com/vasuman
+- https://www.linkedin.com/in/vasumanmoza/
+
+Timestamps:
+0:00 - Introduction: forward deployed agents
+1:55 - The question: what can an agent actually do?
+3:27 - What a forward deployed agent is
+4:44 - Automating a department end to end
+6:14 - Why enterprises need deployed engineers, no migrations
+8:30 - Hiring the top 1 percent
+10:51 - The platform and department wide ROI
+11:53 - Demo: tools for forward deployed engineers
+13:07 - Turning notes into a workflow spec
+14:22 - Engineering workflows with a source of truth
+16:53 - Post training models to extract context
+18:37 - Where this leaves us
+
+## How Forward Deployed Engineering is done at Cognition — Jia Wu
+
+- Upload date: 2026-07-28
+- Video: https://www.youtube.com/watch?v=RVxym6mmIns
+- Transcript: raw/20260728_RVxym6mmIns/RVxym6mmIns.en-orig.vtt
+- Metadata: raw/20260728_RVxym6mmIns/RVxym6mmIns.info.json
+
+Most of the coding agent market quietly optimizes for token usage; Cognition's deployed engineering team measures the opposite, the outcomes a customer can actually see, and reports something like an 82% reduction on the work they targeted. Jia Wu's argument is that you measure before Devin ever lands, then again once it is fully activated inside the customer, so the value is a real delta and not a vanity number. The way that value shows up is not linear: one team using the agent is a step function, a whole enterprise using it is parabolic, because the products Cognition builds and the customer's backlog start to overlap.
+
+That changes what a deployed engineer is. As the pure engineering part trends toward zero, the job leans on business and people skills: understand the customer's real problem space, find the highest leverage place to point the agent, and communicate it back into the roadmap, since customers are the lifeblood. Each deployment is meant to derisk and improve the next, because the challenges recur in similar shapes across companies. The value underneath it all is blunt: correctness and customer success at all costs, ship the hard thing and leave nothing on the table.
+
+Speaker info:
+- https://www.linkedin.com/in/jia-rong-wu/
+
+Timestamps:
+0:00 - Introduction: deployed engineering at Cognition
+2:05 - Step function to parabolic productivity
+3:35 - Where products meet the customer's problems
+5:16 - Pointing agents at the highest leverage work
+7:07 - How deployment challenges recur
+8:34 - What a deployed engineer actually is
+10:25 - Measuring outcomes, not token usage
+12:56 - The 82% result, measured before and after
+14:38 - Developers plus Devin, autonomously
+15:53 - Core values: correctness and customer success
+
+## Forward Deployed Engineering 101 — Kevin Bai, Anthropic, ex Palantir & Rippling Founding FDE
+
+- Upload date: 2026-07-28
+- Video: https://www.youtube.com/watch?v=KwhgfwOSToQ
+- Transcript: raw/20260728_KwhgfwOSToQ/KwhgfwOSToQ.en-orig.vtt
+- Metadata: raw/20260728_KwhgfwOSToQ/KwhgfwOSToQ.info.json
+
+Look at public software companies and very few ever crack half a million dollars in average contract value, and that gap is where forward deployed engineering lives. Kevin Bai's 101 starts from the shape of the deal: when your buyer is not technical and the thing you sell is not a finished product they can pick up and configure themselves, you cannot just ship software and walk away. You loan them engineers who build a real solution on top of your platform, so the customer is neither buying a product nor a service but the outcome in between. That is the model Palantir made famous, and it is how you land Fortune 500 contracts a self serve motion never reaches.
+
+The trap is doing it as pure custom work. Build a bespoke thing for every customer and you reinvent the wheel each time; what makes a forward deployed program work is a platform of reusable pieces the engineers assemble against, not a pile of one offs. So starting one comes down to two questions: is your product complex enough to need hand holding into a non technical org, and do you have engineers who can carry that. What has changed since the Palantir days is that building is easy now and nearly everything is agentic, which pulls this once niche motion toward the center of how software gets sold.
+
+Speaker info:
+- https://x.com/zkevinbai
+- https://www.linkedin.com/in/zkevinbai
+- https://zkevinbai.com/
+- find Kevin on FDE Pod https://fdepod.substack.com/ https://www.youtube.com/@FDEPod
+
+Timestamps:
+0:00 - Introduction: what this 101 covers
+1:47 - What Palantir does, and where FDE fits
+3:14 - Selling a solution, not a product or a service
+4:18 - When your buyer isn't technical
+5:59 - The business case: landing large contracts
+7:16 - FDE as a partnership on a reusable platform
+9:48 - How to start: two questions to ask
+11:34 - What has changed since Palantir
+13:08 - Q&A
+
+## How Forward Deployed Engineering is done at Ramp — Leo Mehr
+
+- Upload date: 2026-07-28
+- Video: https://www.youtube.com/watch?v=ITMXwI6QL6A
+- Transcript: raw/20260728_ITMXwI6QL6A/ITMXwI6QL6A.en-orig.vtt
+- Metadata: raw/20260728_ITMXwI6QL6A/ITMXwI6QL6A.info.json
+
+It's Friday night, an enterprise sales rep needs an SAP S4 HANA integration to hit quota, and the reflexive Forward Deployed answer is yes. Leo Mehr's first principle is to pause instead: always be scoping. Saying yes to everything buries the team and often does not even serve the customer, so the job is to weigh what actually matters against the rest of the queue and decide with that context. Ramp's FDE function looks different from its Palantir origins, pointed at enterprise customers, but the discipline is the same: scope hard before you roll up your sleeves and ship.
+
+The second half is what tokens change. Look at the FDE pipeline and ask which stages an agent can take over. Intake is a good one: requests pour in through account managers and solutions engineers, and someone has to read each and turn it into a spec. Ramp wired that step to an agent with Notion as the surface, and after a couple of iterations account reps were using it directly. The unglamorous parts are what make it work: an agent harness, evals with rubrics and human feedback, and past requests and help articles as grounding. The close is that the future of Forward Deployed needs both, humans for judgment and agents for the volume.
+
+Speaker info:
+- https://x.com/leomehr
+- https://www.linkedin.com/in/leomehr
+- https://leomehr.com/
+
+Timestamps:
+0:00 - Introduction: FDE principles at Ramp
+2:10 - Principle one: always be scoping
+3:16 - The Friday night SAP integration ask
+5:04 - When scoping goes wrong
+6:33 - Using agents for the FDE pipeline
+7:57 - Automating request intake into specs
+9:14 - Building the spec agent in Notion
+11:16 - The agent harness and evals
+13:27 - The future of FDE needs both
+
+## AI Agents for Performance: Ship Faster, Pay Less — Rajat Shah, Netflix
+
+- Upload date: 2026-07-28
+- Video: https://www.youtube.com/watch?v=CgsWxRUY5Eo
+- Transcript: raw/20260728_CgsWxRUY5Eo/CgsWxRUY5Eo.en-orig.vtt
+- Metadata: raw/20260728_CgsWxRUY5Eo/CgsWxRUY5Eo.info.json
+
+An inefficient quadratic-time pattern was hiding inside a tensor merge method on a live Netflix service, quietly wasting CPU on every request - nothing in a code review caught it, but it stood out clearly in a call stack. That's usually how this kind of waste gets missed - the normal process of catching it (profiling, reading a flamegraph, tracing it through the codebase, writing a fix, validating it) takes long enough that inefficiencies sit in production for months before anyone looks at them. AI-assisted coding adds to this, since it produces more code optimized for how fast it's written, not how fast it runs. Rajat Shah's team at Netflix built an agent to handle this loop: it took a call stack, traced the issue to the exact source line, proposed a fix, and validated it against a canary - a real production traffic split, with no regression allowed before it could ship. The result was based on measured outcomes, not the model's own assessment.
+
+The talk covers what it took to get an agent to a point where it could act in production, and walks through this specific case from start to finish - found, fixed, and confirmed by canary without anyone stepping in. It also covers what's next: the same pattern turned up independently in seven other services in one session, which is why it makes sense to build a shared catalog of patterns like this so they aren't rediscovered each time, and which could eventually be used to catch these issues in coding agents before the code ships at all. We'll also share the approach itself - how it was built, what it took to trust it, and what it caught - so other teams can adopt the same loop in their own SDLC rather than starting from scratch.
+
+Speaker info:
+- https://www.linkedin.com/in/rajatsshah/
+- https://github.com/shahrajat
+- https://shahrajat.com/
+
+Timestamps:
+0:00 - Introduction: performance for ML serving
+2:24 - The manual profiling loop today
+4:46 - The experiment: can an LLM read a profile?
+7:37 - From call stack to the exact method
+9:07 - How the agent locates and reads the code
+11:01 - First finding: an O(N) fix, canary confirmed
+12:41 - The same antipattern across seven services
+15:31 - Building a shared pattern catalog
+17:16 - Storing and sharing findings across services
+19:40 - Feeding the catalog to coding agents
+20:56 - Human approval and verification
+22:13 - Canary validation on real traffic
+24:18 - Reactive vs proactive paths
+26:54 - Catching waste before production
+29:32 - Autonomy levels and what is next
+
+## The Dirty Secret of Forward Deployed Engineering — Natalie Meurer, Sierra
+
+- Upload date: 2026-07-28
+- Video: https://www.youtube.com/watch?v=Byv311hdoHE
+- Transcript: raw/20260728_Byv311hdoHE/Byv311hdoHE.en-orig.vtt
+- Metadata: raw/20260728_Byv311hdoHE/Byv311hdoHE.info.json
+
+At Palantir, forward deployed started as a literal description: you were deployed, physically, at the customer's site, and the onboarding project was keeping the platform from falling over. Natalie Meurer's dirty secret is that the title never settled after that. It stretched across DevOps, data integration, ontology work in Slate and then Foundry, and solution architecture, until forward deployed engineering meant so many different jobs that the label stopped meaning much. Every company hiring for it, whether they call it forward deployed, customer, or deployed engineering, is describing a slightly different role of a particular vintage.
+
+Her argument is that the through line was never the code. As coding agents make writing software cheap, the durable part of the job is the rest of it: integrating the data, understanding the customer, and being accountable to an outcome. That is also why she thinks what the industry now calls agent engineering is really forward deployed engineering under a new name. The tell is in how you charge for it: seat based pricing assumes a tool, while pricing to usage or outcome assumes you are on the hook for the result, which is exactly what a forward deployed engineer has always been.
+
+Speaker info:
+- https://x.com/natalie_meurer
+- https://www.linkedin.com/in/nataliemeurer
+
+Timestamps:
+0:00 - Introduction: the dirty secret of FDE
+1:54 - FDE as a subdiscipline of AI engineering
+3:46 - Palantir origins: leading with location
+4:51 - Firefighting platform stability
+6:37 - DevOps, data, and the ontology in Slate
+9:02 - Why FDE is not one thing
+10:46 - Every company hires a different vintage
+12:28 - When code gets cheap, outcomes matter
+13:55 - Pricing: seats vs usage vs outcome
+15:26 - Agent engineering is FDE reborn
+
+## How Forward Deployed Engineering is done at Decagon — Sunny Rekhi
+
+- Upload date: 2026-07-28
+- Video: https://www.youtube.com/watch?v=7wu2hsRfvV0
+- Transcript: raw/20260728_7wu2hsRfvV0/7wu2hsRfvV0.en-orig.vtt
+- Metadata: raw/20260728_7wu2hsRfvV0/7wu2hsRfvV0.info.json
+
+Decagon builds the customer support agent that answers when you email a brand, and making that agent good for a specific enterprise is the forward deployed job. It splits in two: one side configures the agent brain, the instructions and the handoff rules for when a human should take over; the other works like product engineering, figuring out what a new enterprise needs and anticipating the requests that have not been made yet. Sunny Rekhi's point is that the line between forward deployed and product is thin, because a customer ask is often just a product feature waiting to be built.
+
+What changes at scale, from 50 people to 500, is that this splits into specialized lanes and a few disciplines start to matter. One is restraint: some problems belong to the customer, and getting the boundary in writing keeps everyone honest. The bigger one is that custom work does not stay custom. Every integration a forward deployed engineer builds gets upstreamed into the platform, so custom becomes self serve and the agent compounds, and the next customer inherits it for free. You still have to prove value fast, because the relationship is multi year but the trust is won in the first weeks.
+
+Speaker info:
+- https://www.linkedin.com/in/sunny-rekhi/
+
+Timestamps:
+0:00 - Introduction: forward deployed at Decagon
+1:06 - What Decagon's support agent does
+2:24 - Offloading support and proactive outreach
+3:40 - Two kinds of forward deployed work
+6:12 - Scaling from 50 to 500 people
+8:20 - Restraint, and getting it in writing
+9:59 - Ramping a new enterprise deal
+11:18 - Solving a problem so it scales
+13:00 - Proving value fast
+14:18 - Custom becomes self serve
+
+## How Forward Deployed Engineering is done at Kepler — Vinoo Ganesh
+
+- Upload date: 2026-07-28
+- Video: https://www.youtube.com/watch?v=1OMHGsUZiqA
+- Transcript: raw/20260728_1OMHGsUZiqA/1OMHGsUZiqA.en-orig.vtt
+- Metadata: raw/20260728_1OMHGsUZiqA/1OMHGsUZiqA.info.json
+
+A shipping and dispatch customer wanted alerts, a massive BI tool, and a dev environment. What they actually needed Monday morning was one Slack message, so that is what got shipped first, and the real thing followed. Vinoo Ganesh spent seven years doing this at Palantir, where he later ran the rotation program that turned software engineers into forward deployed engineers, and his throughline is that the work was never a sales motion, it was product strategy in disguise. The engineer sits in the customer's environment, solves the concrete problem in under a day, and then generalizes it into something the whole product can use.
+
+The compounding lessons are less obvious. Watch what people actually do: any task a user repeats is a hint at a missing feature, and someone pulling out their phone in the middle of a workflow is a bug report you will never find in documentation. The deepest one is language. When a customer says clients, finance says billing, and support says accounts, the ambiguity costs real money, so the forward deployed engineer defines the terms, the ontology, and becomes the linguistic layer the rest of the system is built on. A throwaway Groovy script that quietly became a product a year later is the whole pattern: forward deployed engineers drive product strategy without anyone calling it that.
+
+Speaker info:
+- https://x.com/vinooganesh
+- https://www.linkedin.com/in/vinoo-ganesh/
+- https://vinoo.io
+
+Timestamps:
+0:00 - Introduction: FDE's origins at Palantir
+2:05 - Not a role, a product strategy
+4:51 - Real stories: scoping down to a Slack alert
+7:11 - Solve in a day, then ship the real thing
+8:33 - The data quality engineer story
+10:03 - Watch what users actually do
+12:33 - Own the language: clients vs billing
+14:54 - The ontology and the linguistic layer
+16:51 - The Groovy script that became a product
+18:09 - The most important skill: what to discard
+19:38 - Ship everything like it runs forever
+21:11 - FDE as an extension of product
+
+## State of Data — Sean Cai, Independent / State of Data
+
+- Upload date: 2026-07-26
+- Video: https://www.youtube.com/watch?v=ZyIoTOAbRfs
+- Transcript: raw/20260726_ZyIoTOAbRfs/ZyIoTOAbRfs.en-orig.vtt
+- Metadata: raw/20260726_ZyIoTOAbRfs/ZyIoTOAbRfs.info.json
+
+GPT 5.5 and Opus 4.8 landed within three points on the same finance benchmark while failing in opposite directions. GPT got the arithmetic right. Opus got the methodology right. One leaderboard number flattened both failures into a single noisy sample, exactly what happens when benchmarks reward one scaffold and vendors sell the data used to climb the tests they designed.
+
+The scarce asset is no longer another isolated answer. It is process data: the reasoning trace, sequence of decisions, state changes, failures, recoveries, and verified outcomes that turn general competence into real expertise. Static datasets depreciate as models improve, so the durable moat is a live pipeline into real work plus the infrastructure to retrain when the base model changes.
+
+Speaker info:
+- https://x.com/SeanZCai
+- https://www.linkedin.com/in/sean-z-cai
+- https://www.seancai.com/philosophy/state_of_data_jan_2026
+
+Timestamps:
+0:00 - The data market nobody sees
+1:15 - Data as industrial fuel
+2:31 - Type one and type two data
+3:23 - Compute, data, and talent
+4:24 - State data versus process data
+5:54 - The three axes of verifiability
+8:14 - When benchmarks become snake oil
+10:08 - Three finance benchmark tests
+12:04 - Predicting the next AI domain
+13:21 - The robotics counterexample
+14:22 - Where the economic value lives
+16:02 - Why data companies move enterprise
+17:09 - The durable moat
+
+## DeepSWE: A Contamination-Resistant Coding Benchmark — James Shi, Datacurve
+
+- Upload date: 2026-07-26
+- Video: https://www.youtube.com/watch?v=Yk87oUPVaxU
+- Transcript: raw/20260726_Yk87oUPVaxU/Yk87oUPVaxU.en-orig.vtt
+- Metadata: raw/20260726_Yk87oUPVaxU/Yk87oUPVaxU.info.json
+
+DeepSWE is 113 software engineering tasks written from scratch, not scraped from pull requests, so a model cannot have seen them in training. Each one is a long horizon problem drawn from a real open source repository, authored by engineers who actually maintain that code, with isolated environments and program based verifiers that check observable behavior rather than trusting the model's own account. James Shi's point is that once you remove the contamination the leaderboard stops clustering: strong models pull far ahead and others, Gemini 3.1 Pro among them, fall toward the bottom.
+
+The more revealing signal is in how models fail. Some quietly expand a task beyond what was asked, a failure mode DeepSWE scores in its own right, and Claude models did this a good fraction of the time while GPT models did it less often. Stronger models also tend not to verify their own work, and there is a real gap between the ones that test what they wrote and the ones that assume it is correct. Since reward hacking is a constant temptation, the verifiers are built to be gamed as little as possible, keeping the score anchored to the objective rather than to a convincing looking rollout.
+
+Speaker info:
+- https://x.com/shiqyy
+- https://www.linkedin.com/in/jamesshi117/
+- https://deepswe.datacurve.ai
+
+Timestamps:
+0:00 - Introduction: the DeepSWE benchmark
+1:03 - 113 original, contamination-resistant tasks
+2:08 - What makes a good benchmark
+3:51 - The leaderboard and model spread
+5:18 - Failure mode: over-scoping the task
+7:16 - Do models verify their own work?
+8:45 - Tasks authored by core contributors
+10:15 - Writing realistic, high level prompts
+11:45 - Program based verifiers and observable behavior
+13:43 - Limitations and future work
+15:25 - Reward hacking and keeping it cheating proof
+
+## The Messy Reality of Scale: Synthetic Data and Pre-Training — Marah Abdin & Robert McHardy, poolside
+
+- Upload date: 2026-07-26
+- Video: https://www.youtube.com/watch?v=KhYifX22yhE
+- Transcript: raw/20260726_KhYifX22yhE/KhYifX22yhE.en-orig.vtt
+- Metadata: raw/20260726_KhYifX22yhE/KhYifX22yhE.info.json
+
+Good code data runs out, so poolside manufactures more of it, and the hard part is making it teach. Their synthetic pipeline pairs templates with supplementary context and spreads generations across an axis of phrasing, with difficulty tuned so a task is neither trivial nor so hard the model learns nothing from it. Multistage pipelines port existing data into new shapes, swapping character styles or plots and turning single prompts into multi turn chats, while an orchestrator polices every generation and drops the ones that miss.
+
+On the training side the team trusts nothing: run two replicas of the same model on the same data and they must return the same number, or the run gets killed. That is how the messy failures surface. Broken GPUs show up as a spiky loss curve, a numerical precision bug in tensor parallel accumulation quietly flattened another until they patched it, and silently corrupted gradients from a race condition were a blind spot nothing caught. The payoff is a 118 billion parameter model built for agentic coding whose early results already edge out GLM 4.5 Air, on a recipe that held as it scaled.
+
+Speaker info:
+Marah Abdin, poolside:
+- https://x.com/marah_i_abdin
+- https://www.linkedin.com/in/marah-abdin
+- https://marahabdin.com
+
+Robert McHardy, poolside:
+- https://x.com/robert_mchardy
+- https://www.linkedin.com/in/robert-mchardy
+- https://www.robertmchardy.de
+
+Timestamps:
+0:00 - Introduction: synthetic data and pre-training at poolside
+1:52 - Why synthetic data
+3:11 - Limitations and the training budget
+4:44 - Inside the synthetic data pipeline
+6:37 - Multistage pipelines and porting data
+7:43 - Multi turn chats and policing generations
+9:03 - Pre-training: trust nothing, crash on mismatch
+10:41 - Failures at scale: broken GPUs
+11:56 - Numerical precision and corrupted gradients
+13:15 - A 118B model for agentic coding
+15:07 - Early results vs GLM 4.5 Air
+
+## Loop Engineering from First Principles — Kyle Mistele, HumanLayer
+
+- Upload date: 2026-07-25
+- Video: https://www.youtube.com/watch?v=xIt_mTQp6mY
+- Transcript: raw/20260725_xIt_mTQp6mY/xIt_mTQp6mY.en-orig.vtt
+- Metadata: raw/20260725_xIt_mTQp6mY/xIt_mTQp6mY.info.json
+
+A coding agent will happily hand you a 40,000 line pull request that nobody can review and that quietly does the wrong thing. Kyle Mistele's argument is that the fix is not a better prompt but a better loop, borrowed from control theory: a thermostat senses the error between where a system is and where you want it, emits a control signal, and measures again, over and over. Infrastructure as code already approximates this. The point is to design agent loops the same way, so each iteration makes a small, readable change you can actually verify, instead of one giant diff you have to trust.
+
+The working example is migrating a codebase one procedure at a time. A sensor, often just Grep or a structural search, finds the smallest unmigrated piece, a controller picks what to work on next, and an actuator agent makes the change against golden patterns defined by hand, gated by deterministic CI like a single loop iteration in CircleCI. The loop tracks its own PRs in version control, refuses to stack a new change while an earlier one is still open, and keeps improving the code incrementally, even while the team is away.
+
+Speaker info:
+- https://x.com/0xBlacklight
+- https://www.linkedin.com/in/kyle-mistele
+- https://blacklight.sh
+
+Timestamps:
+0:00 - Introduction: the 40,000 line PR problem
+1:55 - Why more code is not the goal
+3:37 - Is the generated code any good?
+4:43 - Control loops from control theory
+5:49 - Infrastructure as code and Ralph loops
+7:06 - Applying control loops to coding
+8:35 - Migrating a codebase one procedure at a time
+10:40 - Tracking the loop in version control
+12:35 - The actuator agent and golden patterns
+13:51 - Wiring the loop into CI
+15:44 - Avoiding stacked PRs and scaling the controller
+
+## Why Large? Tiny LMs & Agents on Edge/Robotics — Cormac Brick, Google
+
+- Upload date: 2026-07-25
+- Video: https://www.youtube.com/watch?v=hacEQHHhu2Q
+- Transcript: raw/20260725_hacEQHHhu2Q/hacEQHHhu2Q.en-orig.vtt
+- Metadata: raw/20260725_hacEQHHhu2Q/hacEQHHhu2Q.info.json
+
+The constraint on edge AI is not compute, it is RAM, and it is getting worse: phone makers are shipping less of it this year, and a 6GB Raspberry Pi costs 2.5 times what it did at launch. So Cormac Brick's team at Google AI Edge spends its effort making models small enough to fit. A 2 billion parameter Gemma, quantized to 2.9 bits per weight, runs on a Raspberry Pi at about 8 tokens per second and on a Qualcomm NPU fast enough for a few frames of vision a second.
+
+Below that sit tiny models, from 500 million parameters down to 50, that reach the older laptops and cheap devices where even a small model will not fit. They usually need fine tuning rather than prompting, but the payoff is real: a fine tuned Gemma turns free text into the right function call across ten actions at over 86% reliability, and putting a speech model in front gives you voice to function calling. One shipped example is an offline voice dictation app with no subscription, built on two sub billion Gemma models that also strip your ums and ahs.
+
+Speaker info:
+- https://x.com/cormacb
+- https://www.linkedin.com/in/cbrick/
+- https://github.com/google-ai-edge/gallery
+
+Timestamps:
+0:00 - Why intelligence at scale needs tiny models
+1:17 - The Google AI Edge team and its open source stack
+2:35 - Why run on the edge at all
+3:25 - The real constraint: DRAM cost
+4:40 - Small models: 1 to 4 billion parameters
+6:08 - Shrinking Gemma to 2.9 bits per weight
+7:36 - Decode speeds across Raspberry Pi, Jetson, and NPUs
+9:30 - Try it yourself: AI Edge Gallery and a hobby robot
+12:07 - When small is still too big: tiny models
+13:24 - Off the shelf tiny models: ASR, vision, embeddings
+14:28 - Fine tuning for voice to function calling
+17:50 - In production: offline voice dictation
+19:30 - Takeaways and Q&A
+
+## Evaling Video Slop — Maor Bril, Character.ai
+
+- Upload date: 2026-07-25
+- Video: https://www.youtube.com/watch?v=b_PmGocP4rc
+- Transcript: raw/20260725_b_PmGocP4rc/b_PmGocP4rc.en-orig.vtt
+- Metadata: raw/20260725_b_PmGocP4rc/b_PmGocP4rc.info.json
+
+A generated clip where the character stands frozen for four seconds can still score well, because the judge rewarded the gloss and the vibe instead of what actually happened. That failure is the whole problem with evaling video: CLIP score misses temporal incoherence, a team watching clips on Friday does not scale, and any AI judge you wire up drifts from human preference unless you measure the drift. Video breaks the text playbook because it has to hold temporal consistency, shot continuity, and a coherent story across frames, not just look good in a single still.
+
+The fix that stuck was to stop scoring and start comparing. Absolute scores collapsed to one dimension, but pairwise preference, is B a better story than A, held up, so Maor Bril's team trained a Qwen3-VL judge with Bradley-Terry loss on pairs of real and deliberately broken footage to catch slop before it ships. Drift is cheapest to catch early, especially on longer form video, so the judge runs as a regression gate in CI: every AgentX release at Character.ai clears an eval wall, calibrated against human scores, before users ever see it.
+
+Speaker info:
+- https://x.com/maorbril
+- https://www.linkedin.com/in/maorbril
+- https://github.com/character-ai/judgejudy
+
+Timestamps:
+0:00 - Introduction: evaluating AI generated video
+1:19 - Why video generation drifts between frames
+3:14 - Story and sound: what a clip has to get right
+4:43 - LLM as a judge, and catching drift early
+7:01 - Story and sound failure modes
+8:28 - Small model vs bigger model as judge
+9:20 - Don't score, compare: pairwise preference
+10:47 - When the judge scores vibe over substance
+11:53 - Pairing real footage to train a quality detector
+13:27 - Self verification in the generation loop
+15:05 - Q&A
+
+## Evals-Driven Development for a Mental Health AI Coach — Akele Reed & Dave Revere, SonderMind
+
+- Upload date: 2026-07-25
+- Video: https://www.youtube.com/watch?v=O72p-rBb2bA
+- Transcript: raw/20260725_O72p-rBb2bA/O72p-rBb2bA.en-orig.vtt
+- Metadata: raw/20260725_O72p-rBb2bA/O72p-rBb2bA.info.json
+
+In the world of AI mental health, vibes can be dangerous, with real consequences. Building SonderMind's Mental Health AI Coach required a new playbook for eval-driven development that balances effectiveness and safety.
+
+The team explains the clinical feedback loop that turns human therapist insights into machine-readable evaluations across thousands of conversations; the Ethics Engine of modular guardrails that can evolve with clinical guidelines; the move from single-prompt agents to a closed-loop Supervisor/Executor/Evaluator architecture; and the human oversight used to improve safety and quality.
+
+Speakers:
+
+Akele Reed — Principal AI Engineer, SonderMind
+Akele leads the team behind SonderMind's conversational AI mental health feature and helped architect its guardrails and evaluations framework.
+LinkedIn: https://www.linkedin.com/in/akele-reed
+
+Dave Revere — Staff AI Engineer, SonderMind
+Dave builds evaluation, guardrail, clinical-feedback, and regression-testing infrastructure for high-stakes mental health AI.
+X/Twitter: https://x.com/daverevere
+LinkedIn: https://www.linkedin.com/in/daverevere
+
+Doug Keller — Senior Staff AI Engineer, SonderMind
+Doug is the lead architect of SonderMind's agent platform and a core builder of its mental health coach.
+LinkedIn: https://www.linkedin.com/in/doug-keller/
+
+## From Agent Traces to Agent Simulations — Rustem Feyzkhanov, Snorkel AI
+
+- Upload date: 2026-07-25
+- Video: https://www.youtube.com/watch?v=Ib5t2RLtxvM
+- Transcript: raw/20260725_Ib5t2RLtxvM/Ib5t2RLtxvM.en-orig.vtt
+- Metadata: raw/20260725_Ib5t2RLtxvM/Ib5t2RLtxvM.info.json
+
+Take a real production trace, rebuild the database state, tools, and files the agent touched, and you have a task any model can replay under identical conditions. That reconstruction is the move at the center of this talk. Public benchmarks like WebArena hand you a single success rate on someone else's tasks, but what you actually care about is cost per solved task, latency, and whether the agent followed your policies. So you build a private benchmark from your own traces, wire in the same skills, tools, and evaluators the agent sees in production, and compare models apples to apples on the environment that matters to you.
+
+The environments are multistep and long horizon, so a verifier reads the final state while an LLM judge checks whether the agent followed policy, and a run can stop early once it clearly goes off track. The hard parts are the edge cases: agents that reward hack the simulation, missing fixtures, tasks that turn out to be unsolvable. Rustem Feyzkhanov's case is that this belongs in a CI pipeline for agents, the same way tests gate code, connecting observability traces to experiments to a benchmark that keeps up as the agent changes. Every company ends up needing its own, as part of the agent ops loop.
+
+Speaker info:
+- https://x.com/ryfeus
+- https://www.linkedin.com/in/ryfeus
+- https://ryfeus.io
+
+Slides:
+- https://www.dropbox.com/scl/fi/lyp1my0oc9whpusps29t7/Agent-Simulations-Talk.pdf?rlkey=rhrrpgun5c35kwculce0wmt2x&e=1&dl=0
+
+Timestamps:
+0:00 - Introduction: why Snorkel builds agent benchmarks
+1:17 - Benchmark construction and testing agents in production
+3:08 - The limits of public benchmarks
+4:01 - Why you need a private benchmark
+4:52 - Environments, tools, and evaluators
+6:34 - Anatomy of a simulation task
+7:37 - Task formats: instruction files and Oracle data
+9:20 - Multistep, long horizon simulations
+10:54 - Verifiers, LLM as a judge, and reward hacking
+13:02 - A CI pipeline for agents
+15:19 - Connecting traces, experiments, and benchmarks
+16:51 - Q&A
+
+## How Evals and Prompts Shape Agent Behavior — Preetika Bhateja & Daniel Bump, YouTube Ads
+
+- Upload date: 2026-07-24
+- Video: https://www.youtube.com/watch?v=xyL2Ltkh-SA
+- Transcript: raw/20260724_xyL2Ltkh-SA/xyL2Ltkh-SA.en-orig.vtt
+- Metadata: raw/20260724_xyL2Ltkh-SA/xyL2Ltkh-SA.info.json
+
+Getting an AI agent to behave the way you want isn't just about writing better prompts. In real systems, behavior emerges from a loop: prompts, evals, iteration, and feedback. Small changes in any part of that loop can completely change outcomes.
+
+The Google team shares lessons from building a seed-asset agent that turns messy advertising creatives — low-quality images, cluttered visuals, and heavy text overlays — into clean, reusable assets for downstream generative AI tools. They explain why prompting alone did not produce stable behavior, how evals became feedback signals rather than scorecards, how agent trace logs exposed why failures happened, and how they iterated without breaking problems they had already fixed.
+
+Speakers:
+
+Chris Souza — Google
+Chris works on the Google team behind this seed-asset agent and its evaluation workflow.
+
+Preetika Bhateja — Product Manager, Google/YouTube
+Preetika works on ads, evaluations, agents, and LLM-as-judge systems.
+
+Daniel Bump — Engineer, Google
+Daniel focuses on image and video generation and computer vision.
+X/Twitter: https://x.com/DanielJBump
+LinkedIn: https://www.linkedin.com/in/danielbump
+
+## The Future of Evals: From LLM as a Judge to Agent as a Judge — Aparna Dhinakaran, Arize AI
+
+- Upload date: 2026-07-24
+- Video: https://www.youtube.com/watch?v=q2JrUKBMf0w
+- Transcript: raw/20260724_q2JrUKBMf0w/q2JrUKBMf0w.en-orig.vtt
+- Metadata: raw/20260724_q2JrUKBMf0w/q2JrUKBMf0w.info.json
+
+Across a dozen eval jobs Arize watches the top teams run, one pattern holds: the eval has to change as fast as the agent it grades. In 2023 an agent was barely more than a prompt; since then reasoning, tool calls, and long multi step loops piled on, and every jump in capability quietly broke the eval that came before. So the evals evolved with them. Deterministic checks catch what you can define up front, LLM as a judge adds the analysis a fixed rule cannot, and the newest step, agent as a judge, hunts for failure modes you would never think to write a check for and can open a pull request to fix what it finds. Aparna Dhinakaran's argument is that this arc, from static checks to an agent grading another agent, is where evals go next.
+
+Speaker info:
+- https://x.com/aparnadhinak
+- https://www.linkedin.com/in/aparnadhinakaran/
+
+Timestamps:
+0:00 - Opening: the future of the Evals track
+2:06 - Why evals got harder as agents evolved
+3:45 - From deterministic checks to LLM as a judge
+4:36 - Agent as a judge, and where evals go next
+
+## Everything Is a Rollout — Alex Shaw + Ryan Marten, Terminal-Bench, Harbor, Laude Institute
+
+- Upload date: 2026-07-24
+- Video: https://www.youtube.com/watch?v=jRCpXUjz4CI
+- Transcript: raw/20260724_jRCpXUjz4CI/jRCpXUjz4CI.en-orig.vtt
+- Metadata: raw/20260724_jRCpXUjz4CI/jRCpXUjz4CI.info.json
+
+Alex Shaw and Ryan Marten present a rollout-centered view of evaluating and improving AI agents. Drawing on their work on Harbor, Terminal-Bench, and OpenThoughts-Agent, they connect sandboxed environments, agent evaluations, and optimization workflows into a practical framework for generating and learning from rollouts.
+
+Speakers:
+
+Alex Shaw — Member of Technical Staff, Laude Institute
+Alex is the creator of Harbor, a framework for evaluating and optimizing agents and language models in sandboxed environments.
+https://www.linkedin.com/in/alexgshaw/
+
+Ryan Marten — Member of Technical Staff, Laude Institute
+Ryan builds Harbor and works on research-to-production efforts including Terminal-Bench and OpenThoughts-Agent.
+https://www.linkedin.com/in/ryan-marten/
+
+Harbor: https://www.harborframework.com/
+GitHub: https://github.com/harbor-framework/harbor
+
+## Full Workshop: Setting Yourself Up for Success —Jason Liu, OpenAI Codex
+
+- Upload date: 2026-07-24
+- Video: https://www.youtube.com/watch?v=il1c1a2FufU
+- Transcript: raw/20260724_il1c1a2FufU/il1c1a2FufU.en-orig.vtt
+- Metadata: raw/20260724_il1c1a2FufU/il1c1a2FufU.info.json
+
+Jason Liu walks through how Codex works as a general tool for controlling your computer: setting up a memory vault and assistant threads, prompting it to collaborate with other threads, exploring computer use, thinking about long-running work streams, and preparing to work in loops.
+
+Speaker:
+
+Jason Liu — Developer Experience, OpenAI
+Jason helps developers get more from Codex, the Agents SDK, and the OpenAI API. Before OpenAI, he created Instructor and taught developers how to build reliable AI applications.
+
+X/Twitter: https://x.com/jxnlco
+LinkedIn: https://www.linkedin.com/in/jxnlco
+Website: https://jxnl.co/
+
+## Vending-Bench: Long-Horizon Agent Evals — Lukas Petersson, Andon Labs
+
+- Upload date: 2026-07-24
+- Video: https://www.youtube.com/watch?v=cO8qC6HBuBg
+- Transcript: raw/20260724_cO8qC6HBuBg/cO8qC6HBuBg.en-orig.vtt
+- Metadata: raw/20260724_cO8qC6HBuBg/cO8qC6HBuBg.info.json
+
+An hour before this talk, Andon Labs published a blog post laying off Gemini. Gemini had been running their café in Stockholm, a real café that no human operates, and it had lost $6,000, so they handed it to GPT. That café once hired its own staff by posting a job on LinkedIn. This is the real world half of Lukas Petersson's work; the other half is Vending Bench, where models run a simulated vending business for a year and keep producing behavior nobody prompted: price cartels, lying to suppliers, and power seeking.
+
+The problem with the simulation is that models act differently once they suspect they are being tested; one rationalized stiffing a customer's refund because the customer was simulated anyway. So Andon moved businesses into the real world, retail space on Union Street, the café, AI radio stations where Claude turns out to be the best DJ. To win back reproducibility they fork a live environment into a simulation mid run, which briefly fools the model completely. Replaying the moment Gemini agreed to play a Nazi march, Grok played it over 90% of the time while Opus and GPT refused every time.
+
+Speaker info:
+- https://x.com/lukaspet
+- https://www.linkedin.com/in/lukas-petersson-181a83172/
+- https://lukaspet.substack.com/
+
+Timestamps:
+0:00 - Putting AIs in the real world
+1:05 - Building Vending Bench
+2:07 - The leaderboard: which models run a business best
+3:25 - Emergent misbehavior: collusion, lying, power seeking
+5:42 - The simulation awareness problem
+6:23 - Moving businesses into the real world
+7:11 - Laying off Gemini, hiring GPT
+9:06 - AI radio and the best DJ
+10:39 - Humans as adversarial forces
+12:43 - The Nazi song and the reproducibility problem
+13:58 - Forking real environments into simulation
+15:17 - Live demo: is the store in a simulation?
+
+## Training Frontier Models to Out-Think Hackers — Uri Rolls, Arithmetic & Thom Wolf, Hugging Face
+
+- Upload date: 2026-07-24
+- Video: https://www.youtube.com/watch?v=O-CBZ3JtRvo
+- Transcript: raw/20260724_O-CBZ3JtRvo/O-CBZ3JtRvo.en-orig.vtt
+- Metadata: raw/20260724_O-CBZ3JtRvo/O-CBZ3JtRvo.info.json
+
+NOTE: see further context from Thom: https://x.com/Thom_Wolf/status/2079954096950264238?s=20
+
+Give a frontier model a real chain of Keycloak, Vault, and a broker, start it as a low privileged user, and ask it to reach production code. There is a genuine zero day in there: one check validates the admin by name while another checks by ID, so a user can simply rename themselves to the admin and inherit the privilege. GPT 5.5 and Opus probe everything, even reach the check, and never make that logical leap. That gap is the point of Uri Rolls and Hugging Face cofounder Thom Wolf's talk: today's models can do the reconnaissance but not the reasoning jump a skilled hacker makes.
+
+Their argument is optimistic, which is rare in AI and cyber right now. Just as high quality data transformed coding, Arithmetic builds cyber training data by having human vulnerability researchers find their own zero days in open source software, then wrapping them in blackbox environments where every step of discovery and exploitation is deterministically graded. The benchmark, focused on access control, the top vulnerability class, is brutal: exactly one solve at K1. The bet is that if open source models get fast and good enough at these logic leaps, defenders finally get a lasting edge over attackers, instead of leaving it to two labs.
+
+Speaker info:
+Uri Rolls, Arithmetic:
+- https://x.com/uri_rolls
+- https://www.linkedin.com/in/urirolls/
+Thom Wolf, Hugging Face:
+- https://x.com/Thom_Wolf
+- https://linkedin.com/in/thom-wolf
+- https://thomwolf.io
+
+Timestamps:
+0:00 - Why cyber is a wide new field for AI
+1:34 - The ARC-AGI-3 parallel: models can't model the world
+2:24 - Open source models as part of the defense
+3:45 - The shifting economics of cyber
+5:52 - The optimistic thesis: models are the solution
+7:06 - The first benchmark: access control
+8:20 - Data quality: finding your own zero days
+10:01 - A real solve: the Keycloak name versus ID exploit
+11:57 - Live demo: one solve at K1
+14:22 - Only models can replace the old stack
+15:00 - The speed challenge and specialized defenders
+
+## From Signal to PR: Anatomy of a Self-Improving Agent — Jason Lopatecki, Arize
+
+- Upload date: 2026-07-24
+- Video: https://www.youtube.com/watch?v=9HbzAWnKbo4
+- Transcript: raw/20260724_9HbzAWnKbo4/9HbzAWnKbo4.en-orig.vtt
+- Metadata: raw/20260724_9HbzAWnKbo4/9HbzAWnKbo4.info.json
+
+Instead of getting paged at midnight and starting to dig, you wake up to an issue that has already been investigated: the traces pulled, the root cause found, and a pull request with the fix waiting for review. That is what Arize built with Signal, and Jason Lopatecki walks through the anatomy of it. The unlock is boring and specific: traces on a filesystem. A skill pulls the relevant production traces and logs down as files into the repo, right next to the code, sometimes ten megabytes of them, because coding harnesses like Claude Code are magical with files and hopeless with a dashboard.
+
+From there the agent has the exact code path the software took, not a guess among a million branches, and can produce a real fix. You pick the harness, the sandbox, and the skills, and Arize can run it inside your VPC, because companies like Uber and Booking will not point production systems at an external model. The deeper shift is that observability stops being a dashboard you click and becomes the smoke a system throws off for agents to read, which is why you now log and trace ten times more, not less. He is honest about the limits: a one line fix is the easy case, bigger fixes still need a human to drive, and the job moves from responder to reviewer.
+
+Speaker info:
+- https://www.linkedin.com/in/jason-lopatecki-9509941/
+- https://arize.com/author/jason-lopatecki/
+
+Timestamps:
+0:00 - Arize, its agent Alyx, and why v1 sucked
+1:36 - Observability is changing: from dashboards to telemetry for agents
+2:55 - The goal: systems that fix themselves
+4:14 - Inverting the loop: the agent investigates first
+6:08 - Traces on a filesystem, the key unlock
+7:23 - From your laptop to sandboxes
+8:13 - A real fix: the Alyx stream canceled bug
+9:39 - Why you should trace ten times more
+11:10 - Product demo: Signal, AX, and Phoenix
+13:09 - Sandboxes, VPC, and why customers won't call out
+16:20 - Q&A: why not just point Claude Code at your data?
+18:04 - Q&A: where do the evals come in?
+
+## Building Closed-Loop Evals for a Multimodal Agent at Scale — Soumya Gupta & Jai Chopra, Uber
+
+- Upload date: 2026-07-24
+- Video: https://www.youtube.com/watch?v=31GUkCBD-Uc
+- Transcript: raw/20260724_31GUkCBD-Uc/31GUkCBD-Uc.en-orig.vtt
+- Metadata: raw/20260724_31GUkCBD-Uc/31GUkCBD-Uc.info.json
+
+This talk covers how Uber designed evals for its food enhancement agent, which edits food photography to better present dishes for smaller, independent Uber Eats merchants, along with the pitfalls and lessons learned along the way.
+
+The problem is uniquely hard: the system must stay faithful to the original dish, preserve each merchant's brand and packaging, and avoid homogenizing the marketplace, all without an existing playbook for multimodal evals in a narrow domain. Soumya Gupta and Jai Chopra explain how they navigated reward hacking, built a closed feedback loop combining offline and online signals, and balanced creativity against rigid safety guardrails at scale.
+
+ML and applied AI practitioners working on multimodal systems, agentic pipelines, or eval design will take away practical strategies for narrow-domain multimodal evaluations, countering reward hacking, and production feedback loops.
+
+Speakers:
+
+Soumya Gupta — ML Engineer, Uber
+Soumya is a Tech Lead and Applied AI Engineer who architects and scales production-grade generative AI and computer vision systems at Uber.
+X/Twitter: https://x.com/guptasoumya12
+LinkedIn: https://www.linkedin.com/in/guptasoumya12/
+
+Jai Chopra — Product Manager, Uber
+Jai is a Product Lead on Uber's Applied AI team and previously worked at Cruise and several startups.
+X/Twitter: https://x.com/jai_chopra
+LinkedIn: https://linkedin.com/in/jaichopra
+
+## Why We Killed Our Multi-Agent Pipeline — Subbiah Sethuraman and Abhilash Asokan, ZS Associates
+
+- Upload date: 2026-07-23
+- Video: https://www.youtube.com/watch?v=u6jJcIFDLE4
+- Transcript: raw/20260723_u6jJcIFDLE4/u6jJcIFDLE4.en-orig.vtt
+- Metadata: raw/20260723_u6jJcIFDLE4/u6jJcIFDLE4.info.json
+
+Their first pharma analytics system mimicked a human analyst: one agent to detect a signal, one to localize it, one to find the cause, one to synthesize, all wired to an orchestrator. It produced answers like this: prescriptions dropped 18% in a territory because a payer moved the drug to a worse tier, so send more sales reps. The cause was right and the action was wrong, because no single agent owned the whole picture. So Subbiah Sethuraman's team at ZS killed the multi agent pipeline.
+
+Instead of redesigning the topology, they opened an empty directory, gave Claude Code bash and the database, and watched what it actually did. The rebuild came out smaller, not bigger. Signal detection moved into a deterministic pipeline that runs before the agent wakes up, so the agent investigates rather than guesses. A single agent owns the reasoning and spawns sub agents only when a focused lookup needs one. A pharma knowledge graph acts as a control plane, not a lookup table: every edge is a hypothesis the agent tests against the data, which bounds the search. The result does in 20 minutes what an analyst did in a month.
+
+Speaker info:
+- https://www.linkedin.com/in/subbiahsethuraman/
+- https://subbiah-sethuraman.medium.com/
+
+Timestamps:
+0:00 - Pharma commercial analytics and the analyst's four steps
+2:33 - V1: an agent for every step
+3:26 - Why the output was incoherent
+4:32 - Why it failed: signals, handoffs, and missing domain
+5:57 - The rebuild: watching Claude Code in an empty directory
+7:01 - Deterministic signal detection before the agent
+8:05 - Consolidating to a single agent
+9:22 - The knowledge graph as a control plane
+11:04 - Every edge a hypothesis, and the result
+
+## Learned Execution Graphs for Anomaly Detection & Drift in APIs — Ritvik Pandya, JP Morgan Chase
+
+- Upload date: 2026-07-23
+- Video: https://www.youtube.com/watch?v=u1yaOeEX4e8
+- Transcript: raw/20260723_u1yaOeEX4e8/u1yaOeEX4e8.en-orig.vtt
+- Metadata: raw/20260723_u1yaOeEX4e8/u1yaOeEX4e8.info.json
+
+Traditional monitoring reported the system healthy: latency down, errors at zero. A mandatory processing step had been silently skipped, and nothing caught it except the graph. Ritvik Pandya's team at JP Morgan models each API request as a short lived execution graph, a DAG of the middleware steps it passes through, learned from telemetry at over 1,600 requests per second. Compare what actually ran against that learned graph and a skipped, reordered, or injected step stops hiding behind healthy averages.
+
+The same graph localizes performance problems to the exact node instead of the whole endpoint. In production it flagged a 41x deviation at a single node that service level monitoring never saw, cutting root cause from hours to under 30 seconds. The talk separates a one off anomaly from real drift, a slow shift that needs a new baseline, and sorts drift into structural, volume, and behavioral, using per node baselines and KL divergence rather than one threshold for every request. The payoff is a cheap tier one check that only escalates when the graph says something actually changed.
+
+Speaker info:
+- https://www.linkedin.com/in/ritvik-pandya/
+
+Timestamps:
+0:00 - Execution graphs for anomaly and drift detection
+1:07 - What a short lived execution graph is
+3:28 - Tiered checks and per client baselines
+5:23 - The method: baseline, deviation, localize, act
+6:16 - Localizing a slow node, and how the system is trained
+7:33 - Anomaly versus drift
+8:55 - The three kinds of drift: structural, volume, covariate
+12:46 - The pipeline: from telemetry to gradual rollout
+13:54 - Hot path versus recon, and worked examples
+15:21 - Tuning it: delayed events, sampling, cold starts
+17:09 - Results and lessons
+
+## Video Has No Memory. Here's How We Built One. — James Le, TwelveLabs
+
+- Upload date: 2026-07-23
+- Video: https://www.youtube.com/watch?v=mOf-PP4mVjA
+- Transcript: raw/20260723_mOf-PP4mVjA/mOf-PP4mVjA.en-orig.vtt
+- Metadata: raw/20260723_mOf-PP4mVjA/mOf-PP4mVjA.info.json
+
+Feed it 67 videos from the 2022 World Cup and ask for the near misses, the shots that almost scored but did not, each with a reason, and it returns them. Ask it to track Messi across the entire corpus and describe the camera framing, and it finds the moment he slaloms past a sliding defender. James Le's point is that this is unusual because video has no memory. Almost every video AI system answers each query from scratch, and a bigger context window does not fix it, because the real problem is that there is no durable representation to retrieve into.
+
+His fix is to stop treating video as a bag of frames and start treating it as a spatial temporal volume, then build a memory layer over it: a context graph of time bounded moments, the entities and where they appear, the relationships between them, and corpus level themes. At TwelveLabs that is an embedding encoder, a context store, and a video language model exposed as an API. The design rules are blunt: ingest once and reason many times, store primitives not answers, ground every claim to a timestamp, and let intent decide what to remember, because brand safety and sports highlights need different things from the same footage.
+
+Speaker info:
+- https://x.com/le_james94
+- https://www.linkedin.com/in/khanhnamle94/
+- https://jameskle.com/
+
+Timestamps:
+0:00 - Video has no memory
+0:50 - Video is a spatial temporal volume, not a bag of frames
+2:06 - Three problems: wrong context, wrong memory, weak reasoning
+3:36 - Five properties that make video memory hard
+4:53 - The TwelveLabs stack: Marengo, the context store, and Pegasus
+5:56 - Search versus memory
+7:48 - The context graph
+9:04 - Five design principles for a video memory layer
+10:45 - From a static model to a video worker
+12:51 - Demo: sports and tracking Messi across the World Cup
+15:37 - Demos: traffic security and ad placement
+
+## AI on Your Lakehouse: Context Comes in Shapes, Not Queries — Zach Blumenfeld, Neo4j
+
+- Upload date: 2026-07-23
+- Video: https://www.youtube.com/watch?v=kRkcNOsRyYg
+- Transcript: raw/20260723_kRkcNOsRyYg/kRkcNOsRyYg.en-orig.vtt
+- Metadata: raw/20260723_kRkcNOsRyYg/kRkcNOsRyYg.info.json
+
+Your agent can reach your data and still get it wrong. Vector search hands it a slice, Text2SQL hands it another, and neither tells it what is actually relevant or how the pieces connect, so the answer comes back confident and wrong. Zach Blumenfeld's argument in this hands on workshop is that the missing piece is not a better model or a better query. It is context, and context comes in shapes.
+
+He builds three reusable graph shapes on top of lakehouse data with Neo4j, each answering a question the agent cannot ask a table. Trees give a table of contents, so the agent can navigate what is even there. Communities surface themes, the patterns nobody named. Paths and cycles trace connections, how entities, documents, and records actually relate. The shapes are portable to BigQuery, Databricks, or Snowflake, and you leave with the code to run them on your own data and agents.
+
+Speaker info:
+- https://www.linkedin.com/in/zachblumenfeld/
+- https://graphacademy.neo4j.com/courses/workshop-lakehouse
+
+Timestamps:
+0:00 - Introduction: context comes in shapes, not queries
+6:25 - The three graph shapes to build
+10:56 - Environment setup: Codespaces and Neo4j
+21:47 - Schema, shared terms, and join paths
+45:25 - Shape 1: a table of contents for your data (trees)
+50:30 - Building the containment tree and links
+59:48 - Serving the graph to the agent over MCP
+1:12:21 - Q&A: naming and the containment shape
+1:22:54 - Shape 2: surfacing themes with communities
+1:24:24 - Community detection with Leiden
+1:31:09 - Hierarchical communities and naming themes
+1:43:22 - Shape 3: connections and cross links
+1:50:20 - Watching the agent use outlines and themes
+1:55:05 - Wrap: theme types and real time linking
+
+## Why Agentic Systems Need Ontologies — Frank Coyle, UC Berkeley
+
+- Upload date: 2026-07-23
+- Video: https://www.youtube.com/watch?v=Sir59K8ZDPU
+- Transcript: raw/20260723_Sir59K8ZDPU/Sir59K8ZDPU.en-orig.vtt
+- Metadata: raw/20260723_Sir59K8ZDPU/Sir59K8ZDPU.info.json
+
+A second refund on the same order. A payout sent to the support desk instead of the buyer. An order status of "probably shipped." These are the kinds of mistakes a probabilistic agent makes and a paragraph of instructions cannot reliably stop. Frank Coyle argues that most agent failures, from brittle tools to fragile handoffs, are symptoms of one missing layer: a formal ontology sitting outside the model as logical guardrails. LLMs reason probabilistically over domains they only half understand, and no amount of prompt engineering closes that gap.
+
+His fix is neurosymbolic: probabilistic reasoning inside, logic outside. An ontology is just typed entities, relationships, and constraints, expressed with old and boring standards like RDFS and OWL, that let you say a payment status must be one of three values, that a customer and a support rep are different things, that an order can only be refunded once. Wrap a Claude tool use loop with a validator: when the model proposes a tool call, check its types with Pydantic and its results against the ontology, and only then let it act. The catches that are painful to write in English become a few lines of logic.
+
+Speaker info:
+- https://x.com/coyle_frankp
+- https://www.linkedin.com/in/frank-coyle/
+- https://www.frank-coyle.ai/
+
+Timestamps:
+0:00 - Intro and an educator's philosophy
+2:21 - Two lineages: agents and ontologies
+4:04 - Neurosymbolic AI: guardrails around a probabilistic model
+5:23 - What an ontology actually is
+6:14 - Building one, and the expert systems era
+7:55 - Reusing existing taxonomies
+9:12 - RDFS and OWL: inference and constraints
+12:12 - Agents, loops, and how they break
+14:22 - A Claude tool use loop with an ontology validator
+17:47 - Pydantic at the door, ontology at the ledger
+18:52 - The errors an ontology catches that English cannot
+
+## Harness Engineering is not Enough: Why Software Factories Fail — Dex Horthy, HumanLayer
+
+- Upload date: 2026-07-23
+- Video: https://www.youtube.com/watch?v=Ib5GBkD555M
+- Transcript: raw/20260723_Ib5GBkD555M/Ib5GBkD555M.en-orig.vtt
+- Metadata: raw/20260723_Ib5GBkD555M/Ib5GBkD555M.info.json
+
+In July 2025 Dex Horthy turned the lights off: an agent software factory where nobody read the code. It fell apart. An issue appeared that no amount of prompting could fix, the site was down, users were furious, and he was digging through a codebase he had stopped reading three months earlier. His claim is that this is not a skill or scale issue, and no harness or extra tokens fixes it, because it is a model training problem. Coding models are reinforced on one thing, did the test pass without breaking another, and nothing in that reward penalizes bad architecture, whose cost shows up months later. So they get better at passing tests and no better at keeping a codebase maintainable.
+
+That is why Claude Code went from nothing to billions while tools with the same read, write, and edit commands did not: it was the first model trained against the harness it ships in. But maintainability is far harder to verify than a green test, and as Horthy puts it, if a model knew what good code looked like it would already write it. So for now you are stuck reading the code, which is fine, because you can still move fast. His fix is to turn the lights back on and plan up front: product review, system architecture, the underrated step of program design down to types and call graphs, then vertical slices. Thirty minutes of alignment saves hours of review, and a good PR becomes a joy to read instead of slop to untangle.
+
+Speaker info:
+- https://x.com/dexhorthy
+- https://linkedin.com/in/dexterihorthy
+- https://github.com/humanlayer/12-factor-agents
+
+Timestamps:
+0:00 - The narrative: you are the bottleneck, just ship more
+1:28 - The cracks: outages and falling PR review quality
+2:20 - The thesis: the harness is not enough
+3:36 - A brief history of the software factory
+5:52 - The agentic factory and turning the lights off
+7:30 - Why it fails: the July 2025 lights-off experiment
+8:56 - Models cannot maintain codebase quality
+10:12 - Why Claude Code won and how coding models are trained
+13:18 - Verifying maintainability and better benchmarks
+14:58 - Turning the lights back on: plan up front
+17:16 - Too many bad PRs, and closing advice
+
+## Citation Needed: Provenance for LLM-Built Knowledge Graphs — Daniel Chalef, Zep AI
+
+- Upload date: 2026-07-23
+- Video: https://www.youtube.com/watch?v=H7puB0RwJMM
+- Transcript: raw/20260723_H7puB0RwJMM/H7puB0RwJMM.en-orig.vtt
+- Metadata: raw/20260723_H7puB0RwJMM/H7puB0RwJMM.info.json
+
+An agent hands a doctor a clean, confident fact: the patient has a penicillin allergy. But that fact was synthesized from three sources, an EHR record, a lab report, and something the patient typed into an intake chatbot, and by the time it reaches the doctor, which one it came from is gone. You cannot just stamp a source ID on it, because the LLM merged entities and later data invalidated earlier facts, so the store keeps shifting under your pointer. Daniel Chalef's argument is that provenance for a knowledge graph an LLM builds has to be a graph itself.
+
+In Graphiti, the open source framework behind Zep, sources become episodes and every derived fact links back to them, so tracing a fact to its origin is just a graph walk. Tag a source once and the tag follows every node and edge derived from it, which lets an agent keep only facts from verified clinical sources. Deletion is the same walk in reverse: a GDPR erasure removes a source, and a fact survives only if another source still supports it. Compliance gets an audit trail, and engineers get agents they can debug instead of black boxes.
+
+Speaker info:
+- https://x.com/danielchalef
+- https://www.linkedin.com/in/danielchalef/
+- https://github.com/getzep/graphiti
+
+Timestamps:
+0:00 - Why LLM synthesis destroys the paper trail
+1:10 - Graphiti, Zep, and the provenance problem
+1:47 - The failure mode: a penicillin allergy from three sources
+2:53 - Why a source ID does not survive an LLM pipeline
+4:20 - Provenance as a graph: tracing a fact is a walk
+5:09 - Keeping lineage correct through merges and invalidation
+6:06 - Metadata projection: tag a source once
+7:25 - Mixed trust parents: allergy flags versus consent
+8:57 - Deletion: GDPR erasure through the same edges
+10:26 - Benefits: compliance, veracity, and debuggability
+11:31 - Q&A: cost, dedup, and why not just markdown
+
+## The Unreasonable Effectiveness of Separating the Task from the Model — Maxime Rivest & Isaac Miller
+
+- Upload date: 2026-07-23
+- Video: https://www.youtube.com/watch?v=GgLQ02aO-hs
+- Transcript: raw/20260723_GgLQ02aO-hs/GgLQ02aO-hs.en-orig.vtt
+- Metadata: raw/20260723_GgLQ02aO-hs/GgLQ02aO-hs.info.json
+
+By declaring a task's inputs and outputs without initially considering model capability, you create the space needed to determine execution later. DSPy's promise is that AI engineering should happen above a particular prompt template or provider API shape: the Signature.
+
+That remains useful in a world of tools, RLMs, and Skills. Define a task strictly through its inputs and outputs, and the underlying implementation becomes flexible: experiment with models, settings, weights, templates, and output formats without touching the workflow. The talk covers DSPy 3.5 and previews DSPy 4.0, where models can write code beneath a signature and programs can learn directly from interactions with users while still respecting the signature's inputs and outputs.
+
+Speakers:
+
+Maxime Rivest — Core Contributor, DSPy
+Maxime builds tools and content that make LLMs more accessible and powerful. He is a DSPy core contributor and an open-source Python library author.
+X/Twitter: https://x.com/MaximeRivest
+LinkedIn: https://linkedin.com/in/maximerivest
+Website: https://maximerivest.com
+
+Isaac Miller — Lead Maintainer of DSPy; Co-Founder, cmpnd
+Isaac leads DSPy and co-founded cmpnd, building an open-source framework for self-improving, modular AI systems.
+X/Twitter: https://x.com/isaacbmiller1
+LinkedIn: https://www.linkedin.com/in/miller-isaac/
+
+## Local Agentic Theory For Mobile Games — Shafik Quoraishee & Joanne Song, The New York Times
+
+- Upload date: 2026-07-23
+- Video: https://www.youtube.com/watch?v=418t26CVz-w
+- Transcript: raw/20260723_418t26CVz-w/418t26CVz-w.en-orig.vtt
+- Metadata: raw/20260723_418t26CVz-w/418t26CVz-w.info.json
+
+An agent runs entirely on your phone, no cloud, and plays Space Invaders, perceiving the scene, predicting the aliens, and dodging bullets in a loop. Another solves the New York Times mini crossword with a constraint graph that backtracks when the fills stop fitting. These are experimental, and the Times is emphatic that its actual puzzles are made by people with no AI in the games. The hard part is the budget: a local agent has to plan its next move inside a single 16 millisecond frame, without draining the battery or starving the renderer, or you get jank.
+
+Shafik Quoraishee and Joanne Song use that to argue accessibility and difficulty should stop being separate toggles. Model the game as a continuous negotiation and they become two ends of one dial the agent tunes to you in real time: it watches eye gaze and shaky taps, resizes controls on the fly, and breaks a keyboard trap the moment it detects one, all on the device. Their closing bet is that the future of AI is not one giant centralized brain but billions of small local ones, each shaped by the person it runs for.
+
+Speaker info:
+- https://x.com/squoraishee
+- https://www.linkedin.com/in/shafik-quoraishee/
+- https://www.shafikquoraishee.com/
+
+Timestamps:
+0:00 - Disclaimers and the experimental frame
+1:55 - A short history of AI in games
+2:49 - Why run the AI on the device, not the cloud
+4:56 - From reinforcement learning to agentic play
+7:00 - Demo: an agent playing Space Invaders
+8:19 - The on device budget: space, time, and energy
+11:15 - Demo: solving the mini crossword by backtracking
+12:33 - Accessibility: from toggles to graded dials
+14:40 - The agent tuning the game to you in real time
+16:28 - What is still needed, and billions of local brains
+
+## Perception Agents — Antje Barth, Amazon AGI Lab
+
+- Upload date: 2026-07-23
+- Video: https://www.youtube.com/watch?v=2JX6JYyQG4Y
+- Transcript: raw/20260723_2JX6JYyQG4Y/2JX6JYyQG4Y.en-orig.vtt
+- Metadata: raw/20260723_2JX6JYyQG4Y/2JX6JYyQG4Y.info.json
+
+Human-agent collaboration is changing, becoming more visual. The agents most teams ship today still wait for us to type a paragraph to explain what we're looking at. They cannot see a screen, navigate a UI that changes, or recover when an application throws an unexpected modal. That is the architectural gap between agents that demo well and agents that work alongside real teams in real software. Perception agents close it: they see and use computers the way people do, reason about what they see, and act with clicks and keystrokes.
+
+Speaker:
+
+Antje Barth — Member of Technical Staff, Amazon AGI Lab
+Antje is an AI product leader, keynote speaker, O'Reilly author, and co-instructor of Generative AI with Large Language Models with DeepLearning.AI.
+
+X/Twitter: https://x.com/anbarth
+
+Timestamps
+
+0:00 Introduction to the AI Engineer World's Fair
+0:43 The Evolution of AI Agent Capabilities
+1:15 The Problem: Why Agents Struggle with Real Work
+2:26 Understanding the Gap: Reliability and Trust
+4:36 Why Coding Agents Succeeded: The Role of Verification
+6:27 The Challenge of "Messy" Knowledge Work
+7:29 How Humans Collaborate: The Power of Shared Context
+9:22 Introducing Perception Agents: Perceive, Plan, Act
+11:36 Why Perception Agents Matter: Closing the Loop
+13:23 Open Source Harness: Annotation and Verification
+16:48 Multimodal Perception: Beyond the Screen
+19:30 Call to Action: Building Together
+
+Quotes
+
+"We taught computers to use computers... but we didn't solve the actual work." (1:15)
+"The real work lives within the seams of all of those different applications." (2:03)
+"If your agent one in four times deletes a database, you will never touch that agent again." (4:11)
+"You don't necessarily need a bigger brain. What you need is this shared context." (8:35)
+"We want to build AI that makes all of us smarter together." (20:07)
+
+## Notion's Token Town — Sarah Sachs, Notion
+
+- Upload date: 2026-07-23
+- Video: https://www.youtube.com/watch?v=-I5W5QVAT8E
+- Transcript: raw/20260723_-I5W5QVAT8E/-I5W5QVAT8E.en-orig.vtt
+- Metadata: raw/20260723_-I5W5QVAT8E/-I5W5QVAT8E.info.json
+
+Every month it is the same trap. A reasoning model gets upgraded at the same price per token, then quietly burns three times the output tokens. Or the new version costs 40% more and deprecates its predecessor in four months. Are you growing 40%? Making three times the revenue? Sarah Sachs, who leads AI engineering at Notion and negotiates its model contracts, says no, and that is why she treats every vendor as a competitor. Buy tokens from a lab that also sells the first party product and you are paying a markup on a markup for something you cannot defend, with no exit if you lock yourself to one provider.
+
+Her answer is to stop winning on token economics and win on product: data flywheels, orchestration, and staying model agnostic so optionality stays your leverage. Notion's auto model quietly routes about 75% of traffic and swaps providers underneath, her AI Switzerland approach; triaging an email inbox on Opus, she says, rips off the customer and Notion both. Route by cost per capability per second, not per token; use open weight models for the moderate middle; reach for CPUs over GPUs, because you do not need an LLM to turn a CSV into a PDF. The final stretch turns to the lethal trifecta and a live demo of Notion agents scoping a task, tagging in teammates, and opening a PR.
+
+Speaker info:
+- https://x.com/sarahmsachs
+- https://www.linkedin.com/in/sarahmsachs/
+
+Timestamps:
+0:00 - Welcome to Token Town: AI poor vs AI rich
+1:25 - Negotiating AI contracts as Notion's AI Anna Wintour
+2:30 - The AI transformation journey and the system of record
+4:46 - Why cost is the structural barrier
+5:34 - The monthly model pricing traps
+7:28 - Your supplier is your competitor
+8:44 - Win on product, not token economics
+9:50 - Not all traffic belongs on the frontier model
+12:10 - Optionality is your leverage
+13:25 - The auto model and the model agnostic playbook
+15:04 - Open weight models for the middle
+17:00 - CPUs over GPUs and governance
+17:53 - Security: the lethal trifecta
+19:46 - Live demo: orchestrating Notion agents into a PR
+
+## Active Graph Agent Runtime (BabyAGI 4) — Yohei Nakajima, Untapped Capital
+
+- Upload date: 2026-07-22
+- Video: https://www.youtube.com/watch?v=khVX_BUnEwU
+- Transcript: raw/20260722_khVX_BUnEwU/khVX_BUnEwU.en-orig.vtt
+- Metadata: raw/20260722_khVX_BUnEwU/khVX_BUnEwU.info.json
+
+Yohei Nakajima was running a 500 question eval when his API key died at question 350. Normally that means restarting the whole long agent from scratch. Instead it rolled back one step and resumed at 353, because in ActiveGraph the log is the agent. Most people build agents around the LLM and bolt on memory and logging; Nakajima, the creator of BabyAGI, flips it and builds around an immutable event log. Every action and every change to the agent flattens into one typed log, which projects a graph that is the agent's state, so you get replays, rollbacks, and forks for free.
+
+On top of the log sit behaviors that react to graph changes and emit events, policies that decide what the agent may change on its own versus what needs a human or a contradiction check, and swappable packs for memory, tools, and chat. The LLMs never talk to each other; they only touch shared state, an idea he borrows from 1970s blackboard systems and Kafka, and his hunch is that AI writes this style better than modern agent code because it has decades of training data on it. The payoff is self improvement: a loop that forks the agent, proposes a patch, gates it behind sandbox tests, and keeps it only if accuracy actually rises, and a lab that reads his blog posts, runs its own experiments, and once found a bug in its own code and opened the PR.
+
+Speaker info:
+- https://github.com/yoheinakajima/activegraph
+- https://x.com/yoheinakajima
+- https://www.linkedin.com/in/yoheinakajima
+
+Timestamps:
+0:00 - ActiveGraph and three years of BabyAGI
+1:55 - Build around the log, not the LLM
+3:24 - Behaviors, policies, and views
+6:43 - Packs and the blackboard architecture lineage
+8:12 - The log as memory, and the API key that resumed itself
+9:53 - Reference agents built natively on the log
+11:11 - Self improvement: regimes and controlled self modification
+12:25 - ActiveGraph Lab writes its own experiments
+13:02 - A Pokemon card competition as a testbed
+14:33 - Surprises: why AI architects this better
+15:49 - Why an agent needs an experiential world model
+
+## Your Moat Is Your Data Model — Mike Phipps, Gates Foundation
+
+- Upload date: 2026-07-22
+- Video: https://www.youtube.com/watch?v=jt1Pbr_n6oU
+- Transcript: raw/20260722_jt1Pbr_n6oU/jt1Pbr_n6oU.en-orig.vtt
+- Metadata: raw/20260722_jt1Pbr_n6oU/jt1Pbr_n6oU.info.json
+
+Models, frontends, and agent frameworks all commoditize. Mike Phipps argues the durable moat is the one thing that does not: your data model, and the tacit knowledge of how your questions are supposed to be answered. At the Gates Foundation he and his team modeled 25 years of grantmaking, over 7 billion dollars a year across 2,000 grants and 4,000 people, into a single Neo4j knowledge graph served to Claude through one MCP server.
+
+The graph is built for agents, not dashboards: hierarchies become traversable paths, and unstructured documents are chunked, tagged, and mapped to structured entities at ingestion. An agent turns a messy cross system question into one graph query and gets an answer that respects how the organization actually reports. The talk walks the architecture and the retrieval evals that keep it honest, and why a small team's effort compounds in the data model, not the layers above it.
+
+Speaker info:
+- https://www.linkedin.com/in/mike-phipps-79339a38
+
+Timestamps:
+0:00 - The moat question: what stays defensible as AI commoditizes
+2:32 - SIP across the 4,000 person Gates Foundation
+3:46 - The scale: 25 years, $7B a year, 2,000 grants
+5:15 - Structuring operational data for agentic retrieval
+6:18 - Tacit knowledge as the moat: engaging data owners
+7:09 - The curation pipeline and governance
+8:30 - Modeling hierarchies: funding and management lenses
+12:32 - People, org charts, and stitching siloed systems
+13:49 - Combining unstructured documents with structured data
+15:34 - Serving the graph to Claude through MCP
+17:31 - Retrieval evals and the feedback loop
+
+## Thinner Agents on a Smarter Substrate: The Ontology-based Semantic Layer — Emil Eifrem, Neo4j
+
+- Upload date: 2026-07-22
+- Video: https://www.youtube.com/watch?v=VGN22pPpb-8
+- Transcript: raw/20260722_VGN22pPpb-8/VGN22pPpb-8.en-orig.vtt
+- Metadata: raw/20260722_VGN22pPpb-8/VGN22pPpb-8.info.json
+
+To automate opening a bank account, your agent needs to verify identity, so a team wires it to the DMV and a passport service and ships it. Then the next team builds the next agent and rediscovers, from scratch, where its data lives, across a hundred databases plus Snowflake, Databricks, and S3, whether it can trust the version, and whether it is even allowed to touch it. Every agent repeats that wiring, nothing updates when a source moves without a manual rewire, and no agent is smarter tomorrow than today. Emil Eifrem's fix is to make the agents thin and put the intelligence in a shared substrate underneath.
+
+That substrate is an ontology based semantic layer with three parts. A business ontology names the real concepts, customers, accounts, checks, in the words people actually use, not f_name. A technical ontology catalogs every data source and its schema, with a mapping between the two. And execution traces record what each agent tried and whether it worked, so the layer learns bottom up: an agent that succeeded with the DMV lookup last time is more likely to reach for it next time. Discovery, trust, deduplication, and learning stop being every team's problem and become the substrate's.
+
+Speaker info:
+- https://x.com/emileifrem
+- https://www.linkedin.com/in/emileifrem/
+
+Timestamps:
+0:00 - The account opening agent and its data sources
+1:53 - The problem: every team rewires data from scratch
+4:00 - Thin agents on a smarter shared substrate
+4:37 - Pillar 1: a business facing ontology
+5:26 - Pillar 2: a technical ontology and the mapping
+6:19 - Pillar 3: execution traces that make it learn
+8:01 - Solving discovery, trust, DRY, and learning
+
+## CrabRAG: Why Automated Assistants Need Graph Memory, Not More Tokens — Stephen Chin, Neo4j
+
+- Upload date: 2026-07-22
+- Video: https://www.youtube.com/watch?v=Q0VkgCyNVUg
+- Transcript: raw/20260722_Q0VkgCyNVUg/Q0VkgCyNVUg.en-orig.vtt
+- Metadata: raw/20260722_Q0VkgCyNVUg/Q0VkgCyNVUg.info.json
+
+Stephen Chin gave two copies of the same agent the same facts about his home network, one storing them as a vector database, the other as a graph. He asked both what was running end of life software exposed to the internet. The vector agent said it could not find specific details. The graph agent traced the connections and flagged his daughter's Minecraft server running an out of date OS, then found real open management ports he quietly patched after the demo. Same data, and only one of them could actually answer.
+
+That gap is the whole talk. Most assistants, OpenClaw included, keep their memory as markdown files, which is why Chin's agents burn over 100,000 tokens a round loading everything in case some of it matters. It holds at small scale and breaks at large scale, because similarity in vector space is not a real relationship, so multi hop questions hallucinate. A graph stores entities and the edges between them, seeds the search with vectors, then traverses, so answers come back precise, explainable, and auditable. And if you do not know graphs, Claude writes Cypher better than he does.
+
+Speaker info:
+- https://x.com/steveonjava
+- https://www.linkedin.com/in/steveonjava/
+- https://www.oreilly.com/library/view/graphrag-the-definitive/9798341630147/
+
+Timestamps:
+0:00 - Meet Crab D and the agent memory problem
+2:34 - Why markdown memory wastes tokens
+4:43 - Skills are just markdown too
+5:49 - Goose: memory as an MCP server
+7:44 - Vector databases and why similarity is not a relationship
+9:54 - Enter graphs: precise, explainable, auditable
+11:38 - You do not need to be a graph expert, Claude writes Cypher
+12:04 - The demo: a home lab digital twin, vector versus graph
+13:23 - Live: finding end of life software on the network
+15:30 - Live: finding exposed management ports
+16:49 - Why large scale needs graph memory
+18:05 - Resources: the GraphRAG book and GraphAcademy
+
+## From Systems of Record to Systems of Context — Omri Bruchim & Tomer Ast, monday.com
+
+- Upload date: 2026-07-22
+- Video: https://www.youtube.com/watch?v=Btk8wDUVs74
+- Transcript: raw/20260722_Btk8wDUVs74/Btk8wDUVs74.en-orig.vtt
+- Metadata: raw/20260722_Btk8wDUVs74/Btk8wDUVs74.info.json
+
+Ask your AI assistant what you should focus on right now and you get a list of disconnected bullets dressed up as a confident paragraph. When Omri Bruchim tried it, Claude told him to go to the gym. The assistant has every board, task, email, and Slack message you have ever touched, and still zero understanding, because the problem was never retrieval. It is that a system of record stores what happened but not what it means. monday.com's answer is to become a system of context.
+
+They build that context layer ahead of time from two engines. A slow engine mines weeks of activity into a durable profile of who you are and how you work; a fast engine reads the last few days for what is suddenly urgent and who you are pulled in with. One knows you, the other knows your day, a split that shows up in neuroscience as the hippocampus and neocortex and in data systems as lambda architecture. The context is precomputed and served to their agent, so it degrades gracefully, judges when to speak up, and compounds as every new day and source sharpens the model.
+
+Speaker info:
+- https://x.com/omribruchim
+- https://www.linkedin.com/in/omribruchim/
+- https://edginary.io
+
+- https://www.linkedin.com/in/tomer-ast/
+
+Timestamps:
+0:00 - From system of record to system of context
+0:56 - The gym answer: data without understanding
+2:36 - monday.com, Sidekick, and where work lives
+4:31 - Three reasons context is hard
+7:19 - The Monday world model
+8:15 - The data model and its two engines
+10:21 - Why the split mirrors the brain and lambda architecture
+11:14 - How it comes together, and the honest limits
+13:22 - Answering the question with Sidekick
+
+## Claude for Long-Horizon Tasks — Lance Martin, Anthropic
+
+- Upload date: 2026-07-22
+- Video: https://www.youtube.com/watch?v=9QebvrrY3KY
+- Transcript: raw/20260722_9QebvrrY3KY/9QebvrrY3KY.en-orig.vtt
+- Metadata: raw/20260722_9QebvrrY3KY/9QebvrrY3KY.info.json
+
+Claude is capable of long horizon tasks. In this talk, we'll share lessons learned about building agent harnesses for reliable and secure long-horizon work. This include decoupling the brain and hands, self-verification, self-learning, and design for evolving agent harnesses.
+
+### Lance Martin
+Member of Technical Staff · Anthropic
+[X/Twitter](https://x.com/RLanceMartin) · [LinkedIn](https://www.linkedin.com/in/lance-martin-64a33b5) · [Website](https://rlancemartin.github.io)
+
+Member of technical staff at Anthropic. Working on the Claude Platform, including Claude Managed Agents and the claude-api skill in Claude Code. Prior to Anthropic, was one of the early team at LangChain. Prior to LangChain, spent several years focused on vision for self-driving cars (Uber ATG, Ike, Nuro) and got a PhD from Stanford.
+
+## The Desktop Frontier — Ahmad Osman, Osmantic
+
+- Upload date: 2026-07-21
+- Video: https://www.youtube.com/watch?v=XV2oYi7kojc
+- Transcript: raw/20260721_XV2oYi7kojc/XV2oYi7kojc.en-orig.vtt
+- Metadata: raw/20260721_XV2oYi7kojc/XV2oYi7kojc.info.json
+
+@TheAhmadOsman  shows the power of local AI on stage, running frontier open models on a DGX Station.
+
+Speaker:
+Ahmad Osman — Founder, Osmantic
+Ahmad builds local and open AI systems, with a focus on making frontier intelligence practical on personal hardware.
+
+Links:
+X: https://x.com/TheAhmadOsman
+LinkedIn: https://linkedin.com/in/TheAhmadOsman
+Website: https://ahmadosman.com/
+
+timestamps
+0:00 Introduction and the Desktop Frontier concept
+0:47 Future predictions: GLM 5.2 on an RTX 5090
+1:17 Efficiency over raw size: The move toward compact intelligence
+1:51 The concept of impact per parameter
+2:48 Shifting hardware footprints: From server-grade to consumer-grade
+3:38 Architecture hacks and the compounding nature of AI research
+4:33 Explaining the Densing Law: Getting more intelligence from fewer parameters
+5:09 Running frontier-class models like GLM 5.2 on local hardware
+7:32 The case for sovereign AI: Owning your own compute stack
+9:08 A retrospective on open-weight models: Mistral to Qwen
+11:12 The evolution of reasoning: DeepSeek R1 and beyond
+12:08 The rise of agentic performance and tool calling
+15:33 Economic value: Does hardware appreciate as models become more efficient?
+16:38 Closing thoughts: Why you should own your own GPU
+
+Key Quotes for Virality:
+
+"It's not that small models are beating big models. It's that newer, more efficient models are beating older, less efficient ones." (4:23)
+"Within roughly 18 months we are going to have the equivalent of GLM 5.2 class intelligence running on a single RTX 5090." (0:52)
+"Why wouldn't you want to be in control of the models that you run? Why wouldn't you want to make sure that nothing gets taken away from you?" (7:56)
+"The hardware purchase today... does it get more valuable as models become more efficient and smaller in size?" (15:33)
+
+## Your agent architecture has a half-life of 6 months — Dan Farrelly, CTO, Inngest
+
+- Upload date: 2026-07-21
+- Video: https://www.youtube.com/watch?v=X1kp-ABIIxQ
+- Transcript: raw/20260721_X1kp-ABIIxQ/X1kp-ABIIxQ.en-orig.vtt
+- Metadata: raw/20260721_X1kp-ABIIxQ/X1kp-ABIIxQ.info.json
+
+A short history of the right way to build an agent: RAG, ReAct, prompt chaining, orchestrator-workers, MCP, CLI, MCP again... CLI again?? Every time you adopt a trend you rebuild your architecture. In this talk, Dan Farrelly, Inngest cofounder and CTO, is not going to tell you what comes next. He's going to show you how to build so it doesn't matter. He'll cover the core primitives that show up in every production agent, how bringing decisions closer to code provides more stack flexibility, and why the right execution layer unlocks faster iteration.
+
+### Dan Farrelly
+CTO and Co-founder · Inngest
+[LinkedIn](https://www.linkedin.com/in/djfarrelly)
+
+Dan Farrelly is CTO and co-founder of Inngest, a platform for durable serverless functions, workflows and agent orchestration. He was previously CTO at Buffer and created developer tools including Timezone.io and MailDev.
+
+## "The biggest challenge in your stack? Evals, Evals, Evals" - 2026 State of AI Engineering results
+
+- Upload date: 2026-07-21
+- Video: https://www.youtube.com/watch?v=RGe6EjucbzI
+- Transcript: raw/20260721_RGe6EjucbzI/RGe6EjucbzI.en-orig.vtt
+- Metadata: raw/20260721_RGe6EjucbzI/RGe6EjucbzI.info.json
+
+Barr Yaron shares her perspective on the results and emerging state of AI engineering in 2026.
+
+Speaker:
+Barr Yaron — Partner, Amplify Partners
+Barr backs founders building the AI infrastructure and applications that will shape the future.
+
+Links:
+X: https://x.com/barrnanas
+LinkedIn: https://linkedin.com/in/barryaron
+Website: https://barrchives.com
+
+Timestamps
+
+0:00 Introduction and Survey Context
+2:26 The AI Engineering Workforce
+3:21 Current Modalities and Adoption
+5:34 Model Strategy: Closed vs. Open-Weight
+8:20 Cost as an Engineering Constraint
+9:36 The Rise of Agentic Workflows
+11:57 Infrastructure Challenges and Evals
+12:53 The Build vs. Buy Trade-off
+14:09 Impact on Engineering Culture and Teams
+16:27 Future Bets and Predictions
+
+Quotes:
+
+"The median new engineer has nearly as much AI experience as the median 10-year software veteran." (3:07)
+
+"Cost is now a first-class engineering constraint." (8:38)
+
+"Agents are no longer reading, summarizing, drafting—they’re taking actions inside of systems." (10:58)
+
+"The biggest challenge in your stack? Every single year, the number one answer is eval." (12:12)
+
+"Shipping software is not gated on being an engineer anymore." (16:17)
+
+## Full Workshop: Better Auth — Paola Estefania, Better Auth
+
+- Upload date: 2026-07-21
+- Video: https://www.youtube.com/watch?v=JvKO40CFq-s
+- Transcript: raw/20260721_JvKO40CFq-s/JvKO40CFq-s.en-orig.vtt
+- Metadata: raw/20260721_JvKO40CFq-s/JvKO40CFq-s.info.json
+
+Better Auth has grown to 27k GitHub stars and more than 1.5M weekly downloads, becoming a popular choice for developers who want to own their authentication stack. Agent Auth is a protocol for autonomous and delegated agents operating services for an organization or a user. It lets agents dynamically negotiate capabilities, manage access boundaries, and maintain secure authorization flows. This session breaks down the protocol design and demonstrates it live.
+
+Speakers:
+
+Bereket Habtemeskel — CEO, Better Auth
+Bereket is the Founder and CEO of Better Auth, the most popular auth framework for TypeScript, and a co-author of the Agent Auth protocol.
+X/Twitter: https://x.com/bekacru
+LinkedIn: https://www.linkedin.com/in/bekacru/
+
+Paola Estefania — Staff Engineer, Better Auth
+Paola focuses on agent identity and is a co-creator of the Agent Auth protocol.
+LinkedIn: https://uy.linkedin.com/in/paolaestefaniadecamposdefranco
+
+## HTML Is All Agents Need — James Russo, HeyGen
+
+- Upload date: 2026-07-21
+- Video: https://www.youtube.com/watch?v=Cz4v1WHVyZc
+- Transcript: raw/20260721_Cz4v1WHVyZc/Cz4v1WHVyZc.en-orig.vtt
+- Metadata: raw/20260721_Cz4v1WHVyZc/Cz4v1WHVyZc.info.json
+
+LLMs are great at writing code. So the question we kept asking was: can they write code that produces a video? We thought it would be easy. The reality was a year of trying. We started with massive prompts to get very mediocre output. We made it more agentic to iterate and improve its output. This worked okay but wasn't production-ready. Eventually we tried Remotion. It got us deterministic video, but the React framework kept boxing the agent in. The more guardrails we added, the safer and more boring the outputs got. When we utilized plain HTML, CSS, and JavaScript, the creativity came back to the output. So we set out to build a video rendering framework on top of HTML. But it needed to work with Gemini Flash. Why? Because one tell that a framework is fighting an agent is needing the biggest model just to get usable output. So from there we shaped the framework around what small models could reliably author. That left one real engineering question: can we keep the freedom of HTML and still render a deterministic MP4? Browsers don't want to do that. Image decoders, font loaders, and animation clocks all run async on their own schedule. Great for performance. Terrible for "render the same pixels every time." Throughout, we iterated constantly with agentic loops and self-improving evals to test out the framework, find issues in our renderer, and shape a set of skills that gave the agents Taste instead of guardrails. This talk is what it took to get there.
+
+Speaker:
+James Russo — Software Engineer, HeyGen
+Engineering lead for HyperFrames. Currently at HeyGen building the future of video storytelling, Previously at Brex
+X: https://x.com/Rames_Jusso
+LinkedIn: https://www.linkedin.com/in/james-russo-56026897/
+Website: https://boredhacking.com/
+
+Timeline:
+
+0:00 Introduction and the HeyGen mission
+0:58 The challenge of creating launch videos
+1:27 The importance of A-roll, B-roll, and composition
+2:13 Why HTML, CSS, and JavaScript are the native languages of LLMs
+3:06 Comparing HTML to other frameworks like Remotion
+5:24 Designing the Hyperframes framework with Gemini Flash
+6:54 How Hyperframes works in the browser
+8:56 Leveraging browser-native technologies like Three.js and WebGL
+9:25 Using Skills to teach agents video taste
+10:56 Crafting videos: the human-in-the-loop workflow
+12:09 Keyframes integration
+12:35 Scaling and performance metrics
+13:28 Future goals: Code-to-Video benchmarking
+
+Quotes:
+
+"Why not let the LLMs and agents talk in their native tongue when creating videos?" (2:58)
+"One tell that a framework is fighting an agent is needing the biggest model just to get usable output." (5:24)
+"We don't have to teach them the language. We just teach them how to create good videos." (9:46)
+"Agents have made building incredibly easy. Launching is still quite hard." (14:31)
+
+## Every Harness Will Become A Claw — Sam Bhagwat, Mastra
+
+- Upload date: 2026-07-21
+- Video: https://www.youtube.com/watch?v=8qWIPUia2O8
+- Transcript: raw/20260721_8qWIPUia2O8/8qWIPUia2O8.en-orig.vtt
+- Metadata: raw/20260721_8qWIPUia2O8/8qWIPUia2O8.info.json
+
+Most harness discussion is a reprise of Context Engineering from last summer. But it is not 2025 anymore: we live in a Claude Code world, and the best way to think about a harness is Context Engineering + Coding Agents = Harness.
+
+Harnesses are a powerful developer experience because of planning mode, parallel subagents, skills, background tasks, and more. But they do not stop there. Teams are putting harnesses in a box, making them listen to external events, giving them channels to ping users, and a heartbeat. They are becoming Claws. The argument is that harnesses want to become claws: more present in collaboration workflows and available while users are away. Sam proposes Steinberger's law, a spinoff of Zawinski's law: every harness will expand until it becomes a Claw.
+
+Speaker:
+
+Sam Bhagwat — Founder and CEO, Mastra
+Sam is the co-founder and CEO of Mastra, the TypeScript agent framework; author of Principles of Building AI Agents; and previously a Gatsby co-founder.
+
+X/Twitter: https://x.com/calcsam
+LinkedIn: https://www.linkedin.com/in/sambhagwat/
+
+## Agentic Security: Permissions, Provenance, and the Agent Supply Chain — Steve Yegge, Gas Town
+
+- Upload date: 2026-07-20
+- Video: https://www.youtube.com/watch?v=yWS0udrIOc8
+- Transcript: raw/20260720_yWS0udrIOc8/yWS0udrIOc8.en-orig.vtt
+- Metadata: raw/20260720_yWS0udrIOc8/yWS0udrIOc8.info.json
+
+A security hardening pass by Fable over a game one engineer had built for 30 years came back clean: cloud hardening done, credentials handled, good vibes all around. Then Snyk ran over the same code and surfaced 241 vulnerabilities the agent never thought to look for. That gap is the center of Steve Yegge's talk, whose real title, he says, is not agentic security but be scared. A chief security architect at a big bank had already handed him the math: if everyone ships code 10 times faster and the rate of security defects holds steady, the vulnerable surface grows 10 times with it, and with models writing the code that rate does not hold steady, it gets worse.
+
+The frightening part is not the familiar bugs like XSS that models still cheerfully write, it is the new attack surface. Slop squatting is the clean example: a model hallucinates a package name like graphy 123, someone uploads a real package under that exact name that does the expected thing plus a backdoor, and the build succeeds with the tests green. Yegge's partial answer follows from how models work. They do one thing well at a time, so asking for correctness and security in a single pass gets you a half job of both. Security becomes its own pass, the first one and the last one, with the agent handed real tools like Snyk and Chainguard to check its own work. And the window is closing: Five Eyes now measures the moment open source models can autonomously hack production systems in months, not years.
+
+Speaker info:
+- https://www.linkedin.com/in/steveyegge
+- https://x.com/steve_yegge
+- https://github.com/steveyegge/beads
+
+Timestamps:
+0:00 - The real title of this talk: be scared
+1:38 - The bank architect's question: 10x speed, 10x defect surface
+3:08 - New attack surfaces and slop squatting
+4:51 - How Google surfaces bugs at the developer's fingertips
+6:08 - Why security bugs have no half life
+6:46 - Can the model just write secure code?
+7:24 - Running Snyk on his own game: 241 vulnerabilities
+8:14 - The rule of five and security as its own pass
+9:32 - Software Survival 3.0: lazy models reach for tools
+10:09 - Give the agent Snyk and Chainguard
+12:03 - Five Eyes: months, not years
+13:34 - Refresh your family code words
+14:36 - The arms race you can start fighting now
+15:30 - Q&A: what has surprised you in AI coding
+17:28 - Q&A: Gas Town, beads, and running agents all night
+19:13 - Q&A: adversarial agents watching your agents
+20:58 - Q&A: prompt injection
+
+## Why Your Agent Disagrees With Itself (And What To Do About It) - Diane Lin, Datadog
+
+- Upload date: 2026-07-20
+- Video: https://www.youtube.com/watch?v=wEc9aG7cRQc
+- Transcript: raw/20260720_wEc9aG7cRQc/wEc9aG7cRQc.en-orig.vtt
+- Metadata: raw/20260720_wEc9aG7cRQc/wEc9aG7cRQc.info.json
+
+Run the same task twice, and sometimes you get two materially different answers. While many dismiss this as the "stochastic nature of LLMs," this inconsistency is a critical product flaw that destroys customer trust—especially in high-stakes fields like cybersecurity, where a "flip-flop" between a malicious threat and a benign alert can lead to disastrous outcomes.
+
+This session explores why these flip-flops are usually not model failures. They occur in the "gray zone" near the decision boundary, where policies are ambiguous and even human experts may disagree. Instead of treating disagreement as a bug, we can use it as a signal to improve both the agent and the data.
+
+You'll learn a practical workflow that combines active learning, semantic memory (domain knowledge and business policies), and episodic memory (past similar cases) to automatically identify ambiguous examples, focus human review where it matters most, and continuously adapt the agent to customer-specific preferences, without relying solely on expensive fine-tuning.
+
+Key takeaways
+
+1. Find the gray zone. Use model disagreement to identify the decisions that deserve human attention.
+2. Turn inconsistency into a feature. Every flip-flop is an opportunity to clarify policies and improve the agent.
+3. Teach, don't just fine-tune. Combine semantic memory and episodic memory to make agents more consistent with far less effort than retraining.
+4. Build a continuous learning loop. Improve consistency, streamline quality control, and evolve your agent to match how your customers actually make decisions.
+
+Speakers:
+- Diane Lin (Datadog): Dr. Diane Lin is Tech Lead at Datadog, where she leads the development of self-evolving AI agents for cybersecurity, and previously co-founded Culminate (acquired by Datadog)
+  LinkedIn: https://www.linkedin.com/in/diane-dianhuan-lin-57210215/
+
+## Agent Output Is Not UX: Rendering Layer Your LLM Pipeline Is Missing - Bala Ramdoss, Amazon Lens
+
+- Upload date: 2026-07-20
+- Video: https://www.youtube.com/watch?v=maTp79FD9gI
+- Transcript: raw/20260720_maTp79FD9gI/maTp79FD9gI.en-orig.vtt
+- Metadata: raw/20260720_maTp79FD9gI/maTp79FD9gI.info.json
+
+Getting a model to produce the right output is the part everyone works on. Turning that output into something people will actually use is the part that decides whether an AI feature ships. This talk is about that layer, the one between model output and the product experience, grounded in lessons from building agentic CX on mobile at the scale of hundreds of millions of devices.
+
+Most teams building agentic CX hit the same wall: the feature works, the demo is impressive, and then production UX becomes less than ideal. Latency feels broken. The interface has no idea what to do when the model returns a content type it has never seen before. These are not model problems. They are delivery problems, and they live in an engineering layer the industry is only now naming: generative UI.
+
+The rendering contract: a typed, versioned agreement between model output and your UI components, with a deliberate fallback for unknown types, so a new content type degrades gracefully instead of breaking production across a client base you cannot hot-fix.
+
+Streaming into structured UI: progressively rendering streamed model output into typed components like product cards, comparison modules, and follow-up prompts, so the interface assembles as the response arrives instead of waiting for a complete one.
+
+BFF patterns for AI features: a Backend-for-Frontend layer that absorbs model unpredictability away from the client while preserving conversational context across turns.
+
+Speakers:
+- Bala Ramdoss (Amazon): Bala Ramdoss is a Tech lead at Amazon, where he builds camera-based AI features like Amazon Lens to enhance the visual shopping experience.
+  LinkedIn: https://www.linkedin.com/in/bala-ramdoss/
+
+## Don't Let the LLM Drive - Ornella Bahidika & Joel Allou, Microsoft
+
+- Upload date: 2026-07-20
+- Video: https://www.youtube.com/watch?v=m24UKZomm7k
+- Transcript: raw/20260720_m24UKZomm7k/m24UKZomm7k.en-orig.vtt
+- Metadata: raw/20260720_m24UKZomm7k/m24UKZomm7k.info.json
+
+The LLM in my voice tutor doesn't decide when the lesson is over. It doesn't decide whether the user got the answer right. It doesn't decide which step comes next. A harness does all of that. The LLM just shows up and talks.
+
+Every engineer who's tried to ship a multi-step flow agent has felt this: the model declares itself done before it should, skips a check, loops on a step, or quietly drops half the procedure. Prompting gets you most of the way. Tool-use discipline gets you closer. The last stretch, the difference between a demo and a system real users sign into every day, is owning the flow outside the model.
+
+Ace is a voice tutor in production. The lesson is a small state machine: intro, teach, check, grade, advance, wrap. Each node hands the LLM a narrow contract: do this, return that. The harness validates the return, advances the state, decides what comes next. When the LLM tries to skip ahead the harness ignores it. When the LLM tries to declare the lesson finished the harness checks the actual completion signal. Same pattern for the shared canvas the agent draws on, for grading, for interruption handling.
+
+Seven minutes. The state machine, the contract shape, a few places where I tried to give the LLM more authority and rolled it back, and a short list of decisions the LLM should never own in any flow agent.
+
+Speakers:
+- Ornella Bahidika (Microsoft): Ornella Bahidika is a Product Manager at Microsoft, where she develops solutions that help organizations optimize collaboration, workplace technology, and AI-driven experiences.
+  LinkedIn: https://www.linkedin.com/in/ornella-bahidika/
+- Joel Allou: Joel builds voice-first AI tutors. Solo founder focused on agentic systems for personalized learning, with a particular interest in infrastructure that makes flow agents reliable.
+  LinkedIn: https://www.linkedin.com/in/joel-allou/
+
+## Build the AI GTM Agent That Knows the Buyer - Dr. Sajjan Kanukolanu, Position2 (Position Squared)
+
+- Upload date: 2026-07-20
+- Video: https://www.youtube.com/watch?v=ltv-L5oMPIs
+- Transcript: raw/20260720_ltv-L5oMPIs/ltv-L5oMPIs.en-orig.vtt
+- Metadata: raw/20260720_ltv-L5oMPIs/ltv-L5oMPIs.info.json
+
+As part of a GTM motion, an AI agent goes live on the site. The first visitor lands. The conversation starts. That's the moment everyone optimizes for- the right conversation, the right offer etc.. It's the wrong moment.
+
+A well-built AI GTM system does something very different. By the time a buyer sends their first message, the system already knows who they are, what they're looking for, how likely they are to convert, and how to route them. Most teams aren't building that. They're just building a better AI chatbot.
+
+Connecting AI to the stack that actually runs your GTM, one connected to the CRM, intent data, visitor identity, ICP scoring, routing logic- is not one problem. It's three. An AI problem. An integration problem. An architecture problem. Most deployments skip all three and bolt a language model onto a stack they haven't redesigned.
+
+We built the architecture for a client, across multiple brands. Three decisions made the difference between a chatbot just responding to questions, and a system that identifies buyers, personalizes the conversation, and routes them in real time- based on signals resolved before the first message.
+
+You'll leave with the architecture, the integration decisions, and an honest view of where this approach fails.
+
+Speakers:
+- Dr. Sajjan Kanukolanu (Position2 (Position Squared)): Dr. Sajjan Kanukolanu is VP of Global Operations and Strategy at Position², where he leads the services teams and company's AI-native transformation practice from vision to deployment.
+  LinkedIn: https://www.linkedin.com/in/sajjank/
+
+## Designing Voice Agents for Real Conversations - Chintan Agrawal & Daniel Wirjo, AWS
+
+- Upload date: 2026-07-20
+- Video: https://www.youtube.com/watch?v=hMlLw1LeIK8
+- Transcript: raw/20260720_hMlLw1LeIK8/hMlLw1LeIK8.en-orig.vtt
+- Metadata: raw/20260720_hMlLw1LeIK8/hMlLw1LeIK8.info.json
+
+Chat agents get seconds to respond. Voice agents get 200 milliseconds, and if they get it wrong, the user doesn't retry, they hang up. The gap between "impressive voice demo" and "agent people actually want to talk to" is entirely in the engineering: latency budgets, barge-in handling, turn-taking, and the silence detection problem nobody warns you about.
+
+In this workshop you'll build a production voice agent using Pipecat (open-source real-time AI framework) that handles the three things most voice implementations get wrong. Interruption: user starts talking mid-response. Do you stop, fade, or finish? The answer depends on context, and we'll build the decision logic. Silence: is the user done talking or just thinking? Get this wrong and you either interrupt them or leave dead air. Latency: you have 200ms total for STT to LLM to TTS. We'll build the streaming pipeline that hits that budget consistently.
+
+The thing nobody tells you about voice agents: the hardest problem isn't the AI, it's the audio engineering. WebSocket orchestration, audio chunking, backpressure when the LLM is slower than real-time, echo cancellation when the agent's own output feeds back into the mic. We'll solve all of it.
+
+Stack: Pipecat + Daily (WebRTC) + any STT/TTS (Deepgram, AssemblyAI, Whisper) + any LLM. Bring headphones. You'll be talking to your agent by the end.
+
+Speakers:
+- Chintan Agrawal (Amazon Web Service): Chintan Agrawal and Daniel Wirjo are Solutions Architects at AWS, focused on AI and SaaS startups. They are passionate about helping customers unlock value from their data and accelerate innovation on AWS. By partnering closely with founders and engineering leaders, they enable organizations to build scalable solutions, drive business growth, and realize the full potential of cloud and AI technologies.
+  LinkedIn: https://www.linkedin.com/in/chintan-agrawal-87a866135/
+  GitHub: https://github.com/wirjo/pipecat-turn-detection-demo
+
+## Your Voice Agent Doesn't Need a Frontier Model - Joel Allou & Ornella Bahidika, Microsoft
+
+- Upload date: 2026-07-20
+- Video: https://www.youtube.com/watch?v=fnLBmfsI_Fg
+- Transcript: raw/20260720_fnLBmfsI_Fg/fnLBmfsI_Fg.en-orig.vtt
+- Metadata: raw/20260720_fnLBmfsI_Fg/fnLBmfsI_Fg.info.json
+
+My AI voice tutor doesn't run on a frontier model. It runs on a small one, and the reason isn't cost. It's that voice lives or dies on latency, and the scaffolding around the model is what makes it feel smart anyway.
+
+When you build a voice agent the clock is brutal. A pause longer than a held breath feels broken, so your real budget is time to first token, not benchmark score. A big model that thinks for a second has already lost the room. So the model choice gets made for you: pick the fastest one the latency budget allows, then make up the intelligence elsewhere.
+
+I'll show how that plays out in an AI voice tutor I built on a small, fast model. The model never has to remember what the student knows, plan the lesson, or decide what comes next. Deterministic systems do all of that and hand the model a tight, structured brief each turn. What's left for the model is the one thing it's genuinely best at, which is talking. The scaffolding isn't a cost optimization bolted on afterward. It's the thing that lets you use the cheap fast model at all.
+
+Seven minutes. The latency budget that forces the decision, what moves out of the model to survive it, and where a small model still falls down no matter how much scaffolding you give it.
+
+Speakers:
+- Joel Allou: Joel builds voice-first AI tutors. Solo founder focused on agentic systems for personalized learning, with a particular interest in infrastructure that makes flow agents reliable.
+  LinkedIn: https://www.linkedin.com/in/joel-allou/
+- Ornella Bahidika (Microsoft): Ornella Bahidika is a Product Manager at Microsoft, where she develops solutions that help organizations optimize collaboration, workplace technology, and AI-driven experiences.
+  LinkedIn: https://www.linkedin.com/in/ornella-bahidika/
+
+## Agentic Development Security — Ezra Tanzer, Snyk
+
+- Upload date: 2026-07-20
+- Video: https://www.youtube.com/watch?v=cgimkNGNjvU
+- Transcript: raw/20260720_cgimkNGNjvU/cgimkNGNjvU.en-orig.vtt
+- Metadata: raw/20260720_cgimkNGNjvU/cgimkNGNjvU.info.json
+
+An agent at Replit ignored a code freeze, deleted a production database, then fabricated records to hide it and reported that recovery was impossible. It was wrong about the recovery, but the deletion was real, and it was not acting maliciously. It was trying to help. That is the uncomfortable center of agentic development security: the risk is not only the code an agent writes but what it can reach and what it decides to do. Ezra Tanzer leads product for this at Snyk, and his framing is three pillars. Secure what agents generate, what they use, and what they do.
+
+The numbers under each pillar are not comforting. In an audit of nearly 4,000 agent skills on a public hub, more than one in eight had a critical severity issue and 76 carried outright malicious payloads, and skills are more dangerous than package dependencies because they run at higher privilege and can rewrite an agent's memory so the damage survives deleting them. Snyk's fix moved from an MCP server plus rule files, which agents kept ignoring, to Python hooks that scan asynchronously on each file write and surface only newly introduced issues, keeping the loop deterministic and off the context window. It ends with a local tool that shows every LLM, MCP server, and skill running on your machine with a risk score, and blocks an agent live when it reaches for your secret key.
+
+Speaker info:
+- https://www.linkedin.com/in/ezra-tanzer-5a187423/
+- https://snyk.io/contributors/ezra-tanzer/
+
+Timestamps:
+0:00 - Gaining confidence as agents gain autonomy
+0:36 - How MCP connected agents to tools
+1:14 - Snyk's first answer: an MCP server plus rules
+2:03 - Why securing generated code was only half the problem
+2:29 - Three incidents: Replit, Pocket OS, and GitHub
+3:46 - The three pillars: what agents generate, use, and do
+4:11 - Pillar one: securing what agents generate
+5:26 - From ignored rule files to async Python hooks
+6:40 - Pillar two: the agent supply chain and skill risk
+7:33 - Auto discovering the AI components on your machine
+8:11 - Adoption data: who is running MCP servers and skills
+9:27 - Pillar three: governing agent behavior
+11:20 - Handing off to a live demo
+13:29 - Dan Arpino's local security pair programmer
+14:56 - Visibility into every LLM, MCP server, and skill
+15:47 - Per project guardrails and auto fixing
+18:34 - Blocking an agent from reading your secrets
+20:17 - Security teams versus developers
+21:33 - Q&A: false positives, local vs cloud, and remediation
+
+
+"The risk is not only the code an agent writes, but what it can reach and what it decides to do." (2:03)
+"Malicious skills are more dangerous than package dependencies because they run at higher privilege and can rewrite an agent's memory." (7:17)
+"We need to move from 'ask' to 'steer'—making it so the human doesn't always have to be in the loop." (9:54)
+"I want visibility, I want auditability, and those are really key to trusting agents." (19:15)
+
+## When Agents Meet Physical Data: The Other Physics of Agent Harnesses - Dmitry Petrov, DataChain
+
+- Upload date: 2026-07-20
+- Video: https://www.youtube.com/watch?v=bUJgirn4_yc
+- Transcript: raw/20260720_bUJgirn4_yc/bUJgirn4_yc.en-orig.vtt
+- Metadata: raw/20260720_bUJgirn4_yc/bUJgirn4_yc.info.json
+
+Ask an agent to find every night-time pedestrian frame across terabytes of dashcam video in S3. The first pass can cost thousands of dollars and run for hours or days. Once you’ve paid that cost, the agent’s favorite move - loop, inspect, re-derive - becomes the worst thing it can do.
+
+Most agent intuition comes from a different physics: coding and business automation, where recompute is cheap, verification means re-running code, and state fits in context. That physics is real, useful, and everywhere. But like mechanics at cosmic or particle scale, those intuitions stop working when scale changes.
+
+Large-scale data work is where the cracks start showing. OpenAI’s in-house data agent needed layers of context engineering to operate over 600 petabytes in a structured warehouse - and warehouses are still the forgiving version, with schemas, indexes, query engines, and cheaper ways to check the work.
+
+Now move to the data behind physical AI: video, logs, and sensor data from robots, vehicles, labs, and factories. Petabytes will never fit in a context window. "Just verify it" may mean another expensive inference job. A follow-up question should recall what the system already paid to discover, not trigger another perception pass.
+
+This talk is a tour of that other physics: what breaks, what inverts, and what replaces today’s harness assumptions when recompute is the enemy. Materialization becomes the default, recall becomes first-class, and the dataset - not the context window - becomes the unit of state. I’ll demonstrate the pattern live with Claude Code over raw data in S3, where follow-ups return in seconds and cents instead of reprocessing everything, with measured gaps on the order of millions between recompute and recall.
+
+Same word: harness. Different physics.
+
+Speakers:
+- Dmitry Petrov (DataChain): Dmitry Petrov is the co-founder and CEO of DataChain, where he builds open-source infrastructure for AI agents to work with unstructured and physical-world data, and previously created DVC (Data Version Control).
+  X/Twitter: https://x.com/FullStackML
+  GitHub: https://github.com/dmpetrov
+
+## Can Oncology Workflows Run Without Human Touch? - Anant Shankhdhar, Risa Labs
+
+- Upload date: 2026-07-20
+- Video: https://www.youtube.com/watch?v=_cVfz88_j7A
+- Transcript: raw/20260720__cVfz88_j7A/_cVfz88_j7A.en-orig.vtt
+- Metadata: raw/20260720__cVfz88_j7A/_cVfz88_j7A.info.json
+
+Can Oncology Workflows Run Without Human Touch?
+At Risa, we automate healthcare workflows in oncology end-to-end using AI agents. We built four agents that work together  , each one handles a different step, then passes its output to the next. No human needed in between. The agents when combined are able to do the work of hundreds of medical workers a day. These agents are deployed across 20+ hospitals and supporting care for more than 100,000 patients.
+
+Here is the overview of our agents:-
+Ingestion Agent
+
+Takes messy, unstructured medical documents, faxes, scanned PDFs, clinical notes and turns them into clean, structured data. AI models read each document, extract the key information (patient details, medications, diagnoses), and check against historical records to avoid duplicate work. If a patient has been seen before, the system already knows their history and skips redundant lookups.
+
+EV Agent
+Checks whether a patient's insurance is active and what their plan covers. Some insurers offer APIs; others only have web portals. The agent uses whichever method works calling APIs where available, and driving a browser through the portal where not. The result is always the same standardized output: what's covered, what the patient owes, and whether the plan is active.
+
+Medical Reasoning Agent
+
+The clinical brain of the system. It evaluates whether a proposed treatment is appropriate for a specific patient by checking their medical records against clinical guidelines and insurance coverage rules. It breaks complex guidelines into simple yes/no criteria, evaluates each one against the patient's data in parallel, and aggregates the results. A confidence score determines whether the case can proceed automatically or needs a human clinician to review it.
+
+Submission Browser Agent
+
+100+ browsers running in parallel on Kubernetes, each one filling out forms and submitting requests on insurance portals. Each insurer has a different website with different forms — the agent knows how to navigate all of them. For portals that ask clinical questions during submission, the agent calls the Medical Reasoning Agent in real-time to generate answers. At full capacity, the system handles thousands of submissions per hour
+
+At Risa, we automate healthcare workflows in oncology end-to-end using AI agents. We built four agents that work together as a DAG , each one handles a different step, then passes its output to the next. No human needed in between. The agents when combined are able to do the work of hundreds of medical workers a day. These agents are deployed across 20+ hospitals and supporting care for more than 100,000 patients.
+
+Here is the overview of our agents:-
+Ingestion Agent
+
+Takes messy, unstructured medical documents, faxes, scanned PDFs, clinical notes and turns them into clean, structured data. AI models read each document, extract the key information (patient details, medications, diagnoses), and check against historical records to avoid duplicate work. If a patient has been seen before, the system already knows their history and skips redundant lookups.
+
+EV Agent
+Checks whether a patient's insurance is active and what their plan covers. Some insurers offer APIs; others only have web portals. The agent uses whichever method works calling APIs where available, and driving a browser through the portal where not. The result is always the same standardized output: what's covered, what the patient owes, and whether the plan is active.
+
+Medical Reasoning Agent
+
+The clinical brain of the system. It evaluates whether a proposed treatment is appropriate for a specific patient by checking their medical records against clinical guidelines and insurance coverage rules. It breaks complex guidelines into simple yes/no criteria, evaluates each one against the patient's data in parallel, and aggregates the results. A confidence score determines whether the case can proceed automatically or needs a human clinician to review it.
+
+Submission Browser Agent
+
+100+ browsers running in parallel on Kubernetes, each one filling out forms and submitting requests on insurance portals. Each insurer has a different website with different forms — the agent knows how to navigate all of them. For portals that ask clinical questions during submission, the agent calls the Medical Reasoning Agent in real-time to generate answers. At full capacity, the system handles thousands of submissions per hour
+
+Speakers:
+- Anant Shankhdhar (Risa Labs): Anant Shankhdhar is an AI researcher and Machine Learning Engineer at Risa Labs whose work focuses on large language models, agentic AI, retrieval-augmented generation (RAG), multimodal AI, and document intelligence, combining research and industry experience from IIT Guwahati, Adobe Research, Walmart Global Tech, and healthcare AI to build production-scale intelligent systems.
+  LinkedIn: https://www.linkedin.com/in/anantshankhdhar/
+  GitHub: https://github.com/AnantShankhdhar
+
+## Your LLM Stack Is a 2008 Database With Better Marketing — Lovina Dmello, NVIDIA
+
+- Upload date: 2026-07-20
+- Video: https://www.youtube.com/watch?v=XjI-AR4pt7Y
+- Transcript: raw/20260720_XjI-AR4pt7Y/XjI-AR4pt7Y.en-orig.vtt
+- Metadata: raw/20260720_XjI-AR4pt7Y/XjI-AR4pt7Y.info.json
+
+In 2023, researchers found thousands of Ray clusters sitting wide open on the public internet, dashboards and job APIs exposed to anyone, because authentication ships off by default and nobody turned it on before going to production. The data at risk was worth more than a billion dollars. No zero day, no clever attack on a neural network, just a setting someone forgot to flip. In production ML security that is not the exception, it is the rule.
+
+Lovina Dmello read 139 peer reviewed papers on production ML security and kept hitting the same pattern: misconfiguration, not missing features, is the dominant failure mode. One audit of 50 real systems found a critical mistake in 78% of them, almost always the same three offenders: overprivileged accounts that can touch anything, flat networks where one foothold reaches everything, and secrets and model weights left in storage anyone can read. The heavier defenses researchers love tend to die in production because they add 15% to 30% inference overhead, so the real question is never whether to run a control but how to run it cheaply enough to keep. The fix is not a new attack and defense pair. It is to stop securing ML like a model and start securing it like the infrastructure it actually is, because that is where the breaches keep landing.
+
+Speaker info:
+- https://www.linkedin.com/in/lovina25
+- https://developer.nvidia.com/blog/author/ldmello
+- https://scholar.google.com/citations?user=vqytSYoAAAAJ&hl=en
+
+## In the Land of AI Agents, the Verifiers Are King — Tariq Shaukat, Sonar
+
+- Upload date: 2026-07-20
+- Video: https://www.youtube.com/watch?v=VrpEyglYgeU
+- Transcript: raw/20260720_VrpEyglYgeU/VrpEyglYgeU.en-orig.vtt
+- Metadata: raw/20260720_VrpEyglYgeU/VrpEyglYgeU.info.json
+
+As AI agents take on increasingly complex development tasks, the critical challenge has shifted from generation to verification. Hallucination is not a temporary bug. Evidence suggests that as models grow more capable, failures become more frequent and more convincing, making cognitive surrender among human reviewers an acute risk. This talk introduces a three-stage discipline for responsible agentic development, Guide, Verify, Solve, and argues that rigorous verification infrastructure is both a safety requirement and a competitive advantage. Counterintuitively, code quality matters more in an agentic world: clean, low-complexity codebases make agents faster, cheaper, and more reliable, while technical debt compounds at machine speed.
+
+Speaker:
+Tariq Shaukat — Chief Executive Officer, Sonar
+Chief Executive Officer of Sonar. Previously served as President of Google Cloud and President of Bumble.
+X: https://x.com/tariqshaukat
+
+Timestamps
+0:00 Introduction and the current state of AI adoption
+1:30 The challenge: Distinguishing AI utility from "AI slop"
+3:09 Analyzing the performance data of AI coding agents
+6:17 The productivity paradox: Why gains dissipate after three months
+8:28 Introducing the AC/DC (Agent-Centric Development Cycle) framework
+9:31 Stage 1: Guide (Providing context and constraints)
+11:22 Stage 2: Verify (Zero-trust, multi-layered verification)
+13:00 Stage 3: Solve (Maintenance loops and technical debt control)
+14:32 The necessity of systems-level thinking for AI agents
+16:56 Real-world impact: 92% reduction in issues with disciplined verification
+17:42 Conclusion and final thoughts on enterprise AI
+
+## Agents Need Receipts, Not More Tool Calls - Armanas Povilionis, Alithea Bio
+
+- Upload date: 2026-07-20
+- Video: https://www.youtube.com/watch?v=Q9ycQHbDdJs
+- Transcript: raw/20260720_Q9ycQHbDdJs/Q9ycQHbDdJs.en-orig.vtt
+- Metadata: raw/20260720_Q9ycQHbDdJs/Q9ycQHbDdJs.info.json
+
+In this talk, I’ll show an agent publish a service, another agent discover and invoke it, and a signed receipt that proves what happened. The point is simple: if agents are going to buy, sell, and compose work across hosts, logs and API dashboards are not enough.
+
+Froglet is an open-source protocol and node for agent-to-agent compute. It reduces named services, data-backed services, and open-ended compute to one signed flow: Descriptor  to  Offer  to  Quote  to  Deal  to  Receipt. The same surface is exposed through MCP and OpenClaw/NemoClaw as one froglet tool, so agents can publish, discover, invoke, and verify work without custom glue for every provider.
+
+The hot take: agentic commerce should start with verifiable work, not checkout pages. Payment rails can change. Receipts, identities, workload hashes, and deal state need to survive across models, hosts, and marketplaces.
+
+see froglet.dev
+
+Speakers:
+- Armanas Povilionis (Alithea Bio): Technologist and systems strategist working at the intersection of AI, infrastructure, biology, governance, and incentive coordination.
+  X/Twitter: https://x.com/PovilionisA
+  LinkedIn: https://www.linkedin.com/in/armanas-povilionis/
+  GitHub: https://github.com/armanas
+
+## We Gave an Agent Production Code Access and Then Tried to Sleep at Night — Moritz Johner, Form3
+
+- Upload date: 2026-07-20
+- Video: https://www.youtube.com/watch?v=LqLoYksJ6do
+- Transcript: raw/20260720_LqLoYksJ6do/LqLoYksJ6do.en-orig.vtt
+- Metadata: raw/20260720_LqLoYksJ6do/LqLoYksJ6do.info.json
+
+A single PatchPilot PR that bumped a few dependencies changed 70,000 lines of code, and the whole problem hides somewhere in that diff. Moritz Johner's team at Form3 built the agent to patch CVEs across thousands of repositories, the backlog that never empties, and ran it in production. Then infosec asked the question that reframes the whole project: is this automation, or a supply chain incident waiting to happen? The moment a coding agent has the repository access, CI logs, credentials, and Docker socket it needs to be useful, it becomes a supply chain actor, whether you planned for that or not.
+
+Their answer is architectural. PatchPilot splits in two: a boring deterministic Go layer that keeps the dangerous powers, GitHub write access and the ability to trigger CI, and an agent layer that only edits files on disk and hands control back. Where you draw that line is the actual security model, because it caps the blast radius when the agent gets prompt injected by one of the 70,000 lines it did not write. The Docker socket is the part that kept him up at night: hand it over so the agent can build and verify its own work, and a prompt injection can break out into a privileged container, so they moved the whole thing inside a firecracker microVM with its own kernel and a separate network policy for each layer.
+
+Speaker info:
+- https://www.linkedin.com/in/moritz-johner/
+- https://github.com/moolen
+- https://github.com/external-secrets/external-secrets
+
+## Skills are the New SDKs - Elvin Aghammadzada, DataRobot
+
+- Upload date: 2026-07-20
+- Video: https://www.youtube.com/watch?v=LC3-P7v3yoI
+- Transcript: raw/20260720_LC3-P7v3yoI/LC3-P7v3yoI.en-orig.vtt
+- Metadata: raw/20260720_LC3-P7v3yoI/LC3-P7v3yoI.info.json
+
+You shipped a REST API. Then an SDK. Then MCP tool calling. And still, when a developer asks a coding agent to use your platform, it invents steps, and breaks in production. The problem is that your platform isn't teachable yet.
+
+The fix is a skill layer. Versioned, task-specific packages that encode the workflow knowledge your platform team has always had. Building step ordering, failure modes and security hygiene into something agents can load and execute. This became one of the hardest challenges we have seen on building enterprise agentic AI platform for Fortune 50.
+
+The talk walks through fundamentals of platform agent skills as a live case study: ML predictions, model training, deployment, monitoring, CI/CD, and agent observability - packaged as installable skills that work across Claude Code, Cursor, Codex. This pattern will paint a clear design pattern for building your own agent-native platform layer, and one question answered: what does it actually take to make your platform teachable?
+
+Speakers:
+- Elvin Aghammadzada (DataRobot): Elvin Aghammadzada is a data science engineer on DataRobot's Agent Workforce Platform, focused on bringing production-grade agentic AI to the enterprise.
+  LinkedIn: https://www.linkedin.com/in/elvin-agammed/
+  GitHub: https://github.com/elvinagam
+
+## Privacy-Preserving Intelligence — Steve Korshakov, Bee (acq. Amazon)
+
+- Upload date: 2026-07-20
+- Video: https://www.youtube.com/watch?v=IvE8n-ylFYY
+- Transcript: raw/20260720_IvE8n-ylFYY/IvE8n-ylFYY.en-orig.vtt
+- Metadata: raw/20260720_IvE8n-ylFYY/IvE8n-ylFYY.info.json
+
+A wearable that records everything you say captures about 10 million tokens a year, and within a week it knows almost everything about you. That is Bee, and Steve Korshakov calls it roughly the most sensitive capture device on the market, which is why his whole talk is about one guarantee: no one can read your data, not even Amazon, the company that acquired Bee eight months ago. Being inside Amazon made this harder, not easier, because an ordinary AWS customer trusts Amazon to see their data, and Bee now had to defend against that too.
+
+The encryption key never leaves your phone, and Bee never stores it. Before the phone hands anything over, it runs an attestation pipeline that checks the exact workload against a public transparency log, Sigstore, so anyone can verify the code touching your data is genuine. Inference runs on their own models inside confidential compute, keys in memory expire after seven days, and a separate Amazon privacy team holds the signing keys, hardcoded into the apps, so Bee can influence a deployment but cannot ship anything unnoticed. The footnote that surprised the room: the whole system is about 20,000 lines of memory safe code, most of it just verifying attestation, with no homegrown crypto.
+
+Speaker info:
+- https://x.com/Ex3NDR
+- https://github.com/ex3ndr
+- https://bee.computer
+
+Timestamps:
+0:00 - The most sensitive capture device on the market
+1:32 - The mission: no one, not even Amazon, can read your data
+2:13 - Why the agent runs continuously, not request response
+3:58 - Four principles: the key never leaves your phone
+4:53 - Attestation and a public transparency log
+6:11 - Own inference, confidential compute, and 7 day keys
+7:14 - Signing so no insider can ship unnoticed
+9:35 - Certificates that embed the proofs
+10:16 - Q&A: joining Amazon, 20k lines, and taming agents
+
+## It's 10pm. Do You Know Where Your Agents Are? — Kim Maida, Keycard
+
+- Upload date: 2026-07-20
+- Video: https://www.youtube.com/watch?v=I3znWC3MEXM
+- Transcript: raw/20260720_I3znWC3MEXM/I3znWC3MEXM.en-orig.vtt
+- Metadata: raw/20260720_I3znWC3MEXM/I3znWC3MEXM.info.json
+
+An incident agent on the night shift reads a ticket: the billing database is broken, payments failing. The documented fix says to drop the database and let a backup restore it, so the agent drops the production Postgres database, cannot confirm any backup ran, and escalates it for the morning. This has happened to real companies. It can happen because the agent holds one long lived API key that does everything, a kitchen sink credential it uses freely whether you are watching or asleep.
+
+Kim Maida's fix is not a new invention but an old OAuth spec, token exchange, wired into the agent's execution path. Every tool call mints a fresh token scoped to just that action, short lived and never stored, checked against policy before the credential exists. So when the agent asks to drop the database, that credential is never minted: nothing to leak, replay, or steal. Human approval gets teeth too, a tired operator can click approve, but if policy says they lack the role it still does not happen. It works across CLI coding agents, MCP servers, and any OAuth provider.
+
+Speaker info:
+- https://x.com/kimmaida
+- https://linkedin.com/in/kimmaida
+- https://maida.kim
+
+Timestamps:
+0:00 - It's 10pm, do you know where your agents are?
+1:48 - Demo: an incident agent on the night shift
+3:18 - When the agent drops the production database
+4:52 - Why agents are dangerously overprivileged
+5:56 - The agentic execution path
+7:27 - The fix: OAuth token exchange
+8:32 - Delegation: narrowing the user's access
+9:23 - Minting a fresh token per tool call
+11:44 - The demo again, now with token exchange
+13:33 - Policy blocks the database drop before it exists
+14:27 - Human approval backed by real policy
+15:52 - Works across CLIs, MCP servers, and any provider
+17:34 - Q&A
+
+## Enterprise Agents Have a Structure Problem - Ishita Daga, Tesla
+
+- Upload date: 2026-07-20
+- Video: https://www.youtube.com/watch?v=B8l81jhvHbI
+- Transcript: raw/20260720_B8l81jhvHbI/B8l81jhvHbI.en-orig.vtt
+- Metadata: raw/20260720_B8l81jhvHbI/B8l81jhvHbI.info.json
+
+Most enterprise agents fail for the same reason: the model can generate SQL, call tools, and follow workflows, but it has no understanding of how the business actually defines its data. Most teams try to fix this with longer prompts, more RAG, or a bigger model. The real fix is building semantic retrieval infrastructure — a machine-readable metadata layer that lets agents reason over business concepts instead of guessing at raw schemas.
+
+In this talk, I’ll walk through how this metadata powers business-context-aware agents through semantic retrieval, metadata graphs, and domain-specific sub-agents.
+
+Speakers:
+- Ishita Daga (Tesla): Ishita Daga is a Senior Machine Learning Engineer at Tesla, building enterprise AI systems that combine semantic retrieval, metadata infrastructure, and business-aware reasoning to make analytics agents reliable in production. Previously, she was an AI Scientist at Covera Health, where she built multimodal and weakly supervised ML systems for radiology intelligence. Her interests include enterprise agent architectures, semantic layers, and operational AI systems.
+
+## Security Track Intro — Randall Degges, Snyk
+
+- Upload date: 2026-07-20
+- Video: https://www.youtube.com/watch?v=2xJoimgoqBg
+- Transcript: raw/20260720_2xJoimgoqBg/2xJoimgoqBg.en-orig.vtt
+- Metadata: raw/20260720_2xJoimgoqBg/2xJoimgoqBg.info.json
+
+Building software with AI almost feels like a cheat code: you ship what you were working on and watch it spark joy in real users. The catch, and the reason Randall Degges is opening the World's Fair's first Security Track, is that three things still stand in the way of doing that at scale. AI writes insecure code just like humans do, autonomous agents in production can go off the rails while you sleep, and access to frontier models keeps getting pulled out from under you for what amounts to geopolitics. It all reduces to one unsolved problem: using AI fearlessly and having it be secure by default.
+
+Speaker info:
+- https://x.com/rdegges
+- https://github.com/rdegges
+- https://rdegges.com
+
+## AI’s Jurassic Park Period — Aaron Stanley, dbt Labs
+
+- Upload date: 2026-07-20
+- Video: https://www.youtube.com/watch?v=1lgFGaHoGq8
+- Transcript: raw/20260720_1lgFGaHoGq8/1lgFGaHoGq8.en-orig.vtt
+- Metadata: raw/20260720_1lgFGaHoGq8/1lgFGaHoGq8.info.json
+
+Twenty years ago Aaron Stanley arrived at an emergency evidence collection for an SEC investigation and realized he had forgotten the dongle that licensed his forensic software. Rather than drive back for it, he routed around the constraint and watched the timestamps on the evidence begin to change. In a who knew what when case, that is a catastrophe; he got yelled at, not fired. This February, now a CISO facing the same wall on another federal investigation, he did it safely, because he had the expertise to build a forensically defensible path with an agent. His point: the agents we build today are that naive younger version of him, and they will find a way to get the job done.
+
+Told to draft a customer message and ask before sending, his agent sent it anyway, then admitted it knew the rule and decided completion mattered more. Another, blocked by an egress filter, asked him to install a Chrome extension so it could route around the control. Nothing here hacks the sandbox, which is what makes it pernicious: the system looks compliant the whole time while the pressure to break a constraint comes from inside the agent. Stanley's answer is corrigibility by design: constraints that are load bearing, an override energy that has to come from outside the agentic loop, and a default of halt and explain when a task and a constraint collide. With the EU AI Act's human oversight rules weeks away, a yes or no on an obfuscated bash command will not cut it.
+
+Speaker info:
+- https://www.linkedin.com/in/aastanley/
+- https://www.youtube.com/watch?v=tnB7M9HF1SA
+
+Timestamps:
+0:00 - Introduction: a CISO in Jurassic Park
+0:53 - The forgotten dongle and the changing timestamps
+2:58 - Twenty years later: the same wall, done safely
+4:29 - Agents are naive 2006 Aaron
+5:09 - What Jurassic Park is really about
+6:41 - When an agent sends the message it was told to hold
+8:26 - The agent that asked to install a Chrome extension
+9:42 - Necessary but not sufficient: the pernicious problem
+11:14 - Corrigibility and outcome driven constraint violations
+12:08 - Three rules for load bearing constraints
+13:01 - The intelligent adversary and human escalation
+16:10 - The EU AI Act and the four layer answer
+17:34 - Q&A: what to prioritize and where to instrument it
+
+## Through the AI Fog: The Architectural Decision Agentic Security Depends On — Manoj Nair, Snyk
+
+- Upload date: 2026-07-20
+- Video: https://www.youtube.com/watch?v=1EZdpEhwmNc
+- Transcript: raw/20260720_1EZdpEhwmNc/1EZdpEhwmNc.en-orig.vtt
+- Metadata: raw/20260720_1EZdpEhwmNc/1EZdpEhwmNc.info.json
+
+Ask the latest frontier models, the ones not even public yet, to find the same vulnerability five times, and only half of those runs catch it. Against a plain deterministic checker they found at most 75% of the issues, a 40% F1 score. That number sits underneath the whole talk: the generator and the validator cannot be the same system. Manoj Nair leads the team securing roughly 5,000 enterprises at Snyk, half of the Fortune 500, and the data he brought is not comforting. Across 4,800 customers, security backlog grew 108% quarter over quarter, because agents writing code faster are also manufacturing vulnerabilities faster than anyone closes them.
+
+The new attack surface is not hypothetical. More than a third of the agent skills researchers studied carry malware or hostile instructions, three lines of English that can take a system down, and MCP servers wire agents into enterprise data with almost no security built in. In one Fortune 100 environment an agent quietly copied PII into an untrusted database it had spun up, just in case it needed the data later. Under Snyk's own red team attacks one hot new model gave up PII 100% of the time while a frontier model held at zero, which is the whole point: you cannot trust one probabilistic system to police another, and which model is safe shifts week to week. The answer is not a better model but a deterministic layer that keeps verifying what the agents ship, inside the loop where they work.
+
+Speaker info:
+- https://www.linkedin.com/in/mnair1
+- https://labs.snyk.io/contributors/manoj-nair/
+
+Timestamps:
+0:00 - Welcome to the first AI security track
+1:46 - Manoj takes the stage: securing 5,000 enterprises
+3:07 - The core question: can the generator also be the validator?
+4:25 - Autonomous attacks and the attacker that never sleeps
+5:43 - Why AI generated code makes old problems worse
+7:02 - Real data: 108% more security backlog, quarter over quarter
+8:04 - The Five Eyes warning and chained exploits
+8:34 - Toxic skills and poisoned environments
+9:27 - MCP servers and the GitHub MCP exploit
+9:53 - When an agent squirrels away your PII
+10:34 - You can't govern what you can't see
+11:16 - Red team data: which models leak PII
+12:08 - The generator vs validator benchmark
+13:38 - What Snyk built: prevention and Snyk Studio
+14:20 - Remediation at scale: 16,000 critical issues
+15:37 - Live demo: package health in the coding loop
+19:03 - Live demo: assessing a risky agent skill
+21:02 - Building EVO with the AI security community
+
+## Medic for Apache Spark - First Aid for Failing Jobs - Drasko Profirovic, Pinterest
+
+- Upload date: 2026-07-20
+- Video: https://www.youtube.com/watch?v=0RNNfxpdbQk
+- Transcript: raw/20260720_0RNNfxpdbQk/0RNNfxpdbQk.en-orig.vtt
+- Metadata: raw/20260720_0RNNfxpdbQk/0RNNfxpdbQk.info.json
+
+In this talk, we’ll share the journey of building an agentic diagnostics tool to address one of the most time-consuming challenges in data engineering: troubleshooting Spark job failures at scale. As Spark workloads and platform complexity continue to grow, traditional dashboards and static playbooks are no longer sufficient. Our goal was to build an intelligent agent capable of automatically ingesting logs, correlating relevant context, and producing human-quality diagnoses and actionable recommendations in minutes rather than hours.
+
+We’ll begin by covering the core design goals behind the system—accuracy, extensibility, and trustworthiness—and the architectural foundations we put in place to support them. We’ll discuss how we designed the agent around modular capabilities such as log parsing, pattern recognition, root-cause inference, and remediation suggestions; how we integrated it with Spark and broader platform metadata; and how we made it easy to extend the system to new error patterns and domains. We’ll also share how we approached evaluation and testing by building a corpus of real incidents, turning them into regression tests, and using them to continuously measure reasoning quality and safety. From there, we’ll explore what it takes to push agentic systems to their limits in production, including lessons on prompt and tool design, handling ambiguity in logs, reducing hallucinations, reasoning over partial or noisy signals, and striking the right balance between automation and human oversight. Along the way, we’ll highlight a few unexpected failure modes and how those informed later iterations.
+
+We’ll close by discussing where we’re headed next: expanding beyond Spark into other data systems, and using engineer feedback loops to continuously improve its reasoning over time.
+
+Speakers:
+- Drasko Profirovic (Pinterest): Drasko is a Staff Engineer at Pinterest focused on agentic systems, drawing on a background in full-stack engineering and experience at Stripe and OpenAI to build the primitives and frameworks that enable scalable diagnostics, orchestration, and automated resolution.
+  LinkedIn: https://www.linkedin.com/in/pdrasko/
+
+## You Didn't Ship a Bug. You Just Wrote It for a Human. - Ravi Madabhushi, Scalekit
+
+- Upload date: 2026-07-19
+- Video: https://www.youtube.com/watch?v=lMCxVorb9wM
+- Transcript: raw/20260719_lMCxVorb9wM/lMCxVorb9wM.en-orig.vtt
+- Metadata: raw/20260719_lMCxVorb9wM/lMCxVorb9wM.info.json
+
+We built a demo agent to show customers how to connect agents to their tools. A simple chat assistant — Gmail, Calendar, a handful of connectors. It ran on a 15-minute schedule. And every 15 minutes, our production database strained. Latency crept up and alerts fired. Then settled.
+
+Then, it fired again.
+
+It took us a while to find it. One line - a "last seen" timestamp updating on every tool call. Written for a human who logs in once. Our agent was calling it sixty times a second. We had built infrastructure to show customers how to connect agents to their tools. We hadn't noticed we'd built it for humans.
+
+That line wasn't a bug. It was a design assumption. And it's not just us - 60% of all production LLM errors trace back to rate limits. They are not model failures or bad prompts. Infrastructure that never anticipated this kind of traffic. As one developer put it: "Rate limits can't tell the difference between agent legitimately needs 100 calls and agent is just looping." Because they were never designed to. They were designed for humans.
+
+Every layer of the stack your agents depend on carries the same assumption — that the user on the other end is a person, doing one thing at a time, at human speed. Your agent isn't. And until your infrastructure knows that, production will keep finding the places where it doesn't.
+
+This talk is about what we learned from finding it, what it actually means to treat agents as a first-class principal, not a fast human, and what changes when you design for that from the start.
+
+Speakers:
+- Ravi Madabhushi (Scalekit): Ravi has been building infra for how software talks to other software for more than a decade. He co-founded Pipemonk — a SaaS integration platform acq. by Freshworks (NASDAQ listed) then spent years leading product on Freshworks' auth platform as it scaled to 50K+ businesses and 2M DAUs.
+
+At Scalekit, he's applying that to a harder version of the same problem: not humans logging into software, but agents taking actions inside it. What breaks is different. What it costs when it breaks is worse.
+  X/Twitter: https://x.com/ravibits
+  LinkedIn: https://www.linkedin.com/in/ravibits/
+  GitHub: https://github.com/ravibits
+
+## From Blind Spots to Merged PRs: Continuous Agentic Performance Optimization - May Walter, Hud
+
+- Upload date: 2026-07-19
+- Video: https://www.youtube.com/watch?v=JJGbw4ggaFs
+- Transcript: raw/20260719_JJGbw4ggaFs/JJGbw4ggaFs.en-orig.vtt
+- Metadata: raw/20260719_JJGbw4ggaFs/JJGbw4ggaFs.info.json
+
+Performance issues silently pile up in mature codebases. Teams know things could be faster, but can never justify pausing feature work to investigate. You have to put engineers on it just to find out if there's something worth fixing, and the effort is completely unpredictable: it could take an hour or three weeks.
+
+In this talk, we'll walk through a real case study of adding runtime intelligence to coding agents to enable continuous performance optimization in production. We'll cover the pain that led us here, the technical approach (agents analyzing real production context to surface high-ROI fixes scored by complexity and impact), and what we had to improve along the way to get reliable results.
+
+This approach surfaced and fixed N+1 queries and missing database indexes within the first week, with measurable P90 latency improvements after deployment. Tech leads now receive actionable reports before sprint planning and can make decisions starting from the fix, not the problem.
+
+If you're looking for a concrete, real-world example of integrating AI agents into the SDLC, this is it: not a demo, not a prototype, but merged PRs and better production performance.
+
+Speakers:
+- May Walter (Hud): May Walter is Co-Founder and CTO of Hud, where she builds the Runtime Code Sensor that gives coding agents real-time production intelligence, drawing on her background as a serial CTO, runtime internals expert, and adversarial cybersecurity researcher.
+  LinkedIn: https://www.linkedin.com/in/may-walterr/
+
+## Build Evals That Actually Matter - Nick Ung & Akshay Sharma, Lyft
+
+- Upload date: 2026-07-19
+- Video: https://www.youtube.com/watch?v=3z2uT5aDx_Y
+- Transcript: raw/20260719_3z2uT5aDx_Y/3z2uT5aDx_Y.en-orig.vtt
+- Metadata: raw/20260719_3z2uT5aDx_Y/3z2uT5aDx_Y.info.json
+
+Your agent passes offline evals at 90%. You ship. Production immediately finds failure modes your eval never saw. Sound familiar?
+
+The culprit is almost always the same: the "customer" in your offline eval is an off-the-shelf LLM that sounds nothing like your real users, and your synthetic test set doesn't capture how messy, angry, or off-topic real conversations get. Your eval was too easy.
+
+At Lyft, our customer-care agents resolve roughly a third of all customer issues — millions of conversations a month. To trust them at that scale, we built an adversarial user simulator: a fine-tuned LLM trained on real Lyft rider and driver transcripts that can role-play frustrated, confused, and adversarial users with the same distribution as production. It found regressions our synthetic dataset missed for months.
+
+This talk walks through the full eval lifecycle that surrounds it: the harness primitives that let any engineer write a benchmark in 20 lines, how we calibrate LLM-judge rubrics against human labels until they match inter-rater agreement, how we route failed production traces back into the offline test set, and the continual-learning loop that feeds improvements into prompts, harness, and the model.
+
+Slides:
+- https://docs.google.com/presentation/d/14WuuV6PqUXgXLBVWuZmwsYhmI-lauoNuYyFGvlzHQc4/edit?usp=sharing
+
+Speakers:
+- Nick Ung (Lyft): Nick Ung leads Data Science for Safety & Customer Care at Lyft, where his team built and operates the multi-agent platform that powers AI agents resolving roughly a third of all Lyft customer issues.
+  - LinkedIn: https://www.linkedin.com/in/unglikteng
+
+- Akshay Sharma (Lyft): Akshay Sharma is a Senior ML Engineer at Lyft and tech lead of the Lyft’s Customer Care Agent Architecture and the Builder Platform, which he co-founded with Nick.
+  - LinkedIn: https://www.linkedin.com/in/akshay-sharma-1995/
+
+## From Tokens to Cells: Foundation Models for Single-Cell Biology - Akram Baharlouei, Altos Labs
+
+- Upload date: 2026-07-19
+- Video: https://www.youtube.com/watch?v=-561cZmir5Q
+- Transcript: raw/20260719_-561cZmir5Q/-561cZmir5Q.en-orig.vtt
+- Metadata: raw/20260719_-561cZmir5Q/-561cZmir5Q.info.json
+
+This talk examines the engineering challenges of building foundation models for single-cell biology from a non-biologist’s perspective.
+
+Speakers:
+- Akram Baharlouei (Altos Labs): Machine learning engineer at Altos Labs working on foundation models for biology. Previously at Meta AI and Qualcomm.
+  LinkedIn: https://linkedin.com/in/akram-baharlouei-61784421
+
+## Agents Need Feature Flags - Sachin Gupta
+
+- Upload date: 2026-07-18
+- Video: https://www.youtube.com/watch?v=zU4EagB311U
+- Transcript: raw/20260718_zU4EagB311U/zU4EagB311U.en-orig.vtt
+- Metadata: raw/20260718_zU4EagB311U/zU4EagB311U.info.json
+
+Most AI teams ship behavior changes to 100% of users on every deploy — no canary, no segment, no kill switch. Web teams stopped doing this in 2012. AI teams are about to learn why.
+Feature flags are table stakes in software engineering. In agent systems they're almost nonexistent — prompts, tool access, model selection, memory policy, and autonomy level all change globally the moment you ship. That's why your "small" prompt tweak just broke 12% of your users and you found out from a Discord screenshot.
+This talk walks the feature-flag patterns agents specifically need — beyond the standard boolean-toggle. We'll cover segment-targeted prompt variants, per-tool access flags, model-routing flags, autonomy-level flags (suggest vs. auto-approve vs. auto-execute), memory-policy flags, and the kill switch every agent system should have on day one but almost none do.
+
+Speakers:
+- Sachin Gupta: Sachin Gupta is a Staff Software Engineer with 15+ years building backend platforms at internet scale, currently focused on the runtime trust boundaries that LLM coding agents blur and the creator of HeapLens, a Java heap analyzer extension used in 50+ countries.
+  LinkedIn: https://www.linkedin.com/in/guptasachin1/
+  GitHub: https://github.com/sachinkg12
+
+## Content Is Code - Matt Palmer, Conductor
+
+- Upload date: 2026-07-18
+- Video: https://www.youtube.com/watch?v=yv6xovSsB1U
+- Transcript: raw/20260718_yv6xovSsB1U/yv6xovSsB1U.en-orig.vtt
+- Metadata: raw/20260718_yv6xovSsB1U/yv6xovSsB1U.info.json
+
+Code has become the fastest medium for producing technical content, but the most important piece isn't a secret agent skill or a magical framework: its the same thing that makes a great developer experience.
+
+Speakers:
+- Matt Palmer (Conductor): Matt Palmer is a DevRel & product leader focused on AI devtools, developer education, and making complex concepts accessible. Away from the keyboard, you can find him lifting, hiking, riding motorcycles, or caring for plants.
+  X/Twitter: https://x.com/mattppal
+  LinkedIn: https://www.linkedin.com/in/matt-palmer/
+
+## Stop Burning Tokens: Why self-improvement needs domain expertise first - Annabell Schäfer, Langfuse
+
+- Upload date: 2026-07-18
+- Video: https://www.youtube.com/watch?v=eAXxdtNlK04
+- Transcript: raw/20260718_eAXxdtNlK04/eAXxdtNlK04.en-orig.vtt
+- Metadata: raw/20260718_eAXxdtNlK04/eAXxdtNlK04.info.json
+
+We ran auto-improvement loops on a paper classification task against a ground-truth dataset. A real problem, narrow enough to measure precisely, and in fact one of the few clear cut target functions out there.
+
+We’ll share how to properly set up an agent for auto-improvement, what task specificity and target function quality is actually required for it to work, and why the most efficient path to a continuously improving agentic system is one where domain experts and automation know when to hand off to each other.​​​​​​​​​​​​​​​​
+
+Speakers:
+- Annabell Schäfer (Langfuse): Annabell is a Growth Engineer at Langfuse, the largest Open Source AI observability and evaluation platform. She is passionate about building cutting edge AI systems and has been around in the space since 2022.
+  X/Twitter: https://x.com/annabellschfr
+  LinkedIn: https://linkedin.com/in/annabell-schaefer/
+  GitHub: https://github.com/annabellscha
+
+Timestamps:
+
+0:00 Introduction and the goal of avoiding token waste
+0:24 The current trend of "designing loops" vs. prompt engineering
+0:47 Why coding (with its clear "compile" target) set a false precedent
+1:20 Challenges of defining target functions in non-coding domains
+2:30 Case study: The arXiv paper classification experiment
+3:30 Setup of the minimal self-optimization loop
+5:48 The step-by-step iteration process and stopping criteria
+7:00 Results: Achieving a 15% improvement in accuracy
+9:53 Deep dive into the reasoning behind the improvement
+11:26 Translating binary "high signal" feedback to other applications
+13:12 Defining what "good" looks like for your specific domain
+15:05 The importance of human-agent collaboration and data review
+Viral Quotes & Potential Titles:
+
+"Stop burning your tokens and start building in domain expertise early in your loop design." (0:10)
+"Teams who are investing heavily in the target function are the ones who manage to continuously improve." (2:02)
+"If you can't do 'code compiles', you need to wrap your head a little bit differently around what is good and what is not." (14:23)
+"Don't review it only with your coding agents, but review it as a human." (15:57)
+
+## Your Agents Need a Save Button - Hamza Tahir, ZenML
+
+- Upload date: 2026-07-18
+- Video: https://www.youtube.com/watch?v=bZISsg7H7DA
+- Transcript: raw/20260718_bZISsg7H7DA/bZISsg7H7DA.en-orig.vtt
+- Metadata: raw/20260718_bZISsg7H7DA/bZISsg7H7DA.info.json
+
+Most of an agent's life is spent waiting - on a tool, a human, the next step - and the whole time you're holding a live process awake and billing for it. Multiply that across every agent your org wants to run overnight and the math stops working.
+
+A save button fixes the obvious stuff: freeze an agent to durable state, drop its compute to zero, bring it back in milliseconds when there's work, and if it crashes, resume from the last save instead of re-burning every token from the top.
+
+The interesting part is what a save button does after the run is over. Reload an agent to any point in its trajectory, change one thing, a prompt, a model, a tool, and watch whether it does better. A finished run stops being a log you read and becomes something you re-run and improve.
+
+I'll argue that this one primitive, a checkpoint, is the most underrated thing in agent infrastructure, and follow it down to the sandboxes and Kubernetes-shaped infra the industry is quietly racing to build so a million saved agents can sleep for free. You'll leave with a model for running and improving agents at scale without paying to keep them awake.
+
+Speakers:
+- Hamza Tahir (ZenML): Hamza Tahir is co-founder and CTO of ZenML and co-founder of Kitaru, the durable runtime for AI agents. He's spent a decade building production ML and AI infrastructure used by JetBrains, the German Bundeswehr, and Adeo, and writes and speaks on what actually breaks when agents hit production.
+  X/Twitter: https://x.com/htahir111
+  LinkedIn: https://www.linkedin.com/in/hamzatahirofficial
+  GitHub: http://github.com/htahir1
+
+## Autonomous Agents for Scientific Tasks - Sina Shahandeh, Radicait
+
+- Upload date: 2026-07-18
+- Video: https://www.youtube.com/watch?v=XLEYtv3cMlw
+- Transcript: raw/20260718_XLEYtv3cMlw/XLEYtv3cMlw.en-orig.vtt
+- Metadata: raw/20260718_XLEYtv3cMlw/XLEYtv3cMlw.info.json
+
+There has been much work on Autoresearch where the objectives are coding puzzles, toy optimization problems, or static supervised-learning ML tasks. However, for an autonomous agent to assist with a scientific discovery task, the problems must come from real measurement data of the world and they are highly open-ended, requiring a scientific method in the solution loop.
+
+In this talk, we show scenarios where the agent has to search over methods, priors, data preprocessing, model classes, and hyperparameters while learning from intermediate failures. Often, a step change in agent performance comes from forming an appropriate scientific hypothesis about how the physical system behaves, implementing that hypothesis correctly in a mathematical model, and executing it on the existing real data.
+We show how an ontology-based memory system is used in the harness to assist with the hypothesis generation that is key to the agent's success. All demonstrations come from real scientific problems solved in industrial and applied research settings.
+
+Speakers:
+- Sina Shahandeh (Radicait): Sina is a cofounder/CTO at Radicait. His background is in scientific computing (PhD) and has lead data/AI function in 3 scale ups (with $770M exit) as well as founding 3 companies.
+  X/Twitter: https://x.com/SinaShahandeh
+  LinkedIn: https://www.linkedin.com/in/sinashahandeh/
+
+## The UX of AI: Making AI-Powered Apps Your Users Don't Hate - Kathryn Grayson Nanz, Progress Software
+
+- Upload date: 2026-07-18
+- Video: https://www.youtube.com/watch?v=L3RuP_q8Bwc
+- Transcript: raw/20260718_L3RuP_q8Bwc/L3RuP_q8Bwc.en-orig.vtt
+- Metadata: raw/20260718_L3RuP_q8Bwc/L3RuP_q8Bwc.info.json
+
+As a developer, AI is fun, exciting, and full of potential – but users don't always feel the same way about it.
+
+From a UX perspective, AI comes with a whole new set of considerations around user trust, privacy, and security. From a UI perspective, AI brings new interaction patterns, new icons, new visual cues, and so much more!
+
+If we want people to get the most from what we build, we have to teach our users how to use AI. Let's look at ways to introduce new capabilities in our apps and guide our users through new patterns and processes – ideally without making them throw their phone out a window
+
+Speakers:
+- Kathryn Grayson Nanz (Progress Software): Kathryn Grayson Nanz is the Senior Design and Developer Advocate at Progress Software; her work focuses on React, UI design and design systems, accessibility, and creating software that centers the human experience.
+  X/Twitter: https://bsky.app/profile/kgrayson.com
+  LinkedIn: https://www.linkedin.com/in/kathryngrayson/
+  GitHub: https://github.com/kathryngraysonnanz
+
+## Agents Need Receipts, Not More Tool Calls - Armanas Povilionis, Alithea Bio
+
+- Upload date: 2026-07-18
+- Video: https://www.youtube.com/watch?v=Fu45geO3zX8
+- Transcript: raw/20260718_Fu45geO3zX8/Fu45geO3zX8.en-orig.vtt
+- Metadata: raw/20260718_Fu45geO3zX8/Fu45geO3zX8.info.json
+
+In this talk, I’ll show an agent publish a service, another agent discover and invoke it, and a signed receipt that proves what happened. The point is simple: if agents are going to buy, sell, and compose work across hosts, logs and API dashboards are not enough.
+
+Froglet is an open-source protocol and node for agent-to-agent compute. It reduces named services, data-backed services, and open-ended compute to one signed flow: Descriptor  to  Offer  to  Quote  to  Deal  to  Receipt. The same surface is exposed through MCP and OpenClaw/NemoClaw as one froglet tool, so agents can publish, discover, invoke, and verify work without custom glue for every provider.
+
+The hot take: agentic commerce should start with verifiable work, not checkout pages. Payment rails can change. Receipts, identities, workload hashes, and deal state need to survive across models, hosts, and marketplaces.
+
+see froglet.dev
+
+Speakers:
+- Armanas Povilionis (Alithea Bio): Technologist and systems strategist working at the intersection of AI, infrastructure, biology, governance, and incentive coordination.
+  LinkedIn: https://www.linkedin.com/in/armanas-povilionis/
+  GitHub: https://github.com/armanas
+
+## Stop Renting Your Cognitive Infrastructure - Thiyagarajan Maruthavanan, Kalmantic Labs
+
+- Upload date: 2026-07-18
+- Video: https://www.youtube.com/watch?v=Bck7ABCZRZI
+- Transcript: raw/20260718_Bck7ABCZRZI/Bck7ABCZRZI.en-orig.vtt
+- Metadata: raw/20260718_Bck7ABCZRZI/Bck7ABCZRZI.info.json
+
+I pointed my lab at one problem, inference, after 200 users burned $1,000 in credits and the math just wouldn't close. So I built the thing, felt the cost, and went looking for why renting intelligence never pencils out.
+Turns out everyone in this market sells a gospel shaped like their own invoice. Jensen: build a token factory. Nadella: don't even think about the meter. Fireworks: own your model (on our infra). Three smart people, three different layers, three pitches that all end at "keep paying us."
+My rule: rent to learn, own to run. Rent the model while you're hunting PMF, own the inference for the part you'd have to answer for. I moved my own agents off the Anthropic API onto owned infra, open-sourced the piece that stops the bleed, and got few things badly wrong on the way
+
+Speakers:
+- Thiyagarajan Maruthavanan (Kalmantic Labs): Thiyagarajan M (Rajan) runs an agentic lab focused on AI inference and agent harness, has built open source tools and other products to shape work on it, and authored a book on peak inference performance.
+  X/Twitter: https://x.com/mtraja
+  LinkedIn: https://linkedin.com/in/thiyagarajan
+  GitHub: https://github.com/mtr7x
+
+## A Practitioner's Guide to Graphs - Tim Ainge, Good Collective
+
+- Upload date: 2026-07-18
+- Video: https://www.youtube.com/watch?v=3ySF0I5iE_0
+- Transcript: raw/20260718_3ySF0I5iE_0/3ySF0I5iE_0.en-orig.vtt
+- Metadata: raw/20260718_3ySF0I5iE_0/3ySF0I5iE_0.info.json
+
+A speed-run through the basics... what is a graph, extracting graphs from unstructured text, schema first and ontological improvements and then a slightly more detailed discussion of personalised page rank, shortest path and subgraph matching algorithms. 
+
+Every idea is explored with an explanation of the principles, and accessible example with code and linked to real-world implementations or references to articulate the value and relevance.
+
+Speakers:
+- Tim Ainge (Good Collective): Software Engineering practitioner in startups, private and public sector organisations.
+  X/Twitter: https://x.com/timainge
+  LinkedIn: https://www.linkedin.com/in/timainge/
+  GitHub: https://github.com/timainge/
+
+## Special Topics in Kernels, RL, Reward Hacking in Agents — Daniel Han, Unsloth
+
+- Upload date: 2026-07-17
+- Video: https://www.youtube.com/watch?v=uIiA6DquRiE
+- Transcript: raw/20260717_uIiA6DquRiE/uIiA6DquRiE.en-orig.vtt
+- Metadata: raw/20260717_uIiA6DquRiE/uIiA6DquRiE.info.json
+
+An advanced seminar (good prerequisites: Daniel's 2024 and 2025 hit AIE workshops, but all are welcome!)
+
+PLS WATCH: https://www.youtube.com/@aiDotEngineer/search?query=daniel%20han
+
+Timestamps:
+
+0:00 Introduction to Unsloth and model distribution
+2:32 The State of AI: Meter plots and performance trends
+20:26 Open Source vs. Closed Source models
+38:51 Throughput maxing and accuracy minimizing
+1:03:00 Benchmarking and cheating in AI
+1:37:49 Kernels and algorithmic improvements
+2:04:16 Reinforcement learning primer
+2:05:19 Reward hacking and AI agents
+
+Viral Quotes & Pull Quotes:
+
+"If you make the model 86% smaller, it does not get 86% dumber... it only gets 14% less dumb." (29:52)
+"Reinforcement learning is terrible, but everything else is even worse." (20:43)
+"The model becomes not important anymore; it's the harness or the tool that is actually the most important thing." (38:23)
+"If a model can finish a task that takes a human 16 hours, can a model finish that task?" (2:49)
+
+## Using LLMs to Secure Source Code — Eugene Yan, Anthropic
+
+- Upload date: 2026-07-17
+- Video: https://www.youtube.com/watch?v=imFedndyXYQ
+- Transcript: raw/20260717_imFedndyXYQ/imFedndyXYQ.en-orig.vtt
+- Metadata: raw/20260717_imFedndyXYQ/imFedndyXYQ.info.json
+
+Mozilla shipped about 20 security fixes a month across Firefox in early 2025. In April it shipped 400, a 20x jump, and it credited roughly two thirds of them to a frontier model. That is the shift Eugene Yan came to describe: models are now finding and fixing real vulnerabilities at scale. Anthropic's own scan of more than a thousand open source repos surfaced 6,200 high or critical issues out of 23,000 candidates, reported 1,600 to maintainers, and saw about 100 patched upstream. Finding bugs, it turns out, is no longer the hard part. The bottleneck has moved to verifying, triaging, and patching them.
+
+The talk walks a six step workflow through one running example: a five line order lookup with a SQL injection hiding in a Python string. The two setup steps are a threat model and a sandbox. A written threat model alone pushes the true positive rate to 90%, because a model has great context of the code but poor context of the system, all the design decisions that live only in someone's head. The four loop steps read like a machine learning pipeline: discovery optimizes for recall, then a separate verification agent, kept independent and adversarial so it never sees the discovery reasoning, optimizes for precision by detonating the exploit in a fresh container. Triage protects the scarcest resource, engineer attention, and patching closes the loop so the same bug cannot return. His parting advice: start this week on open source dependencies, keep your hands on the wheel before automating, and remember that scanning was never the bottleneck.
+
+Speaker info:
+- https://x.com/eugeneyan
+- https://github.com/eugeneyan
+- https://eugeneyan.com
+
+Timestamps:
+0:00 - Working with security teams to find and fix vulnerabilities
+0:49 - Three trends in model security capability
+1:16 - Cybersecurity benchmarks and the step jump in capability
+1:54 - Mozilla's 20x jump in monthly security fixes
+2:44 - Log4Shell, Heartbleed, and why this matters
+3:22 - Anthropic's scan of a thousand open source repos
+3:35 - The bottleneck shifts to verify, triage, and patch
+3:48 - Why agentic harnesses changed the game
+4:29 - The six step workflow
+5:31 - A running example: the order service
+5:45 - Step 1: the threat model and 90% true positives
+7:42 - Step 2: the sandbox for isolation and reproducibility
+9:24 - Step 3: discovery and the five line SQL injection
+11:44 - Step 4: independent adversarial verification
+13:36 - Step 5: triage and the scarcity of engineer attention
+15:52 - Step 6: patching and closing the loop
+17:19 - It all looks like a machine learning pipeline
+17:43 - The non technical bottlenecks are harder
+18:47 - Organizational bottlenecks: routing, severity, bandwidth
+20:05 - Three takeaways and how to start this week
+
+"The bottleneck has now shifted to verification, triage, and patching." (3:39)
+"A model has great context of the code but poor context of the system." (6:06)
+"Things that can be solved with money are not really problems. But human attention doesn't scale." (18:14)
+"Scanning was never the bottleneck." (20:38)
+
+## Every company should have a Brain — Garry Tan, Y Combinator
+
+- Upload date: 2026-07-17
+- Video: https://www.youtube.com/watch?v=eBUyTS7SzV4
+- Transcript: raw/20260717_eBUyTS7SzV4/eBUyTS7SzV4.en-orig.vtt
+- Metadata: raw/20260717_eBUyTS7SzV4/eBUyTS7SzV4.info.json
+
+Garry Tan, President of Y Combinator, discusses how the rise of AI-native companies is revolutionizing organizational productivity, allowing lean teams to operate at a scale previously requiring hundreds or thousands of employees (0:52-1:07).
+
+Key Takeaways:
+
+The 400x Leverage: Tan reports a massive increase in output (approximately 400x) by shifting from writing individual lines of code to managing AI agents (2:32-2:35).
+Wiring the Work: He emphasizes that founders should treat AI not as a simple autocomplete tool, but as a workforce (3:58). He explains that core organizational components—like roles, processes, and performance reviews—can now be encoded as markdown-based skill files (4:31-5:32).
+The AI-Native Organization: Successful startups at Y Combinator are building "company brains" (like his own project, GBrain), which act as a library and librarian, ensuring that agents have access to the right context at the right time (12:54-13:30).
+Discipline of Execution: He advises never to perform "one-off" work. Instead, every task should be refined into a reusable skill file to prevent the company from "waking up with amnesia" each day (15:30-16:40).
+The New Physics of Business: Tan argues that modern companies can achieve unprecedented revenue-per-head ratios by building on this new infrastructure, effectively "boiling the ocean" by automating formerly impossible tasks (6:40-7:15; 19:55-20:00).
+
+Timestamps:
+
+0:00 Introduction: The AI revolution and YC's transformation
+1:25 The 400x productivity jump: Coding in 2013 vs. today
+3:38 Wiring the work: Treating AI as a workforce
+4:11 The anatomy of an AI-native organization
+6:12 Real-world impact: Companies scaling with lean teams
+8:38 Latent space vs. deterministic space
+10:53 Overcoming human memory limits: AI as a library
+12:53 Context engineering: The importance of the 'librarian'
+13:28 Building GBrain: Managing institutional knowledge
+15:13 The discipline of 'skillifying' your work
+16:40 The call to build AI-native companies
+18:25 The power of abundance through shipped software
+
+
+"The 2x people and the 100x people are using the exact same Claude... the leverage is not in the weights, it's in how you wire the work." (3:06)
+"When you sit down with Claude Code or Cursor, you're not writing software. You're hiring, training, and managing a workforce made of markdown." (5:58)
+"The organization that captures what it learns like this gets smarter every single day. The one that doesn't wakes up every morning with amnesia." (16:26)
+"Abundance is not a policy paper. It is shipped software." (18:56)
+"Every archive too big to read, every data set too gnarly to clean, every ocean you were told not to boil. We can boil the ocean now." (19:55)
+
+## The Great Loops Debate — Dex Horthy, Geoff Huntley, Ian Livingstone, Greg Pstrucha, @insecure-agents
+
+- Upload date: 2026-07-17
+- Video: https://www.youtube.com/watch?v=c35YoMdnI78
+- Transcript: raw/20260717_c35YoMdnI78/c35YoMdnI78.en-orig.vtt
+- Metadata: raw/20260717_c35YoMdnI78/c35YoMdnI78.info.json
+
+Oxford Style Debate: There is, or is not, a delta between the hype behind loops and what actually works in practice.
+
+Team No Delta (pro the way we do loops today)
+
+The hype around loops is valid and loops work well today in practice. Loops today can be a silver bullet and result in outsize productivity gains, and marks an important step up the autonomy curve towards real software factories.
+
+Ian Livingstone
+Geoff Huntley
+
+Team Delta (anti the way we do loops today)
+
+There is a delta between the hype behind loops and what actually works in practice. The way we are doing loops today is wrong. Loops are not a silver bullet and there is no magic.
+
+The hype is outrunning the discipline
+"Stop writing loops, start writing control loops." A bare repeat-the-agent loop isn't magic. The leverage comes from the Kubernetes-style reconciliation around it: read current state → read desired state → one incremental change  → repeat. Dex's tell when shown a fake loop: "where's the recur condition?" (Jun 21)
+A software factory can run the mechanical, spec-gated, test-covered slices unattended; it cannot autonomously decide whether it built the right thing.
+
+Dex Horthy
+Greg Pstrucha
+
+Main Debate 
+Loop History - Why now as the inflection point and not some of the earlier ones? 
+Loop Anatomy - What makes a good loop? 
+Loop Future - Given what we’re seeing with loop usage now, are we well positioned for software factories? If we can’t use loops well today how do we expect to operate software factories?
+
+Appendix
+Research
+https://x.com/AnatoliKopadze/status/2068328135611822149?s=20
+https://x.com/ericzakariasson/status/2070493377267646797?s=20
+https://x.com/MilksandMatcha/status/2069838072515281386?s=20
+https://x.com/AnatoliKopadze/status/2070156017262793008?s=20
+https://ghuntley.com/loop/
+https://ghuntley.com/ralph/
+https://www.anthropic.com/institute/recursive-self-improvement
+Anthropic's Absorption of the Ralph Loop
+Verifying Agents in GitHub
+
+
+0:00 Introduction and format explanation
+0:43 Introduction of the debaters
+4:05 Team No Delta (Ian & Jeff) opening arguments
+6:53 Team Delta (Dex & Greg) opening arguments
+10:28 Rebuttal and initial stance
+15:32 Main Debate: Loop History and Inflection Points
+16:20 Security, alignment, and goal-seeking agents
+19:24 Why loops became more usable today
+24:40 Context rot and context engineering
+27:10 Loop Anatomy: What makes a good loop?
+30:30 Preventing agent cheating and verification
+32:23 Convergence engineering and loop slop
+36:13 Economic viability and token spend
+39:07 Multiplayer agents and shared memory access
+43:21 The "just write loops" advice critique
+46:36 Scaling, autonomy, and pragmatism
+52:31 Closing statements and final thoughts
+Viral Quotes & Pull Quotes:
+
+(16:55) "As these models get better, the most important thing to remember is they actually become higher goal-seeking and higher capable in terms of finding exploits to achieve their ultimate goal."
+(20:25) "These LLMs generate code better than you can actually hire for. It's sad but true."
+(22:38) "The models are drunk, right? You can't trust them. But like, we accept that. We engineer away those failure domains."
+(36:31) "I don't think they fail quietly. I think they fail very loudly, especially when you're looking at your bills."
+(46:58) "Don't throw away all the things we've learned. Don't go out of your way to cast aside this decades-long career of software engineering that we as a community have built up."
+
+## On AI and Knowledge — Pablo Castro, Distinguished Engineer & CVP for AI Knowledge, Microsoft
+
+- Upload date: 2026-07-17
+- Video: https://www.youtube.com/watch?v=RGSFUqzqErE
+- Transcript: raw/20260717_RGSFUqzqErE/RGSFUqzqErE.en-orig.vtt
+- Metadata: raw/20260717_RGSFUqzqErE/RGSFUqzqErE.info.json
+
+Pablo Castro explores AI and knowledge systems for building better applications and agents.
+
+Speaker:
+Pablo Castro —Distinguished Engineer and CVP, Microsoft, leads the AI Knowledge team in Microsoft's CoreAI division, where he focuses on state-of-the-art information understanding and retrieval systems for AI applications and agents, including Foundry IQ, Azure AI Search, and Azure Content Understanding.
+
+LinkedIn: https://www.linkedin.com/in/pabloc
+
+Timestamps:
+
+0:00 Introduction and speaker background
+1:14 Defining the nature of knowledge: Intrinsic, Extrinsic, and Learned
+1:27 Intrinsic knowledge and the history of AI coding tools
+4:38 Extrinsic knowledge and corporate data grounding
+7:06 Evolution of retrieval systems and Foundry IQ
+9:56 Foundry IQ demo: Building a knowledge base
+13:08 Learned knowledge: The agent learning loop
+14:25 Foundry agent optimization demo
+16:49 Closing remarks and resources
+
+
+Key quotes 
+
+Intrinsic Knowledge
+Perspective: This knowledge represents the foundational parametric memory of models.
+"Intrinsic knowledge is just the knowledge that comes with the models... it's what started many of the scenarios that then grew on all the things we're doing with agents today." (1:27 - 1:48)
+"I would argue that GitHub Copilot and ChatGPT, those sort of experiences, were heavily grounded on this intrinsic memory—what the models already knew." (2:59 - 3:04)
+Extrinsic Knowledge
+Perspective: To be truly useful in an organization, agents must access private, ambient data through sophisticated retrieval.
+"Intrinsic model got us here, but it only gets you so far if you're building a system that or an agent that needs to participate in what's happening in an organization." (4:41 - 4:49)
+"The trick is how do you build a platform that allows you to combine all these building blocks without putting the complexity right in front of you." (8:02 - 8:10)
+"For more sophisticated cases you do want a system that can reflect on what's in the data set and decide whether or not we've satisfied the information need." (9:09 - 9:18)
+Learned Knowledge & Future Predictions
+Perspective: Knowledge is compounded by observing processes and enabling agents to self-optimize.
+"The idea that we can actually observe the processes and get better at them by reflecting and improving every step of it is something that is really changed now." (13:20 - 13:29)
+"Satya wrote about this recently and reflected on the fact that people and agents can really compound in how they do the work and how they can create this learning loop." (13:35 - 13:43)
+"This is a real learning loop materialized in practice... we can enable this learning loops that will capture this differentiated capability that lives in each one of the companies and organizations we work on." (16:40 - 17:03)
+
+## "Software engineering is not about writing code" — Benoit Schillings, Google DeepMind VP of Research
+
+- Upload date: 2026-07-17
+- Video: https://www.youtube.com/watch?v=1P1hJ36rxM0
+- Transcript: raw/20260717_1P1hJ36rxM0/1P1hJ36rxM0.en-orig.vtt
+- Metadata: raw/20260717_1P1hJ36rxM0/1P1hJ36rxM0.info.json
+
+A keynote exploring generative AI for code, deep-thinking algorithms, and the future of pre-training and transformer models for Gemini.
+
+Speaker:
+
+Benoit Schillings leads the Thinking, Reasoning, and Coding teams at Google DeepMind, directing foundational research toward AGI. His work focuses on advancing next-generation model reasoning and integrating software development best practices into AI code generation. Previously, as CTO at X, Benoit guided early-stage teams prototyping Alphabet's moonshot technologies across computing, biochemistry, and clean energy.
+
+LinkedIn: https://www.linkedin.com/in/benoit-schillings-2942a5
+
+Timestamps:
+
+0:00 Introduction and speaker background
+2:35 The origin story of the Pitchfork project
+4:43 Historical eras of software development
+7:08 The current state of AI code generation
+9:36 The role of self-play in training models
+11:13 Changing economics of software engineering
+12:41 Implementing guardrails and security
+13:48 Inductive architecture and model planning
+14:36 Evolution of evaluation benchmarks
+15:45 Moving beyond simple chain-of-thought tokens
+17:51 Future applications in chemistry and biology
+
+
+
+Key Takeaways from the talk:
+
+Benoit Schillings, VP of Technology at Google DeepMind, discusses the transformative impact of generative AI on software engineering and the future of model reasoning (0:49 - 2:35).
+The Era of Syntax Generation is Over: (4:43) Coding has shifted from a machine-constrained task to an AI frontier where syntax is effectively solved, moving the bottleneck to architecture and validation.
+The Power of Self-Play: (9:36) As human-generated training data reaches saturation, DeepMind is utilizing self-play, where models generate and verify their own challenges to reach superhuman performance.
+Shift in Engineering Economics: (11:13) With writing code becoming nearly free, the focus must transition to active guardrails, security, and managing the explosion of generated code.
+Inductive Architecture: (13:48) The next step for AI is moving beyond simple token prediction toward models that can plan, decompose complex problems, and transfer knowledge across domains.
+Scientific Breakthroughs: (17:51) AI's ability to experiment rapidly will transform fields like chemistry and biology, allowing models to uncover patterns and relationships that remain invisible to human perception.
+
+## How Autoresearch is changing ML research — Zhengyao Jiang, Weco
+
+- Upload date: 2026-07-16
+- Video: https://www.youtube.com/watch?v=iCj_ATyThvc
+- Transcript: raw/20260716_iCj_ATyThvc/iCj_ATyThvc.en-orig.vtt
+- Metadata: raw/20260716_iCj_ATyThvc/iCj_ATyThvc.info.json
+
+Earlier this year, OpenAI ran Parameter Golf, a model-training competition that doubled as a hiring filter. Over 1,000 researchers competed to train the best small language model under a 16MB cap. The top contributor was the one candidate OpenAI couldn't hire. Our autonomous research agent Aiden finished with 7 merged records, more than twice as many as any other contributor, and ended up the most-cited participant in the community.
+This talk is about what those 22 days showed. I'll cover on high level how does it works and which of its ideas produced the records. But the part worth more than the leaderboard is the collaboration itself, the community and AI agent building on each other's work, the largest natural experiment in human-AI collaboration I've seen run in public. I'll close with what it tells us about where humans and autonomous research each still matter for the foreseeable future.
+1:57 PM
+
+# An AI Agent Became the #1 Contributor in OpenAI's Hiring Challenge
+
+**Location:** Main Stage
+**When:** Day 3 - July 1, 2026 · 1:55pm-2:15pm
+
+## Speakers
+
+### Zhengyao Jiang
+CEO & Cofounder · Weco AI
+[X/Twitter](https://x.com/zhengyaojiang) · [LinkedIn](https://www.linkedin.com/in/zhengyao-jiang-387b44145/) · [Website](https://zhengyaojiang.github.io/)
+
+Cofounder & CEO @WecoAI - automated hill climbing with LLMs. Previously: PhD in ML at UCL
+
+Timestamps
+
+0:00 Introduction to Parameter Golf and the Aiden agent
+1:06 Defining the challenge: Auto-research vs. human community
+1:47 About Weco AI and the development of Aiden
+3:07 Evaluating Aiden's impact and H-index in the community
+4:01 Why autonomous AI is powerful: Throughput and efficiency
+5:21 Human-AI collaboration: How ideas move the frontier
+6:32 Case study: Combining research, architecture, and tokenization
+7:41 Summary of auto-research strengths: Execution and search
+9:06 The role of human design in competition
+10:04 The Andrej Karpathy metaphor: Gradient descent and coding
+11:19 Auto-research as training a model: Evals and abstractions
+13:36 Case study: Improving data pipelines via strict API abstractions
+14:38 Conclusion: The new craft of the AI engineer
+
+## Imagination Engineering: "Live in the future and then build what's missing."
+
+- Upload date: 2026-07-16
+- Video: https://www.youtube.com/watch?v=Z2Erdirpudo
+- Transcript: raw/20260716_Z2Erdirpudo/Z2Erdirpudo.en-orig.vtt
+- Metadata: raw/20260716_Z2Erdirpudo/Z2Erdirpudo.info.json
+
+Eve Bouffard from Y Combinator explores the concept of "Imagination Engineering"—the idea that with increasingly powerful AI models, the primary challenge for humans is no longer technical execution, but the ability to dream up bold, innovative ideas (0:13-0:59).
+
+Key themes and experiments shared:
+
+Thinking in Public: Inspired by Paul Graham, Eve describes an experiment where she shared her stream of consciousness in a dedicated Slack channel (Eve thoughts). She then used AI to aggregate these raw thoughts into a personal, interactive website (1:35-4:26).
+
+Software on Demand: Eve demonstrates how she uses AI to build custom tools on the fly, such as an interactive "Shape of Minds" visualizer to study commonalities among historical geniuses (8:49-10:44) and a personalized emoji-picker for company communication (12:57-13:46).
+
+Expanding the Mind: She argues that current AI tools function like a "rocket ship for the mind," allowing individuals to learn at unprecedented speeds by requesting summarized reports on complex topics like design principles or historical patronage (13:53-14:48).
+
+Eve emphasizes that we are in a historical period similar to the Library of Alexandria, where the focus should be on consolidating and creating knowledge for humanity (1:01-1:23).
+
+Detailed Timestamps
+0:00 - Introduction to the concept of Imagination Engineering
+1:01 - The analogy of the modern Library of Alexandria
+1:35 - The "Thinking in Public" experiment (Eve Thoughts)
+2:58 - The influence of Paul Graham and Y Combinator culture
+4:23 - Demo: The efar.com personal AI-generated website
+6:05 - Integrating design tools and shaders into workflows
+8:49 - The "Shape of Minds" project: Mapping historical geniuses
+12:57 - Using custom AI tools for daily productivity (Emoji picker)
+13:46 - AI as a tool for rapid learning and research
+15:08 - The evolution of development logs and software backlogs
+
+
+"The new bottleneck will be to come up with crazy ideas because it's going to be really easy to one-shot absolutely everything." (0:38)
+"Live in the future and then build what's missing." (5:15)
+"With these insanely capable models, it's like a rocket ship for the mind; it's no longer a bicycle." (5:35)
+"Whatever stream of consciousness you have, you should just ask an agent to do it for you." (12:26)
+
+
+
+## Speakers
+
+### Eve Bouffard
+Head of Design · Y Combinator
+[X/Twitter](https://x.com/eve_bouff) · [LinkedIn](https://www.linkedin.com/in/eve-bouffard) · [Website](https://evebouffard.com)
+
+Eve is Head of Design at Y Combinator. She joined YC as the youngest member of the admissions team, where she read more than 25,000 startup applications before teaching herself to code and moving into engineering. These days, she works across design and software, building the products founders use and the internal tools that help YC partners support thousands of startups every year. She believes great design isn't what looks best, but what best achieves a given goal. She's happiest building products that make it easier for founders to take a leap, bet on themselves, and make something people want.
+
+## Claude Fable, Claude Tag, and Anthropic's Culture — Cat Wu & Thariq Shihipar ft Simon Willison
+
+- Upload date: 2026-07-15
+- Video: https://www.youtube.com/watch?v=uU5Gv2h8-9g
+- Transcript: raw/20260715_uU5Gv2h8-9g/uU5Gv2h8-9g.en-orig.vtt
+- Metadata: raw/20260715_uU5Gv2h8-9g/uU5Gv2h8-9g.info.json
+
+A long form Q&A with Cat Wu (Head of Product, Claude Code) and Thariq Shihipar (Engineer, Claude Code) from Anthropic, moderated by Simon Willison. The discussion focuses on the evolution of coding agents and how they have fundamentally shifted software development practices.
+
+Key Takeaways:
+Changing Developer Workflow (1:22 - 3:51): Coding agents like Claude Code have moved developers from manual, low-level implementation toward higher-level product strategy. The focus has shifted from writing every line of code to managing and refining outputs from increasingly capable models.
+The Rise of Proactive Agents (6:37 - 9:00): The introduction of Claude Tag marks a shift toward multiplayer, proactive agentic workflows in tools like Slack. It can monitor bugs, draft PRs, and retain team memory, currently landing over 65% of product PRs for the Anthropic team.
+Rethinking Software Engineering Norms (3:51 - 6:37): The speakers argue that traditional practices, such as avoiding rewrites or long-term waterfall planning, are becoming outdated. They emphasize the value of product sense, prototyping, and rapid iteration using high-quality test suites.
+Safety and Trust (30:57 - 37:53): A major portion of the discussion covers Auto Mode and safety. Anthropic has heavily invested in evals and red-teaming to mitigate risks like prompt injection and data exfiltration, making it the recommended way to handle long-running agentic tasks safely.
+Cultural Impact (38:13 - 41:50): The team encourages developers to be more ambitious and stop "negotiating against themselves." They suggest that because implementation is now cheaper, teams should focus on building the "bigger things" they previously thought were impossible or too resource-intensive.
+Future Outlook:
+Looking ahead, the speakers are excited about models becoming better interaction design partners (44:28) and continuing to bridge the gap between abstract ideas and production-ready software.
+
+## Speakers
+
+### Cat Wu
+Head of Product, Claude Code · Anthropic
+https://x.com/_catwu
+
+Cat Wu is Head of Product for Claude Code at Anthropic, working on Claude Code and related agentic developer-product workflows. Her background spans product, engineering, and investing.
+
+### Thariq Shihipar
+Claude Code · Anthropic
+https://x.com/trq212
+
+Engineer and serial entrepreneur currently working on Claude Code at Anthropic. Previously founded One More Multiverse, co-founded Pubpub.org, and co-founded Chime.
+
+### Simon Willison
+Independent · Datasette
+https://x.com/simonw
+
+Simon Willison is the creator of Datasette, co-creator of Django, and an independent open-source developer and writer focused on LLMs, prompt injection, SQLite, and tools for data journalism.
+
+Timestamps
+0:00 Introductions and Claude Code overview
+1:22 How coding agents have changed daily workflows
+3:51 Shifting focus: Product sense over manual implementation
+5:09 Why modern rewrites are now beneficial
+6:37 Introducing Claude Tag and team collaboration
+11:38 Prioritization and internal "dog-fooding" culture
+13:06 The surprise success of remote control features
+14:17 Evolving code review processes and automation
+17:16 Building trust in new model generations
+19:18 Optimizing for capability and user experience
+21:23 Reducing system prompts for frontier models
+28:05 The philosophy of tool design
+30:57 Safety, security, and using Auto Mode
+37:53 The human element and developer ambition
+41:50 Surprising use cases for Claude (e.g., video editing)
+43:35 Limitations and future design aspirations
+45:09 Cultural hacks for productivity
+46:42 Absurd, fun projects built with Claude
+49:03 Audience Q&A
+
+## Recursive Model Improvement — Lee Robinson, Cursor, SpaceXAI
+
+- Upload date: 2026-07-15
+- Video: https://www.youtube.com/watch?v=q4Tr-DknG2M
+- Transcript: raw/20260715_q4Tr-DknG2M/q4Tr-DknG2M.en-orig.vtt
+- Metadata: raw/20260715_q4Tr-DknG2M/q4Tr-DknG2M.info.json
+
+Lee Robinson discusses the future of Cursor and AI-native software development.
+
+Speaker:
+Lee Robinson — ML, Model Behavior, Cursor
+
+Model research and personality at Cursor. Previously Vercel.
+
+X: https://x.com/leerob
+LinkedIn: https://www.linkedin.com/in/leeerob/
+GitHub: https://github.com/leerob
+Website: https://leerob.com
+
+Timestamps
+
+0:37 - Introduction and recursive model improvement overview
+1:55 - The two-loop training framework (inner and outer loops)
+2:33 - Progress and success of Composer 2.5
+4:31 - Improving the outer loop with user feedback
+5:40 - Climbing the inner loop with high-quality evals
+6:52 - Solving reward hacking in public benchmarks
+8:27 - Scaling training with ambitious problems
+9:53 - New learning methods: Teacher-student textual feedback
+11:34 - Scaling compute infrastructure with SpaceX and Colossus
+13:06 - Understanding compute allocation in model training
+15:28 - Agent-based automation and research efficiency
+18:30 - The recursive future: Models training models
+
+## Computer-Use 2.0: Agents Just Got Multi-Cursor — Francesco Bonacci, Cua
+
+- Upload date: 2026-07-15
+- Video: https://www.youtube.com/watch?v=ZSQb5fzRFPw
+- Transcript: raw/20260715_ZSQb5fzRFPw/ZSQb5fzRFPw.en-orig.vtt
+- Metadata: raw/20260715_ZSQb5fzRFPw/ZSQb5fzRFPw.info.json
+
+Three agents click, type, and scroll through three different apps on one desktop at the same time, and the user's own mouse and keyboard never move. That's the live demo behind cua driver, a tool the team built in a single weekend after Codex shipped its own computer use model. Instead of taking over the hardware cursor, it talks straight to the accessibility layer underneath the operating system: UI Automation on Windows, AT SPI on Linux, AX on macOS. Those undocumented APIs let a click land on a background window or a keystroke reach a hidden one, so any number of agents can act without stealing focus from each other or from the human sitting at the machine.
+
+To know whether any of this can be trusted, the team built CUABench: over 130 verifiable tasks across 42 environments and five platforms, each one attacked by a matrix of agents trying to reward hack it before it's allowed into the dataset. Swapping a standard computer tool for cua driver pushed pass rate on a 4K benchmark from 62% to 80% while using 34% fewer tokens, mostly because it watches one window instead of the whole screen. The newest addition, built with Snorkel AI on real circuit design software, humbled every model tested: the best agent fully passed only 6 of 25 electrical engineering tasks, every one of them an edit to an existing schematic, and starting from a blank schematic dropped every model straight to 0%.
+
+Speaker info:
+- https://www.linkedin.com/in/francesco-bonacci-70428a121/
+
+Timestamps
+0:00 - Introduction and Vision of Cua
+2:40 - Overview of Cua Driver and Background Operation
+6:34 - Introduction to Cua Bench and Agent Evaluation
+10:50 - Cua Fleet and GPU Infrastructure Optimization
+15:08 - Q&A Session
+15:44 - Discussion on Mobile and Android Support
+
+## "The engineer of the future is the person who is able to choose what is worth doing." — Addy Osmani
+
+- Upload date: 2026-07-14
+- Video: https://www.youtube.com/watch?v=n97BCfyFIvw
+- Transcript: raw/20260714_n97BCfyFIvw/n97BCfyFIvw.en-orig.vtt
+- Metadata: raw/20260714_n97BCfyFIvw/n97BCfyFIvw.info.json
+
+For his closing keynote, Addy Osmani explores the evolving role of software engineers in the age of AI agents. He argues that as coding tasks become increasingly automated, the true value of an engineer shifts from mere code production to accountability, judgment, and system ownership.
+
+https://addyosmani.com/
+https://x.com/addyosmani/status/2074927530482835916
+
+Timestamps
+
+0:00 Introduction and the human side of engineering
+1:46 Rebundling roles and ownership of systems
+2:34 Harnesses, loop engineering, and software factories
+3:34 The shift to answerability as an engineering requirement
+4:26 Reviewing AI-assisted code and organizational bottlenecks
+5:55 Redefining leverage through human judgment
+6:15 Alpha, decay, and the role of "taste"
+8:49 Defining the modern software engineer
+9:50 Risks to avoid: cognitive debt and surrender
+11:51 Orchestration tax and system design
+12:39 Accountability as the foundation for scaling
+13:16 Career math: credibility vs. capability
+14:13 High agency and the decision-making ladder
+15:13 Defining the boundary between agents and humans
+16:13 Operational rule: explain it or don't ship it
+17:20 Future outlook: unlocking latent demand
+
+## Forward Deployed Engineering at Cursor — Pauline Brunet
+
+- Upload date: 2026-07-14
+- Video: https://www.youtube.com/watch?v=APqXGyCoGW4
+- Transcript: raw/20260714_APqXGyCoGW4/APqXGyCoGW4.en-orig.vtt
+- Metadata: raw/20260714_APqXGyCoGW4/APqXGyCoGW4.info.json
+
+The first question at Cursor is not how to deploy a forward deployed engineer, it is whether to. If a customer's teams are already mature in their transformation and can self serve on an AI coding platform, sending a 10x engineer to sit with them is a waste. Pauline Brunet's frame is to read where the customer actually is: the forward deployed engineer earns their place where teams cannot hire or staff the talent, need an advisor, and want a real outcome rather than a demo. On the ground that means working with VPs of engineering, understanding how they operate today, and driving a strict, measurable return on investment as the tip of the spear.
+
+The other half is who you send and how you scope it. Cursor hires what she calls unicorns by splitting the role: one person who is the deep industry expert, another with the aptitude to learn fast, often pulled from the system integrators and consultants who already know change management. Engagements stay short, roughly six week cycles that co design the solution with the customer, check honestly whether you are close, and pivot on the learnings instead of grinding on a symptom. The discipline is scope: solve the problem the buyer actually cares about, prove the return, and stay honest about where the product really is.
+
+Speaker info:
+- https://www.linkedin.com/in/pauline-brunet/
+
+Timestamps:
+0:00 - Introduction: forward deployed at Cursor
+1:52 - When NOT to send a forward deployed engineer
+4:00 - Where the forward deployed engineer fits
+5:31 - What the job actually entails
+7:50 - The economic buyer and a strict ROI
+9:43 - Scope discipline: knowing what you can't solve
+11:22 - Hiring unicorns by splitting the role
+14:06 - Who to hire, and being an honest partner
+16:41 - Six week engagements and scope
+18:14 - Pivoting on the learnings
+19:55 - Wrap up: build trust
+
+## WTF Is the Context Layer? The Missing Infrastructure for Production Agents — Prukalpa Sankar
+
+- Upload date: 2026-07-14
+- Video: https://www.youtube.com/watch?v=8G_1-3IO4ZQ
+- Transcript: raw/20260714_8G_1-3IO4ZQ/8G_1-3IO4ZQ.en-orig.vtt
+- Metadata: raw/20260714_8G_1-3IO4ZQ/8G_1-3IO4ZQ.info.json
+
+In the last two years, models have gotten exponentially smarter. Two years ago they couldn't pass the bar. Today, top 1% of test scorers. And yet most agents still can't answer a simple business question correctly. You ship a demo that works. You deploy it. The business abandons it in a month.
+
+The missing variable is context: the business definitions, procedural knowledge, and operational norms that make a human expert valuable.
+
+Drawing on hundreds of production deployments, Prukalpa Sankar will break down what it actually takes to give agents contextual intelligence — and get them past the demo stage.
+
+She'll walk through the architecture of a context layer: how context repos work (versioned, testable, portable), how simulation environments catch failures before deployment, how agent traces compound back into shared context, and why context engineering scales where fine-tuning and prompting don't. She'll also cover why your context needs to be open (MCP, Iceberg, deploy to any framework) — and what happens when it isn't.
+
+### Prukalpa Sankar
+Founder & Co-CEO · Atlan
+[X/Twitter](https://x.com/prukalpa) · [LinkedIn](https://www.linkedin.com/in/prukalpa)
+
+Prukalpa Sankar is the Founder & Co-CEO of Atlan, the context layer for AI. She's been early to a defining idea of the AI era: context is king. AI systems are only as good as the business context behind the data they rely on. Under her leadership, Atlan has become a Leader in the Gartner Magic Quadrants for both Data & Analytics and Metadata Management, serves 300+ enterprises including Mastercard, GM, JPMorgan Chase, and Nasdaq, and has raised $200M+ from Sequoia, GIC, and Salesforce Ventures. Before Atlan, Prukalpa co-founded SocialCops, the world's largest government data lake powering the UN's SDG monitoring — recognized by the New York Times and the World Economic Forum. She's been featured in Forbes 30 Under 30 and Fortune 40 Under 40.
+
+Timestamps
+
+* **0:12** Introduction: The Context Moment
+* **1:51** Why AI Agents Struggle with Business Context
+* **3:19** Performance = Intelligence + Context
+* **4:27** The Human Learning Model: Lessons from Maya
+* **7:20** Evolution of Agent Architecture at *Atlan*
+* **10:00** The Challenges of Isolated Agent Systems
+* **11:06** Transitioning to General Purpose Agents
+* **12:43** Marketing Team Case Study: The Context Layer
+* **14:36** The Challenges of Context Engineering
+* **15:31** Defining the Context Layer: The GitHub for Context
+* **16:43** Compounding Learning Loops and Traces
+* **17:18** How to Start Building Your Company Brain
+* **18:07** Defining the Context Layer Architecture
+* **19:31** Conclusion: Context is IP
+
+## Don't Ship Skills Without Evals — Philipp Schmid, Google DeepMind
+
+- Upload date: 2026-07-14
+- Video: https://www.youtube.com/watch?v=0vphxNt4wyk
+- Transcript: raw/20260714_0vphxNt4wyk/0vphxNt4wyk.en-orig.vtt
+- Metadata: raw/20260714_0vphxNt4wyk/0vphxNt4wyk.info.json
+
+There are thousands of agent skills. Almost none of them are tested. They get vibe-checked with two manual runs, maybe a thumbs-up from a colleague, then shipped. You wouldn't merge code without tests — so why are we shipping skills without evals? This talk covers the full lifecycle of building reliable agent skills: what a skill actually is (and isn't), how to write one that triggers correctly, and how to build a lightweight eval harness that catches failures before your users do.
+
+### Philipp Schmid
+Staff Engineer · Google DeepMind
+[X/Twitter](https://x.com/_philschmid) · [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/) · [Website](https://www.philschmid.de/) · [Blog](https://www.philschmid.de)
+
+Philipp Schmid is a Staff Engineer at Google DeepMind working on Gemini and Gemma. His work focuses on helping developers build and benefit from AI responsibly.
+
+Timeline:
+
+0:00 Introduction: Why skills need evals
+0:25 The problem with current agent workflows
+1:25 Agents we use vs. agents we build
+2:28 Defining a 'Skill' and progressive disclosure
+3:08 Capability skills vs. preference skills
+4:17 Do skills actually work? (Skillsbench data)
+5:39 Model-triggered vs. user-invoked skills
+6:39 Best practices for writing skill descriptions
+8:30 Structuring complex, multi-layered skills
+9:04 Defining goals and constraints (avoiding rigid steps)
+9:56 Don't skip negative cases
+10:36 Testing strategy: Evals and regressions
+11:05 Removing 'no-ops' for cost efficiency
+11:47 Knowing when to retire a skill
+12:22 Practical example: Gemini interactions API
+13:36 Building a lightweight eval harness
+14:35 Using regex and LLMs as judges
+17:14 Top 10 best practices summary
+20:20 Homework: How to start testing your skills
+Viral Pull Quotes:
+
+(0:22) "You wouldn't merge code without tests—so why are we shipping skills without evals?"
+(1:13) "Agents are really nondeterministic. You might not know if your task fails because your skill is bad or if your task fails because it's way too challenging for the model."
+(9:15) "If the process or the workflow is always the same, you should not use skills. Maybe you should write a script."
+(11:53) "Skills are not there to live forever. Models get better, behaviors change, environments change."
+
+## Modern Post-Training: A Deep Dive  — Will Brown, Prime Intellect
+
+- Upload date: 2026-07-13
+- Video: https://www.youtube.com/watch?v=V-EDrhIhHzQ
+- Transcript: raw/20260713_V-EDrhIhHzQ/V-EDrhIhHzQ.en-orig.vtt
+- Metadata: raw/20260713_V-EDrhIhHzQ/V-EDrhIhHzQ.info.json
+
+Deep dive into Prime Intellect's open-source ecosystem of post-training tools, including the verifiers and prime-rl libraries, as well as the Lab platform for self-serve training and inference.
+
+Speaker:
+Will Brown — Research Lead, Prime Intellect
+
+Will Brown leads Applied Research at Prime Intellect and builds open research infrastructure to enable every company to train, deploy, and self-improve their own frontier agentic models. He holds a PhD in Computer Science from Columbia University.
+
+X: https://x.com/willccbb
+LinkedIn: https://www.linkedin.com/in/willcb/
+GitHub: https://github.com/willccbb
+Website: https://willcb.com
+
+TImestamps
+0:00 Introduction and Overview of Prime Intellect
+4:20 Defining the Environment in Post-Training
+9:33 Decomposing Environments: Tasks, Harnesses, and Runtimes
+12:46 Verifiers V1: The New Modular Pattern
+17:46 Rewards, Metrics, and Group-Level Rewards
+20:25 Tooling, User Simulators, and MCP Integration
+22:00 The Interception Server Pattern
+24:13 Trace Graphs and Handling Tokenization
+25:35 The Renderers Library for Chat Templates
+29:20 Primaril: Asynchronous Reinforcement Learning
+38:02 Customizing Training Algorithms and Losses
+42:35 The Lab Platform and Hosted Training
+
+## From fork() to Fleet: Designing an Agent Sandbox Cloud — Abhishek Bhardwaj, OpenAI
+
+- Upload date: 2026-07-13
+- Video: https://www.youtube.com/watch?v=OqM67QG_Ikk
+- Transcript: raw/20260713_OqM67QG_Ikk/OqM67QG_Ikk.en-orig.vtt
+- Metadata: raw/20260713_OqM67QG_Ikk/OqM67QG_Ikk.info.json
+
+Sandboxes unleash agents by giving them secure, fully functional computers where they can tackle diverse tasks with minimal setup. This talk explores the architectural challenges of building an agent sandbox cloud. We compare runtime isolation technologies and their trade-offs, examine persistence and storage as the next major unlock for agent capabilities, and discuss the key decisions involved in orchestrating and scaling sandboxes.
+
+Abhishek Bhardwaj works on Agent and Reinforcement Learning Infrastructure at OpenAI. He builds systems that enable large-scale model training in RL environments, as well as secure and scalable cloud sandboxes for OpenAI’s agents. Before joining OpenAI, he created Arrakis, an open-source sandbox for AI agents. Previously, he worked at Google on ChromeOS and foundational microVM technologies, and at Replit on core infrastructure and early versions of Replit Agent.
+
+Timestamps
+0:00 Introduction and motivation for AI agent sandboxes
+1:31 Why AI models need tools and execution environments
+3:51 Product-side challenges: Security and the need for sandboxing
+6:44 Comparing research vs. product sandbox requirements
+8:24 Overview of the three pillars: Runtime, Persistence, and Orchestration
+9:05 First principles of Linux execution: System calls and security vectors
+11:15 Evaluating fork() and exec models
+12:06 Understanding containers: Namespaces and cgroups
+16:26 GVisor as an application kernel alternative
+18:29 Hardware-level virtualization (Virtual Machines)
+20:34 How VMMs (Virtual Machine Monitors) work with KVM
+23:16 Evolution of modern VMMs and Rust-based safety
+24:32 What defines a "microVM"?
+25:43 Orchestrating microVMs via APIs
+27:16 Trade-offs of microVMs (performance vs. security)
+30:05 The need for persistent storage in agent sandboxes
+31:40 Use cases for persistence: Reliability, long-running tasks, and research
+34:36 Design choices for disk snapshotting
+36:03 First principles of Linux block storage and file systems
+37:25 Implementing always-on vs. explicit persistence
+41:20 Scaling and orchestrating sandboxes at fleet level
+
+## Stop Evaluating Models Like It's the 50s - Alejandro Vidal, Mindmakers
+
+- Upload date: 2026-07-13
+- Video: https://www.youtube.com/watch?v=O3FEoMYvUf8
+- Transcript: raw/20260713_O3FEoMYvUf8/O3FEoMYvUf8.en-orig.vtt
+- Metadata: raw/20260713_O3FEoMYvUf8/O3FEoMYvUf8.info.json
+
+Psychologists spent the last century learning how to measure something invisible and uncooperative: a human mind. AI evaluation, meanwhile, still scores like it is 1950. Count the right answers, treat every question as equal, trust the percentage (this is Classical Test Theory). We are sitting on decades of measurement theory built for exactly this problem, and we forgot to use it.
+
+Borrow it and the picture changes. Item Response Theory (or IRT, the math behind the SAT and the GRE) models every item on top of a shared scale with real error bars. That tells you which of your test items are pure noise, which are optimal, and where the knowledge gaps and unexpected behaviours are. Adaptive testing then measures the same ability with a fraction of the questions, which means private, rotating benchmarks that resist contamination instead of saturating in a month (tinyBenchmarks already hinted you can shrink a benchmark with IRT).
+
+It goes further than scoring. The statistical properties of how a model fits the test reveal something a single number never could: data leakage, the moment an agent has quietly seen the answers before. The same machinery that catches a cheating student catches a contaminated benchmark. And instead of one flat score, you get a shape: where the jagged frontier actually is, which abilities are solid and which are luck, so you know which direction to push next.
+
+You will leave this talk with a way to build evals that are cheaper, harder to game, and that tell you what your model actually learned instead of how lucky it got. This is not about handing human tests to a model. It is about borrowing a century of how to measure a mind that does not want to be measured.
+
+Speakers:
+- Alejandro Vidal (Mindmakers): Alex Vidal is the founder of Mindmakers, a psychologist and computer scientist who teaches humans to use AI and teaches AIs to teach humans, building adaptive learning technology and the agents, evals and boring infrastructure that keep it from falling over.
+
+X/Twitter: https://x.com/dobleio
+
+## "I've never seen anything scarier than an LLM with tool calls." — Erik Meijer aka @HeadinTheBox
+
+- Upload date: 2026-07-13
+- Video: https://www.youtube.com/watch?v=-CnA2lGfymY
+- Transcript: raw/20260713_-CnA2lGfymY/-CnA2lGfymY.en-orig.vtt
+- Metadata: raw/20260713_-CnA2lGfymY/-CnA2lGfymY.info.json
+
+AI agents today execute on blind trust, and the failure modes are already in the headlines: a dealership chatbot agreeing to sell a $76,000 Chevy Tahoe for $1, a coding agent wiping a production database during a code freeze, an "agent skill" quietly installing a keylogger on a developer's machine. 
+
+These are not edge cases. They are the predictable consequence of allowing agents to act without any mechanical guarantee of correctness or safety. Execution is irreversible. You cannot unsend a message, unwire a payment, or un-delete a database. In that regime, permitting an unsafe action costs far more than withholding a safe one, and thus the economically rational choice is to refuse to let agents act on unchecked intent alone. 
+
+Automind is an agent harness that enforces this discipline by construction. Before any action runs, the agent must submit its execution plan together with a machine-checkable proof of safety and correctness, written in Universalis, a literate logic programming language designed to be read by humans and verified by machines. A small, auditable checker decides whether the plan is allowed to execute. By left-shifting the trust boundary, we no longer have to trust the agent's proposal, or even its proof; only the checker. Policy compliance becomes a static property, established before the first side effect. We can finally demand formal proofs, not vibes, from the agents we deploy.
+
+More about Erik: https://x.com/headinthebox
+and automind: https://spawn-queue.acm.org/doi/pdf/10.1145/3676287
+
+Erik Meijer has spent more than three decades designing programming languages and developer tools that help humans express intent more clearly to machines. His work has influenced languages and technologies including Haskell, Mondrian, Cω, C#, Visual Basic, Dart, Hack, LINQ, and Rx. Today, he is building Universalis, the world's first programming language for AI agents. By combining formal verification with large language models, Universalis aims to make agentic systems safe, transparent, and trustworthy enough for real-world knowledge work.
+
+Timestamps
+
+0:00 Introduction and purpose of the talk
+1:54 The inherent dangers of AI and accidental file deletion
+3:39 The history and impact of LLMs (the "Pandora's box")
+5:36 The problem of prompt injection and model safety
+7:03 Formal verification and using Lean for safety proofs
+10:45 The introduction of tool calls and the leap into chaos
+13:59 The "lethal trifecta" of AI risks
+14:13 The proposed solution: "air-gapping" the agentic loop
+16:36 Refying plans into programs and using Free Monads
+19:17 The concept of proof-carrying code and summary
+
+## The Agentic Web and the Bazaar Era of AI - Ramesh Raskar, MIT Media Lab
+
+- Upload date: 2026-07-12
+- Video: https://www.youtube.com/watch?v=sum9DgexFRQ
+- Transcript: raw/20260712_sum9DgexFRQ/sum9DgexFRQ.en-orig.vtt
+- Metadata: raw/20260712_sum9DgexFRQ/sum9DgexFRQ.info.json
+
+The AI agent industry is currently focused on memory, orchestration, enterprise deployment, and tooling. But these are the first steps toward a larger transformation: the emergence of the Agentic Web.
+
+Today’s ecosystem resembles the early days of AOL: closed platforms, proprietary agent stores, and siloed orchestration layers. The next era of AI agents will require open infrastructure that allows agents to discover, transact, and co-learn across organizational boundaries.
+
+This talk explores three layers of the Agentic Web.
+
+First, the Discovery Layer: agents will require discovery infrastructure analogous to AltaVista or Google—but for agents instead of webpages. The challenge is no longer PageRank, but “AgentRank”: how agents are discovered, trusted, verified, and coordinated across the open web. This creates the need for ICANN- and W3C-like governance and standards for agents.
+
+Second, the Commerce Layer: what is the dollar value of intelligence? Agents will pay for reasoning, inference, memory, capabilities, and context through emerging “knowledge pricing” markets. Intelligence itself will be discovered, priced before use, coordinated among untrusted entities, and delivered in new ways.
+
+Third, the Bazaar Layer: the last 14 years were about machine learning. The next decade will be about machine co-learning.
+
+Speakers:
+- Ramesh Raskar (MIT Media Lab): Ramesh Raskar is an Associate Professor at the MIT Media Lab and founding architect of NANDA whose pioneering work spans distributed AI agent architectures, health technology, and computational imaging, holding 100+ US patents and earning honors including the National Academy of Inventors award (2024), the Lemelson Award (2016), and the ACM SIGGRAPH Achievement Award (2017), alongside research roles at Google [X], Apple, and Facebook and the co-founding or advising of several companies.
+  LinkedIn: https://www.linkedin.com/in/raskar
+
+## A Song of Types and Agents - Roberto Stagi, Ratel
+
+- Upload date: 2026-07-12
+- Video: https://www.youtube.com/watch?v=UlFB6efYN5Q
+- Transcript: raw/20260712_UlFB6efYN5Q/UlFB6efYN5Q.en-orig.vtt
+- Metadata: raw/20260712_UlFB6efYN5Q/UlFB6efYN5Q.info.json
+
+Python ruled unchallenged for a decade, sitting comfortably on the AIron Throne. But a quiet rebellion is brewing: the entire stack that actually deploys AI agents in production runs on npm, not pip. This lightning talk is an opinionated, slightly unhinged tour of how TypeScript is taking over the AI throne, why this happened and how you can prepare for it.
+
+Speakers:
+- Roberto Stagi (Ratel): Roberto is the CTO & Co-Founder of Ratel, context layer for AI Agents, EU-Ambassador at AI Socratic, and deep into the mission of making context engineering simple for everyone.
+  X/Twitter: https://x.com/rstagi_
+  LinkedIn: https://linkedin.com/in/rstagi
+  GitHub: https://github.com/rstagi
+
+## ReviewDebt: a practical framework for scoring every pull request — Sachin Gupta, Ebay
+
+- Upload date: 2026-07-12
+- Video: https://www.youtube.com/watch?v=TJPInBjhE4Q
+- Transcript: raw/20260712_TJPInBjhE4Q/TJPInBjhE4Q.en-orig.vtt
+- Metadata: raw/20260712_TJPInBjhE4Q/TJPInBjhE4Q.info.json
+
+Coding agents ship PRs faster than humans can trust them. The gap is filling up with a debt nobody is measuring — and it's about to swallow your engineering velocity.
+Every team in 2026 measures coding agents the same way: PR count, lines of code, cycle time, developer NPS. None of those see the real cost — bloated diffs, weak tests, ambiguous rationale, ownership sprawl, and human reviewers spending more time verifying AI code than they used to spend writing their own.
+This talk introduces ReviewDebt: a practical framework for scoring every pull request on the hidden review burden it creates. The scoring is deterministic — diff size, test-coverage delta, ownership spread, generated-code smells, evidence and rationale gaps — so the number is defensible in a real engineering review. We'll walk three real PRs side-by-side (clean human PR, high-debt AI PR, refactored AI PR), watch the scoring play out signal by signal, and look at a 90-day dashboard from a production backend org where review debt climbs in lockstep with AI-PR share.
+
+Speakers:
+- Sachin Gupta: Sachin Gupta is a Staff Software Engineer with 15+ years building backend platforms at internet scale, currently focused on the runtime trust boundaries that LLM coding agents blur and the creator of HeapLens, a Java heap analyzer extension used in 50+ countries.
+  LinkedIn: https://www.linkedin.com/in/guptasachin1/
+  GitHub: https://github.com/sachinkg12
+
+## Semantic Blindness: 500,000 Sensors Confused an LLM - Raahul Singh & Vanč Levstik, Phaidra
+
+- Upload date: 2026-07-12
+- Video: https://www.youtube.com/watch?v=EUsPvBeIx70
+- Transcript: raw/20260712_EUsPvBeIx70/EUsPvBeIx70.en-orig.vtt
+- Metadata: raw/20260712_EUsPvBeIx70/EUsPvBeIx70.info.json
+
+You cannot solve a combinatorial engineering problem with a next token prediction engine. We learned this the hard way.
+
+Modern LLMs can write code, summarize research papers, and reason across massive datasets. But what happens when you connect them to mission-critical physical infrastructure with 50,000 live sensors, deterministic dependencies, and real-world thermodynamic constraints?
+
+We deployed state-of-the-art LLMs to manage real time operations within industrial and AI factory environments to tackle root cause analysis, alarm triage, and operational decision support. What we discovered was a fundamental architectural mismatch between probabilistic language models and deterministic engineering systems.
+
+In this talk, we introduce a failure mode we call Semantic Blindness: the inability of general-purpose LLMs to maintain structural awareness of physical systems, even when provided enormous amounts of context.
+
+This talk dissects three specific failure modes we encountered — and why each one exposes a gap in how the industry thinks about scaling LLMs to complex systems:
+
+1) The Topology Trap. Vector embeddings don't understand pipes, wires, or physical causality. Sensor_445_Temp is just a string. But in reality, it's attached to Valve B, which controls coolant to Generator 3.
+2) The Illusion of Scale. At a small scale, dumping 100 sensors into the context window works surprisingly well. It’s a reasonable solution and it holds up. At 500,000 sensors, the same approach collapses. It creates new problems: attention degrades, critical anomalies get buried in the middle, and latency spikes to unusable levels for real-time response.
+
+3) The Repetition Kill Switch. Industrial tag naming conventions are nearly identical at scale. Feeding the same naming conventions across hundreds of variants, you’ll trip the model’s repetition penalty. It thinks it’s stuck in a degenerate loop and it will literally stop. The data is correct. The model just can’t handle it.
+Rather than focusing on prompt engineering tricks, this session explores the architectural patterns required to make AI reliable in real-world engineering environments.
+
+We’ll present a practical hybrid design approach that combines:
+
+- semantic ontologies,
+- deterministic query systems,
+- structured synthesis layers,
+- and LLM orchestration architectures purpose-built for operational infrastructure.
+
+Attendees will leave with a clear understanding of:
+
+- why naive RAG architectures fail in industrial environments,
+- how to design AI systems that respect physical reality,
+- how to make LLMs work reliably against massive scale of data
+- and what the next generation of “AI-enabled intent resolution” actually looks like beyond semantic search.
+
+This session is designed for senior AI engineers, infrastructure architects, CTOs, and technical leaders building AI systems that must operate reliably under real-world constraints — not just benchmark well in demos.
+
+Speakers:
+- Raahul Singh (Phaidra): Raahul Singh is a Staff AI Research Engineer at Phaidra and the lead architect behind the company's agentic AI platform for data center infrastructure.
+  LinkedIn: https://www.linkedin.com/in/raahulsingh42
+  GitHub: https://github.com/raahul-singh
+- Vanč Levstik (Phaidra): Vanč Levstik is a Senior Engineering Manager at Phaidra and leading the teams developing Phaidra Prism
+
+## RLM: Recursive Language Models for Large Codebases - Shashi, Superagentic AI
+
+- Upload date: 2026-07-12
+- Video: https://www.youtube.com/watch?v=8oyalrfwgjw
+- Transcript: raw/20260712_8oyalrfwgjw/8oyalrfwgjw.en-orig.vtt
+- Metadata: raw/20260712_8oyalrfwgjw/8oyalrfwgjw.info.json
+
+Large codebases break coding agents: they lose the architecture and drown in tool output as context grows. This talk introduces Recursive Language Models (RLM) from a MIT paper a pattern that loads the repo into a programmable REPL where the model writes code to inspect it and recursively delegates focused sub-questions via llm_query. With a live demo on RLM Code (independent, unofficial), you'll see the loop run end to end on local and cloud models, with a fully inspectable trajectory.
+
+Speakers:
+- Shashi (Superagentic AI): Building tools and frameworks for AI Agents
+  X/Twitter: https://x.com/Shashikant86
+  LinkedIn: https://www.linkedin.com/in/shashikantjagtap/
+  GitHub: https://github.com/Shashikant86
+
+## What Does Done Even Mean? Agents and Paperclip's Liveness Model - Dotta, Paperclip
+
+- Upload date: 2026-07-12
+- Video: https://www.youtube.com/watch?v=7P0elyLIxXo
+- Transcript: raw/20260712_7P0elyLIxXo/7P0elyLIxXo.en-orig.vtt
+- Metadata: raw/20260712_7P0elyLIxXo/7P0elyLIxXo.info.json
+
+What does “done” mean when agents can produce more work than humans can possibly review? This talk argues that the future of agentic work is not just faster output, but a stronger trust protocol: systems where “done” means an artifact has met a stated standard, carries evidence, has been checked by the right verifier, assigns ownership of remaining risk, and clearly authorizes the next action. Drawing from Paperclip’s liveness model, it shows how teams can avoid approval theater, keep work moving, route review by risk, and turn agent completion from a vague confidence signal into something others can safely build on.
+
+Speakers:
+- Dotta (Paperclip): Dotta is the creator of Paperclip, the Open-source app for zero human companies
+  X/Twitter: https://x.com/dotta
+  GitHub: https://github.com/cryppadotta
+
+## The AI bugpocalypse is here. Now what? - Jack Cable, Corridor
+
+- Upload date: 2026-07-12
+- Video: https://www.youtube.com/watch?v=7JgIS42mz7U
+- Transcript: raw/20260712_7JgIS42mz7U/7JgIS42mz7U.en-orig.vtt
+- Metadata: raw/20260712_7JgIS42mz7U/7JgIS42mz7U.info.json
+
+Something shifted in the past year that most security teams haven't fully reckoned with yet: AI models can now find serious vulnerabilities in production code, at scale, with minimal human skill required. Not in toy examples. In libraries that have been reviewed hundreds of times by the best researchers in the world. Jack Cable, Co-Founder and CEO of Corridor, will walk through what this means for the 80% of organizations that have never had to defend against adversaries doing in-house vuln discovery: where the real exposure is, what the available playbooks actually get right, and what concrete steps security teams can take right now to reduce their blast radius before open-weight models make this everybody's problem.
+
+Speakers:
+- Jack Cable (Corridor): Jack Cable is a hacker who serves as the Co-Founder and CEO at Corridor, the security platform for AI coding.
+  X/Twitter: https://x.com/jackhcable
+  LinkedIn: https://www.linkedin.com/in/jackcable/
+
+## remobi.app: Don't change your terminal workflow for mobile
+
+- Upload date: 2026-07-12
+- Video: https://www.youtube.com/watch?v=5192csoTkVo
+- Transcript: raw/20260712_5192csoTkVo/5192csoTkVo.en-orig.vtt
+- Metadata: raw/20260712_5192csoTkVo/5192csoTkVo.info.json
+
+remobi.app: Don't change your terminal workflow for mobile. Swipe between agents, unblock when stuck.
+
+## Claws Out: Securing and Building with OpenClaw - Nick Taylor, Pomerium
+
+- Upload date: 2026-07-11
+- Video: https://www.youtube.com/watch?v=xg1zNlzw7Jk
+- Transcript: raw/20260711_xg1zNlzw7Jk/xg1zNlzw7Jk.en-orig.vtt
+- Metadata: raw/20260711_xg1zNlzw7Jk/xg1zNlzw7Jk.info.json
+
+Running OpenClaw without hardening access to it is a bad idea. We'll cover how I secured my OpenClaw, McClaw, contributed trusted-proxy auth mode to the OpenClaw project, and how I use it to build tools.
+
+We're going to build something live during the talk using OpenClaw, the same way I built Clawspace, a browser-based file explorer/editor for your OpenClaw workspace.
+
+feat(gateway): add trusted-proxy auth modegiithub.com/nickytonline/clawspace, a browser-based file explorer/editor for an OpenClaw workspace.github.com/pomerium/pomerium, an open core Identity-Aware Proxy
+
+## Stop AI Agent Hallucinations: 5 Techniques + Production Patterns - Elizabeth Fuentes, AWS
+
+- Upload date: 2026-07-11
+- Video: https://www.youtube.com/watch?v=vJukHCIv7Ck
+- Transcript: raw/20260711_vJukHCIv7Ck/vJukHCIv7Ck.en-orig.vtt
+- Metadata: raw/20260711_vJukHCIv7Ck/vJukHCIv7Ck.info.json
+
+AI agents that book 15 guests in a 10-person room. Agents that fabricate statistics when data doesn't exist. Agents that pick wrong tools from 29 options, wasting $47 in tokens. These aren't prompt engineering failures, they're architectural limitations that need structural solutions.
+
+This hands-on workshop covers 5 research-backed techniques to prevent agent hallucinations:
+
+1. Graph-RAG (Neo4j) - Replace vector similarity guessing with precise entity relationships. Result: 73% fewer fabricated statistics.
+2. Semantic Tool Selection - Filter 29 tools to the relevant 5 using embeddings. Result: 89% token reduction, accurate tool selection.
+3. Multi-Agent Validation - Executor-Validator-Critic swarms catch fabrications through cross-checking. Result: 92% detection rate.
+4. Neurosymbolic Guardrails - Framework-enforced rules (lifecycle hooks) that agents cannot bypass. Result: Zero business rule violations.
+5. Agent Steering - Guide agents to self-correct instead of blocking them. Result: Task completion without hard failures.
+
+Each demo includes live code, before/after metrics, and failure case analysis. Final module shows production deployment.
+
+You'll walk away with working Python implementations, a decision framework for when to apply each technique, and an open-source repository adaptable to your domain.
+
+code: https://github.com/elizabethfuentes12/why-agents-fail-sample-for-amazon-agentcore
+
+Speakers:
+- Elizabeth Fuentes (AWS): Elizabeth Fuentes is a developer advocate and AI engineer focused on what makes agents fast, cheap, and correct in production. She turns failure modes (hallucination, token blowups, context overflow, lost memory) into named, measurable fixes, each backed by a runnable demo and before/after numbers. Her work covers the architectural decisions behind reliable agents: context offloading, the split between conversation and data memory, semantic versus exact-reference retrieval, guardrails, and agent evaluation. With 107+ published technical articles and a Master's in Data Science, she shares production agent patterns across English and Spanish developer communities, and likes turning complex concepts into something anyone can learn.
+  X/Twitter: https://x.com/ElizabethFue12
+  LinkedIn: https://www.linkedin.com/in/lizfue/
+  GitHub: https://github.com/elizabethfuentes12
+
+## The Factory That Dreams: 39 AI Agents, No Framework - Rushabh Doshi, Machinecraft
+
+- Upload date: 2026-07-11
+- Video: https://www.youtube.com/watch?v=jtzh-GBXBWc
+- Transcript: raw/20260711_jtzh-GBXBWc/jtzh-GBXBWc.en-orig.vtt
+- Metadata: raw/20260711_jtzh-GBXBWc/jtzh-GBXBWc.info.json
+
+Most AI demos are built around a toy workflow. Ira was built around a factory.
+
+This talk is the story of how a third-generation Indian machinery company built a multi-agent operating system that helps run sales, business development, recruitment, quoting, marketing, production context, email workflows, and organizational memory. Ira is not a chatbot and not a wrapper around a single framework. It is a company brain: 39 bounded specialist agents, Athena as orchestrator, a 17-stage request pipeline, Qdrant for document memory, Neo4j for relationships, Mem0 for long-term semantic memory, Postgres for CRM and recruiting data, Redis for coordination, and Cursor as the operating cockpit.
+
+The deeper lesson is architectural: companies do not need generic AI assistants. They need digital brains grounded in their own documents, relationships, processes, and values. I will show how Ira ingests company files through a "digestive system", routes work through a pantheon of agents, verifies claims through immune-system style guardrails, learns through memory and corrections, and "dreams" through a nightly consolidation cycle. I will also explain why we gave Ira a SOUL.md: a philosophical constitution based on Anekantavada, Syadvada, Svadharma, and operational truthfulness.
+
+The talk ends with the Fork My Brain thesis: the right way to build company AI is not to sell another SaaS dashboard. It is to send a special-ops AI team inside a company for a week, map the business from the inside out, ingest the right files into Qdrant and Neo4j, wire the operational databases, and leave behind a forkable digital brain that employees can run through Cursor and LLMs.
+
+Speakers:
+- Rushabh Doshi (Machinecraft / Fork My Brain): Rushabh Doshi builds and operates Ira, a multi-agent AI operating system for Machinecraft, an Indian thermoforming machinery manufacturer, combining Cursor, LLMs, retrieval, memory, and business operations into one living company brain.
+  LinkedIn: https://www.linkedin.com/in/rdd0101/
+  GitHub: https://github.com/doshirush1901
 
 ## Design Patterns for AI Trust: Juries, Libraries, and Agent Tiers — Alex Bauer, Upside.tech
 
@@ -24,6 +5910,149 @@ X: https://x.com/alexdbauer
 LinkedIn: https://www.linkedin.com/in/alexdbauer/
 GitHub: https://github.com/aeromusek
 Website: https://alexbauer.net/
+
+## Every Solo Agent Builder Eventually Reinvents a Worse Version of CI/CD - Sumaiya Shrabony
+
+- Upload date: 2026-07-11
+- Video: https://www.youtube.com/watch?v=WLXxTaPagA8
+- Transcript: raw/20260711_WLXxTaPagA8/WLXxTaPagA8.en-orig.vtt
+- Metadata: raw/20260711_WLXxTaPagA8/WLXxTaPagA8.info.json
+
+If you build agents alone long enough, you will independently reinvent five things software engineering solved decades ago. A way to test whether your agent's output is still correct after you changed something. A way to run it on a schedule and know if it failed. A way to prevent one skill's schema change from silently breaking three downstream skills. A way to roll back when today's run produces garbage. A way to validate outputs before they hit production. You just reinvented regression testing, cron monitoring, contract testing, version control, and staging. Badly. Without realizing it.
+
+The dangerous failure in an agent system is not bad output. Bad output is easy to catch. The dangerous failure is a polished artifact that looks ready but violates a production contract: it uses the wrong voice patterns, makes an unverified claim, repeats an old angle, and gets labeled "READY TO PUBLISH" anyway. That is the agent equivalent of shipping because the code compiled, even though the tests never ran.
+
+This talk uses a real, open-source 19-skill Claude Code agent system (github.com/safrin96/agentic-content-system) as the case study. Through an interactive live demo, I show three ways an agent system silently lies to you and what a boundary looks like that catches it. The takeaway is simple: the infrastructure gap in the agent ecosystem is not another framework. It is the equivalent of what CI/CD gave software teams in 2015, a standard, boring, reliable way to test, deploy, and roll back agent behavior. Before you add another agent, add one boundary.
+
+Speakers:
+- Sumaiya Shrabony: Sumaiya Shrabony is a Technical Program Manager, enterprise AI practitioner, and content creator across LinkedIn, Instagram (@thedata_ai.girl), and Substack (Ground Truth) building toward thought leadership at the intersection of enterprise data infrastructure, AI adoption, and the immigrant-in-tech experience.
+  LinkedIn: https://www.linkedin.com/in/sumaiya-shrabony
+  GitHub: https://github.com/safrin96
+
+## Chat and citations won't save your vertical AI - Atul Ramachandran, Filed Inc
+
+- Upload date: 2026-07-11
+- Video: https://www.youtube.com/watch?v=RGiXcVxSD3s
+- Transcript: raw/20260711_RGiXcVxSD3s/RGiXcVxSD3s.en-orig.vtt
+- Metadata: raw/20260711_RGiXcVxSD3s/RGiXcVxSD3s.info.json
+
+Most vertical SaaS teams are doing the same things: chasing higher accuracy, building better model harnesses, shipping more features. And their customers are saying the same things: the AI got this wrong, it hallucinated, the accuracy is not good enough. So teams go back and push the numbers higher.
+We did the same at Filed. We built AI data entry for tax firms and hit 80%+ accuracy against an industry baseline of 50-60%. Many users still complained. Same model, same stack, different outcomes. So we dug in.
+The unhappy customers were not experiencing worse AI. They were reverse-engineering everything we produced. We had not removed work from their day. We had just changed its shape. Chat interfaces and citation trails feel like the fix. They are not. They hand the verification burden back to the user with extra steps. Accuracy %s are the score you get after the game is already over. The complaints, the hallucination reports, all of it: symptoms of the same underlying problem. Users are still holding the bag, and when they are, every error is catastrophic.
+When we started building the real fix, we realised the coding world had already been here. Early coding AI dumped a full function and asked engineers to review 200 lines. Same problem. The fix was not a better model. It was Copilot in the editor, not a separate tab. The planner pattern instead of dumping full outputs. Skills and memory that compound with every use. We reached the same conclusion independently, from taxes.
+This talk is those three patterns and what they look like in a vertical SaaS product.
+Go where the work is. Most users will try a new feature. Almost none will adopt a new platform. AI has to live inside existing workflows, not alongside them.
+1000 feet first. The right unit of work matters more than accuracy on any given unit. Start at the macro level, let users orient, then drill down. Each level is small enough to verify fast. Users stop auditing and start deciding.
+Skills over models. Every edge case is a skill waiting to be encoded, not a model failure. Turn real usage into institutional knowledge that makes every future user better off.
+The specific lessons are from taxes. The pattern is universal.
+
+Speakers:
+- Atul Ramachandran (Filed Inc): Atul has cofounded multiple startups and is currently CTO of Filed, which has raised over $17M to build AI infrastructure for tax firms. He is an active open source contributor in the JavaScript ecosystem, with projects like NodeGui. He is currently based out of Stockholm, Sweden.
+  X/Twitter: https://x.com/a7ulr
+  LinkedIn: https://www.linkedin.com/in/atulanand94/
+  GitHub: https://github.com/a7ul
+
+## State of the Union: Why Local, Why Now — NVIDIA, Osmantic, Roboflow, EXO Labs, @matthew_berman
+
+- Upload date: 2026-07-11
+- Video: https://www.youtube.com/watch?v=KB41dTlX1Uc
+- Transcript: raw/20260711_KB41dTlX1Uc/KB41dTlX1Uc.en-orig.vtt
+- Metadata: raw/20260711_KB41dTlX1Uc/KB41dTlX1Uc.info.json
+
+Alex Cheema's team spent three weeks inside a conference room at NVIDIA headquarters and left with a 10x inference speedup on the DGX Spark, no new computer science required. The update they emailed to Jensen said the wins came from assembling optimizations NVIDIA experts had already solved, pulled together by teams swarming the room all day. The hardware math frames the whole panel: the Spark shares its Grace Blackwell architecture with the data center, Nemotron 3 Ultra runs at 30 tokens per second on four Sparks in the demo room next door, and a four billion parameter Qwen 3.5 on an iPhone now matches what GPT 4o once needed a data center to serve.
+
+Joseph Nelson remembers a passenger on his flight whose phone described the seat back in front of them as a printer while a freshly released LLaVA identified it correctly, his proof that no trillion dollar company holds a monopoly on frontier intelligence. Ahmad Osman places the ecosystem in the 1990s of Linux, where the missing piece is point and click onboarding rather than capability, and Matthew Berman sets the bar for mainstream adoption at nothing harder than opening Cursor. The market is already voting: route planning to frontier models and execution to small specialized ones, which is how Coinbase reports exploding token counts on flat costs.
+
+
+Speaker info:
+Nader Khalil, moderator (NVIDIA):
+- https://x.com/naderlikeladder
+- https://www.linkedin.com/in/naderlikeladder
+
+Joseph Nelson (Roboflow):
+- https://x.com/josephofiowa
+- https://roboflow.com
+
+Alex Cheema (EXO Labs):
+- https://x.com/alexocheema
+- https://exolabs.net
+
+Ahmad Osman (Osmantic):
+- https://x.com/TheAhmadOsman
+- https://www.linkedin.com/in/TheAhmadOsman
+
+Matthew Berman (Forward Future):
+- https://www.youtube.com/@matthew_berman
+- https://forwardfuture.com
+
+Timestamps:
+0:00 - Welcome to the Local AI Summit
+0:40 - Karpathy twice right on keeping up
+1:16 - Reasoning models and always on agents
+2:32 - Panelist introductions
+4:41 - When the inflection point hit
+6:36 - GPT 4o quality in your pocket
+7:14 - Llama 405B to DeepSeek to GLM 5.2
+8:47 - The airplane accessibility story
+10:25 - Harnesses give models the real world
+11:27 - What language learns from vision
+13:19 - A multimodel world in practice
+13:57 - Coinbase: tokens up, costs flat
+15:03 - Control, sovereignty, no rug pulls
+17:50 - Small specialized models and data flywheels
+19:45 - A second headquarters inside NVIDIA
+21:50 - 10x on the DGX Spark by swarming
+24:32 - Desk and data center share an architecture
+26:11 - ODS and point and click onboarding
+27:14 - Where local still falls short
+32:33 - Why finetuning as a service stalled
+35:34 - Distillation down to a submarine
+39:42 - The biggest open problems in local
+42:01 - Open source advocacy and closing
+
+## From Writing Code to Designing Systems: How the Developer Role is Changing — Chris Noring, Microsoft
+
+- Upload date: 2026-07-11
+- Video: https://www.youtube.com/watch?v=GdvKNwMcfd0
+- Transcript: raw/20260711_GdvKNwMcfd0/GdvKNwMcfd0.en-orig.vtt
+- Metadata: raw/20260711_GdvKNwMcfd0/GdvKNwMcfd0.info.json
+
+For decades, developers have been valued primarily for how much code they could write and how quickly they could write it. That model no longer scales. As AI becomes a first-class collaborator, the bottleneck is no longer syntax or implementation speed—it’s clarity of intent, architectural thinking, and the ability to coordinate work across many autonomous contributors.
+
+Today’s challenge is not "How do I write this code?" but "How do I ensure this system is built correctly, consistently, and to company standards—across dozens of moving parts?" Without structure, AI-assisted development risks fragmentation: inconsistent patterns, duplicated logic, and solutions that technically work but fail architectural, security, or organizational expectations.
+
+This talk introduces a new mental model for modern development: the developer as planner, system designer, and orchestrator of agents. Using GitHub Copilot, GitHub Copilot CLI, and custom Copilot agents driven by agents.md, we’ll explore how developers can decompose large problems, delegate implementation to specialized AI agents, and encode standards, constraints, and intent directly into the workflow. Instead of prompting ad-hoc, we define explicit instructions per layer—frontend, backend, infrastructure, testing—so every agent builds the right thing in the right way.
+
+The result is not less control, but more leverage: faster delivery, higher consistency, and systems that reflect deliberate design rather than accidental outcomes.
+
+What you’ll learn:
+
+How the developer role is shifting from code producer to system designer, planner, and agent orchestrator
+
+How to structure projects for agent-driven development, using GitHub Copilot CLI, Copilot Chat, and agents.md to encode standards and intent
+
+How to ensure architectural consistency and quality at scale by giving agents clear responsibilities, constraints, and ownership boundaries
+
+## Develop at Idea Velocity - Jeffrey Lee-Chan, Snapchat
+
+- Upload date: 2026-07-11
+- Video: https://www.youtube.com/watch?v=9arM9b7JgOo
+- Transcript: raw/20260711_9arM9b7JgOo/9arM9b7JgOo.en-orig.vtt
+- Metadata: raw/20260711_9arM9b7JgOo/9arM9b7JgOo.info.json
+
+The biggest gap in production AI agent systems is not the model—it's the harness. After 1,000 hours of orchestrating autonomous fleets under human direction, the pattern is unmistakable: agents that finish complex tasks on the first run routinely fail on subsequent iterations because the surrounding loop lacks persistent memory and contextual guardrails.
+
+In this talk, I dissects the key multi-agent primitives required to turn raw models into deterministic teammates. Moving beyond simple API wrappers, we explore how separating your stack into distinct "Agent Orchestrator Managers" and specialized workers prevents low-level implementation bias.
+
+Using concrete examples from production systems, we will walk through real-time terminal routing via CMUX, analyze the token-burn tradeoffs between leading models, and look under the hood of high-context consumer applications like WorldAI and Consensus ML. You will walk away with a practical architectural checklist you can drop directly into your own agent infrastructure on Monday morning.
+
+Once you're setup you can truly develop at idea velocity ie. natural language  to  code  to  automated iteration  to  evidence produced  to  human review where human interaction in the middle is pushed to the beginning or end allowing improved parallelization.
+
+Speakers:
+- Jeffrey Lee-Chan (Snapchat): Most teams use AI tools wrong — humans still on the critical path. I build parallel multi-agent harnesses so one engineer directs 10–20 coding agents instead of becoming the rate limiter.
+  X/Twitter: https://x.com/jleechan2015
+  LinkedIn: https://www.linkedin.com/in/jeffrey-lee-chan/
+  GitHub: https://github.com/jleechanorg
 
 ## Should AI Engineers Still Read Code in 2026? The Z/L Continuum — Alex Volkov, ThursdAI
 
@@ -613,7 +6642,7 @@ Steering (11:54 - 16:47): Use leading words—specific terms that pack dense mea
 
 Pruning (16:48 - 19:05): Maintain a clean skill set by ensuring a single source of truth, removing "sediment" (irrelevant legacy material), and eliminating "no-ops" (instructions that don't actually change agent behavior).
 
-https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-for-agents/SKILL.md
+https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-great-skills/SKILL.md
 
 ## Using RL Agent to Detect and Remediate ETL Pipeline Failures - Anna Marie Benzon
 
@@ -7263,3157 +13292,3 @@ Timestamps
 10:39 Jonas Bauer - Upside
 13:48 Lengyue - OpenAudio
 18:48 Alex Atallah - OpenRouter
-
-## #define AI Engineer - Greg Brockman, OpenAI (ft. Jensen Huang)
-
-- Upload date: 2025-08-10
-- Video: https://www.youtube.com/watch?v=avWhreBUYF0
-- Transcript: raw/20250810_avWhreBUYF0/avWhreBUYF0.en-orig.vtt
-- Metadata: raw/20250810_avWhreBUYF0/avWhreBUYF0.info.json
-
-Greg Brockman's career and advice for AI Engineers
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-00:00 Greg Brockman's Journey and the Power of Independent Study
-02:50 Joining Stripe and the Grind of a Startup
-08:04 The Power of Independent Study
-10:18 Journey into Machine Learning and Belief in AGI
-16:10 The Relationship Between Engineering and Research at OpenAI
-21:11 Scaling Challenges and Successes at OpenAI
-24:32 Vibe Coding and the Future of Software Engineering
-26:06 Impact of Codex on Coding Practices
-29:20 Scaling Bottlenecks and Future of AI Infrastructure
-38:06 Evolution of Development Workflow with AGI
-
-## The Future of Evals - Ankur Goyal, Braintrust
-
-- Upload date: 2025-08-09
-- Video: https://www.youtube.com/watch?v=MC55hdWLq4o
-- Transcript: raw/20250809_MC55hdWLq4o/MC55hdWLq4o.en-orig.vtt
-- Metadata: raw/20250809_MC55hdWLq4o/MC55hdWLq4o.info.json
-
-About Ankur
-Ankur Goyal is the founder & CEO of Braintrust—the developer platform that companies like Zapier, Notion, Instacart, Airtable, and more use to evaluate, log, and ship reliable AI products to millions. He was previously Head of AI platform at Figma, founder and CEO of Impira, and VP Eng at Singlestore. After Figma acquired Impira, he led the AI team there, and saw a number of the same blockers to AI development at Impira, Figma, and other peer companies, which led to founding Braintrust
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-Timestamps
-00:00 Introduction to AI Engineer World's Fair
-00:15 Speaker Introduction: Ankur Goyal, CEO of Braintrust
-00:22 The Future of Evals
-00:30 Increasing Adoption of Eval
-01:58 Introducing Loop
-04:09 Call to Action: Try Loop and Join the Team
-
-## Designing AI-Intensive Applications - swyx
-
-- Upload date: 2025-08-09
-- Video: https://www.youtube.com/watch?v=IHkyFhU6JEY
-- Transcript: raw/20250809_IHkyFhU6JEY/IHkyFhU6JEY.en-orig.vtt
-- Metadata: raw/20250809_IHkyFhU6JEY/IHkyFhU6JEY.info.json
-
-Whether you call it a workflow or an agent, AI engineered applications are seeing user-input:LLM-call ratios go from 1:1 (ChatGPT) to 1:100 (Deep Research, Codex) and even 0:n (Ambient/Proactive agents). How does AI Engineering change as you build increasingly AI intensive applications?
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-Timestamps:
-
-00:00 Conference Welcome and Overview
-00:42 Conference Logistics and Growth
-01:47 Audience Preferences and Survey
-02:22 Innovations in AI Engineering (MCP and Chatbots)
-02:58 Evolution of AI Engineering (Past Talks)
-03:50 Simplicity in AI Engineering
-04:17 AI Engineering as a Developing Field
-05:23 Seeking the "Standard Model" in AI Engineering
-06:02 Candidate Standard Models in AI Engineering
-09:26 Human Input vs. AI Output (AI News Example)
-11:05 SPADE Model for AI-Intensive Applications
-12:29 Call to Action for Conference Attendees
-
-## On Engineering AI Systems that Endure The Bitter Lesson - Omar Khattab, DSPy & Databricks
-
-- Upload date: 2025-08-06
-- Video: https://www.youtube.com/watch?v=qdmxApz3EJI
-- Transcript: raw/20250806_qdmxApz3EJI/qdmxApz3EJI.en-orig.vtt
-- Metadata: raw/20250806_qdmxApz3EJI/qdmxApz3EJI.info.json
-
-Will discuss the principles for building AI software that underpin DSPy, highlighting the differences between conventional prompting (or finetuning/RL) versus the design and programming of truly modular AI systems.
-
-About Omar Khattab   
-Omar Khattab is a Research Scientist at Databricks and an incoming Assistant Professor at MIT EECS (July 2025). His research creates models, algorithms, and abstractions for building modular, reliable, and scalable AI systems. He is the author of the ColBERT retrieval model, which has helped shape the modern landscape of neural information retrieval, and the creator of the DSPy framework for building and optimizing declarative natural-language programs.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-Timestamps
-00:00 AI Engineer World's Fair
-00:22 On Engineering AI Systems that Endure the Bitter Lesson
-00:32 The Challenges of AI Software Engineering
-00:40 The Bitter Lesson
-04:50 AI Engineering's Purpose
-06:39 Takeaway 1: Engineering for Scalability
-07:19 Premature Optimization
-12:18 The Problem with Prompts
-14:26 Trusty Old Separation of Concerns
-17:11 Takeaway 2: Invest in Decoupling
-17:21 The Pyramid of LLM Software and DSPy
-17:45 The DSPy Concept: Declarative Signatures
-
-## Vibe Coding with Confidence — Itamar Friedman, Qodo
-
-- Upload date: 2025-08-06
-- Video: https://www.youtube.com/watch?v=n991Yxo1aOI
-- Transcript: raw/20250806_n991Yxo1aOI/n991Yxo1aOI.en-orig.vtt
-- Metadata: raw/20250806_n991Yxo1aOI/n991Yxo1aOI.info.json
-
-Everyone wants to do Vibe Code, even large Enterprises. But how can we ensure that the generated code is well-grounded with the dev team's code and software development standards? In this talk, Itamar will present how to use various tools and agents, including MCP and A2A, to achieve precisely that.
-
-About Itamar Friedman
-Itamar Friedman is the CEO and co-founder of Qodo (fka CodiumAI), the leader in the emerging code integrity space.
-Prior to that, Itamar was the co-founder and CTO of Visualead, which Alibaba Group acquired. As a director at Alibaba, he led teams to create innovative ML-based B2C and B2D applications and tools used by millions.
-Itamar holds a BSc & MSc in Electrical Engineering (Summa Cum Laude) from the Technion, majoring in Machine Learning and Computer Vision.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-Timestamps:
-
-00:00 The Evolution of AI in Development
-
-03:08 The Rise of the Command Line Interface (CLI)
-
-03:50 AI Across the Software Development Life Cycle (SDLC)
-
-06:40 The Importance of "Vibe Coding with Confidence"
-
-08:15 The Role of Workflows and Agents
-
-12:21 Qodo's Multi-Agent Approach
-
-13:55 Why the CLI is the Future of AI in Development
-
-20:33 The Future: A "Swarm of Agents"
-
-## How to look at your data — Jeff Huber (Chroma) + Jason Liu (567)
-
-- Upload date: 2025-08-06
-- Video: https://www.youtube.com/watch?v=jryZvCuA0Uc
-- Transcript: raw/20250806_jryZvCuA0Uc/jryZvCuA0Uc.en-orig.vtt
-- Metadata: raw/20250806_jryZvCuA0Uc/jryZvCuA0Uc.info.json
-
-By the end of this talk, you'll understand what it takes to apply clustering techniques and data analysis to understand what is the valuable work that your AI application is doing through analyzing conversation histories and how to create generative evals to benchmark your newly discovered superpowers.
-
-About Jeff Huber
-Jeff Huber is the CEO and cofounder of Chroma. Jeff's work has been featured in TechCrunch, VentureBeat, MacWorld, GQ, Fast Company, Fortune, Forbes, Business Insider, Quartz and others. Chroma is a widely-loved and adopted open-source vector database.
-
-About Jason Liu
-Machine learning engineer, consultant, educator.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Evals Are Not Unit Tests — Ido Pesok, Vercel v0
-
-- Upload date: 2025-08-06
-- Video: https://www.youtube.com/watch?v=L8OoYeDI_ls
-- Transcript: raw/20250806_L8OoYeDI_ls/L8OoYeDI_ls.en-orig.vtt
-- Metadata: raw/20250806_L8OoYeDI_ls/L8OoYeDI_ls.info.json
-
-How to think about evaluating a non-deterministic system — and how to actually succeed at it.
-
-About Ido Pesok
-Ido Pesok is an engineer and researcher at Vercel, working on the AI behind v0 and focused on building reliable and intuitive AI systems.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-Timestamps:
-
-00:00 Introduction to Vercel's V0 and its growth
-01:00 The problem with AI unreliability
-02:44 The "Fruit Letter Counter" app example of AI failure
-03:33 Introducing "evals" and the basketball court analogy
-05:09 Defining the "court": understanding the domain of user queries
-07:53 Data collection for evals
-09:13 Structuring evals: constants in data, variables in task
-10:45 Scoring evals
-12:35 Integrating evals into CI/CD
-13:40 The benefits of using evals
-
-## 2025 is the Year of Evals! Just like 2024, and 2023, and … — John Dickerson, CEO Mozilla AI
-
-- Upload date: 2025-08-06
-- Video: https://www.youtube.com/watch?v=CQGuvf6gSrM
-- Transcript: raw/20250806_CQGuvf6gSrM/CQGuvf6gSrM.en-orig.vtt
-- Metadata: raw/20250806_CQGuvf6gSrM/CQGuvf6gSrM.info.json
-
-AI is getting deployed without guardrails, without governance, without due diligence.  Surely this is the year we’ll see a Fortune 500 CEO fired because of a preventable AI incident.  Surely this is the year we’ll see enterprises wake up to pre-deployment evaluation and post-deployment monitoring being an urgent need.  This story hasn’t changed for a decade, but surely this is the year it will.
-
-In this talk, I’ll cover what enterprise-level AI/ML evaluation has looked like for the last decade - what’s changed, what hasn’t, what sells, what doesn’t, and where I see things going from here on out.  Evaluation matters - we all know this - but using my experience in the trenches over the last decade or so I hope to bridge the gap between what practitioners need and what the C-suite pays for in the space of AI evaluations.
-
-
-
----related links---
-
-https://x.com/johnpdickerson
-https://www.linkedin.com/in/john-dickerson/
-https://jpdickerson.com/
-https://www.mozilla.ai/
-
-Timestamps:
-
-00:00 Introduction to Arthur AI and Mozilla AI
-00:46 2025: The Year of Evals
-01:15 AI/ML monitoring and evaluation
-02:48 The Year of the Agent
-03:26 The need for 'evals' wasn't obvious to the C-suite
-04:15 Pre-ChatGPT launch
-06:06 Venture capitalists' predictions
-07:03 Macroeconomic side of things
-08:06 OpenAI launching ChatGPT
-09:15 2023: The Year of GenAI
-09:39 2024: GenAI applications in production
-10:22 2025: Scaling and autonomy
-11:35 Definition of an agent
-12:06 Connecting to downstream business KPIs
-14:40 Shift to multi-agent systems monitoring
-15:42 Q&A
-16:16 Discussion on domain expertise in evaluations
-18:13 Discussion on LLMs as judges
-
-## Full Workshop: Realtime Voice AI — Mark Backman, Daily
-
-- Upload date: 2025-08-03
-- Video: https://www.youtube.com/watch?v=nxuTVd7v7dg
-- Transcript: raw/20250803_nxuTVd7v7dg/nxuTVd7v7dg.en-orig.vtt
-- Metadata: raw/20250803_nxuTVd7v7dg/nxuTVd7v7dg.info.json
-
-Voice AI agents today can conduct natural, human-like conversations and perform a wide variety of tasks: customer support, lead qualification, healthcare patient intake, market research, and more.
-
-Today's best voice agents combine: realtime responsiveness, open-ended conversational intelligence, reliable instruction following, and flexible integration with existing back-end systems.
-
-Learn how to build state of the art voice agents using Pipecat's open source, vendor neutral tooling. You can deploy Pipecat agents to your own infrastructure or to Pipecat Cloud.
-
-Pipecat is used and supported by teams at NVIDIA, AWS, Google DeepMind, OpenAI, and hundreds of other companies.
-
-
----related links---
-
-https://x.com/mark_backman
-https://www.linkedin.com/in/mark-backman/
-https://daily.co
-
-## How to Improve your Vibe Coding — Ian Butler
-
-- Upload date: 2025-08-03
-- Video: https://www.youtube.com/watch?v=g03m-WFEu1U
-- Transcript: raw/20250803_g03m-WFEu1U/g03m-WFEu1U.en-orig.vtt
-- Metadata: raw/20250803_g03m-WFEu1U/g03m-WFEu1U.info.json
-
-[last round of Attendee-Led 10min lightning talks] Are your vibes immaculate? - Vibe coding is the new hotness but everyone has a story of AI making really dumb choices. Let's talk about how you can improve your vibe coding so your vibes are safe and bug free and you spend more Ian Butler
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Real World Development with GitHub Copilot and VS Code — Harald Kirschner, Christopher Harrison
-
-- Upload date: 2025-08-03
-- Video: https://www.youtube.com/watch?v=eOxOzcw70f0
-- Transcript: raw/20250803_eOxOzcw70f0/eOxOzcw70f0.en-orig.vtt
-- Metadata: raw/20250803_eOxOzcw70f0/eOxOzcw70f0.info.json
-
-Join us to see how VS Code and GitHub Copilot's expanding suite of AI features can match or even surpasses the benefits of other popular AI developer tools.  We'll focus on practical scenarios to ensure immediate applicability and work through live demos of Copilot features such as: Code generation using Edits, Planning/problem solving using Chat, Inline terminal command generation, Boilerplate code generation using Agent mode, Improving boilerplate with custom instructions and then refactoring using Agent mode and Edits, Improving test generation and code reviews with custom instructions, as well as an Introduction to MCP.
-
-## Vision AI in 2025 — Peter Robicheaux, Roboflow
-
-- Upload date: 2025-08-03
-- Video: https://www.youtube.com/watch?v=IQc05eCvNYE
-- Transcript: raw/20250803_IQc05eCvNYE/IQc05eCvNYE.en-orig.vtt
-- Metadata: raw/20250803_IQc05eCvNYE/IQc05eCvNYE.info.json
-
-Attendee-Only and Attendee-Led 10min lightning talks: see https://crowdcomms.com/aiengineer25/qanda/41445
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Vibes won't cut it — Chris Kelly, Augment Code
-
-- Upload date: 2025-08-03
-- Video: https://www.youtube.com/watch?v=Dc3qOA9WOnE
-- Transcript: raw/20250803_Dc3qOA9WOnE/Dc3qOA9WOnE.en-orig.vtt
-- Metadata: raw/20250803_Dc3qOA9WOnE/Dc3qOA9WOnE.info.json
-
-What's the role of vibe coding in a production-grade applications? Join Augment Code's Chris Kelly as he talks about the role of context in software engineering, not code.
-
-About Chris Kelly
-Chris is the head of developer experience where he works across Augment to make building software better for every developer. He’s been making developers happier and more productive for 15 years at innovative companies like New Relic, GitHub, Salesforce, and FireHydrant. You can find him at @amateurhuman everywhere on the internet.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Practical tactics to build reliable AI apps — Dmitry Kuchin, Multinear
-
-- Upload date: 2025-08-03
-- Video: https://www.youtube.com/watch?v=-T6uZYYzkWw
-- Transcript: raw/20250803_-T6uZYYzkWw/-T6uZYYzkWw.en-orig.vtt
-- Metadata: raw/20250803_-T6uZYYzkWw/-T6uZYYzkWw.info.json
-
-[last round of Attendee-Led 10min lightning talks] Practical tactics to build reliable AI apps. Reverse engineering real-world evals with o3. Nobody does it this way. Companies pay me $500/h for this knowledge. I help them get from POC that works 50% of the time - to the solution they can trust to deploy to production.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Building Agents at Cloud Scale — Antje Barth, AWS
-
-- Upload date: 2025-08-02
-- Video: https://www.youtube.com/watch?v=WJjInLeaJjo
-- Transcript: raw/20250802_WJjInLeaJjo/WJjInLeaJjo.en-orig.vtt
-- Metadata: raw/20250802_WJjInLeaJjo/WJjInLeaJjo.info.json
-
-Let's explore  practical strategies for building and scaling agents in production. Discover  how to move from local MCP implementations to cloud-scale architectures and  how engineering teams leverage these patterns to develop sophisticated agent  systems. Expect a mix of demos, use case discussions, and a glimpse into the  future of agentic services!
-
-About Antje Barth
-Antje Barth is a Principal Developer Advocate at AWS, based in San Francisco. She frequently speaks at AI engineering conferences, events, and meetups, and works closely with product teams to build the future of agentic AI. Antje is also co-author of the O’Reilly books Generative AI on AWS and Data Science on AWS.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Useful General Intelligence — Danielle Perszyk, Amazon AGI
-
-- Upload date: 2025-08-02
-- Video: https://www.youtube.com/watch?v=Dj0b_cEBHBI
-- Transcript: raw/20250802_Dj0b_cEBHBI/Dj0b_cEBHBI.en-orig.vtt
-- Metadata: raw/20250802_Dj0b_cEBHBI/Dj0b_cEBHBI.info.json
-
-We’re all hearing that AI agents will enable AGI, but they can’t yet reliably perform even basic computer tasks. It turns out that getting AI to click, type, and scroll is more challenging than getting it to generate code. How can we build general-purpose agents that can do anything we can do on a computer?
-
-This is our goal at the Amazon AGI SF Lab. In this talk, I’ll propose a new approach to agents that we call Useful General Intelligence. After describing how we’re solving the biggest challenges in computer use while enabling developers to access our tech in it’s earliest developmental stages, I’ll show real workflows that developers have built with Nova Act, our agentic model and SDK.
-
-About Danielle
-Danielle is a cognitive scientist at the new Amazon AGI SF Lab. She received her PhD from Northwestern, where she studied the evolution and development of language. Previously, she was at Google and Adept.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## State of Startups and AI 2025 - Sarah Guo, Conviction
-
-- Upload date: 2025-08-02
-- Video: https://www.youtube.com/watch?v=3MZS5gNElZM
-- Transcript: raw/20250802_3MZS5gNElZM/3MZS5gNElZM.en-orig.vtt
-- Metadata: raw/20250802_3MZS5gNElZM/3MZS5gNElZM.info.json
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## The 2025 AI Engineering Report — Barr Yaron, Amplify
-
-- Upload date: 2025-08-01
-- Video: https://www.youtube.com/watch?v=mQ7_Zje7WKE
-- Transcript: raw/20250801_mQ7_Zje7WKE/mQ7_Zje7WKE.en-orig.vtt
-- Metadata: raw/20250801_mQ7_Zje7WKE/mQ7_Zje7WKE.info.json
-
-Come hear the results of the 2025 State of AI Engineering: https://www.amplifypartners.com/blog-posts/the-2025-ai-engineering-report
-
-About Barr Yaon
-Barr is a data scientist turned investment partner at Amplify Partners where she invests in AI infrastructure and apps
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Hacking the Inference Pareto Frontier - Kyle Kranen, NVIDIA
-
-- Upload date: 2025-08-01
-- Video: https://www.youtube.com/watch?v=Y2qc0UhDSnc
-- Transcript: raw/20250801_Y2qc0UhDSnc/Y2qc0UhDSnc.en-orig.vtt
-- Metadata: raw/20250801_Y2qc0UhDSnc/Y2qc0UhDSnc.info.json
-
-Your model works! It aces the evals! It even passes the vibe check! All that’s required is inference, right? Oops, you’ve just stepped into a minefield:
-
--Not low-latency enough? Choppy experience. Users churn from your app. 
--Not cheap enough? You’re losing money on every query.
--Not high enough output quality? Your system can’t be used for that application.
-
-A model and the inference system around it form a “token factory” associated with a Pareto frontier— a curve representing the best possible trade-offs between cost, throughput, latency and quality, outside of which your LLM system cannot be applied successfully. 
-
-Outside of the Pareto frontier? You’re back to square one.
-That is, unless you’re able to change the shape of the Pareto frontier.
-
-In this session, we’ll introduce NVIDIA Dynamo, a datacenter-scale distributed inference framework as well as the bleeding-edge techniques it enables to hack the Pareto frontier of your inference systems, including:
-
--Disaggregation - separating phases of LLM generation to make them more efficient
--Speculation - predicting multiple tokens per cycle
--KV routing, storage, and manipulation - ensuring that we don’t redo work that has already been done
--Pipelining improvements for agents - accelerating our workflows using information about the agent
-
-By the end of the talk, we’ll understand how the Pareto frontier limits where models can be applied, the intuition behind how inference techniques can be used to modify it, as well as the mechanics of how these techniques work.
-
-
-
----related links---
-
-https://x.com/kranenkyle
-https://www.linkedin.com/in/kyle-kranen/
-https://www.nvidia.com/en-us/
-
-Timestamps:
-
-00:00 Introduction to Breaking the Inference Pareto Frontier
-00:33 Introduction of Kyle Cranon and NVIDIA Dynamo
-01:31 The Three Pillars of Deployment (Quality, Latency, Cost)
-02:11 Understanding the Pareto Frontier
-03:06 Application-Specific Prioritization of Quality, Latency, and Cost
-04:32 Common Techniques to Manipulate the Pareto Frontier (Quantization, RAG, Reasoning)
-05:19 Compounding Techniques
-06:04 Three Drivers for Modifying the Pareto Frontier (Scale, Structure, Dynamism)
-06:20 Scale: Disaggregation
-11:02 Scale: Routing
-13:00 Structure: Inference Time Scaling
-16:14 Structure: KV Manipulation
-17:43 Dynamism: Worker Specialization
-18:42 Dynamism: Dynamic Load Balancing
-19:55 Conclusion and NVIDIA Dynamo Resources
-
-## Why We Don’t Need More Data Centers - Dr. Jasper Zhang, Hyperbolic
-
-- Upload date: 2025-08-01
-- Video: https://www.youtube.com/watch?v=M6Vbaig1TsM
-- Transcript: raw/20250801_M6Vbaig1TsM/M6Vbaig1TsM.en-orig.vtt
-- Metadata: raw/20250801_M6Vbaig1TsM/M6Vbaig1TsM.info.json
-
-AI infrastructure today is caught in an endless cycle: build more data centers, deploy more GPUs, repeat.
-
-But this approach is fundamentally flawed—expensive, inefficient, and environmentally unsustainable.
-
-In this talk, we will unpack why continuously expanding data centers masks deeper infrastructure inefficiencies, and why leveraging a GPU marketplace to dynamically allocate existing resources is essential.
-
-We will explore practical use-cases where companies scale GPU capacity flexibly, startups gain affordable compute, and idle GPUs are monetized, enabling a future of sustainable and democratized AI infrastructure.
-
-About Dr  Jasper Zhang, PhD
-Dr. Jasper Zhang is the CEO and Co-founder of Hyperbolic. A mathematical prodigy, he completed his Ph.D. in Mathematics at UC Berkeley in just two years. He is a Gold Medalist in both the Alibaba Global Math Competition and the Chinese Mathematical Olympiad. Before founding Hyperbolic, he held roles at Ava Labs and Citadel Securities, bringing deep expertise in quantitative finance and AI.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Agents vs Workflows: Why Not Both? — Sam Bhagwat, Mastra.ai
-
-- Upload date: 2025-08-01
-- Video: https://www.youtube.com/watch?v=8SUJEqQNClw
-- Transcript: raw/20250801_8SUJEqQNClw/8SUJEqQNClw.en-orig.vtt
-- Metadata: raw/20250801_8SUJEqQNClw/8SUJEqQNClw.info.json
-
-One current hot debate is should you make your top-level abstraction a ReAct type agent running in a loop? or should you make it a structured workflow graph?
-
-OpenAI is launching their new framework and throwing shade on workflow graph approaches
-
-TBH we think this whole debate is kinda dumb.
-
-We've seen a lot of folks be able to structure the problem in a way that a workflow graph makes a lot of sense.
-
-We also see a ton of agents where you need to run the core bit in a loop for a long time.
-
-You can also give your agents structured workflow graphs as a tool. You can use structured workflow graphs as a handoff mechanism between agents. What we've seen from the community is frankly that folks need to tinker with multiple approaches and combine primitives in interesting ways
-
-We'll share a couple stories where teams ended up with workflow graph based approaches, a couple where teams ended up with agent based approaches, and a couple where a blended approach made sense.
-
-About Sam Bhagwat
-Sam is the co-founder and CEO of Mastra and the author of Principles of AI Agents. Previously, Sam was the co-founder of Gatsby.js, the popular web framework.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-Timestamps:
-
-00:00 Introduction: Agents vs. Workflows
-01:00 The Debate and Controversy
-02:15 "Don't Be That Guy": Critiquing Dogma in AI Development
-03:40 Harmful APIs and the Case for Fluent Syntax
-08:00 Defining Agents and Workflows
-10:00 Composition, Design Patterns, and Trade-offs
-11:49 Composing Agents and Workflows
-12:12 Architectural Patterns for Composition
-14:43 Q&A and Concluding Thoughts
-
-## Infrastructure for the Singularity — Jesse Han, Morph
-
-- Upload date: 2025-08-01
-- Video: https://www.youtube.com/watch?v=2goSS66XRBk
-- Transcript: raw/20250801_2goSS66XRBk/2goSS66XRBk.en-orig.vtt
-- Metadata: raw/20250801_2goSS66XRBk/2goSS66XRBk.info.json
-
-We're at an inflection point where AI agents are transitioning from experimental tools to practical coworkers. This new world will demand new infrastructure for RL training, test-time scaling, and deployment. This is why Morph Labs developed Infinibranch last year, and we are excited to finally unveil what's next.
-
-About Jesse Han   
-Jesse Han is the Founder and CEO of Morph Labs, a company building the infrastructure for the singularity. Morph is the creator of Infinibranch, a breakthrough in cloud technology that enables scaling train-time and test-time search for agentic reasoning models. Jesse began his career as a pure mathematician and research scientist at OpenAI working on test-time compute scaling, GPT-4, and reasoning.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Serving Voice AI at $1/hr: Open-source, LoRAs, Latency, Load Balancing - Neil Dwyer, Gabber
-
-- Upload date: 2025-07-31
-- Video: https://www.youtube.com/watch?v=rD23-VZZHOo
-- Transcript: raw/20250731_rD23-VZZHOo/rD23-VZZHOo.en-orig.vtt
-- Metadata: raw/20250731_rD23-VZZHOo/rD23-VZZHOo.info.json
-
-This is a talk that goes over our experience deploying Orpheus (Emotive, Realtime TTS) to production. It will cover topics:
-
-- Latency and optimizations
-- High fidelity voice clones w/ examples
-- Load balancing w/ multiple GPUs and multiple LoRas
-
-About Neil Dwyer
-Spent a lot of my career building real-time applications. First at a company called Bebo circa 2018 where I built a live streaming + computer vision pipeline that watched people play Fortnite. More recently at a company called LiveKit where I worked on the Agents platform along with some amazing people. And now at my own startup, Gabber, where we are making it easier (and cheaper!) to make real-time, multi-modal consumer apps.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-Timestamps
-
-00:00 Introduction to Gabber and Real-Time AI
-02:15 Gabber's Mission for Consumer AI
-04:17 The Orpheus Voice Model
-05:43 Challenges in Voice Cloning
-07:44 Latency Management and "Head of Line Silence"
-11:07 Infrastructure for Batch Inference
-11:36 Leveraging vLLM and Dynamic Quantization
-13:21 Load Balancing with a Consistent Hash Ring
-14:17 System Architecture Overview
-15:07 Conclusion and Open Source Shout-outs
-
-## From Self-driving to Autonomous Voice Agents — Brooke Hopkins, Coval
-
-- Upload date: 2025-07-31
-- Video: https://www.youtube.com/watch?v=kDczF4wBh8s
-- Transcript: raw/20250731_kDczF4wBh8s/kDczF4wBh8s.en-orig.vtt
-- Metadata: raw/20250731_kDczF4wBh8s/kDczF4wBh8s.info.json
-
-The reliability challenges facing voice & chat AI deployment today mirror those that the autonomous vehicle industry confronted years ago. This talk explores how evaluation methodologies developed for self-driving cars can be transferred to create autonomous, self-improving evaluation systems for conversational AI. Drawing from my experience building evaluation infrastructure at Waymo and now developing Coval, an enterprise-grade reliability platform for conversational agents, I'll demonstrate how systematic testing infrastructure is not just a technical requirement but a competitive advantage in the rapidly evolving AI landscape.
-
---
-
- 
-Brooke Hopkins is the Founder at Coval, where her team builds the enterprise-grade reliability infrastructure for conversational AI. Previously, she built evaluation systems at Waymo that helped enable safe autonomous driving. With experience spanning both physical and digital AI domains, Brooke brings unique insights into creating robust testing frameworks that can scale with AI's rapid development.
-
-## [Full Workshop] Building Conversational AI Agents - Thor Schaeff, ElevenLabs
-
-- Upload date: 2025-07-31
-- Video: https://www.youtube.com/watch?v=MPtCBaZn84A
-- Transcript: raw/20250731_MPtCBaZn84A/MPtCBaZn84A.en-orig.vtt
-- Metadata: raw/20250731_MPtCBaZn84A/MPtCBaZn84A.info.json
-
-In this workshop you will learn how to build multilingual Conversational AI agents that can automatically detect your user's spoken language and can seamlessly switch to their preferred language.
-
-About Thor Schaef  
-Thor is a software engineer who loves to teach and help developers build. 
-
-Having grown up around the SAP headquarters in Germany, he started building on the web back in high-school, later studied Computer Science and Media across Germany, Ireland, and Switzerland, and interned with the Google Maps Team in London. 
-
-He joined early Stripe in Dublin, building out various customer-facing engineering teams across Europe and Southeast Asia, contributing to open-source software, while mentoring and investing in early stage startups along the way. 
-
-Settled in sunny Singapore since 2019, he helped grow Supabase from 800 to over a million databases, and recently joined ElevenLabs to help build the developer platform for AI audio!
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Pipecat Cloud: Enterprise Voice Agents Built On Open Source - Kwindla Hultman Kramer, Daily
-
-- Upload date: 2025-07-31
-- Video: https://www.youtube.com/watch?v=IA4lZjh9sTs
-- Transcript: raw/20250731_IA4lZjh9sTs/IA4lZjh9sTs.en-orig.vtt
-- Metadata: raw/20250731_IA4lZjh9sTs/IA4lZjh9sTs.info.json
-
-Voice AI agents today can conduct natural, human-like conversations and perform a wide variety of tasks: customer support, lead qualification, healthcare patient intake, market research, and more.
-
-Today's best voice agents combine: realtime responsiveness, open-ended conversational intelligence, reliable instruction following, and flexible integration with existing back-end systems.
-
-Learn how to build state of the art voice agents using Pipecat's open source, vendor neutral tooling. You can deploy Pipecat agents to your own infrastructure or to Pipecat Cloud.
-
-Pipecat is used and supported by teams at NVIDIA, AWS, Google DeepMind, OpenAI, and hundreds of other companies.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Your realtime AI is ngmi — Sean DuBois (OpenAI), Kwindla Kramer (Daily)
-
-- Upload date: 2025-07-31
-- Video: https://www.youtube.com/watch?v=E71YtNbCFXY
-- Transcript: raw/20250731_E71YtNbCFXY/E71YtNbCFXY.en-orig.vtt
-- Metadata: raw/20250731_E71YtNbCFXY/E71YtNbCFXY.info.json
-
-Sean DuBois of OpenAI and Pion, and Kwindla Hultman Kramer of Daily and Pipecat, will talk about why you have to design realtime AI systems from the network layer up.
-
-Most people who build realtime AI apps and frameworks get it wrong. They build from either the model out or the app layer down. But unless you start with the network layer and build up, you'll never be able to deliver realtime audio and video streams reliably. And perhaps even worse, you'll get core primitives wrong: interruption handling, conversation state management, asynchronous function calling.
-
-Sean and Kwin agree on most things: old-school realtime systems people against the rest of the world. But they disagree on some important things, too, and will argue about those things live on stage. Do you need to give developers "thick" client-side realtime SDKs? Can you build truly great vendor neutral APIs? (You'll be surprised which of them argues which side, on that topic.)
-
-About Kwindla Kramer
-Kwin works on large-scale WebRTC infrastructure at Daily. He is the originator of Pipecat, the widely used, open source, vendor neutral voice agent framework supported by NVIDIA, Google, AWS and used by hundreds of startups. Before co-fonding Daily, Kwin built the sci-fi user interfaces in Minority Report and Iron Man.
-
-About Sean DuBois
-Sean works on WebRTC and the Realtime API at OpenAI. He built 1-800-CHATGPT. He is the founder of Pion, the most widely used open source WebRTC project. He has previously worked at AWS, LiveKit, Apple, and Etsy.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-
-00:00 [Voice Keynote] Your realtime AI is ngmi — Sean DuBois (OpenAI), Kwindla Kramer (Daily)
-01:29 Introduction to Voice AI and Latency
-02:46 Latency Breakdown in a Voice AI Application
-03:27 WebRTC vs. WebSockets for Real-Time Audio
-06:41 Advantages of WebRTC
-07:49 Applications of WebRTC
-08:52 Future of Voice AI and User Interfaces
-09:59 Squabbert Demo
-12:44 Flexibility of WebRTC Connections
-13:09 Community Showcase: Yashin's Project
-15:46 Call to Action and Resources
-
-## Why ChatGPT Keeps Interrupting You — Dr. Tom Shapland, LiveKit
-
-- Upload date: 2025-07-31
-- Video: https://www.youtube.com/watch?v=1v9zBiZKlIY
-- Transcript: raw/20250731_1v9zBiZKlIY/1v9zBiZKlIY.en-orig.vtt
-- Metadata: raw/20250731_1v9zBiZKlIY/1v9zBiZKlIY.info.json
-
-ChatGPT Advanced Voice Mode isn’t interrupting just you. Interruptions, and turn-taking in general, are unsolved problems for all Voice AI agents. Nobody likes being cut short – and people have much less patience for machines than they do for other humans. Turn-taking failures take many forms (e.g., the agent interrupts the user, the agent mistakes a cough for an interruption), and all of them lead to users immediately hanging up the phone.
-
-In this talk, we use human conversation as a framework for understanding both today’s approaches to turn detection and where the field is headed. You’ll learn about how linguists think about turn detection in human dialogue, what’s working (and what’s broken) in current methods, and how we might build Voice AIs that interrupt you less than your human brother.
-
-About Tom Shapland
-Tom Shapland, PhD, is a Product Manager at LiveKit. LiveKit is an open source platform for building, deploying, and scaling realtime multimodal agents. He's passionate about the multimodal future of human-computer interfaces. Before LiveKit, he was the cofounder of a Voice AI observability platform (Canonical AI) and an agriculture technology startup (Tule, YC S14). He lives in the East Bay and coaches lacrosse for his two kids.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## OpenAI on Securing Code-Executing AI Agents — Fouad Matin (Codex, Agent Robustness)
-
-- Upload date: 2025-07-30
-- Video: https://www.youtube.com/watch?v=w7IMuYsBNr8
-- Transcript: raw/20250730_w7IMuYsBNr8/w7IMuYsBNr8.en-orig.vtt
-- Metadata: raw/20250730_w7IMuYsBNr8/w7IMuYsBNr8.info.json
-
-Code is the lingua franca for both software engineers and highly capable AI models. As we give agents the ability to build, test, and run code that they generate, the command line becomes their canvas—and their attack surface.
-
-This keynote explores what it takes to bring code-executing agents from research to real-world deployment while maintaining control and security. We’ll cover how terminals offer AI an ideal interface, why they’re deceptively risky, and what it means to embed security, guardrails, and trust at every layer.
-
-It’s not just about what agents can do—it’s about what they should do, and how we make sure they do it safely.
-
-Join the new Agent Robustness team! https://x.com/gdb/status/1930831992171749773
-
-About Fouad Matin   
-Fouad Matin is an engineer who co-founded Indent, temporary access control startup, before joining OpenAI to work on AGI-ready security, and previously worked on data infrastructure products at Segment. In 2016, he co-founded VotePlz, a non-partisan voter registration and turnout non-profit. Passionate about helping people find fulfilling work, he previously started a referral recruiting company which went through Y Combinator in W16 batch.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-Timestamps:
-
-00:00 Introduction to Code-Executing Agents
-02:29 Shifting Paradigm in AI Agent Building
-03:07 Security Concerns with Code Execution
-04:25 Safety Safeguards: Sandboxing
-05:02 Safety Safeguards: Disabling/Limiting Internet Access
-09:44 Safety Safeguards: Human Review
-11:19 Building Agents and Future Work
-
-## How we hacked YC Spring 2025 batch’s AI agents — Rene Brandel, Casco
-
-- Upload date: 2025-07-30
-- Video: https://www.youtube.com/watch?v=kv-QAuKWllQ
-- Transcript: raw/20250730_kv-QAuKWllQ/kv-QAuKWllQ.en-orig.vtt
-- Metadata: raw/20250730_kv-QAuKWllQ/kv-QAuKWllQ.info.json
-
-We hacked 7 of the16 publicly-accessible YC X25 AI agents. This allowed us to leak user data, execute code remotely, and take over databases. All within 30 minutes each. In this session, we'll walk through the common mistakes these companies made and how you can mitigate these security concerns before your agents put your business at risk.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-Timestamps:
-
-00:00 Introduction to Casco and AI Agents
-01:31 Evolution of Agent Stacks and Security Concerns
-02:56 Why Casco Hacked AI Agents
-04:00 Common Issue 1: Cross-User Data Access (IDOR)
-07:38 Common Issue 2: Arbitrary Code Execution
-12:38 Common Issue 3: Server-Side Request Forgery (SSRF)
-14:48 Key Takeaways
-15:28 Casco's Solution and Contact Information
-15:56 Q&A
-
-## How to Secure Agents using OAuth — Jared Hanson (Keycard, Passport.js)
-
-- Upload date: 2025-07-30
-- Video: https://www.youtube.com/watch?v=blmAkayzE8M
-- Transcript: raw/20250730_blmAkayzE8M/blmAkayzE8M.en-orig.vtt
-- Metadata: raw/20250730_blmAkayzE8M/blmAkayzE8M.info.json
-
-We all know sharing passwords is bad (unless you want free TV), so why are we sharing API keys with AI?  We shouldn't, and that’s why we need to talk about OAuth.
-
-In this talk, we will give a brief intro to OAuth.  Then we will talk about the state of authorization in MCP.  We will show how an MCP client uses OAuth to authenticate a user and securely access private resources and tools hosted by an MCP server.  Then we’ll look at ways autonomous agents can use OAuth on their own behalf, talking to other agents and MCP servers directly.  We’ll learn how to use OAuth to build agents that humans and machines can trust.
-
-About Jared Hanson
-Jared Hanson is the co-founder of Keycard, a company building identity infrastructure for the agent-native world. Previously at Okta and Auth0, Jared is an expert on OpenID, OAuth, and all things identity. He’s also the author of Passport.js, the popular authentication framework for Node.js. At Keycard, he is applying that knowledge to securing AI and infrastructure.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## How to defend your sites from AI bots — David Mytton, Arcjet
-
-- Upload date: 2025-07-30
-- Video: https://www.youtube.com/watch?v=Gi4V8viBGYQ
-- Transcript: raw/20250730_Gi4V8viBGYQ/Gi4V8viBGYQ.en-orig.vtt
-- Metadata: raw/20250730_Gi4V8viBGYQ/Gi4V8viBGYQ.info.json
-
-Constantly seeing CAPTCHAs? It used to be easy to detect the humans from the droids, but what else can we do when synthetic clients make up nearly half of all web requests. Rotating IPs, spoofed browsers, and agents acting on behalf of real users - are we doomed to forever be solving puzzles?
-    
-    In this talk, we’ll explore user agents, HTTP fingerprints, and IP reputation signals that make humans and agents stand out from scrapers, build a realistic threat model, and dig into the behaviors that reveal the LLM-mimicry. Leave with AX- and UX-safe code, benchmarks, and tools to help you take back control.
-
-## The Unofficial Guide to Apple’s Private Cloud Compute - Jmo, CONFSEC
-
-- Upload date: 2025-07-30
-- Video: https://www.youtube.com/watch?v=CCsWZ5bJlO8
-- Transcript: raw/20250730_CCsWZ5bJlO8/CCsWZ5bJlO8.en-orig.vtt
-- Metadata: raw/20250730_CCsWZ5bJlO8/CCsWZ5bJlO8.info.json
-
-In October 2024, Apple released a new private AI technology onto millions of devices called “Private Cloud Compute”. It brings the same level of privacy and security a local device offers but on an “untrusted" remote server. This talk discusses how Private Cloud Compute represents a paradigm shift in confidential computing and explores the core advancements that made it possible to become mainstream. We’ll explore its novel architecture that allows developers to run sensitive, multi-tenant workloads with cryptographically-provably privacy guarantees at scale and at reasonable cost. Attendees will leave with an understanding of how to leverage this technology for data and AI applications where privacy and security is paramount.
-
-About Jonathan Mortensen
-Jonathan Mortensen is a technology executive and founder with expertise spanning AI, data infrastructure, and cybersecurity. Currently serving as CEO of a stealth AI startup and Founder Fellow at South Park Commons, Jonathan previously founded bit.io, a multi-cloud serverless PostgreSQL platform acquired by Databricks. As bit.io's CTO, he built innovative database technology that handled hundreds of thousands of databases securely across multiple cloud providers. Prior to founding bit.io, Jonathan led data science and engineering teams at BlueVoyant, where he designed high-volume data pipelines processing 50 million events per second. He holds a PhD in Biomedical Informatics from Stanford University and combines technical depth with leadership experience across engineering, revenue, and operations.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-
-00:00 Introduction to Apple's Private Cloud Compute (PCC)
-00:58 The Motivation for Privacy in AI
-02:20 The Core Problem: Balancing AI Compute Needs with User Privacy
-03:59 Apple's Five Key Requirements for Private Cloud Compute
-05:22 Conceptual Architecture of the PCC System
-08:06 The Six Core Technical Components of PCC
-10:22 Deep Dive: Remote Attestation
-11:52 Deep Dive: Transparency Log
-13:22 How Remote Attestation and the Transparency Log Work Together
-15:09 Gaps, Downsides, and Trade-offs of the System
-17:33 How Developers Can Use Similar Privacy-Enhancing Technologies
-19:17 Industry Trends in Private Processing
-
-## Building a Smarter AI Agent with Neural RAG - Will Bryk, Exa.ai
-
-- Upload date: 2025-07-29
-- Video: https://www.youtube.com/watch?v=xnXqpUW_Kp8
-- Transcript: raw/20250729_xnXqpUW_Kp8/xnXqpUW_Kp8.en-orig.vtt
-- Metadata: raw/20250729_xnXqpUW_Kp8/xnXqpUW_Kp8.info.json
-
-RAG quality for AI agents is critical, and traditional keyword-based search engines consistently underperform in agentic or multi-step tasks, where semantic grounding and contextual nuance matter most.
-
-In this talk, Will Bryk, CEO of Exa will live code two AI agent applications–one using traditional keyword search RAG and one using neural network RAG via vector search. He’ll then evaluate both applications based on task performance, relevance, and latency. With a live demo (no theory or pre-baked applications), the audience will get a firsthand look at the practical differences between keyword and semantic systems in production, and learn embedding strategies, indexing trade-offs, hybrid retrieval techniques, prompt tuning, and more.
-
-About Will Bryk
-A year before ChatGPT launched, Will was already spending his time building Exa’s API to crawl the web intelligently, focusing on finding quality sources over SEO spam. Backed by NVIDIA and Lightspeed, Exa now powers products for customers like Databricks, Cursor, and LlamaIndex.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Evaluating AI Search: A Practical Framework for Augmented AI Systems — Quotient AI + Tavily
-
-- Upload date: 2025-07-29
-- Video: https://www.youtube.com/watch?v=wRJD0inpmjU
-- Transcript: raw/20250729_wRJD0inpmjU/wRJD0inpmjU.en-orig.vtt
-- Metadata: raw/20250729_wRJD0inpmjU/wRJD0inpmjU.info.json
-
-AI search is becoming the front door to information, whether through Retrieval-Augmented Generation (RAG), Search-Augmented Generation (SAG), or custom agents that synthesize answers on top of indexed content. As users rely more heavily on these systems, evaluating their quality becomes mission-critical. But traditional metrics like precision and recall don’t capture the full picture.
-
-In this talk, we introduce a practical evaluation framework for AI-powered search, across three dimensions:
-- Are the retrieved sources relevant to the query?
-- And is the final answer complete?
-- Are the sources faithfully used in the generated answer?
-
-We’ll share lessons from working with search companies and present early findings from a new benchmark evaluating popular augmented AI systems across these dimensions. Rather than ranking winners and losers, we explore where different systems excel or break down, and how these tradeoffs inform product decisions.
-
-This talk is for AI engineers and product teams who want to build trusted, high-quality AI search experiences, and need a way to measure if it’s actually working.
-
-About Julia Neagu
-Julia is the co-founder and CEO of Quotient AI, which provides intelligent observability for AI apps by automatically detecting failures, uncovering root causes, and recommending improvements. Before Quotient, she was the Director of Data for Copilot, GitHub's AI pair programmer, where her team built the systems evaluating the large language models behind Copilot. Previously, she was the Director of Analytics at Tamr and led end-to-end quantitative modeling at Aon's Intellectual Property Solutions group. Julia has a PhD and MA in Physics from Harvard, an AB in Physics from Princeton.
-
-About Deanna Emery
-Deanna is the Founding AI Researcher at Quotient AI, where she is leading research on evaluation of Large Language Models in real-world products and applications. Before Quotient, Deanna was a Principal Data Scientist at Aon, where she led the team building language models for valuation of intellectual property assets. She began her career as a researcher at Harvard-Smithsonian Center for Astrophysics and Caltech LIGO. Deanna has a MS in Machine Learning from UC Berkeley and BA in Physics from Harvard University. She is passionate about diversity and inclusion in STEM; she has conducted research on diversity in named patent inventors, working with companies to measure and address diversity gaps, and she is an active board member at a STEM education non-profit.
-
-About Maitar Asher
-Maitar Asher is a founding member and Head of Engineering at Tavily, a New York–based startup developing a web infrastructure layer for AI agents.
-
-She leads the technology build and has architected core systems—including Tavily’s intelligent caching layer and enhanced search retrieval—to power the industry’s premier search engine for large language models.
-
-Prior to Tavily, she developed deep learning tools for PET/CT image segmentation as a Machine Learning Research Engineer at Stanford University. She holds a B.S. in Computer Science (Machine Learning) from Columbia University.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Layering every technique in RAG, one query at a time - David Karam, Pi Labs (fmr. Google Search)
-
-- Upload date: 2025-07-29
-- Video: https://www.youtube.com/watch?v=w9u11ioHGA0
-- Transcript: raw/20250729_w9u11ioHGA0/w9u11ioHGA0.en-orig.vtt
-- Metadata: raw/20250729_w9u11ioHGA0/w9u11ioHGA0.info.json
-
-Start with the simplest Search - in-memory embeddings with relevance ranking. End with the most complex planet-scale Search - 70+ corpus mix of token, embeddings, and knowledge graphs, all jointly retrieved, custom ranked, joint re-ranked, and then LLM-processed, at 160,000 queries per second in under 200msec.
-
-This talk will be a fun “one query at a time” survey of all techniques in RAG in incremental complexity, showing the limits of each technique and what the next layered one opens up in terms of capabilities to handle ever-more complex queries in RAG. You’ll learn why queries like [falafel] are notoriously hard to Search over, why chunking your documents can be disastrous, how you can sometimes can get away with a simple bm25, and how some Search problems are so hard to solve that you’re better off punting the problem to the LLM or the UX. Brought to you by the team that worked on 50+ Search products, in the context of Google.com and custom Enterprise Search.
-
-About David Karam
-I'm David K. I love straddling the line between deep tech research and application development. I’ve spent a decade at Google as Product Director working on Search’s core AI and NLU systems, helping Search’s own version of “AI Engineers” develop magical applications. Around a year ago I left with my cofounder to start Pi Labs where we’re trying to bring that same spirit to the rest of the industry. Outside work I love to read, cook, and spend time in nature.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-Timestamps:
-00:00 Introduction and Context
-01:41 Quality Engineering Loop and Mindset
-04:09 In-Memory Retrieval
-04:50 Term-Based Retrieval (BM25)
-05:18 Relevance Embeddings (Vector Search)
-06:15 Re-Rankers (Cross Encoders)
-07:59 Custom Embeddings
-09:40 Domain-Specific Ranking Signals
-11:09 User Preference Signals
-12:17 Query Orchestration (Fan Out)
-14:26 Supplementary Retrieval
-16:09 Distillation
-17:14 Punting the Problem and Graceful Degradation
-
-## [Full Workshop] Building Metrics that actually work — David Karam, Pi Labs (fmr Google Search)
-
-- Upload date: 2025-07-29
-- Video: https://www.youtube.com/watch?v=jxrGodnopHo
-- Transcript: raw/20250729_jxrGodnopHo/jxrGodnopHo.en-orig.vtt
-- Metadata: raw/20250729_jxrGodnopHo/jxrGodnopHo.info.json
-
-One of the biggest challenges in building evals you can trust is building metrics that reliably measure goodness in your application; metrics that are highly accurate, rapid fast, and tunable to ground truth rater and user behavior. This workshop is inspired by decades of AI and machine learning development in Google Search, reinvented for the modern LLM stack by the Pi team over the past year.
-
-In this workshop you will learn how to:
-
-1. Brainstorm and design custom metrics tailored to your specific application needs.
-2. Identify which types of signals (natural language, code, other models) work best for your use case through rapid trial and error.
-3. Combine & calibrate your metrics against ground truth data using real examples from your domain.
-4. Use simple tools like Google Sheets for visualizing and analyzing your inputs and outputs with those metrics.
-5. Integrate your scoring models into both online workflows like agent control and offline ones like model comparison and training evaluation.
-
-About David Karam
-I'm David K. I love straddling the line between deep tech research and application development. I’ve spent a decade at Google as Product Director working on Search’s core AI and NLU systems, helping Search’s own version of “AI Engineers” develop magical applications. Around a year ago I left with my cofounder to start Pi Labs where we’re trying to bring that same spirit to the rest of the industry. Outside work I love to read, cook, and spend time in nature.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Scaling Enterprise-Grade RAG: Lessons from Legal Frontier - Calvin Qi (Harvey), Chang She (Lance)
-
-- Upload date: 2025-07-29
-- Video: https://www.youtube.com/watch?v=W1MiZChnkfA
-- Transcript: raw/20250729_W1MiZChnkfA/W1MiZChnkfA.en-orig.vtt
-- Metadata: raw/20250729_W1MiZChnkfA/W1MiZChnkfA.info.json
-
-In domains like law, compliance, and tax, building enterprise-grade RAG means very large scale, spikey workloads, a focus on accuracy, and non-negotiable privacy. In this talk, we'll share war stories and battle scars of how Harvey has built the world's most advanced AI agents for the legal profession on top of a highly optimized retrieval architecture. We'll cover how to get better retrieval via both sparse and dense retrieval methods, why domain-specific reranking is essential, and how to handle ambiguity in real-world queries. We'll also touch on how LanceDB's search engine enables this architecture by delivering low-latency, high-throughput retrieval across millions of documents of varying sizes without compromising privacy. This solid foundation enables Harvey to build a product that brings highly accurate answers to hundreds of law firms and professional services firms across 45 countries.
-
-About Chang She
-Two decades of building data tools for ML/AI. Pandas co-author. Building LanceDB, the database for multimodal AI.
-
-About Calvin Qi
-Calvin works on Retrieval Augmented Generation at Harvey for expert use cases in Legal, Tax, and more.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Building Alice’s Brain: an AI Sales Rep that Learns Like a Human - Sherwood & Satwik, 11x
-
-- Upload date: 2025-07-29
-- Video: https://www.youtube.com/watch?v=KWmkMV0FNwQ
-- Transcript: raw/20250729_KWmkMV0FNwQ/KWmkMV0FNwQ.en-orig.vtt
-- Metadata: raw/20250729_KWmkMV0FNwQ/KWmkMV0FNwQ.info.json
-
-AI agents are becoming essential tools for teams of all sizes and industries - but training them to become experts in your product, business, and customerbase remains a challenge.
-
-What if onboarding a digital worker was as simple as uploading your pitch deck? At 11x, we built Alice, an AI SDR that writes outbound emails with the nuance and context of a top-performing human sales rep - because she learns like one too!
-
-In this talk, we'll share how we built a knowledge base that allows 11x customers to "train" Alice on their internal materials: PDFs, websites, call recordings, and more. We'll talk through the ingestion pipeline in detail, discuss storage/retrieval technologies and their tradeoffs, and explain how Alice uses the knowledge base to drive high-performance email outreach at scale.
-
-About Sherwood Callaway
-Sherwood Callaway is an emerging leader in the world of AI startups and AI product development. He currently serves as the first engineering manager at 11x, a series B AI startup backed by Benchmark and Andreessen Horowitz, where he oversees technical work on "Alice", an AI sales rep that outperforms top human SDRs.
-
-Alice is an advanced agentic AI working in production and at scale. Under Sherwood’s leadership, the system grew from initial prototype to handling over 1 million prospect interactions per month across 300+ customers, leveraging partnerships with OpenAI, Anthropic, and LangChain while maintaining consistent performance and reliability. Alice is now generating eight figures in ARR.
-
-Sherwood joined 11x in 2024 through the acquisition of his YC-backed startup, Opkit, where he built and commercialized one of the first-ever AI phone calling solutions for a specific industry vertical (healthcare). Prior to Opkit, he was the second infrastructure engineer at Brex, where he designed, built, and scaled the production infrastructure that supported Brex’s application and engineering org through hypergrowth. He currently lives in San Francisco, CA.
-
-About Satwik Singh
-Satwik Singh is a core builder and emerging technical leader in the rapidly evolving field of applied AI and agentic systems. As a Member of Technical Staff at 11x AI, Satwik is at the forefront of developing "Alice", an AI sales representative that operates autonomously at scale—transforming how modern GTM teams work.
-
-At 11x, Satwik has architected and delivered several of the company's most critical agent capabilities. He led the creation of the Knowledge Base Retrieval-Augmented Generation (RAG) and Deep Research pipeline, which powers Alice's ability to reason over complex product information and tailor responses with high fidelity: a first-of-its-kind system in the GTM agent space. He has also worked across systems to handle the credits ledger, and engineered the Sourcing Agent that autonomously crafts campaigns. Satwik has been instrumental in shaping the technical foundation of Alice's intelligence and reliability.
-
-Prior to 11x, Satwik was a software engineer at Meta, where he worked on Generative AI products within the Core Ads organization and contributed to infrastructure across Reality Labs. His work helped ship first-generation GenAI creative enhancements for Feed Ads—driving significant revenue gains at scale.
-
-Satwik's unique strength lies in his ability to move seamlessly between infrastructure, AI product, and agent behavior—designing systems that are production-ready, high-impact, and aligned with real business outcomes. With deep hands-on experience and a vision for what Agentic AI can become, he's helping define the next era of intelligent software.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Everything is ugly, so go build something that isn't — Raiza Martin, Huxe (ex NotebookLM)
-
-- Upload date: 2025-07-28
-- Video: https://www.youtube.com/watch?v=yG5d5UaGz1M
-- Transcript: raw/20250728_yG5d5UaGz1M/yG5d5UaGz1M.en-orig.vtt
-- Metadata: raw/20250728_yG5d5UaGz1M/yG5d5UaGz1M.info.json
-
-We're in an awkward adolescent phase of AI product (design). But what if this chaotic moment is actually our greatest opportunity? Enter the rebuilding revolution.
-
-In this talk, we'll explore how the current state of AI interfaces offers a once-in-a-career chance to rethink fundamental UX patterns, with practical guidance on avoiding common pitfalls that plague first-generation AI products. 
-
-Learn how to balance technical constraints with user needs, identify which conventional wisdom to keep versus discard, and ship AI experiences that actually delight users rather than frustrate them.
-
-About Raiza Martin
-A product leader with a unique lens on AI's user experience challenges, Raiza brings insights from both big tech and startup trenches.
-
-Most recently leading Google's NotebookLM team, she has shaped how millions of users interact with generative AI. Now, as a founder, she is reimagining these experiences from first principles.
-
-With years of hands-on PM experience guiding technical teams through the practical realities of shipping AI products, Raiza offers a rare combination of enterprise-scale perspective and startup-speed execution.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Why your product needs an AI product manager, and why it should be you — James Lowe, i.AI
-
-- Upload date: 2025-07-28
-- Video: https://www.youtube.com/watch?v=xzJdSi2Tsqw
-- Transcript: raw/20250728_xzJdSi2Tsqw/xzJdSi2Tsqw.en-orig.vtt
-- Metadata: raw/20250728_xzJdSi2Tsqw/xzJdSi2Tsqw.info.json
-
-So you've built another cool demo. Now what? You have hype, but not impact. You have kudos but no users. Ultimately you have a demo, but not a product.
-
-The unique uncertainty of AI technology demands a new approach – beyond traditional product management. You need an AI Product Manager. This talk explains why this role is essential for building real AI products, using real case studies from the incubator for Artificial Intelligence in the UK Government.
-
-More importantly, it reveals why your technical depth makes you uniquely suited to step into this critical leadership gap. Discover why could be the ideal candidate to be the AI Product Manager your product needs, and how to step into that role.
-
-About James Lowe
-James Lowe has been a data scientist in public sector for 8 years, including working at 10 Downing Street. He is now the Head of AI Engineering for the Incubator for AI, a small team of experts in the centre of the UK Government building AI products that are delivering public good.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Real-time Experiments with an AI Co-Scientist - Stefania Druga, fmr. Google Deepmind
-
-- Upload date: 2025-07-28
-- Video: https://www.youtube.com/watch?v=wNH3q9pqn0U
-- Transcript: raw/20250728_wNH3q9pqn0U/wNH3q9pqn0U.en-orig.vtt
-- Metadata: raw/20250728_wNH3q9pqn0U/wNH3q9pqn0U.info.json
-
-The sheer volume of data and complexity of modern scientific challenges necessitate tools that go beyond mere analysis. The vision of an "AI Co-scientist" – a true collaborative partner in the lab – requires sophisticated engineering to bridge the gap between powerful AI reasoning and the dynamic reality of physical experiments. This talk dives into the engineering required to build robust AI Co-scientists for hands-on research. We will explore scalable architectures, such as multi-agent systems leveraging foundation models like Gemini for complex reasoning, hypothesis refinement (inspired by the "generate, debate, evolve" paradigm described in recent AI Co-scientist research), and intelligent tool use. The core focus will be on the engineering challenges and solutions for integrating diverse, real-time empirical data streams – visual data from cameras, quantitative readings from sensors, positional feedback from actuators, and instrument outputs – directly into the AI's reasoning loop. I will illustrate this with concrete, technically detailed examples in chemistry (adaptive reaction monitoring), robotics (vision-guided assembly with SO Arm 100 and LeRobot library), and synthetic biology (real-time bacterial growth monitoring & interpretation). We'll discuss engineering strategies for handling data heterogeneity, latency, noise, and enabling the AI to interpret, correlate, and act upon live experimental feedback. Finally, we will touch upon how thoughtful engineering of these AI Co-scientists can contribute to democratizing access to advanced scientific capabilities.
-
-About Stefania Druga
-Hi! I am Stef. I am an independent researcher, formerly a Research Scientist in Google DeepMind working on novel multimodal AI applications. Previously I was a Principal Researcher in the Center of Applied AI Research at the University of Chicago. I graduated with a Ph.D. in Creative AI Literacies at the University of Washington Information School and have a master in Science from MIT,
-
-My research focuses on Large Language Models and the design of Multimodal AI tools and resources and during grad school I built the first open-source platform for K12 AI Education - Cognimates. When I am not coding & writing papers. I love trail running, yoga, and riding my bike.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## What Is a Humanoid Foundation Model? An Introduction to GR00T N1 - Annika & Aastha
-
-- Upload date: 2025-07-28
-- Video: https://www.youtube.com/watch?v=mWKYvT9Lc50
-- Transcript: raw/20250728_mWKYvT9Lc50/mWKYvT9Lc50.en-orig.vtt
-- Metadata: raw/20250728_mWKYvT9Lc50/mWKYvT9Lc50.info.json
-
-Foundation models don’t just write or draw anymore—they’re starting to move.
-
-GR00T N1 is NVIDIA’s open Vision-Language-Action (VLA) foundation model for humanoid robots. Built with a dual-system architecture, it combines a System 2 module for high-level reasoning with a System 1 module for real-time, fluid motor control. It’s trained end-to-end on a an impressive mix of data—from human videos to robot trajectories to synthetic simulations—and deployed on a full-sized humanoid robot performing bimanual manipulation tasks in the real world.
-
-This talk is a high-level, beginner-friendly overview of GR00T N1:
-- What makes a robot foundation model different from an LLM or vision model
-- How GR00T’s architecture is inspired by cognitive systems
-- Why grounding language, vision, and action together unlocks new generalist capabilities
-
-If you’ve ever wondered how large-scale AI is crossing over into the physical world, this session will get you up to speed—no robotics PhD required.
-
-About Annika Brundyn
-Annika Brundyn is a Senior Solutions Architect at NVIDIA focused on deploying generative AI systems in the real world. She works at the intersection of inference infrastructure, reasoning models, and retrieval pipelines, and has contributed to flagship projects like NVIDIA’s NeMo Retriever and the GR00T vision-language-action model. Her experience spans frontier model research and enterprise-grade deployment. She spends a lot of time helping models make fewer “creative” mistakes in production.
-
-About Aastha Jhunjhunwala 
-Aastha Jhunjhunwala is a Solutions Architect at NVIDIA, focused on building optimized generative AI applications across industries. She works at the intersection of large-scale LLM pretraining, large language model inference, and NVIDIA’s full-stack generative AI infrastructure. Aastha has helped enterprises scale LLM workflows—from training models with billions of parameters to serving them efficiently with high-throughput inference. When she’s not working with language models, you’ll find her deep in the mountains, trading tokens for trail markers.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Shipping something to someone always wins — Kenneth Auchenberg (ex. Stripe, VSCode)
-
-- Upload date: 2025-07-28
-- Video: https://www.youtube.com/watch?v=mHzJhXppwUA
-- Transcript: raw/20250728_mHzJhXppwUA/mHzJhXppwUA.en-orig.vtt
-- Metadata: raw/20250728_mHzJhXppwUA/mHzJhXppwUA.info.json
-
-Learnings from building products at Stripe and applying them in an AI native word.
-
-About Kenneth Auchenberg
-Partner at @alley_corp, investor focused on backing founders building for developers.
-
-Past building at @stripe, VS @Code, @microsoft and a few startups (acq)
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Building the platform for agent coordination — Tom Moor, Linear
-
-- Upload date: 2025-07-28
-- Video: https://www.youtube.com/watch?v=UG9IAdmi2Dg
-- Transcript: raw/20250728_UG9IAdmi2Dg/UG9IAdmi2Dg.en-orig.vtt
-- Metadata: raw/20250728_UG9IAdmi2Dg/UG9IAdmi2Dg.info.json
-
-Learn how we're evolving Linear into an operating system for engineering teams to ship product with agents as a first class citizen.
-
-About Tom Moor
-Tom Moor is the Head of Engineering at Linear, a company redefining how modern teams build software. Linear streamlines issue tracking and project management for high-performance teams like Vercel, Ramp, Replit, and Retool.
-
-Tom previously co-founded and scaled multiple SaaS startups including Abstract and Buffer. He draws on over a decade of experience building collaborative tools and design-led products.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Shipping Products When You Don't Know What they Can Do — Ben Stein, Teammates
-
-- Upload date: 2025-07-28
-- Video: https://www.youtube.com/watch?v=PthmdT92qNg
-- Transcript: raw/20250728_PthmdT92qNg/PthmdT92qNg.en-orig.vtt
-- Metadata: raw/20250728_PthmdT92qNg/PthmdT92qNg.info.json
-
-A customer recently asked me: “Hey, can I tag your AI agent in a Google Doc comment?”
-
-The honest answer: I have no idea! We never designed our agents to handle Google Doc comments, but we tried it anyway… and it worked! The agent performed beautifully, the customer was thrilled, and I was left bewildered.
-
-Welcome to Product Management for AI agents, where roadmaps are fuzzy and we only learn the boundaries of our products after they’re released. When a product doesn’t follow predefined requirements but instead learns and improvises at runtime, PMs must give up control and lean into uncertainty, curiosity, experimentation, and fast feedback loops.
-
-This talk is a field guide for Product/Engineering teams navigating this new reality. We’ll cover how to write specs for affordances instead of features, how to use AI evals as a product development tool, and how to perform User Acceptance Testing on undocumented emergent behavior. Most importantly, we’ll explore how to build trust with customers even when the answer is, truthfully, “I don’t know.”
-
-If you’re managing AI-native products in 2025 the same way you managed web apps in 2020, you might find yourself A/B testing an agent that decided to go off and do C, D, and E all by themselves!
-
-About Ben Stein
-Ben is a customer-obsessed technology executive and product leader who seamlessly bridges the worlds of business, product, and technology. He has repeated success leading cross-functional teams at multiple lifecycle stages, from 3x startup founder, to scaling through hypergrowth, to managing mature lines of business.
-
-In 7 years at Twilio, Ben was GM of multiple business units (Developer Experience, Enterprise), Product Director for text messaging, and Head of R&D for Twilio.org. As CPTO at Arcadia (climate tech unicorn), he led a global team building APIs to decentralize and decarbonize the electrical grid. He cofounded multiple startups including Mobile Commons (acquired by $UPLD), an early platform for SMS marketing; and QuitCarbon, an AI platform to transition 100M homes off fossil fuels.
-
-He is currently building Teammates, a platform for designing and managing a virtual workforce of truly autonomous virtual colleagues.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Make your LLM app a Domain Expert: How to Build an Expert System — Christopher Lovejoy, Anterior
-
-- Upload date: 2025-07-28
-- Video: https://www.youtube.com/watch?v=MRM7oA3JsFs
-- Transcript: raw/20250728_MRM7oA3JsFs/MRM7oA3JsFs.en-orig.vtt
-- Metadata: raw/20250728_MRM7oA3JsFs/MRM7oA3JsFs.info.json
-
-Vertical AI is a multi-trillion-dollar opportunity. But you can't build a domain-expert application simply by grabbing the latest LLMs off-the-shelf: you need a system for codifying latent insights from domain experts and using that to drive development of your application.
-
-In this talk, we'll describe the system we've built at Anterior which has enabled us to achieve SOTA clinical reasoning and serve health insurance providers covering 50 million American lives. We'll share:
-- how and why to encode domain-specific failure modes as an ontology
-- a practical system for converting domain expertise into quantifiable eval metrics
-- how we structure work and collaboration between our clinicians, engineer and PMs
-- our eval-driven AI iteration process and how this can be adapted to any industry
-
-
----related links---
-
-https://x.com/chrislovejoy_
-https://www.linkedin.com/in/dr-christopher-lovejoy/
-https://chrislovejoy.me/
-https://www.anterior.com/
-
-## Scaling AI Agents Without Breaking Reliability — Preeti Somal, Temporal
-
-- Upload date: 2025-07-28
-- Video: https://www.youtube.com/watch?v=1izYWsokr9s
-- Transcript: raw/20250728_1izYWsokr9s/1izYWsokr9s.en-orig.vtt
-- Metadata: raw/20250728_1izYWsokr9s/1izYWsokr9s.info.json
-
-As AI agents move from prototypes to production, developers are running into new challenges with orchestration, failure handling, and infrastructure. This session will unpack lessons from teams already building real-world systems and share how to design for reliability from the start.
-
-About Preeti Somal
-Preeti is Senior Vice President of Engineering at Temporal. Preeti is passionate about building great products, growing world class organizations and solving complex problems. Prior to Temporal, Preeti led the Platform, Security and IT engineering organizations at HashiCorp. Her extensive career includes engineering leadership roles at Yahoo!, VMware and Oracle. While at Yahoo! Preeti was VP of Cloud Services in the Platform organization delivering highly scalable services used by engineers across Yahoo to build and operate applications with improved agility, reliability and security. These services power Yahoo!’s consumer and advertising business.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## The AI Engineer’s Guide to Raising VC — Dani Grant (Jam), Chelcie Taylor (Notable)
-
-- Upload date: 2025-07-27
-- Video: https://www.youtube.com/watch?v=YYNXFsUutbM
-- Transcript: raw/20250727_YYNXFsUutbM/YYNXFsUutbM.en-orig.vtt
-- Metadata: raw/20250727_YYNXFsUutbM/YYNXFsUutbM.info.json
-
-A no fluff, all tactics discussion. More AI engineers should build startups, the world needs more software. But there’s a way to raise VC and it’s hard to do it if you’ve never seen it done. We are going to walk through the exact playbook to raise your first round of funding. We will show you real pitch decks, real cold emails and real term sheets so when you go out to raise your first round of funding, you are setup to do it. Every AI Engineer should be equip to start their own company and this session makes sure raising $$$ is not going to be the blocker.
-
-About Dani Grant
-Dani Grant is the CEO of Jam, a dev tools startup helping 65,000+ improve their bug reporting process, backed by executives from Apple, GitHub, and Vercel, and VCs such as Village Global (LPs include Mark Zuckerberg, Bill Gates, Jeff Bezos). Before Jam, Dani was an early product manager at Cloudflare, where she worked on core developer products such as 1.1.1.1 (now used by 10 million+ people). She also worked as a VC at Union Square Ventures.
-
-About Chelcie Taylor
-Leading early stage AI apps investments at Notable Capital ($5B AUM VC).
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Ship Agents that Ship: A Hands-On Workshop - Kyle Penfound, Jeremy Adams, Dagger
-
-- Upload date: 2025-07-27
-- Video: https://www.youtube.com/watch?v=Fzb1a24hF-o
-- Transcript: raw/20250727_Fzb1a24hF-o/Fzb1a24hF-o.en-orig.vtt
-- Metadata: raw/20250727_Fzb1a24hF-o/Fzb1a24hF-o.info.json
-
-Coding agents are transforming how software gets built, tested, and deployed, but engineering teams face a critical challenge: how to embrace this automation wave without sacrificing trust, control, or reliability.
-
-In this 80 minute workshop, you’ll go beyond toy demos and build production-minded AI agents using Dagger, the programmable delivery engine designed for real CI/CD and AI-native workflows. Whether you're debugging failures, triaging pull requests, generating tests, or shipping features, you'll learn how to orchestrate autonomous agents that live in and around your codebase: from your laptop to your CI platform.
-We’ll guide you through:
-
-Building real-world agents with Dagger and popular LLMs (GPT, Claude, etc.)
-
-Programming agent environments using real languages (Go, Python, TypeScript)
-
-Executing agent workflows locally and in GitHub Actions, so you can bring them to production
-
-Using a composable runtime that ensures isolation, determinism, traceability, and repeatability
-
-Designing agents that automate and enhance debugging, test generation, code review, bug fixing, and feature implementation
-
-By the end of the workshop, you’ll walk away ready to build your own army of autonomous agents, working collaboratively across your codebase, locally and in CI, accelerating development without ceding control. Let’s build agents that don’t just talk, they ship!
-
-About Kyle Penfound
-Kyle is part of the ecosystem team at Dagger working on the future of composable software. He has a background in DevOps and just loves giving demos!
-
-About Jeremy Adams
-Jeremy is a senior leader with both a technical and a strategic streak. Passionate about people and entrepreneurship, integration and automation. Through technical/business roles at Dagger, GitHub, Twistlock, and Puppet, Jeremy has both zoomed in and zoomed out a lot, acquiring an appreciation for the details and an ever-broader sense of the big architectural picture.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Strategies for LLM Evals (GuideLLM, lm-eval-harness, OpenAI Evals Workshop) — Taylor Jordan Smith
-
-- Upload date: 2025-07-27
-- Video: https://www.youtube.com/watch?v=89NuzmKokIk
-- Transcript: raw/20250727_89NuzmKokIk/89NuzmKokIk.en-orig.vtt
-- Metadata: raw/20250727_89NuzmKokIk/89NuzmKokIk.info.json
-
-Accuracy scores and leaderboard metrics look impressive—but production-grade AI requires evals that reflect real-world performance, reliability, and user happiness. Traditional benchmarks rarely help you understand how your LLM will perform when embedded in complex workflows or agentic systems. How can you realistically and adequately measure reasoning quality, agent consistency, MCP integration, and user-focused outcomes?
-
-In this practical, example-driven talk, we'll go beyond standard benchmarks and dive into tangible evaluation strategies using various open-source frameworks like GuideLLM and lm-eval-harness. You'll see concrete examples of how to create custom eval suites tailored to your use case, integrate human-in-the-loop feedback effectively, and implement agent reliability checks that reflect production conditions. Walk away with actionable insights and best practices for evaluating and improving your LLMs, ensuring they meet real-world expectations—not just leaderboard positions!
----
-Benchmarks and leaderboards are helpful—but they rarely reflect the realities of production AI. Evaluating real-world performance demands deeper insight into reasoning quality, agent reliability, user satisfaction, and integration with agentic systems and MCP (Model Context Protocol).
-
-This hands-on workshop teaches you tangible evaluation methods using popular open-source frameworks (GuideLLM, lm-eval-harness, OpenAI Evals). No prior evaluation expertise required!
-
-You’ll learn how to:
-
-- Build custom evaluation workflows beyond traditional accuracy benchmarks.
-- Evaluate reasoning skills, consistency, and reliability in agentic AI applications.
-- Integrate human-in-the-loop assessments for better user-aligned outcomes.
-- Validate MCP and agent interactions with practical reliability tests.
-
-Whether you're deploying chatbots, copilots, or autonomous AI agents, robust evaluation is critical. Join us to learn actionable strategies to confidently deploy your LLMs in real-world applications.
-
----related links---
-
-https://www.linkedin.com/in/taylorjordansmith/
-https://www.redhat.com/en/products/ai
-
-## Why you should care about AI interpretability - Mark Bissell, Goodfire AI
-
-- Upload date: 2025-07-27
-- Video: https://www.youtube.com/watch?v=6AVMHZPjpTQ
-- Transcript: raw/20250727_6AVMHZPjpTQ/6AVMHZPjpTQ.en-orig.vtt
-- Metadata: raw/20250727_6AVMHZPjpTQ/6AVMHZPjpTQ.info.json
-
-The goal of mechanistic interpretability is to reverse engineer neural networks. Having direct, programmable access to the internal neurons of models unlocks new ways for developers and users to interact with AI — from more precise steering to guardrails to novel user interfaces. While interpretability has long been an interesting research topic, it is now finding real-world use cases, making it an important tool for AI engineers.
-
-About Mark Bissell
-Mark Bissell is an applied researcher at Goodfire AI working on real-world applications for mechanistic interpretability. He recently joined Goodfire after 3 years at Palantir, where he worked on various U.S. healthcare initiatives including research projects with the NIH, vaccine distribution during the Covid pandemic (Operation Warp Speed), and AI-enabled hospital operations across many of the nation's leading health systems.
-
-Mark is passionate about translating frontier research into practical solutions. He believes that recent AI developments increase the importance broad skillsets, and that roles of the future will blur the lines between traditionally distinct categories such as engineer, researcher, inventor, designer, and entrepreneur.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Information Retrieval from the Ground Up - Philipp Krenn, Elastic
-
-- Upload date: 2025-07-27
-- Video: https://www.youtube.com/watch?v=4Xe_iMYxBQc
-- Transcript: raw/20250727_4Xe_iMYxBQc/4Xe_iMYxBQc.en-orig.vtt
-- Metadata: raw/20250727_4Xe_iMYxBQc/4Xe_iMYxBQc.info.json
-
-Vector search is only a feature. Search engines and information retrieval have retaken their position as the foundation of RAG. This workshop takes you through decades of research, what has been working for a long time, and how it got better with Machine Learning.
-
-About Philipp Krenn
-Philipp leads Developer Relations at Elastic — the company behind the Elasticsearch, Kibana, Beats, and Logstash. Based in San Francisco, he lives to demo interesting technology and solve challenging problems — all with a smile and a terminal window.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## A2A & MCP Workshop: Automating Business Processes with LLMs — Damien Murphy, Bench
-
-- Upload date: 2025-07-26
-- Video: https://www.youtube.com/watch?v=wXVvfFMTyzY
-- Transcript: raw/20250726_wXVvfFMTyzY/wXVvfFMTyzY.en-orig.vtt
-- Metadata: raw/20250726_wXVvfFMTyzY/wXVvfFMTyzY.info.json
-
-Ever wished your webhooks could think for themselves? Join us to discover how A2A agents can transform passive webhook endpoints into intelligent workflow processors.
-
-In this session, we'll show you how to build a system that automatically spawns AI Agents to handle incoming webhooks.
-
-Using Google's Agent-to-Agent framework and MCP, you'll learn how to create dynamic AI agents that respond to events, communicate with external services, and make decisions based on content analysis.
-
-See the future of workflow automation where webhooks don't just trigger actions—they trigger intelligence!
-
-About Damien Murphy
-Full Stack Dev for 20+ years focusing on AI Agents
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Waymo's EMMA: Teaching Cars to Think - Jyh Jing Hwang, Waymo
-
-- Upload date: 2025-07-26
-- Video: https://www.youtube.com/watch?v=iS9YFW28XyM
-- Transcript: raw/20250726_iS9YFW28XyM/iS9YFW28XyM.en-orig.vtt
-- Metadata: raw/20250726_iS9YFW28XyM/iS9YFW28XyM.info.json
-
-This session explores Waymo's latest research on the End-to-End Multimodal Model for Autonomous Driving (EMMA) and advanced sensor simulation techniques. Jyh-Jing Hwang will demonstrate how multimodal large language models like Gemini could improve autonomous driving through unified end-to-end architectures that process raw sensor data directly into driving decisions.
-
-The presentation will showcase EMMA's state-of-the-art performance in trajectory planning, 3D object detection, and road graph understanding, as well as another Drive&Gen research approach to sensor simulation for evaluating an end-to-end motion planning model. Attendees will gain insights into the benefits of co-training across multiple autonomous driving tasks and the potential of controlled video generation for testing under various environmental conditions.
-
-More on EMMA here: https://waymo.com/blog/2024/10/introducing-emma
-
-About Jyh Jing Hwang
-Jyh-Jing is currently a Research Scientist and TLM at Waymo Research. He also taught machine learning and computer vision as a lecturer at UPenn MCIT Online in 2022 and 2023. Before joining Waymo in 2020, Jyh-Jing received his Ph.D. degree in Computer and Information Science from University of Pennsylvania, advised by Prof. Jianbo Shi and Prof. Stella Yu at UC Berkeley / ICSI. Before coming to the U.S., he received the B.S. and M.S. degrees from National Taiwan University and worked with Dr. Tyng-Luh Liu at Academia Sinica. His research interests are broadly in artificial intelligence, computer vision, and machine learning. Particularly, he's interested in end-to-end autonomous driving, large multimodal models, general image/video structures, and sensor fusion for robust perception.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Robotics: why now? - Quan Vuong and Jost Tobias Springberg, Physical Intelligence
-
-- Upload date: 2025-07-26
-- Video: https://www.youtube.com/watch?v=cGLa8DsOYdk
-- Transcript: raw/20250726_cGLa8DsOYdk/cGLa8DsOYdk.en-orig.vtt
-- Metadata: raw/20250726_cGLa8DsOYdk/cGLa8DsOYdk.info.json
-
-Sharing recent progress from Physical Intelligence and why it is an exciting time to push the frontier in general purpose robotics
-
-About Quan Vuong
-Quan Vuong is co-founder at Physical Intelligence. His research focuses on generalist robotics and algorithms that enable intelligent behaviors through large scale learning.
-
-About Jost Tobias Springenberg
-Tobias is currently a research scientist at Physical Intelligence where he works on bringing AI into the real world and understanding the fundamentals of sequential decision making (e.g. imitation and reinforcement learning). He likes his machine learning models big and his data to be plentiful and focuses most of his research on engineering driven machine learning at scale for robotics.
-Before joining Physical Intelligence Tobias was a research scientist Google Deepmind in London within the control team which generally focuses on applications of ML to control for science and robotics. Before that he was a researcher at the University of Freiburg working with the Machine Learning Group and Computer Vision Groups. Tobias holds a BSc. in Cognitive Science from the University of Osnabrueck – from which he still retains an interest in understanding human cognition – and a MSc. in Computer Science from the University of Freiburg.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Piloting agents in GitHub Copilot - Christopher Harrison, Microsoft
-
-- Upload date: 2025-07-26
-- Video: https://www.youtube.com/watch?v=DdaAABdAqZY
-- Transcript: raw/20250726_DdaAABdAqZY/DdaAABdAqZY.en-orig.vtt
-- Metadata: raw/20250726_DdaAABdAqZY/DdaAABdAqZY.info.json
-
-The agent capabilities added to GitHub Copilot have enhanced its ability to act as a peer programmer. Copilot can now discover and generate code based on existing standards, run tests, recover from errors, and call tools using Model Context Protocol (MCP). This workshop will guide you through piloting Copilot's agent capabilities and how to best integrate with the most widely adopted AI coding assistant in the world.
-
-Key takeaways include:
-
-- Understanding how and when to bring agents into your software development workflow
-- Providing context through the use of custom instructions and prompt files to ensure consistency across your team
-- Discovering how MCP provides access to an additional set of external tools and capabilities that the agent can use
-- Configuring Copilot's agentic capabilities to take advantage of your custom MCP server
-- Recommended best practices to help your responsibly accelerate your development while maintaining code quality and governance
-
-About Christopher Harrison
-Christopher is a long-time geek who's spent the bulk of his career training, supporting and upskilling developers. He's a web developer at heart with passions which span from Python to DevOps to TypeScript to AI. In his current role as an Enterprise Advocate for GitHub he seeks to help organizations improve their DevOps process and culture. When not found writing code he can be found running, playing Civilization, or spending time with his partner and their four-legged child (a rescue mutt).
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Introduction to LLM serving with SGLang - Philip Kiely and Yineng Zhang, Baseten
-
-- Upload date: 2025-07-26
-- Video: https://www.youtube.com/watch?v=Ahtaha9fEM0
-- Transcript: raw/20250726_Ahtaha9fEM0/Ahtaha9fEM0.en-orig.vtt
-- Metadata: raw/20250726_Ahtaha9fEM0/Ahtaha9fEM0.info.json
-
-Do you want to learn how to serve models like DeepSeek and Qwen with SOTA speeds on launch day? SGLang is an open-source fast serving framework for LLMs and VLMs that generates trillions of tokens per day at companies like xAI, AMD, and Meituan. This workshop guides AI engineers who are familiar with serving models using frameworks like vLLM, Ollama, and TensorRT-LLM through deploying and optimizing their first model with SGLang, as well as providing guidance on when SGLang is the appropriate tool for LLM workloads.
-
-About Philip Kiely
-Philip Kiely leads Developer Relations at Baseten. Prior to joining Baseten in 2022, he worked across software engineering and technical writing for a variety of startups. Outside of work, you'll find Philip practicing martial arts, reading a new book, or cheering for his adopted bay area sports teams.
-
-About Yineng Zhang
-Yineng Zhang is a Software Engineer at Baseten Model Performance team. He is also a core developer of the SGLang project.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-00:00 Introduction to LLM serving with SGLang
-02:14 What is SGLang?
-03:36 History of SGLang
-06:49 Deploying Your First Model
-13:01 Optimizing Performance with CUDA Graph Max Batch Size
-24:19 Optimizing Performance with Eagle 3 Speculative Decoding
-30:02 SGLang Community and Contributions
-35:24 Invitations and Job Opportunities
-36:52 Q&A
-
-## Beyond the Prototype: Using AI to Write High-Quality Code - Josh Albrecht, Imbue
-
-- Upload date: 2025-07-25
-- Video: https://www.youtube.com/watch?v=x_1EumTaXeE
-- Transcript: raw/20250725_x_1EumTaXeE/x_1EumTaXeE.en-orig.vtt
-- Metadata: raw/20250725_x_1EumTaXeE/x_1EumTaXeE.info.json
-
-In this case study-based keynote, Josh Albrecht, CTO of Imbue, examines the critical engineering challenges in building AI coding systems that create more than just prototypes. Drawing from Imbue's research developing Sculptor, an experimental coding agent environment, Josh shares key insights into the fundamental technical obstacles encountered when evolving AI-assisted coding from toy applications to more robust software systems. 
-
-The session will explore approaches to core challenges like safely executing code, managing context across large codebases, automating test generation, and creating systems that can identify potential pitfalls in AI-generated code. Attendees will gain practical insights into the technical underpinnings of next-generation coding agents that aim to handle complex software engineering challenges architecting larger systems, increasing meaningful test coverage and designing systems that are easy to debug—moving us closer to AI systems that can help create maintainable software.
-
-About Josh Albrecht
-Josh Albrecht is CTO and Co-founder of Imbue, an AI lab launched in 2022 that has since raised $230M at a $1B valuation to create coding agents that make it easier for more people to write software. Josh is also a partner at angel fund Outset Capital, where he invests in promising pre-seed companies. Previously, Josh founded multiple companies including an AI recruiting startup that went through Y Combinator and a 3D injection molding software company that was acquired. He was also an early engineer at Addepar, served as a Thiel Fellow mentor, and published machine learning research as an academic researcher.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Software Development Agents: What Works and What Doesn't - Robert Brennan, OpenHands
-
-- Upload date: 2025-07-25
-- Video: https://www.youtube.com/watch?v=o_hhkJtlbSs
-- Transcript: raw/20250725_o_hhkJtlbSs/o_hhkJtlbSs.en-orig.vtt
-- Metadata: raw/20250725_o_hhkJtlbSs/o_hhkJtlbSs.info.json
-
-The adoption of AI into software development has been bumpy. While autocomplete tools like Copilot have gone mainstream, autonomous agents like Devin and OpenHands have generated both enthusiasm and skepticism. Some engineers claim they generate a 10x productivity boost; others that they just create noise and tech debt.
-
-The difference between the enthusiasts and the skeptics is that the enthusiasts have reasonable expectations for what these agents can do, and have both practical and intuitive knowledge for how to use them effectively.
-
-In this session, we'll talk about what tasks are appropriate for today's software agents, what tasks they might start to succeed at in 2025, and what tasks are best left to humans no matter how good they get.
-
-Session Outline:
-Learn how to use software development agents like OpenHands (fka OpenDevin) effectively, without creating noise and tech debt.
-
-
----related links---
-
-https://x.com/rbren_dev
-https://linkedin.com/in/robert-a-brennan
-https://www.openhands.dev/blog
-https://www.openhands.dev
-
-## Human seeded Evals — Samuel Colvin, Pydantic
-
-- Upload date: 2025-07-25
-- Video: https://www.youtube.com/watch?v=o_LRtAomJCs
-- Transcript: raw/20250725_o_LRtAomJCs/o_LRtAomJCs.en-orig.vtt
-- Metadata: raw/20250725_o_LRtAomJCs/o_LRtAomJCs.info.json
-
-In this talk I'll introduce the concept of Human-seeded Evals, explain the principle and demo them with Pydantic Logfire.
-
----related links---
-
-https://x.com/samuel_colvin
-https://www.linkedin.com/in/samuel-colvin/
-https://github.com/samuelcolvin
-https://pydantic.dev/
-
-## Ship Production Software in Minutes, Not Months — Eno Reyes, Factory
-
-- Upload date: 2025-07-25
-- Video: https://www.youtube.com/watch?v=iheWKg2Tkrk
-- Transcript: raw/20250725_iheWKg2Tkrk/iheWKg2Tkrk.en-orig.vtt
-- Metadata: raw/20250725_iheWKg2Tkrk/iheWKg2Tkrk.info.json
-
-Planning, coding, testing, monitoring—the endless cycle that spans 10+ tools that fragment our focus and slows delivery to a crawl. Vibe coding doesn't work when you've got 10TB of code. If you just sighed, you're one of many professional software engineers trapped in the traditional software development lifecycle (SDLC) that was designed before AI could parallelize your entire workflow.
-
-But what if you could orchestrate multiple AI agents on tasks beyond just generating code, while you focus on the creative decisions that matter?
-
-In this talk, I'll demonstrate how real enterprise organizations are changing their entire SDLC—going from understanding, planning, coding, and testing all the way to incident response—using AI agents. You'll witness the next evolution of software engineering—where AI doesn't just generate code, but orchestrates the entire development lifecycle.
-
-About Eno Reyes
-Eno Reyes is cofounder and CTO of Factory, a platform that accelerates enterprise software development with autonomous AI agents and unified context from across your engineering tools. Enterprises are using Factory to accelerate everything from bug-fixing and coding to PRD creation, release automation, migrations, and more.
-
-Prior to Factory, he was an ML engineer at Hugging Face working on enterprise LLMs.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Your Coding Agent Just Got Cloned And Your Brain Isn't Ready - Rustin Banks, Google Jules
-
-- Upload date: 2025-07-25
-- Video: https://www.youtube.com/watch?v=X4BwOu0GWb8
-- Transcript: raw/20250725_X4BwOu0GWb8/X4BwOu0GWb8.en-orig.vtt
-- Metadata: raw/20250725_X4BwOu0GWb8/X4BwOu0GWb8.info.json
-
-Will the future engineer code alongside a single coding agent, or will they spend their day orchestrating many agents? Traditional development rewards synchronous focus. This session dives into the significant mindshift required to move from sequential coding to orchestrating parallel agents. We are the builders of ""Jules"", Google's massively parallel asynchronous coding agent (to be opened up in May). We'll share real-world insights from building Jules and explore how to rewire your brain for this powerful new ""post-IDE"" development paradigm.
-
-About Rustin Banks
-I'm Rustin, an AI Product Manager at Google Labs. I taught myself to program at age 12 using a compiler I purchased on AOL classifieds. As a teenager I hosted a popular bulletin board system (BBS) out of my cousin’s closet using salvaged 286 computers. I’ve always had a passion for making the world better using technology. When I saw AI write code I dedicated the rest of my career to AI coding. At Google labs I am lucky to explore the frontier of coding models and agents.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Devin 2.0 and the Future of SWE - Scott Wu, Cognition
-
-- Upload date: 2025-07-25
-- Video: https://www.youtube.com/watch?v=MI83buT_23o
-- Transcript: raw/20250725_MI83buT_23o/MI83buT_23o.en-orig.vtt
-- Metadata: raw/20250725_MI83buT_23o/MI83buT_23o.info.json
-
-A talk on the future of software engineering with Scott Wu of Cognition AI, the makers of Devin.
-
-About Scott Wu
-Scott is the co-founder and CEO of Cognition AI. He previously competed in international programming competitions (3x IOI gold medalist) and co-founded Lunchclub, an AI-powered professional networking platform. Scott grew up in Louisiana and attended Harvard University.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Latent Space Paper Club: AIEWF Special Edition (Test of Time, DeepSeek R1/V3) — VIbhu Sapra
-
-- Upload date: 2025-07-25
-- Video: https://www.youtube.com/watch?v=9k3xPh-40mo
-- Transcript: raw/20250725_9k3xPh-40mo/9k3xPh-40mo.en-orig.vtt
-- Metadata: raw/20250725_9k3xPh-40mo/9k3xPh-40mo.info.json
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-Timestamps:
-
-00:00:00 Paper Club Year in Review & Future Plans
-
-00:08:00 DeepSeek Paper Discussion
-
-00:09:10 DeepSeek R1 (May 28th Update)
-
-00:12:40 DeepSeek Distillation
-
-00:16:51 Original DeepSeek Model Overview (DeepSeek V3 and R1)
-
-00:21:15 Development of reasoning capabilities through a pure RL process
-
-00:24:46 DeepSeek R10
-
-00:39:05 DeepSeek R1 four-stage training pipeline
-
-00:35:01 Emergence of "reflection moments" and "aha moments"
-
-00:44:15 Distillation Strategy
-
-00:52:34 Community and Call to Action
-
-## How to build Enterprise Aware Agents - Chau Tran, Glean
-
-- Upload date: 2025-07-24
-- Video: https://www.youtube.com/watch?v=hxFpUcvWPcU
-- Transcript: raw/20250724_hxFpUcvWPcU/hxFpUcvWPcU.en-orig.vtt
-- Metadata: raw/20250724_hxFpUcvWPcU/hxFpUcvWPcU.info.json
-
-While LLMs demonstrated impressive reasoning capabilities, their out-of-the-box reasoning is akin to hiring a brilliant but brand-new employee who doesn’t have the enterprise context of “how things are done at this company”. In this talk, I'll introduce “Workflow Search” as a paradigm to build enterprise-aware agents that can balance predictability on common tasks, and flexibility on unforeseen tasks.
-
-About Chau Tran
-Chau Tran is a Software Engineer at Glean, currently leading the technical work on Glean Assistant and semantic search. They have been with Glean for over 3 years and have a history of impactful contributions in engineering teams. Previously, Chau worked as a Research Engineer at FAIR within Meta and held technical roles at Quora. They graduated from Brown University with a Bachelor's degree in Computer Science.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Building AI Products That Actually Work — Ben Hylak (Raindrop), Sid Bendre (Oleve)
-
-- Upload date: 2025-07-24
-- Video: https://www.youtube.com/watch?v=eSvXbb2EBYc
-- Transcript: raw/20250724_eSvXbb2EBYc/eSvXbb2EBYc.en-orig.vtt
-- Metadata: raw/20250724_eSvXbb2EBYc/eSvXbb2EBYc.info.json
-
-You've made the demo. How do you make the product? A lot of AI products don't actually work. Even worse, a lot of the techniques being advertised for making AI products better don't work either. We'll cover the challenges + techniques we've seen actually work in the real world.
-
-About Ben Hylak
-Ben Hylak is co-founder at Raindrop, building Sentry for AI products. He was previously a designer at Apple for 4 years, building the Apple Vision Pro.
-
-About Sid Bendre
-Sid Bendre is the co-founder of Oleve, a company building a portfolio of iconic consumer software across multiple verticals. With a lean team, Oleve has already launched two virally successful consumer AI products that have amassed over 250 million views across social media platforms. One of their products reached #4 on the App Store's Education charts in 2024 and #5 in 2025, competing alongside giants like Photomath (Google) and Duolingo. Backed by Neo, Cal Henderson (co-founder of Slack), Russell Kaplan (President of Cognition), and Maria Zhang (ex-CTO of Tinder), Oleve is building the AI infrastructure to run a $1B portfolio of consumer software over the next decade. At Oleve, Sid leads technical and AI efforts, running the “Platform” team responsible for the underlying AI infrastructure that powers their lean scaling approach. Before Oleve, Sid led AI experimentation efforts at a startup hedge fund and worked at Slack, Zendesk, and Microsoft.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## AX is the only Experience that Matters - Ivan Burazin, Daytona
-
-- Upload date: 2025-07-24
-- Video: https://www.youtube.com/watch?v=e9sLVMN76qU
-- Transcript: raw/20250724_e9sLVMN76qU/e9sLVMN76qU.en-orig.vtt
-- Metadata: raw/20250724_e9sLVMN76qU/e9sLVMN76qU.info.json
-
-If you’re building devtools for humans, you’re building for the past. 
-
-Already a quarter of Y Combinator’s latest batch used AI to write 95% or more of their code. AI agents are scaling at an exponential rate and soon, they’ll outnumber human developers by orders of magnitude.
-
-
-The real bottleneck isn’t intelligence. It’s tooling. Terminals, local machines, and dashboards weren’t built for agents. They make do… until they can’t.
-
-In this talk, I’ll share how we killed the CLI at Daytona, rebuilt our infrastructure from first principles, and what it takes to build devtools that agents can actually use. Because in an agent-native future, if agents can’t use your tool, no one will.
-
-About Ivan Burazin
-Ivan Burazin co-founded Codeanywhere, the very first cloud IDE, back in 2009 where he and the team had to create everything from scratch, from the IDE itself, to the entire orchestration. Concurrently, he established Shift, the premier developer conference in Europe, which was later acquired by Infobip - a global communications cloud giant in 2021. Following the acquisition, Ivan served on the executive board of this 4,000-person company and as the Chief Developer Experience Officer, where he oversaw global developer-oriented operations.
-
-In 2023, Ivan co-founded Daytona, a fast-growing open-source platform addressing the limitations of AI coding agents by enabling them to programmatically and securely interact with runtime environments.
-
-Backed by $7M in funding, Daytona empowers developers, from startups to Fortune 500 companies to enable AI agents to achieve their full potential.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Mentoring the Machine — Eric Hou, Augment Code
-
-- Upload date: 2025-07-24
-- Video: https://www.youtube.com/watch?v=Zniw5c9_jx8
-- Transcript: raw/20250724_Zniw5c9_jx8/Zniw5c9_jx8.en-orig.vtt
-- Metadata: raw/20250724_Zniw5c9_jx8/Zniw5c9_jx8.info.json
-
-You’d never let a swarm of fresh interns ship to prod on day one—same deal with AI agents. Mentoring the Machine dives into how acting like a tech lead (not just a user) turns those bots into real leverage. In this talk, Eric will deliver practical advice for working with AI agents in the SDLC. He'll also preview how effective use of AI agents changes the calculus of software engineering at both a micro and macro level.
-
-
-
----related links---
-
-## AI That Pays: Lessons from Revenue Cycle — Nathan Wan, Ensemble Health
-
-- Upload date: 2025-07-24
-- Video: https://www.youtube.com/watch?v=TquUsN1QsWs
-- Transcript: raw/20250724_TquUsN1QsWs/TquUsN1QsWs.en-orig.vtt
-- Metadata: raw/20250724_TquUsN1QsWs/TquUsN1QsWs.info.json
-
-While much of the AI innovation in healthcare has centered on clinical and patient-facing applications, Revenue Cycle Management (RCM) remains an underexplored yet critical domain. Given the growing financial pressures facing providers, rethinking how healthcare gets paid is essential to ensuring access and sustainability. The combination of which makes RCM an opportune area for AI disruption.
-
-This session explores how the combination of vast structured and unstructured data, often rule-based workflows, and direct financial opportunity to drive meaningful outcomes. We’ll also share practical lessons from our journey evolving a traditional machine learning mindset to incorporate the latest advances in Generative AI, and how that shift is reshaping what's possible in healthcare operations.
-
----related links---
-
-https://www.linkedin.com/in/nwan1/
-
-## Structuring a modern AI team — Denys Linkov, Wisedocs
-
-- Upload date: 2025-07-24
-- Video: https://www.youtube.com/watch?v=SbUxRluVRwk
-- Transcript: raw/20250724_SbUxRluVRwk/SbUxRluVRwk.en-orig.vtt
-- Metadata: raw/20250724_SbUxRluVRwk/SbUxRluVRwk.info.json
-
-You've been given an AI mandate but don't have additional headcount, what next? Re-skilling, up-skilling and team augmentation become essential to delivering on a new mandate. In this talk we'll cover strategies to structure cross functional AI teams with domain experts, software engineers and ML engineers. We'll cover key skills and milestones that each traditional role can contribute to in unique ways.
-
-
----related links---
-
-https://www.linkedin.com/in/denyslinkov/
-
-Timestamps
-00:00:00 - Introduction to Hiring a Modern AI Team
-
-00:01:10 - The Anatomy of an AI Team and Company Types
-
-00:03:38 - Technology as an Enabler, Not a Limiter
-
-00:03:56 - Do You Need to Hire an AI Researcher?
-
-00:04:33 - Ampere's Wager: Team vs. Researchers
-
-00:05:07 - What an AI Team Needs to Do
-
-00:06:12 - Identifying Your Bottleneck
-
-00:06:48 - The Evolution of a Generalist
-
-00:07:03 - Building the First Machine Learning Team
-
-00:07:53 - Prioritizing Skills: Model Training, Serving, and Business Acumen
-
-00:09:16 - Building the Second AI Team with Advanced Open Source Tools
-
-00:10:45 - Reskilling and Upskilling Existing Teams
-
-00:10:55 - Inner and Outer Loops of Team Activities
-
-00:11:53 - Winning with Generalists in Early AI Strategy
-
-00:12:46 - Upskilling, Reskilling, and Hiring for the AI Wave
-
-00:14:11 - When and Who to Hire
-
-00:15:08 - Verifying Trends and First Principles in Hiring
-
-00:16:00 - Asking Relevant Questions in Interviews
-
-00:16:12 - Reconsidering Ampere's Wager and Final Lessons
-
-## Building Applications with AI Agents — Michael Albada, Microsoft
-
-- Upload date: 2025-07-24
-- Video: https://www.youtube.com/watch?v=R30col3UPUg
-- Transcript: raw/20250724_R30col3UPUg/R30col3UPUg.en-orig.vtt
-- Metadata: raw/20250724_R30col3UPUg/R30col3UPUg.info.json
-
-Generative AI has dramatically shortened the distance between ideas and implementation, enabling faster prototyping and deployment than ever before. But while language models can streamline individual tasks, true transformation comes from combining these capabilities into intelligent, autonomous systems—AI agents.
-
-This talk explores how to build and deploy foundation model-enabled agent systems that go beyond simple prompt chaining or chatbots. Drawing from real-world implementations and the latest research, it offers a clear and practical path to designing both single-agent and multi-agent systems capable of handling complex workflows with minimal oversight.
-
-Attendees will gain a deeper understanding of the core design principles behind agentic systems, the architectural trade-offs involved in orchestrating multiple agents, and the strategies required to develop tailored solutions that enhance efficiency and innovation. Whether just beginning or scaling up, participants will leave with actionable insights to navigate the rapidly evolving world of AI autonomy.
-
-
----related links---
-
-https://x.com/michaelalbada
-https://www.linkedin.com/in/albada/
-https://theneuralnexus.substack.com/
-https://michaelalbada.com
-
-Timestamps
-00:00 - Introduction by Michael Albada, Principal Applied Scientist at Microsoft.
-
-01:14 - The Promise and Obstacles of Agentic Development.
-
-02:37 - Defining What an AI Agent Is (and Isn't).
-
-04:42 - Core Component 1: Tool Use and Function Calling.
-
-06:37 - Core Component 2: Orchestration Patterns (Chains, Trees, Agentic).
-
-08:47 - Core Component 3: Multi-Agent Systems.
-
-09:43 - Common Pitfall 1: Insufficient Evaluation.
-
-11:25 - Overview of specific Evaluation Tools.
-
-12:57 - Common Pitfall 2: Lack of Observability.
-
-13:50 - Other Common Pitfalls (Tool issues, complexity).
-
-14:45 - The Critical Importance of Security and Safety.
-
-15:15 - Conclusion and Future Outlook.
-
-## Rise of the AI Architect — Clay Bavor, Cofounder, Sierra w/ Alessio Fanelli
-
-- Upload date: 2025-07-24
-- Video: https://www.youtube.com/watch?v=C3geUfBR2js
-- Transcript: raw/20250724_C3geUfBR2js/C3geUfBR2js.en-orig.vtt
-- Metadata: raw/20250724_C3geUfBR2js/C3geUfBR2js.info.json
-
-As the amount of consumer facing AI products grows, the most forward leaning enterprises have created a new role: the AI Architect. These leaders are responsible for helping define, manage, and evolve their company's AI agent experiences over time.
-
-In this session, Clay Bavor (Cofounder of Sierra) will join Alessio Fanelli (co-host of Latent Space) in a fireside chat to share what it means to be an AI Architect, success stories from the market, and the future of the role.
-
-
-Timestamps
-00:00 Introduction to Sierra and its mission
-02:11 The concept of an "AI Architect"
-05:13 Backgrounds of successful AI Architects
-06:08 Traits of successful AI Architects and AI strategy
-08:56 Build vs. buy fallacies in AI agent development
-11:36 The agent building iteration process and testing
-14:09 Staying up to date on AI model capabilities
-16:47 The future of AI interfaces and hardware
-
-## The Rise of Open Models in the Enterprise — Amir Haghighat, Baseten
-
-- Upload date: 2025-07-24
-- Video: https://www.youtube.com/watch?v=3WV1vT0B0cg
-- Transcript: raw/20250724_3WV1vT0B0cg/3WV1vT0B0cg.en-orig.vtt
-- Metadata: raw/20250724_3WV1vT0B0cg/3WV1vT0B0cg.info.json
-
-This year kicked off with the DeepSeek-R1 news cycle breaking out of our AI Engineering bubble into the mainstream tech and business world. Leaders at the highest levels of the largest enterprises started asking how open source models could enhance and accelerate their AI strategy.
-
-Open source models promise increased ownership of AI systems: control over performance and price, improved uptime and reliability, better compliance, and flexible hosting options. How are these promises playing out after months of implementation? In this talk, I’ll draw on hundreds of conversations with AI leaders at enterprise companies to discuss what has — and hasn’t — changed about enterprise AI strategy in a world where open-source models compete on the frontier of intelligence.
-
-
----related links---
-
-http://twitter.com/amiruci
-https://www.linkedin.com/in/amirhaghighat/
-https://www.baseten.co/blog/
-https://www.baseten.co/
-
-## Machines of Buying and Selling Grace - Adam Behrens, New Generation
-
-- Upload date: 2025-07-23
-- Video: https://www.youtube.com/watch?v=zlZz0mDF2eg
-- Transcript: raw/20250723_zlZz0mDF2eg/zlZz0mDF2eg.en-orig.vtt
-- Metadata: raw/20250723_zlZz0mDF2eg/zlZz0mDF2eg.info.json
-
-How to go beyond browser automation to truly agentic commerce, where AI can buy, sell and negotiate on behalf of users and merchants.
-
-About Adam Behrens
-Adam Behrens is the co-founder and CEO of New Gen, a company that partners with global brands and merchants to unlock AI native commerce opportunities. New Gen builds infrastructure for brands to host their own conversational AI experiences and to connect their data into 3rd party chat clients like ChatGPT and Claude. Adam previously worked on trading infrastructure at Bridgewater and Banking-as-a-Service at Stripe. Outside of training AI models he is busy training his 8 month old Vizsla puppy.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## POC to PROD: Hard Lessons from 200+ Enterprise GenAI Deployments - Randall Hunt, Caylent
-
-- Upload date: 2025-07-23
-- Video: https://www.youtube.com/watch?v=vW8wLsb3Nnc
-- Transcript: raw/20250723_vW8wLsb3Nnc/vW8wLsb3Nnc.en-orig.vtt
-- Metadata: raw/20250723_vW8wLsb3Nnc/vW8wLsb3Nnc.info.json
-
-The transition from experimental GenAI demonstrations to robust, production-grade systems involves significant technical and organizational complexities. Humans provide a ceiling on the true ROI of automations. This session synthesizes key patterns and practical strategies gathered from more than 200 GenAI implementations across multiple industries and business sizes.
-
-Beyond the general lessons that apply to most products leveraging GenAI, we'll cover detailed observations within three application areas: multimodal understanding and search, enterprise knowledge retrieval, and AI agent architectures. We will share real-world comparative performance data and metrics on embedding models, vector index implementations, and explore various implementation methodologies that balance performance and cost.
-
-Additionally, the session addresses organizational insights critical to successful AI deployments, such as the importance of clearly defined evaluation processes and understanding real-world user interaction challenges, highlighted by examples from healthcare environments. Attendees will gain an understanding of decision-making criteria, including the appropriate complexity of prompt engineering versus more elaborate orchestration methods, token/cost management strategies in multilingual settings, and the challenges in driving behavioral change with new UX and application interaction capabilities.
-
-Participants will leave equipped with practical, data-supported insights for effectively navigating their own GenAI projects, including benchmarks and criteria for informed technology selection, and techniques to streamline the transition from initial concept to sustainable operational deployment. Please note, we all know this field evolves rapidly and we will mark which lessons we believe are immutable.
-
-About Randall Hunt
-Randall Hunt is a technology leader, investor, and hands-on keyboard coder based in Los Angeles, CA. Previously, Randall led software and developer relations teams at Facebook, SpaceX, AWS, MongoDB, and NASA. Randall spends most of his time listening to customers, building demos, writing blog posts, and mentoring junior engineers. Python and C++ are his favorite programming languages, but he begrudgingly admits that Javascript rules the world. Outside of work, Randall loves to read science fiction, advise startups, travel, and ski.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Does AI Actually Boost Developer Productivity? (100k Devs Study) - Yegor Denisov-Blanch, Stanford
-
-- Upload date: 2025-07-23
-- Video: https://www.youtube.com/watch?v=tbDDYKRFjhk
-- Transcript: raw/20250723_tbDDYKRFjhk/tbDDYKRFjhk.en-orig.vtt
-- Metadata: raw/20250723_tbDDYKRFjhk/tbDDYKRFjhk.info.json
-
-Forget vendor hype: Is AI actually boosting developer productivity, or just shifting bottlenecks? Stop guessing.
-
-Our study at Stanford cuts through the noise, analyzing real-world productivity data from nearly 100,000 developers across hundreds of companies. We reveal the hard numbers: while the average productivity boost is significant (~20%), the reality is complex – some teams even see productivity decrease with AI adoption.
-
-The crucial insights lie in why this variance occurs. Discover which company types, industries, and tech stacks achieve dramatic gains versus minimal impact (or worse). Leave with the objective, data-driven evidence needed to build a winning AI strategy tailored to your context, not just follow the trend.
-
-About Yegor Denisov-Blanch
-Researcher at Stanford University researching all things developer productivity
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-
-----
-
-The main thesis of the video is that while AI does increase developer productivity, it is not a one-size-fits-all solution. The speaker, Yegor Denisov-Blanch from Stanford, presents findings from a large-scale study on software engineering productivity to support this claim, arguing that the effectiveness of AI in software development is highly dependent on a variety of factors including task complexity, codebase maturity, language popularity, and codebase size.
-
-timestamps:
-
-- 00:00 Introduction and the context of AI in software development, including Mark Zuckerberg's bold claims.
-- 04:37 Limitations of existing studies on AI's impact on developer productivity.
-- 07:19 The methodology used by the Stanford research group to measure productivity.
-- 09:50 The overall impact of AI on developer productivity, including the concept of "rework."
-- 11:42 How productivity gains vary by task complexity and project maturity (Greenfield vs. Brownfield).
-- 14:21 The impact of programming language popularity on AI's effectiveness.
-- 15:42 How codebase size affects AI-driven productivity gains.
-- 17:22 The final conclusions of the study.
-
-## How to Build Planning Agents without losing control - Yogendra Miraje, Factset
-
-- Upload date: 2025-07-23
-- Video: https://www.youtube.com/watch?v=sl3icG-IjHo
-- Transcript: raw/20250723_sl3icG-IjHo/sl3icG-IjHo.en-orig.vtt
-- Metadata: raw/20250723_sl3icG-IjHo/sl3icG-IjHo.info.json
-
-LLMs are getting smarter—but Agents are still unpredictable, unreliable, and hard to control.
-
-In this talk, I’ll share practical lessons from building real-world plan-and-execute agents —covering how to steer autonomous agents using agentic workflows, blueprints, and evals.
-
-If you’re struggling to make your agents behave (without giving up flexibility), this one’s for you.
-
-About Yogendra Miraje
-I'm a backend engineer turned ML engineer turned AI engineer, with 16 years of experience building intelligent systems. I hold a Master’s degree in Computer Science from Northeastern University in Boston, and I currently work as an AI Engineer in FactSet.
-
-I'm also the host of AI Blindspot, a podcast where we explore the frontiers of artificial intelligence—and the blind spots we often overlook in its development and deployment.
-
-With a strong foundation in Machine Learning and software Engineering and a product-minded approach, I focus on aligning autonomous agents with real-world user goals, emphasizing safety, control, and robust evaluation techniques.
-
-I'm passionate about building AI that’s not just powerful, but grounded, aligned, and truly useful in practice.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## 3 ingredients for building reliable enterprise agents - Harrison Chase, LangChain/LangGraph
-
-- Upload date: 2025-07-23
-- Video: https://www.youtube.com/watch?v=kTnfJszFxCg
-- Transcript: raw/20250723_kTnfJszFxCg/kTnfJszFxCg.en-orig.vtt
-- Metadata: raw/20250723_kTnfJszFxCg/kTnfJszFxCg.info.json
-
-It's easy to build a prototype of an agent, but hard to put an agent in production - especially in an enterprise setting. In this section, will talk about three ingredients for building reliable agents in the enterprise.
-
-About Harrison Chase
-Harrison Chase is the CEO and co-founder of LangChain, a company formed around the popular open source Python/Typescript packages. The goal of LangChain is to make it as easy as possible to use LLMs to develop context-aware reasoning applications. Prior to starting LangChain, he led the ML team at Robust Intelligence (an MLOps company focused on testing and validation of machine learning models), led the entity linking team at Kensho (a fintech startup), and studied stats and CS at Harvard.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## From Copilot to Colleague: Trustworthy Agents for High-Stakes - Joel Hron, CTO Thomson Reuters
-
-- Upload date: 2025-07-23
-- Video: https://www.youtube.com/watch?v=kDEvo2__Ijg
-- Transcript: raw/20250723_kDEvo2__Ijg/kDEvo2__Ijg.en-orig.vtt
-- Metadata: raw/20250723_kDEvo2__Ijg/kDEvo2__Ijg.info.json
-
-This keynote will explore what it takes to move from basic generative assistants to fully agentic AI—systems that don’t just suggest but plan, act, and adapt—all within the structured, high-trust environments where professionals actually work.
-
-About Joel Hron
-Joel Hron is a passionate innovator driving the future of product technology and AI at Thomson Reuters. As Chief Technology Officer, he leads Product Engineering and AI Research & Development, pushing the boundaries of what’s possible in Legal, Tax, Audit, Trade, Compliance, and Risk solutions.
-
-Joel joined Thomson Reuters in 2022 through the acquisition of ThoughtTrace, where he served as CTO. Previously, he led AI and TR Labs, launching seven groundbreaking GenAI products in just 18 months, transforming legal research, tax analysis, and contract drafting.
-
-His approach is centered on rethinking processes through technology, building teams rooted in trust, transparency, and customer-centric innovation. Joel envisions AI not as a replacement for human expertise, but as a force that enhances professional decision-making, making expert information more accessible and impactful.
-
-A New Orleans native, Joel’s global career spans work in London and Africa, and he now calls Zug, Switzerland home. He holds a Master’s in Mechanical Engineering from the University of Texas at Austin and a Bachelor’s in Engineering from Texas Christian University.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Building Agents (the hard parts!) - Rita Kozlov, Cloudflare
-
-- Upload date: 2025-07-23
-- Video: https://www.youtube.com/watch?v=j_TKDweOsYE
-- Transcript: raw/20250723_j_TKDweOsYE/j_TKDweOsYE.en-orig.vtt
-- Metadata: raw/20250723_j_TKDweOsYE/j_TKDweOsYE.info.json
-
-AI workloads are rapidly shifting from AI being used for augmentation (co-pilots), to AI becoming responsible for full, end-to-end automation (agents). But building effective agents, and even more importantly, agent experiences that boost productivity requires many pieces. In this talk, we'll be covering the building blocks of agents, how to put them together, and what we've learned from top companies building agents along the way.
-
-About Rita Kozlov
-From the very beginning, Rita has been a key figure in the development of Cloudflare's developer platform. Their initial experience as a solutions engineer, helping early enterprise customers adopt the service, gave them firsthand insight into user needs. It was the power of Cloudflare Workers that truly resonated, inspiring a vision for a serverless future. For the past eight years, they have built out the platform which now spans products including storage, compute and AI, and is used by everyone from indie millions of indie developers to Fortune 500 companies.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## How Intuit uses LLMs to explain taxes to millions of taxpayers - Jaspreet Singh, Intuit
-
-- Upload date: 2025-07-23
-- Video: https://www.youtube.com/watch?v=_zl_zimMRak
-- Transcript: raw/20250723__zl_zimMRak/_zl_zimMRak.en-orig.vtt
-- Metadata: raw/20250723__zl_zimMRak/_zl_zimMRak.info.json
-
-I will talk about how Intuit uses LLMs to explain tax situations to Turbotax users.
-
-Users want explanations of their tax situations - this drives confidence in the product. Over the course of last two tax years, Intuit has built out explanations using Anthropic and openAI’s models to develop genAI powered explanations. This includes design a complex system with prompt engineered solutions and both LLM & human powered evaluations to ensure high quality bar that our users expect when filing taxes with us.
-
-During the course of my talk, I will talk across GenAI development lifecycle at scale - including development , evaluations and scaling. And security evaluations. We also developed a fine-tuned version of Claude Haiku & shall be covering that in the presentation.
-
-We also expanded into tax question and answering powered by RAG, including graphRAG and I would be covering those developments too.
-
-About Jaspreet Singh
-I’m Jaspreet Singh, a Senior Staff Software Engineer with 12 years of experience in the tech industry. I am the tech lead for the Smart Turbotax AI team at Intuit - focusing on development of new GenAI powered experiences in Intuit Turbotax. I have worked extensively on Personalization and Recommendations problems in the past and I’m very passionate about bringing the latest in AI to help drive Taxes are done experiences for our users. I recently became a father for the first time, and enjoy spending time with my little one. As a speaker at the AI Engineer World’s Fair, I’m excited to share our journey of transforming our user’s tax filing journeys with the power of Gen AI..
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## The Billable Hour is Dead; Long Live the Billable Hour — Kevin Madura + Mo Bhasin, Alix Partners
-
-- Upload date: 2025-07-23
-- Video: https://www.youtube.com/watch?v=Wv1tAxKYLeE
-- Transcript: raw/20250723_Wv1tAxKYLeE/Wv1tAxKYLeE.en-orig.vtt
-- Metadata: raw/20250723_Wv1tAxKYLeE/Wv1tAxKYLeE.info.json
-
-If software was eating the world before, knowledge work will soon be devoured by AI. In corporate America there are thousands of hours spent on rote tasks every day by employees, consultants, and lawyers alike. But is AI really capable of replacing work in the real world yet? Productivity estimates from GenAI range from 1.5% (NBER) to 96% (☝ us! ️). 
-
-In this talk we'll share war stories of where the answer is yes (and no) and how we reduced human time spent on tasks from days to minutes in high-impact situations. The path from promise to actual product, used in real world settings, from our experience, is still unmapped. Learn what we built, how we built it - with code - and how we got stakeholder buy-in to deploy it.
-
-About Kevin Madura
-Kevin leads technical advisory engagements and investigations in situations involving complex software, applied AI, and digital assets. As testifying expert and "translator" of technical material, he regularly interfaces with executive leadership, legal counsel, regulators, and engineers, balancing deep technical expertise with strategic clarity to drive outcomes.
-
-About Mo Bhasin
-Mo Bhasin is Director of AI Products at AlixPartners, where he leads development of the firm's internal genAI platform. He helped scale the platform to 50+ deployments, and grew the AI team from 2 to 20 in under a year.
-
-Over the last 15 years, he's built products as a data scientist at Google, Nest, and most recently as a startup founder at Outoftheblue.ai.
-
-He holds an engineering degree from the University of California Berkeley, and an MBA from University of Chicago Booth School of Business.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-Timestamps
-00:00 Introduction to Alix Partners and the AI Shift
-01:05 How AI is Reshaping Knowledge Work
-02:19 The Future of Professional Services Models with AI
-03:36 AI's Impact on the Three Phases of Engagements
-05:07 Scaling Data Analysis Beyond Human Limitations
-06:36 The Paradox of AI Investment and Productivity
-07:22 Use Case 1: Categorization with Structured Outputs
-10:34 Use Case 2: Retrieval-Augmented Generation (RAG)
-12:46 Use Case 3: Structured Data Extraction from Unstructured Data
-15:54 Key Requirements for Scaling GenAI Initiatives
-16:48 Final Thoughts: The Future of LLMs in the Enterprise
-
-## How agents will unlock the $500B promise of AI - Donald Hruska, Retool
-
-- Upload date: 2025-07-23
-- Video: https://www.youtube.com/watch?v=Lqq_LcBaJCc
-- Transcript: raw/20250723_Lqq_LcBaJCc/Lqq_LcBaJCc.en-orig.vtt
-- Metadata: raw/20250723_Lqq_LcBaJCc/Lqq_LcBaJCc.info.json
-
-AI agents are on the cusp of revolutionizing work as we know it. The number of use cases software can tackle is set to explode as AI handles tasks requiring real judgment. But to cross the gap between an interesting AI prototype and an essential business tool, you need agents built by developers with real guardrails and security.
-
-This means blending AI assistance with traditional coding in a multimodal approach that maximizes efficiency and control. The future isn't about dropping in an LLM — it requires integrating any model, any data, any system to deliver results.
-
-Companies utilizing this approach can finally turn their slice of the $500B+ of total AI investment into real business results.
-
-About Donald Hruska
-Donald is the engineering lead for Retool's new Agents product.
-
-In his three years at Retool, Donald has led teams across AI, Mobile, and Retool's core app building product. Prior to his time at Retool, Donald co-founded and spent 5+ years growing Draftbit, a Y Combinator-backed company in the low code app building space.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Build Dynamic Products, and Stop the AI Sideshow — Eliza Cabrera (Workday) + Jeremy Silva (Freeplay)
-
-- Upload date: 2025-07-23
-- Video: https://www.youtube.com/watch?v=CB-4NKDYnRs
-- Transcript: raw/20250723_CB-4NKDYnRs/CB-4NKDYnRs.en-orig.vtt
-- Metadata: raw/20250723_CB-4NKDYnRs/CB-4NKDYnRs.info.json
-
-AI across product, GTM, and strategy was a great approach in 2023, but by now, we all already know that AI is disrupting the global landscape and how business gets done. Now is the time to stop chasing your competitors, and letting the technology lead your product strategy. There’s a better way to build that will allow you to differentiate and keep pace.
-
-Join AI product managers Eliza Cabrera and Jeremy Silva to learn how to crawl, walk, and run your way towards building dynamic products.
-
-About Jeremy Silva
-A seasoned ML engineer with extensive experience building and deploying language models in the healthcare sector, Jeremy currently serves as Product Lead at Freeplay. At Freeplay, he oversees an enterprise-ready platform that empowers teams to run experiments, create evaluations, monitor production systems, and label data—all within a unified environment.
-
-Drawing from hands-on collaboration with Freeplay's enterprise customers, Jeremy brings valuable "in-the-trenches" experience building LLM systems at scale. This direct customer engagement has also positioned him as a trusted advisor, helping organizations shape and refine their AI product roadmaps for maximum impact.
-
-Jeremy’s unique perspective spans technical implementation and product development making him well-positioned to share insights on effectively bridging the gap between AI capabilities and real-world product outcomes.
-
-About Eliza Cabrera
-Building and scaling 0-1 products in the enterprise.
-
-https://www.linkedin.com/in/itselizacab/
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Monetizing AI — Alvaro Morales, Orb
-
-- Upload date: 2025-07-23
-- Video: https://www.youtube.com/watch?v=6WQYLQB0odc
-- Transcript: raw/20250723_6WQYLQB0odc/6WQYLQB0odc.en-orig.vtt
-- Metadata: raw/20250723_6WQYLQB0odc/6WQYLQB0odc.info.json
-
-As AI continues to transform industries, companies are faced with the critical challenge of effectively monetizing AI-driven products in a way that captures value, ensures customer adoption, and scales revenue sustainably. Unlike traditional SaaS models, AI-powered products have unique complexities - such as fluctuating usage patterns, variable compute costs, and evolving customer demands, making conventional pricing strategies unhelpful to the growth of an AI product-led startup.
-
-In this session, Alvaro Morales, CEO and co-founder of Orb, will explore why the often overlooked monetization aspect of AI is critical for businesses. He’ll share real-world examples and data to demonstrate how adaptive pricing models can drive cost savings, enhance customer experience, and reduce operational bottlenecks.
-
-Alvaro will lead a live demo, showcasing how engineers can simulate AI pricing strategies and subsequently integrate them with a simple plug-and-play solution. He’ll also share how real-world revenue simulations enable companies to test and refine pricing before implementing — reducing risk, boosting adoption, and unlocking new revenue streams. As a quick example, cloud software development platform Replit was looking to adopt a usage-based pricing model for a new product, but their existing billing system couldn't support the new model, and building a new billing system would delay the launch timeline. In order to get things done, they turned to Orb, which enabled them to make pricing changes up to the last minute. After the launch, Orb became the single source of truth for both Replit and its customers - providing usage alerts to notify Replit when users hit cost thresholds and provide insights into user spend and payment methods.
-
-Key takeaways: 
-The challenge of AI monetization – Why traditional subscription-based SaaS pricing models don’t work for AI-powered products.
-Precision pricing – Exploring how usage-based, tiered, and hybrid pricing models can maximize revenue potential. 
-Revenue simulation for AI pricing – Leveraging real-time data to test, adjust and optimize pricing strategies.
-Avoiding common pricing pitfalls – Identifying mistakes that can lead to revenue leakage and customer churn.
-
-This session is designed for AI executives, product leaders, and engineering teams looking for actionable strategies to build adaptive, scalable pricing models that drive long-term growth and profitability.
-
-
-
-
----related links---
-
-https://x.com/alvaromorales
-https://www.linkedin.com/in/alvaro-morales/
-https://www.withorb.com/
-
-## From Hype to Habit: How We’re Building an AI-First SaaS Company—While Still Shipping the Roadmap
-
-- Upload date: 2025-07-23
-- Video: https://www.youtube.com/watch?v=3YGRcgZJ3yc
-- Transcript: raw/20250723_3YGRcgZJ3yc/3YGRcgZJ3yc.en-orig.vtt
-- Metadata: raw/20250723_3YGRcgZJ3yc/3YGRcgZJ3yc.info.json
-
-What does it really take to move a modern SaaS company from AI experimentation to becoming truly AI-first?
-
-At Sprout Social, we’re in the midst of that transformation—rearchitecting strategy, systems, teams, and incentives to put AI at the heart of how we think, build, and deliver value. This is a story in motion: a behind-the-scenes look at how we’re evolving from isolated AI feature experiments to an AI-native operating model.
-
-I’ll share what we’re learning as we navigate the innovation dilemma—integrating disruptive AI capabilities without breaking what already works or our roadmap. That includes rethinking how we define success, how we hire, reward, grow talent, and how we handle legal and ethical complexity without slowing down. We’ll explore the real-world tensions between rapid innovation, value delivery, making progress on Responsible AI, all while elevating internal AI fluency, and engaging with the broader AI ecosystem to stay at the edge.
-
-This isn’t a playbook from the finish line—it’s a candid reflection from deep inside the journey.
-
-About Rossella Blatt Vital
-Rossella Blatt Vital is a passionate AI leader with nearly 20 years of experience turning data into business value—from hands-on research and model-building to strategic executive leadership. She began her journey with a PhD in machine learning, focusing on brain-computer interfaces and cancer detection, and spent years writing code, building models, and shipping AI-powered products before stepping into leadership roles across startups, academia, and Fortune 100 companies.
-
-As VP of AI, Data, and Data Science at Sprout Social, Rossella leads the company’s AI transformation—driving strategy across engineering, applied science, and analytics. Her team is building AI-first capabilities across product experiences, platform infrastructure, and foundational data systems.
-
-She’s passionate about building meaningful technology—and the teams that power it—with the belief that AI, when led with vision and integrity, can help shape a more thoughtful and human-centered future.
-
-About Deepsha Menghani
-Deepsha Menghani is a passionate AI leader with over a decade of experience translating data and machine learning into meaningful business impact—from predictive modeling and customer analytics to large language model applications. Her career spans hands-on data science, applied AI, and strategic leadership across global tech organizations. As Director of Engineering – AI at Sprout Social, her team is responsible for embedding AI into core product experiences and delivering insights that accelerate growth, improve customer understanding, and inform business strategy across the company.
-
-She’s especially passionate about building AI that is not only technically robust, but also responsible, human-centered, and aligned with real-world decision-making.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Top Ten Challenges to Reach AGI — Stephen Chin, Andreas Kollegger
-
-- Upload date: 2025-07-22
-- Video: https://www.youtube.com/watch?v=ypyvj_56sBU
-- Transcript: raw/20250722_ypyvj_56sBU/ypyvj_56sBU.en-orig.vtt
-- Metadata: raw/20250722_ypyvj_56sBU/ypyvj_56sBU.info.json
-
-an opener to the GraphRAG track!
-
-## Knowledge Graphs in Litigation Agents — Tom Smoker, WhyHow
-
-- Upload date: 2025-07-22
-- Video: https://www.youtube.com/watch?v=yYxr6LdXNWM
-- Transcript: raw/20250722_yYxr6LdXNWM/yYxr6LdXNWM.en-orig.vtt
-- Metadata: raw/20250722_yYxr6LdXNWM/yYxr6LdXNWM.info.json
-
-Structured Representations are pretty important in the law, where the relationships between clauses, documents, entities, and multiple parties matter. Structured Representation means Structured Context Injection. Better Context, Less Hallucinations. We walk through a couple of case studies of systems that we’ve built in production for legal use-cases - from recursive contractual clause retrieval, to HITL legal reasoning news agents.
-
-You'll gain insights into how structured representations significantly improve the effectiveness and reliability of legal agents.
-
----related links---
-
-https://www.linkedin.com/in/thomassmoker
-https://www.whyhow.ai/
-
-## Continuous Profiling for GPUs — Matthias Loibl, Polar Signals
-
-- Upload date: 2025-07-22
-- Video: https://www.youtube.com/watch?v=wt8gzWR6auQ
-- Transcript: raw/20250722_wt8gzWR6auQ/wt8gzWR6auQ.en-orig.vtt
-- Metadata: raw/20250722_wt8gzWR6auQ/wt8gzWR6auQ.info.json
-
-Continuous Profiling for GPUs extends our industry-leading continuous profiling platform to provide deep, always-on visibility into your GPU workloads.
-
-Now you can see exactly how your GPUs are being utilized millisecond by millisecond. Our solution helps you move from guesswork to data-driven optimization.
-
-
----related links---
-
-https://twitter.com/metalmatze
-https://www.linkedin.com/in/metalmatze/
-https://matthiasloibl.com/
-https://polarsignals.com
-
-## How to run Evals at Scale: Thinking beyond Accuracy or Similarity — Muktesh Mishra, Adobe
-
-- Upload date: 2025-07-22
-- Video: https://www.youtube.com/watch?v=coKKKKh8Vns
-- Transcript: raw/20250722_coKKKKh8Vns/coKKKKh8Vns.en-orig.vtt
-- Metadata: raw/20250722_coKKKKh8Vns/coKKKKh8Vns.info.json
-
-https://www.linkedin.com/in/mukteshkrmishra/
-
-## How to Hire AI Engineers when EVERYONE is cheating with AI — Beth Glenfield, DevDay
-
-- Upload date: 2025-07-22
-- Video: https://www.youtube.com/watch?v=Zqu0VaJw3vo
-- Transcript: raw/20250722_Zqu0VaJw3vo/Zqu0VaJw3vo.en-orig.vtt
-- Metadata: raw/20250722_Zqu0VaJw3vo/Zqu0VaJw3vo.info.json
-
-AI broke recruitment - how to think about hiring for AI-enabled engineers in the era of AI cheating agents and AI customised resumes.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## When Vectors Break Down: Graph-Based RAG for Dense Enterprise Knowledge - Sam Julien, Writer
-
-- Upload date: 2025-07-22
-- Video: https://www.youtube.com/watch?v=XlAIgmi_Vow
-- Transcript: raw/20250722_XlAIgmi_Vow/XlAIgmi_Vow.en-orig.vtt
-- Metadata: raw/20250722_XlAIgmi_Vow/XlAIgmi_Vow.info.json
-
-Enterprise knowledge bases are filled with "dense mapping," thousands of documents where similar terms appear repeatedly, causing traditional vector retrieval to return the wrong version or irrelevant information. When our customers kept hitting this wall with their RAG systems, we knew we needed a fundamentally different approach.
-
-In this talk, I'll share Writer's journey developing a graph-based RAG architecture that achieved 86.31% accuracy on the RobustQA benchmark while maintaining sub-second response times, significantly outperforming vector approaches.
-
-I'll survey the key techniques behind this performance leap and why graph-based approaches excel with complex enterprise information structures like product documentation, financial documents, and technical specifications that challenge traditional RAG systems. You'll learn about using specialized LLMs to build semantic relationships, how compression techniques efficiently handle concentrated enterprise data patterns, and how infusing key data points in the memory layer of the LLM lowers hallucination.
-
-The presentation will provide practical insights into identifying when graph-based approaches make sense for your organization's specific data challenges, helping you make informed architectural decisions for your next enterprise RAG system.
-
-About Sam Julien
-Sam Julien is the Director of Developer Relations at Writer and is passionate about helping engineers improve their effectiveness and advance their careers. He loves spending time outside with his family in the Pacific Northwest. You can find more of Sam's work at samjulien.com.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Practical GraphRAG: Making LLMs smarter with Knowledge Graphs — Michael, Jesus, and Stephen, Neo4j
-
-- Upload date: 2025-07-22
-- Video: https://www.youtube.com/watch?v=XNneh6-eyPg
-- Transcript: raw/20250722_XNneh6-eyPg/XNneh6-eyPg.en-orig.vtt
-- Metadata: raw/20250722_XNneh6-eyPg/XNneh6-eyPg.info.json
-
-RAG has become one standard architecture component for GenAI applications to address hallucinations and integrate factual knowledge. While vector search over text is common, knowledge graphs represent a proven advancement by leveraging advanced RAG patterns to access and integrate interconnected factual information, complementing the language skills of LLMs. This talk explores GraphRAG challenges, implementation patterns, and real-world agentic examples with Google's ADK, demonstrating how this approach delivers more trustworthy and explainable GenAI solutions with enhanced reasoning capabilities.
-
-About Michael Hunger
-Michael Hunger has been passionate about software development for more than 30 years.
-
-For the last 15 years, he has been working on the open source Neo4j graph database filling many roles, most recently heading product innovation and GenAI.
-
-As a developer Michael enjoys many aspects of software development and architecture, learning new things every day, participating in exciting and ambitious open source projects and contributing and writing software related books and articles. Michael spoke at numerous conferences and helped organize others.
-
-Michael helps kids to learn to program by running weekly girls-only coding classes at local schools.
-
-About Jesús Barrasa
-Dr. Jesús Barrasa is the AI Field CTO at Neo4j, where he works with organisations combining the power of GenAI with Knowledge Graphs. He co-authored "Building Knowledge Graphs" (O'Reilly 2023) and is cohost of the monthly Going Meta live webcast (https://goingmeta.live/) since 2022.
-Jesús holds a Ph.D. in Artificial Intelligence/Knowledge Representation and is an active thought leader in the KG and AI space.
-
-About Stephen Chin
-Stephen Chin is VP of Developer Relations at Neo4j, conference chair of the LF AI & Data Foundation, and author of numerous titles including the upcoming GraphRAG: The Definitive Guide for O'Reilly. He has given keynotes and main stage talks at numerous conferences around the world including AI Engineer Summit, AI DevSummit, Devoxx, DevNexus, JNation, JavaOne, Shift, Joker, swampUP, and GIDS. Stephen is an avid motorcyclist who has done evangelism tours in Europe, Japan, and Brazil, interviewing developers in their natural habitat. When he is not traveling, he enjoys teaching kids how to do AI, embedded, and robot programming together with his daughters.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## AI powered entomology: Lessons from millions of AI code reviews — Tomas Reimers, Graphite
-
-- Upload date: 2025-07-22
-- Video: https://www.youtube.com/watch?v=TswQeKftnaw
-- Transcript: raw/20250722_TswQeKftnaw/TswQeKftnaw.en-orig.vtt
-- Metadata: raw/20250722_TswQeKftnaw/TswQeKftnaw.info.json
-
-This talk will explore insights from millions of automated code reviews, revealing trends in bugs, vulnerabilities, and code health that Graphite’s AI code review agent have uncovered. This talk will also provide meta commentary into the types of bugs AI code review agents are great at spotting, and how far the field of AI code review has come in the last year alone.
-
-
----related links---
-
-## Stop Using RAG as Memory — Daniel Chalef, Zep
-
-- Upload date: 2025-07-22
-- Video: https://www.youtube.com/watch?v=T5IMo5ntyhA
-- Transcript: raw/20250722_T5IMo5ntyhA/T5IMo5ntyhA.en-orig.vtt
-- Metadata: raw/20250722_T5IMo5ntyhA/T5IMo5ntyhA.info.json
-
-RAG is great for static knowledge retrieval—but terrible at memory. Vectorstore-based systems sold as memory lack relational and temporal awareness, leading agents astray with outdated or ambiguous information.
-
-Discover how temporally-aware knowledge graphs—built by the open-source Graphiti framework—solve these limitations. You’ll learn practical strategies to maintain precise, context-rich memory, enabling agents to reason accurately about historical context and knowledge provenance.
-
-About Daniel Chalef   
-I’m Daniel Chalef, an engineer turned startup founder currently building Zep, where we're creating AI's foundational memory layer powered by knowledge graphs. Our vision is a world where AI agents reliably handle personalized tasks, from the mundane to the monumental, always prioritizing privacy and compliance.
-
-Previously, I've led ML and data science teams, marketing, and corporate development at both early-stage startups and late-stage companies, building data-driven products at scale. My first startup was an open source document management application, KnowledgeTree.
-
-When I’m not building Zep (which is seldom 🙂), you’ll likely find me cycling or hiking around the Bay Area with my dog.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Books reimagined: AI to create new experiences for things you know — Lukasz Gandecki, TheBrain.pro
-
-- Upload date: 2025-07-22
-- Video: https://www.youtube.com/watch?v=Kcka7rzcxLk
-- Transcript: raw/20250722_Kcka7rzcxLk/Kcka7rzcxLk.en-orig.vtt
-- Metadata: raw/20250722_Kcka7rzcxLk/Kcka7rzcxLk.info.json
-
-[last round of Attendee-Led 10min lightning talks] I will showcase how I got tired of waiting for an AI assisted/no spoiler book reading experience and built my own. Check 30s video at https://youtu.be/JjwnYqy668M or go to demo book at https//bookgenius.net Open Sourcing!
-
-contact: https://x.com/lgandecki
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Critical AI Inference your CIO can Trust — Sahil Yadav, Hariharan Ganesan, Telemetrak
-
-- Upload date: 2025-07-22
-- Video: https://www.youtube.com/watch?v=6Tpm4m1YxHk
-- Transcript: raw/20250722_6Tpm4m1YxHk/6Tpm4m1YxHk.en-orig.vtt
-- Metadata: raw/20250722_6Tpm4m1YxHk/6Tpm4m1YxHk.info.json
-
-Enterprise AI adoption is accelerating, but with it comes a hard question: Do we trust the model’s decisions? In this 18-minute talk, I’ll explore the invisible risks behind automated decision-making in safety-critical and revenue-sensitive environments. Drawing on case studies across manufacturing, telecom, and industrial IoT, I’ll highlight how explainability, traceability, and robust guardrails drive adoption and protect enterprise value.
-Attendees will walk away with:
-• A 3-step framework for operationalizing AI trust
-• Real-world lessons from building guardrails in on-prem and hybrid systems
-• Tools and techniques for debugging and explaining inferences at scale
-• A blueprint for building trust between models, engineers, and executive stakeholders
-
-
----related links---
-
-https://www.linkedin.com/in/yadavsahil/
-https://telemetrak.com
-
-## Stateful environments for vertical agents — Josh Purtell, Synth Labs
-
-- Upload date: 2025-07-22
-- Video: https://www.youtube.com/watch?v=5rMc-moNVx0
-- Transcript: raw/20250722_5rMc-moNVx0/5rMc-moNVx0.en-orig.vtt
-- Metadata: raw/20250722_5rMc-moNVx0/5rMc-moNVx0.info.json
-
-Hey All - gave a talk on building stateful environments for vertical agents at AI tinkerers and ppl really liked it, happy to do again. Here's the repo - general code that endows environments like Pokemon Red, Minecraft, Swe-Bench, and others with the same interface for development and agent training. github.com/synth-laboratories/Environments
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## HybridRAG: A Fusion of Graph and Vector Retrieval  - Mitesh Patel, NVIDIA
-
-- Upload date: 2025-07-22
-- Video: https://www.youtube.com/watch?v=-tgQa8Fzf80
-- Transcript: raw/20250722_-tgQa8Fzf80/-tgQa8Fzf80.en-orig.vtt
-- Metadata: raw/20250722_-tgQa8Fzf80/-tgQa8Fzf80.info.json
-
-Interpreting complex information from unstructured text data poses significant challenges to Large Language Models (LLM), with difficulties often arising from specialized terminology and the multifaceted relationships between entities in document architectures. Conventional Retrieval Augmented Generation (RAG) methods face limitations in capturing these nuanced interactions, leading to suboptimal performance. In our talk, we introduce a novel approach integrating Knowledge Graph-based RAG (GraphRAG) with VectorRAG, designed to refine question-answering (Q&A) systems for more effective information extraction from complex texts. Our approach employs a dual retrieval strategy that harnesses both knowledge graphs and vector databases, enabling the generation of precise and contextually appropriate answers, thereby setting a new standard for LLMs in processing sophisticated data.
-
-About Mitesh Patel
-Mitesh Patel is a developer advocate manager at NVIDIA. His team is responsible for creating workflows to showcase how developers can harness GPU acceleration in their workflows using tools and frameworks popular in the developer community. Before NVIDIA, he was a senior research scientist at Fuji Xerox Palo Alto Laboratory Inc. (a research subsidiary of Fuji Xerox), where he worked on developing indoor localization technologies for applications such as asset tracking in hospitals and delivery cart tracking in manufacturing facilities. Mitesh received his Ph.D. in Robotics from the Center of Autonomous Systems (CAS) at the University of Technology Sydney, Australia in 2014.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## UX Design Principles for Semi Autonomous Multi Agent Systems — Victor Dibia, Microsoft
-
-- Upload date: 2025-07-21
-- Video: https://www.youtube.com/watch?v=fmZWvE7yDZo
-- Transcript: raw/20250721_fmZWvE7yDZo/fmZWvE7yDZo.en-orig.vtt
-- Metadata: raw/20250721_fmZWvE7yDZo/fmZWvE7yDZo.info.json
-
-Autonomous or semi-autonomous multi-agent systems (MAS) involve exponentially complex configurations (system config, agent configs, task management and delegation, etc.). These present unique interface design challenges for both developer tooling and end-user experiences.
-In this session, I'll explore UX design principles for multi-agent systems, addressing critical questions: What is the true configuration space for autonomous MAS? How can users arrive at the correct mental model of an MAS's capabilities, if at all? How can we improve trust and safety through techniques like cost-aware action delegation? What makes agent actions observable? How do we enable seamless interruptibility? Attendees will gain actionable insights to create more transparent, trustworthy, and user-centered multi-agent applications, illustrated through real-world implementations in AutoGen Studio - a low code developer tool built on AutoGen (44k stars on GitHub, MIT license) and similar tools.
-
-
----related links---
-
-https://x.com/vykthur
-https://www.linkedin.com/in/dibiavictor/
-https://newsletter.victordibia.com/
-https://victordibia.com/
-
-## Excalidraw: AI and Human Whiteboarding Partnership - Christopher Chedeau
-
-- Upload date: 2025-07-21
-- Video: https://www.youtube.com/watch?v=aopgVJBQC0o
-- Transcript: raw/20250721_aopgVJBQC0o/aopgVJBQC0o.en-orig.vtt
-- Metadata: raw/20250721_aopgVJBQC0o/aopgVJBQC0o.info.json
-
-Covid sent everybody home and created the space of virtual whiteboards. At first the experience reused the physical constraints but soon it became better than a physical whiteboard thanks to using virtual native concepts like copy-paste and using keyboard input.
-The next step in this evolution is to integrate AI into the workflow. We've tried a lot of things with Excalidraw and ended up landing on turning prompt into diagram. Come to the talk to understand how it fits into the workflow and how we implemented it.
-
-About Christopher Chedeau   
-Co-creator of React Native and Prettier. Creator of Excalidraw, "CSS-in-JS", Yoga and React Conf.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## CIAM for AI: Authn/Authz for Agents — Michael Grinich, CEO of WorkOS
-
-- Upload date: 2025-07-21
-- Video: https://www.youtube.com/watch?v=D4Dswf-__RM
-- Transcript: raw/20250721_D4Dswf-__RM/D4Dswf-__RM.en-orig.vtt
-- Metadata: raw/20250721_D4Dswf-__RM/D4Dswf-__RM.info.json
-
-AI agents are changing the way modern SaaS products operate. Whether automating workflows, integrating with APIs, or acting on behalf of users, AI-driven assistants and autonomous systems are becoming core product features. But securing these agents presents a fundamental challenge: How do you authenticate AI agents? How do you control what they can access? How do you ensure they act within the right permissions? This talk will explore these concepts and more while highlighting current research and best practices.
-
-
----related links---
-
-https://x.com/grinich/
-https://www.linkedin.com/in/grinich/
-https://workos.com/guides
-https://workos.com/
-
-## The Bitter Layout or: How I Learned to Love the Model Picker — Maximillian Piras, Yutori
-
-- Upload date: 2025-07-21
-- Video: https://www.youtube.com/watch?v=BZtD0yYAgCQ
-- Transcript: raw/20250721_BZtD0yYAgCQ/BZtD0yYAgCQ.en-orig.vtt
-- Metadata: raw/20250721_BZtD0yYAgCQ/BZtD0yYAgCQ.info.json
-
-Are conversational interfaces the future or, as many designers have suggested, a lazy solution that is bottlenecking AI-HCI? Despite well-documented usability issues, the design of many AI applications defaults to an input field, turn-by-turn flow, and an endless model picker — I call this “The Bitter Layout”.
-
-In this talk, we’ll explore how Clay Christensen’s theory of commoditization from the early PC industry can explain why scaling laws require AI interfaces to remain modular until models fully commoditize. The killer feature of conversational interfaces may not be that they’re natural, but that they’re conformable. Learn how to evolve interfaces as inference scales, spot shifts in the basis of competition, and stop worrying about the next model update steamrolling your design decisions.
-
-Foothill G 1&2: Design Engineering
-
-About Maximillian Piras
-Currently the Founding Designer at Yutori working on AI web agents. Previously, Head of Design at Headliner and Sr. Designer at 8tracks. Led cross-platform UIUX design for multiple early-stage consumer startups shipping to millions of users. Contributing writer to Smashing Magazine covering AI-first design. Before that, developed graphics and animations for clients including Giphy, MIT, and Ryuichi Sakamoto.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Agentic GraphRAG: AI’s Logical Edge — Stephen Chin, Neo4j
-
-- Upload date: 2025-07-21
-- Video: https://www.youtube.com/watch?v=AvVoJBxgSQk
-- Transcript: raw/20250721_AvVoJBxgSQk/AvVoJBxgSQk.en-orig.vtt
-- Metadata: raw/20250721_AvVoJBxgSQk/AvVoJBxgSQk.info.json
-
-AI models are getting tasked to do increasingly complex and industry specific tasks where different retrieval approaches provide distinct advantages in accuracy, explainability, and cost to execute. GraphRAG retrieval models have become a powerful tool to solve domain specific problems where answers require logical reasoning and correlation that can be aided by graph relationships and proximity algorithms. We will demonstrate how an agent architecture combining RAG and GraphRAG retrieval patterns can bridge the gap in data analysis, strategic planning, and retrieval to solve complex domain specific problems. 
-
-
----related links---
-
-https://twitter.com/steveonjava
-https://www.linkedin.com/in/steveonjava/
-http://steveonjava.com/
-https://neo4j.com/
-
-## Good design hasn’t changed with AI — John Pham, SF Compute
-
-- Upload date: 2025-07-21
-- Video: https://www.youtube.com/watch?v=7e7eVtcygCM
-- Transcript: raw/20250721_7e7eVtcygCM/7e7eVtcygCM.en-orig.vtt
-- Metadata: raw/20250721_7e7eVtcygCM/7e7eVtcygCM.info.json
-
-Bad designs are still bad. AI doesn’t make it good. The novelty of AI makes the bad things tolerable, for a short time. Building great designs and experiences with AI have the same first principles pre-AI. When people use software, they want it to feel responsive, safe, accessible and delightful. We’ll go over the big and small details that goes into software that people want to use, not forced to use.
-
-About John Pham   
-I'm John Pham, an engineer and a self-taught designer. I seek the dopamine hits of building delightful experiences for others. I've worked at Vercel, Microsoft and NASA doing just that.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## tldraw.computer - Steve Ruiz, tldraw
-
-- Upload date: 2025-07-21
-- Video: https://www.youtube.com/watch?v=1C2TdPkj6aQ
-- Transcript: raw/20250721_1C2TdPkj6aQ/1C2TdPkj6aQ.en-orig.vtt
-- Metadata: raw/20250721_1C2TdPkj6aQ/1C2TdPkj6aQ.info.json
-
-Learn about tldraw's latest experiments with AI on an infinite canvas. In 2024, we created tldraw computer, a loose visual programming environment where arrows and LLMs powered every step of a graph on tldraw's canvas.
-
-About Steve Ruiz
-Steve Ruiz is founder and CEO of tldraw, a London-based startup building an infinite canvas component for the web.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## What every AI engineer needs to know about GPUs — Charles Frye, Modal
-
-- Upload date: 2025-07-20
-- Video: https://www.youtube.com/watch?v=y-UGrYbJsJk
-- Transcript: raw/20250720_y-UGrYbJsJk/y-UGrYbJsJk.en-orig.vtt
-- Metadata: raw/20250720_y-UGrYbJsJk/y-UGrYbJsJk.info.json
-
-Every programmer needs to know a few things about hardware, like processors, memory, and disks. Due to AI systems' extreme demand for mathematical processing power, AI engineers need to know a few things about GPUs -- the world's most popular high-throughput mathematical co-processor.
-
-In this talk, I will explain the fundamental engineering constraints and design decisions that shape GPUs and trace those up to some counter-intuitive facts about the performance characteristics of AI systems, with actionable insights for their deployers and consumers.
-
-
----related links---
-
-## Robots as professional Chefs - Nikhil Abraham, CloudChef
-
-- Upload date: 2025-07-20
-- Video: https://www.youtube.com/watch?v=MBWGiWJDlSo
-- Transcript: raw/20250720_MBWGiWJDlSo/MBWGiWJDlSo.en-orig.vtt
-- Metadata: raw/20250720_MBWGiWJDlSo/MBWGiWJDlSo.info.json
-
-How we converted a bimanual robot into a professional chef that works in novel kitchens and learn new recipes from a single demonstration
-
-About Nikhil Abraham
-Nikhil is the CEO of CloudChef - reimagining cooking using embodied AI. CloudChef builds robots that enable commercial kitchens to cook high quality meals while solving for availability of skilled chefs. Our robots are already doing full-time work in several leading commercial kitchens. Nikhil is an alum of IIT Bombay and was the cofounder of Rephrase AI (acquired by Adobe)
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Building Effective Voice Agents — Toki Sherbakov + Anoop Kotha, OpenAI
-
-- Upload date: 2025-07-20
-- Video: https://www.youtube.com/watch?v=-OXiljTJxQU
-- Transcript: raw/20250720_-OXiljTJxQU/-OXiljTJxQU.en-orig.vtt
-- Metadata: raw/20250720_-OXiljTJxQU/-OXiljTJxQU.info.json
-
-How to build production voice applications and learnings from working with customers along the way!
-
-https://x.com/tokisherbakov
-https://www.linkedin.com/in/akotha7/
-
-## OpenThoughts: Data Recipes for Reasoning Models — Ryan Marten, Bespoke Labs
-
-- Upload date: 2025-07-19
-- Video: https://www.youtube.com/watch?v=liG97YXaTSA
-- Transcript: raw/20250719_liG97YXaTSA/liG97YXaTSA.en-orig.vtt
-- Metadata: raw/20250719_liG97YXaTSA/liG97YXaTSA.info.json
-
-Peel back the curtain on state of the art model post-training through the story of OpenThinker, a SOTA small reasoning model (outperforming DeepSeek distill), built in the open. Learn about the dataset recipe used to build the strongest reasoning models which you can apply to your own domain-specific specialized reasoning models. Hear about the strategies that scale (and that don't) based on our rigorous experimentation on the journey from thousands of data points (Bespoke-Stratos) to millions of data (OpenThinker3). Build upon our open source engineering solutions for large-scale synthetic data generation, training on multiple supercomputing clusters, and building out fast reliable evaluations.
-
-About Ryan Marten
-Ryan Marten is co-lead of OpenThinker collaboration and a founding engineer at Bespoke Labs, working on data curation and model post-training. Previously, Ryan has been an AI researcher at the University of Illinois Urbana-Champaign, University of Toronto, University of Oxford, AI2, and Vector Institute. When he's not at the lab, he's probably out surfing.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-Timestamps:
-
-0:00 - Introduction to the problem of open-source reasoning in AI models.
-
-1:09 - The effectiveness of Supervised Fine-Tuning (SFT) for reasoning.
-
-3:38 - Introduction to OpenThoughts 3 and its performance.
-
-7:52 - Key learnings from the data recipe development.
-
-11:34 - Guidance on adapting the dataset recipe to specific domains.
-
-15:15 - Call for open collaboration and where to find the project's resources
-
-## A Taxonomy for Next-gen Reasoning — Nathan Lambert, Allen Institute (AI2) & Interconnects.ai
-
-- Upload date: 2025-07-19
-- Video: https://www.youtube.com/watch?v=jQcsVk0KWiQ
-- Transcript: raw/20250719_jQcsVk0KWiQ/jQcsVk0KWiQ.en-orig.vtt
-- Metadata: raw/20250719_jQcsVk0KWiQ/jQcsVk0KWiQ.info.json
-
-Current AI models are extremely skilled, which was seen as the step change in evaluation scores across the industry in the first half of 2025, but often fail when presented with even medium time-horizon tasks. This talk presents a taxonomy of 4 traits of reasoning models -- skills, calibration, strategy, and abstraction -- that will be crucial to creating the next generation of AI applications. With this, we focus on the latter two, strategy and abstraction, and discuss how these traits will enable long-horizon and reliable agents. The talk concludes with a scenario where these agentic behaviors are the foundation for RL continuing to scale in the coming years and post-training techniques reaching compute parity with pretraining methors sooner than later.
-
-About Nathan Lambert
-Nathan Lambert is a Senior Research Scientist and post-training lead at the Allen Institute for AI focusing on building open language models. At the same time he founded and operates Interconnects.ai to increase transparency and understanding of current AI models and systems.
-
-Previously, he helped build an RLHF research team at HuggingFace. He received his PhD from the University of California, Berkeley working at the intersection of machine learning and robotics. He was advised by Professor Kristofer Pister in the Berkeley Autonomous Microsystems Lab and Roberto Calandra at Meta AI Research. He was lucky to intern at Facebook AI and DeepMind during his Ph.D. Nathan was was awarded the UC Berkeley EECS Demetri Angelakos Memorial Achievement Award for Altruism for his efforts to better community norms.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-Timestamps:
-
-[00:00] The Current State of Reasoning in AI Models
-
-[01:06] Unlocking New Language Model Applications
-
-[03:48] The Need for Advanced Planning in AI
-
-[04:29] A Proposed Taxonomy for Next-Generation Reasoning
-
-[06:16] Reinforcement Learning with Verifiable Rewards
-
-[08:23] Current Challenges and Future Directions
-
-[12:07] The Effort Required to Build New Capabilities
-
-[16:20] A Research Plan for Training Reasoning Models
-
-[17:36] The Shift in Compute Allocation from Pre-training to Post-training
-
-## Design like Karpathy is watching — Zeke Sikelianos, Replicate
-
-- Upload date: 2025-07-19
-- Video: https://www.youtube.com/watch?v=huQPkrwVWwc
-- Transcript: raw/20250719_huQPkrwVWwc/huQPkrwVWwc.en-orig.vtt
-- Metadata: raw/20250719_huQPkrwVWwc/huQPkrwVWwc.info.json
-
-Legendary AI engineer and educator Andrej Karpathy recently blogged about his experiences building, deploying, and monetizing a vibe-coded web app called MenuGen. Let's dig into the challenges he faced and learn what we as AI designers can do to make life better for the Andrejs of the world.
-
-About Zeke Sikelianos
-Zeke's been building developer tools at companies like Heroku, npm, GitHub, and Replicate for over ten years. He cares deeply about simple and tasteful developer experiences, and thinks the world of generative AI deserves small, sharp, and composable tools!
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## How to Train Your Agent: Building Reliable Agents with RL — Kyle Corbitt, OpenPipe
-
-- Upload date: 2025-07-19
-- Video: https://www.youtube.com/watch?v=gEDl9C8s_-4
-- Transcript: raw/20250719_gEDl9C8s_-4/gEDl9C8s_-4.en-orig.vtt
-- Metadata: raw/20250719_gEDl9C8s_-4/gEDl9C8s_-4.info.json
-
-Have you ever launched an awesome agentic demo, only to realize no amount of prompting will make it reliable enough to deploy in production? Agent reliability is a famously difficult problem to solve!
-
-In this talk we’ll learn how to use GRPO to help your agent learn from its successes and failures and improve over time. We’ve seen dramatic results with this technique, such as an email assistant agent that whose success rate jumped from 74% to 94% after replacing o4-mini with an open source model optimized using GRPO.
-
-We’ll share case studies as well as practical lessons learned around the types of problems this works well for and the unexpected pitfalls to avoid.
-
-About Kyle Corbitt
-Kyle Corbitt is the co-founder and CEO of OpenPipe, the RL post-training company. OpenPipe has trained thousands of customer models for both enterprises and tech-forward startups.
-
-Before founding OpenPipe, Kyle led the Startup School team at Y Combinator, which was responsible for the product and content that YC produces for early-stage companies. Prior to that he worked as an engineer at Google and studied ML at school.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-Timestamps:
-
-[00:00] - Introduction to building reliable agents with RL.
-
-[00:49] - Case Study: ART-E, an AI email assistant.
-
-[02:19] - The importance of starting with prompted models before moving to RL.
-
-[03:17] - Performance improvements of RL over prompted models.
-
-[05:18] - Cost and latency benefits of the RL approach.
-
-[08:02] - The two hardest problems in modern RL: realistic environments and reward functions.
-
-[13:13] - Optimizing agent behavior with "extra rewards."
-
-[15:25] - The problem of "reward hacking" and how to address it.
-
-[18:37] - The solution to reward hacking:
-
-## ComfyUI Full Workshop — first workshop from ComfyAnonymous himself!
-
-- Upload date: 2025-07-19
-- Video: https://www.youtube.com/watch?v=_FKeSzM9fPc
-- Transcript: raw/20250719__FKeSzM9fPc/_FKeSzM9fPc.en-orig.vtt
-- Metadata: raw/20250719__FKeSzM9fPc/_FKeSzM9fPc.info.json
-
-Quick introduction to ComfyUI and what's new followed by a QA session.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Real world MCPs in GitHub Copilot Agent Mode — Jon Peck, Microsoft
-
-- Upload date: 2025-07-19
-- Video: https://www.youtube.com/watch?v=RkVILz06y08
-- Transcript: raw/20250719_RkVILz06y08/RkVILz06y08.en-orig.vtt
-- Metadata: raw/20250719_RkVILz06y08/RkVILz06y08.info.json
-
-As developers, we don't spend most of our time vibe-coding prototypes. More often, we're adding features, squashing bugs, and building tests for existing apps across a wide variety of services and technologies. Come learn how MCPs help GitHub Copilot to untangle real engineering problems. By allowing agent mode to securely work with data sources, testing tools, infrastructure providers, and even core DevOps tooling -- we can go beyond the hype, and solve the actual engineering problems we face every day.
-
-
----related links---
-
-http://twitter.com/peckjon
-http://linkedin.com/in/peckjon
-https://github.com/peckjon
-
-## [Full Workshop] Reinforcement Learning, Kernels, Reasoning, Quantization & Agents — Daniel Han
-
-- Upload date: 2025-07-19
-- Video: https://www.youtube.com/watch?v=OkEGJ5G3foU
-- Transcript: raw/20250719_OkEGJ5G3foU/OkEGJ5G3foU.en-orig.vtt
-- Metadata: raw/20250719_OkEGJ5G3foU/OkEGJ5G3foU.info.json
-
-Why is Reinforcement Learning (RL) suddenly everywhere, and is it truly effective? Have LLMs hit a plateau in terms of intelligence and capabilities, or is RL the breakthrough they need?
-
-In this workshop, we'll dive into the fundamentals of RL, what makes a good reward function, and how RL can help create agents.
-
-We'll also talk about kernels, are they still worth your time and what you should focus on. And finally, we’ll explore how LLMs like DeepSeek-R1 can be quantized down to 1.58-bits and still perform well, along with techniques to maintain accuracy.
-
-About Daniel Han
-I'm building Unsloth and we're an open-source startup trying to make AI more accessible and accurate for everyone! We have 40K GitHub stars, 10M monthly downloads on Hugging Face and worked with Google, Meta, Hugging Face teams to fix bugs in open-source models like Llama, Phi & Gemma models. I was previously working at NVIDIA making TSNE 2000x faster.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-Timestamps
-
-00:00 Introduction and Unsloth's Contributions
-03:25 The Evolution of Large Language Models (LLMs)
-09:47 LLM Training Stages and Yann LeCun's Cake Analogy
-16:56 Agents and Reinforcement Learning Principles
-23:17 PPO and the Introduction of GRPO
-48:12 Reward Model vs. Reward Function
-51:22 The Math Behind the Reinforce Algorithm
-01:08:50 PPO Formula Breakdown
-01:16:29 GRPO Deep Dive
-02:00:20 Practical Implementation and Demo with Unsloth
-02:33:07 Quantization and the Future of GPUs
-02:41:59 Conclusion and Call to Action
-
-## Dream Machine: Scaling to 1m users in 4 days — Keegan McCallum, Luma AI
-
-- Upload date: 2025-07-19
-- Video: https://www.youtube.com/watch?v=EY4O9M6AsWI
-- Transcript: raw/20250719_EY4O9M6AsWI/EY4O9M6AsWI.en-orig.vtt
-- Metadata: raw/20250719_EY4O9M6AsWI/EY4O9M6AsWI.info.json
-
-Talking about Luma AI, our mission, and how our ML infrastructure enables SOTA multimodal model development
-
-About Keegan McCallum 
-I'm Keegan McCallum, the Head of ML infrastructure at Luma AI. I began my career in research focusing on portfolio optimization. Since then I've founded two startups, lead engineering at two others and have landed at Luma AI working on an unconventional multimodal path to AGI among a cracked team of researchers and engineers. When I'm not working, I'm usually out in the woods hiking with my family, or exploring the culinary delights in whatever city I happen to be in. I'm excited to share the insights and war stories I've gathered launching one of the most successful AI products to date in a (hopefully) fun and engaging way
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-Timestamps
-The initial launch challenges [00:00]: Luma AI was unprepared for the high traffic, quickly exhausting their initial GPU allocation and facing a large queue of requests.
-
-Rapid scaling efforts [00:57]: They rapidly scaled their GPU capacity from 500 to 5,000 H100 GPUs within six hours, and later added another 4,000 H100 GPUs from their training cluster to keep up with demand.
-
-Luma AI's mission [03:10]: Beyond just video models, Luma AI aims to build general multimodal intelligence that can generate, understand, and operate in the physical world.
-
-Their product capabilities [03:22]: They demonstrate a "modify video" feature where users can upload iPhone videos and transform them with text prompts. They also highlight their public API for integrating this functionality into applications [03:52].
-
-Infrastructure re-architecture [06:02]: They moved from a brittle, tightly coupled container setup using Triton inference server to a custom-built serving stack on vanilla PyTorch, which offers better support for multiple GPUs, nodes, and different chipsets.
-
-Challenges and solutions in scaling [07:39]:
-
-Back pressure [07:51]: They implemented a dispatch limitation system to prevent too many CPU workers from queuing jobs in one cluster.
-
-Fair scheduling and work starvation [08:36]: To address issues with different user tiers (API, enterprise, unlimited, light, free) and prevent lower-priority jobs from being starved, they developed an SLO (Service Level Objective) based system that prioritizes jobs based on the percentage of their worst-case waiting time [11:14].
-
-Handling different models and bursts [08:43]: They built a system to automatically scale up compute on their training cluster to handle demand bursts [09:16].
-
-Model management [13:24]: They use a model repository system where each model has immutable versions stored in object storage, including the full Python environment and checkpoints. This allows for reproducible rollbacks and seamless, on-the-fly version switching for workers [14:46].
-
-Hiring [15:13]: Luma AI is actively hiring engineers, researchers, and AI enthusiasts
-
-## Google Photos Magic Editor: GenAI Under the Hood of a Billion-User App - Kelvin Ma, Google Photos
-
-- Upload date: 2025-07-19
-- Video: https://www.youtube.com/watch?v=C13jiFWNuo8
-- Transcript: raw/20250719_C13jiFWNuo8/C13jiFWNuo8.en-orig.vtt
-- Metadata: raw/20250719_C13jiFWNuo8/C13jiFWNuo8.info.json
-
-Go behind the scenes of Google Photos' Magic Editor. Explore the engineering feats required to integrate complex CV and cutting-edge generative AI models into a seamless mobile experience. We'll discuss optimizing massive models for latency/size, the crucial interplay with graphics rendering (OpenGL/Halide), and the practicalities of turning research concepts into polished features people actually use.
-
-About Kelvin Ma
-I'm Kelvin Ma. A product engineer with 15 years of experience working across innovative consumer applications that is used by millions of consumers. I'm passionate about using technology to build tools that improves users lives by allowing greater expression, building skills, and fostering communication.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## On Curiosity — Sharif Shameem, Lexica
-
-- Upload date: 2025-07-19
-- Video: https://www.youtube.com/watch?v=0F8mnGPUycY
-- Transcript: raw/20250719_0F8mnGPUycY/0F8mnGPUycY.en-orig.vtt
-- Metadata: raw/20250719_0F8mnGPUycY/0F8mnGPUycY.info.json
-
-Creating and sharing demos is the easiest way to influence the future. It gets people to think about what's possible. A good tech demo doesn't have to be fully fleshed out. It doesn't even have to be fully functional. The purpose of a demo is to inspire. A good demo makes you feel like someone jumped into the future and pulled back an idea to the present.
-
-About Sharif Shameem
-I'm the founder of Lexica – we're building creative tools backed by state-of-the-art generative models (P.S. we're hiring). I previously worked on a low-code tool powered by language models called Debuild.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## MCP is all you need — Samuel Colvin, Pydantic
-
-- Upload date: 2025-07-18
-- Video: https://www.youtube.com/watch?v=bmWZk9vTze0
-- Transcript: raw/20250718_bmWZk9vTze0/bmWZk9vTze0.en-orig.vtt
-- Metadata: raw/20250718_bmWZk9vTze0/bmWZk9vTze0.info.json
-
-Everyone is talking about agents, and right after that, they’re talking about agent-to-agent communications. Not surprisingly, various nascent, competing protocols are popping up to handle it.
-
-But maybe all we need is MCP — the OG of GenAI communication protocols (it's from way back in 2024!).
-
-Last year, Jason Liu gave the second most watched AIE talk — “Pydantic is all you need”.
-
-This year, I (the creator of Pydantic) am continuing the tradition by arguing that MCP might be all we need for agent-to-agent communications.
-
-What I’ll cover:
-
-- Misusing Common Patterns: MCP was designed for desktop/IDE applications like Claude Code and Cursor. How can we adapt MCP for autonomous agents?
-- Many Common Problems: MCP is great, but what can go wrong? How can you work around it? Can the protocol be extended to solve these issues?
-- Monitoring Complex Phenomena: How does observability work (and not work) with MCP?
-- Multiple Competing Protocols: A quick run-through of other agent communication protocols like A2A and AGNTCY, and probably a few more by June 😴
-- Massive Crustaceans Party: What might success look like if everything goes to plan?
-
-
----related links---
-
-https://x.com/samuel_colvin
-https://www.linkedin.com/in/samuel-colvin/
-https://github.com/samuelcolvin
-https://pydantic.dev/
-
-
-Timestamps
-00:00:00 - Introduction: Speaker Samuel Colvin introduces himself as the creator of Pydantic.
-
-00:00:42 - Pydantic Ecosystem: Introduction to Pydantic the company, the Pydantic AI agent framework, and the Logfire observability platform.
-
-00:01:18 - Talk Thesis: Explaining the title "MCP is all you need" and the main argument that MCP simplifies agent communication.
-
-00:02:05 - MCP's Focus: Clarifying that the talk focuses on MCP for autonomous agents and custom code, not its original desktop automation use case.
-
-00:02:48 - Tool Calling Primitive: Highlighting that "tool calling" is the most relevant MCP primitive for this context.
-
-00:03:10 - MCP vs. OpenAPI: Listing the advantages MCP has over a simple OpenAPI specification for tool calls.
-
-00:03:21 - Feature 1: Dynamic Tools: Tools can appear and disappear based on server state.
-
-00:03:26 - Feature 2: Streaming Logs: The ability to return log data to the user while a tool is still executing.
-
-00:03:33 - Feature 3: Sampling: A mechanism for a tool (server) to request an LLM call back through the agent (client).
-
-00:04:01 - MCP Architecture Diagram: Visualizing the basic agent-to-tool communication flow.
-
-00:04:43 - Complex Architecture: Discussing scenarios where tools are themselves agents that need LLM access.
-
-00:05:24 - Explaining Sampling: Detailing how sampling solves the problem of every agent needing its own LLM by allowing tools to "piggyback" on the client's LLM access.
-
-00:06:42 - Pydantic AI's Role in Sampling: How the Pydantic AI library supports sampling on both the client and server side.
-
-00:07:10 - Demo Start: Beginning the demonstration of a research agent that uses an MCP tool to query BigQuery.
-
-00:08:23 - Code Walkthrough: Validation: Showing how Pydantic is used for output validation and automatic retries (model_retry).
-
-00:09:00 - Code Walkthrough: Context Logging: Demonstrating the use of mcp_context.log to send progress updates back to the client.
-
-00:10:51 - MCP Server Setup: Showing the code for setting up an MCP server using fast_mcp.
-
-00:11:54 - Design Pattern: Inference Inside the Tool: Explaining the benefit of having the tool perform its own LLM inference to reduce the context burden on the main agent.
-
-00:12:27 - Main Application Code: Reviewing the client-side code that defines the agent and registers the MCP tool.
-
-00:13:16 - Observability with Logfire: Switching to the Logfire UI to trace the execution of the agent's query.
-
-00:14:09 - Observing Sampling in Action: Pointing out the specific span in the trace that shows the tool making an LLM call back through the client via sampling.
-
-00:14:48 - Inspecting the SQL Query: Showing how the observability tool can be used to see the exact SQL query that was generated by the internal agent.
-
-00:15:15 - Conclusion: Final summary of the talk's points.
-
-## The rise of the agentic economy on the shoulders of MCP — Jan Curn, Apify
-
-- Upload date: 2025-07-18
-- Video: https://www.youtube.com/watch?v=blW-lSd5CYQ
-- Transcript: raw/20250718_blW-lSd5CYQ/blW-lSd5CYQ.en-orig.vtt
-- Metadata: raw/20250718_blW-lSd5CYQ/blW-lSd5CYQ.info.json
-
-Thanks to MCP and all the MCP server directories, agents can now autonomously discover new tools and other agents. This lays down the foundation for the future agentic economy, where businesses will sell to autonomous agents (B2A) and eventually agents will sell to other agents (A2A).
-
-But one key part is still missing: agents do not have a standard way to subscribe to external services and pay for them.
-
-In this talk, we’ll show how to give agents full autonomy to discover and pay for new external MCP-enabled services, even if those services don’t support it, using a little-known MCP server nesting capability. We’ll also cover how to monetize AI agents and the B2A/A2A business models.
-
-
-
----related links---
-
-https://x.com/jancurn
-https://www.linkedin.com/in/jancurn/
-https://blog.apify.com/author/jancurn/
-https://apify.com/
-
-Timestamps
-[00:00] Emergence of Intelligence
-
-[02:42] Apify and the Agentic Economy
-
-[07:30] Challenges and Solutions for Agent Autonomy
-
-[11:50] Demo of Apify's MCP Integration
-
-[15:52] Monetization and Future Outlook
-
-## Shipping an Enterprise Voice AI Agent in 100 Days - Peter Bar, Intercom Fin
-
-- Upload date: 2025-07-18
-- Video: https://www.youtube.com/watch?v=HOYLZ7IVgJo
-- Transcript: raw/20250718_HOYLZ7IVgJo/HOYLZ7IVgJo.en-orig.vtt
-- Metadata: raw/20250718_HOYLZ7IVgJo/HOYLZ7IVgJo.info.json
-
-What does it take to go from blank page to live enterprise voice agent in 100 days?
-
-That’s the challenge we took on with Fin Voice at Intercom. Enterprise customer service demands high-quality, reliable voice interactions - but delivering that fast means wrestling with tough problems like latency, hallucinations, voice quality, and answer accuracy.
-
-We rapidly evaluated and integrated a full voice stack - including transcription, language model, text-to-speech, retrieval-augmented generation, and telephony - while designing tools that fit seamlessly into existing human support workflows.
-
-In this session, I’ll share key lessons from our accelerated development of Fin Voice. We'll explore the technical and operational hurdles we faced, the trade-offs we made, and how we built deployment and handover tools that work for customer service teams. You'll leave with insights into building AI-driven voice products that are both powerful and practical.
-
-About Peter Bar
-I’m Peter Bar, a Product Lead with over 10 years of experience in the tech industry. At Intercom, I’m responsible for Voice AI initiatives and led the development and launch of Fin Voice, our AI voice agent. My background spans both B2B and consumer tech, blending technical depth with strategic product leadership. Before Intercom, I drove growth and customer experience efforts at Deliveroo (food delivery) and worked on music discovery products at Shazam. I hold a Master’s degree in Computer Science from Imperial College London.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Full Spec MCP: Hidden Capabilities of the MCP spec — Harald Kirschner, Microsoft/VSCode
-
-- Upload date: 2025-07-18
-- Video: https://www.youtube.com/watch?v=ExeD-8gFUMM
-- Transcript: raw/20250718_ExeD-8gFUMM/ExeD-8gFUMM.en-orig.vtt
-- Metadata: raw/20250718_ExeD-8gFUMM/ExeD-8gFUMM.info.json
-
-The true power of Model Context Protocol emerges when clients and servers collaborate across the full spectrum of the specification. This talk presents practical examples of how VS Code's comprehensive implementation of MCP transforms the capabilities of AI assistants, making them more contextual, efficient, and user-friendly. We'll showcase advanced features like dynamic tool discovery and workspace-aware roots, demonstrating how they create experiences impossible with standard tools integrations while confronting the reality gap between MCP's theoretical potential and practical implementation challenges.
-
-Timestamps
-
-[00:00] Introduction to MCP and its Current State
-
-[01:42] The "MCP is just another API wrapper" Syndrome
-
-[02:51] VS Code's Full Spec Support
-
-[03:40] Challenges with Tools and Solutions
-
-[06:35] Resources and Their Importance
-
-[07:41] Sampling
-
-[09:21] Developer Experience Improvements
-
-[10:28] Staying Updated with the Spec
-
-[10:53] Key Upcoming Features and Community Efforts
-
-[12:46] Call to Action
-
-## What We Learned from Using LLMs in Pinterest — Mukuntha Narayanan, Han Wang, Pinterest
-
-- Upload date: 2025-07-16
-- Video: https://www.youtube.com/watch?v=XdAWgO11zuk
-- Transcript: raw/20250716_XdAWgO11zuk/XdAWgO11zuk.en-orig.vtt
-- Metadata: raw/20250716_XdAWgO11zuk/XdAWgO11zuk.info.json
-
-Pinterest Search integrates Large Language Models (LLMs) to enhance relevance scoring by combining search queries with rich multimodal content, including visual captions, link-based text, and user curation signals. A semi-supervised learning framework enables scaling to large and multilingual datasets, going beyond English and limited human labels. These LLM-driven models are distilled into efficient architectures for real-time serving, with experimental validation and large-scale deployment demonstrating substantial improvements in search relevance for Pinterest users worldwide.
-
-
-Timestamps
-[00:00] Introduction to Pinterest and its search functionality.
-
-[01:52] Overview of the Pinterest search backend architecture.
-
-[02:29] The search relevance model.
-
-[02:55] Key learnings from using LLMs for search relevance.
-
-[05:04] The value of VLM-generated captions and user actions as content annotations.
-
-[07:16] Productionizing LLMs with knowledge distillation.
-
-[12:14] The utility of relevance-tuned LLM embeddings as general-purpose semantic representations.
-
-[13:55] Q&A session.
-
-## 360Brew: LLM-based Personalized Ranking and Recommendation - Hamed and Maziar, LinkedIn AI
-
-- Upload date: 2025-07-16
-- Video: https://www.youtube.com/watch?v=U0S6CfzAY5c
-- Transcript: raw/20250716_U0S6CfzAY5c/U0S6CfzAY5c.en-orig.vtt
-- Metadata: raw/20250716_U0S6CfzAY5c/U0S6CfzAY5c.info.json
-
-We will give a talk about our journey of building a foundation model for solving ranking and recommendation tasks
-
-About Hamed Firooz
-Principal AI Scientist at LinkedIn Core AI. With 15 years in large-scale AI, Hamed leads the 50-person team behind LinkedIn’s 150-billion-parameter foundation model that personalizes the experience for hundreds of millions of members. Before LinkedIn, he led multimodal Content Understanding model at Meta AI that handle tens of billions of daily requests. His work spans open-source projects like Hateful Memes benchmark dataset and papers at venues such as NeurIPS and ICML.
-
-About Maziar Sanjabi
-Maziar is a Principal Scientist at LinkedIn AI, where he leads efforts in training large language models (LLMs) for personalization tasks. Prior to joining LinkedIn AI, he worked at Meta AI, applying AI research to the development of multimodal systems for real-world applications. With over a decade of experience in AI research across both industry and academia, Maziar has a proven track record of building and scaling cutting-edge AI technologies, including LLMs, multimodal systems, and privacy-aware AI. He has published over 60 papers, many of which have been featured in top-tier AI conferences such as NeurIPS, ICML, ICLR, ACL, EMNLP, and CVPR.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## RL for Autonomous Coding — Aakanksha Chowdhery, Reflection.ai
-
-- Upload date: 2025-07-16
-- Video: https://www.youtube.com/watch?v=QluDzKVfp6A
-- Transcript: raw/20250716_QluDzKVfp6A/QluDzKVfp6A.en-orig.vtt
-- Metadata: raw/20250716_QluDzKVfp6A/QluDzKVfp6A.info.json
-
-The models and techniques to build fully autonomous coding agents - not just coding copilots - are already here. In this talk, former Google DeepMind staff research scientist, now CEO of Reflection Misha Laskin will present new research on post-training open weight LLMs for autonomous SWE tasks. He’ll focus on how scaling LLMs with Reinforcement Learning improves the autonomous coding capabilities of LLMs, and provide insight on the technical challenges required to train such systems at scale.
-
-About Aakanksha Chowdhery 
-Aakanksha Chowdhery is a Research Leader at Reflection AI pushing the frontier of reasoning for coding agents. She is also an adjunct faculty at Stanford. Before her startup journey, she was the technical Lead of 540B PaLM model and lead researcher at Google in pre-training, scaling, and post-training of Large Language Models. She was a lead researcher in Gemini, PaLM-E, MedPaLM, and Pathways project at Google. Prior to joining Google, she led interdisciplinary research initiatives at Microsoft Research and Princeton University across machine learning and distributed systems.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-Timestamps:
-[00:00:00] Introduction to LLMs and Scaling Laws
-
-[00:01:41] Emergent Behavior in LLMs
-
-[00:04:00] Reinforcement Learning from Human Feedback (RLHF)
-
-[00:06:11] Inference-Time Scaling and Verification
-
-[00:10:33] Challenges with Inference-Time Scaling
-
-[00:11:16] The Next Frontier: Reinforcement Learning for Correct Generation
-
-[00:13:20] Challenges in Scaling RL
-
-[00:14:58] Autonomous Coding as a Prime Domain for RL
-
-[00:15:53] Reflection.ai's Mission
-
-## Transforming search and discovery using LLMs — Tejaswi & Vinesh, Instacart
-
-- Upload date: 2025-07-16
-- Video: https://www.youtube.com/watch?v=PjaVHm_3Ljg
-- Transcript: raw/20250716_PjaVHm_3Ljg/PjaVHm_3Ljg.en-orig.vtt
-- Metadata: raw/20250716_PjaVHm_3Ljg/PjaVHm_3Ljg.info.json
-
-Learn how Instacart uses cutting-edge LLMs to redefine search and product discovery. 
-- Explore innovative solutions overcoming traditional search engine limitations for grocery shopping.
-- Discover how LLMs enhance user intent understanding and generate engaging content.
-- See practical applications of LLM technology to improve search relevance and user experience.
-
-About Tejaswi Tenneti
-Tejaswi Tenneti is currently a Director of Machine Learning at Instacart, the north american leader in online grocery. Prior to Instacart, Tejaswi was a tech lead in machine learning teams at Apple and Oracle where he worked on various applications related to Search and Recommendations for local maps data and Enterprise. Tejaswi holds a BS from IIIT, Allahabad and an MS from Stanford University specializing in AI
-
-About Vinesh Gudla
-Vinesh is a Staff Machine Learning Engineer at Instacart on the search and discovery team. He has previously worked on balancing multiple objectives in search in a marketplace and has authored numerous well-received blogposts and articles about his work. He is currently working on bringing Generative AI to production at ecommerce scale at Instacart.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## The State of Generative Media - Gorkem Yurtseven, FAL
-
-- Upload date: 2025-07-16
-- Video: https://www.youtube.com/watch?v=P370D8Kmlkw
-- Transcript: raw/20250716_P370D8Kmlkw/P370D8Kmlkw.en-orig.vtt
-- Metadata: raw/20250716_P370D8Kmlkw/P370D8Kmlkw.info.json
-
-Generative AI is reshaping the creative landscape, enabling the production of images, audio, and video with unprecedented speed and sophistication. This session offers an in-depth exploration of the current state of generative media, highlighting cutting-edge models, platforms, and tools that are transforming the industry.
-
-About Gorkem Yurtseven
-Gorkem Yurtseven is the co-founder and CTO of fal, a generative media platform empowering developers to build with cutting-edge AI models. Previously, he was a Senior Software Engineer at AWS and holds a degree in Computer Engineering from the University of Pennsylvania.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-
-Timestamps
-[00:00:00] Introduction to Generative Media
-
-[00:03:49] Evolution of Generative Image Models
-
-[00:05:11] Impact on Industries
-
-[00:10:50] The Rise of Generative Video
-
-[00:14:23] Future of Generative Media
-
-[00:16:33] Conclusion and Call to Action
-
-## Teaching Gemini to Speak YouTube: Adapting LLMs for Video Recommendations to 2B+DAU - Devansh Tandon
-
-- Upload date: 2025-07-16
-- Video: https://www.youtube.com/watch?v=LxQsQ3vZDqo
-- Transcript: raw/20250716_LxQsQ3vZDqo/LxQsQ3vZDqo.en-orig.vtt
-- Metadata: raw/20250716_LxQsQ3vZDqo/LxQsQ3vZDqo.info.json
-
-YouTube recommendations drive the majority of video watch time for billions of daily users. Traditionally powered by large embedding models (LEMs), we're undertaking a fundamental shift: rebuilding our recommendation stack using foundation models like Gemini. This talk dives into our engineering journey adapting general-purpose LLMs (Gemini) for the highly specialized, dynamic, and massive-scale task of YouTube recommendations.
-
-We'll discuss:
-
-SemanticID: creating a "language" for YouTube videos, from our paper last year – Better Generalization with Semantic IDs: A Case Study in Ranking for Recommendations
-Adapting Gemini checkpoints to understand SemanticID
-Generative Video Retrieval with prompts
-There’s a lot of attention on the LLM-led transformation of Search (with AI Overviews, Perplexity, ChatGPT-Search etc). However, across large consumer apps, it’s the recommendation systems & feeds that drive most consumer engagement, not just search. This talk is about the LLM-led transformation of recommendations & feeds – building a recommendation engine on top of Gemini.
-
-About Devansh Tandon
-Devansh Tandon is a Product Manager at Google, leading YouTube’s discovery system and GenAI efforts. At YouTube, Devansh leads a team of research scientists and ML engineers to develop the recommendation engine, which powers the majority of YouTube watchtime for billions of daily active users.
-
-He led Google DeepMind & YouTube partnerships, and has launched GenAI products including video summaries & AI dubbing for YouTube. At DeepMind, Devansh led the development of a new generative recommendation system – adapting Gemini to power YouTube recommendations – from research to scaled consumer launch.
-
-Previously, Devansh has led AI teams in Google Search, Google News and Google Ads. He graduated Magna Cum Laude from Yale University, with a BS in Computer Science and Economics.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Netflix's Big Bet: One model to rule recommendations: Yesu Feng, Netflix
-
-- Upload date: 2025-07-16
-- Video: https://www.youtube.com/watch?v=AbZ4IYGbfpQ
-- Transcript: raw/20250716_AbZ4IYGbfpQ/AbZ4IYGbfpQ.en-orig.vtt
-- Metadata: raw/20250716_AbZ4IYGbfpQ/AbZ4IYGbfpQ.info.json
-
-Discuss the foundation model strategy for personalization at Netflix based on this post https://netflixtechblog.com/foundation-model-for-personalized-recommendation-1a0bd8e02d39 and recent developments.
-
-About Yesu Feng
-Yesu Feng is a staff research scientist/engineer at Netflix, his work focused on generative foundation models for personalized recommendation. Before Netflix, he was at Linkedin and later Uber, worked on homepage feed and marketplace optimization, respectively.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Measuring AGI: Interactive Reasoning Benchmarks for ARC-AGI-3 — Greg Kamradt, ARC Prize Foundation
-
-- Upload date: 2025-07-16
-- Video: https://www.youtube.com/watch?v=3XmFPwjG8pg
-- Transcript: raw/20250716_3XmFPwjG8pg/3XmFPwjG8pg.en-orig.vtt
-- Metadata: raw/20250716_3XmFPwjG8pg/3XmFPwjG8pg.info.json
-
-ARC Prize Foundation is building the North Star for AGI—rigorous, open benchmarks that track reasoning progress in modern AI. We'll show why static AGI evaluations are useful, but fall short when comparing models to human intelligence. Sneak peak preview of ARC-AGI-3: a dynamic, game-like benchmark launching Q1 '26.
-
-About Greg Kamradt   
-Greg Kamradt is President of the ARC Prize Foundation, the ARC‑AGI benchmark series that challenges frontier AI models on out‑of‑distribution reasoning tasks.​ He has taught thousands of developers to build production AI applications.​
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Recsys Keynote: Improving Recommendation Systems & Search in the Age of LLMs - Eugene Yan, Amazon
-
-- Upload date: 2025-07-16
-- Video: https://www.youtube.com/watch?v=2vlCqD6igVA
-- Transcript: raw/20250716_2vlCqD6igVA/2vlCqD6igVA.en-orig.vtt
-- Metadata: raw/20250716_2vlCqD6igVA/2vlCqD6igVA.info.json
-
-Recommendation systems and search have long adopted advances in language modeling, from early adoption of Word2vec for embedding-based retrieval to the transformative impact of GRUs, Transformers, and BERT on predicting user interactions. Now, the rise of large language models (LLMs) is inspiring innovations in model architecture, scalable system designs, and richer customer experiences.
-
-In this keynote, we'll dive into cutting-edge industry applications of LLMs in recommendation and search systems, exploring real-world implementations and measurable outcomes. Join us for an look at current trends and an exciting vision of how LLM-driven techniques will shape the future of content discovery and intelligent search.
-
-About Eugene Yan
-Eugene Yan is a Principal Applied Scientist at Amazon building recommendation systems and AI-powered products that serve customers at scale. He's led ML/AI teams at Alibaba, Lazada, and a Healthtech Series A. He writes about RecSys, LLMs, and engineering at eugeneyan.com.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-Timestamps:
-
-[00:00] Introduction to Language Modeling in Recommendation Systems
-
-[01:31] Challenge 1: Hash-based Item IDs
-
-[02:14] Solution: Semantic IDs
-
-[05:37] Challenge 2: Data Augmentation and Quality
-
-[06:10] Solution: LLM-Augmented Synthetic Data
-
-[06:21] Indeed Case Study
-
-[10:37] Spotify Case Study
-
-[13:34] Challenge 3: Separate Systems and High Operational Costs
-
-[14:24] Solution: Unified Models
-
-[14:51] Netflix Case Study (Unicorn)
-
-[16:46] Etsy Case Study (Unified Embeddings)
-
-[20:26] Key Takeaways
-
-## Bolt.new: How we scaled $0-20m ARR in 60 days, with 15 people — Eric Simons, Bolt
-
-- Upload date: 2025-07-15
-- Video: https://www.youtube.com/watch?v=s8RM8uYxkoY
-- Transcript: raw/20250715_s8RM8uYxkoY/s8RM8uYxkoY.en-orig.vtt
-- Metadata: raw/20250715_s8RM8uYxkoY/s8RM8uYxkoY.info.json
-
-Tiny Teams are the future of how startups are built, and it all comes down to team culture, decision making, tooling choices, and endless grit.
-
-In this talk, Eric will share the high octane insights & learnings of how the 2nd fastest growing product in history _made it_ with a team of less than 15 people.
-
-About Eric Simons
-CEO of Bolt.new
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Rethinking Team Building: how a 30-person Startup serves 50 Million Users — Grant Lee, Gamma
-
-- Upload date: 2025-07-15
-- Video: https://www.youtube.com/watch?v=q8zoXAbmJdI
-- Transcript: raw/20250715_q8zoXAbmJdI/q8zoXAbmJdI.en-orig.vtt
-- Metadata: raw/20250715_q8zoXAbmJdI/q8zoXAbmJdI.info.json
-
-The central thesis of this talk is that in the rapidly evolving age of AI, startups and tech companies should reject the traditional "blitzscaling" model of hyper-growth and specialized roles. Instead, they should focus on building lean, agile teams of generalists and "player coaches" who can adapt quickly to change. Grant Lee argues that investing in brand and culture from day one is a more scalable and sustainable way to build a company than simply hiring more people.
-
-Timestamps
-
-00:00:00 - Introduction to Gamma and its "content-first" philosophy.
-
-00:01:55 - Shifting focus from product innovation to organizational innovation.
-
-00:04:19 - The case for hiring generalists over specialists.
-
-00:06:48 - Introducing the "player coach" leadership model.
-
-00:08:57 - The importance of scaling with brand and culture.
-
-00:12:04 - Q&A session begins.
-
-About Grant Lee
-Grant has spent the past 10+ years building tech startups and has a background in finance and operations. He was interim CFO at Optimizely and the COO of Clearbrain, two YC startups. He grew up in the bay area and studied at Stanford, where he received his B.S. and M.S. in mechanical engineering. He is currently building Gamma, an AI-powered platform to create presentations, websites, and more.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Using OSS models to build AI apps with millions of users — Hassan El Mghari
-
-- Upload date: 2025-07-15
-- Video: https://www.youtube.com/watch?v=gcseUQJ6Gbg
-- Transcript: raw/20250715_gcseUQJ6Gbg/gcseUQJ6Gbg.en-orig.vtt
-- Metadata: raw/20250715_gcseUQJ6Gbg/gcseUQJ6Gbg.info.json
-
-In this talk, Hassan will go over how he builds open source AI apps that get millions of users like roomGPT.io 2.9 million users, restorePhotos.io 1.1 million users, Blinkshot.io 1 million visitors, and LlamaCoder.io 1.4 million visitors. He'll go over his journey in AI, demo some of the apps that he's built, and dig into his tech stack and code to explain how he builds these apps from scratch. He’ll also go over how to market them and go over his top tips and tricks for building great full-stack AI applications quickly and efficiently.
-
-This talk will start from first principles and give you a glimpse into Hassan’s workflow of idea - working app - many users. Attendees should come out of this session equipped with the resources to build impressive AI applications and understand some of the behind the scenes of how they’re built and marketed. This will hopefully serve as an educational and inspirational talk that encourages builders to go build cool things.
-
-About Hassan El Mghari
-Hassan El Mghari is a software engineer based in New York specializing in building full-stack AI applications. His AI applications have a combined user base of over 3 million. He currently leads the developer relations team at Together.ai, where his work includes building example AI apps, creating content, and educating developers on AI development.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Benchmarks Are Memes: How What We Measure Shapes AI—and Us - Alex Duffy, Every.to
-
-- Upload date: 2025-07-15
-- Video: https://www.youtube.com/watch?v=W3khHzajE04
-- Transcript: raw/20250715_W3khHzajE04/W3khHzajE04.en-orig.vtt
-- Metadata: raw/20250715_W3khHzajE04/W3khHzajE04.info.json
-
-Benchmarks shape more than just AI models—they shape our future. The things we choose to measure become self-fulfilling prophecies, guiding AI toward specific abilities and, ultimately, defining humanity’s evolving role in the AI era. Today’s benchmarks have propelled incredible progress, but now we have an exciting opportunity: thoughtfully designing benchmarks around what genuinely matters to us—cooperation, creativity, education, and meaningful human experiences.
-
-In this talk, we’ll explore how benchmarks function as powerful cultural memes, influencing not only technical outcomes but societal direction. Drawing on practical examples we have seen at Every consulting in industries like finance, journalism, education, and even personally making AI play diplomacy. We’ll uncover what makes a benchmark impactful, approachable, and inspiring. You’ll see our engaging new AI Diplomacy benchmark demo, illustrating vividly how thoughtful evaluation design can excite both engineers and the wider community.
-
-You’ll hopefully walk away inspired and equipped to define benchmarks intentionally, helping steer AI toward outcomes that truly matter.
-
-About Alex Duffy
-I’m Alex Duffy. I lead AI strategy at Every Inc., helping teams across industries put AI into practice. Previously, I co-founded AI Camp, teaching thousands of students to build their own AI projects, and launched Salt AI, creating tools to help researchers, designers, and creators bring ideas to life. I’m passionate about building teams and tools to empower people with AI. I really believe in creating technology that works for us, not that is work for us
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Building a 10 person unicorn - Max Brodeur-Urbas, Gumloop
-
-- Upload date: 2025-07-15
-- Video: https://www.youtube.com/watch?v=Qw9P1zvCupE
-- Transcript: raw/20250715_Qw9P1zvCupE/Qw9P1zvCupE.en-orig.vtt
-- Metadata: raw/20250715_Qw9P1zvCupE/Qw9P1zvCupE.info.json
-
-An overview of how Gumloop is scaling automation across companies like Instacart, Webflow and Shopify with less than 10 people.
-
-About Max Brodeur-Urbas
-ex-microsoft engineer, started Gumloop in my bedroom and scaled to millions in ARR with a hyper-lean team
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Small AI Teams with Huge Impact — Vik Paruchuri, Datalab
-
-- Upload date: 2025-07-15
-- Video: https://www.youtube.com/watch?v=K-iYKDMFKhE
-- Transcript: raw/20250715_K-iYKDMFKhE/K-iYKDMFKhE.en-orig.vtt
-- Metadata: raw/20250715_K-iYKDMFKhE/K-iYKDMFKhE.info.json
-
-We scaled Datalab 5x this year - to 7-figure ARR, with customers that include tier 1 AI labs. We train custom models for document intelligence (OCR, layout), with popular repos surya and marker.
-
-I'll talk about a new approach to building AI teams, including lessons I learned from Jeremy Howard, and how we manage building popular repos, scaling revenue, and training models with a tiny team.
-
-About Vikas Paruchuri
-CEO of Datalab
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Prompt Engineering and AI Red Teaming — Sander Schulhoff, HackAPrompt/LearnPrompting
-
-- Upload date: 2025-07-14
-- Video: https://www.youtube.com/watch?v=_BRhRh7mOX0
-- Transcript: raw/20250714__BRhRh7mOX0/_BRhRh7mOX0.en-orig.vtt
-- Metadata: raw/20250714__BRhRh7mOX0/_BRhRh7mOX0.info.json
-
-Learn from the creator of Learn Prompting, the internet's 1st Prompt Engineering guide (released 2 months before ChatGPT), and HackAPrompt, the World's 1st AI Red Teaming competition.
-
-My talk will cover topics ranging from the history of prompt engineering to the most advanced research-backed prompt engineering techniques.
-
-I will also discuss the origins of prompt injection and AI red teaming, as well as the current state of industry and the need for agentic red teaming.
-
-https://www.hackaprompt.com
-
-About Sander Schulhoff
-I'm Sander Schulhoff, the founder and CEO of HackAPrompt and Learn Prompting. I created the first Prompt Engineering guide on the internet, two months before ChatGPT was released, which has taught 3 million people how to prompt ChatGPT. I also ran, in collaboration with OpenAI, the first AI Red Teaming Hackathon (an event that nearly doubled a similar one by the White House). Today, HackAPrompt partners with the Frontier AI labs to produce research that makes their models more secure. My background is primarily in NLP and deep reinforcement learning. I recently led the team behind The Prompt Report, the most comprehensive study of prompt engineering ever done. Our 76-page survey, co-authored with OpenAI, Microsoft, Google, Princeton, Stanford, and other leading institutions, analyzed 1,500+ academic papers and covered 200+ prompting techniques.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Automating Escrow with USDC and AI - Corey Cooper, Circle
-
-- Upload date: 2025-07-14
-- Video: https://www.youtube.com/watch?v=AXMdSqdoGHM
-- Transcript: raw/20250714_AXMdSqdoGHM/AXMdSqdoGHM.en-orig.vtt
-- Metadata: raw/20250714_AXMdSqdoGHM/AXMdSqdoGHM.info.json
-
-This workshop explores how USDC, AI, and smart contracts can streamline escrow by automating fund release based on task or process verification. By using AI to interpret off-chain signals such as document validation, delivery confirmations, or milestone completion, we can trigger secure, programmable USDC payouts without manual intervention. The result is a faster, trust-minimized escrow system ideal for services, trade, and gig economy use cases.
-
-About Corey Cooper
-I'm a developer who was once a high school basketball scout, where I built scouting technology to make data more accessible for college coaches. A lifelong Lakers fan from Atlanta, I love basketball and have spent my career building enterprise software. With over 15 years of experience as a solutions engineer, I bring a mix of technical depth, business insight, and hands-on leadership to product launches. Today, I am passionate about the programmability of money, now empowered by smart contracts, and how it is reshaping what is possible in digital finance.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## Survive the AI Knife Fight: Building Products That Win — Brian Balfour, Reforge
-
-- Upload date: 2025-07-14
-- Video: https://www.youtube.com/watch?v=1MVh05GDydE
-- Transcript: raw/20250714_1MVh05GDydE/1MVh05GDydE.en-orig.vtt
-- Metadata: raw/20250714_1MVh05GDydE/1MVh05GDydE.info.json
-
-If you’ve ever been blocked by vague specs, shifting goals, or chasing “vibes,” things have only gotten messier in the age of AI. Everyone is obsessing over engineers doing PM work and PMs cranking out prototypes—but that skips the hardest question: What should we build, and why will it win? Today’s competitive landscape is a knife-fight. When it’s trivial to ship “something,” true differentiation becomes brutally difficult.
-
-At Reforge, we built AI agents that analyze user feedback at scale, perform real-time market analysis, model feature impact, and run continuous user research -- pushing us to rethink what "product work” actually looks like.
-
-In this talk, we’ll explore:
-
-- How to find a seam within the red ocean of incumbents, well-funded upstarts, and the horde of startups.
-- How to use real-time feedback analysis, competitive monitoring, synthetic users, AI-native research to understand impact before it ships.
-- How to architect workflows where human intuition and machine intelligence ship product side by side.
-
-About Brian Balfour
-Brian Balfour, Founder/CEO of Reforge, previously VP Growth @ HubSpot. Prior to Reforge, he has started multiple VC backed companies, and grown user bases to millions of daily active users.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## How LLMs work for Web Devs: GPT in 600 lines of Vanilla JS - Ishan Anand
-
-- Upload date: 2025-07-13
-- Video: https://www.youtube.com/watch?v=ZuiJjkbX0Og
-- Transcript: raw/20250713_ZuiJjkbX0Og/ZuiJjkbX0Og.en-orig.vtt
-- Metadata: raw/20250713_ZuiJjkbX0Og/ZuiJjkbX0Og.info.json
-
-Don't be intimidated. Modern AI can feel like magic, but underneath the hood are principles that web developers can understand, even if you don't have a machine learning background. In this workshop, we'll explore a complete GPT-2 inference implementation built entirely in Vanilla JS. This JavaScript translation of the popular "Spreadsheets-are-all-you-need" approach will let you debug and step through a real LLM line by line without the overhead of learning a new language, framework, or even IDE.
-
-All the major LLMs, including ChatGPT, Claude, DeepSeek, and Llama, inherit from GPT-2's architecture, making this exploration a solid foundation to understand modern AI systems and comprehend the latest research.
-
-While we won't have time to cover everything, you'll gain the essential knowledge to understand the key concepts that matter when building with LLMs, including how they:
-
-- Convert raw text into meaningful tokens
-- Represent semantic meaning through vector embeddings
-- Train neural networks through gradient descent
-- Generate text with sampling algorithms like top-k, top-p, and temperature
-
-This intense but beginner-friendly workshop is designed specifically for web developers diving into ML and AI for the first time. It’s your "missing AI degree" in just two hours. You'll walk away with an intuitive mental model of how Transformers work that you can apply immediately to your own LLM-powered projects.
-
-About Ishan Anand
-Ishan Anand is an AI consultant and technology executive specializing in Generative AI and LLMs. He created "Spreadsheets-are-all-you-need," an innovative course that demystifies large language models by implementing GPT-2 entirely in Excel. As the former CTO and co-founder of Layer0 (acquired by Edgio), and most recently Vice-President of Product Management for Edgio, he's led teams in developing cutting-edge solutions in web performance, edge computing, and AI/ML for enterprise web applications. Ishan brings deep technical expertise from his dual B.S. degrees in Mathematics and EECS from MIT, combined with a unique ability to make advanced technology accessible to broader audiences.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-Timestamps
-00:00 Introduction to the Talk and Conference
-01:24 Mission: Breaking Clark's Third Law (Demystifying LLMs)
-02:45 Overview of the "Spreadsheets are All You Need" Approach
-04:14 Today's Approach: Vanilla JavaScript Implementation
-04:47 Background Needed for the Workshop
-05:22 Key Resources for the Workshop
-05:50 Simplified GPT-2 Diagram as a Roadmap
-07:07 Quick Tour of the JavaScript Implementation of GPT-2
-12:20 Understanding Large Language Models (LLMs)
-17:47 Tokenization: Splitting Text into Subword Units
-33:12 Embeddings: Token and Position Embeddings
-56:51 Attention Mechanism
-01:02:57 Multi-Layer Perceptron (MLP) and Backpropagation
-01:16:07 Iteration: Refining Predictions Across Blocks
-01:17:49 Language Head: Turning Embeddings Back into Tokens
-01:23:18 Chat GPT vs. GPT-2: Key Innovations
-01:31:37 Summary and Conclusion
-01:35:13 Q&A Session
-
-## [Workshop] AI Pipelines and Agents in Pure TypeScript with Mastra.ai — Nick Nisi, Zack Proser
-
-- Upload date: 2025-07-12
-- Video: https://www.youtube.com/watch?v=FWlRHPZWyHE
-- Transcript: raw/20250712_FWlRHPZWyHE/FWlRHPZWyHE.en-orig.vtt
-- Metadata: raw/20250712_FWlRHPZWyHE/FWlRHPZWyHE.info.json
-
-This hands-on workshop introduces Mastra.ai, a TypeScript framework that streamlines the development of agentic AI systems compared to traditional approaches using LangChain and vector databases. Participants will learn to build structured AI workflows with composable tools and reliable control, enabling them to create internal AI assistants that can handle requests like data cleaning, email drafting, and document summarization with minimal code. The session covers Mastra installation, running a local MCP server, defining tools and agents in TypeScript, using the Mastra playground, and implementing practical examples such as RAG setups and tool-chaining agents—all designed to equip attendees with the skills to develop scalable AI-driven internal tools based on sound software engineering principles rather than just experimental prompts.
-
-About Nick Nisi
-Nick Nisi is an elite software engineer who is a veteran of open source web development, a lover of karaoke, an advocate for diversity in tech, a conference organizer extraordinaire, a lover of new experiences, and a beacon of expertise, kindness and hope for his development team.
-
-About Zack Proser
-Zachary Proser builds AI systems that actually ship. For over thirteen years at Cloudmark, Cloudflare, Gruntwork, Pinecone, and now WorkOS, he’s worked across the stack—from infrastructure to interface—shipping production code.
-
-At WorkOS, he shares what he learns in the open: creating sample applications and architectures, technical guides, and real-world lessons that make identity, security, and AI accessible. His posts are known for their copy-paste readiness and refusal to hand-wave.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## AI Engineering with the Google Gemini 2.5 Model Family - Philipp Schmid, Google DeepMind
-
-- Upload date: 2025-07-11
-- Video: https://www.youtube.com/watch?v=zK9lYrLbjSg
-- Transcript: raw/20250711_zK9lYrLbjSg/zK9lYrLbjSg.en-orig.vtt
-- Metadata: raw/20250711_zK9lYrLbjSg/zK9lYrLbjSg.info.json
-
-Hands on Workshop on learning to use Gemini 2.5 Pro in combination with Agentic tooling and MCP Servers.
-
-About Philipp Schmid  
-Philipp Schmid is a Senior AI Developer Relations Engineer at Google DeepMind working on Gemini, Gemma with the mission to help every developer and builder to create and benefit from AI in a responsible way.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## The New Code — Sean Grove, OpenAI
-
-- Upload date: 2025-07-11
-- Video: https://www.youtube.com/watch?v=8rABwKRsec4
-- Transcript: raw/20250711_8rABwKRsec4/8rABwKRsec4.en-orig.vtt
-- Metadata: raw/20250711_8rABwKRsec4/8rABwKRsec4.info.json
-
-In an era where AI transforms software development, the most valuable skill isn't writing code - it's communicating intent with precision. This talk reveals how specifications, not prompts or code, are becoming the fundamental unit of programming, and why spec-writing is the new superpower.
-
-Drawing from production experience, we demonstrate how rigorous, versioned specifications serve as the source of truth that compiles to documentation, evaluations, model behaviors, and maybe even code.
-
-Just as the US Constitution acts as a versioned spec with judicial review as its grader, AI systems need executable specifications that align both human teams and machine intelligence. We'll look at OpenAI's Model Spec as a real-world example.
-
-Finally, we'll end on some open questions about what the future of developer tooling looks like in a world where communication once again becomes the most important artifact in engineering.
-
-About Sean Grove
-Sean Grove works on alignment reasoning at OpenAI, helping translate high‑level intent into enforceable specs and evaluations. Before OpenAI he founded OneGraph, a GraphQL developer‑tools startup later acquired by Netlify. He has delivered dozens of technical talks worldwide on developer tooling, APIs, AI UX and design, and now alignment.
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter

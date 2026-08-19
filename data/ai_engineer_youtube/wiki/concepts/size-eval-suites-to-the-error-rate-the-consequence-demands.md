@@ -1,0 +1,31 @@
+# Size Eval Suites to the Error Rate the Consequence Demands
+
+Summary: Translate an accuracy percentage into daily harmed users before accepting it, then size the eval suite by the statistics of detecting that failure rate — catching a 1% error with confidence takes hundreds of tests, which is why high-stakes systems combine synthetic cases with continuous human evaluation and grade outputs on a harm scale rather than a correctness bit.
+
+Use when:
+- Someone reports agent accuracy as a headline percentage and you need to decide whether it is good enough.
+- Setting the size of a regression or release eval suite for a production agent.
+- Choosing between synthetic eval data, human evaluation, or both.
+- Designing a grading rubric for a system whose failures are not equally bad.
+
+Details:
+- Convert the rate into people: at 10,000 calls a day, "most agentic systems would claim 80%, 90% accuracy, and that's great for them. For us, even the 99% is pretty bad" — 1% error means 100 people a day get the wrong appointment type, showing up on the wrong date or time, or worse, missing a critical appointment. "It's not just an annoyance." The acceptable error rate is a property of volume × consequence, not of the model. (Hippocratic AI, 16:24-17:06)
+- Detection arithmetic, which sets the suite size: "you need about 450 tests to be 99% sure that you can catch this 1% error rate, and 1,900 tests to be able to see that you've caught it like 10 times." A 20-case eval suite cannot observe a 1% failure mode at all, so a passing suite of that size carries no information about it. (17:06-17:23)
+- Consequence: synthetic data alone does not get you there — "you can't purely rely on synthetic data from our experience to be able to get to the scale of accuracy" — so evaluation is a standing human operation. 7,000+ trained clinicians on the platform have run roughly 700,000-800,000 clinical conversations as continuous evaluation, alongside synthetic cases. (17:24-17:52)
+- Grade on harm, not correctness: outputs are scored on the same scale used for human clinicians — correctness, no harm, minor harm, severe harm, death — rather than only "correct/valid." Reusing the profession's existing human rubric also makes the AI-vs-human comparison meaningful. (17:53-18:18)
+- Reported result across five shipped generations: 99.89% on no-harm, against about 81% for humans on the same rubric. The explanation offered is structural rather than flattering — "AI systems don't get tired and unfortunately we do," and humans don't have "30 plus supervisors helping us at any given point of time" (see [Run Parallel Specialist Models Behind a Speak-Up Gate](run-parallel-specialist-models-with-a-speak-up-gate.md)). (18:18-18:44)
+- Benchmarks you need may not exist: none of the common voice benchmarks covered the workflows that decide their product (lab results check, IVR navigation), and no good benchmark existed for the empathy the product depends on, so they built one — HEART — and published the paper. When a quality dimension is load-bearing and unmeasured, building the benchmark is part of the work. (06:47-07:21, 18:45-19:14)
+
+Related topics:
+- [Evaluation](../topics/evaluation.md)
+- [Healthcare Operations](../topics/healthcare-operations.md)
+- [Voice Agents](../topics/voice-agents.md)
+
+Related concepts:
+- [Evaluate voice agents with traces, transcripts, audio checks, and simulations](evaluate-voice-agents-with-traces-transcripts-audio-checks-and-simulations.md)
+- [Simulate Voice Agents With Probabilistic Conversation Evals](simulate-voice-agents-with-probabilistic-conversation-evals.md)
+- [Hire humans for context, verification, and accountability](hire-humans-for-context-verification-and-accountability.md)
+- [Run Parallel Specialist Models Behind a Speak-Up Gate](run-parallel-specialist-models-with-a-speak-up-gate.md)
+
+Sources:
+- [200 Million Patient Interactions Later — Vivek Muppalla, Hippocratic AI](../sources/20260819_AN65uc645mE.md), 06:47-19:14
