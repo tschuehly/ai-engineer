@@ -17,6 +17,8 @@ Details:
 - Caveat carried by the source: it is a vendor's positioning talk (Reactor sells the platform), the argument is by historical analogy rather than measurement, and Ahres concedes current output quality limits it — the video-editing products built on it are "not very good yet just because of the quality of the models" (10:32-10:57).
 - Independent corroboration of the *medium* claim from someone with no stake in it, plus the bar it has to clear: Arturo Nunez, building a conventional (non-generated) game engine, agrees that on-the-fly world models are "going to be a different medium even if we call them video games," and names the threshold as an engineering fact rather than a taste — games "have to render 60 frames per second. And doing that at 4K resolutions in real time with a world model, I think it's still far away. And on top of that… simulating physics and stuff, it's very difficult," 17:33-18:20. The medium argument and the readiness argument are separable: something can be a genuinely new category and still be years from the frame-rate, resolution, and simulation budget the incumbent medium already meets.
 
+- A second inference provider arrives at the same "slot machine" diagnosis from the cost side rather than the affordance side, which is useful because the two arguments are independent. Keegan McCallum (uRun) describes today's creative loop as "a slot machine type approach where you're setting up a prompt and maybe some keyframes and spending about $10 a minute to try and get the shot that you want," and the fix as steering "in real time in under a second while they're generating" (Xln-On3syJk 05:02-05:26). Ahres says the batch artifact gives you no point of intervention; McCallum says each non-intervention costs money. Both land on mid-generation steering as the thing being bought, and McCallum supplies the price at which it becomes ordinary: ~3 hours of continuous generation for $10 (03:34-03:52).
+
 Related topics:
 - [Generative Media](../topics/generative-media.md)
 - [Product Strategy](../topics/product-strategy.md)
@@ -27,7 +29,10 @@ Related concepts:
 - [Interactive world models need memory, control, and live prompting](interactive-world-models-need-memory-control-and-live-prompting.md)
 - [Expose explicit control signals for generative media models](expose-explicit-control-signals-for-generative-media-models.md)
 - [Reliability and Stylistic Range Are Opposite Model Positions](reliability-and-stylistic-range-are-opposite-model-positions.md)
+- [Track the Efficiency Axis in Generative Video, Not Only Quality](track-the-efficiency-axis-in-generative-video-not-only-quality.md)
+- [Steer in Real Time, Then Render the Chosen Shot at Full Fidelity](steer-in-real-time-then-render-the-chosen-shot-at-full-fidelity.md)
 
 Sources:
 - [The Next Medium: Why Real-Time Interactive Video Changes Everything — Ahmed Ahres, Reactor](../sources/20260818_5dCAmSDOAjI.md), 01:11-07:05, 10:32-10:57
 - [The Next Game Engine Won't Have a Manual — Arturo Nunez, Nereu](../sources/20260818_VBCDhRrvlYo.md), 17:33-18:20
+- [Generative Video at the Speed of Light — Keegan McCallum, uRun](../sources/20260818_Xln-On3syJk.md), 03:34-05:26

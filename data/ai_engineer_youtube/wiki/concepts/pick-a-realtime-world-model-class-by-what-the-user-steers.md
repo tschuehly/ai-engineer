@@ -16,6 +16,9 @@ Details:
 - What users actually ship on these, as reported: interactive livestreams where viewers type and vote on what happens next, medical simulation ("what if I put this medicine? What if I remove this medicine?") as a training playground, cooking simulation, and real-time video editing by prompt, click, or voice (10:06-11:00).
 - Maturity caveats to carry: the video-editing products are "not very good yet just because of the quality of the models" (10:44-10:50), avatars are unsolved by his own account, and the demoed frame rate is 16 FPS (14:28-14:36). Several model names above are ASR-damaged in the captions and should be verified against vendor documentation before use.
 
+- An independent enumeration from a second inference provider lands on the same families and adds a discriminator for class one. Keegan McCallum (uRun) lists "world models which can keep consistency over long horizons and you can control in a fine-grained way, the camera and the viewport"; "avatar models like we just talked about with LemonSlice"; and "video-to-video models that can transform what you're seeing in real time, almost like a magic mirror" (Xln-On3syJk 02:42-03:11). The camera-and-viewport phrasing is a sharper handle than "steer the scene": what the user moves is the observer, not the content. The video-to-video class is also the one with a live *input* stream — a webcam — rather than a prompt, which is a different serving shape (03:52-04:31).
+- Provenance discrepancy worth carrying about Helios, since both sources name it: Ahres presents it as a model "from ByteDance," while McCallum, who serves it, says "Helios is a distill of [Wan] 2.1 14B" and that it "came out in March" (Xln-On3syJk 01:41-02:48). These are not necessarily in conflict — a distill can be produced by one party from another lab's open weights — but the two talks attribute the model differently, so check vendor documentation before repeating either lineage.
+
 Related topics:
 - [Generative Media](../topics/generative-media.md)
 - [Models](../topics/models.md)
@@ -26,6 +29,8 @@ Related concepts:
 - [Serve Real-Time Video as Stateful Streaming Sessions, Not Batch Jobs](serve-realtime-video-as-stateful-streaming-sessions.md)
 - [Real-Time World-Model Evaluation Is Still Human Judgment](realtime-world-model-evaluation-is-still-human-judgment.md)
 - [Robotics data pyramids combine scarce real trajectories with synthetic data](robotics-data-pyramids-combine-scarce-real-trajectories-with-synthetic-data.md)
+- [Steer in Real Time, Then Render the Chosen Shot at Full Fidelity](steer-in-real-time-then-render-the-chosen-shot-at-full-fidelity.md)
 
 Sources:
 - [The Next Medium: Why Real-Time Interactive Video Changes Everything — Ahmed Ahres, Reactor](../sources/20260818_5dCAmSDOAjI.md), 00:39-00:52, 04:47-11:50, 14:28-14:36
+- [Generative Video at the Speed of Light — Keegan McCallum, uRun](../sources/20260818_Xln-On3syJk.md), 01:41-04:31

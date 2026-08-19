@@ -46,8 +46,11 @@ Chaitanya Asawa (Abridge) adds the two cost dials that sit *outside* per-request
 
 The cheapest dial of all is not serving the request at all. Todd Fisher's guitar project needs pitch-shifted singing samples that WORLD produces far too slowly for a live audio thread, and rather than optimize the transform he moves it off the request path: [pre-bake transforms too heavy for the real-time path](../concepts/pre-bake-transforms-too-heavy-for-the-realtime-path.md), running it once per possible input offline so the runtime is a lookup — each fret maps to a finished sample. What licenses the substitution is an enumerable control surface, and what it costs is coverage: he baked only five vowel sounds, and the output is honestly "not quite your opera singer." That makes it the opposite end of this topic's range from quantization, distillation, batching, and routing, all of which make the live computation cheaper rather than deleting it, and it is unavailable exactly where those matter most — an open-ended prompt has no finite key to bake against.
 
+Generative video is where this topic's cost work has moved furthest fastest, and Keegan McCallum (uRun) states the result as a change of unit rather than a speedup: [track the efficiency axis in generative video, not only quality](../concepts/track-the-efficiency-axis-in-generative-video-not-only-quality.md). A model distilled from open 14B weights now generates at roughly last year's frontier quality for about a hundredth of the cost of a minutes-long generation, so the planning unit becomes dollars per hour of continuous generation — $10 for about three hours, $50 for about fifteen — instead of dollars per clip or per retry. That is the same shape as this topic's token-cost arithmetic but with an unusual property: the cheap tier is not merely a smaller model, it is a *different interaction*, because a generation you can steer mid-flight replaces a batch attempt you can only rerun. The residual gap is narrow and specific rather than diffuse (motion quality), which is exactly the kind of discriminator a routing decision needs, and the supply of such models is no longer scarce — "at least 40 models with real-time capabilities and long horizon generation capabilities released this year."
+
 ## Key Concepts
 
+- [Track the Efficiency Axis in Generative Video, Not Only Quality](../concepts/track-the-efficiency-axis-in-generative-video-not-only-quality.md) - a distilled real-time video model buys last year's frontier quality at ~1/100th the cost, repricing the workload per session-hour.
 - [Pre-Bake Transforms Too Heavy for the Real-Time Path](../concepts/pre-bake-transforms-too-heavy-for-the-realtime-path.md) - when the control input is enumerable, precompute every result offline and turn the real-time step into a lookup.
 - [Decompose the Deliverable and Post-Train a Small Model per Section](../concepts/decompose-the-deliverable-and-post-train-a-model-per-section.md) - split a long structured output along its own sections and serve each with a small post-trained model, so cost and latency track per-part difficulty instead of the whole artifact's.
 - [Gate Always-On Listening With Cheap Event Detectors](../concepts/gate-always-on-listening-with-cheap-event-detectors.md) - an ambient system's dominant cost is deciding when to act, so chain cheap fast gates over the stream and reserve heavy models for the moments they fire on.
@@ -117,6 +120,7 @@ The cheapest dial of all is not serving the request at all. Todd Fisher's guitar
 
 ## Open Questions
 
+- Does a per-session-hour price make continuous generative workloads plannable, or does steering-driven usage vary too much between users for an hourly unit to hold?
 - How large can a pre-baked result set get before storage, build time, and staleness cost more than serving the transform live?
 - What measures the recall of a cheap gate in front of an expensive model? Abridge's in-visit order capture only pays because most of the stream never reaches the heavy model, but a missed trigger produces no output to score and no error to log, and no source describes how gate misses are detected.
 - How should teams evaluate the latency and quality tradeoff between preprocessing with small models and sending broader raw context to a larger agent model?
@@ -136,6 +140,7 @@ The cheapest dial of all is not serving the request at all. Todd Fisher's guitar
 
 ## Sources
 
+- [Generative Video at the Speed of Light — Keegan McCallum, uRun](../sources/20260818_Xln-On3syJk.md)
 - [While my guitar gently speaks — Todd Fisher, Philo Ventures](../sources/20260818_E_Txocq-Lrw.md)
 - [Voice In, Visuals Out: The Agony and the Ecstasy - Allen Pike, Forestwalk Labs](../sources/20260628_65X0pQ6Lmbg.md)
 - [You Might Not Need 50 Diffusion Steps — Ziv Ilan, Nvidia](../sources/20260616_gHs5ZiY80PM.md)

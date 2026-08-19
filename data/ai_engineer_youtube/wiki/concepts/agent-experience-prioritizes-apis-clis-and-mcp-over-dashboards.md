@@ -16,6 +16,7 @@ Details:
 - Agent-facing CLIs and APIs should run during development when they are part of the coding loop; CI-only feedback with long latency weakens iterative agent workflows (16:37-17:18).
 - Friedman frames the CLI as a workflow surface for coding agents: developers can run agents in the background, collect logs, pipe outputs, and chain specialized generation, coverage, and review agents across SDLC tasks. (14:32-17:25)
 - Burazin adds that APIs and readable docs are the baseline for agent experience, but the practical test is whether an agent can complete the task without a human clicking buttons, typing into terminals, reading logs, or debugging missing setup. 03:07-06:29, 14:30-15:02
+- The pattern now shows up in infrastructure categories far from web hosting. Keegan McCallum, launching a real-time generative-video inference platform, treats the agent surface as a launch requirement rather than a later port: "in 2026, [we] don't just need platforms, we need software factories and ways for agents [to] interact with these. And so we've actually built one that will let folks hook into a CLI or an MCP server and build these kinds of applications," shipped next to the human-facing React component and Python runtime (Xln-On3syJk 06:53-07:58).
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -36,3 +37,4 @@ Sources:
 - [Developer Experience in the Age of AI Coding Agents - Max Kanat-Alexander, Capital One](../sources/20251223_rT2Del5pwg4.md), 04:36-05:07, 16:37-17:18
 - [Vibe Coding with Confidence - Itamar Friedman, Qodo](../sources/20250806_n991Yxo1aOI.md), 14:32-17:25
 - [AX is the only Experience that Matters - Ivan Burazin, Daytona](../sources/20250724_e9sLVMN76qU.md), 03:07-06:29, 14:30-15:02
+- [Generative Video at the Speed of Light — Keegan McCallum, uRun](../sources/20260818_Xln-On3syJk.md), 06:53-07:58

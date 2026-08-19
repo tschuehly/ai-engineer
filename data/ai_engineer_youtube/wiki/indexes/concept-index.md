@@ -1075,6 +1075,7 @@
 
 ## Inference
 
+- [Track the Efficiency Axis in Generative Video, Not Only Quality](../concepts/track-the-efficiency-axis-in-generative-video-not-only-quality.md) - a distilled real-time video model buys last year's frontier quality at ~1/100th the cost.
 - [Pre-Bake Transforms Too Heavy for the Real-Time Path](../concepts/pre-bake-transforms-too-heavy-for-the-realtime-path.md) - the cheapest answer to a real-time budget is deleting the live computation, available whenever the control input is enumerable.
 - [Gate Always-On Listening With Cheap Event Detectors](../concepts/gate-always-on-listening-with-cheap-event-detectors.md) - an ambient system spends most of its compute deciding that no request exists, so chain cheap gates and reserve heavy models for the moments they fire on.
 - [Decompose the Deliverable and Post-Train a Small Model per Section](../concepts/decompose-the-deliverable-and-post-train-a-model-per-section.md) - split a long structured output along its own sections so cost tracks per-part difficulty without a difficulty classifier.
@@ -1142,6 +1143,9 @@
 
 ## Generative Media
 
+- [Track the Efficiency Axis in Generative Video, Not Only Quality](../concepts/track-the-efficiency-axis-in-generative-video-not-only-quality.md) - real-time output is last year's frontier quality at ~1/100th the cost, so the unit becomes dollars per session-hour.
+- [Steer in Real Time, Then Render the Chosen Shot at Full Fidelity](../concepts/steer-in-real-time-then-render-the-chosen-shot-at-full-fidelity.md) - explore live at sub-second latency, then commit through a slower high-fidelity model.
+- [Text-First AI Interfaces Exclude People Who Don't Think in Text](../concepts/text-first-interfaces-exclude-people-who-dont-think-in-text.md) - cheap continuous generation makes a visual medium affordable as an interface, not just as output.
 - [Separate What Generated Audio Says From When It Plays](../concepts/separate-what-generated-audio-says-from-when-it-plays.md) - slice the utterance and let external events fire the units, so the model owns content while a performer owns timing, pitch, and expression.
 - [Pre-Bake Transforms Too Heavy for the Real-Time Path](../concepts/pre-bake-transforms-too-heavy-for-the-realtime-path.md) - enumerable control input means the expensive transform can run once per value offline and the runtime becomes a lookup.
 - [Segment Synthesized Speech With Multiple Cues, Then Let a Human Fix the Rest](../concepts/segment-synthesized-speech-with-multiple-cues-and-manual-repair.md) - energy gaps plus sonority peaks get close, and a drag-to-edit boundary UI is cheaper than a third heuristic.
@@ -1188,6 +1192,7 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Text-First AI Interfaces Exclude People Who Don't Think in Text](../concepts/text-first-interfaces-exclude-people-who-dont-think-in-text.md) - a chat-shaped product excludes visual thinkers, and cheap generated video is what makes the alternative affordable.
 - [Scope the Assistant to Getting the User Unstuck, Not One-Shotting the Artifact](../concepts/scope-the-assistant-to-getting-users-unstuck-not-one-shotting.md) - when the process is the product rather than the artifact, the AI removes blockers instead of producing the output.
 - [Real-Time Generation Changes the Medium, Not Just the Latency](../concepts/real-time-generation-changes-the-medium-not-the-latency.md) - compete on what the user can do with output mid-generation rather than on output quality.
 - [Reliability and Stylistic Range Are Opposite Model Positions](../concepts/reliability-and-stylistic-range-are-opposite-model-positions.md) - segment creative products by how much certainty the user arrives with, and let that choose the model's distribution.
@@ -2123,6 +2128,7 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Steer in Real Time, Then Render the Chosen Shot at Full Fidelity](../concepts/steer-in-real-time-then-render-the-chosen-shot-at-full-fidelity.md) - a two-tier explore-then-commit loop that replaces paying per failed batch attempt.
 - [Hire the User to Own the Judgment Loop](../concepts/hire-the-user-to-own-the-judgment-loop.md) - a seven-step vertical AI build that stops before iteration until the domain expert is on staff.
 - [Generate Eval Data by Reversing the Inference Workflow](../concepts/generate-eval-data-by-reversing-the-inference-workflow.md)
 - [Build Synthetic Records Coarse to Fine by Emulating How They Were Produced](../concepts/build-synthetic-records-coarse-to-fine-by-emulating-their-source-process.md)

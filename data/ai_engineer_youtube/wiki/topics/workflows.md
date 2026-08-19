@@ -216,8 +216,11 @@ Anuj Iravane (Anterior) contributes a generation workflow with an unusual owners
 
 Ayush Bhardwaj (Allos AI) offers a build order for vertical AI whose interesting feature is a deliberate stop. Seven steps: formulate a narrow problem, identify proprietary data, model the problem as a prompt written "after the person who you are trying to replace," add observability — and then "you don't iterate yet, you hire the user." The pause is the whole argument, because the first four steps "fit one screen" and produce something that looks shippable while nobody on the team can tell whether it is any good. Once the expert is on staff, the loop this topic normally starts with becomes runnable, and its rungs are specific: the expert narrows prompts, curates sources (a practitioner "knows which sources are more reliable than the other," the way an engineer distinguishes credible venues from influencers), encodes ordering — "if you follow five steps to solve a problem, you just cannot do it in any random order. There has to be a logical flow" — and only then judges, so that a career's worth of judgment "is now turning into agents." That is [hiring the user to own the judgment loop](../concepts/hire-the-user-to-own-the-judgment-loop.md), and it sits one step earlier than Anterior's expert-review tooling and skill-file authorship: those arrangements hand a pipeline to experts the company already employs, whereas this one is about a team that has none and must buy the judgment before any loop exists. The loop's byproduct is the asset the company started without — "at this point you're kind of generating your own data… that exercise itself is generating a crazy data set of what works and what does not work" — and the improvement ladder is explicitly cost-ordered, with error analysis over observability logs as the cheapest, highest-ROI rung and fine-tuning carrying a treadmill cost, since each new base model release means fine-tuning again.
 
+Generative-media authoring supplies a workflow shape this topic has not carried: a two-tier loop where the cheap tier makes the decision and the expensive tier makes the artifact. Keegan McCallum (uRun) describes today's video-creation loop as a slot machine — a prompt, maybe some keyframes, "about $10 a minute to try and get the shot that you want" — and the replacement as [steering in real time and then rendering the chosen shot at full fidelity](../concepts/steer-in-real-time-then-render-the-chosen-shot-at-full-fidelity.md): sub-second steering while the model generates, then a slower high-fidelity render of the result you converged on. The generalizable part is not video-specific. Whenever attempts are paid and quality is only knowable after the fact, moving the intervention point *inside* the attempt converts a gamble into a search — and the pattern's load-bearing assumption is that the cheap tier is representative of the expensive one, which is the thing to test before adopting it. The same live surface has a second use in this topic's supervision thread: "piloting an agent that you're able to look over its shoulder and see what it's generating in real time," which is streamed agent progress applied to media instead of tool calls.
+
 ## Key Concepts
 
+- [Steer in Real Time, Then Render the Chosen Shot at Full Fidelity](../concepts/steer-in-real-time-then-render-the-chosen-shot-at-full-fidelity.md) - explore with a cheap steerable tier, commit with a slow high-fidelity one, instead of paying per failed batch attempt.
 - [Hire the User to Own the Judgment Loop](../concepts/hire-the-user-to-own-the-judgment-loop.md) - a seven-step vertical AI build that deliberately stops before iteration until the domain expert is staff, then runs prompts → sources → decision procedure → judgment.
 - [You Cannot Iterate on Output You Cannot Judge](../concepts/you-cannot-iterate-on-output-you-cannot-judge.md) - the reason the build order pauses: the cheap first four steps outrun the team's ability to evaluate what they produced.
 - [Build Synthetic Records Coarse to Fine by Emulating How They Were Produced](../concepts/build-synthetic-records-coarse-to-fine-by-emulating-their-source-process.md) - layer a long artifact along the process that generates it, keep each prompt payload small, and reconcile the parallel branches with a consistency eval.
@@ -612,6 +615,7 @@ Ayush Bhardwaj (Allos AI) offers a build order for vertical AI whose interesting
 
 ## Open Questions
 
+- In a two-tier explore-then-commit loop, what has to be carried from the cheap tier into the expensive one for the committed artifact to match what the user approved?
 - Which repeated research phases can be compressed without changing the human decision owner?
 - How should teams decide when a failure-driven context update is durable enough to enter the shared knowledge base?
 - How should a loop decide when to stop, ask for human review, or continue to the next ticket?
@@ -659,6 +663,7 @@ Ayush Bhardwaj (Allos AI) offers a build order for vertical AI whose interesting
 
 ## Sources
 
+- [Generative Video at the Speed of Light — Keegan McCallum, uRun](../sources/20260818_Xln-On3syJk.md)
 - [Research to Reality: Bringing Frontier ML Research to Production - Vaidas Razgaitis, Higharc](../sources/20260628_OXMMN-XbxwA.md)
 - [The Agentic AI Engineer - Benedikt Sanftl, Mutagent](../sources/20260629_pSto5YaNGUo.md)
 - [Field Guide to Fable — Thariq Shihipar, Anthropic](../sources/20260706_9fubhllmsBU.md)

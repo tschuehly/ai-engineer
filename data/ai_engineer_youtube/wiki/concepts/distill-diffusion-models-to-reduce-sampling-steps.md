@@ -16,6 +16,9 @@ Details:
 - It is a post-training technique, so it needs data and must converge well ("garbage in, garbage out") and costs more compute, time, and proficiency than enabling caching or quantization; FastGen's hybrid distillation recipe held quality while stabilizing training (gHs5ZiY80PM 11:53-12:44).
 - Hardware bar is moderate: distillation does not need top-tier GB200 — it runs on Hopper (H100/H200) and Blackwell (B200/B300) and costs far less than pre-training, scaling with model size (small 2-4B video models need much less) (gHs5ZiY80PM 16:50-17:48).
 
+- A shipped instance of the technique, with numbers attached to the outcome rather than the method: Helios, the real-time video model uRun serves, "is a distill of [Wan] 2.1 14B" — an open 14-billion-parameter video model — and reached production in March. Its output is "about at the same quality as the frontier models were last year" and costs roughly a hundredth of a minutes-long generation, with the residual gap showing up as motion quality (Xln-On3syJk 01:16-02:48). Two things generalize: the base can be someone else's open weights rather than your own teacher, and the achievable position is a one-year quality lag at two orders of magnitude less cost, which is the trade a product team is actually deciding on.
+- Field-wide adoption rather than one vendor's trick: "at least 40 models with real-time capabilities and long horizon generation capabilities released this year," and "these are techniques that are being applied all over the place, not just the one model" (Xln-On3syJk 02:42-03:23).
+
 Related topics:
 - [Generative Media](../topics/generative-media.md)
 - [Inference](../topics/inference.md)
@@ -26,7 +29,9 @@ Related concepts:
 - [Stack Additive Diffusion Optimizations for Real-Time Generation](stack-additive-diffusion-optimizations-for-real-time-generation.md)
 - [Production inference combines model support with cluster operations](production-inference-combines-model-support-with-cluster-operations.md)
 - [Scale Text-Diffusion Quality With More Denoising Steps](scale-text-diffusion-quality-with-more-denoising-steps.md) - the same denoising-step lever in the text modality, where more steps trade latency for quality.
+- [Track the Efficiency Axis in Generative Video, Not Only Quality](track-the-efficiency-axis-in-generative-video-not-only-quality.md) - what a distilled real-time video model is worth in cost and quality terms.
 
 Sources:
 - [Building Generative Image & Video models at Scale - Sander Dieleman, Google DeepMind](../sources/20260421_xOP1PM8fwnk.md), 02:17-02:27, 28:04-29:50
 - [You Might Not Need 50 Diffusion Steps — Ziv Ilan, Nvidia](../sources/20260616_gHs5ZiY80PM.md), 09:22-12:44, 16:50-17:48
+- [Generative Video at the Speed of Light — Keegan McCallum, uRun](../sources/20260818_Xln-On3syJk.md), 01:16-03:23
