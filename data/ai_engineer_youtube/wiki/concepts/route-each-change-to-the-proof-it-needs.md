@@ -17,6 +17,7 @@ Details:
   - Verify with traces, evals, and shadow mode — the software-engineering discipline of verification does not go away.
   - Separate the writer from the reviewer/tester: "if I came up with an exam and then took it and scored myself, it's not productive."
   - Engineer rails, observability, and rollback — "build the system that builds the system, because read spends your attention once."
+- Maven Clinic supplies a team-policy implementation of the routing decision and moves the call to the *author*: "we allow engineers to self-identify whether they still need code review. If they think this PR is simple enough, I feel very confident, I don't need anybody to take a look… We let them merge, but we still hold them accountable." Routing without mandatory review only works because accountability does not transfer — the author cannot buy safety by opting out. The rest of the policy constrains what can be routed at all: a 500-line cap per PR and stacked PRs for large features, which is the "decompose long PRs into atomic reviewable PRs" row of the routing table enforced as a limit rather than left to judgment. (Maven Clinic, 11:43-12:32)
 - Capability drift makes this framing time-dependent: rising model capability pushes everyone toward the Lopopolo end, and the review layer moves — yesterday inspect outputs and read code, today inspect task direction, maybe tomorrow inspect the loops. "Capability drift changes where proof belongs; it doesn't remove the requirement of proof." (17:42-17:57) The Anthropic Fable-5 framing echoes it: "we used to check if Claude is doing the work right; now I check if Claude is doing the right work," and Karpathy: "it's never felt so tempting to stop looking at code at all — but don't do this in production." (16:28)
 - The closing rule of thumb: "Not every line in 2026 needs your eyes. Every system still needs your judgment." (21:13)
 
@@ -33,3 +34,4 @@ Related concepts:
 
 Sources:
 - [Should AI Engineers Still Read Code in 2026? The Z/L Continuum — Alex Volkov, ThursdAI](../sources/20260710_ZpK5PWX2YRM.md), 12:17-21:13
+- [How to build an AI-Native Health Company — Dan Feng, Maven Clinic](../sources/20260819_WJRdLNhrsLQ.md), 11:43-12:32

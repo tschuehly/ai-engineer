@@ -1,6 +1,7 @@
 # Concept Index
 
 ## Agents
+- [Sort Failures by Whether the User Can Retry](../concepts/sort-failures-by-whether-the-user-can-retry.md)
 - [Ground Agent Actions in an Existing Domain Transaction Standard](../concepts/ground-agent-actions-in-an-existing-domain-transaction-standard.md)
 - [Treat Every External System of Record as Non-Authoritative](../concepts/treat-every-external-system-of-record-as-non-authoritative.md)
 - [Give Enterprise Agents Tiered Database Memory With an Escape Hatch](../concepts/give-enterprise-agents-tiered-database-memory-with-an-escape-hatch.md)
@@ -451,6 +452,8 @@
 
 ## Coding Agents
 
+- [Commit at Sprint Scale When Implementation Is Cheap](../concepts/commit-at-sprint-scale-when-implementation-is-cheap.md)
+- [Earn Release Confidence From Repeated Runs and Post-Launch Sampling](../concepts/earn-release-confidence-from-repeated-runs-and-post-launch-sampling.md)
 - [Stage Agentic-Engineering Adoption With a Delegation Maturity Model](../concepts/stage-agentic-engineering-adoption-with-a-delegation-maturity-model.md)
 - [Drive Org-Wide Agentic Adoption Through Champions and AI-Ready Repos](../concepts/drive-org-wide-agentic-adoption-through-champions-and-ai-ready-repos.md)
 - [Cut Coding-Agent Cost by Fixing the Input, Not the Model or Output](../concepts/cut-coding-agent-cost-by-fixing-the-input-not-the-model-or-output.md)
@@ -1013,6 +1016,8 @@
 
 ## Healthcare Operations
 
+- [Sort Failures by Whether the User Can Retry](../concepts/sort-failures-by-whether-the-user-can-retry.md)
+- [Earn Release Confidence From Repeated Runs and Post-Launch Sampling](../concepts/earn-release-confidence-from-repeated-runs-and-post-launch-sampling.md)
 - [Ground Agent Actions in an Existing Domain Transaction Standard](../concepts/ground-agent-actions-in-an-existing-domain-transaction-standard.md)
 - [Treat Every External System of Record as Non-Authoritative](../concepts/treat-every-external-system-of-record-as-non-authoritative.md)
 - [Give Enterprise Agents Tiered Database Memory With an Escape Hatch](../concepts/give-enterprise-agents-tiered-database-memory-with-an-escape-hatch.md)
@@ -1121,6 +1126,8 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Commit at Sprint Scale When Implementation Is Cheap](../concepts/commit-at-sprint-scale-when-implementation-is-cheap.md)
+- [Sort Failures by Whether the User Can Retry](../concepts/sort-failures-by-whether-the-user-can-retry.md)
 - [Layer Brand Voice Into Four Composable Prompt Tiers](../concepts/layer-brand-voice-into-composable-prompt-tiers.md)
 - [Design AI Systems Requirements-First With a Four-Phase Framework](../concepts/design-ai-systems-requirements-first-with-a-four-phase-framework.md)
 - [Elicit Requirements as the Non-Automatable Bottleneck](../concepts/elicit-requirements-as-the-non-automatable-bottleneck.md)
@@ -1202,6 +1209,8 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Sort Failures by Whether the User Can Retry](../concepts/sort-failures-by-whether-the-user-can-retry.md)
+- [Earn Release Confidence From Repeated Runs and Post-Launch Sampling](../concepts/earn-release-confidence-from-repeated-runs-and-post-launch-sampling.md)
 - [Gate Generated Output With a Deterministic Post-Generation Veto](../concepts/gate-generated-output-with-a-deterministic-veto.md)
 - [Tune a Tool Router With a K-Sweep and Guard Its Failure Modes](../concepts/tune-a-tool-router-with-k-sweep-and-guard-its-failure-modes.md)
 - [Optimize an Agent With a Branch-per-Hypothesis Coding-Agent Loop](../concepts/optimize-an-agent-with-a-branch-per-hypothesis-coding-agent-loop.md)
@@ -2010,6 +2019,8 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Commit at Sprint Scale When Implementation Is Cheap](../concepts/commit-at-sprint-scale-when-implementation-is-cheap.md)
+- [Earn Release Confidence From Repeated Runs and Post-Launch Sampling](../concepts/earn-release-confidence-from-repeated-runs-and-post-launch-sampling.md)
 - [Choose the Research Tool by Reuse and Ownership, Not Just Speed](../concepts/choose-the-research-tool-by-reuse-and-ownership.md)
 - [Stage Agentic-Engineering Adoption With a Delegation Maturity Model](../concepts/stage-agentic-engineering-adoption-with-a-delegation-maturity-model.md)
 - [Drive Org-Wide Agentic Adoption Through Champions and AI-Ready Repos](../concepts/drive-org-wide-agentic-adoption-through-champions-and-ai-ready-repos.md)
