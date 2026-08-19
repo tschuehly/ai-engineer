@@ -1,6 +1,8 @@
 # Concept Index
 
 ## Agents
+- [Reuse the Agentic App-Builder Architecture for Non-Code Artifacts](../concepts/reuse-the-agentic-app-builder-shape-for-non-code-artifacts.md) - prompt, sandbox, agent with tools and skills, artifact, render — the same stack builds a video once the artifact is code-shaped and render-checkable.
+- [Editing Real Material Constrains an Agent More Than Generating From Scratch](../concepts/editing-real-material-is-harder-for-agents-than-generating.md) - a blank canvas lets the agent define its own success; the user's messy real footage forces selection and omission against an absolute polish bar.
 - [Expose the Domain's Vocabulary to Agents, Not the Platform's Primitives](../concepts/expose-domain-vocabulary-to-agents-not-platform-primitives.md) - agents reinvent the same solution when the only surface they can speak is implementation primitives; raise the layer instead of the model.
 - [Make Agent Edits Declarative Tags Instead of Generated Code](../concepts/make-agent-edits-declarative-tags-instead-of-generated-code.md) - a closed tag vocabulary as the entire action space: inspectable, reversible, and composable without a sandbox.
 - [Scope the Assistant to Getting the User Unstuck, Not One-Shotting the Artifact](../concepts/scope-the-assistant-to-getting-users-unstuck-not-one-shotting.md) - aim the assistant at the current blocker so the user keeps authorship and learns the domain's language.
@@ -1148,6 +1150,9 @@
 
 ## Generative Media
 
+- [Reuse the Agentic App-Builder Architecture for Non-Code Artifacts](../concepts/reuse-the-agentic-app-builder-shape-for-non-code-artifacts.md) - an agentic video editor is an app builder with the codebase swapped for a Remotion composition and the preview swapped for a render.
+- [Editing Real Material Constrains an Agent More Than Generating From Scratch](../concepts/editing-real-material-is-harder-for-agents-than-generating.md) - the part of the market generation models do not absorb, and the harder agent task.
+- [Hide an Agentic Pipeline Behind Templates and a Manual Editor](../concepts/package-agentic-pipelines-behind-templates-and-a-manual-editor.md) - mobile surface, zero-prompt directional templates, an approval gate on intent, and a familiar editor for the last mile.
 - [Inference Tolerates Degraded GPUs That Training Cannot](../concepts/inference-tolerates-degraded-gpus-that-training-cannot.md) - diffusion transformers serve on one node, so media serving tolerates hardware a training run must eject.
 - [Track the Efficiency Axis in Generative Video, Not Only Quality](../concepts/track-the-efficiency-axis-in-generative-video-not-only-quality.md) - real-time output is last year's frontier quality at ~1/100th the cost, so the unit becomes dollars per session-hour.
 - [Steer in Real Time, Then Render the Chosen Shot at Full Fidelity](../concepts/steer-in-real-time-then-render-the-chosen-shot-at-full-fidelity.md) - explore live at sub-second latency, then commit through a slower high-fidelity model.
@@ -1198,6 +1203,7 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Hide an Agentic Pipeline Behind Templates and a Manual Editor](../concepts/package-agentic-pipelines-behind-templates-and-a-manual-editor.md) - delivering a multi-stage agent workflow to consumers can be harder than building it; remove the prompt instead of teaching it.
 - [Text-First AI Interfaces Exclude People Who Don't Think in Text](../concepts/text-first-interfaces-exclude-people-who-dont-think-in-text.md) - a chat-shaped product excludes visual thinkers, and cheap generated video is what makes the alternative affordable.
 - [Scope the Assistant to Getting the User Unstuck, Not One-Shotting the Artifact](../concepts/scope-the-assistant-to-getting-users-unstuck-not-one-shotting.md) - when the process is the product rather than the artifact, the AI removes blockers instead of producing the output.
 - [Real-Time Generation Changes the Medium, Not Just the Latency](../concepts/real-time-generation-changes-the-medium-not-the-latency.md) - compete on what the user can do with output mid-generation rather than on output quality.
