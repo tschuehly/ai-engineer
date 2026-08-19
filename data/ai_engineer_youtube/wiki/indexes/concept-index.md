@@ -1,6 +1,9 @@
 # Concept Index
 
 ## Agents
+- [Enforce Agent Egress Policy at the Wire Protocol, Below HTTP](../concepts/enforce-agent-egress-policy-below-the-http-layer.md) - the guard has to work on an agent it cannot modify, so it inspects the bytes leaving the process rather than the loop inside it.
+- [Composed Access Defeats Per-System Credential Scoping](../concepts/composed-access-defeats-per-system-credential-scoping.md) - a permissioned MCP tool surface describes the intended action space rather than enforcing it once the agent can spawn subprocesses.
+- [Version-Control and Unit-Test the Agent Permission Policy](../concepts/version-control-and-unit-test-the-agent-permission-policy.md) - treat the agent's permission rules as production code with fixture-based regression tests.
 - [Reuse the Agentic App-Builder Architecture for Non-Code Artifacts](../concepts/reuse-the-agentic-app-builder-shape-for-non-code-artifacts.md) - prompt, sandbox, agent with tools and skills, artifact, render — the same stack builds a video once the artifact is code-shaped and render-checkable.
 - [Editing Real Material Constrains an Agent More Than Generating From Scratch](../concepts/editing-real-material-is-harder-for-agents-than-generating.md) - a blank canvas lets the agent define its own success; the user's messy real footage forces selection and omission against an absolute polish bar.
 - [Expose the Domain's Vocabulary to Agents, Not the Platform's Primitives](../concepts/expose-domain-vocabulary-to-agents-not-platform-primitives.md) - agents reinvent the same solution when the only surface they can speak is implementation primitives; raise the layer instead of the model.
@@ -1306,6 +1309,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Version-Control and Unit-Test the Agent Permission Policy](../concepts/version-control-and-unit-test-the-agent-permission-policy.md) - security policy needs regression tests too: fixture requests flowed through the rule set turn "are the guardrails still working?" into a build step.
 - [Real-Time World-Model Evaluation Is Still Human Judgment](../concepts/realtime-world-model-evaluation-is-still-human-judgment.md) - the consistency of a steered generated session has no automated measure, so human review is the eval of record.
 - [Expert Judgment Bookends the Eval Suite](../concepts/expert-judgment-bookends-the-eval-suite.md) - expert-authored cases before the prompt, a zero-failure bar on the safety subset, and dogfooding for the tone no scorer covers.
 - [Size Your Eval Effort to the Generator–Verifier Gap](../concepts/size-your-eval-effort-to-the-generator-verifier-gap.md) - when checking is nearly as hard as producing, a trustworthy verifier would already be your generator, so the reference must come from outside the model.
@@ -1850,6 +1854,9 @@
 
 ## Security
 
+- [Enforce Agent Egress Policy at the Wire Protocol, Below HTTP](../concepts/enforce-agent-egress-policy-below-the-http-layer.md) - every agent action is bytes on the wire and the dangerous ones are often not HTTP, so the enforcement point is a protocol-parsing proxy that holds credentials, survives tunneling, and treats the agent as a black box.
+- [Composed Access Defeats Per-System Credential Scoping](../concepts/composed-access-defeats-per-system-credential-scoping.md) - read-only credentials and curated MCP tools are correct and insufficient: reach is the composition of grants across systems, and a subprocess bypasses the tool surface.
+- [Version-Control and Unit-Test the Agent Permission Policy](../concepts/version-control-and-unit-test-the-agent-permission-policy.md) - a thousand-line HCL rule file reviewed in git, with fixture requests as unit tests asserting a dangerous action stays blocked.
 - [Hold Unregulated Intimate Data to the Professional-Privilege Bar](../concepts/hold-unregulated-intimate-data-to-the-professional-privilege-bar.md) - intimate consumer disclosures default into training pipelines, server logs, and analytics because no framework marks them as different.
 - [An Audit Trail Is a Chain of Evidence, Not a Developer Log](../concepts/an-audit-trail-is-a-chain-of-evidence-not-a-developer-log.md) - compliance frameworks require every action, every data access, and its authorization; an append-only event log supplies it.
 - [Store Agent Data in Object Storage Beside the Event Log, Not Inside It](../concepts/store-agent-data-in-object-storage-beside-the-event-log.md) - events hold references to immutable schema-driven blobs, so debugging, zero trust, and trifecta containment separate from the payload.

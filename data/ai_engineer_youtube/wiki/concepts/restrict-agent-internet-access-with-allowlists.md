@@ -11,6 +11,7 @@ Details:
 - Codex CLI full-auto mode is described as allowing read/write only within the current directory and permitting network calls only for commands the user auto-approves. 07:53-08:24
 - Hosted Codex network access can be enabled with configurable allowlists and HTTP method controls, giving teams both a maximum-security mode and a more flexible mode for docs or package installation. 08:24-08:56
 - In the GitHub issue example, hostile issue text asks the agent to post repository data to a random URL; model-level detection can flag suspicion, but the decisive control is a system policy that prevents the outbound call. 09:00-09:47
+- **Caveat: domain and HTTP-method allow-lists only cover the HTTP path.** Deno's threat model is an agent that "can just spawn [psql] as a subprocess and start connecting to services" over a non-HTTP protocol, tunneling to a VPC-internal Postgres through an EKS endpoint — traffic an HTTP-layer rule never parses. The allow-list is still the right first control where the agent's egress is HTTP, but for an agent with subprocess access to production systems the enforcement point has to sit [below HTTP, parsing the wire protocol](enforce-agent-egress-policy-below-the-http-layer.md). ([Ryan Dahl](../sources/20260817_MkRYPFIMCSA.md), 04:45-06:33, 07:40-09:58)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -24,3 +25,4 @@ Related concepts:
 
 Sources:
 - [OpenAI on Securing Code-Executing AI Agents - Fouad Matin (Codex, Agent Robustness)](../sources/20250730_w7IMuYsBNr8.md), 05:02-09:47
+- [Security Firewall for Agents — Ryan Dahl, Deno](../sources/20260817_MkRYPFIMCSA.md), 04:45-09:58

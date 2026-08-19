@@ -15,12 +15,15 @@ Details:
 - Network-layer revocation can't be worked around: "the moment you say no," the agent can't fail over to another endpoint because there is no working credential — "it's just a dash," not "the key no longer works, let me try this other thing... I would want to be very helpful here." Contrast with a still-valid key that an over-helpful model reroutes. (11:13-11:46)
 - tsnet (open-source Go library) exposes the same identity primitives so teams can build internal-only MCP servers or API endpoints that read "who made this request?" and force that identity downstream — without "thinking about OAuth or opening it up to everybody." Aperture was deliberately built only on public primitives so it is reproducible. (15:35-16:55)
 - Permissions configure in two places: a gateway "grants" surface (model access, quotas, MCP access, hooks, roles) and the Tailscale ACL/policy file; "application capabilities" attach arbitrary control-plane-guaranteed metadata to an identity, editable as JSON for GitOps. (17:03-18:46)
+- **Independent corroboration, and one delta.** Deno reaches the same no-credential-in-the-box conclusion from the protocol side rather than the identity side: its Claw Patrol proxy "holds credentials… so that your agent software doesn't ever actually see secret values," across cookies, Postgres, ClickHouse, OAuth flows, and AWS SigV4. It also lands on the same substrate — the proxy runs "over Tailscale or WireGuard," with the agents inside a tailnet and the proxy itself acting as "a Tailscale exit node," and reuses Tailscale identity for dashboard auth "so that we don't have to layer on another authentication mechanism." The delta is what happens *after* identity: an identity-aware network decides whether a connection may exist at all, which does not constrain what the agent then says over a connection it is entitled to open. Deno's agents are entitled to reach production Postgres, so the deciding rule has to read the SQL — see [enforcing egress policy at the wire protocol](enforce-agent-egress-policy-below-the-http-layer.md). ([Ryan Dahl](../sources/20260817_MkRYPFIMCSA.md), 10:00-10:42, 14:41-16:12)
+- **The concentration caveat both designs inherit.** Whoever holds the only real credential becomes the highest-value target in the deployment. Dahl states it about his own system — "Claw Patrol itself is holding all of these credentials to production systems. So you have to be very careful with it" — and the same is structurally true of a gateway holding the only provider key. ([Ryan Dahl](../sources/20260817_MkRYPFIMCSA.md), 16:12-16:32)
 
 Related topics:
 - [Security](../topics/security.md)
 - [Infrastructure](../topics/infrastructure.md)
 
 Related concepts:
+- [Enforce Agent Egress Policy at the Wire Protocol, Below HTTP](enforce-agent-egress-policy-below-the-http-layer.md)
 - [Make the LLM Gateway the Agent Observability Chokepoint](make-the-llm-gateway-the-agent-observability-chokepoint.md)
 - [Capability-Based Sandboxes Start With No Authority](capability-based-sandboxes-start-with-no-authority.md)
 - [Treat Agents As Users For Authorization](treat-agents-as-users-for-authorization.md)
@@ -29,3 +32,4 @@ Related concepts:
 
 Sources:
 - [What if the network was the sandbox? — Remy Guercio, Tailscale](../sources/20260601_BM2JX9hqsVQ.md), 00:46-07:10, 11:13-11:46, 15:35-18:46
+- [Security Firewall for Agents — Ryan Dahl, Deno](../sources/20260817_MkRYPFIMCSA.md), 10:00-16:32
