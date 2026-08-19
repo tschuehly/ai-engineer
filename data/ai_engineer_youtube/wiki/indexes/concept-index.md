@@ -1,6 +1,7 @@
 # Concept Index
 
 ## Agents
+- [Hand Domain Experts the Pipeline as Skills](../concepts/hand-domain-experts-the-pipeline-as-skills.md)
 - [Sort Failures by Whether the User Can Retry](../concepts/sort-failures-by-whether-the-user-can-retry.md)
 - [Ground Agent Actions in an Existing Domain Transaction Standard](../concepts/ground-agent-actions-in-an-existing-domain-transaction-standard.md)
 - [Treat Every External System of Record as Non-Authoritative](../concepts/treat-every-external-system-of-record-as-non-authoritative.md)
@@ -719,6 +720,7 @@
 
 ## Context Engineering
 
+- [Build Synthetic Records Coarse to Fine by Emulating How They Were Produced](../concepts/build-synthetic-records-coarse-to-fine-by-emulating-their-source-process.md)
 - [Give Enterprise Agents Tiered Database Memory With an Escape Hatch](../concepts/give-enterprise-agents-tiered-database-memory-with-an-escape-hatch.md)
 - [Treat Every External System of Record as Non-Authoritative](../concepts/treat-every-external-system-of-record-as-non-authoritative.md)
 - [Layer Brand Voice Into Four Composable Prompt Tiers](../concepts/layer-brand-voice-into-composable-prompt-tiers.md)
@@ -1016,6 +1018,8 @@
 
 ## Healthcare Operations
 
+- [Generate Eval Data by Reversing the Inference Workflow](../concepts/generate-eval-data-by-reversing-the-inference-workflow.md)
+- [Hand Domain Experts the Pipeline as Skills](../concepts/hand-domain-experts-the-pipeline-as-skills.md)
 - [Sort Failures by Whether the User Can Retry](../concepts/sort-failures-by-whether-the-user-can-retry.md)
 - [Earn Release Confidence From Repeated Runs and Post-Launch Sampling](../concepts/earn-release-confidence-from-repeated-runs-and-post-launch-sampling.md)
 - [Ground Agent Actions in an Existing Domain Transaction Standard](../concepts/ground-agent-actions-in-an-existing-domain-transaction-standard.md)
@@ -1209,6 +1213,8 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Generate Eval Data by Reversing the Inference Workflow](../concepts/generate-eval-data-by-reversing-the-inference-workflow.md)
+- [Build Synthetic Records Coarse to Fine by Emulating How They Were Produced](../concepts/build-synthetic-records-coarse-to-fine-by-emulating-their-source-process.md)
 - [Sort Failures by Whether the User Can Retry](../concepts/sort-failures-by-whether-the-user-can-retry.md)
 - [Earn Release Confidence From Repeated Runs and Post-Launch Sampling](../concepts/earn-release-confidence-from-repeated-runs-and-post-launch-sampling.md)
 - [Gate Generated Output With a Deterministic Post-Generation Veto](../concepts/gate-generated-output-with-a-deterministic-veto.md)
@@ -1763,6 +1769,7 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Hand Domain Experts the Pipeline as Skills](../concepts/hand-domain-experts-the-pipeline-as-skills.md)
 - [Adopt A2A's Spec as an Internal Front-End/Back-End Contract](../concepts/adopt-a2a-as-an-internal-front-end-back-end-contract.md)
 - [The Fat-Agent Tool Overload Collapses Accuracy and Inflates Latency](../concepts/fat-agent-tool-overload-collapses-accuracy-and-latency.md)
 - [Tune a Tool Router With a K-Sweep and Guard Its Failure Modes](../concepts/tune-a-tool-router-with-k-sweep-and-guard-its-failure-modes.md)
@@ -2019,6 +2026,9 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Generate Eval Data by Reversing the Inference Workflow](../concepts/generate-eval-data-by-reversing-the-inference-workflow.md)
+- [Build Synthetic Records Coarse to Fine by Emulating How They Were Produced](../concepts/build-synthetic-records-coarse-to-fine-by-emulating-their-source-process.md)
+- [Hand Domain Experts the Pipeline as Skills](../concepts/hand-domain-experts-the-pipeline-as-skills.md)
 - [Commit at Sprint Scale When Implementation Is Cheap](../concepts/commit-at-sprint-scale-when-implementation-is-cheap.md)
 - [Earn Release Confidence From Repeated Runs and Post-Launch Sampling](../concepts/earn-release-confidence-from-repeated-runs-and-post-launch-sampling.md)
 - [Choose the Research Tool by Reuse and Ownership, Not Just Speed](../concepts/choose-the-research-tool-by-reuse-and-ownership.md)
