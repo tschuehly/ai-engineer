@@ -25,6 +25,7 @@ Related concepts:
 - [Collaborative plans become executable agent context](collaborative-plans-become-executable-agent-context.md)
 - [Spec-driven development is a tool-portable pattern, not a single product](spec-driven-development-is-a-tool-portable-pattern.md)
 - [Reorder the generated task list to ship an MVP first](reorder-the-generated-task-list-to-ship-an-mvp-first.md)
+- [Spec-Driven Development Without a Feedback Loop Is Waterfall](spec-driven-development-without-a-feedback-loop-is-waterfall.md)
 
 Sources:
 - [Spec-Driven Development: Agentic Coding at FAANG Scale and Quality - Al Harris, Amazon Kiro](../sources/20260109_HY_JyxAZsiE.md), 03:32-06:26

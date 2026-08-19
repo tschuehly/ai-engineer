@@ -13,6 +13,8 @@ Details:
 - Mechanically, the specs are parsed by steps and executed as code, but a human can still write, read, review, and understand them — "the language is on you," so it doubles as living documentation of behavior. 05:15-05:31
 - A parallel reviewable-spec idea applies to UI: a documented design system and pattern library (state the language and rules, e.g. "only one primary button visible on a page at any point in time," with component previews and snippets that agents can see) lets you and the agent review whether generated UI adheres before reuse. 05:59-07:18
 
+- Ankit Jain (Aviator) reaches the same "closer to BDD than TDD" placement from the review side, with one variation worth weighing: instead of a maintained scenario suite, an LLM generates a per-change test plan from the coding session plus codified invariants, and a verification system executes it against a live preview. The readable-behavior property is identical and is justified the same way — "the test plan is now something which even you can share with your product managers, your designers. Everyone can participate because these things are now in English" — but the maintenance claim is stronger and unproven: "you don't have to maintain tests at all. This is creating tests in real time." A generated per-change plan gives up the regression net a persistent Cucumber suite provides, so the two are better read as complements than as substitutes. (YgEv7IQzGdM 10:44-11:43)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -24,6 +26,8 @@ Related concepts:
 - [Generated Tests Need Meaningful Plans, Coverage, and Pruning](generated-tests-need-meaningful-plans-coverage-and-pruning.md)
 - [Use PRDs to align agents on the design concept](use-prds-to-align-agents-on-the-design-concept.md)
 - [Enforce Agent Rules in Git Hooks and CI, Not the Prompt](enforce-agent-rules-in-git-hooks-and-ci-not-the-prompt.md)
+- [Make Intent and Evidence the Review Surface](make-intent-and-evidence-the-review-surface.md)
 
 Sources:
 - [BDD, ADR, PRD, WTF: Capturing Decisions for Humans and AI Alike — Michal Cichra, Safe Intelligence](../sources/20260603_504PvfXou5Y.md), 04:07-07:18
+- [How to Kill the Code Review — Ankit Jain, Aviator](../sources/20260817_YgEv7IQzGdM.md), 10:44-11:43

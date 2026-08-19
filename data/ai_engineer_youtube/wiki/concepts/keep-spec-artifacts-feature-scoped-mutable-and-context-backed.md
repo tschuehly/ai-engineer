@@ -23,6 +23,7 @@ Related concepts:
 - [Retire completed planning docs before they become agent doc rot](retire-completed-planning-docs-before-they-become-agent-doc-rot.md)
 - [Fresh Markdown context mitigates model rot in codegen](fresh-markdown-context-mitigates-model-rot-in-codegen.md)
 - [Encode non-functional requirements as agent-visible context](encode-non-functional-requirements-as-agent-visible-context.md)
+- [Spec-Driven Development Without a Feedback Loop Is Waterfall](spec-driven-development-without-a-feedback-loop-is-waterfall.md)
 
 Sources:
 - [Spec-Driven Development: Agentic Coding at FAANG Scale and Quality - Al Harris, Amazon Kiro](../sources/20260109_HY_JyxAZsiE.md), 08:33-15:15, 48:49-55:24, 01:01:34-01:03:05

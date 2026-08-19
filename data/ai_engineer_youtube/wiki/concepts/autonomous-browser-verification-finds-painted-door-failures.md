@@ -17,6 +17,8 @@ Details:
 - Multimodal model understanding makes browser recordings and screenshots reusable feedback: the model can inspect the visual evidence it produced and iterate from there. 10:16-11:05
 - The same browser-driving idea works as a *third-party benchmark verifier*, not only as the coding agent's own self-check: SWE-Marathon is "the first benchmark to use a computer use agent or CUA verifier" for full-stack product-clone tasks, because "unit test can pass, but the product is probably still unusable and the front end looks terrible." For a Slack-clone task, deterministic unit tests check the API/back-end, then a CUA "uses the browser like a human" — logging in, creating channels, posting messages, reacting with emotes — and scores the app against a rubric. The durable framing: "full stack evals are hard because correctness is not just an API contract. It's whether the user can actually complete the product's intended workflow." (SWE-Marathon 03:49-05:03)
 
+- Ankit Jain (Aviator) points the same capability at a third audience: not the agent's retry loop and not a benchmark scorer, but the human reviewer who has stopped reading diffs. For a new payment form, the verification question is whether the payment system changed, so "an AI agent can go and browse through your application to fill out a form and capture screenshots as evidence," and those screenshots plus "your database snapshots" decide whether the acceptance criterion was met — "you're creating more solid evidence, which now a reviewer can look at and build more confidence that this actually works." The addition to this page is the database snapshot as a paired artifact (the UI can look right while the write did not land) and the framing of browser output as a review artifact rather than an agent self-check. (YgEv7IQzGdM 12:16-13:05)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -27,8 +29,10 @@ Related concepts:
 - [Make validation fast, local, deterministic, and actionable](make-validation-fast-local-deterministic-and-actionable.md)
 - [Do not report agent autonomy without quality accountability](do-not-report-agent-autonomy-without-quality-accountability.md)
 - [Agent managers orchestrate editor, browser, and background agents](agent-managers-orchestrate-editor-browser-and-background-agents.md)
+- [Make Intent and Evidence the Review Surface](make-intent-and-evidence-the-review-surface.md)
 
 Sources:
 - [The 3 Pillars of Autonomy - Michele Catasta, Replit](../sources/20251222_MLhAA9yguwM.md), 08:31-14:56
 - [Defying Gravity - Kevin Hou, Google DeepMind](../sources/20251202_HN-F-OQe6j0.md), 03:14-04:24, 09:48-11:05
 - [SWE-Marathon: Evaluating Coding Agents at Billion-Token Scale - Rishi Desai, Abundant AI](../sources/20260707_Rx8f05JI_WA.md), 03:49-05:03
+- [How to Kill the Code Review — Ankit Jain, Aviator](../sources/20260817_YgEv7IQzGdM.md), 12:16-13:05

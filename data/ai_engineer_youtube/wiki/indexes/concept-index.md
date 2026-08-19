@@ -469,6 +469,11 @@
 
 ## Coding Agents
 
+- [Code Review Carries Alignment, Not Just Correctness](../concepts/code-review-carries-alignment-not-just-correctness.md) - review's knowledge-sharing, mentorship, and onboarding half has no tooling substitute.
+- [Make Intent and Evidence the Review Surface](../concepts/make-intent-and-evidence-the-review-surface.md) - session-derived criteria plus preview-executed evidence replace the diff as what the human reads.
+- [Capture the Coding Session as the Intent Record](../concepts/capture-the-coding-session-as-the-intent-record.md) - the decisions that define a change live in the prompts and are discarded at PR time.
+- [Mine Recurring Review Comments Into an Invariant Registry](../concepts/mine-recurring-review-comments-into-an-invariant-registry.md) - mine the last 1,000 review comments and turn each repeatable one into a guardrail.
+- [Spec-Driven Development Without a Feedback Loop Is Waterfall](../concepts/spec-driven-development-without-a-feedback-loop-is-waterfall.md) - up-front specs are written before the unknowns surface and never amended afterwards.
 - [Commit at Sprint Scale When Implementation Is Cheap](../concepts/commit-at-sprint-scale-when-implementation-is-cheap.md)
 - [Earn Release Confidence From Repeated Runs and Post-Launch Sampling](../concepts/earn-release-confidence-from-repeated-runs-and-post-launch-sampling.md)
 - [Stage Agentic-Engineering Adoption With a Delegation Maturity Model](../concepts/stage-agentic-engineering-adoption-with-a-delegation-maturity-model.md)
@@ -735,6 +740,7 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Capture the Coding Session as the Intent Record](../concepts/capture-the-coding-session-as-the-intent-record.md) - prompts and agent question/answer pairs carry decision history, so they are outputs of a coding run, not debugging noise.
 - [Prompt Caching Sets the Break-Even Bar for Compaction](../concepts/prompt-caching-sets-the-break-even-bar-for-compaction.md) - compaction invalidates the cache, so it must compress by more than the cache discount (up to 50x) before it saves anything.
 - [Benchmark Context-Management Presets Against a Do-Nothing Baseline](../concepts/benchmark-context-management-presets-against-a-do-nothing-baseline.md) - 11 presets on a production agent; untouched history beat every technique and the shipped defaults on recall, cost, and latency at once.
 - [Full History Recalls Details That Summaries Delete](../concepts/full-history-recalls-details-that-summaries-delete.md) - 95% detail recall keeping everything versus 32% after summarizing, with distinctive facts surviving to 800k tokens.
@@ -1314,6 +1320,8 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Make Intent and Evidence the Review Surface](../concepts/make-intent-and-evidence-the-review-surface.md) - a per-change test plan built from session intent and codified invariants, run against a live preview for reviewer-facing evidence.
+- [Mine Recurring Review Comments Into an Invariant Registry](../concepts/mine-recurring-review-comments-into-an-invariant-registry.md) - the team's own repeated review comments become the invariant half of the verification input.
 - [Benchmark Context-Management Presets Against a Do-Nothing Baseline](../concepts/benchmark-context-management-presets-against-a-do-nothing-baseline.md) - vary only the context configuration, include a do-nothing control, and gate-check that the technique under test actually fired.
 - [Measure Agentic Knowledge-Base Browsing Before Adding It](../concepts/measure-agentic-knowledge-base-browsing-before-adding-it.md) - identical recall to a tuned retriever at 50% higher latency, one of two negative results the same harness produced.
 - [Version-Control and Unit-Test the Agent Permission Policy](../concepts/version-control-and-unit-test-the-agent-permission-policy.md) - security policy needs regression tests too: fixture requests flowed through the rule set turn "are the guardrails still working?" into a build step.
@@ -2171,6 +2179,11 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Make Intent and Evidence the Review Surface](../concepts/make-intent-and-evidence-the-review-surface.md) - when output outruns inspection capacity, relocate review to an artifact that still fits human attention.
+- [Capture the Coding Session as the Intent Record](../concepts/capture-the-coding-session-as-the-intent-record.md) - the interaction transcript, not the produced artifact, is what makes a downstream verifier independent.
+- [Code Review Carries Alignment, Not Just Correctness](../concepts/code-review-carries-alignment-not-just-correctness.md) - a review ritual can survive as a formality while the alignment it carried quietly disappears.
+- [Mine Recurring Review Comments Into an Invariant Registry](../concepts/mine-recurring-review-comments-into-an-invariant-registry.md) - a retrospective bulk version of the lesson-to-guardrail loop, with a J-curve payback.
+- [Spec-Driven Development Without a Feedback Loop Is Waterfall](../concepts/spec-driven-development-without-a-feedback-loop-is-waterfall.md) - the test for a spec workflow is whether a path exists back from implementation into the spec.
 - [Steer in Real Time, Then Render the Chosen Shot at Full Fidelity](../concepts/steer-in-real-time-then-render-the-chosen-shot-at-full-fidelity.md) - a two-tier explore-then-commit loop that replaces paying per failed batch attempt.
 - [Hire the User to Own the Judgment Loop](../concepts/hire-the-user-to-own-the-judgment-loop.md) - a seven-step vertical AI build that stops before iteration until the domain expert is on staff.
 - [Generate Eval Data by Reversing the Inference Workflow](../concepts/generate-eval-data-by-reversing-the-inference-workflow.md)
