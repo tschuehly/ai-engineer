@@ -130,8 +130,12 @@ Amol Kapoor (Nori) generalizes the "text-native surface beats spatial automation
 
 Most of this topic is about the tools an agent uses; the mirror question is which tool an AI feature should live inside when its users already have one. Todd Fisher's answer for audio is to [ship AI audio features as plugins inside the host DAW](../concepts/ship-ai-audio-features-as-plugins-inside-the-host-daw.md): a JUCE plugin dropped into Logic Pro "just like any other plugin… where you just plop it in there," chained with the session's existing effects, on the reasoning that "your DAW is effectively your IDE but for musicians and music producers." The host then supplies live input, routing, monitoring, and the backing track, and the plugin's own UI carries only the genuinely new decisions — in his case a clarity dial mixing synthesized tone against generated voice, and a drag-to-edit word-boundary editor. The tradeoff is that the feature now runs inside someone else's real-time audio thread, which is part of why the heaviest processing had to move off the live path.
 
+Kapoor's medium argument has a vocabulary counterpart. Arturo Nunez's account of why agents reinvent the same game-engine camera on every request is that the only nouns available are implementation primitives — mesh, renderer, animator, rigid body, collider, audio source — so a domain intent has nothing to bind to and must be re-derived from parts. His prescription is to [expose the domain's vocabulary to agents rather than the platform's primitives](../concepts/expose-domain-vocabulary-to-agents-not-platform-primitives.md), and the source of that vocabulary is a useful detail: not invented, but taken from the words that already teach the domain ("press A to jump and press A again while you're in the air to do a double jump"). That is the same instinct as grouping raw backend endpoints into fewer human-facing tools and as encoding agent intent server-side, stated as a design rule about *whose* words the tool surface uses. The action side is stricter than most tool surfaces here: Nereu [makes every agent edit a declarative tag rather than generated code](../concepts/make-agent-edits-declarative-tags-instead-of-generated-code.md), with built-in systems querying by tag and no scripting layer at all "on purpose," so the tool catalog is a closed vocabulary the assistant is handed as it grows and the worst outcome of a bad call is a wrong tag a user can delete. Where this topic's code-mode material buys expressiveness and then spends the savings on sandboxes and capability grants, this trades expressiveness away and gets containment for free — and pays for it in the platform team's obligation to decompose everything users might mean into tags and systems.
+
 ## Key Concepts
 
+- [Expose the Domain's Vocabulary to Agents, Not the Platform's Primitives](../concepts/expose-domain-vocabulary-to-agents-not-platform-primitives.md) - name tools with the words that teach the domain rather than the ones that implement it, so common intents are selected instead of re-derived.
+- [Make Agent Edits Declarative Tags Instead of Generated Code](../concepts/make-agent-edits-declarative-tags-instead-of-generated-code.md) - a closed tag vocabulary as the entire action surface: inspectable, reversible, composable, and containable without a sandbox.
 - [Ship AI Audio Features as Plugins Inside the Host DAW](../concepts/ship-ai-audio-features-as-plugins-inside-the-host-daw.md) - deliver into the application that already owns the pipeline and the user's workflow, so the build is only the new signal processing.
 - [Adopt A2A's Spec as an Internal Front-End/Back-End Contract](../concepts/adopt-a2a-as-an-internal-front-end-back-end-contract.md) - use Google's A2A agent-card spec as the internal contract between your own front-end and back-end for development alignment, not to cross an ownership boundary.
 - [Choose a skill's trigger by trading context load against cognitive load](../concepts/choose-skill-trigger-by-trading-context-load-against-cognitive-load.md) - exposing a skill to the model (model-invocation) adds a per-request description and firing unpredictability; keeping it user-only stays deterministic but loads the pilot — a tool-surface budget decision.
@@ -373,6 +377,7 @@ Most of this topic is about the tools an agent uses; the mirror question is whic
 ## Open Questions
 
 - Which AI features belong inside the user's existing host application as a plugin, and which need their own runtime because the host's real-time or process constraints would break them?
+- When a closed tag or descriptor vocabulary is the whole action surface, how should the platform team discover what the vocabulary is missing — from failed agent calls, from user complaints, or from the assistant proposing new tags it wishes existed?
 - When should a workflow be encoded as an MCP tool description, a skill, a local script, or a combination of these?
 - When is server-controlled command prompting a better product surface than visible UI controls?
 - What telemetry is needed to decide that a skill or tool is unused, stale, or actively harmful?
@@ -408,6 +413,7 @@ Most of this topic is about the tools an agent uses; the mirror question is whic
 
 ## Sources
 
+- [The Next Game Engine Won't Have a Manual — Arturo Nunez, Nereu](../sources/20260818_VBCDhRrvlYo.md)
 - [While my guitar gently speaks — Todd Fisher, Philo Ventures](../sources/20260818_E_Txocq-Lrw.md)
 - [Agents in Production: How OpenGov Built and Scaled OG Assist - Gabe De Mesa, OpenGov](../sources/20260626_4uFVSLgD2Q4.md)
 - [The 100-Tool Agent Is a Trap - Sohail Shaikh & Ankush Rastogi, Prosodica](../sources/20260628_vh2VGuQ3zhY.md)

@@ -15,6 +15,7 @@ Details:
 - Why control is the lever in creative products: "the big problem that content creators all have is I don't have the control I need… this is always the thing that any filmmaker or movie producer or any content creator will tell you," and his slogan is "instant feedback is the ultimate level of control," unreachable without real time (05:47-06:23).
 - The market consequence he expects first is advertising generated at view time rather than pre-produced — "why can't I produce an ad in real-time in front of you? We don't need to pre-produce anything" — gated not by capability but by brand risk tolerance, "if their logo has one pixel that is white instead of dark" (06:23-07:05).
 - Caveat carried by the source: it is a vendor's positioning talk (Reactor sells the platform), the argument is by historical analogy rather than measurement, and Ahres concedes current output quality limits it — the video-editing products built on it are "not very good yet just because of the quality of the models" (10:32-10:57).
+- Independent corroboration of the *medium* claim from someone with no stake in it, plus the bar it has to clear: Arturo Nunez, building a conventional (non-generated) game engine, agrees that on-the-fly world models are "going to be a different medium even if we call them video games," and names the threshold as an engineering fact rather than a taste — games "have to render 60 frames per second. And doing that at 4K resolutions in real time with a world model, I think it's still far away. And on top of that… simulating physics and stuff, it's very difficult," 17:33-18:20. The medium argument and the readiness argument are separable: something can be a genuinely new category and still be years from the frame-rate, resolution, and simulation budget the incumbent medium already meets.
 
 Related topics:
 - [Generative Media](../topics/generative-media.md)
@@ -29,3 +30,4 @@ Related concepts:
 
 Sources:
 - [The Next Medium: Why Real-Time Interactive Video Changes Everything — Ahmed Ahres, Reactor](../sources/20260818_5dCAmSDOAjI.md), 01:11-07:05, 10:32-10:57
+- [The Next Game Engine Won't Have a Manual — Arturo Nunez, Nereu](../sources/20260818_VBCDhRrvlYo.md), 17:33-18:20

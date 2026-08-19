@@ -1,6 +1,9 @@
 # Concept Index
 
 ## Agents
+- [Expose the Domain's Vocabulary to Agents, Not the Platform's Primitives](../concepts/expose-domain-vocabulary-to-agents-not-platform-primitives.md) - agents reinvent the same solution when the only surface they can speak is implementation primitives; raise the layer instead of the model.
+- [Make Agent Edits Declarative Tags Instead of Generated Code](../concepts/make-agent-edits-declarative-tags-instead-of-generated-code.md) - a closed tag vocabulary as the entire action space: inspectable, reversible, and composable without a sandbox.
+- [Scope the Assistant to Getting the User Unstuck, Not One-Shotting the Artifact](../concepts/scope-the-assistant-to-getting-users-unstuck-not-one-shotting.md) - aim the assistant at the current blocker so the user keeps authorship and learns the domain's language.
 - [Screen Every Turn for When Advice Stops Being the Right Kind of Help](../concepts/screen-every-turn-for-when-advice-stops-being-the-right-kind-of-help.md) - an inferential background screen for risk the user never states, resolving to a mode change rather than a refusal.
 
 - [Encode the Field's Validated Method, Not General Empathy](../concepts/encode-the-fields-validated-method-not-general-empathy.md) - a profession's outcome-validated framework turns "be helpful" into agent behaviors a rubric can check.
@@ -727,6 +730,7 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Assemble Scene Context by Level of Detail Around the Edit Focus](../concepts/assemble-scene-context-by-level-of-detail-around-the-edit-focus.md) - rendering's LOD idea applied to prompt assembly: full attributes near the user's selection, an identity-and-position stub further out, omission beyond.
 
 - [Build Synthetic Records Coarse to Fine by Emulating How They Were Produced](../concepts/build-synthetic-records-coarse-to-fine-by-emulating-their-source-process.md)
 - [Give Enterprise Agents Tiered Database Memory With an Escape Hatch](../concepts/give-enterprise-agents-tiered-database-memory-with-an-escape-hatch.md)
@@ -1173,6 +1177,7 @@
 - [Orchestrate Generative Media From a Real-Time Voice Agent via Tool Use](../concepts/orchestrate-generative-media-from-a-realtime-voice-agent.md)
 
 ## Vision AI
+- [Bulk-Tag an Asset Library With a Vision Model Over Rendered Views](../concepts/bulk-tag-asset-libraries-with-a-vision-model-for-retrieval.md) - a captioner as offline labeling infrastructure, where systematic omissions become silent retrieval gaps.
 
 - [Filter Training Images Your Captioner Systematically Mis-Describes](../concepts/filter-images-your-captioner-systematically-mis-describes.md) - the generative mirror of caption-erased distinctions: what the caption omits, the model always renders.
 - [Use Sparse Autoencoder Features as an Unsupervised Data Tagger](../concepts/use-sparse-autoencoder-features-as-an-unsupervised-data-tagger.md) - an SAE on a vision model becomes labeling infrastructure rather than an analysis artifact.
@@ -1183,6 +1188,7 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Scope the Assistant to Getting the User Unstuck, Not One-Shotting the Artifact](../concepts/scope-the-assistant-to-getting-users-unstuck-not-one-shotting.md) - when the process is the product rather than the artifact, the AI removes blockers instead of producing the output.
 - [Real-Time Generation Changes the Medium, Not Just the Latency](../concepts/real-time-generation-changes-the-medium-not-the-latency.md) - compete on what the user can do with output mid-generation rather than on output quality.
 - [Reliability and Stylistic Range Are Opposite Model Positions](../concepts/reliability-and-stylistic-range-are-opposite-model-positions.md) - segment creative products by how much certainty the user arrives with, and let that choose the model's distribution.
 - [Refuse AI-Generated Training Images When Style Is the Product](../concepts/refuse-ai-generated-images-when-style-is-the-product.md) - differentiation by refusing the shortcut everyone else can cheaply take.
@@ -1707,6 +1713,7 @@
 - [Condition ASR on Conversation Context and Domain Vocabulary](../concepts/condition-asr-on-conversation-context-and-domain-vocabulary.md)
 
 ## Retrieval
+- [Bulk-Tag an Asset Library With a Vision Model Over Rendered Views](../concepts/bulk-tag-asset-libraries-with-a-vision-model-for-retrieval.md) - render non-textual assets and caption the renders to manufacture the metadata a filename-only catalog is missing.
 - [Build a File-Based Research Wiki With Progressive-Disclosure Retrieval](../concepts/file-based-research-wiki-with-progressive-disclosure-retrieval.md)
 - [Choose the Research Tool by Reuse and Ownership, Not Just Speed](../concepts/choose-the-research-tool-by-reuse-and-ownership.md)
 - [Insert a Local Code-Index Retrieval Layer Between the Codebase and the Coding Agent](../concepts/insert-a-local-code-index-retrieval-layer-between-codebase-and-agent.md)
@@ -1854,6 +1861,8 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Expose the Domain's Vocabulary to Agents, Not the Platform's Primitives](../concepts/expose-domain-vocabulary-to-agents-not-platform-primitives.md) - name tools with the words that teach the domain rather than the ones that implement it.
+- [Make Agent Edits Declarative Tags Instead of Generated Code](../concepts/make-agent-edits-declarative-tags-instead-of-generated-code.md) - trade expressiveness for containment: no generated code, no sandbox, and a wrong call is a deletable tag.
 - [Ship AI Audio Features as Plugins Inside the Host DAW](../concepts/ship-ai-audio-features-as-plugins-inside-the-host-daw.md) - deliver an AI feature into the application that already owns the pipeline, so only the new decisions need a UI.
 - [Hand Domain Experts the Pipeline as Skills](../concepts/hand-domain-experts-the-pipeline-as-skills.md)
 - [Adopt A2A's Spec as an Internal Front-End/Back-End Contract](../concepts/adopt-a2a-as-an-internal-front-end-back-end-contract.md)

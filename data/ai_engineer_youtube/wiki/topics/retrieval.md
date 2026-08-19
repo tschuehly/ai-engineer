@@ -48,8 +48,11 @@ Rajkumar Sakthivel (Tesco) applies the same hybrid-retrieval and structure-first
 
 At the other end of the infrastructure spectrum, Paul Iusztin and Louis-François Bouchard show that a personal research memory can skip vector/graph databases entirely and still retrieve efficiently. Their [file-based research wiki with progressive-disclosure retrieval](../concepts/file-based-research-wiki-with-progressive-disclosure-retrieval.md) replaces similarity search with a *reference index* over plain Markdown and a cheapest-first read path: an agent consults the `index.yaml` catalog (per-source summaries + metadata), then a source's expanded executive summary, then LLM-derived wiki pages (concepts/entities/comparisons), and only reads the raw source if nothing cheaper answers. The executive summary for each source is computed once at ingestion, echoing this topic's "structure documents offline" and "document-outline-as-index" threads — the index and summaries are the retrieval layer, so relevance comes from a curated hierarchy rather than embedding distance. The tradeoff they flag is the one a vector store would normally handle: without similarity scores it is hard to rank sources by strength or detect stale ones, so source provenance/freshness is their top open problem. Choosing between this and RAG is itself a decision — [choose the research tool by reuse and ownership, not just speed](../concepts/choose-the-research-tool-by-reuse-and-ownership.md) — with vector-DB RAG reserved for production scale and the file wiki for a personal, inspectable store.
 
+Most of this topic assumes the corpus is already text. Arturo Nunez (Nereu) covers the case where it is not and the metadata simply does not exist: a library of 6,000-7,000 3D game assets for which "I just have the names and the 3D file." Manual tagging was out at that scale, so he [bulk-tagged the library with a vision model over rendered views](../concepts/bulk-tag-asset-libraries-with-a-vision-model-for-retrieval.md) — screenshot each model, caption the screenshot, and use the generated descriptions as the searchable layer, which is what lets a user say "add a robot" and get back assets "tagged as robot or the description are… a robot." The render is the load-bearing step: it converts a format nothing can index into the one modality with a mature off-the-shelf describer, and the same move is available for textures, icons, CAD parts, or any asset with a canonical view. Two things generalize past games. The expensive pass runs once per item offline, so the live path stays a plain text search over manufactured descriptions rather than a runtime vision call. And the failure mode is quiet in a way this topic's text-retrieval failures usually are not — a wrong or thin caption removes an asset from reach without producing an error anywhere, and the source reports no accuracy check on the generated descriptions.
+
 ## Key Concepts
 
+- [Bulk-Tag an Asset Library With a Vision Model Over Rendered Views](../concepts/bulk-tag-asset-libraries-with-a-vision-model-for-retrieval.md) - render non-textual assets and caption the renders to manufacture the missing metadata that makes a filename-only catalog searchable by description.
 - [Build a File-Based Research Wiki With Progressive-Disclosure Retrieval](../concepts/file-based-research-wiki-with-progressive-disclosure-retrieval.md) - retrieve over plain Markdown via a reference index and a cheapest-first read path (index → executive summary → derivatives → raw), a no-vector-DB alternative for a personal, inspectable store.
 - [Choose the Research Tool by Reuse and Ownership, Not Just Speed](../concepts/choose-the-research-tool-by-reuse-and-ownership.md) - pick chat vs coding agent vs NotebookLM/RAG vs a self-owned file wiki by how durable and how owned the research must be, not only by answer speed.
 - [Curate Context Strategically Because Models Drop the Middle](../concepts/curate-context-strategically-because-models-drop-the-middle.md) - choose a context-supply strategy (context engine, summarization, knowledge graph, iterative retrieval, self-correction) by developer cost and scaling because models ignore mid-prompt context.
@@ -152,6 +155,7 @@ Tax explanation systems add a regulated consumer version of expert-domain retrie
 
 ## Open Questions
 
+- How should a machine-captioned asset catalog be quality-checked, given that a bad caption silently removes an item from retrieval rather than surfacing an error — sampled human review, round-trip retrieval tests, or multiple views per asset?
 - How should retrieval systems route between source-of-truth systems and curated context blocks when they disagree?
 - Which retrieval steps benefit from hot-swappable small models rather than a single general embedding or reranking service?
 - How should Graph RAG or graph summarization systems preserve permission boundaries when summaries cross source scopes?
@@ -176,6 +180,7 @@ Tax explanation systems add a regulated consumer version of expert-domain retrie
 
 ## Sources
 
+- [The Next Game Engine Won't Have a Manual — Arturo Nunez, Nereu](../sources/20260818_VBCDhRrvlYo.md)
 - [Devin 2.0 and the Future of SWE - Scott Wu, Cognition](../sources/20250725_MI83buT_23o.md)
 - [Building the platform for agent coordination - Tom Moor, Linear](../sources/20250728_UG9IAdmi2Dg.md)
 - [Evaluating AI Search: A Practical Framework for Augmented AI Systems - Quotient AI + Tavily](../sources/20250729_wRJD0inpmjU.md)
