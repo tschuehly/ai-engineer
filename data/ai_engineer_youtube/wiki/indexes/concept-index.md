@@ -856,6 +856,10 @@
 
 ## Infrastructure
 
+- [Works in Dev, Passes Tests, and Survives Reality Are Three Different Systems](../concepts/works-in-dev-passes-tests-and-survives-reality-are-three-systems.md) - against an adversarial dependency such as the live web, a green test suite and a staging benchmark do not transfer to production.
+- [Define the Unit of Work Behind a Throughput Target](../concepts/define-the-unit-of-work-behind-a-throughput-target.md) - a requests-per-second target is meaningless until one request is defined, and 10x traffic changes the operating model rather than the server count.
+- [Realistic Traffic, Not Volume, Is the Hard Part of Load Testing](../concepts/realistic-traffic-not-volume-is-the-hard-part-of-load-testing.md) - synthetic load is easy, organic-looking load is not, and telemetry at scale becomes part of the load it measures.
+- [AI Training-Data Requests Compound Into Pipelines](../concepts/ai-training-data-requests-compound-into-pipelines.md) - a multimodal data ask is really collection, transfer, storage, and delivery, and it keeps extending.
 - [GPU Utilization Is a Lie: Instrument Tensor Cores and the Fabric](../concepts/measure-tensor-core-utilization-not-gpu-utilization.md) - GPU utilization reads 100% on an underused cluster; tensor cores are the honest proxy and InfiniBand counters have to be built by hand.
 - [Let Training Crash and Checkpoint Against a Fast Filesystem](../concepts/let-training-crash-and-checkpoint-against-a-fast-filesystem.md) - replace hardware on a threshold, absorb crashes with frequent checkpoints, and treat storage throughput as the enabling constraint.
 - [Give Training Priority Over Production on a Shared GPU Cluster](../concepts/give-training-priority-over-production-on-a-shared-gpu-cluster.md) - training preempts inference because a training GPU-hour is worth more, with gang scheduling and manual quota drift as the mechanics.
@@ -1223,6 +1227,7 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [AI Training-Data Requests Compound Into Pipelines](../concepts/ai-training-data-requests-compound-into-pipelines.md) - clients buy adaptation speed, not the first iteration; being early on a capability is not the same as being right.
 - [Hide an Agentic Pipeline Behind Templates and a Manual Editor](../concepts/package-agentic-pipelines-behind-templates-and-a-manual-editor.md) - delivering a multi-stage agent workflow to consumers can be harder than building it; remove the prompt instead of teaching it.
 - [Text-First AI Interfaces Exclude People Who Don't Think in Text](../concepts/text-first-interfaces-exclude-people-who-dont-think-in-text.md) - a chat-shaped product excludes visual thinkers, and cheap generated video is what makes the alternative affordable.
 - [Scope the Assistant to Getting the User Unstuck, Not One-Shotting the Artifact](../concepts/scope-the-assistant-to-getting-users-unstuck-not-one-shotting.md) - when the process is the product rather than the artifact, the AI removes blockers instead of producing the output.
@@ -1320,6 +1325,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Realistic Traffic, Not Volume, Is the Hard Part of Load Testing](../concepts/realistic-traffic-not-volume-is-the-hard-part-of-load-testing.md) - a passing load test proves the tested number, not the next one; the wall at 20k rps was uncertainty, not failure.
 - [Make Intent and Evidence the Review Surface](../concepts/make-intent-and-evidence-the-review-surface.md) - a per-change test plan built from session intent and codified invariants, run against a live preview for reviewer-facing evidence.
 - [Mine Recurring Review Comments Into an Invariant Registry](../concepts/mine-recurring-review-comments-into-an-invariant-registry.md) - the team's own repeated review comments become the invariant half of the verification input.
 - [Benchmark Context-Management Presets Against a Do-Nothing Baseline](../concepts/benchmark-context-management-presets-against-a-do-nothing-baseline.md) - vary only the context configuration, include a do-nothing control, and gate-check that the technique under test actually fired.
@@ -1761,6 +1767,7 @@
 - [Condition ASR on Conversation Context and Domain Vocabulary](../concepts/condition-asr-on-conversation-context-and-domain-vocabulary.md)
 
 ## Retrieval
+- [Close a Multiples-Wide Latency Gap by Redesign, Not Optimization](../concepts/close-a-multiples-wide-latency-gap-by-redesign-not-optimization.md) - a 4 s general search scraper became a 550 ms AI-facing API by cutting the payload to organic results and hunting seconds across every layer.
 - [Dense Retrieval Collapses on Buried Facts as the Haystack Grows](../concepts/dense-retrieval-collapses-on-buried-facts-as-the-haystack-grows.md) - ~80% recall at 50k-200k tokens falling to 0% at 400k while BM25 held 100%, a scale-dependent case for hybrid search.
 - [Measure Agentic Knowledge-Base Browsing Before Adding It](../concepts/measure-agentic-knowledge-base-browsing-before-adding-it.md) - a sandboxed bash-browse tool over a generated wiki matched a tuned hybrid retriever on recall and cost 50% latency.
 - [Bulk-Tag an Asset Library With a Vision Model Over Rendered Views](../concepts/bulk-tag-asset-libraries-with-a-vision-model-for-retrieval.md) - render non-textual assets and caption the renders to manufacture the metadata a filename-only catalog is missing.
