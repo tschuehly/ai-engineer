@@ -1014,6 +1014,9 @@
 - [Condition ASR on Conversation Context and Domain Vocabulary](../concepts/condition-asr-on-conversation-context-and-domain-vocabulary.md)
 - [Run Parallel Specialist Models Behind a Speak-Up Gate](../concepts/run-parallel-specialist-models-with-a-speak-up-gate.md)
 - [Size Eval Suites to the Error Rate the Consequence Demands](../concepts/size-eval-suites-to-the-error-rate-the-consequence-demands.md)
+- [Replace Ship-and-Rollback With Hazard-First Simulation When Errors Are Irreversible](../concepts/replace-ship-and-rollback-with-hazard-first-simulation.md)
+- [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
+- [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 
 ## Inference
 
@@ -1473,6 +1476,9 @@
 - [Benchmark Voice AI on Distant-Mic Multi-Speaker Audio, Not Headset Single-Speaker](../concepts/benchmark-voice-ai-on-distant-mic-multi-speaker-audio.md)
 - [Mine stuck-then-solved sessions for injectable fixes](../concepts/mine-stuck-then-solved-sessions-for-injectable-fixes.md)
 - [Size Eval Suites to the Error Rate the Consequence Demands](../concepts/size-eval-suites-to-the-error-rate-the-consequence-demands.md)
+- [Replace Ship-and-Rollback With Hazard-First Simulation When Errors Are Irreversible](../concepts/replace-ship-and-rollback-with-hazard-first-simulation.md)
+- [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
+- [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 
 ## Models
 
@@ -1992,6 +1998,8 @@
 - [Separate Engine Latency From Network Latency in Voice Pipelines](../concepts/separate-engine-latency-from-network-latency-in-voice-pipelines.md)
 - [Condition ASR on Conversation Context and Domain Vocabulary](../concepts/condition-asr-on-conversation-context-and-domain-vocabulary.md)
 - [Run Parallel Specialist Models Behind a Speak-Up Gate](../concepts/run-parallel-specialist-models-with-a-speak-up-gate.md)
+- [Replace Ship-and-Rollback With Hazard-First Simulation When Errors Are Irreversible](../concepts/replace-ship-and-rollback-with-hazard-first-simulation.md)
+- [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
 - [Choose the Research Tool by Reuse and Ownership, Not Just Speed](../concepts/choose-the-research-tool-by-reuse-and-ownership.md)
@@ -2317,3 +2325,4 @@
 - [Run a Production AI Incident Playbook](../concepts/run-a-production-ai-incident-playbook.md)
 - [Mine stuck-then-solved sessions for injectable fixes](../concepts/mine-stuck-then-solved-sessions-for-injectable-fixes.md)
 - [Give agents a vent tool to report platform friction](../concepts/give-agents-a-vent-tool-to-report-platform-friction.md)
+- [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
