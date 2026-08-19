@@ -1027,6 +1027,10 @@
 
 ## Healthcare Operations
 
+- [Size Your Eval Effort to the Generator–Verifier Gap](../concepts/size-your-eval-effort-to-the-generator-verifier-gap.md) - clinical decision support has no cheap check, which is what makes evaluation the hard part of the product.
+- [Build Judge References From Independently Written, Adjudicated Expert Rubrics](../concepts/build-judge-references-from-adjudicated-expert-rubrics.md) - four physicians produce one rubric of required response elements so non-clinicians can hill-climb against clinician judgment.
+- [Decompose the Deliverable and Post-Train a Small Model per Section](../concepts/decompose-the-deliverable-and-post-train-a-model-per-section.md) - the clinical note's sections are the decomposition boundary that makes small post-trained models viable at 100M conversations a year.
+- [Gate Always-On Listening With Cheap Event Detectors](../concepts/gate-always-on-listening-with-cheap-event-detectors.md) - in-visit order capture fires heavy order-matching models from cheap gates rather than polling the conversation.
 - [An Audit Trail Is a Chain of Evidence, Not a Developer Log](../concepts/an-audit-trail-is-a-chain-of-evidence-not-a-developer-log.md) - compliance frameworks require every action, every data access, and its authorization; an append-only event log supplies it.
 - [Store Agent Data in Object Storage Beside the Event Log, Not Inside It](../concepts/store-agent-data-in-object-storage-beside-the-event-log.md) - events hold references to immutable schema-driven blobs, so debugging, zero trust, and trifecta containment separate from the payload.
 - [Treat Humans and Models as the Same Kind of Agent](../concepts/treat-humans-and-models-as-the-same-kind-of-agent.md) - any action an LLM can take, a human can take, so escalation works at unpredictable points and downstream steps stay agnostic.
@@ -1054,6 +1058,8 @@
 
 ## Inference
 
+- [Gate Always-On Listening With Cheap Event Detectors](../concepts/gate-always-on-listening-with-cheap-event-detectors.md) - an ambient system spends most of its compute deciding that no request exists, so chain cheap gates and reserve heavy models for the moments they fire on.
+- [Decompose the Deliverable and Post-Train a Small Model per Section](../concepts/decompose-the-deliverable-and-post-train-a-model-per-section.md) - split a long structured output along its own sections so cost tracks per-part difficulty without a difficulty classifier.
 - [Route Each Request to the Cheapest Sufficient Model by Difficulty](../concepts/route-each-request-to-the-cheapest-sufficient-model-by-difficulty.md)
 - [Shard Cache-Augmented Generation Into Parallel Buckets With a Supervisor](../concepts/shard-cache-augmented-generation-into-parallel-buckets-with-a-supervisor.md)
 - [Hit Soft-Realtime Latency With a Fast Model, Eager Inference, and Prefix Caching](../concepts/hit-realtime-latency-with-fast-models-eager-inference-and-prefix-caching.md)
@@ -1147,6 +1153,7 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Train Your Own Models Only Where You Have a Right to Win](../concepts/train-your-own-models-only-where-you-have-a-right-to-win.md) - a proprietary corpus is a moat only alongside a problem the labs are not focused on, and the bet is on rate of change rather than today's level.
 - [You Cannot Iterate on Output You Cannot Judge](../concepts/you-cannot-iterate-on-output-you-cannot-judge.md) - the finished-looking demo an expert buyer will not buy is where vertical AI projects quietly die.
 - [High-Value Vertical Data Is Withheld by Design](../concepts/high-value-vertical-data-is-withheld-by-design.md) - the reasoning corpus is deliberately unpublished, which is what makes curated proprietary data the moat.
 - [Hire the User to Own the Judgment Loop](../concepts/hire-the-user-to-own-the-judgment-loop.md) - hire the person you sell to and make them the evaluator before iterating.
@@ -1234,6 +1241,8 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Size Your Eval Effort to the Generator–Verifier Gap](../concepts/size-your-eval-effort-to-the-generator-verifier-gap.md) - when checking is nearly as hard as producing, a trustworthy verifier would already be your generator, so the reference must come from outside the model.
+- [Build Judge References From Independently Written, Adjudicated Expert Rubrics](../concepts/build-judge-references-from-adjudicated-expert-rubrics.md) - two independent expert rubrics, one adjudicator, one QA pass, then an LLM judge that only semantic-matches required elements.
 - [Let Evals Emerge From Your Architectural Primitives](../concepts/let-evals-emerge-from-your-architectural-primitives.md) - ledger replay, human-agent difference, and object storage give counterfactuals, labels, and in-customer-environment eval runs.
 - [You Cannot Iterate on Output You Cannot Judge](../concepts/you-cannot-iterate-on-output-you-cannot-judge.md) - LLM-as-judge cannot substitute for domain judgment where no answer key exists.
 - [Hire the User to Own the Judgment Loop](../concepts/hire-the-user-to-own-the-judgment-loop.md) - the cost-ordered improvement ladder starts at error analysis over observability logs.
@@ -1531,6 +1540,8 @@
 
 ## Models
 
+- [Train Your Own Models Only Where You Have a Right to Win](../concepts/train-your-own-models-only-where-you-have-a-right-to-win.md) - saturated quality justifies training for cost and latency; unsaturated quality only if unique data plus narrow focus can beat the frontier's rate of change.
+- [Decompose the Deliverable and Post-Train a Small Model per Section](../concepts/decompose-the-deliverable-and-post-train-a-model-per-section.md) - read the structure of the artifact to find the narrow tasks that small post-trained models can own.
 - [High-Value Vertical Data Is Withheld by Design](../concepts/high-value-vertical-data-is-withheld-by-design.md) - some domains' reasoning corpora never reach the pretraining set, capping what any base model can do there.
 - [Right-size models with prototype-big, deploy-small](../concepts/right-size-models-with-prototype-big-deploy-small.md)
 - [Capability Overhang: Tools Decide Which Model Spikes You Reach](../concepts/capability-overhang-tools-decide-which-model-spikes-you-reach.md)
