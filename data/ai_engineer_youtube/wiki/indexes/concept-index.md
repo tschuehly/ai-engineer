@@ -836,6 +836,7 @@
 
 ## Infrastructure
 
+- [Serve Real-Time Video as Stateful Streaming Sessions, Not Batch Jobs](../concepts/serve-realtime-video-as-stateful-streaming-sessions.md) - real-time generative video breaks batch serving on three axes: streaming output, long-lived stateful sessions, and GPUs placed near users.
 - [An Audit Trail Is a Chain of Evidence, Not a Developer Log](../concepts/an-audit-trail-is-a-chain-of-evidence-not-a-developer-log.md) - compliance frameworks require every action, every data access, and its authorization; an append-only event log supplies it.
 - [Store Agent Data in Object Storage Beside the Event Log, Not Inside It](../concepts/store-agent-data-in-object-storage-beside-the-event-log.md) - events hold references to immutable schema-driven blobs, so debugging, zero trust, and trifecta containment separate from the payload.
 - [Let Evals Emerge From Your Architectural Primitives](../concepts/let-evals-emerge-from-your-architectural-primitives.md) - ledger replay, human-agent difference, and object storage give counterfactuals, labels, and in-customer-environment eval runs.
@@ -1136,6 +1137,10 @@
 
 ## Generative Media
 
+- [Real-Time Generation Changes the Medium, Not Just the Latency](../concepts/real-time-generation-changes-the-medium-not-the-latency.md) - steerable-while-generating output is a different category, not a faster one; the GPS and viewfinder cases carry the argument.
+- [Pick a Real-Time World-Model Class by What the User Steers](../concepts/pick-a-realtime-world-model-class-by-what-the-user-steers.md) - prompted scenes, controllable characters, and live avatars are three products with three maturities.
+- [Serve Real-Time Video as Stateful Streaming Sessions, Not Batch Jobs](../concepts/serve-realtime-video-as-stateful-streaming-sessions.md) - streaming pixels, per-session model memory, and sub-100 ms global GPU placement.
+- [Real-Time World-Model Evaluation Is Still Human Judgment](../concepts/realtime-world-model-evaluation-is-still-human-judgment.md) - fidelity is measurable per frame, session consistency is not, and nobody has solved it yet.
 - [Reliability and Stylistic Range Are Opposite Model Positions](../concepts/reliability-and-stylistic-range-are-opposite-model-positions.md) - production image models buy consistency with mode collapse; pick the end of the dial by whether the user knows what they want.
 - [Refuse AI-Generated Training Images When Style Is the Product](../concepts/refuse-ai-generated-images-when-style-is-the-product.md) - synthetic aesthetic is sticky, so distillation ships a detectable copy of another lab's look.
 - [Filter Training Images Your Captioner Systematically Mis-Describes](../concepts/filter-images-your-captioner-systematically-mis-describes.md) - a caption omission that repeats becomes a property the model renders unconditionally.
@@ -1173,6 +1178,7 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Real-Time Generation Changes the Medium, Not Just the Latency](../concepts/real-time-generation-changes-the-medium-not-the-latency.md) - compete on what the user can do with output mid-generation rather than on output quality.
 - [Reliability and Stylistic Range Are Opposite Model Positions](../concepts/reliability-and-stylistic-range-are-opposite-model-positions.md) - segment creative products by how much certainty the user arrives with, and let that choose the model's distribution.
 - [Refuse AI-Generated Training Images When Style Is the Product](../concepts/refuse-ai-generated-images-when-style-is-the-product.md) - differentiation by refusing the shortcut everyone else can cheaply take.
 - [Agreeableness Is a Failure Mode When the Product's Job Is to Change the User](../concepts/agreeableness-is-a-failure-mode-when-the-job-is-to-change-the-user.md) - engagement metrics and user benefit point in opposite directions in advice domains, and the harm is a trajectory rather than a bad response.
@@ -1266,6 +1272,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Real-Time World-Model Evaluation Is Still Human Judgment](../concepts/realtime-world-model-evaluation-is-still-human-judgment.md) - the consistency of a steered generated session has no automated measure, so human review is the eval of record.
 - [Expert Judgment Bookends the Eval Suite](../concepts/expert-judgment-bookends-the-eval-suite.md) - expert-authored cases before the prompt, a zero-failure bar on the safety subset, and dogfooding for the tone no scorer covers.
 - [Size Your Eval Effort to the Generator–Verifier Gap](../concepts/size-your-eval-effort-to-the-generator-verifier-gap.md) - when checking is nearly as hard as producing, a trustworthy verifier would already be your generator, so the reference must come from outside the model.
 - [Build Judge References From Independently Written, Adjudicated Expert Rubrics](../concepts/build-judge-references-from-adjudicated-expert-rubrics.md) - two independent expert rubrics, one adjudicator, one QA pass, then an LLM judge that only semantic-matches required elements.
@@ -1566,6 +1573,7 @@
 
 ## Models
 
+- [Pick a Real-Time World-Model Class by What the User Steers](../concepts/pick-a-realtime-world-model-class-by-what-the-user-steers.md) - a working taxonomy for the real-time interactive video family, with sharply different maturity per class.
 - [Run the LLM Post-Training Ladder on Diffusion Models](../concepts/run-the-llm-post-training-ladder-on-diffusion-models.md) - image-model training reuses the LLM stage ladder plus a resolution curriculum and a prompt expander, chosen partly to reuse LLM kernels and literature.
 - [Order Billion-Scale Data Filters by Cost Per Sample](../concepts/order-billion-scale-data-filters-by-cost-per-sample.md) - any judgment you want over a pretraining corpus has to be distilled into something runnable a billion times.
 - [Refuse AI-Generated Training Images When Style Is the Product](../concepts/refuse-ai-generated-images-when-style-is-the-product.md) - the distillation shortcut transfers aesthetic identity along with capability.
