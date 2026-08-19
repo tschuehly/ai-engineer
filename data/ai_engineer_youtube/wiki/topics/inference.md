@@ -50,8 +50,12 @@ The cheapest dial of all is not serving the request at all. Todd Fisher's guitar
 
 Generative video is where this topic's cost work has moved furthest fastest, and Keegan McCallum (uRun) states the result as a change of unit rather than a speedup: [track the efficiency axis in generative video, not only quality](../concepts/track-the-efficiency-axis-in-generative-video-not-only-quality.md). A model distilled from open 14B weights now generates at roughly last year's frontier quality for about a hundredth of the cost of a minutes-long generation, so the planning unit becomes dollars per hour of continuous generation — $10 for about three hours, $50 for about fifteen — instead of dollars per clip or per retry. That is the same shape as this topic's token-cost arithmetic but with an unusual property: the cheap tier is not merely a smaller model, it is a *different interaction*, because a generation you can steer mid-flight replaces a batch attempt you can only rerun. The residual gap is narrow and specific rather than diffuse (motion quality), which is exactly the kind of discriminator a routing decision needs, and the supply of such models is no longer scarce — "at least 40 models with real-time capabilities and long horizon generation capabilities released this year."
 
+A real-time avatar vendor supplies the counterweight to that per-request framing, and it is a claim about where the engineering effort goes rather than about throughput. LemonSlice's Sidney Primas reports serving cost "about the same as a voice model" despite video being far more pixel-heavy — the fact that makes consumer video agents viable at all — but says the difficulty is elsewhere: [the real-time model harness is where the product work sits](../concepts/the-realtime-model-harness-is-where-the-product-work-sits.md), meaning separate threads moving live data across GPU and CPU orchestrated so "the video always remains real time. There is never any stutter," and "especially hard when you have things like interrupts, you have queues, you're buffering data, you have to clean the queues." The correctness condition is a timing invariant on a heterogeneous pipeline under interruption, not a latency percentile on a request, and it is the part a real-time media platform is actually selling when it advertises a ten-line integration. His forward claim is that the harness rather than the model is where value accrues in real-time applications — which is worth reading against this topic's assumption that serving is mostly a kernel, quantization, and scheduling problem.
+
 ## Key Concepts
 
+- [The Real-Time Model Harness Is Where the Product Work Sits](../concepts/the-realtime-model-harness-is-where-the-product-work-sits.md) - holding a stutter-free stream across GPU and CPU threads under interrupts is a different discipline from optimizing a request.
+- [Make a Video Model Interactive With a Causal Attention Mask, Then Budget for Error Accumulation](../concepts/make-video-models-causal-and-budget-for-error-accumulation.md) - what a streaming generative session degrades into over hours, and why per-frame metrics miss it.
 - [Inference Tolerates Degraded GPUs That Training Cannot](../concepts/inference-tolerates-degraded-gpus-that-training-cannot.md) - single-node serving has no collective to hold up, so hardware quality becomes a routing parameter instead of a pass/fail gate.
 - [Evict Inference Off-Cluster Through a Virtual-Kubelet Node](../concepts/evict-inference-off-cluster-through-a-virtual-kubelet-node.md) - a fake Kubernetes node plus a metrics-driven taint relocates serving to external providers when local GPUs are claimed.
 - [Track the Efficiency Axis in Generative Video, Not Only Quality](../concepts/track-the-efficiency-axis-in-generative-video-not-only-quality.md) - a distilled real-time video model buys last year's frontier quality at ~1/100th the cost, repricing the workload per session-hour.
@@ -124,6 +128,7 @@ Generative video is where this topic's cost work has moved furthest fastest, and
 
 ## Open Questions
 
+- What does a real-time model harness look like architecturally? Two vendors name it as the hard part and neither describes the thread model, buffering strategy, or how an interrupt is propagated across the GPU/CPU boundary.
 - What does serving on deliberately degraded GPUs cost in tail latency and output quality? Krea reports only that inference keeps running, and says nothing about a card that returns wrong results instead of crashing.
 - Does a per-session-hour price make continuous generative workloads plannable, or does steering-driven usage vary too much between users for an hourly unit to hold?
 - How large can a pre-baked result set get before storage, build time, and staleness cost more than serving the transform live?
@@ -145,6 +150,7 @@ Generative video is where this topic's cost work has moved furthest fastest, and
 
 ## Sources
 
+- [Voice agents with Realtime Video — Sidney Primas, LemonSlice](../sources/20260818_z1dqv74SpUs.md)
 - [Infra behind Krea 2: How to train and serve at scale — Gabriel Jorge Menezes, Krea.ai](../sources/20260818_byn9PURoBNY.md)
 - [Generative Video at the Speed of Light — Keegan McCallum, uRun](../sources/20260818_Xln-On3syJk.md)
 - [While my guitar gently speaks — Todd Fisher, Philo Ventures](../sources/20260818_E_Txocq-Lrw.md)

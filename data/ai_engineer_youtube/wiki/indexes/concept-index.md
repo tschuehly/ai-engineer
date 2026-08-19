@@ -1081,6 +1081,8 @@
 
 ## Inference
 
+- [The Real-Time Model Harness Is Where the Product Work Sits](../concepts/the-realtime-model-harness-is-where-the-product-work-sits.md) - holding a stutter-free stream across GPU and CPU threads under interrupts is a different discipline from optimizing a request.
+- [Make a Video Model Interactive With a Causal Attention Mask, Then Budget for Error Accumulation](../concepts/make-video-models-causal-and-budget-for-error-accumulation.md) - what a streaming generative session degrades into over hours, and why per-frame metrics miss it.
 - [Inference Tolerates Degraded GPUs That Training Cannot](../concepts/inference-tolerates-degraded-gpus-that-training-cannot.md) - single-node serving has no collective to slow down, so hot or flaky cards stay useful and hardware quality becomes a routing parameter.
 - [Track the Efficiency Axis in Generative Video, Not Only Quality](../concepts/track-the-efficiency-axis-in-generative-video-not-only-quality.md) - a distilled real-time video model buys last year's frontier quality at ~1/100th the cost.
 - [Pre-Bake Transforms Too Heavy for the Real-Time Path](../concepts/pre-bake-transforms-too-heavy-for-the-realtime-path.md) - the cheapest answer to a real-time budget is deleting the live computation, available whenever the control input is enumerable.
@@ -1150,6 +1152,10 @@
 
 ## Generative Media
 
+- [Make a Video Model Interactive With a Causal Attention Mask, Then Budget for Error Accumulation](../concepts/make-video-models-causal-and-budget-for-error-accumulation.md) - the training-time change that makes a video model streamable, and the compounding drift it creates over an hours-long session.
+- [Off-the-Shelf Audio Encoders Are Trained on Audiobooks, So They Flatten Generated Emotion](../concepts/audiobook-trained-audio-encoders-flatten-generated-emotion.md) - the audio embedding sets the expressiveness ceiling of an audio-driven avatar, and the standard corpus is monotone by construction.
+- [The Real-Time Model Harness Is Where the Product Work Sits](../concepts/the-realtime-model-harness-is-where-the-product-work-sits.md) - thread and queue orchestration across GPU and CPU under interrupts, named by a practitioner as the accruing value.
+- [Point a General World Model at a Narrow Domain Instead of Building a Task-Specific Model](../concepts/point-a-general-world-model-at-a-narrow-domain.md) - harder to train and deploy, in exchange for the domain's open-ended long tail arriving closer to free.
 - [Reuse the Agentic App-Builder Architecture for Non-Code Artifacts](../concepts/reuse-the-agentic-app-builder-shape-for-non-code-artifacts.md) - an agentic video editor is an app builder with the codebase swapped for a Remotion composition and the preview swapped for a render.
 - [Editing Real Material Constrains an Agent More Than Generating From Scratch](../concepts/editing-real-material-is-harder-for-agents-than-generating.md) - the part of the market generation models do not absorb, and the harder agent task.
 - [Hide an Agentic Pipeline Behind Templates and a Manual Editor](../concepts/package-agentic-pipelines-behind-templates-and-a-manual-editor.md) - mobile surface, zero-prompt directional templates, an approval gate on intent, and a familiar editor for the last mile.
@@ -1601,6 +1607,10 @@
 
 ## Models
 
+- [Point a General World Model at a Narrow Domain Instead of Building a Task-Specific Model](../concepts/point-a-general-world-model-at-a-narrow-domain.md) - a general model amortizes when the requirement set is open-ended; a specialist wins only when it is closed.
+- [Make a Video Model Interactive With a Causal Attention Mask, Then Budget for Error Accumulation](../concepts/make-video-models-causal-and-budget-for-error-accumulation.md) - enforce causality during training so inference matches, and expect compounding drift as the structural cost.
+- [Split an Embodied Conversational Agent Into an EQ Layer and an IQ Model](../concepts/split-an-embodied-agent-into-an-eq-layer-and-an-iq-model.md) - an end-to-end interaction model that is deliberately not the intelligent one.
+- [Off-the-Shelf Audio Encoders Are Trained on Audiobooks, So They Flatten Generated Emotion](../concepts/audiobook-trained-audio-encoders-flatten-generated-emotion.md) - a frozen upstream encoder bounds a downstream capability along whatever axis its corpus lacks.
 - [GPU Utilization Is a Lie: Instrument Tensor Cores and the Fabric](../concepts/measure-tensor-core-utilization-not-gpu-utilization.md) - what a from-scratch pre-training run has to measure, and why the resolution curriculum shows up as arithmetic intensity.
 - [Let Training Crash and Checkpoint Against a Fast Filesystem](../concepts/let-training-crash-and-checkpoint-against-a-fast-filesystem.md) - the operations practice that training from scratch commits a team to.
 - [Pick a Real-Time World-Model Class by What the User Steers](../concepts/pick-a-realtime-world-model-class-by-what-the-user-steers.md) - a working taxonomy for the real-time interactive video family, with sharply different maturity per class.
@@ -2093,6 +2103,9 @@
 
 ## Voice Agents
 
+- [Split an Embodied Conversational Agent Into an EQ Layer and an IQ Model](../concepts/split-an-embodied-agent-into-an-eq-layer-and-an-iq-model.md) - an end-to-end interaction model fed by a separate reasoning model, a third option beside the cascade and monolithic speech-to-speech.
+- [Off-the-Shelf Audio Encoders Are Trained on Audiobooks, So They Flatten Generated Emotion](../concepts/audiobook-trained-audio-encoders-flatten-generated-emotion.md) - a borrowed encoder's corpus bounds how expressive anything downstream of it can be.
+- [The Real-Time Model Harness Is Where the Product Work Sits](../concepts/the-realtime-model-harness-is-where-the-product-work-sits.md) - stream orchestration under interrupts, the same problem frame pipelines solve for audio, with a visible frame budget.
 - [Separate What Generated Audio Says From When It Plays](../concepts/separate-what-generated-audio-says-from-when-it-plays.md) - a speech cascade whose output device is an instrument takes generation latency off the live path entirely.
 - [Segment Synthesized Speech With Multiple Cues, Then Let a Human Fix the Rest](../concepts/segment-synthesized-speech-with-multiple-cues-and-manual-repair.md) - word-level slicing of TTS output needs two independent acoustic cues plus a manual repair affordance.
 - [Relax the Latency Budget by Choosing Voice-In, Visuals-Out Over Voice-Out](../concepts/relax-the-latency-budget-with-voice-in-visuals-out.md)
