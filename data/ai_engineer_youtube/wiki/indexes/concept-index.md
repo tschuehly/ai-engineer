@@ -735,6 +735,10 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Prompt Caching Sets the Break-Even Bar for Compaction](../concepts/prompt-caching-sets-the-break-even-bar-for-compaction.md) - compaction invalidates the cache, so it must compress by more than the cache discount (up to 50x) before it saves anything.
+- [Benchmark Context-Management Presets Against a Do-Nothing Baseline](../concepts/benchmark-context-management-presets-against-a-do-nothing-baseline.md) - 11 presets on a production agent; untouched history beat every technique and the shipped defaults on recall, cost, and latency at once.
+- [Full History Recalls Details That Summaries Delete](../concepts/full-history-recalls-details-that-summaries-delete.md) - 95% detail recall keeping everything versus 32% after summarizing, with distinctive facts surviving to 800k tokens.
+- [Local Deployment Inverts the Keep-Everything Context Strategy](../concepts/local-deployment-inverts-the-keep-everything-context-strategy.md) - a 32k local window forces compression or retrieval, and a bigger model does not buy a bigger window.
 - [Assemble Scene Context by Level of Detail Around the Edit Focus](../concepts/assemble-scene-context-by-level-of-detail-around-the-edit-focus.md) - rendering's LOD idea applied to prompt assembly: full attributes near the user's selection, an identity-and-position stub further out, omission beyond.
 
 - [Build Synthetic Records Coarse to Fine by Emulating How They Were Produced](../concepts/build-synthetic-records-coarse-to-fine-by-emulating-their-source-process.md)
@@ -821,6 +825,7 @@
 - [Give Browser Agents a Compact Whole-Page Representation](../concepts/give-browser-agents-a-compact-whole-page-representation.md)
 
 ## Edge Inference
+- [Local Deployment Inverts the Keep-Everything Context Strategy](../concepts/local-deployment-inverts-the-keep-everything-context-strategy.md) - the context window is a hardware constraint that parameter count cannot fix, so the cloud context strategy does not port.
 
 - [Keep inference off the microcontroller: build the AI-native device as a thin client over a backend](../concepts/keep-inference-off-the-microcontroller-thin-device-over-a-backend.md)
 - [Use edge inference when latency, privacy, offline access, or token cost dominate](../concepts/use-edge-inference-when-latency-privacy-offline-access-or-token-cost-dominate.md)
@@ -1309,6 +1314,8 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Benchmark Context-Management Presets Against a Do-Nothing Baseline](../concepts/benchmark-context-management-presets-against-a-do-nothing-baseline.md) - vary only the context configuration, include a do-nothing control, and gate-check that the technique under test actually fired.
+- [Measure Agentic Knowledge-Base Browsing Before Adding It](../concepts/measure-agentic-knowledge-base-browsing-before-adding-it.md) - identical recall to a tuned retriever at 50% higher latency, one of two negative results the same harness produced.
 - [Version-Control and Unit-Test the Agent Permission Policy](../concepts/version-control-and-unit-test-the-agent-permission-policy.md) - security policy needs regression tests too: fixture requests flowed through the rule set turn "are the guardrails still working?" into a build step.
 - [Real-Time World-Model Evaluation Is Still Human Judgment](../concepts/realtime-world-model-evaluation-is-still-human-judgment.md) - the consistency of a steered generated session has no automated measure, so human review is the eval of record.
 - [Expert Judgment Bookends the Eval Suite](../concepts/expert-judgment-bookends-the-eval-suite.md) - expert-authored cases before the prompt, a zero-failure bar on the safety subset, and dogfooding for the tone no scorer covers.
@@ -1746,6 +1753,8 @@
 - [Condition ASR on Conversation Context and Domain Vocabulary](../concepts/condition-asr-on-conversation-context-and-domain-vocabulary.md)
 
 ## Retrieval
+- [Dense Retrieval Collapses on Buried Facts as the Haystack Grows](../concepts/dense-retrieval-collapses-on-buried-facts-as-the-haystack-grows.md) - ~80% recall at 50k-200k tokens falling to 0% at 400k while BM25 held 100%, a scale-dependent case for hybrid search.
+- [Measure Agentic Knowledge-Base Browsing Before Adding It](../concepts/measure-agentic-knowledge-base-browsing-before-adding-it.md) - a sandboxed bash-browse tool over a generated wiki matched a tuned hybrid retriever on recall and cost 50% latency.
 - [Bulk-Tag an Asset Library With a Vision Model Over Rendered Views](../concepts/bulk-tag-asset-libraries-with-a-vision-model-for-retrieval.md) - render non-textual assets and caption the renders to manufacture the metadata a filename-only catalog is missing.
 - [Build a File-Based Research Wiki With Progressive-Disclosure Retrieval](../concepts/file-based-research-wiki-with-progressive-disclosure-retrieval.md)
 - [Choose the Research Tool by Reuse and Ownership, Not Just Speed](../concepts/choose-the-research-tool-by-reuse-and-ownership.md)

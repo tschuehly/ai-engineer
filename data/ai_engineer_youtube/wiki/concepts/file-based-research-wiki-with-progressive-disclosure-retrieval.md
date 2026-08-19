@@ -15,6 +15,7 @@ Details:
 - The derived wiki does not sit over the *entire* second brain. The raw personal vault (Obsidian, organized with Tiago Forte's PARA method) is an immutable snapshot the LLM never edits; each project scopes its own wiki via a deep-research pass. "The project is the work, and your second brain is the research." (25:01-27:04)
 - Ingestion can target the public web, personal sources (Obsidian/Readwise/NotebookLM), or code: pointing the loop at three harness repos produced per-repo architecture notes plus cross-repo comparisons and extracted "key architectural decisions" — a wiki good enough to design your own harness from. (31:58-34:24)
 - Known gaps (by design a builder tool, not a product): source provenance/freshness is hard — "it's hard to know which sources are outdated or weak or strong" — and the next priorities are stronger *linting* and better *memory compaction*, which the authors call genuinely hard and fast-moving. (36:49-39:16)
+- The same author later shipped and *measured* this structure inside a product, with a mixed verdict worth carrying back. Towards AI's AI tutor uses the identical three-tier layout — `raw` markdown, a `generated` title index, and an LLM-written `wiki` of topic pages built offline by Claude Code — with the agent reading a ~450-token index first and escalating index → chunk → raw file only when needed. But when they measured the browse tool against their tuned hybrid retriever on real student questions, recall was identical and latency was 50% worse. The cheapest-first *structure* remains sound; what did not hold in that setting was the assumption that an agent browsing the structure beats a well-tuned retriever over the same content. ([Context Engineering in 2026](../sources/20260817_WP3hjUXd918.md), 13:01-14:52, 28:00-29:20, 31:15-32:18)
 
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
@@ -26,6 +27,8 @@ Related concepts:
 - [Use a Document Outline as the Retrieval Index for Chunkless Agentic RAG](use-a-document-outline-as-the-retrieval-index-for-chunkless-agentic-rag.md)
 - [Do Not Treat Long Context as Durable Model Memory](do-not-treat-long-context-as-durable-model-memory.md)
 - [Choose the Research Tool by Reuse and Ownership, Not Just Speed](choose-the-research-tool-by-reuse-and-ownership.md)
+- [Measure Agentic Knowledge-Base Browsing Before Adding It](measure-agentic-knowledge-base-browsing-before-adding-it.md)
 
 Sources:
 - [Turn 10,994 Notes Into Memory - Paul Iusztin, Decoding AI & Louis-François Bouchard, Towards AI](../sources/20260626_ZRM_TfEZcIo.md), 19:37-27:04, 31:58-34:24, 36:49-39:16
+- [Context Engineering in 2026 — Louis-François Bouchard, Omar Solano & Samridhi Vaid, Towards AI](../sources/20260817_WP3hjUXd918.md), 13:01-14:52, 28:00-29:20, 31:15-32:18
