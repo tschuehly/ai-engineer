@@ -1,6 +1,9 @@
 # Concept Index
 
 ## Agents
+- [Treat Humans and Models as the Same Kind of Agent](../concepts/treat-humans-and-models-as-the-same-kind-of-agent.md) - any action an LLM can take, a human can take, so escalation works at unpredictable points and downstream steps stay agnostic.
+- [An Audit Trail Is a Chain of Evidence, Not a Developer Log](../concepts/an-audit-trail-is-a-chain-of-evidence-not-a-developer-log.md) - compliance frameworks require every action, every data access, and its authorization; an append-only event log supplies it.
+- [Store Agent Data in Object Storage Beside the Event Log, Not Inside It](../concepts/store-agent-data-in-object-storage-beside-the-event-log.md) - events hold references to immutable schema-driven blobs, so debugging, zero trust, and trifecta containment separate from the payload.
 - [Keep the Expert as Decider With AI in Their Loop](../concepts/keep-the-expert-as-decider-with-ai-in-their-loop.md) - AI-in-the-loop: the agent proposes candidates, the expert decides, and the win is expert time.
 - [Run Must-Not-Fail Decisions in a Code Layer Above the Model](../concepts/run-must-not-fail-decisions-in-code-above-the-model.md)
 - [Hand Domain Experts the Pipeline as Skills](../concepts/hand-domain-experts-the-pipeline-as-skills.md)
@@ -830,6 +833,9 @@
 
 ## Infrastructure
 
+- [An Audit Trail Is a Chain of Evidence, Not a Developer Log](../concepts/an-audit-trail-is-a-chain-of-evidence-not-a-developer-log.md) - compliance frameworks require every action, every data access, and its authorization; an append-only event log supplies it.
+- [Store Agent Data in Object Storage Beside the Event Log, Not Inside It](../concepts/store-agent-data-in-object-storage-beside-the-event-log.md) - events hold references to immutable schema-driven blobs, so debugging, zero trust, and trifecta containment separate from the payload.
+- [Let Evals Emerge From Your Architectural Primitives](../concepts/let-evals-emerge-from-your-architectural-primitives.md) - ledger replay, human-agent difference, and object storage give counterfactuals, labels, and in-customer-environment eval runs.
 - [Make Regulated-Data Failures Architecturally Impossible](../concepts/make-regulated-data-failures-architecturally-impossible.md)
 - [Own the Agent Loop on a Typed Effects Runtime](../concepts/own-the-agent-loop-on-a-typed-effects-runtime.md)
 - [Keep inference off the microcontroller: build the AI-native device as a thin client over a backend](../concepts/keep-inference-off-the-microcontroller-thin-device-over-a-backend.md)
@@ -1021,6 +1027,10 @@
 
 ## Healthcare Operations
 
+- [An Audit Trail Is a Chain of Evidence, Not a Developer Log](../concepts/an-audit-trail-is-a-chain-of-evidence-not-a-developer-log.md) - compliance frameworks require every action, every data access, and its authorization; an append-only event log supplies it.
+- [Store Agent Data in Object Storage Beside the Event Log, Not Inside It](../concepts/store-agent-data-in-object-storage-beside-the-event-log.md) - events hold references to immutable schema-driven blobs, so debugging, zero trust, and trifecta containment separate from the payload.
+- [Treat Humans and Models as the Same Kind of Agent](../concepts/treat-humans-and-models-as-the-same-kind-of-agent.md) - any action an LLM can take, a human can take, so escalation works at unpredictable points and downstream steps stay agnostic.
+- [Let Evals Emerge From Your Architectural Primitives](../concepts/let-evals-emerge-from-your-architectural-primitives.md) - ledger replay, human-agent difference, and object storage give counterfactuals, labels, and in-customer-environment eval runs.
 - [Run Must-Not-Fail Decisions in a Code Layer Above the Model](../concepts/run-must-not-fail-decisions-in-code-above-the-model.md)
 - [Make Regulated-Data Failures Architecturally Impossible](../concepts/make-regulated-data-failures-architecturally-impossible.md)
 - [Decide Ship-or-Hold With Explicit Severity Rules](../concepts/decide-ship-or-hold-with-explicit-severity-rules.md)
@@ -1224,6 +1234,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Let Evals Emerge From Your Architectural Primitives](../concepts/let-evals-emerge-from-your-architectural-primitives.md) - ledger replay, human-agent difference, and object storage give counterfactuals, labels, and in-customer-environment eval runs.
 - [You Cannot Iterate on Output You Cannot Judge](../concepts/you-cannot-iterate-on-output-you-cannot-judge.md) - LLM-as-judge cannot substitute for domain judgment where no answer key exists.
 - [Hire the User to Own the Judgment Loop](../concepts/hire-the-user-to-own-the-judgment-loop.md) - the cost-ordered improvement ladder starts at error analysis over observability logs.
 - [High-Value Vertical Data Is Withheld by Design](../concepts/high-value-vertical-data-is-withheld-by-design.md) - NDAs and pay make practitioner annotation unbuyable, so expert labels must be hired.
@@ -1750,6 +1761,8 @@
 
 ## Security
 
+- [An Audit Trail Is a Chain of Evidence, Not a Developer Log](../concepts/an-audit-trail-is-a-chain-of-evidence-not-a-developer-log.md) - compliance frameworks require every action, every data access, and its authorization; an append-only event log supplies it.
+- [Store Agent Data in Object Storage Beside the Event Log, Not Inside It](../concepts/store-agent-data-in-object-storage-beside-the-event-log.md) - events hold references to immutable schema-driven blobs, so debugging, zero trust, and trifecta containment separate from the payload.
 - [Make Regulated-Data Failures Architecturally Impossible](../concepts/make-regulated-data-failures-architecturally-impossible.md)
 - [Run Must-Not-Fail Decisions in a Code Layer Above the Model](../concepts/run-must-not-fail-decisions-in-code-above-the-model.md)
 - [Behavioral Evals Cannot Catch Sleeper-Agent Backdoors](../concepts/behavioral-evals-cannot-catch-sleeper-agent-backdoors.md)
