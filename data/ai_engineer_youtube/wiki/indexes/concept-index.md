@@ -1,6 +1,9 @@
 # Concept Index
 
 ## Agents
+- [Screen Every Turn for When Advice Stops Being the Right Kind of Help](../concepts/screen-every-turn-for-when-advice-stops-being-the-right-kind-of-help.md) - an inferential background screen for risk the user never states, resolving to a mode change rather than a refusal.
+
+- [Encode the Field's Validated Method, Not General Empathy](../concepts/encode-the-fields-validated-method-not-general-empathy.md) - a profession's outcome-validated framework turns "be helpful" into agent behaviors a rubric can check.
 - [Treat Humans and Models as the Same Kind of Agent](../concepts/treat-humans-and-models-as-the-same-kind-of-agent.md) - any action an LLM can take, a human can take, so escalation works at unpredictable points and downstream steps stay agnostic.
 - [An Audit Trail Is a Chain of Evidence, Not a Developer Log](../concepts/an-audit-trail-is-a-chain-of-evidence-not-a-developer-log.md) - compliance frameworks require every action, every data access, and its authorization; an append-only event log supplies it.
 - [Store Agent Data in Object Storage Beside the Event Log, Not Inside It](../concepts/store-agent-data-in-object-storage-beside-the-event-log.md) - events hold references to immutable schema-driven blobs, so debugging, zero trust, and trifecta containment separate from the payload.
@@ -1027,6 +1030,15 @@
 
 ## Healthcare Operations
 
+- [Agreeableness Is a Failure Mode When the Product's Job Is to Change the User](../concepts/agreeableness-is-a-failure-mode-when-the-job-is-to-change-the-user.md) - consumer AI is the highest-volume relationship intervention in the world, and the engagement objective it was tuned for is a clinical failure mode.
+
+- [Encode the Field's Validated Method, Not General Empathy](../concepts/encode-the-fields-validated-method-not-general-empathy.md) - Gottman and EFT are the measured standard of care and are almost absent from commercial relationship AI.
+
+- [Screen Every Turn for When Advice Stops Being the Right Kind of Help](../concepts/screen-every-turn-for-when-advice-stops-being-the-right-kind-of-help.md) - a background clinical screen switches the agent out of coaching into expert-authored protocols when the language signals danger.
+
+- [Hold Unregulated Intimate Data to the Professional-Privilege Bar](../concepts/hold-unregulated-intimate-data-to-the-professional-privilege-bar.md) - the cluster's unregulated branch, where the handling standard has to be borrowed from the profession rather than derived from a regulator.
+
+- [Expert Judgment Bookends the Eval Suite](../concepts/expert-judgment-bookends-the-eval-suite.md) - the clinician writes the evals before the prompt exists and the builder catches the tone drift the suite cannot score.
 - [Size Your Eval Effort to the Generator–Verifier Gap](../concepts/size-your-eval-effort-to-the-generator-verifier-gap.md) - clinical decision support has no cheap check, which is what makes evaluation the hard part of the product.
 - [Build Judge References From Independently Written, Adjudicated Expert Rubrics](../concepts/build-judge-references-from-adjudicated-expert-rubrics.md) - four physicians produce one rubric of required response elements so non-clinicians can hill-climb against clinician judgment.
 - [Decompose the Deliverable and Post-Train a Small Model per Section](../concepts/decompose-the-deliverable-and-post-train-a-model-per-section.md) - the clinical note's sections are the decomposition boundary that makes small post-trained models viable at 100M conversations a year.
@@ -1153,6 +1165,9 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Agreeableness Is a Failure Mode When the Product's Job Is to Change the User](../concepts/agreeableness-is-a-failure-mode-when-the-job-is-to-change-the-user.md) - engagement metrics and user benefit point in opposite directions in advice domains, and the harm is a trajectory rather than a bad response.
+
+- [Hold Unregulated Intimate Data to the Professional-Privilege Bar](../concepts/hold-unregulated-intimate-data-to-the-professional-privilege-bar.md) - a trust bar adopted voluntarily in a category no regulator covers, competing directly with growth instrumentation.
 - [Train Your Own Models Only Where You Have a Right to Win](../concepts/train-your-own-models-only-where-you-have-a-right-to-win.md) - a proprietary corpus is a moat only alongside a problem the labs are not focused on, and the bet is on rate of change rather than today's level.
 - [You Cannot Iterate on Output You Cannot Judge](../concepts/you-cannot-iterate-on-output-you-cannot-judge.md) - the finished-looking demo an expert buyer will not buy is where vertical AI projects quietly die.
 - [High-Value Vertical Data Is Withheld by Design](../concepts/high-value-vertical-data-is-withheld-by-design.md) - the reasoning corpus is deliberately unpublished, which is what makes curated proprietary data the moat.
@@ -1241,6 +1256,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Expert Judgment Bookends the Eval Suite](../concepts/expert-judgment-bookends-the-eval-suite.md) - expert-authored cases before the prompt, a zero-failure bar on the safety subset, and dogfooding for the tone no scorer covers.
 - [Size Your Eval Effort to the Generator–Verifier Gap](../concepts/size-your-eval-effort-to-the-generator-verifier-gap.md) - when checking is nearly as hard as producing, a trustworthy verifier would already be your generator, so the reference must come from outside the model.
 - [Build Judge References From Independently Written, Adjudicated Expert Rubrics](../concepts/build-judge-references-from-adjudicated-expert-rubrics.md) - two independent expert rubrics, one adjudicator, one QA pass, then an LLM judge that only semantic-matches required elements.
 - [Let Evals Emerge From Your Architectural Primitives](../concepts/let-evals-emerge-from-your-architectural-primitives.md) - ledger replay, human-agent difference, and object storage give counterfactuals, labels, and in-customer-environment eval runs.
@@ -1772,6 +1788,7 @@
 
 ## Security
 
+- [Hold Unregulated Intimate Data to the Professional-Privilege Bar](../concepts/hold-unregulated-intimate-data-to-the-professional-privilege-bar.md) - intimate consumer disclosures default into training pipelines, server logs, and analytics because no framework marks them as different.
 - [An Audit Trail Is a Chain of Evidence, Not a Developer Log](../concepts/an-audit-trail-is-a-chain-of-evidence-not-a-developer-log.md) - compliance frameworks require every action, every data access, and its authorization; an append-only event log supplies it.
 - [Store Agent Data in Object Storage Beside the Event Log, Not Inside It](../concepts/store-agent-data-in-object-storage-beside-the-event-log.md) - events hold references to immutable schema-driven blobs, so debugging, zero trust, and trifecta containment separate from the payload.
 - [Make Regulated-Data Failures Architecturally Impossible](../concepts/make-regulated-data-failures-architecturally-impossible.md)
