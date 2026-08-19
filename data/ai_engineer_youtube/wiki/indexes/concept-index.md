@@ -1136,6 +1136,12 @@
 
 ## Generative Media
 
+- [Reliability and Stylistic Range Are Opposite Model Positions](../concepts/reliability-and-stylistic-range-are-opposite-model-positions.md) - production image models buy consistency with mode collapse; pick the end of the dial by whether the user knows what they want.
+- [Refuse AI-Generated Training Images When Style Is the Product](../concepts/refuse-ai-generated-images-when-style-is-the-product.md) - synthetic aesthetic is sticky, so distillation ships a detectable copy of another lab's look.
+- [Filter Training Images Your Captioner Systematically Mis-Describes](../concepts/filter-images-your-captioner-systematically-mis-describes.md) - a caption omission that repeats becomes a property the model renders unconditionally.
+- [Order Billion-Scale Data Filters by Cost Per Sample](../concepts/order-billion-scale-data-filters-by-cost-per-sample.md) - hashes before embeddings, and a large VLM's judgment distilled into a classifier cheap enough to sweep a billion images.
+- [Use Sparse Autoencoder Features as an Unsupervised Data Tagger](../concepts/use-sparse-autoencoder-features-as-an-unsupervised-data-tagger.md) - SAE features double as off-the-shelf tags for watermarks, signatures, and border artifacts.
+- [Run the LLM Post-Training Ladder on Diffusion Models](../concepts/run-the-llm-post-training-ladder-on-diffusion-models.md) - resolution curriculum, mid-training, SFT, preference optimization, GRPO-style RL, and a trained prompt expander.
 - [Anchor Generative Asset Cohesion on One Key-Art Image](../concepts/anchor-generative-asset-cohesion-on-one-key-art-image.md)
 - [Design LLM-native interactive experiences around narrative state, not numeric mechanics](../concepts/design-llm-native-experiences-around-narrative-state-not-numbers.md)
 - [Drive Game NPCs and Difficulty With Runtime LLMs](../concepts/drive-game-npcs-and-difficulty-with-runtime-llms.md)
@@ -1158,6 +1164,8 @@
 
 ## Vision AI
 
+- [Filter Training Images Your Captioner Systematically Mis-Describes](../concepts/filter-images-your-captioner-systematically-mis-describes.md) - the generative mirror of caption-erased distinctions: what the caption omits, the model always renders.
+- [Use Sparse Autoencoder Features as an Unsupervised Data Tagger](../concepts/use-sparse-autoencoder-features-as-an-unsupervised-data-tagger.md) - an SAE on a vision model becomes labeling infrastructure rather than an analysis artifact.
 - [Do not trust saturated vision benchmarks as visual intelligence](../concepts/do-not-trust-saturated-vision-benchmarks-as-visual-intelligence.md)
 - [Use vision-only features when captions erase visual distinctions](../concepts/use-vision-only-features-when-captions-erase-visual-distinctions.md)
 - [Evaluate vision models on domain adaptability and few-shot grounding](../concepts/evaluate-vision-models-on-domain-adaptability-and-few-shot-grounding.md)
@@ -1165,6 +1173,8 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Reliability and Stylistic Range Are Opposite Model Positions](../concepts/reliability-and-stylistic-range-are-opposite-model-positions.md) - segment creative products by how much certainty the user arrives with, and let that choose the model's distribution.
+- [Refuse AI-Generated Training Images When Style Is the Product](../concepts/refuse-ai-generated-images-when-style-is-the-product.md) - differentiation by refusing the shortcut everyone else can cheaply take.
 - [Agreeableness Is a Failure Mode When the Product's Job Is to Change the User](../concepts/agreeableness-is-a-failure-mode-when-the-job-is-to-change-the-user.md) - engagement metrics and user benefit point in opposite directions in advice domains, and the harm is a trajectory rather than a bad response.
 
 - [Hold Unregulated Intimate Data to the Professional-Privilege Bar](../concepts/hold-unregulated-intimate-data-to-the-professional-privilege-bar.md) - a trust bar adopted voluntarily in a category no regulator covers, competing directly with growth instrumentation.
@@ -1556,6 +1566,9 @@
 
 ## Models
 
+- [Run the LLM Post-Training Ladder on Diffusion Models](../concepts/run-the-llm-post-training-ladder-on-diffusion-models.md) - image-model training reuses the LLM stage ladder plus a resolution curriculum and a prompt expander, chosen partly to reuse LLM kernels and literature.
+- [Order Billion-Scale Data Filters by Cost Per Sample](../concepts/order-billion-scale-data-filters-by-cost-per-sample.md) - any judgment you want over a pretraining corpus has to be distilled into something runnable a billion times.
+- [Refuse AI-Generated Training Images When Style Is the Product](../concepts/refuse-ai-generated-images-when-style-is-the-product.md) - the distillation shortcut transfers aesthetic identity along with capability.
 - [Train Your Own Models Only Where You Have a Right to Win](../concepts/train-your-own-models-only-where-you-have-a-right-to-win.md) - saturated quality justifies training for cost and latency; unsaturated quality only if unique data plus narrow focus can beat the frontier's rate of change.
 - [Decompose the Deliverable and Post-Train a Small Model per Section](../concepts/decompose-the-deliverable-and-post-train-a-model-per-section.md) - read the structure of the artifact to find the narrow tasks that small post-trained models can own.
 - [High-Value Vertical Data Is Withheld by Design](../concepts/high-value-vertical-data-is-withheld-by-design.md) - some domains' reasoning corpora never reach the pretraining set, capping what any base model can do there.

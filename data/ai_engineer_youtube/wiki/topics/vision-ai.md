@@ -6,8 +6,12 @@ Vision AI covers model and evaluation choices for systems that perceive images, 
 
 For AI engineers, the key distinction is visual fidelity versus language alignment. Caption-contrastive models can align images and text while missing pose, part, direction, or small-object distinctions that captions omit. Self-supervised vision-only features such as DINOv2 can preserve richer visual structure, but production VLMs still need ways to align those features with language and downstream detection tasks. Evaluation should therefore include domain-shifted object detection, specialized imaging modalities, few-shot examples, and annotator instructions instead of only common-class COCO performance.
 
+Krea's image-model training talk shows the same caption-versus-pixels gap from the generative side, and inverts its consequence. In representation learning, a distinction the caption omits is one the encoder never learns; in generation, a property the caption omits becomes one the decoder always renders — Krea's captioner reliably failed to mention that a photographed painting was framed on a white wall, so the trained model hung every painting it generated on a white wall. Their fix is data selection rather than better captioning ([filter training images your captioner systematically mis-describes](../concepts/filter-images-your-captioner-systematically-mis-describes.md)), with the caption pipeline ordered to extract what the VLM under-reports first: OCR before captioning because text rendering matters, then optional metadata, then the detailed VLM pass. The same talk repurposes vision-model internals as tooling rather than analysis: a sparse autoencoder trained on a CLIP-style vision model becomes an [unsupervised tagging system](../concepts/use-sparse-autoencoder-features-as-an-unsupervised-data-tagger.md) whose activated features (watermarks, signatures, border artifacts, "black and white," "blurry") serve as filter or oversampling criteria with no labeled data. Both moves reinforce this topic's core distinction — language alignment is not visual fidelity — by showing what it costs downstream of the encoder.
+
 ## Key Concepts
 
+- [Filter Training Images Your Captioner Systematically Mis-Describes](../concepts/filter-images-your-captioner-systematically-mis-describes.md) - consistent caption omissions become unconditional artifacts in a generative model trained on them.
+- [Use Sparse Autoencoder Features as an Unsupervised Data Tagger](../concepts/use-sparse-autoencoder-features-as-an-unsupervised-data-tagger.md) - SAE features on a vision model act as off-the-shelf tags for corpus filtering.
 - [Do not trust saturated vision benchmarks as visual intelligence](../concepts/do-not-trust-saturated-vision-benchmarks-as-visual-intelligence.md) - high scores on common visual benchmarks can hide weak spatial and fine-detail reasoning.
 - [Use vision-only features when captions erase visual distinctions](../concepts/use-vision-only-features-when-captions-erase-visual-distinctions.md) - self-supervised visual features can preserve distinctions omitted from image captions.
 - [Evaluate vision models on domain adaptability and few-shot grounding](../concepts/evaluate-vision-models-on-domain-adaptability-and-few-shot-grounding.md) - practical vision benchmarks should test class context, instructions, examples, and specialized domains.
@@ -18,7 +22,9 @@ For AI engineers, the key distinction is visual fidelity versus language alignme
 
 - How should rich vision-only feature spaces be aligned with language features without losing fine visual fidelity?
 - Which domain-adaptability benchmark shapes best predict production object-detection success outside common web-photo classes?
+- Which properties do production captioners systematically omit, and can that omission set be enumerated in advance rather than discovered from generation artifacts?
 
 ## Sources
 
 - [Vision AI in 2025 - Peter Robicheaux, Roboflow](../sources/20250803_IQc05eCvNYE.md)
+- [Training Krea 2: What matters in generative model training — Sangwu Lee, Krea.ai](../sources/20260818_-tviRdpmHvs.md)
