@@ -1,6 +1,7 @@
 # Concept Index
 
 ## Agents
+- [Keep the Expert as Decider With AI in Their Loop](../concepts/keep-the-expert-as-decider-with-ai-in-their-loop.md) - AI-in-the-loop: the agent proposes candidates, the expert decides, and the win is expert time.
 - [Run Must-Not-Fail Decisions in a Code Layer Above the Model](../concepts/run-must-not-fail-decisions-in-code-above-the-model.md)
 - [Hand Domain Experts the Pipeline as Skills](../concepts/hand-domain-experts-the-pipeline-as-skills.md)
 - [Sort Failures by Whether the User Can Retry](../concepts/sort-failures-by-whether-the-user-can-retry.md)
@@ -1136,6 +1137,9 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [You Cannot Iterate on Output You Cannot Judge](../concepts/you-cannot-iterate-on-output-you-cannot-judge.md) - the finished-looking demo an expert buyer will not buy is where vertical AI projects quietly die.
+- [High-Value Vertical Data Is Withheld by Design](../concepts/high-value-vertical-data-is-withheld-by-design.md) - the reasoning corpus is deliberately unpublished, which is what makes curated proprietary data the moat.
+- [Hire the User to Own the Judgment Loop](../concepts/hire-the-user-to-own-the-judgment-loop.md) - hire the person you sell to and make them the evaluator before iterating.
 - [Decide Ship-or-Hold With Explicit Severity Rules](../concepts/decide-ship-or-hold-with-explicit-severity-rules.md)
 - [Commit at Sprint Scale When Implementation Is Cheap](../concepts/commit-at-sprint-scale-when-implementation-is-cheap.md)
 - [Sort Failures by Whether the User Can Retry](../concepts/sort-failures-by-whether-the-user-can-retry.md)
@@ -1220,6 +1224,9 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [You Cannot Iterate on Output You Cannot Judge](../concepts/you-cannot-iterate-on-output-you-cannot-judge.md) - LLM-as-judge cannot substitute for domain judgment where no answer key exists.
+- [Hire the User to Own the Judgment Loop](../concepts/hire-the-user-to-own-the-judgment-loop.md) - the cost-ordered improvement ladder starts at error analysis over observability logs.
+- [High-Value Vertical Data Is Withheld by Design](../concepts/high-value-vertical-data-is-withheld-by-design.md) - NDAs and pay make practitioner annotation unbuyable, so expert labels must be hired.
 - [Check Whether the Judge Is Right Before Changing the Agent](../concepts/check-the-judge-before-changing-the-agent.md)
 - [Generate Eval Data by Reversing the Inference Workflow](../concepts/generate-eval-data-by-reversing-the-inference-workflow.md)
 - [Build Synthetic Records Coarse to Fine by Emulating How They Were Produced](../concepts/build-synthetic-records-coarse-to-fine-by-emulating-their-source-process.md)
@@ -1513,6 +1520,7 @@
 
 ## Models
 
+- [High-Value Vertical Data Is Withheld by Design](../concepts/high-value-vertical-data-is-withheld-by-design.md) - some domains' reasoning corpora never reach the pretraining set, capping what any base model can do there.
 - [Right-size models with prototype-big, deploy-small](../concepts/right-size-models-with-prototype-big-deploy-small.md)
 - [Capability Overhang: Tools Decide Which Model Spikes You Reach](../concepts/capability-overhang-tools-decide-which-model-spikes-you-reach.md)
 - [Train a Small Retrieval Agent With SFT Plus Search-Reward RL](../concepts/train-a-small-retrieval-agent-with-sft-and-search-reward-rl.md)
@@ -2036,6 +2044,7 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Hire the User to Own the Judgment Loop](../concepts/hire-the-user-to-own-the-judgment-loop.md) - a seven-step vertical AI build that stops before iteration until the domain expert is on staff.
 - [Generate Eval Data by Reversing the Inference Workflow](../concepts/generate-eval-data-by-reversing-the-inference-workflow.md)
 - [Build Synthetic Records Coarse to Fine by Emulating How They Were Produced](../concepts/build-synthetic-records-coarse-to-fine-by-emulating-their-source-process.md)
 - [Hand Domain Experts the Pipeline as Skills](../concepts/hand-domain-experts-the-pipeline-as-skills.md)
