@@ -840,6 +840,10 @@
 
 ## Infrastructure
 
+- [GPU Utilization Is a Lie: Instrument Tensor Cores and the Fabric](../concepts/measure-tensor-core-utilization-not-gpu-utilization.md) - GPU utilization reads 100% on an underused cluster; tensor cores are the honest proxy and InfiniBand counters have to be built by hand.
+- [Let Training Crash and Checkpoint Against a Fast Filesystem](../concepts/let-training-crash-and-checkpoint-against-a-fast-filesystem.md) - replace hardware on a threshold, absorb crashes with frequent checkpoints, and treat storage throughput as the enabling constraint.
+- [Give Training Priority Over Production on a Shared GPU Cluster](../concepts/give-training-priority-over-production-on-a-shared-gpu-cluster.md) - training preempts inference because a training GPU-hour is worth more, with gang scheduling and manual quota drift as the mechanics.
+- [Evict Inference Off-Cluster Through a Virtual-Kubelet Node](../concepts/evict-inference-off-cluster-through-a-virtual-kubelet-node.md) - a fake node makes external GPU capacity schedulable; a taint routes new pods and a descheduler migrates them back gradually.
 - [Serve Real-Time Video as Stateful Streaming Sessions, Not Batch Jobs](../concepts/serve-realtime-video-as-stateful-streaming-sessions.md) - real-time generative video breaks batch serving on three axes: streaming output, long-lived stateful sessions, and GPUs placed near users.
 - [An Audit Trail Is a Chain of Evidence, Not a Developer Log](../concepts/an-audit-trail-is-a-chain-of-evidence-not-a-developer-log.md) - compliance frameworks require every action, every data access, and its authorization; an append-only event log supplies it.
 - [Store Agent Data in Object Storage Beside the Event Log, Not Inside It](../concepts/store-agent-data-in-object-storage-beside-the-event-log.md) - events hold references to immutable schema-driven blobs, so debugging, zero trust, and trifecta containment separate from the payload.
@@ -1075,6 +1079,7 @@
 
 ## Inference
 
+- [Inference Tolerates Degraded GPUs That Training Cannot](../concepts/inference-tolerates-degraded-gpus-that-training-cannot.md) - single-node serving has no collective to slow down, so hot or flaky cards stay useful and hardware quality becomes a routing parameter.
 - [Track the Efficiency Axis in Generative Video, Not Only Quality](../concepts/track-the-efficiency-axis-in-generative-video-not-only-quality.md) - a distilled real-time video model buys last year's frontier quality at ~1/100th the cost.
 - [Pre-Bake Transforms Too Heavy for the Real-Time Path](../concepts/pre-bake-transforms-too-heavy-for-the-realtime-path.md) - the cheapest answer to a real-time budget is deleting the live computation, available whenever the control input is enumerable.
 - [Gate Always-On Listening With Cheap Event Detectors](../concepts/gate-always-on-listening-with-cheap-event-detectors.md) - an ambient system spends most of its compute deciding that no request exists, so chain cheap gates and reserve heavy models for the moments they fire on.
@@ -1143,6 +1148,7 @@
 
 ## Generative Media
 
+- [Inference Tolerates Degraded GPUs That Training Cannot](../concepts/inference-tolerates-degraded-gpus-that-training-cannot.md) - diffusion transformers serve on one node, so media serving tolerates hardware a training run must eject.
 - [Track the Efficiency Axis in Generative Video, Not Only Quality](../concepts/track-the-efficiency-axis-in-generative-video-not-only-quality.md) - real-time output is last year's frontier quality at ~1/100th the cost, so the unit becomes dollars per session-hour.
 - [Steer in Real Time, Then Render the Chosen Shot at Full Fidelity](../concepts/steer-in-real-time-then-render-the-chosen-shot-at-full-fidelity.md) - explore live at sub-second latency, then commit through a slower high-fidelity model.
 - [Text-First AI Interfaces Exclude People Who Don't Think in Text](../concepts/text-first-interfaces-exclude-people-who-dont-think-in-text.md) - cheap continuous generation makes a visual medium affordable as an interface, not just as output.
@@ -1589,6 +1595,8 @@
 
 ## Models
 
+- [GPU Utilization Is a Lie: Instrument Tensor Cores and the Fabric](../concepts/measure-tensor-core-utilization-not-gpu-utilization.md) - what a from-scratch pre-training run has to measure, and why the resolution curriculum shows up as arithmetic intensity.
+- [Let Training Crash and Checkpoint Against a Fast Filesystem](../concepts/let-training-crash-and-checkpoint-against-a-fast-filesystem.md) - the operations practice that training from scratch commits a team to.
 - [Pick a Real-Time World-Model Class by What the User Steers](../concepts/pick-a-realtime-world-model-class-by-what-the-user-steers.md) - a working taxonomy for the real-time interactive video family, with sharply different maturity per class.
 - [Run the LLM Post-Training Ladder on Diffusion Models](../concepts/run-the-llm-post-training-ladder-on-diffusion-models.md) - image-model training reuses the LLM stage ladder plus a resolution curriculum and a prompt expander, chosen partly to reuse LLM kernels and literature.
 - [Order Billion-Scale Data Filters by Cost Per Sample](../concepts/order-billion-scale-data-filters-by-cost-per-sample.md) - any judgment you want over a pretraining corpus has to be distilled into something runnable a billion times.
