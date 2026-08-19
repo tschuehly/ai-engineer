@@ -1071,6 +1071,7 @@
 
 ## Inference
 
+- [Pre-Bake Transforms Too Heavy for the Real-Time Path](../concepts/pre-bake-transforms-too-heavy-for-the-realtime-path.md) - the cheapest answer to a real-time budget is deleting the live computation, available whenever the control input is enumerable.
 - [Gate Always-On Listening With Cheap Event Detectors](../concepts/gate-always-on-listening-with-cheap-event-detectors.md) - an ambient system spends most of its compute deciding that no request exists, so chain cheap gates and reserve heavy models for the moments they fire on.
 - [Decompose the Deliverable and Post-Train a Small Model per Section](../concepts/decompose-the-deliverable-and-post-train-a-model-per-section.md) - split a long structured output along its own sections so cost tracks per-part difficulty without a difficulty classifier.
 - [Route Each Request to the Cheapest Sufficient Model by Difficulty](../concepts/route-each-request-to-the-cheapest-sufficient-model-by-difficulty.md)
@@ -1137,6 +1138,10 @@
 
 ## Generative Media
 
+- [Separate What Generated Audio Says From When It Plays](../concepts/separate-what-generated-audio-says-from-when-it-plays.md) - slice the utterance and let external events fire the units, so the model owns content while a performer owns timing, pitch, and expression.
+- [Pre-Bake Transforms Too Heavy for the Real-Time Path](../concepts/pre-bake-transforms-too-heavy-for-the-realtime-path.md) - enumerable control input means the expensive transform can run once per value offline and the runtime becomes a lookup.
+- [Segment Synthesized Speech With Multiple Cues, Then Let a Human Fix the Rest](../concepts/segment-synthesized-speech-with-multiple-cues-and-manual-repair.md) - energy gaps plus sonority peaks get close, and a drag-to-edit boundary UI is cheaper than a third heuristic.
+- [Ship AI Audio Features as Plugins Inside the Host DAW](../concepts/ship-ai-audio-features-as-plugins-inside-the-host-daw.md) - build into the host that already owns the audio graph, the transport, and the user's workflow.
 - [Real-Time Generation Changes the Medium, Not Just the Latency](../concepts/real-time-generation-changes-the-medium-not-the-latency.md) - steerable-while-generating output is a different category, not a faster one; the GPS and viewfinder cases carry the argument.
 - [Pick a Real-Time World-Model Class by What the User Steers](../concepts/pick-a-realtime-world-model-class-by-what-the-user-steers.md) - prompted scenes, controllable characters, and live avatars are three products with three maturities.
 - [Serve Real-Time Video as Stateful Streaming Sessions, Not Batch Jobs](../concepts/serve-realtime-video-as-stateful-streaming-sessions.md) - streaming pixels, per-session model memory, and sub-100 ms global GPU placement.
@@ -1849,6 +1854,7 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Ship AI Audio Features as Plugins Inside the Host DAW](../concepts/ship-ai-audio-features-as-plugins-inside-the-host-daw.md) - deliver an AI feature into the application that already owns the pipeline, so only the new decisions need a UI.
 - [Hand Domain Experts the Pipeline as Skills](../concepts/hand-domain-experts-the-pipeline-as-skills.md)
 - [Adopt A2A's Spec as an Internal Front-End/Back-End Contract](../concepts/adopt-a2a-as-an-internal-front-end-back-end-contract.md)
 - [The Fat-Agent Tool Overload Collapses Accuracy and Inflates Latency](../concepts/fat-agent-tool-overload-collapses-accuracy-and-latency.md)
@@ -2059,6 +2065,8 @@
 
 ## Voice Agents
 
+- [Separate What Generated Audio Says From When It Plays](../concepts/separate-what-generated-audio-says-from-when-it-plays.md) - a speech cascade whose output device is an instrument takes generation latency off the live path entirely.
+- [Segment Synthesized Speech With Multiple Cues, Then Let a Human Fix the Rest](../concepts/segment-synthesized-speech-with-multiple-cues-and-manual-repair.md) - word-level slicing of TTS output needs two independent acoustic cues plus a manual repair affordance.
 - [Relax the Latency Budget by Choosing Voice-In, Visuals-Out Over Voice-Out](../concepts/relax-the-latency-budget-with-voice-in-visuals-out.md)
 - [Treat AI as an Interface Technology That Removes Human Burden](../concepts/treat-ai-as-an-interface-technology-that-removes-human-burden.md)
 - [Treat the Prompt as a Batch Protocol, Not a Conversation](../concepts/treat-the-prompt-as-a-batch-protocol-not-a-conversation.md)

@@ -128,8 +128,11 @@ Skills are themselves a tool surface, and Matt Pocock's authoring rubric makes o
 
 Amol Kapoor (Nori) generalizes the "text-native surface beats spatial automation" rule from CLIs to *artifact-authoring* tools. When agents produce garbage graphics, the fault is the tool's medium, not the model: canvas tools (PowerPoint, Figma, Canva, Figma MCPs, PowerPoint CLIs, screenshot-and-replace loops) are built for human hands and eyes and force the model to place coordinates in "a wall of numbers," which is as foreign to a model as handwriting SVG is to a person. So [match the agent's output medium to its native representation](../concepts/match-agent-output-medium-to-its-native-representation.md) — give it a language/structure tool where it reasons about semantic elements (heading, chart, grid) and the renderer places pixels, so "the model never actually places a coordinate." Concretely, [author visual artifacts as HTML and decouple the editing format from delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md): HTML/CSS is the editing substrate agents already handle well (slides, docs, video), and the delivery format (a PowerPoint deck, a PDF) is a separate downstream render. This is the same lesson as "prefer a CLI/API over browser automation," applied to the tool an agent uses to *make* graphics rather than to act on a system.
 
+Most of this topic is about the tools an agent uses; the mirror question is which tool an AI feature should live inside when its users already have one. Todd Fisher's answer for audio is to [ship AI audio features as plugins inside the host DAW](../concepts/ship-ai-audio-features-as-plugins-inside-the-host-daw.md): a JUCE plugin dropped into Logic Pro "just like any other plugin… where you just plop it in there," chained with the session's existing effects, on the reasoning that "your DAW is effectively your IDE but for musicians and music producers." The host then supplies live input, routing, monitoring, and the backing track, and the plugin's own UI carries only the genuinely new decisions — in his case a clarity dial mixing synthesized tone against generated voice, and a drag-to-edit word-boundary editor. The tradeoff is that the feature now runs inside someone else's real-time audio thread, which is part of why the heaviest processing had to move off the live path.
+
 ## Key Concepts
 
+- [Ship AI Audio Features as Plugins Inside the Host DAW](../concepts/ship-ai-audio-features-as-plugins-inside-the-host-daw.md) - deliver into the application that already owns the pipeline and the user's workflow, so the build is only the new signal processing.
 - [Adopt A2A's Spec as an Internal Front-End/Back-End Contract](../concepts/adopt-a2a-as-an-internal-front-end-back-end-contract.md) - use Google's A2A agent-card spec as the internal contract between your own front-end and back-end for development alignment, not to cross an ownership boundary.
 - [Choose a skill's trigger by trading context load against cognitive load](../concepts/choose-skill-trigger-by-trading-context-load-against-cognitive-load.md) - exposing a skill to the model (model-invocation) adds a per-request description and firing unpredictability; keeping it user-only stays deterministic but loads the pilot — a tool-surface budget decision.
 - [Standardize the Editor–Agent Boundary With a Client-Agent Protocol](../concepts/standardize-the-editor-agent-boundary-with-a-client-agent-protocol.md) - ACP is a JSON-RPC LSP/MCP analog for the editor↔agent boundary: four minimal methods plus capability negotiation let any client drive any agent.
@@ -369,6 +372,7 @@ Amol Kapoor (Nori) generalizes the "text-native surface beats spatial automation
 
 ## Open Questions
 
+- Which AI features belong inside the user's existing host application as a plugin, and which need their own runtime because the host's real-time or process constraints would break them?
 - When should a workflow be encoded as an MCP tool description, a skill, a local script, or a combination of these?
 - When is server-controlled command prompting a better product surface than visible UI controls?
 - What telemetry is needed to decide that a skill or tool is unused, stale, or actively harmful?
@@ -404,6 +408,7 @@ Amol Kapoor (Nori) generalizes the "text-native surface beats spatial automation
 
 ## Sources
 
+- [While my guitar gently speaks — Todd Fisher, Philo Ventures](../sources/20260818_E_Txocq-Lrw.md)
 - [Agents in Production: How OpenGov Built and Scaled OG Assist - Gabe De Mesa, OpenGov](../sources/20260626_4uFVSLgD2Q4.md)
 - [The 100-Tool Agent Is a Trap - Sohail Shaikh & Ankush Rastogi, Prosodica](../sources/20260628_vh2VGuQ3zhY.md)
 - [Building Great Agent Skills: The Missing Manual - Matt Pocock](../sources/20260629_UNzCG3lw6O0.md)

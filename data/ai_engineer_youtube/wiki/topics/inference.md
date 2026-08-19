@@ -44,8 +44,11 @@ Hippocratic AI's realtime clinical voice stack states the constraint order for l
 
 Chaitanya Asawa (Abridge) adds the two cost dials that sit *outside* per-request routing, both forced by a run rate of "100 million medical conversations a year" with the product live inside the conversation. The first moves the boundary: instead of routing a whole generation to a tier, [decompose the deliverable and post-train a small model per section](../concepts/decompose-the-deliverable-and-post-train-a-model-per-section.md), because a clinical note is really several narrow tasks (history of present illness, past medical history, assessment and plan) and "we don't need frontier level intelligence for every problem." Where difficulty routing needs a classifier that can be wrong, the section boundary is supplied by the artifact itself — at the price of an assembly step and one model to maintain per part. The second dial is about *whether to call a model at all*: for capturing orders a clinician speaks mid-visit, polling is the naive design and it does not survive contact with the scale — "every few seconds are just listening for orders … would really break the bank" — so [cheap event detectors gate the always-on stream](../concepts/gate-always-on-listening-with-cheap-event-detectors.md), and "a number of different gates that are cheaper and faster" decide when to trigger the heavier models that actually match a spoken order against the approved catalogue. That reframes the cost question this topic usually asks. Difficulty routing assumes a request exists and asks which tier serves it; ambient products spend most of their compute deciding that no request exists at all, and the same latency envelope still applies, since "you can't act on information too late and you have to act at the right time for it to be useful."
 
+The cheapest dial of all is not serving the request at all. Todd Fisher's guitar project needs pitch-shifted singing samples that WORLD produces far too slowly for a live audio thread, and rather than optimize the transform he moves it off the request path: [pre-bake transforms too heavy for the real-time path](../concepts/pre-bake-transforms-too-heavy-for-the-realtime-path.md), running it once per possible input offline so the runtime is a lookup — each fret maps to a finished sample. What licenses the substitution is an enumerable control surface, and what it costs is coverage: he baked only five vowel sounds, and the output is honestly "not quite your opera singer." That makes it the opposite end of this topic's range from quantization, distillation, batching, and routing, all of which make the live computation cheaper rather than deleting it, and it is unavailable exactly where those matter most — an open-ended prompt has no finite key to bake against.
+
 ## Key Concepts
 
+- [Pre-Bake Transforms Too Heavy for the Real-Time Path](../concepts/pre-bake-transforms-too-heavy-for-the-realtime-path.md) - when the control input is enumerable, precompute every result offline and turn the real-time step into a lookup.
 - [Decompose the Deliverable and Post-Train a Small Model per Section](../concepts/decompose-the-deliverable-and-post-train-a-model-per-section.md) - split a long structured output along its own sections and serve each with a small post-trained model, so cost and latency track per-part difficulty instead of the whole artifact's.
 - [Gate Always-On Listening With Cheap Event Detectors](../concepts/gate-always-on-listening-with-cheap-event-detectors.md) - an ambient system's dominant cost is deciding when to act, so chain cheap fast gates over the stream and reserve heavy models for the moments they fire on.
 - [Route Each Request to the Cheapest Sufficient Model by Difficulty](../concepts/route-each-request-to-the-cheapest-sufficient-model-by-difficulty.md) - classify each agent call's difficulty and send it to the cheapest sufficient tier (cheap/mid/frontier), optionally via a cheap classifier model, so per-token cost tracks difficulty instead of a fixed worst-case.
@@ -114,6 +117,7 @@ Chaitanya Asawa (Abridge) adds the two cost dials that sit *outside* per-request
 
 ## Open Questions
 
+- How large can a pre-baked result set get before storage, build time, and staleness cost more than serving the transform live?
 - What measures the recall of a cheap gate in front of an expensive model? Abridge's in-visit order capture only pays because most of the stream never reaches the heavy model, but a missed trigger produces no output to score and no error to log, and no source describes how gate misses are detected.
 - How should teams evaluate the latency and quality tradeoff between preprocessing with small models and sending broader raw context to a larger agent model?
 - When should a workload pay inference-time cost for retrieval or deep research versus training-time cost for model adaptation?
@@ -132,6 +136,7 @@ Chaitanya Asawa (Abridge) adds the two cost dials that sit *outside* per-request
 
 ## Sources
 
+- [While my guitar gently speaks — Todd Fisher, Philo Ventures](../sources/20260818_E_Txocq-Lrw.md)
 - [Voice In, Visuals Out: The Agony and the Ecstasy - Allen Pike, Forestwalk Labs](../sources/20260628_65X0pQ6Lmbg.md)
 - [You Might Not Need 50 Diffusion Steps — Ziv Ilan, Nvidia](../sources/20260616_gHs5ZiY80PM.md)
 - [Your Agent Failed in Prod. Good Luck Reproducing It. - Tisha Chawla & Susheem Koul, Microsoft](../sources/20260629_Lc8zRh9muoY.md)
