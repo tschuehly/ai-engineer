@@ -1,6 +1,7 @@
 # Concept Index
 
 ## Agents
+- [Run Must-Not-Fail Decisions in a Code Layer Above the Model](../concepts/run-must-not-fail-decisions-in-code-above-the-model.md)
 - [Hand Domain Experts the Pipeline as Skills](../concepts/hand-domain-experts-the-pipeline-as-skills.md)
 - [Sort Failures by Whether the User Can Retry](../concepts/sort-failures-by-whether-the-user-can-retry.md)
 - [Ground Agent Actions in an Existing Domain Transaction Standard](../concepts/ground-agent-actions-in-an-existing-domain-transaction-standard.md)
@@ -828,6 +829,7 @@
 
 ## Infrastructure
 
+- [Make Regulated-Data Failures Architecturally Impossible](../concepts/make-regulated-data-failures-architecturally-impossible.md)
 - [Own the Agent Loop on a Typed Effects Runtime](../concepts/own-the-agent-loop-on-a-typed-effects-runtime.md)
 - [Keep inference off the microcontroller: build the AI-native device as a thin client over a backend](../concepts/keep-inference-off-the-microcontroller-thin-device-over-a-backend.md)
 - [Structure the ML Codebase as Decoupled Per-Researcher Microservices](../concepts/structure-the-ml-codebase-as-decoupled-per-researcher-microservices.md)
@@ -1018,6 +1020,10 @@
 
 ## Healthcare Operations
 
+- [Run Must-Not-Fail Decisions in a Code Layer Above the Model](../concepts/run-must-not-fail-decisions-in-code-above-the-model.md)
+- [Make Regulated-Data Failures Architecturally Impossible](../concepts/make-regulated-data-failures-architecturally-impossible.md)
+- [Decide Ship-or-Hold With Explicit Severity Rules](../concepts/decide-ship-or-hold-with-explicit-severity-rules.md)
+- [Check Whether the Judge Is Right Before Changing the Agent](../concepts/check-the-judge-before-changing-the-agent.md)
 - [Generate Eval Data by Reversing the Inference Workflow](../concepts/generate-eval-data-by-reversing-the-inference-workflow.md)
 - [Hand Domain Experts the Pipeline as Skills](../concepts/hand-domain-experts-the-pipeline-as-skills.md)
 - [Sort Failures by Whether the User Can Retry](../concepts/sort-failures-by-whether-the-user-can-retry.md)
@@ -1130,6 +1136,7 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Decide Ship-or-Hold With Explicit Severity Rules](../concepts/decide-ship-or-hold-with-explicit-severity-rules.md)
 - [Commit at Sprint Scale When Implementation Is Cheap](../concepts/commit-at-sprint-scale-when-implementation-is-cheap.md)
 - [Sort Failures by Whether the User Can Retry](../concepts/sort-failures-by-whether-the-user-can-retry.md)
 - [Layer Brand Voice Into Four Composable Prompt Tiers](../concepts/layer-brand-voice-into-composable-prompt-tiers.md)
@@ -1213,6 +1220,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Check Whether the Judge Is Right Before Changing the Agent](../concepts/check-the-judge-before-changing-the-agent.md)
 - [Generate Eval Data by Reversing the Inference Workflow](../concepts/generate-eval-data-by-reversing-the-inference-workflow.md)
 - [Build Synthetic Records Coarse to Fine by Emulating How They Were Produced](../concepts/build-synthetic-records-coarse-to-fine-by-emulating-their-source-process.md)
 - [Sort Failures by Whether the User Can Retry](../concepts/sort-failures-by-whether-the-user-can-retry.md)
@@ -1734,6 +1742,8 @@
 
 ## Security
 
+- [Make Regulated-Data Failures Architecturally Impossible](../concepts/make-regulated-data-failures-architecturally-impossible.md)
+- [Run Must-Not-Fail Decisions in a Code Layer Above the Model](../concepts/run-must-not-fail-decisions-in-code-above-the-model.md)
 - [Behavioral Evals Cannot Catch Sleeper-Agent Backdoors](../concepts/behavioral-evals-cannot-catch-sleeper-agent-backdoors.md)
 - [Detect Fine-Tuning Backdoors With an Activation-Difference SAE](../concepts/detect-fine-tuning-backdoors-with-an-activation-difference-sae.md)
 - [A Bigger Model Is Not Automatically a Safer or Better Agent](../concepts/a-bigger-model-is-not-automatically-a-safer-or-better-agent.md)
