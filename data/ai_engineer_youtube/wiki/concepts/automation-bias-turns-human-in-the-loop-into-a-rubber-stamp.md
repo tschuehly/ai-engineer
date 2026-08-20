@@ -16,6 +16,8 @@ Details:
 - **The code-review extension names volume as the aggravating factor, not interface design.** "This is almost surely happening in code review as well… Especially when there's higher amounts of code being written, when there's multiple agents writing code simultaneously, when you now have to bring all those pieces together into a single software application, the load is just too great. There's only so many hours in the day… And so there's a lot of rubber stamping that I'm sure is happening in all of your organizations." This is an inference from the study rather than a measurement of code review, but it identifies a second driver alongside the frictionless-interface mechanism above: deference under time scarcity, which no interface change removes. The prescribed backstop is therefore automated rather than procedural — see [Verify Generated Code With a Method the Generator Does Not Share](verify-generated-code-with-a-method-the-generator-does-not-share.md) and [AI Output Speed Can Overwhelm Review Capacity](ai-output-speed-can-overwhelm-review-capacity.md). ([Chatterjee](../sources/20260809_03l29gJXpCE.md), 07:13-07:39)
 - Practical tell: if a review step only collects a binary accept/reject that skews heavily to accept, you likely have automation bias, not oversight. The corrective is to force the human to be an investigator who cites independent evidence (see the related discernment concept) and to capture what they actually changed (see the training-label concept).
 
+- The design-decision version of the same collapse, from Matt Dailey (Ref): the agent "ask[s] you a question and it'll be like, you know, this is the recommended option and then you're like, great. I don't even think about this. I'll just hit that one and we keep going." Two things make this worse than a rubber-stamped approval of *work already done*. The prompt arrives inside a medium Dailey characterizes as "brain off" — chat is built for execution, which is the worst posture in which to be handed a design question — and marking one option as recommended supplies the anchor that automation bias then follows. What is stamped here is not a verdict on output but a choice about what to build. ([Dailey](../sources/20260809_Kz4QJmNrVXU.md), 10:55-11:35)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -25,6 +27,8 @@ Related concepts:
 - [Treat Every Human-AI Interaction as a Training Label](treat-every-human-ai-interaction-as-a-training-label.md)
 - [AI Output Speed Can Overwhelm Review Capacity](ai-output-speed-can-overwhelm-review-capacity.md)
 - [Self-verifying agent loops hide review rather than remove it](self-verifying-agent-loops-hide-review-rather-than-remove-it.md)
+- [Ceding a Critical Decision Transfers Ownership of the Code](ceding-a-critical-decision-transfers-ownership-of-the-code.md)
 
 Sources:
 - [Build AI Systems for Discernment, Not Approval - Angel Ortmann Lee, Duolingo](../sources/20260707_CDqzWpwkSls.md), 01:19-11:56
+- [Velocity Sickness: What Happens When Your Whole Team Gets 10x Faster — Matt Dailey, Ref.](../sources/20260809_Kz4QJmNrVXU.md), 10:55-11:35

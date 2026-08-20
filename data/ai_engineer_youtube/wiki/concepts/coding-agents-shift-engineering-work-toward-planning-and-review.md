@@ -12,6 +12,8 @@ Details:
 - The displaced time moves into planning and reviewing; the speaker describes AI as an accelerant that increases daily throughput but still leaves humans responsible for higher-leverage planning and review work. (02:52-03:30)
 - Mature coding-agent interfaces should optimize task writing, QA, code review, and change shepherding because those are the human responsibilities that remain visible when agents handle more implementation. (12:14-14:01)
 
+- Matt Dailey (Ref) sharpens the displacement in two ways. First, the phases are not one new job but two gears with different requirements — planning is "creative and collaborative," polish is evaluative and local — so "the skill now is what gear am I in? Am I using the appropriate tools for the gear that I'm… trying to accomplish right now." Second, the displaced work inherits the wrong tools: "all our history of coding tools were built for this style of work. Um our IDE, our workhorse… it was built for implementation and polish to be done by an individual, to be heads down." The cheap diagnostic is drift inside a single session — notice "when you drift from the planning phase into the polish phase," and whether the tool still fits. ([Dailey](../sources/20260809_Kz4QJmNrVXU.md), 07:03-09:55, 18:43-19:16)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Coding Agents](../topics/coding-agents.md)
@@ -20,6 +22,8 @@ Related topics:
 Related concepts:
 - [Ralph loops process one ticket at a time with fresh context](ralph-loops-process-one-ticket-at-a-time-with-fresh-context.md)
 - [Feedback turns coding-agent loops into prompt and skill improvement cycles](feedback-turns-coding-agent-loops-into-prompt-and-skill-improvement-cycles.md)
+- [Separate the Decision Layer From the Implementation Layer](separate-the-decision-layer-from-the-implementation-layer.md)
 
 Sources:
 - [Software Engineering Is Becoming Plan and Review - Louis Knight-Webb, Vibe Kanban](../sources/20260502_W76woOYHlvY.md), 02:04-03:30, 12:14-14:01
+- [Velocity Sickness: What Happens When Your Whole Team Gets 10x Faster — Matt Dailey, Ref.](../sources/20260809_Kz4QJmNrVXU.md), 07:03-09:55, 18:43-19:16

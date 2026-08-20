@@ -13,6 +13,8 @@ Details:
 - A reviewable agent workflow should attach the work to the responsible human or team while preserving that an agent generated the diff, so accountability and auditability do not disappear behind a bot account. (11:32-12:09)
 - This ownership gate complements, rather than replaces, code review: Brennan separately warns that automatically merging agent output can create duplicate code and technical debt quickly. (10:34-11:15)
 
+- Ownership in this page's sense is accountability routing — whose name is on the PR, who owns the failing test. Matt Dailey (Ref) names a loss upstream of that, which correct routing does not prevent: "if you as an engineer are letting an agent make a critical decision, you are [ceding] control of your code. You are no longer the owner of that code. The agent is," and at team scale "you no longer own the product." A change can be routed to exactly the right accountable human and still be a change whose every real decision the model made. Both controls are needed, and they fail independently. ([Dailey](../sources/20260809_Kz4QJmNrVXU.md), 03:16-03:43, 17:10-17:27)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Coding Agents](../topics/coding-agents.md)
@@ -22,6 +24,8 @@ Related concepts:
 - [Enterprise Coding Agents Need Ownership, Auditability, and Action Controls](enterprise-coding-agents-need-ownership-auditability-and-action-controls.md)
 - [First-Class Agent Users Need Identity, Scopes, and Audit Trails](first-class-agent-users-need-identity-scopes-and-audit-trails.md)
 - [AI code quality needs full-SDLC workflows](ai-code-quality-needs-full-sdlc-workflows.md)
+- [Ceding a Critical Decision Transfers Ownership of the Code](ceding-a-critical-decision-transfers-ownership-of-the-code.md)
 
 Sources:
 - [Software Development Agents: What Works and What Doesn't - Robert Brennan, OpenHands](../sources/20250725_o_hhkJtlbSs.md), 10:34-12:09
+- [Velocity Sickness: What Happens When Your Whole Team Gets 10x Faster — Matt Dailey, Ref.](../sources/20260809_Kz4QJmNrVXU.md), 03:16-03:43, 17:10-17:27

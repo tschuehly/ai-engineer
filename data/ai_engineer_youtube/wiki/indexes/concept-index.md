@@ -1,6 +1,7 @@
 # Concept Index
 
 ## Agents
+- [Make the Doc the State and the Agent the Action](../concepts/make-the-doc-the-state-and-the-agent-the-action.md) - stateless agents plus a durable state document makes agents disposable and their context shareable across many of them.
 - [Fast Inference Moves the Agent Bottleneck to the Network](../concepts/fast-inference-moves-the-agent-bottleneck-to-the-network.md) - at 1,000 tokens per second the round trip and the conversation resend dominate the turn.
 - [Model Async Agent Work as Spawn, Send, Wait, Shut Down](../concepts/model-async-agent-work-as-spawn-send-wait-shut-down.md) - one handle abstraction covering subagents and background terminals alike.
 - [Drive Computer Use Through a Persistent Scripting Session](../concepts/drive-computer-use-through-a-persistent-scripting-session.md) - a REPL held across turns replaces a fixed action vocabulary, so the agent scripts the environment.
@@ -549,6 +550,11 @@
 - [Learn risk scoring from audit feedback for predictive compliance](../concepts/learn-risk-scoring-from-audit-feedback-for-predictive-compliance.md)
 
 ## Coding Agents
+- [Velocity Sickness Is Output Without Impact](../concepts/velocity-sickness-is-output-without-impact.md) - four team-level symptoms of AI throughput that never converts, three of which shipping metrics cannot see.
+- [Separate the Decision Layer From the Implementation Layer](../concepts/separate-the-decision-layer-from-the-implementation-layer.md) - planning is a distinct gear with inverted tool requirements, and drift into polish is detectable inside one session.
+- [Make the Doc the State and the Agent the Action](../concepts/make-the-doc-the-state-and-the-agent-the-action.md) - a durable shared document holds the state so agents stay stateless, restartable, and start from identical context.
+- [Unimplemented Plans Signal a Working Decision Layer](../concepts/unimplemented-plans-signal-a-working-decision-layer.md) - prototype gravity is what a planning layer escapes, so plans written and never built are the expected output.
+- [Ceding a Critical Decision Transfers Ownership of the Code](../concepts/ceding-a-critical-decision-transfers-ownership-of-the-code.md) - ownership is lost at the decision, not at the line, and reading the diff afterwards does not restore it.
 - [Verification Debt Outlives the Productivity Spike](../concepts/verification-debt-outlives-the-productivity-spike.md) - the ~3-month productivity gain decays; the static-analysis and complexity residue does not.
 - [Verify Generated Code With a Method the Generator Does Not Share](../concepts/verify-generated-code-with-a-method-the-generator-does-not-share.md) - zero trust is provenance-blindness plus method-class independence, and its payoff is provability rather than detection rate.
 - [Choose Verification Layers by Defect-Class Coverage](../concepts/choose-verification-layers-by-defect-class-coverage.md) - syntax, data flow, architecture, and control flow are reached by different techniques, so layers are a coverage question.
@@ -842,6 +848,7 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Make the Doc the State and the Agent the Action](../concepts/make-the-doc-the-state-and-the-agent-the-action.md) - chat is a lossy container for state; a durable shared document is readable by teammates and reusable across agents.
 - [Defer Tool Definitions Out of Context and Let the Model Search for Them](../concepts/defer-tool-definitions-out-of-context-and-let-the-model-search-for-them.md) - the tool registry is the term that grows, and it does not have to be resident.
 - [Cap the Skills List as a Share of the Context Window](../concepts/cap-the-skills-list-as-a-share-of-the-context-window.md) - a context budget expressed as a percentage of the window, enforced by the harness.
 - [Measure First-Prompt Context Burn to Test Progressive Disclosure](../concepts/measure-first-prompt-context-burn-to-test-progressive-disclosure.md) - a one-session numeric check of whether the context files defer anything, with a stated baseline and failure threshold.
@@ -1409,6 +1416,7 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Unimplemented Plans Signal a Working Decision Layer](../concepts/unimplemented-plans-signal-a-working-decision-layer.md) - code velocity is not idea velocity, and prototype gravity narrows the option set precisely because building got cheap.
 - [Decide the Agent Buy Boundary With Six Production Questions](../concepts/decide-the-agent-buy-boundary-with-six-production-questions.md) - what a hosted agent platform will and will not do for you, and where differentiation therefore has to live.
 - [Raise the Floor Before Maxing the Benchmark](../concepts/raise-the-floor-before-maxing-the-benchmark.md) - "are you a benchmark maxer or a floor raiser?" — the floor is where user trust is lost, and it cannot be removed without removing the ceiling.
 - [Lab Eval Vocabulary Does Not Transfer to Application Teams](../concepts/lab-eval-vocabulary-does-not-transfer-to-application-teams.md) - how much responsibility the product leaves to the user is the axis that sets the eval design.
@@ -2538,6 +2546,10 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Separate the Decision Layer From the Implementation Layer](../concepts/separate-the-decision-layer-from-the-implementation-layer.md) - the IDE, chat, plan mode, and spec-driven development are each ruled out for the deciding half of the work.
+- [Velocity Sickness Is Output Without Impact](../concepts/velocity-sickness-is-output-without-impact.md) - broken merge queues, divergent work, agent bankruptcy, and decisions made by the agent.
+- [Unimplemented Plans Signal a Working Decision Layer](../concepts/unimplemented-plans-signal-a-working-decision-layer.md) - plans that never ship mean prioritization happened after exploration instead of being forced by a prototype.
+- [Ceding a Critical Decision Transfers Ownership of the Code](../concepts/ceding-a-critical-decision-transfers-ownership-of-the-code.md) - the "recommended option" prompt is where ownership changes hands, mid-session and unremarked.
 - [Fix Defects Inside the Agent Loop Before They Become Foundation](../concepts/fix-defects-inside-the-agent-loop-before-they-become-foundation.md) - verify in both the inner agentic loop and the outer CI/CD loop; the inner one exists to stop propagation.
 - [Choose Verification Layers by Defect-Class Coverage](../concepts/choose-verification-layers-by-defect-class-coverage.md) - the reasoning layer produces findings, the reproducible layer produces the pass/fail that blocks.
 - [Verify Generated Code With a Method the Generator Does Not Share](../concepts/verify-generated-code-with-a-method-the-generator-does-not-share.md) - one verification regime for all code regardless of who wrote it, using a method the writer did not.

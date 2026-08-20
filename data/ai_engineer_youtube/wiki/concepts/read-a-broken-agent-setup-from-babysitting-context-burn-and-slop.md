@@ -17,6 +17,8 @@ Details:
 - The attribution discipline generalizes in both directions. This page covers *harness moved, model did not*. The complementary failure is *model moved, harness did not* — see [A Harness Fix Becomes Overhead When the Model Outgrows It](a-harness-fix-becomes-overhead-when-the-model-outgrows-it.md), where machinery added for an older model's quirk keeps executing and costs latency and cache hits after the quirk is gone. Khandelwal names the pairing himself when triaging with an engineer: "if the model changed, the [harness] changed, again you need to go revisit something." (13:15-13:34)
 - Caveat on the numbers: 500k / 750k / a million tokens exceed the context windows of the coding harnesses in common use at the time, and auto-compaction implies a window smaller than the total, so these read as cumulative session token spend rather than window occupancy. The talk names no harness, model, task, or repo size, so treat the figures as directional and re-derive local thresholds.
 
+- A second symptom checklist exists in this wiki with **no overlapping entries**, and the disjointness is the useful part. Matt Dailey's four velocity-sickness symptoms — PR backlog breaking the merge queue, work sprinting in incompatible directions, agent bankruptcy each morning, and critical decisions made by agents — describe a team whose setup may be entirely healthy and whose *direction* is unowned. Khandelwal's list indicts the harness and the codebase; Dailey's indicts what the working agents are pointed at. Running both is cheap, and a team that passes one can fail the other outright. See [Velocity Sickness Is Output Without Impact](velocity-sickness-is-output-without-impact.md). ([Dailey](../sources/20260809_Kz4QJmNrVXU.md), 01:36-04:26)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Context Engineering](../topics/context-engineering.md)
@@ -29,6 +31,8 @@ Related concepts:
 - [Codebase Hygiene Amplifies AI Productivity Gains](codebase-hygiene-amplifies-ai-productivity-gains.md)
 - [Own agent context instead of accepting hidden harness mutation](own-agent-context-instead-of-accepting-hidden-harness-mutation.md)
 - [Treat slop as a quality failure, not an AI provenance label](treat-slop-as-a-quality-failure-not-an-ai-provenance-label.md)
+- [Velocity Sickness Is Output Without Impact](velocity-sickness-is-output-without-impact.md)
 
 Sources:
 - [Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab](../sources/20260811_aeTb5BdmTTc.md), 04:22-05:34, 13:15-13:34
+- [Velocity Sickness: What Happens When Your Whole Team Gets 10x Faster — Matt Dailey, Ref.](../sources/20260809_Kz4QJmNrVXU.md), 01:36-04:26

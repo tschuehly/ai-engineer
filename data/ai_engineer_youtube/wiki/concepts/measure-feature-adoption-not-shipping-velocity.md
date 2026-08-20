@@ -14,6 +14,8 @@ Details:
 - Anti-pattern — a PRD with no real user testers: shipping into a live environment without gathering proper end-user testing tends to produce features people won't use. (12:00-12:20)
 - Root-cause evidence: a VisualLabs hackathon abandoned 17 of 21 agent ideas for lack of business value (no data access, no owner, no measurable value); the surviving 4 earned production use — the same value/adoption filter applied before and after building. (00:37-01:30)
 
+- The clearest statement of why this metric swap is needed comes from outside software. Matt Dailey (Ref) describes a newsletter writer whose agentic pipeline was genuinely good — "very very much not slop… using agents to amplify their own voice" — and who reported "I'm basically writing a book every week." Asked whether the audience was reading a book every week: "No, they're probably not." He generalizes it as **velocity sickness**, "the stress caused by sudden output increases thanks to AI," whose result is "output without impact." The pattern is identical to features-shipped-versus-features-reused, and the writing case makes it obvious that the producing side can be excellent while the receiving side is unchanged. ([Dailey](../sources/20260809_Kz4QJmNrVXU.md), 03:53-06:04)
+
 Related topics:
 - [Product Strategy](../topics/product-strategy.md)
 
@@ -22,6 +24,8 @@ Related concepts:
 - [Capture AI-Build Requirements With Story Maps and User Stories](capture-ai-build-requirements-with-story-maps-and-user-stories.md)
 - [AI-amplified shipping speed needs stronger product taste](ai-amplified-shipping-speed-needs-stronger-product-taste.md)
 - [Optimize Onboarding Around One Aha Moment](optimize-onboarding-around-one-aha-moment.md)
+- [Velocity Sickness Is Output Without Impact](velocity-sickness-is-output-without-impact.md)
 
 Sources:
 - [You Can't Prompt the Room: The Last Skill AI Won't Replace - Balázs Horváth, VisualLabs](../sources/20260629_6bmM45jkMDY.md), 00:37-14:00
+- [Velocity Sickness: What Happens When Your Whole Team Gets 10x Faster — Matt Dailey, Ref.](../sources/20260809_Kz4QJmNrVXU.md), 03:53-06:04

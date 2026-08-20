@@ -16,6 +16,8 @@ Details:
 - Scope caveat the speaker volunteers: this argument is for teams. "If you're doing… [vibe] coding, you're working as a solo project, this is not a talk for you," and it assumes you are not running "completely dark factories, orchestrators, where nobody looks at the code." (03:51-04:11)
 - This sharpens a caution the wiki already carries from the other direction. Litt's argument is that humans should stay in the loop to *participate*, because understanding compounds across loops; Jain's is the organizational version of the same claim — the review ritual is where that participation currently happens, so automating it without relocating the alignment work is how a team acquires cognitive debt at scale.
 
+- Matt Dailey (Ref) agrees the alignment function must survive and puts it somewhere else entirely: upstream of implementation, in a shared decision document, so that "the code review is easier because the hardest part of any code review is… what actually matters here." On his account the later review does not need to carry alignment because alignment already happened. The open question the pairing raises is what remains of Jain's second list — mentorship, onboarding, knowledge sharing — when the alignment moment moves to a document that only the people already in the conversation write. ([Dailey](../sources/20260809_Kz4QJmNrVXU.md), 16:03-16:54)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Workflows](../topics/workflows.md)
@@ -27,6 +29,8 @@ Related concepts:
 - [Keep critical code inside human understanding and review capacity](keep-critical-code-inside-human-understanding-and-review-capacity.md)
 - [Make Code Review the Bottleneck Skill for AI-Generated Code](make-code-review-the-bottleneck-skill-for-ai-generated-code.md)
 - [Human ownership keeps agent pull requests from bypassing review](human-ownership-keeps-agent-pull-requests-from-bypassing-review.md)
+- [Separate the Decision Layer From the Implementation Layer](separate-the-decision-layer-from-the-implementation-layer.md)
 
 Sources:
 - [How to Kill the Code Review — Ankit Jain, Aviator](../sources/20260817_YgEv7IQzGdM.md), 00:40-04:21, 09:33-10:10, 13:48-14:04
+- [Velocity Sickness: What Happens When Your Whole Team Gets 10x Faster — Matt Dailey, Ref.](../sources/20260809_Kz4QJmNrVXU.md), 16:03-16:54

@@ -26,6 +26,8 @@ Details:
 
 - Chatterjee (Sonar) supplies the mechanism that connects the volume to the rubber stamp, by way of the Wharton cognitive-surrender study rather than by observing review: humans followed AI advice "92.7% of the time when the AI was correct" and still listened "nearly 80% of the time when the AI was wrong," and "this is almost surely happening in code review as well… Especially when there's higher amounts of code being written, when there's multiple agents writing code simultaneously… the load is just too great. There's only so many hours in the day… there's a lot of rubber stamping that I'm sure is happening in all of your organizations." The point this adds to the capacity framing above is that the failure is not reviewers running out of time and *declining* to review — it is reviewers continuing to review while deferring, so the throughput problem shows up as approvals rather than as a queue. That is why his prescription is an automated layer that does not tire rather than more reviewers. Inference from a study about reasoning exams, not a measurement of code review. ([Chatterjee](../sources/20260809_03l29gJXpCE.md), 06:37-07:39)
 
+- Matt Dailey (Ref) records the same overload one step downstream of the reviewer, in the integration machinery: "too many PRs to merge. This is the like classic first problem you hit when you start adopting AI as an engineer… Merge conflicts, merge queue breaks down, things get bad." Worth separating from review capacity as a distinct constraint — merge-queue serialization and conflict rate degrade with concurrent branch count regardless of how fast anyone reads. His proposed relief is upstream rather than in the queue: align on the key decisions before implementation so fewer branches are pointed at the same code and the eventual review is smaller. ([Dailey](../sources/20260809_Kz4QJmNrVXU.md), 01:36-01:55, 16:03-16:54)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -40,6 +42,7 @@ Related concepts:
 - [Route each change to the proof it needs](route-each-change-to-the-proof-it-needs.md)
 - [Code Review Carries Alignment, Not Just Correctness](code-review-carries-alignment-not-just-correctness.md)
 - [Make Intent and Evidence the Review Surface](make-intent-and-evidence-the-review-surface.md)
+- [Velocity Sickness Is Output Without Impact](velocity-sickness-is-output-without-impact.md)
 
 Sources:
 - [The Friction is Your Judgment - Armin Ronacher & Cristina Poncela Cubeiro, Earendil](../sources/20260418__Zcw_sVF6hU.md), 03:35-07:10
@@ -50,3 +53,4 @@ Sources:
 - [How to Kill the Code Review — Ankit Jain, Aviator](../sources/20260817_YgEv7IQzGdM.md), 01:39-02:58
 - [Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab](../sources/20260811_aeTb5BdmTTc.md), 06:06-06:36
 - [Guide, Verify, Solve — Anirban Chatterjee, Sonar](../sources/20260809_03l29gJXpCE.md), 06:37-07:39
+- [Velocity Sickness: What Happens When Your Whole Team Gets 10x Faster — Matt Dailey, Ref.](../sources/20260809_Kz4QJmNrVXU.md), 01:36-01:55, 16:03-16:54

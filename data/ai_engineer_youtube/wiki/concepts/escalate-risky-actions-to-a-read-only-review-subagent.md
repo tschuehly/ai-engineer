@@ -17,6 +17,8 @@ Details:
 - **Where this sits relative to the wiki's existing gates.** [Route High-Impact Agent Actions Through Explicit Human Approval Gates](route-high-impact-agent-actions-through-explicit-human-approval-gates.md) argues the gate must be one the model cannot decide for itself, and Amazon AGI Lab's version keeps a hard harness override under a model-side confidence estimate. Auto review is a *third* layer between them: a model judgment made by a different model instance with different permissions, which is weaker than a human gate and stronger than the acting model's own self-assessment. It should not be read as licence to remove the hard gate on the actions you already know are irreversible.
 - **The unevaluated part is the reviewer itself.** The speaker calls his description "a gross oversimplification," and the talk gives no false-approval rate, no false-escalation rate, no cost or latency for the extra subagent, and no adversarial test. The reviewer reads the transcript, which is also the surface a prompt injection would occupy — a transcript that says the user authorized something is evidence the reviewer is designed to trust. Nothing in the talk addresses that. ([Codex, Behind the Harness](../sources/20260810_shRR1e2HXMk.md), 15:18-15:32, Provenance and Caveats)
 
+- Independent corroboration of the premise, from a source with no stake in automating the gate. Matt Dailey (Ref) describes the same degradation for design decisions rather than dangerous commands: the agent says "this is the recommended option and then you're like, great. I don't even think about this. I'll just hit that one and we keep going" — because chat is "brain off," a medium built for execution. Two independent observers report the in-session human gate collapsing, which strengthens the premise while pointing at opposite remedies: automate the judgment (Codex), or move the judgment out of the session entirely into a shared decision document ([Separate the Decision Layer From the Implementation Layer](separate-the-decision-layer-from-the-implementation-layer.md)). The remedies are compatible — one covers dangerous actions, the other covers consequential choices. ([Dailey](../sources/20260809_Kz4QJmNrVXU.md), 10:55-11:35)
+
 Related topics:
 - [Security](../topics/security.md)
 - [Agents](../topics/agents.md)
@@ -29,6 +31,8 @@ Related concepts:
 - [Teach Calibrated Confidence So an Agent Knows When to Hand Off](teach-calibrated-confidence-so-an-agent-knows-when-to-hand-off.md)
 - [Customize Subagents by Task, Model, Tools, and Permissions](customize-subagents-by-task-model-tools-and-permissions.md)
 - [Sandbox Primitives Are Per Operating System](sandbox-primitives-are-per-operating-system.md)
+- [Ceding a Critical Decision Transfers Ownership of the Code](ceding-a-critical-decision-transfers-ownership-of-the-code.md)
 
 Sources:
 - [Codex, Behind the Harness — Dominik Kundel, OpenAI](../sources/20260810_shRR1e2HXMk.md), 11:59-15:32
+- [Velocity Sickness: What Happens When Your Whole Team Gets 10x Faster — Matt Dailey, Ref.](../sources/20260809_Kz4QJmNrVXU.md), 10:55-11:35
