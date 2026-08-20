@@ -14,6 +14,8 @@ Details:
 - Bottom-up beats top-down mandate: each champion decided what worked for their repo, teams with similar shapes converged naturally on the same tools and patterns, and engineers "loved" choosing over being pushed — countering the "AI or die" leadership pressure that was causing fatigue and turn-off. (04:40-04:52, 08:44-09:20)
 - The payoff is that later delegation (assigning Jira/Linear/GitHub/Slack requests to an agent) "felt native to how people already work" and required no new skill from the 90%, because the champions had already laid the repo foundation the agents work against. (10:00-12:20)
 
+- Khandelwal runs the same play at team scale and names the constraint it has to satisfy to work. The method matches — "find your best ICs and find… how they are making the code base work for them. Take those practices and pass them or guide" — but the requirement is *replacement*, not addition: "People can't live in their own practices. And this is really hard for engineers to do it. It's basically accepting that my setup is imperfect." Extracting champion practices into a shared setup that then coexists with everyone's personal setup leaves the codebase unconverged, which is the thing the repo-as-leverage-point argument depends on. His buy-in test is behavioral for the same reason: "get them to be able to edit and play with the shared setup cuz that's the true way you know that they're actually invested." ([Khandelwal](../sources/20260811_aeTb5BdmTTc.md), 09:14-09:37, 10:56-11:15)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Workflows](../topics/workflows.md)
@@ -27,3 +29,4 @@ Related concepts:
 
 Sources:
 - [Building an Autonomous Engineering Org - Angie Jones, Agentic AI Foundation](../sources/20260628_whue9_YquGA.md), 04:40-12:20
+- [Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab](../sources/20260811_aeTb5BdmTTc.md), 09:14-09:37, 10:56-11:15

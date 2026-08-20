@@ -22,6 +22,8 @@ Details:
 - Attribution caveat on the merge-without-review number: Volkov's rendering is "a 31% increase in PRs merged with no review at all," while Jain states "over 30% of changes are actually getting merged without a review at all" — a rate rather than a delta. Neither talk shows the underlying table, so treat the rising direction as supported and the absolute share as unverified.
 - Anthropic's recursive-self-improvement essay makes the mechanism explicit via Amdahl's law: as engineers 10x–1000x their output, human code review becomes the blocking stage; neither Anthropic nor OpenAI removes the human, so the fix is to move review up a layer (encode caught bug-classes as docs/linters/reviewers), not to skip it. (ZpK5PWX2YRM 11:44-11:46)
 
+- Khandelwal adds the *distributional* version, which bites on teams whose aggregate capacity is still fine. Where adoption is uneven, the fast adopters author and the slow adopters review: "the people who are generating like 10 PRs a day are going to like look like… gods compared to people who are shipping like one to two. And the one to two PR people are actually going to get left with the review burden… now not only can they not ship, they're going to actually see bad code and then curse the agents." Two consequences follow that the aggregate framing misses: assigning review by availability concentrates it on non-adopters, because they are the most available; and the sample of agent output a skeptic sees is systematically the worst on the team. See [Uneven Agent Adoption Loads Review Onto the Slowest Adopters](uneven-agent-adoption-loads-review-onto-the-slowest-adopters.md). One team of about ten, no measurements. ([Khandelwal](../sources/20260811_aeTb5BdmTTc.md), 06:06-06:36)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -43,3 +45,4 @@ Sources:
 - [Should AI Engineers Still Read Code in 2026? The Z/L Continuum — Alex Volkov, ThursdAI](../sources/20260710_ZpK5PWX2YRM.md), 09:10-11:46
 - [How to build an AI-Native Health Company — Dan Feng, Maven Clinic](../sources/20260819_WJRdLNhrsLQ.md), 10:59-12:57
 - [How to Kill the Code Review — Ankit Jain, Aviator](../sources/20260817_YgEv7IQzGdM.md), 01:39-02:58
+- [Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab](../sources/20260811_aeTb5BdmTTc.md), 06:06-06:36

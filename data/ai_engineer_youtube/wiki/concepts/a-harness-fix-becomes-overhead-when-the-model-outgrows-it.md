@@ -15,11 +15,14 @@ Details:
 - **The diagnostic this suggests.** For each intervention in the harness, name the model deficiency it compensates for. If you cannot name one, it is not a compensation and this page does not apply. If you can, that sentence is a test to re-run against every new model — and the intervention's own cost (latency, cache invalidation, extra tokens, forced truncation) is what you save by deleting it.
 - Provenance: an Anthropic vendor talk for its managed-agent product. The context-anxiety story is anecdotal — no eval, no frequency, no task distribution for the original behavior, no measurement that the fix helped, and no quantification of the overhead it later imposed. The dynamic is credible and specific; its magnitude is unreported. The captions render the newer model as "Claude Opus 48," most likely 4.5, and nothing here depends on which release it is.
 
+- **The other direction of the same misattribution, from the application side.** Aditya Khandelwal (Amazon AGI Lab) reports the complaint a team lead actually hears — "insert whatever latest model there is being really dumb today" — and gives the correction: "The model didn't change, right? The [harness] may have changed underneath." He then adds a fragility test this page's framing does not supply: "if… that's acceptable to like small changes in the [harness], clearly your own code base isn't set up well." So the pairing is *model moved, harness didn't* (this page) versus *harness moved, model didn't* (his), and his triage question covers both — "if the model changed, the [harness] changed, again you need to go revisit something." One team's anecdote with no measurement, but it names the observable that sends you looking. ([Khandelwal](../sources/20260811_aeTb5BdmTTc.md), 04:34-04:54, 13:15-13:34)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Infrastructure](../topics/infrastructure.md)
 
 Related concepts:
+- [Read a Broken Agent Setup From Babysitting, Context Burn, and Slop](read-a-broken-agent-setup-from-babysitting-context-burn-and-slop.md)
 - [Keep the Harness Thick Early and Thin It as the Model Improves](keep-the-harness-thick-early-and-thin-it-as-the-model-improves.md)
 - [Use stable agent harnesses as model-evolution boundaries](use-stable-agent-harnesses-as-model-evolution-boundaries.md)
 - [A Harness Switch Invalidates Most of an Eval Suite](a-harness-switch-invalidates-most-of-an-eval-suite.md)
@@ -28,3 +31,4 @@ Related concepts:
 
 Sources:
 - [Anthropic's Applied AI team on the Evolution of Agentic Surfaces](../sources/20260811_K0X9QDRkIdg.md), 07:36-10:13
+- [Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab](../sources/20260811_aeTb5BdmTTc.md), 04:34-04:54, 13:15-13:34

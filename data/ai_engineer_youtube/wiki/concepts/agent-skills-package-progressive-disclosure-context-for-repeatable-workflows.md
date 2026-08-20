@@ -16,6 +16,8 @@ Details:
 - Matt Pocock decomposes a skill into two units — **steps** (the step-by-step procedure) and **reference** (supporting material) — and treats keeping the top-level `SKILL.md` as small as possible as a first-class constraint, because smaller skills are easier to maintain and audit and every word shaved is a token shaved off every invocation. UNzCG3lw6O0 07:29-09:00
 - The concrete progressive-disclosure move is branch-driven: look at the skill's *branches* (ways it can be used) and move reference material used on only one branch behind a "context pointer" to an external Markdown file ("external reference") bundled with the skill, so the agent pulls it in only when that branch is taken. His `domain modeling` skill hides its ADR template and `context.md` template this way because they're needed on only some branches; his single-branch `to PRD` keeps its reference inline. UNzCG3lw6O0 09:00-11:53
 
+- One team turns the authoring judgment into an enforceable number. Khandelwal: "even in your [SKILL.md] files, don't overload it. Like, we've kind of set a hard limit for like 100 lines in your [SKILL.md] cuz your skill is really a folder." The reasoning clause is the same one Pocock gives, but a stated cap survives many contributors in a way a principle does not — each addition becomes a trade against an existing line, and review has something to point at. He pairs it with the same rule one level up for the repo context file ("a thin index that can point through the right files") and with a verification test at the first prompt. See [Keep the Repo Context File a Thin Index and Cap Skill Files](keep-the-repo-context-file-a-thin-index-and-cap-skill-files.md). Note that line count is a crude proxy for tokens, and no derivation is offered for 100. ([Khandelwal](../sources/20260811_aeTb5BdmTTc.md), 14:54-15:04, 15:36-15:50)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Context Engineering](../topics/context-engineering.md)
@@ -43,3 +45,4 @@ Sources:
 - [Building Conversational Agents - Thor Schaeff and Philipp Schmid, Google DeepMind](../sources/20260430_cVzf49yg0D8.md), 23:34-24:34
 - [Building Great Agent Skills: The Missing Manual - Matt Pocock](../sources/20260629_UNzCG3lw6O0.md), 07:29-11:53
 - [LLM Knowledge Bases: a practical guide — Ben Holmes, Warp](../sources/20260812_I3bpdgFJCUY.md), 06:29-07:53, 15:44-16:47
+- [Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab](../sources/20260811_aeTb5BdmTTc.md), 14:54-15:04, 15:36-15:50

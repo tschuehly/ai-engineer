@@ -542,6 +542,16 @@
 - [Learn risk scoring from audit feedback for predictive compliance](../concepts/learn-risk-scoring-from-audit-feedback-for-predictive-compliance.md)
 
 ## Coding Agents
+- [Own Agent Adoption at the Leadership Layer Because the Fixes Are Shared](../concepts/own-agent-adoption-at-the-leadership-layer-because-the-fixes-are-shared.md) - codebase reorganization and a converged setup are out of an IC's reach, which is the structural reason adoption cannot be delegated downward.
+- [Uneven Agent Adoption Loads Review Onto the Slowest Adopters](../concepts/uneven-agent-adoption-loads-review-onto-the-slowest-adopters.md) - the ten-PR engineers generate the diffs the one-PR engineers must read, so the gap widens itself and sours the laggards on agents.
+- [Map Agent Adoption on Fear and Utilization Axes](../concepts/map-agent-adoption-on-fear-and-utilization-axes.md) - a two-axis state map whose observed trajectory includes a phase where shipped slop lowers fear by lowering expectations.
+- [Read a Broken Agent Setup From Babysitting, Context Burn, and Slop](../concepts/read-a-broken-agent-setup-from-babysitting-context-burn-and-slop.md) - five observable symptoms, including "the model got dumb today," that point at the harness rather than the model.
+- [Invest in One High-Value Skill to Convert Agent Skeptics](../concepts/invest-in-one-high-value-skill-to-convert-agent-skeptics.md) - one end-to-end skill over work nobody likes, whose hour-long runtime is the proof of trust rather than a defect.
+- [Measure First-Prompt Context Burn to Test Progressive Disclosure](../concepts/measure-first-prompt-context-burn-to-test-progressive-disclosure.md) - 20–25K tokens is unavoidable overhead and 40–50K means something is wrong, per one team's rule of thumb.
+- [Keep the Repo Context File a Thin Index and Cap Skill Files](../concepts/keep-the-repo-context-file-a-thin-index-and-cap-skill-files.md) - a ~100-line hard limit on `SKILL.md` and an `AGENTS.md` that points rather than explains.
+- [Put Context Pointers Where the Agent Will Land](../concepts/put-context-pointers-where-the-agent-will-land.md) - the runbook goes in the comments of the code a grep will hit, so retrieval carries its own next hop.
+- [Wire Issue-Filing Authority Before Giving Agents a Tracker](../concepts/wire-issue-filing-authority-before-giving-agents-a-tracker.md) - unscoped filing rights produced 400–500 issues in a couple of weeks and an unreadable backlog.
+- [Let Prototypes Opt Out of Codebase Standards](../concepts/let-prototypes-opt-out-of-codebase-standards.md) - a declared exemption lane for code that will never ship, so slop controls apply where they pay.
 - [A Teacher Can Install a Tool Call by Moving the Reasoning Path, Never the Call Tokens](../concepts/move-the-reasoning-path-not-the-target-tokens.md) - task-completion rate reportedly went ~22%→60% by conditioning on traces that never contained the tool call.
 - [When Rewards and SFT Both Degrade the Base Model, Hint Against the Rollout](../concepts/hint-against-the-rollout-when-rewards-and-sft-degrade-the-base-model.md) - a correct, non-hackable format reward and SFT on correct traces both cost general coding ability; a rollout-specific hint took correctness ~15%→80%.
 - [Measure a Behavior Change With Three Metrics Including Their Intersection](../concepts/measure-a-behavior-change-with-three-metrics-including-their-intersection.md) - behavior rate, base-task rate measured irrespective of the behavior, and the fraction that does both — stated as a joint goal, not a headline plus a footnote.
@@ -818,6 +828,10 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Measure First-Prompt Context Burn to Test Progressive Disclosure](../concepts/measure-first-prompt-context-burn-to-test-progressive-disclosure.md) - a one-session numeric check of whether the context files defer anything, with a stated baseline and failure threshold.
+- [Keep the Repo Context File a Thin Index and Cap Skill Files](../concepts/keep-the-repo-context-file-a-thin-index-and-cap-skill-files.md) - a stated line cap makes each addition a trade, which is what an authoring principle cannot do across contributors.
+- [Put Context Pointers Where the Agent Will Land](../concepts/put-context-pointers-where-the-agent-will-land.md) - an agent's entry point is wherever its search matched, so unreferenced docs are unreachable however well written.
+- [Read a Broken Agent Setup From Babysitting, Context Burn, and Slop](../concepts/read-a-broken-agent-setup-from-babysitting-context-burn-and-slop.md) - silent context burn on an uncomplicated task is evidence about the setup, not about the task.
 - [Keep the Session Log Separate From the Context Window](../concepts/keep-the-session-log-separate-from-the-context-window.md) - store the session outside the window so eviction becomes a retrieval decision rather than a deletion.
 - [Rewrite Agent Memory in a Periodic Batch Pass Over Session Logs](../concepts/rewrite-agent-memory-in-a-periodic-batch-pass-over-session-logs.md) - the manage phase moved offline, where it can see across sessions and afford to delete.
 - [Plain In-Context Learning Topped a Continual-Learning Benchmark](../concepts/plain-in-context-learning-topped-a-continual-learning-benchmark.md) - the growing-context baseline any context-management or memory layer has to beat, on tasks built to reward accumulation.
@@ -2195,6 +2209,7 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Keep the Repo Context File a Thin Index and Cap Skill Files](../concepts/keep-the-repo-context-file-a-thin-index-and-cap-skill-files.md) - a ~100-line hard limit on `SKILL.md`, "cuz your skill is really a folder," plus the same rule for the repo context file above it.
 - [Reach Private MCP Servers With Outbound-Only Tunnels](../concepts/reach-private-mcp-servers-with-outbound-only-tunnels.md) - a deployment shape for internal MCP tools that needs no inbound path into the customer's network.
 - [Run Trace Classifiers as Code Mode in a Sandbox](../concepts/run-trace-classifiers-as-code-mode-in-a-sandbox.md) - code mode generalizes from tool calling to any operation over a corpus too large to put in context.
 - [Keep Evals in the Repo as Tests, Not in a Prompt Playground](../concepts/keep-evals-in-the-repo-as-tests-not-in-a-prompt-playground.md) - when the unit under test is the whole harness, the prompt-management product no longer holds it.
@@ -2470,6 +2485,12 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Wire Issue-Filing Authority Before Giving Agents a Tracker](../concepts/wire-issue-filing-authority-before-giving-agents-a-tracker.md) - closing the loop through an issue tracker without scoping who may file produces an unreadable backlog in weeks.
+- [Invest in One High-Value Skill to Convert Agent Skeptics](../concepts/invest-in-one-high-value-skill-to-convert-agent-skeptics.md) - automate the work everyone dislikes end to end, and route complaints back into the skill instead of answering them.
+- [Own Agent Adoption at the Leadership Layer Because the Fixes Are Shared](../concepts/own-agent-adoption-at-the-leadership-layer-because-the-fixes-are-shared.md) - setup maintenance is a standing budget line rather than a project, because nothing here converges.
+- [Map Agent Adoption on Fear and Utilization Axes](../concepts/map-agent-adoption-on-fear-and-utilization-axes.md) - an instrument for reading where a rollout actually is, including the state that looks like acceptance and is not.
+- [Uneven Agent Adoption Loads Review Onto the Slowest Adopters](../concepts/uneven-agent-adoption-loads-review-onto-the-slowest-adopters.md) - an unmanaged rollout sends its cost to the review queue, and it lands on the people least able to absorb it.
+- [Let Prototypes Opt Out of Codebase Standards](../concepts/let-prototypes-opt-out-of-codebase-standards.md) - an exemption lane so the quality loop stops filing work items against code nobody intends to fix.
 - [Triage Agent Issues by Onset and Share of Users](../concepts/triage-agent-issues-by-onset-and-share-of-users.md) - two numbers per issue are the whole triage interface for a standing production loop.
 - [Clusters Are Not Issues](../concepts/clusters-are-not-issues.md) - a cluster cannot supply onset or share, so it cannot be the monitoring layer.
 - [Hand Agents Anomalies to Investigate, Not to Detect](../concepts/hand-agents-anomalies-to-investigate-not-to-detect.md) - deterministic detection, agentic investigation; the detector is allowed to be wrong.

@@ -15,12 +15,15 @@ Details:
 - Legacy systems that humans cannot reason about also reduce agent capability: if required information is missing from the codebase and structure obscures behavior, the agent falls back to slow trial-and-error instead of direct reasoning (06:47-07:57).
 - Long-lived systems need review processes that can reject harmful generated changes; otherwise agentic coding can make the codebase harder for future humans and agents to work with (13:29-14:09).
 
+- One cheap, mechanical way to make the required information present where the agent lands: put the pointer in the comment. Khandelwal treats the codebase as the injection surface — "smartly prompt inject the model with just the right context at just the right time" — and the concrete rule is that a runbook or design doc must be "reflected in the comments so that… if somehow the agent figures its way into like [grepping] into the code base and find that file, it knows I need to go look at this." An agent's entry point is wherever its search matched, so documentation that is only reachable from a docs directory is not reachable. See [Put Context Pointers Where the Agent Will Land](put-context-pointers-where-the-agent-will-land.md); note the maintenance cost the source does not price, which is that renaming the referenced file breaks the path with no test failure. ([Khandelwal](../sources/20260811_aeTb5BdmTTc.md), 07:25-08:01, 15:09-15:27)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Evaluation](../topics/evaluation.md)
 - [Workflows](../topics/workflows.md)
 
 Related concepts:
+- [Put Context Pointers Where the Agent Will Land](put-context-pointers-where-the-agent-will-land.md)
 - [Use deep modules to make agent work testable](use-deep-modules-to-make-agent-work-testable.md)
 - [Agent software factories need runnable, contextual, and verifiable primitives](agent-software-factories-need-runnable-contextual-and-verifiable-primitives.md)
 - [Constrain sensitive file access with purpose-built tools](constrain-sensitive-file-access-with-purpose-built-tools.md)
@@ -30,3 +33,4 @@ Related concepts:
 Sources:
 - [The Friction is Your Judgment - Armin Ronacher & Cristina Poncela Cubeiro, Earendil](../sources/20260418__Zcw_sVF6hU.md), 07:13-14:08
 - [Developer Experience in the Age of AI Coding Agents - Max Kanat-Alexander, Capital One](../sources/20251223_rT2Del5pwg4.md), 06:47-07:57, 13:29-14:09
+- [Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab](../sources/20260811_aeTb5BdmTTc.md), 07:25-08:01, 15:09-15:27

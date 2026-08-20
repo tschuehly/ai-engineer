@@ -1,0 +1,30 @@
+# Let Prototypes Opt Out of Codebase Standards
+
+Summary: Agent-generated experiment code will be slop, and applying the codebase's full standards to code that was never going to ship costs more than it protects. Give prototypes an explicit, marked opt-out lane instead of either enforcing standards everywhere or quietly not enforcing them anywhere.
+
+Use when:
+- Deciding what quality gates apply to throwaway agent output: spikes, experiments, one-off scripts, design explorations.
+- Watching engineers route around review or lint gates because those gates are wrong for what they are doing.
+- Designing the "close the loop" slop-detection machinery so it does not flag work that is slop on purpose.
+
+Details:
+- The rule as stated: "There is going to be slop when you're going to write experiments. Treat it like it's own thing… people are generating this code, but it's not relevant. It's not going to be shipped… It's a prototype. So, treat it like one. Get it to opt out of all the rigorous other standards you've got across your code base." ([Khandelwal](../sources/20260811_aeTb5BdmTTc.md), 12:57-13:15)
+- The design point is that the opt-out is *explicit and declared*, not tolerated. A named lane keeps three things true at once: the prototype is cheap to produce, the standards stay credible everywhere else, and the slop-detection loop has a defensible reason not to file against it — which matters directly, given that the same setup's issue-filing agents will otherwise generate work items for code nobody intends to fix. See [Wire Issue-Filing Authority Before Giving Agents a Tracker](wire-issue-filing-authority-before-giving-agents-a-tracker.md).
+- Without a lane, both failure modes are worse than the exemption. Enforcing production standards on a spike destroys the reason to spike; enforcing nothing and hoping people know the difference means the exemption exists anyway, undeclared and unbounded, and nothing stops the prototype from being promoted as-is.
+- This is the enforcement half of a distinction the wiki already records as a workflow judgment. [Stage Vibe Coding From Prototype to Structured Workflow](stage-vibe-coding-from-prototype-to-structured-workflow.md) matches autonomy to stakes; [Treat slop as a quality failure, not an AI provenance label](treat-slop-as-a-quality-failure-not-an-ai-provenance-label.md) says the question is whether output meets the bar rather than who wrote it. The addition here is that "the bar" is not one bar — a codebase can hold more than one, provided membership is declared rather than inferred.
+- The obvious risk the talk does not address: an opt-out lane is a promotion path unless something blocks it. Nothing in the source specifies how prototype code is prevented from being merged into shipping paths, how the lane is marked, whether it is a directory, a flag, or a convention, or what happens when a prototype turns out to be the product. A team adopting this should decide the exit rules at the same time as the entry rules.
+- Caveat on evidence: two sentences from one talk, presented in a list of things that went wrong and how the team responded. No mechanism, no marking convention, no measurement of how much lint or review effort the lane saved, and no report of whether prototype code leaked into production.
+
+Related topics:
+- [Coding Agents](../topics/coding-agents.md)
+- [Workflows](../topics/workflows.md)
+
+Related concepts:
+- [Stage Vibe Coding From Prototype to Structured Workflow](stage-vibe-coding-from-prototype-to-structured-workflow.md)
+- [Treat slop as a quality failure, not an AI provenance label](treat-slop-as-a-quality-failure-not-an-ai-provenance-label.md)
+- [Wire Issue-Filing Authority Before Giving Agents a Tracker](wire-issue-filing-authority-before-giving-agents-a-tracker.md)
+- [Make the Running Prototype the Primary Design Artifact](make-the-running-prototype-the-primary-design-artifact.md)
+- [Read a Broken Agent Setup From Babysitting, Context Burn, and Slop](read-a-broken-agent-setup-from-babysitting-context-burn-and-slop.md)
+
+Sources:
+- [Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab](../sources/20260811_aeTb5BdmTTc.md), 12:57-13:15

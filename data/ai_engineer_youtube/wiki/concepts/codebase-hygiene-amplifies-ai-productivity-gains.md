@@ -13,11 +13,14 @@ Details:
 - Engineers also need judgment about when not to use AI: rejected or heavily rewritten AI output can reduce trust and collapse later usage gains. (05:50-06:13)
 - Jellyfish's PR data adds an architecture-specific version of this caveat: highly distributed repositories showed little or no positive throughput correlation with AI adoption, plausibly because cross-repo context is harder for humans and tools to assemble. (13:23-15:26)
 
+- If hygiene is the amplifier, one team automates the upkeep rather than scheduling it as human cleanup: "We have like a code gardener that actually goes back and looks through… every night it'll run and look at the code and check if something like not organized correctly. What does correct organization mean will depend on your code base." The design choice worth noting is that the rubric is repo-specific rather than a generic linter — it encodes the team's own organization conventions, which is exactly the part a linter cannot express and the part that decays fastest under agent-written code. Reported as practice, with no measure of what it caught or what it cost. ([Khandelwal](../sources/20260811_aeTb5BdmTTc.md), 10:32-10:53)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Evaluation](../topics/evaluation.md)
 
 Related concepts:
+- [Read a Broken Agent Setup From Babysitting, Context Burn, and Slop](read-a-broken-agent-setup-from-babysitting-context-burn-and-slop.md)
 - [Agent-legible codebases reduce generated-code entropy](agent-legible-codebases-reduce-generated-code-entropy.md)
 - [Active repos per engineer exposes context architecture drag](active-repos-per-engineer-exposes-context-architecture-drag.md)
 - [Treat agent readiness as verification infrastructure](treat-agent-readiness-as-verification-infrastructure.md)
@@ -26,3 +29,4 @@ Related concepts:
 Sources:
 - [Can you prove AI ROI in Software Eng? (Stanford 120k Devs Study) - Yegor Denisov-Blanch, Stanford](../sources/20251211_JvosMkuNxF8.md), 04:02-06:13
 - [What Data from 20m Pull Requests Reveal About AI Transformation - Nick Arcolano, Jellyfish](../sources/20251124_WqZq8L-v9pA.md), 13:23-15:26
+- [Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab](../sources/20260811_aeTb5BdmTTc.md), 10:32-10:53
