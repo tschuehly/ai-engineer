@@ -13,6 +13,8 @@ Details:
 - A long window can avoid hard failure while still failing to reason well. The speaker separates "not breaking" at many tokens from actually reasoning across large chunks, and cites context-rot behavior where performance worsens as extra context grows. (06:18-07:51)
 - A measured qualification, not a refutation: Towards AI probed *single-fact* recall across a growing session transcript and found distinctive facts recovered consistently out to 800k tokens with no visible rot, while ambiguous facts (no distinguishing surface form) degraded to about half that. Within one session, on this model class, keeping the full history recalled specific details 95% of the time against 32% after summarizing — so for retrieval of distinctive details, the window outperformed the alternative rather than rotting. The claim this page makes still holds where it was made: across sessions the model is stateless, the serving cost of long prompts is real, and reasoning *across* a large span is a different task from pulling one fact out of it. ([Context Engineering in 2026](../sources/20260817_WP3hjUXd918.md), 50:53-51:56, 53:16-54:33)
 
+- What the flagship consumer products actually do with this constraint is instructive: neither ChatGPT nor Claude carries raw history into a new conversation. Each prepends a small synthesized profile — ~4,000 and ~1,000 tokens respectively — because that artifact enters the context window of *every* conversation, making its length a permanent per-turn serving cost rather than a one-off. Asked what an unconstrained design would look like, Shlok Khemani answers 400,000 tokens updated after every conversation, and immediately notes "we live in a GPU constrained world." ([Lessons from Studying Every Memory System](../sources/20260812_5ZGyKWjQDr0.md), 12:08-13:37)
+
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
 - [Inference](../topics/inference.md)
@@ -23,7 +25,10 @@ Related concepts:
 - [RAG stacks need modular baselines instead of one fixed recipe](rag-stacks-need-modular-baselines-instead-of-one-fixed-recipe.md)
 - [Train long-tail knowledge into weights with curated synthetic data](train-long-tail-knowledge-into-weights-with-curated-synthetic-data.md)
 - [Full History Recalls Details That Summaries Delete](full-history-recalls-details-that-summaries-delete.md)
+- [Budget Memory Between Update Cost and Serving Cost](budget-memory-between-update-cost-and-serving-cost.md)
+- [Profile Synthesis Is Continual Learning Outside the Weights](profile-synthesis-is-continual-learning-outside-the-weights.md)
 
 Sources:
 - [Jack Morris: Stuffing Context is not Memory, Updating Weights is](../sources/20251229_Jty4s9-Jb78.md), 02:35-07:51
 - [Context Engineering in 2026 — Louis-François Bouchard, Omar Solano & Samridhi Vaid, Towards AI](../sources/20260817_WP3hjUXd918.md), 50:53-51:56, 53:16-54:33
+- [Lessons from Studying Every Memory System — Shlok Khemani, Independent](../sources/20260812_5ZGyKWjQDr0.md), 12:08-13:37

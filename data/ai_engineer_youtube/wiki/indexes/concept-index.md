@@ -1,6 +1,8 @@
 # Concept Index
 
 ## Agents
+- [Do Not Outsource the Memory System](../concepts/do-not-outsource-the-memory-system.md) - shipped memory designs disagree at every level, so memory evolves with the product instead of arriving as a bought component.
+- [Pair a Running Profile With On-Demand Conversation Search](../concepts/pair-a-running-profile-with-on-demand-conversation-search.md) - the convergent consumer memory shape: a small always-served profile plus model-invoked search over past conversations.
 - [The Long Tail of the Web Will Not Ship APIs](../concepts/the-long-tail-of-the-web-will-not-ship-apis.md) - the head of the distribution may publish endpoints; ~200 million slow-moving sites will not, so UI control is the default surface for the tail.
 - [Rendered State Is Not in the HTML](../concepts/rendered-state-is-not-in-the-html.md) - async fetches and rendering scripts mean the document often lacks what the page shows, and the extractor fails silently.
 - [Per-Site Scaffolding Does Not Generalize: The Bitter Lesson for Web Agents](../concepts/per-site-scaffolding-does-not-generalize-to-the-long-tail.md) - each wrapper buys one site; competence must not depend on the wrapper existing.
@@ -762,6 +764,10 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Replace User-Managed Memory Lists With a Background-Synthesized Profile](../concepts/replace-user-managed-memory-lists-with-a-background-profile.md) - removes the user's curation burden, but synthesis records deliberation as fact and staleness survives.
+- [Budget Memory Between Update Cost and Serving Cost](../concepts/budget-memory-between-update-cost-and-serving-cost.md) - "memory is a function of compute": profile length and refresh cadence trade against each other under one budget.
+- [Memory Quality Is Capped by the Context It Can Reach](../concepts/memory-quality-is-capped-by-the-context-it-can-reach.md) - offline events, connected-but-unread sources, and per-product silos bound any memory architecture.
+- [Make Memory Notice Conflicts and Seek the Evidence That Settles Them](../concepts/make-memory-notice-conflicts-and-seek-the-evidence-that-settles-them.md) - no stage of extract-synthesize-serve asks whether two stored claims can both be true.
 - [Frequency, Not Volume, Drives Web-Context Cost](../concepts/frequency-not-volume-drives-web-context-cost.md) - web context decays on a per-domain clock, so cadence rather than row count multiplies cost, and repeated queries never amortize.
 - [Cost Pressure Silently Shrinks Research Scope](../concepts/cost-pressure-silently-shrinks-research-scope.md) - metered context is absorbed as slower refreshes, truncated result sets, and questions nobody submits.
 - [Publish Per-Site Skills So Agents Do Not Rediscover a Website](../concepts/publish-per-site-skills-so-agents-do-not-rediscover-a-website.md) - compressed, site-keyed knowledge delivered before navigation beats dumping the page, on quality as well as cost.
@@ -1255,6 +1261,7 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Make the Memory Profile Visible and Editable](../concepts/make-the-memory-profile-visible-and-editable.md) - from a profile reachable only by jailbreak to a raw one whose user edits force a resynthesis.
 - [Context as a Service Is Vertical Search for Agents](../concepts/context-as-a-service-is-vertical-search-for-agents.md) - crawl one vertical, entity-dedupe into a graph, enrich, and serve agents over MCP — DaaS re-aimed at machine consumers.
 - [Find the Crossover Point Between Renting and Owning Context](../concepts/find-the-crossover-point-between-renting-and-owning-context.md) - a week of build against per-query fees has a computable break-even, quoted at just over 15,000 entities and explicitly not universal.
 - [The Long Tail of the Web Will Not Ship APIs](../concepts/the-long-tail-of-the-web-will-not-ship-apis.md) - betting on protocol adoption is betting on 200 million site owners doing work they have no reason to do.
@@ -1675,6 +1682,7 @@
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 
 ## Models
+- [Profile Synthesis Is Continual Learning Outside the Weights](../concepts/profile-synthesis-is-continual-learning-outside-the-weights.md) - the running-profile loop already learns continuously; the weights version is blocked on amortization, not capability.
 - [Per-Site Scaffolding Does Not Generalize: The Bitter Lesson for Web Agents](../concepts/per-site-scaffolding-does-not-generalize-to-the-long-tail.md) - the model-side scaling argument for a general vision-and-action policy over site wrappers.
 - [Train Screen-Perception Primitives Beyond Coding Ability](../concepts/train-screen-perception-primitives-beyond-coding-ability.md) - "coding abilities are not sufficient to do well on computer use," so four screen capabilities have to be trained in.
 - [Penalize Dangerous Steps With a Process Reward Model](../concepts/penalize-dangerous-steps-with-a-process-reward-model.md) - a training signal for the path, alongside the outcome verifier.

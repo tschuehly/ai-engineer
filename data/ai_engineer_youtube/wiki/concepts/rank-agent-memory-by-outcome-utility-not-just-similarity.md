@@ -15,6 +15,8 @@ Details:
 - Reported lift: on tau-bench (policy adherence) 66% → 76% from utility-ranked memory, and 80% once stabilized reasoning is baked into skills; a similar trend on other agentic benchmarks (agentic figures ASR-uncertain in the source), 06:44-08:50.
 - Failure modes: **cold start** (pure semantic search until enough reviews accumulate), **utility drift** (near-duplicate memories collide), **noisy review labels** making utility noisy, and a credit/re-ranking hyperparameter `lambda` to tune, 08:50-09:45.
 
+- Scope check on the premise. This page's starting complaint — that memory systems store preferences and retrieve by embedding similarity — describes the memory *libraries*, not the flagship consumer products. A year of reverse-engineering found that "neither ChatGPT nor Claude really do this": both rewrite a synthesized profile in the background and expose model-invoked search over past conversations instead of a similarity lookup over chunks. Outcome-utility ranking is therefore an argument against the library default, and the shipped consumer alternative is a third position rather than a confirmation. ([Lessons from Studying Every Memory System](../sources/20260812_5ZGyKWjQDr0.md), 10:32-11:31)
+
 Related topics:
 - [Retrieval](../topics/retrieval.md)
 - [Agents](../topics/agents.md)
@@ -24,6 +26,8 @@ Related concepts:
 - [Rank RAG Results With Domain and Product Signals Beyond Relevance](rank-rag-results-with-domain-and-product-signals-beyond-relevance.md)
 - [Skills Turn Procedural Feedback Into Transferable Agent Memory](skills-turn-procedural-feedback-into-transferable-agent-memory.md)
 - [Explicit Context Attachments Can Outperform Opaque Agent Memory](explicit-context-attachments-can-outperform-opaque-agent-memory.md)
+- [Pair a Running Profile With On-Demand Conversation Search](pair-a-running-profile-with-on-demand-conversation-search.md)
 
 Sources:
 - [User Signal Dies at the Retrieval Boundary - Sonam Pankaj, StarlightSearch](../sources/20260628_Jx4ZFEAq6bY.md), 03:36-09:45
+- [Lessons from Studying Every Memory System — Shlok Khemani, Independent](../sources/20260812_5ZGyKWjQDr0.md), 10:32-11:31

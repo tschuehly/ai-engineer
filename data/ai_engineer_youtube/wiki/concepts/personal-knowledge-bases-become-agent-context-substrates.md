@@ -12,6 +12,8 @@ Details:
 - Link-inbox automation can analyze a tweet, thread, article, or YouTube video, add tags and context, inspect related vault content, and add connections to other notes (07:30-08:07).
 - A useful agent memory workflow surfaces related prior notes when a new bookmark arrives, turning forgotten saved material into active context (08:07-08:45).
 
+- The reason a user-owned substrate is worth the effort is that vendor memory does not accumulate across the stack. Shlok Khemani's personal stack of chatbots, assistants, vertical applications, agents, and hardware devices each builds a private memory of him, shares none of it, and forces him to "rebuild context within every single product from scratch" and update all of them by hand whenever his life changes — while email, calendar, and photos stay unread by all of them. A personal knowledge base is the one copy of that context the user controls. ([Lessons from Studying Every Memory System](../sources/20260812_5ZGyKWjQDr0.md), 17:34-18:21)
+
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
 - [Retrieval](../topics/retrieval.md)
@@ -20,6 +22,8 @@ Related topics:
 Related concepts:
 - [Context blocks turn monolithic enterprise knowledge into reusable agent context](context-blocks-turn-monolithic-enterprise-knowledge-into-reusable-agent-context.md)
 - [Use agent logs and review feedback as context observability signals](use-agent-logs-and-review-feedback-as-context-observability-signals.md)
+- [Memory Quality Is Capped by the Context It Can Reach](memory-quality-is-capped-by-the-context-it-can-reach.md)
 
 Sources:
 - [I Gave an AI Agent the Keys to My Life (Here's What Happened) - Radek Sienkiewicz (@velvetshark-com)](../sources/20260502_sJ2jc7leKBk.md), 04:53-08:45
+- [Lessons from Studying Every Memory System — Shlok Khemani, Independent](../sources/20260812_5ZGyKWjQDr0.md), 17:34-18:21
