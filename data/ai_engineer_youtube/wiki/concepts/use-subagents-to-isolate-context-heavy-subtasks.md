@@ -15,6 +15,7 @@ Details:
 - The pattern qualifies generic subagent guidance: role-specific model, tool, and permission choices matter, but context isolation is also a first-order reason to introduce a subagent.
 - A Codex CLI retrofit shows the same context-isolation pattern can be approximated with a wrapper script that launches a child agent process and returns only the child answer to the parent session. 01:35-03:22
 - Aditya Bhargava (Etsy) reaches the same conclusion from the tool-selection side: agents fail not only from context bloat but from "too many unrelated concepts in their context" and "too many tools that are unrelated," which makes it hard to pick the right tool. Grouping tools under sub-agents makes selection cleaner — the top agent just "picks the sub-agent you want to call" and each sub-agent owns a coherent tool set. In his framing a sub-agent is "just another function" you call like a tool (its own LLM call, its own tools, callable in parallel), so context isolation adds capability "without bloating context." ([Aditya Bhargava](../sources/20260707_2e9ANoOEn28.md), 21:29-25:21)
+- **What the parent can still do to a running child, which the subroutine framing hides.** Calling a subagent "just another function" implies fire-and-return; Codex instead exposes spawn, send input, wait, and shut down as four separate tools over a handle, on the grounds that async actions are "things that are happening while the agent has to continue to do work" ([Model Async Agent Work as Spawn, Send, Wait, Shut Down](model-async-agent-work-as-spawn-send-wait-shut-down.md)). The isolation argument on this page is unaffected — the child still has its own window — but the interface question is separate from it, and a one-shot call cannot express mid-run steering or cancellation of a specialist that has gone the wrong way. ([Codex, Behind the Harness](../sources/20260810_shRR1e2HXMk.md), 07:04-08:08)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -26,8 +27,10 @@ Related concepts:
 - [Keep agent context small, fresh, and task-specific](keep-agent-context-small-fresh-and-task-specific.md)
 - [Use small models as context-management tools before agent reasoning](use-small-models-as-context-management-tools-before-agent-reasoning.md)
 - [Shell-wrapped subagents can retrofit harness capabilities](shell-wrapped-subagents-can-retrofit-harness-capabilities.md)
+- [Model Async Agent Work as Spawn, Send, Wait, Shut Down](model-async-agent-work-as-spawn-send-wait-shut-down.md)
 
 Sources:
 - [Amp Code: Next Generation AI Coding - Beyang Liu, Amp Code](../sources/20251222_gvIAkmZUEZY.md), 06:00-09:06
 - [Hacking Subagents Into Codex CLI - Brian John, Betterup](../sources/20251124_5eJqXtevlXg.md), 01:35-03:22
 - [What if the harness mattered more than the model? - Aditya Bhargava, Etsy](../sources/20260707_2e9ANoOEn28.md), 21:29-25:21
+- [Codex, Behind the Harness — Dominik Kundel, OpenAI](../sources/20260810_shRR1e2HXMk.md), 07:04-08:08

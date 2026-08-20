@@ -21,6 +21,8 @@ Details:
 
 - Amazon AGI Lab adds a second, model-side layer under the same gate. Their computer-use agents are *trained* to judge whether an action is authorized, irreversible, visible to the user, and impactful, and to escalate on their own ([calibrated confidence](teach-calibrated-confidence-so-an-agent-knows-when-to-hand-off.md)); the harness then keeps a hard override — "wherever the confidence calibration of the model is not correct, we let the harness override the model and force it to give control back to the user." The learned estimate generalizes to actions no policy author enumerated; the enforced gate covers the case where the estimate is wrong. Neither replaces the other. ([From RL to IRL](../sources/20260814_Cc0_nyxROBA.md), 10:09-10:34, 13:44-13:55)
 
+- **The gate has a failure mode of its own: users turn it off.** OpenAI reports that Codex's approval prompts produced measurable fatigue — "in our own testing… we saw people would just start clicking yes" and "in polls that we did… people started to just use full access mode more" — so the approval count is itself a metric to watch, not just a safety dial to turn up. Their response was not a better prompt but a different reviewer: an automatic [read-only review subagent](escalate-risky-actions-to-a-read-only-review-subagent.md) that judges the action and only escalates to the human when it disagrees, with the criterion being [how explicitly the user authorized it](judge-an-action-by-how-explicitly-the-user-authorized-it.md). That inverts this page's default — the human gate stops being per-action and becomes the exception path — and it moves the risk from "human approves without reading" to "model approves wrongly," for which the source offers no false-approval rate. ([Codex, Behind the Harness](../sources/20260810_shRR1e2HXMk.md), 11:59-12:22, 13:15-15:32)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Tools](../topics/tools.md)
@@ -33,6 +35,8 @@ Related concepts:
 - [Human approval can hide tool-description and parameter risk](human-approval-can-hide-tool-description-and-parameter-risk.md)
 - [Vault and exchange tokens for scoped upstream agent access](vault-and-exchange-tokens-for-scoped-upstream-agent-access.md)
 - [Teach Calibrated Confidence So an Agent Knows When to Hand Off](teach-calibrated-confidence-so-an-agent-knows-when-to-hand-off.md)
+- [Escalate Risky Actions to a Read-Only Review Subagent](escalate-risky-actions-to-a-read-only-review-subagent.md)
+- [Judge an Action by How Explicitly the User Authorized It](judge-an-action-by-how-explicitly-the-user-authorized-it.md)
 
 Sources:
 - [Human-in-the-Loop Automation with n8n - Liam McGarrigle](../sources/20260502_tDArkCqjA-c.md), 01:10-01:25, 01:10:41-01:11:07, 01:13:56-01:16:08
@@ -43,3 +47,4 @@ Sources:
 - [Building Agents (the hard parts!) - Rita Kozlov, Cloudflare](../sources/20250723_j_TKDweOsYE.md), 15:58-18:44
 - [I Run a Fleet of AI Agents Across Three Machines. Here's What Broke. - Kyle Jaejun Lee, KRAFTON](../sources/20260708_4kYl2_mqmnQ.md), 03:20-04:11, 07:04-07:27
 - [From RL to IRL — Gaurav Mishra, Amazon AGI Lab](../sources/20260814_Cc0_nyxROBA.md), 10:09-10:34, 13:44-13:55
+- [Codex, Behind the Harness — Dominik Kundel, OpenAI](../sources/20260810_shRR1e2HXMk.md), 11:59-12:22, 13:15-15:32

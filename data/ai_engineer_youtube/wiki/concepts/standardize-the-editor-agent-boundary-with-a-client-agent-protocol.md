@@ -15,6 +15,7 @@ Details:
 - Session lifecycle: `newSession` generates a random session ID, instantiates an agent bound to the client-provided working directory, stores it in a map, and returns the ID; `prompt` carries that session ID plus content blocks and looks the agent up — the ID is how one client thread maps to one agent instance. (05:04-06:30)
 - Integration is config, not code: Zed runs an ACP agent by being told it exists and is launchable as `node <path>/agent.js`. (06:46-07:00)
 - Transport is stdio today; remote transport (JetBrains) is in progress, so the same protocol can later cross process/machine boundaries. (17:51-18:03)
+- **A second protocol occupies the same boundary, shipped by a model lab rather than an editor — and the difference in origin shows.** Codex names two protocols that bracket its harness: "the first one is what happens when you send it off in the UI and it goes to the harness. We call that the app server… the second part is the responses API, which… handles the communication between the harness and the inference." The app server sits exactly where ACP sits, and it is a public build surface — "if you're building your own UI… you can actually build on top of the Codex… harness using the app server protocol. We use that same app server to power the Codex app," with third-party clients named and a plugin that puts Codex inside Claude Code. But the asymmetry is the finding: ACP is one protocol many agents implement, while the app server is one agent many clients implement. Both remove an N×M matrix; they remove opposite halves of it, and an app-server client is not portable to a different agent the way an ACP client is. Note also which side each takes as fixed — Zed's clients are editors, OpenAI's is the harness itself. ([Codex, Behind the Harness](../sources/20260810_shRR1e2HXMk.md), 02:00-03:12)
 
 Related topics:
 - [Tools](../topics/tools.md)
@@ -25,6 +26,8 @@ Related concepts:
 - [Choose A2A and MCP by Ownership Boundary](choose-a2a-and-mcp-by-ownership-boundary.md)
 - [Agent Clients Can Be Custom or Existing MCP Surfaces](agent-clients-can-be-custom-or-existing-mcp-surfaces.md)
 - [Design Coding-Agent Editors as Review Surfaces](design-coding-agent-editors-as-review-surfaces.md)
+- [Match Agent Tooling to the Model's Training Distribution](match-agent-tooling-to-the-models-training-distribution.md)
 
 Sources:
 - [Building an ACP-Compatible Agent Live — Bennet Fenner, Zed](../sources/20260708_HsxQICTLF84.md), 00:14-07:00, 17:51-18:03
+- [Codex, Behind the Harness — Dominik Kundel, OpenAI](../sources/20260810_shRR1e2HXMk.md), 02:00-03:12

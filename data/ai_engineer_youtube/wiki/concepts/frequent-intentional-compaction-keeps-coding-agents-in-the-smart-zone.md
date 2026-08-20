@@ -18,6 +18,7 @@ Details:
 
 - **Given that disagreement, the honest answer is per-deployment and lives in your traces.** LangChain lists exactly this as a question you send a mining agent to answer rather than one you settle by argument: "Agents now run for millions of tokens. Does the agent get really dumb after the first compaction? After the second compaction? Does it never get dumb? Like how do we actually answer these questions? We need to do it by actually looking at the traces." The degradation curve is a function of your model, harness, and task mix, all of which change under you ([Ask Traces the Behavioral Questions Code Cannot Answer](ask-traces-the-behavioral-questions-code-cannot-answer.md)). ([LangChain](../sources/20260812_CvRngaQZQ3Y.md), 05:16-05:32)
 - **A scope boundary worth stating, because the same word gets borrowed for a different job.** Jack Morris uses coding-agent compaction — "the way that, you know, Claude code or Codex or open code, what have you, does compaction" — as the reference point for compressing a whole private corpus into cache state, and then names its limit: "it only applies to things that are in context," and it "misses… some of the magic that you can get from taking gradients." Nothing there disputes this page. The practice here is about surviving a session whose material already passed through the window; it is not evidence that the same mechanism can teach a model a corpus it has never seen ([KV Compaction Reaches Only What Already Fits in Context](kv-compaction-reaches-only-what-already-fits-in-context.md)). ([Engram](../sources/20260812_WiqDvX6isc4.md), 12:16-13:10)
+- **A third position the two sides above do not cover: compaction as a trained model behavior running on the provider's servers.** Codex triggers compaction "on the server side in a way that the model got trained with so that the performance stays the same," producing "a compaction item" that replaces the previous window on subsequent turns, and OpenAI exposes it through the responses API so other harnesses can use it. This cuts across the page's existing disagreement rather than settling it. Against the quality argument it removes the human review step this page treats as load-bearing — no artifact is tagged or corrected before the next turn starts. Against the caching counter-argument it does nothing to help: a compaction item is a new prefix, so the cache invalidation Towards AI measured still applies, and the training claim is about output quality, not cost. No before/after numbers are given for "the performance stays the same," and the motivation offered is unattended long-horizon runs — "if we have these agents run for hours or days at a time" — which is a different regime from the reviewed coding session this page describes. ([Codex, Behind the Harness](../sources/20260810_shRR1e2HXMk.md), 18:51-19:35, 19:58-20:16)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -33,6 +34,8 @@ Related concepts:
 - [KV Compaction Reaches Only What Already Fits in Context](kv-compaction-reaches-only-what-already-fits-in-context.md)
 - [Benchmark Context-Management Presets Against a Do-Nothing Baseline](benchmark-context-management-presets-against-a-do-nothing-baseline.md)
 - [Ask Traces the Behavioral Questions Code Cannot Answer](ask-traces-the-behavioral-questions-code-cannot-answer.md)
+- [Match Agent Tooling to the Model's Training Distribution](match-agent-tooling-to-the-models-training-distribution.md)
+- [End a Long-Horizon Loop With a Model-Called Goal Tool](end-a-long-horizon-loop-with-a-model-called-goal-tool.md)
 
 Sources:
 - [No Vibes Allowed: Solving Hard Problems in Complex Codebases - Dex Horthy, HumanLayer](../sources/20251202_rmvDxxNubIg.md), 03:47-07:27, 12:14-14:10
@@ -40,3 +43,4 @@ Sources:
 - [Context Engineering in 2026 — Louis-François Bouchard, Omar Solano & Samridhi Vaid, Towards AI](../sources/20260817_WP3hjUXd918.md), 16:45-18:52, 43:40-45:57
 - [Improving Agents is a Data Mining Problem — Vivek Trivedy, LangChain](../sources/20260812_CvRngaQZQ3Y.md), 05:16-05:32
 - [Scaling Compute on Context — Jack Morris, Engram](../sources/20260812_WiqDvX6isc4.md), 12:16-13:10
+- [Codex, Behind the Harness — Dominik Kundel, OpenAI](../sources/20260810_shRR1e2HXMk.md), 18:51-19:35, 19:58-20:16

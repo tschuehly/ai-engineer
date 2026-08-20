@@ -70,8 +70,11 @@ Serving infrastructure also acquires a second customer in this wiki's newest inf
 
 One serving decision changes meaning under that design. Precision is normally a memory-and-throughput lever with an accuracy price, but a coarser serving dtype also has a higher rounding boundary — roughly θ/2^(mantissa+1) — so it absorbs more of each optimizer step and *fewer* served weights differ between versions, meaning [lower serving precision shrinks the weight-sync patch](../concepts/lower-serving-precision-shrinks-the-weight-sync-patch.md). Serving in FP8 or MXFP4 therefore trades on three axes at once rather than two. Treat the whole picture as an unmeasured design: no cross-region sync latency, sidecar hop cost, or serving-quality comparison across dtypes is reported anywhere in the talk, and the only measured run is FP8.
 
+A different report from the same week marks where further generation speed stops paying, at least for one workload shape. OpenAI ran GPT 5.3 Codex Spark on Cerebras at 1,000 tokens per second and concluded that for an agent, "inference… no longer was the bottleneck. It was actually the network" ([Fast Inference Moves the Agent Bottleneck to the Network](../concepts/fast-inference-moves-the-agent-bottleneck-to-the-network.md)). The precondition is the tool-call loop rather than the token rate alone — a one-shot completion pays the round trip once, a fifty-call trajectory pays it fifty times, and under a stateless protocol each turn also re-uploads the whole conversation. Their answer was a persistent WebSocket with server-held conversation state so only the changed item is sent. For this topic the useful reading is a boundary on what serving optimization buys: past some rate, the remaining latency belongs to the protocol and the harness, and a serving benchmark measured on single completions will not show it. The evidence is thin — no latency numbers, no workload description, and a demo that had to be replaced with a recording — so treat the crossover point as unlocated rather than established.
+
 ## Key Concepts
 
+- [Fast Inference Moves the Agent Bottleneck to the Network](../concepts/fast-inference-moves-the-agent-bottleneck-to-the-network.md) - the point at which faster token generation stops improving an agent's wall clock, and what to optimize instead.
 - [Publish Immutable Weight Versions to a Bulletin Board](../concepts/publish-immutable-weight-versions-to-a-bulletin-board.md) - safetensors-shaped, pull-based weight distribution that unmodified vLLM and SGLang servers can consume.
 - [Make a Rollout Engine Version-Aware With a Sidecar](../concepts/make-a-rollout-engine-version-aware-with-a-sidecar.md) - the one piece of state a serving engine lacks before it can produce RL training data.
 - [Lower Serving Precision Shrinks the Weight-Sync Patch](../concepts/lower-serving-precision-shrinks-the-weight-sync-patch.md) - quantization as a third-axis lever on how much of the model changes per training step.
@@ -161,6 +164,7 @@ One serving decision changes meaning under that design. Precision is normally a 
 
 ## Open Questions
 
+- At what tokens-per-second does the network overtake generation for a tool-calling agent? The one report of the crossover comes from a 1,000-token-per-second deployment and gives no per-turn latency breakdown, so there is no way to tell whether a 200-token-per-second stack is already there or nowhere near it.
 - What does a serving replica actually give up by joining an RL rollout fleet? The design adds a sidecar hop on every request, an unbounded catch-up window before a request is failed, and periodic weight reloads on a live server — none of which is measured, and none of which is reconciled with the latency SLOs a serving tier normally carries.
 - Does lower serving precision keep shrinking the sync patch in group-scaled formats? The monotone claim across BF16 → FP8 → FP4 rests on the per-element mantissa formula, but INT4, MXFP4, and NVFP4 quantize against shared (and in NVFP4's case hierarchical) scales, where one scale change re-encodes a whole group. The only measured run is FP8, and no source works the group-scaled case through.
 - Does tokens-to-solve actually fall under distribution-matching post-training, and by how much? The direction is asserted with no counts, tasks, or baselines, and it is one of the few claims in this area a team can test on its own traces — measure the reasoning-token trend across training runs of each kind before budgeting capacity on it.
@@ -191,6 +195,7 @@ One serving decision changes meaning under that design. Precision is normally a 
 
 ## Sources
 
+- [Codex, Behind the Harness — Dominik Kundel, OpenAI](../sources/20260810_shRR1e2HXMk.md)
 - [Taking Reinforcement Learning Cross Datacenter — Nan Jiang, Modal](../sources/20260810_maRzp4kImJ4.md)
 - [Scaling up Continual Learning — Ronak Malde, Trajectory](../sources/20260812_zL1kLftVTlo.md)
 - [Adaption Labs: Gradient-Free Continual Learning — Sara Hooker, Adaption](../sources/20260812_XEd_SRVHBgU.md)

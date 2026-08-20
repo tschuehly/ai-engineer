@@ -1,6 +1,13 @@
 # Concept Index
 
 ## Agents
+- [Fast Inference Moves the Agent Bottleneck to the Network](../concepts/fast-inference-moves-the-agent-bottleneck-to-the-network.md) - at 1,000 tokens per second the round trip and the conversation resend dominate the turn.
+- [Model Async Agent Work as Spawn, Send, Wait, Shut Down](../concepts/model-async-agent-work-as-spawn-send-wait-shut-down.md) - one handle abstraction covering subagents and background terminals alike.
+- [Drive Computer Use Through a Persistent Scripting Session](../concepts/drive-computer-use-through-a-persistent-scripting-session.md) - a REPL held across turns replaces a fixed action vocabulary, so the agent scripts the environment.
+- [End a Long-Horizon Loop With a Model-Called Goal Tool](../concepts/end-a-long-horizon-loop-with-a-model-called-goal-tool.md) - a continuation prompt runs until the model declares the goal met, making verifiability a termination condition.
+- [Escalate Risky Actions to a Read-Only Review Subagent](../concepts/escalate-risky-actions-to-a-read-only-review-subagent.md) - approval fatigue degrades the human gate, so a constrained model reviews first.
+- [Judge an Action by How Explicitly the User Authorized It](../concepts/judge-an-action-by-how-explicitly-the-user-authorized-it.md) - a rubric for standing permissions that covers filesystem and network with one question.
+- [Match Agent Tooling to the Model's Training Distribution](../concepts/match-agent-tooling-to-the-models-training-distribution.md) - choose the diff format, search tool, and shell the weights were trained on.
 - [A Harness Fix Becomes Overhead When the Model Outgrows It](../concepts/a-harness-fix-becomes-overhead-when-the-model-outgrows-it.md) - a workaround keeps executing after the model stops needing it, so staleness costs latency and discarded cache.
 - [Decouple the Agent Loop From the Tool Execution Environment](../concepts/decouple-the-agent-loop-from-the-tool-execution-environment.md) - latency, blast radius, and allocation timing as non-security reasons to split the brain from the hands.
 - [Model a Managed Agent as Agent, Environment, and Session](../concepts/model-a-managed-agent-as-agent-environment-session.md) - three primitives and a four-state session machine for a hosted agent runtime.
@@ -542,6 +549,8 @@
 - [Learn risk scoring from audit feedback for predictive compliance](../concepts/learn-risk-scoring-from-audit-feedback-for-predictive-compliance.md)
 
 ## Coding Agents
+- [Match Agent Tooling to the Model's Training Distribution](../concepts/match-agent-tooling-to-the-models-training-distribution.md) - the diff format, search binary, shell dialect, and compaction are all training-distribution choices.
+- [Sandbox Primitives Are Per Operating System](../concepts/sandbox-primitives-are-per-operating-system.md) - a locally executing coding agent carries three isolation stories, one of which it wrote itself.
 - [Own Agent Adoption at the Leadership Layer Because the Fixes Are Shared](../concepts/own-agent-adoption-at-the-leadership-layer-because-the-fixes-are-shared.md) - codebase reorganization and a converged setup are out of an IC's reach, which is the structural reason adoption cannot be delegated downward.
 - [Uneven Agent Adoption Loads Review Onto the Slowest Adopters](../concepts/uneven-agent-adoption-loads-review-onto-the-slowest-adopters.md) - the ten-PR engineers generate the diffs the one-PR engineers must read, so the gap widens itself and sours the laggards on agents.
 - [Map Agent Adoption on Fear and Utilization Axes](../concepts/map-agent-adoption-on-fear-and-utilization-axes.md) - a two-axis state map whose observed trajectory includes a phase where shipped slop lowers fear by lowering expectations.
@@ -828,6 +837,8 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Defer Tool Definitions Out of Context and Let the Model Search for Them](../concepts/defer-tool-definitions-out-of-context-and-let-the-model-search-for-them.md) - the tool registry is the term that grows, and it does not have to be resident.
+- [Cap the Skills List as a Share of the Context Window](../concepts/cap-the-skills-list-as-a-share-of-the-context-window.md) - a context budget expressed as a percentage of the window, enforced by the harness.
 - [Measure First-Prompt Context Burn to Test Progressive Disclosure](../concepts/measure-first-prompt-context-burn-to-test-progressive-disclosure.md) - a one-session numeric check of whether the context files defer anything, with a stated baseline and failure threshold.
 - [Keep the Repo Context File a Thin Index and Cap Skill Files](../concepts/keep-the-repo-context-file-a-thin-index-and-cap-skill-files.md) - a stated line cap makes each addition a trade, which is what an authoring principle cannot do across contributors.
 - [Put Context Pointers Where the Agent Will Land](../concepts/put-context-pointers-where-the-agent-will-land.md) - an agent's entry point is wherever its search matched, so unreferenced docs are unreachable however well written.
@@ -975,6 +986,8 @@
 - [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md)
 
 ## Infrastructure
+- [Fast Inference Moves the Agent Bottleneck to the Network](../concepts/fast-inference-moves-the-agent-bottleneck-to-the-network.md) - a persistent connection plus server-held state, once generation stops being the slow part.
+- [Sandbox Primitives Are Per Operating System](../concepts/sandbox-primitives-are-per-operating-system.md) - where execution stays on the user's machine, the OS primitive is the whole isolation story.
 - [RL Post-Training Demands Four Scarce Compute Properties at Once](../concepts/rl-post-training-demands-four-scarce-compute-properties-at-once.md) - enough GPU, same region, fast fabric, available now: the conjunction is what makes the capacity hard to buy.
 - [The Rollout Serving Island Is the Movable Unit of an RL Run](../concepts/the-rollout-serving-island-is-the-movable-unit-of-an-rl-run.md) - cut the job on the absence of a global all-reduce, not on "training versus inference."
 - [Synchronize Rollout Weights With a Bitwise-Lossless Patch, Not a Checkpoint](../concepts/synchronize-rollout-weights-with-a-bitwise-lossless-patch.md) - changed positions plus replacement bits, so repeated application cannot accumulate additive drift.
@@ -1247,6 +1260,7 @@
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 
 ## Inference
+- [Fast Inference Moves the Agent Bottleneck to the Network](../concepts/fast-inference-moves-the-agent-bottleneck-to-the-network.md) - the point at which faster token generation stops improving an agent's wall clock.
 - [The Rollout Serving Island Is the Movable Unit of an RL Run](../concepts/the-rollout-serving-island-is-the-movable-unit-of-an-rl-run.md) - the largest scope over which a serving group still needs fast interconnect, and therefore what can move.
 - [Lower Serving Precision Shrinks the Weight-Sync Patch](../concepts/lower-serving-precision-shrinks-the-weight-sync-patch.md) - a third axis for a quantization decision, beside memory bandwidth and quality.
 - [Adam Absorption Hides Most Weight Updates From the Served Model](../concepts/adam-absorption-hides-most-weight-updates-from-the-served-model.md) - what a quantized serving view rounds away from a training loop, and why that turns out to be useful.
@@ -2178,6 +2192,9 @@
 - [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md)
 
 ## Security
+- [Escalate Risky Actions to a Read-Only Review Subagent](../concepts/escalate-risky-actions-to-a-read-only-review-subagent.md) - a separately spawned reviewer that cannot act, and only escalates when it objects.
+- [Judge an Action by How Explicitly the User Authorized It](../concepts/judge-an-action-by-how-explicitly-the-user-authorized-it.md) - explicitness of authorization as the portable criterion for when to stop and ask.
+- [Sandbox Primitives Are Per Operating System](../concepts/sandbox-primitives-are-per-operating-system.md) - Seatbelt, Bubblewrap, and a hand-written Windows sandbox: isolation quality does not port.
 - [Decrypt Agent Credentials Only at Tool Execution Time](../concepts/decrypt-agent-credentials-only-at-tool-execution-time.md) - "the model never sees your security tokens" is an architectural consequence, not a prompt-hygiene rule.
 - [Reach Private MCP Servers With Outbound-Only Tunnels](../concepts/reach-private-mcp-servers-with-outbound-only-tunnels.md) - no listener and no inbound rule; the protected network dials out and its egress controls become the gate.
 - [Agent Trust Needs a Certificate Issuer, Not a CAPTCHA](../concepts/agent-trust-needs-a-certificate-issuer-not-a-captcha.md) - CAPTCHAs answer "is this a human?" and signatures answer "who is calling?"; neither answers whether the agent should be let in.
@@ -2229,6 +2246,11 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Defer Tool Definitions Out of Context and Let the Model Search for Them](../concepts/defer-tool-definitions-out-of-context-and-let-the-model-search-for-them.md) - a per-tool deferred flag plus a tool-search call, so definitions cost nothing until wanted.
+- [Cap the Skills List as a Share of the Context Window](../concepts/cap-the-skills-list-as-a-share-of-the-context-window.md) - 2% of the window, with descriptions trimmed rather than skills dropped as the catalog grows.
+- [Match Agent Tooling to the Model's Training Distribution](../concepts/match-agent-tooling-to-the-models-training-distribution.md) - apply patch, ripgrep, and PowerShell as model-fit decisions rather than preferences.
+- [Model Async Agent Work as Spawn, Send, Wait, Shut Down](../concepts/model-async-agent-work-as-spawn-send-wait-shut-down.md) - four operations over a handle, reused for subagents and background terminals.
+- [Drive Computer Use Through a Persistent Scripting Session](../concepts/drive-computer-use-through-a-persistent-scripting-session.md) - code execution against a persistent REPL instead of a typed, harness-implemented action set.
 - [Keep the Repo Context File a Thin Index and Cap Skill Files](../concepts/keep-the-repo-context-file-a-thin-index-and-cap-skill-files.md) - a ~100-line hard limit on `SKILL.md`, "cuz your skill is really a folder," plus the same rule for the repo context file above it.
 - [Reach Private MCP Servers With Outbound-Only Tunnels](../concepts/reach-private-mcp-servers-with-outbound-only-tunnels.md) - a deployment shape for internal MCP tools that needs no inbound path into the customer's network.
 - [Run Trace Classifiers as Code Mode in a Sandbox](../concepts/run-trace-classifiers-as-code-mode-in-a-sandbox.md) - code mode generalizes from tool calling to any operation over a corpus too large to put in context.

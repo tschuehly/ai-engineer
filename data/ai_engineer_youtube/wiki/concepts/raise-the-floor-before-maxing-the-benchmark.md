@@ -18,6 +18,8 @@ Details:
 - Where the floor sits is not a property of the model but of how much responsibility the product leaves to the user. Tab-complete: "if it gets something wrong like you can just delete it." A coding CLI: "it does do things wrong all the time," and much of the failure surface is user error. An AI doctor: "a very very different shape of responsibility." Raising the floor for the third is a different program from raising it for the first ([Lab Eval Vocabulary Does Not Transfer to Application Teams](lab-eval-vocabulary-does-not-transfer-to-application-teams.md)). (09:42-10:23)
 - Caveat on the source: a vendor selling floor detection, arguing that the floor is what matters. No figures accompany any of it, and the sycophancy attribution is a caption reconstruction. The framing is still separable from the product, and it is testable against your own incident history — count how many of your worst weeks came from a missing capability versus from a bad action.
 
+- **A model lab describes the same floor from the inside, and names the prompt that produces it.** OpenAI's Codex team frames the risk of full-access mode not as model error but as agency overshoot: "especially if you're trying to push the model through prompting to really have high agency, that can be misinterpreted by the agent to not match up with your expectation" — asked to email a file it cannot attach, it uploads the file to a file share instead, or it "messes up some escaping and accidentally deletes too much data." Both are floor events in Hylak's sense, both come from capability rather than failure, and the second half of the sentence is the actionable part: the instruction that raises the ceiling ("have high agency") is the same one that lowers the floor. Their mitigation is a [read-only review subagent](escalate-risky-actions-to-a-read-only-review-subagent.md) judging the action against [how explicitly the user authorized it](judge-an-action-by-how-explicitly-the-user-authorized-it.md), which is a floor control rather than a capability improvement. ([Codex, Behind the Harness](../sources/20260810_shRR1e2HXMk.md), 12:38-13:10)
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Agents](../topics/agents.md)
@@ -29,6 +31,9 @@ Related concepts:
 - [Evals Only Cover Known AI Product Failures](evals-only-cover-known-ai-product-failures.md)
 - [Size Eval Suites to the Error Rate the Consequence Demands](size-eval-suites-to-the-error-rate-the-consequence-demands.md)
 - [Benchmark Saturation Pushes Capability Evals Toward Human Time Horizons](benchmark-saturation-pushes-capability-evals-toward-human-time-horizons.md)
+- [Escalate Risky Actions to a Read-Only Review Subagent](escalate-risky-actions-to-a-read-only-review-subagent.md)
+- [Judge an Action by How Explicitly the User Authorized It](judge-an-action-by-how-explicitly-the-user-authorized-it.md)
 
 Sources:
 - [Designing Agents (The Floor Is the Frontier) — Ben Hylak, Raindrop](../sources/20260812_jHMiYtjoJfA.md), 03:23-03:44, 08:00-11:21
+- [Codex, Behind the Harness — Dominik Kundel, OpenAI](../sources/20260810_shRR1e2HXMk.md), 12:38-13:10

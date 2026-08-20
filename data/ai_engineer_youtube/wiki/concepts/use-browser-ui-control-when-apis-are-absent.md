@@ -16,6 +16,7 @@ Details:
 
 - **"Absent" is the steady state for most of the web, not a transitional gap.** Dhruv Batra's version of this page's premise is a distribution claim: "the head of the distribution, the most popular websites perhaps, will give you the API, but the long tail will not," against roughly 200 million active sites whose owners — school district offices that answer a purchasing question with a Freedom of Information Act request and a scan of your own email — will not publish an endpoint even after generating one becomes technically trivial. That converts UI control from a fallback into the default path for a majority of targets; see [The Long Tail of the Web Will Not Ship APIs](the-long-tail-of-the-web-will-not-ship-apis.md). The same source is explicit about the other direction too: where an aggregator or API already exists, clicking through the UI "is bizarre." ([Dhruv Batra](../sources/20260814_Ki980nV0__0.md), 01:12-08:33)
 - **The cheap substitute does not work either.** The natural reaction — skip both the API and the pixels and have a coding agent read the HTML — fails on pages whose displayed state is computed rather than stored, which includes ordinary e-commerce and sports pages. See [Rendered State Is Not in the HTML](rendered-state-is-not-in-the-html.md). ([Dhruv Batra](../sources/20260814_Ki980nV0__0.md), 08:33-12:24)
+- **How the control surface itself is changing, from the API side.** OpenAI's original computer-use tool "only allowed you to do one action at a time," and required the harness author to implement each exposed action type; recent models and API shapes let the agent script the environment instead — Codex drives Playwright against a persistent Node REPL, so the action vocabulary becomes whatever the library exposes and page handles survive across turns ([Drive Computer Use Through a Persistent Scripting Session](drive-computer-use-through-a-persistent-scripting-session.md)). This changes the economics of the fallback path on this page in a specific way: the agent can inspect one page by hand and then write a loop for the remaining hundred, so the per-page cost of UI control stops being flat. It does not touch the perception problem — the script still has to name the right element — nor the terms-of-service exposure. ([Codex, Behind the Harness](../sources/20260810_shRR1e2HXMk.md), 08:12-10:07)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -29,8 +30,10 @@ Related concepts:
 - [Choose agent observation and action spaces explicitly](choose-agent-observation-and-action-spaces-explicitly.md)
 - [Climb a Humanness Ladder Only as High as the Page Forces](climb-a-humanness-ladder-only-as-high-as-the-page-forces.md)
 - [Chrome Stamps Every Input Trusted or Untrusted](chrome-stamps-every-input-trusted-or-untrusted.md)
+- [Drive Computer Use Through a Persistent Scripting Session](drive-computer-use-through-a-persistent-scripting-session.md)
 
 Sources:
 - [Useful General Intelligence - Danielle Perszyk, Amazon AGI](../sources/20250802_Dj0b_cEBHBI.md), 03:17-03:27, 07:48-08:31
 - [The Dark Arts of Web Automation — Corey Gallon, Rexmore](../sources/20260814_26RtyAm9y_Q.md), 00:01-01:09, 08:48-12:41
 - [Computer-use models will agentify the web, not APIs — Dhruv Batra, Yutori](../sources/20260814_Ki980nV0__0.md), 01:12-12:24
+- [Codex, Behind the Harness — Dominik Kundel, OpenAI](../sources/20260810_shRR1e2HXMk.md), 08:12-10:07

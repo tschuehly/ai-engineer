@@ -14,6 +14,7 @@ Details:
 - The recommended posture is to avoid custom code sandboxes and use hardened sandbox products with observability, fast startup, and agent-friendly integration surfaces such as MCP. 11:54-12:24
 - **What "buying it" actually covers, and what it does not.** Anthropic frames the decision as a checklist of six things production forces on you — hosting and scaling, session management, filesystem, execution isolation, credentials, observability — where execution isolation is one item among six that a platform answers together ([Decide the Agent Buy Boundary With Six Production Questions](decide-the-agent-buy-boundary-with-six-production-questions.md)). The useful correction to "just use a sandbox product" is in that list: a team that outsources isolation alone still owns session durability and credential handling, and those are the ones a prototype has never had. ([Anthropic Applied AI](../sources/20260811_K0X9QDRkIdg.md), 04:30-05:14)
 - **Sandbox lifecycle is a design decision, not just a procurement one.** Anthropic ran the loop and the container as one unit first and found that the container blocked first token and that either half dying killed the run; splitting them let a dead sandbox be replaced mid-run — "the brain could just spin up a new sandbox and retry and then continue as it left off" ([Decouple the Agent Loop From the Tool Execution Environment](decouple-the-agent-loop-from-the-tool-execution-environment.md)). Whichever sandbox you buy, that boundary is yours to get right. ([Anthropic Applied AI](../sources/20260811_K0X9QDRkIdg.md), 11:16-12:52)
+- **The case where the advice does not apply, from a team that hit it.** Codex runs on the user's own machine, so there is no container to buy: it uses Seatbelt on macOS, Bubblewrap on Linux, and on Windows — where no comparable primitive existed — OpenAI wrote its own ([Sandbox Primitives Are Per Operating System](sandbox-primitives-are-per-operating-system.md)). This does not overturn the guidance so much as scope it: "use a hardened sandbox product" presumes execution can move off the user's machine, and where it cannot, the choice is between an OS primitive, a custom sandbox, and no isolation at all. Reading it the other way round is the practical version — if you are contemplating writing a sandbox, first check whether the execution could be remote instead. ([Codex, Behind the Harness](../sources/20260810_shRR1e2HXMk.md), 11:06-11:57)
 
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
@@ -26,7 +27,9 @@ Related concepts:
 - [Separate agent harnesses from generated-code execution](separate-agent-harnesses-from-generated-code-execution.md)
 - [Decide the Agent Buy Boundary With Six Production Questions](decide-the-agent-buy-boundary-with-six-production-questions.md)
 - [Decouple the Agent Loop From the Tool Execution Environment](decouple-the-agent-loop-from-the-tool-execution-environment.md)
+- [Sandbox Primitives Are Per Operating System](sandbox-primitives-are-per-operating-system.md)
 
 Sources:
 - [How we hacked YC Spring 2025 batch's AI agents - Rene Brandel, Casco](../sources/20250730_kv-QAuKWllQ.md), 08:13-12:24
 - [Anthropic's Applied AI team on the Evolution of Agentic Surfaces](../sources/20260811_K0X9QDRkIdg.md), 04:30-05:14, 11:16-12:52
+- [Codex, Behind the Harness — Dominik Kundel, OpenAI](../sources/20260810_shRR1e2HXMk.md), 11:06-11:57

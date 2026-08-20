@@ -13,6 +13,7 @@ Details:
 - Prosodica frames the same pattern as a **Semantic Tool Router** — "RAG for tools": each tool has a clear description; the descriptions are embedded offline into a vector index (Chroma, Pinecone, Qdrant) when the catalog is created or updated; at runtime the user query is embedded with the same model, a nearest-neighbor / cosine search returns the top-K (K≈3–5) closest tool descriptions, and only those schemas are injected into the model call. If you already have an embedding model and vector DB, the infrastructure is familiar. (vh2VGuQ3zhY 09:20-16:40)
 - The retrieval step does more than narrow — it *removes* the wrong tools from the model's choice set, cutting cross-tool confusion, not only adding the right one. (vh2VGuQ3zhY 18:30-20:00)
 - Community signal for the same move: Anthropic's on-demand tool loading via MCP reported token usage dropping from 150k to 2,000 (98.7% reduction), and MCP Zero explores routing across thousands of tools spanning many servers. (vh2VGuQ3zhY 12:10-12:40, 26:10-26:20)
+- **Who runs the retrieval is a real fork, and Codex takes the other branch.** This page's pattern embeds the query and retrieves ahead of the model, so the model is handed a narrowed set it did not ask for; Codex instead gives the model a tool-search tool and lets it decide when to look ([Defer Tool Definitions Out of Context and Let the Model Search for Them](defer-tool-definitions-out-of-context-and-let-the-model-search-for-them.md)). The trade is the usual one and neither source measures it: query-timed retrieval costs no extra model turn but can only match on the user's first message, while model-timed search costs a round trip and can be issued mid-trajectory once the agent knows what it actually needs. Both agree on the underlying claim — the executable schema should be absent from the window until something has selected it. ([Codex, Behind the Harness](../sources/20260810_shRR1e2HXMk.md), 05:59-06:59)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -25,7 +26,9 @@ Related concepts:
 - [Use tool names and descriptions as operational prompts](use-tool-names-and-descriptions-as-operational-prompts.md)
 - [The Fat-Agent Tool Overload Collapses Accuracy and Inflates Latency](fat-agent-tool-overload-collapses-accuracy-and-latency.md)
 - [Tune a tool router with a K-sweep and guard its failure modes](tune-a-tool-router-with-k-sweep-and-guard-its-failure-modes.md)
+- [Defer Tool Definitions Out of Context and Let the Model Search for Them](defer-tool-definitions-out-of-context-and-let-the-model-search-for-them.md)
 
 Sources:
 - [Building Agents at Cloud Scale - Antje Barth, AWS](../sources/20250802_WJjInLeaJjo.md), 10:47-11:30
 - [The 100-Tool Agent Is a Trap - Sohail Shaikh & Ankush Rastogi, Prosodica](../sources/20260628_vh2VGuQ3zhY.md), 09:20-16:40, 18:30-20:00
+- [Codex, Behind the Harness — Dominik Kundel, OpenAI](../sources/20260810_shRR1e2HXMk.md), 05:59-06:59

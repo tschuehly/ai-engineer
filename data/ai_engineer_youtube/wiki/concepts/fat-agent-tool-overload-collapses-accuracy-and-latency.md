@@ -15,6 +15,7 @@ Details:
 - Latency: fat-agent time-to-first-token grows with the catalog because the model must process a larger prompt before answering; ~500 tools can push first-token latency past 5 seconds, which makes a real-time product feel slow and unpredictable. Router TTFT stays almost flat. (06:50-07:25, 15:00-15:20)
 - The core lesson: "the catalog can grow, but the model's working set should stay small." The router also *removes* the wrong tools from the model's choice set, not only adds the right one, which cuts cross-tool confusion. (15:10-15:20, 18:30-20:00)
 - Threshold: fewer than 20 tools, a router may be unnecessary — load directly (fine for 10–15); past ~50 tools in production a router is justified. But tool confusion can appear with only a few tools, long before 100, so treat rising add-a-tool failures as a possible architecture problem, not automatically a bad prompt. (08:40-09:10, 26:20-27:00)
+- **A first-party harness reaches the same conclusion and puts the fix in the model's hands.** Codex identifies the tool registry as the term in the context that grows without bound — "especially if you install MCPs… you might have additional context that is like growing as you're installing more MCPs" — and its answer is per-tool deferred loading plus a tool-search tool the model calls itself ([Defer Tool Definitions Out of Context and Let the Model Search for Them](defer-tool-definitions-out-of-context-and-let-the-model-search-for-them.md)). That agrees with this page's prescription — keep the working set small while the catalog grows — but relocates the selector from a retriever in front of the model to the model itself, which trades a router's flat accuracy curve for a round trip and for the model's own judgment about when to look. No accuracy figures accompany the Codex version, so the measured comparison on this page remains the only quantified one. ([Codex, Behind the Harness](../sources/20260810_shRR1e2HXMk.md), 05:29-06:59)
 
 Related topics:
 - [Tools](../topics/tools.md)
@@ -27,6 +28,8 @@ Related concepts:
 - [Inject Tool Context Just-in-Time During Agent Sequencing](inject-tool-context-just-in-time-during-agent-sequencing.md)
 - [Curate context strategically because models drop the middle](curate-context-strategically-because-models-drop-the-middle.md)
 - [MCP tool surfaces need default context budgets](mcp-tool-surfaces-need-default-context-budgets.md)
+- [Defer Tool Definitions Out of Context and Let the Model Search for Them](defer-tool-definitions-out-of-context-and-let-the-model-search-for-them.md)
 
 Sources:
 - [The 100-Tool Agent Is a Trap - Sohail Shaikh & Ankush Rastogi, Prosodica](../sources/20260628_vh2VGuQ3zhY.md), 02:19-07:25, 26:10-27:00
+- [Codex, Behind the Harness — Dominik Kundel, OpenAI](../sources/20260810_shRR1e2HXMk.md), 05:29-06:59
