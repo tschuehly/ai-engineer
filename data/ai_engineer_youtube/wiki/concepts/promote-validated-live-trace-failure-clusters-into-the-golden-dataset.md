@@ -16,6 +16,8 @@ Details:
 - Cadence is use-case dependent: generating the report ~once per sprint is reasonable; with 10,000+ feedback traces, one report is too much, so split into several. 26:40-27:30
 - Given enough context and the ability to test its changes against those regression traces, a coding agent has fixed an entire suite of issues with a single prompt; complex clusters can be handed to the [branch-per-hypothesis optimization loop](optimize-an-agent-with-a-branch-per-hypothesis-coding-agent-loop.md) to build draft PRs. 27:00-27:51
 
+- **The promotion step is what makes this survive the standing objection to clustering.** Ben Hylak argues that clusters cannot function as issues — you do not control their boundaries, "it's very, very hard to reliably track over time," and "what you consider to be like the same issue or not is actually very, very unique to every company" ([Clusters Are Not Issues](clusters-are-not-issues.md)). This pipeline escapes all three because the cluster is not the artifact: an SME validates it, names it, and it becomes a golden-dataset entry and a scorer with a stable identity that can be re-run and trended. Stated as a rule, a cluster is a discovery output that has to be promoted into something you named before anything can be tracked against it — and the corollary is that the SME triage step is load-bearing, not administrative overhead to automate away. ([Hylak](../sources/20260812_jHMiYtjoJfA.md), 17:03-18:08)
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Agents](../topics/agents.md)
@@ -26,6 +28,8 @@ Related concepts:
 - [Portfolio-Allocate Eval Failures With a Triage Agent](portfolio-allocate-eval-failures-with-a-triage-agent.md)
 - [Replay Production Failures Before Promoting Prompt Fixes](replay-production-failures-before-promoting-prompt-fixes.md)
 - [Use golden data sets and mixed scoring functions for AI application confidence](use-golden-data-sets-and-mixed-scoring-functions-for-ai-application-confidence.md)
+- [Clusters Are Not Issues](clusters-are-not-issues.md)
 
 Sources:
 - [Agents Building Agents - Alfonso Graziano, Nearform](../sources/20260628_aHhB3sjGjkI.md), 21:00-27:51
+- [Designing Agents (The Floor Is the Frontier) — Ben Hylak, Raindrop](../sources/20260812_jHMiYtjoJfA.md), 17:03-18:08

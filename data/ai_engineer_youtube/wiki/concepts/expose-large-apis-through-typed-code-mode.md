@@ -18,6 +18,8 @@ Details:
 - MCP structured output can give the model return-value type information, making code-mode composition more reliable than parsing opaque natural-language tool results. (10:56-11:49)
 - A later Cloudflare session restates the headline figure: code mode in an MCP server can expose all 2,600 Cloudflare API endpoints in just ~1,000 tokens of tool interface, the same "we fixed MCP twice" claim that pairs with capability-scoped Dynamic Workers for safe execution. (SKDJo2CopRs 09:44-10:22)
 
+- **Code mode generalizes past tool calling to any operation over a corpus too large to put in context.** Ben Hylak transplants it to observability: "you've heard about code mode in the context of MCPs… I highly recommend just uh trying to apply this to traces. Like you can just write uh these classifiers and you can run them in a sandbox and you can run them at production scale." The invariant that carries across is the same one that motivates typed code mode here — the model authors a program against a described surface and the runtime executes it over the data, so the model's context holds the question rather than the payload ([Run Trace Classifiers as Code Mode in a Sandbox](run-trace-classifiers-as-code-mode-in-a-sandbox.md)). ([Hylak](../sources/20260812_jHMiYtjoJfA.md), 18:14-18:36)
+
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
 - [Tools](../topics/tools.md)
@@ -25,8 +27,10 @@ Related topics:
 Related concepts:
 - [Discover Large API Tool Surfaces Progressively](discover-large-api-tool-surfaces-progressively.md)
 - [Run Agent-Written API Code Inside Programmable Sandboxes](run-agent-written-api-code-inside-programmable-sandboxes.md)
+- [Run Trace Classifiers as Code Mode in a Sandbox](run-trace-classifiers-as-code-mode-in-a-sandbox.md)
 
 Sources:
+- [Designing Agents (The Floor Is the Frontier) — Ben Hylak, Raindrop](../sources/20260812_jHMiYtjoJfA.md), 18:14-18:36
 - [Code Mode: Let the Code do the Talking - Sunil Pai, Cloudflare](../sources/20260419_8txf05vVVl4.md), 01:31-05:18
 - [MCP = Mega Context Problem - Matt Carey](../sources/20260425_YBYUvGOuotE.md), 07:20-10:08
 - [The Future of MCP - David Soria Parra, Anthropic](../sources/20260419_v3Fr2JR47KA.md), 09:39-11:49

@@ -1,6 +1,12 @@
 # Concept Index
 
 ## Agents
+- [Raise the Floor Before Maxing the Benchmark](../concepts/raise-the-floor-before-maxing-the-benchmark.md) - agent creativity produces the ceiling and the floor together; only the floor breaks trust.
+- [Triage Agent Issues by Onset and Share of Users](../concepts/triage-agent-issues-by-onset-and-share-of-users.md) - two numbers that make an unbounded agent issue list tractable.
+- [Clusters Are Not Issues](../concepts/clusters-are-not-issues.md) - why an agent issue needs a declared identity, not an emergent one.
+- [Hand Agents Anomalies to Investigate, Not to Detect](../concepts/hand-agents-anomalies-to-investigate-not-to-detect.md) - what agents are and are not good at inside a monitoring loop.
+- [A Harness Switch Invalidates Most of an Eval Suite](../concepts/a-harness-switch-invalidates-most-of-an-eval-suite.md) - an agent eval asserts on the harness as much as on the model, so swapping loops or CLIs voids most of the suite.
+- [Lab Eval Vocabulary Does Not Transfer to Application Teams](../concepts/lab-eval-vocabulary-does-not-transfer-to-application-teams.md) - how much responsibility an agent leaves to its user is the axis that separates tab complete from an AI doctor.
 - [Measure Learning as Gain Over a Memory-Wiped Rerun](../concepts/measure-learning-as-gain-over-a-memory-wiped-rerun.md) - run the system twice, once carrying state and once reset between instances, and report the difference; total reward alone confounds learning with base-model strength.
 - [Classify Continual-Learning Failures as Stability or Plasticity](../concepts/classify-continual-learning-failures-as-stability-or-plasticity.md) - oscillating back to a prior answer and fluently dismissing relevant memory are opposite failures with opposite fixes.
 - [Plain In-Context Learning Topped a Continual-Learning Benchmark](../concepts/plain-in-context-learning-topped-a-continual-learning-benchmark.md) - appending experience to the context beat memory and context-management systems on reward, gain, and cost.
@@ -942,6 +948,7 @@
 - [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md)
 
 ## Infrastructure
+- [Run Trace Classifiers as Code Mode in a Sandbox](../concepts/run-trace-classifiers-as-code-mode-in-a-sandbox.md) - a sandbox sweeping the production trace corpus with model-written predicates, moving per-trace cost from tokens to compute.
 - [Place a Continual-Learning Setup on Two Axes: Trace Policyness and Hint Provenance](../concepts/place-a-continual-learning-setup-on-the-trace-and-hint-axes.md) - two independent axes — how on-policy the trace is and where the hint comes from — turn "continual learning" into four concrete setups with different prerequisites.
 - [Offline Hints on Offline Traces Need No Replayable Environment](../concepts/offline-hints-on-offline-traces-need-no-replayable-environment.md) - the cheapest continual-learning corner: a stored trace dump plus a static behavior prior, no environment and no rollouts.
 - [Buy On-Policyness With a Single Rollout Step on an Offline Trace](../concepts/buy-on-policyness-with-a-single-rollout-step.md) - regenerate one step from the current policy against a stale prefix — no environment interaction — and hint against that.
@@ -1332,6 +1339,9 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Raise the Floor Before Maxing the Benchmark](../concepts/raise-the-floor-before-maxing-the-benchmark.md) - "are you a benchmark maxer or a floor raiser?" — the floor is where user trust is lost, and it cannot be removed without removing the ceiling.
+- [Lab Eval Vocabulary Does Not Transfer to Application Teams](../concepts/lab-eval-vocabulary-does-not-transfer-to-application-teams.md) - how much responsibility the product leaves to the user is the axis that sets the eval design.
+- [Match the Quality Method to Your User Count](../concepts/match-the-quality-method-to-your-user-count.md) - ask user count before recommending anything; a five-user internal app is low volume, not low stakes.
 - [Customization Control Is a Separate Question From Open Weights](../concepts/customization-control-is-a-separate-question-from-open-weights.md) - the axis procurement and policy language usually collapses into "open source," and why keeping it separate matters.
 - [Frontier Training Know-How Is Apprenticeship, Not Literature](../concepts/frontier-training-know-how-is-apprenticeship-not-literature.md) - fewer than 5,000 people have trained a frontier model, and the knowledge moves by working beside them.
 - [Distributable Compute Lowers the Barrier to Frontier Work](../concepts/distributable-compute-lowers-the-barrier-to-frontier-work.md) - who is allowed to build frontier models, argued from the shape of the compute rather than its size.
@@ -1444,6 +1454,15 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Raise the Floor Before Maxing the Benchmark](../concepts/raise-the-floor-before-maxing-the-benchmark.md) - measure the worst thing the agent can do, not only the most impressive; almost all published eval effort measures the ceiling.
+- [Lab Eval Vocabulary Does Not Transfer to Application Teams](../concepts/lab-eval-vocabulary-does-not-transfer-to-application-teams.md) - "eval" names two unrelated activities, and copying a lab's task set imports the wrong success criteria.
+- [A Harness Switch Invalidates Most of an Eval Suite](../concepts/a-harness-switch-invalidates-most-of-an-eval-suite.md) - suite size is a liability with a depreciation schedule; trajectory assertions do not port, outcome assertions mostly do.
+- [Keep Evals in the Repo as Tests, Not in a Prompt Playground](../concepts/keep-evals-in-the-repo-as-tests-not-in-a-prompt-playground.md) - the unit under test is now the whole harness, so the assertion has to live and version with it.
+- [Match the Quality Method to Your User Count](../concepts/match-the-quality-method-to-your-user-count.md) - scale decides which instruments exist; consequence per interaction and interaction volume are independent axes.
+- [Triage Agent Issues by Onset and Share of Users](../concepts/triage-agent-issues-by-onset-and-share-of-users.md) - onset and share are the whole triage interface; anything that cannot produce them is analysis, not monitoring.
+- [Clusters Are Not Issues](../concepts/clusters-are-not-issues.md) - unstable boundaries and product-specific issue identity make raw clustering a discovery pass, not an issue tracker.
+- [Run Trace Classifiers as Code Mode in a Sandbox](../concepts/run-trace-classifiers-as-code-mode-in-a-sandbox.md) - the model writes the predicate and a sandbox runs it over every trace, moving the model call from per-trace to per-question.
+- [Hand Agents Anomalies to Investigate, Not to Detect](../concepts/hand-agents-anomalies-to-investigate-not-to-detect.md) - detect deterministically and cheaply, then spend the model on explaining a bounded, already-found object.
 - [Measure Learning as Gain Over a Memory-Wiped Rerun](../concepts/measure-learning-as-gain-over-a-memory-wiped-rerun.md) - stateful reward minus stateless reward, so the score attributes improvement to the system rather than to the base model.
 - [A Learning Benchmark Needs Headroom, Shared Structure, and a Signal](../concepts/a-learning-benchmark-needs-headroom-shared-structure-and-a-signal.md) - headroom that offline training cannot close, structure shared across instances, and feedback in the environment.
 - [Chained Independent Benchmarks Cannot Measure Learning](../concepts/chained-independent-benchmarks-cannot-measure-learning.md) - why the cheapest proposed shortcut to a learning benchmark cannot work at all.
@@ -2137,6 +2156,8 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Run Trace Classifiers as Code Mode in a Sandbox](../concepts/run-trace-classifiers-as-code-mode-in-a-sandbox.md) - code mode generalizes from tool calling to any operation over a corpus too large to put in context.
+- [Keep Evals in the Repo as Tests, Not in a Prompt Playground](../concepts/keep-evals-in-the-repo-as-tests-not-in-a-prompt-playground.md) - when the unit under test is the whole harness, the prompt-management product no longer holds it.
 - [Generate Disposable Visualizations to Find Gaps in Your Own Corpus](../concepts/generate-disposable-visualizations-to-find-gaps-in-your-own-corpus.md) - "this is not a tool that you have to install... I told an agent, build this for me," then restyled it on a whim.
 - [Go Straight to the Known Source Instead of Searching for It](../concepts/go-straight-to-the-known-source-instead-of-searching-for-it.md) - handing a search tool a task whose source you already know adds a hop, a failure mode, and a token bill.
 - [The Long Tail of the Web Will Not Ship APIs](../concepts/the-long-tail-of-the-web-will-not-ship-apis.md) - every agent-facing tool surface presumes a cooperating publisher, which scopes it to the head of the distribution.
@@ -2409,6 +2430,13 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Triage Agent Issues by Onset and Share of Users](../concepts/triage-agent-issues-by-onset-and-share-of-users.md) - two numbers per issue are the whole triage interface for a standing production loop.
+- [Clusters Are Not Issues](../concepts/clusters-are-not-issues.md) - a cluster cannot supply onset or share, so it cannot be the monitoring layer.
+- [Hand Agents Anomalies to Investigate, Not to Detect](../concepts/hand-agents-anomalies-to-investigate-not-to-detect.md) - deterministic detection, agentic investigation; the detector is allowed to be wrong.
+- [Run Trace Classifiers as Code Mode in a Sandbox](../concepts/run-trace-classifiers-as-code-mode-in-a-sandbox.md) - a named, versioned, re-runnable predicate over the whole corpus is what makes onset and growth computable.
+- [A Harness Switch Invalidates Most of an Eval Suite](../concepts/a-harness-switch-invalidates-most-of-an-eval-suite.md) - the offline half of the loop depreciates; the test is whether you would delay a model upgrade two weeks to update it.
+- [Keep Evals in the Repo as Tests, Not in a Prompt Playground](../concepts/keep-evals-in-the-repo-as-tests-not-in-a-prompt-playground.md) - evals as code is the precondition for evals in CI.
+- [Match the Quality Method to Your User Count](../concepts/match-the-quality-method-to-your-user-count.md) - which half of the loop you can lean on is set by scale before anything else.
 - [Run Recurring Knowledge Jobs in a Cloud Sandbox With Sync-Down/Sync-Back](../concepts/run-recurring-knowledge-jobs-in-a-cloud-sandbox-with-sync-down-sync-back.md) - generation latency is the reason to schedule, and the laptop lid is the reason to leave the laptop.
 - [Stamp Processing State in the Artifact to Make Agent Passes Resumable](../concepts/stamp-processing-state-in-the-artifact-to-make-agent-passes-resumable.md) - the corpus is its own checkpoint store, which is what makes a torn-down nightly sandbox workable.
 - [Optimize Capture Bandwidth Before Note Organization](../concepts/optimize-capture-bandwidth-before-note-organization.md) - dictation at ~200 wpm, deliberately sloppy, because every generated layer needs raw material underneath it.

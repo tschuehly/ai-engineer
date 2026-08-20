@@ -14,6 +14,7 @@ Details:
 - Consequence for tooling: the mining product LangChain built around this reads the corpus, finds issues, "agentically searches over it," and prepares datasets — a search agent over trace storage, not a summarization pass. ([LangChain](../sources/20260812_CvRngaQZQ3Y.md), 10:39-11:08)
 - The problem gets worse monotonically. "The data that we see today is going to be the smallest that humans have ever seen in their entire lives," as agent runtimes stretch from year scales to 6-month, 3-month, and daily cadences. A read path that only works at today's corpus size is a read path with an expiry date. ([LangChain](../sources/20260812_CvRngaQZQ3Y.md), 05:59-06:35)
 - This is the read-side counterpart to the storage-side constraint: agent traces are text-heavy, semi-structured, large, and high-velocity, which already breaks naive relational storage ([Agent traces require specialized eval infrastructure](agent-traces-require-specialized-eval-infrastructure.md)). Both sides have to hold, and neither implies the other.
+- **A fourth lever attacks the same arithmetic from a different angle: move the model call from once-per-trace to once-per-question.** Ben Hylak's version is to transplant code mode from MCP tool calling onto traces — "you can just write uh these classifiers and you can run them in a sandbox and you can run them at production scale" — so the corpus is swept by deterministic code the model wrote, and neither the token term nor the context-window constraint applies at all ([Run Trace Classifiers as Code Mode in a Sandbox](run-trace-classifiers-as-code-mode-in-a-sandbox.md)). This does not replace agentic mining; it partitions the work. Questions you can already state become cheap full-coverage sweeps, and the agent reader is reserved for the behavioral questions no classifier can express. ([Hylak](../sources/20260812_jHMiYtjoJfA.md), 18:14-18:36)
 - Cost control the wiki records elsewhere applies here too and is complementary rather than alternative: sample rather than score everything ([Apply online scoring to production traces with cost-aware sampling](apply-online-scoring-to-production-traces-with-cost-aware-sampling.md)), and use a cheaper model for the bulk judging pass ([Read the Frontier Model's Traces to Harness-Engineer Its Cheap Replacement](read-frontier-traces-to-harness-engineer-a-cheap-replacement.md)). Sampling reduces the trace count; a cheaper judge reduces the price term; agentic querying reduces the per-trace token term.
 
 Related topics:
@@ -27,6 +28,8 @@ Related concepts:
 - [Observability and Continual Learning Are the Same Problem](observability-and-continual-learning-are-the-same-problem.md)
 - [Ask Traces the Behavioral Questions Code Cannot Answer](ask-traces-the-behavioral-questions-code-cannot-answer.md)
 - [Use subagents to isolate context-heavy subtasks](use-subagents-to-isolate-context-heavy-subtasks.md)
+- [Run Trace Classifiers as Code Mode in a Sandbox](run-trace-classifiers-as-code-mode-in-a-sandbox.md)
 
 Sources:
 - [Improving Agents is a Data Mining Problem — Vivek Trivedy, LangChain](../sources/20260812_CvRngaQZQ3Y.md), 05:59-07:36, 10:39-11:08
+- [Designing Agents (The Floor Is the Frontier) — Ben Hylak, Raindrop](../sources/20260812_jHMiYtjoJfA.md), 18:14-18:36

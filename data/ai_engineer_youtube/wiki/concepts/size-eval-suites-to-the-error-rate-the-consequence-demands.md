@@ -16,6 +16,8 @@ Details:
 - Reported result across five shipped generations: 99.89% on no-harm, against about 81% for humans on the same rubric. The explanation offered is structural rather than flattering — "AI systems don't get tired and unfortunately we do," and humans don't have "30 plus supervisors helping us at any given point of time" (see [Run Parallel Specialist Models Behind a Speak-Up Gate](run-parallel-specialist-models-with-a-speak-up-gate.md)). (18:18-18:44)
 - Benchmarks you need may not exist: none of the common voice benchmarks covered the workflows that decide their product (lab results check, IVR navigation), and no good benchmark existed for the empathy the product depends on, so they built one — HEART — and published the paper. When a quality dimension is load-bearing and unmeasured, building the benchmark is part of the work. (06:47-07:21, 18:45-19:14)
 
+- There is also a prior question that decides whether the statistical half of this is available at all. Ben Hylak asks it first of every team — "how many users do you have?" — because his customers span "millions of users" and "like five," and the method set differs completely: at 10–100 million messages a day "experiments become extremely valuable" and can be run "on a very small sample of your free tier," while at five or ten users he "would not recommend experiments or AB tests." Crucially, the low end is not the low-stakes end; a five-user internal enterprise app "giving like very critical information" sits in the same high-consequence quadrant as this page's clinical example with none of its volume. Consequence sets the target error rate; user count sets which instruments can measure against it ([Match the Quality Method to Your User Count](match-the-quality-method-to-your-user-count.md)). ([Hylak](../sources/20260812_jHMiYtjoJfA.md), 14:27-15:26)
+
 - Sizing has a second dimension this arithmetic does not cover: *where* the cases come from. D'Oro's coverage measurement shows that a sample spread only across repetitions of a fixed starting state produces confidence intervals containing the true performance ~20% of the time rather than 95%, because environment variance is missing from the estimate. Count of cases and spread across configurations are separate budgets, and only the first is set by detection statistics. See [computing intervals over both action and environment variance](compute-confidence-intervals-over-both-action-and-environment-variance.md). ([Computer Use at the Edge of the Statistical Precipice](../sources/20260814_CTLa_p6iOiY.md), 11:05-13:19)
 
 Related topics:
@@ -29,7 +31,9 @@ Related concepts:
 - [Hire humans for context, verification, and accountability](hire-humans-for-context-verification-and-accountability.md)
 - [Run Parallel Specialist Models Behind a Speak-Up Gate](run-parallel-specialist-models-with-a-speak-up-gate.md)
 - [Compute Confidence Intervals Over Both Action and Environment Variance](compute-confidence-intervals-over-both-action-and-environment-variance.md)
+- [Match the Quality Method to Your User Count](match-the-quality-method-to-your-user-count.md)
 
 Sources:
 - [200 Million Patient Interactions Later — Vivek Muppalla, Hippocratic AI](../sources/20260819_AN65uc645mE.md), 06:47-19:14
+- [Designing Agents (The Floor Is the Frontier) — Ben Hylak, Raindrop](../sources/20260812_jHMiYtjoJfA.md), 14:27-15:26
 - [Computer Use at the Edge of the Statistical Precipice — Pierluca D'Oro, Programma Labs](../sources/20260814_CTLa_p6iOiY.md), 11:05-13:19
