@@ -14,6 +14,8 @@ Details:
 - The two failure modes it defends against: "vibe-based" harness edits and unverified memory writes that appear to fix one case but silently regress others, and overfitting the latest fix so previously-passing tasks break (the demo benchmark builds in an explicit "regression trap"). (09:09-11:01, 18:36-19:07)
 - Packaged as a loop (signals → replayable learning environments → root-cause routing → regression-aware optimization → reviewable version PR), it turns a self-improvement step into a compounding, testable, reviewable change rather than an act of faith. (15:44-21:33)
 - The stated frontier: a holistic, lifelong, verifiable learning loop with online regression control — "when fixing the new failure, we verify that we don't forget the old ones." (21:35-22:26)
+- What this discipline is buying, named generally: reliability and plasticity are "inherently conflicting with each other. Reliable systems or stable systems, they resist the change. But the plastic systems likes change" ([NeoCognition](../sources/20260812_I6aiEf3aEFQ.md), 15:46-16:12). Verifiable continual learning does not dissolve that conflict — it prices each unit of plasticity against the stability it might cost, which is why replayability comes first: a system that cannot re-run its past has no way to charge a change for what it breaks.
+- The limit of the framing: RELAI's loop verifies *repairs* to known failures. Su's target is the accumulation of *competence* in an environment, and he flags the missing instrument for it — "how do you even define and measure expertise? And this is probably environment-specific" ([NeoCognition](../sources/20260812_I6aiEf3aEFQ.md), 15:35-15:46). A regression suite proves nothing was lost; it does not measure how much was gained.
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -24,6 +26,9 @@ Related concepts:
 - [Make Regression-Aware Optimization Part of the Continual-Learning Loop](make-regression-aware-optimization-part-of-the-continual-learning-loop.md)
 - [Ground agent simulation and evaluation in production logs](ground-agent-simulation-and-evaluation-in-production-logs.md)
 - [Replay Production Failures Before Promoting Prompt Fixes](replay-production-failures-before-promoting-prompt-fixes.md)
+- [Reliability and Plasticity Conflict in Continually Learning Agents](reliability-and-plasticity-conflict-in-continually-learning-agents.md)
+- [Define Continual Learning as Adaptive Compression of Experience](define-continual-learning-as-adaptive-compression-of-experience.md)
 
 Sources:
 - [Continual Learning for AI Agents: From Failures to Durable Improvements - Soheil Feizi, RELAI](../sources/20260705_2IxD9OB3XuQ.md), 00:30-02:26, 11:04-15:44, 21:35-22:26
+- [Intelligence + Continual Learning = Expertise — Yu Su, NeoCognition](../sources/20260812_I6aiEf3aEFQ.md), 15:35-16:12

@@ -14,6 +14,8 @@ Details:
 - The reason the record cannot be replaced by reading the system's code: agents have prompts, tools, skills, hooks, middlewares, and other agents orchestrated in swarms, so "it's really really hard for humans to reason about how certain prompts that they change are actually going to affect agent behavior at scale," and the same change behaves differently in the medical and the legal domain. Four years of "trading determinism for autonomy" is what made the record load-bearing. ([LangChain](../sources/20260812_CvRngaQZQ3Y.md), 03:31-04:40)
 - The cheapest possible entry point, and the talk's closing recommendation: "if you have an agent, just turn on tracing and point an agent at it and that's like the easiest thing that you can do to basically understand what your agents are doing." ([LangChain](../sources/20260812_CvRngaQZQ3Y.md), 18:49-19:06)
 - Scope note: this is a claim about where the *signal* lives, not about whether an improvement is safe to ship. The verification half — proving a fix helps the failing case and breaks nothing that already worked — is a separate discipline layered on top ([Verifiable Continual Learning](verifiable-continual-learning-prove-each-fix-helps-and-breaks-nothing.md)).
+- Where the substrate claim stops. Traces supply the *experience* term; they do not decide the other three. Yu Su's definition — continual learning as "adaptive compression of experience into reusable structures for future behavior" — makes the remaining choices explicit: how the trace corpus is compressed, into what structure, and for what use ([NeoCognition](../sources/20260812_I6aiEf3aEFQ.md), 10:27-12:41). A team with tracing on has secured one of four axes.
+- The reason the loop is worth running at all, in Su's terms: continual learning is "the important bridge from intelligence to expertise," and without it, scaling raw capability produces an agent that "doesn't accumulate expertise, so it ends up as just like brute forcing its way at every problem" ([NeoCognition](../sources/20260812_I6aiEf3aEFQ.md), 10:27-10:40, 13:01-13:26). Tracing is what makes the accumulation possible; it is not itself the accumulation.
 - Provenance: the speaker leads applied research at LangChain and the talk ends on a trace-mining product pitch, so the claim that traces are the necessary substrate runs in his employer's commercial direction. The reasoning stands independently of the product.
 
 Related topics:
@@ -28,6 +30,9 @@ Related concepts:
 - [Verifiable Continual Learning: Prove Each Agent Fix Helps and Breaks Nothing](verifiable-continual-learning-prove-each-fix-helps-and-breaks-nothing.md)
 - [Profile Synthesis Is Continual Learning Outside the Weights](profile-synthesis-is-continual-learning-outside-the-weights.md)
 - [Expose Observability As Agent-Readable Feedback](expose-observability-as-agent-readable-feedback.md)
+- [Define Continual Learning as Adaptive Compression of Experience](define-continual-learning-as-adaptive-compression-of-experience.md)
+- [Separate Intelligence From Expertise When Diagnosing an Agent](separate-intelligence-from-expertise-when-diagnosing-agents.md)
 
 Sources:
 - [Improving Agents is a Data Mining Problem — Vivek Trivedy, LangChain](../sources/20260812_CvRngaQZQ3Y.md), 02:21-04:40, 18:49-19:06
+- [Intelligence + Continual Learning = Expertise — Yu Su, NeoCognition](../sources/20260812_I6aiEf3aEFQ.md), 10:27-12:41, 13:01-13:26

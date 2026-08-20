@@ -1,6 +1,13 @@
 # Concept Index
 
 ## Agents
+- [Separate Intelligence From Expertise When Diagnosing an Agent](../concepts/separate-intelligence-from-expertise-when-diagnosing-agents.md) - roughly orthogonal axes with different fixes; scaling only capability yields "the world's smartest novice."
+- [A Modern Moravec's Paradox Explains the Coding-Agent Gap](../concepts/a-modern-moravecs-paradox-explains-the-coding-agent-gap.md) - code is language-native, structured, and self-verifying; a new domain must supply all three itself.
+- [Digital Work Is Millions of Microworlds With Local Physics](../concepts/digital-work-is-millions-of-microworlds-with-local-physics.md) - structures, constraints, affordances, and dynamics differ per company, so competence is acquired rather than shipped.
+- [Expertise Compresses the Search; Intelligence Expands It](../concepts/expertise-compresses-the-search-intelligence-expands-it.md) - a hundred parallel attempts is what you pay for having no learned shortcuts.
+- [Define Continual Learning as Adaptive Compression of Experience](../concepts/define-continual-learning-as-adaptive-compression-of-experience.md) - experience, compression, structure, and use as four decisions the label hides.
+- [Reliability and Plasticity Conflict in Continually Learning Agents](../concepts/reliability-and-plasticity-conflict-in-continually-learning-agents.md) - stable systems resist change and plastic ones invite it; no source here resolves the trade.
+- [Scale Expertise Once Intelligence Is Abundant](../concepts/scale-expertise-once-intelligence-is-abundant.md) - past a capability threshold the marginal return may move from the model to the learning loop.
 - [Stamp Processing State in the Artifact to Make Agent Passes Resumable](../concepts/stamp-processing-state-in-the-artifact-to-make-agent-passes-resumable.md) - a timestamp written by the pass that did the work turns a repeated batch run into an incremental one with no queue.
 - [Constrain Agent-Generated Tags to a Reference Vocabulary](../concepts/constrain-agent-generated-tags-to-a-reference-vocabulary.md) - a stateless per-item run renames everything unless you hand it the closed label set as a file.
 - [Observability and Continual Learning Are the Same Problem](../concepts/observability-and-continual-learning-are-the-same-problem.md) - the trace corpus you collect to debug is the same substrate that trains, evaluates, and re-harnesses the agent.
@@ -501,6 +508,7 @@
 
 ## Coding Agents
 
+- [A Modern Moravec's Paradox Explains the Coding-Agent Gap](../concepts/a-modern-moravecs-paradox-explains-the-coding-agent-gap.md) - coding agents work because code supplies symbols, structure, and tests for free, which is why the success does not port.
 - [Code Review Carries Alignment, Not Just Correctness](../concepts/code-review-carries-alignment-not-just-correctness.md) - review's knowledge-sharing, mentorship, and onboarding half has no tooling substitute.
 - [Make Intent and Evidence the Review Surface](../concepts/make-intent-and-evidence-the-review-surface.md) - session-derived criteria plus preview-executed evidence replace the diff as what the human reads.
 - [Capture the Coding Session as the Intent Record](../concepts/capture-the-coding-session-as-the-intent-record.md) - the decisions that define a change live in the prompts and are discarded at PR time.
@@ -772,6 +780,9 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Expertise Compresses the Search; Intelligence Expands It](../concepts/expertise-compresses-the-search-intelligence-expands-it.md) - knowing which context a problem needs is accumulated competence, not a retriever property.
+- [Define Continual Learning as Adaptive Compression of Experience](../concepts/define-continual-learning-as-adaptive-compression-of-experience.md) - the *adaptive* qualifier is what separates a learning loop from a pipeline that treats every item identically.
+- [Digital Work Is Millions of Microworlds With Local Physics](../concepts/digital-work-is-millions-of-microworlds-with-local-physics.md) - the general argument for why per-deployment context layers keep being necessary.
 - [Optimize Capture Bandwidth Before Note Organization](../concepts/optimize-capture-bandwidth-before-note-organization.md) - when agents impose the structure, the human's only irreplaceable job is volume: dictate, ramble, do not file.
 - [Generate an Entity Wiki Over Your Own Notes](../concepts/generate-an-entity-wiki-over-your-own-notes.md) - a people/concepts/organizations/sources layer over a raw folder, scoped to a focus area you name.
 - [Constrain Agent-Generated Tags to a Reference Vocabulary](../concepts/constrain-agent-generated-tags-to-a-reference-vocabulary.md) - "Claude loves to get creative," so the tag list lives in a reference folder with a narrow escape hatch.
@@ -1146,6 +1157,7 @@
 
 ## Inference
 
+- [Expertise Compresses the Search; Intelligence Expands It](../concepts/expertise-compresses-the-search-intelligence-expands-it.md) - offered as the explanation for agent token inefficiency: no accumulated shortcuts means full exploration cost every episode.
 - [Read the Frontier Model's Traces to Harness-Engineer Its Cheap Replacement](../concepts/read-frontier-traces-to-harness-engineer-a-cheap-replacement.md) - one vendor reports matching Opus at trace-judging with an open model one to two orders of magnitude cheaper.
 - [Compete on Latency and Cost per Task Once Computer-Use Accuracy Ties](../concepts/compete-on-latency-and-cost-per-task-when-computer-use-accuracy-ties.md) - $0.80 versus $2.30 per task at parity accuracy, because a browser task is 20-50 model calls.
 - [Let Deterministic Code Drive the Timed Loop and Call the Model Only for Perception](../concepts/let-code-drive-the-timed-loop-and-call-the-model-only-for-perception.md) - inference latency, not accuracy, is what fails a loop running against an expiring deadline.
@@ -1277,6 +1289,9 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Scale Expertise Once Intelligence Is Abundant](../concepts/scale-expertise-once-intelligence-is-abundant.md) - intelligence is becoming abundant and expertise is not, so lowering its cost expands what work is worth doing.
+- [Private Microworlds Are the Next Training-Data Opportunity](../concepts/private-microworlds-are-the-next-training-data-opportunity.md) - in-situ learning inside customer environments, with ownership of the resulting capability left unaddressed.
+- [Digital Work Is Millions of Microworlds With Local Physics](../concepts/digital-work-is-millions-of-microworlds-with-local-physics.md) - why a per-customer layer is structural rather than a stopgap until the next model.
 - [An Agent's Eval Suite Describes Its Behavior](../concepts/an-agents-eval-suite-describes-its-behavior.md) - the suite doubles as the artifact you hand a customer to say what the agent does.
 - [Make the Memory Profile Visible and Editable](../concepts/make-the-memory-profile-visible-and-editable.md) - from a profile reachable only by jailbreak to a raw one whose user edits force a resynthesis.
 - [Context as a Service Is Vertical Search for Agents](../concepts/context-as-a-service-is-vertical-search-for-agents.md) - crawl one vertical, entity-dedupe into a graph, enrich, and serve agents over MCP — DaaS re-aimed at machine consumers.
@@ -1381,6 +1396,10 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Reliability and Plasticity Conflict in Continually Learning Agents](../concepts/reliability-and-plasticity-conflict-in-continually-learning-agents.md) - a suite that only detects loss will always argue against learning; measuring accumulated expertise is unsolved.
+- [A Modern Moravec's Paradox Explains the Coding-Agent Gap](../concepts/a-modern-moravecs-paradox-explains-the-coding-agent-gap.md) - code hands you rewards and tests "in symbolic ways"; other domains have to build the verification loop first.
+- [Separate Intelligence From Expertise When Diagnosing an Agent](../concepts/separate-intelligence-from-expertise-when-diagnosing-agents.md) - a benchmark score reports the intelligence axis and says little about situated competence.
+- [Private Microworlds Are the Next Training-Data Opportunity](../concepts/private-microworlds-are-the-next-training-data-opportunity.md) - private environments as both eval substrate and training signal once public data is exhausted.
 - [Observability and Continual Learning Are the Same Problem](../concepts/observability-and-continual-learning-are-the-same-problem.md) - "if you're a continual learning company, you need traces"; the eval corpus and the training corpus are one artifact.
 - [Mine Trace Corpora With Agents Because They Do Not Fit in Context](../concepts/mine-trace-corpora-with-agents-because-they-do-not-fit-in-context.md) - a single trace can exceed the window, so send agents to read traces and query the corpus as an external object.
 - [Ask Traces the Behavioral Questions Code Cannot Answer](../concepts/ask-traces-the-behavioral-questions-code-cannot-answer.md) - three question shapes that only the run record can settle once determinism was traded for autonomy.
@@ -1705,6 +1724,11 @@
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 
 ## Models
+- [Scale Expertise Once Intelligence Is Abundant](../concepts/scale-expertise-once-intelligence-is-abundant.md) - unbounded expertise from bounded intelligence, offered as a conjecture about where scaling should go next.
+- [Private Microworlds Are the Next Training-Data Opportunity](../concepts/private-microworlds-are-the-next-training-data-opportunity.md) - specialized agents learning in situ, with the channel-back mechanism unspecified.
+- [Separate Intelligence From Expertise When Diagnosing an Agent](../concepts/separate-intelligence-from-expertise-when-diagnosing-agents.md) - before upgrading the model, check which of the two axes is actually failing.
+- [Define Continual Learning as Adaptive Compression of Experience](../concepts/define-continual-learning-as-adaptive-compression-of-experience.md) - parameters, adapters, vectors, graphs, skills, or world models are choices on one axis, not rival philosophies.
+- [Reliability and Plasticity Conflict in Continually Learning Agents](../concepts/reliability-and-plasticity-conflict-in-continually-learning-agents.md) - parametric and non-parametric learning are argued to be both needed, with the combination unspecified.
 - [Read the Frontier Model's Traces to Harness-Engineer Its Cheap Replacement](../concepts/read-frontier-traces-to-harness-engineer-a-cheap-replacement.md) - the expensive model establishes the waterline and its trajectory becomes the small model's harness.
 - [Sequence Harness Engineering and Fine-Tuning by Feedback Speed](../concepts/sequence-harness-engineering-and-finetuning-by-feedback-speed.md) - exhaust the two-minute lever before the training run, then come back to it.
 - [Treat Agent Improvement as Model-Harness-Task Fit](../concepts/treat-agent-improvement-as-model-harness-task-fit.md) - model choice is one term in a fit function, not a decision made ahead of the harness.

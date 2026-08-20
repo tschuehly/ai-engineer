@@ -14,6 +14,8 @@ Details:
 - Three open questions named and left open: will each of us get our own self-learning model; what data is needed to kick the process off and how is it generated; and who pays for it (14:54-15:12). He points to an essay titled "Guardian Angels" for the one-model-per-person future (15:12-15:32); the author's name is not recoverable from the captions.
 - The practical consequence for builders: the text-based loop is available today and its operating point is a compute choice you control, whereas the weights-based version is gated on an amortization problem no architecture fixes.
 - Ceiling shared with every other memory design: even a perfect per-user weight-update loop stays capped by how much context the system can gather about the person (15:32-16:03).
+- Where this sits in the general taxonomy: the profile loop is one point in a four-axis space — it compresses *conversations* (episodes) by *LLM summarization into text*, stores them as a *natural-language artifact*, and uses them for *recall and framing* ([Define Continual Learning as Adaptive Compression of Experience](define-continual-learning-as-adaptive-compression-of-experience.md)). Naming the axes is what makes the text-versus-weights question a choice about the compression and structure terms rather than an argument about whether the loop counts as learning at all.
+- A caution against reading "outside the weights" as a verdict: Yu Su's position is that "both are really needed for this type of continual learning to actually work. But how do we synergize the two?" — parametric and non-parametric learning as complements rather than alternatives ([NeoCognition](../sources/20260812_I6aiEf3aEFQ.md), 16:32-16:49). Khemani's economic argument explains why the parametric half has not shipped for individuals; it does not establish that the text loop is sufficient.
 
 Related topics:
 - [Models](../topics/models.md)
@@ -26,6 +28,9 @@ Related concepts:
 - [Do not treat long context as durable model memory](do-not-treat-long-context-as-durable-model-memory.md)
 - [Train Long-Tail Knowledge Into Weights With Curated Synthetic Data](train-long-tail-knowledge-into-weights-with-curated-synthetic-data.md)
 - [Verifiable Continual Learning: Prove Each Fix Helps and Breaks Nothing](verifiable-continual-learning-prove-each-fix-helps-and-breaks-nothing.md)
+- [Define Continual Learning as Adaptive Compression of Experience](define-continual-learning-as-adaptive-compression-of-experience.md)
+- [Reliability and Plasticity Conflict in Continually Learning Agents](reliability-and-plasticity-conflict-in-continually-learning-agents.md)
 
 Sources:
 - [Lessons from Studying Every Memory System — Shlok Khemani, Independent](../sources/20260812_5ZGyKWjQDr0.md), 13:37-16:03
+- [Intelligence + Continual Learning = Expertise — Yu Su, NeoCognition](../sources/20260812_I6aiEf3aEFQ.md), 10:27-12:41, 16:32-16:49
