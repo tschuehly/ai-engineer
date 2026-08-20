@@ -1,0 +1,35 @@
+# Verify Generated Code With a Method the Generator Does Not Share
+
+Summary: Zero trust for AI-written code means two things at once: the check does not care who wrote the code, and the check does not reuse the technique that wrote it. A model grading its own output inherits its own blind spots, so the reviewing method should differ in kind — not just in prompt or vendor. The payoff of an algorithmic checker is provability rather than accuracy: you can show it ran the same way every time, which an LLM reviewer cannot.
+
+Use when:
+- Choosing what reviews agent-written code, and tempted to point a second model at it and call that independence.
+- Justifying static analysis, type checks, or tests as a distinct layer beside an AI reviewer rather than a legacy one it replaces.
+- A compliance or audit requirement asks you to prove that verification ran, not just that it was configured.
+- Writing a policy that has to cover human-written, AI-written, and mixed-provenance code without branching on origin.
+
+Details:
+- **Provenance-blindness is half of it.** "Zero trust in this context basically means that the code could really have come from anywhere. It could still be written by a human, it could be written by an AI." The consequence is a single regime rather than a special AI-code path: "no matter where the code is coming from, you want to have a… similar comprehensive regime to verify that code that works the same no matter how that code was written." ([Chatterjee](../sources/20260809_03l29gJXpCE.md), 09:23-10:00)
+- **Method independence is the other half, and it is stronger than model independence.** "Different AIs will write code in different ways, and… you're not going to want to use that same AI to to validate the code because you're going to want a diversity of… tools being used to make sure that you're catching all the different issues that can happen." Compressed to a rule: "Use a different methodology to review the code that was used to write the code." (09:35-10:03)
+- **The under-appreciated payoff is auditability, not detection rate.** A computational checker "is completely auditable, completely explainable, so you can prove that verification was run the same way every single time, and it's algorithmic and repeatable and consistent no matter how you run it." That is a property an LLM reviewer structurally cannot offer — the same diff reviewed twice can produce different findings — and it is what makes the layer usable as evidence. Sonar reports compliance as one of four customer-named drivers for adopting verification at all: teams "need to be able to prove that verification is run constantly and consistently across the board. Maintaining an audit trail that allows you to prove that is extremely important." (10:03-10:13, 13:18-13:32)
+- **This is the strong form of a pattern the wiki already holds in weaker versions.** [Separate generation and verification prompts or models](separate-generation-and-verification-prompts-or-models.md) varies the prompt, context, or provider — still LLM reviewing LLM, which shares a technique class and much of a training distribution. [Self-verifying agent loops hide review rather than remove it](self-verifying-agent-loops-hide-review-rather-than-remove-it.md) names what happens when even that separation collapses. The claim here is that varying the *method class* (deterministic analysis versus generation) buys independence that varying the model does not, and the wiki's [Gate Generated Output With a Deterministic Post-Generation Veto](gate-generated-output-with-a-deterministic-veto.md) is the same move applied to model output rather than to code.
+- **Where "different method" stops being available.** A deterministic checker only covers defect classes someone encoded; it cannot judge whether the change matches intent. That is why the talk pairs it with an LLM layer rather than substituting one for the other — see [Choose Verification Layers by Defect-Class Coverage](choose-verification-layers-by-defect-class-coverage.md).
+- **An unresolved tension worth carrying with this page.** The same product line offered as the independent zero-trust check is also offered as the thing that "can write fixes and… approve those fixes and merge those PRs completely automatically if you wanted to." Once the checker authors and merges its own remediation, the independence that made it a zero-trust layer is gone for that change, and the talk does not address who verifies the verifier. The autonomy ramp it describes — findings and dialogue by default, more automation "as you use it more and more and gain confidence" — is offered without any criterion for when a team has earned the next step. ([Chatterjee](../sources/20260809_03l29gJXpCE.md), 14:20-14:49)
+- Caveat on evidence: this is a vendor talk and the zero-trust argument is asserted, not measured. No comparison of what a computational layer catches versus what an LLM layer catches appears anywhere in it, and no false-positive rate is given for either.
+
+Related topics:
+- [Coding Agents](../topics/coding-agents.md)
+- [Evaluation](../topics/evaluation.md)
+- [Workflows](../topics/workflows.md)
+
+Related concepts:
+- [Separate generation and verification prompts or models](separate-generation-and-verification-prompts-or-models.md)
+- [Choose Verification Layers by Defect-Class Coverage](choose-verification-layers-by-defect-class-coverage.md)
+- [Self-verifying agent loops hide review rather than remove it](self-verifying-agent-loops-hide-review-rather-than-remove-it.md)
+- [Gate Generated Output With a Deterministic Post-Generation Veto](gate-generated-output-with-a-deterministic-veto.md)
+- [Verify an Action Through a Different Channel Than the One That Acted](verify-an-action-through-a-different-channel-than-the-one-that-acted.md)
+- [Treat slop as a quality failure, not an AI provenance label](treat-slop-as-a-quality-failure-not-an-ai-provenance-label.md)
+- [Automation Bias Turns Human-in-the-Loop Into a Rubber Stamp](automation-bias-turns-human-in-the-loop-into-a-rubber-stamp.md)
+
+Sources:
+- [Guide, Verify, Solve — Anirban Chatterjee, Sonar](../sources/20260809_03l29gJXpCE.md), 09:23-10:13, 13:18-13:32, 14:20-14:49

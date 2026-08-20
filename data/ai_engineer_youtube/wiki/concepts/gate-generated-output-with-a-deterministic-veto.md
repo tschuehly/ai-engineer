@@ -14,6 +14,8 @@ Details:
 - **Two veto types.** A *soft flag* — an "honesty inspector" that flags a response that slipped a rail (e.g. "did it actually answer the question? It should not hedge"). A *hard reject* — a "numbers guard" that rejects a confidently-stated figure that was never given, "even though the prompt asked it not to invert numbers." The build justifies itself by cost asymmetry: a false positive means "someone double-checked a response," a false negative "remains a hallucinated number or a privacy violation that ships to a client" — "obvious once you say it out loud, but often not written in as its own layer." ([Isadora Martin-Dye](../sources/20260626_ij-AU9dpJjc.md), 13:45-16:15)
 - **Determinism vs coverage is a real trade-off.** The veto is deterministic pattern-matching: "it either matches or it doesn't… never gets it wrong on the patterns it covers." A small classifier "might catch more edge cases including the ones I haven't thought to write a pattern for yet, but it is a classifier that is probabilistic — sometimes it gets it wrong. And right now I'm choosing determinism over coverage" — "a real trade-off and not an obvious win." She also notes the veto "should be its own service" and a shared default gate "everything passes through" so "you can't opt out by accident," rather than being wired per surface. ([Isadora Martin-Dye](../sources/20260626_ij-AU9dpJjc.md), 19:25-20:53)
 
+- **The same determinism-over-coverage trade, made in code review, adds a third reason to prefer the deterministic layer: it can be proved to have run.** Sonar's argument for a computational checker beside an LLM reviewer is not a better detection rate but provability — it is "completely auditable, completely explainable, so you can prove that verification was run the same way every single time, and it's algorithmic and repeatable and consistent no matter how you run it" — and compliance is named as one of four customer-reported drivers for adopting verification at all: teams "need to be able to prove that verification is run constantly and consistently across the board." That reframes this page's choice: determinism buys not just correctness on covered patterns but evidence, which a probabilistic classifier cannot supply no matter how good its coverage gets. It also gives the classifier a place to live rather than a veto — advise where it is broad, block where you can prove it. See [Verify Generated Code With a Method the Generator Does Not Share](verify-generated-code-with-a-method-the-generator-does-not-share.md). ([Chatterjee](../sources/20260809_03l29gJXpCE.md), 10:03-10:13, 13:18-13:32)
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Context Engineering](../topics/context-engineering.md)
@@ -24,6 +26,8 @@ Related concepts:
 - [Wrap Agent Completion in an Automatic Deterministic Verification Gate](wrap-agent-completion-in-an-automatic-deterministic-verification-gate.md)
 - [Separate generation and verification prompts or models](separate-generation-and-verification-prompts-or-models.md)
 - [LLM Guardrails Need Checkpoints at Every Untrusted Boundary](llm-guardrails-need-checkpoints-at-every-untrusted-boundary.md)
+- [Verify Generated Code With a Method the Generator Does Not Share](verify-generated-code-with-a-method-the-generator-does-not-share.md)
 
 Sources:
 - [Stop Writing Tone Instructions. Layer Them. - Isadora Martin-Dye, Isadora & Co](../sources/20260626_ij-AU9dpJjc.md), 13:36-20:53
+- [Guide, Verify, Solve — Anirban Chatterjee, Sonar](../sources/20260809_03l29gJXpCE.md), 10:03-10:13, 13:18-13:32

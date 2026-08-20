@@ -549,6 +549,11 @@
 - [Learn risk scoring from audit feedback for predictive compliance](../concepts/learn-risk-scoring-from-audit-feedback-for-predictive-compliance.md)
 
 ## Coding Agents
+- [Verification Debt Outlives the Productivity Spike](../concepts/verification-debt-outlives-the-productivity-spike.md) - the ~3-month productivity gain decays; the static-analysis and complexity residue does not.
+- [Verify Generated Code With a Method the Generator Does Not Share](../concepts/verify-generated-code-with-a-method-the-generator-does-not-share.md) - zero trust is provenance-blindness plus method-class independence, and its payoff is provability rather than detection rate.
+- [Choose Verification Layers by Defect-Class Coverage](../concepts/choose-verification-layers-by-defect-class-coverage.md) - syntax, data flow, architecture, and control flow are reached by different techniques, so layers are a coverage question.
+- [Fix Defects Inside the Agent Loop Before They Become Foundation](../concepts/fix-defects-inside-the-agent-loop-before-they-become-foundation.md) - propagation, not CI latency, is the argument for verifying during generation.
+- [Route Between Model Tiers by Quality Dimension, Not Only Cost](../concepts/route-between-model-tiers-by-quality-dimension-not-only-cost.md) - one family's tiers lead on different quality axes, so the token-burn toggle is silently a quality decision.
 - [Match Agent Tooling to the Model's Training Distribution](../concepts/match-agent-tooling-to-the-models-training-distribution.md) - the diff format, search binary, shell dialect, and compaction are all training-distribution choices.
 - [Sandbox Primitives Are Per Operating System](../concepts/sandbox-primitives-are-per-operating-system.md) - a locally executing coding agent carries three isolation stories, one of which it wrote itself.
 - [Own Agent Adoption at the Leadership Layer Because the Fixes Are Shared](../concepts/own-agent-adoption-at-the-leadership-layer-because-the-fixes-are-shared.md) - codebase reorganization and a converged setup are out of an IC's reach, which is the structural reason adoption cannot be delegated downward.
@@ -1520,6 +1525,11 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Verification Debt Outlives the Productivity Spike](../concepts/verification-debt-outlives-the-productivity-spike.md) - a productivity metric and a quality metric on the same projects, decaying at different rates.
+- [Route Between Model Tiers by Quality Dimension, Not Only Cost](../concepts/route-between-model-tiers-by-quality-dimension-not-only-cost.md) - disagreement between axes on one board, inside one vendor's own family.
+- [Choose Verification Layers by Defect-Class Coverage](../concepts/choose-verification-layers-by-defect-class-coverage.md) - audit a pipeline against defect classes reached rather than tools running.
+- [Verify Generated Code With a Method the Generator Does Not Share](../concepts/verify-generated-code-with-a-method-the-generator-does-not-share.md) - varying the method class buys independence that varying the model does not.
+- [Fix Defects Inside the Agent Loop Before They Become Foundation](../concepts/fix-defects-inside-the-agent-loop-before-they-become-foundation.md) - a verification verdict used as an exit condition rather than as a report.
 - [Grade With a Parallel Rubric Agent and Retry Until It Passes](../concepts/grade-with-a-parallel-rubric-agent-and-retry-until-it-passes.md) - a rubric moved from the offline suite into the running loop, and the two bounds it needs before production.
 - [Train on Inference Exhaust Instead of Scaling Benchmarks](../concepts/train-on-inference-exhaust-instead-of-scaling-benchmarks.md) - benchmarks saturate in months, cost hours to days per task, and are not tied to real use.
 - [Hint Leakage Is the Reward Hacking of Self-Distillation](../concepts/hint-leakage-is-the-reward-hacking-of-self-distillation.md) - a hint containing the answer teaches the model to state it and back-fill the reasoning.
@@ -1881,6 +1891,7 @@
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 
 ## Models
+- [Route Between Model Tiers by Quality Dimension, Not Only Cost](../concepts/route-between-model-tiers-by-quality-dimension-not-only-cost.md) - Sonnet 4.6 leads on correctness and solve rate while Opus 4.6 is the pick for maintainability, security, or lower complexity.
 - [Adam Absorption Hides Most Weight Updates From the Served Model](../concepts/adam-absorption-hides-most-weight-updates-from-the-served-model.md) - a flat push against a floor that scales with weight magnitude, so small weights move and large weights freeze.
 - [A Sparse Served-Weight Delta Is Not Gradient Sparsity](../concepts/a-sparse-served-weight-delta-is-not-gradient-sparsity.md) - ~99% of parameters still receive non-zero gradients; the FP32 master update is dense, just small.
 - [Lower Serving Precision Shrinks the Weight-Sync Patch](../concepts/lower-serving-precision-shrinks-the-weight-sync-patch.md) - the rounding floor is roughly theta over 2^(mantissa+1), so FP4 hides more of the step than FP8 or BF16.
@@ -2527,6 +2538,9 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Fix Defects Inside the Agent Loop Before They Become Foundation](../concepts/fix-defects-inside-the-agent-loop-before-they-become-foundation.md) - verify in both the inner agentic loop and the outer CI/CD loop; the inner one exists to stop propagation.
+- [Choose Verification Layers by Defect-Class Coverage](../concepts/choose-verification-layers-by-defect-class-coverage.md) - the reasoning layer produces findings, the reproducible layer produces the pass/fail that blocks.
+- [Verify Generated Code With a Method the Generator Does Not Share](../concepts/verify-generated-code-with-a-method-the-generator-does-not-share.md) - one verification regime for all code regardless of who wrote it, using a method the writer did not.
 - [Wire Issue-Filing Authority Before Giving Agents a Tracker](../concepts/wire-issue-filing-authority-before-giving-agents-a-tracker.md) - closing the loop through an issue tracker without scoping who may file produces an unreadable backlog in weeks.
 - [Invest in One High-Value Skill to Convert Agent Skeptics](../concepts/invest-in-one-high-value-skill-to-convert-agent-skeptics.md) - automate the work everyone dislikes end to end, and route complaints back into the skill instead of answering them.
 - [Own Agent Adoption at the Leadership Layer Because the Fixes Are Shared](../concepts/own-agent-adoption-at-the-leadership-layer-because-the-fixes-are-shared.md) - setup maintenance is a standing budget line rather than a project, because nothing here converges.

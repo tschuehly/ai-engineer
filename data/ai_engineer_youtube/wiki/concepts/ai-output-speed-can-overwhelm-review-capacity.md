@@ -24,12 +24,15 @@ Details:
 
 - Khandelwal adds the *distributional* version, which bites on teams whose aggregate capacity is still fine. Where adoption is uneven, the fast adopters author and the slow adopters review: "the people who are generating like 10 PRs a day are going to like look like… gods compared to people who are shipping like one to two. And the one to two PR people are actually going to get left with the review burden… now not only can they not ship, they're going to actually see bad code and then curse the agents." Two consequences follow that the aggregate framing misses: assigning review by availability concentrates it on non-adopters, because they are the most available; and the sample of agent output a skeptic sees is systematically the worst on the team. See [Uneven Agent Adoption Loads Review Onto the Slowest Adopters](uneven-agent-adoption-loads-review-onto-the-slowest-adopters.md). One team of about ten, no measurements. ([Khandelwal](../sources/20260811_aeTb5BdmTTc.md), 06:06-06:36)
 
+- Chatterjee (Sonar) supplies the mechanism that connects the volume to the rubber stamp, by way of the Wharton cognitive-surrender study rather than by observing review: humans followed AI advice "92.7% of the time when the AI was correct" and still listened "nearly 80% of the time when the AI was wrong," and "this is almost surely happening in code review as well… Especially when there's higher amounts of code being written, when there's multiple agents writing code simultaneously… the load is just too great. There's only so many hours in the day… there's a lot of rubber stamping that I'm sure is happening in all of your organizations." The point this adds to the capacity framing above is that the failure is not reviewers running out of time and *declining* to review — it is reviewers continuing to review while deferring, so the throughput problem shows up as approvals rather than as a queue. That is why his prescription is an automated layer that does not tire rather than more reviewers. Inference from a study about reasoning exams, not a measurement of code review. ([Chatterjee](../sources/20260809_03l29gJXpCE.md), 06:37-07:39)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Evaluation](../topics/evaluation.md)
 - [Workflows](../topics/workflows.md)
 
 Related concepts:
+- [Automation Bias Turns Human-in-the-Loop Into a Rubber Stamp](automation-bias-turns-human-in-the-loop-into-a-rubber-stamp.md)
 - [Limit agent change size by feedback speed](limit-agent-change-size-by-feedback-speed.md)
 - [Coding agents shift engineering work toward planning and review](coding-agents-shift-engineering-work-toward-planning-and-review.md)
 - [Do not use token volume as a developer productivity metric](do-not-use-token-volume-as-a-developer-productivity-metric.md)
@@ -46,3 +49,4 @@ Sources:
 - [How to build an AI-Native Health Company — Dan Feng, Maven Clinic](../sources/20260819_WJRdLNhrsLQ.md), 10:59-12:57
 - [How to Kill the Code Review — Ankit Jain, Aviator](../sources/20260817_YgEv7IQzGdM.md), 01:39-02:58
 - [Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab](../sources/20260811_aeTb5BdmTTc.md), 06:06-06:36
+- [Guide, Verify, Solve — Anirban Chatterjee, Sonar](../sources/20260809_03l29gJXpCE.md), 06:37-07:39

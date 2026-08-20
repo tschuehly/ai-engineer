@@ -12,6 +12,8 @@ Details:
 - The claimed adoption threshold is qualitative: developers avoid agents when fixing generated bugs costs more than writing directly, but adoption can accelerate when agentic coding routinely produces fewer defects than human-written code. 34:12-35:02
 - The source cautions implicitly against measuring only generated output volume; useful economics must include verification and correction cost. 30:43-31:13
 
+- An observational datapoint on the same asymmetry, with a time axis this page lacked: a Carnegie Mellon study sorting GitHub projects by whether an AI tool wrote the code found "a temporary spike in productivity… it lasted about 3 months and then it went back down," alongside "a persistent increase in static analysis warnings and code complexity" that "persisted well into the future" ([Chatterjee](../sources/20260809_03l29gJXpCE.md), 01:45-02:34). If it holds, the writing-cost saving is the transient term and the assurance cost is the durable one — which is the economics this page argues from, observed rather than modeled. Carry the caveats with it: the study is cited with no link, sample size, or productivity definition; the causal link between the two findings is the speaker's inference ("the reason for that, we think"); and the instrument was the citing vendor's own analyzer. See [Verification Debt Outlives the Productivity Spike](verification-debt-outlives-the-productivity-spike.md).
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -21,7 +23,9 @@ Related concepts:
 - [Reliability thresholds determine whether coding agents save time](reliability-thresholds-determine-whether-coding-agents-save-time.md)
 - [Measure AI ROI with primary output and guardrails](measure-ai-roi-with-primary-output-and-guardrails.md)
 - [AI output speed can overwhelm review capacity](ai-output-speed-can-overwhelm-review-capacity.md)
+- [Verification Debt Outlives the Productivity Spike](verification-debt-outlives-the-productivity-spike.md)
 
 Sources:
 - [Vision: Zero Bugs — Johann Schleier-Smith, Temporal](../sources/20251124_qLqttdO33UM.md), 30:17-35:02
+- [Guide, Verify, Solve — Anirban Chatterjee, Sonar](../sources/20260809_03l29gJXpCE.md), 01:45-02:34
 

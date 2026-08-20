@@ -13,6 +13,8 @@ Details:
 - The pass-rate leader can still be concise: Gemini 3.1 Pro High led at 84.17% with ~307,000 LOC, cyclomatic complexity 234, 614 bugs/MLOC, and 210 security issues/MLOC. (03:48-04:28, 07:21-07:38)
 - Root causes are structural: training data carries mixed-quality and insecure code plus hidden subtle logic bugs that models absorb alongside good examples; LLMs are probabilistic (same prompt yields different code and different volume), lack the company's codebase and architecture context, and are not explainable, so defects are hard to diagnose. (05:23-06:45)
 - Maturing models are not a free pass: as RL fixes known issue classes, total vulnerabilities per model fall but the remaining bugs get "finer" and harder for a human reviewer to detect. (09:54-10:32)
+- **The board is maintained per release, and its per-dimension spread is now stated as a routing input.** A later Sonar talk describes scoring "each of the major new models that come out… on 4,000 or so coding tasks" against "correctness, complexity, the rate at which they're solving the tasks we assign them, and then our classic things maintainability, reliability, and security," and reads the Claude tier pair off it: Sonnet 4.6 ahead on correctness and task-solving, Opus 4.6 the better pick where maintainability, security, or lower complexity is what the task needs. That turns this page's finding from a caution about benchmarks into a selection key — see [Route Between Model Tiers by Quality Dimension, Not Only Cost](route-between-model-tiers-by-quality-dimension-not-only-cost.md). No numbers accompany the tier comparison; it is spoken over a slide. ([Chatterjee](../sources/20260809_03l29gJXpCE.md), 04:51-05:57)
+- **The vendor's own conclusion from the board is a floor, not a ranking**: "None of these models are ever going to be perfect. You're always going to have some kind of need for verification in the loop." Read with the maturing-models bullet above, the two together say the quality gap narrows and changes shape rather than closing, which is the premise the same talk builds its verification argument on — see [Verification Debt Outlives the Productivity Spike](verification-debt-outlives-the-productivity-spike.md). (06:12-06:27)
 - Cyclomatic complexity counts branches (ifs/else/for/while); cognitive complexity is a proprietary measure of how hard the code is for a human to read, understand, and maintain — both rise with the more verbose models. (08:30-09:48)
 
 Related topics:
@@ -25,6 +27,9 @@ Related concepts:
 - [Agentic coding economics shift attention from writing cost to assurance cost](agentic-coding-economics-shift-attention-from-writing-cost-to-assurance-cost.md)
 - [Do not trust a single leaderboard for model selection](do-not-trust-a-single-leaderboard-for-model-selection.md)
 - [Shift Code Quality Left With a Pre-Commit Analysis and Remediation Loop](shift-code-quality-left-with-precommit-analysis-loop.md)
+- [Route Between Model Tiers by Quality Dimension, Not Only Cost](route-between-model-tiers-by-quality-dimension-not-only-cost.md)
+- [Verification Debt Outlives the Productivity Spike](verification-debt-outlives-the-productivity-spike.md)
 
 Sources:
 - [Can LLMs generate Enterprise Quality Code? — Prasenjit Sarkar, Sonar](../sources/20260531_NuePCNMpWGc.md), 02:08-10:32
+- [Guide, Verify, Solve — Anirban Chatterjee, Sonar](../sources/20260809_03l29gJXpCE.md), 04:51-06:27

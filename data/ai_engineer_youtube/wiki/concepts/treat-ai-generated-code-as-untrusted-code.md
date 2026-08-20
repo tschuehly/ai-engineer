@@ -13,6 +13,8 @@ Details:
 - Direct and indirect prompt injection can steer generated code toward exfiltration when user input, web pages, or documents become part of the prompt context. (04:57-05:58)
 - A practical generated-code checklist includes default-deny network access, explicit capabilities, per-user sandboxing, resource limits, secrets outside the sandbox, cleanup, audit logs, and validation before execution. (33:00-35:24)
 
+- **Two different senses of "untrusted" are in circulation, and they prescribe different things.** This page's sense is *runtime containment*: the code may execute, so remove its capabilities. Sonar's "zero trust" is a *verification* claim about the same code before it runs — "the code could really have come from anywhere. It could still be written by a human, it could be written by an AI," so apply "a similar comprehensive regime to verify that code that works the same no matter how that code was written." The prescriptions diverge on provenance: sandboxing exists precisely because the code is generated and about to run unreviewed, while the verification sense argues *against* an AI-specific path and for one regime over all code. They are complementary rather than competing — a sandbox does not tell you whether the code is right, and static analysis does not stop a hallucinated import from opening a socket — but a policy that says "we treat AI code as untrusted" should say which one it means. See [Verify Generated Code With a Method the Generator Does Not Share](verify-generated-code-with-a-method-the-generator-does-not-share.md). ([Chatterjee](../sources/20260809_03l29gJXpCE.md), 09:23-10:00)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Infrastructure](../topics/infrastructure.md)
@@ -22,6 +24,8 @@ Related concepts:
 - [Run Agent-Written API Code Inside Programmable Sandboxes](run-agent-written-api-code-inside-programmable-sandboxes.md)
 - [Capability-Based Sandboxes Start With No Authority](capability-based-sandboxes-start-with-no-authority.md)
 - [LLM Attack Surfaces Span Prompts, Context, Retrieval, Tools, and Actions](llm-attack-surfaces-span-prompts-context-retrieval-tools-and-actions.md)
+- [Verify Generated Code With a Method the Generator Does Not Share](verify-generated-code-with-a-method-the-generator-does-not-share.md)
 
 Sources:
 - [Why, and how you need to sandbox AI-Generated Code? - Harshil Agrawal, Cloudflare](../sources/20260408_AHtGAgQ0Q_Q.md), 01:45-06:48, 33:00-35:24
+- [Guide, Verify, Solve — Anirban Chatterjee, Sonar](../sources/20260809_03l29gJXpCE.md), 09:23-10:00
