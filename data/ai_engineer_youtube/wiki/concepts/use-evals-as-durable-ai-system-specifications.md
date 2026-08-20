@@ -11,6 +11,7 @@ Details:
 - Evals should not replace task instructions: learning from data is harder than following instructions, so a system needs both localized natural-language definitions and evals that measure whether the whole system works. 15:29-15:39
 - The eval should evaluate the full application-specific system, not a generic model default, because the goal is to make the assembled task, control flow, tools, and model choices work together. 16:48-17:12
 - Once evals name the target behavior, optimizers can change lower-level artifacts such as prompts, modules, or reinforcement-learning policies without making the product requirement itself disappear into model-specific prompt text. 17:05-17:22, 18:52-19:04
+- **The descriptive counterpart: whether or not you write them as a spec, they already act as one.** LangChain's version is that "you can basically define agent behavior by showing the evals that you ran on it," because the agent "literally like hill climbs those evals, and you alter the behavior of the agent to make the evals pass." Read alongside this page, that turns a recommendation into an observation with a sharp corollary — behavior absent from the suite is behavior nothing optimized for ([An Agent's Eval Suite Describes Its Behavior](an-agents-eval-suite-describes-its-behavior.md)). ([LangChain](../sources/20260812_CvRngaQZQ3Y.md), 11:43-12:15)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -20,6 +21,8 @@ Related concepts:
 - [Optimize LLM programs with metrics and teacher feedback](optimize-llm-programs-with-metrics-and-teacher-feedback.md)
 - [Build AI app benchmarks before optimization](build-ai-app-benchmarks-before-optimization.md)
 - [Avoid premature low-level AI system coupling](avoid-premature-low-level-ai-system-coupling.md)
+- [An Agent's Eval Suite Describes Its Behavior](an-agents-eval-suite-describes-its-behavior.md)
 
 Sources:
 - [On Engineering AI Systems that Endure The Bitter Lesson - Omar Khattab, DSPy & Databricks](../sources/20250806_qdmxApz3EJI.md), 15:09-15:39, 16:48-19:04
+- [Improving Agents is a Data Mining Problem — Vivek Trivedy, LangChain](../sources/20260812_CvRngaQZQ3Y.md), 11:43-12:15

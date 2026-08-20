@@ -1,6 +1,12 @@
 # Concept Index
 
 ## Agents
+- [Observability and Continual Learning Are the Same Problem](../concepts/observability-and-continual-learning-are-the-same-problem.md) - the trace corpus you collect to debug is the same substrate that trains, evaluates, and re-harnesses the agent.
+- [Ask Traces the Behavioral Questions Code Cannot Answer](../concepts/ask-traces-the-behavioral-questions-code-cannot-answer.md) - upset users, happy users, degradation after compaction, and counterfactual model swaps are all trace queries.
+- [Sequence Harness Engineering and Fine-Tuning by Feedback Speed](../concepts/sequence-harness-engineering-and-finetuning-by-feedback-speed.md) - two minutes versus hours decides the order, and stopping after the fast lever is a legitimate end state.
+- [An Agent's Eval Suite Describes Its Behavior](../concepts/an-agents-eval-suite-describes-its-behavior.md) - the agent hill-climbs whatever you measure, so behavior absent from the suite is behavior nothing optimized for.
+- [Densify Agent Feedback Because Pass/Fail Is Not Actionable](../concepts/densify-agent-feedback-because-pass-fail-is-not-actionable.md) - a single number says the run failed but not where, and traces are the substrate that holds the richer signal.
+- [Treat Agent Improvement as Model-Harness-Task Fit](../concepts/treat-agent-improvement-as-model-harness-task-fit.md) - fit data, harness, and model jointly instead of fixing the model and tuning around it.
 - [Do Not Outsource the Memory System](../concepts/do-not-outsource-the-memory-system.md) - shipped memory designs disagree at every level, so memory evolves with the product instead of arriving as a bought component.
 - [Pair a Running Profile With On-Demand Conversation Search](../concepts/pair-a-running-profile-with-on-demand-conversation-search.md) - the convergent consumer memory shape: a small always-served profile plus model-invoked search over past conversations.
 - [The Long Tail of the Web Will Not Ship APIs](../concepts/the-long-tail-of-the-web-will-not-ship-apis.md) - the head of the distribution may publish endpoints; ~200 million slow-moving sites will not, so UI control is the default surface for the tail.
@@ -764,6 +770,8 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Mine Trace Corpora With Agents Because They Do Not Fit in Context](../concepts/mine-trace-corpora-with-agents-because-they-do-not-fit-in-context.md) - treat the corpus as an external object you query rather than a payload you load into a window.
+- [Ask Traces the Behavioral Questions Code Cannot Answer](../concepts/ask-traces-the-behavioral-questions-code-cannot-answer.md) - "does the agent get really dumb after the first compaction?" is a question about your deployment, answerable only from your run records.
 - [Replace User-Managed Memory Lists With a Background-Synthesized Profile](../concepts/replace-user-managed-memory-lists-with-a-background-profile.md) - removes the user's curation burden, but synthesis records deliberation as fact and staleness survives.
 - [Budget Memory Between Update Cost and Serving Cost](../concepts/budget-memory-between-update-cost-and-serving-cost.md) - "memory is a function of compute": profile length and refresh cadence trade against each other under one budget.
 - [Memory Quality Is Capped by the Context It Can Reach](../concepts/memory-quality-is-capped-by-the-context-it-can-reach.md) - offline events, connected-but-unread sources, and per-product silos bound any memory architecture.
@@ -887,6 +895,7 @@
 
 ## Infrastructure
 
+- [Mine Trace Corpora With Agents Because They Do Not Fit in Context](../concepts/mine-trace-corpora-with-agents-because-they-do-not-fit-in-context.md) - the read path over a trace store is its own cost model: traces x average size x input token price.
 - [Hold the Browser Environment Constant Across Runs](../concepts/hold-the-browser-environment-constant-across-runs.md) - render consistency is the base layer under the harness and the model, and the home Mac mini fails on both scale and compliance.
 - [Works in Dev, Passes Tests, and Survives Reality Are Three Different Systems](../concepts/works-in-dev-passes-tests-and-survives-reality-are-three-systems.md) - against an adversarial dependency such as the live web, a green test suite and a staging benchmark do not transfer to production.
 - [Define the Unit of Work Behind a Throughput Target](../concepts/define-the-unit-of-work-behind-a-throughput-target.md) - a requests-per-second target is meaningless until one request is defined, and 10x traffic changes the operating model rather than the server count.
@@ -1131,6 +1140,7 @@
 
 ## Inference
 
+- [Read the Frontier Model's Traces to Harness-Engineer Its Cheap Replacement](../concepts/read-frontier-traces-to-harness-engineer-a-cheap-replacement.md) - one vendor reports matching Opus at trace-judging with an open model one to two orders of magnitude cheaper.
 - [Compete on Latency and Cost per Task Once Computer-Use Accuracy Ties](../concepts/compete-on-latency-and-cost-per-task-when-computer-use-accuracy-ties.md) - $0.80 versus $2.30 per task at parity accuracy, because a browser task is 20-50 model calls.
 - [Let Deterministic Code Drive the Timed Loop and Call the Model Only for Perception](../concepts/let-code-drive-the-timed-loop-and-call-the-model-only-for-perception.md) - inference latency, not accuracy, is what fails a loop running against an expiring deadline.
 - [The Real-Time Model Harness Is Where the Product Work Sits](../concepts/the-realtime-model-harness-is-where-the-product-work-sits.md) - holding a stutter-free stream across GPU and CPU threads under interrupts is a different discipline from optimizing a request.
@@ -1261,6 +1271,7 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [An Agent's Eval Suite Describes Its Behavior](../concepts/an-agents-eval-suite-describes-its-behavior.md) - the suite doubles as the artifact you hand a customer to say what the agent does.
 - [Make the Memory Profile Visible and Editable](../concepts/make-the-memory-profile-visible-and-editable.md) - from a profile reachable only by jailbreak to a raw one whose user edits force a resynthesis.
 - [Context as a Service Is Vertical Search for Agents](../concepts/context-as-a-service-is-vertical-search-for-agents.md) - crawl one vertical, entity-dedupe into a graph, enrich, and serve agents over MCP — DaaS re-aimed at machine consumers.
 - [Find the Crossover Point Between Renting and Owning Context](../concepts/find-the-crossover-point-between-renting-and-owning-context.md) - a week of build against per-query fees has a computable break-even, quoted at just over 15,000 entities and explicitly not universal.
@@ -1364,6 +1375,12 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Observability and Continual Learning Are the Same Problem](../concepts/observability-and-continual-learning-are-the-same-problem.md) - "if you're a continual learning company, you need traces"; the eval corpus and the training corpus are one artifact.
+- [Mine Trace Corpora With Agents Because They Do Not Fit in Context](../concepts/mine-trace-corpora-with-agents-because-they-do-not-fit-in-context.md) - a single trace can exceed the window, so send agents to read traces and query the corpus as an external object.
+- [Ask Traces the Behavioral Questions Code Cannot Answer](../concepts/ask-traces-the-behavioral-questions-code-cannot-answer.md) - three question shapes that only the run record can settle once determinism was traded for autonomy.
+- [Read the Frontier Model's Traces to Harness-Engineer Its Cheap Replacement](../concepts/read-frontier-traces-to-harness-engineer-a-cheap-replacement.md) - prove the task is possible with the big model, then mine its trajectory for the small model's guidance.
+- [An Agent's Eval Suite Describes Its Behavior](../concepts/an-agents-eval-suite-describes-its-behavior.md) - "you can basically define agent behavior by showing the evals that you ran on it" — the descriptive counterpart to evals-as-spec.
+- [Densify Agent Feedback Because Pass/Fail Is Not Actionable](../concepts/densify-agent-feedback-because-pass-fail-is-not-actionable.md) - the boundary between a score for ranking humans and a signal an agent can act on.
 - [A Prebuilt Context Vendor Cannot Answer Outside Its Index](../concepts/a-prebuilt-context-vendor-cannot-answer-outside-its-index.md) - index gaps are structural rather than statistical, and coverage is only meaningful against the field set your job needs.
 - [Cost Pressure Silently Shrinks Research Scope](../concepts/cost-pressure-silently-shrinks-research-scope.md) - the eval keeps passing while the workload quietly degrades, because the questions that were dropped were never on the sheet.
 - [Compete on Latency and Cost per Task Once Computer-Use Accuracy Ties](../concepts/compete-on-latency-and-cost-per-task-when-computer-use-accuracy-ties.md) - when success rates tie within noise, the honest report is the cost and latency columns.
@@ -1682,6 +1699,9 @@
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 
 ## Models
+- [Read the Frontier Model's Traces to Harness-Engineer Its Cheap Replacement](../concepts/read-frontier-traces-to-harness-engineer-a-cheap-replacement.md) - the expensive model establishes the waterline and its trajectory becomes the small model's harness.
+- [Sequence Harness Engineering and Fine-Tuning by Feedback Speed](../concepts/sequence-harness-engineering-and-finetuning-by-feedback-speed.md) - exhaust the two-minute lever before the training run, then come back to it.
+- [Treat Agent Improvement as Model-Harness-Task Fit](../concepts/treat-agent-improvement-as-model-harness-task-fit.md) - model choice is one term in a fit function, not a decision made ahead of the harness.
 - [Profile Synthesis Is Continual Learning Outside the Weights](../concepts/profile-synthesis-is-continual-learning-outside-the-weights.md) - the running-profile loop already learns continuously; the weights version is blocked on amortization, not capability.
 - [Per-Site Scaffolding Does Not Generalize: The Bitter Lesson for Web Agents](../concepts/per-site-scaffolding-does-not-generalize-to-the-long-tail.md) - the model-side scaling argument for a general vision-and-action policy over site wrappers.
 - [Train Screen-Perception Primitives Beyond Coding Ability](../concepts/train-screen-perception-primitives-beyond-coding-ability.md) - "coding abilities are not sufficient to do well on computer use," so four screen capabilities have to be trained in.
@@ -2259,6 +2279,9 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Observability and Continual Learning Are the Same Problem](../concepts/observability-and-continual-learning-are-the-same-problem.md) - ship, collect traces, mine them, run data-driven experiments; the loop only starts on contact with users.
+- [Sequence Harness Engineering and Fine-Tuning by Feedback Speed](../concepts/sequence-harness-engineering-and-finetuning-by-feedback-speed.md) - the sandwich: harness, then fine-tune, then harness again around the new model.
+- [Treat Agent Improvement as Model-Harness-Task Fit](../concepts/treat-agent-improvement-as-model-harness-task-fit.md) - borrowing scikit-learn's fit(), the two remaining jobs are finding a good fit function and finding good data.
 - [Verify an Action Through a Different Channel Than the One That Acted](../concepts/verify-an-action-through-a-different-channel-than-the-one-that-acted.md) - sense, act once, confirm through an independent channel, and treat the failed check as the signal to escalate.
 - [Make Intent and Evidence the Review Surface](../concepts/make-intent-and-evidence-the-review-surface.md) - when output outruns inspection capacity, relocate review to an artifact that still fits human attention.
 - [Capture the Coding Session as the Intent Record](../concepts/capture-the-coding-session-as-the-intent-record.md) - the interaction transcript, not the produced artifact, is what makes a downstream verifier independent.

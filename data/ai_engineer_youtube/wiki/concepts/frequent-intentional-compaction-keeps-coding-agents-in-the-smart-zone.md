@@ -16,6 +16,8 @@ Details:
 - A complementary mechanism is to keep the durable rules and decisions *outside* the prompt entirely: Michal Cichra runs sessions through 20–50 context compacts with "no fear of context compacts" because the rules live in git hooks, CI, and ADRs, so the important things survive a compact and the agent always re-looks-them-up — externalized enforcement and reviewed-artifact compaction are two ways to keep agents on track across a context reset. ([Capturing Decisions](../sources/20260603_504PvfXou5Y.md), 11:04-11:44)
 - Scope boundary, from a measured counter-example: this concept's case for compaction rests on *quality* (correctness, completeness, trajectory) in coding sessions where the human reviews the compacted artifact. It does not carry over to unattended chat agents on a cost argument. Towards AI benchmarked 11 context presets on a production AI tutor and found untouched full history beat every compaction technique — and beat their own shipped defaults — on recall, cost, *and* latency at once, because prompt caching makes resending the history nearly free while compaction invalidates the cache. The distinguishing conditions are whether a human curates the compacted artifact, whether the prefix is cache-stable, and whether the session's value lies in a distilled plan or in specific details a summarizer will drop. ([Context Engineering in 2026](../sources/20260817_WP3hjUXd918.md), 43:40-45:57, 16:45-18:52)
 
+- **Given that disagreement, the honest answer is per-deployment and lives in your traces.** LangChain lists exactly this as a question you send a mining agent to answer rather than one you settle by argument: "Agents now run for millions of tokens. Does the agent get really dumb after the first compaction? After the second compaction? Does it never get dumb? Like how do we actually answer these questions? We need to do it by actually looking at the traces." The degradation curve is a function of your model, harness, and task mix, all of which change under you ([Ask Traces the Behavioral Questions Code Cannot Answer](ask-traces-the-behavioral-questions-code-cannot-answer.md)). ([LangChain](../sources/20260812_CvRngaQZQ3Y.md), 05:16-05:32)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Context Engineering](../topics/context-engineering.md)
@@ -28,8 +30,10 @@ Related concepts:
 - [Enforce Agent Rules in Git Hooks and CI, Not the Prompt](enforce-agent-rules-in-git-hooks-and-ci-not-the-prompt.md)
 - [Prompt Caching Sets the Break-Even Bar for Compaction](prompt-caching-sets-the-break-even-bar-for-compaction.md)
 - [Benchmark Context-Management Presets Against a Do-Nothing Baseline](benchmark-context-management-presets-against-a-do-nothing-baseline.md)
+- [Ask Traces the Behavioral Questions Code Cannot Answer](ask-traces-the-behavioral-questions-code-cannot-answer.md)
 
 Sources:
 - [No Vibes Allowed: Solving Hard Problems in Complex Codebases - Dex Horthy, HumanLayer](../sources/20251202_rmvDxxNubIg.md), 03:47-07:27, 12:14-14:10
 - [BDD, ADR, PRD, WTF: Capturing Decisions for Humans and AI Alike — Michal Cichra, Safe Intelligence](../sources/20260603_504PvfXou5Y.md), 11:04-11:44
 - [Context Engineering in 2026 — Louis-François Bouchard, Omar Solano & Samridhi Vaid, Towards AI](../sources/20260817_WP3hjUXd918.md), 16:45-18:52, 43:40-45:57
+- [Improving Agents is a Data Mining Problem — Vivek Trivedy, LangChain](../sources/20260812_CvRngaQZQ3Y.md), 05:16-05:32

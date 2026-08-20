@@ -16,6 +16,7 @@ Details:
 - Proof points that the pattern is real, not exceptional: Intercom is beating its frontier API at ~one-fifth the cost (the description says one-tenth); Pinterest claims orders of magnitude. 04:18-04:30
 - Prerequisite — garbage in, garbage out: if you haven't been collecting data and lack mature evals, it's not time to train yet; collect the data first. The complement is that if you've built a product you've probably already touched everything you need to train, so the readiness gap is usually smaller than teams assume. 06:51-07:46
 - Urgency framing: this is not "train now" — it might be 6 months or a year out — but you prepare for the moment by collecting data and developing evals before you need them. 11:35-12:06
+- **A sequencing rule that sits under signal 2, from a vendor that sells fine-tuning.** LangChain picks the next lever by feedback latency rather than by power: "harness engineering gives you feedback in maybe 2 minutes," so you exhaust that ceiling first, fine-tune to break through it, then return to harness engineering — a sandwich rather than a graduation. The eval plateau in signal 2 is the same ceiling seen from the outside, and this explains why reaching it cheaply matters. Two qualifications travel with it: many teams never need the second rung ("we find a lot of teams are happy with harness engineering and it solves their customer use case, so we always sort of recommend it"), and the fine-tuning that does pay targets a narrow vertical because customers "don't really care about the entire variance of tasks" ([Sequence Harness Engineering and Fine-Tuning by Feedback Speed](sequence-harness-engineering-and-finetuning-by-feedback-speed.md)). ([LangChain](../sources/20260812_CvRngaQZQ3Y.md), 09:20-09:48, 15:58-16:51)
 
 Related topics:
 - [Models](../topics/models.md)
@@ -27,6 +28,8 @@ Related concepts:
 - [Decide open-model ownership by capability, hardware, latency, and cost thresholds](decide-open-model-ownership-by-capability-hardware-latency-and-cost-thresholds.md)
 - [Prefer model-portable agentic prompts before fine-tuning](prefer-model-portable-agentic-prompts-before-fine-tuning.md)
 - [Product harnesses can become model customization environments](product-harnesses-can-become-model-customization-environments.md)
+- [Sequence Harness Engineering and Fine-Tuning by Feedback Speed](sequence-harness-engineering-and-finetuning-by-feedback-speed.md)
 
 Sources:
 - [What Lies Beneath the API — Benjamin Cowen, Modal](../sources/20260602_HvZXAOZ3iv8.md), 01:55-12:06
+- [Improving Agents is a Data Mining Problem — Vivek Trivedy, LangChain](../sources/20260812_CvRngaQZQ3Y.md), 09:20-09:48, 15:58-16:51

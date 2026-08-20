@@ -18,6 +18,8 @@ Details:
 
 - Browser agents give the pattern a concrete signal list. Because the agent acts on someone else's site, the telemetry that matters is what a human debugger would want: "you need screen recordings, logs, network activity. And you need to feed that back into your agent so it can self-improve. Every agent you run should get better every single time." Browserbase's "Auto Browse" (as spoken) is described as this loop — "how is my agent able to improve itself over multiple loops" with observability data as the input. The precondition is that the substrate is pinned first, or the recordings capture variance the agent cannot act on ([Hold the Browser Environment Constant Across Runs](hold-the-browser-environment-constant-across-runs.md)). ([Paul Klein IV](../sources/20260814_GqoNrUz8hEU.md), 14:35-15:10)
 
+- LangChain runs the same pattern on its own tracing product and adds the part of the loop that stays human-facing. Traces are centralized into a tracing project — per agent or across all agents — and then "we send agents to read traces from other agents," with the mining product reading the corpus, finding issues, "agentically searching over it," and preparing datasets. But one of the three named outputs is content for people, not machines: "humans are still in the loop. Like, I need to know that customers are happy… I just don't have the bandwidth to read a bunch of traces," which matters most "in like high-trust domains like legal and medical. Like, some human needs to review this, but they can't read it all." Agent-readable observability and human-readable summarization are two outputs of the same mining pass, not competing designs. ([LangChain](../sources/20260812_CvRngaQZQ3Y.md), 04:40-05:09, 10:39-11:08, 12:15-12:46)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -30,8 +32,10 @@ Related concepts:
 - [Agent experience prioritizes APIs, CLIs, and MCP over dashboards](agent-experience-prioritizes-apis-clis-and-mcp-over-dashboards.md)
 - [Choose Eval Scope Across Span, Multispan, Trajectory, and Session](choose-eval-scope-across-span-multispan-trajectory-and-session.md)
 - [Catalog Eval Signal Sources Across Judge, Human, Golden, Deterministic, and Business](catalog-eval-signal-sources-judge-human-golden-deterministic-business.md)
+- [Mine Trace Corpora With Agents Because They Do Not Fit in Context](mine-trace-corpora-with-agents-because-they-do-not-fit-in-context.md)
 
 Sources:
 - [Platforms for Humans and Machines: Engineering for the Age of Agents - Juan Herreros Elorza](../sources/20260408_cCRO3ChaYhM.md), 11:14-12:20, 17:12-19:19
 - [LLM Observability, Evaluation, Experimentation Platform — Dat Ngo, Arize](../sources/20260607_JsCCrBF7F1g.md), 13:11-15:23
 - [Bringing agents onto the world wide web — Paul Klein IV, Browserbase](../sources/20260814_GqoNrUz8hEU.md), 14:35-15:10
+- [Improving Agents is a Data Mining Problem — Vivek Trivedy, LangChain](../sources/20260812_CvRngaQZQ3Y.md), 04:40-05:09, 10:39-11:08, 12:15-12:46

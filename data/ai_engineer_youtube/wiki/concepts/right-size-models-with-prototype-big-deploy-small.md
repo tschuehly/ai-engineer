@@ -14,6 +14,8 @@ Details:
 - Success criteria for the case study mixed deterministic and judge-based measures on 14 threads × 2 output shapes (28 examples): JSON validity (`JSON.parse`), reference structural validity, factual consistency (LLM-as-judge), length compliance, and P50/P95 latency, benchmarked in the open-source Phoenix eval tool; run each model multiple times and average. ([Frontier results, on device](../sources/20260629_fWXJM-J0ZB8.md), 11:14-13:34)
 - The economic prize is direct: a Claude Sonnet baseline cost ~$0.22 for 14 tasks (~$1/day for the product), while on-device inference cost is "zilch" because it runs on the consumer's device — reframing the audit question as "how many Claude calls could be Llama calls?" ([Frontier results, on device](../sources/20260629_fWXJM-J0ZB8.md), 13:59-15:02, 28:38-28:55)
 
+- **A second team runs the same pattern on a server-side workload and adds a step between "prove it's possible" and "test small."** LangChain starts with Opus or GPT-5.5 "because we just want to know if the task is even possible," then treats that as a *waterline* and looks "back at those traces" to ask whether an open model can do the same thing. The added step is that the frontier model's traces are read for *how it reasons*, and that reasoning becomes harness guidance for the smaller model — "Opus reasons about things in this way… that might mean I need to give it a little bit more guidance so it can reach the sort of same intelligence level at like a much much lower cost." Where this page freezes outputs as the bar, that step mines the trajectory as the fix ([Read the Frontier Model's Traces to Harness-Engineer Its Cheap Replacement](read-frontier-traces-to-harness-engineer-a-cheap-replacement.md)). ([LangChain](../sources/20260812_CvRngaQZQ3Y.md), 07:36-08:58)
+
 Related topics:
 - [Edge Inference](../topics/edge-inference.md)
 - [Evaluation](../topics/evaluation.md)
@@ -25,6 +27,8 @@ Related concepts:
 - [Use golden data sets and mixed scoring functions for AI application confidence](use-golden-data-sets-and-mixed-scoring-functions-for-ai-application-confidence.md)
 - [Select State of the Art on a Quality-Efficiency Pareto Front](select-state-of-the-art-on-a-quality-efficiency-pareto-front.md)
 - [Compare models by task, thinking budget, cost, and latency](compare-models-by-task-thinking-budget-cost-and-latency.md)
+- [Read the Frontier Model's Traces to Harness-Engineer Its Cheap Replacement](read-frontier-traces-to-harness-engineer-a-cheap-replacement.md)
 
 Sources:
 - [Frontier results, on device - RL Nabors, Arize](../sources/20260629_fWXJM-J0ZB8.md), 08:43-19:24
+- [Improving Agents is a Data Mining Problem — Vivek Trivedy, LangChain](../sources/20260812_CvRngaQZQ3Y.md), 07:36-08:58
