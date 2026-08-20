@@ -1,6 +1,12 @@
 # Concept Index
 
 ## Agents
+- [Separate Execution From the Production Context That Judges It](../concepts/separate-execution-from-the-production-context-that-judges-it.md) - loading the dashboard and deciding the metric smells off are different capabilities, and only the second says whether anything is important.
+- [Give Unowned Operational Work a Trigger](../concepts/give-unowned-operational-work-a-trigger.md) - a page has a receiver and an incident has a bridge; the long tail has neither, so supply a schedule, an event stream, or a message.
+- [Derive the Post-Deploy Check Plan From What Actually Changed](../concepts/derive-the-post-deploy-check-plan-from-what-changed.md) - read the diff, pick the telemetry that would expose trouble for that change, and let the agent choose when to look again.
+- [Answer Unaddressed Questions Behind a Confidence Gate](../concepts/answer-unaddressed-questions-behind-a-confidence-gate.md) - an agent nobody at-mentioned decides whether it can help, defaults to silence, and confirms privately before answering in public.
+- [Amend a Recurring Agent Task by Replying to Its Output](../concepts/amend-a-recurring-agent-task-by-replying-to-its-output.md) - "make it shorter" in the report's own thread edits the standing job rather than only this run.
+- [Watch the Change Paths That Bypass Your Deployment Pipeline](../concepts/watch-the-change-paths-that-bypass-your-deployment-pipeline.md) - feature flags and infra changes inherit no verification, so the fallback detector is an alert waking someone hours later.
 - [Turn Unfiled Conversation Into Concrete Prototypes](../concepts/turn-unfiled-conversation-into-concrete-prototypes.md) - MCP access solved reading every signal, not choosing among them; unstructured speech has no ticket number to hand over.
 - [Make the Doc the State and the Agent the Action](../concepts/make-the-doc-the-state-and-the-agent-the-action.md) - stateless agents plus a durable state document makes agents disposable and their context shareable across many of them.
 - [Fast Inference Moves the Agent Bottleneck to the Network](../concepts/fast-inference-moves-the-agent-bottleneck-to-the-network.md) - at 1,000 tokens per second the round trip and the conversation resend dominate the turn.
@@ -853,6 +859,7 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Separate Execution From the Production Context That Judges It](../concepts/separate-execution-from-the-production-context-that-judges-it.md) - the context half returns a priority rather than a fact, and it decays as the environment changes instead of converging.
 - [Make the Doc the State and the Agent the Action](../concepts/make-the-doc-the-state-and-the-agent-the-action.md) - chat is a lossy container for state; a durable shared document is readable by teammates and reusable across agents.
 - [Defer Tool Definitions Out of Context and Let the Model Search for Them](../concepts/defer-tool-definitions-out-of-context-and-let-the-model-search-for-them.md) - the tool registry is the term that grows, and it does not have to be resident.
 - [Cap the Skills List as a Share of the Context Window](../concepts/cap-the-skills-list-as-a-share-of-the-context-window.md) - a context budget expressed as a percentage of the window, enforced by the harness.
@@ -1003,6 +1010,10 @@
 - [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md)
 
 ## Infrastructure
+- [Watch the Change Paths That Bypass Your Deployment Pipeline](../concepts/watch-the-change-paths-that-bypass-your-deployment-pipeline.md) - feature flags and infra changes never enter CI/CD, so they get no verification and are found after impact.
+- [Derive the Post-Deploy Check Plan From What Actually Changed](../concepts/derive-the-post-deploy-check-plan-from-what-changed.md) - per-change telemetry selection along the causal chain, with the recheck interval decided rather than configured.
+- [Separate Execution From the Production Context That Judges It](../concepts/separate-execution-from-the-production-context-that-judges-it.md) - reaching the telemetry is the easy half; the environment knowledge that says a reading matters is the scarce one.
+- [Give Unowned Operational Work a Trigger](../concepts/give-unowned-operational-work-a-trigger.md) - the operational long tail has no page and no bridge, so nothing starts it until someone remembers.
 - [Fast Inference Moves the Agent Bottleneck to the Network](../concepts/fast-inference-moves-the-agent-bottleneck-to-the-network.md) - a persistent connection plus server-held state, once generation stops being the slow part.
 - [Sandbox Primitives Are Per Operating System](../concepts/sandbox-primitives-are-per-operating-system.md) - where execution stays on the user's machine, the OS primitive is the whole isolation story.
 - [RL Post-Training Demands Four Scarce Compute Properties at Once](../concepts/rl-post-training-demands-four-scarce-compute-properties-at-once.md) - enough GPU, same region, fast fabric, available now: the conjunction is what makes the capacity hard to buy.
@@ -2553,6 +2564,11 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Give Unowned Operational Work a Trigger](../concepts/give-unowned-operational-work-a-trigger.md) - work with a ceremony gets done and the rest survives on memory, so supply the missing schedule, event stream, or message.
+- [Amend a Recurring Agent Task by Replying to Its Output](../concepts/amend-a-recurring-agent-task-by-replying-to-its-output.md) - tune a standing job in the thread its output landed in, so the next firing differs rather than only this one.
+- [Derive the Post-Deploy Check Plan From What Actually Changed](../concepts/derive-the-post-deploy-check-plan-from-what-changed.md) - verification triggered by the change instead of the symptom, with checks chosen from what the diff touched.
+- [Watch the Change Paths That Bypass Your Deployment Pipeline](../concepts/watch-the-change-paths-that-bypass-your-deployment-pipeline.md) - enumerate every mechanism that changes production and mark which ones have any verification attached.
+- [Answer Unaddressed Questions Behind a Confidence Gate](../concepts/answer-unaddressed-questions-behind-a-confidence-gate.md) - the cost removed is interruption rather than difficulty, and staying silent is the designed default.
 - [Turn Unfiled Conversation Into Concrete Prototypes](../concepts/turn-unfiled-conversation-into-concrete-prototypes.md) - a meeting bot removes the human who picks which signal is work, on a contract that the output is reactable rather than shippable.
 - [Make One Agent Session Reachable From Every Interface](../concepts/make-one-agent-session-reachable-from-every-interface.md) - the alternative to people couriering context between tools is one session that every tool is a view onto.
 - [Environment Isolation Is What Lets Non-Engineers Trigger Real Work](../concepts/environment-isolation-is-what-lets-non-engineers-trigger-real-work.md) - what the file-it-and-wait-for-triage path substitutes for is a development environment the requester does not have.

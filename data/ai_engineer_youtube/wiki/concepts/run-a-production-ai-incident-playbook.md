@@ -14,6 +14,8 @@ Details:
 - This is presented as a commonly missed artifact: teams build models and demos but rarely define, in advance, what must happen when the system fails in production. (31:00-31:26)
 - **What the "detect" step has to emit for the rest of the loop to run.** Ben Hylak's requirement is two numbers per issue: "you need to know when it actually started, and you need to know how many people it affects." Onset is what makes *diagnose* tractable — "this issue started yesterday… suddenly like your mind starts turning and you're like, 'Oh, what did I do?… Did we change model?'" — and share is what makes triage possible when "agents will have an infinite number of problems," since "three users versus 100,000 users" is the difference between a watch and a page ([Triage Agent Issues by Onset and Share of Users](triage-agent-issues-by-onset-and-share-of-users.md)). A dashboard that shows a satisfaction drop without an onset date gives the diagnose step nothing to diff against. ([Hylak](../sources/20260812_jHMiYtjoJfA.md), 13:20-14:24)
 
+- **The playbook's "detect" step assumes something fires; a fourth source argues the harder cases are the ones that never will.** Resolve AI's position is that the well-instrumented paths already work — "on-call you've got a page that goes off. You know somebody's going to receive that. Incidents you create a bridge, you invite people in" — and that the residual risk sits in changes nobody watches, particularly the ones that never enter the pipeline: "a feature flag or maybe some infra changes… which maybe don't get any monitoring at all. And you're sort of just trusting that an alert might fire and an on-caller will wake up and say, 'Who changed what?'" That is the detect step failing open. The proposed addition is to trigger verification off the change rather than off a symptom, and to accept sub-page signals ("this may not be paging… because we're not going to alert on everything") as work worth scheduling. ([Justin Smith](../sources/20260809_vSx5IULvBns.md), 09:04-09:50, 14:35-14:52)
+
 Related topics:
 - [Workflows](../topics/workflows.md)
 - [Evaluation](../topics/evaluation.md)
@@ -27,7 +29,10 @@ Related concepts:
 - [Sequence Production AI by Pillars and Choose the Model Last](sequence-production-ai-by-pillars-and-choose-the-model-last.md)
 - [Triage Agent Issues by Onset and Share of Users](triage-agent-issues-by-onset-and-share-of-users.md)
 - [Hand Agents Anomalies to Investigate, Not to Detect](hand-agents-anomalies-to-investigate-not-to-detect.md)
+- [Watch the Change Paths That Bypass Your Deployment Pipeline](watch-the-change-paths-that-bypass-your-deployment-pipeline.md)
+- [Give Unowned Operational Work a Trigger](give-unowned-operational-work-a-trigger.md)
 
 Sources:
 - [The Production AI Playbook: Deploying Agents at Enterprise Scale — Sandipan Bhaumik, Databricks](../sources/20260618_ObTPqBGsEbA.md), 30:29-32:51
 - [Designing Agents (The Floor Is the Frontier) — Ben Hylak, Raindrop](../sources/20260812_jHMiYtjoJfA.md), 13:20-14:24
+- [Always-on agents run production without the on-call tax — Justin Smith, Resolve AI](../sources/20260809_vSx5IULvBns.md), 09:04-09:50, 14:35-14:52

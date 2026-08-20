@@ -13,6 +13,9 @@ Details:
 - Personalization is required because the agent must learn how the user works, what they care about, what they ignore, preferences, and areas of code they do not want touched (04:46-04:56).
 - Timing is a product constraint: acting too early interrupts the user, while acting too late misses the useful moment (04:56-05:03).
 - Workflow embedding matters because the agent should appear in terminals, repositories, and IDEs where the user already works rather than forcing attention into a separate app (05:03-05:20).
+- **A production-operations vendor reports the same four elements with different content in each slot, which is evidence the pattern is not developer-tool-specific.** Observation is over change events, dashboards, and chat channels rather than code edits; personalization is per-environment rather than per-user ("every company is a unique place. That's why we spend so much time on our knowledge system"); timing becomes an explicit agent decision ("none of this is hard-coded in… it could decide, I want to wait for another hour"); and workflow embedding lands in Slack or MS Teams instead of the IDE — "we think the surface area being where you live." ([Justin Smith](../sources/20260809_vSx5IULvBns.md), 19:10-19:45, 21:56-22:11, 23:09-23:28)
+- **That source adds a trigger taxonomy this page leaves implicit.** "When does it work?" resolves to a schedule, an event stream, or a message — the three ways observation turns into an actual run — which is the concrete version of "notice work opportunities." See [Give Unowned Operational Work a Trigger](give-unowned-operational-work-a-trigger.md). ([Justin Smith](../sources/20260809_vSx5IULvBns.md), 11:15-12:18)
+- **And it supplies a failure mode for the timing slot beyond too-early/too-late: not interrupting at all.** A channel-watching agent decides per message "whether it has enough sort of confidence to answer the question or not," and the instruction makes silence the default — "if you see something that you think you have an answer for… go ahead and respond. Otherwise don't." Proactivity that can decline is a different control surface from proactivity tuned by when it fires. ([Justin Smith](../sources/20260809_vSx5IULvBns.md), 16:44-16:52, 21:14-21:28)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -24,6 +27,9 @@ Related concepts:
 - [Local OS agents can invert the prompt flow](local-os-agents-can-invert-the-prompt-flow.md)
 - [Purpose-built agent workspaces make orchestration visible](purpose-built-agent-workspaces-make-orchestration-visible.md)
 - [Keep agent context small, fresh, and task-specific](keep-agent-context-small-fresh-and-task-specific.md)
+- [Give Unowned Operational Work a Trigger](give-unowned-operational-work-a-trigger.md)
+- [Answer Unaddressed Questions Behind a Confidence Gate](answer-unaddressed-questions-behind-a-confidence-gate.md)
 
 Sources:
 - [Proactive Agents - Kath Korevec, Google Labs](../sources/20251213_v3u8xc0zLec.md), 00:39-05:20
+- [Always-on agents run production without the on-call tax — Justin Smith, Resolve AI](../sources/20260809_vSx5IULvBns.md), 11:15-12:18, 16:44-16:52, 19:10-19:45, 21:14-22:11, 23:09-23:28

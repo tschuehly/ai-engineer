@@ -11,6 +11,8 @@ Details:
 - Uplift agents scan the codebase for places a patch applies, create pull requests with the fix, and explain why the patch was made, improving on earlier regex-based refactoring tools. (06:48-07:38)
 - Uplift work still needs deterministic verification; without tests, linters, or other checks, generated patches can be difficult to trust and apply. (07:40-08:05)
 - Incident-response agents can inspect code, telemetry, feature flags, traces, metrics, logs, topologies, alarms, triggers, and SLOs quickly, while reducing human anchoring on a first hypothesis. (08:37-10:37)
+- **A second source generalizes the ROI argument past incidents to routine operations, with a specific denominator.** Resolve AI's premise is that "70% of the time from an engineer is actually not focused just on writing code. It's actually spent on actually running the code that is actually shipped into production," covering maintenance, scaling, on-call, hot fixes, runbook updates, escalations, and other teams' questions — so "really coding was never the the big bottleneck." The argument extends this page's from-maintenance-not-greenfield reasoning to work that is not a defect at all. Note the figure is attributed only as "this was a survey study done," with no publisher, sample, or year. ([Justin Smith](../sources/20260809_vSx5IULvBns.md), 01:47-02:25)
+- **And it names the compounding effect that makes the targeting choice more urgent over time.** More code shipping faster, including "from even non-developers that maybe don't actually know the code," means "AI is creating a lot more issues in production… it's not clear we have the right sort of structures in place to deal with the amount of kind of changes that are coming through." On this reading, coding-agent adoption enlarges the operational half it was meant to offset. ([Justin Smith](../sources/20260809_vSx5IULvBns.md), 01:15-01:35, 02:37-02:49)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -21,6 +23,9 @@ Related concepts:
 - [Decompose large refactors into dependency-aware agent batches](decompose-large-refactors-into-dependency-aware-agent-batches.md)
 - [Expose observability as agent-readable feedback](expose-observability-as-agent-readable-feedback.md)
 - [Make validation fast, local, deterministic, and actionable](make-validation-fast-local-deterministic-and-actionable.md)
+- [Give Unowned Operational Work a Trigger](give-unowned-operational-work-a-trigger.md)
+- [Watch the Change Paths That Bypass Your Deployment Pipeline](watch-the-change-paths-that-bypass-your-deployment-pipeline.md)
 
 Sources:
 - [What We Learned Deploying AI within Bloomberg's Engineering Organization - Lei Zhang, Bloomberg](../sources/20251216_Q81AzlA-VE8.md), 06:18-10:37
+- [Always-on agents run production without the on-call tax — Justin Smith, Resolve AI](../sources/20260809_vSx5IULvBns.md), 01:15-02:49

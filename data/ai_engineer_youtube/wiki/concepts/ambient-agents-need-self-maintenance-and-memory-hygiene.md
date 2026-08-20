@@ -18,6 +18,9 @@ Details:
 - One concrete mechanism for the incremental half of this: stamp each artifact with a processing marker when the maintenance pass touches it, so the next run selects only unprocessed work with no external queue. Ben Holmes' overnight enrichment job does exactly this — an enrichment timestamp per note, and a nightly cloud pass that looks "for anything that's not tagged yet" — which is what lets an overnight job over a growing corpus stay bounded instead of reprocessing everything. It handles *new* work, not *stale* work; the cleanup problem above still needs its own trigger. See [Stamp Processing State in the Artifact to Make Agent Passes Resumable](stamp-processing-state-in-the-artifact-to-make-agent-passes-resumable.md). ([LLM Knowledge Bases](../sources/20260812_I3bpdgFJCUY.md), 06:48-06:57, 08:38-09:04)
 - The same source names a deployment constraint this page's overnight jobs assume away: a local scheduler "means your laptop has to be cracked open when it runs because it's a local automation." Ambient work that must actually happen every night belongs in a runner that does not depend on the user's machine being awake. See [Run Recurring Knowledge Jobs in a Cloud Sandbox With Sync-Down/Sync-Back](run-recurring-knowledge-jobs-in-a-cloud-sandbox-with-sync-down-sync-back.md). ([LLM Knowledge Bases](../sources/20260812_I3bpdgFJCUY.md), 14:10-14:24)
 
+- **Standing jobs need a retirement rule, and one source supplies the only example of a job that ends.** Resolve AI's time-boxed watch is created for a bounded worry and expires with it: "I'm worried about this third-party service… let me just kind of set an agent to kind of watch that maybe for the next week just to make sure everything is kind of stable and then that agent can sort of stop [its] job." Everything else in that talk is an open-ended recurring task, so cleanup remains an unowned trigger there too — but an end condition declared at creation time is cheaper than a cleanup pass that has to decide later whether a job still matters. ([Justin Smith](../sources/20260809_vSx5IULvBns.md), 15:23-15:39)
+- **The same source restates the memory-hygiene requirement as a moving-target problem without solving it.** Its learning system is meant to "reflect on that task and do a better job next time," transfer knowledge between tasks, and "grow as your system evolves" — but no storage model, retrieval, staleness policy, or conflict handling is described anywhere, which is the same gap this page's compounding-bad-memory failure mode points at. Worth noting that the vendor whose whole pitch is the knowledge layer still publishes no hygiene mechanism. ([Justin Smith](../sources/20260809_vSx5IULvBns.md), 07:14-07:32, 12:34-12:58)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Tools](../topics/tools.md)
@@ -30,8 +33,10 @@ Related concepts:
 - [Use agent logs and review feedback as context observability signals](use-agent-logs-and-review-feedback-as-context-observability-signals.md)
 - [Make Memory Notice Conflicts and Seek the Evidence That Settles Them](make-memory-notice-conflicts-and-seek-the-evidence-that-settles-them.md)
 - [Make the Memory Profile Visible and Editable](make-the-memory-profile-visible-and-editable.md)
+- [Give Unowned Operational Work a Trigger](give-unowned-operational-work-a-trigger.md)
 
 Sources:
 - [I Gave an AI Agent the Keys to My Life (Here's What Happened) - Radek Sienkiewicz (@velvetshark-com)](../sources/20260502_sJ2jc7leKBk.md), 08:59-17:20
 - [Lessons from Studying Every Memory System — Shlok Khemani, Independent](../sources/20260812_5ZGyKWjQDr0.md), 03:26-03:53, 05:56-06:29, 08:46-09:16
 - [LLM Knowledge Bases: a practical guide — Ben Holmes, Warp](../sources/20260812_I3bpdgFJCUY.md), 06:48-06:57, 08:38-09:04, 14:10-14:24
+- [Always-on agents run production without the on-call tax — Justin Smith, Resolve AI](../sources/20260809_vSx5IULvBns.md), 07:14-07:32, 12:34-12:58, 15:23-15:39

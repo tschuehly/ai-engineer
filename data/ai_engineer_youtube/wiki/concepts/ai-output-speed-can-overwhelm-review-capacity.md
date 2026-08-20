@@ -30,6 +30,8 @@ Details:
 
 - **Widening who can originate work multiplies the same load, and the sources that report it rarely price it.** Superconductor combines three amplifiers on one engineering team: 99.9% agent-generated PRs against "everything's human reviewed," support and growth people triggering fixes directly ([environment isolation](environment-isolation-is-what-lets-non-engineers-trigger-real-work.md)), and a meeting bot that produces "dozens of new ideas that are prototyped" plus "at least a few shippable PRs" after every customer or team meeting ([turn unfiled conversation into concrete prototypes](turn-unfiled-conversation-into-concrete-prototypes.md)). No merge rate, rework rate, or reviewer-hours figure is offered for any of the three. Worth using as a checklist item: each new origination channel is a multiplier on a denominator that stays fixed at the number of people who can review. ([Arjun Singh](../sources/20260809_OL7kfezynJM.md), 08:24-08:42, 16:00-16:16)
 
+- **The overflow does not stop at the merge button.** Justin Smith (Resolve AI) reports the same volume arriving one stage later, in production: bigger PRs, more of them, "even from even non-developers that maybe don't actually know the code," and consequently "AI is creating a lot more issues in production as AI code sort of goes through. It's not clear we have the right sort of structures in place to deal with the amount of kind of changes that are coming through." Read against this page's other sources, review capacity is the first fixed denominator the wave hits and operational capacity is the second — and unlike review, the operational half has no queue to visibly back up. His framing of what that half already consumes is 70% of engineering time, uncited. ([Justin Smith](../sources/20260809_vSx5IULvBns.md), 01:15-01:35, 01:47-02:00, 02:37-02:49)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -47,6 +49,7 @@ Related concepts:
 - [Velocity Sickness Is Output Without Impact](velocity-sickness-is-output-without-impact.md)
 - [Environment Isolation Is What Lets Non-Engineers Trigger Real Work](environment-isolation-is-what-lets-non-engineers-trigger-real-work.md)
 - [Turn Unfiled Conversation Into Concrete Prototypes](turn-unfiled-conversation-into-concrete-prototypes.md)
+- [Give Unowned Operational Work a Trigger](give-unowned-operational-work-a-trigger.md)
 
 Sources:
 - [The Friction is Your Judgment - Armin Ronacher & Cristina Poncela Cubeiro, Earendil](../sources/20260418__Zcw_sVF6hU.md), 03:35-07:10
@@ -59,3 +62,4 @@ Sources:
 - [Guide, Verify, Solve — Anirban Chatterjee, Sonar](../sources/20260809_03l29gJXpCE.md), 06:37-07:39
 - [Velocity Sickness: What Happens When Your Whole Team Gets 10x Faster — Matt Dailey, Ref.](../sources/20260809_Kz4QJmNrVXU.md), 01:36-01:55, 16:03-16:54
 - [Multiplayer agentic engineering — Arjun Singh, Superconductor](../sources/20260809_OL7kfezynJM.md), 08:24-08:42, 16:00-16:16
+- [Always-on agents run production without the on-call tax — Justin Smith, Resolve AI](../sources/20260809_vSx5IULvBns.md), 01:15-02:00, 02:37-02:49

@@ -19,6 +19,8 @@ Details:
 
 - **The same pipeline shape runs on human speech, where the hard step moves from grouping to noticing.** Superconductor puts a bot in customer calls, onboarding calls and internal meetings alongside Sentry and bug-tracker feeds, and its output is a prototype rather than a fix — "am I going to ship this one exactly how it is? Like, no, probably not. But it's a new idea, it's concrete, I can play with it." Machine signals arrive with structure, a timestamp, and an implicit claim that something is wrong; a spoken remark has none of those, so the deduplication rule ("if it finds existing work, it'll link to it") does the job that grouping and weighting do here, and the output contract is loosened from mergeable to reactable. Useful as the complementary input to the same signal-to-diff machinery — see [turn unfiled conversation into concrete prototypes](turn-unfiled-conversation-into-concrete-prototypes.md). ([Arjun Singh](../sources/20260809_OL7kfezynJM.md), 05:51-08:14)
 
+- **A fourth variant stops before the diff on purpose, and its input is the change rather than the failure.** Resolve AI triggers on a release, a feature flag flip, or an infra change instead of on a symptom, derives which telemetry would expose trouble for that specific change, follows the causal chain outward ("the checkout replaces currency service… let's take a look at the Kafka pipeline cuz that's sort of involved"), and re-checks on a schedule it chooses — an hour, three days. The output is a judgment about whether the change is healthy, not a pull request. That inverts this page's ordering: here a signal fires and the pipeline reconstructs what caused it, there the cause is known first and the question is which signals to watch. It also covers the paths this page's inputs never see, since a feature flag emits no error until it does harm ([Watch the Change Paths That Bypass Your Deployment Pipeline](watch-the-change-paths-that-bypass-your-deployment-pipeline.md)). ([Justin Smith](../sources/20260809_vSx5IULvBns.md), 14:35-14:52, 17:57-19:53)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Coding Agents](../topics/coding-agents.md)
@@ -34,9 +36,12 @@ Related concepts:
 - [Start Expensive With Agents, Then Collapse Proven Steps](start-expensive-with-agents-then-collapse-proven-steps.md)
 - [Give agents a vent tool to report platform friction](give-agents-a-vent-tool-to-report-platform-friction.md)
 - [Turn Unfiled Conversation Into Concrete Prototypes](turn-unfiled-conversation-into-concrete-prototypes.md)
+- [Derive the Post-Deploy Check Plan From What Actually Changed](derive-the-post-deploy-check-plan-from-what-changed.md)
+- [Watch the Change Paths That Bypass Your Deployment Pipeline](watch-the-change-paths-that-bypass-your-deployment-pipeline.md)
 
 Sources:
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md), 02:33-06:55, 17:24-17:47
 - [Self Driving Products: Product Signals to Pull Requests — Joshua Snyder, PostHog](../sources/20260610_zMiSRliEzv4.md), 02:09-05:53, 07:32-08:45, 10:00-11:03, 13:38-14:56
 - [How Lovable self-improves every hour — Benjamin Verbeek, Lovable](../sources/20260602_KA5kPbdkK2E.md), 16:44-18:43
 - [Multiplayer agentic engineering — Arjun Singh, Superconductor](../sources/20260809_OL7kfezynJM.md), 05:51-08:14
+- [Always-on agents run production without the on-call tax — Justin Smith, Resolve AI](../sources/20260809_vSx5IULvBns.md), 14:35-14:52, 17:57-19:53

@@ -16,6 +16,7 @@ Details:
 - The scheduled prompt is short and names the environment affordance rather than the procedure: "I gave you the Obsidian CLI in your environment. Use that, pull down that wiki, go ahead and update it, and I put in some special instructions for my own setup, and then sync it back up." Two schedules run — one for the wiki pass, one for `enrich note`. (16:13-16:47)
 - The output is a review artifact rather than a notification: "when I come back to my computer in the morning, I wake up to a perfectly fresh wiki that I can review. It's like the daily paper, but it's your own." Runs remain viewable in the browser afterward, which is what makes a silent failure detectable. See [Start the workday by reviewing and dispatching agent work](start-the-workday-by-reviewing-and-dispatching-agent-work.md). (16:35-17:25)
 - Triggers need not be time-based: the scheduler he uses (Warp's oz.dev / warp.dev/os — first-party, and the talk's main product pitch) also supports "other triggers like maybe a Slack message, iMessage, whatever you want to set up." (14:24-14:42)
+- **The laptop-lid constraint is confirmed independently, and the sandbox filesystem gets a second justification.** Resolve AI states the same two properties for its background agents: "Always runs. It's in the cloud. So if you close your laptop, it's okay. Runs inside of a sandbox, so it has kind of a file system underneath it. This allows it to sort of self-organize a lot of its work." The reason for the filesystem differs — here it hosts a corpus synced down and back, there it is scratch space the agent uses to organize a run — but the conclusion is the same: a scheduled job tied to a workstation is not a scheduled job. That talk also names non-time triggers as first class (event streams and messages alongside schedules), matching the Warp scheduler's Slack/iMessage triggers noted above. ([Justin Smith](../sources/20260809_vSx5IULvBns.md), 11:15-12:33)
 - Unaddressed by the source, and worth designing before adopting: conflict handling when the human edits a note on the laptop while the sandbox is editing the same file, credentials for the sync CLI inside a sandbox that is torn down daily, and what a failed or half-finished run leaves behind on sync-back.
 
 Related topics:
@@ -30,6 +31,8 @@ Related concepts:
 - [Generate an Entity Wiki Over Your Own Notes](generate-an-entity-wiki-over-your-own-notes.md)
 - [Agent-native runtimes provide fast, API-controlled sandboxes](agent-native-runtimes-provide-fast-api-controlled-sandboxes.md)
 - [Automate a Nightly Generate-and-Publish Media Pipeline With Sampled QA](automate-a-nightly-generate-and-publish-media-pipeline-with-sampled-qa.md)
+- [Give Unowned Operational Work a Trigger](give-unowned-operational-work-a-trigger.md)
 
 Sources:
 - [LLM Knowledge Bases: a practical guide — Ben Holmes, Warp](../sources/20260812_I3bpdgFJCUY.md), 13:31-17:25
+- [Always-on agents run production without the on-call tax — Justin Smith, Resolve AI](../sources/20260809_vSx5IULvBns.md), 11:15-12:33
