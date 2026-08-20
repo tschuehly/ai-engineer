@@ -1,0 +1,35 @@
+# Place a Continual-Learning Setup on Two Axes: Trace Policyness and Hint Provenance
+
+Summary: "Online continual learning" names two independent choices that are usually collapsed into one word — how on-policy the *traces* are (a one-time production dump, a daily batch, or a serving model updated from its own rollouts) and where the *hint* comes from (a static prior held before any rollout, or one constructed against what the model just did). Separating them turns a vague ambition into a grid you can locate a project on, and shows that the two axes have different prerequisites and different ceilings.
+
+Use when:
+- Two teams both say "we do online continual learning" and you need to know whether they mean the same thing.
+- Scoping a weight-level improvement program against what infrastructure you actually have.
+- Deciding which corner of the design space to start in given a trace dump but no replayable environment.
+
+Details:
+- **Axis one, trace policyness**, is presented as a spectrum with three named points. At the offline end, "you get a single batch of traces from a production agent, and you're meant to just do something with it… you want to learn via hindsight, you want to learn via the mistakes the agent made." In the middle sits "a daily batch of production traces." At the online end is "this sort of unified engine of putting inference and training together… a model that's serving production traffic, it does a rollout, it creates a trace, we figure out how to learn from that trace, we update the model, and then we serve the next production request" — called "the holy grail of continual learning." ([Applied Compute](../sources/20260812_ZTA0GwpAUak.md), 01:24-02:48)
+- **Axis two, hint provenance**, exists because distillation needs a teacher better than the student: "we need to create some kind of hint or have some kind of privileged information. And so the question is where does this hint come from?" An *offline* hint comes "from some static or offline data… known rubrics for a single task… general priors about behavior that needs to get better, such as like a customer support agent that is too willing to give refunds," and its defining property is that "it's independent of the online model's rollout." An *online* hint is "dynamically constructed from the online rollout… completely dependent on the online rollout and the online policy that's doing the work." ([Applied Compute](../sources/20260812_ZTA0GwpAUak.md), 03:43-05:05)
+- The axes are independent, which is the point of drawing them separately: you can pair a static prior with a live rollout, or a rollout-specific hint with a trace from days ago. The four combinations Denton enumerates are offline hint on offline trace; offline hint on an online rollout; an off-policy trace with a single on-policy step and a hint written against that step; and online hint on online trace. ([Applied Compute](../sources/20260812_ZTA0GwpAUak.md), 05:33-07:44)
+- **The honest caveat travels with the grid**: "these are all spectrums, right? So I've drawn lines and put things in boxes where boxes sometimes don't make sense as boxes, but more as spectrums." The third combination is the clearest evidence — a single on-policy step inside an otherwise off-policy trace is a point partway along axis one, not a corner. Treat the grid as coordinates, not categories. ([Applied Compute](../sources/20260812_ZTA0GwpAUak.md), 05:11-05:33)
+- The practical asymmetry between the axes is what makes the split useful for planning. Moving right on the trace axis needs infrastructure you may not have — a replayable environment or the willingness to train a model that is serving traffic. Moving to online hints needs only that you look at each rollout before writing the hint, which is a judge call, not a systems change. That is why [offline hints on offline traces need no replayable environment](offline-hints-on-offline-traces-need-no-replayable-environment.md) and why [an online hint beat a static one on the same task](hint-against-the-rollout-when-rewards-and-sft-degrade-the-base-model.md).
+- Applied Compute says it researches all four but works two: offline/offline, "how we meet enterprises who are ready to have their production agents improve today," and online/online, "our most scalable solution." The commercial phrasing is "we can improve for free today, and we can raise all ceilings tomorrow." ([Applied Compute](../sources/20260812_ZTA0GwpAUak.md), 07:44-09:49)
+- **Where this sits relative to the wiki's other continual-learning taxonomy.** Yu Su's four axes — experience, compression, structure, use — classify learning loops of every shape ([Define Continual Learning as Adaptive Compression of Experience](define-continual-learning-as-adaptive-compression-of-experience.md)). Denton's grid subdivides a single cell of that taxonomy: experience = agent traces, compression = distillation into parameters. Neither of his axes appears in Su's list, which is a sign the field's naming problem is deeper than one level of decomposition, not that the two disagree.
+- Provenance: this is a vendor taxonomy from a company selling both corners, presented in a talk that closes on hiring. The axes are a useful discriminator regardless; the claim that the online corner has the higher ceiling is asserted from their own unpublished runs.
+
+Related topics:
+- [Models](../topics/models.md)
+- [Agents](../topics/agents.md)
+- [Infrastructure](../topics/infrastructure.md)
+
+Related concepts:
+- [Distill Without a Golden Answer by Giving the Teacher Privileged Information](distill-without-a-golden-answer-using-privileged-information.md)
+- [Offline Hints on Offline Traces Need No Replayable Environment](offline-hints-on-offline-traces-need-no-replayable-environment.md)
+- [Buy On-Policyness With a Single Rollout Step on an Offline Trace](buy-on-policyness-with-a-single-rollout-step.md)
+- [When Rewards and SFT Both Degrade the Base Model, Hint Against the Rollout](hint-against-the-rollout-when-rewards-and-sft-degrade-the-base-model.md)
+- [Define Continual Learning as Adaptive Compression of Experience](define-continual-learning-as-adaptive-compression-of-experience.md)
+- [Observability and Continual Learning Are the Same Problem](observability-and-continual-learning-are-the-same-problem.md)
+- [Pipeline RL Trades Policy Staleness for GPU Throughput](pipeline-rl-trades-policy-staleness-for-gpu-throughput.md)
+
+Sources:
+- [Bringing Continual Learning into Enterprises — Samuel Denton, Applied Compute](../sources/20260812_ZTA0GwpAUak.md), 01:24-09:49

@@ -18,12 +18,16 @@ Details:
 - The caveat the talk flags but does not spend: this approach "also has some properties that are not necessarily appealing" — which turn out to be the shared ceiling of the whole family, not something specific to distillation ([The Synthetic Data Wall](the-synthetic-data-wall-caps-every-define-then-train-loop.md)). ([Engram](../sources/20260812_WiqDvX6isc4.md), 14:12-14:18)
 - Provenance and limits: a one-minute characterization of other people's work by a researcher at a company pursuing a different approach, with no results, no comparison, and no description of self-study beyond "question and answer pairs conditioned on D." The cartridges paper is the thing to read; the durable content here is the *framing* of what distillation transfers, not any claim about how well it performs. The transcript attributes on-policy distillation to another speaker at the same event by first name only.
 
+- **The general move this is one instance of: manufacture the asymmetry.** Applied Compute states the requirement in its bare form — "in order to create a teacher that's smarter than this on-policy model, we need to create some kind of hint or have some kind of privileged information" — and satisfies it with a *statement about what the model should have done* rather than knowledge in the window ([Distill Without a Golden Answer by Giving the Teacher Privileged Information](distill-without-a-golden-answer-using-privileged-information.md)). Putting D in the context and quoting the rollout back at the model are two ways of building the same gap, which is a useful thing to see explicitly when neither a larger model nor a labelled answer is available. ([Applied Compute](../sources/20260812_ZTA0GwpAUak.md), 03:43-04:07)
+- Note what the two variants each supply. Context-stuffing gives the teacher *knowledge* and is the right shape when the goal is domain competence; a hint gives the teacher *hindsight about this rollout* and is the right shape when the goal is a behavior change. The corpus problem this page addresses cannot be solved by hints — there is nothing to quote back — and the behavior problems Applied Compute reports cannot be solved by stuffing a corpus.
+
 Related topics:
 - [Models](../topics/models.md)
 - [Context Engineering](../topics/context-engineering.md)
 - [Inference](../topics/inference.md)
 
 Related concepts:
+- [Distill Without a Golden Answer by Giving the Teacher Privileged Information](distill-without-a-golden-answer-using-privileged-information.md)
 - [Distill reasoning traces into small models](distill-reasoning-traces-into-small-models.md)
 - [Train Long-Tail Knowledge Into Weights With Curated Synthetic Data](train-long-tail-knowledge-into-weights-with-curated-synthetic-data.md)
 - [A Perfect Training Loss on Your Corpus Is Not Knowledge](a-perfect-training-loss-on-your-corpus-is-not-knowledge.md)
@@ -33,3 +37,4 @@ Related concepts:
 
 Sources:
 - [Scaling Compute on Context — Jack Morris, Engram](../sources/20260812_WiqDvX6isc4.md), 13:10-14:18
+- [Bringing Continual Learning into Enterprises — Samuel Denton, Applied Compute](../sources/20260812_ZTA0GwpAUak.md), 03:43-04:07

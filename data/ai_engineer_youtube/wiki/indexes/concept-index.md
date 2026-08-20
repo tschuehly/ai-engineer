@@ -1,6 +1,13 @@
 # Concept Index
 
 ## Agents
+- [Place a Continual-Learning Setup on Two Axes: Trace Policyness and Hint Provenance](../concepts/place-a-continual-learning-setup-on-the-trace-and-hint-axes.md) - two independent axes — how on-policy the trace is and where the hint comes from — turn "continual learning" into four concrete setups with different prerequisites.
+- [Distill Without a Golden Answer by Giving the Teacher Privileged Information](../concepts/distill-without-a-golden-answer-using-privileged-information.md) - make the teacher smarter than the student with information rather than size, so self-distillation works with no correct output and no rubric.
+- [Offline Hints on Offline Traces Need No Replayable Environment](../concepts/offline-hints-on-offline-traces-need-no-replayable-environment.md) - the cheapest continual-learning corner: a stored trace dump plus a static behavior prior, no environment and no rollouts.
+- [A Teacher Can Install a Tool Call by Moving the Reasoning Path, Never the Call Tokens](../concepts/move-the-reasoning-path-not-the-target-tokens.md) - task-completion rate reportedly went ~22%→60% by conditioning on traces that never contained the tool call.
+- [Buy On-Policyness With a Single Rollout Step on an Offline Trace](../concepts/buy-on-policyness-with-a-single-rollout-step.md) - regenerate one step from the current policy against a stale prefix — no environment interaction — and hint against that.
+- [Let a Judge Place the Hint and Distill Only the Steps Near It](../concepts/let-a-judge-place-the-hint-and-distill-only-nearby-steps.md) - the same advice applied uniformly barely helped; placement carried the result, and the learning signal decays with distance from the hint.
+- [Mask Irrelevant Teacher Tokens Before Learning From Them](../concepts/mask-irrelevant-teacher-tokens-before-learning-from-them.md) - an LLM judge selects which teacher tokens the student learns from, because the teacher's connector-word preferences carry no lesson.
 - [Automating Harness Design Requires Co-Optimizing the Model](../concepts/automating-harness-design-requires-co-optimizing-the-model.md) - an automated search over agent scaffolds converges against a frozen model; the joint version is the claim.
 - [Rank a Decisions Ledger Instead of Retrieving Memories by Similarity](../concepts/rank-a-decisions-ledger-instead-of-retrieving-memories-by-similarity.md) - record what was decided each turn and rank it; beat vector similarity, recency, and no-recall on a 500-step task.
 - [Do Not Gate Memory Use on the Agent's Own Judgment](../concepts/do-not-gate-memory-use-on-the-agents-own-judgment.md) - asking the model whether it needs memory lost to always-on ranked recall.
@@ -511,6 +518,9 @@
 - [Learn risk scoring from audit feedback for predictive compliance](../concepts/learn-risk-scoring-from-audit-feedback-for-predictive-compliance.md)
 
 ## Coding Agents
+- [A Teacher Can Install a Tool Call by Moving the Reasoning Path, Never the Call Tokens](../concepts/move-the-reasoning-path-not-the-target-tokens.md) - task-completion rate reportedly went ~22%→60% by conditioning on traces that never contained the tool call.
+- [When Rewards and SFT Both Degrade the Base Model, Hint Against the Rollout](../concepts/hint-against-the-rollout-when-rewards-and-sft-degrade-the-base-model.md) - a correct, non-hackable format reward and SFT on correct traces both cost general coding ability; a rollout-specific hint took correctness ~15%→80%.
+- [Measure a Behavior Change With Three Metrics Including Their Intersection](../concepts/measure-a-behavior-change-with-three-metrics-including-their-intersection.md) - behavior rate, base-task rate measured irrespective of the behavior, and the fraction that does both — stated as a joint goal, not a headline plus a footnote.
 
 - [A Modern Moravec's Paradox Explains the Coding-Agent Gap](../concepts/a-modern-moravecs-paradox-explains-the-coding-agent-gap.md) - coding agents work because code supplies symbols, structure, and tests for free, which is why the success does not port.
 - [Code Review Carries Alignment, Not Just Correctness](../concepts/code-review-carries-alignment-not-just-correctness.md) - review's knowledge-sharing, mentorship, and onboarding half has no tooling substitute.
@@ -921,6 +931,9 @@
 - [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md)
 
 ## Infrastructure
+- [Place a Continual-Learning Setup on Two Axes: Trace Policyness and Hint Provenance](../concepts/place-a-continual-learning-setup-on-the-trace-and-hint-axes.md) - two independent axes — how on-policy the trace is and where the hint comes from — turn "continual learning" into four concrete setups with different prerequisites.
+- [Offline Hints on Offline Traces Need No Replayable Environment](../concepts/offline-hints-on-offline-traces-need-no-replayable-environment.md) - the cheapest continual-learning corner: a stored trace dump plus a static behavior prior, no environment and no rollouts.
+- [Buy On-Policyness With a Single Rollout Step on an Offline Trace](../concepts/buy-on-policyness-with-a-single-rollout-step.md) - regenerate one step from the current policy against a stale prefix — no environment interaction — and hint against that.
 - [Distributable Compute Lowers the Barrier to Frontier Work](../concepts/distributable-compute-lowers-the-barrier-to-frontier-work.md) - pre-training compute must be colocated; the workloads now carrying the returns do not, which is an argument about who can enter.
 - [Customization Control Is a Separate Question From Open Weights](../concepts/customization-control-is-a-separate-question-from-open-weights.md) - weight distribution, adaptation control, and deployment locality are three axes, and a rule naming one leaves the others open.
 - [Continued Pre-Training on a Private Corpus Owes a Post-Training Debt](../concepts/continued-pretraining-on-a-private-corpus-owes-a-post-training-debt.md) - the checkpoint decision that has to be made before the training project starts.
@@ -1420,6 +1433,11 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Distill Without a Golden Answer by Giving the Teacher Privileged Information](../concepts/distill-without-a-golden-answer-using-privileged-information.md) - make the teacher smarter than the student with information rather than size, so self-distillation works with no correct output and no rubric.
+- [When Rewards and SFT Both Degrade the Base Model, Hint Against the Rollout](../concepts/hint-against-the-rollout-when-rewards-and-sft-degrade-the-base-model.md) - a correct, non-hackable format reward and SFT on correct traces both cost general coding ability; a rollout-specific hint took correctness ~15%→80%.
+- [Let a Judge Place the Hint and Distill Only the Steps Near It](../concepts/let-a-judge-place-the-hint-and-distill-only-nearby-steps.md) - the same advice applied uniformly barely helped; placement carried the result, and the learning signal decays with distance from the hint.
+- [Mask Irrelevant Teacher Tokens Before Learning From Them](../concepts/mask-irrelevant-teacher-tokens-before-learning-from-them.md) - an LLM judge selects which teacher tokens the student learns from, because the teacher's connector-word preferences carry no lesson.
+- [Measure a Behavior Change With Three Metrics Including Their Intersection](../concepts/measure-a-behavior-change-with-three-metrics-including-their-intersection.md) - behavior rate, base-task rate measured irrespective of the behavior, and the fraction that does both — stated as a joint goal, not a headline plus a footnote.
 - [A Budget Stopping Rule Can Masquerade as a Capability Ceiling](../concepts/a-budget-stopping-rule-can-masquerade-as-a-capability-ceiling.md) - scores clustered just above a round number measure the termination criterion, not the system; publish the rule with the number.
 - [Co-Optimize Data With the Model or the Search Does Not Pay](../concepts/co-optimize-data-with-the-model-or-the-search-does-not-pay.md) - a sweep that holds data quality fixed hides the interaction that carried the returns.
 - [An Automated Training Search Beats Staff by Not Carrying Architecture Priors](../concepts/automated-training-search-beats-staff-by-not-carrying-architecture-priors.md) - no favorite architecture family, and willingness to move many hyperparameters at once.
@@ -1756,6 +1774,15 @@
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 
 ## Models
+- [Place a Continual-Learning Setup on Two Axes: Trace Policyness and Hint Provenance](../concepts/place-a-continual-learning-setup-on-the-trace-and-hint-axes.md) - two independent axes — how on-policy the trace is and where the hint comes from — turn "continual learning" into four concrete setups with different prerequisites.
+- [Distill Without a Golden Answer by Giving the Teacher Privileged Information](../concepts/distill-without-a-golden-answer-using-privileged-information.md) - make the teacher smarter than the student with information rather than size, so self-distillation works with no correct output and no rubric.
+- [Offline Hints on Offline Traces Need No Replayable Environment](../concepts/offline-hints-on-offline-traces-need-no-replayable-environment.md) - the cheapest continual-learning corner: a stored trace dump plus a static behavior prior, no environment and no rollouts.
+- [A Teacher Can Install a Tool Call by Moving the Reasoning Path, Never the Call Tokens](../concepts/move-the-reasoning-path-not-the-target-tokens.md) - task-completion rate reportedly went ~22%→60% by conditioning on traces that never contained the tool call.
+- [Buy On-Policyness With a Single Rollout Step on an Offline Trace](../concepts/buy-on-policyness-with-a-single-rollout-step.md) - regenerate one step from the current policy against a stale prefix — no environment interaction — and hint against that.
+- [When Rewards and SFT Both Degrade the Base Model, Hint Against the Rollout](../concepts/hint-against-the-rollout-when-rewards-and-sft-degrade-the-base-model.md) - a correct, non-hackable format reward and SFT on correct traces both cost general coding ability; a rollout-specific hint took correctness ~15%→80%.
+- [Let a Judge Place the Hint and Distill Only the Steps Near It](../concepts/let-a-judge-place-the-hint-and-distill-only-nearby-steps.md) - the same advice applied uniformly barely helped; placement carried the result, and the learning signal decays with distance from the hint.
+- [Mask Irrelevant Teacher Tokens Before Learning From Them](../concepts/mask-irrelevant-teacher-tokens-before-learning-from-them.md) - an LLM judge selects which teacher tokens the student learns from, because the teacher's connector-word preferences carry no lesson.
+- [Measure a Behavior Change With Three Metrics Including Their Intersection](../concepts/measure-a-behavior-change-with-three-metrics-including-their-intersection.md) - behavior rate, base-task rate measured irrespective of the behavior, and the fraction that does both — stated as a joint goal, not a headline plus a footnote.
 - [Pre-Training Size Is No Longer the Most Lucrative Scaling Axis](../concepts/pretraining-size-is-no-longer-the-most-lucrative-scaling-axis.md) - the architecture-ceiling argument, what evidence is actually offered for it, and what it does not claim.
 - [An Automated Training Search Beats Staff by Not Carrying Architecture Priors](../concepts/automated-training-search-beats-staff-by-not-carrying-architecture-priors.md) - two stated mechanisms behind an unpublished win rate over research staff.
 - [Co-Optimize Data With the Model or the Search Does Not Pay](../concepts/co-optimize-data-with-the-model-or-the-search-does-not-pay.md) - the returns did not appear until data quality entered the search space alongside the model.

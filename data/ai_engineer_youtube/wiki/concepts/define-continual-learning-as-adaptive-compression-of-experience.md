@@ -20,12 +20,17 @@ Details:
 - Morris's own instantiation is worth reading through the axes as a check on their coverage: the *experience* is a fixed unstructured corpus (emails, meeting transcripts), the *compression* is gradient-based training, the *structure* is model parameters, and the *use* is answering and generating in the domain. His central complaint — that this loop saturates because the dataset is defined once — is precisely a failure of Su's "adaptive" qualifier, and the escape he points at is a curriculum that gets harder as the model improves ([Seek the AlphaGo Property](seek-the-alphago-property-so-added-compute-keeps-buying-depth.md)). ([Engram](../sources/20260812_WiqDvX6isc4.md), 16:23-16:57, 17:35-18:05)
 - Provenance: a definitional contribution from a conceptual talk, by the COO of a company focused on continual learning. It is not validated against anything; its value is as a specification checklist, and the fourth axis (use) is the one most often left implicit in the systems above.
 
+- **One cell of this taxonomy needs two more axes, which is a result about the taxonomy's resolution rather than a correction to it.** Applied Compute's whole talk lives in a single cell — experience = agent traces, compression = distillation into parameters — and inside it distinguishes two independent dimensions that appear nowhere in Su's four: how on-policy the traces are, and whether the supervising hint is a static prior or constructed against the rollout just produced ([Place a Continual-Learning Setup on Two Axes](place-a-continual-learning-setup-on-the-trace-and-hint-axes.md)). Two systems can match on all four of Su's axes and still differ on both of Denton's, with different infrastructure prerequisites and, by Applied Compute's account, different ceilings. ([Applied Compute](../sources/20260812_ZTA0GwpAUak.md), 01:24-05:33)
+- The addition also puts a name to something the "experience" axis leaves implicit: experience alone is not supervision. A trace records what the policy did, so distilling from it requires a second input carrying what it should have done ([Distill Without a Golden Answer](distill-without-a-golden-answer-using-privileged-information.md)). Auditing a learning loop for "which axis did nobody choose deliberately" should include this one — where the corrective signal comes from — alongside Su's four. ([Applied Compute](../sources/20260812_ZTA0GwpAUak.md), 03:43-04:07, 09:49-10:36)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Context Engineering](../topics/context-engineering.md)
 - [Models](../topics/models.md)
 
 Related concepts:
+- [Place a Continual-Learning Setup on Two Axes: Trace Policyness and Hint Provenance](place-a-continual-learning-setup-on-the-trace-and-hint-axes.md)
+- [Distill Without a Golden Answer by Giving the Teacher Privileged Information](distill-without-a-golden-answer-using-privileged-information.md)
 - [Separate Intelligence From Expertise When Diagnosing an Agent](separate-intelligence-from-expertise-when-diagnosing-agents.md)
 - [Reliability and Plasticity Conflict in Continually Learning Agents](reliability-and-plasticity-conflict-in-continually-learning-agents.md)
 - [Profile Synthesis Is Continual Learning Outside the Weights](profile-synthesis-is-continual-learning-outside-the-weights.md)
@@ -39,3 +44,4 @@ Related concepts:
 Sources:
 - [Intelligence + Continual Learning = Expertise — Yu Su, NeoCognition](../sources/20260812_I6aiEf3aEFQ.md), 10:27-12:41
 - [Scaling Compute on Context — Jack Morris, Engram](../sources/20260812_WiqDvX6isc4.md), 04:33-05:05, 16:23-16:57, 17:35-18:05
+- [Bringing Continual Learning into Enterprises — Samuel Denton, Applied Compute](../sources/20260812_ZTA0GwpAUak.md), 01:24-05:33, 09:49-10:36
