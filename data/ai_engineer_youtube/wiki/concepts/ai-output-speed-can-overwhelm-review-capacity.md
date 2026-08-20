@@ -28,6 +28,8 @@ Details:
 
 - Matt Dailey (Ref) records the same overload one step downstream of the reviewer, in the integration machinery: "too many PRs to merge. This is the like classic first problem you hit when you start adopting AI as an engineer… Merge conflicts, merge queue breaks down, things get bad." Worth separating from review capacity as a distinct constraint — merge-queue serialization and conflict rate degrade with concurrent branch count regardless of how fast anyone reads. His proposed relief is upstream rather than in the queue: align on the key decisions before implementation so fewer branches are pointed at the same code and the eventual review is smaller. ([Dailey](../sources/20260809_Kz4QJmNrVXU.md), 01:36-01:55, 16:03-16:54)
 
+- **Widening who can originate work multiplies the same load, and the sources that report it rarely price it.** Superconductor combines three amplifiers on one engineering team: 99.9% agent-generated PRs against "everything's human reviewed," support and growth people triggering fixes directly ([environment isolation](environment-isolation-is-what-lets-non-engineers-trigger-real-work.md)), and a meeting bot that produces "dozens of new ideas that are prototyped" plus "at least a few shippable PRs" after every customer or team meeting ([turn unfiled conversation into concrete prototypes](turn-unfiled-conversation-into-concrete-prototypes.md)). No merge rate, rework rate, or reviewer-hours figure is offered for any of the three. Worth using as a checklist item: each new origination channel is a multiplier on a denominator that stays fixed at the number of people who can review. ([Arjun Singh](../sources/20260809_OL7kfezynJM.md), 08:24-08:42, 16:00-16:16)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -43,6 +45,8 @@ Related concepts:
 - [Code Review Carries Alignment, Not Just Correctness](code-review-carries-alignment-not-just-correctness.md)
 - [Make Intent and Evidence the Review Surface](make-intent-and-evidence-the-review-surface.md)
 - [Velocity Sickness Is Output Without Impact](velocity-sickness-is-output-without-impact.md)
+- [Environment Isolation Is What Lets Non-Engineers Trigger Real Work](environment-isolation-is-what-lets-non-engineers-trigger-real-work.md)
+- [Turn Unfiled Conversation Into Concrete Prototypes](turn-unfiled-conversation-into-concrete-prototypes.md)
 
 Sources:
 - [The Friction is Your Judgment - Armin Ronacher & Cristina Poncela Cubeiro, Earendil](../sources/20260418__Zcw_sVF6hU.md), 03:35-07:10
@@ -54,3 +58,4 @@ Sources:
 - [Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab](../sources/20260811_aeTb5BdmTTc.md), 06:06-06:36
 - [Guide, Verify, Solve — Anirban Chatterjee, Sonar](../sources/20260809_03l29gJXpCE.md), 06:37-07:39
 - [Velocity Sickness: What Happens When Your Whole Team Gets 10x Faster — Matt Dailey, Ref.](../sources/20260809_Kz4QJmNrVXU.md), 01:36-01:55, 16:03-16:54
+- [Multiplayer agentic engineering — Arjun Singh, Superconductor](../sources/20260809_OL7kfezynJM.md), 08:24-08:42, 16:00-16:16

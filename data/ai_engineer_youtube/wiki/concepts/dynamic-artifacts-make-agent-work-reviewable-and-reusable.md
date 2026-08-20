@@ -16,6 +16,8 @@ Details:
 - Artifacts can be stored as memory when the agent derives reusable knowledge, such as API schemas learned through documentation plus live `curl` exploration. 16:49-17:35
 - Commenting on text or image artifacts gives the user a Google Docs/GitHub/Figma-like feedback surface that the agent can incorporate during execution without forcing the whole loop to stop. 17:37-19:20
 
+- **On a team, the artifact's second job is to be findable from wherever the reader is.** Superconductor treats screenshots and videos as the medium through which agent work becomes visible across surfaces: "it doesn't matter where the work started or where it's finishing, the agent can show you the work it's doing as screenshot or video or other. And you can see it from everywhere… you don't have to worry about like, 'Oh, where is that thing? I got to go to GitHub to see the image or got to go to Slack to see the image.'" The enabling design is that the artifact belongs to the session rather than to the tool that produced it ([make one agent session reachable from every interface](make-one-agent-session-reachable-from-every-interface.md)). It is also what closes the loop for a non-engineer who triggered the work: the reported flow is that they ask for a fix in Slack, "screenshots are shown," and an engineer merges — so the artifact is doing verification for someone with no way to run the code. ([Arjun Singh](../sources/20260809_OL7kfezynJM.md), 05:09-05:31, 12:26-12:45)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Coding Agents](../topics/coding-agents.md)
@@ -26,6 +28,9 @@ Related concepts:
 - [Collaborate with complex agents through high-bandwidth artifacts](collaborate-with-complex-agents-through-high-bandwidth-artifacts.md)
 - [Review bundles compress parallel agent output into evidence](review-bundles-compress-parallel-agent-output-into-evidence.md)
 - [Agent managers orchestrate editor, browser, and background agents](agent-managers-orchestrate-editor-browser-and-background-agents.md)
+- [Make One Agent Session Reachable From Every Interface](make-one-agent-session-reachable-from-every-interface.md)
+- [Environment Isolation Is What Lets Non-Engineers Trigger Real Work](environment-isolation-is-what-lets-non-engineers-trigger-real-work.md)
 
 Sources:
 - [Defying Gravity - Kevin Hou, Google DeepMind](../sources/20251202_HN-F-OQe6j0.md), 12:48-19:20
+- [Multiplayer agentic engineering — Arjun Singh, Superconductor](../sources/20260809_OL7kfezynJM.md), 05:09-05:31, 12:26-12:45

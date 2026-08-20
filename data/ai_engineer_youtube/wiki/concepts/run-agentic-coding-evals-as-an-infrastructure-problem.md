@@ -16,6 +16,8 @@ Details:
 - Validate your harness against an external benchmark (SWE-bench, Terminal Bench) and confirm your numbers match the reported numbers *before* running your own experiments. (10:38-10:53)
 - Caching materially improves cost efficiency (~4x for the simple agent), but token-hungry harnesses like Claude Code stay expensive even with caching and Haiku sub-agents — so cost is part of the infrastructure budget, not a footnote. (09:40-10:10)
 
+- **A team running its own agents already has most of this infrastructure, which lowers the cost of a private benchmark.** Superconductor replays its own merged pull requests through candidate agents and plots quality against cost and against time; the reason it is affordable is that the isolated-environment substrate their product needs anyway is the same substrate an eval harness needs — every replay is one more sandboxed run of the codebase. Their headline number makes the scale concrete: "3,300 Claude code runs that cost $10,000 in tokens daily" at plan pricing, with "Codex had four times as many" sessions "and it was cheaper overall." That reframes eval infrastructure for a product team as a marginal cost on capacity it already operates, rather than a separate build — see [replay your own merged PRs as the coding-agent benchmark](replay-your-own-merged-prs-as-the-agent-benchmark.md). Caveat: no reproducibility discipline is described — no seeds, no repeated trials, no variance figures, and no account of how a replayed attempt is scored against the original PR — so this is the infrastructure without the measurement rigor this page argues for. ([Arjun Singh](../sources/20260809_OL7kfezynJM.md), 13:25-14:51, 16:16-16:38)
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Coding Agents](../topics/coding-agents.md)
@@ -27,6 +29,8 @@ Related concepts:
 - [Validate eval harnesses before trusting skill scores](validate-eval-harnesses-before-trusting-skill-scores.md)
 - [Evaluate Agent Loops With Correctness, Cost, Latency, and Step Counts](evaluate-agent-loops-with-correctness-cost-latency-and-step-counts.md)
 - [Portfolio-Allocate Eval Failures With a Triage Agent](portfolio-allocate-eval-failures-with-a-triage-agent.md)
+- [Replay Your Own Merged PRs as the Coding-Agent Benchmark](replay-your-own-merged-prs-as-the-agent-benchmark.md)
 
 Sources:
 - [SWE-rebench: Lessons from Evaluating Coding Agents — Ibragim Badertdinov, Nebius](../sources/20260604_wcUJWP6WpGM.md), 05:11-10:53
+- [Multiplayer agentic engineering — Arjun Singh, Superconductor](../sources/20260809_OL7kfezynJM.md), 13:25-14:51, 16:16-16:38

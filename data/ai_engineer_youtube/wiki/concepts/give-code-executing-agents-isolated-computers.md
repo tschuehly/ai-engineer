@@ -15,6 +15,8 @@ Details:
 - The isolated environment still needs the right dependencies and task access; isolation should not prevent validation, but it should limit second-order consequences outside the intended workspace. 06:09-08:24
 - Burazin describes the positive product side of isolation: a sandbox can become an agent-native runtime when the agent can quickly create, control, clone, and use the environment through APIs and preloaded tools. 08:12-09:53
 
+- **The strongest argument for isolation is not what the agent was given but what it can find.** Superconductor demotes the convenience case — "lid anxiety," people running through airports with laptops open — as real but "not the most important reason to do this," and puts the credential surface first: developer laptops, "unless you have like impeccable hygiene, probably have a bunch of stuff on it that you don't want the LLMs or agents to have access to." The failure mode is an obedient agent, not a rogue one: told to wipe staging, it "finds a token on your laptop that it can use and it thinks it's working with staging, but actually it's production." Per-tool permission scoping cannot cover this, because you cannot scope a credential nobody enumerated — see [a developer laptop is an ambient-credential surface](a-developer-laptop-is-an-ambient-credential-surface.md). Two qualifications: the frequency claim is explicitly weak ("I'm not trying to say this is happening constantly, but it still happens"), and moving execution to a vendor's cloud inverts the trust boundary rather than removing it, which the talk does not address. ([Arjun Singh](../sources/20260809_OL7kfezynJM.md), 09:13-11:23)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Infrastructure](../topics/infrastructure.md)
@@ -25,8 +27,11 @@ Related concepts:
 - [Run Agent-Written API Code Inside Programmable Sandboxes](run-agent-written-api-code-inside-programmable-sandboxes.md)
 - [Do Not Roll Your Own Agent Code Sandbox](do-not-roll-your-own-agent-code-sandbox.md)
 - [Agent-Native Runtimes Provide Fast API-Controlled Sandboxes](agent-native-runtimes-provide-fast-api-controlled-sandboxes.md)
+- [A Developer Laptop Is an Ambient-Credential Surface](a-developer-laptop-is-an-ambient-credential-surface.md)
+- [Environment Isolation Is What Lets Non-Engineers Trigger Real Work](environment-isolation-is-what-lets-non-engineers-trigger-real-work.md)
 
 Sources:
 - [Software Development Agents: What Works and What Doesn't - Robert Brennan, OpenHands](../sources/20250725_o_hhkJtlbSs.md), 06:44-07:23
 - [OpenAI on Securing Code-Executing AI Agents - Fouad Matin (Codex, Agent Robustness)](../sources/20250730_w7IMuYsBNr8.md), 04:25-08:24
 - [AX is the only Experience that Matters - Ivan Burazin, Daytona](../sources/20250724_e9sLVMN76qU.md), 08:12-09:53
+- [Multiplayer agentic engineering — Arjun Singh, Superconductor](../sources/20260809_OL7kfezynJM.md), 09:13-11:23

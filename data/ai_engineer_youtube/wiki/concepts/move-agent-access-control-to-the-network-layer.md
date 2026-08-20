@@ -20,6 +20,8 @@ Details:
 - **The direction of the connection is also a control.** Where the protected resource is on the customer's side rather than the agent's, Anthropic inverts the tunnel so private MCP servers "run only within their private network and only making outbound calls to the Claude agent loop" — no listener, no inbound rule, and the customer's existing egress controls become the enforcement point ([Reach Private MCP Servers With Outbound-Only Tunnels](reach-private-mcp-servers-with-outbound-only-tunnels.md)). Like identity at the network layer, this governs whether a connection may exist, not what is said over it. ([Anthropic Applied AI](../sources/20260811_K0X9QDRkIdg.md), 25:47-26:34)
 - **The concentration caveat both designs inherit.** Whoever holds the only real credential becomes the highest-value target in the deployment. Dahl states it about his own system — "Claw Patrol itself is holding all of these credentials to production systems. So you have to be very careful with it" — and the same is structurally true of a gateway holding the only provider key. ([Ryan Dahl](../sources/20260817_MkRYPFIMCSA.md), 16:12-16:32)
 
+- **The case this approach uniquely answers is the credential the agent was never given.** Superconductor's argument for moving agents off laptops is that a working developer machine holds credentials nobody enumerated, and a helpful agent will find one — told to wipe staging, it "finds a token on your laptop that it can use and it thinks it's working with staging, but actually it's production" ([a developer laptop is an ambient-credential surface](a-developer-laptop-is-an-ambient-credential-surface.md)). A box that holds no real key has nothing for a resourceful agent to discover, which is the property tool-level permission scoping cannot provide. Their own egress control is weaker than what this page describes: a configurable network sandbox with allowed and disallowed destinations that prompts on anything new, scoped "on a per ticket basis or for the whole project" — destination-based, and an interactive approval prompt of the kind the same talk criticizes minutes earlier. ([Arjun Singh](../sources/20260809_OL7kfezynJM.md), 10:12-11:07, 11:24-12:13)
+
 Related topics:
 - [Security](../topics/security.md)
 - [Infrastructure](../topics/infrastructure.md)
@@ -33,8 +35,10 @@ Related concepts:
 - [Server-Side Request Forgery Exfiltrates Agent Credentials](server-side-request-forgery-exfiltrates-agent-credentials.md)
 - [Decrypt Agent Credentials Only at Tool Execution Time](decrypt-agent-credentials-only-at-tool-execution-time.md)
 - [Reach Private MCP Servers With Outbound-Only Tunnels](reach-private-mcp-servers-with-outbound-only-tunnels.md)
+- [A Developer Laptop Is an Ambient-Credential Surface](a-developer-laptop-is-an-ambient-credential-surface.md)
 
 Sources:
 - [What if the network was the sandbox? — Remy Guercio, Tailscale](../sources/20260601_BM2JX9hqsVQ.md), 00:46-07:10, 11:13-11:46, 15:35-18:46
 - [Security Firewall for Agents — Ryan Dahl, Deno](../sources/20260817_MkRYPFIMCSA.md), 10:00-16:32
 - [Anthropic's Applied AI team on the Evolution of Agentic Surfaces](../sources/20260811_K0X9QDRkIdg.md), 18:30-19:20, 22:25-22:47, 25:47-26:34
+- [Multiplayer agentic engineering — Arjun Singh, Superconductor](../sources/20260809_OL7kfezynJM.md), 10:12-11:07, 11:24-12:13

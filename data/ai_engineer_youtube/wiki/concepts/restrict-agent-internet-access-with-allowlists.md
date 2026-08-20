@@ -13,6 +13,8 @@ Details:
 - In the GitHub issue example, hostile issue text asks the agent to post repository data to a random URL; model-level detection can flag suspicion, but the decisive control is a system policy that prevents the outbound call. 09:00-09:47
 - **Caveat: domain and HTTP-method allow-lists only cover the HTTP path.** Deno's threat model is an agent that "can just spawn [psql] as a subprocess and start connecting to services" over a non-HTTP protocol, tunneling to a VPC-internal Postgres through an EKS endpoint — traffic an HTTP-layer rule never parses. The allow-list is still the right first control where the agent's egress is HTTP, but for an agent with subprocess access to production systems the enforcement point has to sit [below HTTP, parsing the wire protocol](enforce-agent-egress-policy-below-the-http-layer.md). ([Ryan Dahl](../sources/20260817_MkRYPFIMCSA.md), 04:45-06:33, 07:40-09:58)
 
+- **The reason to bother is stated as exfiltration, and the practical form is per-project or per-ticket scope with a prompt on anything new.** Superconductor frames egress control as the direction people forget: "it's not just, 'Hey, make sure they don't have the credentials that they shouldn't have.' It's also make sure they can't exfiltrate your code or your projects or your secrets or your content to somewhere they shouldn't be able to." Their sandbox names allowed and disallowed destinations and prompts on a new one — the given example is benign ("maybe you're trying to integrate a new vendor and you need documentation"), which is exactly why a prompt-on-new-destination flow trains toward approval; the same talk criticizes interactive approval as one of two bad camps minutes earlier. The stated goal is "we're not going to leak a bunch of important data by running agents in YOLO mode," which is the honest scope: an allowlist is what makes unattended execution tolerable, not what makes it safe. ([Arjun Singh](../sources/20260809_OL7kfezynJM.md), 11:24-12:13)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Infrastructure](../topics/infrastructure.md)
@@ -22,7 +24,9 @@ Related concepts:
 - [Browser agents sit in the prompt-injection lethal trifecta](browser-agents-sit-in-the-prompt-injection-lethal-trifecta.md)
 - [LLM guardrails need checkpoints at every untrusted boundary](llm-guardrails-need-checkpoints-at-every-untrusted-boundary.md)
 - [Capability-Based Sandboxes Start With No Authority](capability-based-sandboxes-start-with-no-authority.md)
+- [A Developer Laptop Is an Ambient-Credential Surface](a-developer-laptop-is-an-ambient-credential-surface.md)
 
 Sources:
 - [OpenAI on Securing Code-Executing AI Agents - Fouad Matin (Codex, Agent Robustness)](../sources/20250730_w7IMuYsBNr8.md), 05:02-09:47
 - [Security Firewall for Agents — Ryan Dahl, Deno](../sources/20260817_MkRYPFIMCSA.md), 04:45-09:58
+- [Multiplayer agentic engineering — Arjun Singh, Superconductor](../sources/20260809_OL7kfezynJM.md), 11:24-12:13

@@ -16,6 +16,8 @@ Details:
 - **The talk's own use of the data is more modest than the routing advice**, and worth keeping: the leaderboard "serves to put some sunlight on the fact that you still need to be vigilant with these models… None of these models are ever going to be perfect. You're always going to have some kind of need for verification in the loop." Per-dimension routing narrows the gap; it does not close it. (06:12-06:27)
 - Caveats: this is a vendor leaderboard whose axes are the vendor's own product metrics, including at least one proprietary measure (cognitive complexity). The comparison is spoken over a slide, so no numbers are stated for either model; "4,000 or so coding tasks" is the only sample figure given, and the earlier Sonar talk describes its dataset as Java assignments, so language generality is unestablished. Rankings on any such board are also perishable across model releases.
 
+- **The dimensions worth routing on are the ones your own repository separates, which argues for measuring the split yourself.** Superconductor's private benchmark produces two plots rather than one ranking — quality against cost and quality against time — and the families separate differently on each: Anthropic's agents are "consistently getting better, but not really any faster" and "clearly just so much more expensive for us," while Codex and Cursor come out "pretty fast and quite good" and open models are improving but "kind of slow." Latency and price are cruder dimensions than maintainability or security, but the structural point is the same one this page makes: a single ordering hides the tradeoff you are actually making, and the ordering that matters is the one measured on your codebase ([replay your own merged PRs as the coding-agent benchmark](replay-your-own-merged-prs-as-the-agent-benchmark.md)). ([Arjun Singh](../sources/20260809_OL7kfezynJM.md), 13:46-14:51)
+
 Related topics:
 - [Models](../topics/models.md)
 - [Evaluation](../topics/evaluation.md)
@@ -28,6 +30,8 @@ Related concepts:
 - [Verification Guardrails Let You Downshift to Cheaper Models](verification-guardrails-let-you-downshift-to-cheaper-models.md)
 - [Select State of the Art on a Quality-Efficiency Pareto Front](select-state-of-the-art-on-a-quality-efficiency-pareto-front.md)
 - [Verification Debt Outlives the Productivity Spike](verification-debt-outlives-the-productivity-spike.md)
+- [Replay Your Own Merged PRs as the Coding-Agent Benchmark](replay-your-own-merged-prs-as-the-agent-benchmark.md)
 
 Sources:
 - [Guide, Verify, Solve — Anirban Chatterjee, Sonar](../sources/20260809_03l29gJXpCE.md), 04:51-06:27
+- [Multiplayer agentic engineering — Arjun Singh, Superconductor](../sources/20260809_OL7kfezynJM.md), 13:46-14:51

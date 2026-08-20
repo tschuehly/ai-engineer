@@ -16,6 +16,8 @@ Details:
 - It also sharpens a related caveat the wiki already holds. [AI-Generated Security Reports Need Maintainer Triage](ai-generated-security-reports-need-maintainer-triage.md) covers unsolicited reports arriving from outside; this is the internal version, where the team wired the firehose to itself and the triage cost lands on the same people who were supposed to be freed up.
 - Caveat on the count: the captions render "4 or 500 issues" (400–500) while the channel-authored video description says "roughly 4,500 open issues in a couple of weeks." The order of magnitude is unresolved; the failure mode does not depend on which reading is right. No other figure — issues per agent, triage rate, how many were valid — appears anywhere.
 
+- **The cheapest version of the wiring is a deduplication rule stated as part of the filing authority.** A system that opens work from overheard conversation is the highest-volume case of this failure, and Superconductor's guard is one sentence: "if it finds existing work, it'll link to it. So it's not going to just create new work if it's something already working on." Linking rather than filing is a weaker control than an approval gate and a much cheaper one, and it targets the specific harm — duplicate tickets nobody triages — rather than the general one. Their output contract does the rest of the work: what gets produced is a prototype to react to, not a claim on anyone's queue ([turn unfiled conversation into concrete prototypes](turn-unfiled-conversation-into-concrete-prototypes.md)). No duplicate-detection accuracy is reported. ([Arjun Singh](../sources/20260809_OL7kfezynJM.md), 07:06-07:15)
+
 Related topics:
 - [Workflows](../topics/workflows.md)
 - [Coding Agents](../topics/coding-agents.md)
@@ -27,6 +29,8 @@ Related concepts:
 - [Repo-local Markdown tasks give agents durable scoped work units](repo-local-markdown-tasks-give-agents-durable-scoped-work-units.md)
 - [Own Agent Adoption at the Leadership Layer Because the Fixes Are Shared](own-agent-adoption-at-the-leadership-layer-because-the-fixes-are-shared.md)
 - [Automation Loops Convert Repeated Review and Triage Into Factory Improvements](automation-loops-convert-repeated-review-and-triage-into-factory-improvements.md)
+- [Turn Unfiled Conversation Into Concrete Prototypes](turn-unfiled-conversation-into-concrete-prototypes.md)
 
 Sources:
 - [Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab](../sources/20260811_aeTb5BdmTTc.md), 08:03-08:19, 10:32-10:53, 11:54-12:11
+- [Multiplayer agentic engineering — Arjun Singh, Superconductor](../sources/20260809_OL7kfezynJM.md), 07:06-07:15

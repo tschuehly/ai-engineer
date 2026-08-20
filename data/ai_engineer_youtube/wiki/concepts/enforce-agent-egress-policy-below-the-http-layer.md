@@ -20,6 +20,8 @@ Details:
 
 - **What the common alternative looks like, and exactly where Dahl's argument bites it.** Anthropic's managed agents attach an allowed-hosts egress policy to the environment definition — the demo sandbox runs "with the networking limited and allowed hosts only being the MCP server," described as "effectively stop[ping] Claude from doing things that you didn't intend." Host allowlisting is a real and worthwhile control, and attaching it to the environment rather than the agent means every session inherits it ([Model a Managed Agent as Agent, Environment, and Session](model-a-managed-agent-as-agent-environment-session.md)). But it decides *destination*, not *content*: an agent allowed to reach a host can send that host anything the protocol permits, which is precisely the gap this page argues has to be closed by a rule that parses the bytes. The two are layers, not alternatives — and note that neither vendor account has third-party validation behind it. ([Anthropic Applied AI](../sources/20260811_K0X9QDRkIdg.md), 18:30-19:20)
 
+- **What a destination-list sandbox gives you, and where it stops.** Superconductor ships the common shape — allowed and disallowed destinations, a prompt on anything new, scope set "on a per ticket basis or for the whole project" — with exfiltration named as the reason: "make sure they can't exfiltrate your code or your projects or your secrets or your content to somewhere they shouldn't be able to." That governs which hosts a run may reach; it does not govern what is sent to a host already on the list, which is the gap this page's wire-protocol enforcement addresses. The second limitation is procedural: prompting on each new destination is the interactive-approval pattern the same talk rejects two minutes earlier for laptop agents, and the example given for approving one is mundane enough ("maybe you're trying to integrate a new vendor and you need documentation") to train the habit of saying yes. ([Arjun Singh](../sources/20260809_OL7kfezynJM.md), 11:24-12:13)
+
 Related topics:
 - [Security](../topics/security.md)
 - [Agents](../topics/agents.md)
@@ -32,7 +34,9 @@ Related concepts:
 - [Restrict Agent Internet Access With Allowlists](restrict-agent-internet-access-with-allowlists.md)
 - [Run Must-Not-Fail Decisions in a Code Layer Above the Model](run-must-not-fail-decisions-in-code-above-the-model.md)
 - [Reach Private MCP Servers With Outbound-Only Tunnels](reach-private-mcp-servers-with-outbound-only-tunnels.md)
+- [A Developer Laptop Is an Ambient-Credential Surface](a-developer-laptop-is-an-ambient-credential-surface.md)
 
 Sources:
 - [Security Firewall for Agents — Ryan Dahl, Deno](../sources/20260817_MkRYPFIMCSA.md), 04:24-16:32
 - [Anthropic's Applied AI team on the Evolution of Agentic Surfaces](../sources/20260811_K0X9QDRkIdg.md), 18:30-19:20
+- [Multiplayer agentic engineering — Arjun Singh, Superconductor](../sources/20260809_OL7kfezynJM.md), 11:24-12:13

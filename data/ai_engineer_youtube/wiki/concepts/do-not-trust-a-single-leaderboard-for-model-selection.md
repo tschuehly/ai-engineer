@@ -17,6 +17,8 @@ Details:
 
 - **Disagreement is not only between boards — one board can rank a family's own tiers differently on different axes.** Sonar's per-dimension scoring puts Claude Sonnet 4.6 ahead of Opus 4.6 on correctness and task-solving while Opus is the better pick for maintainability, security, or lower complexity ([Chatterjee](../sources/20260809_03l29gJXpCE.md), 04:51-05:57). This is the intra-vendor case of the aggregate-hides-variance bullet above, and the one most likely to be assumed away, because tiers are marketed and priced as a single capability ladder. It also gives the "target the board matching your use case" advice a sharper form: match the *axis*, not just the task family. See [Route Between Model Tiers by Quality Dimension, Not Only Cost](route-between-model-tiers-by-quality-dimension-not-only-cost.md). Caveat in the same direction as this page's argument — that is a vendor board scored on the vendor's own product metrics, including a proprietary one.
 
+- **A fourth failure mode for coding agents specifically: the benchmark is on the wrong stack.** Superconductor's objection to public coding boards is not disagreement or aggregation but subject matter — "SWE-bench is all in Python, we're Ruby on Rails. It is not the case that the benchmarks are identical for them. There's trends that do compare, but the results can be very, very different." That is a stronger caution than "read several boards," because reading more Python benchmarks does not help a Rails team; the remedy is a private set built from your own merged pull requests ([replay your own merged PRs as the coding-agent benchmark](replay-your-own-merged-prs-as-the-agent-benchmark.md)). Their own quality-versus-cost and quality-versus-time plots split the field differently than any public ranking would, and they attach the same disclaimer in reverse: "this is for our code base again. I'm not trying to make any general claims here." ([Arjun Singh](../sources/20260809_OL7kfezynJM.md), 13:46-14:51)
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Models](../topics/models.md)
@@ -34,3 +36,4 @@ Sources:
 - [20 days of compute vs 7 hours: rethinking what state-of-the-art means — Bertrand Charpentier, Pruna](../sources/20260601_hqHC6Z_lXyo.md), 02:33-12:18
 - [Adaption Labs: Gradient-Free Continual Learning — Sara Hooker, Adaption](../sources/20260812_XEd_SRVHBgU.md), 11:36-12:08
 - [Guide, Verify, Solve — Anirban Chatterjee, Sonar](../sources/20260809_03l29gJXpCE.md), 04:51-05:57
+- [Multiplayer agentic engineering — Arjun Singh, Superconductor](../sources/20260809_OL7kfezynJM.md), 13:46-14:51

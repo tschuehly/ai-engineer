@@ -17,6 +17,8 @@ Details:
 - Both systems keep a human in the loop by default, but PostHog notes low-risk changes can ship immediately behind a feature flag (rolled back and deleted if they fail), and aims to learn from every outcome — rejected PRs, deployment issues, errors resolved in production — to improve the next generated PR (PostHog 02:09-02:46, 13:38-14:56).
 - Lovable's vent loop shows the same pattern with an agent-authored signal source: the platform's coding agent reports tooling/platform friction to a Slack channel, and a second monitoring agent deduplicates the vents, investigates, and opens PRs automatically; devs review (review requests arrive on the phone) and in many cases merge to prod — vent-volume spikes also serve as the incident-detection input that kicks the loop off (Lovable 16:44-18:43).
 
+- **The same pipeline shape runs on human speech, where the hard step moves from grouping to noticing.** Superconductor puts a bot in customer calls, onboarding calls and internal meetings alongside Sentry and bug-tracker feeds, and its output is a prototype rather than a fix — "am I going to ship this one exactly how it is? Like, no, probably not. But it's a new idea, it's concrete, I can play with it." Machine signals arrive with structure, a timestamp, and an implicit claim that something is wrong; a spoken remark has none of those, so the deduplication rule ("if it finds existing work, it'll link to it") does the job that grouping and weighting do here, and the output contract is loosened from mergeable to reactable. Useful as the complementary input to the same signal-to-diff machinery — see [turn unfiled conversation into concrete prototypes](turn-unfiled-conversation-into-concrete-prototypes.md). ([Arjun Singh](../sources/20260809_OL7kfezynJM.md), 05:51-08:14)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Coding Agents](../topics/coding-agents.md)
@@ -31,8 +33,10 @@ Related concepts:
 - [Embed LLM-Generated Queries, Not Raw Heterogeneous Signals](embed-llm-generated-queries-not-raw-heterogeneous-signals.md)
 - [Start Expensive With Agents, Then Collapse Proven Steps](start-expensive-with-agents-then-collapse-proven-steps.md)
 - [Give agents a vent tool to report platform friction](give-agents-a-vent-tool-to-report-platform-friction.md)
+- [Turn Unfiled Conversation Into Concrete Prototypes](turn-unfiled-conversation-into-concrete-prototypes.md)
 
 Sources:
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md), 02:33-06:55, 17:24-17:47
 - [Self Driving Products: Product Signals to Pull Requests — Joshua Snyder, PostHog](../sources/20260610_zMiSRliEzv4.md), 02:09-05:53, 07:32-08:45, 10:00-11:03, 13:38-14:56
 - [How Lovable self-improves every hour — Benjamin Verbeek, Lovable](../sources/20260602_KA5kPbdkK2E.md), 16:44-18:43
+- [Multiplayer agentic engineering — Arjun Singh, Superconductor](../sources/20260809_OL7kfezynJM.md), 05:51-08:14

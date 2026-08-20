@@ -1,6 +1,7 @@
 # Concept Index
 
 ## Agents
+- [Turn Unfiled Conversation Into Concrete Prototypes](../concepts/turn-unfiled-conversation-into-concrete-prototypes.md) - MCP access solved reading every signal, not choosing among them; unstructured speech has no ticket number to hand over.
 - [Make the Doc the State and the Agent the Action](../concepts/make-the-doc-the-state-and-the-agent-the-action.md) - stateless agents plus a durable state document makes agents disposable and their context shareable across many of them.
 - [Fast Inference Moves the Agent Bottleneck to the Network](../concepts/fast-inference-moves-the-agent-bottleneck-to-the-network.md) - at 1,000 tokens per second the round trip and the conversation resend dominate the turn.
 - [Model Async Agent Work as Spawn, Send, Wait, Shut Down](../concepts/model-async-agent-work-as-spawn-send-wait-shut-down.md) - one handle abstraction covering subagents and background terminals alike.
@@ -550,6 +551,10 @@
 - [Learn risk scoring from audit feedback for predictive compliance](../concepts/learn-risk-scoring-from-audit-feedback-for-predictive-compliance.md)
 
 ## Coding Agents
+- [Make One Agent Session Reachable From Every Interface](../concepts/make-one-agent-session-reachable-from-every-interface.md) - a Slack bot moves the agent from one laptop to one product; the session with its context is the object that must be addressable.
+- [Environment Isolation Is What Lets Non-Engineers Trigger Real Work](../concepts/environment-isolation-is-what-lets-non-engineers-trigger-real-work.md) - the blocker is the missing development environment, not the interface, which turns a safety control into an access-widening one.
+- [Replay Your Own Merged PRs as the Coding-Agent Benchmark](../concepts/replay-your-own-merged-prs-as-the-agent-benchmark.md) - your merge history is a benchmark corpus needing no task authoring, for teams whose stack the public boards do not test.
+- [A Developer Laptop Is an Ambient-Credential Surface](../concepts/a-developer-laptop-is-an-ambient-credential-surface.md) - the obedient agent that finds a production token nobody handed it is the case sandbox advice usually skips.
 - [Velocity Sickness Is Output Without Impact](../concepts/velocity-sickness-is-output-without-impact.md) - four team-level symptoms of AI throughput that never converts, three of which shipping metrics cannot see.
 - [Separate the Decision Layer From the Implementation Layer](../concepts/separate-the-decision-layer-from-the-implementation-layer.md) - planning is a distinct gear with inverted tool requirements, and drift into polish is detectable inside one session.
 - [Make the Doc the State and the Agent the Action](../concepts/make-the-doc-the-state-and-the-agent-the-action.md) - a durable shared document holds the state so agents stay stateless, restartable, and start from identical context.
@@ -1533,6 +1538,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Replay Your Own Merged PRs as the Coding-Agent Benchmark](../concepts/replay-your-own-merged-prs-as-the-agent-benchmark.md) - a fourth leaderboard failure mode: the public benchmark is on the wrong stack, and your merge history is the corpus that is not.
 - [Verification Debt Outlives the Productivity Spike](../concepts/verification-debt-outlives-the-productivity-spike.md) - a productivity metric and a quality metric on the same projects, decaying at different rates.
 - [Route Between Model Tiers by Quality Dimension, Not Only Cost](../concepts/route-between-model-tiers-by-quality-dimension-not-only-cost.md) - disagreement between axes on one board, inside one vendor's own family.
 - [Choose Verification Layers by Defect-Class Coverage](../concepts/choose-verification-layers-by-defect-class-coverage.md) - audit a pipeline against defect classes reached rather than tools running.
@@ -2211,6 +2217,7 @@
 - [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md)
 
 ## Security
+- [A Developer Laptop Is an Ambient-Credential Surface](../concepts/a-developer-laptop-is-an-ambient-credential-surface.md) - least privilege fails on a workstation because nobody enumerated what is on it, and the dangerous agent is the maximally obedient one.
 - [Escalate Risky Actions to a Read-Only Review Subagent](../concepts/escalate-risky-actions-to-a-read-only-review-subagent.md) - a separately spawned reviewer that cannot act, and only escalates when it objects.
 - [Judge an Action by How Explicitly the User Authorized It](../concepts/judge-an-action-by-how-explicitly-the-user-authorized-it.md) - explicitness of authorization as the portable criterion for when to stop and ask.
 - [Sandbox Primitives Are Per Operating System](../concepts/sandbox-primitives-are-per-operating-system.md) - Seatbelt, Bubblewrap, and a hand-written Windows sandbox: isolation quality does not port.
@@ -2546,6 +2553,9 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Turn Unfiled Conversation Into Concrete Prototypes](../concepts/turn-unfiled-conversation-into-concrete-prototypes.md) - a meeting bot removes the human who picks which signal is work, on a contract that the output is reactable rather than shippable.
+- [Make One Agent Session Reachable From Every Interface](../concepts/make-one-agent-session-reachable-from-every-interface.md) - the alternative to people couriering context between tools is one session that every tool is a view onto.
+- [Environment Isolation Is What Lets Non-Engineers Trigger Real Work](../concepts/environment-isolation-is-what-lets-non-engineers-trigger-real-work.md) - what the file-it-and-wait-for-triage path substitutes for is a development environment the requester does not have.
 - [Separate the Decision Layer From the Implementation Layer](../concepts/separate-the-decision-layer-from-the-implementation-layer.md) - the IDE, chat, plan mode, and spec-driven development are each ruled out for the deciding half of the work.
 - [Velocity Sickness Is Output Without Impact](../concepts/velocity-sickness-is-output-without-impact.md) - broken merge queues, divergent work, agent bankruptcy, and decisions made by the agent.
 - [Unimplemented Plans Signal a Working Decision Layer](../concepts/unimplemented-plans-signal-a-working-decision-layer.md) - plans that never ship mean prioritization happened after exploration instead of being forced by a prototype.

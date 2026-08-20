@@ -18,6 +18,8 @@ Details:
 
 - A directly opposing position is worth holding alongside this one. Matt Dailey (Ref) argues the consequential decisions should never need recovering from a session, because they should have been made in a durable document first: "let's pull out all the decisions up front and agree to them and put them in a place that's durable so that we don't have to have like some LLM summarizing it and maybe picking the wrong things later on." The disagreement is about *where* decisions are made — Jain locates them in the back-and-forth during implementation, Dailey wants the ones that matter hoisted ahead of it — and the shared risk they name is the same: a summarizer choosing what mattered. The two reconcile only if the up-front document is amended as the run discovers things, which neither source describes. ([Dailey](../sources/20260809_Kz4QJmNrVXU.md), 17:41-18:05)
 
+- **The record is more useful when it is queryable and shared than when it is merely retained.** Superconductor's reviewers do not read the session — they interrogate it: "I can just pop in and say, 'Hey, why did you do it this way?' And again, because it's the same agent session, I don't need to wait for Sergey to kind of get my notification on GitHub and respond to me. The answer to the question is almost certainly in this thread… I don't also don't want to read the entire thread. So I can just ask the agent." That takes the author off the critical path for review questions, which is a payoff this page's arguments imply but no source had demonstrated. It requires the session to be addressable by people other than its author ([make one agent session reachable from every interface](make-one-agent-session-reachable-from-every-interface.md)) — a stored transcript nobody but the author can reach gives you the archive without the latency win. ([Arjun Singh](../sources/20260809_OL7kfezynJM.md), 04:49-05:08)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Context Engineering](../topics/context-engineering.md)
@@ -31,7 +33,9 @@ Related concepts:
 - [Use agent logs and review feedback as context observability signals](use-agent-logs-and-review-feedback-as-context-observability-signals.md)
 - [Review coding-agent work at task, plan, and code checkpoints](review-coding-agent-work-at-task-plan-and-code-checkpoints.md)
 - [Make the Doc the State and the Agent the Action](make-the-doc-the-state-and-the-agent-the-action.md)
+- [Make One Agent Session Reachable From Every Interface](make-one-agent-session-reachable-from-every-interface.md)
 
 Sources:
 - [How to Kill the Code Review — Ankit Jain, Aviator](../sources/20260817_YgEv7IQzGdM.md), 05:47-06:32, 08:19-08:30, 09:33-10:16, 13:15-13:47
 - [Velocity Sickness: What Happens When Your Whole Team Gets 10x Faster — Matt Dailey, Ref.](../sources/20260809_Kz4QJmNrVXU.md), 17:41-18:05
+- [Multiplayer agentic engineering — Arjun Singh, Superconductor](../sources/20260809_OL7kfezynJM.md), 04:49-05:08
