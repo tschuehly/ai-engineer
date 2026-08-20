@@ -17,6 +17,7 @@ Details:
 - Scope boundary, from a measured counter-example: this concept's case for compaction rests on *quality* (correctness, completeness, trajectory) in coding sessions where the human reviews the compacted artifact. It does not carry over to unattended chat agents on a cost argument. Towards AI benchmarked 11 context presets on a production AI tutor and found untouched full history beat every compaction technique — and beat their own shipped defaults — on recall, cost, *and* latency at once, because prompt caching makes resending the history nearly free while compaction invalidates the cache. The distinguishing conditions are whether a human curates the compacted artifact, whether the prefix is cache-stable, and whether the session's value lies in a distilled plan or in specific details a summarizer will drop. ([Context Engineering in 2026](../sources/20260817_WP3hjUXd918.md), 43:40-45:57, 16:45-18:52)
 
 - **Given that disagreement, the honest answer is per-deployment and lives in your traces.** LangChain lists exactly this as a question you send a mining agent to answer rather than one you settle by argument: "Agents now run for millions of tokens. Does the agent get really dumb after the first compaction? After the second compaction? Does it never get dumb? Like how do we actually answer these questions? We need to do it by actually looking at the traces." The degradation curve is a function of your model, harness, and task mix, all of which change under you ([Ask Traces the Behavioral Questions Code Cannot Answer](ask-traces-the-behavioral-questions-code-cannot-answer.md)). ([LangChain](../sources/20260812_CvRngaQZQ3Y.md), 05:16-05:32)
+- **A scope boundary worth stating, because the same word gets borrowed for a different job.** Jack Morris uses coding-agent compaction — "the way that, you know, Claude code or Codex or open code, what have you, does compaction" — as the reference point for compressing a whole private corpus into cache state, and then names its limit: "it only applies to things that are in context," and it "misses… some of the magic that you can get from taking gradients." Nothing there disputes this page. The practice here is about surviving a session whose material already passed through the window; it is not evidence that the same mechanism can teach a model a corpus it has never seen ([KV Compaction Reaches Only What Already Fits in Context](kv-compaction-reaches-only-what-already-fits-in-context.md)). ([Engram](../sources/20260812_WiqDvX6isc4.md), 12:16-13:10)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -29,6 +30,7 @@ Related concepts:
 - [Use research-plan-implement loops for coding agents](use-research-plan-implement-loops-for-coding-agents.md)
 - [Enforce Agent Rules in Git Hooks and CI, Not the Prompt](enforce-agent-rules-in-git-hooks-and-ci-not-the-prompt.md)
 - [Prompt Caching Sets the Break-Even Bar for Compaction](prompt-caching-sets-the-break-even-bar-for-compaction.md)
+- [KV Compaction Reaches Only What Already Fits in Context](kv-compaction-reaches-only-what-already-fits-in-context.md)
 - [Benchmark Context-Management Presets Against a Do-Nothing Baseline](benchmark-context-management-presets-against-a-do-nothing-baseline.md)
 - [Ask Traces the Behavioral Questions Code Cannot Answer](ask-traces-the-behavioral-questions-code-cannot-answer.md)
 
@@ -37,3 +39,4 @@ Sources:
 - [BDD, ADR, PRD, WTF: Capturing Decisions for Humans and AI Alike — Michal Cichra, Safe Intelligence](../sources/20260603_504PvfXou5Y.md), 11:04-11:44
 - [Context Engineering in 2026 — Louis-François Bouchard, Omar Solano & Samridhi Vaid, Towards AI](../sources/20260817_WP3hjUXd918.md), 16:45-18:52, 43:40-45:57
 - [Improving Agents is a Data Mining Problem — Vivek Trivedy, LangChain](../sources/20260812_CvRngaQZQ3Y.md), 05:16-05:32
+- [Scaling Compute on Context — Jack Morris, Engram](../sources/20260812_WiqDvX6isc4.md), 12:16-13:10

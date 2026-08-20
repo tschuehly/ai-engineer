@@ -17,6 +17,8 @@ Details:
 
 - **The boundary measured from both sides in one experiment.** A memory-harness ablation ran the same harness on two tasks and got opposite verdicts. On a literature review whose whole corpus fit in the window — including a deliberately hard needle, a retracted Nature claim about 742,000 materials where "the retraction… is a much smaller haystack needle in that corpus than the headlines and the citations" — memory produced "the same performance with memory and without memory, and it only added more cost." On an xbench question whose answer sat at step 124 while the question arrived at step 500, "completely outside of the context window," the harness became the only route to the answer. That is the operational form of this page's claim: inside the window, external memory is overhead; outside it, the window is not memory at all and the harness is the whole mechanism. ([Memory Harnesses for Long-Running Research Agents](../sources/20260812_R3-anFK1YM8.md), 05:29-07:33)
 
+- **What the same speaker moved on to, which sharpens what this page is actually recommending.** Eight months after the talk this page was built from, Morris's framing is no longer "context versus RAG versus weights" but "which scaling axis is even available." Against a private corpus you cannot make more data and will not train from scratch, so compute is the only lever left ([Only the Compute Axis Is Available on Your Own Corpus](only-the-compute-axis-is-available-on-your-own-corpus.md)). That reframes the choice this page opens: pasting the corpus into the window is not a weaker version of adapting the model, it is a decision to spend nothing on the one axis you have. The counterweight is that spending on it does not scale indefinitely either ([The Synthetic Data Wall](the-synthetic-data-wall-caps-every-define-then-train-loop.md)), and that the in-window techniques closest to "memory" — compressing the corpus into cache state — still "only appl[y] to things that are in context" ([KV Compaction Reaches Only What Already Fits in Context](kv-compaction-reaches-only-what-already-fits-in-context.md)). ([Engram](../sources/20260812_WiqDvX6isc4.md), 07:26-08:11, 13:00-13:10, 16:23-16:57)
+
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
 - [Inference](../topics/inference.md)
@@ -30,9 +32,12 @@ Related concepts:
 - [Budget Memory Between Update Cost and Serving Cost](budget-memory-between-update-cost-and-serving-cost.md)
 - [Profile Synthesis Is Continual Learning Outside the Weights](profile-synthesis-is-continual-learning-outside-the-weights.md)
 - [A Memory Harness Adds Only Cost When the Task Fits in Context](a-memory-harness-adds-only-cost-when-the-task-fits-in-context.md)
+- [Only the Compute Axis Is Available on Your Own Corpus](only-the-compute-axis-is-available-on-your-own-corpus.md)
+- [KV Compaction Reaches Only What Already Fits in Context](kv-compaction-reaches-only-what-already-fits-in-context.md)
 
 Sources:
 - [Jack Morris: Stuffing Context is not Memory, Updating Weights is](../sources/20251229_Jty4s9-Jb78.md), 02:35-07:51
 - [Context Engineering in 2026 — Louis-François Bouchard, Omar Solano & Samridhi Vaid, Towards AI](../sources/20260817_WP3hjUXd918.md), 50:53-51:56, 53:16-54:33
 - [Lessons from Studying Every Memory System — Shlok Khemani, Independent](../sources/20260812_5ZGyKWjQDr0.md), 12:08-13:37
 - [Memory Harnesses for Long-Running Research Agents — Stefania Druga, Sakana.ai](../sources/20260812_R3-anFK1YM8.md), 05:29-07:33
+- [Scaling Compute on Context — Jack Morris, Engram](../sources/20260812_WiqDvX6isc4.md), 07:26-08:11, 13:00-13:10, 16:23-16:57

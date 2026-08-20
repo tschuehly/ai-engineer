@@ -15,6 +15,8 @@ Details:
 - The diagnostic use: if the agent reasons correctly once it has the right facts but keeps rediscovering the environment, the deficit is expertise, and a stronger model will re-solve the same problem from scratch at higher cost. If it holds the right context and still reasons wrongly, that is the intelligence axis.
 - Scope and provenance: this is a position talk with no measurement behind it. The orthogonality figure is drawn conceptually, not plotted from data, and the speaker is COO of a company whose stated focus is agents and continual learning. The distinction is useful as a diagnostic frame; the "largely orthogonal" claim is an assertion, not a result.
 
+- **An independent statement of the same split, from a different starting point and the same event.** Jack Morris opens with Terence Tao's account of using AI in mathematics: it "knows like every single public mathematical topic" and can "bridge gaps in the literature… in a way that no human even can know because it's read so much," yet it "lacks the depth that you would look for from… a graduate student who spent 5 years practicing in one area that gets this… almost like subconscious intuition for the problem space." Su's orthogonality claim and Tao's breadth-versus-depth observation name the same gap; the difference is what each blames it on. Su locates the cause in the structure of work ([Digital Work Is Millions of Microworlds With Local Physics](digital-work-is-millions-of-microworlds-with-local-physics.md)), while Morris locates it in the training data — every scaling axis runs on public material, so depth in anything private is unreachable by construction ([Post-Training Data Is Public by Construction](post-training-data-is-public-by-construction.md)). The two are compatible and suggest different fixes, which is the reason to keep both. ([Engram](../sources/20260812_WiqDvX6isc4.md), 01:14-02:28)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Models](../topics/models.md)
@@ -22,6 +24,7 @@ Related topics:
 
 Related concepts:
 - [Expertise Compresses the Search; Intelligence Expands It](expertise-compresses-the-search-intelligence-expands-it.md)
+- [Post-Training Data Is Public by Construction](post-training-data-is-public-by-construction.md)
 - [Define Continual Learning as Adaptive Compression of Experience](define-continual-learning-as-adaptive-compression-of-experience.md)
 - [Scale Expertise Once Intelligence Is Abundant](scale-expertise-once-intelligence-is-abundant.md)
 - [Digital Work Is Millions of Microworlds With Local Physics](digital-work-is-millions-of-microworlds-with-local-physics.md)
@@ -31,3 +34,4 @@ Related concepts:
 
 Sources:
 - [Intelligence + Continual Learning = Expertise — Yu Su, NeoCognition](../sources/20260812_I6aiEf3aEFQ.md), 06:33-09:20, 12:41-13:26
+- [Scaling Compute on Context — Jack Morris, Engram](../sources/20260812_WiqDvX6isc4.md), 01:14-02:28

@@ -783,6 +783,10 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Only the Compute Axis Is Available on Your Own Corpus](../concepts/only-the-compute-axis-is-available-on-your-own-corpus.md) - what "scaling" can mean against private data, and why the next model release does not move it.
+- [KV Compaction Reaches Only What Already Fits in Context](../concepts/kv-compaction-reaches-only-what-already-fits-in-context.md) - compaction compresses what you had; it does not acquire what you did not, and it skips gradients.
+- [Treat the Corpus Boundary as Negotiable, Not Fixed](../concepts/treat-the-corpus-boundary-as-negotiable-not-fixed.md) - the fixed-corpus premise is a modeling assumption; enlarging D is a separate lever from training harder.
+- [Distill Behaving as if the Corpus Were in Context, Not the Documents](../concepts/distill-behaving-as-if-the-corpus-were-in-context.md) - buying in-context behavior without paying the window, and the supervision that requires.
 - [A Memory Harness Adds Only Cost When the Task Fits in Context](../concepts/a-memory-harness-adds-only-cost-when-the-task-fits-in-context.md) - measured identical accuracy at higher cost when the corpus fit in the window, so ask "does it fit?" first.
 - [Bad Recall Costs More Than No Recall](../concepts/bad-recall-costs-more-than-no-recall.md) - the accurate recall policy was also the cheapest, because wrong context is charged in extra turns too.
 - [Treat Memory as a Write–Manage–Read Control Loop, Not a Store](../concepts/treat-memory-as-a-write-manage-read-control-loop.md) - "not just a database store" but a control loop whose phases are separately ablatable.
@@ -916,6 +920,7 @@
 - [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md)
 
 ## Infrastructure
+- [Continued Pre-Training on a Private Corpus Owes a Post-Training Debt](../concepts/continued-pretraining-on-a-private-corpus-owes-a-post-training-debt.md) - the checkpoint decision that has to be made before the training project starts.
 
 - [Run Harness Ablations on Local Models to Own Every Step](../concepts/run-harness-ablations-on-local-models-to-own-every-step.md) - a desk-side M3 Ultra as an experiment rig: no batch querying, multi-day sweeps, household fans.
 - [Run Recurring Knowledge Jobs in a Cloud Sandbox With Sync-Down/Sync-Back](../concepts/run-recurring-knowledge-jobs-in-a-cloud-sandbox-with-sync-down-sync-back.md) - a local automation "means your laptop has to be cracked open when it runs"; a scheduled sandbox does not.
@@ -1163,6 +1168,7 @@
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 
 ## Inference
+- [KV Compaction Reaches Only What Already Fits in Context](../concepts/kv-compaction-reaches-only-what-already-fits-in-context.md) - a serving technique wearing a learning technique's vocabulary, and the two limits that separate them.
 
 - [Run Harness Ablations on Local Models to Own Every Step](../concepts/run-harness-ablations-on-local-models-to-own-every-step.md) - local control of data, compute traces, and evals, priced in serial-only execution and days of sustained thermal load.
 - [Bad Recall Costs More Than No Recall](../concepts/bad-recall-costs-more-than-no-recall.md) - misdirected agents are a trajectory cost that a per-call token count never shows.
@@ -1298,6 +1304,8 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Post-Training Data Is Public by Construction](../concepts/post-training-data-is-public-by-construction.md) - why waiting for the frontier models to cover your domain is structurally a losing plan.
+- [Only the Compute Axis Is Available on Your Own Corpus](../concepts/only-the-compute-axis-is-available-on-your-own-corpus.md) - a private-data project cannot borrow the playbook that produced the frontier models.
 - [Scale Expertise Once Intelligence Is Abundant](../concepts/scale-expertise-once-intelligence-is-abundant.md) - intelligence is becoming abundant and expertise is not, so lowering its cost expands what work is worth doing.
 - [Private Microworlds Are the Next Training-Data Opportunity](../concepts/private-microworlds-are-the-next-training-data-opportunity.md) - in-situ learning inside customer environments, with ownership of the resulting capability left unaddressed.
 - [Digital Work Is Millions of Microworlds With Local Physics](../concepts/digital-work-is-millions-of-microworlds-with-local-physics.md) - why a per-customer layer is structural rather than a stopgap until the next model.
@@ -1405,6 +1413,8 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [A Perfect Training Loss on Your Corpus Is Not Knowledge](../concepts/a-perfect-training-loss-on-your-corpus-is-not-knowledge.md) - the training metric looks best exactly when the behavior is worst, so pick the acceptance criterion first.
+- [Seek the AlphaGo Property So Added Compute Keeps Buying Depth](../concepts/seek-the-alphago-property-so-added-compute-keeps-buying-depth.md) - a cheap test for whether a proposed learning loop can compound or will plateau.
 - [Ablate the Recall Policy With a Ladder and an Oracle](../concepts/ablate-the-recall-policy-with-a-ladder-and-an-oracle.md) - hold the model fixed and climb from no-recall through similarity and your policy to ground truth, plus adversarial wrong-memory rungs.
 - [An Oracle Ceiling Separates Retrieval Failure From Use Failure](../concepts/an-oracle-ceiling-separates-retrieval-failure-from-use-failure.md) - the gap above the oracle is not recoverable by any retriever.
 - [A Memory Harness Adds Only Cost When the Task Fits in Context](../concepts/a-memory-harness-adds-only-cost-when-the-task-fits-in-context.md) - a do-nothing control turning an intuitively sensible addition into a measured loss.
@@ -1736,6 +1746,13 @@
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 
 ## Models
+- [Only the Compute Axis Is Available on Your Own Corpus](../concepts/only-the-compute-axis-is-available-on-your-own-corpus.md) - data and model size are spent before a private-corpus project starts, leaving one lever.
+- [Post-Training Data Is Public by Construction](../concepts/post-training-data-is-public-by-construction.md) - annotation bought from vendors is disclosable by definition, so it cannot close a private gap.
+- [The Synthetic Data Wall Caps Every Define-Then-Train Loop](../concepts/the-synthetic-data-wall-caps-every-define-then-train-loop.md) - define, train, saturate; the unsolved part is what the second stage of training is.
+- [A Perfect Training Loss on Your Corpus Is Not Knowledge](../concepts/a-perfect-training-loss-on-your-corpus-is-not-knowledge.md) - near-zero loss with collapsed generation, and two independent failures inside one experiment.
+- [Continued Pre-Training on a Private Corpus Owes a Post-Training Debt](../concepts/continued-pretraining-on-a-private-corpus-owes-a-post-training-debt.md) - overwriting, scaling difficulty, and a base-model prerequisite most teams cannot meet.
+- [Distill Behaving as if the Corpus Were in Context, Not the Documents](../concepts/distill-behaving-as-if-the-corpus-were-in-context.md) - on-policy distillation transfers behavior, so the corpus conditions supervision rather than being it.
+- [Seek the AlphaGo Property So Added Compute Keeps Buying Depth](../concepts/seek-the-alphago-property-so-added-compute-keeps-buying-depth.md) - if improving the model does not change what it trains on next, the loop has a predictable ceiling.
 - [Scale Expertise Once Intelligence Is Abundant](../concepts/scale-expertise-once-intelligence-is-abundant.md) - unbounded expertise from bounded intelligence, offered as a conjecture about where scaling should go next.
 - [Private Microworlds Are the Next Training-Data Opportunity](../concepts/private-microworlds-are-the-next-training-data-opportunity.md) - specialized agents learning in situ, with the channel-back mechanism unspecified.
 - [Separate Intelligence From Expertise When Diagnosing an Agent](../concepts/separate-intelligence-from-expertise-when-diagnosing-agents.md) - before upgrading the model, check which of the two axes is actually failing.
@@ -1886,6 +1903,8 @@
 - [Condition ASR on Conversation Context and Domain Vocabulary](../concepts/condition-asr-on-conversation-context-and-domain-vocabulary.md)
 
 ## Retrieval
+- [Treat the Corpus Boundary as Negotiable, Not Fixed](../concepts/treat-the-corpus-boundary-as-negotiable-not-fixed.md) - adjacent material and elicited answers add information no reorganization of an index can.
+- [Post-Training Data Is Public by Construction](../concepts/post-training-data-is-public-by-construction.md) - the structural reason a frontier model will not eventually cover your private domain.
 - [Rank a Decisions Ledger Instead of Retrieving Memories by Similarity](../concepts/rank-a-decisions-ledger-instead-of-retrieving-memories-by-similarity.md) - over an agent's own history the retrieval unit should be a decision with a priority, not a chunk with an embedding.
 - [An Oracle Ceiling Separates Retrieval Failure From Use Failure](../concepts/an-oracle-ceiling-separates-retrieval-failure-from-use-failure.md) - perfect retrieval is capped by whether the model uses what it gets.
 - [Bad Recall Costs More Than No Recall](../concepts/bad-recall-costs-more-than-no-recall.md) - a wrong retrieval pays twice, in tokens and in the path it sends the agent down.

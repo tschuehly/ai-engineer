@@ -96,7 +96,12 @@ Shlok Khemani supplies this topic's clearest example of a capability that is a p
 
 Yu Su supplies the market-shaped version of the same instinct, and its usable form is a claim about scarcity. Frontier intelligence "is already becoming abundance" while "expertise is still scarce," so the argument is to [scale expertise rather than capability](../concepts/scale-expertise-once-intelligence-is-abundant.md) — the payoff being that lowering the friction on expert work moves "many of the new type of work across the threshold of worth doing," a market-expansion story rather than a cost-reduction one. Two consequences bear on strategy. The buildable asset is a learning loop rather than a model: "every company can build their own learning loop," turning into institutional memory and, in his words, a moat that keeps a company "in charge of their means of production" — which is the same asset argument this topic already carries from Bright Data's owned-versus-rented context material. And [private microworlds are named as the next training-data opportunity](../concepts/private-microworlds-are-the-next-training-data-opportunity.md), specialized agents learning in situ and channeling that learning back to a general model. Those two positions sit uneasily together — a vendor's channel-back is a customer's moat leaking — and the talk does not reconcile them, which is exactly the term to examine in any in-deployment-learning contract. Nothing here is measured; it is positioning from the COO of a continual-learning company.
 
+Jack Morris supplies a durable planning argument for anyone deciding whether to wait for the models to cover their domain. The answer is structurally no, and the reason is not that the labs are slow: every scaling axis runs on public material, including the expert-annotation layer bought from vendors, which is "still by definition creating publicly available data because it's something that the model could tell to a user" ([Post-Training Data Is Public by Construction](../concepts/post-training-data-is-public-by-construction.md)). Capability gains therefore keep landing on public tasks — "coding in the way that is public on GitHub," math "written in public textbooks" — while "they're not getting more knowledge of you or your life or your work." That is a stronger version of the wiki's existing case for [private microworlds as the next training-data opportunity](../concepts/private-microworlds-are-the-next-training-data-opportunity.md), because it does not depend on the contested claim that public data is exhausted. The strategic counterweight, delivered by a founder-adjacent researcher against his own pitch, is that owning the private axis is not a scaling story either: every technique for turning a corpus into model capability hits [a synthetic data wall](../concepts/the-synthetic-data-wall-caps-every-define-then-train-loop.md), and Engram's own early curves plateaued. Read together, the two halves argue for treating domain adaptation as a bounded project with a defined stopping point — and for asking any vendor in this space the question Morris frames the field around: how does adding compute keep buying depth, rather than finishing the dataset faster?
+
 ## Key Concepts
+
+- [Post-Training Data Is Public by Construction](../concepts/post-training-data-is-public-by-construction.md) - why buying more expert annotation cannot close a private-domain gap.
+- [Only the Compute Axis Is Available on Your Own Corpus](../concepts/only-the-compute-axis-is-available-on-your-own-corpus.md) - the structural reason a private-data project cannot borrow the frontier playbook.
 
 - [Scale Expertise Once Intelligence Is Abundant](../concepts/scale-expertise-once-intelligence-is-abundant.md) - the scarce input is situated competence, and lowering its cost expands what work is worth doing at all.
 - [Private Microworlds Are the Next Training-Data Opportunity](../concepts/private-microworlds-are-the-next-training-data-opportunity.md) - in-situ learning inside customer environments, with ownership of the resulting capability left unaddressed.
@@ -205,6 +210,8 @@ Yu Su supplies the market-shaped version of the same instinct, and its usable fo
 
 ## Open Questions
 
+- What should a buyer ask a continual-learning vendor to demonstrate? Morris's own framing suggests the test — show that added compute keeps buying depth rather than finishing a fixed dataset faster — but his talk reports no method that passes it, including his company's.
+
 - Who owns competence an agent acquires inside a customer's environment? Su argues both that private worlds are the industry's next training-data opportunity and that companies should keep their own learning loop as a moat, without saying how a channel-back to the vendor's general model is squared with that — a contract term, not a research question.
 - Do directional templates hold as users get more ambitious, or does a template catalog grow until choosing one is as hard as writing the prompt it replaced? Deyneka reports three templates and no data on where the catalog stops scaling.
 - When the process rather than the output is the product, what measures whether an unblocking assistant is working — session completion, return rate, or the user's growing fluency? Nunez asserts the learning outcome without an instrument for it.
@@ -231,6 +238,7 @@ Yu Su supplies the market-shaped version of the same instinct, and its usable fo
 
 ## Sources
 
+- [Scaling Compute on Context — Jack Morris, Engram](../sources/20260812_WiqDvX6isc4.md)
 - [Intelligence + Continual Learning = Expertise — Yu Su, NeoCognition](../sources/20260812_I6aiEf3aEFQ.md)
 - [Building an Agentic Video Editor for Mass Consumer — Ekaterina Deyneka, Reelful](../sources/20260818_pPj_tjlvYjA.md)
 - [The Next Game Engine Won't Have a Manual — Arturo Nunez, Nereu](../sources/20260818_VBCDhRrvlYo.md)

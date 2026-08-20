@@ -13,11 +13,14 @@ Details:
 - The durable lesson is that reasoning-model improvements can compound: better teacher reasoning creates better traces, and those traces can transfer into smaller deployable models. (14:43-15:05)
 - **The applied version uses your own production traces as the teacher corpus.** LangChain lists distillation and SFT as the first output of mining a trace store: "let's say I'm running GLM 5.2. It's doing great, but I think that I can run this task like way cheaper with like a 9B or 13B model. Then what I'll do is like I'll take the good traces and the good examples from the GLM 5.2 runs, I'll prepare them in a data set, and then I'll try to fine-tune a small model on that data set to like mimic behavior." Two differences from the research-lab version above: the teacher is whatever model is already serving your traffic rather than a frontier reasoning model, and the selection step ("the good traces") is where the work is — which is what makes the trace-mining read path a prerequisite ([Mine Trace Corpora With Agents Because They Do Not Fit in Context](mine-trace-corpora-with-agents-because-they-do-not-fit-in-context.md)). ([LangChain](../sources/20260812_CvRngaQZQ3Y.md), 11:08-11:43)
 
+- **The third variant has no teacher until you build one, and that changes what the technique is for.** Both cases above start from a model that already produces the target behavior — a frontier reasoning model, or your own production traffic. For a private *corpus* there is no such teacher: documents are not behavior. On-policy distillation manufactures one by putting the corpus in the context window and cloning the resulting answers, so "you can't really distill the raw documents" is the constraint that decides the whole pipeline ([Distill Behaving as if the Corpus Were in Context](distill-behaving-as-if-the-corpus-were-in-context.md)). Keeping the three apart matters when scoping: with a teacher, distillation is a compression project; without one, most of the work is supervision synthesis. ([Engram](../sources/20260812_WiqDvX6isc4.md), 13:20-14:12)
+
 Related topics:
 - [Models](../topics/models.md)
 - [Inference](../topics/inference.md)
 
 Related concepts:
+- [Distill Behaving as if the Corpus Were in Context, Not the Documents](distill-behaving-as-if-the-corpus-were-in-context.md)
 - [Post-Train Small Models for Narrow Capabilities](post-train-small-models-for-narrow-capabilities.md)
 - [Small agentic models make parallel workplace agents economical](small-agentic-models-make-parallel-workplace-agents-economical.md)
 - [Use small models as context-management tools before agent reasoning](use-small-models-as-context-management-tools-before-agent-reasoning.md)
@@ -27,3 +30,4 @@ Related concepts:
 Sources:
 - [Latent Space Paper Club: AIEWF Special Edition (Test of Time, DeepSeek R1/V3) — VIbhu Sapra](../sources/20250725_9k3xPh-40mo.md), 12:48-15:05
 - [Improving Agents is a Data Mining Problem — Vivek Trivedy, LangChain](../sources/20260812_CvRngaQZQ3Y.md), 11:08-11:43
+- [Scaling Compute on Context — Jack Morris, Engram](../sources/20260812_WiqDvX6isc4.md), 13:20-14:12
