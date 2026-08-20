@@ -13,6 +13,7 @@ Details:
 - Choose the LLM layer over the MCP layer deliberately: "a lot of agents are moving away from tool calls and executing code," which makes traffic harder to parse, "and it's the whole reason we chose to do this." They considered the MCP layer but the LLM layer is "way more valuable" because even with skills/code "you're still running something" through the gateway. (21:28-22:41)
 - Even visibility-only is valuable: many teams "don't even know what tools people are using — forget about blocking it, just tell me what people are doing." A reported production datum: internally "bash dominates everything else" over MCP/structured tool calls. Planned guardrails layer on top (e.g. block `rm -rf /`). The honest caveat: an agent could "write the thing, obfuscate the thing, then run the thing." (22:41-23:41)
 - Design tradeoff: the gateway requires setting the agent's base URL explicitly rather than transparently intercepting at the network layer — a deliberate choice, because hidden interception "can start to break and shift and move out from under you." (18:46-20:25)
+- **The same chokepoint is where a model swap becomes a configuration change.** Coinbase "defaulted to using GLM and Kimi in their internal LLM gateway and… this has cut their AI spend by nearly half while their token usage continues to grow." Nothing in the calling applications changed; the default at the gateway did. That makes the gateway a cost-control point as well as an observability one, and the two functions reinforce each other — you cannot route to the cheapest sufficient model without per-call visibility into which model served what, and the visibility is worth little if the routing decision lives in each application's config. Rizwan expects this to generalize to "businesses building their own internal tooling and routing to work with these agents in the most dollar efficient way for them." ([Rizwan](../sources/20260807_CoEIs6Xm8m8.md), 10:27-10:55)
 
 Related topics:
 - [Tools](../topics/tools.md)
@@ -25,6 +26,8 @@ Related concepts:
 - [Abstract LLM Inference Behind One Routing API](abstract-llm-inference-behind-one-routing-api.md)
 - [Govern MCP Tool Calls With Tool-Level Policy and End-to-End Traces](govern-mcp-tool-calls-with-tool-level-policy-and-end-to-end-traces.md)
 - [Use Bash as a composable code-mode tool for agents](use-bash-as-a-composable-code-mode-tool-for-agents.md)
+- [A Subsidized Coding-Agent Subscription Is a Lock-In Ramp](a-subsidized-coding-agent-subscription-is-a-lock-in-ramp.md)
 
 Sources:
 - [What if the network was the sandbox? — Remy Guercio, Tailscale](../sources/20260601_BM2JX9hqsVQ.md), 05:42-11:13, 13:59-15:35, 18:46-23:41
+- [Open Source Is Dead. Long Live Open Source. — Saoud Rizwan, Cline](../sources/20260807_CoEIs6Xm8m8.md), 10:27-10:55

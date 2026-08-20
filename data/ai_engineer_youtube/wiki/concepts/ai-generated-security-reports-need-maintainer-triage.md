@@ -12,6 +12,7 @@ Details:
 - Maintainers still need human review because they cannot fully trust an agent to determine whether a report is real or whether a proposed fix is safe, 14:47-15:12.
 - When a report includes a fix, the fix is often poor; rushing such fixes under overload can break the product, 15:41-16:04.
 - Company-backed help, such as full-time contributors working through reports and hardening the codebase, became a practical way to survive the report volume, 09:48-10:21.
+- **A bounty is a volume amplifier, and one long-running program is considering shutdown.** Rizwan reports curl's lead describing the project as "effectively being DDoSed by AI generated bug reports," with the team "even considering shutting down their bug bounty program for the first time in decades." That is the OpenClaw curve on a project with decades of triage practice, and it names a design flaw rather than a capacity problem: a bounty pays per submitted report while triage cost is borne by the maintainer, so a generation cost that fell to near zero inverts the economics of the whole mechanism. Any organization running a bounty alongside AI-assisted reporting needs a submitter-side cost — reputation staking, reproduction requirements, or a deposit — or the payout structure funds the flood. Reported second-hand from a slide, with no figures given for curl's report volume. ([Rizwan](../sources/20260807_CoEIs6Xm8m8.md), 03:00-03:15)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -20,6 +21,8 @@ Related topics:
 Related concepts:
 - [Use reviewer agents and lints to turn review lessons into guardrails](use-reviewer-agents-and-lints-to-turn-review-lessons-into-guardrails.md)
 - [AI output speed can overwhelm review capacity](ai-output-speed-can-overwhelm-review-capacity.md)
+- [Closing the Contribution Channel Is Where Slop Filtering Ends](closing-the-contribution-channel-is-where-slop-filtering-ends.md)
 
 Sources:
 - [State of the Claw - Peter Steinberger](../sources/20260417_zgNvts_2TUE.md), 04:15-05:22, 09:48-10:21, 14:47-16:04
+- [Open Source Is Dead. Long Live Open Source. — Saoud Rizwan, Cline](../sources/20260807_CoEIs6Xm8m8.md), 03:00-03:15

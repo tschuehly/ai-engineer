@@ -16,6 +16,7 @@ Details:
 - Distinguish this from two nearby moves the wiki already records. [Right-size models with prototype-big, deploy-small](right-size-models-with-prototype-big-deploy-small.md) freezes the big model's *outputs* as a golden dataset and benchmarks candidates against it; this concept mines the big model's *trajectory* for the guidance the small model is missing. [Distill reasoning traces into small models](distill-reasoning-traces-into-small-models.md) puts that trajectory into weights; this puts it into the prompt and harness first, which is reversible and answers in minutes rather than a training run.
 - Related empirical support that the harness can carry a weaker model: Harness Bench holds the model and evaluation fixed, varies only the harness, and swings scores by more than 20 points — "for weaker models, the harness matters more" ([Invest in the harness to run weaker and local models](invest-in-the-harness-to-run-weaker-and-local-models.md)).
 - Provenance caveat that should travel with the number: this is a single vendor-reported customer engagement with no published methodology, no baseline table, and no named open model, and "an order or like two orders of magnitude" is itself a 10× band. The structural claim — that trace judging is a bulk workload where trace-informed harness engineering can substitute for model capability — is separable from the figure.
+- **The same technique named from the releasing lab's side, with a bound asserted on it.** Rizwan argues American labs should publish weights precisely because the distillation route this page describes has a ceiling: released weights let others "extract the traces and train your copycat models on them more easily, but not in a way that can leapfrog," which is why he separates weight release from opening research ("I don't mean we need to open source our research. I think that's what gives us the lead"). If the bound holds, trace-based harness engineering is a way to close most of a gap you did not create and never a way to open one — which is a fair description of the practice this page recommends. The claim is asserted without evidence by someone with a commercial interest in more open weights, and it is contested; it is worth knowing as the argument a releaser makes, not as a measured limit. ([Rizwan](../sources/20260807_CoEIs6Xm8m8.md), 15:19-15:45)
 
 Related topics:
 - [Models](../topics/models.md)
@@ -29,6 +30,8 @@ Related concepts:
 - [Distill Reasoning Traces Into Small Models](distill-reasoning-traces-into-small-models.md)
 - [Sequence Harness Engineering and Fine-Tuning by Feedback Speed](sequence-harness-engineering-and-finetuning-by-feedback-speed.md)
 - [Mine Trace Corpora With Agents Because They Do Not Fit in Context](mine-trace-corpora-with-agents-because-they-do-not-fit-in-context.md)
+- [Commoditize the Layer You Do Not Win On](commoditize-the-layer-you-do-not-win-on.md)
 
 Sources:
 - [Improving Agents is a Data Mining Problem — Vivek Trivedy, LangChain](../sources/20260812_CvRngaQZQ3Y.md), 07:36-08:58
+- [Open Source Is Dead. Long Live Open Source. — Saoud Rizwan, Cline](../sources/20260807_CoEIs6Xm8m8.md), 15:19-15:45

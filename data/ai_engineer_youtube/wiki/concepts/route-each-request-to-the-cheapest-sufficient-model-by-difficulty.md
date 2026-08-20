@@ -13,6 +13,7 @@ Details:
 - This is a *difficulty*-triggered routing policy, distinct from other cheaper-model paths in the wiki: [verification guardrails let you downshift to cheaper models](verification-guardrails-let-you-downshift-to-cheaper-models.md) uses a check-and-retry harness (not task difficulty) as the trigger, and [abstract LLM inference behind one routing API](abstract-llm-inference-behind-one-routing-api.md) is the routing *mechanism* rather than the per-request policy. Use this concept for the "which tier does this request need" decision and those for the harness and plumbing.
 - Caveats implicit in the pattern: routing adds logic and possibly one extra (cheap) classifier call per request, and mis-routing a hard task to a too-cheap model trades cost for quality, so the difficulty signal needs to be reliable enough that cheap-tier outputs still complete the task.
 - **The same argument stated at the industry level, and extended past model choice to compute per request.** Sara Hooker frames one-model-for-everyone as a compute waste before it is an equity problem: "it's not a particularly good use of compute… You're spending the same amount of compute on everything. And some problems are hard and some are very easy" ([Adaption](../sources/20260812_XEd_SRVHBgU.md), 04:12-04:27). She names the next step past tier routing as making the budget itself difficulty-dependent — "even your test time compute should be adaptive based on your task" (08:29-08:34) — which is the same policy applied to reasoning tokens, search width, or verification passes rather than to which checkpoint answers. Stated as a direction with nothing implemented or measured in that talk.
+- **The premise stated plainly, and the case for a cheap default rather than per-request classification.** Rizwan's version of the routing argument skips difficulty estimation entirely: open-weight models "are powerful enough where you don't always need the best one for all your work," so Coinbase "defaulted to using GLM and Kimi in their internal LLM gateway" and cut spend nearly in half while volume grew. A blanket cheap default with escalation on failure is the crude form of this page's policy and needs no difficulty classifier, which is worth considering when the classifier itself is the part that is hard to build or validate. The cost he names for the crude version is not accuracy but features: you lose "the latest new feature in something like Claude Code." ([Rizwan](../sources/20260807_CoEIs6Xm8m8.md), 08:27-08:47, 10:27-10:55)
 
 Related topics:
 - [Inference](../topics/inference.md)
@@ -25,7 +26,9 @@ Related concepts:
 - [Abstract LLM inference behind one routing API](abstract-llm-inference-behind-one-routing-api.md)
 - [Compare models by task, thinking budget, cost, and latency](compare-models-by-task-thinking-budget-cost-and-latency.md)
 - [Split discovery and validation across reasoning and deterministic models](split-discovery-and-validation-across-reasoning-and-deterministic-models.md)
+- [A Subsidized Coding-Agent Subscription Is a Lock-In Ramp](a-subsidized-coding-agent-subscription-is-a-lock-in-ramp.md)
 
 Sources:
 - [Your Agent Is Wasting Tokens and You Don't Know It - Erik Hanchett, AWS](../sources/20260628_uiP88SpCi1Q.md), 01:01-01:51, 04:50-05:03
 - [Adaption Labs: Gradient-Free Continual Learning — Sara Hooker, Adaption](../sources/20260812_XEd_SRVHBgU.md), 04:12-04:27, 08:29-08:34
+- [Open Source Is Dead. Long Live Open Source. — Saoud Rizwan, Cline](../sources/20260807_CoEIs6Xm8m8.md), 08:27-08:47, 10:27-10:55

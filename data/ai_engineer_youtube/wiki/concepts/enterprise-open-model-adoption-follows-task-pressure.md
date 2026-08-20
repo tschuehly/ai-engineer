@@ -12,6 +12,7 @@ Details:
 - The practical pressure starts when generic models are not the best tool for a specific job, such as extracting CPT codes, diagnosis codes, prescriptions, or medical jargon from healthcare documents and transcripts where the enterprise owns labeled domain data. (06:56-08:16)
 - Latency-sensitive products such as AI phone calls need time-to-first-token and time-to-first-sentence behavior that shared high-throughput APIs may not optimize for. (08:18-09:07)
 - Strategic differentiation is also a pressure: if every competitor uses the same frontier models, some CIOs and CTOs ask what proprietary advantage remains at the AI layer. (10:07-10:37)
+- **A pressure this page's list does not contain: undifferentiated unit cost at scale.** Haghighat reports rarely hearing vendor lock-in or cost as the reason to leave closed APIs, with the real pressure coming from task shapes that generic models fit badly. A year later Rizwan describes the opposite driver — no special task, just volume. Coinbase "defaulted to using GLM and Kimi in their internal LLM gateway," which "cut their AI spend by nearly half while their token usage continues to grow," a swap applied across the board rather than to a particular workload. His premise is that quality has stopped gating the decision: open-weight models "are powerful enough where you don't always need the best one for all your work. And that cost is becoming extremely important to these businesses that have kind of turned a blind eye until now." The two accounts are compatible if the binding constraint moved — task-fit pressure comes first for a specific workload, then general cost pressure arrives once agentic volume makes the aggregate bill visible. ([Rizwan](../sources/20260807_CoEIs6Xm8m8.md), 08:27-08:47, 10:27-10:55)
 
 Related topics:
 - [Models](../topics/models.md)
@@ -22,6 +23,8 @@ Related concepts:
 - [Compare models by task, thinking budget, cost, and latency](compare-models-by-task-thinking-budget-cost-and-latency.md)
 - [Domain Gemma variants package specialized policy and task behavior](domain-gemma-variants-package-specialized-policy-and-task-behavior.md)
 - [Decide When to Fine-Tune From Three Business Signals](decide-when-to-fine-tune-from-three-signals.md)
+- [Commoditize the Layer You Do Not Win On](commoditize-the-layer-you-do-not-win-on.md)
 
 Sources:
 - [The Rise of Open Models in the Enterprise — Amir Haghighat, Baseten](../sources/20250724_3WV1vT0B0cg.md), 03:16-10:37
+- [Open Source Is Dead. Long Live Open Source. — Saoud Rizwan, Cline](../sources/20260807_CoEIs6Xm8m8.md), 08:27-08:47, 10:27-10:55

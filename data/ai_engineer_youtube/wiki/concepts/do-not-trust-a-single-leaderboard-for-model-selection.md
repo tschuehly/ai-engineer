@@ -19,6 +19,7 @@ Details:
 
 - **A fourth failure mode for coding agents specifically: the benchmark is on the wrong stack.** Superconductor's objection to public coding boards is not disagreement or aggregation but subject matter — "SWE-bench is all in Python, we're Ruby on Rails. It is not the case that the benchmarks are identical for them. There's trends that do compare, but the results can be very, very different." That is a stronger caution than "read several boards," because reading more Python benchmarks does not help a Rails team; the remedy is a private set built from your own merged pull requests ([replay your own merged PRs as the coding-agent benchmark](replay-your-own-merged-prs-as-the-agent-benchmark.md)). Their own quality-versus-cost and quality-versus-time plots split the field differently than any public ranking would, and they attach the same disclaimer in reverse: "this is for our code base again. I'm not trying to make any general claims here." ([Arjun Singh](../sources/20260809_OL7kfezynJM.md), 13:46-14:51)
 - **The smallest possible private substitute: one task you already solved.** Denys Linkov re-runs a single real refactor from his own pipeline on each model generation and reads off the human effort it took — three hours of back-and-forth and ten major mistakes with o3, "one additional iteration" with Sonnet 4.6, essentially one-shot with Opus 4.8, and roughly a fifth of the original time overall. It ranks nothing and generalizes to nobody, which is the point: it answers "did my hardest recurring problem get easier" without a rubric, a judge, or a leaderboard's task distribution. Note the confound he names himself — "models are getting significantly better along with harnesses" — so a single-task reading attributes improvement to the pair, not the model. See [Re-Run One Remembered Hard Task on Each New Model](re-run-one-remembered-hard-task-on-each-new-model.md). ([Denys Linkov](../sources/20260808_7vn4WpqNpck.md), 05:20-06:48)
+- **A worked instance of the recommended response: distrust the ranking, then run your own task.** Cline "were skeptical of the benchmark saying that GLM was better than Opus. So we tested them on a real bug from the Cline repo." Both models fixed the bug, so the leaderboard's ordering was not wrong on the headline question — but the distinguishing evidence was invisible to any pass/fail score: GLM verified the build compiled and cleaned up dead code, Opus left type errors that broke the production build. The lesson is narrower than "leaderboards lie." The ranking answered the question it was measuring; the thing that decided the choice (does the repository still build afterward) was not on the leaderboard at all, and the only way to see it was to run the model on a task where you already knew what done looked like. ([Rizwan](../sources/20260807_CoEIs6Xm8m8.md), 09:28-10:05)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -33,6 +34,7 @@ Related concepts:
 - [Specialize models against private benchmarks with RL](specialize-models-against-private-benchmarks-with-rl.md)
 - [Route Between Model Tiers by Quality Dimension, Not Only Cost](route-between-model-tiers-by-quality-dimension-not-only-cost.md)
 - [Re-Run One Remembered Hard Task on Each New Model](re-run-one-remembered-hard-task-on-each-new-model.md)
+- [Invest in the Harness to Run Weaker and Local Models](invest-in-the-harness-to-run-weaker-and-local-models.md)
 
 Sources:
 - [20 days of compute vs 7 hours: rethinking what state-of-the-art means — Bertrand Charpentier, Pruna](../sources/20260601_hqHC6Z_lXyo.md), 02:33-12:18
@@ -40,3 +42,4 @@ Sources:
 - [Guide, Verify, Solve — Anirban Chatterjee, Sonar](../sources/20260809_03l29gJXpCE.md), 04:51-05:57
 - [Multiplayer agentic engineering — Arjun Singh, Superconductor](../sources/20260809_OL7kfezynJM.md), 13:46-14:51
 - [Benchmarking Coding Agents on New vs Legacy Codebases — Denys Linkov, Wisedocs](../sources/20260808_7vn4WpqNpck.md), 05:20-06:48
+- [Open Source Is Dead. Long Live Open Source. — Saoud Rizwan, Cline](../sources/20260807_CoEIs6Xm8m8.md), 09:28-10:05

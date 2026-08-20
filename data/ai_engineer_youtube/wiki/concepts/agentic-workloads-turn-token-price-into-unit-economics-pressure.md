@@ -12,6 +12,7 @@ Details:
 - To show ROI and economic viability, enterprises may compare per-token API pricing with running models themselves and paying directly for compute. (09:36-10:07)
 - The cost decision is tied to control: the talk frames owned compute as a way to move from being a price taker to controlling the price shape. (09:53-10:07)
 - The "cost of intelligence keeps falling" assumption is not safe: StandardAgents reports the trend *reversed* in 2026, with per-token cost up ~29–30% adjusted for IQ and ~76% unadjusted at mid-year (partly a memory crunch). That makes per-task efficiency — cheaper models and smaller contexts on narrow tasks — a first-order lever, especially for customer-facing AI where a premium model like Fable is uneconomical unless the customer has a massive lifetime value. ([Domain-Specific Agents](../sources/20260629_spNAUEgq_A8.md), 22:37-24:13)
+- **The internal-tooling version of the pressure, with a measured relief valve.** Coinbase "defaulted to using GLM and Kimi in their internal LLM gateway and… this has cut their AI spend by nearly half while their token usage continues to grow" — the volume kept climbing and the bill halved anyway, because the swap happened at the gateway rather than in every calling application. Rizwan's projection is that this becomes the default enterprise shape: "businesses building their own internal tooling and routing to work with these agents in the most dollar efficient way for them. Even if it means not having access to the latest new feature in something like Claude Code." The demand-side figures he stacks against it show why the pressure is now visible where it previously was not: an anonymous CFO report of $500 million on Claude in a single month with no per-user limits set, and Uber's CTO reporting $2,000 per user per month and the entire 2026 budget spent in four months. All four figures are relayed second-hand from slides. ([Rizwan](../sources/20260807_CoEIs6Xm8m8.md), 05:46-06:27, 10:27-10:55)
 
 Related topics:
 - [Inference](../topics/inference.md)
@@ -23,7 +24,9 @@ Related concepts:
 - [Tune inference to the application Pareto point](tune-inference-to-the-application-pareto-point.md)
 - [Compare models by task, thinking budget, cost, and latency](compare-models-by-task-thinking-budget-cost-and-latency.md)
 - [Domain-specific agents unlock small models and tight permissions](domain-specific-agents-unlock-small-models-and-tight-permissions.md)
+- [A Subsidized Coding-Agent Subscription Is a Lock-In Ramp](a-subsidized-coding-agent-subscription-is-a-lock-in-ramp.md)
 
 Sources:
 - [The Rise of Open Models in the Enterprise — Amir Haghighat, Baseten](../sources/20250724_3WV1vT0B0cg.md), 05:51-06:10, 09:07-10:07
 - [The Future Is Domain-Specific Agents - Justin Schroeder, StandardAgents](../sources/20260629_spNAUEgq_A8.md), 22:37-24:13
+- [Open Source Is Dead. Long Live Open Source. — Saoud Rizwan, Cline](../sources/20260807_CoEIs6Xm8m8.md), 05:46-06:27, 10:27-10:55

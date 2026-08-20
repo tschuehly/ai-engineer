@@ -544,6 +544,7 @@
 - [Bound Agent Payments With Processor-Enforced Mandate Tokens](../concepts/bound-agent-payments-with-processor-enforced-mandate-tokens.md)
 - [Settle Agent Payments Over HTTP With 402 and Checkout Protocols](../concepts/settle-agent-payments-over-http-with-402-and-checkout-protocols.md)
 - [Treat Token Spend as a Strategic Axis](../concepts/treat-token-spend-as-a-strategic-axis.md)
+- [A Subsidized Coding-Agent Subscription Is a Lock-In Ramp](../concepts/a-subsidized-coding-agent-subscription-is-a-lock-in-ramp.md)
 
 ## Architecture Copilots
 
@@ -565,6 +566,8 @@
 - [Learn risk scoring from audit feedback for predictive compliance](../concepts/learn-risk-scoring-from-audit-feedback-for-predictive-compliance.md)
 
 ## Coding Agents
+- [A Subsidized Coding-Agent Subscription Is a Lock-In Ramp](../concepts/a-subsidized-coding-agent-subscription-is-a-lock-in-ramp.md) - a $200 plan estimated at $8,000-$14,000 of API value buys adoption; the switching cost accrues in your harness, not your invoice.
+- [Closing the Contribution Channel Is Where Slop Filtering Ends](../concepts/closing-the-contribution-channel-is-where-slop-filtering-ends.md) - Zig's ban, curl's bug bounty, tldraw's closed PRs: effort filters escalate one way, and the apprenticeship path is what they cost.
 - [Tell the Agent Only What Is Not Recoverable From the Code](../concepts/tell-the-agent-only-what-is-not-recoverable-from-the-code.md) - define the human's context contribution by exclusion, and expect it to shrink as retrieval improves.
 - [Automate the Chores That Needed Judgment, Not the Ones That Needed Rules](../concepts/automate-the-chores-that-needed-judgment-not-rules.md) - a per-task test for what is now worth handing to an agent, with the reflex-you-are-embarrassed-by as a candidate finder.
 - [The Markdown Workflow Is the Source; the YAML Is a Compiled Artifact](../concepts/the-markdown-workflow-is-source-the-yaml-is-a-compiled-artifact.md) - a three-line brief expands, codebase-aware, into a playbook the author never wrote.
@@ -1030,6 +1033,7 @@
 - [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md)
 
 ## Infrastructure
+- [An AI-Infrastructure Package Is a High-Yield Credential Target](../concepts/an-ai-infrastructure-package-is-a-high-yield-credential-target.md) - self-hosting a gateway concentrates the keys you meant to control, and a three-hour LiteLLM compromise harvested exactly those machines.
 - [Multi-Repo Cost Has Moved From Navigation to Verification](../concepts/multi-repo-cost-has-moved-from-navigation-to-verification.md) - every isolated agent environment pays clone-and-provision again, so repository layout is a per-task infrastructure cost.
 - [Watch the Change Paths That Bypass Your Deployment Pipeline](../concepts/watch-the-change-paths-that-bypass-your-deployment-pipeline.md) - feature flags and infra changes never enter CI/CD, so they get no verification and are found after impact.
 - [Derive the Post-Deploy Check Plan From What Actually Changed](../concepts/derive-the-post-deploy-check-plan-from-what-changed.md) - per-change telemetry selection along the causal chain, with the recheck interval decided rather than configured.
@@ -1453,6 +1457,7 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Commoditize the Layer You Do Not Win On](../concepts/commoditize-the-layer-you-do-not-win-on.md) - Open Compute as the template: publishing first sets the standard, and the industry adopts what it can build on even when it is not the best thing.
 - [Unimplemented Plans Signal a Working Decision Layer](../concepts/unimplemented-plans-signal-a-working-decision-layer.md) - code velocity is not idea velocity, and prototype gravity narrows the option set precisely because building got cheap.
 - [Decide the Agent Buy Boundary With Six Production Questions](../concepts/decide-the-agent-buy-boundary-with-six-production-questions.md) - what a hosted agent platform will and will not do for you, and where differentiation therefore has to live.
 - [Raise the Floor Before Maxing the Benchmark](../concepts/raise-the-floor-before-maxing-the-benchmark.md) - "are you a benchmark maxer or a floor raiser?" — the floor is where user trust is lost, and it cannot be removed without removing the ceiling.
@@ -1941,6 +1946,7 @@
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 
 ## Models
+- [Commoditize the Layer You Do Not Win On](../concepts/commoditize-the-layer-you-do-not-win-on.md) - the releasing lab's case for open weights: publish the weights, keep the research, and claim distillation closes gaps without opening them.
 - [Re-Run One Remembered Hard Task on Each New Model](../concepts/re-run-one-remembered-hard-task-on-each-new-model.md) - three hours and ten mistakes on o3 down to a one-shot on Opus 4.8, priced in hours saved against tokens spent — and confounded by harness drift.
 - [Route Between Model Tiers by Quality Dimension, Not Only Cost](../concepts/route-between-model-tiers-by-quality-dimension-not-only-cost.md) - Sonnet 4.6 leads on correctness and solve rate while Opus 4.6 is the pick for maintainability, security, or lower complexity.
 - [Adam Absorption Hides Most Weight Updates From the Served Model](../concepts/adam-absorption-hides-most-weight-updates-from-the-served-model.md) - a flat push against a floor that scales with weight magnitude, so small weights move and large weights freeze.
@@ -2254,6 +2260,7 @@
 - [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md)
 
 ## Security
+- [An AI-Infrastructure Package Is a High-Yield Credential Target](../concepts/an-ai-infrastructure-package-is-a-high-yield-credential-target.md) - a backdoored release of a 3.5M-downloads-a-day LLM proxy, found only because the payload crashed an editor.
 - [Bound What an Unattended Automation May Emit, Including Emitting Nothing](../concepts/bound-what-an-unattended-automation-may-emit.md) - an output allow-list with cardinality caps turns a prompt-injected flood into one artifact, and closes the availability hole of manufactured noise.
 - [A Developer Laptop Is an Ambient-Credential Surface](../concepts/a-developer-laptop-is-an-ambient-credential-surface.md) - least privilege fails on a workstation because nobody enumerated what is on it, and the dangerous agent is the maximally obedient one.
 - [Escalate Risky Actions to a Read-Only Review Subagent](../concepts/escalate-risky-actions-to-a-read-only-review-subagent.md) - a separately spawned reviewer that cannot act, and only escalates when it objects.
@@ -2592,6 +2599,7 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Closing the Contribution Channel Is Where Slop Filtering Ends](../concepts/closing-the-contribution-channel-is-where-slop-filtering-ends.md) - every filter raises the cost for careful contributors too, and the terminal state accepts nothing from outside.
 - [The Markdown Workflow Is the Source; the YAML Is a Compiled Artifact](../concepts/the-markdown-workflow-is-source-the-yaml-is-a-compiled-artifact.md) - one document holds the prose instructions and the front-matter capability manifest; the CI config is regenerated, never edited.
 - [Bound What an Unattended Automation May Emit, Including Emitting Nothing](../concepts/bound-what-an-unattended-automation-may-emit.md) - cap a scheduled run's artifacts by kind and by count, and let it finish silently rather than manufacture output.
 - [Automate the Chores That Needed Judgment, Not the Ones That Needed Rules](../concepts/automate-the-chores-that-needed-judgment-not-rules.md) - a filter for which recurring annoyances are candidates now, and why the ones rejected years ago deserve another look.
