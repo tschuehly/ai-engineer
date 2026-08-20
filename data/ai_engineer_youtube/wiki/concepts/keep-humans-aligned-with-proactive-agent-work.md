@@ -14,6 +14,7 @@ Details:
 - Editable self-written memory gives the agent project knowledge while leaving humans able to inspect and change what the agent remembers (09:34-09:50).
 - **"Refining when intervention is needed" gets a concrete, low-friction mechanism from a second source: reply to the output.** Resolve AI's on-call handoff report is tuned in its own Slack thread — "this is too verbose. Verbose. Make it shorter" — and "the agent is able to update its task underneath… so that the next time it fires, it's not going to be as verbose." Redirecting agent work costs a sentence in the channel where the work already appeared, rather than a trip to a configuration surface. Note this segment was not shown completing on stage. See [Amend a Recurring Agent Task by Replying to Its Output](amend-a-recurring-agent-task-by-replying-to-its-output.md). ([Justin Smith](../sources/20260809_vSx5IULvBns.md), 20:26-20:58)
 - **The same source shows an agent escalating to a human by choice rather than by policy.** With DM access, it will "DM you to say, 'I think I know the answer to this, but I'm not sure. Can you confirm this for me before I respond back?'" — a control point the agent opens when its own confidence is middling. Smith calls this "emergent," which is worth reading as a limit: a behavior that appeared rather than one that is guaranteed is not yet an alignment guarantee. ([Justin Smith](../sources/20260809_vSx5IULvBns.md), 16:52-17:09)
+- **A lab building this surface names the same problem as unsolved, which is worth recording as a status check on the pattern.** Gazit's ACE has ambient awareness of *teammates* — "I also want to be ambiently aware of what everybody's going on about" — and then stops at the agent case: "how do automations surface themselves in this? If I want to talk with my automation… when an agent wants to tap me on the shoulder and ask me a question." So the design question this page addresses is open at GitHub Next, not merely at teams adopting it. What his talk does supply is the other end of the channel: a scheduled job is allowed to produce nothing, which is a prerequisite for any surfacing design that expects humans to keep reading it ([bound what an unattended automation may emit](bound-what-an-unattended-automation-may-emit.md)). ([Idan Gazit](../sources/20260808_iQ5xldZ9StU.md), 18:37-19:21)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -27,7 +28,9 @@ Related concepts:
 - [Use reviewer agents and lints to turn review lessons into guardrails](use-reviewer-agents-and-lints-to-turn-review-lessons-into-guardrails.md)
 - [Amend a Recurring Agent Task by Replying to Its Output](amend-a-recurring-agent-task-by-replying-to-its-output.md)
 - [Answer Unaddressed Questions Behind a Confidence Gate](answer-unaddressed-questions-behind-a-confidence-gate.md)
+- [Bound What an Unattended Automation May Emit, Including Emitting Nothing](bound-what-an-unattended-automation-may-emit.md)
 
 Sources:
 - [Proactive Agents - Kath Korevec, Google Labs](../sources/20251213_v3u8xc0zLec.md), 02:21-10:08
 - [Always-on agents run production without the on-call tax — Justin Smith, Resolve AI](../sources/20260809_vSx5IULvBns.md), 16:52-17:09, 20:26-20:58
+- [Realtime multiplayer, automation, and you! — Idan Gazit, GitHub](../sources/20260808_iQ5xldZ9StU.md), 18:37-19:21

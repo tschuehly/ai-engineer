@@ -17,6 +17,7 @@ Details:
 - The inverted model is stated bluntly: ordinary sandboxes start from a VM/container and add security around it, while a capability sandbox starts from "the only thing you can run is JavaScript, with no access to fetch, no APIs, nothing," then grants explicit capabilities from the outside (e.g., outgoing fetches only to `github.com`), with the recommended default being to block outgoing fetches entirely. (SKDJo2CopRs 08:55-09:36)
 - A concrete payoff is server-side generative UI: instead of generating JSON to render ("Jason Bender") because a platform lacks a primitive to render untrusted code, have the model generate HTML or React and render it directly inside the sandbox — safe enough to run on your own servers, not just in a client like Claude Artifacts. (SKDJo2CopRs 12:14-13:11)
 - Plugin systems are another fit: Cloudflare's M- CMS builds its plugin system entirely on Dynamic Workers, locking down where plugins run to avoid WordPress-style plugin security incidents. (SKDJo2CopRs 21:31-22:06)
+- **The same rule shipped as a per-job manifest for scheduled CI work.** GitHub's agentic workflows apply capability grants to standing automations rather than to a code-execution sandbox: the workflow document's front matter enumerates permissions ("read all"), the tool set, the reachable network destinations, and — the axis a sandbox rarely covers — the write actions the run may perform at all. The motivation is the absence of a supervisor rather than untrusted generated code: "if we're going to be not supervising agents doing things, then we're going to need much stronger guardrails around what they're allowed to do, what they're allowed to read, what they're allowed to write." Worth noting that an allow-list of *writes* with a cardinality bound (see [bound what an unattended automation may emit](bound-what-an-unattended-automation-may-emit.md)) is a capability shape this page's runtime examples do not express. ([Idan Gazit](../sources/20260808_iQ5xldZ9StU.md), 07:10-08:34)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -30,8 +31,10 @@ Related concepts:
 - [Choose isolates or containers by generated-code workload](choose-isolates-or-containers-by-generated-code-workload.md)
 - [Build Agents on Addressable Stateful-Serverless Instances](build-agents-on-addressable-stateful-serverless-instances.md)
 - [Move Agent Access Control to the Network Layer So the Sandbox Holds No Credential](move-agent-access-control-to-the-network-layer.md)
+- [Bound What an Unattended Automation May Emit, Including Emitting Nothing](bound-what-an-unattended-automation-may-emit.md)
 
 Sources:
 - [Code Mode: Let the Code do the Talking - Sunil Pai, Cloudflare](../sources/20260419_8txf05vVVl4.md), 12:33-14:15, 17:50-18:17
 - [Why, and how you need to sandbox AI-Generated Code? - Harshil Agrawal, Cloudflare](../sources/20260408_AHtGAgQ0Q_Q.md), 08:13-09:57, 15:24-18:44
 - [Why Eval++ Is the Next Great Compute Primitive — Sunil Pai & Matt Carey, Cloudflare](../sources/20260608_SKDJo2CopRs.md), 07:11-13:11, 21:31-22:06
+- [Realtime multiplayer, automation, and you! — Idan Gazit, GitHub](../sources/20260808_iQ5xldZ9StU.md), 07:10-08:34

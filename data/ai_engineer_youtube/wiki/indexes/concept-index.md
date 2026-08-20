@@ -1,6 +1,10 @@
 # Concept Index
 
 ## Agents
+- [Bound What an Unattended Automation May Emit, Including Emitting Nothing](../concepts/bound-what-an-unattended-automation-may-emit.md) - declare the kinds and counts of artifact a scheduled run may produce, outside the prompt, and make silence a permitted outcome.
+- [Automate the Chores That Needed Judgment, Not the Ones That Needed Rules](../concepts/automate-the-chores-that-needed-judgment-not-rules.md) - the newly automatable set is the tasks no rule could decide but a human decides routinely in seconds from evidence already in the repo.
+- [Tell the Agent Only What Is Not Recoverable From the Code](../concepts/tell-the-agent-only-what-is-not-recoverable-from-the-code.md) - agents recover any fact that lives in the repository, so the human supplies the residue: constraints, deals, and preferences written nowhere.
+- [The Markdown Workflow Is the Source; the YAML Is a Compiled Artifact](../concepts/the-markdown-workflow-is-source-the-yaml-is-a-compiled-artifact.md) - author a standing agent job as prose plus a capability manifest, and treat the executable form as a build output.
 - [Read the Stop Reason Before You Read the Answer](../concepts/read-the-stop-reason-before-you-read-the-answer.md) - the loop branches on `stop_reason`, and `max_tokens` hands you a fragment that looks exactly like a finished answer.
 - [Withhold the Producer's Reasoning From the Critic](../concepts/withhold-the-producers-reasoning-from-the-critic.md) - agents that read each other's reasoning devolve into one idea, so give the critic the claim and the evidence only.
 - [Bound Context Twice: Fork the Subtask, Then Compact on a Token Threshold](../concepts/bound-context-twice-fork-the-subtask-then-compact-on-a-token-threshold.md) - isolation keeps subtask traffic out of the parent window; compaction handles what the parent accumulates anyway.
@@ -561,6 +565,9 @@
 - [Learn risk scoring from audit feedback for predictive compliance](../concepts/learn-risk-scoring-from-audit-feedback-for-predictive-compliance.md)
 
 ## Coding Agents
+- [Tell the Agent Only What Is Not Recoverable From the Code](../concepts/tell-the-agent-only-what-is-not-recoverable-from-the-code.md) - define the human's context contribution by exclusion, and expect it to shrink as retrieval improves.
+- [Automate the Chores That Needed Judgment, Not the Ones That Needed Rules](../concepts/automate-the-chores-that-needed-judgment-not-rules.md) - a per-task test for what is now worth handing to an agent, with the reflex-you-are-embarrassed-by as a candidate finder.
+- [The Markdown Workflow Is the Source; the YAML Is a Compiled Artifact](../concepts/the-markdown-workflow-is-source-the-yaml-is-a-compiled-artifact.md) - a three-line brief expands, codebase-aware, into a playbook the author never wrote.
 - [Read a Certification Blueprint as a Map of Production Anti-Patterns](../concepts/read-a-certification-blueprint-as-a-map-of-production-anti-patterns.md) - agentic architecture at 27% and harness configuration at 20% ahead of prompting, with a named wrong answer attached to each scenario.
 - [Audit a Refactor Against Having Waited for Better Models](../concepts/audit-a-refactor-against-having-waited-for-better-models.md) - the deferral discount compounds, but so does the illegible code you generate while waiting; decide on business ROI, not model forecasts.
 - [Read the Task-Length Curve at the Success Rate You Would Actually Delegate At](../concepts/read-the-task-length-curve-at-the-success-rate-you-would-delegate-at.md) - 50% is a benchmark convention and a coin flip in a workday; the delegation threshold is 80%, 90%, or 99%.
@@ -868,6 +875,7 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Tell the Agent Only What Is Not Recoverable From the Code](../concepts/tell-the-agent-only-what-is-not-recoverable-from-the-code.md) - "what's left are the things that are not in code" as a subtraction rule for instruction files and shared sessions.
 - [Bound Context Twice: Fork the Subtask, Then Compact on a Token Threshold](../concepts/bound-context-twice-fork-the-subtask-then-compact-on-a-token-threshold.md) - two bounds catching different traffic, because forking cannot stop the parent conversation from growing and compaction cannot refund a subtask's spend.
 - [Withhold the Producer's Reasoning From the Critic](../concepts/withhold-the-producers-reasoning-from-the-critic.md) - a deliberate omission rather than a budget decision: the reviewer is denied context it could technically be given.
 - [Multi-Repo Cost Has Moved From Navigation to Verification](../concepts/multi-repo-cost-has-moved-from-navigation-to-verification.md) - the cross-repo reading problem is largely solved by model progress, so a context remedy no longer addresses what is left.
@@ -2246,6 +2254,7 @@
 - [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md)
 
 ## Security
+- [Bound What an Unattended Automation May Emit, Including Emitting Nothing](../concepts/bound-what-an-unattended-automation-may-emit.md) - an output allow-list with cardinality caps turns a prompt-injected flood into one artifact, and closes the availability hole of manufactured noise.
 - [A Developer Laptop Is an Ambient-Credential Surface](../concepts/a-developer-laptop-is-an-ambient-credential-surface.md) - least privilege fails on a workstation because nobody enumerated what is on it, and the dangerous agent is the maximally obedient one.
 - [Escalate Risky Actions to a Read-Only Review Subagent](../concepts/escalate-risky-actions-to-a-read-only-review-subagent.md) - a separately spawned reviewer that cannot act, and only escalates when it objects.
 - [Judge an Action by How Explicitly the User Authorized It](../concepts/judge-an-action-by-how-explicitly-the-user-authorized-it.md) - explicitness of authorization as the portable criterion for when to stop and ask.
@@ -2583,6 +2592,9 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [The Markdown Workflow Is the Source; the YAML Is a Compiled Artifact](../concepts/the-markdown-workflow-is-source-the-yaml-is-a-compiled-artifact.md) - one document holds the prose instructions and the front-matter capability manifest; the CI config is regenerated, never edited.
+- [Bound What an Unattended Automation May Emit, Including Emitting Nothing](../concepts/bound-what-an-unattended-automation-may-emit.md) - cap a scheduled run's artifacts by kind and by count, and let it finish silently rather than manufacture output.
+- [Automate the Chores That Needed Judgment, Not the Ones That Needed Rules](../concepts/automate-the-chores-that-needed-judgment-not-rules.md) - a filter for which recurring annoyances are candidates now, and why the ones rejected years ago deserve another look.
 - [Read the Stop Reason Before You Read the Answer](../concepts/read-the-stop-reason-before-you-read-the-answer.md) - sequence, selection, and iteration over a control field, with one branch meaning the step's output is a fragment.
 - [Validate a Research Report by Building the Thing It Recommends](../concepts/validate-a-research-report-by-building-the-thing-it-recommends.md) - keep the criteria list and the proof of concept when an agent compresses a two-month vendor evaluation into days.
 - [Audit a Refactor Against Having Waited for Better Models](../concepts/audit-a-refactor-against-having-waited-for-better-models.md) - now-versus-later on a large cleanup, with layered partial isolation as the option the binary framing hides.

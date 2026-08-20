@@ -14,6 +14,7 @@ Details:
 - **How it relates to the scope-exchange pattern.** [Vaulting and exchanging tokens for scoped upstream access](vault-and-exchange-tokens-for-scoped-upstream-agent-access.md) attacks the second problem: narrow what the credential can do. The two compose — never-in-context bounds who can read the secret, scope exchange bounds what the secret can do — and neither substitutes for the other.
 - **The unstated surface.** The talk gives no threat model for the execution layer itself. A malicious or compromised tool, an untrusted skill uploaded into the environment, or a tool that echoes its own auth header into its return value all reach the credential at exactly the moment it is decrypted. "The model never sees it" is a statement about one component, not about the system.
 - Provenance: an Anthropic vendor talk describing its managed-agent product; this is one of four "lessons learned" delivered in about twenty seconds. The mechanism is stated, not demonstrated — no audit, no attack analysis, no discussion of vault compromise, key rotation, or what is logged at decryption time.
+- **A second source states the same architecture plus the operating assumption that motivates it.** GitHub Next lists "never trust agents with secrets" among four principles it wants burned into people's brains, and gives the rule in its strongest form: "if an agent can know a secret, that secret, you need to treat it as if it's already been compromised… because you have no idea whether or not somebody's injected the agent to reveal that secret somewhere else." The mechanism is the same broker: "the secrets are all kept outside of the agent's jail, and when the agent wants to use the secret to call something, it needs to ask the warden, 'Hey, mother may I please go talk to that service?'" The assume-compromised framing is the useful addition — it converts "don't put tokens in the prompt" from a hygiene rule into a classification rule, since any secret that ever entered the context has to be rotated rather than reasoned about. ([Idan Gazit](../sources/20260808_iQ5xldZ9StU.md), 11:52-12:30)
 
 Related topics:
 - [Security](../topics/security.md)
@@ -26,6 +27,8 @@ Related concepts:
 - [Reach Private MCP Servers With Outbound-Only Tunnels](reach-private-mcp-servers-with-outbound-only-tunnels.md)
 - [Separate Agent Harnesses From Generated-Code Execution](separate-agent-harnesses-from-generated-code-execution.md)
 - [Move Agent Access Control to the Network Layer So the Sandbox Holds No Credential](move-agent-access-control-to-the-network-layer.md)
+- [Bound What an Unattended Automation May Emit, Including Emitting Nothing](bound-what-an-unattended-automation-may-emit.md)
 
 Sources:
 - [Anthropic's Applied AI team on the Evolution of Agentic Surfaces](../sources/20260811_K0X9QDRkIdg.md), 22:25-22:47
+- [Realtime multiplayer, automation, and you! — Idan Gazit, GitHub](../sources/20260808_iQ5xldZ9StU.md), 11:52-12:30

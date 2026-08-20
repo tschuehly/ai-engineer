@@ -1,0 +1,36 @@
+# Tell the Agent Only What Is Not Recoverable From the Code
+
+Summary: An agent that can read the repository can recover any fact the repository contains, so the context a human must supply is exactly the residue: the constraints, preferences, and commitments that were never written down anywhere an agent can reach. "Anything that's in code, any fact that's in code, the agents can figure out by reading the code. What's left are the things that are not in code." That residue — not a restatement of the architecture — is what belongs in a shared human-agent surface.
+
+Use when:
+- Deciding what goes into a repository instructions file, a spec, a plan document, or a project channel, and what is wasted effort.
+- Designing a collaboration surface that humans and agents share, and needing a rule for what it is *for*.
+- An agent produced a technically sound change that was rejected for a reason nobody could point to in the codebase.
+- Onboarding an agent to a project and tempted to write a summary of code it can already read.
+
+Details:
+- **The criterion, and why it is a subtraction.** The surface's job is "surfacing all the facts that are not in code," and the boundary is drawn by the agent's own competence rather than by taste: whatever it can derive by reading, it should derive by reading. What remains is what a human uniquely holds. This inverts the usual instinct to write an architecture overview for the agent — that document is the part it needed least. ([Idan Gazit](../sources/20260808_iQ5xldZ9StU.md), 14:01-14:12)
+- **The examples are deliberately non-technical, which is the tell.** "If we do it that way, that VP over there is going to vibe with that direction." "We should make it purple because that's their favorite color." "We get a really sweet deal on infrastructure from Azure. Therefore, we should be building on Azure, not on GCP or AWS." None of these is inferable from any artifact, none is a technical argument, and each is decisive. The last one is the sharpest case, because the resulting cloud choice will be visible in the code forever while the reason for it will not. ([Idan Gazit](../sources/20260808_iQ5xldZ9StU.md), 14:12-14:30)
+- **The payoff is that the residue does not have to be restated.** Once the conversation and the agent share a surface, a decision reached in the thread can be executed from the thread: "I've just had a whole discussion with my teammate. I don't want to turn around and now emit those instructions again. Instead, I just want to be like, yo, ACE, do it. And because it sees the entire backscroll of my conversation with my peers, with my team, it's able to act on that chat history." The alternative — a human reading a discussion and re-typing its conclusion as a prompt — is the tax this removes. ([Idan Gazit](../sources/20260808_iQ5xldZ9StU.md), 16:11-16:32)
+- **Conversations arrive in the wrong order, and the model can sort them.** "Very frequently, what do engineering conversations sound like? They sound like, hey, we should try it this way. No, wait, I thought of an edge case. We should actually do it that way. Let's go back to the first idea… instead of me teasing out that final state from that long conversation, I can just let AI do it and it'll figure it out. So I don't need to work for the robots." This makes backscroll usable as context without a human first curating it into a clean statement — but note it is asserted, not measured, and a thread that reversed twice is exactly the input where a wrong reading is both likely and invisible. ([Idan Gazit](../sources/20260808_iQ5xldZ9StU.md), 16:44-17:07)
+- **How this sharpens the wiki's existing alignment argument.** [Align teams before agents implement](align-teams-before-agents-implement.md) — from the earlier GitHub Next talk on the same prototype — observes that alignment context "lives outside the codebase in business constraints, decision authority, product vision, organizational history, and people's heads." That is a description of where the context is. This is a rule for what to do about it: the agent's reading ability defines the boundary, so the surface should carry the complement and nothing else. The practical consequence is a smaller, more durable set of things worth writing down.
+- **The tension with instruction-file practice.** Repository instruction files ([layer Copilot context through issues, instructions, and repository structure](layer-copilot-context-through-issues-instructions-and-repository-structure.md)) routinely contain build commands, directory maps, and conventions — much of which *is* recoverable from the repo, and is written down anyway because rediscovering it costs tokens and time on every run. The residue rule is about what is *necessary*, not about what is cheapest; a fact the agent can derive but derives slowly or unreliably is still worth caching. Read this page as a priority ordering rather than a prohibition: the non-recoverable facts are the ones nothing else will supply.
+- **The trajectory it implies.** Gazit projects the residue accumulating into shared documents: "more and more of the work that we're doing with AI results in markdown documents in a docs folder that captures sort of the truth… in order to change something about my application, I'm going to edit a document, and I'm going to tell AI, 'Hey, make the document true.'" That is the same position the wiki files as [make the doc the state and the agent the action](make-the-doc-the-state-and-the-agent-the-action.md), reached independently by a second speaker in the same week, and it inherits the same unpaid bill: a document meant to be read as current needs an owner and a retirement rule ([retire completed planning docs before they become agent doc rot](retire-completed-planning-docs-before-they-become-agent-doc-rot.md)), and neither is described here either. ([Idan Gazit](../sources/20260808_iQ5xldZ9StU.md), 17:45-18:24)
+- **Provenance.** A vendor lab demo. The criterion is an argument, not a finding; there is no study of what teams actually put in shared surfaces or of what agents actually fail to recover from code.
+
+Related topics:
+- [Context Engineering](../topics/context-engineering.md)
+- [Agents](../topics/agents.md)
+- [Coding Agents](../topics/coding-agents.md)
+
+Related concepts:
+- [Align Teams Before Agents Implement](align-teams-before-agents-implement.md)
+- [Shared Cloud Workspaces Make Agent Sessions Collaborative](shared-cloud-workspaces-make-agent-sessions-collaborative.md)
+- [Collaborative Plans Become Executable Agent Context](collaborative-plans-become-executable-agent-context.md)
+- [Turn Unfiled Conversation Into Concrete Prototypes](turn-unfiled-conversation-into-concrete-prototypes.md)
+- [Layer Copilot Context Through Issues, Instructions, and Repository Structure](layer-copilot-context-through-issues-instructions-and-repository-structure.md)
+- [Make One Agent Session Reachable From Every Interface](make-one-agent-session-reachable-from-every-interface.md)
+- [Make the Doc the State and the Agent the Action](make-the-doc-the-state-and-the-agent-the-action.md)
+
+Sources:
+- [Realtime multiplayer, automation, and you! — Idan Gazit, GitHub](../sources/20260808_iQ5xldZ9StU.md), 14:01-18:24

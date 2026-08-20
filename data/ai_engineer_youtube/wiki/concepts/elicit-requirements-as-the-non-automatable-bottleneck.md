@@ -13,6 +13,7 @@ Details:
 - Naive AI use replicates what already exists because a model "by definition is coded to give you the most common answers" — the Henry Ford "faster horse" trap. A human must read the room and name the problem precisely to move AI off the average and toward a step-change ("a car a magnitude shift better"). (03:10-04:20)
 - The remedy is an old trade with new economics: "isn't this just good old product management?" — yes; everyone has the same models and tools, so the differentiator is who understands the business need better. (10:50-11:40)
 - Operational consequence: move upstream. Pre-boom the smartest people wrote code; now shift subject-matter experts toward customers and business problems and spend more time deciding what to build, "because that's the expensive part. Building it has actually become very cheap." Don't require everyone to become a PM — just include their experience in the decision of what to build. (12:35-14:00)
+- **The same boundary drawn from the agent's side, as a rule about what is left to say.** "Anything that's in code, any fact that's in code, the agents can figure out by reading the code. What's left are the things that are not in code" — the political constraints, the vendor deal that forces a database choice, the preference nobody wrote down. That is a sharper statement of this page's claim than "requirements are hard": it says the non-automatable input is defined by exclusion, and it shrinks as retrieval improves. It also gives elicitation a concrete output format, since the residue is what belongs in the shared session or document rather than in a spec that restates the codebase. See [tell the agent only what is not recoverable from the code](tell-the-agent-only-what-is-not-recoverable-from-the-code.md). ([Idan Gazit](../sources/20260808_iQ5xldZ9StU.md), 14:01-14:30)
 
 Related topics:
 - [Product Strategy](../topics/product-strategy.md)
@@ -22,6 +23,8 @@ Related concepts:
 - [Measure Feature Adoption, Not Shipping Velocity](measure-feature-adoption-not-shipping-velocity.md)
 - [AI-amplified shipping speed needs stronger product taste](ai-amplified-shipping-speed-needs-stronger-product-taste.md)
 - [Product Engineers Need Direct Customer Context](product-engineers-need-direct-customer-context.md)
+- [Tell the Agent Only What Is Not Recoverable From the Code](tell-the-agent-only-what-is-not-recoverable-from-the-code.md)
 
 Sources:
 - [You Can't Prompt the Room: The Last Skill AI Won't Replace - Balázs Horváth, VisualLabs](../sources/20260629_6bmM45jkMDY.md), 00:37-14:00
+- [Realtime multiplayer, automation, and you! — Idan Gazit, GitHub](../sources/20260808_iQ5xldZ9StU.md), 14:01-14:30

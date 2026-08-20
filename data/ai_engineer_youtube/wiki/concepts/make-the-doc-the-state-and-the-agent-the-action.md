@@ -19,6 +19,7 @@ Details:
 - The summary form is a substitution of the unit of work: "your core atom of your work is a doc rather than a chat." (14:23-14:30)
 - **Unpriced costs.** The talk names no owner for the doc, no versioning against the code it describes, no retirement policy, and no answer for concurrent editing or for a doc that grows to the size of the chat it replaced. The wiki's counterweight is [Retire Completed Planning Docs Before They Become Agent Doc Rot](retire-completed-planning-docs-before-they-become-agent-doc-rot.md): a durable planning artifact that outlives its accuracy becomes harmful retrieval context, which is exactly the failure a state document invites. Treat doc lifecycle as the design work this pattern hands you.
 - Caveat: vendor talk, and "agent bankruptcy is just not a thing" is the strongest and least supported claim in it — no measurement of restart cost, doc size, or how often a reread actually substitutes for the lost session.
+- **A second speaker in the same week reaches the same formulation, and gives it its shortest name.** GitHub Next projects that "more and more of the work that we're doing with AI results in markdown documents in a docs folder that captures sort of the truth," and that editing those documents becomes the development action: "in order to change something about my application, I'm going to edit a document, and I'm going to tell AI, 'Hey, make the document true.'" The independent arrival is the evidence worth recording, since the two sources share no product, method, or framing. It also arrives with the same bill unpaid: neither describes who owns a living state document, how it is versioned against the code it describes, or when it is retired ([retire completed planning docs before they become agent doc rot](retire-completed-planning-docs-before-they-become-agent-doc-rot.md)). ([Idan Gazit](../sources/20260808_iQ5xldZ9StU.md), 17:45-18:24)
 
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
@@ -33,6 +34,8 @@ Related concepts:
 - [Collaborative Plans Become Executable Agent Context](collaborative-plans-become-executable-agent-context.md)
 - [Keep the Session Log Separate From the Context Window](keep-the-session-log-separate-from-the-context-window.md)
 - [Use Decision Logs to Keep Uncertain Agents Moving](use-decision-logs-to-keep-uncertain-agents-moving.md)
+- [Tell the Agent Only What Is Not Recoverable From the Code](tell-the-agent-only-what-is-not-recoverable-from-the-code.md)
 
 Sources:
 - [Velocity Sickness: What Happens When Your Whole Team Gets 10x Faster — Matt Dailey, Ref.](../sources/20260809_Kz4QJmNrVXU.md), 10:38-11:35, 12:52-14:30, 16:55-18:05
+- [Realtime multiplayer, automation, and you! — Idan Gazit, GitHub](../sources/20260808_iQ5xldZ9StU.md), 17:45-18:24
