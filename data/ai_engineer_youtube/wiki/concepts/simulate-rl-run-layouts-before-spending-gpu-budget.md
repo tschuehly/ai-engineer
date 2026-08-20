@@ -14,6 +14,8 @@ Details:
 - Candidate layouts are pruned when simulated staleness exceeds what the ML method can tolerate, then swept to choose high-throughput allocation before paying for real GPU runs. (17:17-19:31)
 - The source reports a roughly 60% simulated speedup over the synchronous baseline when compute is optimally allocated between training and sampling under their assumptions. (18:58-19:12)
 
+- **The simulator assumes one budget of homogeneous, co-located GPUs to allocate between training and sampling; a cross-datacenter design breaks that assumption in a useful direction.** If rollout engines can autoscale globally at other providers, sampling capacity stops being drawn from the same fixed pool as training capacity, and the allocation sweep this page describes becomes a sweep over trainer size against an elastic — and differently priced — sampling tier ([The Rollout Serving Island Is the Movable Unit of an RL Run](the-rollout-serving-island-is-the-movable-unit-of-an-rl-run.md)). Two model inputs change with it: weight-sync latency stops being negligible, and per-GPU sampling cost stops being a single number. Modal reports no simulation of its own, so this is a stated implication rather than a modeled result. ([Modal](../sources/20260810_maRzp4kImJ4.md), 03:37-04:18, 17:26-18:43)
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Infrastructure](../topics/infrastructure.md)
@@ -21,8 +23,10 @@ Related topics:
 
 Related concepts:
 - [Pipeline RL trades policy staleness for GPU throughput](pipeline-rl-trades-policy-staleness-for-gpu-throughput.md)
+- [The Rollout Serving Island Is the Movable Unit of an RL Run](the-rollout-serving-island-is-the-movable-unit-of-an-rl-run.md)
 - [Make local inference benchmarks reproducible artifacts](make-local-inference-benchmarks-reproducible-artifacts.md)
 - [Use hardware-in-the-loop search for AI kernel generation](use-hardware-in-the-loop-search-for-ai-kernel-generation.md)
 
 Sources:
 - [Efficient Reinforcement Learning - Rhythm Garg & Linden Li, Applied Compute](../sources/20251209_o15AaYl7Wu0.md), 09:00-19:57
+- [Taking Reinforcement Learning Cross Datacenter — Nan Jiang, Modal](../sources/20260810_maRzp4kImJ4.md), 03:37-04:18, 17:26-18:43

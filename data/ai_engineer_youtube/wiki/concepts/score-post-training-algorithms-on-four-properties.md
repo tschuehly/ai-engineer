@@ -19,6 +19,8 @@ Details:
 - It also silently prices out the compute self-distillation adds. Matching a teacher's full distribution at every token requires teacher forward passes over the whole vocabulary; "parallelism of one" describes rollouts, not FLOPs, and the talk never compares total cost against GRPO.
 - Provenance: a founder's framing, drawn to make his own algorithm score four out of four. The historical rows are uncontroversial characterizations of well-known methods; the scoring of the last row is the vendor's own.
 
+- **The parallelism row's cost is partly negotiable, which the scorecard does not show.** Malde treats exploded parallelism as a fixed consequence of group rollouts — "our parallelism is now exploded, meaning that we need really robust environment infrastructure" — and the wiki reads that as a budget line. Modal argues the rollout fleet does not have to live in the trainer's cluster at all: with weights synchronized as a bitwise-lossless patch and pulled from a shared board, "scattered inference capacity became one elastic rollout fleet… inference capacity can now become RL capacity" ([The Rollout Serving Island Is the Movable Unit of an RL Run](the-rollout-serving-island-is-the-movable-unit-of-an-rl-run.md)). That does not make group rollouts free — the environments and the trajectory traffic remain — but it changes what the parallelism row is priced against, from scarce trainer-cluster capacity to ordinary serving capacity. ([Modal](../sources/20260810_maRzp4kImJ4.md), 03:37-04:18, 18:17-18:43)
+
 Related topics:
 - [Models](../topics/models.md)
 - [Infrastructure](../topics/infrastructure.md)
@@ -33,6 +35,8 @@ Related concepts:
 - [Build RL environments as software artifacts](build-rl-environments-as-software-artifacts.md)
 - [Use verifiable rewards for language-model RL](use-verifiable-rewards-for-language-model-rl.md)
 - [Train on Inference Exhaust Instead of Scaling Benchmarks](train-on-inference-exhaust-instead-of-scaling-benchmarks.md)
+- [The Rollout Serving Island Is the Movable Unit of an RL Run](the-rollout-serving-island-is-the-movable-unit-of-an-rl-run.md)
 
 Sources:
 - [Scaling up Continual Learning — Ronak Malde, Trajectory](../sources/20260812_zL1kLftVTlo.md), 02:51-05:31, 06:52-07:11, 09:40-10:13, 19:20-19:44
+- [Taking Reinforcement Learning Cross Datacenter — Nan Jiang, Modal](../sources/20260810_maRzp4kImJ4.md), 03:37-04:18, 18:17-18:43

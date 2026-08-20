@@ -16,6 +16,9 @@ Details:
 - Failure semantics differ too, and Kubernetes already exploits this: an inference pod that dies is marked failed and replaced, losing one request's work, while a training crash rolls back to the last checkpoint. Cheap-to-restart workloads can accept hardware that expensive-to-restart workloads cannot. (12:53-13:41)
 - Caveats the talk does not address: it says nothing about *silent* degradation — a card producing wrong results rather than crashing — which inference would not notice and which no checkpoint would catch, nor about tail-latency effects when a throttling GPU serves user-facing traffic. The claim as given is about availability, not about quality or latency SLOs.
 
+- **The same asymmetry, reached from placement rather than hardware health, and pushed further.** Modal's cross-datacenter RL talk gives the identical cause — "training is one tightly coupled job. Every step has collectives, all-reduce and the model parallel communication. That part actually wants one fast fabric" while "across rollout jobs there's no global all-reduce" — and draws a second conclusion from it: what a serving workload tolerates is not only worse *hardware* but worse *location*. Rollout engines can sit in another region at another provider, syncing weights by patch, so "scattered inference capacity became one elastic rollout fleet." Two talks, two teams, one underlying fact: the collective is what makes training fragile, and every tolerance the serving tier enjoys is downstream of not having one. ([Modal](../sources/20260810_maRzp4kImJ4.md), 03:25-03:59, 18:17-18:43)
+- That extension also complicates this page's precondition. Here the tolerance holds only while inference stays single-node; Modal's [rollout serving island](the-rollout-serving-island-is-the-movable-unit-of-an-rl-run.md) says the boundary is the largest scope over which a collective still runs, so a multi-node serving group can keep the tolerance *at its own edge* — tight inside the island, loose across islands — rather than losing it entirely.
+
 Related topics:
 - [Inference](../topics/inference.md)
 - [Infrastructure](../topics/infrastructure.md)
@@ -28,6 +31,9 @@ Related concepts:
 - [Benchmark And Rate Heterogeneous GPU Providers](benchmark-and-rate-heterogeneous-gpu-providers.md)
 - [Aggregate Idle GPU Supply Through Compute Marketplaces](aggregate-idle-gpu-supply-through-compute-marketplaces.md)
 - [Hot-swap small models to avoid one-model-per-GPU waste](hot-swap-small-models-to-avoid-one-model-per-gpu-waste.md)
+- [The Rollout Serving Island Is the Movable Unit of an RL Run](the-rollout-serving-island-is-the-movable-unit-of-an-rl-run.md)
+- [Make a Rollout Engine Version-Aware With a Sidecar](make-a-rollout-engine-version-aware-with-a-sidecar.md)
 
 Sources:
 - [Infra behind Krea 2: How to train and serve at scale — Gabriel Jorge Menezes, Krea.ai](../sources/20260818_byn9PURoBNY.md), 04:46-05:17, 12:53-13:41, 16:02-16:22
+- [Taking Reinforcement Learning Cross Datacenter — Nan Jiang, Modal](../sources/20260810_maRzp4kImJ4.md), 03:25-03:59, 18:17-18:43

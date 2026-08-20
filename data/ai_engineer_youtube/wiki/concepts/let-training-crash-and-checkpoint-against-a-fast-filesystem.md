@@ -19,11 +19,14 @@ Details:
 - Note the division of labor with the metrics argument: metrics are not for explaining individual crashes, which this concept declines to do. They are for finding the *systematic* faults — a hot card, a node with NVLink errors, a fabric with rising wait times — that a let-it-crash policy would otherwise let bleed indefinitely.
 - Scope caveat: these are numbers from one image-diffusion pre-training cluster, and the speaker concedes the crash rate may be "maybe skill issue on our part, maybe our cluster." The transferable parts are the policy shape (replace on threshold, checkpoint on a fast filesystem) and the ratio to design for (checkpoint write time far below checkpoint interval), not the specific 20-30 minute cadence.
 
+- **The checkpoint is cheap to write and expensive to move, and those are different problems.** The 1.8 TB/s reads and ~1 TB/s writes here make a terabyte checkpoint a sub-30-second local operation; Modal's RL talk measures the same artifact across a network and reports a frontier-scale checkpoint at "like 500 gigabytes, normally take multiple minutes to hours" to sync. A fast local filesystem is what makes checkpointing viable as a *crash absorber*; it does nothing for checkpointing as a *distribution mechanism*, which needs a different unit entirely ([Synchronize Rollout Weights With a Bitwise-Lossless Patch, Not a Checkpoint](synchronize-rollout-weights-with-a-bitwise-lossless-patch.md)). ([Modal](../sources/20260810_maRzp4kImJ4.md), 05:25-06:02)
+
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
 - [Models](../topics/models.md)
 
 Related concepts:
+- [Synchronize Rollout Weights With a Bitwise-Lossless Patch, Not a Checkpoint](synchronize-rollout-weights-with-a-bitwise-lossless-patch.md)
 - [GPU Utilization Is a Lie: Instrument Tensor Cores and the Fabric](measure-tensor-core-utilization-not-gpu-utilization.md)
 - [Give Training Priority Over Production on a Shared GPU Cluster](give-training-priority-over-production-on-a-shared-gpu-cluster.md)
 - [Inference Tolerates Degraded GPUs That Training Cannot](inference-tolerates-degraded-gpus-that-training-cannot.md)
@@ -32,3 +35,4 @@ Related concepts:
 
 Sources:
 - [Infra behind Krea 2: How to train and serve at scale — Gabriel Jorge Menezes, Krea.ai](../sources/20260818_byn9PURoBNY.md), 03:02-08:43
+- [Taking Reinforcement Learning Cross Datacenter — Nan Jiang, Modal](../sources/20260810_maRzp4kImJ4.md), 05:25-06:02

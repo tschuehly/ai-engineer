@@ -13,12 +13,17 @@ Details:
 - The talk frames lower GPU price as a productivity lever, not only a cost cut: if compute follows scaling-law behavior for the workload, the same budget can buy more experiments or larger training runs. 10:31-11:18
 - Zhang says customers ultimately want to run training, online inference, and offline inference jobs, so compute platforms should expose workload-shaped access rather than only raw GPU ownership. 11:21-11:43
 
+- **One phase on this page cannot burst the way the others can, and naming the asymmetry sharpens the whole model.** Modal states it directly: "training capacity is not elastic in the way the inference capacity is. You cannot assume you can grow the trainer cluster halfway through a run just because rollout wants more nodes." A synchronous training job's size is fixed when the run starts, so the "burst for a shorter training window" move works only *between* runs, not inside one. Anything that must scale mid-run has to be architecturally separable from the collective — which is what [The Rollout Serving Island Is the Movable Unit of an RL Run](the-rollout-serving-island-is-the-movable-unit-of-an-rl-run.md) makes possible for RL rollout. ([Modal](../sources/20260810_maRzp4kImJ4.md), 02:56-03:22)
+
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
 - [Inference](../topics/inference.md)
 
 Related concepts:
 - [Aggregate Idle GPU Supply Through Compute Marketplaces](aggregate-idle-gpu-supply-through-compute-marketplaces.md)
+- [RL Post-Training Demands Four Scarce Compute Properties at Once](rl-post-training-demands-four-scarce-compute-properties-at-once.md)
+- [The Rollout Serving Island Is the Movable Unit of an RL Run](the-rollout-serving-island-is-the-movable-unit-of-an-rl-run.md)
 
 Sources:
 - [Why We Don't Need More Data Centers - Dr. Jasper Zhang, Hyperbolic](../sources/20250801_M6Vbaig1TsM.md), 08:29-11:43
+- [Taking Reinforcement Learning Cross Datacenter — Nan Jiang, Modal](../sources/20260810_maRzp4kImJ4.md), 02:56-03:22

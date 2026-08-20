@@ -18,6 +18,9 @@ Details:
 - The other half of the same argument is that automating the training recipe is worthless if the compute barrier stands: "if we just did auto scientist, but it still took enormous compute to do frontier AI trainings, I think we'd be in a bit of a pickle… 'Oh great, you can use this agent, but don't worry, just bring your 10,000 GPUs with you.'" The two arguments — automated recipes and distributable compute — are presented as needing each other. ([Adaption](../sources/20260812_XEd_SRVHBgU.md), 10:15-10:28)
 - Provenance: a founder whose company gives away GPUs with its beta, making the access argument that supports her product's premise. The physical asymmetry between colocated pre-training and distributable serving is uncontroversial and independently supported elsewhere in this wiki; the inference that it changes who wins is her argument, not a measurement. ([Adaption](../sources/20260812_XEd_SRVHBgU.md), 20:10-20:17)
 
+- **"Post-training compute can be distributed" is asserted here and given a mechanism — and a sharp qualification — elsewhere.** Modal's cross-datacenter talk agrees that RL post-training can leave one cluster, but only half of it: "back propagation should stay in the cluster. The rollout fleet is the one that can leave," because every training step has collectives while "across rollout jobs there's no global all-reduce" ([The Rollout Serving Island Is the Movable Unit of an RL Run](the-rollout-serving-island-is-the-movable-unit-of-an-rl-run.md)). Post-training is therefore not distributable as a category; it contains a colocated core with exactly the pre-training-like requirements this page attributes to pre-training alone. What distributes is the sampling tier, which is the bulk of the FLOPs in group-based RL but not the whole method. ([Modal](../sources/20260810_maRzp4kImJ4.md), 03:25-03:59)
+- The distribution is also not free by nature — it is bought by a specific numerical accident. Splitting the fleet leaves one link, the weight update, and shipping a ≈500 GB checkpoint across regions takes "multiple minutes to hours." What makes it viable is that a bounded Adam step at RL learning rates is ~1000× smaller than the serving format's rounding boundary, so ~99% of served weights are bit-identical per step and the sync object becomes ≈500 MB ([Adam Absorption Hides Most Weight Updates From the Served Model](adam-absorption-hides-most-weight-updates-from-the-served-model.md)). Jiang raises the obvious fragility himself: everything rests on Adam, and Moonshot and DeepSeek are moving to Muon. Treat the distributability of post-training as contingent on the optimizer, not as a property of the workload. ([Modal](../sources/20260810_maRzp4kImJ4.md), 05:25-06:02, 09:11-09:52, 18:48-19:02)
+
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
 - [Product Strategy](../topics/product-strategy.md)
@@ -30,6 +33,9 @@ Related concepts:
 - [Aggregate Idle GPU Supply Through Compute Marketplaces](aggregate-idle-gpu-supply-through-compute-marketplaces.md)
 - [Run Elastic Training on Serverless GPU, Not a Reserved Cluster](run-elastic-training-on-serverless-gpu-not-a-reserved-cluster.md)
 - [Customization Control Is a Separate Question From Open Weights](customization-control-is-a-separate-question-from-open-weights.md)
+- [The Rollout Serving Island Is the Movable Unit of an RL Run](the-rollout-serving-island-is-the-movable-unit-of-an-rl-run.md)
+- [Adam Absorption Hides Most Weight Updates From the Served Model](adam-absorption-hides-most-weight-updates-from-the-served-model.md)
 
 Sources:
 - [Adaption Labs: Gradient-Free Continual Learning — Sara Hooker, Adaption](../sources/20260812_XEd_SRVHBgU.md), 10:15-12:36, 14:44-15:09, 17:44-19:20
+- [Taking Reinforcement Learning Cross Datacenter — Nan Jiang, Modal](../sources/20260810_maRzp4kImJ4.md), 03:25-03:59, 05:25-06:02, 09:11-09:52, 18:48-19:02

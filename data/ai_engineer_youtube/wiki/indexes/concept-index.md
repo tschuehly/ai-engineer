@@ -975,6 +975,14 @@
 - [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md)
 
 ## Infrastructure
+- [RL Post-Training Demands Four Scarce Compute Properties at Once](../concepts/rl-post-training-demands-four-scarce-compute-properties-at-once.md) - enough GPU, same region, fast fabric, available now: the conjunction is what makes the capacity hard to buy.
+- [The Rollout Serving Island Is the Movable Unit of an RL Run](../concepts/the-rollout-serving-island-is-the-movable-unit-of-an-rl-run.md) - cut the job on the absence of a global all-reduce, not on "training versus inference."
+- [Synchronize Rollout Weights With a Bitwise-Lossless Patch, Not a Checkpoint](../concepts/synchronize-rollout-weights-with-a-bitwise-lossless-patch.md) - changed positions plus replacement bits, so repeated application cannot accumulate additive drift.
+- [Publish Immutable Weight Versions to a Bulletin Board](../concepts/publish-immutable-weight-versions-to-a-bulletin-board.md) - numbered safetensors versions that any engine can pull, replacing a push that required RDMA to the trainer.
+- [Make a Rollout Engine Version-Aware With a Sidecar](../concepts/make-a-rollout-engine-version-aware-with-a-sidecar.md) - proxy, catch up, or say not ready: three cases that add policy-version correctness beside an unmodified server.
+- [Adam Absorption Hides Most Weight Updates From the Served Model](../concepts/adam-absorption-hides-most-weight-updates-from-the-served-model.md) - the bounded Adam step lands ~1000x below the serving format's rounding boundary, so ~99% of served weights do not change.
+- [A Sparse Served-Weight Delta Is Not Gradient Sparsity](../concepts/a-sparse-served-weight-delta-is-not-gradient-sparsity.md) - the correction the speaker stops to make on stage: gradients stay dense, only the published artifact compresses.
+- [Lower Serving Precision Shrinks the Weight-Sync Patch](../concepts/lower-serving-precision-shrinks-the-weight-sync-patch.md) - rollout dtype as a lever on trainer-to-fleet transfer volume, inverting the usual reading of quantization.
 - [Decide the Agent Buy Boundary With Six Production Questions](../concepts/decide-the-agent-buy-boundary-with-six-production-questions.md) - hosting, sessions, filesystem, isolation, credentials, observability: score any surface on which it answers.
 - [Decouple the Agent Loop From the Tool Execution Environment](../concepts/decouple-the-agent-loop-from-the-tool-execution-environment.md) - container start off the first-token path, contained blast radius, and hands that can be replaced mid-run.
 - [Model a Managed Agent as Agent, Environment, and Session](../concepts/model-a-managed-agent-as-agent-environment-session.md) - environment as a definition, so isolation and egress policy are inherited by every session instance.
@@ -1239,6 +1247,11 @@
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 
 ## Inference
+- [The Rollout Serving Island Is the Movable Unit of an RL Run](../concepts/the-rollout-serving-island-is-the-movable-unit-of-an-rl-run.md) - the largest scope over which a serving group still needs fast interconnect, and therefore what can move.
+- [Lower Serving Precision Shrinks the Weight-Sync Patch](../concepts/lower-serving-precision-shrinks-the-weight-sync-patch.md) - a third axis for a quantization decision, beside memory bandwidth and quality.
+- [Adam Absorption Hides Most Weight Updates From the Served Model](../concepts/adam-absorption-hides-most-weight-updates-from-the-served-model.md) - what a quantized serving view rounds away from a training loop, and why that turns out to be useful.
+- [Publish Immutable Weight Versions to a Bulletin Board](../concepts/publish-immutable-weight-versions-to-a-bulletin-board.md) - what a serving fleet has to accept to be usable as RL rollout capacity.
+- [Make a Rollout Engine Version-Aware With a Sidecar](../concepts/make-a-rollout-engine-version-aware-with-a-sidecar.md) - a request contract that carries a policy version, and the three answers a replica can give.
 - [Optimize the Whole Vocabulary, Not the Token You Sampled](../concepts/optimize-the-whole-vocabulary-not-the-sampled-token.md) - carries the testable prediction that tokens-to-solve collapses under distillation while RL inflates it.
 - [Pre-Training Size Is No Longer the Most Lucrative Scaling Axis](../concepts/pretraining-size-is-no-longer-the-most-lucrative-scaling-axis.md) - the argument that returns moved to post-training and request time, with its uneven evidence and explicit non-claims recorded.
 - [KV Compaction Reaches Only What Already Fits in Context](../concepts/kv-compaction-reaches-only-what-already-fits-in-context.md) - a serving technique wearing a learning technique's vocabulary, and the two limits that separate them.
@@ -1854,6 +1867,13 @@
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 
 ## Models
+- [Adam Absorption Hides Most Weight Updates From the Served Model](../concepts/adam-absorption-hides-most-weight-updates-from-the-served-model.md) - a flat push against a floor that scales with weight magnitude, so small weights move and large weights freeze.
+- [A Sparse Served-Weight Delta Is Not Gradient Sparsity](../concepts/a-sparse-served-weight-delta-is-not-gradient-sparsity.md) - ~99% of parameters still receive non-zero gradients; the FP32 master update is dense, just small.
+- [Lower Serving Precision Shrinks the Weight-Sync Patch](../concepts/lower-serving-precision-shrinks-the-weight-sync-patch.md) - the rounding floor is roughly theta over 2^(mantissa+1), so FP4 hides more of the step than FP8 or BF16.
+- [RL Post-Training Demands Four Scarce Compute Properties at Once](../concepts/rl-post-training-demands-four-scarce-compute-properties-at-once.md) - why an RL run cannot be bought the way inference capacity is bought.
+- [The Rollout Serving Island Is the Movable Unit of an RL Run](../concepts/the-rollout-serving-island-is-the-movable-unit-of-an-rl-run.md) - back-propagation stays in the cluster; the sampling tier is what leaves.
+- [Synchronize Rollout Weights With a Bitwise-Lossless Patch, Not a Checkpoint](../concepts/synchronize-rollout-weights-with-a-bitwise-lossless-patch.md) - the full checkpoint is the wrong unit of synchronization when only the served view has to agree.
+- [Publish Immutable Weight Versions to a Bulletin Board](../concepts/publish-immutable-weight-versions-to-a-bulletin-board.md) - policy versions as immutable numbered artifacts a fleet pulls, rather than state a trainer pushes.
 - [Score a Post-Training Algorithm on Four Properties](../concepts/score-post-training-algorithms-on-four-properties.md) - one scorecard for SFT, RLHF, GRPO, and self-distillation: online task distribution, on-policy sampling, parallelism of one, per-token reward.
 - [Optimize the Whole Vocabulary, Not the Token You Sampled](../concepts/optimize-the-whole-vocabulary-not-the-sampled-token.md) - shifting a distribution versus sharpening one, and the stated reason distillation is claimed to climb where GRPO plateaus.
 - [Long-Horizon Self-Distillation Collapses Into Hedging](../concepts/long-horizon-self-distillation-collapses-into-hedging.md) - the "but wait" failure that appears over 50-100 tool calls and not on short tasks.
