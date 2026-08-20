@@ -13,6 +13,7 @@ Details:
 - NotebookLM is powerful for digesting and revisiting content, but you don't own it, can't fully personalize it, it's "not agent-native," and it's weak for coding because it's browser-based. (05:32-06:05)
 - A retrieval/RAG pipeline with a vector DB is the production answer and is "super powerful at scale," but it needs infrastructure, is not human-friendly to inspect/edit by hand, and is overkill for a personal system you want to use lightly. (06:24-07:07)
 - Build your own when you want "everything there but more personalization" — a personalized research assistant that builds a Wikipedia-like store that compounds over time, is easily inspectable, and holds sources/comparisons/implementations you keep adding. The downside is more setup than opening Claude Code. (07:08-07:57)
+- The ladder's ownership rung gets a number from a different domain. For web-sourced entity context, Bright Data's Omer Primor priced a week of pipeline setup at $5,000 and found owning cheaper than per-query vendors "just over 15,000 entities or queries," while insisting the threshold is use-case-specific ("maybe it's 30, maybe it's 100,000, maybe it's 10,000"). His routing condition matches this page's: plug-and-play services win when the need is ad hoc, and ownership wins when "your knowledge work needs are persistent and consistent and… may even continue escalating and growing." See [Find the Crossover Point Between Renting and Owning Context](find-the-crossover-point-between-renting-and-owning-context.md) for the arithmetic and its caveats. (Ot4OPrPH4xY, 18:32-19:46)
 - Underlying principle: the bottleneck is not how much context you feed the model but how you *reuse* it later. With an agent "the context window becomes everything… and when you stop the conversation, it loses everything," so the real need is memory + context management (and, for the authors' video work, some persistent personality). (08:39-09:16)
 
 Related topics:
@@ -24,6 +25,8 @@ Related concepts:
 - [Do Not Treat Long Context as Durable Model Memory](do-not-treat-long-context-as-durable-model-memory.md)
 - [Enterprise Deep Research Runs Multi-Step Synthesis Over Private Corpora](enterprise-deep-research-runs-multi-step-synthesis-over-private-corpora.md)
 - [Treat Embeddings as Cached Compute Decided by Query Volume](treat-embeddings-as-cached-compute-decided-by-query-volume.md)
+- [Find the Crossover Point Between Renting and Owning Context](find-the-crossover-point-between-renting-and-owning-context.md)
 
 Sources:
 - [Turn 10,994 Notes Into Memory - Paul Iusztin, Decoding AI & Louis-François Bouchard, Towards AI](../sources/20260626_ZRM_TfEZcIo.md), 03:42-09:16
+- [The Rise of CaaS: Context-as-a-Service for Agentic AI — Omer Primor, Bright Data](../sources/20260814_Ot4OPrPH4xY.md), 18:32-19:46

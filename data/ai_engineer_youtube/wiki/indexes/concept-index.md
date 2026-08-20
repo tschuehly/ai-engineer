@@ -762,6 +762,8 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Frequency, Not Volume, Drives Web-Context Cost](../concepts/frequency-not-volume-drives-web-context-cost.md) - web context decays on a per-domain clock, so cadence rather than row count multiplies cost, and repeated queries never amortize.
+- [Cost Pressure Silently Shrinks Research Scope](../concepts/cost-pressure-silently-shrinks-research-scope.md) - metered context is absorbed as slower refreshes, truncated result sets, and questions nobody submits.
 - [Publish Per-Site Skills So Agents Do Not Rediscover a Website](../concepts/publish-per-site-skills-so-agents-do-not-rediscover-a-website.md) - compressed, site-keyed knowledge delivered before navigation beats dumping the page, on quality as well as cost.
 - [Capture the Coding Session as the Intent Record](../concepts/capture-the-coding-session-as-the-intent-record.md) - prompts and agent question/answer pairs carry decision history, so they are outputs of a coding run, not debugging noise.
 - [Prompt Caching Sets the Break-Even Bar for Compaction](../concepts/prompt-caching-sets-the-break-even-bar-for-compaction.md) - compaction invalidates the cache, so it must compress by more than the cache discount (up to 50x) before it saves anything.
@@ -1253,6 +1255,8 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Context as a Service Is Vertical Search for Agents](../concepts/context-as-a-service-is-vertical-search-for-agents.md) - crawl one vertical, entity-dedupe into a graph, enrich, and serve agents over MCP — DaaS re-aimed at machine consumers.
+- [Find the Crossover Point Between Renting and Owning Context](../concepts/find-the-crossover-point-between-renting-and-owning-context.md) - a week of build against per-query fees has a computable break-even, quoted at just over 15,000 entities and explicitly not universal.
 - [The Long Tail of the Web Will Not Ship APIs](../concepts/the-long-tail-of-the-web-will-not-ship-apis.md) - betting on protocol adoption is betting on 200 million site owners doing work they have no reason to do.
 - [Computer Use Diffuses AI Into the Form-Filling Economy](../concepts/computer-use-diffuses-ai-into-the-form-filling-economy.md) - the market is PHP forms in Singapore, South Africa, and Mexico, and its defining property — no cooperation from the site owner — dictates the architecture.
 - [AI Training-Data Requests Compound Into Pipelines](../concepts/ai-training-data-requests-compound-into-pipelines.md) - clients buy adaptation speed, not the first iteration; being early on a capability is not the same as being right.
@@ -1353,6 +1357,8 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [A Prebuilt Context Vendor Cannot Answer Outside Its Index](../concepts/a-prebuilt-context-vendor-cannot-answer-outside-its-index.md) - index gaps are structural rather than statistical, and coverage is only meaningful against the field set your job needs.
+- [Cost Pressure Silently Shrinks Research Scope](../concepts/cost-pressure-silently-shrinks-research-scope.md) - the eval keeps passing while the workload quietly degrades, because the questions that were dropped were never on the sheet.
 - [Compete on Latency and Cost per Task Once Computer-Use Accuracy Ties](../concepts/compete-on-latency-and-cost-per-task-when-computer-use-accuracy-ties.md) - when success rates tie within noise, the honest report is the cost and latency columns.
 - [Train Computer-Use Agents in a Flight Simulator, Not on Exams](../concepts/train-computer-use-agents-in-a-flight-simulator-not-on-exams.md) - varying the task is not the same as reproducing software that misbehaves.
 - [Map RL Assumptions to Deployment Realities for Computer-Use Agents](../concepts/map-rl-assumptions-to-deployment-realities-for-computer-use-agents.md) - the six assumptions a benchmark quietly preserves and deployment removes.
@@ -1810,6 +1816,11 @@
 - [Condition ASR on Conversation Context and Domain Vocabulary](../concepts/condition-asr-on-conversation-context-and-domain-vocabulary.md)
 
 ## Retrieval
+- [Context as a Service Is Vertical Search for Agents](../concepts/context-as-a-service-is-vertical-search-for-agents.md) - a prebuilt vertical index served over MCP sits between an AI search API and your own pipeline, with different coverage and cost behavior from both.
+- [A Prebuilt Context Vendor Cannot Answer Outside Its Index](../concepts/a-prebuilt-context-vendor-cannot-answer-outside-its-index.md) - a stored index cannot go looking, so an unmodeled field returns empty on every rerun.
+- [Frequency, Not Volume, Drives Web-Context Cost](../concepts/frequency-not-volume-drives-web-context-cost.md) - a million rows re-asked weekly is a different bill from a million rows read once, and decay sets the cadence.
+- [Find the Crossover Point Between Renting and Owning Context](../concepts/find-the-crossover-point-between-renting-and-owning-context.md) - compute where a built pipeline overtakes per-query fees, and check the maintenance line the arithmetic leaves out.
+- [Go Straight to the Known Source Instead of Searching for It](../concepts/go-straight-to-the-known-source-instead-of-searching-for-it.md) - search is for locating unknown sources; a known source deserves a direct fetch with no tokens spent.
 - [Close a Multiples-Wide Latency Gap by Redesign, Not Optimization](../concepts/close-a-multiples-wide-latency-gap-by-redesign-not-optimization.md) - a 4 s general search scraper became a 550 ms AI-facing API by cutting the payload to organic results and hunting seconds across every layer.
 - [Dense Retrieval Collapses on Buried Facts as the Haystack Grows](../concepts/dense-retrieval-collapses-on-buried-facts-as-the-haystack-grows.md) - ~80% recall at 50k-200k tokens falling to 0% at 400k while BM25 held 100%, a scale-dependent case for hybrid search.
 - [Measure Agentic Knowledge-Base Browsing Before Adding It](../concepts/measure-agentic-knowledge-base-browsing-before-adding-it.md) - a sandboxed bash-browse tool over a generated wiki matched a tuned hybrid retriever on recall and cost 50% latency.
@@ -1969,6 +1980,7 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Go Straight to the Known Source Instead of Searching for It](../concepts/go-straight-to-the-known-source-instead-of-searching-for-it.md) - handing a search tool a task whose source you already know adds a hop, a failure mode, and a token bill.
 - [The Long Tail of the Web Will Not Ship APIs](../concepts/the-long-tail-of-the-web-will-not-ship-apis.md) - every agent-facing tool surface presumes a cooperating publisher, which scopes it to the head of the distribution.
 - [Rendered State Is Not in the HTML](../concepts/rendered-state-is-not-in-the-html.md) - "have a coding agent read the HTML" returns a confident wrong answer on pages whose state is computed and rendered.
 - [Publish Per-Site Skills So Agents Do Not Rediscover a Website](../concepts/publish-per-site-skills-so-agents-do-not-rediscover-a-website.md) - a skill keyed to an external website rather than a repository, delivered before the visit and applicable to CLI control too.
