@@ -15,6 +15,7 @@ Details:
 - The human layer is a standing role, not a rotation: "a dedicated group, their job is mainly review those conversations. We will spot check our conversations." Its output is deliberately two-directional — it says "whether we need to come back to improve our systems, or our rubrics is too strict or too loose, and we need consistently improve it." The humans are auditing the judge as much as the product. (16:12-16:31)
 - Sampling rate scales with novelty: for a new feature launch, "not only spot check probably not enough, we really want to review like say 20%, and we can do it." Coverage is a dial tied to how much is unknown, then relaxed as evidence accumulates. (16:31-16:41)
 - The purpose is explicitly confidence under known imperfection rather than elimination of it: the whole process exists so "we are really confident whenever we release something, although we know hallucination is there." (16:41-16:50)
+- Caveat on what repetition buys, from the computer-use side: repeating a *fixed* scenario narrows the interval around performance on that scenario, which is exactly the procedure D'Oro measures at ~17-20% real coverage against a nominal 95%. Repetition addresses variance in the model's actions; it does not address variance in the environment the task starts in, so a 90%-across-many-runs gate on a fixed set of cases can still be confidently wrong about deployment. The complement is to vary the configuration, not only the seed — see [computing intervals over both action and environment variance](compute-confidence-intervals-over-both-action-and-environment-variance.md). ([Computer Use at the Edge of the Statistical Precipice](../sources/20260814_CTLa_p6iOiY.md), 11:05-13:19)
 - The same team pairs this with a pre-release decision about which failures matter at all — see the retryability sort — so the pass-rate bar and the sampling rate are applied hardest where a failure cannot be undone by a second click.
 
 Related topics:
@@ -28,7 +29,9 @@ Related concepts:
 - [Decompose Evals Into Rubrics to Target the Failing Behavior](decompose-evals-into-rubrics-to-target-the-failing-behavior.md)
 - [AI System Evaluation Still Depends on Human Review](ai-system-evaluation-still-depends-on-human-review.md)
 - [Size Eval Suites to the Error Rate the Consequence Demands](size-eval-suites-to-the-error-rate-the-consequence-demands.md)
+- [Compute Confidence Intervals Over Both Action and Environment Variance](compute-confidence-intervals-over-both-action-and-environment-variance.md)
 - [Simulated Conversations Test Customer-Facing Agents Before Launch](simulated-conversations-test-customer-facing-agents-before-launch.md)
 
 Sources:
 - [How to build an AI-Native Health Company — Dan Feng, Maven Clinic](../sources/20260819_WJRdLNhrsLQ.md), 15:17-16:50
+- [Computer Use at the Edge of the Statistical Precipice — Pierluca D'Oro, Programma Labs](../sources/20260814_CTLa_p6iOiY.md), 11:05-13:19

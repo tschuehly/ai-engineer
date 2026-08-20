@@ -1,6 +1,8 @@
 # Concept Index
 
 ## Agents
+- [A Blind Replay Script Exposes a Deterministic Benchmark](../concepts/a-blind-replay-script-exposes-a-deterministic-benchmark.md) - the constructive audit for whether a computer-use benchmark measures perception or a memorized path.
+- [Measure Agent Robustness per Variation Axis, Not Just Average Success](../concepts/measure-agent-robustness-per-variation-axis-not-just-average-success.md) - frontier computer-use agents drop performance when only the app theme or entry screen changes.
 - [Climb a Humanness Ladder Only as High as the Page Forces](../concepts/climb-a-humanness-ladder-only-as-high-as-the-page-forces.md) - escalate browser actions from synthetic click to trusted CDP input to human-like motion only as far as the page forces, then record the winning path as code or a skill.
 - [Chrome Stamps Every Input Trusted or Untrusted](../concepts/chrome-stamps-every-input-trusted-or-untrusted.md) - the automation failure that returns success: a page checking event provenance drops a synthetic click with no error at all.
 - [Verify an Action Through a Different Channel Than the One That Acted](../concepts/verify-an-action-through-a-different-channel-than-the-one-that-acted.md) - the acting channel reports that it fired, not that it worked, so confirmation has to come from the network, the screen, or page state.
@@ -1330,6 +1332,12 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [A Blind Replay Script Exposes a Deterministic Benchmark](../concepts/a-blind-replay-script-exposes-a-deterministic-benchmark.md) - record one successful trajectory per task and replay it blindly; a script under a megabyte that never reads the screen ties the frontier model it came from.
+- [pass@k on a Deterministic Environment Measures Replay, Not Capability](../concepts/passk-on-a-deterministic-environment-measures-replay.md) - formally the replay agent's success rate, so the metric is a metrification of the exploit rather than a measurement that survives it.
+- [Design Eval Environments to the PRISM Principles](../concepts/design-eval-environments-to-the-prism-principles.md) - privileged verification, realism, integrity-checked configurations, sandboxed execution, multifactorial variation; varying the initial state is the rare one that matters.
+- [Generate Task Configurations by Compiling and Rejecting the Invalid Ones](../concepts/generate-task-configurations-by-compiling-and-rejecting-invalid-combinations.md) - 387 scenarios into 3.2 million verified configs; "a lot of software is not the same as an effective environment."
+- [Compute Confidence Intervals Over Both Action and Environment Variance](../concepts/compute-confidence-intervals-over-both-action-and-environment-variance.md) - rollouts on a single base case give ~20% real coverage at a nominal 95%, and the overconfident intervals are the narrow ones.
+- [Measure Agent Robustness per Variation Axis, Not Just Average Success](../concepts/measure-agent-robustness-per-variation-axis-not-just-average-success.md) - read the worst case across data, theme, and starting screen instead of the mean.
 - [Realistic Traffic, Not Volume, Is the Hard Part of Load Testing](../concepts/realistic-traffic-not-volume-is-the-hard-part-of-load-testing.md) - a passing load test proves the tested number, not the next one; the wall at 20k rps was uncertainty, not failure.
 - [Make Intent and Evidence the Review Surface](../concepts/make-intent-and-evidence-the-review-surface.md) - a per-change test plan built from session intent and codified invariants, run against a live preview for reviewer-facing evidence.
 - [Mine Recurring Review Comments Into an Invariant Registry](../concepts/mine-recurring-review-comments-into-an-invariant-registry.md) - the team's own repeated review comments become the invariant half of the verification input.

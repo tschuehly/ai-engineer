@@ -18,6 +18,8 @@ Details:
 - Cline's coding-agent environment recipe starts from a real repository snapshot and user prompt, reconstructs the real solved state, documents dependencies, removes Git from the Dockerized environment to reduce reward hacking, and records traces for repeatable scoring. 05:07-10:01
 - Snorkel's FinQA environment shows the same artifact pattern for a financial-analysis tool task: it is fully self-contained with no external dependencies (no remote data center the trainer cannot reach), provides a fixed set of tools (`get_table_names`, `get_table_info`, query), and packages two benchmarks inside one environment — FinQA (290 samples) and the harder multi-table FinQA-reasoning (79 samples). It is published on Prime Intellect's infrastructure, saved into the OpenEnv repo on GitHub, and hosted in Hugging Face spaces (PyTorch and Hugging Face co-host), and a ~21-hour GRPO run inside it cost under $500. (12:10-13:30)
 
+- DIGIWORLD adds a generation stage to the same artifact pattern for computer use: a compiler takes a parameterized task template, its verifier, and mock data, combines them with a base data case and a base UI state, enumerates every combination, and rejects the invalid ones — turning 387 authored scenarios into 3.2 million verified configurations across 15 sandboxed Android apps. The warning attached is that emitting the software is the easy half: "coding agents can generate a lot of software, but a lot of software is not the same as an effective, cool environment," and "the main craft is good software engineering" in the verification pipeline. See [compiling configurations and rejecting the invalid ones](generate-task-configurations-by-compiling-and-rejecting-invalid-combinations.md). ([Computer Use at the Edge of the Statistical Precipice](../sources/20260814_CTLa_p6iOiY.md), 05:31-09:20)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -32,6 +34,8 @@ Related concepts:
 - [Treat environments as eval, data, and training substrates](treat-environments-as-eval-data-and-training-substrates.md)
 - [Environment registries make AI research more accessible](environment-registries-make-ai-research-more-accessible.md)
 - [Fix Tool Discipline Before Reaching for a Bigger Model](fix-tool-discipline-before-reaching-for-a-bigger-model.md)
+- [Generate Task Configurations by Compiling and Rejecting the Invalid Ones](generate-task-configurations-by-compiling-and-rejecting-invalid-combinations.md)
+- [Design Eval Environments to the PRISM Principles](design-eval-environments-to-the-prism-principles.md)
 
 Sources:
 - [Let LLMs Wander: Engineering RL Environments - Stefano Fiorucci](../sources/20260408_71V3fTaUp2Q.md), 00:45-20:52
@@ -39,3 +43,4 @@ Sources:
 - [Hard Won Lessons from Building Effective AI Coding Agents - Nik Pash, Cline](../sources/20251212_I8fs4omN1no.md), 05:07-10:01
 - [RL Environments at Scale - Will Brown, Prime Intellect](../sources/20251209__IzZWeuTx7I.md), 05:42-12:05
 - [Stop Making Models Bigger, Make Them Behave — Kobie Crawford, Snorkel](../sources/20260610_TNwJ1LMiENk.md), 12:10-13:30
+- [Computer Use at the Edge of the Statistical Precipice — Pierluca D'Oro, Programma Labs](../sources/20260814_CTLa_p6iOiY.md), 05:31-09:20
