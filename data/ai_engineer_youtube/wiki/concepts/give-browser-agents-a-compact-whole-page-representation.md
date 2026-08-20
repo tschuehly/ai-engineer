@@ -12,6 +12,7 @@ Details:
 - Pair the markdown with a screenshot: together they stay cheap token-wise while giving the model both structure (whole-page layout, all actionable elements) and pixels (visual grounding), which lets it reason well and construct a long sequence of tasks. (04:08-04:23)
 - Augment the static representation with change feedback: track the full end-to-end page and report deltas (elements that appeared, elements now gone, a blocker that was removed) so the model does not have to re-screenshot to discover what changed. (03:50-04:08)
 - This is the observation lever of the broader thesis that the browser-agent bottleneck is the interface, not the model — see [Fix the Browser-Agent Runtime Interface Before Reaching for a Better Model](fix-the-browser-agent-runtime-interface-before-reaching-for-a-better-model.md).
+- **Caveat on what the compressed representation cannot carry.** Any document-derived format inherits the fact that a page's displayed state is often computed rather than written: a variant that is grayed out and unclickable because a fetched `quantity` is zero has no text saying "sold out" anywhere in the source, and a score that arrives in a later asynchronous fetch is absent from the initial HTML entirely. "It is calculated. It is rendered." That is an argument for keeping the screenshot in the pair for the specific facts being extracted, not just for visual grounding of clicks — see [Rendered State Is Not in the HTML](rendered-state-is-not-in-the-html.md). ([Dhruv Batra](../sources/20260814_Ki980nV0__0.md), 09:01-11:33)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -22,6 +23,8 @@ Related concepts:
 - [Choose agent observation and action spaces explicitly](choose-agent-observation-and-action-spaces-explicitly.md)
 - [Agent-readable web surfaces guide browsing agents](agent-readable-web-surfaces-guide-browsing-agents.md)
 - [Measure Agent Interface Efficiency With Tokens Per Successful Outcome](measure-agent-interface-efficiency-with-tokens-per-successful-outcome.md)
+- [Rendered State Is Not in the HTML](rendered-state-is-not-in-the-html.md)
 
 Sources:
 - [Browser Agents Don't Need Better Models. They Need Better Eyes. - Kushan Raj, ARK](../sources/20260628_JnubYCYunk8.md), 01:18-04:23
+- [Computer-use models will agentify the web, not APIs — Dhruv Batra, Yutori](../sources/20260814_Ki980nV0__0.md), 09:01-11:33

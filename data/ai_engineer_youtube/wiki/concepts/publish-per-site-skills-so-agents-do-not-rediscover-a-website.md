@@ -16,6 +16,8 @@ Details:
 - Relationship to the wiki's general skills material: [agent skills package progressive-disclosure context](agent-skills-package-progressive-disclosure-context-for-repeatable-workflows.md) and [repository skills and AGENTS.md encode repeatable web workflows](repository-skills-and-agents-md-encode-repeatable-web-agent-workflows.md) both keep the skill next to the *repository*. Keying the skill to the *external site* is the variant this source adds, and it changes the maintenance question: the artifact goes stale when someone else's site changes, so it needs the same self-repair posture as a scraper ([Let an Agent Build and Maintain Self-Healing Scrapers](let-agents-build-and-maintain-self-healing-scrapers.md)).
 - Ownership caveat worth stating: a site skill published by a third party is an assertion about someone else's product. It is durable knowledge only as far as the site is stable, which is why the observability-fed improvement loop matters — see [Expose Observability As Agent-Readable Feedback](expose-observability-as-agent-readable-feedback.md).
 
+- Counter-position worth holding alongside this page: Dhruv Batra calls per-site scaffolding "the bitter lesson for web agents" — "the more you end up writing scaffolds around existing websites, it doesn't actually generalize to the long tail of the web." The two are compatible because they answer different questions. Site skills are a *repeat-visit* optimization: cheaper and more reliable on sites the agent already visits often. They are not a coverage strategy, because nobody enumerates 200 million sites. The rule that keeps both true is that the agent's competence must not *depend* on the skill existing, or the first unseen site becomes a hard failure instead of a slow success. See [Per-Site Scaffolding Does Not Generalize](per-site-scaffolding-does-not-generalize-to-the-long-tail.md). ([Dhruv Batra](../sources/20260814_Ki980nV0__0.md), 12:24-12:53)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Tools](../topics/tools.md)
@@ -28,6 +30,8 @@ Related concepts:
 - [Agent-readable web surfaces guide browsing agents](agent-readable-web-surfaces-guide-browsing-agents.md)
 - [Give Browser Agents a Compact Whole-Page Representation](give-browser-agents-a-compact-whole-page-representation.md)
 - [Let an Agent Build and Maintain Self-Healing Scrapers](let-agents-build-and-maintain-self-healing-scrapers.md)
+- [Per-Site Scaffolding Does Not Generalize: The Bitter Lesson for Web Agents](per-site-scaffolding-does-not-generalize-to-the-long-tail.md)
 
 Sources:
 - [Bringing agents onto the world wide web — Paul Klein IV, Browserbase](../sources/20260814_GqoNrUz8hEU.md), 07:59-08:54
+- [Computer-use models will agentify the web, not APIs — Dhruv Batra, Yutori](../sources/20260814_Ki980nV0__0.md), 12:24-12:53

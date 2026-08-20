@@ -1,0 +1,33 @@
+# The Long Tail of the Web Will Not Ship APIs
+
+Summary: The popular argument that the web will become agent-friendly by publishing APIs holds only at the head of the distribution. The long tail — roughly 200 million active sites run by institutions that still fax each other — will not publish an endpoint, an MCP server, or anything else, so an agent strategy that assumes machine-readable access is a strategy for the sites you were least blocked by.
+
+Use when:
+- Deciding whether to wait for a site to expose an API/MCP surface or to build the UI-driving path now.
+- Scoping which parts of a workflow can be integrated and which must be operated.
+- Evaluating protocol proposals (MCP, WebMCP, agent payment protocols) against the sites you actually need to reach.
+
+Details:
+- **The three-step argument and the step that breaks.** Batra grants that agents will drive most action on the web and that the web must therefore become agent-friendly, then rejects the usual mechanism: "this last bit that suddenly the web will provide you APIs for accessing things is just delusional… computer-use agents and computer-use models will agentify the web, not APIs, and more specifically the long tail of the web. The head of the distribution, the most popular websites perhaps, will give you the API, but the long tail will not." Note that this is a *split*, not a blanket denial — see the flight-booking concession below. ([Dhruv Batra](../sources/20260814_Ki980nV0__0.md), 01:12-01:47)
+- **Two evidence ladders, both ending below "text."** A restaurant menu: text on a page (easy), a PDF behind a menu button (medium), or a gallery of JPEG photographs of a printed menu that ChatGPT "is struggling doing OCR on" (hard). A US school district's purchasing information, across 15,000-20,000 districts: a portal (easy), a scanned PDF of solicitations with no text layer (harder), or a Freedom of Information Act request answered by scanning your own email onto Google Drive with PDFs attached — "these are the people you're telling me will give you an MCP server." (02:35-07:25)
+- **The scale and the access argument are separate, and the second is the load-bearing one.** Active sites number "somewhere [around] 200 million" out of about a billion total, and "infrastructure changes very slowly." Even granting that a coding agent will eventually be able to generate an endpoint from a codebase — "even if that technological problem is solved, which I agree seems like on a horizon it should eventually be solved" — "you're not going to get unfettered access to these institutions… There are still places that are faxing each other." Capability is not the constraint; permission and institutional inertia are. (07:38-08:33)
+- **Where the argument concedes.** Batra volunteers the counterexample himself: an agent clicking through `flights.google.com` to find business-class flights "is bizarre. Why would you possibly do it this way? Aren't you aware that there are already aggregators? You send them a variable, they will send you a JSON. Your LLMs can do tool calling." Where an aggregator or API exists, use it; the purpose of the clicking is "to generate this behind the scenes." The concept is a routing rule, not a preference for pixels. (01:55-02:35)
+- **What arrives instead of an API.** The endpoint people want is a *task* endpoint — "I want you to do X… maybe I give you that task description in natural language, maybe I have some programmatic description with parameters" — and his prediction is that computer use fills that shape rather than the web being rewritten: "we will just pile on another layer of mess on top of the mess that the web is… you will issue a task, behind the scenes there will be hundreds of browsers that are pretending and clicking buttons just like humans would, and they will give you a result in a structured format. It will cost less than a penny… And at some point you will say, yeah, that's an API." The falsifiable part is the trend it extrapolates: rising accuracy, falling latency, falling cost — see [Compete on Latency and Cost per Task Once Computer-Use Accuracy Ties](compete-on-latency-and-cost-per-task-when-computer-use-accuracy-ties.md). (19:12-20:33)
+- **Relationship to the wiki's site-cooperation pages.** [WebMCP](expose-site-capabilities-to-in-browser-agents-with-webmcp.md), [`llms.txt` and the agent-readable surface family](agent-readable-web-surfaces-guide-browsing-agents.md), and [per-site skills](publish-per-site-skills-so-agents-do-not-rediscover-a-website.md) are all real and all require someone to do work on the site's side. This concept says who will: the head. Batra treats the protocol proliferation itself as a symptom — "it was initially supposed to be MCP servers, then WebMCP, and for payments there are 20 different competing protocols… every single company wants to introduce their own protocol." (00:57-01:12)
+- **Independent agreement from the market side.** Paul Klein IV reaches the same structural conclusion from customers rather than from site anatomy: the businesses worth automating are "built on PHP websites with forms and human beings clicking buttons every single day," whose owners will never publish anything — see [Computer Use Diffuses AI Into the Form-Filling Economy](computer-use-diffuses-ai-into-the-form-filling-economy.md). Two sources, one talking about supply of endpoints and the other about demand for automation, land on the same segment.
+
+Related topics:
+- [Agents](../topics/agents.md)
+- [Tools](../topics/tools.md)
+- [Product Strategy](../topics/product-strategy.md)
+
+Related concepts:
+- [Use Browser UI Control When APIs Are Absent](use-browser-ui-control-when-apis-are-absent.md)
+- [Rendered State Is Not in the HTML](rendered-state-is-not-in-the-html.md)
+- [Per-Site Scaffolding Does Not Generalize: The Bitter Lesson for Web Agents](per-site-scaffolding-does-not-generalize-to-the-long-tail.md)
+- [Computer Use Diffuses AI Into the Form-Filling Economy](computer-use-diffuses-ai-into-the-form-filling-economy.md)
+- [Agent-readable web surfaces guide browsing agents](agent-readable-web-surfaces-guide-browsing-agents.md)
+- [The Open Web Is Adversarial to Agent Access](the-open-web-is-adversarial-to-agent-access.md)
+
+Sources:
+- [Computer-use models will agentify the web, not APIs — Dhruv Batra, Yutori](../sources/20260814_Ki980nV0__0.md), 00:57-08:33, 19:12-20:33

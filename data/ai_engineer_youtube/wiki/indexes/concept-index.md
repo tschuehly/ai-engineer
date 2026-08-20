@@ -1,6 +1,10 @@
 # Concept Index
 
 ## Agents
+- [The Long Tail of the Web Will Not Ship APIs](../concepts/the-long-tail-of-the-web-will-not-ship-apis.md) - the head of the distribution may publish endpoints; ~200 million slow-moving sites will not, so UI control is the default surface for the tail.
+- [Rendered State Is Not in the HTML](../concepts/rendered-state-is-not-in-the-html.md) - async fetches and rendering scripts mean the document often lacks what the page shows, and the extractor fails silently.
+- [Per-Site Scaffolding Does Not Generalize: The Bitter Lesson for Web Agents](../concepts/per-site-scaffolding-does-not-generalize-to-the-long-tail.md) - each wrapper buys one site; competence must not depend on the wrapper existing.
+- [Compete on Latency and Cost per Task Once Computer-Use Accuracy Ties](../concepts/compete-on-latency-and-cost-per-task-when-computer-use-accuracy-ties.md) - a 20-50 step trajectory multiplies per-step latency and price into the deciding numbers.
 - [Pair Clicking With Generated Code and Replayed Network Requests](../concepts/pair-clicking-with-generated-code-and-replayed-network-requests.md) - the most reliable production browser agents discover the request in the browser and replay it from a script instead of driving pixels every run.
 - [Publish Per-Site Skills So Agents Do Not Rediscover a Website](../concepts/publish-per-site-skills-so-agents-do-not-rediscover-a-website.md) - fetch what a site supports before navigating, so exploration is a one-time cost rather than a per-run one.
 - [Hold the Browser Environment Constant Across Runs](../concepts/hold-the-browser-environment-constant-across-runs.md) - a page that renders mobile on one run and desktop on the next makes agent results unattributable.
@@ -1119,6 +1123,7 @@
 
 ## Inference
 
+- [Compete on Latency and Cost per Task Once Computer-Use Accuracy Ties](../concepts/compete-on-latency-and-cost-per-task-when-computer-use-accuracy-ties.md) - $0.80 versus $2.30 per task at parity accuracy, because a browser task is 20-50 model calls.
 - [Let Deterministic Code Drive the Timed Loop and Call the Model Only for Perception](../concepts/let-code-drive-the-timed-loop-and-call-the-model-only-for-perception.md) - inference latency, not accuracy, is what fails a loop running against an expiring deadline.
 - [The Real-Time Model Harness Is Where the Product Work Sits](../concepts/the-realtime-model-harness-is-where-the-product-work-sits.md) - holding a stutter-free stream across GPU and CPU threads under interrupts is a different discipline from optimizing a request.
 - [Make a Video Model Interactive With a Causal Attention Mask, Then Budget for Error Accumulation](../concepts/make-video-models-causal-and-budget-for-error-accumulation.md) - what a streaming generative session degrades into over hours, and why per-frame metrics miss it.
@@ -1248,6 +1253,7 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [The Long Tail of the Web Will Not Ship APIs](../concepts/the-long-tail-of-the-web-will-not-ship-apis.md) - betting on protocol adoption is betting on 200 million site owners doing work they have no reason to do.
 - [Computer Use Diffuses AI Into the Form-Filling Economy](../concepts/computer-use-diffuses-ai-into-the-form-filling-economy.md) - the market is PHP forms in Singapore, South Africa, and Mexico, and its defining property — no cooperation from the site owner — dictates the architecture.
 - [AI Training-Data Requests Compound Into Pipelines](../concepts/ai-training-data-requests-compound-into-pipelines.md) - clients buy adaptation speed, not the first iteration; being early on a capability is not the same as being right.
 - [Hide an Agentic Pipeline Behind Templates and a Manual Editor](../concepts/package-agentic-pipelines-behind-templates-and-a-manual-editor.md) - delivering a multi-stage agent workflow to consumers can be harder than building it; remove the prompt instead of teaching it.
@@ -1347,6 +1353,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Compete on Latency and Cost per Task Once Computer-Use Accuracy Ties](../concepts/compete-on-latency-and-cost-per-task-when-computer-use-accuracy-ties.md) - when success rates tie within noise, the honest report is the cost and latency columns.
 - [Train Computer-Use Agents in a Flight Simulator, Not on Exams](../concepts/train-computer-use-agents-in-a-flight-simulator-not-on-exams.md) - varying the task is not the same as reproducing software that misbehaves.
 - [Map RL Assumptions to Deployment Realities for Computer-Use Agents](../concepts/map-rl-assumptions-to-deployment-realities-for-computer-use-agents.md) - the six assumptions a benchmark quietly preserves and deployment removes.
 - [Penalize Dangerous Steps With a Process Reward Model](../concepts/penalize-dangerous-steps-with-a-process-reward-model.md) - outcome verification passes trajectories that did real damage on the way.
@@ -1662,6 +1669,7 @@
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 
 ## Models
+- [Per-Site Scaffolding Does Not Generalize: The Bitter Lesson for Web Agents](../concepts/per-site-scaffolding-does-not-generalize-to-the-long-tail.md) - the model-side scaling argument for a general vision-and-action policy over site wrappers.
 - [Train Screen-Perception Primitives Beyond Coding Ability](../concepts/train-screen-perception-primitives-beyond-coding-ability.md) - "coding abilities are not sufficient to do well on computer use," so four screen capabilities have to be trained in.
 - [Penalize Dangerous Steps With a Process Reward Model](../concepts/penalize-dangerous-steps-with-a-process-reward-model.md) - a training signal for the path, alongside the outcome verifier.
 - [Make Recovery a Native Model Action, Not an Infra Reset](../concepts/make-recovery-a-native-model-action-not-an-infra-reset.md) - refresh, backtrack, compare, wait, abandon, escalate as learned actions.
@@ -1961,6 +1969,8 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [The Long Tail of the Web Will Not Ship APIs](../concepts/the-long-tail-of-the-web-will-not-ship-apis.md) - every agent-facing tool surface presumes a cooperating publisher, which scopes it to the head of the distribution.
+- [Rendered State Is Not in the HTML](../concepts/rendered-state-is-not-in-the-html.md) - "have a coding agent read the HTML" returns a confident wrong answer on pages whose state is computed and rendered.
 - [Publish Per-Site Skills So Agents Do Not Rediscover a Website](../concepts/publish-per-site-skills-so-agents-do-not-rediscover-a-website.md) - a skill keyed to an external website rather than a repository, delivered before the visit and applicable to CLI control too.
 - [Pair Clicking With Generated Code and Replayed Network Requests](../concepts/pair-clicking-with-generated-code-and-replayed-network-requests.md) - use the browser to find the request, run the script for the repeatable part, keep pixel control as the fallback.
 - [Let Deterministic Code Drive the Timed Loop and Call the Model Only for Perception](../concepts/let-code-drive-the-timed-loop-and-call-the-model-only-for-perception.md) - the CLI-versus-MCP tradeoff becomes decisive under a deadline, where per-turn model round trips are unaffordable.

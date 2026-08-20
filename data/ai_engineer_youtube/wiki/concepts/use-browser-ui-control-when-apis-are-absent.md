@@ -14,11 +14,16 @@ Details:
 - **The API can exist and still be unavailable to you.** A second source sharpens "APIs are absent" into a permissions argument: in corporate environments the Office 365 tenant API "requires an app registration, and it also requires admin approval, which as an employee you can't often get," while the web login the employee already has is enough to drive the same actions. "In this pattern the web UI itself kind of becomes a universal API… a permissionless API." Batch personalized email from the Outlook web client needs no human-likeness at all — a synthetic click opens compose, fields are filled programmatically, a synthetic click sends, and the captured sequence loops for 20 or 200 messages. ([Corey Gallon](../sources/20260814_26RtyAm9y_Q.md), 08:48-10:43)
 - **The cost of that reach is a hostility gradient.** Sites that resist automation escalate the work from a scripted sequence to trusted browser input to human-like motion and vision, which is the escalation discipline in [Climb a Humanness Ladder Only as High as the Page Forces](climb-a-humanness-ladder-only-as-high-as-the-page-forces.md); the immediate trap is that resistance often presents as silence rather than an error ([Chrome Stamps Every Input Trusted or Untrusted](chrome-stamps-every-input-trusted-or-untrusted.md)). Driving the UI in place of a sanctioned API also inherits the account's terms of service, and terms-of-service risk is real: the same speaker was threatened with an account ban for the work. ([Corey Gallon](../sources/20260814_26RtyAm9y_Q.md), 00:01-01:09, 10:43-12:41)
 
+- **"Absent" is the steady state for most of the web, not a transitional gap.** Dhruv Batra's version of this page's premise is a distribution claim: "the head of the distribution, the most popular websites perhaps, will give you the API, but the long tail will not," against roughly 200 million active sites whose owners — school district offices that answer a purchasing question with a Freedom of Information Act request and a scan of your own email — will not publish an endpoint even after generating one becomes technically trivial. That converts UI control from a fallback into the default path for a majority of targets; see [The Long Tail of the Web Will Not Ship APIs](the-long-tail-of-the-web-will-not-ship-apis.md). The same source is explicit about the other direction too: where an aggregator or API already exists, clicking through the UI "is bizarre." ([Dhruv Batra](../sources/20260814_Ki980nV0__0.md), 01:12-08:33)
+- **The cheap substitute does not work either.** The natural reaction — skip both the API and the pixels and have a coding agent read the HTML — fails on pages whose displayed state is computed rather than stored, which includes ordinary e-commerce and sports pages. See [Rendered State Is Not in the HTML](rendered-state-is-not-in-the-html.md). ([Dhruv Batra](../sources/20260814_Ki980nV0__0.md), 08:33-12:24)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Tools](../topics/tools.md)
 
 Related concepts:
+- [The Long Tail of the Web Will Not Ship APIs](the-long-tail-of-the-web-will-not-ship-apis.md)
+- [Rendered State Is Not in the HTML](rendered-state-is-not-in-the-html.md)
 - [Agent experience prioritizes APIs, CLIs, and MCP over dashboards](agent-experience-prioritizes-apis-clis-and-mcp-over-dashboards.md)
 - [Agent-readable web surfaces guide browsing agents](agent-readable-web-surfaces-guide-browsing-agents.md)
 - [Choose agent observation and action spaces explicitly](choose-agent-observation-and-action-spaces-explicitly.md)
@@ -28,3 +33,4 @@ Related concepts:
 Sources:
 - [Useful General Intelligence - Danielle Perszyk, Amazon AGI](../sources/20250802_Dj0b_cEBHBI.md), 03:17-03:27, 07:48-08:31
 - [The Dark Arts of Web Automation — Corey Gallon, Rexmore](../sources/20260814_26RtyAm9y_Q.md), 00:01-01:09, 08:48-12:41
+- [Computer-use models will agentify the web, not APIs — Dhruv Batra, Yutori](../sources/20260814_Ki980nV0__0.md), 01:12-12:24

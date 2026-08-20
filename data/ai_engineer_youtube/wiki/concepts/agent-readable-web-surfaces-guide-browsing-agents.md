@@ -19,11 +19,16 @@ Details:
 - The file-convention family is broader than `llms.txt` alone: "we've seen things like `llms.txt`, `skills.md`, `agents.md` all being published alongside our websites. We need to see more of that to build the agent-first web." The same source names the missing member of the family — a published convention for how an agent *signs up and logs in*, see [Design an Agent-First Signup and Login Flow](design-an-agent-first-signup-and-login-flow.md). ([Paul Klein IV](../sources/20260814_GqoNrUz8hEU.md), 11:05-11:45)
 - Caveat on adoption, from the same source: this half of the problem is the harder one because it is not self-serve. "We're not just engineering on our own systems anymore. We have to be evangelists to the web and to the broader world that, hey, you want agents to come to your website." Any design that depends on site cooperation excludes the sites least likely to cooperate — see [Computer Use Diffuses AI Into the Form-Filling Economy](computer-use-diffuses-ai-into-the-form-filling-economy.md). ([Paul Klein IV](../sources/20260814_GqoNrUz8hEU.md), 10:09-10:26)
 
+- Scope limit worth stating on this page, from a source that rejects the premise for most of the web: every surface here requires the site's owner to publish something, and Dhruv Batra argues that only the head of the distribution will — "the head of the distribution, the most popular websites perhaps, will give you the API, but the long tail will not," where the tail is ~200 million active sites including institutions that answer questions by fax and Freedom of Information Act request. He also reads the growing convention list as evidence of churn rather than progress: "it was initially supposed to be MCP servers, then WebMCP, and for payments there are 20 different competing protocols." Treat this page as the playbook for sites that *choose* to participate, and [The Long Tail of the Web Will Not Ship APIs](the-long-tail-of-the-web-will-not-ship-apis.md) for coverage of the rest. ([Dhruv Batra](../sources/20260814_Ki980nV0__0.md), 00:57-08:33)
+- The DOM-adjacent surfaces also inherit a limit that is not about adoption: an affordance the page renders rather than states — a grayed-out, unclickable "sold out" driven by a fetched `quantity` of zero — has no text for any of these formats to carry. See [Rendered State Is Not in the HTML](rendered-state-is-not-in-the-html.md). ([Dhruv Batra](../sources/20260814_Ki980nV0__0.md), 10:14-11:33)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Tools](../topics/tools.md)
 
 Related concepts:
+- [The Long Tail of the Web Will Not Ship APIs](the-long-tail-of-the-web-will-not-ship-apis.md)
+- [Rendered State Is Not in the HTML](rendered-state-is-not-in-the-html.md)
 - [Expose Site Capabilities to In-Browser Agents With WebMCP](expose-site-capabilities-to-in-browser-agents-with-webmcp.md)
 - [Make Web Foundations Agent-Ready Before Adopting WebMCP](make-web-foundations-agent-ready-before-adopting-webmcp.md)
 - [Agent experience prioritizes APIs, CLIs, and MCP over dashboards](agent-experience-prioritizes-apis-clis-and-mcp-over-dashboards.md)
@@ -36,3 +41,4 @@ Sources:
 - [AI Didn't Kill the Web, It Moved in! - Olivier Leplus (AWS) & Yohan Lasorsa (Microsoft)](../sources/20260410_XZ0boOjtbNo.md), 36:03-42:57
 - [The agent-ready web: Simplify user actions with WebMCP — Tara Agyemang, Google](../sources/20260611_ghJmWQCIHRM.md), 03:02-17:28
 - [Bringing agents onto the world wide web — Paul Klein IV, Browserbase](../sources/20260814_GqoNrUz8hEU.md), 10:09-11:45
+- [Computer-use models will agentify the web, not APIs — Dhruv Batra, Yutori](../sources/20260814_Ki980nV0__0.md), 00:57-11:33
