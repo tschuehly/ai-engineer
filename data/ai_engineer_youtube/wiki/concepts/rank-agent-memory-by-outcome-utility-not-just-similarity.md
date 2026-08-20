@@ -17,11 +17,14 @@ Details:
 
 - Scope check on the premise. This page's starting complaint — that memory systems store preferences and retrieve by embedding similarity — describes the memory *libraries*, not the flagship consumer products. A year of reverse-engineering found that "neither ChatGPT nor Claude really do this": both rewrite a synthesized profile in the background and expose model-invoked search over past conversations instead of a similarity lookup over chunks. Outcome-utility ranking is therefore an argument against the library default, and the shipped consumer alternative is a third position rather than a confirmation. ([Lessons from Studying Every Memory System](../sources/20260812_5ZGyKWjQDr0.md), 10:32-11:31)
 
+- Independent convergence on the negative half of this claim, from a controlled ablation rather than a product. Stefania Druga held the model and task fixed and varied only the recall policy across a ladder — no recall, vector RAG "just to see whatever the harness would pull in terms of similarity," a ranked decisions ledger, and an oracle. Vector similarity lost, and "the rank only ledger performed the best," a result that survived adversarial ablations (arbitrary examples, the wrong step, the most recent step) and held on a second local model and a second benchmark. Read together, the two sources agree that similarity alone is the wrong ranking signal and disagree on the fix: this page keeps the retrieval unit and learns the ranking from outcome labels (with a cold start to pay for), while the ledger changes the *unit* to a per-turn decision and ranks it structurally with no labels required. Both are available at once. See [Rank a Decisions Ledger Instead of Retrieving Memories by Similarity](rank-a-decisions-ledger-instead-of-retrieving-memories-by-similarity.md). ([Memory Harnesses for Long-Running Research Agents](../sources/20260812_R3-anFK1YM8.md), 04:28-05:27, 08:17-09:36)
+
 Related topics:
 - [Retrieval](../topics/retrieval.md)
 - [Agents](../topics/agents.md)
 
 Related concepts:
+- [Rank a Decisions Ledger Instead of Retrieving Memories by Similarity](rank-a-decisions-ledger-instead-of-retrieving-memories-by-similarity.md)
 - [Close the Eval-to-Action Loop So Signal Survives the Dashboard](close-the-eval-to-action-loop-so-signal-survives-the-dashboard.md)
 - [Rank RAG Results With Domain and Product Signals Beyond Relevance](rank-rag-results-with-domain-and-product-signals-beyond-relevance.md)
 - [Skills Turn Procedural Feedback Into Transferable Agent Memory](skills-turn-procedural-feedback-into-transferable-agent-memory.md)
@@ -31,3 +34,4 @@ Related concepts:
 Sources:
 - [User Signal Dies at the Retrieval Boundary - Sonam Pankaj, StarlightSearch](../sources/20260628_Jx4ZFEAq6bY.md), 03:36-09:45
 - [Lessons from Studying Every Memory System — Shlok Khemani, Independent](../sources/20260812_5ZGyKWjQDr0.md), 10:32-11:31
+- [Memory Harnesses for Long-Running Research Agents — Stefania Druga, Sakana.ai](../sources/20260812_R3-anFK1YM8.md), 04:28-05:27, 08:17-09:36

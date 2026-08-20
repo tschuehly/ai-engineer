@@ -17,6 +17,7 @@ Details:
 - Vibe engineering needs explicit context surfaces such as rules, docs, commands, and memories because the model cannot hold an entire app context or infer project intent like a mind reader. (10:59-11:13)
 - Frequent intentional compaction treats correctness, completeness, size, and trajectory as context-quality dimensions; repeated correction history and wrong research can poison the next tool choice even when the prompt still fits in the model window. 04:38-05:43
 - For coding agents, broad static onboarding can become too large or stale, while on-demand compressed context can summarize only the current vertical slice from source-backed code. 12:14-14:10
+- A symptom checklist for the failure this page prevents, usable as a production trigger rather than a diagnosis after the fact: the model "starts contradicting itself, or it has to redo the work because it forgot it did that task in the first place, or it starts to drift from your questions because it forgot them." Each maps to a different remedy — self-contradiction to conflict surfacing, repeated work to a decisions record, question drift to keeping the task statement pinned in the core context. The same talk cites "keeping the context clean" as one item in a reported organizational cost reduction (Coinbase, via a CEO tweet, alongside more local models, better routing, better caching, and per-task usage visibility) — second-hand and unquantified, but the only place in the wiki where context hygiene appears in a *company-level* spend story rather than a per-session one. ([Memory Harnesses for Long-Running Research Agents](../sources/20260812_R3-anFK1YM8.md), 00:46-01:04, 01:44-02:17)
 - A self-improving injected-context bank needs the same hygiene: Lovable's "Stack Overflow" entries go stale "incredibly quickly" — every new model release or feature change — so they aggressively rebalance and discard knowledge, because deprecated entries cause context rot and actively hamper the agent rather than helping it. Freshness here is a maintenance task on the knowledge store, not just on a single session's window. (Lovable 10:27-11:02)
 
 Related topics:
@@ -31,6 +32,7 @@ Related concepts:
 - [Frequent intentional compaction keeps coding agents in the smart zone](frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md)
 - [Mine stuck-then-solved sessions for injectable fixes](mine-stuck-then-solved-sessions-for-injectable-fixes.md)
 - [Prompt Caching Sets the Break-Even Bar for Compaction](prompt-caching-sets-the-break-even-bar-for-compaction.md)
+- [Treat Memory as a Write–Manage–Read Control Loop, Not a Store](treat-memory-as-a-write-manage-read-control-loop.md)
 
 Sources:
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md), 04:33-11:15
@@ -38,3 +40,4 @@ Sources:
 - [No Vibes Allowed: Solving Hard Problems in Complex Codebases - Dex Horthy, HumanLayer](../sources/20251202_rmvDxxNubIg.md), 04:38-05:43, 12:14-14:10
 - [How Lovable self-improves every hour — Benjamin Verbeek, Lovable](../sources/20260602_KA5kPbdkK2E.md), 10:27-11:02
 - [Context Engineering in 2026 — Louis-François Bouchard, Omar Solano & Samridhi Vaid, Towards AI](../sources/20260817_WP3hjUXd918.md), 15:55-17:37, 52:10-53:07
+- [Memory Harnesses for Long-Running Research Agents — Stefania Druga, Sakana.ai](../sources/20260812_R3-anFK1YM8.md), 00:46-01:04, 01:44-02:17

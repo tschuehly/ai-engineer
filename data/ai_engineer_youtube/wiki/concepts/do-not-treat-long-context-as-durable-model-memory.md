@@ -15,6 +15,8 @@ Details:
 
 - What the flagship consumer products actually do with this constraint is instructive: neither ChatGPT nor Claude carries raw history into a new conversation. Each prepends a small synthesized profile — ~4,000 and ~1,000 tokens respectively — because that artifact enters the context window of *every* conversation, making its length a permanent per-turn serving cost rather than a one-off. Asked what an unconstrained design would look like, Shlok Khemani answers 400,000 tokens updated after every conversation, and immediately notes "we live in a GPU constrained world." ([Lessons from Studying Every Memory System](../sources/20260812_5ZGyKWjQDr0.md), 12:08-13:37)
 
+- **The boundary measured from both sides in one experiment.** A memory-harness ablation ran the same harness on two tasks and got opposite verdicts. On a literature review whose whole corpus fit in the window — including a deliberately hard needle, a retracted Nature claim about 742,000 materials where "the retraction… is a much smaller haystack needle in that corpus than the headlines and the citations" — memory produced "the same performance with memory and without memory, and it only added more cost." On an xbench question whose answer sat at step 124 while the question arrived at step 500, "completely outside of the context window," the harness became the only route to the answer. That is the operational form of this page's claim: inside the window, external memory is overhead; outside it, the window is not memory at all and the harness is the whole mechanism. ([Memory Harnesses for Long-Running Research Agents](../sources/20260812_R3-anFK1YM8.md), 05:29-07:33)
+
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
 - [Inference](../topics/inference.md)
@@ -27,8 +29,10 @@ Related concepts:
 - [Full History Recalls Details That Summaries Delete](full-history-recalls-details-that-summaries-delete.md)
 - [Budget Memory Between Update Cost and Serving Cost](budget-memory-between-update-cost-and-serving-cost.md)
 - [Profile Synthesis Is Continual Learning Outside the Weights](profile-synthesis-is-continual-learning-outside-the-weights.md)
+- [A Memory Harness Adds Only Cost When the Task Fits in Context](a-memory-harness-adds-only-cost-when-the-task-fits-in-context.md)
 
 Sources:
 - [Jack Morris: Stuffing Context is not Memory, Updating Weights is](../sources/20251229_Jty4s9-Jb78.md), 02:35-07:51
 - [Context Engineering in 2026 — Louis-François Bouchard, Omar Solano & Samridhi Vaid, Towards AI](../sources/20260817_WP3hjUXd918.md), 50:53-51:56, 53:16-54:33
 - [Lessons from Studying Every Memory System — Shlok Khemani, Independent](../sources/20260812_5ZGyKWjQDr0.md), 12:08-13:37
+- [Memory Harnesses for Long-Running Research Agents — Stefania Druga, Sakana.ai](../sources/20260812_R3-anFK1YM8.md), 05:29-07:33

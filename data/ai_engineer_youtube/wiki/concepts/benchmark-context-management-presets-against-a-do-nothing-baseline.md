@@ -20,11 +20,15 @@ Details:
 - Honest statistical caveat from the presenters: one trial and two trials is thin, so the signal they trust is "the order in which the techniques ended up being in the table," not the individual numbers. The dataset was also 11-13 turns, which they call "not huge." (44:19-44:42, 46:41-46:58)
 - The decision rule they land on generalizes past their tutor: "do not compact by default. You have to name the constraint that you have and then look for a better alternative." Cost, window size, and latency are different constraints with different answers. (61:34-61:47)
 
+- **Add an oracle rung above the presets, and the ladder tells you two things instead of one.** A second, independently run study applies the same discipline to memory recall rather than compaction — model, task, core context, and archival store all fixed, only the recall block varied — and extends the ladder past the presets to a condition handed the correct memory for every loop as ground truth. The do-nothing control still does its job (on a task whose corpus fit in the window, memory produced "the same performance with memory and without memory, and it only added more cost"), but the oracle adds an upper bound: whatever it still fails is not a retrieval defect at all. Two other transferable additions from the same design are adversarial rungs (feed the wrong step, feed the most recent step, feed arbitrary examples) and running the whole ladder on a second model and a second benchmark before believing the ordering. Same honest limit as here, in a stronger form: that study reports *no* effect sizes at all, so only the rank order of conditions is usable. See [Ablate the Recall Policy With a Ladder and an Oracle](ablate-the-recall-policy-with-a-ladder-and-an-oracle.md). ([Memory Harnesses for Long-Running Research Agents](../sources/20260812_R3-anFK1YM8.md), 04:28-05:27, 06:14-06:39, 08:05-09:36)
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Context Engineering](../topics/context-engineering.md)
 
 Related concepts:
+- [Ablate the Recall Policy With a Ladder and an Oracle](ablate-the-recall-policy-with-a-ladder-and-an-oracle.md)
+- [An Oracle Ceiling Separates Retrieval Failure From Use Failure](an-oracle-ceiling-separates-retrieval-failure-from-use-failure.md)
 - [Prompt Caching Sets the Break-Even Bar for Compaction](prompt-caching-sets-the-break-even-bar-for-compaction.md)
 - [Full History Recalls Details That Summaries Delete](full-history-recalls-details-that-summaries-delete.md)
 - [Measure Agentic Knowledge-Base Browsing Before Adding It](measure-agentic-knowledge-base-browsing-before-adding-it.md)
@@ -34,3 +38,4 @@ Related concepts:
 
 Sources:
 - [Context Engineering in 2026 — Louis-François Bouchard, Omar Solano & Samridhi Vaid, Towards AI](../sources/20260817_WP3hjUXd918.md), 32:19-33:30, 36:23-47:35, 61:34-61:47
+- [Memory Harnesses for Long-Running Research Agents — Stefania Druga, Sakana.ai](../sources/20260812_R3-anFK1YM8.md), 04:28-05:27, 06:14-06:39, 08:05-09:36

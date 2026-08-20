@@ -58,8 +58,12 @@ Two cost arguments from LangChain's Vivek Trivedy belong to this topic. The firs
 
 The second is an accounting change this topic has otherwise recorded only from the model-ownership side. Past a threshold he states only qualitatively as "very high inference workloads," fine-tuning an open model lets you "move from token costs to hardware costs" — "I run a cluster and I get like unlimited inference," with the elasticity caveat that you "spin it down when I don't need it." The unit of billing switches from tokens consumed to capacity provisioned, which changes what an inference budget even measures: the marginal request goes to roughly zero and the risk moves to utilization. He gives no crossover point, so the threshold remains something each team has to compute from its own volume.
 
+Local inference has a use case this topic had not separated from production serving: the controlled experiment. Stefania Druga ran a full memory-harness ablation on a desk-side M3 Ultra precisely because [owning every step of the pipeline is what an ablation needs](../concepts/run-harness-ablations-on-local-models-to-own-every-step.md) — "I got to control the data I was using, the entire traces of compute and evaluations" — and her report of the bill is the useful part. The binding constraint was not throughput per token but concurrency: the local models "don't support batch querying," so a ladder of recall policies across 68 questions and multiple seeds ran strictly serially, still going during the conference travel. The second, rarely stated cost is thermal — days of sustained load on a workstation is a cooling problem, met here with household fans. What made it feasible at all is the capability threshold she describes as local models "crossing the line" for *agentic* tasks and tool use rather than chat, with DeepSeek V4 Flash newly runnable on an M3 Ultra and RAM still "a bottleneck… it's tricky." The routing rule this suggests is orthogonal to the cost-per-token arithmetic elsewhere on this page: pick local when the experiment's value comes from holding everything fixed and reading every trace, and pick hosted when parallel throughput is what you are buying.
+
 ## Key Concepts
 
+- [Run Harness Ablations on Local Models to Own Every Step](../concepts/run-harness-ablations-on-local-models-to-own-every-step.md) - full control of data, compute traces, and evals, priced in serial-only execution and sustained thermal load.
+- [Bad Recall Costs More Than No Recall](../concepts/bad-recall-costs-more-than-no-recall.md) - wrong retrieved context is charged in extra turns, not just prompt tokens.
 - [Read the Frontier Model's Traces to Harness-Engineer Its Cheap Replacement](../concepts/read-frontier-traces-to-harness-engineer-a-cheap-replacement.md) - the expensive model proves the task is possible and its trajectory becomes the small model's harness.
 - [Compete on Latency and Cost per Task Once Computer-Use Accuracy Ties](../concepts/compete-on-latency-and-cost-per-task-when-computer-use-accuracy-ties.md) - a 20-50 step trajectory multiplies per-step latency and price, so those axes decide the model long before accuracy does.
 - [The Real-Time Model Harness Is Where the Product Work Sits](../concepts/the-realtime-model-harness-is-where-the-product-work-sits.md) - holding a stutter-free stream across GPU and CPU threads under interrupts is a different discipline from optimizing a request.
@@ -136,6 +140,7 @@ The second is an accounting change this topic has otherwise recorded only from t
 
 ## Open Questions
 
+- Which local serving stacks actually support batched or concurrent agentic requests, and at what memory cost? "They don't support batch querying" is reported as a property of a specific quantized model on a specific runtime, and it is the difference between a multi-day sweep and an overnight one, yet no source in this wiki compares local runtimes on concurrency.
 - What does a real-time model harness look like architecturally? Two vendors name it as the hard part and neither describes the thread model, buffering strategy, or how an interrupt is propagated across the GPU/CPU boundary.
 - What does serving on deliberately degraded GPUs cost in tail latency and output quality? Krea reports only that inference keeps running, and says nothing about a card that returns wrong results instead of crashing.
 - Where is the crossover from token costs to hardware costs? "Very high inference workloads" is the only threshold on offer, and the answer depends on utilization, cluster size, and how elastically a team can actually spin capacity down.
@@ -159,6 +164,7 @@ The second is an accounting change this topic has otherwise recorded only from t
 
 ## Sources
 
+- [Memory Harnesses for Long-Running Research Agents — Stefania Druga, Sakana.ai](../sources/20260812_R3-anFK1YM8.md)
 - [Voice agents with Realtime Video — Sidney Primas, LemonSlice](../sources/20260818_z1dqv74SpUs.md)
 - [Infra behind Krea 2: How to train and serve at scale — Gabriel Jorge Menezes, Krea.ai](../sources/20260818_byn9PURoBNY.md)
 - [Generative Video at the Speed of Light — Keegan McCallum, uRun](../sources/20260818_Xln-On3syJk.md)

@@ -13,6 +13,7 @@ Details:
 - The two flagship consumer products sit at opposite corners of that budget as of the talk. ChatGPT: ~4,000 tokens, updated every few days — higher serving cost, lower update cost. Claude: ~1,000 tokens, updated every 24 hours — the exact opposite trade (13:14-13:37).
 - The serving cost is per-conversation and unavoidable for the always-on half of a memory system, which is what makes profile length a product-wide inference bill rather than a storage decision. The retrieval half has the inverse profile: it costs nothing on turns where the model does not call it.
 - Compression style is part of the same budget. ChatGPT's dense keyword clues buy more content per served token than Claude's complete sentences; the bet is that the model reconstructs the meaning at conversation time (04:58-05:47, 08:20-08:46).
+- **The read half of the budget has its own cost law, and it is not about length.** Where the serving cost of an always-on profile scales with tokens × traffic, the cost of *retrieved* memory scales with how wrong it is: "bad memory is expensive because it spends more token and it can send the agent the wrong way," and in a controlled ablation the most accurate recall policy was also the cheapest — "it's not just that it gives you better recall, it actually costs less." That breaks the tradeoff framing on the retrieval side: you do not buy accuracy with tokens there, you buy both together by ranking better. The corollary for this page's budget is that the on-demand half is not simply the cheap half — a noisy retriever can cost more than a long profile, because misdirection is charged in extra turns rather than in prompt size. See [Bad Recall Costs More Than No Recall](bad-recall-costs-more-than-no-recall.md). ([Memory Harnesses for Long-Running Research Agents](../sources/20260812_R3-anFK1YM8.md), 09:36-10:02)
 - Corollary for anyone benchmarking their own memory system against a vendor's: the observable numbers (profile size, refresh interval) are the output of someone else's traffic and margin, so copying the operating point copies their economics, not their quality.
 
 Related topics:
@@ -26,6 +27,9 @@ Related concepts:
 - [Do not treat long context as durable model memory](do-not-treat-long-context-as-durable-model-memory.md)
 - [Frequency, Not Volume, Drives Web-Context Cost](frequency-not-volume-drives-web-context-cost.md)
 - [Profile Synthesis Is Continual Learning Outside the Weights](profile-synthesis-is-continual-learning-outside-the-weights.md)
+- [Bad Recall Costs More Than No Recall](bad-recall-costs-more-than-no-recall.md)
+- [Treat Memory as a Write–Manage–Read Control Loop, Not a Store](treat-memory-as-a-write-manage-read-control-loop.md)
 
 Sources:
 - [Lessons from Studying Every Memory System — Shlok Khemani, Independent](../sources/20260812_5ZGyKWjQDr0.md), 04:58-05:47, 08:20-08:46, 12:08-13:37
+- [Memory Harnesses for Long-Running Research Agents — Stefania Druga, Sakana.ai](../sources/20260812_R3-anFK1YM8.md), 09:36-10:02

@@ -1,6 +1,9 @@
 # Concept Index
 
 ## Agents
+- [Rank a Decisions Ledger Instead of Retrieving Memories by Similarity](../concepts/rank-a-decisions-ledger-instead-of-retrieving-memories-by-similarity.md) - record what was decided each turn and rank it; beat vector similarity, recency, and no-recall on a 500-step task.
+- [Do Not Gate Memory Use on the Agent's Own Judgment](../concepts/do-not-gate-memory-use-on-the-agents-own-judgment.md) - asking the model whether it needs memory lost to always-on ranked recall.
+- [Treat Memory as a Write–Manage–Read Control Loop, Not a Store](../concepts/treat-memory-as-a-write-manage-read-control-loop.md) - core, recall, and archival blocks, each with its own policy, cost, and failure mode.
 - [Separate Intelligence From Expertise When Diagnosing an Agent](../concepts/separate-intelligence-from-expertise-when-diagnosing-agents.md) - roughly orthogonal axes with different fixes; scaling only capability yields "the world's smartest novice."
 - [A Modern Moravec's Paradox Explains the Coding-Agent Gap](../concepts/a-modern-moravecs-paradox-explains-the-coding-agent-gap.md) - code is language-native, structured, and self-verifying; a new domain must supply all three itself.
 - [Digital Work Is Millions of Microworlds With Local Physics](../concepts/digital-work-is-millions-of-microworlds-with-local-physics.md) - structures, constraints, affordances, and dynamics differ per company, so competence is acquired rather than shipped.
@@ -780,6 +783,9 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [A Memory Harness Adds Only Cost When the Task Fits in Context](../concepts/a-memory-harness-adds-only-cost-when-the-task-fits-in-context.md) - measured identical accuracy at higher cost when the corpus fit in the window, so ask "does it fit?" first.
+- [Bad Recall Costs More Than No Recall](../concepts/bad-recall-costs-more-than-no-recall.md) - the accurate recall policy was also the cheapest, because wrong context is charged in extra turns too.
+- [Treat Memory as a Write–Manage–Read Control Loop, Not a Store](../concepts/treat-memory-as-a-write-manage-read-control-loop.md) - "not just a database store" but a control loop whose phases are separately ablatable.
 - [Expertise Compresses the Search; Intelligence Expands It](../concepts/expertise-compresses-the-search-intelligence-expands-it.md) - knowing which context a problem needs is accumulated competence, not a retriever property.
 - [Define Continual Learning as Adaptive Compression of Experience](../concepts/define-continual-learning-as-adaptive-compression-of-experience.md) - the *adaptive* qualifier is what separates a learning loop from a pipeline that treats every item identically.
 - [Digital Work Is Millions of Microworlds With Local Physics](../concepts/digital-work-is-millions-of-microworlds-with-local-physics.md) - the general argument for why per-deployment context layers keep being necessary.
@@ -911,6 +917,7 @@
 
 ## Infrastructure
 
+- [Run Harness Ablations on Local Models to Own Every Step](../concepts/run-harness-ablations-on-local-models-to-own-every-step.md) - a desk-side M3 Ultra as an experiment rig: no batch querying, multi-day sweeps, household fans.
 - [Run Recurring Knowledge Jobs in a Cloud Sandbox With Sync-Down/Sync-Back](../concepts/run-recurring-knowledge-jobs-in-a-cloud-sandbox-with-sync-down-sync-back.md) - a local automation "means your laptop has to be cracked open when it runs"; a scheduled sandbox does not.
 - [Mine Trace Corpora With Agents Because They Do Not Fit in Context](../concepts/mine-trace-corpora-with-agents-because-they-do-not-fit-in-context.md) - the read path over a trace store is its own cost model: traces x average size x input token price.
 - [Hold the Browser Environment Constant Across Runs](../concepts/hold-the-browser-environment-constant-across-runs.md) - render consistency is the base layer under the harness and the model, and the home Mac mini fails on both scale and compliance.
@@ -1157,6 +1164,8 @@
 
 ## Inference
 
+- [Run Harness Ablations on Local Models to Own Every Step](../concepts/run-harness-ablations-on-local-models-to-own-every-step.md) - local control of data, compute traces, and evals, priced in serial-only execution and days of sustained thermal load.
+- [Bad Recall Costs More Than No Recall](../concepts/bad-recall-costs-more-than-no-recall.md) - misdirected agents are a trajectory cost that a per-call token count never shows.
 - [Expertise Compresses the Search; Intelligence Expands It](../concepts/expertise-compresses-the-search-intelligence-expands-it.md) - offered as the explanation for agent token inefficiency: no accumulated shortcuts means full exploration cost every episode.
 - [Read the Frontier Model's Traces to Harness-Engineer Its Cheap Replacement](../concepts/read-frontier-traces-to-harness-engineer-a-cheap-replacement.md) - one vendor reports matching Opus at trace-judging with an open model one to two orders of magnitude cheaper.
 - [Compete on Latency and Cost per Task Once Computer-Use Accuracy Ties](../concepts/compete-on-latency-and-cost-per-task-when-computer-use-accuracy-ties.md) - $0.80 versus $2.30 per task at parity accuracy, because a browser task is 20-50 model calls.
@@ -1396,6 +1405,9 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Ablate the Recall Policy With a Ladder and an Oracle](../concepts/ablate-the-recall-policy-with-a-ladder-and-an-oracle.md) - hold the model fixed and climb from no-recall through similarity and your policy to ground truth, plus adversarial wrong-memory rungs.
+- [An Oracle Ceiling Separates Retrieval Failure From Use Failure](../concepts/an-oracle-ceiling-separates-retrieval-failure-from-use-failure.md) - the gap above the oracle is not recoverable by any retriever.
+- [A Memory Harness Adds Only Cost When the Task Fits in Context](../concepts/a-memory-harness-adds-only-cost-when-the-task-fits-in-context.md) - a do-nothing control turning an intuitively sensible addition into a measured loss.
 - [Reliability and Plasticity Conflict in Continually Learning Agents](../concepts/reliability-and-plasticity-conflict-in-continually-learning-agents.md) - a suite that only detects loss will always argue against learning; measuring accumulated expertise is unsolved.
 - [A Modern Moravec's Paradox Explains the Coding-Agent Gap](../concepts/a-modern-moravecs-paradox-explains-the-coding-agent-gap.md) - code hands you rewards and tests "in symbolic ways"; other domains have to build the verification loop first.
 - [Separate Intelligence From Expertise When Diagnosing an Agent](../concepts/separate-intelligence-from-expertise-when-diagnosing-agents.md) - a benchmark score reports the intelligence axis and says little about situated competence.
@@ -1874,6 +1886,9 @@
 - [Condition ASR on Conversation Context and Domain Vocabulary](../concepts/condition-asr-on-conversation-context-and-domain-vocabulary.md)
 
 ## Retrieval
+- [Rank a Decisions Ledger Instead of Retrieving Memories by Similarity](../concepts/rank-a-decisions-ledger-instead-of-retrieving-memories-by-similarity.md) - over an agent's own history the retrieval unit should be a decision with a priority, not a chunk with an embedding.
+- [An Oracle Ceiling Separates Retrieval Failure From Use Failure](../concepts/an-oracle-ceiling-separates-retrieval-failure-from-use-failure.md) - perfect retrieval is capped by whether the model uses what it gets.
+- [Bad Recall Costs More Than No Recall](../concepts/bad-recall-costs-more-than-no-recall.md) - a wrong retrieval pays twice, in tokens and in the path it sends the agent down.
 - [Materialize Backlinks at Ingest With Key-Term Search](../concepts/materialize-backlinks-at-ingest-with-key-term-search.md) - write the links into the document at enrichment time and the file tree becomes the index.
 - [Generate an Entity Wiki Over Your Own Notes](../concepts/generate-an-entity-wiki-over-your-own-notes.md) - an entity index built for a human clicking through, which the measured null result on agentic browsing never tested.
 - [Context as a Service Is Vertical Search for Agents](../concepts/context-as-a-service-is-vertical-search-for-agents.md) - a prebuilt vertical index served over MCP sits between an AI search API and your own pipeline, with different coverage and cost behavior from both.
