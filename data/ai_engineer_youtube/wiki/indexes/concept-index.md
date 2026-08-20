@@ -1,6 +1,13 @@
 # Concept Index
 
 ## Agents
+- [Map RL Assumptions to Deployment Realities for Computer-Use Agents](../concepts/map-rl-assumptions-to-deployment-realities-for-computer-use-agents.md) - six assumptions that hold in a sandbox and fail on a real UI, each with the adaptation it forces.
+- [Train Computer-Use Agents in a Flight Simulator, Not on Exams](../concepts/train-computer-use-agents-in-a-flight-simulator-not-on-exams.md) - layout shift, slow loads, pop-ups, focus stealing, stale tabs, and adversarial lures belong in the training environment.
+- [Make Recovery a Native Model Action, Not an Infra Reset](../concepts/make-recovery-a-native-model-action-not-an-infra-reset.md) - resetting on infra errors trains an agent that has never recovered from anything; pass the error to the model instead.
+- [Teach Calibrated Confidence So an Agent Knows When to Hand Off](../concepts/teach-calibrated-confidence-so-an-agent-knows-when-to-hand-off.md) - authorized, reversible, visible, impactful as the four inputs to the act-or-escalate decision.
+- [Train Screen-Perception Primitives Beyond Coding Ability](../concepts/train-screen-perception-primitives-beyond-coding-ability.md) - grounding, semantics, change detection, and multi-source reconciliation are what coding ability does not supply.
+- [Keep the Harness Thick Early and Thin It as the Model Improves](../concepts/keep-the-harness-thick-early-and-thin-it-as-the-model-improves.md) - the guardrail layer is temporary scaffolding whose second job is capturing failures as training data.
+- [Penalize Dangerous Steps With a Process Reward Model](../concepts/penalize-dangerous-steps-with-a-process-reward-model.md) - the path and its side effects, not only the final state, decide whether a trajectory was good.
 - [A Blind Replay Script Exposes a Deterministic Benchmark](../concepts/a-blind-replay-script-exposes-a-deterministic-benchmark.md) - the constructive audit for whether a computer-use benchmark measures perception or a memorized path.
 - [Measure Agent Robustness per Variation Axis, Not Just Average Success](../concepts/measure-agent-robustness-per-variation-axis-not-just-average-success.md) - frontier computer-use agents drop performance when only the app theme or entry screen changes.
 - [Climb a Humanness Ladder Only as High as the Page Forces](../concepts/climb-a-humanness-ladder-only-as-high-as-the-page-forces.md) - escalate browser actions from synthetic click to trusted CDP input to human-like motion only as far as the page forces, then record the winning path as code or a skill.
@@ -1332,6 +1339,9 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Train Computer-Use Agents in a Flight Simulator, Not on Exams](../concepts/train-computer-use-agents-in-a-flight-simulator-not-on-exams.md) - varying the task is not the same as reproducing software that misbehaves.
+- [Map RL Assumptions to Deployment Realities for Computer-Use Agents](../concepts/map-rl-assumptions-to-deployment-realities-for-computer-use-agents.md) - the six assumptions a benchmark quietly preserves and deployment removes.
+- [Penalize Dangerous Steps With a Process Reward Model](../concepts/penalize-dangerous-steps-with-a-process-reward-model.md) - outcome verification passes trajectories that did real damage on the way.
 - [A Blind Replay Script Exposes a Deterministic Benchmark](../concepts/a-blind-replay-script-exposes-a-deterministic-benchmark.md) - record one successful trajectory per task and replay it blindly; a script under a megabyte that never reads the screen ties the frontier model it came from.
 - [pass@k on a Deterministic Environment Measures Replay, Not Capability](../concepts/passk-on-a-deterministic-environment-measures-replay.md) - formally the replay agent's success rate, so the metric is a metrification of the exploit rather than a measurement that survives it.
 - [Design Eval Environments to the PRISM Principles](../concepts/design-eval-environments-to-the-prism-principles.md) - privileged verification, realism, integrity-checked configurations, sandboxed execution, multifactorial variation; varying the initial state is the rare one that matters.
@@ -1644,6 +1654,10 @@
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 
 ## Models
+- [Train Screen-Perception Primitives Beyond Coding Ability](../concepts/train-screen-perception-primitives-beyond-coding-ability.md) - "coding abilities are not sufficient to do well on computer use," so four screen capabilities have to be trained in.
+- [Penalize Dangerous Steps With a Process Reward Model](../concepts/penalize-dangerous-steps-with-a-process-reward-model.md) - a training signal for the path, alongside the outcome verifier.
+- [Make Recovery a Native Model Action, Not an Infra Reset](../concepts/make-recovery-a-native-model-action-not-an-infra-reset.md) - refresh, backtrack, compare, wait, abandon, escalate as learned actions.
+- [Train Computer-Use Agents in a Flight Simulator, Not on Exams](../concepts/train-computer-use-agents-in-a-flight-simulator-not-on-exams.md) - the training-environment fidelity requirement behind those behaviors.
 
 - [Point a General World Model at a Narrow Domain Instead of Building a Task-Specific Model](../concepts/point-a-general-world-model-at-a-narrow-domain.md) - a general model amortizes when the requirement set is open-ended; a specialist wins only when it is closed.
 - [Make a Video Model Interactive With a Causal Attention Mask, Then Budget for Error Accumulation](../concepts/make-video-models-causal-and-budget-for-error-accumulation.md) - enforce causality during training so inference matches, and expect compounding drift as the structural cost.
@@ -1890,6 +1904,7 @@
 - [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md)
 
 ## Security
+- [Teach Calibrated Confidence So an Agent Knows When to Hand Off](../concepts/teach-calibrated-confidence-so-an-agent-knows-when-to-hand-off.md) - an agent that treats escalation as defeat will guess credentials against a live login form until the account locks.
 
 - [Chrome Stamps Every Input Trusted or Untrusted](../concepts/chrome-stamps-every-input-trusted-or-untrusted.md) - event-provenance checking is cheap and defeats only naive scripting, since a protocol-driven browser emits genuinely trusted events.
 - [Climb a Humanness Ladder Only as High as the Page Forces](../concepts/climb-a-humanness-ladder-only-as-high-as-the-page-forces.md) - the attacker's escalation discipline, read by a defender as a price list for its own signals.

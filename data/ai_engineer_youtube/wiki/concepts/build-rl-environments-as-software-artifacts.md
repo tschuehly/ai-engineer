@@ -20,6 +20,8 @@ Details:
 
 - DIGIWORLD adds a generation stage to the same artifact pattern for computer use: a compiler takes a parameterized task template, its verifier, and mock data, combines them with a base data case and a base UI state, enumerates every combination, and rejects the invalid ones — turning 387 authored scenarios into 3.2 million verified configurations across 15 sandboxed Android apps. The warning attached is that emitting the software is the easy half: "coding agents can generate a lot of software, but a lot of software is not the same as an effective, cool environment," and "the main craft is good software engineering" in the verification pipeline. See [compiling configurations and rejecting the invalid ones](generate-task-configurations-by-compiling-and-rejecting-invalid-combinations.md). ([Computer Use at the Edge of the Statistical Precipice](../sources/20260814_CTLa_p6iOiY.md), 05:31-09:20)
 
+- Amazon AGI Lab adds a fidelity requirement that changes what the artifact has to contain for computer use: the sandbox must reproduce the *misbehavior* of real software — layout shift, slow loads, missing labels, pop-ups, focus stealing, random account states, stale tabs — and it must stop resetting on infrastructure errors, because "that's not an option in real life"; the error is passed to the model as an observation it has to recover from ([Make Recovery a Native Model Action](make-recovery-a-native-model-action-not-an-infra-reset.md)). That makes the error path part of the environment's public interface rather than a harness implementation detail. ([From RL to IRL](../sources/20260814_Cc0_nyxROBA.md), 09:03-09:48)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -36,6 +38,7 @@ Related concepts:
 - [Fix Tool Discipline Before Reaching for a Bigger Model](fix-tool-discipline-before-reaching-for-a-bigger-model.md)
 - [Generate Task Configurations by Compiling and Rejecting the Invalid Ones](generate-task-configurations-by-compiling-and-rejecting-invalid-combinations.md)
 - [Design Eval Environments to the PRISM Principles](design-eval-environments-to-the-prism-principles.md)
+- [Train Computer-Use Agents in a Flight Simulator, Not on Exams](train-computer-use-agents-in-a-flight-simulator-not-on-exams.md)
 
 Sources:
 - [Let LLMs Wander: Engineering RL Environments - Stefano Fiorucci](../sources/20260408_71V3fTaUp2Q.md), 00:45-20:52
@@ -44,3 +47,4 @@ Sources:
 - [RL Environments at Scale - Will Brown, Prime Intellect](../sources/20251209__IzZWeuTx7I.md), 05:42-12:05
 - [Stop Making Models Bigger, Make Them Behave — Kobie Crawford, Snorkel](../sources/20260610_TNwJ1LMiENk.md), 12:10-13:30
 - [Computer Use at the Edge of the Statistical Precipice — Pierluca D'Oro, Programma Labs](../sources/20260814_CTLa_p6iOiY.md), 05:31-09:20
+- [From RL to IRL — Gaurav Mishra, Amazon AGI Lab](../sources/20260814_Cc0_nyxROBA.md), 09:03-09:48

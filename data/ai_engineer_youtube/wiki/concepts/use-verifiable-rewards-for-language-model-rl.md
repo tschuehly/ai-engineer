@@ -12,6 +12,9 @@ Details:
 - The reverse-text example uses a longest-common-subsequence ratio against the known reversed answer; the tic-tac-toe example uses a winner reward, an XML-format reward, and invalid-move penalties. (12:50-13:05, 20:52-23:40)
 - The source cautions that task difficulty matters: if an opponent is too perfect too early, the model may never see wins and fail to receive useful positive learning signal. (21:35-22:09)
 
+- Mishra states the same three requirements from the training side — the task must have a verifiable outcome, be targeted at the skill being taught, and sit in a difficulty window, "if the task is very easy or very difficult, then we're not going to get much training signal" — and gives the verifier ladder as string equality, compiler, linter, unit tests, database lookups, and rubric-graded agent judges. His criteria for preferring RL over SFT: tasks are easy to generate but demonstrations are hard to collect; many valid paths exist and SFT would "narrow down the model to following a few patterns only"; or the domain is reasoning-heavy and subjective enough that only the outcome should be judged. ([From RL to IRL](../sources/20260814_Cc0_nyxROBA.md), 01:26-03:16)
+- **Limit of outcome-only verification.** Once actions touch the real world, a verified outcome stops being a sufficient reward: an agent that files the expense report *and* sends a resignation letter to the CEO passes the outcome check, and an agent that locks an account while retrying passes it too. Verifiable rewards then need a path-scoring companion — see [Penalize Dangerous Steps With a Process Reward Model](penalize-dangerous-steps-with-a-process-reward-model.md). (07:48-08:02, 09:49-10:07)
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Models](../topics/models.md)
@@ -20,6 +23,8 @@ Related concepts:
 - [Mitigate small-model doom loops during preference alignment and RL](mitigate-small-model-doom-loops-during-preference-alignment-and-rl.md)
 - [Split LLM Judges Into Narrow Binary Metrics](split-llm-judges-into-narrow-binary-metrics.md)
 - [Build RL environments as software artifacts](build-rl-environments-as-software-artifacts.md)
+- [Penalize Dangerous Steps With a Process Reward Model](penalize-dangerous-steps-with-a-process-reward-model.md)
 
 Sources:
 - [Let LLMs Wander: Engineering RL Environments - Stefano Fiorucci](../sources/20260408_71V3fTaUp2Q.md), 06:22-23:40
+- [From RL to IRL — Gaurav Mishra, Amazon AGI Lab](../sources/20260814_Cc0_nyxROBA.md), 01:26-03:16, 07:48-10:07

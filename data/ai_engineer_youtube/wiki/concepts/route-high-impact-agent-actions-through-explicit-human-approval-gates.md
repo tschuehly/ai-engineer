@@ -19,6 +19,8 @@ Details:
 - Kozlov's Cloudflare/Knock example wraps an `issueCard` tool in required human input, defers execution until approval, routes the approval webhook back to the correct durable object, and stores status so the same card cannot be provisioned twice. 15:58-18:44
 - Kyle Jaejun Lee (KRAFTON) runs a fleet-wide **review gateway** to catch plan drift as plans flow down an agent hierarchy: any layer that wants to act submits its plan and then blocks — "Nothing runs until I approve. And the second I approve, a hook fires the work off automatically." This collapses per-pane inspection into "One web inbox, one control point, I never walk into the work windows anymore," and as the fleet grows every machine sends its review requests over SSH into one main gateway hosted on an always-on box, "because… Your one point of control can't be a thing that falls asleep." ([I Run a Fleet of AI Agents Across Three Machines. Here's What Broke. - Kyle Jaejun Lee, KRAFTON](../sources/20260708_4kYl2_mqmnQ.md), 03:20-04:11, 07:04-07:27)
 
+- Amazon AGI Lab adds a second, model-side layer under the same gate. Their computer-use agents are *trained* to judge whether an action is authorized, irreversible, visible to the user, and impactful, and to escalate on their own ([calibrated confidence](teach-calibrated-confidence-so-an-agent-knows-when-to-hand-off.md)); the harness then keeps a hard override — "wherever the confidence calibration of the model is not correct, we let the harness override the model and force it to give control back to the user." The learned estimate generalizes to actions no policy author enumerated; the enforced gate covers the case where the estimate is wrong. Neither replaces the other. ([From RL to IRL](../sources/20260814_Cc0_nyxROBA.md), 10:09-10:34, 13:44-13:55)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Tools](../topics/tools.md)
@@ -30,6 +32,7 @@ Related concepts:
 - [Customize subagents by task, model, tools, and permissions](customize-subagents-by-task-model-tools-and-permissions.md)
 - [Human approval can hide tool-description and parameter risk](human-approval-can-hide-tool-description-and-parameter-risk.md)
 - [Vault and exchange tokens for scoped upstream agent access](vault-and-exchange-tokens-for-scoped-upstream-agent-access.md)
+- [Teach Calibrated Confidence So an Agent Knows When to Hand Off](teach-calibrated-confidence-so-an-agent-knows-when-to-hand-off.md)
 
 Sources:
 - [Human-in-the-Loop Automation with n8n - Liam McGarrigle](../sources/20260502_tDArkCqjA-c.md), 01:10-01:25, 01:10:41-01:11:07, 01:13:56-01:16:08
@@ -39,3 +42,4 @@ Sources:
 - [How BlackRock Builds Custom Knowledge Apps at Scale — Vaibhav Page & Infant Vasanth, BlackRock](../sources/20250823_08mH36_NVos.md), 13:44-14:05
 - [Building Agents (the hard parts!) - Rita Kozlov, Cloudflare](../sources/20250723_j_TKDweOsYE.md), 15:58-18:44
 - [I Run a Fleet of AI Agents Across Three Machines. Here's What Broke. - Kyle Jaejun Lee, KRAFTON](../sources/20260708_4kYl2_mqmnQ.md), 03:20-04:11, 07:04-07:27
+- [From RL to IRL — Gaurav Mishra, Amazon AGI Lab](../sources/20260814_Cc0_nyxROBA.md), 10:09-10:34, 13:44-13:55

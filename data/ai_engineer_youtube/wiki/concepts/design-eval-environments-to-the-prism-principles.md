@@ -21,6 +21,8 @@ Details:
 - The single highest-value addition for a team that already sandboxes and verifies: "some things like *varying initial state across runs* — they are pretty rare across existing benchmarks, but they are very important, and so I would suggest you try to incorporate these into your evals." Starting every run of a task from the login screen is exactly what makes the recorded action sequence a constant. (15:16-15:30)
 - Relation to the wiki's other benchmark checklist: Snorkel's four properties ([task quality, diversity, headroom, methodology](judge-benchmark-quality-by-task-diversity-headroom-and-methodology.md)) are about whether the *task set* is a sound measuring stick; PRISM is about whether the *environment each task runs in* can be short-circuited. They are complementary and neither implies the other — a benchmark can have expert-validated, diverse, unsaturated tasks and still be beaten by a one-megabyte script.
 
+- **The training side asks for a different kind of variation.** Amazon AGI Lab's requirement for computer-use training environments is "high-fidelity digital sandboxes" that reproduce layout shift, slow loads, missing labels, pop-ups, focus stealing, random account states, and stale tabs — the software *misbehaving*, not the task differing. PRISM's multifactorial variation changes what the task is (data, theme, starting screen); an environment can satisfy all five PRISM properties and still never drop a request or steal focus, so a benchmark built to PRISM is not automatically a [flight simulator](train-computer-use-agents-in-a-flight-simulator-not-on-exams.md). Both teams presented at the same event on the same day. ([From RL to IRL](../sources/20260814_Cc0_nyxROBA.md), 08:22-09:20)
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Agents](../topics/agents.md)
@@ -34,6 +36,8 @@ Related concepts:
 - [Push Agent Benchmarks on Environment Complexity, Autonomy Horizon, and Output Complexity](push-agent-benchmarks-on-environment-autonomy-and-output-complexity.md)
 - [Control environment noise for group-based RL](control-environment-noise-for-group-based-rl.md)
 - [Seal Eval Environments Against Agents That Read the Leaked Answer](seal-eval-environments-against-answer-leaking-agents.md)
+- [Train Computer-Use Agents in a Flight Simulator, Not on Exams](train-computer-use-agents-in-a-flight-simulator-not-on-exams.md)
 
 Sources:
 - [Computer Use at the Edge of the Statistical Precipice — Pierluca D'Oro, Programma Labs](../sources/20260814_CTLa_p6iOiY.md), 03:47-06:22, 15:16-15:30
+- [From RL to IRL — Gaurav Mishra, Amazon AGI Lab](../sources/20260814_Cc0_nyxROBA.md), 08:22-09:20
