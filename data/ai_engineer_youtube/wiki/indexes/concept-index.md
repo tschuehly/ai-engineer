@@ -1,6 +1,10 @@
 # Concept Index
 
 ## Agents
+- [Climb a Humanness Ladder Only as High as the Page Forces](../concepts/climb-a-humanness-ladder-only-as-high-as-the-page-forces.md) - escalate browser actions from synthetic click to trusted CDP input to human-like motion only as far as the page forces, then record the winning path as code or a skill.
+- [Chrome Stamps Every Input Trusted or Untrusted](../concepts/chrome-stamps-every-input-trusted-or-untrusted.md) - the automation failure that returns success: a page checking event provenance drops a synthetic click with no error at all.
+- [Verify an Action Through a Different Channel Than the One That Acted](../concepts/verify-an-action-through-a-different-channel-than-the-one-that-acted.md) - the acting channel reports that it fired, not that it worked, so confirmation has to come from the network, the screen, or page state.
+- [Let Deterministic Code Drive the Timed Loop and Call the Model Only for Perception](../concepts/let-code-drive-the-timed-loop-and-call-the-model-only-for-perception.md) - against an environment that expires on its own clock, per-step model round trips lose even when every call succeeds.
 - [Enforce Agent Egress Policy at the Wire Protocol, Below HTTP](../concepts/enforce-agent-egress-policy-below-the-http-layer.md) - the guard has to work on an agent it cannot modify, so it inspects the bytes leaving the process rather than the loop inside it.
 - [Composed Access Defeats Per-System Credential Scoping](../concepts/composed-access-defeats-per-system-credential-scoping.md) - a permissioned MCP tool surface describes the intended action space rather than enforcing it once the agent can spawn subprocesses.
 - [Version-Control and Unit-Test the Agent Permission Policy](../concepts/version-control-and-unit-test-the-agent-permission-policy.md) - treat the agent's permission rules as production code with fixture-based regression tests.
@@ -1099,6 +1103,7 @@
 
 ## Inference
 
+- [Let Deterministic Code Drive the Timed Loop and Call the Model Only for Perception](../concepts/let-code-drive-the-timed-loop-and-call-the-model-only-for-perception.md) - inference latency, not accuracy, is what fails a loop running against an expiring deadline.
 - [The Real-Time Model Harness Is Where the Product Work Sits](../concepts/the-realtime-model-harness-is-where-the-product-work-sits.md) - holding a stutter-free stream across GPU and CPU threads under interrupts is a different discipline from optimizing a request.
 - [Make a Video Model Interactive With a Causal Attention Mask, Then Budget for Error Accumulation](../concepts/make-video-models-causal-and-budget-for-error-accumulation.md) - what a streaming generative session degrades into over hours, and why per-frame metrics miss it.
 - [Inference Tolerates Degraded GPUs That Training Cannot](../concepts/inference-tolerates-degraded-gpus-that-training-cannot.md) - single-node serving has no collective to slow down, so hot or flaky cards stay useful and hardware quality becomes a routing parameter.
@@ -1878,6 +1883,8 @@
 
 ## Security
 
+- [Chrome Stamps Every Input Trusted or Untrusted](../concepts/chrome-stamps-every-input-trusted-or-untrusted.md) - event-provenance checking is cheap and defeats only naive scripting, since a protocol-driven browser emits genuinely trusted events.
+- [Climb a Humanness Ladder Only as High as the Page Forces](../concepts/climb-a-humanness-ladder-only-as-high-as-the-page-forces.md) - the attacker's escalation discipline, read by a defender as a price list for its own signals.
 - [Enforce Agent Egress Policy at the Wire Protocol, Below HTTP](../concepts/enforce-agent-egress-policy-below-the-http-layer.md) - every agent action is bytes on the wire and the dangerous ones are often not HTTP, so the enforcement point is a protocol-parsing proxy that holds credentials, survives tunneling, and treats the agent as a black box.
 - [Composed Access Defeats Per-System Credential Scoping](../concepts/composed-access-defeats-per-system-credential-scoping.md) - read-only credentials and curated MCP tools are correct and insufficient: reach is the composition of grants across systems, and a subprocess bypasses the tool surface.
 - [Version-Control and Unit-Test the Agent Permission Policy](../concepts/version-control-and-unit-test-the-agent-permission-policy.md) - a thousand-line HCL rule file reviewed in git, with fixture requests as unit tests asserting a dangerous action stays blocked.
@@ -1921,6 +1928,7 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Let Deterministic Code Drive the Timed Loop and Call the Model Only for Perception](../concepts/let-code-drive-the-timed-loop-and-call-the-model-only-for-perception.md) - the CLI-versus-MCP tradeoff becomes decisive under a deadline, where per-turn model round trips are unaffordable.
 - [Expose the Domain's Vocabulary to Agents, Not the Platform's Primitives](../concepts/expose-domain-vocabulary-to-agents-not-platform-primitives.md) - name tools with the words that teach the domain rather than the ones that implement it.
 - [Make Agent Edits Declarative Tags Instead of Generated Code](../concepts/make-agent-edits-declarative-tags-instead-of-generated-code.md) - trade expressiveness for containment: no generated code, no sandbox, and a wrong call is a deletable tag.
 - [Ship AI Audio Features as Plugins Inside the Host DAW](../concepts/ship-ai-audio-features-as-plugins-inside-the-host-daw.md) - deliver an AI feature into the application that already owns the pipeline, so only the new decisions need a UI.
@@ -2186,6 +2194,7 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Verify an Action Through a Different Channel Than the One That Acted](../concepts/verify-an-action-through-a-different-channel-than-the-one-that-acted.md) - sense, act once, confirm through an independent channel, and treat the failed check as the signal to escalate.
 - [Make Intent and Evidence the Review Surface](../concepts/make-intent-and-evidence-the-review-surface.md) - when output outruns inspection capacity, relocate review to an artifact that still fits human attention.
 - [Capture the Coding Session as the Intent Record](../concepts/capture-the-coding-session-as-the-intent-record.md) - the interaction transcript, not the produced artifact, is what makes a downstream verifier independent.
 - [Code Review Carries Alignment, Not Just Correctness](../concepts/code-review-carries-alignment-not-just-correctness.md) - a review ritual can survive as a formality while the alignment it carried quietly disappears.

@@ -14,6 +14,7 @@ Details:
   - **What it learns from** — step-by-step delta feedback (what popped up, what is gone, that a click did not register) from tracking the full end-to-end page, instead of only a pass/fail at the end. (03:50-04:08)
 - Evidence the split is real: a baseline agent spent 10-20 seconds just to click a Start button on a 30-step challenge; Claude with default computer-use took ~2 minutes and got stuck screenshot-scroll-screenshot downloading an Aadhaar document and could not pick a date on an unfamiliar booking site — the same tasks completed quickly on the rebuilt runtime using a *cheaper* model. (00:30-02:41)
 - This complements the general principle that observation and action spaces are explicit design choices ([Choose agent observation and action spaces explicitly](choose-agent-observation-and-action-spaces-explicitly.md)) and the parallel finding for tool-using agents that failures are often interface/discipline, not raw capability ([Fix Tool Discipline Before Reaching for a Bigger Model](fix-tool-discipline-before-reaching-for-a-bigger-model.md)).
+- **A second source reaches the same conclusion from the input side.** Corey Gallon's account of driving Chrome through the DevTools Protocol is an interface argument end to end: the model never changes, but whether a click is dispatched from page JavaScript or through the browser's own input path decides whether the page acts on it at all ([Chrome Stamps Every Input Trusted or Untrusted](chrome-stamps-every-input-trusted-or-untrusted.md)), and his closing claim is that "careful, disciplined engineering… enabled the agent to do something that it could not do at all off the shelf." His three levers map onto the same three: senses (DOM, accessibility tree, screenshot, network, console), a graded action layer ([Climb a Humanness Ladder Only as High as the Page Forces](climb-a-humanness-ladder-only-as-high-as-the-page-forces.md)), and out-of-band verification ([Verify an Action Through a Different Channel Than the One That Acted](verify-an-action-through-a-different-channel-than-the-one-that-acted.md)). ([Corey Gallon](../sources/20260814_26RtyAm9y_Q.md), 04:28-06:47, 10:43-12:41, 19:36-20:22)
 - Contrast with the site-side approach: WebMCP and agent-readable web surfaces ask *sites* to publish clean action surfaces; this is the *agent-side* runtime that works on unmodified, hostile pages when no such surface exists.
 
 Related topics:
@@ -26,6 +27,9 @@ Related concepts:
 - [Fix Tool Discipline Before Reaching for a Bigger Model](fix-tool-discipline-before-reaching-for-a-bigger-model.md)
 - [Measure Agent Interface Efficiency With Tokens Per Successful Outcome](measure-agent-interface-efficiency-with-tokens-per-successful-outcome.md)
 - [Use Browser UI Control When APIs Are Absent](use-browser-ui-control-when-apis-are-absent.md)
+- [Chrome Stamps Every Input Trusted or Untrusted](chrome-stamps-every-input-trusted-or-untrusted.md)
+- [Climb a Humanness Ladder Only as High as the Page Forces](climb-a-humanness-ladder-only-as-high-as-the-page-forces.md)
 
 Sources:
 - [Browser Agents Don't Need Better Models. They Need Better Eyes. - Kushan Raj, ARK](../sources/20260628_JnubYCYunk8.md), 00:30-04:23
+- [The Dark Arts of Web Automation — Corey Gallon, Rexmore](../sources/20260814_26RtyAm9y_Q.md), 04:28-06:47, 10:43-12:41, 19:36-20:22
