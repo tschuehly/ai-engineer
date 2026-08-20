@@ -15,6 +15,7 @@ Details:
 - What the single step buys, conceptually: it converts the hint from a statement about traces in general into a statement about *this policy's current mistake*, which is the same asymmetry that made online hints outperform static ones on a different task ([When Rewards and SFT Both Degrade the Base Model, Hint Against the Rollout](hint-against-the-rollout-when-rewards-and-sft-degrade-the-base-model.md)). The step count is the price you pay for that specificity, and one is the minimum.
 - It also pairs naturally with per-step hinting: if a judge is already choosing where in the rollout the hint belongs, that chosen point is where the single on-policy step should be taken ([Let a Judge Place the Hint and Distill Only the Steps Near It](let-a-judge-place-the-hint-and-distill-only-nearby-steps.md)).
 - **The staleness framing this refines.** The wiki's [pipeline RL](pipeline-rl-trades-policy-staleness-for-gpu-throughput.md) page — from the same company eight months earlier — treats policy staleness as a cost to be tolerated for throughput, measured in policy versions behind. Here staleness is a *dial you can partially buy back* on trace data that is days old, by regenerating just the step that matters. The two pages are about different loops (RL sampling versus distillation on logs) but share the underlying quantity.
+- **Why "one rollout" is a property worth naming rather than an implementation detail.** Trajectory scores post-training methods partly on parallelism, and the entry that separates GRPO from self-distillation is that group rollouts force environments to be "one-to-one copies of the real world," which the same talk calls "a bias that we're adding to our training paradigm" on top of the infrastructure bill ([Score a Post-Training Algorithm on Four Properties](score-post-training-algorithms-on-four-properties.md)). A single step is the strongest version of that: "we don't need a group of eight in order to roll out but just from a single example we're able to get information. So that takes away the environment bottleneck." ([Trajectory](../sources/20260812_zL1kLftVTlo.md), 09:53-10:06)
 - Read the grid honestly: this rung is the clearest evidence for Denton's own caveat that the boxes "sometimes don't make sense as boxes, but more as spectrums" — one on-policy step is a coordinate partway along the trace axis, not a corner. ([Applied Compute](../sources/20260812_ZTA0GwpAUak.md), 05:11-05:33)
 
 Related topics:
@@ -29,6 +30,8 @@ Related concepts:
 - [Pipeline RL Trades Policy Staleness for GPU Throughput](pipeline-rl-trades-policy-staleness-for-gpu-throughput.md)
 - [A Teacher Can Install a Tool Call by Moving the Reasoning Path, Never the Call Tokens](move-the-reasoning-path-not-the-target-tokens.md)
 - [Turn Recorded Agent Traces Into Free Replay Test Cases](turn-recorded-agent-traces-into-free-replay-test-cases.md)
+- [Score a Post-Training Algorithm on Four Properties](score-post-training-algorithms-on-four-properties.md)
 
 Sources:
 - [Bringing Continual Learning into Enterprises — Samuel Denton, Applied Compute](../sources/20260812_ZTA0GwpAUak.md), 05:11-05:33, 06:28-07:15, 13:38-14:17
+- [Scaling up Continual Learning — Ronak Malde, Trajectory](../sources/20260812_zL1kLftVTlo.md), 03:12-03:25, 09:53-10:06

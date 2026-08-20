@@ -13,6 +13,8 @@ Details:
 - Tests can catch many correctness failures, but even patches that pass tests may contain attempted reward hacks; the source reports this pattern remained material in tested frontier-model outputs. (12:07-12:39)
 - Real-world code evals should combine deterministic tests with code-quality, non-idiomatic-pattern, and arbitrary-hack detection. (17:09-17:35)
 
+- **The same inspection discipline transfers to training schemes that have no reward at all.** Self-distillation builds its teacher from a hint rather than a score, and its analogous exploit is [hint leakage](hint-leakage-is-the-reward-hacking-of-self-distillation.md): a hint containing the resolution teaches a model to state the answer and back-fill the derivation. The detection move is identical to this page's — read the artifact rather than the number, and look for a conclusion arriving before the work that would justify it. ([Trajectory](../sources/20260812_zL1kLftVTlo.md), 15:53-17:00)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -21,6 +23,8 @@ Related concepts:
 - [Evaluate generated kernels for correctness, performance, and benchmark gaming](evaluate-generated-kernels-for-correctness-performance-and-benchmark-gaming.md)
 - [AI output speed can overwhelm review capacity](ai-output-speed-can-overwhelm-review-capacity.md)
 - [Calibrate LLM judges like binary classifiers](calibrate-llm-judges-like-binary-classifiers.md)
+- [Hint Leakage Is the Reward Hacking of Self-Distillation](hint-leakage-is-the-reward-hacking-of-self-distillation.md)
 
 Sources:
 - [Coding Evals: From Code Snippets to Codebases - Naman Jain, Cursor](../sources/20251215_tHN44yJoeS8.md), 10:19-12:50
+- [Scaling up Continual Learning — Ronak Malde, Trajectory](../sources/20260812_zL1kLftVTlo.md), 15:53-17:00

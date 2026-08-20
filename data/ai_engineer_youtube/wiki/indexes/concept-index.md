@@ -1,6 +1,9 @@
 # Concept Index
 
 ## Agents
+- [Long-Horizon Self-Distillation Collapses Into Hedging](../concepts/long-horizon-self-distillation-collapses-into-hedging.md) - a training method proven on short tasks drifts into "wait / but / maybe" over 50-100 tool calls.
+- [Weight Distillation Steps by Student/Teacher Divergence](../concepts/weight-distillation-steps-by-student-teacher-divergence.md) - use the student/teacher KL as a per-step weight so a corrective signal stops applying where it no longer holds.
+- [Today's Continual Learning Is Batch Updates and a Model Re-Upload](../concepts/todays-continual-learning-is-batch-updates-and-a-model-reupload.md) - "pseudo continual learning," and the unsolved merge of thousands of concurrent rollouts.
 - [Raise the Floor Before Maxing the Benchmark](../concepts/raise-the-floor-before-maxing-the-benchmark.md) - agent creativity produces the ceiling and the floor together; only the floor breaks trust.
 - [Triage Agent Issues by Onset and Share of Users](../concepts/triage-agent-issues-by-onset-and-share-of-users.md) - two numbers that make an unbounded agent issue list tractable.
 - [Clusters Are Not Issues](../concepts/clusters-are-not-issues.md) - why an agent issue needs a declared identity, not an emergent one.
@@ -948,6 +951,9 @@
 - [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md)
 
 ## Infrastructure
+- [Score a Post-Training Algorithm on Four Properties](../concepts/score-post-training-algorithms-on-four-properties.md) - the parallelism row is the one that turns into an environment-infrastructure budget line.
+- [Today's Continual Learning Is Batch Updates and a Model Re-Upload](../concepts/todays-continual-learning-is-batch-updates-and-a-model-reupload.md) - merging 10,000 concurrent production rollouts into one update is named as unsolved.
+- [Train on Inference Exhaust Instead of Scaling Benchmarks](../concepts/train-on-inference-exhaust-instead-of-scaling-benchmarks.md) - manufactured evals cost engineer-days per task while served traffic accrues for free.
 - [Run Trace Classifiers as Code Mode in a Sandbox](../concepts/run-trace-classifiers-as-code-mode-in-a-sandbox.md) - a sandbox sweeping the production trace corpus with model-written predicates, moving per-trace cost from tokens to compute.
 - [Place a Continual-Learning Setup on Two Axes: Trace Policyness and Hint Provenance](../concepts/place-a-continual-learning-setup-on-the-trace-and-hint-axes.md) - two independent axes — how on-policy the trace is and where the hint comes from — turn "continual learning" into four concrete setups with different prerequisites.
 - [Offline Hints on Offline Traces Need No Replayable Environment](../concepts/offline-hints-on-offline-traces-need-no-replayable-environment.md) - the cheapest continual-learning corner: a stored trace dump plus a static behavior prior, no environment and no rollouts.
@@ -1202,6 +1208,7 @@
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 
 ## Inference
+- [Optimize the Whole Vocabulary, Not the Token You Sampled](../concepts/optimize-the-whole-vocabulary-not-the-sampled-token.md) - carries the testable prediction that tokens-to-solve collapses under distillation while RL inflates it.
 - [Pre-Training Size Is No Longer the Most Lucrative Scaling Axis](../concepts/pretraining-size-is-no-longer-the-most-lucrative-scaling-axis.md) - the argument that returns moved to post-training and request time, with its uneven evidence and explicit non-claims recorded.
 - [KV Compaction Reaches Only What Already Fits in Context](../concepts/kv-compaction-reaches-only-what-already-fits-in-context.md) - a serving technique wearing a learning technique's vocabulary, and the two limits that separate them.
 
@@ -1454,6 +1461,9 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Train on Inference Exhaust Instead of Scaling Benchmarks](../concepts/train-on-inference-exhaust-instead-of-scaling-benchmarks.md) - benchmarks saturate in months, cost hours to days per task, and are not tied to real use.
+- [Hint Leakage Is the Reward Hacking of Self-Distillation](../concepts/hint-leakage-is-the-reward-hacking-of-self-distillation.md) - a hint containing the answer teaches the model to state it and back-fill the reasoning.
+- [Score a Post-Training Algorithm on Four Properties](../concepts/score-post-training-algorithms-on-four-properties.md) - online task distribution, on-policy sampling, parallelism of one, per-token reward.
 - [Raise the Floor Before Maxing the Benchmark](../concepts/raise-the-floor-before-maxing-the-benchmark.md) - measure the worst thing the agent can do, not only the most impressive; almost all published eval effort measures the ceiling.
 - [Lab Eval Vocabulary Does Not Transfer to Application Teams](../concepts/lab-eval-vocabulary-does-not-transfer-to-application-teams.md) - "eval" names two unrelated activities, and copying a lab's task set imports the wrong success criteria.
 - [A Harness Switch Invalidates Most of an Eval Suite](../concepts/a-harness-switch-invalidates-most-of-an-eval-suite.md) - suite size is a liability with a depreciation schedule; trajectory assertions do not port, outcome assertions mostly do.
@@ -1811,6 +1821,14 @@
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 
 ## Models
+- [Score a Post-Training Algorithm on Four Properties](../concepts/score-post-training-algorithms-on-four-properties.md) - one scorecard for SFT, RLHF, GRPO, and self-distillation: online task distribution, on-policy sampling, parallelism of one, per-token reward.
+- [Optimize the Whole Vocabulary, Not the Token You Sampled](../concepts/optimize-the-whole-vocabulary-not-the-sampled-token.md) - shifting a distribution versus sharpening one, and the stated reason distillation is claimed to climb where GRPO plateaus.
+- [Long-Horizon Self-Distillation Collapses Into Hedging](../concepts/long-horizon-self-distillation-collapses-into-hedging.md) - the "but wait" failure that appears over 50-100 tool calls and not on short tasks.
+- [Weight Distillation Steps by Student/Teacher Divergence](../concepts/weight-distillation-steps-by-student-teacher-divergence.md) - KL as a per-step weight rather than a penalty, so the signal decays where it has stopped applying.
+- [Hint Leakage Is the Reward Hacking of Self-Distillation](../concepts/hint-leakage-is-the-reward-hacking-of-self-distillation.md) - hints should supply what the model should have noticed, not what it should have concluded.
+- [Blend a Partial-Hint Teacher to Bound the Distribution Shift](../concepts/blend-a-partial-hint-teacher-to-bound-the-distribution-shift.md) - residual guidance: measure how far a hint pushes the policy out of its own distribution, then clamp it.
+- [Today's Continual Learning Is Batch Updates and a Model Re-Upload](../concepts/todays-continual-learning-is-batch-updates-and-a-model-reupload.md) - what "pseudo continual learning" actually runs as, from a vendor selling it.
+- [Train on Inference Exhaust Instead of Scaling Benchmarks](../concepts/train-on-inference-exhaust-instead-of-scaling-benchmarks.md) - the cost-curve argument for production traffic over manufactured suites and environments.
 - [Continual Learning Bolted Onto a Frozen Checkpoint Is a Sunk-Cost Choice](../concepts/continual-learning-bolted-onto-a-frozen-checkpoint-is-a-sunk-cost-choice.md) - train-then-freeze is an inherited pipeline shape, not a requirement; the alternative is one phase of training for continual learning and deployment after.
 - [A Learning Benchmark Needs Headroom, Shared Structure, and a Signal](../concepts/a-learning-benchmark-needs-headroom-shared-structure-and-a-signal.md) - the headroom test separates a capability that needs online adaptation from one that needs more offline training.
 - [Place a Continual-Learning Setup on Two Axes: Trace Policyness and Hint Provenance](../concepts/place-a-continual-learning-setup-on-the-trace-and-hint-axes.md) - two independent axes — how on-policy the trace is and where the hint comes from — turn "continual learning" into four concrete setups with different prerequisites.

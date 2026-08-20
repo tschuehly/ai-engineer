@@ -15,6 +15,8 @@ Details:
 - Composes directly with the other two implementation practices in the same talk. The judge-selected step is the natural place to take a [single on-policy step](buy-on-policyness-with-a-single-rollout-step.md), and within the chosen window, [token-level relevance masking](mask-irrelevant-teacher-tokens-before-learning-from-them.md) narrows the signal further. The three are localization at trajectory, step, and token granularity respectively.
 - **The judge is now load-bearing, which imports the wiki's judge caveats.** A misplaced hint trains on the wrong moment, and nothing in the talk validates the placement judge or reports its agreement with a human. Before trusting a pipeline like this, [check the judge before changing the agent](check-the-judge-before-changing-the-agent.md) and treat placement as a narrow binary decision that can be measured ([Split LLM judges into narrow binary metrics](split-llm-judges-into-narrow-binary-metrics.md)).
 - The same judge is what makes the online corner scale across behaviors rather than one at a time: "that judge is able to adapt to whatever the online model does in production," which is the stated reason online hinting supports "improvement across multiple improvement areas." ([Applied Compute](../sources/20260812_ZTA0GwpAUak.md), 17:40-18:26)
+- **The same quantity, used as a continuous weight instead of a window, by a competing vendor.** Trajectory computes the student/teacher KL at every step of a 100-tool-call trajectory and multiplies each step's token weight by it ([Weight Distillation Steps by Student/Teacher Divergence](weight-distillation-steps-by-student-teacher-divergence.md)). Where this page hard-windows around a known hint position, that approach needs no intervention point and handles a trajectory that goes off track and recovers — but it also cannot express "train harder here," only "train less there." Neither talk cites the other, and neither reports an ablation, so the useful takeaway is that two teams independently landed on KL-per-step as the thing to localize with.
+- **What the second account reframes about the decay curve.** Here the decaying KL signal is presented as an efficiency finding — later steps dilute the update. Trajectory's long-horizon failure analysis suggests it is also a safety property: once the student has drifted, continuing to apply teacher guidance produces [collapse into hedging tokens](long-horizon-self-distillation-collapses-into-hedging.md), so a short window is protective and not merely economical.
 - Provenance: an unpublished in-house practice, presented as a tip with one chart. No ablation of window size, no judge accuracy, and no cost comparison against whole-rollout distillation are given.
 
 Related topics:
@@ -29,6 +31,9 @@ Related concepts:
 - [Check the judge before changing the agent](check-the-judge-before-changing-the-agent.md)
 - [Split LLM judges into narrow binary metrics](split-llm-judges-into-narrow-binary-metrics.md)
 - [Penalize dangerous steps with a process reward model](penalize-dangerous-steps-with-a-process-reward-model.md)
+- [Weight Distillation Steps by Student/Teacher Divergence](weight-distillation-steps-by-student-teacher-divergence.md)
+- [Long-Horizon Self-Distillation Collapses Into Hedging](long-horizon-self-distillation-collapses-into-hedging.md)
 
 Sources:
 - [Bringing Continual Learning into Enterprises — Samuel Denton, Applied Compute](../sources/20260812_ZTA0GwpAUak.md), 16:13-16:57, 17:40-18:26
+- [Scaling up Continual Learning — Ronak Malde, Trajectory](../sources/20260812_zL1kLftVTlo.md), 13:16-15:53

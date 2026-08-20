@@ -13,6 +13,8 @@ Details:
 - The practical systems benefit is that slow tasks no longer block the whole training pipeline. (10:14-10:19)
 - The framework also keeps BF16 precision for training while sending lower-precision weights to rollout workers after policy updates, seeking a speed and accuracy balance. (10:26-10:56)
 
+- **The infrastructure this page designs around is a consequence of one algorithmic choice, not of RL in general.** Group-based methods need many rollouts per task, which is what forces decoupled rollout workers, buffers, and environments that are "one-to-one copies of the real world." A method whose parallelism is one deletes that requirement rather than optimizing it, which is why [parallelism is a row on the four-property scorecard](score-post-training-algorithms-on-four-properties.md) alongside signal density. Before building the hybrid system, it is worth asking whether the training method needs group rollouts at all. ([Trajectory](../sources/20260812_zL1kLftVTlo.md), 03:12-03:25, 04:57-05:31)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Models](../topics/models.md)
@@ -21,6 +23,8 @@ Related concepts:
 - [Pipeline RL trades policy staleness for GPU throughput](pipeline-rl-trades-policy-staleness-for-gpu-throughput.md)
 - [Preserve rollout trajectory context for agent RFT grading](preserve-rollout-trajectory-context-for-agent-rft-grading.md)
 - [Treat environments as eval, data, and training substrates](treat-environments-as-eval-data-and-training-substrates.md)
+- [Score a Post-Training Algorithm on Four Properties](score-post-training-algorithms-on-four-properties.md)
 
 Sources:
 - [Z.ai GLM 4.6: What We Learned From 100 Million Open Source Downloads - Yuxuan Zhang, Z.ai](../sources/20251122_m6MF1OR_9kM.md), 07:51-10:56
+- [Scaling up Continual Learning — Ronak Malde, Trajectory](../sources/20260812_zL1kLftVTlo.md), 03:12-03:25, 04:57-05:31

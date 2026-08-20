@@ -15,6 +15,7 @@ Details:
 - The most useful way to hold this without the vendor's numbers: catastrophic degradation from self-distillation is at least partly an *aperture* problem rather than a fundamental capability/behavior tradeoff. Two approaches that could not narrow their aperture — a format reward and SFT on correct traces — degraded the base model on a comparable task ([When Rewards and SFT Both Degrade the Base Model](hint-against-the-rollout-when-rewards-and-sft-degrade-the-base-model.md)).
 - **What is missing before you could reimplement it.** The judge prompt, the masking policy, the fraction of tokens typically masked, whether masking is binary or weighted, and any ablation against unmasked self-distillation are all unstated. The talk names the technique and its motivation; the mechanism is left to a blog post.
 - The judge dependency is real and unvalidated here — a judge that masks the wrong tokens silently removes the lesson. The wiki's judge-validation guidance applies: [check the judge before changing the agent](check-the-judge-before-changing-the-agent.md).
+- **Why the objective needs masking at all, stated by a second vendor.** Self-distillation matches the teacher's full distribution over the whole vocabulary at every position — "not just the top token that you sampled… but instead the entire vocabulary" ([Optimize the Whole Vocabulary, Not the Token You Sampled](optimize-the-whole-vocabulary-not-the-sampled-token.md)). That breadth is the stated reason the method can move a model somewhere RL cannot, and it is also why every teacher preference at every position gets learned by default. Masking is not a refinement on a targeted loss; it is the first narrowing applied to a maximally broad one.
 - Provenance: a vendor's in-house technique presented in the "tips and tricks" segment of a talk that closes on hiring, with charts referenced but no numbers spoken.
 
 Related topics:
@@ -30,6 +31,9 @@ Related concepts:
 - [Check the judge before changing the agent](check-the-judge-before-changing-the-agent.md)
 - [Preserve long-context ability with single-stage RL](preserve-long-context-ability-with-single-stage-rl.md)
 - [Make Regression-Aware Optimization Part of the Continual-Learning Loop](make-regression-aware-optimization-part-of-the-continual-learning-loop.md)
+- [Optimize the Whole Vocabulary, Not the Token You Sampled](optimize-the-whole-vocabulary-not-the-sampled-token.md)
+- [Weight Distillation Steps by Student/Teacher Divergence](weight-distillation-steps-by-student-teacher-divergence.md)
 
 Sources:
 - [Bringing Continual Learning into Enterprises — Samuel Denton, Applied Compute](../sources/20260812_ZTA0GwpAUak.md), 16:57-17:36
+- [Scaling up Continual Learning — Ronak Malde, Trajectory](../sources/20260812_zL1kLftVTlo.md), 10:21-11:03
