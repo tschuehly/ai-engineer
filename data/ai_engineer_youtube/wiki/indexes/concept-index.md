@@ -1,6 +1,7 @@
 # Concept Index
 
 ## Agents
+- [Automating Harness Design Requires Co-Optimizing the Model](../concepts/automating-harness-design-requires-co-optimizing-the-model.md) - an automated search over agent scaffolds converges against a frozen model; the joint version is the claim.
 - [Rank a Decisions Ledger Instead of Retrieving Memories by Similarity](../concepts/rank-a-decisions-ledger-instead-of-retrieving-memories-by-similarity.md) - record what was decided each turn and rank it; beat vector similarity, recency, and no-recall on a 500-step task.
 - [Do Not Gate Memory Use on the Agent's Own Judgment](../concepts/do-not-gate-memory-use-on-the-agents-own-judgment.md) - asking the model whether it needs memory lost to always-on ranked recall.
 - [Treat Memory as a Write–Manage–Read Control Loop, Not a Store](../concepts/treat-memory-as-a-write-manage-read-control-loop.md) - core, recall, and archival blocks, each with its own policy, cost, and failure mode.
@@ -920,6 +921,8 @@
 - [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md)
 
 ## Infrastructure
+- [Distributable Compute Lowers the Barrier to Frontier Work](../concepts/distributable-compute-lowers-the-barrier-to-frontier-work.md) - pre-training compute must be colocated; the workloads now carrying the returns do not, which is an argument about who can enter.
+- [Customization Control Is a Separate Question From Open Weights](../concepts/customization-control-is-a-separate-question-from-open-weights.md) - weight distribution, adaptation control, and deployment locality are three axes, and a rule naming one leaves the others open.
 - [Continued Pre-Training on a Private Corpus Owes a Post-Training Debt](../concepts/continued-pretraining-on-a-private-corpus-owes-a-post-training-debt.md) - the checkpoint decision that has to be made before the training project starts.
 
 - [Run Harness Ablations on Local Models to Own Every Step](../concepts/run-harness-ablations-on-local-models-to-own-every-step.md) - a desk-side M3 Ultra as an experiment rig: no batch querying, multi-day sweeps, household fans.
@@ -1168,6 +1171,7 @@
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 
 ## Inference
+- [Pre-Training Size Is No Longer the Most Lucrative Scaling Axis](../concepts/pretraining-size-is-no-longer-the-most-lucrative-scaling-axis.md) - the argument that returns moved to post-training and request time, with its uneven evidence and explicit non-claims recorded.
 - [KV Compaction Reaches Only What Already Fits in Context](../concepts/kv-compaction-reaches-only-what-already-fits-in-context.md) - a serving technique wearing a learning technique's vocabulary, and the two limits that separate them.
 
 - [Run Harness Ablations on Local Models to Own Every Step](../concepts/run-harness-ablations-on-local-models-to-own-every-step.md) - local control of data, compute traces, and evals, priced in serial-only execution and days of sustained thermal load.
@@ -1304,6 +1308,9 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Customization Control Is a Separate Question From Open Weights](../concepts/customization-control-is-a-separate-question-from-open-weights.md) - the axis procurement and policy language usually collapses into "open source," and why keeping it separate matters.
+- [Frontier Training Know-How Is Apprenticeship, Not Literature](../concepts/frontier-training-know-how-is-apprenticeship-not-literature.md) - fewer than 5,000 people have trained a frontier model, and the knowledge moves by working beside them.
+- [Distributable Compute Lowers the Barrier to Frontier Work](../concepts/distributable-compute-lowers-the-barrier-to-frontier-work.md) - who is allowed to build frontier models, argued from the shape of the compute rather than its size.
 - [Post-Training Data Is Public by Construction](../concepts/post-training-data-is-public-by-construction.md) - why waiting for the frontier models to cover your domain is structurally a losing plan.
 - [Only the Compute Axis Is Available on Your Own Corpus](../concepts/only-the-compute-axis-is-available-on-your-own-corpus.md) - a private-data project cannot borrow the playbook that produced the frontier models.
 - [Scale Expertise Once Intelligence Is Abundant](../concepts/scale-expertise-once-intelligence-is-abundant.md) - intelligence is becoming abundant and expertise is not, so lowering its cost expands what work is worth doing.
@@ -1413,6 +1420,9 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [A Budget Stopping Rule Can Masquerade as a Capability Ceiling](../concepts/a-budget-stopping-rule-can-masquerade-as-a-capability-ceiling.md) - scores clustered just above a round number measure the termination criterion, not the system; publish the rule with the number.
+- [Co-Optimize Data With the Model or the Search Does Not Pay](../concepts/co-optimize-data-with-the-model-or-the-search-does-not-pay.md) - a sweep that holds data quality fixed hides the interaction that carried the returns.
+- [An Automated Training Search Beats Staff by Not Carrying Architecture Priors](../concepts/automated-training-search-beats-staff-by-not-carrying-architecture-priors.md) - no favorite architecture family, and willingness to move many hyperparameters at once.
 - [A Perfect Training Loss on Your Corpus Is Not Knowledge](../concepts/a-perfect-training-loss-on-your-corpus-is-not-knowledge.md) - the training metric looks best exactly when the behavior is worst, so pick the acceptance criterion first.
 - [Seek the AlphaGo Property So Added Compute Keeps Buying Depth](../concepts/seek-the-alphago-property-so-added-compute-keeps-buying-depth.md) - a cheap test for whether a proposed learning loop can compound or will plateau.
 - [Ablate the Recall Policy With a Ladder and an Oracle](../concepts/ablate-the-recall-policy-with-a-ladder-and-an-oracle.md) - hold the model fixed and climb from no-recall through similarity and your policy to ground truth, plus adversarial wrong-memory rungs.
@@ -1746,6 +1756,12 @@
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 
 ## Models
+- [Pre-Training Size Is No Longer the Most Lucrative Scaling Axis](../concepts/pretraining-size-is-no-longer-the-most-lucrative-scaling-axis.md) - the architecture-ceiling argument, what evidence is actually offered for it, and what it does not claim.
+- [An Automated Training Search Beats Staff by Not Carrying Architecture Priors](../concepts/automated-training-search-beats-staff-by-not-carrying-architecture-priors.md) - two stated mechanisms behind an unpublished win rate over research staff.
+- [Co-Optimize Data With the Model or the Search Does Not Pay](../concepts/co-optimize-data-with-the-model-or-the-search-does-not-pay.md) - the returns did not appear until data quality entered the search space alongside the model.
+- [A Budget Stopping Rule Can Masquerade as a Capability Ceiling](../concepts/a-budget-stopping-rule-can-masquerade-as-a-capability-ceiling.md) - how to read a training-search result whose exit condition was "beat the baseline."
+- [Frontier Training Know-How Is Apprenticeship, Not Literature](../concepts/frontier-training-know-how-is-apprenticeship-not-literature.md) - configuration-shaped tacit knowledge held by under 5,000 people is exactly what an automated search can attack.
+- [Automating Harness Design Requires Co-Optimizing the Model](../concepts/automating-harness-design-requires-co-optimizing-the-model.md) - search over scaffolds against frozen weights converges; the model has to move with it.
 - [Only the Compute Axis Is Available on Your Own Corpus](../concepts/only-the-compute-axis-is-available-on-your-own-corpus.md) - data and model size are spent before a private-corpus project starts, leaving one lever.
 - [Post-Training Data Is Public by Construction](../concepts/post-training-data-is-public-by-construction.md) - annotation bought from vendors is disclosable by definition, so it cannot close a private gap.
 - [The Synthetic Data Wall Caps Every Define-Then-Train Loop](../concepts/the-synthetic-data-wall-caps-every-define-then-train-loop.md) - define, train, saturate; the unsolved part is what the second stage of training is.

@@ -14,11 +14,15 @@ Details:
 - Concrete sovereign deployments cited: Ukraine uses Gemma in parts of its services; Bulgaria built a national LLM fine-tuned on Gemma 2 (moving toward Gemma 4); Brazil has a Portuguese variant fine-tuned on Gemma 3. (08:25-09:00)
 - Sovereignty caveat on language adaptation: because a strong multilingual base is already top-2-3 in many languages, fine-tuning it for one specific language now yields diminishing returns (sometimes ~1%), so verify base-model quality before investing in language fine-tuning. (09:00-09:35, see [Multilingual tokenizers improve low-resource fine-tuning paths](multilingual-tokenizers-improve-low-resource-fine-tuning-paths.md))
 
+- **Sovereignty has a third axis this page folds into the first two.** Weight ownership and deployment locality are here; the ability to *adapt* the model yourself is separable from both. Sara Hooker draws the line explicitly when asked about the safety case against enabling frontier AI outside the labs: a tool for customizing your own models is "a slightly different question from whether those are open source… Whether that's local or private or within that company, it's about… how do they own their own intelligence?" ([Adaption](../sources/20260812_XEd_SRVHBgU.md), 16:02-16:19). Worth keeping distinct when writing procurement or policy language, because a rule written against "open source" constrains distribution only. See [Customization Control Is a Separate Question From Open Weights](customization-control-is-a-separate-question-from-open-weights.md).
+
 Related topics:
 - [Models](../topics/models.md)
 - [Infrastructure](../topics/infrastructure.md)
+- [Product Strategy](../topics/product-strategy.md)
 
 Related concepts:
+- [Customization Control Is a Separate Question From Open Weights](customization-control-is-a-separate-question-from-open-weights.md)
 - [Enterprise Open-Model Adoption Follows Task Pressure](enterprise-open-model-adoption-follows-task-pressure.md)
 - [Open Model Families Need Ecosystem-Compatible Tooling](open-model-families-need-ecosystem-compatible-tooling.md)
 - [Decide open-model ownership by capability, hardware, latency, and cost thresholds](decide-open-model-ownership-by-capability-hardware-latency-and-cost-thresholds.md)
@@ -28,3 +32,4 @@ Related concepts:
 
 Sources:
 - [Sovereign Escape Velocity: Ownership w Open Models — Gus Martins, & Ian Ballantyne, Google DeepMind](../sources/20260610_SS-A8sE7hkw.md), 01:11-09:35
+- [Adaption Labs: Gradient-Free Continual Learning — Sara Hooker, Adaption](../sources/20260812_XEd_SRVHBgU.md), 15:49-16:19

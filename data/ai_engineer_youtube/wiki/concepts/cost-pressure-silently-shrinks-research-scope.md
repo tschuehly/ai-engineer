@@ -15,12 +15,15 @@ Details:
 - What to instrument: intended versus actual refresh cadence per entity class, result-set caps and how often they bind, and — hardest but most valuable — questions that were considered and dropped for cost. Without the third, the system's own logs will report a healthy pipeline running at a fraction of its designed scope.
 - The corresponding win from removing the constraint is behavioral, and the speaker rates it above the money: once retrieval is a sunk cost rather than a metered one, "I can just ask that question over and over again. I did not like the first answer, I'll ask it again. I'll ask it a hundred times until I get what I need. I have no more fear, no more cutting corners, which is maybe the most important thing." (20:05-20:16)
 - The general form: when a metered dependency sits inside an exploratory loop, the meter changes what gets explored. That is an argument for pricing the *loop* — retries, follow-ups, and disconfirming checks included — rather than the single successful query, when comparing a rented service against an owned pipeline.
+- **The same law, observed independently one layer up, at the cost of an experiment rather than a query.** Sara Hooker names it as the thing "people… often miss": "the cost of asking something informs what is asked. And if you make it cheaper to ask something, you change… the volume of things that are asked" ([Adaption](../sources/20260812_XEd_SRVHBgU.md), 14:30-14:43). Her instance is research rather than retrieval — automating the tacit knowledge of model training "accelerate[s] innovation cycles. Which means that you can explore and do more questions" (14:20-14:30) — and the loss she describes is the same invisible kind: "instead of taking years of training to learn how to build the tools, scientists just skipped the questions" (05:15-05:21). Two sources at different layers converging on *cost changes the question set, not just the bill* is worth more than either alone, because it says the effect is a property of metered exploratory loops generally rather than of query pricing. Neither source measures it.
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Context Engineering](../topics/context-engineering.md)
+- [Product Strategy](../topics/product-strategy.md)
 
 Related concepts:
+- [Frontier-Training Know-How Is Apprenticeship, Not Literature](frontier-training-know-how-is-apprenticeship-not-literature.md)
 - [Frequency, Not Volume, Drives Web-Context Cost](frequency-not-volume-drives-web-context-cost.md)
 - [Find the Crossover Point Between Renting and Owning Context](find-the-crossover-point-between-renting-and-owning-context.md)
 - [Evals Only Cover Known AI Product Failures](evals-only-cover-known-ai-product-failures.md)
@@ -29,3 +32,4 @@ Related concepts:
 
 Sources:
 - [The Rise of CaaS: Context-as-a-Service for Agentic AI — Omer Primor, Bright Data](../sources/20260814_Ot4OPrPH4xY.md), 15:19-15:48, 20:05-20:16
+- [Adaption Labs: Gradient-Free Continual Learning — Sara Hooker, Adaption](../sources/20260812_XEd_SRVHBgU.md), 05:15-05:21, 14:20-14:43

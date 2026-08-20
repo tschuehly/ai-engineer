@@ -12,12 +12,14 @@ Details:
 - The router can be as simple as an `if` statement on task type, or "you can even have another model that's very cheap decide which model to use" — a cheap classifier picks the tier per request, so the routing overhead stays far below the cost of over-serving every call with the frontier model.
 - This is a *difficulty*-triggered routing policy, distinct from other cheaper-model paths in the wiki: [verification guardrails let you downshift to cheaper models](verification-guardrails-let-you-downshift-to-cheaper-models.md) uses a check-and-retry harness (not task difficulty) as the trigger, and [abstract LLM inference behind one routing API](abstract-llm-inference-behind-one-routing-api.md) is the routing *mechanism* rather than the per-request policy. Use this concept for the "which tier does this request need" decision and those for the harness and plumbing.
 - Caveats implicit in the pattern: routing adds logic and possibly one extra (cheap) classifier call per request, and mis-routing a hard task to a too-cheap model trades cost for quality, so the difficulty signal needs to be reliable enough that cheap-tier outputs still complete the task.
+- **The same argument stated at the industry level, and extended past model choice to compute per request.** Sara Hooker frames one-model-for-everyone as a compute waste before it is an equity problem: "it's not a particularly good use of compute… You're spending the same amount of compute on everything. And some problems are hard and some are very easy" ([Adaption](../sources/20260812_XEd_SRVHBgU.md), 04:12-04:27). She names the next step past tier routing as making the budget itself difficulty-dependent — "even your test time compute should be adaptive based on your task" (08:29-08:34) — which is the same policy applied to reasoning tokens, search width, or verification passes rather than to which checkpoint answers. Stated as a direction with nothing implemented or measured in that talk.
 
 Related topics:
 - [Inference](../topics/inference.md)
 - [Agents](../topics/agents.md)
 
 Related concepts:
+- [Pre-Training Size Is No Longer the Most Lucrative Scaling Axis](pretraining-size-is-no-longer-the-most-lucrative-scaling-axis.md)
 - [Shrink the Per-Step Payload the Agent Loop Re-Sends](shrink-the-per-step-payload-the-agent-loop-re-sends.md)
 - [Verification Guardrails Let You Downshift to Cheaper Models](verification-guardrails-let-you-downshift-to-cheaper-models.md)
 - [Abstract LLM inference behind one routing API](abstract-llm-inference-behind-one-routing-api.md)
@@ -26,3 +28,4 @@ Related concepts:
 
 Sources:
 - [Your Agent Is Wasting Tokens and You Don't Know It - Erik Hanchett, AWS](../sources/20260628_uiP88SpCi1Q.md), 01:01-01:51, 04:50-05:03
+- [Adaption Labs: Gradient-Free Continual Learning — Sara Hooker, Adaption](../sources/20260812_XEd_SRVHBgU.md), 04:12-04:27, 08:29-08:34

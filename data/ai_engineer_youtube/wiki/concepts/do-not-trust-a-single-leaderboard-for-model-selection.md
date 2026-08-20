@@ -13,11 +13,15 @@ Details:
 - Sample size matters. Leaderboards are built on a few thousand samples, which is small versus real inference load; a provider with millions of requests per day gets more information by evaluating on its own API traffic than from a public board (05:55-06:30). Average on many samples under conditions close to the final use-case setup (07:10-07:24).
 - Win-rate distribution is the sharpest argument: no model is near 100% win rate, and most models lose at least 40% of their head-to-head battles, so if your use case falls in that 40%, taking the top-ranked model gives you the wrong model for nearly half of real use cases (06:30-07:05).
 - Internal benchmarks fail the same way when naive: manual inspection is doubly biased (by your own preference and by the few samples you look at), and automated metrics can be inconsistent (a CLIP-score ranking of 8 models flipped across datasets with tiny between-model variation) — so understand what a metric measures, match it to the use case, and use several (07:37-12:18).
+- **A leaderboard is also weak evidence for a claim about model *classes*, which is a use it gets put to more often than model selection.** Sara Hooker's argument that pre-training size has stopped paying is supported on stage by the Open LLM leaderboard's "daily submission of… the best small model under 13B versus all the larger models," a ratio she says "totally flips" over time ([Adaption](../sources/20260812_XEd_SRVHBgU.md), 11:36-11:53). The failure modes above apply with an extra one on top: daily submissions are a self-selected sample of what people chose to train and submit, so the flip is as consistent with the field's effort moving to small models as with size ceasing to pay. Her observational claim — that recent size increases have not produced their predecessors' stepwise jumps — is the load-bearing evidence, and the leaderboard is an illustration of it. See [Pre-Training Size Is No Longer the Most Lucrative Scaling Axis](pretraining-size-is-no-longer-the-most-lucrative-scaling-axis.md).
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
+- [Models](../topics/models.md)
 
 Related concepts:
+- [Pre-Training Size Is No Longer the Most Lucrative Scaling Axis](pretraining-size-is-no-longer-the-most-lucrative-scaling-axis.md)
+- [A Budget Stopping Rule Can Masquerade as a Capability Ceiling](a-budget-stopping-rule-can-masquerade-as-a-capability-ceiling.md)
 - [Select State of the Art on a Quality-Efficiency Pareto Front](select-state-of-the-art-on-a-quality-efficiency-pareto-front.md)
 - [Track User Dissatisfaction Alongside Pairwise Model Preference](track-user-dissatisfaction-alongside-pairwise-model-preference.md)
 - [Benchmark narrow slices separately from real expert work](benchmark-narrow-slices-separately-from-real-expert-work.md)
@@ -25,3 +29,4 @@ Related concepts:
 
 Sources:
 - [20 days of compute vs 7 hours: rethinking what state-of-the-art means — Bertrand Charpentier, Pruna](../sources/20260601_hqHC6Z_lXyo.md), 02:33-12:18
+- [Adaption Labs: Gradient-Free Continual Learning — Sara Hooker, Adaption](../sources/20260812_XEd_SRVHBgU.md), 11:36-12:08
