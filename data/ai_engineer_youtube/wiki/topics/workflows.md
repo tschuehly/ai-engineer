@@ -224,8 +224,13 @@ LangChain's Vivek Trivedy proposes an improvement loop for agents themselves, an
 
 The mining step has a constraint that changes who does the reading. A trace corpus is too large to fit any context window — the cost of a naive pass is "the input token cost times the number of traces times how big each trace is on average" — so [agents read the traces and the corpus is queried as an external object](../concepts/mine-trace-corpora-with-agents-because-they-do-not-fit-in-context.md) rather than loaded. The reframing that ties the whole loop together is [model-harness-task fit](../concepts/treat-agent-improvement-as-model-harness-task-fit.md): borrowing scikit-learn's `fit()`, the thing being fitted is the triple of data, harness, and model together, which means "which model should we use" is a term inside the optimization rather than a decision made before it. Note the two jobs this leaves — finding a good fit function and finding good data — and his own warning about the first: "agents are pretty good at making that number go up. They might cheat a little bit."
 
+A recurring agent job over a corpus you own needs three decisions the interactive case never forces, and Ben Holmes' nightly knowledge-base pipeline makes all three explicit. Where does it run: a local scheduler is simpler but "means your laptop has to be cracked open when it runs," so anything that must actually happen nightly belongs in [a cloud sandbox that syncs the corpus down, runs the skill, and syncs it back](../concepts/run-recurring-knowledge-jobs-in-a-cloud-sandbox-with-sync-down-sync-back.md) — and the reason to schedule at all is latency, since "it can take time for an agent to go generate these things," not convenience. How does it know what is left to do: [stamp processing state into each artifact](../concepts/stamp-processing-state-in-the-artifact-to-make-agent-passes-resumable.md), which makes the corpus its own checkpoint store — necessary here because the sandbox is torn down between runs, so nothing else survives. And what does the human get: a review artifact rather than a notification — "I wake up to a perfectly fresh wiki that I can review. It's like the daily paper, but it's your own" — with the run itself still viewable afterward, which is what makes a silent failure detectable. The unglamorous gaps are worth designing before adopting: nothing in the source handles a human editing a file while the sandbox edits the same file, or what a half-finished run leaves behind on sync-back.
+
 ## Key Concepts
 
+- [Run Recurring Knowledge Jobs in a Cloud Sandbox With Sync-Down/Sync-Back](../concepts/run-recurring-knowledge-jobs-in-a-cloud-sandbox-with-sync-down-sync-back.md) - schedule the slow pass off the laptop, because a local automation depends on an open lid.
+- [Stamp Processing State in the Artifact to Make Agent Passes Resumable](../concepts/stamp-processing-state-in-the-artifact-to-make-agent-passes-resumable.md) - the corpus becomes its own checkpoint store, with no queue or database.
+- [Generate Disposable Visualizations to Find Gaps in Your Own Corpus](../concepts/generate-disposable-visualizations-to-find-gaps-in-your-own-corpus.md) - an agent-written HTML view is cheap enough to request, restyle, and discard.
 - [Observability and Continual Learning Are the Same Problem](../concepts/observability-and-continual-learning-are-the-same-problem.md) - the traces you collect to debug are the same corpus that trains, evaluates, and re-harnesses the agent.
 - [Sequence Harness Engineering and Fine-Tuning by Feedback Speed](../concepts/sequence-harness-engineering-and-finetuning-by-feedback-speed.md) - two minutes versus hours decides the order, and stopping after the fast lever is a legitimate end state.
 - [Treat Agent Improvement as Model-Harness-Task Fit](../concepts/treat-agent-improvement-as-model-harness-task-fit.md) - fit data, harness, and model jointly rather than fixing the model and tuning around it.
@@ -626,6 +631,7 @@ The mining step has a constraint that changes who does the reading. A trace corp
 
 ## Open Questions
 
+- How should a scheduled sandbox job and a live human editing the same files resolve a conflict? Sync-down/sync-back is presented as "super simple," and it is — until both sides write the same note on the same night.
 - What does the ship-trace-mine-experiment loop cost to run per cycle? Trivedy gives the ingredients of the arithmetic (traces × average trace size × input token price) but no worked example, so the point at which mining a corpus costs more than the improvement it buys is unquantified.
 - In a two-tier explore-then-commit loop, what has to be carried from the cheap tier into the expensive one for the committed artifact to match what the user approved?
 - Which repeated research phases can be compressed without changing the human decision owner?
@@ -676,6 +682,7 @@ The mining step has a constraint that changes who does the reading. A trace corp
 
 ## Sources
 
+- [LLM Knowledge Bases: a practical guide — Ben Holmes, Warp](../sources/20260812_I3bpdgFJCUY.md)
 - [Generative Video at the Speed of Light — Keegan McCallum, uRun](../sources/20260818_Xln-On3syJk.md)
 - [Research to Reality: Bringing Frontier ML Research to Production - Vaidas Razgaitis, Higharc](../sources/20260628_OXMMN-XbxwA.md)
 - [The Agentic AI Engineer - Benedikt Sanftl, Mutagent](../sources/20260629_pSto5YaNGUo.md)

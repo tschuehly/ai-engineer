@@ -1,6 +1,8 @@
 # Concept Index
 
 ## Agents
+- [Stamp Processing State in the Artifact to Make Agent Passes Resumable](../concepts/stamp-processing-state-in-the-artifact-to-make-agent-passes-resumable.md) - a timestamp written by the pass that did the work turns a repeated batch run into an incremental one with no queue.
+- [Constrain Agent-Generated Tags to a Reference Vocabulary](../concepts/constrain-agent-generated-tags-to-a-reference-vocabulary.md) - a stateless per-item run renames everything unless you hand it the closed label set as a file.
 - [Observability and Continual Learning Are the Same Problem](../concepts/observability-and-continual-learning-are-the-same-problem.md) - the trace corpus you collect to debug is the same substrate that trains, evaluates, and re-harnesses the agent.
 - [Ask Traces the Behavioral Questions Code Cannot Answer](../concepts/ask-traces-the-behavioral-questions-code-cannot-answer.md) - upset users, happy users, degradation after compaction, and counterfactual model swaps are all trace queries.
 - [Sequence Harness Engineering and Fine-Tuning by Feedback Speed](../concepts/sequence-harness-engineering-and-finetuning-by-feedback-speed.md) - two minutes versus hours decides the order, and stopping after the fast lever is a legitimate end state.
@@ -770,6 +772,9 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Optimize Capture Bandwidth Before Note Organization](../concepts/optimize-capture-bandwidth-before-note-organization.md) - when agents impose the structure, the human's only irreplaceable job is volume: dictate, ramble, do not file.
+- [Generate an Entity Wiki Over Your Own Notes](../concepts/generate-an-entity-wiki-over-your-own-notes.md) - a people/concepts/organizations/sources layer over a raw folder, scoped to a focus area you name.
+- [Constrain Agent-Generated Tags to a Reference Vocabulary](../concepts/constrain-agent-generated-tags-to-a-reference-vocabulary.md) - "Claude loves to get creative," so the tag list lives in a reference folder with a narrow escape hatch.
 - [Mine Trace Corpora With Agents Because They Do Not Fit in Context](../concepts/mine-trace-corpora-with-agents-because-they-do-not-fit-in-context.md) - treat the corpus as an external object you query rather than a payload you load into a window.
 - [Ask Traces the Behavioral Questions Code Cannot Answer](../concepts/ask-traces-the-behavioral-questions-code-cannot-answer.md) - "does the agent get really dumb after the first compaction?" is a question about your deployment, answerable only from your run records.
 - [Replace User-Managed Memory Lists With a Background-Synthesized Profile](../concepts/replace-user-managed-memory-lists-with-a-background-profile.md) - removes the user's curation burden, but synthesis records deliberation as fact and staleness survives.
@@ -895,6 +900,7 @@
 
 ## Infrastructure
 
+- [Run Recurring Knowledge Jobs in a Cloud Sandbox With Sync-Down/Sync-Back](../concepts/run-recurring-knowledge-jobs-in-a-cloud-sandbox-with-sync-down-sync-back.md) - a local automation "means your laptop has to be cracked open when it runs"; a scheduled sandbox does not.
 - [Mine Trace Corpora With Agents Because They Do Not Fit in Context](../concepts/mine-trace-corpora-with-agents-because-they-do-not-fit-in-context.md) - the read path over a trace store is its own cost model: traces x average size x input token price.
 - [Hold the Browser Environment Constant Across Runs](../concepts/hold-the-browser-environment-constant-across-runs.md) - render consistency is the base layer under the harness and the model, and the home Mac mini fails on both scale and compliance.
 - [Works in Dev, Passes Tests, and Survives Reality Are Three Different Systems](../concepts/works-in-dev-passes-tests-and-survives-reality-are-three-systems.md) - against an adversarial dependency such as the live web, a green test suite and a staging benchmark do not transfer to production.
@@ -1844,6 +1850,8 @@
 - [Condition ASR on Conversation Context and Domain Vocabulary](../concepts/condition-asr-on-conversation-context-and-domain-vocabulary.md)
 
 ## Retrieval
+- [Materialize Backlinks at Ingest With Key-Term Search](../concepts/materialize-backlinks-at-ingest-with-key-term-search.md) - write the links into the document at enrichment time and the file tree becomes the index.
+- [Generate an Entity Wiki Over Your Own Notes](../concepts/generate-an-entity-wiki-over-your-own-notes.md) - an entity index built for a human clicking through, which the measured null result on agentic browsing never tested.
 - [Context as a Service Is Vertical Search for Agents](../concepts/context-as-a-service-is-vertical-search-for-agents.md) - a prebuilt vertical index served over MCP sits between an AI search API and your own pipeline, with different coverage and cost behavior from both.
 - [A Prebuilt Context Vendor Cannot Answer Outside Its Index](../concepts/a-prebuilt-context-vendor-cannot-answer-outside-its-index.md) - a stored index cannot go looking, so an unmodeled field returns empty on every rerun.
 - [Frequency, Not Volume, Drives Web-Context Cost](../concepts/frequency-not-volume-drives-web-context-cost.md) - a million rows re-asked weekly is a different bill from a million rows read once, and decay sets the cadence.
@@ -2008,6 +2016,7 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Generate Disposable Visualizations to Find Gaps in Your Own Corpus](../concepts/generate-disposable-visualizations-to-find-gaps-in-your-own-corpus.md) - "this is not a tool that you have to install... I told an agent, build this for me," then restyled it on a whim.
 - [Go Straight to the Known Source Instead of Searching for It](../concepts/go-straight-to-the-known-source-instead-of-searching-for-it.md) - handing a search tool a task whose source you already know adds a hop, a failure mode, and a token bill.
 - [The Long Tail of the Web Will Not Ship APIs](../concepts/the-long-tail-of-the-web-will-not-ship-apis.md) - every agent-facing tool surface presumes a cooperating publisher, which scopes it to the head of the distribution.
 - [Rendered State Is Not in the HTML](../concepts/rendered-state-is-not-in-the-html.md) - "have a coding agent read the HTML" returns a confident wrong answer on pages whose state is computed and rendered.
@@ -2279,6 +2288,10 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Run Recurring Knowledge Jobs in a Cloud Sandbox With Sync-Down/Sync-Back](../concepts/run-recurring-knowledge-jobs-in-a-cloud-sandbox-with-sync-down-sync-back.md) - generation latency is the reason to schedule, and the laptop lid is the reason to leave the laptop.
+- [Stamp Processing State in the Artifact to Make Agent Passes Resumable](../concepts/stamp-processing-state-in-the-artifact-to-make-agent-passes-resumable.md) - the corpus is its own checkpoint store, which is what makes a torn-down nightly sandbox workable.
+- [Optimize Capture Bandwidth Before Note Organization](../concepts/optimize-capture-bandwidth-before-note-organization.md) - dictation at ~200 wpm, deliberately sloppy, because every generated layer needs raw material underneath it.
+- [Generate Disposable Visualizations to Find Gaps in Your Own Corpus](../concepts/generate-disposable-visualizations-to-find-gaps-in-your-own-corpus.md) - a bird's-eye view over your own corpus is diagnostic: it shows what you are not writing about.
 - [Observability and Continual Learning Are the Same Problem](../concepts/observability-and-continual-learning-are-the-same-problem.md) - ship, collect traces, mine them, run data-driven experiments; the loop only starts on contact with users.
 - [Sequence Harness Engineering and Fine-Tuning by Feedback Speed](../concepts/sequence-harness-engineering-and-finetuning-by-feedback-speed.md) - the sandwich: harness, then fine-tune, then harness again around the new model.
 - [Treat Agent Improvement as Model-Harness-Task Fit](../concepts/treat-agent-improvement-as-model-harness-task-fit.md) - borrowing scikit-learn's fit(), the two remaining jobs are finding a good fit function and finding good data.

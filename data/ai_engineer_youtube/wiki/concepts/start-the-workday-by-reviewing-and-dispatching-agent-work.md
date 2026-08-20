@@ -12,6 +12,8 @@ Details:
 - Midday review can collect PRs, marketing collateral, email drafts, or other artifacts produced by agents and decide what to approve, revise, or send back.
 - This pattern depends on visible artifacts and review surfaces; otherwise parallel agent output becomes another unmanaged queue.
 
+- The morning artifact does not have to be a task queue. Ben Holmes' overnight job enriches and re-generates a personal wiki from the previous day's notes, so what he reviews is a document rather than a work list: "when I come back to my computer in the morning, I wake up to a perfectly fresh wiki that I can review. It's like the daily paper, but it's your own." The reviewability property is the same one this page depends on — the run stays viewable in the browser afterward, so a silent failure is detectable rather than just an absent update. ([LLM Knowledge Bases](../sources/20260812_I3bpdgFJCUY.md), 16:35-17:25)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Workflows](../topics/workflows.md)
@@ -19,6 +21,8 @@ Related topics:
 Related concepts:
 - [Treat long-horizon agents as asynchronous workers with evolving interfaces](treat-long-horizon-agents-as-asynchronous-workers-with-evolving-interfaces.md)
 - [Parallel coding-agent queues need focus-preserving review interfaces](parallel-coding-agent-queues-need-focus-preserving-review-interfaces.md)
+- [Run Recurring Knowledge Jobs in a Cloud Sandbox With Sync-Down/Sync-Back](run-recurring-knowledge-jobs-in-a-cloud-sandbox-with-sync-down-sync-back.md)
 
 Sources:
 - [The Agent Native Company — Rick Blalock, Agentuity](../sources/20250603_0ZPAvzhpGjw.md), 00:23-01:19, 10:51-12:42
+- [LLM Knowledge Bases: a practical guide — Ben Holmes, Warp](../sources/20260812_I3bpdgFJCUY.md), 16:35-17:25

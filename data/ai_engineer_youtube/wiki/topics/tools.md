@@ -140,8 +140,11 @@ Dhruv Batra (Yutori) supplies this topic's sharpest limit on tool surfaces in ge
 
 One more limit, from Bright Data's Omer Primor, applies to the search tools this topic hands agents by default. Search is a tool for *locating* a source, and giving it a job where the source is already known is a routing mistake: "you use search when you don't know the source. But if you know the source, then you should just go to the source." His worked example is a company-research task where the fields live on LinkedIn company pages, LinkedIn jobs, and Crunchbase, so the pipeline scrapes those three directly — [go straight to the known source instead of searching for it](../concepts/go-straight-to-the-known-source-instead-of-searching-for-it.md). The payoff is not only accuracy but the disappearance of a cost line, since a built scraper carries no per-call model spend: "zero AI cost involved. There's no tokens." Two things bound it. Knowing the source is itself a design-time judgment that has to be right, and the built path only pays back for a query shape you will run repeatedly — for genuinely open questions, an AI search API is still the tool, and "it's very tempting to throw AI search at all of them, but maybe that's not optimal."
 
+A quieter shift in this topic is that some tools no longer need to be adopted at all. Ben Holmes wanted a force-graph over his own notes and did not evaluate a graph-view product: "this is not a tool that you have to install. By the way, I told an agent, build this for me." He then restyled it into a star constellation on a whim and generated a GitHub-style habit chart beside it — [disposable visualizations over your own corpus](../concepts/generate-disposable-visualizations-to-find-gaps-in-your-own-corpus.md), whose value is diagnostic ("where you have gaps in your thinking") rather than navigational. This is the fully generative end of the [agent-UI spectrum](../concepts/place-agent-ui-on-the-static-declarative-generative-spectrum.md), and it is safe here for a specific reason worth naming: the output is a personal view over local files rendered for its author, not third-party UI shipped to users, so the trust and containment problem that governs that end of the spectrum does not bind. The build-vs-adopt line for read-only views over data you already own has moved; the line for anything you ship has not.
+
 ## Key Concepts
 
+- [Generate Disposable Visualizations to Find Gaps in Your Own Corpus](../concepts/generate-disposable-visualizations-to-find-gaps-in-your-own-corpus.md) - a bespoke HTML view is now a prompt, not a tool decision — for views you render for yourself.
 - [Go Straight to the Known Source Instead of Searching for It](../concepts/go-straight-to-the-known-source-instead-of-searching-for-it.md) - search locates unknown sources; when the source is known, a direct fetch removes both a hop and the token cost.
 - [The Long Tail of the Web Will Not Ship APIs](../concepts/the-long-tail-of-the-web-will-not-ship-apis.md) - tool-surface proposals reach the sites whose owners participate; the rest must be operated through the UI.
 - [Rendered State Is Not in the HTML](../concepts/rendered-state-is-not-in-the-html.md) - a document-derived extractor misses state the page computes and renders, and fails silently when it does.
@@ -429,6 +432,7 @@ One more limit, from Bright Data's Omer Primor, applies to the search tools this
 
 ## Sources
 
+- [LLM Knowledge Bases: a practical guide — Ben Holmes, Warp](../sources/20260812_I3bpdgFJCUY.md)
 - [The Next Game Engine Won't Have a Manual — Arturo Nunez, Nereu](../sources/20260818_VBCDhRrvlYo.md)
 - [While my guitar gently speaks — Todd Fisher, Philo Ventures](../sources/20260818_E_Txocq-Lrw.md)
 - [Agents in Production: How OpenGov Built and Scaled OG Assist - Gabe De Mesa, OpenGov](../sources/20260626_4uFVSLgD2Q4.md)

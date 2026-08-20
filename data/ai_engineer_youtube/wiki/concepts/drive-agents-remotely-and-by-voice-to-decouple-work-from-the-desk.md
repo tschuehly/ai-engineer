@@ -20,8 +20,11 @@ Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Workflows](../topics/workflows.md)
 
+- An independent convergence on the same human-side fix, from a different bottleneck. Ben Holmes dictates all his notes for knowledge capture rather than for agent driving, citing a comparable rate ("like 200 words per minute… unless you're an absolute Olympic typist, it will be faster than any other method that you have") and naming the same social friction ("pretty awkward to talk into your computer with a bunch of co-workers around"). He adds a subscription-free path: Handy, open source and on-device, or VoiceInk at a ~$20 lifetime fee with a hotkey and a mobile app. Two workflows, two bottlenecks, one input channel. See [Optimize Capture Bandwidth Before Note Organization](optimize-capture-bandwidth-before-note-organization.md). ([LLM Knowledge Bases](../sources/20260812_I3bpdgFJCUY.md), 03:08-04:25)
+
 Related concepts:
 - [Treat Human Attention as the Bottleneck for Agentic Work](treat-human-attention-as-the-agentic-bottleneck.md)
+- [Optimize Capture Bandwidth Before Note Organization](optimize-capture-bandwidth-before-note-organization.md)
 - [Run a Signal Layer to Triage Comms and Protect Focus](run-a-signal-layer-to-triage-comms-and-protect-focus.md)
 - [Use voice-dumped UI and code observations as agent feedback](use-voice-dumped-ui-and-code-observations-as-agent-feedback.md)
 - [Fractured Attention Becomes Usable With Delegated Agents](fractured-attention-becomes-usable-with-delegated-agents.md)
@@ -30,3 +33,4 @@ Related concepts:
 
 Sources:
 - [Your Attention Is the Bottleneck, Not Your Agents — Zack Proser, WorkOS](../sources/20260611_so9l_MwS2yg.md), 07:04-13:22, 22:17-25:00
+- [LLM Knowledge Bases: a practical guide — Ben Holmes, Warp](../sources/20260812_I3bpdgFJCUY.md), 03:08-04:25

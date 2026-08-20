@@ -17,11 +17,16 @@ Details:
 - Known gaps (by design a builder tool, not a product): source provenance/freshness is hard — "it's hard to know which sources are outdated or weak or strong" — and the next priorities are stronger *linting* and better *memory compaction*, which the authors call genuinely hard and fast-moving. (36:49-39:16)
 - The same author later shipped and *measured* this structure inside a product, with a mixed verdict worth carrying back. Towards AI's AI tutor uses the identical three-tier layout — `raw` markdown, a `generated` title index, and an LLM-written `wiki` of topic pages built offline by Claude Code — with the agent reading a ~450-token index first and escalating index → chunk → raw file only when needed. But when they measured the browse tool against their tuned hybrid retriever on real student questions, recall was identical and latency was 50% worse. The cheapest-first *structure* remains sound; what did not hold in that setting was the assumption that an agent browsing the structure beats a well-tuned retriever over the same content. ([Context Engineering in 2026](../sources/20260817_WP3hjUXd918.md), 13:01-14:52, 28:00-29:20, 31:15-32:18)
 
+- A third independent build shares the lineage and diverges on the consumer, which is the useful contrast. Ben Holmes credits the same Karpathy LLM-wiki gist and keeps the same raw-below/generated-above split, but his generated layer is an *entity* index (people, concepts, organizations, sources) optimized for a human clicking through, and his retrieval affordance is materialized backlinks written into each note rather than a cheapest-first read path. Same architecture, different read model: progressive disclosure is designed for an agent's token budget, an entity wiki for a person's attention. See [Generate an Entity Wiki Over Your Own Notes](generate-an-entity-wiki-over-your-own-notes.md). ([LLM Knowledge Bases](../sources/20260812_I3bpdgFJCUY.md), 09:56-13:24)
+- On the "known gaps" above: Holmes' pipeline supplies a partial answer to freshness and to incremental regeneration that this page's original build lacked — every note carries an enrichment timestamp, so a scheduled pass processes only what is new. It supplies no answer at all to provenance strength, and adds an unaddressed gap of its own: nothing in his setup reconciles a regenerated wiki entry against one a human edited. ([LLM Knowledge Bases](../sources/20260812_I3bpdgFJCUY.md), 06:48-06:57, 08:38-09:04)
+
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
 - [Retrieval](../topics/retrieval.md)
 
 Related concepts:
+- [Generate an Entity Wiki Over Your Own Notes](generate-an-entity-wiki-over-your-own-notes.md)
+- [Materialize Backlinks at Ingest With Key-Term Search](materialize-backlinks-at-ingest-with-key-term-search.md)
 - [Personal Knowledge Bases Become Agent Context Substrates](personal-knowledge-bases-become-agent-context-substrates.md)
 - [Externalize Agent State to Files and Reset Instead of Compact](externalize-agent-state-to-files-and-reset-instead-of-compact.md)
 - [Use a Document Outline as the Retrieval Index for Chunkless Agentic RAG](use-a-document-outline-as-the-retrieval-index-for-chunkless-agentic-rag.md)
@@ -32,3 +37,4 @@ Related concepts:
 Sources:
 - [Turn 10,994 Notes Into Memory - Paul Iusztin, Decoding AI & Louis-François Bouchard, Towards AI](../sources/20260626_ZRM_TfEZcIo.md), 19:37-27:04, 31:58-34:24, 36:49-39:16
 - [Context Engineering in 2026 — Louis-François Bouchard, Omar Solano & Samridhi Vaid, Towards AI](../sources/20260817_WP3hjUXd918.md), 13:01-14:52, 28:00-29:20, 31:15-32:18
+- [LLM Knowledge Bases: a practical guide — Ben Holmes, Warp](../sources/20260812_I3bpdgFJCUY.md), 06:48-06:57, 08:38-09:04, 09:56-13:24

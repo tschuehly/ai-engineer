@@ -22,8 +22,12 @@ Related topics:
 - [Tools](../topics/tools.md)
 - [Workflows](../topics/workflows.md)
 
+- Skills are also the unit a *scheduler* invokes, and the use is not coding. Ben Holmes packages personal knowledge-base maintenance as two skills — `enrich note` (stamp a timestamp, tag from a fixed reference list, research the source on the web, write key-term backlinks) and a wiki generator — then runs them nightly in a cloud sandbox with prompts that name the skill rather than restate the procedure: "instruct the agent run enriched note across [n] notes that are not enriched yet." Two properties of the skill format do the work there: the skill is harness-independent ("you can of course do it manually with whatever harness"), and it is a file that ships into a fresh sandbox alongside the corpus. Note also that the skill's reliability rests on a bundled *reference folder* of allowed tags, i.e. the reference-file half of the format carrying policy, not just documentation. See [Constrain Agent-Generated Tags to a Reference Vocabulary](constrain-agent-generated-tags-to-a-reference-vocabulary.md). ([LLM Knowledge Bases](../sources/20260812_I3bpdgFJCUY.md), 06:29-07:47, 07:49-07:53, 15:44-16:47)
+
 Related concepts:
 - [Context blocks turn monolithic enterprise knowledge into reusable agent context](context-blocks-turn-monolithic-enterprise-knowledge-into-reusable-agent-context.md)
+- [Constrain Agent-Generated Tags to a Reference Vocabulary](constrain-agent-generated-tags-to-a-reference-vocabulary.md)
+- [Run Recurring Knowledge Jobs in a Cloud Sandbox With Sync-Down/Sync-Back](run-recurring-knowledge-jobs-in-a-cloud-sandbox-with-sync-down-sync-back.md)
 - [Feedback turns coding-agent loops into prompt and skill improvement cycles](feedback-turns-coding-agent-loops-into-prompt-and-skill-improvement-cycles.md)
 - [Prompt-coded product behavior reduces code but weakens hard guarantees](prompt-coded-product-behavior-reduces-code-but-weakens-hard-guarantees.md)
 - [Agent skills should point to current docs instead of embedding every API detail](agent-skills-should-point-to-current-docs-instead-of-embedding-every-api-detail.md)
@@ -38,3 +42,4 @@ Sources:
 - [Replacing 12K LoC with a 200 LoC Skill - David Gomes, Cursor](../sources/20260430_WE_Gnowy3uw.md), 08:24-09:05
 - [Building Conversational Agents - Thor Schaeff and Philipp Schmid, Google DeepMind](../sources/20260430_cVzf49yg0D8.md), 23:34-24:34
 - [Building Great Agent Skills: The Missing Manual - Matt Pocock](../sources/20260629_UNzCG3lw6O0.md), 07:29-11:53
+- [LLM Knowledge Bases: a practical guide — Ben Holmes, Warp](../sources/20260812_I3bpdgFJCUY.md), 06:29-07:53, 15:44-16:47

@@ -17,12 +17,15 @@ Details:
 - The comparison was against a retriever that had itself been tuned — hybrid Cohere embeddings plus BM25 to top 30 each, merged and reranked to top 5, with the configuration chosen by a separate recall sweep. A fair verdict is "agentic browsing did not beat a *tuned* retriever," which is a different claim from "browsing does not beat RAG." (25:30-27:05)
 - The same source reports a second negative result on a fashionable technique from the same evaluation discipline: GraphRAG was "way costlier to set up and just tie[d] on the results" against plain RAG on their real-user evaluations, with the caveat that a large dataset of genuinely interconnected topics might change the answer. (11:55-12:58)
 
+- Scope the null result to its consumer. A third build from the same Karpathy LLM-wiki idea — Ben Holmes' personal note pipeline — generates an entity layer (people, concepts, organizations, sources) whose readers are a *human* clicking backlinks and a "bird's eye" graph view, not an agent answering questions. Nothing here refutes that use, and nothing there rescues agentic browsing: the two cases share a structure but not a benefit, so "the generated wiki did not help our retriever" and "the generated wiki is worth generating" can both hold. What Holmes offers is a demonstration and no measurement of any kind, which is the gap this page exists to close. See [Generate an Entity Wiki Over Your Own Notes](generate-an-entity-wiki-over-your-own-notes.md). ([LLM Knowledge Bases](../sources/20260812_I3bpdgFJCUY.md), 09:20-13:24, 17:52-19:20)
+
 Related topics:
 - [Retrieval](../topics/retrieval.md)
 - [Tools](../topics/tools.md)
 - [Evaluation](../topics/evaluation.md)
 
 Related concepts:
+- [Generate an Entity Wiki Over Your Own Notes](generate-an-entity-wiki-over-your-own-notes.md)
 - [Agentic Retrieval Lets Models Plan Search Steps](agentic-retrieval-lets-models-plan-search-steps.md)
 - [Redefine RAG as Iterative Multi-Tool Retrieval, Not Vector Search](redefine-rag-as-iterative-multi-tool-retrieval.md)
 - [Build a File-Based Research Wiki With Progressive-Disclosure Retrieval](file-based-research-wiki-with-progressive-disclosure-retrieval.md)
@@ -32,3 +35,4 @@ Related concepts:
 
 Sources:
 - [Context Engineering in 2026 — Louis-François Bouchard, Omar Solano & Samridhi Vaid, Towards AI](../sources/20260817_WP3hjUXd918.md), 11:55-12:58, 24:00-32:18
+- [LLM Knowledge Bases: a practical guide — Ben Holmes, Warp](../sources/20260812_I3bpdgFJCUY.md), 09:20-13:24, 17:52-19:20
