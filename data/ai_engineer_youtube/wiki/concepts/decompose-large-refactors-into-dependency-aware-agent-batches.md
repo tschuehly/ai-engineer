@@ -12,6 +12,7 @@ Details:
 - Batching can use graph algorithms when structural guarantees matter, but existing directory structure can be sufficient when it keeps semantically related files together. (19:52-20:08)
 - A good batch fits in a single commit or pull request, can be one-shot by a single agent, can be verified quickly, and has clear ordering relative to other batches. (27:36-29:00)
 - Shared migration context should be placed on an initial branch before spawning agents so each worker understands the target transition, such as a Redux-to-Zustand or Spark 2-to-Spark 3 migration. (16:37-17:25)
+- **Partial isolation is the option that a now-versus-later argument hides.** Reporting on a six-month full consolidation, Denys Linkov still frames the choice as graded rather than binary: "the AI delivery system is a layered approach. You can isolate different parts of your codebase to avoid a full refactor, but there's so many components that you need to keep in mind." Batch decomposition is what makes that middle option executable — a team that cannot justify the whole migration can still carve out the layers whose ROI it can name. ([Denys Linkov](../sources/20260808_7vn4WpqNpck.md), 14:28-14:43)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -21,6 +22,8 @@ Related concepts:
 - [Run parallel issue agents in sandboxes with review and merge loops](run-parallel-issue-agents-in-sandboxes-with-review-and-merge-loops.md)
 - [Spatial agent maps expose filesystem-level lineage and collisions](spatial-agent-maps-expose-filesystem-level-lineage-and-collisions.md)
 - [Limit agent change size by feedback speed](limit-agent-change-size-by-feedback-speed.md)
+- [Audit a Refactor Against Having Waited for Better Models](audit-a-refactor-against-having-waited-for-better-models.md)
 
 Sources:
 - [Automating Large Scale Refactors with Parallel Agents - Robert Brennan, OpenHands](../sources/20260108_rcsliSIy_YU.md), 16:37-29:00
+- [Benchmarking Coding Agents on New vs Legacy Codebases — Denys Linkov, Wisedocs](../sources/20260808_7vn4WpqNpck.md), 14:28-14:43

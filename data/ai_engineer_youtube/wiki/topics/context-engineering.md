@@ -110,8 +110,11 @@ Justin Smith (Resolve AI) supplies a definition worth carrying, from a domain th
 
 What the source does not provide is any mechanism. The learning system is named as the hard part four separate times and never described — no storage model, retrieval, staleness or eviction policy, conflict handling, or evaluation of what was learned — and nothing in the talk is measured, including any comparison between an agent with this layer and one without it. The commercial framing is worth keeping visible: "we need full stack AI. It's not just about the models anymore, it's about the context around the models," from a vendor selling the context layer. Take the distinction as a useful analytical cut and the implementation as unevidenced.
 
+A repository-layout result from Denys Linkov (WiseDocs) retires one of this topic's older assumptions. Cross-repository work was long argued to be a context problem — the agent cannot see the other repositories, so consolidate — and he reports the reading half solved by ordinary model progress: "models are much better at navigating multiple repos. So, if you put it into a higher-level folder, right, they could navigate the file directory." A shared parent directory is now sufficient for comprehension. What did not move is execution: "for doing that end-to-end testing and verification and deployment, it's still much harder to do with multiple repos," plus the per-task provisioning bill, since "it also takes more time to clone repos and get everything set up" ([Multi-Repo Cost Has Moved From Navigation to Verification](../concepts/multi-repo-cost-has-moved-from-navigation-to-verification.md)). The practical consequence for anyone reaching for a context remedy: ask what the agent must do to know it succeeded. If the answer is "read code in three repositories," better retrieval, indexes, or documentation are the right investment. If it is "run the pipeline, hit the service, deploy the change," none of those help and the problem was never a context one. Caveats: this is one practitioner's Q&A answer, with no retrieval benchmark behind "much better at navigating," no repository count, and no measurement of provisioning time.
+
 ## Key Concepts
 
+- [Multi-Repo Cost Has Moved From Navigation to Verification](../concepts/multi-repo-cost-has-moved-from-navigation-to-verification.md) - the cross-repo reading problem is largely solved by model progress; what remains is execution, which no context remedy addresses.
 - [Separate Execution From the Production Context That Judges It](../concepts/separate-execution-from-the-production-context-that-judges-it.md) - the context half produces a priority rather than a fact, and it decays continuously instead of converging.
 - [Make the Doc the State and the Agent the Action](../concepts/make-the-doc-the-state-and-the-agent-the-action.md) - put the state in a durable shared document so agents stay stateless, restartable, and start from identical context.
 - [Defer Tool Definitions Out of Context and Let the Model Search for Them](../concepts/defer-tool-definitions-out-of-context-and-let-the-model-search-for-them.md) - the growing term in the context is the tool registry, and it does not have to be resident.
@@ -280,6 +283,7 @@ What the source does not provide is any mechanism. The learning system is named 
 
 ## Sources
 
+- [Benchmarking Coding Agents on New vs Legacy Codebases — Denys Linkov, Wisedocs](../sources/20260808_7vn4WpqNpck.md)
 - [Always-on agents run production without the on-call tax — Justin Smith, Resolve AI](../sources/20260809_vSx5IULvBns.md)
 - [Codex, Behind the Harness — Dominik Kundel, OpenAI](../sources/20260810_shRR1e2HXMk.md)
 - [Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab](../sources/20260811_aeTb5BdmTTc.md)

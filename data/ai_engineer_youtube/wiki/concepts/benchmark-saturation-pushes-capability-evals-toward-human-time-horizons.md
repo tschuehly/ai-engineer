@@ -14,6 +14,7 @@ Details:
 - The observed time-horizon trend looked close to exponential over calendar time and was described as doubling roughly every six to seven months, but the speaker cautions that even time-horizon benchmarks or their underlying tasks may saturate. (06:22-09:02)
 
 - **How the trend gets used downstream, and the second axis that sharpens it.** Stefania Druga cites these METR projections as the reason context rot is a priority rather than a curiosity, and pairs the lengthening-horizon curve with a second observation: "we're getting fewer and fewer model releases." Her reading is a convergence "at some point later this year" where practitioners face "many more long-term horizon tasks and fewer model releases" — so the horizon that matters is the one you have to reach with the model you already have, via the harness, rather than by waiting for the next release. That reframes the time-horizon curve as a planning input for harness and memory investment, not only as a capability measurement. The pairing is her inference from the projections rather than a METR claim. ([Memory Harnesses for Long-Running Research Agents](../sources/20260812_R3-anFK1YM8.md), 01:07-01:36)
+- **A practitioner rejecting the 50% convention, and the axis the fit hides.** Denys Linkov argues the curve should be quoted at 80%, 90%, or 99% instead, because at those thresholds "we're no longer claiming that models can accomplish tasks that would take a human 18+ hours" while the exponential trend still holds — and because 50% is not a rate anyone would delegate an hour of wall-clock at. He also reports the part a single fitted horizon suppresses: on METR's frontier-model results the success rate "starts to decline significantly at that 4-hour mark, but even before then at the 15-second mark or even before the 15-minute mark, there are certain tasks that [the model], in all its glory, cannot complete effectively and consistently." Human task duration orders the fit, not the difficulty. See [Read the Task-Length Curve at the Success Rate You Would Actually Delegate At](read-the-task-length-curve-at-the-success-rate-you-would-delegate-at.md). ([Denys Linkov](../sources/20260808_7vn4WpqNpck.md), 07:57-09:25)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -26,7 +27,9 @@ Related concepts:
 - [Push Agent Benchmarks on Environment Complexity, Autonomy Horizon, and Output Complexity](push-agent-benchmarks-on-environment-autonomy-and-output-complexity.md)
 - [Invest in the Harness to Run Weaker and Local Models](invest-in-the-harness-to-run-weaker-and-local-models.md)
 - [Offload Long-Horizon Agent State Outside the Context Window](offload-long-horizon-agent-state-outside-the-context-window.md)
+- [Read the Task-Length Curve at the Success Rate You Would Actually Delegate At](read-the-task-length-curve-at-the-success-rate-you-would-delegate-at.md)
 
 Sources:
 - [Why Agent Hype can fall short of reality - Joel Becker, METR](../sources/20251224_RhfqQKe22ZA.md), 01:47-09:02
 - [Memory Harnesses for Long-Running Research Agents — Stefania Druga, Sakana.ai](../sources/20260812_R3-anFK1YM8.md), 01:07-01:36
+- [Benchmarking Coding Agents on New vs Legacy Codebases — Denys Linkov, Wisedocs](../sources/20260808_7vn4WpqNpck.md), 07:57-09:25

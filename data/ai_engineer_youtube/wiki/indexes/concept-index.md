@@ -557,6 +557,10 @@
 - [Learn risk scoring from audit feedback for predictive compliance](../concepts/learn-risk-scoring-from-audit-feedback-for-predictive-compliance.md)
 
 ## Coding Agents
+- [Audit a Refactor Against Having Waited for Better Models](../concepts/audit-a-refactor-against-having-waited-for-better-models.md) - the deferral discount compounds, but so does the illegible code you generate while waiting; decide on business ROI, not model forecasts.
+- [Read the Task-Length Curve at the Success Rate You Would Actually Delegate At](../concepts/read-the-task-length-curve-at-the-success-rate-you-would-delegate-at.md) - 50% is a benchmark convention and a coin flip in a workday; the delegation threshold is 80%, 90%, or 99%.
+- [Re-Run One Remembered Hard Task on Each New Model](../concepts/re-run-one-remembered-hard-task-on-each-new-model.md) - one task you solved the hard way, re-run each generation and measured in hours, iterations, and mistakes caught.
+- [Multi-Repo Cost Has Moved From Navigation to Verification](../concepts/multi-repo-cost-has-moved-from-navigation-to-verification.md) - agents read across repositories fine now; end-to-end testing, deployment, and provisioning are what still break at the boundary.
 - [Make One Agent Session Reachable From Every Interface](../concepts/make-one-agent-session-reachable-from-every-interface.md) - a Slack bot moves the agent from one laptop to one product; the session with its context is the object that must be addressable.
 - [Environment Isolation Is What Lets Non-Engineers Trigger Real Work](../concepts/environment-isolation-is-what-lets-non-engineers-trigger-real-work.md) - the blocker is the missing development environment, not the interface, which turns a safety control into an access-widening one.
 - [Replay Your Own Merged PRs as the Coding-Agent Benchmark](../concepts/replay-your-own-merged-prs-as-the-agent-benchmark.md) - your merge history is a benchmark corpus needing no task authoring, for teams whose stack the public boards do not test.
@@ -859,6 +863,7 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Multi-Repo Cost Has Moved From Navigation to Verification](../concepts/multi-repo-cost-has-moved-from-navigation-to-verification.md) - the cross-repo reading problem is largely solved by model progress, so a context remedy no longer addresses what is left.
 - [Separate Execution From the Production Context That Judges It](../concepts/separate-execution-from-the-production-context-that-judges-it.md) - the context half returns a priority rather than a fact, and it decays as the environment changes instead of converging.
 - [Make the Doc the State and the Agent the Action](../concepts/make-the-doc-the-state-and-the-agent-the-action.md) - chat is a lossy container for state; a durable shared document is readable by teammates and reusable across agents.
 - [Defer Tool Definitions Out of Context and Let the Model Search for Them](../concepts/defer-tool-definitions-out-of-context-and-let-the-model-search-for-them.md) - the tool registry is the term that grows, and it does not have to be resident.
@@ -1010,6 +1015,7 @@
 - [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md)
 
 ## Infrastructure
+- [Multi-Repo Cost Has Moved From Navigation to Verification](../concepts/multi-repo-cost-has-moved-from-navigation-to-verification.md) - every isolated agent environment pays clone-and-provision again, so repository layout is a per-task infrastructure cost.
 - [Watch the Change Paths That Bypass Your Deployment Pipeline](../concepts/watch-the-change-paths-that-bypass-your-deployment-pipeline.md) - feature flags and infra changes never enter CI/CD, so they get no verification and are found after impact.
 - [Derive the Post-Deploy Check Plan From What Actually Changed](../concepts/derive-the-post-deploy-check-plan-from-what-changed.md) - per-change telemetry selection along the causal chain, with the recheck interval decided rather than configured.
 - [Separate Execution From the Production Context That Judges It](../concepts/separate-execution-from-the-production-context-that-judges-it.md) - reaching the telemetry is the easy half; the environment knowledge that says a reading matters is the scarce one.
@@ -1549,6 +1555,9 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Re-Run One Remembered Hard Task on Each New Model](../concepts/re-run-one-remembered-hard-task-on-each-new-model.md) - an N-of-1 longitudinal instrument measured in human intervention, which needs no scorer because you solved the task yourself.
+- [Read the Task-Length Curve at the Success Rate You Would Actually Delegate At](../concepts/read-the-task-length-curve-at-the-success-rate-you-would-delegate-at.md) - the exponential trend survives at 80/90/99% while the headline duration collapses to a number you can plan against.
+- [Validate a Research Report by Building the Thing It Recommends](../concepts/validate-a-research-report-by-building-the-thing-it-recommends.md) - a fluent 20-page comparison can attribute features that do not exist; only running the product separates shipped from announced.
 - [Replay Your Own Merged PRs as the Coding-Agent Benchmark](../concepts/replay-your-own-merged-prs-as-the-agent-benchmark.md) - a fourth leaderboard failure mode: the public benchmark is on the wrong stack, and your merge history is the corpus that is not.
 - [Verification Debt Outlives the Productivity Spike](../concepts/verification-debt-outlives-the-productivity-spike.md) - a productivity metric and a quality metric on the same projects, decaying at different rates.
 - [Route Between Model Tiers by Quality Dimension, Not Only Cost](../concepts/route-between-model-tiers-by-quality-dimension-not-only-cost.md) - disagreement between axes on one board, inside one vendor's own family.
@@ -1916,6 +1925,7 @@
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 
 ## Models
+- [Re-Run One Remembered Hard Task on Each New Model](../concepts/re-run-one-remembered-hard-task-on-each-new-model.md) - three hours and ten mistakes on o3 down to a one-shot on Opus 4.8, priced in hours saved against tokens spent — and confounded by harness drift.
 - [Route Between Model Tiers by Quality Dimension, Not Only Cost](../concepts/route-between-model-tiers-by-quality-dimension-not-only-cost.md) - Sonnet 4.6 leads on correctness and solve rate while Opus 4.6 is the pick for maintainability, security, or lower complexity.
 - [Adam Absorption Hides Most Weight Updates From the Served Model](../concepts/adam-absorption-hides-most-weight-updates-from-the-served-model.md) - a flat push against a floor that scales with weight magnitude, so small weights move and large weights freeze.
 - [A Sparse Served-Weight Delta Is Not Gradient Sparsity](../concepts/a-sparse-served-weight-delta-is-not-gradient-sparsity.md) - ~99% of parameters still receive non-zero gradients; the FP32 master update is dense, just small.
@@ -2564,6 +2574,8 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Validate a Research Report by Building the Thing It Recommends](../concepts/validate-a-research-report-by-building-the-thing-it-recommends.md) - keep the criteria list and the proof of concept when an agent compresses a two-month vendor evaluation into days.
+- [Audit a Refactor Against Having Waited for Better Models](../concepts/audit-a-refactor-against-having-waited-for-better-models.md) - now-versus-later on a large cleanup, with layered partial isolation as the option the binary framing hides.
 - [Give Unowned Operational Work a Trigger](../concepts/give-unowned-operational-work-a-trigger.md) - work with a ceremony gets done and the rest survives on memory, so supply the missing schedule, event stream, or message.
 - [Amend a Recurring Agent Task by Replying to Its Output](../concepts/amend-a-recurring-agent-task-by-replying-to-its-output.md) - tune a standing job in the thread its output landed in, so the next firing differs rather than only this one.
 - [Derive the Post-Deploy Check Plan From What Actually Changed](../concepts/derive-the-post-deploy-check-plan-from-what-changed.md) - verification triggered by the change instead of the symptom, with checks chosen from what the diff touched.

@@ -17,6 +17,7 @@ Details:
 - Caching materially improves cost efficiency (~4x for the simple agent), but token-hungry harnesses like Claude Code stay expensive even with caching and Haiku sub-agents — so cost is part of the infrastructure budget, not a footnote. (09:40-10:10)
 
 - **A team running its own agents already has most of this infrastructure, which lowers the cost of a private benchmark.** Superconductor replays its own merged pull requests through candidate agents and plots quality against cost and against time; the reason it is affordable is that the isolated-environment substrate their product needs anyway is the same substrate an eval harness needs — every replay is one more sandboxed run of the codebase. Their headline number makes the scale concrete: "3,300 Claude code runs that cost $10,000 in tokens daily" at plan pricing, with "Codex had four times as many" sessions "and it was cheaper overall." That reframes eval infrastructure for a product team as a marginal cost on capacity it already operates, rather than a separate build — see [replay your own merged PRs as the coding-agent benchmark](replay-your-own-merged-prs-as-the-agent-benchmark.md). Caveat: no reproducibility discipline is described — no seeds, no repeated trials, no variance figures, and no account of how a replayed attempt is scored against the original PR — so this is the infrastructure without the measurement rigor this page argues for. ([Arjun Singh](../sources/20260809_OL7kfezynJM.md), 13:25-14:51, 16:16-16:38)
+- **Repository layout is part of the per-task environment cost.** "If you're building a sandbox environment to run sort of a full AI factory, it also takes more time to clone repos and get everything set up," and the harder half is downstream: "for doing that end-to-end testing and verification and deployment, it's still much harder to do with multiple repos." An eval harness pays both bills on every task, so a distributed repository estate raises the fixed cost of every measurement before any model is compared. ([Denys Linkov](../sources/20260808_7vn4WpqNpck.md), 15:15-15:44)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -30,7 +31,9 @@ Related concepts:
 - [Evaluate Agent Loops With Correctness, Cost, Latency, and Step Counts](evaluate-agent-loops-with-correctness-cost-latency-and-step-counts.md)
 - [Portfolio-Allocate Eval Failures With a Triage Agent](portfolio-allocate-eval-failures-with-a-triage-agent.md)
 - [Replay Your Own Merged PRs as the Coding-Agent Benchmark](replay-your-own-merged-prs-as-the-agent-benchmark.md)
+- [Multi-Repo Cost Has Moved From Navigation to Verification](multi-repo-cost-has-moved-from-navigation-to-verification.md)
 
 Sources:
 - [SWE-rebench: Lessons from Evaluating Coding Agents — Ibragim Badertdinov, Nebius](../sources/20260604_wcUJWP6WpGM.md), 05:11-10:53
 - [Multiplayer agentic engineering — Arjun Singh, Superconductor](../sources/20260809_OL7kfezynJM.md), 13:25-14:51, 16:16-16:38
+- [Benchmarking Coding Agents on New vs Legacy Codebases — Denys Linkov, Wisedocs](../sources/20260808_7vn4WpqNpck.md), 15:15-15:44

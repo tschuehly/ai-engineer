@@ -14,6 +14,7 @@ Details:
 - Jellyfish's PR data adds an architecture-specific version of this caveat: highly distributed repositories showed little or no positive throughput correlation with AI adoption, plausibly because cross-repo context is harder for humans and tools to assemble. (13:23-15:26)
 
 - If hygiene is the amplifier, one team automates the upkeep rather than scheduling it as human cleanup: "We have like a code gardener that actually goes back and looks through… every night it'll run and look at the code and check if something like not organized correctly. What does correct organization mean will depend on your code base." The design choice worth noting is that the rubric is repo-specific rather than a generic linter — it encodes the team's own organization conventions, which is exactly the part a linter cannot express and the part that decays fastest under agent-written code. Reported as practice, with no measure of what it caught or what it cost. ([Khandelwal](../sources/20260811_aeTb5BdmTTc.md), 10:32-10:53)
+- **Voluntary cross-area contribution as the hygiene signal.** After consolidating more than ten repositories, WiseDocs reports a result that no velocity dashboard produces: "beyond just shipping velocity, developers actually want to work in this codebase. So, everybody comes along and says, 'Hey, can I work in this codebase? It's much cleaner compared to the other ones.'" It became measurable as reach — "now almost every developer within the company is committing to this new mono repo even though it might not be their area of expertise, but they might need to make changes to schemas, API calls, and other parts of the stack" — against a prior estate where "nobody actually wants to touch the code. It's not a fun experience." The patterns then propagated on their own: "a lot of the patterns we have adopted here have spread to other repos within the company." ([Denys Linkov](../sources/20260808_7vn4WpqNpck.md), 00:38-00:45, 11:22-11:35, 14:09-14:28)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -25,8 +26,10 @@ Related concepts:
 - [Active repos per engineer exposes context architecture drag](active-repos-per-engineer-exposes-context-architecture-drag.md)
 - [Treat agent readiness as verification infrastructure](treat-agent-readiness-as-verification-infrastructure.md)
 - [Standardize development environments around common model priors](standardize-development-environments-around-common-model-priors.md)
+- [Audit a Refactor Against Having Waited for Better Models](audit-a-refactor-against-having-waited-for-better-models.md)
 
 Sources:
 - [Can you prove AI ROI in Software Eng? (Stanford 120k Devs Study) - Yegor Denisov-Blanch, Stanford](../sources/20251211_JvosMkuNxF8.md), 04:02-06:13
 - [What Data from 20m Pull Requests Reveal About AI Transformation - Nick Arcolano, Jellyfish](../sources/20251124_WqZq8L-v9pA.md), 13:23-15:26
 - [Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab](../sources/20260811_aeTb5BdmTTc.md), 10:32-10:53
+- [Benchmarking Coding Agents on New vs Legacy Codebases — Denys Linkov, Wisedocs](../sources/20260808_7vn4WpqNpck.md), 11:22-11:35, 14:09-14:28

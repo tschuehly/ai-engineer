@@ -16,6 +16,7 @@ Details:
 - **The board is maintained per release, and its per-dimension spread is now stated as a routing input.** A later Sonar talk describes scoring "each of the major new models that come out… on 4,000 or so coding tasks" against "correctness, complexity, the rate at which they're solving the tasks we assign them, and then our classic things maintainability, reliability, and security," and reads the Claude tier pair off it: Sonnet 4.6 ahead on correctness and task-solving, Opus 4.6 the better pick where maintainability, security, or lower complexity is what the task needs. That turns this page's finding from a caution about benchmarks into a selection key — see [Route Between Model Tiers by Quality Dimension, Not Only Cost](route-between-model-tiers-by-quality-dimension-not-only-cost.md). No numbers accompany the tier comparison; it is spoken over a slide. ([Chatterjee](../sources/20260809_03l29gJXpCE.md), 04:51-05:57)
 - **The vendor's own conclusion from the board is a floor, not a ranking**: "None of these models are ever going to be perfect. You're always going to have some kind of need for verification in the loop." Read with the maturing-models bullet above, the two together say the quality gap narrows and changes shape rather than closing, which is the premise the same talk builds its verification argument on — see [Verification Debt Outlives the Productivity Spike](verification-debt-outlives-the-productivity-spike.md). (06:12-06:27)
 - Cyclomatic complexity counts branches (ifs/else/for/while); cognitive complexity is a proprietary measure of how hard the code is for a human to read, understand, and maintain — both rise with the more verbose models. (08:30-09:48)
+- **A quality measure that needs no rubric: count the human interventions.** Denys Linkov re-runs one remembered hard task on each new model and reports the result in units of his own effort — o3 in Cursor took "3 hours of back and forth… but it made 10 major mistakes," Sonnet 4.6 needed "one additional iteration," Opus 4.8 was "basically able to one-shot" it, and the whole task now takes "around 1/5 of the time." Hours, iterations, and mistakes caught are directly observable and need no scorer, which is what makes the measure cheap enough for a team of one; the price is that it is N-of-1, unblinded, and confounded by the operator getting better at prompting over the same period. See [Re-Run One Remembered Hard Task on Each New Model](re-run-one-remembered-hard-task-on-each-new-model.md). ([Denys Linkov](../sources/20260808_7vn4WpqNpck.md), 09:39-11:22)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -29,7 +30,9 @@ Related concepts:
 - [Shift Code Quality Left With a Pre-Commit Analysis and Remediation Loop](shift-code-quality-left-with-precommit-analysis-loop.md)
 - [Route Between Model Tiers by Quality Dimension, Not Only Cost](route-between-model-tiers-by-quality-dimension-not-only-cost.md)
 - [Verification Debt Outlives the Productivity Spike](verification-debt-outlives-the-productivity-spike.md)
+- [Re-Run One Remembered Hard Task on Each New Model](re-run-one-remembered-hard-task-on-each-new-model.md)
 
 Sources:
 - [Can LLMs generate Enterprise Quality Code? — Prasenjit Sarkar, Sonar](../sources/20260531_NuePCNMpWGc.md), 02:08-10:32
 - [Guide, Verify, Solve — Anirban Chatterjee, Sonar](../sources/20260809_03l29gJXpCE.md), 04:51-06:27
+- [Benchmarking Coding Agents on New vs Legacy Codebases — Denys Linkov, Wisedocs](../sources/20260808_7vn4WpqNpck.md), 09:39-11:22
