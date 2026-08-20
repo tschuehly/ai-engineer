@@ -16,6 +16,7 @@ Details:
 - Corollary for design: the lever that survives is cache-stability, not size. Keep the static prefix byte-identical (system prompt, tool definitions), append rather than rewrite, and reserve clearing for a genuine topic change where the cache is going to be lost anyway. (18:55-19:52)
 - The bar is not universal. It scales with whatever cache discount your provider actually offers, and it disappears entirely once the conversation no longer fits the window, because there is then nothing to cache — see the local-deployment case. (55:37-56:31)
 - Log cache-hit rate per turn alongside cost and time-to-first-token; without it, a compaction change looks like a token reduction and its cache cost is invisible. Their tutor logs input tokens, output tokens, cached count, cost, TTFT, tool-call count, and whether summarization fired. (19:52-20:31, 35:19-35:50)
+- **The common trigger design ignores this bill entirely.** Coyle's recommended pattern fires compaction on a single measured condition — "if you have more than 150,000 tokens, then… you can run a compact" — chosen purely against window size and model confusion ("the more context you have, the more confused the LLM is going to be"). A threshold tuned that way spends the cached prefix at a moment nobody priced, which is exactly the invisible cost this page argues you must log. The fix is not to abandon a programmatic trigger but to put cache-hit rate on the same dashboard as the token count before choosing the number ([Bound Context Twice](bound-context-twice-fork-the-subtask-then-compact-on-a-token-threshold.md)). ([Coyle](../sources/20260808_Z-c11pV_uvU.md), 13:07-13:41, 16:42-17:08)
 
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
@@ -29,6 +30,8 @@ Related concepts:
 - [Shrink the Per-Step Payload the Agent Loop Re-Sends](shrink-the-per-step-payload-the-agent-loop-re-sends.md)
 - [Agent swarms create reusable KV-cache working sets](agent-swarms-create-reusable-kv-cache-working-sets.md)
 - [Frequent intentional compaction keeps coding agents in the smart zone](frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md)
+- [Bound Context Twice: Fork the Subtask, Then Compact on a Token Threshold](bound-context-twice-fork-the-subtask-then-compact-on-a-token-threshold.md)
 
 Sources:
 - [Context Engineering in 2026 — Louis-François Bouchard, Omar Solano & Samridhi Vaid, Towards AI](../sources/20260817_WP3hjUXd918.md), 15:55-20:31, 35:19-35:50, 45:57-46:41, 52:10-53:07, 55:37-56:31
+- [Anthropic's CCA Exam as a Field-Guide for Agentic Engineering — Frank Coyle, UC Berkeley](../sources/20260808_Z-c11pV_uvU.md), 13:07-13:41, 16:42-17:08

@@ -15,6 +15,7 @@ Details:
 - The payoff is that later delegation (assigning Jira/Linear/GitHub/Slack requests to an agent) "felt native to how people already work" and required no new skill from the 90%, because the champions had already laid the repo foundation the agents work against. (10:00-12:20)
 
 - Khandelwal runs the same play at team scale and names the constraint it has to satisfy to work. The method matches — "find your best ICs and find… how they are making the code base work for them. Take those practices and pass them or guide" — but the requirement is *replacement*, not addition: "People can't live in their own practices. And this is really hard for engineers to do it. It's basically accepting that my setup is imperfect." Extracting champion practices into a shared setup that then coexists with everyone's personal setup leaves the codebase unconverged, which is the thing the repo-as-leverage-point argument depends on. His buy-in test is behavioral for the same reason: "get them to be able to edit and play with the shared setup cuz that's the true way you know that they're actually invested." ([Khandelwal](../sources/20260811_aeTb5BdmTTc.md), 09:14-09:37, 10:56-11:15)
+- **What the champions should be checking the repos against, if you would rather not derive it from scratch.** Coyle reads Anthropic's Claude Code certification blueprint as an engineering document rather than an exam syllabus, on the reasoning that the vendor "knows how people are using their system and what the issues are going to be," so the weighted domains encode observed failure frequency. The two heaviest — agentic architecture at 27% and harness configuration at 20%, both ahead of prompting — line up with exactly the repo-level assets this page lists (context files, rules, repeatable workflows), which is a second, independent argument that the leverage point is configuration rather than individual skill. The scenario questions are usable directly as a cohort review checklist because each ships with a named wrong answer attached ([Read a Certification Blueprint as a Map of Production Anti-Patterns](read-a-certification-blueprint-as-a-map-of-production-anti-patterns.md)). Two limits: the blueprint is scoped to one vendor's harness, and Coyle offers no evidence about how the weights were set beyond his inference. ([Coyle](../sources/20260808_Z-c11pV_uvU.md), 01:04-06:04)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -26,7 +27,9 @@ Related concepts:
 - [Institutionalize Knowledge Infrastructure for AI Adoption](institutionalize-knowledge-infrastructure-for-ai-adoption.md)
 - [Use Repository Instructions to Ground Coding Agents](use-repository-instructions-to-ground-coding-agents.md)
 - [Create Psychological Safety for AI Adoption](create-psychological-safety-for-ai-adoption.md)
+- [Read a Certification Blueprint as a Map of Production Anti-Patterns](read-a-certification-blueprint-as-a-map-of-production-anti-patterns.md)
 
 Sources:
 - [Building an Autonomous Engineering Org - Angie Jones, Agentic AI Foundation](../sources/20260628_whue9_YquGA.md), 04:40-12:20
 - [Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab](../sources/20260811_aeTb5BdmTTc.md), 09:14-09:37, 10:56-11:15
+- [Anthropic's CCA Exam as a Field-Guide for Agentic Engineering — Frank Coyle, UC Berkeley](../sources/20260808_Z-c11pV_uvU.md), 01:04-06:04

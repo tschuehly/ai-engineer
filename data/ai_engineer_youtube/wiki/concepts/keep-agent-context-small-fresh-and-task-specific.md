@@ -19,6 +19,7 @@ Details:
 - For coding agents, broad static onboarding can become too large or stale, while on-demand compressed context can summarize only the current vertical slice from source-backed code. 12:14-14:10
 - A symptom checklist for the failure this page prevents, usable as a production trigger rather than a diagnosis after the fact: the model "starts contradicting itself, or it has to redo the work because it forgot it did that task in the first place, or it starts to drift from your questions because it forgot them." Each maps to a different remedy — self-contradiction to conflict surfacing, repeated work to a decisions record, question drift to keeping the task statement pinned in the core context. The same talk cites "keeping the context clean" as one item in a reported organizational cost reduction (Coinbase, via a CEO tweet, alongside more local models, better routing, better caching, and per-task usage visibility) — second-hand and unquantified, but the only place in the wiki where context hygiene appears in a *company-level* spend story rather than a per-session one. ([Memory Harnesses for Long-Running Research Agents](../sources/20260812_R3-anFK1YM8.md), 00:46-01:04, 01:44-02:17)
 - A self-improving injected-context bank needs the same hygiene: Lovable's "Stack Overflow" entries go stale "incredibly quickly" — every new model release or feature change — so they aggressively rebalance and discard knowledge, because deprecated entries cause context rot and actively hamper the agent rather than helping it. Freshness here is a maintenance task on the knowledge store, not just on a single session's window. (Lovable 10:27-11:02)
+- **A large window is capacity, not a plan, and the two costs move together.** Coyle states the trade in one line — "context means tokens, tokens mean money, and the more context you have, the more confused the LLM is going to be in giving you an answer" — and applies it directly to the temptation a long window creates: "even though oh, a million token context window, I can put everything in there. No, no, don't put everything in there. Limit what's going to go in there because then you're going to get a much more accurate system." The accuracy claim is asserted rather than measured here, and this wiki's [do-nothing baseline](benchmark-context-management-presets-against-a-do-nothing-baseline.md) result is a real counterweight on the cost half; the argument for restraint holds on quality grounds in agentic work more than on token price. ([Coyle](../sources/20260808_Z-c11pV_uvU.md), 13:07-13:41)
 
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
@@ -33,6 +34,7 @@ Related concepts:
 - [Mine stuck-then-solved sessions for injectable fixes](mine-stuck-then-solved-sessions-for-injectable-fixes.md)
 - [Prompt Caching Sets the Break-Even Bar for Compaction](prompt-caching-sets-the-break-even-bar-for-compaction.md)
 - [Treat Memory as a Write–Manage–Read Control Loop, Not a Store](treat-memory-as-a-write-manage-read-control-loop.md)
+- [Bound Context Twice: Fork the Subtask, Then Compact on a Token Threshold](bound-context-twice-fork-the-subtask-then-compact-on-a-token-threshold.md)
 
 Sources:
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md), 04:33-11:15
@@ -41,3 +43,4 @@ Sources:
 - [How Lovable self-improves every hour — Benjamin Verbeek, Lovable](../sources/20260602_KA5kPbdkK2E.md), 10:27-11:02
 - [Context Engineering in 2026 — Louis-François Bouchard, Omar Solano & Samridhi Vaid, Towards AI](../sources/20260817_WP3hjUXd918.md), 15:55-17:37, 52:10-53:07
 - [Memory Harnesses for Long-Running Research Agents — Stefania Druga, Sakana.ai](../sources/20260812_R3-anFK1YM8.md), 00:46-01:04, 01:44-02:17
+- [Anthropic's CCA Exam as a Field-Guide for Agentic Engineering — Frank Coyle, UC Berkeley](../sources/20260808_Z-c11pV_uvU.md), 13:07-13:41

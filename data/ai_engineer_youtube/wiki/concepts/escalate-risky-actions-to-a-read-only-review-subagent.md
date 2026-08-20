@@ -18,6 +18,7 @@ Details:
 - **The unevaluated part is the reviewer itself.** The speaker calls his description "a gross oversimplification," and the talk gives no false-approval rate, no false-escalation rate, no cost or latency for the extra subagent, and no adversarial test. The reviewer reads the transcript, which is also the surface a prompt injection would occupy — a transcript that says the user authorized something is evidence the reviewer is designed to trust. Nothing in the talk addresses that. ([Codex, Behind the Harness](../sources/20260810_shRR1e2HXMk.md), 15:18-15:32, Provenance and Caveats)
 
 - Independent corroboration of the premise, from a source with no stake in automating the gate. Matt Dailey (Ref) describes the same degradation for design decisions rather than dangerous commands: the agent says "this is the recommended option and then you're like, great. I don't even think about this. I'll just hit that one and we keep going" — because chat is "brain off," a medium built for execution. Two independent observers report the in-session human gate collapsing, which strengthens the premise while pointing at opposite remedies: automate the judgment (Codex), or move the judgment out of the session entirely into a shared decision document ([Separate the Decision Layer From the Implementation Layer](separate-the-decision-layer-from-the-implementation-layer.md)). The remedies are compatible — one covers dangerous actions, the other covers consequential choices. ([Dailey](../sources/20260809_Kz4QJmNrVXU.md), 10:55-11:35)
+- **A dissenting design principle about the one input this reviewer depends on.** Coyle argues a critic should be denied the producer's reasoning entirely — pass "the claim and the evidence" but not "the thought processes that went in to creating this claim" — because collaborating agents "devolve into one idea" ([Withhold the Producer's Reasoning From the Critic](withhold-the-producers-reasoning-from-the-critic.md)). Applied literally that would gut this reviewer, which is given "the transcript as well as… the tool calls." The reconciliation is that the two reviewers judge different objects: an authorization reviewer is judging *what the user asked for*, so the transcript is its evidence, while a correctness critic is judging an artifact and the transcript only tells it what conclusion to reach. Worth holding onto because it names precisely the exposure flagged in the bullet above — a transcript is persuasive to a reviewer that treats it as evidence. ([Coyle](../sources/20260808_Z-c11pV_uvU.md), 13:44-15:12)
 
 Related topics:
 - [Security](../topics/security.md)
@@ -32,7 +33,9 @@ Related concepts:
 - [Customize Subagents by Task, Model, Tools, and Permissions](customize-subagents-by-task-model-tools-and-permissions.md)
 - [Sandbox Primitives Are Per Operating System](sandbox-primitives-are-per-operating-system.md)
 - [Ceding a Critical Decision Transfers Ownership of the Code](ceding-a-critical-decision-transfers-ownership-of-the-code.md)
+- [Withhold the Producer's Reasoning From the Critic](withhold-the-producers-reasoning-from-the-critic.md)
 
 Sources:
 - [Codex, Behind the Harness — Dominik Kundel, OpenAI](../sources/20260810_shRR1e2HXMk.md), 11:59-15:32
 - [Velocity Sickness: What Happens When Your Whole Team Gets 10x Faster — Matt Dailey, Ref.](../sources/20260809_Kz4QJmNrVXU.md), 10:55-11:35
+- [Anthropic's CCA Exam as a Field-Guide for Agentic Engineering — Frank Coyle, UC Berkeley](../sources/20260808_Z-c11pV_uvU.md), 13:44-15:12

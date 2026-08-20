@@ -16,6 +16,7 @@ Details:
 - **Where "different method" stops being available.** A deterministic checker only covers defect classes someone encoded; it cannot judge whether the change matches intent. That is why the talk pairs it with an LLM layer rather than substituting one for the other — see [Choose Verification Layers by Defect-Class Coverage](choose-verification-layers-by-defect-class-coverage.md).
 - **An unresolved tension worth carrying with this page.** The same product line offered as the independent zero-trust check is also offered as the thing that "can write fixes and… approve those fixes and merge those PRs completely automatically if you wanted to." Once the checker authors and merges its own remediation, the independence that made it a zero-trust layer is gone for that change, and the talk does not address who verifies the verifier. The autonomy ramp it describes — findings and dialogue by default, more automation "as you use it more and more and gain confidence" — is offered without any criterion for when a team has earned the next step. ([Chatterjee](../sources/20260809_03l29gJXpCE.md), 14:20-14:49)
 - Caveat on evidence: this is a vendor talk and the zero-trust argument is asserted, not measured. No comparison of what a computational layer catches versus what an LLM layer catches appears anywhere in it, and no false-positive rate is given for either.
+- **The method-independence argument has a context-independence twin that costs nothing.** Coyle attacks the same shared-blind-spot problem from inside the LLM layer, by redacting the producer's reasoning from the critic: pass "the claim and the evidence" but not "the thought processes that went in to creating this claim," because collaborating agents "devolve into one idea." That does not give you provability — only the computational layer does — but it is available on every LLM review, including the ones where a deterministic checker has nothing to say, and it is the missing control on any pipeline that hands a reviewer the full transcript. See [Withhold the Producer's Reasoning From the Critic](withhold-the-producers-reasoning-from-the-critic.md). ([Coyle](../sources/20260808_Z-c11pV_uvU.md), 13:44-15:12)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -30,6 +31,8 @@ Related concepts:
 - [Verify an Action Through a Different Channel Than the One That Acted](verify-an-action-through-a-different-channel-than-the-one-that-acted.md)
 - [Treat slop as a quality failure, not an AI provenance label](treat-slop-as-a-quality-failure-not-an-ai-provenance-label.md)
 - [Automation Bias Turns Human-in-the-Loop Into a Rubber Stamp](automation-bias-turns-human-in-the-loop-into-a-rubber-stamp.md)
+- [Withhold the Producer's Reasoning From the Critic](withhold-the-producers-reasoning-from-the-critic.md)
 
 Sources:
 - [Guide, Verify, Solve — Anirban Chatterjee, Sonar](../sources/20260809_03l29gJXpCE.md), 09:23-10:13, 13:18-13:32, 14:20-14:49
+- [Anthropic's CCA Exam as a Field-Guide for Agentic Engineering — Frank Coyle, UC Berkeley](../sources/20260808_Z-c11pV_uvU.md), 13:44-15:12

@@ -15,6 +15,7 @@ Details:
 - Why it works: "multiple researchers with somebody who helps at the end is better than a single person kind of perseverating on that forever" — this is a human pattern reused for agents. (15:01-15:15)
 - Upside runs this for multi-touch attribution ("the holy grail of go-to-market"), "enabled by Opus," after two years building the underlying AI-native data layer. (13:16-13:49)
 - Distinct from reconciling *heterogeneous* specialist outputs (a security agent + a Jira agent + a diff agent combined by a judge): here every juror attempts the *same* subjective task independently, and the judge weights reasoning quality rather than stitching different slices together.
+- **What has to be true for the jurors' independence to be real.** A jury only beats one analyst if the votes are not correlated, and Coyle names a mechanism that correlates them: "when you get a bunch of agents together collaborating and talking to each other, there's a tendency to have group think. And all the agents seem to kind of devolve into one idea." His remedy is to control the shared input rather than the panel size — give each agent "only a slice," and withhold from a critic "the thought processes that went in to creating this claim" ([Withhold the Producer's Reasoning From the Critic](withhold-the-producers-reasoning-from-the-critic.md)). Whether jurors here see each other's work, or a shared upstream reasoning trace, is the design decision that determines whether the consensus means anything. ([Coyle](../sources/20260808_Z-c11pV_uvU.md), 13:44-15:12)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -26,6 +27,8 @@ Related concepts:
 - [Use parent agents to compare and merge parallel subagent outputs](use-parent-agents-to-compare-and-merge-parallel-subagent-outputs.md)
 - [Use independent validation contexts to reduce agent confirmation bias](use-independent-validation-contexts-to-reduce-agent-confirmation-bias.md)
 - [Make agent work more trustworthy by making it verifiable](make-agent-work-more-trustworthy-by-making-it-verifiable.md)
+- [Withhold the Producer's Reasoning From the Critic](withhold-the-producers-reasoning-from-the-critic.md)
 
 Sources:
 - [Design Patterns for AI Trust: Juries, Libraries, and Agent Tiers — Alex Bauer, Upside.tech](../sources/20260711_YZQsWVeN3rE.md), 13:16-15:15
+- [Anthropic's CCA Exam as a Field-Guide for Agentic Engineering — Frank Coyle, UC Berkeley](../sources/20260808_Z-c11pV_uvU.md), 13:44-15:12

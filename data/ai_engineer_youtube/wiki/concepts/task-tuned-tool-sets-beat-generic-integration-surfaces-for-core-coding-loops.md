@@ -12,6 +12,7 @@ Details:
 - The source argues that core coding-agent tools should be refined around feedback loops such as finding context and acting on it, because a generic MCP server author does not know the agent's local task or workflow. (04:40-05:40)
 - Adding irrelevant tools to the context window increases the set of choices the agent must consider and can make the agent confused even before useful work begins. (05:42-05:58)
 - This complements MCP context-budget guidance: the issue is not only the number of tools, but whether the visible tools and descriptions are tuned to the agent's current job.
+- **The anti-pattern has a name and a memorable shape, and it is tested for.** Coyle reports "you have one agent and you load it up with tools" as the multi-agent scenario's anti-pattern on Anthropic's architect exam, illustrated as hiring a carpenter who arrives with "plumbing tools, carpenter tools, electrical tools" announcing "I can do anything" — "maybe you want a professional carpenter." His bound is tighter than most guidance in this wiki: borrowing from functional programming's "functions should do one thing," an agent should do one thing "with maybe one or two tools available to it." Offered as exam-relevant architecture rather than measured, but it is corroborating evidence that generalist tool surfaces are a common enough production failure for a vendor to test on it ([Read a Certification Blueprint as a Map of Production Anti-Patterns](read-a-certification-blueprint-as-a-map-of-production-anti-patterns.md)). ([Coyle](../sources/20260808_Z-c11pV_uvU.md), 12:12-13:05)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -21,6 +22,8 @@ Related concepts:
 - [MCP tool surfaces need default context budgets](mcp-tool-surfaces-need-default-context-budgets.md)
 - [Design MCP servers as agent products](design-mcp-servers-as-agent-products.md)
 - [Use tool names and descriptions as operational prompts](use-tool-names-and-descriptions-as-operational-prompts.md)
+- [Read a Certification Blueprint as a Map of Production Anti-Patterns](read-a-certification-blueprint-as-a-map-of-production-anti-patterns.md)
 
 Sources:
 - [Amp Code: Next Generation AI Coding - Beyang Liu, Amp Code](../sources/20251222_gvIAkmZUEZY.md), 03:58-05:58
+- [Anthropic's CCA Exam as a Field-Guide for Agentic Engineering — Frank Coyle, UC Berkeley](../sources/20260808_Z-c11pV_uvU.md), 12:12-13:05

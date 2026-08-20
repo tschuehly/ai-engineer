@@ -12,6 +12,7 @@ Details:
 - The speakers distinguish "how" from "what": instructions should encode how the agent should work in this repository, while the current task prompt should state what to change. (45:09-45:14)
 
 - The cost side of this file is easy to lose, and it argues for a specific shape. Khandelwal: "Don't overload your [CLAUDE.md] or your [AGENTS.md] file into like one big thing. You want to make sure that… it's a thin index that can point through the right files and that's what the agent gets in its like first prompt cuz that's what gets loaded when it starts to work." Because it is charged to every session before any work happens, the useful discipline is pointing rather than explaining, with the material it points at also reachable from the code itself. The corresponding check is a first-prompt token reading — his team treats roughly 20–25K as unavoidable overhead and 40–50K as a symptom. See [Keep the Repo Context File a Thin Index and Cap Skill Files](keep-the-repo-context-file-a-thin-index-and-cap-skill-files.md) and [Measure First-Prompt Context Burn to Test Progressive Disclosure](measure-first-prompt-context-burn-to-test-progressive-disclosure.md). ([Khandelwal](../sources/20260811_aeTb5BdmTTc.md), 15:36-16:20)
+- **The instruction file is a hierarchy, not a file, which is the escape from the overload problem above.** Coyle reports the Anthropic recommendation as three levels of `CLAUDE.md` — one at the top level, one in the project folder, and per-directory files, giving "a hierarchical set of rules that can then control how the system is going to respond." That is the structural counterpart to the thin-index discipline: directory-scoped rules load with the work they govern instead of being charged to every session's first prompt. The captioned description of the first two levels is ambiguous about whether the top level is user-scoped or repository-root, so the exact scoping should be checked against current documentation rather than taken from this source. ([Coyle](../sources/20260808_Z-c11pV_uvU.md), 11:15-11:57)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -24,7 +25,9 @@ Related concepts:
 - [Give coding agents the same engineering infrastructure humans need](give-coding-agents-the-same-engineering-infrastructure-humans-need.md)
 - [Encode non-functional requirements as agent-visible context](encode-non-functional-requirements-as-agent-visible-context.md)
 - [Configure Agent Modes, Rules, and Permissions as the Workflow Evolves](configure-agent-modes-rules-and-permissions-as-the-workflow-evolves.md)
+- [Read a Certification Blueprint as a Map of Production Anti-Patterns](read-a-certification-blueprint-as-a-map-of-production-anti-patterns.md)
 
 Sources:
 - [Real World Development with GitHub Copilot and VS Code — Harald Kirschner, Christopher Harrison](../sources/20250803_eOxOzcw70f0.md), 38:14-40:58, 45:09-45:14
 - [Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab](../sources/20260811_aeTb5BdmTTc.md), 15:36-16:20
+- [Anthropic's CCA Exam as a Field-Guide for Agentic Engineering — Frank Coyle, UC Berkeley](../sources/20260808_Z-c11pV_uvU.md), 11:15-11:57

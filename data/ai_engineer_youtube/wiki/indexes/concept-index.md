@@ -1,6 +1,10 @@
 # Concept Index
 
 ## Agents
+- [Read the Stop Reason Before You Read the Answer](../concepts/read-the-stop-reason-before-you-read-the-answer.md) - the loop branches on `stop_reason`, and `max_tokens` hands you a fragment that looks exactly like a finished answer.
+- [Withhold the Producer's Reasoning From the Critic](../concepts/withhold-the-producers-reasoning-from-the-critic.md) - agents that read each other's reasoning devolve into one idea, so give the critic the claim and the evidence only.
+- [Bound Context Twice: Fork the Subtask, Then Compact on a Token Threshold](../concepts/bound-context-twice-fork-the-subtask-then-compact-on-a-token-threshold.md) - isolation keeps subtask traffic out of the parent window; compaction handles what the parent accumulates anyway.
+- [Read a Certification Blueprint as a Map of Production Anti-Patterns](../concepts/read-a-certification-blueprint-as-a-map-of-production-anti-patterns.md) - a vendor's exam weights and scenario questions as a cheap proxy for the failures its support volume sees.
 - [Separate Execution From the Production Context That Judges It](../concepts/separate-execution-from-the-production-context-that-judges-it.md) - loading the dashboard and deciding the metric smells off are different capabilities, and only the second says whether anything is important.
 - [Give Unowned Operational Work a Trigger](../concepts/give-unowned-operational-work-a-trigger.md) - a page has a receiver and an incident has a bridge; the long tail has neither, so supply a schedule, an event stream, or a message.
 - [Derive the Post-Deploy Check Plan From What Actually Changed](../concepts/derive-the-post-deploy-check-plan-from-what-changed.md) - read the diff, pick the telemetry that would expose trouble for that change, and let the agent choose when to look again.
@@ -557,6 +561,7 @@
 - [Learn risk scoring from audit feedback for predictive compliance](../concepts/learn-risk-scoring-from-audit-feedback-for-predictive-compliance.md)
 
 ## Coding Agents
+- [Read a Certification Blueprint as a Map of Production Anti-Patterns](../concepts/read-a-certification-blueprint-as-a-map-of-production-anti-patterns.md) - agentic architecture at 27% and harness configuration at 20% ahead of prompting, with a named wrong answer attached to each scenario.
 - [Audit a Refactor Against Having Waited for Better Models](../concepts/audit-a-refactor-against-having-waited-for-better-models.md) - the deferral discount compounds, but so does the illegible code you generate while waiting; decide on business ROI, not model forecasts.
 - [Read the Task-Length Curve at the Success Rate You Would Actually Delegate At](../concepts/read-the-task-length-curve-at-the-success-rate-you-would-delegate-at.md) - 50% is a benchmark convention and a coin flip in a workday; the delegation threshold is 80%, 90%, or 99%.
 - [Re-Run One Remembered Hard Task on Each New Model](../concepts/re-run-one-remembered-hard-task-on-each-new-model.md) - one task you solved the hard way, re-run each generation and measured in hours, iterations, and mistakes caught.
@@ -863,6 +868,8 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Bound Context Twice: Fork the Subtask, Then Compact on a Token Threshold](../concepts/bound-context-twice-fork-the-subtask-then-compact-on-a-token-threshold.md) - two bounds catching different traffic, because forking cannot stop the parent conversation from growing and compaction cannot refund a subtask's spend.
+- [Withhold the Producer's Reasoning From the Critic](../concepts/withhold-the-producers-reasoning-from-the-critic.md) - a deliberate omission rather than a budget decision: the reviewer is denied context it could technically be given.
 - [Multi-Repo Cost Has Moved From Navigation to Verification](../concepts/multi-repo-cost-has-moved-from-navigation-to-verification.md) - the cross-repo reading problem is largely solved by model progress, so a context remedy no longer addresses what is left.
 - [Separate Execution From the Production Context That Judges It](../concepts/separate-execution-from-the-production-context-that-judges-it.md) - the context half returns a priority rather than a fact, and it decays as the environment changes instead of converging.
 - [Make the Doc the State and the Agent the Action](../concepts/make-the-doc-the-state-and-the-agent-the-action.md) - chat is a lossy container for state; a durable shared document is readable by teammates and reusable across agents.
@@ -1555,6 +1562,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Withhold the Producer's Reasoning From the Critic](../concepts/withhold-the-producers-reasoning-from-the-critic.md) - a fourth independence axis for LLM review: change what the reviewer sees, not the model, the prompt, or the method class.
 - [Re-Run One Remembered Hard Task on Each New Model](../concepts/re-run-one-remembered-hard-task-on-each-new-model.md) - an N-of-1 longitudinal instrument measured in human intervention, which needs no scorer because you solved the task yourself.
 - [Read the Task-Length Curve at the Success Rate You Would Actually Delegate At](../concepts/read-the-task-length-curve-at-the-success-rate-you-would-delegate-at.md) - the exponential trend survives at 80/90/99% while the headline duration collapses to a number you can plan against.
 - [Validate a Research Report by Building the Thing It Recommends](../concepts/validate-a-research-report-by-building-the-thing-it-recommends.md) - a fluent 20-page comparison can attribute features that do not exist; only running the product separates shipped from announced.
@@ -2293,6 +2301,7 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Read the Stop Reason Before You Read the Answer](../concepts/read-the-stop-reason-before-you-read-the-answer.md) - `tool_use` drives the loop, and `max_tokens` means the tool call you are about to parse may be cut off mid-argument.
 - [Defer Tool Definitions Out of Context and Let the Model Search for Them](../concepts/defer-tool-definitions-out-of-context-and-let-the-model-search-for-them.md) - a per-tool deferred flag plus a tool-search call, so definitions cost nothing until wanted.
 - [Cap the Skills List as a Share of the Context Window](../concepts/cap-the-skills-list-as-a-share-of-the-context-window.md) - 2% of the window, with descriptions trimmed rather than skills dropped as the catalog grows.
 - [Match Agent Tooling to the Model's Training Distribution](../concepts/match-agent-tooling-to-the-models-training-distribution.md) - apply patch, ripgrep, and PowerShell as model-fit decisions rather than preferences.
@@ -2574,6 +2583,7 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Read the Stop Reason Before You Read the Answer](../concepts/read-the-stop-reason-before-you-read-the-answer.md) - sequence, selection, and iteration over a control field, with one branch meaning the step's output is a fragment.
 - [Validate a Research Report by Building the Thing It Recommends](../concepts/validate-a-research-report-by-building-the-thing-it-recommends.md) - keep the criteria list and the proof of concept when an agent compresses a two-month vendor evaluation into days.
 - [Audit a Refactor Against Having Waited for Better Models](../concepts/audit-a-refactor-against-having-waited-for-better-models.md) - now-versus-later on a large cleanup, with layered partial isolation as the option the binary framing hides.
 - [Give Unowned Operational Work a Trigger](../concepts/give-unowned-operational-work-a-trigger.md) - work with a ceremony gets done and the rest survives on memory, so supply the missing schedule, event stream, or message.
