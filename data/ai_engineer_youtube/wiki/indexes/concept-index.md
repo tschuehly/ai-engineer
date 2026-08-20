@@ -1,6 +1,14 @@
 # Concept Index
 
 ## Agents
+- [A Harness Fix Becomes Overhead When the Model Outgrows It](../concepts/a-harness-fix-becomes-overhead-when-the-model-outgrows-it.md) - a workaround keeps executing after the model stops needing it, so staleness costs latency and discarded cache.
+- [Decouple the Agent Loop From the Tool Execution Environment](../concepts/decouple-the-agent-loop-from-the-tool-execution-environment.md) - latency, blast radius, and allocation timing as non-security reasons to split the brain from the hands.
+- [Model a Managed Agent as Agent, Environment, and Session](../concepts/model-a-managed-agent-as-agent-environment-session.md) - three primitives and a four-state session machine for a hosted agent runtime.
+- [Keep the Session Log Separate From the Context Window](../concepts/keep-the-session-log-separate-from-the-context-window.md) - when the window is the session, eviction is deletion and a mid-run discard loses the run.
+- [Rewrite Agent Memory in a Periodic Batch Pass Over Session Logs](../concepts/rewrite-agent-memory-in-a-periodic-batch-pass-over-session-logs.md) - "dreaming" as the manage phase of the memory loop, run offline against accumulated transcripts.
+- [Grade With a Parallel Rubric Agent and Retry Until It Passes](../concepts/grade-with-a-parallel-rubric-agent-and-retry-until-it-passes.md) - a rubric as a runtime controller, missing an iteration cap and a defense against its own error.
+- [Decrypt Agent Credentials Only at Tool Execution Time](../concepts/decrypt-agent-credentials-only-at-tool-execution-time.md) - the model never sees the token, which is possible only because tool execution left its process.
+- [Decide the Agent Buy Boundary With Six Production Questions](../concepts/decide-the-agent-buy-boundary-with-six-production-questions.md) - hosting, sessions, filesystem, isolation, credentials, observability as the surface-selection checklist.
 - [Long-Horizon Self-Distillation Collapses Into Hedging](../concepts/long-horizon-self-distillation-collapses-into-hedging.md) - a training method proven on short tasks drifts into "wait / but / maybe" over 50-100 tool calls.
 - [Weight Distillation Steps by Student/Teacher Divergence](../concepts/weight-distillation-steps-by-student-teacher-divergence.md) - use the student/teacher KL as a per-step weight so a corrective signal stops applying where it no longer holds.
 - [Today's Continual Learning Is Batch Updates and a Model Re-Upload](../concepts/todays-continual-learning-is-batch-updates-and-a-model-reupload.md) - "pseudo continual learning," and the unsolved merge of thousands of concurrent rollouts.
@@ -810,6 +818,8 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Keep the Session Log Separate From the Context Window](../concepts/keep-the-session-log-separate-from-the-context-window.md) - store the session outside the window so eviction becomes a retrieval decision rather than a deletion.
+- [Rewrite Agent Memory in a Periodic Batch Pass Over Session Logs](../concepts/rewrite-agent-memory-in-a-periodic-batch-pass-over-session-logs.md) - the manage phase moved offline, where it can see across sessions and afford to delete.
 - [Plain In-Context Learning Topped a Continual-Learning Benchmark](../concepts/plain-in-context-learning-topped-a-continual-learning-benchmark.md) - the growing-context baseline any context-management or memory layer has to beat, on tasks built to reward accumulation.
 - [Measure Learning as Gain Over a Memory-Wiped Rerun](../concepts/measure-learning-as-gain-over-a-memory-wiped-rerun.md) - one mechanism-agnostic instrument that compares notes, summaries, retrieval, and a raw growing window on the same plot.
 - [Inject Concept Drift to Test What a System Forgets](../concepts/inject-concept-drift-to-test-what-a-system-forgets.md) - a strategy that only accumulates is never tested on the harder half of the job: deciding what to stop believing.
@@ -951,6 +961,13 @@
 - [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md)
 
 ## Infrastructure
+- [Decide the Agent Buy Boundary With Six Production Questions](../concepts/decide-the-agent-buy-boundary-with-six-production-questions.md) - hosting, sessions, filesystem, isolation, credentials, observability: score any surface on which it answers.
+- [Decouple the Agent Loop From the Tool Execution Environment](../concepts/decouple-the-agent-loop-from-the-tool-execution-environment.md) - container start off the first-token path, contained blast radius, and hands that can be replaced mid-run.
+- [Model a Managed Agent as Agent, Environment, and Session](../concepts/model-a-managed-agent-as-agent-environment-session.md) - environment as a definition, so isolation and egress policy are inherited by every session instance.
+- [Keep the Session Log Separate From the Context Window](../concepts/keep-the-session-log-separate-from-the-context-window.md) - the durability primitive that makes both halves of a decoupled agent recoverable.
+- [Decrypt Agent Credentials Only at Tool Execution Time](../concepts/decrypt-agent-credentials-only-at-tool-execution-time.md) - keeping secrets out of the context window is downstream of where tool execution runs.
+- [Reach Private MCP Servers With Outbound-Only Tunnels](../concepts/reach-private-mcp-servers-with-outbound-only-tunnels.md) - invert the connection direction so the private network never has a listener.
+- [A Harness Fix Becomes Overhead When the Model Outgrows It](../concepts/a-harness-fix-becomes-overhead-when-the-model-outgrows-it.md) - stale compensating machinery spends latency and discards cache on every run.
 - [Score a Post-Training Algorithm on Four Properties](../concepts/score-post-training-algorithms-on-four-properties.md) - the parallelism row is the one that turns into an environment-infrastructure budget line.
 - [Today's Continual Learning Is Batch Updates and a Model Re-Upload](../concepts/todays-continual-learning-is-batch-updates-and-a-model-reupload.md) - merging 10,000 concurrent production rollouts into one update is named as unsolved.
 - [Train on Inference Exhaust Instead of Scaling Benchmarks](../concepts/train-on-inference-exhaust-instead-of-scaling-benchmarks.md) - manufactured evals cost engineer-days per task while served traffic accrues for free.
@@ -1346,6 +1363,7 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Decide the Agent Buy Boundary With Six Production Questions](../concepts/decide-the-agent-buy-boundary-with-six-production-questions.md) - what a hosted agent platform will and will not do for you, and where differentiation therefore has to live.
 - [Raise the Floor Before Maxing the Benchmark](../concepts/raise-the-floor-before-maxing-the-benchmark.md) - "are you a benchmark maxer or a floor raiser?" — the floor is where user trust is lost, and it cannot be removed without removing the ceiling.
 - [Lab Eval Vocabulary Does Not Transfer to Application Teams](../concepts/lab-eval-vocabulary-does-not-transfer-to-application-teams.md) - how much responsibility the product leaves to the user is the axis that sets the eval design.
 - [Match the Quality Method to Your User Count](../concepts/match-the-quality-method-to-your-user-count.md) - ask user count before recommending anything; a five-user internal app is low volume, not low stakes.
@@ -1461,6 +1479,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Grade With a Parallel Rubric Agent and Retry Until It Passes](../concepts/grade-with-a-parallel-rubric-agent-and-retry-until-it-passes.md) - a rubric moved from the offline suite into the running loop, and the two bounds it needs before production.
 - [Train on Inference Exhaust Instead of Scaling Benchmarks](../concepts/train-on-inference-exhaust-instead-of-scaling-benchmarks.md) - benchmarks saturate in months, cost hours to days per task, and are not tied to real use.
 - [Hint Leakage Is the Reward Hacking of Self-Distillation](../concepts/hint-leakage-is-the-reward-hacking-of-self-distillation.md) - a hint containing the answer teaches the model to state it and back-fill the reasoning.
 - [Score a Post-Training Algorithm on Four Properties](../concepts/score-post-training-algorithms-on-four-properties.md) - online task distribution, on-policy sampling, parallelism of one, per-token reward.
@@ -2125,6 +2144,8 @@
 - [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md)
 
 ## Security
+- [Decrypt Agent Credentials Only at Tool Execution Time](../concepts/decrypt-agent-credentials-only-at-tool-execution-time.md) - "the model never sees your security tokens" is an architectural consequence, not a prompt-hygiene rule.
+- [Reach Private MCP Servers With Outbound-Only Tunnels](../concepts/reach-private-mcp-servers-with-outbound-only-tunnels.md) - no listener and no inbound rule; the protected network dials out and its egress controls become the gate.
 - [Agent Trust Needs a Certificate Issuer, Not a CAPTCHA](../concepts/agent-trust-needs-a-certificate-issuer-not-a-captcha.md) - CAPTCHAs answer "is this a human?" and signatures answer "who is calling?"; neither answers whether the agent should be let in.
 - [Design an Agent-First Signup and Login Flow](../concepts/design-an-agent-first-signup-and-login-flow.md) - password sharing, service accounts, and human approval are the three improvised paradigms, each with a named cost.
 - [Teach Calibrated Confidence So an Agent Knows When to Hand Off](../concepts/teach-calibrated-confidence-so-an-agent-knows-when-to-hand-off.md) - an agent that treats escalation as defeat will guess credentials against a live login form until the account locks.
@@ -2174,6 +2195,7 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Reach Private MCP Servers With Outbound-Only Tunnels](../concepts/reach-private-mcp-servers-with-outbound-only-tunnels.md) - a deployment shape for internal MCP tools that needs no inbound path into the customer's network.
 - [Run Trace Classifiers as Code Mode in a Sandbox](../concepts/run-trace-classifiers-as-code-mode-in-a-sandbox.md) - code mode generalizes from tool calling to any operation over a corpus too large to put in context.
 - [Keep Evals in the Repo as Tests, Not in a Prompt Playground](../concepts/keep-evals-in-the-repo-as-tests-not-in-a-prompt-playground.md) - when the unit under test is the whole harness, the prompt-management product no longer holds it.
 - [Generate Disposable Visualizations to Find Gaps in Your Own Corpus](../concepts/generate-disposable-visualizations-to-find-gaps-in-your-own-corpus.md) - "this is not a tool that you have to install... I told an agent, build this for me," then restyled it on a whim.

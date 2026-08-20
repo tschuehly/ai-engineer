@@ -11,6 +11,7 @@ Details:
 - The new engineering role is to productively deploy agent capacity into codebases and teams through systems thinking, system design, and delegation. (02:47-03:09)
 - Lower-priority work can be kicked off in multiple parallel attempts and then selected from, but only if the surrounding harness can route attention, review, and integration responsibly. (05:40-06:05)
 - The talk frames every engineer as closer to a staff engineer: responsible for looking days, weeks, and months ahead to build structures that make large amounts of agent output useful. (04:44-05:05)
+- **The strongest version of the claim comes from a model lab, which is why it is worth recording.** Anthropic's Applied AI team closes a talk on agent architecture by naming the harness — not the model — as the binding constraint: the work is to close the gap between "static harnesses" and what models can do, because "harnesses have become the limiting factor to what models can achieve." The mechanism they give is that "harnesses encode assumptions about what Claude cannot do on its own," so every workaround is a dated belief that has to be re-checked. Note the interest at play: the speakers sell a hosted harness, so the framing is convenient for them — but a model vendor arguing that model quality is not the bottleneck is still evidence pointing away from its own product's headline. ([Anthropic Applied AI](../sources/20260811_K0X9QDRkIdg.md), 07:36-07:53, 30:11-31:03)
 - Talha Sheikh (Checkout.com) reaches the same conclusion from a coding-agent field report: value used to sit in "the code that we create" but "in reality it's the verification that we design," so "it's not about can you code, but can you verify?" His TLDR — "work on the harness, and not on the code" — restates that engineering leverage has moved to the control surface (here a deterministic verification/enforcement layer), and he notes the same convergence across Anthropic, OpenAI, CodeRabbit, and WorkOS. ([Talha Sheikh](../sources/20260708_MpZzWMdmQCE.md), 08:22-08:51)
 
 Related topics:
@@ -23,7 +24,10 @@ Related concepts:
 - [AI output speed can overwhelm review capacity](ai-output-speed-can-overwhelm-review-capacity.md)
 - [Agent software factories need runnable, contextual, and verifiable primitives](agent-software-factories-need-runnable-contextual-and-verifiable-primitives.md)
 - [Wrap Agent Completion in an Automatic Deterministic Verification Gate](wrap-agent-completion-in-an-automatic-deterministic-verification-gate.md)
+- [A Harness Fix Becomes Overhead When the Model Outgrows It](a-harness-fix-becomes-overhead-when-the-model-outgrows-it.md)
+- [Decide the Agent Buy Boundary With Six Production Questions](decide-the-agent-buy-boundary-with-six-production-questions.md)
 
 Sources:
 - [Harness Engineering: How to Build Software When Humans Steer, Agents Execute - Ryan Lopopolo, OpenAI](../sources/20260417_am_oeAoUhew.md), 02:09-06:05
 - [Your coding agent doesn't always follow your rules — Talha Sheikh, Checkout.com](../sources/20260708_MpZzWMdmQCE.md), 08:22-08:51
+- [Anthropic's Applied AI team on the Evolution of Agentic Surfaces](../sources/20260811_K0X9QDRkIdg.md), 07:36-07:53, 30:11-31:03

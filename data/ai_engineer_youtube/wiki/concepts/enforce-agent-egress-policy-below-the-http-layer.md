@@ -18,6 +18,8 @@ Details:
 - **The proxy also holds the credentials.** Because it terminates and re-forms the connection, it can inject secrets so the agent "doesn't ever actually see secret values," across "cookies… Postgres… ClickHouse… all sorts of OAuth protocols… very complex things like AWS SigV4." This is the same no-credential-in-the-box property that [network-layer access control](move-agent-access-control-to-the-network-layer.md) achieves, reached from the protocol side instead of the identity side. ([Ryan Dahl](../sources/20260817_MkRYPFIMCSA.md), 10:00-10:42, 14:41-15:11)
 - **Deployment and the caveat the author volunteers.** It runs "over Tailscale or WireGuard," with agents inside a tailnet and the proxy acting as "a Tailscale exit node," and the dashboard reusing Tailscale identity "so that we don't have to layer on another authentication mechanism." The precondition is that "all of our stuff is off the internet." The cost is concentration: "Claw Patrol itself is holding all of these credentials to production systems. So you have to be very careful with it" — the chokepoint that makes the policy enforceable is also the highest-value target in the deployment. ([Ryan Dahl](../sources/20260817_MkRYPFIMCSA.md), 15:28-16:32)
 
+- **What the common alternative looks like, and exactly where Dahl's argument bites it.** Anthropic's managed agents attach an allowed-hosts egress policy to the environment definition — the demo sandbox runs "with the networking limited and allowed hosts only being the MCP server," described as "effectively stop[ping] Claude from doing things that you didn't intend." Host allowlisting is a real and worthwhile control, and attaching it to the environment rather than the agent means every session inherits it ([Model a Managed Agent as Agent, Environment, and Session](model-a-managed-agent-as-agent-environment-session.md)). But it decides *destination*, not *content*: an agent allowed to reach a host can send that host anything the protocol permits, which is precisely the gap this page argues has to be closed by a rule that parses the bytes. The two are layers, not alternatives — and note that neither vendor account has third-party validation behind it. ([Anthropic Applied AI](../sources/20260811_K0X9QDRkIdg.md), 18:30-19:20)
+
 Related topics:
 - [Security](../topics/security.md)
 - [Agents](../topics/agents.md)
@@ -29,6 +31,8 @@ Related concepts:
 - [Make the LLM Gateway the Agent Observability Chokepoint](make-the-llm-gateway-the-agent-observability-chokepoint.md)
 - [Restrict Agent Internet Access With Allowlists](restrict-agent-internet-access-with-allowlists.md)
 - [Run Must-Not-Fail Decisions in a Code Layer Above the Model](run-must-not-fail-decisions-in-code-above-the-model.md)
+- [Reach Private MCP Servers With Outbound-Only Tunnels](reach-private-mcp-servers-with-outbound-only-tunnels.md)
 
 Sources:
 - [Security Firewall for Agents — Ryan Dahl, Deno](../sources/20260817_MkRYPFIMCSA.md), 04:24-16:32
+- [Anthropic's Applied AI team on the Evolution of Agentic Surfaces](../sources/20260811_K0X9QDRkIdg.md), 18:30-19:20

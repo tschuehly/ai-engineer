@@ -13,7 +13,8 @@ Details:
 - The choice of starting point follows from the framing: research agents were used "because they have zero durable memory, and I wanted all the memory to come from the harness." A subject with no built-in memory isolates the harness's contribution; a subject that already has memory confounds it. (03:57-04:08)
 - Consequence for design questions. Once memory is a loop, the open questions are policies rather than schemas: "what are the type of memories that you want to store? How do you rank them? Like, how do you design your recall function?" plus the cross-session one — "what survives when you run this over and over and over and multiple sessions, multiple runs?" (10:02-10:35)
 - The landscape sits on a structure axis, not a vendor axis: solutions run "from simple file system retrieval to training memory models… a wide spectrum of solutions from less structural to completely structured," and memory itself decomposes further into short-term, long-term, and "different cognitive techniques" — with evaluation results themselves usable as stored memory. (10:54-11:22)
-- Provenance: single-author, unpublished work presented in a 13-minute talk, run on local quantized models; the framing is a mental model the speaker asks the audience to adopt, not a measured claim.
+- **The manage phase can be moved off the request path entirely.** Anthropic describes "dreaming": session transcripts plus the current memory state fed into "a periodic batch process" that extracts "new insights and new organized structures that essentially feed back and edit the memory as needed to make the next day's agent sessions automatically much more intelligent." This is the clearest example of why the three phases are worth separating — batching only makes sense for *manage*, and it buys three things a per-turn writer structurally cannot have: visibility across many sessions, freedom from latency pressure, and standing to decide an older memory is now wrong. Recorded with its unaddressed hazards (conflict resolution, rollback, cost, evaluation) as [rewrite agent memory in a periodic batch pass over session logs](rewrite-agent-memory-in-a-periodic-batch-pass-over-session-logs.md). ([Anthropic Applied AI](../sources/20260811_K0X9QDRkIdg.md), 27:28-28:44)
+- Provenance: single-author, unpublished work presented in a 13-minute talk, run on local quantized models; the framing is a mental model the speaker asks the audience to adopt, not a measured claim. The dreaming addition comes from a vendor talk where it appears on a coming-soon list with no evaluation attached.
 
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
@@ -27,6 +28,8 @@ Related concepts:
 - [Give Enterprise Agents Tiered Database Memory With an Escape Hatch](give-enterprise-agents-tiered-database-memory-with-an-escape-hatch.md)
 - [Budget Memory Between Update Cost and Serving Cost](budget-memory-between-update-cost-and-serving-cost.md)
 - [Offload Long-Horizon Agent State Outside the Context Window](offload-long-horizon-agent-state-outside-the-context-window.md)
+- [Rewrite Agent Memory in a Periodic Batch Pass Over Session Logs](rewrite-agent-memory-in-a-periodic-batch-pass-over-session-logs.md)
 
 Sources:
 - [Memory Harnesses for Long-Running Research Agents — Stefania Druga, Sakana.ai](../sources/20260812_R3-anFK1YM8.md), 03:36-04:28, 10:02-11:22
+- [Anthropic's Applied AI team on the Evolution of Agentic Surfaces](../sources/20260811_K0X9QDRkIdg.md), 27:28-28:44

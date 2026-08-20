@@ -21,6 +21,7 @@ Details:
 - Design consequence: build harness controls so they can be removed. Each one is an implicit bet about a model gap, and the audit log is what tells you whether that gap has closed.
 - **Tension with the runtime-first sources.** The wiki's browser-agent material argues that the interface, not the model, is the bottleneck and that rebuilding what the agent sees, does, and learns from lets a *cheaper* model succeed ([Fix the Browser-Agent Runtime Interface](fix-the-browser-agent-runtime-interface-before-reaching-for-a-better-model.md)). Both can hold and they are aimed at different readers: if you cannot change the weights, runtime engineering is the only lever you have; if you are training the model, the same runtime work is scaffolding you expect to delete. Which posture applies depends on whether the model is yours.
 - Related but different claim already in the wiki: [use stable agent harnesses as model-evolution boundaries](use-stable-agent-harnesses-as-model-evolution-boundaries.md) treats the harness as the durable part while models change underneath. Mishra's version is narrower — the *guardrail* layer is what shrinks, not the interface itself.
+- **A worked instance of the thinning, with the cost of not doing it.** Anthropic's Applied AI team reports adding context-reset machinery to compensate for Sonnet 4.5 "literally [getting] anxious as it approached its context window limit" and wrapping up tasks early, then finding that on Opus 4.5 — which "no longer exhibited context anxiety" — the same machinery "became dead weight. In fact, it became pure overhead, adding things like latency and causing issues with the cache being discarded incorrectly at times." That supplies the concrete answer to "what happens if we just leave the scaffolding up": a guardrail that fires on a schedule or a threshold keeps *executing*, so staleness is a running cost rather than dead code. Recorded separately as [a harness fix becomes overhead when the model outgrows it](a-harness-fix-becomes-overhead-when-the-model-outgrows-it.md). ([Anthropic Applied AI](../sources/20260811_K0X9QDRkIdg.md), 07:58-08:57)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -33,6 +34,8 @@ Related concepts:
 - [An Audit Trail Is a Chain of Evidence, Not a Developer Log](an-audit-trail-is-a-chain-of-evidence-not-a-developer-log.md)
 - [Train Computer-Use Agents in a Flight Simulator, Not on Exams](train-computer-use-agents-in-a-flight-simulator-not-on-exams.md)
 - [Product harnesses can become model customization environments](product-harnesses-can-become-model-customization-environments.md)
+- [A Harness Fix Becomes Overhead When the Model Outgrows It](a-harness-fix-becomes-overhead-when-the-model-outgrows-it.md)
 
 Sources:
 - [From RL to IRL — Gaurav Mishra, Amazon AGI Lab](../sources/20260814_Cc0_nyxROBA.md), 12:24-14:00, 16:49-17:12
+- [Anthropic's Applied AI team on the Evolution of Agentic Surfaces](../sources/20260811_K0X9QDRkIdg.md), 07:58-08:57
