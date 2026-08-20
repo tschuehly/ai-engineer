@@ -15,6 +15,7 @@ Details:
 - Practical reading: the boundary is a *cheap* test. Both halves of it came from one ablation on one machine, because the null result only requires running the task with the recall block turned off — the bottom rung of [the recall ladder](ablate-the-recall-policy-with-a-ladder-and-an-oracle.md).
 - This is the memory-specific case of a pattern the wiki has now measured three times on different layers: doing nothing beat every context-compaction preset in Towards AI's bake-off, and agentic knowledge-base browsing tied a tuned retriever at 50% worse latency. In all three, an intuitively sensible addition cost real money for no measured gain, and only a do-nothing control revealed it.
 - Caveats: no accuracy figures are given for either task, only the statement of equality; the models were local and quantized; and "fits in context" was assessed by construction of the corpus rather than by a reported token count.
+- **The harder version of the same test, which the harnesses also lost.** Continual Learning Bench 1.0 was built so the "does it fit?" escape hatch is closed by design: tasks must have headroom (not solvable by offline training), shared latent structure across instances, and a feedback signal, plus injected concept drift. On sequences built to require improvement, "vanilla in context learning where you just put the experience in the context and you don't do any of the fancy context management" still topped the leaderboard on reward and on both the reward-versus-cost and gain-versus-cost frontiers. That extends this page's claim past its stated boundary: the harness lost not only where the task fit, but on tasks explicitly constructed to reward accumulation. The limit the speaker names himself is horizon — "these were medium horizon tasks and they didn't push the frontiers of the in-context learning systems enough" — which is the same fit variable this page turns on, arriving as sequence length rather than corpus size. See [Plain In-Context Learning Topped a Continual-Learning Benchmark](plain-in-context-learning-topped-a-continual-learning-benchmark.md). ([Evaluating Continual Learning](../sources/20260812_iqloyWCGYQQ.md), 05:51-07:34, 13:52-14:52)
 
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
@@ -29,6 +30,9 @@ Related concepts:
 - [Do not treat long context as durable model memory](do-not-treat-long-context-as-durable-model-memory.md)
 - [Full History Recalls Details That Summaries Delete](full-history-recalls-details-that-summaries-delete.md)
 - [Offload Long-Horizon Agent State Outside the Context Window](offload-long-horizon-agent-state-outside-the-context-window.md)
+- [Plain In-Context Learning Topped a Continual-Learning Benchmark](plain-in-context-learning-topped-a-continual-learning-benchmark.md)
+- [A Learning Benchmark Needs Headroom, Shared Structure, and a Signal](a-learning-benchmark-needs-headroom-shared-structure-and-a-signal.md)
 
 Sources:
 - [Memory Harnesses for Long-Running Research Agents — Stefania Druga, Sakana.ai](../sources/20260812_R3-anFK1YM8.md), 05:29-07:33
+- [Beyond Static Intelligence: Evaluating Continual Learning — Parth Asawa, UC Berkeley](../sources/20260812_iqloyWCGYQQ.md), 05:51-07:34, 13:52-14:52

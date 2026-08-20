@@ -14,6 +14,7 @@ Details:
 - What this does *not* say. It is not an argument against ever skipping memory — the same study found that when the whole task fits in context, the harness adds only cost, and that determination was made by the *engineer* from the task shape, not by the model at run time. See [A Memory Harness Adds Only Cost When the Task Fits in Context](a-memory-harness-adds-only-cost-when-the-task-fits-in-context.md). Gate on a property of the workload you can establish offline; do not gate on the model's introspection.
 - Tension worth noting against a shipped consumer design: Claude's memory v1 was exactly a model-invoked design — no profile, two search tools, retrieval "on demand when it decides it needs to" — and both flagships now pair on-demand search with an always-on profile. The always-on half is what this result argues for; the on-demand half is not measured against a ranked alternative anywhere in the wiki. See [Pair a Running Profile With On-Demand Conversation Search](pair-a-running-profile-with-on-demand-conversation-search.md).
 - Caveats: no figures are given for the gate condition or the margin it lost by; the gate's prompt is not described; and the base models were local and quantized, which may make self-assessment weaker than on a frontier model.
+- **The read-side version caught in the act, from an independent benchmark.** A context-management system with a notepad wrote into its notes: "These seem to be cohort definitions from a different study schema that doesn't apply here" — and "the study schema did in fact apply here." The memory was present and correct; the model's own relevance judgment discarded it, inside a fluent justification that would survive casual trace review. That is this page's claim generalized one step: not only is the model's judgment of whether it *needs* memory weak, its judgment of whether supplied memory *applies* is weak in the same way. A practical review habit follows — audit the dismissals ("doesn't apply here," "from a different context") rather than the actions. See [Classify Continual-Learning Failures as Stability or Plasticity](classify-continual-learning-failures-as-stability-or-plasticity.md). ([Evaluating Continual Learning](../sources/20260812_iqloyWCGYQQ.md), 16:12-16:45)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -26,6 +27,8 @@ Related concepts:
 - [A Memory Harness Adds Only Cost When the Task Fits in Context](a-memory-harness-adds-only-cost-when-the-task-fits-in-context.md)
 - [Pair a Running Profile With On-Demand Conversation Search](pair-a-running-profile-with-on-demand-conversation-search.md)
 - [Ablate the Recall Policy With a Ladder and an Oracle](ablate-the-recall-policy-with-a-ladder-and-an-oracle.md)
+- [Classify Continual-Learning Failures as Stability or Plasticity](classify-continual-learning-failures-as-stability-or-plasticity.md)
 
 Sources:
 - [Memory Harnesses for Long-Running Research Agents — Stefania Druga, Sakana.ai](../sources/20260812_R3-anFK1YM8.md), 08:17-08:59, 09:36-10:02
+- [Beyond Static Intelligence: Evaluating Continual Learning — Parth Asawa, UC Berkeley](../sources/20260812_iqloyWCGYQQ.md), 16:12-16:45

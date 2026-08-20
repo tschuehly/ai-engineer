@@ -19,6 +19,8 @@ Details:
 
 - **What the same speaker moved on to, which sharpens what this page is actually recommending.** Eight months after the talk this page was built from, Morris's framing is no longer "context versus RAG versus weights" but "which scaling axis is even available." Against a private corpus you cannot make more data and will not train from scratch, so compute is the only lever left ([Only the Compute Axis Is Available on Your Own Corpus](only-the-compute-axis-is-available-on-your-own-corpus.md)). That reframes the choice this page opens: pasting the corpus into the window is not a weaker version of adapting the model, it is a decision to spend nothing on the one axis you have. The counterweight is that spending on it does not scale indefinitely either ([The Synthetic Data Wall](the-synthetic-data-wall-caps-every-define-then-train-loop.md)), and that the in-window techniques closest to "memory" — compressing the corpus into cache state — still "only appl[y] to things that are in context" ([KV Compaction Reaches Only What Already Fits in Context](kv-compaction-reaches-only-what-already-fits-in-context.md)). ([Engram](../sources/20260812_WiqDvX6isc4.md), 07:26-08:11, 13:00-13:10, 16:23-16:57)
 
+- **The strongest qualification yet, and it is about the alternatives rather than about long context.** On a benchmark built to require learning across instances, "vanilla in context learning where you just put the experience in the context and you don't do any of the fancy context management" topped the leaderboard on reward *and* on gain — that is, growing context learned more from experience than the memory and context-management systems it was compared against, at lower cost. This does not make the window durable memory; the same talk's whole argument is that state has to be carried deliberately, and simply growing the context is counted as one legitimate way to carry it. What it does is set the bar: an architecture that externalizes memory has to beat "keep appending" on a gain-versus-cost plot, and on medium-horizon tasks it did not. See [Plain In-Context Learning Topped a Continual-Learning Benchmark](plain-in-context-learning-topped-a-continual-learning-benchmark.md). ([Evaluating Continual Learning](../sources/20260812_iqloyWCGYQQ.md), 09:36-09:46, 13:52-14:52)
+
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
 - [Inference](../topics/inference.md)
@@ -34,6 +36,7 @@ Related concepts:
 - [A Memory Harness Adds Only Cost When the Task Fits in Context](a-memory-harness-adds-only-cost-when-the-task-fits-in-context.md)
 - [Only the Compute Axis Is Available on Your Own Corpus](only-the-compute-axis-is-available-on-your-own-corpus.md)
 - [KV Compaction Reaches Only What Already Fits in Context](kv-compaction-reaches-only-what-already-fits-in-context.md)
+- [Plain In-Context Learning Topped a Continual-Learning Benchmark](plain-in-context-learning-topped-a-continual-learning-benchmark.md)
 
 Sources:
 - [Jack Morris: Stuffing Context is not Memory, Updating Weights is](../sources/20251229_Jty4s9-Jb78.md), 02:35-07:51
@@ -41,3 +44,4 @@ Sources:
 - [Lessons from Studying Every Memory System — Shlok Khemani, Independent](../sources/20260812_5ZGyKWjQDr0.md), 12:08-13:37
 - [Memory Harnesses for Long-Running Research Agents — Stefania Druga, Sakana.ai](../sources/20260812_R3-anFK1YM8.md), 05:29-07:33
 - [Scaling Compute on Context — Jack Morris, Engram](../sources/20260812_WiqDvX6isc4.md), 07:26-08:11, 13:00-13:10, 16:23-16:57
+- [Beyond Static Intelligence: Evaluating Continual Learning — Parth Asawa, UC Berkeley](../sources/20260812_iqloyWCGYQQ.md), 09:36-09:46, 13:52-14:52

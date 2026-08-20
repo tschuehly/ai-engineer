@@ -14,6 +14,7 @@ Details:
 - Even better, draw the front using a use-case-specific quality metric (e.g. text rendering) rather than general capability — Pruna optimized Flux 2 / Flux models (with Black Forest Labs) to be far faster while staying on the text-rendering Pareto front (15:26-16:02).
 - Evaluating this way tends to surface "a lot of small performance models" that are very good for a specific use case rather than one large foundation model; this is what Pruna serves behind endpoints (fastest image models, video models running 1–5s) (16:02-16:27, 16:41-17:18).
 - This is a model-*selection* discipline across candidate models, distinct from tuning one deployment's inference (runtime, quantization, batching) to its application Pareto point, though the two compose.
+- **When the systems being compared accumulate state, the front needs a third axis, not a better quality metric.** A continual-learning benchmark reports "reward, gain, and cost… all measured on Pareto frontiers. There isn't one single metric that I think defines continual learning because we still care about the base model strength. We still care about the ability to learn and we still care about the cost." Reward is the quality axis this page already covers; [gain](measure-learning-as-gain-over-a-memory-wiped-rerun.md) is how much of that reward came from learning rather than from the base model. The two can disagree — a system can lead on reward while showing no improvement over its own memory-wiped rerun — and a two-axis plot cannot show that. ([Evaluating Continual Learning](../sources/20260812_iqloyWCGYQQ.md), 10:19-10:39, 08:05-09:16)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -24,6 +25,9 @@ Related concepts:
 - [Tune inference to the application Pareto point](tune-inference-to-the-application-pareto-point.md)
 - [Compare models by task, thinking budget, cost, and latency](compare-models-by-task-thinking-budget-cost-and-latency.md)
 - [Stack Additive Diffusion Optimizations for Real-Time Generation](stack-additive-diffusion-optimizations-for-real-time-generation.md)
+- [Measure Learning as Gain Over a Memory-Wiped Rerun](measure-learning-as-gain-over-a-memory-wiped-rerun.md)
+- [Plain In-Context Learning Topped a Continual-Learning Benchmark](plain-in-context-learning-topped-a-continual-learning-benchmark.md)
 
 Sources:
 - [20 days of compute vs 7 hours: rethinking what state-of-the-art means — Bertrand Charpentier, Pruna](../sources/20260601_hqHC6Z_lXyo.md), 00:46-01:26, 12:18-17:18
+- [Beyond Static Intelligence: Evaluating Continual Learning — Parth Asawa, UC Berkeley](../sources/20260812_iqloyWCGYQQ.md), 08:05-09:16, 10:19-10:39

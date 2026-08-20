@@ -1,6 +1,13 @@
 # Concept Index
 
 ## Agents
+- [Measure Learning as Gain Over a Memory-Wiped Rerun](../concepts/measure-learning-as-gain-over-a-memory-wiped-rerun.md) - run the system twice, once carrying state and once reset between instances, and report the difference; total reward alone confounds learning with base-model strength.
+- [Classify Continual-Learning Failures as Stability or Plasticity](../concepts/classify-continual-learning-failures-as-stability-or-plasticity.md) - oscillating back to a prior answer and fluently dismissing relevant memory are opposite failures with opposite fixes.
+- [Plain In-Context Learning Topped a Continual-Learning Benchmark](../concepts/plain-in-context-learning-topped-a-continual-learning-benchmark.md) - appending experience to the context beat memory and context-management systems on reward, gain, and cost.
+- [Inject Concept Drift to Test What a System Forgets](../concepts/inject-concept-drift-to-test-what-a-system-forgets.md) - invalidate part of what the system learned partway through, or the eval only ever tests accumulation.
+- [A Learning Benchmark Needs Headroom, Shared Structure, and a Signal](../concepts/a-learning-benchmark-needs-headroom-shared-structure-and-a-signal.md) - three task properties that must hold before any learning score means anything.
+- [Chained Independent Benchmarks Cannot Measure Learning](../concepts/chained-independent-benchmarks-cannot-measure-learning.md) - existing benchmark instances are designed to be independent, so a chained run has nothing to carry forward.
+- [Continual Learning Bolted Onto a Frozen Checkpoint Is a Sunk-Cost Choice](../concepts/continual-learning-bolted-onto-a-frozen-checkpoint-is-a-sunk-cost-choice.md) - every memory layer today sits on a model never designed to be a continual learner.
 - [Place a Continual-Learning Setup on Two Axes: Trace Policyness and Hint Provenance](../concepts/place-a-continual-learning-setup-on-the-trace-and-hint-axes.md) - two independent axes — how on-policy the trace is and where the hint comes from — turn "continual learning" into four concrete setups with different prerequisites.
 - [Distill Without a Golden Answer by Giving the Teacher Privileged Information](../concepts/distill-without-a-golden-answer-using-privileged-information.md) - make the teacher smarter than the student with information rather than size, so self-distillation works with no correct output and no rubric.
 - [Offline Hints on Offline Traces Need No Replayable Environment](../concepts/offline-hints-on-offline-traces-need-no-replayable-environment.md) - the cheapest continual-learning corner: a stored trace dump plus a static behavior prior, no environment and no rollouts.
@@ -794,6 +801,10 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Plain In-Context Learning Topped a Continual-Learning Benchmark](../concepts/plain-in-context-learning-topped-a-continual-learning-benchmark.md) - the growing-context baseline any context-management or memory layer has to beat, on tasks built to reward accumulation.
+- [Measure Learning as Gain Over a Memory-Wiped Rerun](../concepts/measure-learning-as-gain-over-a-memory-wiped-rerun.md) - one mechanism-agnostic instrument that compares notes, summaries, retrieval, and a raw growing window on the same plot.
+- [Inject Concept Drift to Test What a System Forgets](../concepts/inject-concept-drift-to-test-what-a-system-forgets.md) - a strategy that only accumulates is never tested on the harder half of the job: deciding what to stop believing.
+- [Classify Continual-Learning Failures as Stability or Plasticity](../concepts/classify-continual-learning-failures-as-stability-or-plasticity.md) - the two ways a context or memory strategy fails, sorted by trace signature before you tune anything.
 - [Only the Compute Axis Is Available on Your Own Corpus](../concepts/only-the-compute-axis-is-available-on-your-own-corpus.md) - what "scaling" can mean against private data, and why the next model release does not move it.
 - [KV Compaction Reaches Only What Already Fits in Context](../concepts/kv-compaction-reaches-only-what-already-fits-in-context.md) - compaction compresses what you had; it does not acquire what you did not, and it skips gradients.
 - [Treat the Corpus Boundary as Negotiable, Not Fixed](../concepts/treat-the-corpus-boundary-as-negotiable-not-fixed.md) - the fixed-corpus premise is a modeling assumption; enlarging D is a separate lever from training harder.
@@ -1433,6 +1444,13 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Measure Learning as Gain Over a Memory-Wiped Rerun](../concepts/measure-learning-as-gain-over-a-memory-wiped-rerun.md) - stateful reward minus stateless reward, so the score attributes improvement to the system rather than to the base model.
+- [A Learning Benchmark Needs Headroom, Shared Structure, and a Signal](../concepts/a-learning-benchmark-needs-headroom-shared-structure-and-a-signal.md) - headroom that offline training cannot close, structure shared across instances, and feedback in the environment.
+- [Chained Independent Benchmarks Cannot Measure Learning](../concepts/chained-independent-benchmarks-cannot-measure-learning.md) - why the cheapest proposed shortcut to a learning benchmark cannot work at all.
+- [Inject Concept Drift to Test What a System Forgets](../concepts/inject-concept-drift-to-test-what-a-system-forgets.md) - migrate the schema partway through, on purpose, and see what the system keeps believing.
+- [Plain In-Context Learning Topped a Continual-Learning Benchmark](../concepts/plain-in-context-learning-topped-a-continual-learning-benchmark.md) - the null option beat the elaborate machinery on reward, on gain, and on both cost frontiers.
+- [Classify Continual-Learning Failures as Stability or Plasticity](../concepts/classify-continual-learning-failures-as-stability-or-plasticity.md) - two trace signatures with opposite fixes, and the dismissals are the ones you have to grep for.
+- [Continual Learning Bolted Onto a Frozen Checkpoint Is a Sunk-Cost Choice](../concepts/continual-learning-bolted-onto-a-frozen-checkpoint-is-a-sunk-cost-choice.md) - a bound that may apply to every system on the leaderboard at once.
 - [Distill Without a Golden Answer by Giving the Teacher Privileged Information](../concepts/distill-without-a-golden-answer-using-privileged-information.md) - make the teacher smarter than the student with information rather than size, so self-distillation works with no correct output and no rubric.
 - [When Rewards and SFT Both Degrade the Base Model, Hint Against the Rollout](../concepts/hint-against-the-rollout-when-rewards-and-sft-degrade-the-base-model.md) - a correct, non-hackable format reward and SFT on correct traces both cost general coding ability; a rollout-specific hint took correctness ~15%→80%.
 - [Let a Judge Place the Hint and Distill Only the Steps Near It](../concepts/let-a-judge-place-the-hint-and-distill-only-nearby-steps.md) - the same advice applied uniformly barely helped; placement carried the result, and the learning signal decays with distance from the hint.
@@ -1774,6 +1792,8 @@
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 
 ## Models
+- [Continual Learning Bolted Onto a Frozen Checkpoint Is a Sunk-Cost Choice](../concepts/continual-learning-bolted-onto-a-frozen-checkpoint-is-a-sunk-cost-choice.md) - train-then-freeze is an inherited pipeline shape, not a requirement; the alternative is one phase of training for continual learning and deployment after.
+- [A Learning Benchmark Needs Headroom, Shared Structure, and a Signal](../concepts/a-learning-benchmark-needs-headroom-shared-structure-and-a-signal.md) - the headroom test separates a capability that needs online adaptation from one that needs more offline training.
 - [Place a Continual-Learning Setup on Two Axes: Trace Policyness and Hint Provenance](../concepts/place-a-continual-learning-setup-on-the-trace-and-hint-axes.md) - two independent axes — how on-policy the trace is and where the hint comes from — turn "continual learning" into four concrete setups with different prerequisites.
 - [Distill Without a Golden Answer by Giving the Teacher Privileged Information](../concepts/distill-without-a-golden-answer-using-privileged-information.md) - make the teacher smarter than the student with information rather than size, so self-distillation works with no correct output and no rubric.
 - [Offline Hints on Offline Traces Need No Replayable Environment](../concepts/offline-hints-on-offline-traces-need-no-replayable-environment.md) - the cheapest continual-learning corner: a stored trace dump plus a static behavior prior, no environment and no rollouts.

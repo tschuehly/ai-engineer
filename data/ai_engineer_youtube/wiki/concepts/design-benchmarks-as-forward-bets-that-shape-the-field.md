@@ -12,6 +12,7 @@ Details:
 - Thesis: a field-shaping benchmark carries a research question about a *subspace* of capabilities and a bet on the future. Terminal Bench bet on the CLI not only for coding agents but for general-purpose computer use — a bet that "turned out to be largely correct and consequential" as Claude and Codex teams built enterprise capabilities on CLI-based tools, and measuring those capabilities early helped accelerate the field. (13:23-14:34)
 - Roadmap: a great benchmark produces new roadmaps — it inspires new attacks on research problems and helps people ideate new methods. SWE-bench was a deliberately simple idea (leverage coding capability via real PRs) that spawned a whole family (Lite, Verified, Pro, Multilingual, Multimodal) and changed how the field thinks about coding agents, with many inspired benchmarks following. (14:36-15:55)
 - The motivating asymmetry that makes this matter: capability is outpacing measurement (ARC-AGI 3 launched with every task human-solvable but frontier models under 1%), so the path to safe, trustworthy agents depends on more benchmarks that *guide* where capability goes, not just record where it was. (01:52-04:11)
+- **A worked instance of the forward bet, where the thesis is that an entire capability is currently unmeasured.** Continual Learning Bench 1.0's premise is not that existing benchmarks are too easy but that they assume the capability away: independent per-task scoring tells the model "imagine that every time you do something, you completely forget your memory." The bet is stated in the same terms this page uses — "continual learning doesn't look like point capabilities. We need to measure it the right way to optimize for the right objective as a field because that's a history of how machine learning has progressed." That is the sharpest version of the forward-bet argument in this wiki: the benchmark is proposed as the thing that makes the field optimize for a different objective, and its contribution is a metric ([gain](measure-learning-as-gain-over-a-memory-wiped-rerun.md)) rather than a harder task set. ([Evaluating Continual Learning](../sources/20260812_iqloyWCGYQQ.md), 00:56-01:31, 19:53-20:04)
 - This is "the art" of benchmarking — the special-sauce differentiators of benchmarks that are real research contributions — distinct from "the science" of building a sound measuring stick. (12:55-13:23)
 
 Related topics:
@@ -22,6 +23,9 @@ Related concepts:
 - [Treat Researcher UX as a First-Class Benchmark Feature](treat-researcher-ux-as-a-first-class-benchmark-feature.md)
 - [Push Agent Benchmarks on Environment Complexity, Autonomy Horizon, and Output Complexity](push-agent-benchmarks-on-environment-autonomy-and-output-complexity.md)
 - [Update coding eval sets dynamically as model capability changes](update-coding-eval-sets-dynamically-as-model-capability-changes.md)
+- [Measure Learning as Gain Over a Memory-Wiped Rerun](measure-learning-as-gain-over-a-memory-wiped-rerun.md)
+- [A Learning Benchmark Needs Headroom, Shared Structure, and a Signal](a-learning-benchmark-needs-headroom-shared-structure-and-a-signal.md)
 
 Sources:
 - [The Art & Science of Benchmarking Agents — Vincent Chen, Snorkel AI](../sources/20260604_iNkFlCiij0U.md), 01:52-04:11, 12:55-15:55
+- [Beyond Static Intelligence: Evaluating Continual Learning — Parth Asawa, UC Berkeley](../sources/20260812_iqloyWCGYQQ.md), 00:56-01:31, 19:53-20:04

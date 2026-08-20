@@ -23,10 +23,14 @@ Details:
 - **One cell of this taxonomy needs two more axes, which is a result about the taxonomy's resolution rather than a correction to it.** Applied Compute's whole talk lives in a single cell — experience = agent traces, compression = distillation into parameters — and inside it distinguishes two independent dimensions that appear nowhere in Su's four: how on-policy the traces are, and whether the supervising hint is a static prior or constructed against the rollout just produced ([Place a Continual-Learning Setup on Two Axes](place-a-continual-learning-setup-on-the-trace-and-hint-axes.md)). Two systems can match on all four of Su's axes and still differ on both of Denton's, with different infrastructure prerequisites and, by Applied Compute's account, different ceilings. ([Applied Compute](../sources/20260812_ZTA0GwpAUak.md), 01:24-05:33)
 - The addition also puts a name to something the "experience" axis leaves implicit: experience alone is not supervision. A trace records what the policy did, so distilling from it requires a second input carrying what it should have done ([Distill Without a Golden Answer](distill-without-a-golden-answer-using-privileged-information.md)). Auditing a learning loop for "which axis did nobody choose deliberately" should include this one — where the corrective signal comes from — alongside Su's four. ([Applied Compute](../sources/20260812_ZTA0GwpAUak.md), 03:43-04:07, 09:49-10:36)
 
+- **A competing one-sentence definition from the same event, and the reason to keep both.** Parth Asawa defines continual learning as "sample efficient online learning that is stable over long horizons," which is not a taxonomy but a set of acceptance criteria — sample efficiency as a first-order requirement, online rather than batch, and stability held across a long sequence. He names the same two-sided difficulty this wiki files under stability and plasticity: "your ability to retain prior information without forgetting while simultaneously being able to update from new information and adjust your priors." The two definitions do different jobs and should not be merged. Su's four axes tell you whether two systems are comparable; Asawa's criteria tell you whether a given system qualifies at all, and his complaint about the existing literature is that it fails two of them — "they don't consider sample efficiency a first order requirement. They don't necessarily always measure learning." ([Evaluating Continual Learning](../sources/20260812_iqloyWCGYQQ.md), 01:51-02:11, 04:37-04:50)
+- **The taxonomy now has a measurement that is neutral across all four axes.** Whatever the experience, compression, structure, and use, [gain](measure-learning-as-gain-over-a-memory-wiped-rerun.md) is computed the same way: run the system with state and again with state wiped between instances, and take the difference. Asawa makes that neutrality explicit — maintaining state "might mean it's learning and updating its policy. It might mean that it's updating its notes. It might mean that it's just growing its context length." That is what lets a running profile, a skills directory, a distillation loop, and a KV-cache trick be scored against each other despite sharing almost no machinery, which is exactly the comparability problem this definition was written to expose. ([Evaluating Continual Learning](../sources/20260812_iqloyWCGYQQ.md), 09:22-10:19)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Context Engineering](../topics/context-engineering.md)
 - [Models](../topics/models.md)
+- [Evaluation](../topics/evaluation.md)
 
 Related concepts:
 - [Place a Continual-Learning Setup on Two Axes: Trace Policyness and Hint Provenance](place-a-continual-learning-setup-on-the-trace-and-hint-axes.md)
@@ -40,8 +44,11 @@ Related concepts:
 - [Budget Memory Between Update Cost and Serving Cost](budget-memory-between-update-cost-and-serving-cost.md)
 - [Seek the AlphaGo Property So Added Compute Keeps Buying Depth](seek-the-alphago-property-so-added-compute-keeps-buying-depth.md)
 - [The Synthetic Data Wall Caps Every Define-Then-Train Loop](the-synthetic-data-wall-caps-every-define-then-train-loop.md)
+- [Measure Learning as Gain Over a Memory-Wiped Rerun](measure-learning-as-gain-over-a-memory-wiped-rerun.md)
+- [Continual Learning Bolted Onto a Frozen Checkpoint Is a Sunk-Cost Choice](continual-learning-bolted-onto-a-frozen-checkpoint-is-a-sunk-cost-choice.md)
 
 Sources:
 - [Intelligence + Continual Learning = Expertise — Yu Su, NeoCognition](../sources/20260812_I6aiEf3aEFQ.md), 10:27-12:41
 - [Scaling Compute on Context — Jack Morris, Engram](../sources/20260812_WiqDvX6isc4.md), 04:33-05:05, 16:23-16:57, 17:35-18:05
 - [Bringing Continual Learning into Enterprises — Samuel Denton, Applied Compute](../sources/20260812_ZTA0GwpAUak.md), 01:24-05:33, 09:49-10:36
+- [Beyond Static Intelligence: Evaluating Continual Learning — Parth Asawa, UC Berkeley](../sources/20260812_iqloyWCGYQQ.md), 01:51-02:11, 04:37-04:50, 09:22-10:19
