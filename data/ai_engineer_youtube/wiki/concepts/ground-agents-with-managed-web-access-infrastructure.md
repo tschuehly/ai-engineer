@@ -18,6 +18,8 @@ Details:
 - Anti-detection at the browser layer is pre-recorded human mouse movement and human-like typing (slower, speeding up, even mistakes), so a low-cost model such as Claude Haiku is enough for browsing because the human-masking, not the model, defeats trackers; the provider runs ~150M IPs and can open ~1,000 remote browsers from one laptop on its servers. (20260607: 09:28-09:46, 23:47-24:24)
 - Legal posture, reinforced: the provider won lawsuits from Meta and X (Elon Musk) on the principle "public data is public data — it doesn't matter how you collect it or what you do with it," and the MCP is most valuable on the ~20% of domains behind Akamai/DataDome/Cloudflare, which are the "juiciest" (real estate, big e-commerce). (20260607: 18:57-19:18, 21:54-22:16)
 
+- **A four-item checklist for evaluating this layer as a platform**, from a browser-agent provider rather than a data provider: (1) *scale range* — "you can want to run one agent, but also thousands of agents," and serving both ends is the hard part; (2) *model agnosticism* — "as a developer, I don't want to be locked into a single model provider. As models continually change and get better, I want to be able to move my agent around"; (3) *agent identity* — "somebody who's going to go out and negotiate with the anti-bot providers of the world and say, we are the platform for trusted agents and we are the ones that can help broker the access," which is the commercial stand-in for the [certificate authority that does not exist](agent-trust-needs-a-certificate-issuer-not-a-captcha.md); and (4) *observability* — "screen recordings, logs, network activity… feed that back into your agent so it can self-improve." Add [render consistency](hold-the-browser-environment-constant-across-runs.md) as the precondition that makes items 1 and 4 meaningful. ([Paul Klein IV](../sources/20260814_GqoNrUz8hEU.md), 14:01-15:10)
+
 Related topics:
 - [Retrieval](../topics/retrieval.md)
 - [Tools](../topics/tools.md)
@@ -31,7 +33,10 @@ Related concepts:
 - [MCP tool surfaces need default context budgets](mcp-tool-surfaces-need-default-context-budgets.md)
 - [Expose Search Controls For Agentic Retrieval](expose-search-controls-for-agentic-retrieval.md)
 - [Let an Agent Build and Maintain Self-Healing Scrapers](let-agents-build-and-maintain-self-healing-scrapers.md)
+- [Hold the Browser Environment Constant Across Runs](hold-the-browser-environment-constant-across-runs.md)
+- [Agent Trust Needs a Certificate Issuer, Not a CAPTCHA](agent-trust-needs-a-certificate-issuer-not-a-captcha.md)
 
 Sources:
 - [Your Agent's Biggest Lie: "I Searched the Web" — Rafael Levi, Bright Data](../sources/20260617_btxGmN8RvNU.md), 04:56-09:44, 10:51-14:03
 - [From MCP to Scale: Pipelines That Build Themselves — Rafael Levi, Bright Data](../sources/20260607_zTZ0qunQXnM.md), 09:28-11:23, 16:03-24:24
+- [Bringing agents onto the world wide web — Paul Klein IV, Browserbase](../sources/20260814_GqoNrUz8hEU.md), 14:01-15:10

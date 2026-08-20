@@ -15,6 +15,8 @@ Details:
 - End-to-end shape: the concert demo bought tickets in three tool calls — `search concerts` (by name → returns info including an ID), `open concert page` (with the ID → loads a page exposing its own tools), and `purchase ticket` (quantity, section). Keep the UI in sync with each tool call so the user sees what is happening, and leave the final checkout for the user to do manually so they know they are spending real money. (15:16-17:43)
 - Status and tooling (as of the talk): experimental early preview, API changing weekly; enabled in Chrome 146+ (Chrome Canary recommended, else an experimental URL flag). The Model Context Tool Inspector is a Chrome Web Store extension that lists every tool found on a page and lets you prompt or call tools directly for debugging; a GitHub repo ships ~6-7 demos and an eval CLI for testing WebMCP tools on your own sites. (04:53-05:54, 17:46-20:01)
 
+- **The agent-side reading of the same feature**, from a browser-agent platform: "Chrome just added WebMCP… Websites can now publish MCP servers within their page that your agent can take advantage of without pre-installing the actual MCP. It can now issue tool calls to a website like submit the registration form in a way that's not only context-efficient, but is website approved and blessed." Two things in that sentence matter beyond the Chrome-team framing above — no client-side installation step (the tool surface arrives with the page, so an agent visiting an unfamiliar site gets it for free), and *blessed*, meaning the action is one the site chose to expose rather than one the agent inferred. Klein also treats WebMCP as a supply of pre-visit site knowledge, which is the same job as a [per-site skill](publish-per-site-skills-so-agents-do-not-rediscover-a-website.md): "your agent doesn't have to discover something in the first place if it's done it before." ([Paul Klein IV](../sources/20260814_GqoNrUz8hEU.md), 08:18-08:26, 10:46-11:25)
+
 Related topics:
 - [Tools](../topics/tools.md)
 - [Agents](../topics/agents.md)
@@ -25,6 +27,8 @@ Related concepts:
 - [Use Browser UI Control When APIs Are Absent](use-browser-ui-control-when-apis-are-absent.md)
 - [MCP applications ship UI and tools together](mcp-applications-ship-ui-and-tools-together.md)
 - [Group Agent Tools by Human-Facing Actions](group-agent-tools-by-human-facing-actions.md)
+- [Publish Per-Site Skills So Agents Do Not Rediscover a Website](publish-per-site-skills-so-agents-do-not-rediscover-a-website.md)
 
 Sources:
 - [The agent-ready web: Simplify user actions with WebMCP — Tara Agyemang, Google](../sources/20260611_ghJmWQCIHRM.md), 02:08-20:01
+- [Bringing agents onto the world wide web — Paul Klein IV, Browserbase](../sources/20260814_GqoNrUz8hEU.md), 08:18-08:26, 10:46-11:25

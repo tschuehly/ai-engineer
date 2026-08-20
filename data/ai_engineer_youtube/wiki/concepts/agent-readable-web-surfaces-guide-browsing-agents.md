@@ -15,6 +15,10 @@ Details:
 - A dedicated WebMCP talk from the Google Chrome team frames the same surface concretely: tools are page-scoped (each page advertises its own action set), they can be added declaratively by annotating existing HTML forms (the browser auto-generates the JSON schema) or imperatively via `registerTool` with an `execute` block of JavaScript, and a live demo bought concert tickets in three tool calls (search, open page, purchase). ([Agyemang/Google] 04:47-17:28)
 - Surface design has a prerequisite: solid web foundations (semantic HTML, accessibility, page performance, good UX) already make a site usable by agents and get it "halfway to agent-ready" before any explicit agent tooling is added. See [Make Web Foundations Agent-Ready Before Adopting WebMCP](make-web-foundations-agent-ready-before-adopting-webmcp.md). ([Agyemang/Google] 03:02-03:49)
 
+- What best-in-class agents actually consume today sits between the raw page and a published tool surface: "they're not just consuming the raw DOM and HTML of the page anymore. They're looking at subsections of that like the accessibility tree, the ARIA tags. These are labeled components of a page that can help show your agent where it needs to click and why." Accessibility markup is the one agent-readable surface that already exists on many sites without anyone adding it for agents — which makes ordinary accessibility work the cheapest agent-readability investment available. ([Paul Klein IV](../sources/20260814_GqoNrUz8hEU.md), 10:26-10:46)
+- The file-convention family is broader than `llms.txt` alone: "we've seen things like `llms.txt`, `skills.md`, `agents.md` all being published alongside our websites. We need to see more of that to build the agent-first web." The same source names the missing member of the family — a published convention for how an agent *signs up and logs in*, see [Design an Agent-First Signup and Login Flow](design-an-agent-first-signup-and-login-flow.md). ([Paul Klein IV](../sources/20260814_GqoNrUz8hEU.md), 11:05-11:45)
+- Caveat on adoption, from the same source: this half of the problem is the harder one because it is not self-serve. "We're not just engineering on our own systems anymore. We have to be evangelists to the web and to the broader world that, hey, you want agents to come to your website." Any design that depends on site cooperation excludes the sites least likely to cooperate — see [Computer Use Diffuses AI Into the Form-Filling Economy](computer-use-diffuses-ai-into-the-form-filling-economy.md). ([Paul Klein IV](../sources/20260814_GqoNrUz8hEU.md), 10:09-10:26)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Tools](../topics/tools.md)
@@ -25,7 +29,10 @@ Related concepts:
 - [Agent experience prioritizes APIs, CLIs, and MCP over dashboards](agent-experience-prioritizes-apis-clis-and-mcp-over-dashboards.md)
 - [MCP applications ship UI and tools together](mcp-applications-ship-ui-and-tools-together.md)
 - [Discover large API tool surfaces progressively](discover-large-api-tool-surfaces-progressively.md)
+- [Design an Agent-First Signup and Login Flow](design-an-agent-first-signup-and-login-flow.md)
+- [Publish Per-Site Skills So Agents Do Not Rediscover a Website](publish-per-site-skills-so-agents-do-not-rediscover-a-website.md)
 
 Sources:
 - [AI Didn't Kill the Web, It Moved in! - Olivier Leplus (AWS) & Yohan Lasorsa (Microsoft)](../sources/20260410_XZ0boOjtbNo.md), 36:03-42:57
 - [The agent-ready web: Simplify user actions with WebMCP — Tara Agyemang, Google](../sources/20260611_ghJmWQCIHRM.md), 03:02-17:28
+- [Bringing agents onto the world wide web — Paul Klein IV, Browserbase](../sources/20260814_GqoNrUz8hEU.md), 10:09-11:45

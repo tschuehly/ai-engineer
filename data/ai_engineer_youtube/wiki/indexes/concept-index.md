@@ -1,6 +1,11 @@
 # Concept Index
 
 ## Agents
+- [Pair Clicking With Generated Code and Replayed Network Requests](../concepts/pair-clicking-with-generated-code-and-replayed-network-requests.md) - the most reliable production browser agents discover the request in the browser and replay it from a script instead of driving pixels every run.
+- [Publish Per-Site Skills So Agents Do Not Rediscover a Website](../concepts/publish-per-site-skills-so-agents-do-not-rediscover-a-website.md) - fetch what a site supports before navigating, so exploration is a one-time cost rather than a per-run one.
+- [Hold the Browser Environment Constant Across Runs](../concepts/hold-the-browser-environment-constant-across-runs.md) - a page that renders mobile on one run and desktop on the next makes agent results unattributable.
+- [Design an Agent-First Signup and Login Flow](../concepts/design-an-agent-first-signup-and-login-flow.md) - authentication, not capability, is the gate on production computer use; agents will use your software either way.
+- [Agent Trust Needs a Certificate Issuer, Not a CAPTCHA](../concepts/agent-trust-needs-a-certificate-issuer-not-a-captcha.md) - good agents and bad bots cannot be separated from traffic signals, and no one has taken the certificate-authority role.
 - [Map RL Assumptions to Deployment Realities for Computer-Use Agents](../concepts/map-rl-assumptions-to-deployment-realities-for-computer-use-agents.md) - six assumptions that hold in a sandbox and fail on a real UI, each with the adaptation it forces.
 - [Train Computer-Use Agents in a Flight Simulator, Not on Exams](../concepts/train-computer-use-agents-in-a-flight-simulator-not-on-exams.md) - layout shift, slow loads, pop-ups, focus stealing, stale tabs, and adversarial lures belong in the training environment.
 - [Make Recovery a Native Model Action, Not an Infra Reset](../concepts/make-recovery-a-native-model-action-not-an-infra-reset.md) - resetting on infra errors trains an agent that has never recovered from anything; pass the error to the model instead.
@@ -753,6 +758,7 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Publish Per-Site Skills So Agents Do Not Rediscover a Website](../concepts/publish-per-site-skills-so-agents-do-not-rediscover-a-website.md) - compressed, site-keyed knowledge delivered before navigation beats dumping the page, on quality as well as cost.
 - [Capture the Coding Session as the Intent Record](../concepts/capture-the-coding-session-as-the-intent-record.md) - prompts and agent question/answer pairs carry decision history, so they are outputs of a coding run, not debugging noise.
 - [Prompt Caching Sets the Break-Even Bar for Compaction](../concepts/prompt-caching-sets-the-break-even-bar-for-compaction.md) - compaction invalidates the cache, so it must compress by more than the cache discount (up to 50x) before it saves anything.
 - [Benchmark Context-Management Presets Against a Do-Nothing Baseline](../concepts/benchmark-context-management-presets-against-a-do-nothing-baseline.md) - 11 presets on a production agent; untouched history beat every technique and the shipped defaults on recall, cost, and latency at once.
@@ -869,6 +875,7 @@
 
 ## Infrastructure
 
+- [Hold the Browser Environment Constant Across Runs](../concepts/hold-the-browser-environment-constant-across-runs.md) - render consistency is the base layer under the harness and the model, and the home Mac mini fails on both scale and compliance.
 - [Works in Dev, Passes Tests, and Survives Reality Are Three Different Systems](../concepts/works-in-dev-passes-tests-and-survives-reality-are-three-systems.md) - against an adversarial dependency such as the live web, a green test suite and a staging benchmark do not transfer to production.
 - [Define the Unit of Work Behind a Throughput Target](../concepts/define-the-unit-of-work-behind-a-throughput-target.md) - a requests-per-second target is meaningless until one request is defined, and 10x traffic changes the operating model rather than the server count.
 - [Realistic Traffic, Not Volume, Is the Hard Part of Load Testing](../concepts/realistic-traffic-not-volume-is-the-hard-part-of-load-testing.md) - synthetic load is easy, organic-looking load is not, and telemetry at scale becomes part of the load it measures.
@@ -1241,6 +1248,7 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Computer Use Diffuses AI Into the Form-Filling Economy](../concepts/computer-use-diffuses-ai-into-the-form-filling-economy.md) - the market is PHP forms in Singapore, South Africa, and Mexico, and its defining property — no cooperation from the site owner — dictates the architecture.
 - [AI Training-Data Requests Compound Into Pipelines](../concepts/ai-training-data-requests-compound-into-pipelines.md) - clients buy adaptation speed, not the first iteration; being early on a capability is not the same as being right.
 - [Hide an Agentic Pipeline Behind Templates and a Manual Editor](../concepts/package-agentic-pipelines-behind-templates-and-a-manual-editor.md) - delivering a multi-stage agent workflow to consumers can be harder than building it; remove the prompt instead of teaching it.
 - [Text-First AI Interfaces Exclude People Who Don't Think in Text](../concepts/text-first-interfaces-exclude-people-who-dont-think-in-text.md) - a chat-shaped product excludes visual thinkers, and cheap generated video is what makes the alternative affordable.
@@ -1904,6 +1912,8 @@
 - [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md)
 
 ## Security
+- [Agent Trust Needs a Certificate Issuer, Not a CAPTCHA](../concepts/agent-trust-needs-a-certificate-issuer-not-a-captcha.md) - CAPTCHAs answer "is this a human?" and signatures answer "who is calling?"; neither answers whether the agent should be let in.
+- [Design an Agent-First Signup and Login Flow](../concepts/design-an-agent-first-signup-and-login-flow.md) - password sharing, service accounts, and human approval are the three improvised paradigms, each with a named cost.
 - [Teach Calibrated Confidence So an Agent Knows When to Hand Off](../concepts/teach-calibrated-confidence-so-an-agent-knows-when-to-hand-off.md) - an agent that treats escalation as defeat will guess credentials against a live login form until the account locks.
 
 - [Chrome Stamps Every Input Trusted or Untrusted](../concepts/chrome-stamps-every-input-trusted-or-untrusted.md) - event-provenance checking is cheap and defeats only naive scripting, since a protocol-driven browser emits genuinely trusted events.
@@ -1951,6 +1961,8 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Publish Per-Site Skills So Agents Do Not Rediscover a Website](../concepts/publish-per-site-skills-so-agents-do-not-rediscover-a-website.md) - a skill keyed to an external website rather than a repository, delivered before the visit and applicable to CLI control too.
+- [Pair Clicking With Generated Code and Replayed Network Requests](../concepts/pair-clicking-with-generated-code-and-replayed-network-requests.md) - use the browser to find the request, run the script for the repeatable part, keep pixel control as the fallback.
 - [Let Deterministic Code Drive the Timed Loop and Call the Model Only for Perception](../concepts/let-code-drive-the-timed-loop-and-call-the-model-only-for-perception.md) - the CLI-versus-MCP tradeoff becomes decisive under a deadline, where per-turn model round trips are unaffordable.
 - [Expose the Domain's Vocabulary to Agents, Not the Platform's Primitives](../concepts/expose-domain-vocabulary-to-agents-not-platform-primitives.md) - name tools with the words that teach the domain rather than the ones that implement it.
 - [Make Agent Edits Declarative Tags Instead of Generated Code](../concepts/make-agent-edits-declarative-tags-instead-of-generated-code.md) - trade expressiveness for containment: no generated code, no sandbox, and a wrong call is a deletable tag.

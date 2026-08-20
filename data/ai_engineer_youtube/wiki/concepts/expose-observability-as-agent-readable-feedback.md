@@ -16,6 +16,8 @@ Details:
 - The platform also ships its own agent ("Alex") with access to all the trace data and hooks; an external coding agent or a user can ask "do you see any issues with my application?" and Alex plans and runs tasks, surfacing high latency and detected errors. (Arize, 13:53-15:23)
 - The end goal is to "automate you out of" the whole flywheel: the AI should already have context of the traces, create evals on the fly, and know when something changed and a new eval is needed — "you shouldn't even have to choose your evals." (Arize, 14:33-15:12)
 
+- Browser agents give the pattern a concrete signal list. Because the agent acts on someone else's site, the telemetry that matters is what a human debugger would want: "you need screen recordings, logs, network activity. And you need to feed that back into your agent so it can self-improve. Every agent you run should get better every single time." Browserbase's "Auto Browse" (as spoken) is described as this loop — "how is my agent able to improve itself over multiple loops" with observability data as the input. The precondition is that the substrate is pinned first, or the recordings capture variance the agent cannot act on ([Hold the Browser Environment Constant Across Runs](hold-the-browser-environment-constant-across-runs.md)). ([Paul Klein IV](../sources/20260814_GqoNrUz8hEU.md), 14:35-15:10)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -32,3 +34,4 @@ Related concepts:
 Sources:
 - [Platforms for Humans and Machines: Engineering for the Age of Agents - Juan Herreros Elorza](../sources/20260408_cCRO3ChaYhM.md), 11:14-12:20, 17:12-19:19
 - [LLM Observability, Evaluation, Experimentation Platform — Dat Ngo, Arize](../sources/20260607_JsCCrBF7F1g.md), 13:11-15:23
+- [Bringing agents onto the world wide web — Paul Klein IV, Browserbase](../sources/20260814_GqoNrUz8hEU.md), 14:35-15:10

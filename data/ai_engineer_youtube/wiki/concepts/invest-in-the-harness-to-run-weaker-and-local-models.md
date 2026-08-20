@@ -13,6 +13,8 @@ Details:
 - The democratization argument: if the model matters more, "we're dependent on a handful of companies who are able to build and train these models"; if a good harness can compensate for a weaker model, "you can build your own harnesses… any of us can do [that]… and we don't have to depend on paid models." ([Aditya Bhargava](../sources/20260707_2e9ANoOEn28.md), 02:47-03:12)
 - Corollary: an agent is a model + a harness, so "better harness equals better performance, especially for weaker models" — the same lever that Talha Sheikh reaches from the cost side (a tight verification harness lets you downshift to a Haiku or open-source model). ([Aditya Bhargava](../sources/20260707_2e9ANoOEn28.md), 31:29-31:52)
 
+- **A second source turns this into a routine measurement and a domain claim.** Paul Klein IV cites Factory compared against Claude Code "using the same model but using their kind of custom harness," and generalizes: "when you build a harness optimized for the domain that your agent is operating in, it can actually achieve above model results in that domain. Harness engineering is a real thing." He credits Cursor as the first company to do harness engineering on top of the original LLMs. Two useful qualifications come with it. He explicitly declines to settle whether custom harnesses beat models that were RL'd for the task — "it's not clear yet if custom harnesses are going to beat out durable RL'd models… we're not going to debate that today" — and the practice that survives either answer is the measurable one: "you should still have some sort of harness on your model and measure the performance versus baseline model." That is the per-team version of Harness Bench, and it is cheap: hold the model fixed, run the task with and without your harness, and keep the number. ([Paul Klein IV](../sources/20260814_GqoNrUz8hEU.md), 04:13-05:46)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Models](../topics/models.md)
@@ -26,3 +28,4 @@ Related concepts:
 
 Sources:
 - [What if the harness mattered more than the model? - Aditya Bhargava, Etsy](../sources/20260707_2e9ANoOEn28.md), 00:48-03:12, 31:29-31:52
+- [Bringing agents onto the world wide web — Paul Klein IV, Browserbase](../sources/20260814_GqoNrUz8hEU.md), 04:13-05:46
