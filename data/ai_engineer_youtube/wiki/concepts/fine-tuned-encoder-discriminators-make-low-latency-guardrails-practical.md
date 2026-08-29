@@ -13,6 +13,7 @@ Details:
 - Long sequence support is part of the safety story: short-sequence models may force truncation and miss attack signals in MCP tool descriptions or agentic plans, while the talk cites up to 8192 tokens for ModernBERT. 23:06-23:55
 - The fine-tuning walkthrough uses Inject Guard, described as 75,000 labeled examples from 20 attack types, and recommends starting with ModernBERT base before moving to large for higher accuracy. 35:07-35:44
 - The reported production-shape result is around 35-40 ms latency, with FlashAttention recommended to realize the gains from alternating attention and with roughly 70% memory savings reported in the demo. 35:37-36:02
+- **A 35 ms classifier is still a service that can be down, slow, or in the wrong position.** Manuja's operational frame adds three things this latency comparison does not settle. The check needs its own timeout and time budget, because "your request should never be bound by your guardrail timing. It should always be the LLM that is the rate determining step" — a fast median does not bound a tail. It needs a fail-open or fail-closed decision made in advance, since the discriminator service can be unavailable entirely. And its *placement* changes what its latency costs: a serial pre-hook is "probably the safest, but it does add serial latency," while running concurrently with generation hides the cost but "streaming wouldn't work well here with parallel." ([Manuja](../sources/20260828_zrZ1amZBSPw.md), 10:12-12:47)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -23,6 +24,8 @@ Related concepts:
 - [Use small models as context-management tools before agent reasoning](use-small-models-as-context-management-tools-before-agent-reasoning.md)
 - [Calibrate LLM judges like binary classifiers](calibrate-llm-judges-like-binary-classifiers.md)
 - [Interleave local and global attention to trade context for efficiency](interleave-local-and-global-attention-to-trade-context-for-efficiency.md)
+- [Treat Guardrails as a Failable Dependency With Its Own Time Budget](treat-guardrails-as-a-failable-dependency-with-a-time-budget.md)
 
 Sources:
 - [$1 AI Guardrails: The Unreasonable Effectiveness of Finetuned ModernBERTs - Diego Carpentero](../sources/20260416_YZHPEkfy2kc.md), 17:50-19:27, 23:06-23:55, 35:07-36:02
+- [Productionizing LLM Gateways: Architecture, Tradeoffs and Hard Lessons — Kanish Manuja, Twilio](../sources/20260828_zrZ1amZBSPw.md), 10:12-12:47

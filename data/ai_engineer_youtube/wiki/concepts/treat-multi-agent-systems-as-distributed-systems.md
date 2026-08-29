@@ -13,6 +13,7 @@ Details:
 - Multi-agent production work should include distributed-systems practices such as explicit coordination patterns, state lineage, handoff contracts, failure isolation, retries, and observability.
 - Meta Superintelligence Labs (Nishant Gupta) reaches the same conclusion from the infrastructure side: "AI agents should be treated as distributed systems… models are stochastic, infrastructure must be deterministic." Once multiple agents share state, familiar distributed-systems issues appear (stale reads, conflicting updates, context drift, inconsistent views), made worse when memory itself is probabilistic and retrieval-based — so "many multi-agent failures are actually consistency failures masquerading as reasoning failures," a direct generalization of the stale-cache credit-decisioning example above.
 - The reliability primitives map one-to-one from distributed systems onto agents rather than being invented anew: circuit breakers → tool isolation, rate limits → agent limits, retries → controlled recovery, resource quotas → cost governance, observability → agent tracing.
+- **The toolkit transfers, but not unchanged — and the mismatches are specific.** Manuja works through the standard unreliable-dependency remedy for LLM calls and rejects it in three parts: retries "eat into your latency budget really fast" because the calls are slow, blind retries "multiply your cost" because they are expensive, and a circuit breaker is the wrong instrument when "you have another perfectly fine model provider to route to." What survives is the *shape* of distributed-systems thinking — cool-downs, fleet-wide versus per-instance failure state, bounded queues, load shedding, timeouts — with the specific policies re-derived from the properties of model calls rather than copied from a microservice client. ([Manuja](../sources/20260828_zrZ1amZBSPw.md), 02:03-04:35)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -25,7 +26,9 @@ Related concepts:
 - [Wrap agent calls with circuit breakers and compensation](wrap-agent-calls-with-circuit-breakers-and-compensation.md)
 - [Build an Agentic Control Plane So the Model Proposes and the Platform Decides](build-an-agentic-control-plane.md)
 - [Contain Retry Amplification Before It Becomes a Compute Incident](contain-retry-amplification-in-agent-loops.md)
+- [Prefer Per-Request Fallback to Retries and Circuit Breakers for LLM Calls](prefer-per-request-fallback-to-retries-and-circuit-breakers-for-llm-calls.md)
 
 Sources:
 - [From Chaos to Choreography: Multi-Agent Orchestration Patterns That Actually Work - Sandipan Bhaumik](../sources/20260408_2czYyrTzILg.md), 01:32-05:28
 - [Deterministic Infra for Non-Deterministic AI Agents - Nishant Gupta, Meta Superintelligence Labs](../sources/20260629_APh1Vx0oLmQ.md), 04:23-06:26
+- [Productionizing LLM Gateways: Architecture, Tradeoffs and Hard Lessons — Kanish Manuja, Twilio](../sources/20260828_zrZ1amZBSPw.md), 02:03-04:35

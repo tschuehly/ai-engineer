@@ -14,6 +14,7 @@ Details:
 - **The inverse of the Gemini failure: fewer steps can mean skipped verification, not efficiency.** Cline ran GLM and Opus on one real bug in their own repository. Opus "finished faster. It used half as many tool calls" — and "left a bunch of type errors and it broke the production build," while GLM spent twice the tokens, "cleaned up dead code and verified that the build compiled before completing." Every operational metric on that run ranked the wrong model first: fewer tool calls, lower latency, fewer tokens. The reason is that in an agentic loop the extra steps *are* the verification, so step count penalizes exactly the behavior you want, and cost and step count also decouple — GLM's double token spend cost half as much in dollars. Rank on delivered correctness (does the build still compile, do the types check) and read the operational metrics only within the set of runs that passed. ([Rizwan](../sources/20260807_CoEIs6Xm8m8.md), 09:28-10:17)
 
 - **A negative turn budget, motivated by a deadline rather than by cost.** "We also realized that we need to have guardrails for the agent. So we need to tell the agent what not to waste turns doing. Like code review is something that has to happen in like a specific time span. And then if it starts spending time doing things that it should not be doing, uh leads to a bad quality code review." Two things worth separating: the constraint is latency, because a review that arrives after the author has moved on is worthless regardless of content; and the instrument is a prohibition list rather than a step cap, which fails differently — a step cap truncates the good path along with the bad, while a prohibition list only helps for the wasteful behaviours you already know to name. Uber reports no measurement of either. ([Bond and Ketkar](../sources/20260828_EL123UNokkI.md), 07:01-07:20)
+- **The latency axis needs a unit before it means anything.** Manuja's objection to service-wide numbers applies directly to loop measurement: when a loop mixes embeddings, classification, chat, and reasoning calls, an aggregate latency "doesn't make sense. It's a lie. You should be tracking your P99 per model per route," because "a reasoning model's normal is actually a chat model's outage." A loop whose slow steps are all reasoning calls and one whose slow steps are chat calls can share a mean and need entirely different fixes. ([Manuja](../sources/20260828_zrZ1amZBSPw.md), 06:54-08:16)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -27,9 +28,11 @@ Related concepts:
 - [Run Agentic Coding Evals as an Infrastructure-Reliability Problem](run-agentic-coding-evals-as-an-infrastructure-problem.md)
 - [Verification Guardrails Let You Downshift to Cheaper Models](verification-guardrails-let-you-downshift-to-cheaper-models.md)
 - [Comment Volume Is a Property of the Review Pipeline, Not the Model](comment-volume-is-a-property-of-the-review-pipeline.md)
+- [Track Latency and Timeouts Per Model Class Per Route](track-latency-and-timeouts-per-model-class-per-route.md)
 
 Sources:
 - [From Stateless Nightmares to Durable Agents - Samuel Colvin, Pydantic](../sources/20251124_flf_IKnFYnE.md), 02:55-03:24, 11:05-12:20
 - [SWE-rebench: Lessons from Evaluating Coding Agents — Ibragim Badertdinov, Nebius](../sources/20260604_wcUJWP6WpGM.md), 12:53-13:27
 - [Open Source Is Dead. Long Live Open Source. — Saoud Rizwan, Cline](../sources/20260807_CoEIs6Xm8m8.md), 09:28-10:17
 - [Building uReview, Uber's Multi-Agent Code Review Engine — Will Bond & Ameya Ketkar, Uber](../sources/20260828_EL123UNokkI.md), 07:01-07:20
+- [Productionizing LLM Gateways: Architecture, Tradeoffs and Hard Lessons — Kanish Manuja, Twilio](../sources/20260828_zrZ1amZBSPw.md), 06:54-08:16

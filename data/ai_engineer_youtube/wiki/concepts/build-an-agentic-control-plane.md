@@ -13,6 +13,7 @@ Details:
 - The control plane is the emerging analog to Kubernetes (for containers) and service meshes (for microservices) — an "operating system for autonomous AI" that owns scheduling, memory coordination, policy enforcement, evaluation, monitoring, and workload routing. Organizations that build this layer gain a durable competitive advantage.
 - The stance reflects a phase shift: prompts were the differentiator, then models, and both are commoditizing; "the next frontier is infrastructure," and "the organization that wins is not necessarily the one with the best prompts — they'll have the most reliable systems."
 - This is the architecture home for the topic's other reliability primitives: layered defense-in-depth safety (prompt controls, tool permissions, policy validation, human approval, audit), humans as permanent exception handlers who get attention allocated where it adds the most value, and multi-dimensional observability that traces planning decisions, tool calls, memory lookups, and state transitions to explain *why*, not just *what*, happened.
+- **The control plane is in the request path, so it needs its own failure policy.** Validators, policy engines, and execution gateways are services that can be down or slow, and Manuja's framing for guardrails applies unchanged: "just like another service that can go down… you need to choose do you fail open or do you fail close," with the default set to "the worst case that you can live with," a time budget so the model rather than the check is "the rate determining step," and fallbacks of its own ("secondary provider, secondary checks, cache decisions"). A control plane that has not decided what it does when its own policy engine is unreachable has decided by omission. ([Manuja](../sources/20260828_zrZ1amZBSPw.md), 10:12-12:02)
 
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
@@ -24,6 +25,8 @@ Related concepts:
 - [Keep Human Review on High-Risk Agent Operations](keep-human-review-on-high-risk-agent-operations.md)
 - [LLM guardrails need checkpoints at every untrusted boundary](llm-guardrails-need-checkpoints-at-every-untrusted-boundary.md)
 - [Make the LLM Gateway the Agent Observability Chokepoint](make-the-llm-gateway-the-agent-observability-chokepoint.md)
+- [Treat Guardrails as a Failable Dependency With Its Own Time Budget](treat-guardrails-as-a-failable-dependency-with-a-time-budget.md)
 
 Sources:
 - [Deterministic Infra for Non-Deterministic AI Agents - Nishant Gupta, Meta Superintelligence Labs](../sources/20260629_APh1Vx0oLmQ.md), 03:08-03:55
+- [Productionizing LLM Gateways: Architecture, Tradeoffs and Hard Lessons — Kanish Manuja, Twilio](../sources/20260828_zrZ1amZBSPw.md), 10:12-12:02

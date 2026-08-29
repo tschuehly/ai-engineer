@@ -12,6 +12,7 @@ Details:
 - Async handoff for heavy work: when a larger chunk of work is needed, the fast real-time model sends an asynchronous message to a larger model that can think, then the soft-realtime model re-interleaves that result into its ongoing responses — keeping the interactive loop fast while still doing deep work. 09:57-10:14
 - Eager short-interval inference: traditional voice apps wait for ~1 s of silence to confirm the user stopped, blowing the latency budget; instead fire inference every 1-2 s as the person talks, even when unsure they've finished, so output keeps pace with a multi-clause spoken request ("change this, and also list that"). 10:30-11:35
 - Stable prefix-caching regimen: lean into platform prefix caching (up to ~90% cheaper/faster) by keeping the first ~90% of the context window identical from request to request and varying only the final ~10%, and minimize output tokens for fast, affordable turns. The same principle applies whether the agent is long-running or frequently-running. 11:35-12:40
+- **Hedging is the lever for the tail these techniques do not reach.** Once the per-route budget exists, "you can fire another request if your primary request actually consumed let's say P90 of your latency budget. This can really hedge the P99 tail." It buys tail latency with duplicate spend rather than with model choice or caching, which makes it complementary to everything on this page — and it presupposes a budget defined per model per route, since a gateway-wide number would fire the hedge at the wrong moment for every route. ([Manuja](../sources/20260828_zrZ1amZBSPw.md), 07:15-07:40, 09:24-09:43)
 
 Related topics:
 - [Inference](../topics/inference.md)
@@ -21,6 +22,8 @@ Related concepts:
 - [Relax the latency budget by choosing voice-in, visuals-out over voice-out](relax-the-latency-budget-with-voice-in-visuals-out.md)
 - [Size the Voice-Agent LLM to the Time-to-First-Token Budget](size-the-voice-agent-llm-to-the-time-to-first-token-budget.md)
 - [KV cache hit rate is a production agent SLO](kv-cache-hit-rate-is-a-production-agent-slo.md)
+- [Track Latency and Timeouts Per Model Class Per Route](track-latency-and-timeouts-per-model-class-per-route.md)
 
 Sources:
 - [Voice In, Visuals Out: The Agony and the Ecstasy - Allen Pike, Forestwalk Labs](../sources/20260628_65X0pQ6Lmbg.md), 08:55-12:40
+- [Productionizing LLM Gateways: Architecture, Tradeoffs and Hard Lessons — Kanish Manuja, Twilio](../sources/20260828_zrZ1amZBSPw.md), 07:15-07:40, 09:24-09:43

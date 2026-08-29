@@ -15,6 +15,7 @@ Details:
 - The loop exit, not the middle, is the natural gate: "then we take the answer, and this is an opportunity for you to have a human in the loop potentially. You check the confidence. If it looks good, you keep it. If you don't, then you escalate to a human." Placing the check there means it runs once per completed task rather than once per tool call, which is the difference between a gate and [approval fatigue](escalate-risky-actions-to-a-read-only-review-subagent.md). ([Coyle](../sources/20260808_Z-c11pV_uvU.md), 10:36-10:49)
 - The framing generalizes past one API: the stop reason is treated as a standing diagnostic channel — "every time something happens, there's a stop reason and you need to take a look at that because that can give you a lot of information about what's going on" — and it is listed as exam material under agentic loops and control, which is [evidence about what breaks in production](read-a-certification-blueprint-as-a-map-of-production-anti-patterns.md) rather than about one vendor's SDK. ([Coyle](../sources/20260808_Z-c11pV_uvU.md), 04:47-05:05)
 - **Limits.** This is a ~20-minute conference talk built around exam preparation, with code shown on slides the transcript does not capture, no enumeration of the full stop-reason set, no handling recipe for the out-of-tokens case beyond "take action," and no measured failure rate for loops that skip the check. The claim is an architectural argument, not a study.
+- **Stop reasons are also where cross-provider fallback quietly breaks.** Manuja lists them among the residual incompatibilities behind an ostensibly common API: "while the industry is converging on an OpenAI API compatible format… there are still nuances… differences in your tool calling schemas, token limits, stop reasons and what have you." Code that branches on the stop reason — which is exactly what this page argues for — is therefore code that must be normalized per provider before a fallback path can be trusted, or the failover succeeds at the transport level and produces a mis-handled response at the application level. ([Manuja](../sources/20260828_zrZ1amZBSPw.md), 04:35-05:07)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -27,6 +28,8 @@ Related concepts:
 - [Route High-Impact Agent Actions Through Explicit Human Approval Gates](route-high-impact-agent-actions-through-explicit-human-approval-gates.md)
 - [Contain retry amplification in agent loops](contain-retry-amplification-in-agent-loops.md)
 - [Read a Certification Blueprint as a Map of Production Anti-Patterns](read-a-certification-blueprint-as-a-map-of-production-anti-patterns.md)
+- [Your Fallback Provider Is Under-Tested and Under-Provisioned](your-fallback-provider-is-under-tested-and-under-provisioned.md)
 
 Sources:
 - [Anthropic's CCA Exam as a Field-Guide for Agentic Engineering — Frank Coyle, UC Berkeley](../sources/20260808_Z-c11pV_uvU.md), 04:47-05:05, 08:03-11:12
+- [Productionizing LLM Gateways: Architecture, Tradeoffs and Hard Lessons — Kanish Manuja, Twilio](../sources/20260828_zrZ1amZBSPw.md), 04:35-05:07

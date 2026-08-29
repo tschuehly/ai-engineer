@@ -12,6 +12,7 @@ Details:
 - Circuit breakers prevent one agent failure from cascading into the entire workflow; fallback behavior can include reduced functionality, cached results, human alerts, or retrying later.
 - Saga-style compensation gives each agent an `execute` path and a `compensate` path. If a later agent fails, the orchestrator walks backward through successful agents and calls their compensation methods in reverse order.
 - Compensation should be planned as part of the workflow contract, especially in workflows where partial recommendations, cached data, or side effects must be undone.
+- **The breaker's core assumption fails for model calls, because the dependency is replaceable.** Manuja keeps the pattern but demotes it: "tripping over a circuit breaker when you have another perfectly fine model provider to route to doesn't make sense. You should use the second model provider." A breaker exists to stop hammering a dependency you cannot substitute; with two providers behind a gateway, the right response to a failed call is a per-request fallback to provider B, and the breaker's remaining job is the slower one of parking a persistently failing primary — "take it out of the load balancer or your request path and put it in a cool down and then after a few minutes have passed, try putting that back again." He adds one design choice this page does not raise: whether the failure counts live in memory per instance or in shared fleet-wide state, where "if you want quick failovers, then fleetwide helps," but local counters mean the threshold silently changes meaning "whenever you change your deployment size." ([Manuja](../sources/20260828_zrZ1amZBSPw.md), 02:24-04:35)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -22,6 +23,8 @@ Related concepts:
 - [Treat multi-agent systems as distributed systems](treat-multi-agent-systems-as-distributed-systems.md)
 - [Choose choreography or orchestration by complexity and autonomy](choose-choreography-or-orchestration-by-complexity-and-autonomy.md)
 - [Use immutable versioned state for agent handoffs](use-immutable-versioned-state-for-agent-handoffs.md)
+- [Prefer Per-Request Fallback to Retries and Circuit Breakers for LLM Calls](prefer-per-request-fallback-to-retries-and-circuit-breakers-for-llm-calls.md)
 
 Sources:
 - [From Chaos to Choreography: Multi-Agent Orchestration Patterns That Actually Work - Sandipan Bhaumik](../sources/20260408_2czYyrTzILg.md), 16:36-20:56
+- [Productionizing LLM Gateways: Architecture, Tradeoffs and Hard Lessons — Kanish Manuja, Twilio](../sources/20260828_zrZ1amZBSPw.md), 02:24-04:35

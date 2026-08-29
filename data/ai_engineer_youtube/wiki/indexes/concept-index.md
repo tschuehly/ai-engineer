@@ -1065,6 +1065,13 @@
 - [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md)
 
 ## Infrastructure
+- [Streaming Forecloses the Provider Fallback](../concepts/streaming-forecloses-the-provider-fallback.md) - the first token commits you to a provider, which is what the generic "something went wrong" message actually costs.
+- [Track Latency and Timeouts Per Model Class Per Route](../concepts/track-latency-and-timeouts-per-model-class-per-route.md) - aggregate latency over mixed workloads is a lie, and a missing timeout is the named number-one cause of silent outages.
+- [Treat Guardrails as a Failable Dependency With Its Own Time Budget](../concepts/treat-guardrails-as-a-failable-dependency-with-a-time-budget.md) - guardrails are services that go down, so fail-open versus fail-closed, timeouts, fallbacks, and placement are all decisions to take in advance.
+- [An LLM Gateway Cannot Maximize Availability, Latency, Guardrails, and Cost at Once](../concepts/an-llm-gateway-cannot-maximize-availability-latency-guardrails-and-cost.md) - degradation forces the four apart, and a gateway's job is to expose the choice to callers rather than hard-code one answer.
+- [Prefer Per-Request Fallback to Retries and Circuit Breakers for LLM Calls](../concepts/prefer-per-request-fallback-to-retries-and-circuit-breakers-for-llm-calls.md) - three reasons the standard unreliable-dependency remedy misfires on slow, expensive, substitutable model calls.
+- [Your Fallback Provider Is Under-Tested and Under-Provisioned](../concepts/your-fallback-provider-is-under-tested-and-under-provisioned.md) - the backup absorbs the whole load at the worst moment, so it needs more headroom than the primary and a normalization layer for API differences.
+- [Decentralize the Gateway, Centralize the Governance](../concepts/decentralize-the-gateway-centralize-the-governance.md) - a company-wide gateway is a single point of failure, and the requirement behind it is usually cost tracking and rate limits.
 - [Gate Releases on Agreement Between an Executable Spec and the Shipping Code](../concepts/gate-releases-on-agreement-between-an-executable-spec-and-the-shipping-code.md) - a shipped system that keeps an executable Lean specification beside its Rust production code and blocks releases on their nightly agreement.
 - [Pick a Verification Route by Which Translation You Can Afford](../concepts/pick-a-verification-route-by-which-translation-you-can-afford.md) - where the translation into the prover's logic happens — your rewrite, the verifier, the compiler IR, or a shared verification IR — decides how much of your stack has to move.
 - [Ship Stable APIs and Let Users Vibe-Code the Interface](../concepts/ship-stable-apis-and-let-users-vibe-code-the-interface.md) - the platform team's product becomes the endpoint rather than the screen, with API stability as the load-bearing promise.
@@ -1350,6 +1357,11 @@
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 
 ## Inference
+- [An LLM Gateway Cannot Maximize Availability, Latency, Guardrails, and Cost at Once](../concepts/an-llm-gateway-cannot-maximize-availability-latency-guardrails-and-cost.md) - degradation forces the four apart, and a gateway's job is to expose the choice to callers rather than hard-code one answer.
+- [Prefer Per-Request Fallback to Retries and Circuit Breakers for LLM Calls](../concepts/prefer-per-request-fallback-to-retries-and-circuit-breakers-for-llm-calls.md) - three reasons the standard unreliable-dependency remedy misfires on slow, expensive, substitutable model calls.
+- [Your Fallback Provider Is Under-Tested and Under-Provisioned](../concepts/your-fallback-provider-is-under-tested-and-under-provisioned.md) - the backup absorbs the whole load at the worst moment, so it needs more headroom than the primary and a normalization layer for API differences.
+- [Streaming Forecloses the Provider Fallback](../concepts/streaming-forecloses-the-provider-fallback.md) - the first token commits you to a provider, which is what the generic "something went wrong" message actually costs.
+- [Track Latency and Timeouts Per Model Class Per Route](../concepts/track-latency-and-timeouts-per-model-class-per-route.md) - aggregate latency over mixed workloads is a lie, and a missing timeout is the named number-one cause of silent outages.
 - [Fast Inference Moves the Agent Bottleneck to the Network](../concepts/fast-inference-moves-the-agent-bottleneck-to-the-network.md) - the point at which faster token generation stops improving an agent's wall clock.
 - [The Rollout Serving Island Is the Movable Unit of an RL Run](../concepts/the-rollout-serving-island-is-the-movable-unit-of-an-rl-run.md) - the largest scope over which a serving group still needs fast interconnect, and therefore what can move.
 - [Lower Serving Precision Shrinks the Weight-Sync Patch](../concepts/lower-serving-precision-shrinks-the-weight-sync-patch.md) - a third axis for a quantization decision, beside memory bandwidth and quality.
@@ -2321,6 +2333,7 @@
 - [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md)
 
 ## Security
+- [Treat Guardrails as a Failable Dependency With Its Own Time Budget](../concepts/treat-guardrails-as-a-failable-dependency-with-a-time-budget.md) - guardrails are services that go down, so fail-open versus fail-closed, timeouts, fallbacks, and placement are all decisions to take in advance.
 - [An AI-Infrastructure Package Is a High-Yield Credential Target](../concepts/an-ai-infrastructure-package-is-a-high-yield-credential-target.md) - a backdoored release of a 3.5M-downloads-a-day LLM proxy, found only because the payload crashed an editor.
 - [Bound What an Unattended Automation May Emit, Including Emitting Nothing](../concepts/bound-what-an-unattended-automation-may-emit.md) - an output allow-list with cardinality caps turns a prompt-injected flood into one artifact, and closes the availability hole of manufactured noise.
 - [A Developer Laptop Is an Ambient-Credential Surface](../concepts/a-developer-laptop-is-an-ambient-credential-surface.md) - least privilege fails on a workstation because nobody enumerated what is on it, and the dangerous agent is the maximally obedient one.
@@ -2378,6 +2391,7 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Decentralize the Gateway, Centralize the Governance](../concepts/decentralize-the-gateway-centralize-the-governance.md) - a company-wide gateway is a single point of failure, and the requirement behind it is usually cost tracking and rate limits.
 - [Pick a Verification Route by Which Translation You Can Afford](../concepts/pick-a-verification-route-by-which-translation-you-can-afford.md) - Lean, Verus on Z3, Aeneas over Rust's MIR, and AWS's work-in-progress Strata, arranged by which translation each one performs on your behalf.
 - [Tools Are the Only Primitive Every Client Implements](../concepts/tools-are-the-only-primitive-every-client-implements.md) - a client compatibility matrix as a maintained artifact; server instructions, elicitation, and sampling all reimplemented through tool results, and a primitive that was implemented but wired to the wrong model was worse than one that was absent.
 - [Pick the Serialization the Models Have Seen Most, Not the One Native to Your System](../concepts/pick-the-serialization-the-models-have-seen-most.md) - Figma had three textual serializations of its own C++ scene graph and chose React and Tailwind over its purpose-built internal representation, on the stated hunch that models had seen the most of it; the image rides along as a supplement, never inlined as base64.

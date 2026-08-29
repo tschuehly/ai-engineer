@@ -13,6 +13,7 @@ Details:
 - **Monitoring continues the same metrics online** and adds *implicit* indicators of user success and system health: how often a human overrides the AI verdict (want it low; rising above a threshold → investigate) and how long a human takes to review the AI recommendation (too long can mean verbose/confusing responses). (23:59-25:10)
 - Motivating principle: "you can't improve what you can't measure" — build evaluation in from the start rather than bolting metrics on after a demo. (28:14-28:22)
 - Distinct from a *model* eval pyramid (serving metrics → formatting → factual accuracy → safety/bias → custom): this ladder is about the *application's* own compliance, grounding, domain outcome, and operational health, and it is explicitly designed to carry from offline eval into online monitoring.
+- **Two gaps in this ladder that only show up in production.** Tier 1 measures how often guardrails *fire*, but not how often they were *unavailable*: if guardrails can fail open, then the fail-open rate and the guardrail-timeout rate belong beside the compliance rate, or a quiet dependency outage reads as a clean compliance record. And tier 4's system-health metrics need the same per-route granularity Manuja demands of latency — a service-wide average over embeddings, chat, and reasoning traffic "doesn't make sense. It's a lie," since "a reasoning model's normal is actually a chat model's outage." ([Manuja](../sources/20260828_zrZ1amZBSPw.md), 07:15-08:16, 10:12-11:38)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -23,6 +24,8 @@ Related concepts:
 - [Design AI systems requirements-first with a four-phase framework](design-ai-systems-requirements-first-with-a-four-phase-framework.md)
 - [Run eval suites in CI/CD before and during production](run-eval-suites-in-cicd-before-and-during-production.md)
 - [Evaluate Agent Loops With Correctness, Cost, Latency, and Step Counts](evaluate-agent-loops-with-correctness-cost-latency-and-step-counts.md)
+- [Treat Guardrails as a Failable Dependency With Its Own Time Budget](treat-guardrails-as-a-failable-dependency-with-a-time-budget.md)
 
 Sources:
 - [AI System Design: From Idea to Production - Apoorva Joshi, MongoDB](../sources/20260628_T0HhO4YtTfE.md), 21:12-25:10
+- [Productionizing LLM Gateways: Architecture, Tradeoffs and Hard Lessons — Kanish Manuja, Twilio](../sources/20260828_zrZ1amZBSPw.md), 07:15-08:16, 10:12-11:38

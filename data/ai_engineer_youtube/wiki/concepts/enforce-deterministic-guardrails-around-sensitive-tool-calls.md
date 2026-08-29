@@ -11,6 +11,7 @@ Details:
 - The talk recommends deterministic logic for sensitive task aspects because agents are nondeterministic and may ignore prompt or tool-description guidance. 22:53-23:55
 - The demo wrapped the visual screenshot tool with path validation, checking that requested output paths stayed under the configured screenshot root before invoking the Playwright tool. 24:05-27:40
 - Guardrail failures should return an agent-facing explanation that tells the model how to retry correctly, rather than crashing the whole agent process. 27:44-28:25
+- **Determinism settles what the check decides, not whether it answers.** A wrapper that calls out to a policy service, a classifier, or a filter is still a dependency: "guardrails are just like another service that can go down that can be unreliable," so the design has to state whether the sensitive tool call proceeds when the check is unavailable — "do you fail open or do you fail close" — with Manuja's default rule being that "the default choice should be the worst case that you can live with." For the sensitive-tool-call case that usually resolves to fail-closed, but the point is that leaving it unstated picks an answer anyway. ([Manuja](../sources/20260828_zrZ1amZBSPw.md), 10:12-11:00)
 
 Related topics:
 - [Tools](../topics/tools.md)
@@ -21,6 +22,8 @@ Related concepts:
 - [LLM Guardrails Need Checkpoints at Every Untrusted Boundary](llm-guardrails-need-checkpoints-at-every-untrusted-boundary.md)
 - [Secure MCP Servers by Shrinking the Agent-Visible Surface](secure-mcp-servers-by-shrinking-the-agent-visible-surface.md)
 - [Govern MCP Tool Calls With Tool-Level Policy and End-to-End Traces](govern-mcp-tool-calls-with-tool-level-policy-and-end-to-end-traces.md)
+- [Treat Guardrails as a Failable Dependency With Its Own Time Budget](treat-guardrails-as-a-failable-dependency-with-a-time-budget.md)
 
 Sources:
 - [Bending a Public MCP Server Without Breaking It — Nimrod Hauser, Baz](../sources/20260408_U00AOI1eJUE.md), 03:52-28:25
+- [Productionizing LLM Gateways: Architecture, Tradeoffs and Hard Lessons — Kanish Manuja, Twilio](../sources/20260828_zrZ1amZBSPw.md), 10:12-11:00

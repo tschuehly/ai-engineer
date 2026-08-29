@@ -15,6 +15,7 @@ Details:
 - The gate for that class is cross-model agreement on the same input: "when we receive their receipt, we will use different models to review the same receipt. We only move forward if the results from different models agree with each other." Note the shape — different models rather than repeated samples of one, and agreement as a precondition for action rather than as a confidence score. (14:48-15:02)
 - Disagreement resolves to a human handoff, and admitting failure is treated as a legitimate outcome rather than a fallback of last resort: "if we really have trouble to figure it out which one is right, it's okay to tell the customer, say, 'Hey, we have trouble to process your stuff. Do you want us to get you connect to a human agent?'… That's acceptable solutions." (15:02-15:17)
 - The generalization: retryability is a cheap proxy for the harm-scale grading that high-stakes systems build explicitly, and it makes the classification something a product team can do in a planning meeting. Where the consequence is not user-absorbable, the volume × consequence arithmetic in the related eval-sizing concept takes over and sets both the accuracy bar and the size of the test suite.
+- **Streaming manufactures a retry-only failure class, whether or not you sorted it there.** Once tokens have reached the client the provider is fixed — "whatever has been sent to the client, it's done. You cannot mid-stream change the providers" — so every mid-generation failure on a streaming endpoint lands in the tolerable-if-retryable bucket by construction, and "something went wrong. Please try again" is the only honest thing it can say: "it's not because of laziness. It's by design." The design consequence for this page's taxonomy is that actions you classified as *not* retryable must not stream, because streaming removes the machinery — fallback, cross-model agreement, human handoff — that the non-retryable class depends on. ([Manuja](../sources/20260828_zrZ1amZBSPw.md), 05:16-05:55)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -29,6 +30,8 @@ Related concepts:
 - [Keep Human Review on High-Risk Agent Operations](keep-human-review-on-high-risk-agent-operations.md)
 - [Use Field-Level Confidence Signals for Human Review](use-field-level-confidence-signals-for-human-review.md)
 - [Plan AI Reliability Risk Inside Product Work](plan-ai-reliability-risk-inside-product-work.md)
+- [Streaming Forecloses the Provider Fallback](streaming-forecloses-the-provider-fallback.md)
 
 Sources:
 - [How to build an AI-Native Health Company — Dan Feng, Maven Clinic](../sources/20260819_WJRdLNhrsLQ.md), 13:29-15:17
+- [Productionizing LLM Gateways: Architecture, Tradeoffs and Hard Lessons — Kanish Manuja, Twilio](../sources/20260828_zrZ1amZBSPw.md), 05:16-05:55
