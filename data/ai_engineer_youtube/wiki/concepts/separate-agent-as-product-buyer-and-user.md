@@ -18,6 +18,7 @@ Details:
 - Limit: this is a framework offered by a vendor whose product sits under all three roles, presented without any data on how commonly each role is confused for another. Its value is as a disambiguation checklist, not as a claim about the market's composition.
 - **Agent-as-buyer arrives as someone else's protocol, not as your API design.** In commerce, being purchasable by another company's agent means conforming to ACP, UCP, and Meta's feed schemas — three specifications you do not control — and the enforcement is exclusion rather than a support ticket: "you want to make sure that the feeds are actually conforming, or else they will not support it." The obligation in this bucket is therefore set by the channel and re-set whenever the channel's spec moves, which makes it an ongoing conformance cost rather than an integration project. ([Prio](../sources/20260827_G7cgLjZtmMU.md), 09:19-09:30, 17:55-18:12)
 - **Agent as user, from the seller's side of the transaction.** Exa is described as "a search engine for agents… this web MCP web tool that agents can access," sold to companies (Cursor and Cognition are named) whose agents are the actual consumers. The role split shows up in the company's own go-to-market: the buyer is an engineering org that has to be reached with conventional distribution work, while the product surface is built for a caller that never sees a dashboard. ([Wang](../sources/20260826_6pbQgnJ9Voc.md), 00:40-00:58)
+- **A fourth role the three-way split does not cover: agent as recommender.** Jarmak separates it explicitly from agent-as-user — "it is both the user of your tool in a very similar way to the developer," reading docs and calling the API, "but then it's also a recommender of your tools," occupying the bottom-up adoption position developer relations was built to reach, either answering product questions directly in ChatGPT or Claude or installing a library into a developer's workflow unattended. This is distinct from agent-as-buyer: no procurement happens, no protocol conformance is required, and the obligation is editorial and operational rather than contractual — be findable at the moment of pain, and be adoptable without a sales conversation. Two instruments follow, one per obligation: [Measure Agent Recommendations on Pain Prompts, Not Comparison Prompts](measure-agent-recommendations-on-pain-prompts-not-comparison-prompts.md) and [Self-Serve Onboarding Is a Precondition for Agent Recommendation](self-serve-onboarding-is-a-precondition-for-agent-recommendation.md). ([Jarmak](../sources/20260826_Lrw0jqBNaw0.md), 04:15-05:22, 08:38-09:32, 12:28-12:53)
 
 Related topics:
 - [Product Strategy](../topics/product-strategy.md)
@@ -32,8 +33,12 @@ Related concepts:
 - [Delegate Agentic Commerce Transactions With Explicit Payment Authority](delegate-agentic-commerce-transactions-with-explicit-payment-authority.md)
 - [Eval an Agent Surface for Protocol Compliance, Not Just Behavior](eval-agent-surfaces-for-protocol-compliance-not-just-behavior.md)
 - [Treat Go-to-Market as a Live Model of Your World That Agents Act On](treat-go-to-market-as-a-live-model-of-your-world.md)
+- [Measure Agent Recommendations on Pain Prompts, Not Comparison Prompts](measure-agent-recommendations-on-pain-prompts-not-comparison-prompts.md)
+- [Self-Serve Onboarding Is a Precondition for Agent Recommendation](self-serve-onboarding-is-a-precondition-for-agent-recommendation.md)
+- [Treat Agent Experience as a Curb Cut](treat-agent-experience-as-a-curb-cut.md)
 
 Sources:
 - [How to avoid disaster when vibe-coding a billing engine — Andrew Garvin, Stripe](../sources/20260828_mJqwmmOx4WA.md), 09:33-11:23, 16:42-16:54, 17:14-17:31
 - [The Agentic Commerce Stack — Ahnaf Prio, Best Buy](../sources/20260827_G7cgLjZtmMU.md), 09:19-09:30, 17:55-18:12
 - [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md), 00:40-00:58
+- [The Death of Developer Advocates — Stephanie Jarmak, Sourcegraph](../sources/20260826_Lrw0jqBNaw0.md), 04:15-05:22, 08:38-09:32, 12:28-12:53

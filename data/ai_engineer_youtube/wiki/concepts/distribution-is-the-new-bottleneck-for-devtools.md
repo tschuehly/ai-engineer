@@ -16,6 +16,7 @@ Details:
 - Events tactic: organize or attend events in any format (meetups, launch parties, breakfasts/dinners, padel/poker/boba, user conferences). Learn from the best — Supabase Select ran a second year; earlier-stage startups increasingly host their own user conferences (Paul Copplestone/Supabase describes an internal "no conference policy" giving way to hosting one). (07:11-08:33)
 - Stunt/fun tactic: do fun, "crazy" memorable marketing — "whenever you have fun with your marketing, it really comes through." (See also embracing fail stories in [AI Does Not Replace Shareable Product Marketing](ai-does-not-replace-shareable-product-marketing.md).) (08:37-09:00)
 - **The flame war refused from the other side, by a founder who was bad at the second half.** Wang describes the public argument — "product is the only thing that matters" versus "distribution is the only thing that matters," with Glean as the contested example — and rejects the choice: "you just kind of have to do both… If you don't do both things, then you don't have a company." He names the engineer's version of the failure as his own: the bias is "I'm going to just build the thing… make it really really freaking good," which is "the bias we had when we started [Exa] and we were honestly pretty bad at go-to-market. We were not doing enough marketing, we were not doing enough sales." His fix is not more distribution effort but treating distribution as an engineering surface: "you can treat go-to-market like an engineering problem and particularly an AI engineering problem… you can do so much as one person." ([Wang](../sources/20260826_6pbQgnJ9Voc.md), 01:12-02:41)
+- **A channel that did not exist in the tactic list above, and it comes with a measurement.** Jarmak's version of distribution work is "GEO instead of SEO… generative engine optimization": run prompts against assistants and count whether your product is surfaced. The result argues the channel is both real and mis-measured by default — comparison-shopping prompts returned Sourcegraph "like 65% of the time," while a prompt describing the pain the product solves returned "zero mentions" and a suggestion that the user write a wiki page. Distribution here is not billboards or events but published content that names the customer's symptom, with a rerun of the prompt set as the lift measurement. See [Measure Agent Recommendations on Pain Prompts, Not Comparison Prompts](measure-agent-recommendations-on-pain-prompts-not-comparison-prompts.md). ([Jarmak](../sources/20260826_Lrw0jqBNaw0.md), 07:47-10:10)
 
 Related topics:
 - [Product Strategy](../topics/product-strategy.md)
@@ -28,7 +29,10 @@ Related concepts:
 - [Treat Investor Outreach Like Specific Go-To-Market](treat-investor-outreach-like-specific-go-to-market.md)
 - [Treat Go-to-Market as a Live Model of Your World That Agents Act On](treat-go-to-market-as-a-live-model-of-your-world.md)
 - [Staff Forward-Deployed Engineers Who Run Deals and Build the Deal Tooling](staff-forward-deployed-engineers-who-run-deals-and-build-the-deal-tooling.md)
+- [Measure Agent Recommendations on Pain Prompts, Not Comparison Prompts](measure-agent-recommendations-on-pain-prompts-not-comparison-prompts.md)
+- [Self-Serve Onboarding Is a Precondition for Agent Recommendation](self-serve-onboarding-is-a-precondition-for-agent-recommendation.md)
 
 Sources:
 - [GTM Is You - Victoria Melnikova, Evil Martians](../sources/20260707_G6IlDzj8OjA.md), 01:43-09:00
 - [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md), 01:12-02:41
+- [The Death of Developer Advocates — Stephanie Jarmak, Sourcegraph](../sources/20260826_Lrw0jqBNaw0.md), 07:47-10:10

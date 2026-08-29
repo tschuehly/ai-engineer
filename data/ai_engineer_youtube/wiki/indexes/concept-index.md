@@ -1,6 +1,9 @@
 # Concept Index
 
 ## Agents
+- [Treat Agent Experience as a Curb Cut](../concepts/treat-agent-experience-as-a-curb-cut.md) - serving the agent clears the human path; one more user in the room, still serving the human on the other end.
+- [Split Agent Advocacy Into Engineering, Product, and Marketing Flavors](../concepts/split-agent-advocacy-into-engineering-product-and-marketing-flavors.md) - the MCP interface and its instrumentation, the end-to-end agent experience, and the agent funnel are three different jobs.
+- [Count Burned Turns, Because Agent Self-Recovery Hides Tool Defects](../concepts/count-burned-turns-because-agent-self-recovery-hides-tool-defects.md) - a guessed parameter the error message repaired still cost a full turn, and the run still passed.
 - [Put Humans and Agents on the Same Substrate Instead of an AI Layer on Top](../concepts/put-humans-and-agents-on-the-same-substrate-instead-of-an-ai-layer-on-top.md) - two substrates become two systems that drift apart.
 - [Emit Owner-Assigned Tasks From Signals, With a Marketing Default When None Fire](../concepts/emit-owner-assigned-tasks-from-signals-with-a-marketing-default-when-none-fire.md) - work arrives as an owner-assigned task for a human or an agent, in the assignee's own surface.
 - [Budget a Third of Sprint Capacity for Re-Architecture](../concepts/budget-a-third-of-sprint-capacity-for-re-architecture.md) - 30-40% of sprints spent rebuilding onto new platform primitives, planned rather than resented.
@@ -603,6 +606,7 @@
 - [Learn risk scoring from audit feedback for predictive compliance](../concepts/learn-risk-scoring-from-audit-feedback-for-predictive-compliance.md)
 
 ## Coding Agents
+- [Agents Widen the Dev-Tool ICP Beyond Engineers](../concepts/agents-widen-the-dev-tool-icp-beyond-engineers.md) - a second reader profile for developer-tool docs, with caveats on generalizing from one trajectory.
 - [The Review Bottleneck Is Comprehension, Not Reviewer Time](../concepts/the-review-bottleneck-is-comprehension-not-reviewer-time.md) - more review hours cannot fix a change nobody can hold in their head.
 - [Validate a Cross-Language Port Against Production Runtime Data](../concepts/validate-a-cross-language-port-against-production-runtime-data.md) - captured production behavior is the oracle a model-driven port needs; the cutover boundary is still yours.
 - [Ask Size Lags Model Capability Because Early Products Boxed the Model In](../concepts/ask-size-lags-model-capability-because-early-products-boxed-the-model-in.md) - the ask shrank to fit a generation of products that could not run code or inspect their environment.
@@ -947,6 +951,7 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Human and Agent Credibility Reward Opposite Writing Styles](../concepts/human-and-agent-credibility-reward-opposite-writing-styles.md) - two registers with inverted rules; the agent-side permission is for structure, not length.
 - [Put Humans and Agents on the Same Substrate Instead of an AI Layer on Top](../concepts/put-humans-and-agents-on-the-same-substrate-instead-of-an-ai-layer-on-top.md) - markdown plus databases as one representation both readers can use.
 - [Own the Context Layer and Rent Every Other Layer](../concepts/own-the-context-layer-and-rent-every-other-layer.md) - the layer to keep, because a generic tool cannot hold the data model and you cannot debug what you rent.
 - [Budget a Third of Sprint Capacity for Re-Architecture](../concepts/budget-a-third-of-sprint-capacity-for-re-architecture.md) - 30-40% of sprints spent rebuilding onto new platform primitives, planned rather than resented.
@@ -1576,6 +1581,10 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Treat Agent Experience as a Curb Cut](../concepts/treat-agent-experience-as-a-curb-cut.md) - agent-facing work upgrades the human surface, with two starter actions and one limit the analogy hides.
+- [Split Agent Advocacy Into Engineering, Product, and Marketing Flavors](../concepts/split-agent-advocacy-into-engineering-product-and-marketing-flavors.md) - a decomposition for assigning ownership, usable as a gap check on agent-experience work.
+- [Agents Widen the Dev-Tool ICP Beyond Engineers](../concepts/agents-widen-the-dev-tool-icp-beyond-engineers.md) - zero GitHub commits to 12,000 and an OSS maintainership in a year, from a research scientist.
+- [Self-Serve Onboarding Is a Precondition for Agent Recommendation](../concepts/self-serve-onboarding-is-a-precondition-for-agent-recommendation.md) - a demo-gated tool is one the agent declines to hand its user.
 - [Own the Context Layer and Rent Every Other Layer](../concepts/own-the-context-layer-and-rent-every-other-layer.md) - rent orchestration, email, CRM, and enrichment; keep the layer that carries the edge.
 - [Separate the Did-Not-Try Problem From the Did-Not-Return Problem](../concepts/separate-the-did-not-try-problem-from-the-did-not-return-problem.md) - trial rate and return rate fail differently and have different owners.
 - [The Wow Factor Collapses Into a Baseline Within Months](../concepts/the-wow-factor-collapses-into-a-baseline-within-months.md) - success turns a capability into a habit and then into the floor you are judged against.
@@ -1717,6 +1726,10 @@
 
 ## Go To Market
 
+- [Measure Agent Recommendations on Pain Prompts, Not Comparison Prompts](../concepts/measure-agent-recommendations-on-pain-prompts-not-comparison-prompts.md) - 65% when the prompt is a tool comparison, zero when it describes the pain the product solves.
+- [Stale Product Content Compounds Through Newer Models](../concepts/stale-product-content-compounds-through-newer-models.md) - the newer model pitched the retired product more, because superseded models publish what later ones read.
+- [Self-Serve Onboarding Is a Precondition for Agent Recommendation](../concepts/self-serve-onboarding-is-a-precondition-for-agent-recommendation.md) - go to agent market — registries plus an adoption path with no sales conversation in it.
+- [Human and Agent Credibility Reward Opposite Writing Styles](../concepts/human-and-agent-credibility-reward-opposite-writing-styles.md) - developers penalize model cadence; assistants show a bias toward their own content shape.
 - [Reduce Every Workflow to Know, Decide, Act, and Learn](../concepts/reduce-every-workflow-to-know-decide-act-and-learn.md) - what do we know, what should happen next, how do we execute safely, did it work — four questions that become four layers.
 - [Put Humans and Agents on the Same Substrate Instead of an AI Layer on Top](../concepts/put-humans-and-agents-on-the-same-substrate-instead-of-an-ai-layer-on-top.md) - the agent as another operator in the human system, with context displayed rather than merely queryable.
 - [Compute Truth in the Warehouse and Serve It as a Denormalized Profile](../concepts/compute-truth-in-the-warehouse-and-serve-it-as-a-denormalized-profile.md) - batch compute of modeled versioned entities, join-free key-addressable serving for agent reads.
@@ -1746,6 +1759,9 @@
 - [Verify AI Call Summaries Before CRM Sync](../concepts/verify-ai-call-summaries-before-crm-sync.md) - the write path into the system of record needs a check, and agent tool access widens it.
 
 ## Evaluation
+- [Benchmark Your Own Tool by Running Agents With and Without It](../concepts/benchmark-your-tool-by-running-agents-with-and-without-it.md) - hundreds of lifecycle tasks in both conditions, with the traces as the deliverable rather than the score.
+- [Count Burned Turns, Because Agent Self-Recovery Hides Tool Defects](../concepts/count-burned-turns-because-agent-self-recovery-hides-tool-defects.md) - recovered tool errors are waste that no success rate reports.
+- [Measure Agent Recommendations on Pain Prompts, Not Comparison Prompts](../concepts/measure-agent-recommendations-on-pain-prompts-not-comparison-prompts.md) - a prompt set partitioned by intent, rerun per model release.
 - [Thread Every Outcome Back to the Decision That Caused It](../concepts/thread-every-outcome-back-to-the-decision-that-caused-it.md) - outcome attribution is what lets business results re-enter the decision layer instead of dying in a report.
 - [Write the Question Set From the Business Process Before the Data Is Connected](../concepts/write-the-question-set-from-the-business-process-before-the-data-is-connected.md) - 150 questions taken from the sales process, including the ones the system could not answer, as the pre-traffic eval set.
 - [Classify the Assistant Question Log to Find Feature and Content Gaps](../concepts/classify-the-assistant-question-log-to-find-feature-and-content-gaps.md) - LLM classification over 40,000 questions a week, with repeats and profanity as free negative labels.
@@ -2150,6 +2166,7 @@
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 
 ## Models
+- [Stale Product Content Compounds Through Newer Models](../concepts/stale-product-content-compounds-through-newer-models.md) - a model upgrade is not a remediation plan for stale claims about your product.
 - [Models Solve the Parallelism Patterns the Internet Already Contains](../concepts/models-solve-the-parallelism-patterns-the-internet-already-contains.md) - a distribution-shifted held-out test where in-context principles did not close the gap.
 - [Commoditize the Layer You Do Not Win On](../concepts/commoditize-the-layer-you-do-not-win-on.md) - the releasing lab's case for open weights: publish the weights, keep the research, and claim distillation closes gaps without opening them.
 - [Re-Run One Remembered Hard Task on Each New Model](../concepts/re-run-one-remembered-hard-task-on-each-new-model.md) - three hours and ten mistakes on o3 down to a one-shot on Opus 4.8, priced in hours saved against tokens spent — and confounded by harness drift.
@@ -2534,6 +2551,8 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Count Burned Turns, Because Agent Self-Recovery Hides Tool Defects](../concepts/count-burned-turns-because-agent-self-recovery-hides-tool-defects.md) - a silent description lets the model's training prior win, and a good error message hides the cost.
+- [Benchmark Your Own Tool by Running Agents With and Without It](../concepts/benchmark-your-tool-by-running-agents-with-and-without-it.md) - the vendor-side method for producing the traces that expose those defects.
 - [Replace Buy-Versus-Build With Arbitrary Customizability](../concepts/replace-buy-versus-build-with-arbitrary-customizability.md) - an MCP server turns a procurement question into a customizability question.
 - [Product Surface Fragmentation Makes the User the Integration Layer](../concepts/product-surface-fragmentation-makes-the-user-the-integration-layer.md) - the tell for a missing delegation edge is a copy-paste handoff between your own surfaces.
 - [Map the Agentic Commerce Protocol Stack by Layer](../concepts/map-the-agentic-commerce-protocol-stack-by-layer.md) - five acronyms on four layers, with one canonical checkout model plus per-spec serializers as the implementation that follows.

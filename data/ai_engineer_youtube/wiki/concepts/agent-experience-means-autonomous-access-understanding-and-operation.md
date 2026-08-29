@@ -15,6 +15,7 @@ Details:
 - His oxygen-mask investment argument: "put the mask on the AI first" — make it self-served *before* you build features, because "even if it slows you down right now, it's an investment that pays off as soon as you start multiplying agents and running things over time"; velocity without this "self-serve" scaffolding just compounds errors. ([Your agent is blindfolded](../sources/20260708_iRcX54EO5g8.md), 06:38-07:29)
 - **The three layers, filled in by a billing vendor.** Access is the CLI, through which Stripe Projects "provisions a Stripe account for you as well as backend services… think like Vercel, Postgres, and in this case, a Metronome billing agent." Understanding is "an extensible set of skills files that can provide context to the agent that's implementing Metronome and working with our API," portable and installable on the customer's side. Operation is the verbose-error channel that lets the agent self-correct mid-run. The instructive part is that all three are shipped by the vendor rather than assembled by the user, and the understanding layer carries domain hazards — "a lot of different ways to hit foot guns" — that no amount of API polish removes. ([Garvin](../sources/20260828_mJqwmmOx4WA.md), 00:59-01:22, 06:13-07:12)
 - **The same test turned inward, at internal data rather than at a product.** Wang applies the access requirement to a company's own systems: every internal GTM surface — a market-classification dashboard, an alerting system, a dozen Slack agents — presupposes "really good APIs on top of any internal and external data," without which "we'd be out of luck." Agent experience is usually argued as an obligation to external agents visiting your product; here it is the precondition for your own staff's agents reaching your own data, and the interface is deliberately unspecified: "MCP, CLI, whatever… you just need some interface that's programmatic." ([Wang](../sources/20260826_6pbQgnJ9Voc.md), 10:25-10:56)
+- **A stricter test than autonomous completion: would the agent recommend it?** Jarmak's version adds a step past access, understanding, and operation — the agent also decides whether to hand the tool to its user, and it declines when adoption is human-gated: "if an agent realizes your tool requires like three different demos and emailing sales reps and stuff, they're never going to say, 'Hey user, like here's what you should do, but FYI, you're going to have to do all this other stuff.'" A product can pass every autonomy check inside the session and still fail here, because the failure is in what happens after the session. See [Self-Serve Onboarding Is a Precondition for Agent Recommendation](self-serve-onboarding-is-a-precondition-for-agent-recommendation.md). ([Jarmak](../sources/20260826_Lrw0jqBNaw0.md), 12:28-12:53)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -28,9 +29,12 @@ Related concepts:
 - [Harness Engineering Shifts Scarcity From Code Production to Control Surfaces](harness-engineering-shifts-scarcity-from-code-production-to-control-surfaces.md)
 - [Separate Agent as Product, Agent as Buyer, and Agent as User](separate-agent-as-product-buyer-and-user.md)
 - [Treat Go-to-Market as a Live Model of Your World That Agents Act On](treat-go-to-market-as-a-live-model-of-your-world.md)
+- [Self-Serve Onboarding Is a Precondition for Agent Recommendation](self-serve-onboarding-is-a-precondition-for-agent-recommendation.md)
+- [Treat Agent Experience as a Curb Cut](treat-agent-experience-as-a-curb-cut.md)
 
 Sources:
 - [AX is the only Experience that Matters - Ivan Burazin, Daytona](../sources/20250724_e9sLVMN76qU.md), 02:04-06:29, 14:00-15:02
 - [Your agent is blindfolded — Johan Lajili, Poolside AI](../sources/20260708_iRcX54EO5g8.md), 05:51-07:29
 - [How to avoid disaster when vibe-coding a billing engine — Andrew Garvin, Stripe](../sources/20260828_mJqwmmOx4WA.md), 00:59-01:22, 06:13-07:12
 - [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md), 10:25-10:56
+- [The Death of Developer Advocates — Stephanie Jarmak, Sourcegraph](../sources/20260826_Lrw0jqBNaw0.md), 12:28-12:53

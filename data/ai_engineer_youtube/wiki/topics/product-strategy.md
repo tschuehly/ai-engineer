@@ -130,8 +130,16 @@ Two failure modes recur once an AI product is live rather than launching, and bo
 
 Build-versus-buy is sharper as a per-layer question than as a per-system one. Notion's lean go-to-market engineering team rents orchestration, email, CRM, and enrichment because "vendors do that really well," and refuses to outsource only the context layer — for a strategic reason (that is where the edge is, and a generic tool cannot capture the esoteric data model) and an operational one that generalizes further: an outsourced context layer is one you cannot debug. The build-order heuristic that follows is about information rather than ambition — build first where you hold the most data on your own model, since "internal agents are actually cheaper and faster to build than most people assume," and rent the generalizable parts afterwards.
 
+Once agents are a meaningful share of a product's users, developer relations does not disappear so much as change audience, and Stephanie Jarmak's argument is that this is measurable rather than rhetorical. The agent occupies both ends of the old relationship at once — the user reading docs, calling the API, and recovering from errors, and the recommender that drives bottom-up adoption. Two instruments follow. A with-and-without benchmark over lifecycle tasks tells you whether your surface helps the agent and, from the traces, exactly where it does not; a generative-engine-optimization prompt set tells you whether assistants surface you at the customer's moment of pain, which is a different question from whether they list you among competitors. The framing that justifies the spend is the curb cut: work done for the agent — machine-readable docs, honest tool descriptions, a self-serve install path, quotable structured claims — clears the human path too. It also implies staffing, because "support agents" is three jobs (the interface and its instrumentation, the end-to-end agent experience, the agent funnel) that fail in different ways when absent, and a widened ICP, because people who are not engineers can now use developer tools productively.
+
 ## Key Concepts
 
+- [Treat Agent Experience as a Curb Cut](../concepts/treat-agent-experience-as-a-curb-cut.md) - agent-facing investment upgrades the human path, with two cheap starter actions and one limit the analogy hides.
+- [Measure Agent Recommendations on Pain Prompts, Not Comparison Prompts](../concepts/measure-agent-recommendations-on-pain-prompts-not-comparison-prompts.md) - 65% on comparison-shopping prompts, zero on the pain the product solves.
+- [Split Agent Advocacy Into Engineering, Product, and Marketing Flavors](../concepts/split-agent-advocacy-into-engineering-product-and-marketing-flavors.md) - three jobs with different artifacts, usable as a gap check.
+- [Self-Serve Onboarding Is a Precondition for Agent Recommendation](../concepts/self-serve-onboarding-is-a-precondition-for-agent-recommendation.md) - demo-gated adoption removes you from the answer set, not just from the funnel.
+- [Agents Widen the Dev-Tool ICP Beyond Engineers](../concepts/agents-widen-the-dev-tool-icp-beyond-engineers.md) - zero commits to 12,000 and an OSS maintainership in a year, from a research scientist.
+- [Human and Agent Credibility Reward Opposite Writing Styles](../concepts/human-and-agent-credibility-reward-opposite-writing-styles.md) - two registers with inverted rules for the same claims.
 - [Own the Context Layer and Rent Every Other Layer](../concepts/own-the-context-layer-and-rent-every-other-layer.md) - decide build-versus-buy per architectural layer, and keep the one that must stay debuggable.
 - [Separate the Did-Not-Try Problem From the Did-Not-Return Problem](../concepts/separate-the-did-not-try-problem-from-the-did-not-return-problem.md) - split the adoption funnel at first use, because trial and return failures have different owners.
 - [The Wow Factor Collapses Into a Baseline Within Months](../concepts/the-wow-factor-collapses-into-a-baseline-within-months.md) - success resets the user's reference point, so delivered capability decays without regressing.
@@ -270,6 +278,7 @@ Build-versus-buy is sharper as a per-layer question than as a per-system one. No
 
 ## Open Questions
 
+- Does removing demo gating to stay in the agent's recommendation set cost more revenue than the agent channel returns? Jarmak states the disqualification mechanism but never addresses the enterprise sales motion it displaces. ([Jarmak](../sources/20260826_Lrw0jqBNaw0.md), 12:28-12:53)
 - Where does "arbitrarily customizable" stop for a bought system? Wang's criterion is satisfied by a vendor MCP server, but an MCP server exposes what the vendor chose to expose, and no source here describes a case where a purchased system's customizability ran out. ([Wang](../sources/20260826_6pbQgnJ9Voc.md), 11:56-13:16)
 - Where does the cut line between verified data and free-form agent output actually fall for a concrete financial workload? Krieger names the boundary as "a lot of the art" in the space and does not draw it for any specific product. ([Krieger](../sources/20260827_qqrk7CtkuIw.md), 20:42-21:41)
 - Liguori identifies product decision and launch-approval review as the new long pole but names no review that Amazon actually shortened, and gives no per-stage lead-time data. Which approvals are safe to compress on reversibility grounds, and what breaks when they are? ([Liguori](../sources/20260828_pqlWNihgdjI.md), 18:45-19:56)
@@ -376,3 +385,4 @@ Build-versus-buy is sharper as a per-layer question than as a per-system one. No
 - [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md)
 - [Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md)
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md)
+- [The Death of Developer Advocates — Stephanie Jarmak, Sourcegraph](../sources/20260826_Lrw0jqBNaw0.md)

@@ -18,6 +18,7 @@ Details:
 - His claim about the payoff curve: "the first features are difficult to get out. The next ones are easy. And then once you start tapping into your logs, this hockey stick exponential thing actually starts happening." (16:15-16:32)
 - **The precondition is adoption, which makes this the back half of a loop the front half must seed.** A 40,000-question weekly log is a product of a rollout that reached its population ([Separate the Did-Not-Try Problem From the Did-Not-Return Problem](separate-the-did-not-try-problem-from-the-did-not-return-problem.md)); before that traffic exists, demand has to be written down by hand from the business process instead ([Write the Question Set From the Business Process Before the Data Is Connected](write-the-question-set-from-the-business-process-before-the-data-is-connected.md)).
 - Limits: the pipeline is described only by its output. No model, prompt, sampling rate, taxonomy design, cost figure, or classification accuracy is given, despite cost being named as the hard part; nor is any validation that LLM-assigned categories match what users meant. Privacy and consent for reading employee questions at this scale are not discussed at all. The generated battle cards are not reported as reviewed by anyone before being fed back into the agent. ([Provenance and Limits](../sources/20260826_DrTdD-ttjCY.md))
+- **The mirror instrument, for when the assistant is not yours.** This page's signal depends on owning the log. A vendor whose product is discussed inside someone else's assistant has no log to classify, so Jarmak synthesizes the demand signal instead: write the prompts your ICP would actually type at their moment of need, run them against the assistants, and count mentions. The finding that comes back is the same class of gap — the pain-shaped prompt ("we keep breaking downstream services when we change shared libraries because we can't see all the consumers") produced zero mentions and a suggestion to write a wiki page, while the comparison-shopping prompt produced 65%. A content gap, discovered without a log. See [Measure Agent Recommendations on Pain Prompts, Not Comparison Prompts](measure-agent-recommendations-on-pain-prompts-not-comparison-prompts.md). ([Jarmak](../sources/20260826_Lrw0jqBNaw0.md), 08:18-09:50)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -33,6 +34,8 @@ Related concepts:
 - [Write the Question Set From the Business Process Before the Data Is Connected](write-the-question-set-from-the-business-process-before-the-data-is-connected.md)
 - [Separate the Did-Not-Try Problem From the Did-Not-Return Problem](separate-the-did-not-try-problem-from-the-did-not-return-problem.md)
 - [Schema-first classification turns LLMs into enterprise categorization tools](schema-first-classification-turns-llms-into-enterprise-categorization-tools.md)
+- [Measure Agent Recommendations on Pain Prompts, Not Comparison Prompts](measure-agent-recommendations-on-pain-prompts-not-comparison-prompts.md)
 
 Sources:
 - [Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 14:11-16:32
+- [The Death of Developer Advocates — Stephanie Jarmak, Sourcegraph](../sources/20260826_Lrw0jqBNaw0.md), 08:18-09:50

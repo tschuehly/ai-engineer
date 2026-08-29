@@ -12,6 +12,7 @@ Details:
 - The concrete foundation list is semantic HTML, robust accessibility standards, page performance (load quickly, mind core web vitals), and good user-experience flows; doing these gets you "halfway to an agent-ready website." (03:23-03:46)
 - Only once those are in place does it make sense to start thinking about WebMCP — the new standard is an addition on top of solid foundations, not a substitute for them. (03:46-03:49)
 - This is the same reasoning behind the scraping failure WebMCP targets: agents lean on the DOM, the accessibility tree, and screenshots, so a well-structured, accessible, fast page is already easier for an agent to read even without explicit tools. (02:08-03:00)
+- **The general form of this page's argument, named.** Jarmak's closing frame is the curb cut: built for wheelchairs, now used by "anybody with wheels, strollers and suitcases," so "by serving the agents, the human path gets cleared, too." This page is one instance running the other direction — foundations built for humans get you halfway to agent-ready — and the two together say the investment is shared rather than duplicated. One caveat the analogy hides: a curb cut is finished when it is poured, while agent readiness is measured against models that change, so it needs a rerun cadence. See [Treat Agent Experience as a Curb Cut](treat-agent-experience-as-a-curb-cut.md). ([Jarmak](../sources/20260826_Lrw0jqBNaw0.md), 16:45-17:21)
 
 Related topics:
 - [Tools](../topics/tools.md)
@@ -20,6 +21,8 @@ Related topics:
 Related concepts:
 - [Expose Site Capabilities to In-Browser Agents With WebMCP](expose-site-capabilities-to-in-browser-agents-with-webmcp.md)
 - [Agent-readable web surfaces guide browsing agents](agent-readable-web-surfaces-guide-browsing-agents.md)
+- [Treat Agent Experience as a Curb Cut](treat-agent-experience-as-a-curb-cut.md)
 
 Sources:
 - [The agent-ready web: Simplify user actions with WebMCP — Tara Agyemang, Google](../sources/20260611_ghJmWQCIHRM.md), 02:08-03:49
+- [The Death of Developer Advocates — Stephanie Jarmak, Sourcegraph](../sources/20260826_Lrw0jqBNaw0.md), 16:45-17:21

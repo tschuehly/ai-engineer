@@ -17,6 +17,7 @@ Details:
 - The advice to builders is framed as inevitability, not opportunity: "if you're building software now, you should think about what is my agent-first sign up and login flow look like because agents are going to be using your software whether you like it or not. It's best to let them use it securely." The alternative to a designed path is not "no agents"; it is agents using the human path badly. (12:31-12:37)
 - Where this meets the wiki's existing authorization material: the *third-party site* case here is harder than the enterprise-integration case those pages cover. [Treating agents as users for authorization](treat-agents-as-users-for-authorization.md) and [first-class agent users with identity, scopes, and audit trails](first-class-agent-users-need-identity-scopes-and-audit-trails.md) assume the platform chose to model agents; [cross-app access](cross-app-access-centralizes-mcp-authentication-through-the-identity-provider.md) and [scoped OAuth token flows](move-production-mcp-from-api-keys-to-scoped-oauth-token-flows.md) assume an identity provider both sides accept. A browser agent on an arbitrary website has neither, which is why password sharing persists despite being the worst option.
 - Pairs with the trust problem rather than solving it: an agent getting its own account answers "can it get in?", not "should this site let it in" — see [Agent Trust Needs a Certificate Issuer, Not a CAPTCHA](agent-trust-needs-a-certificate-issuer-not-a-captcha.md). Klein names both as the two unsolved halves of the agent-facing web.
+- **The commercial argument for shipping this, distinct from the technical one.** A missing agent-first signup path is usually treated as friction the agent works around. Jarmak's framing makes it disqualifying: the agent decides whether to recommend the tool at all, and "if an agent realizes your tool requires like three different demos and emailing sales reps and stuff, they're never going to say, 'Hey user, like here's what you should do, but FYI, you're going to have to do all this other stuff.'" The gate acts one step earlier than a conversion funnel — you are never in the answer. See [Self-Serve Onboarding Is a Precondition for Agent Recommendation](self-serve-onboarding-is-a-precondition-for-agent-recommendation.md). ([Jarmak](../sources/20260826_Lrw0jqBNaw0.md), 12:28-12:53)
 
 Related topics:
 - [Security](../topics/security.md)
@@ -30,6 +31,8 @@ Related concepts:
 - [Route High-Impact Agent Actions Through Explicit Human Approval Gates](route-high-impact-agent-actions-through-explicit-human-approval-gates.md)
 - [Agent-readable web surfaces guide browsing agents](agent-readable-web-surfaces-guide-browsing-agents.md)
 - [Authorization Propagation Is the Hard Part of Enterprise Agent Workloads](authorization-propagation-is-the-hard-part-of-enterprise-agent-workloads.md)
+- [Self-Serve Onboarding Is a Precondition for Agent Recommendation](self-serve-onboarding-is-a-precondition-for-agent-recommendation.md)
 
 Sources:
 - [Bringing agents onto the world wide web — Paul Klein IV, Browserbase](../sources/20260814_GqoNrUz8hEU.md), 11:25-12:37
+- [The Death of Developer Advocates — Stephanie Jarmak, Sourcegraph](../sources/20260826_Lrw0jqBNaw0.md), 12:28-12:53

@@ -13,6 +13,7 @@ Details:
 - Database migrations are treated as a different case because they are deterministic records of what changed, not speculative planning context. (01:25:41-01:26:08)
 
 - This page states the unpriced cost of the doc-as-state pattern. Matt Dailey (Ref) proposes making a durable shared document the state of the work — "separate the agent as the action and the doc as the state" — so that agents restart from it and the team reads it to reconstruct context, but names no owner, no versioning against the code, and no retirement policy for those documents. A living state document is exactly the artifact that rots most expensively, because unlike a completed PRD it is *meant* to be read as current. If you adopt the pattern, its lifecycle is the design work you inherit. See [Make the Doc the State and the Agent the Action](make-the-doc-the-state-and-the-agent-the-action.md). ([Dailey](../sources/20260809_Kz4QJmNrVXU.md), 13:25-14:30)
+- **The version you cannot delete, because the stale material is on the public internet.** Retiring a doc works when you own the corpus. Jarmak reports the case where you do not: a retired Sourcegraph product kept being pitched by assistants, and a newer model pitched it *more*, on the account that "old models… outputting content… is like compounding in the internet." There is no file to move to an archive directory; the described remedy is to "bury all of that noise with your true signal" through fresh authoritative content plus a standing measurement of mentions per model version. See [Stale Product Content Compounds Through Newer Models](stale-product-content-compounds-through-newer-models.md). ([Jarmak](../sources/20260826_Lrw0jqBNaw0.md), 10:30-11:45)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -24,8 +25,10 @@ Related concepts:
 - [Do not cache context-engine answers as durable truth](do-not-cache-context-engine-answers-as-durable-truth.md)
 - [Filter untrusted context before it reaches the agent](filter-untrusted-context-before-it-reaches-the-agent.md)
 - [Make the Doc the State and the Agent the Action](make-the-doc-the-state-and-the-agent-the-action.md)
+- [Stale Product Content Compounds Through Newer Models](stale-product-content-compounds-through-newer-models.md)
 
 Sources:
 - [Full Walkthrough: Workflow for AI Coding - Matt Pocock](../sources/20260424_-QFHIoCo-Ko.md), 01:24:19-01:26:08
 - [Velocity Sickness: What Happens When Your Whole Team Gets 10x Faster — Matt Dailey, Ref.](../sources/20260809_Kz4QJmNrVXU.md), 13:25-14:30
 
+- [The Death of Developer Advocates — Stephanie Jarmak, Sourcegraph](../sources/20260826_Lrw0jqBNaw0.md), 10:30-11:45
