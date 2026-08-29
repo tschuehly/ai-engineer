@@ -20,6 +20,8 @@ Details:
 
 - **Code mode generalizes past tool calling to any operation over a corpus too large to put in context.** Ben Hylak transplants it to observability: "you've heard about code mode in the context of MCPs… I highly recommend just uh trying to apply this to traces. Like you can just write uh these classifiers and you can run them in a sandbox and you can run them at production scale." The invariant that carries across is the same one that motivates typed code mode here — the model authors a program against a described surface and the runtime executes it over the data, so the model's context holds the question rather than the payload ([Run Trace Classifiers as Code Mode in a Sandbox](run-trace-classifiers-as-code-mode-in-a-sandbox.md)). ([Hylak](../sources/20260812_jHMiYtjoJfA.md), 18:14-18:36)
 
+- **Code mode as the last stage of a migration, applied only where it pays.** Uber reached code mode after two cheaper interface changes and scoped it narrowly: "of late we also have a code mode skill which is auto-installed which on the fly creates Python scripts to hyper optimize some of the top MCP token consuming use cases" ([Medisetty](../sources/20260821_17-YSUHo6Lk.md), 05:06-05:41). Two choices are worth separating from the technique itself. It targets the measured top consumers rather than the whole catalog, which means code mode is treated as an optimization with a cost, not as the right default shape for every tool. And it ships as an *auto-installed skill*, so the optimization reaches engineers who never asked for it — the distribution problem that usually decides whether an interface improvement is realized fleetwide. The combined reported effect of this and the two preceding stages is "more than 40% fleetwide savings" across 1,000-plus tools. See [Stage the MCP Token Tax Down](stage-the-mcp-token-tax-down-direct-omni-cli-then-code-mode.md).
+
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
 - [Tools](../topics/tools.md)
@@ -28,6 +30,7 @@ Related concepts:
 - [Discover Large API Tool Surfaces Progressively](discover-large-api-tool-surfaces-progressively.md)
 - [Run Agent-Written API Code Inside Programmable Sandboxes](run-agent-written-api-code-inside-programmable-sandboxes.md)
 - [Run Trace Classifiers as Code Mode in a Sandbox](run-trace-classifiers-as-code-mode-in-a-sandbox.md)
+- [Stage the MCP Token Tax Down: Direct, Omni, CLI, Then Code Mode](stage-the-mcp-token-tax-down-direct-omni-cli-then-code-mode.md)
 
 Sources:
 - [Designing Agents (The Floor Is the Frontier) — Ben Hylak, Raindrop](../sources/20260812_jHMiYtjoJfA.md), 18:14-18:36
@@ -35,3 +38,4 @@ Sources:
 - [MCP = Mega Context Problem - Matt Carey](../sources/20260425_YBYUvGOuotE.md), 07:20-10:08
 - [The Future of MCP - David Soria Parra, Anthropic](../sources/20260419_v3Fr2JR47KA.md), 09:39-11:49
 - [Why Eval++ Is the Next Great Compute Primitive — Sunil Pai & Matt Carey, Cloudflare](../sources/20260608_SKDJo2CopRs.md), 09:44-10:22
+- [Agentic SDLC at Uber — Uday Kiran Medisetty & Adam Huda, Uber](../sources/20260821_17-YSUHo6Lk.md), 05:06-05:41

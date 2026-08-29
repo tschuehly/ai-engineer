@@ -18,6 +18,8 @@ Details:
 - **How this relates to the coverage question.** Where [LLM Guardrails Need Checkpoints at Every Untrusted Boundary](llm-guardrails-need-checkpoints-at-every-untrusted-boundary.md) argues about *how many* checkpoints and *where* the untrusted input enters, this page is about the operational properties of each checkpoint once it exists. Adding checkpoints multiplies the failure surface and the serial latency, so the two arguments pull against each other and should be resolved explicitly.
 - **Caveat.** No incident, latency figure, or availability number for any guardrail is reported, and the fail-open/fail-closed guidance is worked through for exactly one example (toxicity). The talk also does not address the case that makes the decision hardest: a guardrail that is up but degraded, returning verdicts of unknown quality, which neither a timeout nor a fail-open switch detects.
 
+- **A production budget number, and it covers the whole chain rather than each check.** Uber holds identity and authentication (Spire), a data anonymizer redacting "20 plus PII types," and an "AI guard that has five specialized models that handles various parts of safety and policy" to a combined "under 100 milliseconds" ([Medisetty](../sources/20260821_17-YSUHo6Lk.md), 02:16-02:56). That is a materially stronger commitment than this page's per-check timeout: a whole-chain budget makes adding a check a zero-sum decision against the checks already there, which is the property that stops the stack growing silently. It also constrains implementation upstream — five specialized models rather than one frontier judge is what fits, which is the same argument as [Fine-Tuned Encoder Discriminators Make Low-Latency Guardrails Practical](fine-tuned-encoder-discriminators-make-low-latency-guardrails-practical.md). What Uber does not supply is the failure half of this page: no fail-open/fail-closed policy, no fallback, and no account of the degraded-but-up case are mentioned anywhere.
+
 Related topics:
 - [Security](../topics/security.md)
 - [Infrastructure](../topics/infrastructure.md)
@@ -31,6 +33,8 @@ Related concepts:
 - [Streaming Forecloses the Provider Fallback](streaming-forecloses-the-provider-fallback.md)
 - [Layer AI Application Metrics From Guardrail Compliance to System Health](layer-ai-application-metrics-from-guardrail-compliance-to-system-health.md)
 - [Fail Loudly and Bill Only for Successful Results](fail-loudly-and-bill-only-for-successful-results.md)
+- [State the Model Gateway as Three Invariants, Not a Feature List](state-the-model-gateway-as-three-invariants-not-a-feature-list.md)
 
 Sources:
 - [Productionizing LLM Gateways: Architecture, Tradeoffs and Hard Lessons — Kanish Manuja, Twilio](../sources/20260828_zrZ1amZBSPw.md), 09:45-12:47
+- [Agentic SDLC at Uber — Uday Kiran Medisetty & Adam Huda, Uber](../sources/20260821_17-YSUHo6Lk.md), 02:16-02:56

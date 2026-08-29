@@ -17,6 +17,8 @@ Details:
 - **Authored by the API vendor, shipped to the customer's agent.** Metronome's skills files exist because "there's a lot of different ways to hit foot guns etc if you're not guided," and the packaging decision is deliberate: "these skills files are also portable and easy to install so you can use them on your own side." The unit of packaging is the accumulated hazard knowledge of one API — what the docs do not say — which is exactly the content a customer cannot write and the vendor cannot express as a better endpoint. They also carry procedure, not just facts: the skill is what tells the agent to flow usage into the platform so the setup becomes testable. ([Garvin](../sources/20260828_mJqwmmOx4WA.md), 06:13-06:35, 08:04-08:19)
 - **A registry with no package manager, for an audience that would not use one.** Cloudflare distributes skills to a go-to-market organization through a central alias where skills are submitted, reviewed by the business and operations teams, and curated into a repository the agentic workspace reads. There is no install step, no version pin, and no dependency resolution — the discovery and quality functions this page attributes to a registry are performed by named humans instead. That is a workable substitute at organization scale and a bad one at ecosystem scale, and it makes the supply-chain question a question about who has access to the alias. ([Joyce](../sources/20260826_Qw_tC68KKes.md), 13:01-14:02)
 
+- **What the registry has to do at 2,500 skills, and what it looks like when it does not.** Uber names three separate failures from decentralized skill authoring — "there's a lot of duplication, same skill being built by different engineers… discovery and configuration was a huge hassle… and a lot of skills were subpar quality" — and answers them with three distinct mechanisms rather than one catalog: automated lint checks and reviews as a publish gate, "one single command to discover and install any plug-in," and persona-based auto-install where "based on the engineer personas, we even auto-install some of the default skills… you don't even have to even install them" ([Medisetty](../sources/20260821_17-YSUHo6Lk.md), 07:03-08:13). The auto-install layer is the addition this page did not have: package management assumes a consumer who chooses, and most engineers never browse a catalog of 2,500 entries. Usage context for the duplication complaint: 2,500 skills against "more than 20,000 skill executions per day," which is a thin average tail (08:26-08:44). See [Run a Skills Marketplace With Lint Gates, Persona Auto-Install, and Trace Feedback](run-a-skills-marketplace-with-lint-gates-persona-auto-install-and-trace-feedback.md).
+
 Related topics:
 - [Tools](../topics/tools.md)
 - [Context Engineering](../topics/context-engineering.md)
@@ -29,6 +31,7 @@ Related concepts:
 - [Seed the Agent-Built Sandbox With Usage, Not Just Objects](seed-the-agent-built-sandbox-with-usage-not-just-objects.md)
 - [Run a Submission-and-Review Alias for Shared Skills](run-a-submission-and-review-alias-for-shared-skills.md)
 - [Let Users Author the Output Format as a Skill](let-users-author-the-output-format-as-a-skill.md)
+- [Run a Skills Marketplace With Lint Gates, Persona Auto-Install, and Trace Feedback](run-a-skills-marketplace-with-lint-gates-persona-auto-install-and-trace-feedback.md)
 
 Sources:
 - [Context Is the New Code - Patrick Debois, Tessl](../sources/20260503_bSG9wUYaHWU.md), 14:00-17:40
@@ -36,3 +39,4 @@ Sources:
 - [AI-Native Organisations Run on Skills: How to Structure and Scale Them — Imad Touil, QuantumBlack](../sources/20260828_M05vON8i0aI.md), 13:44-14:47
 - [How to avoid disaster when vibe-coding a billing engine — Andrew Garvin, Stripe](../sources/20260828_mJqwmmOx4WA.md), 06:13-06:35, 08:04-08:19
 - [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md), 13:01-14:02
+- [Agentic SDLC at Uber — Uday Kiran Medisetty & Adam Huda, Uber](../sources/20260821_17-YSUHo6Lk.md), 07:03-08:44

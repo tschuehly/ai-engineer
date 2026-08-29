@@ -16,6 +16,8 @@ Details:
 - Cursor's cloud-agent VMs also illustrate a training-infrastructure reuse pattern: secure sandboxes that load user code, run tools, and edit files can double as production-matched RL environments for coding models. 08:31-09:05
 - **The two things this pattern is actually built on, and neither is about coding agents.** Shenoy's version of the same claim — "you take the exact same coding agent, you wrap it in a sandbox, and you just let it go run… it can provide the code in the form of a PR" — is followed by the observation that makes it a warning: "we've figured out what the async and forking mechanism for code is… What does that look like for the rest of the world?" The sandbox-and-PR loop is a *forking substrate*, and the reason engineers accept it is a second, separate property: they "launch 10 jobs and be comfortable with the fact that job seven might finish before job three." Both are inherited from software practice, not from the agent. See [Async Agents Need a Forking Substrate and a User Who Tolerates Out-of-Order Completion](async-agents-need-a-forking-substrate-and-a-tolerant-user.md). ([Shenoy](../sources/20260828_B0fjR3yaZFU.md), 07:59-09:24)
 
+- **What the setup and handoff costs look like when a platform team has removed them.** Uber's cloud coding agent, Minion, runs interactive or autonomous on a pre-provisioned Kubernetes "balloon pod" that already holds every repository snapshotted with "the search index already built," so "the agents can start working within a matter of seconds" and a single run makes "backend changes and the front end changes here too as well" ([Medisetty and Huda](../sources/20260821_17-YSUHo6Lk.md), 06:09-07:03, 13:18-13:42). That addresses two of the three costs this page names — setup and context — by pre-paying them at the pool rather than per run. The third, review handoff, is answered differently: the run deliberately stops at a draft PR without pushing to CI, so validation happens before either a queue or a human sees it. See [Pre-Provision Agent Environments With Snapshots and Prebuilt Indexes](pre-provision-agent-environments-with-snapshots-and-prebuilt-indexes.md) and [Stop the Autonomous Agent at a Draft PR and Validate Before CI](stop-the-autonomous-agent-at-a-draft-pr-and-validate-before-ci.md).
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Infrastructure](../topics/infrastructure.md)
@@ -29,9 +31,11 @@ Related concepts:
 - [Use parent agents to compare and merge parallel subagent outputs](use-parent-agents-to-compare-and-merge-parallel-subagent-outputs.md)
 - [Production-Matched RL Environments Train Coding Agents on Real Tool Surfaces](production-matched-rl-environments-train-coding-agents-on-real-tool-surfaces.md)
 - [Async Agents Need a Forking Substrate and a User Who Tolerates Out-of-Order Completion](async-agents-need-a-forking-substrate-and-a-tolerant-user.md)
+- [Pre-Provision Agent Environments With Snapshots and Prebuilt Indexes](pre-provision-agent-environments-with-snapshots-and-prebuilt-indexes.md)
 
 Sources:
 - [Your Coding Agent Just Got Cloned And Your Brain Isn't Ready - Rustin Banks, Google Jules](../sources/20250725_X4BwOu0GWb8.md), 01:12-08:24
 - [Building your own software factory — Eric Zakariasson, Cursor](../sources/20260428_rnDm57Py54A.md), 15:26-21:52, 01:01:30-01:02:14
 - [Building Cursor Composer - Lee Robinson, Cursor](../sources/20251202_fL1iJHtl51Q.md), 08:31-09:05
 - [How do you diffuse AI into the real world? — Varun Shenoy, Long Lake](../sources/20260828_B0fjR3yaZFU.md), 07:59-09:24
+- [Agentic SDLC at Uber — Uday Kiran Medisetty & Adam Huda, Uber](../sources/20260821_17-YSUHo6Lk.md), 06:09-07:03, 13:18-14:07

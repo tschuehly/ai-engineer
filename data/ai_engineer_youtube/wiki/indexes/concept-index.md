@@ -993,6 +993,9 @@
 
 - [Give the Agent the Verbs That Fail Loudly](../concepts/give-the-agent-the-verbs-that-fail-loudly.md) - unskip yes, skip no: classify CI operations by whether their failure reaches a dashboard.
 - [Size Agent Controls With the Undo Test](../concepts/size-agent-controls-with-the-undo-test.md) - full autonomy on canary, a proposal on production, from one reversibility question.
+- [Stop the Autonomous Agent at a Draft PR and Validate Before CI](../concepts/stop-the-autonomous-agent-at-a-draft-pr-and-validate-before-ci.md) - halt before the build queue and prove the feature in the inner loop with a simulator screenshot against the design spec.
+- [Split Code Review Across the Loops and Size the Model to Each](../concepts/split-code-review-across-the-loops-and-size-the-model-to-each.md) - call frequency, not difficulty, decides which model tier reviews where.
+- [Run a Skills Marketplace With Lint Gates, Persona Auto-Install, and Trace Feedback](../concepts/run-a-skills-marketplace-with-lint-gates-persona-auto-install-and-trace-feedback.md) - three named skill-sprawl failures, three distinct mechanisms, governance built before the improvement loop.
 
 ## Context Engineering
 - [Steer an Over-Budget Run Before You Kill It](../concepts/steer-an-over-budget-run-before-you-kill-it.md) - compaction and tool-output reduction fired by a budget forecast rather than a token threshold.
@@ -1146,6 +1149,7 @@
 
 - [Keep a Moving Standard in Examples, Not in a Rubric or the Weights](../concepts/keep-a-moving-standard-in-examples-not-in-a-rubric-or-the-weights.md) - specification, weights, or retrievable examples as homes for judgment that cannot be written down.
 - [Assemble the Judging Standard Per Output From Retrieved Precedent](../concepts/assemble-the-judging-standard-per-output-from-retrieved-precedent.md) - per-output context assembly aimed at the evaluation path, supplying priority rather than facts.
+- [Build One Context Graph So Agents Stop Crawling Twenty Systems for Basic Facts](../concepts/build-one-context-graph-so-agents-stop-crawling-twenty-systems-for-basic-facts.md) - orientation cost found in execution traces, fixed by consolidating 20-30 systems into one queryable graph.
 
 ## Edge Inference
 - [Local Deployment Inverts the Keep-Everything Context Strategy](../concepts/local-deployment-inverts-the-keep-everything-context-strategy.md) - the context window is a hardware constraint that parameter count cannot fix, so the cloud context strategy does not port.
@@ -1451,6 +1455,11 @@
 - [Fix the Browser-Agent Runtime Interface Before Reaching for a Better Model](../concepts/fix-the-browser-agent-runtime-interface-before-reaching-for-a-better-model.md)
 
 - [Stamp Agent Identity at the Proxy, Because a Claimed Identity Resets the Budget](../concepts/stamp-agent-identity-at-the-proxy-because-a-claimed-identity-resets-the-budget.md) - a per-session sidecar holds the credentials and the stamp propagates as a cluster label.
+- [State the Model Gateway as Three Invariants, Not a Feature List](../concepts/state-the-model-gateway-as-three-invariants-not-a-feature-list.md) - PII containment, a whole-chain latency bound, and per-caller attribution as falsifiable guarantees that generate the design.
+- [Crawl Internal APIs Into MCP Servers Instead of Asking Teams to Write Them](../concepts/crawl-internal-apis-into-mcp-servers-instead-of-asking-teams-to-write-them.md) - a crawler projects thousands of internal APIs into MCP servers, so coverage is generated supply rather than a team backlog.
+- [Pre-Provision Agent Environments With Snapshots and Prebuilt Indexes](../concepts/pre-provision-agent-environments-with-snapshots-and-prebuilt-indexes.md) - balloon pods already scheduled and already materialized, plus one cross-repo pod because agent and engineer roles blur.
+- [Put Every Platform Capability Behind One Assistant and Let Teams Fork Personas](../concepts/put-every-platform-capability-behind-one-assistant-and-let-teams-fork-personas.md) - integrate capabilities once at the assistant, expose Slack, CLI, and web over it, and let teams fork channel-scoped personas.
+- [Treat CI and Experiment Capacity as the Scarce Resource Agent Throughput Consumes](../concepts/treat-ci-and-experiment-capacity-as-the-scarce-resource-agent-throughput-consumes.md) - the bottleneck lands on shared build and experiment capacity before it reaches people.
 
 ## Healthcare Operations
 
@@ -2940,6 +2949,7 @@
 - [Spec-driven development is a tool-portable pattern, not a single product](../concepts/spec-driven-development-is-a-tool-portable-pattern.md)
 - [Match the Agent's Output Medium to Its Native Representation](../concepts/match-agent-output-medium-to-its-native-representation.md)
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
+- [Stage the MCP Token Tax Down: Direct, Omni, CLI, Then Code Mode](../concepts/stage-the-mcp-token-tax-down-direct-omni-cli-then-code-mode.md) - four narrowing interface shapes over one tool catalog, attacking definitions then responses.
 
 ## Voice Agents
 
@@ -3436,3 +3446,5 @@
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 - [Discover Failure Modes From Production Outputs, Not Synthetic Cases](../concepts/discover-failure-modes-from-production-outputs-not-synthetic-cases.md) - clustering real outputs replaces the whiteboard taxonomy and decides what gets reviewed and retrieved.
 - [Capture Expert Reasoning and Corrections, Not Just a Score](../concepts/capture-expert-reasoning-and-corrections-not-just-a-score.md) - a few focused hours of free-form expert comments on real output is the cheapest starting artifact.
+
+- [Run Maintenance Skills From One Managed Loop Surface](../concepts/run-maintenance-skills-from-one-managed-loop-surface.md) - enrollment plus central scheduling against CI and reviewer capacity, with land-rate as free label data.

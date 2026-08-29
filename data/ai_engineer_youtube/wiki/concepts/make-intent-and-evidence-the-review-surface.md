@@ -22,6 +22,8 @@ Details:
 - **A one-sentence version of the same reviewer contract, for teams without the pipeline.** Where this page builds acceptance criteria and executed evidence, Blum's team runs a convention: "every PR description will start with… something that I wrote by hand… And then the AI description is going to come after that… they should pay more attention to what I wrote in the top and they should override it." Same instinct — give the reviewer the human's intent first and the generated material second, with the human's version authoritative — at a cost of one sentence and no tooling, and with the fragility of any unenforced convention. His execution rule for verification matches this page's exactly: deterministic where it can be, and the model reserved for what "needs to reason." ([Blum](../sources/20260828_5Bn0xro2ol8.md), 05:38-06:11, 13:37-14:10)
 - **The same substitution, shipped as a product feature and adopted as an internal default.** Anthropic built Claude Code artifacts partly to fix the null review: "you would send somebody a PR, and then they'd be like, I don't know, man. This is like 2,000 lines of code. It looks like code to me. And what we started doing instead is sharing much more like, here's a Claude Code artifact. Here's the explanation. Here's the intention of the change. Here's the trade-offs that were made." The division of labour matches this page's exactly — "the code is ultimately verifiable using some things, but actually discussing intent and trade-offs, and then measuring in production" — with one difference worth noting: Krieger's third leg is *production measurement* rather than a pre-merge executed test plan, which is a weaker gate and a cheaper one. ([Krieger](../sources/20260827_qqrk7CtkuIw.md), 10:30-11:08)
 
+- **Evidence attached to the PR as a table of checks, with screenshots as the load-bearing item.** For autonomous diffs, Uber's stated goal is "to give a human reviewer some confidence that this diff has gone through a lot of self-improvement already… not just touching that initial generation that happened, but all these other steps have happened. And so on the PR, you will have a table attached that says all these different checks that it went through, including the screenshots" ([Huda](../sources/20260821_17-YSUHo6Lk.md), 15:21-15:54). The screenshots are the part that changes the reviewer's work rather than reassuring them: a simulator capture compared against the Figma spec is evidence a reviewer can evaluate directly, whereas a list of passed checks still has to be trusted. That distinction — evidence a reviewer can judge versus evidence a reviewer must accept — is the useful test for what belongs on such a table.
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -40,9 +42,11 @@ Related concepts:
 - [Withhold the Producer's Reasoning From the Critic](withhold-the-producers-reasoning-from-the-critic.md)
 - [Mark Which Lines a Human Wrote So Readers Can Budget Attention](mark-which-lines-a-human-wrote-so-readers-can-budget-attention.md)
 - [The Review Bottleneck Is Comprehension, Not Reviewer Time](the-review-bottleneck-is-comprehension-not-reviewer-time.md)
+- [Stop the Autonomous Agent at a Draft PR and Validate Before CI](stop-the-autonomous-agent-at-a-draft-pr-and-validate-before-ci.md)
 
 Sources:
 - [How to Kill the Code Review — Ankit Jain, Aviator](../sources/20260817_YgEv7IQzGdM.md), 08:19-09:30, 10:30-13:05, 13:48-14:12, 15:40-16:04
 - [Anthropic's CCA Exam as a Field-Guide for Agentic Engineering — Frank Coyle, UC Berkeley](../sources/20260808_Z-c11pV_uvU.md), 13:44-15:12
 - [How to Get Your Org to Adopt Coding Agents (Without Shipping Garbage) — Eyal Blum, Figma](../sources/20260828_5Bn0xro2ol8.md), 05:38-06:11, 13:37-14:10
 - [How Anthropic Builds: Lessons from Labs — Mike Krieger, Anthropic](../sources/20260827_qqrk7CtkuIw.md), 10:30-11:08
+- [Agentic SDLC at Uber — Uday Kiran Medisetty & Adam Huda, Uber](../sources/20260821_17-YSUHo6Lk.md), 14:31-15:54

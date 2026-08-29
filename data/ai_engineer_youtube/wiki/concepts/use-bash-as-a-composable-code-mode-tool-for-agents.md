@@ -15,6 +15,8 @@ Details:
 - A Codex CLI subagent prototype uses ordinary shell wrappers as a composable harness layer: the parent agent invokes a stable command, the wrapper launches a child `codex exec`, and stdout becomes the parent-visible result. 02:40-03:22, 08:09-08:57
 - Production usage data corroborates the shift toward this surface: a Tailscale talk that watches every agent LLM call at the network layer reports that internally "bash dominates everything else" over structured/MCP tool calls — and frames "a lot of agents are moving away from tool calls and executing code" as the reason to instrument at the LLM layer rather than the MCP layer, since structured-tool traffic no longer captures what agents do. BM2JX9hqsVQ 22:54-23:11, 21:28-22:10
 
+- **The CLI's advantage stated as a context-disposal property.** Uber projected its entire MCP catalog into commands, and the reason given is narrow and reusable: "we projected all of these MCPs into CLI pattern so that even the response doesn't eat up in your context" ([Medisetty](../sources/20260821_17-YSUHo6Lk.md), 05:06-05:21). That names what a CLI actually changes relative to a tool call — not the protocol and not the capability, but who decides what happens to the output. A tool result is pasted into the transcript whole; a command's output lands somewhere the agent can filter, page, or discard. It is the same tools with a different default disposal policy, which is why the projection was mechanical enough to apply to the whole catalog at once. See [Stage the MCP Token Tax Down](stage-the-mcp-token-tax-down-direct-omni-cli-then-code-mode.md).
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Coding Agents](../topics/coding-agents.md)
@@ -26,9 +28,11 @@ Related concepts:
 - [Sandboxed code execution turns model reasoning into inspectable computation](sandboxed-code-execution-turns-model-reasoning-into-inspectable-computation.md)
 - [Shell-wrapped subagents can retrofit harness capabilities](shell-wrapped-subagents-can-retrofit-harness-capabilities.md)
 - [Make the LLM Gateway the Agent Observability Chokepoint](make-the-llm-gateway-the-agent-observability-chokepoint.md)
+- [Stage the MCP Token Tax Down: Direct, Omni, CLI, Then Code Mode](stage-the-mcp-token-tax-down-direct-omni-cli-then-code-mode.md)
 
 Sources:
 - [Claude Agent SDK [Full Workshop] - Thariq Shihipar, Anthropic](../sources/20260105_TqC1qOfiVcQ.md), 15:51-19:00
 - [Code World Model: Building World Models for Computation - Jacob Kahn, FAIR Meta](../sources/20251217_sYgE4ppDFOQ.md), 06:55-08:05
 - [Hacking Subagents Into Codex CLI - Brian John, Betterup](../sources/20251124_5eJqXtevlXg.md), 02:40-03:22, 08:09-08:57
 - [What if the network was the sandbox? — Remy Guercio, Tailscale](../sources/20260601_BM2JX9hqsVQ.md), 21:28-23:11
+- [Agentic SDLC at Uber — Uday Kiran Medisetty & Adam Huda, Uber](../sources/20260821_17-YSUHo6Lk.md), 05:06-05:21

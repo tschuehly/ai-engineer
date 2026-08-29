@@ -18,6 +18,8 @@ Details:
 
 - **A worked metric ladder that stops one rung short.** Amazon's early frontier result was scored on commits — the Bedrock Mantle team "looked at commits" to claim "up to 20X improvement" — and the later 50-team pilot deliberately moved off it: "a productivity metric of deployment velocity to production. So, not just commits, how many commits are they producing, but how quickly are we getting changes out to customers?" That is a real improvement, since commits are an activity count and deployments are at least a delivery event. It is still an output proxy: nothing in the talk adjusts for defect rate, rework, revert rate, incident load, or the value of what shipped, and no quality outcome is reported anywhere. The general shape worth taking is that moving from activity to delivery is the easy half of this fix, and moving from delivery to outcome is the half most organizations skip. ([Liguori](../sources/20260828_pqlWNihgdjI.md), 03:20-03:23, 06:36-07:06)
 
+- **The metric this page warns against, reported as a headline achievement by a large platform team.** Uber opens with "more than 70% of our PRs now either by local or cloud agents" and "twice the number of lines of code per engineer year-over-year" ([Medisetty](../sources/20260821_17-YSUHo6Lk.md), 00:36-00:52). Lines of code per engineer is the same category of measure as tokens: output volume with no denominator for value, risk, or rework. What makes this instance instructive rather than merely wrong is that the rest of the same talk is architecture for *absorbing* that volume — validation shifted into the inner loop, review split across two model tiers, maintenance diffs deliberately metered so engineers are not flooded on Monday, and CI capacity named as the next bottleneck. Doubling the code is presented as the win and simultaneously treated as the load, which is the clearest available demonstration that the number is measuring throughput of something the organization then has to pay to handle.
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Workflows](../topics/workflows.md)
@@ -30,6 +32,7 @@ Related concepts:
 - [A Subsidized Coding-Agent Subscription Is a Lock-In Ramp](a-subsidized-coding-agent-subscription-is-a-lock-in-ramp.md)
 - [A Missing Skill Is Billed as Tokens, Not Recorded as a Gap](a-missing-skill-is-billed-as-tokens-not-recorded-as-a-gap.md)
 - [Stage Productivity Pilots to Strip One Confound at a Time](stage-productivity-pilots-to-strip-one-confound-at-a-time.md)
+- [Treat CI and Experiment Capacity as the Scarce Resource Agent Throughput Consumes](treat-ci-and-experiment-capacity-as-the-scarce-resource-agent-throughput-consumes.md)
 
 Sources:
 - [How AI is changing Software Engineering: A Conversation with Gergely Orosz, @pragmaticengineer](../sources/20260421_CS5Cmz5FssI.md), 01:17-04:41
@@ -38,3 +41,4 @@ Sources:
 - [Open Source Is Dead. Long Live Open Source. — Saoud Rizwan, Cline](../sources/20260807_CoEIs6Xm8m8.md), 06:05-06:27, 09:45-10:05
 - [AI-Native Organisations Run on Skills: How to Structure and Scale Them — Imad Touil, QuantumBlack](../sources/20260828_M05vON8i0aI.md), 16:18-16:42
 - [From AI-Assisted to AI-Native: Building a Frontier Development Team — Clare Liguori, AWS](../sources/20260828_pqlWNihgdjI.md), 03:20-03:23, 06:36-07:06
+- [Agentic SDLC at Uber — Uday Kiran Medisetty & Adam Huda, Uber](../sources/20260821_17-YSUHo6Lk.md), 00:36-00:52

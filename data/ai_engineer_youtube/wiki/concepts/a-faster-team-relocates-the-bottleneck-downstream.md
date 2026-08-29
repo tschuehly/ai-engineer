@@ -19,6 +19,8 @@ Details:
   - It assumes the downstream work is automatable in the same way coding is. GTM approvals, contractual review, and user retraining are not obviously the same kind of problem, and the talk does not distinguish them.
   - "Users have a hard time keeping up" could equally be an argument for shipping *less* often rather than automating around it. Nothing in the talk considers that reading.
 
+- **There is a stop before downstream: the shared infrastructure the engineering org owns.** Uber's closing bottleneck list starts inside engineering — "we're putting more strain on our infrastructure. So we're trying to anticipate where our CI capacity needs to be and make the right foundational investments there" — then adds a validation ceiling that is not a compute limit at all, "there's only so many experiments that we can feasibly run," and only then reaches judgment: "it's not about can we build… it's more of a question of should we build it" ([Huda](../sources/20260821_17-YSUHo6Lk.md), 17:10-17:52). CI is the sharpest case because every agent *attempt* consumes it while only merged work reaches anyone downstream, so the queue grows faster than delivered value does — which is why the same talk stops its coding agent short of CI and schedules maintenance runs for Sunday (13:42-14:07, 16:22-16:46). The ordering matters for planning: the infrastructure bill arrives before the go-to-market queue does, and it is the one you can buy your way out of. See [Treat CI and Experiment Capacity as the Scarce Resource Agent Throughput Consumes](treat-ci-and-experiment-capacity-as-the-scarce-resource-agent-throughput-consumes.md).
+
 Related topics:
 - [Workflows](../topics/workflows.md)
 
@@ -28,6 +30,8 @@ Related concepts:
 - [Measure Enablement by Human Touches and Share of Fixes Reused](measure-enablement-by-human-touches-and-share-of-fixes-reused.md)
 - [Run the Retro Against the System and Split Planning by Scopedness](run-the-retro-against-the-system-and-split-planning-by-scopedness.md)
 - [Agent Enablement Falls Between Platform and Developer Experience, So Name an Owner](agent-enablement-falls-between-platform-and-developer-experience-so-name-an-owner.md)
+- [Treat CI and Experiment Capacity as the Scarce Resource Agent Throughput Consumes](treat-ci-and-experiment-capacity-as-the-scarce-resource-agent-throughput-consumes.md)
 
 Sources:
 - [Coding Agents Don't Scale Themselves. Neither Do Your Teams. — Patrick Debois, Tessl](../sources/20260822_zCJtYuqwm7E.md), 08:27-09:09
+- [Agentic SDLC at Uber — Uday Kiran Medisetty & Adam Huda, Uber](../sources/20260821_17-YSUHo6Lk.md), 13:42-14:07, 16:22-16:46, 17:10-17:52

@@ -35,6 +35,8 @@ Details:
 - **One organization's own instrumentation of the bottleneck, on the metric the author feels.** Uber tracks time to first review on a pull request: "Back in 2024, we were seeing that engineers would get their first review within 3 hours. Now in 2026, that has grown to 9 hours uh in addition to all of the volume changes. So, in short, code review is now the bottleneck that we are running into" — across thousands of engineers, hundreds of teams, twelve sites, and six language-specific monorepos. Worth keeping distinct from the survey numbers above: this is one company measuring itself over its own history, which makes it a cleaner trend and a weaker generalization. The attribution is softer than it first reads — the talk does not separate agent-authored volume from headcount growth or from an in-progress Phabricator-to-GitHub migration — and no post-deployment figure for the same metric is reported, so the system built to relieve the bottleneck is never measured against it. ([Bond and Ketkar](../sources/20260828_EL123UNokkI.md), 00:33-01:22)
 - **The moment of overwhelm, in one reviewer sentence.** Krieger's description of what a saturated reviewer actually says about an agent-sized change: "this is like 2,000 lines of code. It looks like code to me." That is not a slow review or a missed bug — it is a review that produced no signal, which is the failure this page's pressure ends in. Anthropic's response was to change the artifact rather than the schedule, and to route cosmetic visual changes to fix-forward so scarce attention lands on architecture-touching diffs. ([Krieger](../sources/20260827_qqrk7CtkuIw.md), 10:36-10:44, 11:21-11:29)
 
+- **Two mitigations from an organization where agents write most of the code, and neither is a rate limit on the agents.** With "more than 70% of our PRs now either by local or cloud agents," Uber controls *arrival* rather than production: recurring maintenance runs are scheduled for Sunday partly because "we don't want to overwhelm engineers that Monday morning with a bunch of extra diffs. We want to control how many diffs they're seeing on Monday as well" ([Huda](../sources/20260821_17-YSUHo6Lk.md), 16:22-16:46). The second mitigation attacks per-diff review cost instead of volume: an autonomous diff carries "a table attached that says all these different checks that it went through, including the screenshots," so the reviewer starts from evidence of what was already verified rather than from a bare diff (15:21-15:54). Both are worth separating from the failed approach this page warns about — neither asks the reviewer to be faster.
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -55,6 +57,7 @@ Related concepts:
 - [Give Unowned Operational Work a Trigger](give-unowned-operational-work-a-trigger.md)
 - [Review Comments Have Two Audiences With Inverted Error Costs](review-comments-have-two-audiences-with-inverted-error-costs.md)
 - [The Review Bottleneck Is Comprehension, Not Reviewer Time](the-review-bottleneck-is-comprehension-not-reviewer-time.md)
+- [Split Code Review Across the Loops and Size the Model to Each](split-code-review-across-the-loops-and-size-the-model-to-each.md)
 
 Sources:
 - [The Friction is Your Judgment - Armin Ronacher & Cristina Poncela Cubeiro, Earendil](../sources/20260418__Zcw_sVF6hU.md), 03:35-07:10
@@ -70,3 +73,4 @@ Sources:
 - [Always-on agents run production without the on-call tax — Justin Smith, Resolve AI](../sources/20260809_vSx5IULvBns.md), 01:15-02:00, 02:37-02:49
 - [Building uReview, Uber's Multi-Agent Code Review Engine — Will Bond & Ameya Ketkar, Uber](../sources/20260828_EL123UNokkI.md), 00:33-01:22
 - [How Anthropic Builds: Lessons from Labs — Mike Krieger, Anthropic](../sources/20260827_qqrk7CtkuIw.md), 10:11-11:29
+- [Agentic SDLC at Uber — Uday Kiran Medisetty & Adam Huda, Uber](../sources/20260821_17-YSUHo6Lk.md), 00:36-00:52, 15:21-16:46

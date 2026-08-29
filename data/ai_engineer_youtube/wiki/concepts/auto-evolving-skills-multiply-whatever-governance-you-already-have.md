@@ -18,6 +18,8 @@ Details:
 - Limits. Nothing in this talk is measured, and this section in particular is forward-looking commentary rather than a report of anything deployed. No auto-evolving system is named, evaluated, or shown; the static-check-against-best-practices recommendation is offered as "the easy thing that I found so far very valuable" with no accuracy figure. See the source's [Provenance and Limits](../sources/20260828_M05vON8i0aI.md).
 - **What the governed regime looks like when it is written down and cheap.** Cloudflare's is an email alias plus two named reviewer constituencies — the go-to-market team and the operations team — with an explicit anti-proliferation goal and an explicit coverage goal ("an expert-level knowledge skill at every level"). No versioning, ownership registry, or access-control scheme is described, which is the honest shape of most organizations at this stage: a human bottleneck standing in for the four properties this page names. It is exactly the regime that an auto-evolving loop would multiply, and human review at an alias is the first thing that breaks when authoring rate rises. ([Joyce](../sources/20260826_Qw_tC68KKes.md), 13:36-14:02)
 
+- **A large deployment whose build order matches this page's sequencing claim.** Uber built the governance first and the loop last. The marketplace, the lint checks and automated reviews, the single install command, and persona-based auto-install are all in place across 2,500 skills; the improvement loop is explicitly the newest piece — "of late, we started working on collecting traces and comments and capturing continuous evals so that we can give feedback back to the skill authors for skill improvements. And this is an area of big investment for us right now" ([Medisetty](../sources/20260821_17-YSUHo6Lk.md), 07:31-08:26). Two details sharpen this page rather than just confirming it. The loop closes on the *author*, not on the skill file, so a human edit remains in the path and the publish gate still runs. And the quality gate is automated, which is what makes it survivable at catalog scale — a human review board would have become the bottleneck the loop was meant to remove.
+
 Related topics:
 - [Workflows](../topics/workflows.md)
 - [Evaluation](../topics/evaluation.md)
@@ -31,7 +33,9 @@ Related concepts:
 - [Prune skills with single source of truth, sediment removal, and no-op deletion tests](prune-skills-with-single-source-of-truth-sediment-and-no-op-deletion-tests.md)
 - [Skill Composability Is Decided Before Authoring, Not in the Registry](skill-composability-is-decided-before-authoring-not-in-the-registry.md)
 - [Run a Submission-and-Review Alias for Shared Skills](run-a-submission-and-review-alias-for-shared-skills.md)
+- [Run a Skills Marketplace With Lint Gates, Persona Auto-Install, and Trace Feedback](run-a-skills-marketplace-with-lint-gates-persona-auto-install-and-trace-feedback.md)
 
 Sources:
 - [AI-Native Organisations Run on Skills: How to Structure and Scale Them — Imad Touil, QuantumBlack](../sources/20260828_M05vON8i0aI.md), 11:21-13:13, 19:13-20:03
 - [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md), 13:36-14:02
+- [Agentic SDLC at Uber — Uday Kiran Medisetty & Adam Huda, Uber](../sources/20260821_17-YSUHo6Lk.md), 07:31-08:26

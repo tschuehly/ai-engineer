@@ -84,6 +84,8 @@ The most useful reframe this wiki has for agent authorization is that the token 
 
 Underneath all of it sits a rule the same source calls the one that matters: [identity has to be stamped by infrastructure and never claimed by the caller](../concepts/stamp-agent-identity-at-the-proxy-because-a-claimed-identity-resets-the-budget.md). If the agent supplies its own identity header, then hitting a limit is fixed by changing the header, and every quota, rate limit, approval, and audit row keyed on that identity was never a control. Their arrangement puts a proxy beside each agent session holding the real credentials, stamping every outbound call, and letting the stamp propagate as a label into whatever the call spawns. That proxy is also where the wiki's two-layer policy question gets its cleanest answer: [text carries intent and infrastructure carries bounds](../concepts/keep-policy-in-text-for-intent-and-in-infrastructure-for-bounds.md), because a counter-and-compare enforcement point has no surface for a prompt injection to talk to, while a markdown instruction — reported to work "about 80% of the time," the only figure this wiki has for instruction compliance — is advice.
 
+A production instance of the mandatory-chokepoint argument is worth recording alongside this topic's policy patterns. Uber routes every model call in the company through one gateway and states its first requirement as an absolute: "no PII ever leaves our perimeter to any of the vendor by default," enforced by a data anonymizer redacting "20 plus PII types" behind Spire identity and authentication, with five specialized safety models handling policy — the whole chain held under 100 milliseconds at more than 100 million requests a day ([Medisetty](../sources/20260821_17-YSUHo6Lk.md), 01:48-03:39). The security-relevant lesson is about enforcement location rather than about the checks: redaction is a data-plane property, so a shared library that every deployment is *supposed* to run cannot guarantee it, while a path everything must traverse can. That is the one requirement in the stack that does not survive decentralization, and it is why the same organization accepts a single point of failure that this wiki's gateway pages otherwise argue against. What is not reported is the failure behaviour — no fail-open or fail-closed policy, no availability figure, and no account of a safety model that is up but returning degraded verdicts.
+
 ## Key Concepts
 
 - [Block the Capability at the Substrate, Because Denying a Tool Only Denies a Name](../concepts/block-the-capability-at-the-substrate-because-denying-a-tool-only-denies-a-name.md) - an agreed-to prohibition failed through three successive tools; the fix was to move the block below the tool layer.
@@ -158,6 +160,7 @@ Underneath all of it sits a rule the same source calls the one that matters: [id
 - [Give the Agent the Verbs That Fail Loudly](../concepts/give-the-agent-the-verbs-that-fail-loudly.md) - classify operations by whether their failure reaches a dashboard, which splits skip from unskip.
 - [Size Agent Controls With the Undo Test](../concepts/size-agent-controls-with-the-undo-test.md) - can the agent put it back, and how bad if wrong, as the lens that sets every threshold.
 - [Keep Policy in Text for Intent and in Infrastructure for Bounds](../concepts/keep-policy-in-text-for-intent-and-in-infrastructure-for-bounds.md) - the enforcing layer cannot explain why, and the explaining layer cannot enforce.
+- [State the Model Gateway as Three Invariants, Not a Feature List](../concepts/state-the-model-gateway-as-three-invariants-not-a-feature-list.md) - default-on PII redaction, a bounded guardrail budget, and per-caller attribution stated as guarantees rather than features.
 
 ## Open Questions
 
@@ -231,3 +234,4 @@ Underneath all of it sits a rule the same source calls the one that matters: [id
 - [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md)
 - [What If Your Chip Design Team Moved Like a Single Body? — Abduallah Mohamed, AIDAChip](../sources/20260822_0I6aoPSRzVc.md)
 - [Give the Agent a Budget, Not a Token — Sachin Malhotra, Anthropic](../sources/20260822_rbjWzZK2LU0.md)
+- [Agentic SDLC at Uber — Uday Kiran Medisetty & Adam Huda, Uber](../sources/20260821_17-YSUHo6Lk.md)
