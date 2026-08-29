@@ -178,6 +178,8 @@ An internal MCP server can be a distribution mechanism rather than an integratio
 
 A web-access vendor's rebuild of a failing shopping agent contributes two contract-level points to this topic's interface design material. The first is about the failure path: a tool that returns a degraded payload instead of an error has not merely produced a poor message, it has produced a successful-looking response the agent must spend input tokens to classify. The rule is that the tool should assert what it already knows — a blocked fetch fails "with an explicit error message" so the caller knows to keep it out of the model's context — which is the step before the actionable-error work this topic already documents, and it fails more expensively when skipped. The second is that for a bought tool, the billing unit is a readable statement of what the vendor considers success. "No cure or no pay" aligns the provider's incentive with honest classification in a way documentation cannot, which makes "what does a failed request cost me?" a sharper vendor-evaluation question than the headline unit price. A third, smaller observation concerns protocol boundaries: because the agent drove checkout through Playwright MCP rather than an embedded library, swapping a hardened remote browser in behind it changed nothing above the interface, turning "our browser keeps getting blocked" from a rewrite into a procurement decision. The whole talk is a vendor on its own product line with nothing measured before or after.
 
+One agent-tool failure is worth designing against explicitly, because neither better prompting nor better models address it. When an agent composes a destructive operation as a pipeline — list, filter, select, delete — [an intermediate stage that yields nothing usually degrades to "no constraint" rather than to "no matches"](../concepts/an-empty-filter-stage-turns-a-cleanup-into-a-match-all-delete.md), and the selector then matches everything. The reported instance removed about 200 workloads in 90 seconds with correct intent at every step and a well-formed command. The pattern recurs anywhere a predicate is the argument: an empty label selector, a `WHERE` clause built from a variable that came back empty, a tag filter that returns all resources when the tag list is empty. The tool-design response is to make emptiness non-degrading — reject a predicate resolving to zero constraints, require the caller to pass resolved targets rather than the predicate, or return a match count the caller must accept — which is [pre-binding tool arguments](../concepts/pre-bind-tool-arguments-to-give-agents-safe-autonomy.md) applied to the predicate instead of the value. The controls the source actually deployed do less than that: [a refilling per-window cap](../concepts/rate-limit-every-write-with-a-ceiling-that-refills.md) truncates the loss from hundreds to tens without making the composition safe.
+
 ## Key Concepts
 
 - [Fail Loudly and Bill Only for Successful Results](../concepts/fail-loudly-and-bill-only-for-successful-results.md) - an explicit error beats a plausible payload, and per-success billing is what makes the classification credible.
@@ -471,6 +473,9 @@ A web-access vendor's rebuild of a failing shopping agent contributes two contra
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md) - HTML/CSS is the universal editing substrate for agent-authored slides, docs, and video; the delivery format (PowerPoint deck, PDF) is just presentation mode rendered later.
 - [Expose Orchestration Through Both a Prompt and an API](../concepts/expose-orchestration-through-both-a-prompt-and-an-api.md) - cover the run, the place it runs, and its artifacts with APIs, and expect the unanticipated builds to be event-driven triggers into the agent system rather than screens over its data.
 
+- [An Empty Filter Stage Turns a Cleanup Into a Match-All Delete](../concepts/an-empty-filter-stage-turns-a-cleanup-into-a-match-all-delete.md) - the predicate-shaped tool argument as a blast-radius amplifier, and what a safer tool signature looks like.
+- [Rate-Limit Every Write With a Ceiling That Refills](../concepts/rate-limit-every-write-with-a-ceiling-that-refills.md) - the mitigation that bounds the damage rather than preventing it, with the override kept out of the agent's reach.
+
 ## Open Questions
 
 - What is the right contract for a *partially* degraded tool result? "Fail loudly" is well defined for a block and undefined for a truncation or a partial record, and a hard error on a mostly-good payload is its own waste. No source in this wiki proposes a middle signal.
@@ -526,6 +531,8 @@ A web-access vendor's rebuild of a failing shopping agent contributes two contra
 - Which registry metadata fields should be mandatory before an MCP server or A2A agent can be discovered by production agents?
 - Which RAG internals should be editable in visual flows, and which should remain fixed behind a stable API or MCP server?
 - Which prompt-format decisions belong in DSPy adapters versus task signatures or higher-level program logic?
+
+- Should a destructive tool ever accept a predicate at all? The failure is in the composition, not in any stage, so every layer that reviews the command — the model, a human reading it, a parser — sees something correct. The candidate fixes (reject zero-constraint predicates, demand resolved target lists, require an accepted match count) are all tool-signature changes, and no source in this wiki reports having made one or measured what it costs an agent in expressiveness. ([Malhotra](../sources/20260822_rbjWzZK2LU0.md), 01:28-02:21)
 
 ## Sources
 
@@ -684,3 +691,4 @@ A web-access vendor's rebuild of a failing shopping agent contributes two contra
 - [The Building Blocks of GTM Orchestration — Arman Vaziri, Ramp](../sources/20260826_VjEP0xqTUI0.md)
 - [The Missing Layer in Agentic AI — Giedrius Šteimantas, Oxylabs](../sources/20260826_XsvUhpnHepE.md)
 - [The Agent Behind the Curtain: Building the Oz Cloud Agent Platform — Safia Abdalla, Warp](../sources/20260822_L173Z8DpaJg.md)
+- [Give the Agent a Budget, Not a Token — Sachin Malhotra, Anthropic](../sources/20260822_rbjWzZK2LU0.md)

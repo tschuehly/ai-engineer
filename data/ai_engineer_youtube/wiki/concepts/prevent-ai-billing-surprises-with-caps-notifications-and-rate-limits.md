@@ -18,6 +18,9 @@ Details:
 
 - **Every control on this page is halt-family, and that is why they get set loosely or not at all.** A cap, a rate limit, and a hard quota all resolve an overrun by refusing to do the work, so the operator setting the threshold is trading spend against dead runs and has an incentive to set it high enough never to fire. Chawla and Koul add the missing action class — steer, which "does not kill the agent" but changes its behaviour to fit the budget — and report their benchmark as a pair for exactly this reason: against simple throttling, which "is going to kill your agent runs no matter what," average spend fell "almost 78%" while completion rose "from 67% to roughly 96%." Their layering rule is the transferable one: in-place policies first, "and as the last resort only a halting… should happen from a budget cap." They also independently corroborate the Uber datum recorded above, relayed the same way from news reports — "the AI budget for Uber getting exhausted within 4 months." See [Steer an Over-Budget Run Before You Kill It](steer-an-over-budget-run-before-you-kill-it.md) and [A Cost Control Must Report Completion Rate or It Is Just Throttling](a-cost-control-must-report-completion-rate-or-it-is-just-throttling.md). ([FinOps for AI Agents: Who Spent All the Tokens? — Tisha Chawla & Susheem Koul, Microsoft](../sources/20260822_GJX19pNhmSw.md), 03:00-03:21, 05:01-05:46, 14:43-15:07, 19:00-19:26)
 - **The grain of the cap is a design choice, and free-form dimensions subsume the ones this page lists.** Per-customer caps, per-seat caps, and per-agent wallets are three fixed answers to "what is the spending boundary." Tagging each run with caller-defined dimensions and building segments from them lets the boundary be a cohort, an environment, or a feature — "you don't necessarily have to restrict everything at an agent level or a run level. You can do rollups, you can do fine grain or coarse grain control" — at the price that an untagged run belongs to no segment and is governed by nothing. See [Emit Attribution Dimensions So Budgets Can Target Any Cohort](emit-attribution-dimensions-so-budgets-can-target-any-cohort.md). (13:51-14:31)
+
+- **The same instrument aimed at blast radius rather than at spend.** Anthropic's CI team applies caps-and-refills to destructive writes: "every write effectively gets a rate limit. There are no exceptions to that. What changes is the size" — larger in your own namespace, smaller in a shared one — implemented as an admission webhook capping deletes "at a fixed number per hour per resource kind per name space." Three properties transfer back to the billing case. The ceiling refills on its own, so exceeding it costs a wait rather than a support ticket; the agent keeps full autonomy underneath it, so the cap is not an approval gate; and the override exists but is not reachable by the agent, which turns a blocked attempt into a request to a human instead of a dead end. See [rate-limit every write with a ceiling that refills](rate-limit-every-write-with-a-ceiling-that-refills.md). ([Malhotra](../sources/20260822_rbjWzZK2LU0.md), 08:34-10:03)
+
 Related topics:
 - [AI Monetization](../topics/ai-monetization.md)
 - [Infrastructure](../topics/infrastructure.md)
@@ -34,6 +37,7 @@ Related concepts:
 - [Per-Seat Pricing Loses Its Referent When One Agent Does the Work of Many Logins](per-seat-pricing-loses-its-referent-when-agents-do-the-work.md)
 - [Decentralize the Gateway, Centralize the Governance](decentralize-the-gateway-centralize-the-governance.md)
 - [Price Under the Department Threshold So Adoption Can Spread](price-under-the-department-threshold-so-adoption-can-spread.md)
+- [Rate-Limit Every Write With a Ceiling That Refills](rate-limit-every-write-with-a-ceiling-that-refills.md)
 
 Sources:
 - [Mastering AI Pricing: Flexible & Agile Monetization - Mayank Pant, Stripe](../sources/20260501_CrqPcIZOOXA.md), 13:10-15:06, 23:06-23:52
@@ -42,3 +46,4 @@ Sources:
 - [Productionizing LLM Gateways: Architecture, Tradeoffs and Hard Lessons — Kanish Manuja, Twilio](../sources/20260828_zrZ1amZBSPw.md), 13:24-13:48, 14:53-15:28
 - [Reverse-Engineering the AI Buyer — Aliisa Rosenthal, Acrew Capital](../sources/20260826_wdTRsfw0KG0.md), 10:19-10:51
 - [FinOps for AI Agents: Who Spent All the Tokens? — Tisha Chawla & Susheem Koul, Microsoft](../sources/20260822_GJX19pNhmSw.md), 03:00-03:21, 05:01-05:46, 13:51-14:31, 14:43-15:07, 19:00-19:26
+- [Give the Agent a Budget, Not a Token — Sachin Malhotra, Anthropic](../sources/20260822_rbjWzZK2LU0.md), 08:34-10:03

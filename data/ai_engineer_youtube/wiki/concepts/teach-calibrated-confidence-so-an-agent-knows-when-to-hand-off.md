@@ -16,6 +16,9 @@ Details:
 - **The harness keeps an override.** "Wherever the confidence calibration of the model is not correct, we let the harness override the model and force it to give control back to the user." Learned calibration and enforced gates are layered, not alternatives — which is the same layering as [explicit human approval gates](route-high-impact-agent-actions-through-explicit-human-approval-gates.md), except that here the gate is the backstop for a model that is expected to escalate on its own. (13:44-13:55)
 - Contrast worth keeping: approval-gate designs elsewhere in the wiki make the *system* decide which action classes need a human, using a fixed policy the model cannot influence. This adds a second, model-side estimate over the same four properties, which generalizes to actions no policy author enumerated — at the cost of being a learned estimate that can be miscalibrated.
 
+
+- **The same four properties, answered once at design time instead of estimated per action.** Anthropic's CI team splits two of these inputs into separate controls and compiles the answers into infrastructure rather than into the model. Visibility becomes a scope rule — [give the agent the verbs whose failures are loud](give-the-agent-the-verbs-that-fail-loudly.md), since unskipping a test turns CI red while skipping one leaves "green checks and nobody would notice it until much later" — and irreversibility plus impact become [the undo test](size-agent-controls-with-the-undo-test.md), asked by a human when sizing a control rather than by the model when acting. The source is explicit that these are different questions: "the verbs ask whether you would notice the failure and undo asks whether you can recover from it." The tradeoff against a learned estimate is clean in both directions. A design-time answer cannot generalize to actions nobody enumerated, which is this page's whole advantage; it also cannot be miscalibrated at 3 a.m., and it does not require a training pipeline to change. ([Malhotra](../sources/20260822_rbjWzZK2LU0.md), 06:21-07:04, 12:25-12:43)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Security](../topics/security.md)
@@ -27,6 +30,9 @@ Related concepts:
 - [Make Recovery a Native Model Action, Not an Infra Reset](make-recovery-a-native-model-action-not-an-infra-reset.md)
 - [Keep the Harness Thick Early and Thin It as the Model Improves](keep-the-harness-thick-early-and-thin-it-as-the-model-improves.md)
 - [Use field-level confidence signals for human review](use-field-level-confidence-signals-for-human-review.md)
+- [Give the Agent the Verbs That Fail Loudly](give-the-agent-the-verbs-that-fail-loudly.md)
+- [Size Agent Controls With the Undo Test](size-agent-controls-with-the-undo-test.md)
 
 Sources:
 - [From RL to IRL — Gaurav Mishra, Amazon AGI Lab](../sources/20260814_Cc0_nyxROBA.md), 04:47-05:38, 10:09-10:34, 13:44-13:55, 14:54-15:02, 15:34-16:05
+- [Give the Agent a Budget, Not a Token — Sachin Malhotra, Anthropic](../sources/20260822_rbjWzZK2LU0.md), 06:21-07:04, 12:25-12:43

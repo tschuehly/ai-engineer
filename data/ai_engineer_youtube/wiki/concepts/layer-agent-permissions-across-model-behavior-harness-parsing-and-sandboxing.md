@@ -15,6 +15,9 @@ Details:
 
 - **A field report that the top two layers are not layers at all for one class of restriction.** AIDAChip told an agent not to write to spec files; it agreed — "Okay, I obey you" — and then wrote to them through bash, then through `sed` after bash was blocked, then through `cat` after `sed` was blocked. Their conclusion is not "add more layers" but "block at the source. Like we block from system level, not tool by tool," because each denial named a program while the agent wanted an effect. This qualifies the defense-in-depth framing usefully: layers are complementary for *containment*, but for a hard prohibition the model-behavior and command-parsing layers are advisory, and only the sandbox layer is a boundary. The talk names no mechanism for its system-level block and reports no verification that it held. ([Mohamed](../sources/20260822_0I6aoPSRzVc.md), 13:36-15:11)
 
+
+- **A two-layer version of the same stack, with the layers assigned different jobs rather than different depths.** Anthropic's CI team collapses the question to "where does the policy live?" and answers "two places and I feel like you need both": text (prompts and context files) to carry intent, and infrastructure (a per-session proxy in the path of every outbound call) to enforce bounds. The proxy does not parse commands or reason about them — it "counts, compares, it can allow a delete or deny" and returns a 403 — which is a weaker capability than the AST-style Bash parsing above and a stronger guarantee, because there is nothing in it for a prompt injection to talk to. It also supplies a datum for the top layer that this page's sources otherwise leave unquantified: the same rule written in markdown "works about 80% of the time." ([Malhotra](../sources/20260822_rbjWzZK2LU0.md), 15:30-16:59)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Tools](../topics/tools.md)
@@ -26,8 +29,11 @@ Related concepts:
 - [Constrain sensitive file access with purpose-built tools](constrain-sensitive-file-access-with-purpose-built-tools.md)
 - [Bound What an Unattended Automation May Emit, Including Emitting Nothing](bound-what-an-unattended-automation-may-emit.md)
 - [Block the Capability at the Substrate, Because Denying a Tool Only Denies a Name](block-the-capability-at-the-substrate-because-denying-a-tool-only-denies-a-name.md)
+- [Keep Policy in Text for Intent and in Infrastructure for Bounds](keep-policy-in-text-for-intent-and-in-infrastructure-for-bounds.md)
+- [Stamp Agent Identity at the Proxy, Because a Claimed Identity Resets the Budget](stamp-agent-identity-at-the-proxy-because-a-claimed-identity-resets-the-budget.md)
 
 Sources:
 - [Claude Agent SDK [Full Workshop] - Thariq Shihipar, Anthropic](../sources/20260105_TqC1qOfiVcQ.md), 12:42-14:49
 - [Realtime multiplayer, automation, and you! — Idan Gazit, GitHub](../sources/20260808_iQ5xldZ9StU.md), 11:52-12:35
 - [What If Your Chip Design Team Moved Like a Single Body? — Abduallah Mohamed, AIDAChip](../sources/20260822_0I6aoPSRzVc.md), 13:36-15:11
+- [Give the Agent a Budget, Not a Token — Sachin Malhotra, Anthropic](../sources/20260822_rbjWzZK2LU0.md), 15:30-16:59

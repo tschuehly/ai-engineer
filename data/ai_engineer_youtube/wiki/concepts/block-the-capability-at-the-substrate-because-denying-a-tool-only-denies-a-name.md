@@ -16,6 +16,9 @@ Details:
 - **The source does not say what the substrate-level block actually is.** "Block from system level" names no container, mount option, filesystem permission model, seccomp profile, or LSM policy, and the talk does not report whether the block held after `cat`. The principle is well-evidenced by the failure; the implementation is not evidenced at all. ([What If Your Chip Design Team Moved Like a Single Body? — Abduallah Mohamed, AIDAChip](../sources/20260822_0I6aoPSRzVc.md), 14:25-14:47)
 - This is the enforcement-layer argument that the wiki's layered-permissions page makes as doctrine, arrived at empirically and from the opposite direction: not "one layer is never enough" but "the upper layers were never a layer at all for this class of restriction."
 
+
+- **A reason to keep writing the text layer anyway, plus the only number the wiki has for it.** Anthropic's CI team agrees the prompt does not enforce — "at the end of the day it's just advice… text can shape the intent but there is no enforcement anywhere" — and still runs policy in both places on purpose, because the enforcing layer cannot say why. Their proxy "is not reading the prompt. It doesn't know why the agent wants to do something and it doesn't really care… it'll simply return a 403 and that's the whole conversation," which is also what makes it injection-proof: "a clever prompt injection cannot really talk it out of the rule itself." The division they state is "the text shapes what an agent is trying to do and infra is bounding how wrong can it go," and the operator's estimate for the text half is that the same sentence in a markdown file "works about 80% of the time" — unmeasured, but the only figure any source here attaches to instruction compliance. See [keep policy in text for intent and in infrastructure for bounds](keep-policy-in-text-for-intent-and-in-infrastructure-for-bounds.md). ([Malhotra](../sources/20260822_rbjWzZK2LU0.md), 15:30-16:40)
+
 Related topics:
 - [Security](../topics/security.md)
 - [Agents](../topics/agents.md)
@@ -30,6 +33,8 @@ Related concepts:
 - [Do Not Gate Memory Use on the Agent's Own Judgment](do-not-gate-memory-use-on-the-agents-own-judgment.md)
 - [Keep a Living Intent Graph That Agents Read but Cannot Write](keep-a-living-intent-graph-that-agents-read-but-cannot-write.md)
 - [Design the Environment, Not the Workflow](design-the-environment-not-the-workflow.md)
+- [Keep Policy in Text for Intent and in Infrastructure for Bounds](keep-policy-in-text-for-intent-and-in-infrastructure-for-bounds.md)
 
 Sources:
 - [What If Your Chip Design Team Moved Like a Single Body? — Abduallah Mohamed, AIDAChip](../sources/20260822_0I6aoPSRzVc.md), 13:36-15:11
+- [Give the Agent a Budget, Not a Token — Sachin Malhotra, Anthropic](../sources/20260822_rbjWzZK2LU0.md), 15:30-16:40

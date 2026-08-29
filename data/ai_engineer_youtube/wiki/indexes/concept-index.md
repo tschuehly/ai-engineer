@@ -579,6 +579,11 @@
 - [Give Browser Agents a Compact Whole-Page Representation](../concepts/give-browser-agents-a-compact-whole-page-representation.md)
 - [Run Parallel Specialist Models Behind a Speak-Up Gate](../concepts/run-parallel-specialist-models-with-a-speak-up-gate.md)
 
+- [Replace the Token's Boolean With a Budget on Four Dimensions](../concepts/replace-the-token-boolean-with-a-budget-on-four-dimensions.md) - scope has two settings and both fail; how much, how fast, what is undoable, and who notices.
+- [Rate-Limit Every Write With a Ceiling That Refills](../concepts/rate-limit-every-write-with-a-ceiling-that-refills.md) - a self-refilling per-window cap on every write, with the override kept by the human.
+- [Prefer Trip Wires to Allow Lists, Because Only One of Them Learns](../concepts/prefer-trip-wires-to-allow-lists-because-only-one-of-them-learns.md) - an allow list is a guess made before you have data; a trip wire is how you get it.
+- [An Empty Filter Stage Turns a Cleanup Into a Match-All Delete](../concepts/an-empty-filter-stage-turns-a-cleanup-into-a-match-all-delete.md) - correct intent, well-formed command, 200 workloads gone in 90 seconds.
+
 ## AI Monetization
 
 - [Price Under the Department Threshold So Adoption Can Spread](../concepts/price-under-the-department-threshold-so-adoption-can-spread.md) - $60 a seat made buyers scope the purchase to a subset; a low base fee plus usage removed the scoping decision.
@@ -982,6 +987,9 @@
 - [Give agents a vent tool to report platform friction](../concepts/give-agents-a-vent-tool-to-report-platform-friction.md)
 - [Match the Agent's Output Medium to Its Native Representation](../concepts/match-agent-output-medium-to-its-native-representation.md)
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
+
+- [Give the Agent the Verbs That Fail Loudly](../concepts/give-the-agent-the-verbs-that-fail-loudly.md) - unskip yes, skip no: classify CI operations by whether their failure reaches a dashboard.
+- [Size Agent Controls With the Undo Test](../concepts/size-agent-controls-with-the-undo-test.md) - full autonomy on canary, a proposal on production, from one reversibility question.
 
 ## Context Engineering
 - [Steer an Over-Budget Run Before You Kill It](../concepts/steer-an-over-budget-run-before-you-kill-it.md) - compaction and tool-output reduction fired by a budget forecast rather than a token threshold.
@@ -1433,6 +1441,8 @@
 - [Give agents a vent tool to report platform friction](../concepts/give-agents-a-vent-tool-to-report-platform-friction.md)
 - [Separate Engine Latency From Network Latency in Voice Pipelines](../concepts/separate-engine-latency-from-network-latency-in-voice-pipelines.md)
 - [Fix the Browser-Agent Runtime Interface Before Reaching for a Better Model](../concepts/fix-the-browser-agent-runtime-interface-before-reaching-for-a-better-model.md)
+
+- [Stamp Agent Identity at the Proxy, Because a Claimed Identity Resets the Budget](../concepts/stamp-agent-identity-at-the-proxy-because-a-claimed-identity-resets-the-budget.md) - a per-session sidecar holds the credentials and the stamp propagates as a cluster label.
 
 ## Healthcare Operations
 
@@ -2643,6 +2653,8 @@
 - [Render Third-Party Generative UI Through a Double Iframe](../concepts/render-third-party-generative-ui-through-a-double-iframe.md)
 - [Move Agent Access Control to the Network Layer So the Sandbox Holds No Credential](../concepts/move-agent-access-control-to-the-network-layer.md)
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
+
+- [Keep Policy in Text for Intent and in Infrastructure for Bounds](../concepts/keep-policy-in-text-for-intent-and-in-infrastructure-for-bounds.md) - a markdown rule works about 80% of the time; a proxy that counts and returns 403 cannot be argued with.
 
 ## Tools
 - [Expose Orchestration Through Both a Prompt and an API](../concepts/expose-orchestration-through-both-a-prompt-and-an-api.md) - the same subagent capability as a slash command and as a parent-child configuration API, because they answer different questions.

@@ -17,6 +17,9 @@ Details:
 - **Distinguish this from developer-facing replay.** Recording node-boundary inputs and outputs to [re-enter a failed run](record-and-replay-agent-runs-at-node-boundaries.md) serves debugging and is scoped to traces you chose to keep; the compliance ledger is the system's source of truth, covers every action including the successful ones, and carries the authorization for each. The same log can serve both, but only the second requirement forces completeness and immutability. ([Lovejoy & Howard](../sources/20260819_mav15aW9lLM.md), 05:23-07:44)
 - **Why the systems that already do this well are the ones agents cannot build on.** Krieger, on agentic products in financial services: "a lot of the systems that were built to do the verifiability, auditability are almost by design not super flexible in terms of agentic workloads on top. So there's opportunity at both sides of the stack." The rigidity is a design consequence of the evidence guarantee, not an implementation gap, so an agent layer generally cannot be bolted onto an existing audit system — the architecture question becomes where to draw the cut line between the verified substrate and the free-form analysis generated over it. ([Krieger](../sources/20260827_qqrk7CtkuIw.md), 20:42-21:41)
 
+
+- **Who holds the pen matters as much as what is in the record.** Anthropic's CI team removes audit writing from the agent entirely: for their break-glass test-skip operations "the agent itself is not responsible for writing the row or the audit trail itself. There is a proxy in the middle… responsible for stamping the caller's main identity on every call, whether it's a skip or an unskip… the agent technically never holds the pen on its own provenance." An audit trail an agent writes about itself is a record of what the agent chose to record, which is a weaker artifact than the chain of evidence this page describes. Their stamp also propagates: a job launched into a cluster carries it as a label and every child job inherits it, so the record covers work the agent spawned rather than only the calls it made. ([Malhotra](../sources/20260822_rbjWzZK2LU0.md), 08:07-08:24, 17:00-17:26)
+
 Related topics:
 - [Security](../topics/security.md)
 - [Infrastructure](../topics/infrastructure.md)
@@ -31,7 +34,9 @@ Related concepts:
 - [First-Class Agent Users Need Identity, Scopes, and Audit Trails](first-class-agent-users-need-identity-scopes-and-audit-trails.md)
 - [Make Regulated-Data Failures Architecturally Impossible](make-regulated-data-failures-architecturally-impossible.md)
 - [Draw the Cut Line Between Verified Data and Free-Form Agent Analysis](draw-the-cut-line-between-verified-data-and-free-form-agent-analysis.md)
+- [Stamp Agent Identity at the Proxy, Because a Claimed Identity Resets the Budget](stamp-agent-identity-at-the-proxy-because-a-claimed-identity-resets-the-budget.md)
 
 Sources:
 - [Why Your Enterprise Tech Stack Isn't Ready for AI Agents — Christopher Lovejoy & Saul Howard](../sources/20260819_mav15aW9lLM.md), 05:23-08:46
 - [How Anthropic Builds: Lessons from Labs — Mike Krieger, Anthropic](../sources/20260827_qqrk7CtkuIw.md), 20:42-21:41
+- [Give the Agent a Budget, Not a Token — Sachin Malhotra, Anthropic](../sources/20260822_rbjWzZK2LU0.md), 08:07-08:24, 17:00-17:26

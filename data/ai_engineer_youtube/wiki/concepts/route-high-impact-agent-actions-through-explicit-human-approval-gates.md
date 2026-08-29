@@ -28,6 +28,10 @@ Details:
 
 - **Two additions from a gate built around a constraint graph rather than around actions: routing by stakeholder, and an echo on approval.** AIDAChip's agents may not modify the "system of intent" — the graph holding all constraints and decisions — "except with human in the loop approval for specific changes." Because dependents are edges rather than prose, a proposal "captures all the values over there, all the stakeholders," fires a request that "goes to an architect or an owner of the system," and on approval "it actually goes and echoes in the whole system. Like everyone will know that this decision has been made." The echo is the part most gate designs omit: an approval that only unblocks the requester leaves every other holder of the old value silently stale, which is precisely the drift failure the same team reports. Two caveats — the enforcement layer for the write-gate is not stated, and the same talk's spec-file story is that an instruction-level prohibition did not hold; and they treat gate integrity as a metric, asking "are our agents overstepping human in the loop approval or not?", which no other source here measures. ([Mohamed](../sources/20260822_0I6aoPSRzVc.md), 05:46-06:19, 09:27-10:15, 11:30-11:40)
 
+
+- **An override that exists, is documented, and cannot be invoked by the agent.** Anthropic's CI team caps deletes with an admission webhook and keeps "always a bypass flag because sometimes you genuinely want to delete more than you're allowed for," but "inside an agent session effectively the bypass flag simply refuses to do anything. All it's going to do is tell the agent to ask the human to run the command itself. So the agent effectively gets the rate limit and the human keeps the override and nobody effectively has to file a ticket." This is a different gate topology from every other entry on this page: the escape hatch is not an approval queue, it is the same command the human already knows, and the agent's blocked attempt *is* the request. It avoids the approval-fatigue mechanism recorded above because nothing is presented to a human unless the agent has already exhausted its own budget. The weak joint is that "am I inside an agent session" is detected in band and the source names no mechanism for it — the same talk's own [identity argument](stamp-agent-identity-at-the-proxy-because-a-claimed-identity-resets-the-budget.md) is that anything the caller can assert about itself is not a control. ([Malhotra](../sources/20260822_rbjWzZK2LU0.md), 09:35-10:03)
+- **When the second key is just an environment split.** The same source's sizing lens — [the undo test](size-agent-controls-with-the-undo-test.md) — routes an action to a human only when the agent cannot roll it back or the blast radius is unacceptable, and observes that the resulting "second key" often needs no new machinery: on their feature-flag service the agent holds "the full dial" over canary, zero to 100 and back off again, but its key cannot promote a flag to production, so "the second key in this scenario is not necessarily a new auth system. It's a scoped key for production and a scoped key for canary." Splitting an existing credential by environment implements the gate without an approval UI, and the operator reports the consequence that gates usually cost: "I'm not in the middle of any of these things." ([Malhotra](../sources/20260822_rbjWzZK2LU0.md), 12:25-14:18)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Tools](../topics/tools.md)
@@ -47,6 +51,8 @@ Related concepts:
 - [Gate a Generated Multi-Channel Campaign on the Channel Owner](gate-a-generated-multi-channel-campaign-on-the-channel-owner.md)
 - [Keep a Living Intent Graph That Agents Read but Cannot Write](keep-a-living-intent-graph-that-agents-read-but-cannot-write.md)
 - [Grade the Alignment, Not the Agents](grade-the-alignment-not-the-agents.md)
+- [Size Agent Controls With the Undo Test](size-agent-controls-with-the-undo-test.md)
+- [Rate-Limit Every Write With a Ceiling That Refills](rate-limit-every-write-with-a-ceiling-that-refills.md)
 
 Sources:
 - [Human-in-the-Loop Automation with n8n - Liam McGarrigle](../sources/20260502_tDArkCqjA-c.md), 01:10-01:25, 01:10:41-01:11:07, 01:13:56-01:16:08
@@ -62,3 +68,4 @@ Sources:
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 07:27-07:43, 19:55-20:01, 20:30-20:49
 - [The Building Blocks of GTM Orchestration — Arman Vaziri, Ramp](../sources/20260826_VjEP0xqTUI0.md), 11:06-11:13, 13:25-13:28, 17:02-17:10
 - [What If Your Chip Design Team Moved Like a Single Body? — Abduallah Mohamed, AIDAChip](../sources/20260822_0I6aoPSRzVc.md), 05:46-06:19, 09:27-10:15, 11:30-11:40
+- [Give the Agent a Budget, Not a Token — Sachin Malhotra, Anthropic](../sources/20260822_rbjWzZK2LU0.md), 09:35-10:03, 12:25-14:18

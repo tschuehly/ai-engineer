@@ -16,6 +16,9 @@ Details:
 - **Choosing an existing configuration language over inventing one.** HCL brings variables, blocks, and existing editor and review tooling, and it puts the policy in a dialect infrastructure engineers already read. Dahl offers no comparison against alternatives beyond "it actually works really well here," so treat the specific choice as a report rather than a benchmark; the transferable part is that the policy is authored in something with a grammar and a test harness rather than accumulated in a UI. ([Ryan Dahl](../sources/20260817_MkRYPFIMCSA.md), 11:07-11:29)
 - **A second product reaches the version-controlled half and stops short of the tested half, which sharpens what this page is claiming.** GitHub's agentic workflows keep the policy in front matter inside the workflow document — permissions, allowed tools, allowed network destinations, permitted writes, and a capped list of outputs — so it lives in the repository and moves through pull request like any other change, for the same reason Dahl gives: "if you're prompting the guardrails at the agent, you're effectively letting the fox loose in the henhouse. It's not actually a guardrail." What is missing is everything downstream of storage. There are no fixture tests over the policy, and the executable artifact is machine-generated and explicitly not read: "the markdown is the source code. The YAML is like a compiled artifact… You never look at it." Version control without tests or a reviewed executable form gives you history and blame but not a check that the policy still denies what it used to deny — which is the part this page argues is load-bearing. ([Idan Gazit](../sources/20260808_iQ5xldZ9StU.md), 07:10-07:47, 10:20-10:35)
 
+
+- **Testing the policy does not tell you the policy is right.** Anthropic's CI team's objection is aimed at the content rather than the process: an enumerated permission list "is effectively a guess that you're making up front about what the agent needs or about model behavior itself… before you have any data on how the agent is behaving," and "allow lists don't really get better over time. They can get stale." Their complement is a [trip wire](prefer-trip-wires-to-allow-lists-because-only-one-of-them-learns.md) — an aggregate counter with a baseline that pages a human after the fact — which is the mechanism that generates the data a policy revision needs. The two compose rather than conflict: version control and fixture tests make changing the policy safe, and the trip wire is what tells you which entries were wrong. ([Malhotra](../sources/20260822_rbjWzZK2LU0.md), 10:05-11:03)
+
 Related topics:
 - [Security](../topics/security.md)
 - [Evaluation](../topics/evaluation.md)
@@ -29,7 +32,9 @@ Related concepts:
 - [Evaluate Workspace Isolation With Positive and Negative Filesystem Scorers](evaluate-workspace-isolation-with-positive-and-negative-filesystem-scorers.md)
 - [Spec-Driven Agent Validation Goes Beyond the Test Set](spec-driven-agent-validation-goes-beyond-the-test-set.md)
 - [The Markdown Workflow Is the Source; the YAML Is a Compiled Artifact](the-markdown-workflow-is-source-the-yaml-is-a-compiled-artifact.md)
+- [Prefer Trip Wires to Allow Lists, Because Only One of Them Learns](prefer-trip-wires-to-allow-lists-because-only-one-of-them-learns.md)
 
 Sources:
 - [Security Firewall for Agents — Ryan Dahl, Deno](../sources/20260817_MkRYPFIMCSA.md), 11:02-13:14, 17:26-18:04
 - [Realtime multiplayer, automation, and you! — Idan Gazit, GitHub](../sources/20260808_iQ5xldZ9StU.md), 07:10-07:47, 10:20-10:35
+- [Give the Agent a Budget, Not a Token — Sachin Malhotra, Anthropic](../sources/20260822_rbjWzZK2LU0.md), 10:05-11:03
