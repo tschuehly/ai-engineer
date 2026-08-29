@@ -27,6 +27,7 @@ Related concepts:
 - [Split Agent Advocacy Into Engineering, Product, and Marketing Flavors](split-agent-advocacy-into-engineering-product-and-marketing-flavors.md)
 - [Measure Agent Recommendations on Pain Prompts, Not Comparison Prompts](measure-agent-recommendations-on-pain-prompts-not-comparison-prompts.md)
 - [Universal AI Adoption Changes Engineering Coordination](universal-ai-adoption-changes-engineering-coordination.md)
+- [The Install Handoff Is Now a Prompt](the-install-handoff-is-now-a-prompt.md)
 
 Sources:
 - [The Death of Developer Advocates — Stephanie Jarmak, Sourcegraph](../sources/20260826_Lrw0jqBNaw0.md), 00:43, 03:21-04:15

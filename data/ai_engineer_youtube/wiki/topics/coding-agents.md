@@ -214,8 +214,11 @@ When agent output outruns human review, the instinct is to schedule more review 
 
 Coding agents changed who can use developer tools at all. Jarmak's own trajectory is the datum the talk rests on — a research scientist and astronomer with zero GitHub commits a year earlier, 12,000 now, maintaining an open-source multi-agent orchestration framework — and the generalization drawn is that "anybody with these agents can use dev tools, essentially." The other side of the same shift is that engineers became orchestrators of fleets of agents, with job-posting language changing to match. Both movements land on the same practical point for anyone writing docs, error messages, or onboarding for a developer tool: there are now two reader profiles with very different tacit knowledge, and the one that arrived recently cannot be assumed to know the category your product belongs to.
 
+Where a coding agent looks for documentation turns out to be different from where documentation is published. For an installable library, the agent mostly does not visit the docs site at all: it reads the repository and `node_modules`, reconstructing the API from compiled source and patching the gaps with stale training data. That reframes the freshness problem the wiki treats elsewhere as a retrieval problem — supply current Markdown at runtime, link skills to live docs — because both assume a fetch that may never happen. The alternative is to ship the Markdown documentation inside the published package alongside an `AGENTS.md` that points at it, which puts version-pinned docs on disk with no fetch, no skill, and nothing for the consumer to install; one vendor reports close to half the tokens saved against the web-search alternative, though with no task-success axis attached to the figure. The pointer is best written as a verification instruction — read the bundled docs and check them against what you believe — because the failure being corrected is a confident prior, not an absence.
+
 ## Key Concepts
 
+- [Ship Bundled Docs and an AGENTS.md Inside the Published Package](../concepts/ship-bundled-docs-and-an-agents-md-inside-the-published-package.md) - agents read `node_modules`, not your docs site, so put the docs where they already look.
 - [Agents Widen the Dev-Tool ICP Beyond Engineers](../concepts/agents-widen-the-dev-tool-icp-beyond-engineers.md) - a second persona for developer tools, and the caveats on generalizing from one trajectory.
 - [The Review Bottleneck Is Comprehension, Not Reviewer Time](../concepts/the-review-bottleneck-is-comprehension-not-reviewer-time.md) - carving out more review hours cannot fix a change nobody can hold in their head.
 - [Validate a Cross-Language Port Against Production Runtime Data](../concepts/validate-a-cross-language-port-against-production-runtime-data.md) - captured runtime types and values are the oracle a large model-driven port needs, and the cutover boundary is the part the model does not choose.
@@ -593,6 +596,8 @@ Coding agents changed who can use developer tools at all. Jarmak's own trajector
 
 ## Open Questions
 
+- Does the bundled-docs token saving survive a success-rate check? The reported ~50% reduction compares token cost with and without docs in `node_modules`, with no measure of whether the tasks completed correctly — and a cheaper run can be a shallower one. The wiki's own efficiency metric insists on tokens per *successful* outcome for exactly this reason. ([Burns](../sources/20260826_V_5bn4q-vAI.md), 11:16-11:45)
+
 - Does an agent-authored explanation of an agent-authored change improve review catches, or does it mainly make an unreviewable diff feel reviewed? Krieger reports the practice as Anthropic's internal default with no measurement either way. ([Krieger](../sources/20260827_qqrk7CtkuIw.md), 10:30-11:08)
 - Does expertise-weighted review guidance improve outcomes, or only recognition? The demonstrated signal is a senior engineer saying "that's something I would say," which confirms provenance and not usefulness; the missing measurement is whether boosted comments change code more often than unweighted ones.
 
@@ -805,3 +810,4 @@ Coding agents changed who can use developer tools at all. Jarmak's own trajector
 - [How to Generate Mergeable Code with a Context Engine — Peter Werry, Unblocked](../sources/20260827_qdAkxLoYNI8.md)
 - [How Anthropic Builds: Lessons from Labs — Mike Krieger, Anthropic](../sources/20260827_qqrk7CtkuIw.md)
 - [The Death of Developer Advocates — Stephanie Jarmak, Sourcegraph](../sources/20260826_Lrw0jqBNaw0.md)
+- [How We Got LLMs to Recommend Our Open Source Library — Christopher Burns, Inth](../sources/20260826_V_5bn4q-vAI.md)

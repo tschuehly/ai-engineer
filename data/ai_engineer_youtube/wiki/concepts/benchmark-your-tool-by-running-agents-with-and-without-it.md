@@ -16,6 +16,7 @@ Details:
 - **You can run this population at a scale you cannot run on humans.** The same source names the general version: "you can basically spin up like thousands of these agents to perform experiments on them and experiments that you can't really do as easily with the developers who don't want to maybe talk to you that much." Agent-user research is cheap in the way human-user research is not, which changes the economics of instrumenting an agent surface. (16:08-16:20)
 - **The output metrics buyers want are operational, not just correctness.** "How many tokens is the agent dealing with to work with your tool? And how fast is it?" — so the benchmark should report per-task token consumption and latency in both arms alongside completion, which is the same metric set as [Evaluate Agent Loops With Correctness, Cost, Latency, and Step Counts](evaluate-agent-loops-with-correctness-cost-latency-and-step-counts.md). (07:23-07:38)
 - **Limit.** No aggregate with-versus-without result is reported in the talk — only that the benchmark and traces exist, plus one narrated trace. The pattern is well specified; the effect size for this particular tool is not. ([Jarmak](../sources/20260826_Lrw0jqBNaw0.md), Provenance and Limits)
+- **The cheapest version of this design measures token cost rather than task success.** Burns compares the same agents working on his library with and without bundled docs in `node_modules`, and reports "almost 50% token saving" against the alternative of searching the web for the same information, observed "between many different models." No task-success axis is reported, which is the weakness — a with/without comparison on cost alone cannot distinguish a cheaper run from a shallower one. The complementary standing check is an external agent-readiness grader, with the caveat that its rubric moves under you. See [Ship Bundled Docs and an AGENTS.md Inside the Published Package](ship-bundled-docs-and-an-agents-md-inside-the-published-package.md) and [Score Agent-Readiness Against a Moving Baseline](score-agent-readiness-against-a-moving-baseline.md). ([Burns](../sources/20260826_V_5bn4q-vAI.md), 11:16-11:45, 12:48-13:33)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -30,6 +31,9 @@ Related concepts:
 - [Design MCP Servers as Agent Products](design-mcp-servers-as-agent-products.md)
 - [Evaluate Retrieval and MCP Layers by Task Value](evaluate-retrieval-and-mcp-layers-by-task-value.md)
 - [Treat Agent Experience as a Curb Cut](treat-agent-experience-as-a-curb-cut.md)
+- [Ship Bundled Docs and an AGENTS.md Inside the Published Package](ship-bundled-docs-and-an-agents-md-inside-the-published-package.md)
+- [Score Agent-Readiness Against a Moving Baseline](score-agent-readiness-against-a-moving-baseline.md)
 
 Sources:
 - [The Death of Developer Advocates — Stephanie Jarmak, Sourcegraph](../sources/20260826_Lrw0jqBNaw0.md), 05:36-07:38, 16:08-16:20
+- [How We Got LLMs to Recommend Our Open Source Library — Christopher Burns, Inth](../sources/20260826_V_5bn4q-vAI.md), 11:16-11:45, 12:48-13:33

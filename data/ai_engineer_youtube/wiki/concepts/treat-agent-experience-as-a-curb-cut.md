@@ -15,6 +15,8 @@ Details:
 - **Starter action, go-to-market side.** "Start developing some of these experiments with the GEO, putting together those prompts, and looking at the mentions versus recommendations." Note the distinction it draws — being mentioned and being recommended are separate counts, and only the second corresponds to adoption. (17:36-17:52)
 - **Make the artifact itself agent-legible.** The talk was published with a QR code and toy repositories containing templates, described as making the whole talk "agent legible" so an attendee could send an agent to it rather than photograph slides. The principle applies to any material you expect to be consumed downstream: publish the machine-readable version alongside the human one. (17:52-17:56)
 - **The audience-change framing behind it.** The talk's thesis is that developer relations is not dead but that its audience changed; the agent is "both the user of your tool in a very similar way to the developer" — reading docs, calling the API, hitting and recovering from errors — "but then it's also a recommender," which is the position bottom-up developer adoption always ran through. (04:15-05:22)
+- **A shipped outcome for the argument, from the vendor side.** The curb-cut claim is that agent work and human work converge; Burns reports the convergence running in the other direction, with developer-experience investment made years earlier for competitive reasons paying off in the agent channel: c15t was built for developers while "every other tool was built for marketers and lawyers," and the result is that "our very good developer experience primitives are now hitting agent primitives." The channel outcome that followed is the closest thing the wiki has to a measured payoff for agent-experience work — assistant recommendation became the library's top inbound source, detected on an ordinary onboarding form. See [The Install Handoff Is Now a Prompt](the-install-handoff-is-now-a-prompt.md) and [Attribute LLM-Sourced Inbound With a How-Did-You-Hear Field](attribute-llm-sourced-inbound-with-a-how-did-you-hear-field.md). ([Burns](../sources/20260826_V_5bn4q-vAI.md), 02:07-04:20)
+- **Independent confirmation of "where the analogy stops."** This page warns that agent experience is measured against a moving target. Burns supplies a second, non-model instance: a third-party agent-readiness grader scored his site at 59 where "3 weeks ago, it was a lot higher," with no site change — the *rubric* moved. Both the models and the graders are non-stationary, so the rerun cadence this page asks for is doubly required. See [Score Agent-Readiness Against a Moving Baseline](score-agent-readiness-against-a-moving-baseline.md). ([Burns](../sources/20260826_V_5bn4q-vAI.md), 12:48-14:10)
 
 Related topics:
 - [Product Strategy](../topics/product-strategy.md)
@@ -30,6 +32,10 @@ Related concepts:
 - [Split Agent Advocacy Into Engineering, Product, and Marketing Flavors](split-agent-advocacy-into-engineering-product-and-marketing-flavors.md)
 - [Agents Widen the Dev-Tool ICP Beyond Engineers](agents-widen-the-dev-tool-icp-beyond-engineers.md)
 - [Make Web Foundations Agent-Ready Before Adopting WebMCP](make-web-foundations-agent-ready-before-adopting-webmcp.md)
+- [The Install Handoff Is Now a Prompt](the-install-handoff-is-now-a-prompt.md)
+- [Attribute LLM-Sourced Inbound With a How-Did-You-Hear Field](attribute-llm-sourced-inbound-with-a-how-did-you-hear-field.md)
+- [Score Agent-Readiness Against a Moving Baseline](score-agent-readiness-against-a-moving-baseline.md)
 
 Sources:
 - [The Death of Developer Advocates — Stephanie Jarmak, Sourcegraph](../sources/20260826_Lrw0jqBNaw0.md), 04:15-05:22, 16:45-17:56
+- [How We Got LLMs to Recommend Our Open Source Library — Christopher Burns, Inth](../sources/20260826_V_5bn4q-vAI.md), 02:07-04:20, 12:48-14:10

@@ -617,6 +617,7 @@
 - [Learn risk scoring from audit feedback for predictive compliance](../concepts/learn-risk-scoring-from-audit-feedback-for-predictive-compliance.md)
 
 ## Coding Agents
+- [Ship Bundled Docs and an AGENTS.md Inside the Published Package](../concepts/ship-bundled-docs-and-an-agents-md-inside-the-published-package.md) - coding agents read `node_modules` and compiled source, so put version-pinned docs there.
 - [Agents Widen the Dev-Tool ICP Beyond Engineers](../concepts/agents-widen-the-dev-tool-icp-beyond-engineers.md) - a second reader profile for developer-tool docs, with caveats on generalizing from one trajectory.
 - [The Review Bottleneck Is Comprehension, Not Reviewer Time](../concepts/the-review-bottleneck-is-comprehension-not-reviewer-time.md) - more review hours cannot fix a change nobody can hold in their head.
 - [Validate a Cross-Language Port Against Production Runtime Data](../concepts/validate-a-cross-language-port-against-production-runtime-data.md) - captured production behavior is the oracle a model-driven port needs; the cutover boundary is still yours.
@@ -1595,6 +1596,8 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [The Install Handoff Is Now a Prompt](../concepts/the-install-handoff-is-now-a-prompt.md) - the Collison laptop install became a paste, which is why DX primitives are agent primitives.
+- [Score Agent-Readiness Against a Moving Baseline](../concepts/score-agent-readiness-against-a-moving-baseline.md) - a grader whose rubric changes weekly measures a delta, not a level.
 - [Layer Ask, Push, and Self-Serve Because Teams Interface Differently](../concepts/layer-ask-push-and-self-serve-because-teams-interface-differently.md) - a request queue, a digest, and a workspace running concurrently over one substrate.
 - [Push the Narrative Because Dashboard Adoption Is Always Uneven](../concepts/push-the-narrative-because-dashboard-adoption-is-always-uneven.md) - metric adoption is a distribution, so deliver the story and demote the dashboard to drill-down.
 - [Separate the Context Gap From the Expert Gap](../concepts/separate-the-context-gap-from-the-expert-gap.md) - assembly cost and judgment variance are different deficits with different fixes.
@@ -1742,6 +1745,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Go To Market
+- [Attribute LLM-Sourced Inbound With a How-Did-You-Hear Field](../concepts/attribute-llm-sourced-inbound-with-a-how-did-you-hear-field.md) - the only place a referrer-less assistant recommendation shows up is a signup form.
 
 - [Ship Go-to-Market Changes on an Engineering Release Cadence](../concepts/ship-go-to-market-changes-on-an-engineering-release-cadence.md) - data, automations, and campaigns pushed every two weeks, and the role defined as removing shipping constraints.
 - [Waterfall Data Vendors and Run Evals to Decide Which to Trust](../concepts/waterfall-data-vendors-and-run-evals-to-decide-which-to-trust.md) - no provider covers a field, so layer them and let per-provider evals set the order.
@@ -2582,6 +2586,9 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Serve Markdown Through Three Redundant Paths](../concepts/serve-markdown-through-three-redundant-paths.md) - `.md` suffix, `Accept` negotiation, and `?mode=agent`, ordered by the client capability each one assumes.
+- [Hand-Write llms.txt and Index the Rest for Fetching](../concepts/hand-write-llms-txt-and-index-the-rest-for-fetching.md) - forty authored lines beat a thousand generated ones, and agents fetch rather than browse.
+- [Generate Agent-Facing Docs Artifacts From One Markdown Source](../concepts/generate-agent-facing-docs-artifacts-from-one-markdown-source.md) - the agent-readability checklist as a build step over `.mdx`, not files someone keeps in sync.
 - [Run a Submission-and-Review Alias for Shared Skills](../concepts/run-a-submission-and-review-alias-for-shared-skills.md) - central intake with two reviewer constituencies as the control on skill proliferation.
 - [Put the Business Question Set Inside the Skill File, Not Just the Schema](../concepts/put-the-business-question-set-inside-the-skill-file-not-just-the-schema.md) - business semantics plus the questions people actually ask, shipped as context and reused as an app spec.
 - [Count Burned Turns, Because Agent Self-Recovery Hides Tool Defects](../concepts/count-burned-turns-because-agent-self-recovery-hides-tool-defects.md) - a silent description lets the model's training prior win, and a good error message hides the cost.

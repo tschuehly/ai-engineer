@@ -12,6 +12,7 @@ Details:
 - The skill intentionally does not embed all API documentation; it links to Markdown documentation so agents with web-fetch tools can retrieve details when needed. 23:50-24:06
 - Keeping volatile API details in documentation instead of the skill avoids forcing every skill user to update their local package for each new API feature. 24:06-24:34
 - **Freshness has a second, non-correctness reason to exist.** Pointing at current docs assumes the docs get updated when something changes. Jarmak adds a maintenance obligation that a correctness-driven process never generates: "even if your stuff hasn't changed in 2 years, which would be shocking. Even if it hasn't, keep everything up-to-date and fresh because that is how they have their relevance algorithm." Recency is an input to what an assistant retrieves and ranks, decoupled from whether the content is still true — so a stable API's docs can go quietly unfindable. See [Stale Product Content Compounds Through Newer Models](stale-product-content-compounds-through-newer-models.md). ([Jarmak](../sources/20260826_Lrw0jqBNaw0.md), 11:53-12:12)
+- **Point at the dependency, not only at the web — and the pointer may not need to be a skill.** Burns bundles the Markdown docs into the published package and adds an `AGENTS.md` beside them, which "is also working without any skills" because the files sit where a coding agent already reads; a skill is optional reinforcement, "you can add skills to it to say, look at the node modules and go from that." Two refinements for this page's advice: a link to docs is only as good as the agent's willingness and ability to fetch, and the pointer text should ask for reconciliation rather than reading — "read the bundles and verify that they match." See [Ship Bundled Docs and an AGENTS.md Inside the Published Package](ship-bundled-docs-and-an-agents-md-inside-the-published-package.md). ([Burns](../sources/20260826_V_5bn4q-vAI.md), 10:46-12:10)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -24,7 +25,10 @@ Related concepts:
 - [Package reusable context as skills, libraries, and registries](package-reusable-context-as-skills-libraries-and-registries.md)
 - [Use skills for workflow guidance and MCP for integrations](use-skills-for-workflow-guidance-and-mcp-for-integrations.md)
 - [Stale Product Content Compounds Through Newer Models](stale-product-content-compounds-through-newer-models.md)
+- [Ship Bundled Docs and an AGENTS.md Inside the Published Package](ship-bundled-docs-and-an-agents-md-inside-the-published-package.md)
+- [Hand-Write llms.txt and Index the Rest for Fetching](hand-write-llms-txt-and-index-the-rest-for-fetching.md)
 
 Sources:
 - [Building Conversational Agents - Thor Schaeff and Philipp Schmid, Google DeepMind](../sources/20260430_cVzf49yg0D8.md), 23:16-24:34
 - [The Death of Developer Advocates — Stephanie Jarmak, Sourcegraph](../sources/20260826_Lrw0jqBNaw0.md), 11:53-12:12
+- [How We Got LLMs to Recommend Our Open Source Library — Christopher Burns, Inth](../sources/20260826_V_5bn4q-vAI.md), 10:46-12:10

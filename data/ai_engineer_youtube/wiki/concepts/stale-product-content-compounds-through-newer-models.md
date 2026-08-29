@@ -16,6 +16,7 @@ Details:
 - **Give the assistant something quotable and structured.** "You want to give the agent something to quote… they want to bring something that they can really sell to the user," and assistants "really really like charts and FAQs and things like that." Prose that states a claim without a citable, extractable unit is harder for an assistant to relay. (11:45-12:12)
 - **Operational consequence.** Deprecating a product name is now a content campaign with a measurement loop attached, not a changelog entry. Track mentions of the retired name per model version as a standing metric; expect it to rise on some releases, and target the retrieval path — see [Measure Agent Recommendations on Pain Prompts, Not Comparison Prompts](measure-agent-recommendations-on-pain-prompts-not-comparison-prompts.md).
 - **Limit.** One product, one pair of model versions, one re-run performed the same afternoon, with no repetition count and no control for prompt or sampling variance. The compounding mechanism is the speaker's explanation, not a measured causal finding. ([Jarmak](../sources/20260826_Lrw0jqBNaw0.md), Provenance and Limits)
+- **For an installable library there is a way out of the corpus fight, and it is not on the web.** The compounding described here happens in published content that models train on and retrieve. Burns reports the same starting condition for a library — the agent has "previous stale training data and they're trying to work it out on what it can do from the compiled source" — but relocates the fix to the dependency itself: bundle current Markdown docs into the published package with an `AGENTS.md` pointing at them, so the docs the agent reads are pinned to the version installed. That does not bury the noise; it routes around it for the one case where a version-pinned artifact is already on the agent's disk. Nothing equivalent exists for a product whose surface is a website. See [Ship Bundled Docs and an AGENTS.md Inside the Published Package](ship-bundled-docs-and-an-agents-md-inside-the-published-package.md). ([Burns](../sources/20260826_V_5bn4q-vAI.md), 10:04-11:45)
 
 Related topics:
 - [Go To Market](../topics/go-to-market.md)
@@ -29,6 +30,10 @@ Related concepts:
 - [Agent skills should point to current docs instead of embedding every API detail](agent-skills-should-point-to-current-docs-instead-of-embedding-every-api-detail.md)
 - [Human and Agent Credibility Reward Opposite Writing Styles](human-and-agent-credibility-reward-opposite-writing-styles.md)
 - [Retire Completed Planning Docs Before They Become Agent Doc Rot](retire-completed-planning-docs-before-they-become-agent-doc-rot.md)
+- [Ship Bundled Docs and an AGENTS.md Inside the Published Package](ship-bundled-docs-and-an-agents-md-inside-the-published-package.md)
+- [Score Agent-Readiness Against a Moving Baseline](score-agent-readiness-against-a-moving-baseline.md)
+- [Hand-Write llms.txt and Index the Rest for Fetching](hand-write-llms-txt-and-index-the-rest-for-fetching.md)
 
 Sources:
 - [The Death of Developer Advocates — Stephanie Jarmak, Sourcegraph](../sources/20260826_Lrw0jqBNaw0.md), 10:30-12:12
+- [How We Got LLMs to Recommend Our Open Source Library — Christopher Burns, Inth](../sources/20260826_V_5bn4q-vAI.md), 10:04-11:45

@@ -15,6 +15,7 @@ Details:
 - Operationalize with a per-use-case view (e.g. a bar per tool or journey where shorter bars = less effective for that case); the short bars are where to focus optimization next. Even an imperfect measurement beats gut-driven decisions because it enables data-informed ones. (10:02-11:03)
 - This is the design-time counterpart to model-comparison loop metrics: where loop evals rank models by correctness + cost + latency + steps, tokens per successful outcome ranks the *interface* the model is calling, per journey.
 - **Two moves from one MCP server that improve both terms of the ratio at once.** Replacing generated markup with a pointer to the consumer's component cuts tokens and raises output quality together, because the referenced component is the accessible, internationalized one. Separately, Figma moved server usage guidance out of error responses and into resources, because with errors "the agent would have to call uh wasting inference and sort of reasoning to sort of figure out what is actually going wrong" — reactive discovery is billed in round trips, and the same information placed where the agent already looks is billed once. Neither change is quantified in the talk. ([Lumarie](../sources/20260828_ZIYYsAzaLlA.md), 08:12-08:37, 09:28-09:47)
+- **The largest reported saving came from moving the artifact, not from compressing it.** Burns's bundled-docs change reports "almost 50% token saving" against the baseline of the agent searching the web — and the tokens removed are almost entirely the retrieval subplot (decide to search, choose a tool, fetch, parse HTML), not the documentation itself. When optimizing an interface's ratio, audit what the agent spends *getting to* your content before you rewrite the content. Caveat for this page's own metric: the figure has no effectiveness term attached, so it is tokens-per-outcome rather than tokens-per-*successful*-outcome. See [Ship Bundled Docs and an AGENTS.md Inside the Published Package](ship-bundled-docs-and-an-agents-md-inside-the-published-package.md). ([Burns](../sources/20260826_V_5bn4q-vAI.md), 11:16-11:45)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -27,7 +28,11 @@ Related concepts:
 - [Design MCP Servers as Agent Products](design-mcp-servers-as-agent-products.md)
 - [Turn Tool Errors Into Agent Self-Healing Recovery](turn-tool-errors-into-agent-self-healing-recovery.md)
 - [Return a Pointer to the Reader's Own Component Instead of a Faithful Copy](return-a-pointer-to-the-readers-own-component-instead-of-a-copy.md)
+- [Ship Bundled Docs and an AGENTS.md Inside the Published Package](ship-bundled-docs-and-an-agents-md-inside-the-published-package.md)
+- [Serve Markdown Through Three Redundant Paths](serve-markdown-through-three-redundant-paths.md)
+- [Score Agent-Readiness Against a Moving Baseline](score-agent-readiness-against-a-moving-baseline.md)
 
 Sources:
 - [Building Agent Interfaces: Lessons from Chrome DevTools (MCP) for Agents — Michael Hablich, Google](../sources/20260605__B4Pv9ttFgY.md), 05:25-11:03, 21:32-22:15
 - [Building the Engine While Flying the Plane: Launching the Figma MCP Server — Jesse Lumarie, Figma](../sources/20260828_ZIYYsAzaLlA.md), 08:12-08:37, 09:28-09:47
+- [How We Got LLMs to Recommend Our Open Source Library — Christopher Burns, Inth](../sources/20260826_V_5bn4q-vAI.md), 11:16-11:45

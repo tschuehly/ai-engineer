@@ -15,6 +15,7 @@ Details:
 - **Make the lift measurable on a campaign timescale by targeting the retrieval path, not the weights.** The planned measurement watches "how the agents that are using those… web search tool calls… are then interpreting the information about your product," explicitly "not necessarily in the form of anything that was baked into the training data." Content that only pays off at the next pretraining run is unmeasurable this quarter; content that a search tool can retrieve today is testable by rerunning the same prompt set. (09:50-10:10)
 - **Report both conditions as separate numbers.** Averaging them produces a single mention rate that hides the entire finding. The useful artifact is a prompt set partitioned by intent — comparison, pain, task-in-progress — with a mention rate and a recommendation rate per partition, rerun on each model release. The talk's closing instruction is exactly this: "start developing some of these experiments with the GEO, putting together those prompts, and looking at the mentions versus recommendations." (17:36-17:52)
 - **Limit.** This is a self-reported pilot study by a vendor about its own product: no prompt count, no repetition count, no list of which assistants were queried, and single-condition point estimates. Treat 65-versus-zero as an existence proof that the gap can be total, not as a calibrated effect size. ([Jarmak](../sources/20260826_Lrw0jqBNaw0.md), Provenance and Limits)
+- **The downstream instrument this one cannot replace.** A prompt harness measures the assistant's behavior; it does not measure whether anyone acted on it. Burns measures the other end with a free-text onboarding question — "how did you hear about this?" — which spiked from a named date and now ranks assistant recommendation as the top inbound source. The two are complementary and neither is sufficient: a mention rate can rise with no installs, and an inbound spike cannot tell you which prompt shape produced it. Running both also operationalizes this page's mentions-versus-recommendations distinction, because only an acted-on recommendation reaches a signup form. See [Attribute LLM-Sourced Inbound With a How-Did-You-Hear Field](attribute-llm-sourced-inbound-with-a-how-did-you-hear-field.md). ([Burns](../sources/20260826_V_5bn4q-vAI.md), 02:17-02:39)
 
 Related topics:
 - [Go To Market](../topics/go-to-market.md)
@@ -29,6 +30,9 @@ Related concepts:
 - [Distribution Is the New Bottleneck for Developer Tools](distribution-is-the-new-bottleneck-for-devtools.md)
 - [Separate Agent as Product, Agent as Buyer, and Agent as User](separate-agent-as-product-buyer-and-user.md)
 - [Agent-readable web surfaces guide browsing agents](agent-readable-web-surfaces-guide-browsing-agents.md)
+- [Attribute LLM-Sourced Inbound With a How-Did-You-Hear Field](attribute-llm-sourced-inbound-with-a-how-did-you-hear-field.md)
+- [Score Agent-Readiness Against a Moving Baseline](score-agent-readiness-against-a-moving-baseline.md)
 
 Sources:
 - [The Death of Developer Advocates — Stephanie Jarmak, Sourcegraph](../sources/20260826_Lrw0jqBNaw0.md), 07:47-10:10, 17:36-17:52
+- [How We Got LLMs to Recommend Our Open Source Library — Christopher Burns, Inth](../sources/20260826_V_5bn4q-vAI.md), 02:17-02:39

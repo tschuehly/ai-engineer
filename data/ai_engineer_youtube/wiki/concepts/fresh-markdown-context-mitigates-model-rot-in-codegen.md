@@ -13,6 +13,7 @@ Details:
 
 - **Freshness cuts both ways, and the removal half is the one teams skip.** Amazon's context habit has an addition trigger and a subtraction trigger running together: "every time the agent makes a mistake or does something not the way that you would have done it, what am I missing in my skills files? What am I missing in my steering files that the agent needed?" — and, as models improve, "do I still need this in my steering files or is this just bloating context?" The material being pruned is specifically compensation for a superseded model's quirks ("a lot of do nots" written for Sonnet 3.7, largely unnecessary by Opus 4.5). A context file kept fresh only by addition drifts toward being a record of models that no longer exist. ([Liguori](../sources/20260828_pqlWNihgdjI.md), 08:47-09:39)
 - **The harder case: the stale claim is better attested in the newer model, not merely absent.** Model rot here is treated as a snapshot gap that current docs patch. Jarmak reports the version that does not behave like a gap — a GEO run on Claude Sonnet 4 "kept pitching Cody, which was one of our older products," and re-running it on 4.6 thinking, expecting improvement, produced "it pitched Cody even more." The proposed mechanism is a loop rather than a lag: "now you have all of these like old models like outputting content that then is like compounding in the internet." Fresh docs still help, but only if the agent retrieves them; waiting for the next release can move the wrong way. See [Stale Product Content Compounds Through Newer Models](stale-product-content-compounds-through-newer-models.md). ([Jarmak](../sources/20260826_Lrw0jqBNaw0.md), 10:30-11:27)
+- **A delivery path that removes the fetch entirely.** Every mitigation on this page assumes the agent will retrieve current docs — which fails when there is no web tool, no network, a sandboxed run, or simply a model that does not bother. Burns's version ships the Markdown inside the published package next to an `AGENTS.md` that points at it, so the docs are already on disk and, because they arrive with the dependency, are pinned to the exact version installed rather than to whatever the docs site currently shows. Reported effect: "almost 50% token saving" against searching the web for the same information. See [Ship Bundled Docs and an AGENTS.md Inside the Published Package](ship-bundled-docs-and-an-agents-md-inside-the-published-package.md). ([Burns](../sources/20260826_V_5bn4q-vAI.md), 10:04-11:45)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -23,8 +24,10 @@ Related concepts:
 - [Do not cache context-engine answers as durable truth](do-not-cache-context-engine-answers-as-durable-truth.md)
 - [A Harness Fix Becomes Overhead When the Model Outgrows It](a-harness-fix-becomes-overhead-when-the-model-outgrows-it.md)
 - [Stale Product Content Compounds Through Newer Models](stale-product-content-compounds-through-newer-models.md)
+- [Ship Bundled Docs and an AGENTS.md Inside the Published Package](ship-bundled-docs-and-an-agents-md-inside-the-published-package.md)
 
 Sources:
 - [LLM codegen fails and how to stop 'em - Danilo Campos, PostHog](../sources/20260430_juoNbJiZUi0.md), 02:15-04:48
 - [From AI-Assisted to AI-Native: Building a Frontier Development Team — Clare Liguori, AWS](../sources/20260828_pqlWNihgdjI.md), 08:47-09:39
 - [The Death of Developer Advocates — Stephanie Jarmak, Sourcegraph](../sources/20260826_Lrw0jqBNaw0.md), 10:30-11:27
+- [How We Got LLMs to Recommend Our Open Source Library — Christopher Burns, Inth](../sources/20260826_V_5bn4q-vAI.md), 10:04-11:45

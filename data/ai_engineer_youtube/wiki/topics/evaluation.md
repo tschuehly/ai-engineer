@@ -326,8 +326,11 @@ Not every production artifact can be scored, and the honest fallback deserves a 
 
 Two evaluation problems arrive from go-to-market with no method attached, and both are worth recording as shapes. The first is the data-provider eval that decides a waterfall's ordering, which Berry makes the deciding mechanism for the whole data layer and then leaves entirely unspecified — no ground truth, no sample, no per-field metric — in a domain where the reference answer for a fact is the same market the vendors are selling. The second is a base-rate problem: on a channel where roughly one contact in a hundred replies, per-message quality scores are computed almost entirely over messages that were never going to convert, so the metrics are cheap and nearly uninformative while outcome measurement needs volume most teams do not have per variant. That is an argument for judging such agents on trajectory and policy compliance rather than on outcome alone.
 
+Agent-experience measurement has a non-stationarity problem that ordinary evals do not. Third-party graders that score whether a site is agent-ready now exist — Cloudflare shipped one, and others are appearing — but their rubrics change on the same weekly cadence as the conventions they check, so one team watched its score fall from substantially higher to 59 in three weeks with no change to the site. The consequence is that such a score cannot carry a target; the informative reading is the delta, where a drop with no deploys is a changelog of new conventions and a drop after a deploy is a regression. Distinguishing the two requires re-running on a schedule, and pairing the external grader with a first-party outcome measurement, since a grader reports which conventions you are missing and never whether an agent finished the task. The same caution already applies from the model side, where a fixed prompt set re-run on a newer release moved the wrong way.
+
 ## Key Concepts
 
+- [Score Agent-Readiness Against a Moving Baseline](../concepts/score-agent-readiness-against-a-moving-baseline.md) - read the delta, not the level, when the rubric moves faster than the site.
 - [Waterfall Data Vendors and Run Evals to Decide Which to Trust](../concepts/waterfall-data-vendors-and-run-evals-to-decide-which-to-trust.md) - provider evals as the ordering mechanism, and the ground-truth problem underneath them.
 - [Size Agent Quality Against the Channel's Reply Rate](../concepts/size-agent-quality-against-the-channel-reply-rate.md) - a rare-positive base rate that makes per-message quality scores uninformative.
 - [Read Every Run for Months Before Trusting an Unevaluatable Narrative](../concepts/read-every-run-for-months-before-trusting-an-unevaluatable-narrative.md) - exhaustive manual review as a burn-in, its volume ceiling, and the artifact it should leave behind.
@@ -1074,3 +1077,4 @@ Two evaluation problems arrive from go-to-market with no method attached, and bo
 - [The Death of Developer Advocates — Stephanie Jarmak, Sourcegraph](../sources/20260826_Lrw0jqBNaw0.md)
 - [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md)
 - [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md)
+- [How We Got LLMs to Recommend Our Open Source Library — Christopher Burns, Inth](../sources/20260826_V_5bn4q-vAI.md)

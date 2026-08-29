@@ -136,8 +136,12 @@ When the users are not engineers, the context layer becomes a business-semantics
 
 Purchased context adds a cost dimension the wiki's caching rules did not price. The rule that stored facts can be cached and date-stamped while stored conclusions must be recomputed still holds, but when re-derivation carries a per-call invoice from a data vendor, the date stamp needs a companion: an expiry chosen per field and ranked by volatility, since employee count moves constantly and headquarters location almost never. A single record-level refresh cadence is wrong in both directions at once. The same layer also has to reconcile representations before it can serve anything, because each vendor describes the same account differently — which is what produces the stable ID that a per-entity agent later rehydrates against.
 
+Context work for external agents is mostly a placement problem before it is a compression problem. The largest single reduction one vendor reports came not from shortening its documentation but from moving it: bundling Markdown docs into the published npm package so a coding agent finds them on disk, eliminating the whole web-research detour — decide to search, choose a tool, fetch, parse HTML — for a reported saving of close to half the tokens. The same instinct governs the web-facing surfaces: serve Markdown instead of HTML because the markup is paid for and discarded, and keep the orientation file short, since roughly forty hand-written lines were found to beat a thousand generated ones. The density rule is worth holding against the wiki's other finding that agent-facing content can carry as much machine-styled structure as it likes — structure buys tolerance for form, not for length.
+
 ## Key Concepts
 
+- [Ship Bundled Docs and an AGENTS.md Inside the Published Package](../concepts/ship-bundled-docs-and-an-agents-md-inside-the-published-package.md) - the biggest token saving came from relocating the artifact, not compressing it.
+- [Hand-Write llms.txt and Index the Rest for Fetching](../concepts/hand-write-llms-txt-and-index-the-rest-for-fetching.md) - forty good lines against a thousand lines of noise, for the file an agent reads first.
 - [Refresh Record Fields Selectively by Volatility and Price](../concepts/refresh-record-fields-selectively-by-volatility-and-price.md) - the price-side companion to date-stamping cached context.
 - [Resolve Entities Across Vendors Before the Agent Reads the Record](../concepts/resolve-entities-across-vendors-before-the-agent-reads-the-record.md) - one stable identity per entity as the precondition for everything that reads it.
 - [Put the Business Question Set Inside the Skill File, Not Just the Schema](../concepts/put-the-business-question-set-inside-the-skill-file-not-just-the-schema.md) - business semantics plus the recurring questions, with the residual routed to humans rather than guessed.
@@ -421,3 +425,4 @@ Purchased context adds a cost dimension the wiki's caching rules did not price. 
 - [The Death of Developer Advocates — Stephanie Jarmak, Sourcegraph](../sources/20260826_Lrw0jqBNaw0.md)
 - [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md)
 - [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md)
+- [How We Got LLMs to Recommend Our Open Source Library — Christopher Burns, Inth](../sources/20260826_V_5bn4q-vAI.md)

@@ -14,6 +14,7 @@ Details:
 - **The practical split.** Keep two registers with different targets: human-facing pages optimize for a developer's recognition test (specific, first-person, concrete, no model cadence), and agent-facing files optimize for extractability (headed sections, tables, FAQ pairs, explicit claims with names and numbers). Publishing the agent register on your marketing site is the failure mode this page exists to prevent.
 - **The tension with the wiki's other slop page.** [Treat Slop as a Quality Failure, Not an AI Provenance Label](treat-slop-as-a-quality-failure-not-an-ai-provenance-label.md) argues that "AI-generated" is the wrong axis and quality is the right one. This source uses "slop" the other way — as a recognizable style that costs credibility with humans regardless of whether the content is any good. Both can hold: the human penalty here is a *signaling* cost attached to recognizable model cadence, which is a real effect on the reader even when the underlying content passes a quality bar. The reconciliation is to fix the cadence rather than to hide the provenance.
 - **Caveat.** The agent-side bias is stated as an anecdotal observation ("for whatever reason") from GEO experiments, not a measured self-preference result, and it names one model family. Do not over-read it into a claim that verbosity is free — the same talk's benchmark work argues that tokens the agent must process are a cost buyers count. See [Count Burned Turns, Because Agent Self-Recovery Hides Tool Defects](count-burned-turns-because-agent-self-recovery-hides-tool-defects.md).
+- **Qualifier: "agents tolerate structure" is not "agents tolerate volume."** This page records that agent-facing material can carry as much LLM-styled structure as it likes so long as it is structured. Burns's testing on the orientation file draws the other boundary: "about 40 good lines beats 1,000 lines of noise." Structure buys you tolerance for form, not for length — the content still competes for a context window and for the model's attention, so the density rule survives the style permission. See [Hand-Write llms.txt and Index the Rest for Fetching](hand-write-llms-txt-and-index-the-rest-for-fetching.md). ([Burns](../sources/20260826_V_5bn4q-vAI.md), 06:14-06:39)
 
 Related topics:
 - [Go To Market](../topics/go-to-market.md)
@@ -27,6 +28,8 @@ Related concepts:
 - [Agent-readable web surfaces guide browsing agents](agent-readable-web-surfaces-guide-browsing-agents.md)
 - [AI Does Not Replace Shareable Product Marketing](ai-does-not-replace-shareable-product-marketing.md)
 - [Treat Agent Experience as a Curb Cut](treat-agent-experience-as-a-curb-cut.md)
+- [Hand-Write llms.txt and Index the Rest for Fetching](hand-write-llms-txt-and-index-the-rest-for-fetching.md)
 
 Sources:
 - [The Death of Developer Advocates — Stephanie Jarmak, Sourcegraph](../sources/20260826_Lrw0jqBNaw0.md), 11:45-12:12, 16:20-16:45
+- [How We Got LLMs to Recommend Our Open Source Library — Christopher Burns, Inth](../sources/20260826_V_5bn4q-vAI.md), 06:14-06:39

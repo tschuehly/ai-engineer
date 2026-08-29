@@ -30,6 +30,7 @@ Related concepts:
 - [Version-Control and Unit-Test the Agent Permission Policy](version-control-and-unit-test-the-agent-permission-policy.md)
 - [Automate the Chores That Needed Judgment, Not the Ones That Needed Rules](automate-the-chores-that-needed-judgment-not-rules.md)
 - [Use Playbooks for Repetitive Codebase Migrations](use-playbooks-for-repetitive-codebase-migrations.md)
+- [Generate Agent-Facing Docs Artifacts From One Markdown Source](generate-agent-facing-docs-artifacts-from-one-markdown-source.md)
 
 Sources:
 - [Realtime multiplayer, automation, and you! — Idan Gazit, GitHub](../sources/20260808_iQ5xldZ9StU.md), 05:38-11:46
