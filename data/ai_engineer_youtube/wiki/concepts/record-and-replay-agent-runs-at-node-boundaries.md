@@ -14,6 +14,7 @@ Details:
 - The trace is hyper-detailed per node (metadata like model version and sampling version, plus input/output JSON), so you can walk one node back from a bad `place_order(quantity=1000)` tool call to the LLM node that emitted it, 08:35-10:11.
 - What replay buys is a deterministic CI: stop the model and rerun the exact failure line with zero model calls. The end-to-end loop is annotation → recording → visualization → understanding → fixing → replaying → verifying, 06:47-07:15.
 - This is the Mozilla-rr record-and-replay philosophy brought into the agent loop — it goes beyond API mocking or response caching by capturing every model invocation, tool payload, memory-boundary read, and intermediate state transition into an append-only event log (talk description).
+- **A production orchestrator whose node boundaries are already the right seams, and which reports no replay story.** Clay's graph runs five node types — agent, tool call, conditional, code, and map-reduce fan-out — over a distributed setup where "failures… are happening all the time." Those boundaries are exactly where a run would be checkpointed and resumed, and the talk describes neither, which is the gap between having a graph and having a durable one. ([Berry](../sources/20260826_UhCY231d0FQ.md), 08:08-09:32)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -24,6 +25,8 @@ Related concepts:
 - [Turn Recorded Agent Traces Into Free Replay Test Cases](turn-recorded-agent-traces-into-free-replay-test-cases.md)
 - [Record Workflow History for Agent Debugging and Compliance](record-workflow-history-for-agent-debugging-and-compliance.md)
 - [Use Durable Execution for Production Agent Loops](use-durable-execution-for-production-agent-loops.md)
+- [Build Orchestration From a Few General-Purpose Node Types](build-orchestration-from-a-few-general-purpose-node-types.md)
 
 Sources:
 - [Your Agent Failed in Prod. Good Luck Reproducing It. - Tisha Chawla & Susheem Koul, Microsoft](../sources/20260629_Lc8zRh9muoY.md), 00:41-10:11, 13:11-13:36
+- [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 08:08-09:32

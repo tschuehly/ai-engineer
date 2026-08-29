@@ -15,6 +15,7 @@ Details:
 - The closing takeaway lists it as one of the five primitives worth modelling explicitly — "entities, context, triggers, actions, eligibility rules" — which is what makes an unfamiliar business domain "a system you can engineer." (20:02-20:12)
 - The rule set is also what makes a single decisioning system possible across two motions: without shared eligibility, self-serve growth and sales-assist necessarily decide separately about the same customer. (03:02-03:34)
 - **Limit.** No rule count, conflict rate, or before/after measurement of duplicate sends is given, and the classifier is described only by its job — no model, features, accuracy, or fallback behaviour when it is uncertain. (08:26-08:37)
+- **The suppression case, which is the same primitive read at conversion time.** Berry's version of preventing a double send runs after contact rather than before it: "if you get a call connection and a meeting booked on your call sequence, you then need to suppress your email sequence and maybe [unenroll] someone from a life cycle marketing campaign." Notion's single classifier prevents two channels from firing at once; this is the harder residual case where they legitimately both fired and one has now won. It needs the same shared eligibility state, but with a write path from every channel back into it, and each of those channels is usually a different vendor with its own sync lag. ([Berry](../sources/20260826_UhCY231d0FQ.md), 15:26-15:48)
 
 Related topics:
 - [Workflows](../topics/workflows.md)
@@ -27,6 +28,9 @@ Related concepts:
 - [Compute Truth in the Warehouse and Serve It as a Denormalized Profile](compute-truth-in-the-warehouse-and-serve-it-as-a-denormalized-profile.md)
 - [Tune a Tool Router With K-Sweep and Guard Its Failure Modes](tune-a-tool-router-with-k-sweep-and-guard-its-failure-modes.md)
 - [Land the Data in One Governed Store So Agents Inherit Access Control](land-the-data-in-one-governed-store-so-agents-inherit-access-control.md)
+- [Protect Sender Reputation by Splitting Domains and Routing Replies Home](protect-sender-reputation-by-splitting-domains-and-routing-replies-home.md)
+- [Wait for the Background Sync Before Acting on a Record You Just Created](wait-for-the-background-sync-before-acting-on-a-record-you-just-created.md)
 
 Sources:
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 03:02-03:34, 07:59-08:37, 09:22-09:36, 20:02-20:12
+- [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 15:26-15:48

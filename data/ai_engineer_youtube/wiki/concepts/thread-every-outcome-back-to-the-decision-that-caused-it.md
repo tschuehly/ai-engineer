@@ -15,6 +15,7 @@ Details:
 - The decomposition places this as the fourth question, "did it work," feeding back into the second, "what should happen next," which is why the loop is drawn as a loop rather than a pipeline. (05:47-06:25)
 - Step-level tracing is a separate mechanism serving a different purpose: "every LLM step is traced so that we can evaluate quality and improve over time" is about the quality of a workflow's internals, while outcome threading is about whether the decision to run that workflow was right. Both are needed and they are not the same instrumentation. (14:46-14:52)
 - **Limit.** This is the least demonstrated layer in the source. No worked example of a pivot, no metric, no attribution window, and no description of how an outcome is matched to a decision is given, and the two outcome figures reported are system-level results, not evidence that the loop closed. (14:53-15:37, 18:48-19:14)
+- **A second source placing the same loop at the frontier rather than in production.** Berry describes the per-account agent's learning phase — "as the agent works on an account or a series of accounts, it updates its own view of what's working" — and then disclaims it: "today in GTM, this is not fully solved yet. And in fact, the continual learning effort and the next best action suggestions are kind of one of the cutting edge problems that we're working on." Two independent GTM sources now describe outcome-to-decision threading as the mechanism that would make the architecture self-improving, and neither demonstrates it working, which strengthens the reading that the learn layer is the least built part of these systems. ([Berry](../sources/20260826_UhCY231d0FQ.md), 11:47-12:10)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -28,6 +29,8 @@ Related concepts:
 - [Reverse-Engineer AI App Evals From User Outcomes](reverse-engineer-ai-app-evals-from-user-outcomes.md)
 - [Emit Owner-Assigned Tasks From Signals, With a Marketing Default When None Fire](emit-owner-assigned-tasks-from-signals-with-a-marketing-default-when-none-fire.md)
 - [Use Decision Logs to Keep Uncertain Agents Moving](use-decision-logs-to-keep-uncertain-agents-moving.md)
+- [Run One Dormant, Long-Lived Agent Per Account](run-one-dormant-long-lived-agent-per-account.md)
 
 Sources:
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 05:47-06:25, 14:46-15:37, 18:48-19:14
+- [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 11:47-12:10

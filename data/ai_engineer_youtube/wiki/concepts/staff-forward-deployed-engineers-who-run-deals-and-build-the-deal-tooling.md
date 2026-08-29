@@ -14,6 +14,7 @@ Details:
 - **The non-FDE half is the more transferable finding.** Everyone outside FDE "has learned how to use AI really well," but "they're not generally vibe coding these interfaces that we have" — the company invests in training sessions so "people really understand how to use these tools" instead. Expert operation and building are treated as separate skills with separate investments, and only one is asked of the whole team. (14:59-15:28)
 - The scale is small and the speaker does not project it: about eight or nine FDEs at a company of about 115 people, with his own answer to whether the everyone-does-everything model survives growth being "probably not. But at least right now that's what we have, and I think that's a really good working model to get pretty far." (18:07-18:31)
 - **Limits.** One company's current arrangement, reported by a founder, with no productivity, coverage, or attrition data on either side and no comparison against a conventional solutions-engineering split. The model is explicitly presented as unscaled and possibly temporary. (14:36-18:31)
+- **A third staffing answer to the same shift, and it is the most conventional one.** Asked whether GTM engineers are "fundamentally software developers that have this knowledge," Berry effectively agrees, and grounds the role in a cadence claim: the best GTM teams push "changes to their GTM structure almost at the same cadence that an engineering team might be doing releases," with new data, automations, and campaigns every two weeks at his own company. He also claims the role is "an index on the advances that we're making in AI," gaining leverage as models improve. Exa collapses the solutions engineer and the tooling builder into one person who also runs deals; this keeps them distinct and puts an engineer next to the GTM team. Both are responses to the same speedup and they disagree about whether the deal-running and the tool-building belong to the same person. ([Berry](../sources/20260826_UhCY231d0FQ.md), 00:32-01:58, 17:47-18:14)
 
 Related topics:
 - [Go To Market](../topics/go-to-market.md)
@@ -25,6 +26,8 @@ Related concepts:
 - [Agent-native companies embed agents into product, operations, and culture](agent-native-companies-embed-agents-into-product-operations-and-culture.md)
 - [Embed Agent Tools in Existing Work Surfaces](embed-agent-tools-in-existing-work-surfaces.md)
 - [Crystallize the UI for Repeated Use Cases and Generate It for Novel Ones](crystallize-the-ui-for-repeated-use-cases-and-generate-it-for-novel-ones.md)
+- [Ship Go-to-Market Changes on an Engineering Release Cadence](ship-go-to-market-changes-on-an-engineering-release-cadence.md)
 
 Sources:
 - [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md), 14:36-15:56, 17:16-18:31
+- [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 00:32-01:58, 17:47-18:14

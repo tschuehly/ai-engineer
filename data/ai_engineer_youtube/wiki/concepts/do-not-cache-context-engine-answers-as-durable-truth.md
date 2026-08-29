@@ -15,6 +15,7 @@ Details:
 
 - **The distinction gets harder when the artifact is a synthesis rather than an answer.** Werry's demo returns an architecture diagram that "doesn't exist. It just figures it out based on the way the code operates today" — a relation over the corpus, not a retrieved document, and not obviously either a fact or a conclusion. The talk does not say whether that synthesis is built at ingest or per question, which is exactly the fork this page cares about: precomputed, it decays like any cache and needs a date stamp and a refresh trigger; recomputed, it tracks the sources and costs more every time. The rule stated here still resolves it — cache what you can re-derive and date-stamp, recompute what you concluded — but a synthesis sits close enough to the line that a system should decide explicitly rather than by default. See [Distillation Is a Separate Step From Retrieval, and the Task Agent Will Not Do It](distillation-is-a-separate-step-from-retrieval.md). ([Werry, Aug 2026](../sources/20260827_qdAkxLoYNI8.md), 05:12-05:52, 07:53-08:33)
 - **A production system that does persist generated answers alongside facts, and does not say how they expire.** Notion's serve store holds "agent-generated artifacts — research snippets, summarized notes, rolling summaries" keyed by the same IDs as the modeled entities "so that downstream systems can read all of this in one shot." The convenience is real and so is the exposure this page names: the modeled entities carry ownership and timestamps, but no invalidation policy, freshness bound, or re-derivation rule is described for the generated half, which is exactly where a stale answer would be indistinguishable from a fact. ([Liu](../sources/20260826_L4I7WgiEquo.md), 09:22-10:07)
+- **The price side of "cache what you can re-derive."** Berry's context layer is assembled from purchased vendor data, which puts an invoice on re-derivation: "it's incredibly expensive to update data all the time, especially if you're purchasing it. So, I can't just update all the fields. I need to kind of selectively choose which fields to update." The rule survives but needs a companion — a per-field expiry set by how fast the field actually changes, since "employee count change[s] all the time [while] headquarters location change[s] very rarely." A single record-level refresh cadence overpays on the stable fields and is stale on the volatile ones. ([Berry](../sources/20260826_UhCY231d0FQ.md), 05:38-05:50, 07:44-07:54)
 
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
@@ -28,9 +29,11 @@ Related concepts:
 - [Frequency, Not Volume, Drives Web-Context Cost](frequency-not-volume-drives-web-context-cost.md)
 - [Distillation Is a Separate Step From Retrieval, and the Task Agent Will Not Do It](distillation-is-a-separate-step-from-retrieval.md)
 - [Compute Truth in the Warehouse and Serve It as a Denormalized Profile](compute-truth-in-the-warehouse-and-serve-it-as-a-denormalized-profile.md)
+- [Refresh Record Fields Selectively by Volatility and Price](refresh-record-fields-selectively-by-volatility-and-price.md)
 
 Sources:
 - [Mergeable by default: Building the context engine to save time and tokens — Peter Werry, Unblocked](../sources/20260503_5ID22ACI7IM.md), 19:10-19:41, 24:42-25:28, 38:26-39:19
 - [The Rise of CaaS: Context-as-a-Service for Agentic AI — Omer Primor, Bright Data](../sources/20260814_Ot4OPrPH4xY.md), 02:47-03:28, 19:46-21:40
 - [How to Generate Mergeable Code with a Context Engine — Peter Werry, Unblocked](../sources/20260827_qdAkxLoYNI8.md), 05:12-05:52, 07:53-08:33
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 09:22-10:07
+- [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 05:38-05:50, 07:44-07:54

@@ -70,8 +70,11 @@ Embeddings over a large corpus support a second operation besides retrieval, and
 
 Retrieval for an internal agent is sometimes better solved as a serving problem than as a search problem. When the entities are known and enumerable — accounts, contacts, workspaces — Notion computes the joined view in the warehouse on a batch cadence and publishes a denormalized, key-addressable profile so agents fetch context by key in milliseconds with no joins, rather than searching for it. Model-generated artifacts (research snippets, summarized notes, rolling summaries) are keyed to the same IDs so a single read returns structured and unstructured context together. The tradeoff to carry: this trades query flexibility and freshness for latency and determinism, and the source describes no invalidation rule for the generated half, which is where a stale answer would be indistinguishable from a fact.
 
+A commercial data layer shows what coverage costs when the corpus is bought rather than crawled. No go-to-market vendor holds a complete picture of any field, so values are assembled by waterfalling providers until one returns, and the ordering is decided by running evals against them rather than by reputation — a fallback chain whose later rungs serve exactly the records the earlier ones missed. Coverage and correctness stay separate: a value returned by the third provider is still one external system's claim, and two vendors agreeing may not be independent evidence if both resold the same upstream file.
+
 ## Key Concepts
 
+- [Waterfall Data Vendors and Run Evals to Decide Which to Trust](../concepts/waterfall-data-vendors-and-run-evals-to-decide-which-to-trust.md) - layering providers for coverage without mistaking agreement for confirmation.
 - [Compute Truth in the Warehouse and Serve It as a Denormalized Profile](../concepts/compute-truth-in-the-warehouse-and-serve-it-as-a-denormalized-profile.md) - key-addressable context beats search when the entity set is known, with staleness as the price.
 - [Classify the Whole Addressable Market Instead of Searching It Account by Account](../concepts/classify-the-whole-addressable-market-instead-of-searching-it.md) - exhaustive classification is a distinct use of an embedding index from ranked retrieval.
 - [Treat Go-to-Market as a Live Model of Your World That Agents Act On](../concepts/treat-go-to-market-as-a-live-model-of-your-world.md) - the joined internal/external substrate that market classification and account alerting both read.
@@ -292,3 +295,4 @@ Tax explanation systems add a regulated consumer version of expert-domain retrie
 - [How to Generate Mergeable Code with a Context Engine — Peter Werry, Unblocked](../sources/20260827_qdAkxLoYNI8.md)
 - [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md)
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md)
+- [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md)

@@ -29,6 +29,7 @@ Related concepts:
 - [Crystallize the UI for Repeated Use Cases and Generate It for Novel Ones](crystallize-the-ui-for-repeated-use-cases-and-generate-it-for-novel-ones.md)
 - [Separate the Context Gap From the Expert Gap](separate-the-context-gap-from-the-expert-gap.md)
 - [Choose Quality Over Coverage Because the First Five Answers Decide Adoption](choose-quality-over-coverage-because-the-first-five-answers-decide-adoption.md)
+- [Ship Go-to-Market Changes on an Engineering Release Cadence](ship-go-to-market-changes-on-an-engineering-release-cadence.md)
 
 Sources:
 - [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md), 04:56-06:45, 14:39-15:33, 16:30-17:08

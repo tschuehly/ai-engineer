@@ -16,6 +16,7 @@ Details:
 - The substrate property that makes one artifact serve both readers is format: the context layer is "built off of plain markdown, a language that agents are fluent in, and we have databases and hierarchies that they can navigate easily; at the same time this is well designed for humans," which is "what lets our engineers, agents, and GTM work off the same context." (18:18-18:44)
 - The human-side payoff is measured in tabs rather than in accuracy: GTM staff "didn't need to jump between many tools anymore," exploring context, investigating accounts, and dispatching to outbound tools from the surface they already used. (10:36-11:03)
 - **Limit.** The substrate here is the speaker's own product, and no alternative substrate is compared. The claim that a shared markdown-and-database surface prevents drift is an architectural argument, not a measured result; nothing in the talk reports a drift incident avoided. (11:15-11:17, 18:18-18:44)
+- **The shared substrate is necessary and not sufficient, per a vendor who ranks the remaining gap first.** Asked for the hardest problem in GTM engineering, Berry names neither data nor orchestration nor agents but "the interface between the human and the agent," because with the agent acting as "the reasoning and decision layer for a lot of tasks that a sales rep was previously doing," "the rep might think that they should do something different or the rep might not know that the agent did something." A common substrate makes the second knowable; it does not make it known, and it says nothing about the first. See [The Human-Agent Handoff Is the Hard Part Once Agents Are the Decision Layer](the-human-agent-handoff-is-the-hard-part-once-agents-are-the-decision-layer.md). ([Berry](../sources/20260826_UhCY231d0FQ.md), 16:51-17:47)
 
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
@@ -29,6 +30,9 @@ Related concepts:
 - [Personal Knowledge Bases Become Agent Context Substrates](personal-knowledge-bases-become-agent-context-substrates.md)
 - [Shared Canvases Expose Multi-Agent State and Coordination](shared-canvases-expose-multi-agent-state-and-coordination.md)
 - [Keep Humans Aligned With Proactive Agent Work](keep-humans-aligned-with-proactive-agent-work.md)
+- [The Human-Agent Handoff Is the Hard Part Once Agents Are the Decision Layer](the-human-agent-handoff-is-the-hard-part-once-agents-are-the-decision-layer.md)
+- [Give Agents Their Own Fields in the System of Record](give-agents-their-own-fields-in-the-system-of-record.md)
 
 Sources:
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 06:25-07:20, 10:36-11:17, 18:18-18:44, 20:13-20:27
+- [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 16:51-17:47

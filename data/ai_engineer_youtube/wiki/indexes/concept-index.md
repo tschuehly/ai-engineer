@@ -1,6 +1,9 @@
 # Concept Index
 
 ## Agents
+- [Run One Dormant, Long-Lived Agent Per Account](../concepts/run-one-dormant-long-lived-agent-per-account.md) - one agent per entity, dormant by default, woken by trigger or heartbeat and rehydrated from the shared substrate.
+- [Give Agents Their Own Fields in the System of Record](../concepts/give-agents-their-own-fields-in-the-system-of-record.md) - separate agent-written columns from human and pipeline ones: containment instead of approval.
+- [The Human-Agent Handoff Is the Hard Part Once Agents Are the Decision Layer](../concepts/the-human-agent-handoff-is-the-hard-part-once-agents-are-the-decision-layer.md) - the rep disagrees with the decision, or never learns it was made.
 - [Separate the Context Gap From the Expert Gap](../concepts/separate-the-context-gap-from-the-expert-gap.md) - assembly cost and judgment variance are different deficits with different fixes.
 - [Read-Side Agents Scale First Because the Write Side Needs Approvals](../concepts/read-side-agents-scale-first-because-the-write-side-needs-approvals.md) - briefs and decks ship long before quoting, approvals, and CRM writes.
 - [Treat Agent Experience as a Curb Cut](../concepts/treat-agent-experience-as-a-curb-cut.md) - serving the agent clears the human path; one more user in the room, still serving the human on the other end.
@@ -1740,6 +1743,12 @@
 
 ## Go To Market
 
+- [Ship Go-to-Market Changes on an Engineering Release Cadence](../concepts/ship-go-to-market-changes-on-an-engineering-release-cadence.md) - data, automations, and campaigns pushed every two weeks, and the role defined as removing shipping constraints.
+- [Waterfall Data Vendors and Run Evals to Decide Which to Trust](../concepts/waterfall-data-vendors-and-run-evals-to-decide-which-to-trust.md) - no provider covers a field, so layer them and let per-provider evals set the order.
+- [Refresh Record Fields Selectively by Volatility and Price](../concepts/refresh-record-fields-selectively-by-volatility-and-price.md) - purchased data makes freshness a per-field budget; employee count and headquarters sit at opposite ends.
+- [Resolve Entities Across Vendors Before the Agent Reads the Record](../concepts/resolve-entities-across-vendors-before-the-agent-reads-the-record.md) - every source names the same account differently, and the merge is an admission requirement.
+- [Size Agent Quality Against the Channel's Reply Rate](../concepts/size-agent-quality-against-the-channel-reply-rate.md) - 0.5-1% reply rates put the program's whole value in a margin a mediocre agent erases.
+- [Protect Sender Reputation by Splitting Domains and Routing Replies Home](../concepts/protect-sender-reputation-by-splitting-domains-and-routing-replies-home.md) - deliverability is a shared company asset; isolating it creates reply routing and cross-channel suppression.
 - [Separate the Context Gap From the Expert Gap](../concepts/separate-the-context-gap-from-the-expert-gap.md) - assembly cost and judgment variance are different deficits with different fixes.
 - [Layer Ask, Push, and Self-Serve Because Teams Interface Differently](../concepts/layer-ask-push-and-self-serve-because-teams-interface-differently.md) - a request queue, a digest, and a workspace running concurrently over one substrate.
 - [Push the Narrative Because Dashboard Adoption Is Always Uneven](../concepts/push-the-narrative-because-dashboard-adoption-is-always-uneven.md) - metric adoption is a distribution, so deliver the story and demote the dashboard to drill-down.
@@ -2876,6 +2885,9 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Treat Tool-to-Tool Orchestration as a Data Engineering Problem](../concepts/treat-tool-to-tool-orchestration-as-a-data-engineering-problem.md) - 10-30 tools with disagreeing world views, heterogeneous cadences, fan-out, and constant partial failure.
+- [Wait for the Background Sync Before Acting on a Record You Just Created](../concepts/wait-for-the-background-sync-before-acting-on-a-record-you-just-created.md) - pre-integrated vendors sync outside your orchestrator, so poll for readiness instead of retrying.
+- [Build Orchestration From a Few General-Purpose Node Types](../concepts/build-orchestration-from-a-few-general-purpose-node-types.md) - agent, tool call, conditional, code, and map-reduce as the whole execution vocabulary.
 - [Split a Generated Narrative Into Drafter, Fact-Checker, and Tone Agents](../concepts/split-generated-narrative-into-drafter-checker-and-tone-agents.md) - drafter, veracity checker, and a tone agent whose objective is framing balance rather than correctness.
 - [Pre-Shape Analytics Data by Time, Slice, and Metric Before the Agent Reads It](../concepts/pre-shape-analytics-data-by-time-slice-and-metric-before-the-agent-reads-it.md) - engineer the filters, aggregations, and trend detection up front so the model reads a small clean table.
 - [Read Every Run for Months Before Trusting an Unevaluatable Narrative](../concepts/read-every-run-for-months-before-trusting-an-unevaluatable-narrative.md) - exhaustive manual review as a burn-in when there is no ground-truth label, and what it fails to leave behind.

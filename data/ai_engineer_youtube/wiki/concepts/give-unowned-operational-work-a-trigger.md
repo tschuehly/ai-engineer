@@ -20,6 +20,7 @@ Details:
 - The runtime assumptions that make a trigger dependable: "Always runs. It's in the cloud. So if you close your laptop, it's okay. Runs inside of a sandbox, so it has kind of a file system underneath it. This allows it to sort of self-organize a lot of its work" (12:19-12:33). A trigger tied to a workstation is not a trigger.
 - The reason this tail is growing is the same volume argument made about coding agents: more change is reaching production — "AI is creating a lot more issues in production… it's not clear we have the right sort of structures in place to deal with the amount of kind of changes that are coming through" (02:37-02:49) — against a background where "70% of the time from an engineer is actually not focused just on writing code. It's actually spent on actually running the code that is actually shipped into production" (01:47-02:00).
 - Caveats: the 70% figure is attributed only as "this was a survey study done," with no publisher, sample, or year. The workloads are offered as "very basic primitives" that customers have extended, but no adoption, catch-rate, or time-saved figures are given for any of them.
+- **Two trigger classes, and the second one is what unowned work usually needs.** Berry's per-account agent is woken by "smart triggers or a heartbeat," and his worked example uses the heartbeat: a closed-lost account is re-approached on elapsed time, because "if we lose an account, we're not going to immediately go after that account again. We're going to wait for a little bit of time." Event triggers cover work created by something happening; a heartbeat covers work whose cue is that nothing has happened for long enough, which is exactly the shape of work that goes unowned. ([Berry](../sources/20260826_UhCY231d0FQ.md), 11:21-13:03)
 
 Related topics:
 - [Workflows](../topics/workflows.md)
@@ -32,6 +33,8 @@ Related concepts:
 - [Watch the Change Paths That Bypass Your Deployment Pipeline](watch-the-change-paths-that-bypass-your-deployment-pipeline.md)
 - [Ambient Agents Need Self-Maintenance and Memory Hygiene](ambient-agents-need-self-maintenance-and-memory-hygiene.md)
 - [Amend a Recurring Agent Task by Replying to Its Output](amend-a-recurring-agent-task-by-replying-to-its-output.md)
+- [Run One Dormant, Long-Lived Agent Per Account](run-one-dormant-long-lived-agent-per-account.md)
 
 Sources:
 - [Always-on agents run production without the on-call tax — Justin Smith, Resolve AI](../sources/20260809_vSx5IULvBns.md), 01:47-02:49, 09:04-10:16, 11:15-12:33, 15:23-15:39
+- [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 11:21-13:03

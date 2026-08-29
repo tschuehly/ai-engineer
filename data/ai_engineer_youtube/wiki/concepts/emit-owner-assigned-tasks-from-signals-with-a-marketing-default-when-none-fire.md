@@ -16,6 +16,7 @@ Details:
 - The single-classifier routing primitive is what stops the two halves from both firing at the same customer — centralizing the decision is credited with preventing double sends. (08:26-08:37)
 - The strongest reported number belongs to the default branch, not the signal branch: "users who received context-aware recommendations were 63% more likely to take the next step," with no absolute rates, control description, sample size, or definition of the step. (19:07-19:14)
 - **Limit.** No signal taxonomy, volume, precision, or threshold definition is given; the predictive engine is named only by its output; and how a signal's owner is chosen is not described. (11:20-12:53)
+- **A third disposition for a signal, between notify and emit-a-task: wake a standing agent that already holds the entity's state.** Berry's decision layer is not a task queue but a per-account agent, "dormant for most of the time," woken by "smart triggers or a heartbeat," that re-reads the account and decides what to do. The difference matters for the no-signal case this page is about: a task-emitting service has to decide ownership at emission time, while a heartbeat-woken agent can act on the *absence* of events — the closed-lost re-awaken agent fires on elapsed time precisely because nothing happened. ([Berry](../sources/20260826_UhCY231d0FQ.md), 11:21-13:03)
 
 Related topics:
 - [Go To Market](../topics/go-to-market.md)
@@ -29,6 +30,8 @@ Related concepts:
 - [Proactive Agent Systems Need Observation, Personalization, Timing, and Workflow Embedding](proactive-agent-systems-need-observation-personalization-timing-and-workflow-embedding.md)
 - [Repo-Local Markdown Tasks Give Agents Durable Scoped Work Units](repo-local-markdown-tasks-give-agents-durable-scoped-work-units.md)
 - [Run a Signal Layer to Triage Comms and Protect Focus](run-a-signal-layer-to-triage-comms-and-protect-focus.md)
+- [Run One Dormant, Long-Lived Agent Per Account](run-one-dormant-long-lived-agent-per-account.md)
 
 Sources:
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 08:26-08:37, 11:20-12:53, 16:14-16:41, 19:07-19:14
+- [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 11:21-13:03

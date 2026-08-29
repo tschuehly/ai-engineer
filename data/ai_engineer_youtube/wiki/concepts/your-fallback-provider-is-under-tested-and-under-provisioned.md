@@ -15,6 +15,7 @@ Details:
 - **The two mitigations are separate work.** A normalization layer in the gateway "can ensure that you can do cross provider fallbacks" by reconciling those differences in one place instead of in every caller; and "you need to really test your fallbacks well," which means exercising the fallback path deliberately rather than waiting for it to be exercised by an incident. (05:00-05:07)
 - **What this implies for the failover you have never run.** A fallback that has never carried production traffic is untested in both senses at once — its capacity is unmeasured and its response shape is unverified — so the first real failover tests two hypotheses simultaneously during an outage. Load-shedding and traffic prioritization exist partly because that test tends to fail; see [Decentralize the Gateway, Centralize the Governance](decentralize-the-gateway-centralize-the-governance.md) for the rest of that machinery.
 - **Caveat.** This is practitioner experience with no numbers attached: no failover incident, no saturation event, and no measured provider difference is reported, and the "even higher" headroom recommendation comes with no ratio. It also has an unpriced cost the talk does not mention — reserved capacity or committed spend with a second provider that normally serves zero traffic — which is exactly the availability-versus-cost trade in [An LLM Gateway Cannot Maximize Availability, Latency, Guardrails, and Cost at Once](an-llm-gateway-cannot-maximize-availability-latency-guardrails-and-cost.md).
+- **The same hazard in a data waterfall, where the fallback rungs exist by design rather than for outages.** Layering data vendors until a field fills means "if I was just using Forager to get phone numbers for this set of countries, I'd only get halfway there," so providers two through N serve exactly the records the earlier rungs missed — a biased, low-volume slice that is rarely monitored. The remedy Berry names is the one this page implies: "either you or the vendor that you're using needs to run evals against these data providers," which means evaluating the fallbacks on the population they actually serve rather than on the whole set. ([Berry](../sources/20260826_UhCY231d0FQ.md), 04:42-05:28)
 
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
@@ -27,6 +28,8 @@ Related concepts:
 - [Abstract LLM Inference Behind One Routing API](abstract-llm-inference-behind-one-routing-api.md)
 - [Read the Stop Reason Before You Read the Answer](read-the-stop-reason-before-you-read-the-answer.md)
 - [Open Model Families Need Ecosystem-Compatible Tooling](open-model-families-need-ecosystem-compatible-tooling.md)
+- [Waterfall Data Vendors and Run Evals to Decide Which to Trust](waterfall-data-vendors-and-run-evals-to-decide-which-to-trust.md)
 
 Sources:
 - [Productionizing LLM Gateways: Architecture, Tradeoffs and Hard Lessons — Kanish Manuja, Twilio](../sources/20260828_zrZ1amZBSPw.md), 04:35-05:07, 05:55-06:29
+- [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 04:42-05:28

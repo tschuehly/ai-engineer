@@ -16,6 +16,7 @@ Details:
 - Quoting and approvals are not CRM writes with a bigger blast radius; they are workflows with existing human authorization structures, which is why they appear in the same sentence. An agent entering them has to be modeled inside the approval chain rather than in front of it.
 - The governance concern the speaker raises about proliferating skills — "so that the source of truth in all the systems are aligning" — becomes materially harder once agents write, because divergent definitions stop producing merely divergent answers and start producing divergent records. (18:19-18:49)
 - **Limit.** This is a snapshot of one rollout six months in, not a measured claim that reads must precede writes. The talk gives no timeline, design, or risk assessment for the Salesforce write path, and no source here reports an internal deployment that started on the write side to compare against.
+- **A cheaper containment than approval, from a source whose agents already write.** Berry's rule is structural rather than procedural: agents get their own CRM columns, and "I always recommend separating the fields that agents are updating from the fields that deterministic systems are updating or that people are updating." That does not make the write correct, but it stops a wrong agent value from overwriting a right human one, which is the specific mechanism by which a bad write propagates silently into forecasts and routing. It is a third option alongside read-only and human-approved, and it is the one available to a team that cannot afford to gate every field. See [Give Agents Their Own Fields in the System of Record](give-agents-their-own-fields-in-the-system-of-record.md). ([Berry](../sources/20260826_UhCY231d0FQ.md), 12:23-12:43)
 
 Related topics:
 - [Go To Market](../topics/go-to-market.md)
@@ -30,6 +31,8 @@ Related concepts:
 - [Keep Agents Off the Customer Channel and Treat Inbound Forms as Untrusted Input](keep-agents-off-the-customer-channel-and-treat-inbound-forms-as-untrusted-input.md)
 - [Run a Submission-and-Review Alias for Shared Skills](run-a-submission-and-review-alias-for-shared-skills.md)
 - [Stage the Internal Agent Roadmap From Answers to Automation to Team-Built Tooling](stage-the-internal-agent-roadmap-from-answers-to-automation-to-team-built-tooling.md)
+- [Give Agents Their Own Fields in the System of Record](give-agents-their-own-fields-in-the-system-of-record.md)
 
 Sources:
 - [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md), 12:36-14:28, 17:08-18:49
+- [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 11:07-12:43

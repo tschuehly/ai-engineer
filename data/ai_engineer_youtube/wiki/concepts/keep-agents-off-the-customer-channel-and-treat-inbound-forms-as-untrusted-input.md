@@ -15,6 +15,7 @@ Details:
 - The stance is explicitly a current position on a trajectory, not a permanent one: "right now, humans are the primary consumer of GTM data and agents are helping at the edges. Soon, agents will become primary first-class consumers within the system, moving from drafting to acting within guardrails." The guardrails that would replace the human are not described. (20:30-20:49)
 - **Limit.** This is a design decision with a rationale, not a tested control. No injection attempt, filter, classifier, sanitization step, or incident is described, and nothing is said about what the agent may still do with untrusted text on the read side — research, enrichment, and scoring all consume it before a human sees the draft. (07:43-07:58)
 - **The same boundary arrived at by sequencing rather than by policy.** Cloudflare's go-to-market agents also never touch a customer, but because the outbound and write paths simply have not been built: quoting, approvals, and CRM updates are named as "harder problems" still in progress, and even the modest integration of embedding generated artifacts into meetings is gated on "some security setup." Notion decided not to let agents talk to customers; Cloudflare has not yet had to decide. The distinction matters when the connections land, because a boundary that exists only as an unbuilt feature offers no guidance about what to allow through it. ([Joyce](../sources/20260826_Qw_tC68KKes.md), 17:08-18:11)
+- **The opposite bet, and the infrastructure risk it exposes.** Clay keeps agents on the outbound channel and manages the fallout structurally: sending as the rep means "everett@clay.com is actually reaching out directly to customers," and doing it badly means "my overall domain reputation is going to suffer for my company," so volume moves to secondary domains and replies are routed home. That names a cost Notion's blanket prohibition also avoids but never states — deliverability is a shared company asset that a single bad campaign spends on behalf of everyone. A policy of no-agent-on-the-channel and a practice of isolate-the-blast-radius are answers to overlapping risks; a team running agents on outbound needs the second even after adopting the first for customer-facing content. See [Protect Sender Reputation by Splitting Domains and Routing Replies Home](protect-sender-reputation-by-splitting-domains-and-routing-replies-home.md). ([Berry](../sources/20260826_UhCY231d0FQ.md), 14:39-15:26)
 
 Related topics:
 - [Security](../topics/security.md)
@@ -30,7 +31,10 @@ Related concepts:
 - [Reduce Every Workflow to Know, Decide, Act, and Learn](reduce-every-workflow-to-know-decide-act-and-learn.md)
 - [Scope a Person-Cloned Agent by Caller, With Drafts as the Shared Capability](scope-a-person-cloned-agent-by-caller-with-drafts-as-the-shared-capability.md)
 - [Read-Side Agents Scale First Because the Write Side Needs Approvals](read-side-agents-scale-first-because-the-write-side-needs-approvals.md)
+- [Protect Sender Reputation by Splitting Domains and Routing Replies Home](protect-sender-reputation-by-splitting-domains-and-routing-replies-home.md)
+- [Size Agent Quality Against the Channel's Reply Rate](size-agent-quality-against-the-channel-reply-rate.md)
 
 Sources:
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 07:23-07:58, 16:14-16:41, 19:55-20:01, 20:30-20:49
 - [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md), 17:08-18:11
+- [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 14:39-15:26

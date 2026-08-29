@@ -28,6 +28,7 @@ Related concepts:
 - [Human Ownership Keeps Agent Pull Requests From Bypassing Review](human-ownership-keeps-agent-pull-requests-from-bypassing-review.md)
 - [The Best Engineers Adopt Agents Last, and Their Objections Are the Roadmap](the-best-engineers-adopt-agents-last-and-their-objections-are-the-roadmap.md)
 - [Create Psychological Safety for AI Adoption](create-psychological-safety-for-ai-adoption.md)
+- [Give Agents Their Own Fields in the System of Record](give-agents-their-own-fields-in-the-system-of-record.md)
 
 Sources:
 - [How to Get Your Org to Adopt Coding Agents (Without Shipping Garbage) — Eyal Blum, Figma](../sources/20260828_5Bn0xro2ol8.md), 04:08-04:42, 12:45-15:28

@@ -15,6 +15,7 @@ Details:
 - The system-level properties are named as a triple — "programmable, proactive and continuous" — which maps onto the layers: programmable comes from the shared context and eligibility primitives, proactive comes from non-user-initiated signals in the decide layer, and continuous comes from closing the loop. (03:36-03:41, 11:44-11:59)
 - A parallel takeaway gives the vocabulary rather than the layers: "model GTM as primitives — entities, context, triggers, actions, eligibility rules — and the alien world becomes a system you can engineer." Entities and context are the know layer, triggers and eligibility the decide layer, actions the act layer. (20:02-20:12)
 - **Limit.** The fourth layer is the least demonstrated. The learn loop is described as "the rebuilt version" of an analyst reading outputs, and no instance of the system pivoting on engagement history is shown; the two reported outcome figures (13 weeks, 63%) measure the system, not the loop. (14:53-15:37, 18:48-19:14)
+- **An independently derived four-part decomposition that matches on three of four and orders them by dependency.** Berry's GTM engineering breaks into data, orchestration, agents, and execution — the world model, keeping the systems that hold it in agreement, the reasoning layer, and getting in front of the customer. Know maps to data, decide to agents, act to execution; what Berry adds is orchestration as a first-class layer, which Notion's model absorbs into know and act. What he lacks is learn, and he says why: "the continual learning effort and the next best action suggestions are kind of one of the cutting edge problems… today in GTM, this is not fully solved yet." Two teams converging on nearly the same decomposition from different vantages is evidence for the decomposition; both leaving the fourth layer unbuilt is evidence about the fourth layer. ([Berry](../sources/20260826_UhCY231d0FQ.md), 01:58-02:19, 11:47-12:10)
 
 Related topics:
 - [Go To Market](../topics/go-to-market.md)
@@ -28,6 +29,9 @@ Related concepts:
 - [Treat Go-to-Market as a Live Model of Your World That Agents Act On](treat-go-to-market-as-a-live-model-of-your-world.md)
 - [Design AI Systems Requirements-First With a Four-Phase Framework](design-ai-systems-requirements-first-with-a-four-phase-framework.md)
 - [Close the Eval-to-Action Loop So Signal Survives the Dashboard](close-the-eval-to-action-loop-so-signal-survives-the-dashboard.md)
+- [Ship Go-to-Market Changes on an Engineering Release Cadence](ship-go-to-market-changes-on-an-engineering-release-cadence.md)
+- [Treat Tool-to-Tool Orchestration as a Data Engineering Problem](treat-tool-to-tool-orchestration-as-a-data-engineering-problem.md)
 
 Sources:
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 03:02-06:25, 20:02-20:12
+- [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 01:58-02:19, 11:47-12:10

@@ -32,6 +32,7 @@ Related concepts:
 - [Find the Crossover Point Between Renting and Owning Context](find-the-crossover-point-between-renting-and-owning-context.md)
 - [Frequency, Not Volume, Drives Web-Context Cost](frequency-not-volume-drives-web-context-cost.md)
 - [Classify the Whole Addressable Market Instead of Searching It Account by Account](classify-the-whole-addressable-market-instead-of-searching-it.md)
+- [Refresh Record Fields Selectively by Volatility and Price](refresh-record-fields-selectively-by-volatility-and-price.md)
 
 Sources:
 - [RAG is dead, right?? - Kuba Rogut, Turbopuffer](../sources/20260609_UM6sFg_jdlE.md), 06:08-08:36

@@ -15,6 +15,7 @@ Details:
 - **The expert gap is a floor problem, and it is the one that resists tooling.** Related sources converge on the same asymmetry: encoding a shadowed top rep's workflow is described as raising the floor for the team rather than the ceiling for the expert ([Shadow Your Best Human Before Encoding the Workflow](shadow-your-best-human-before-encoding-the-workflow.md)), and the general argument for prioritizing the floor over the ceiling is that trust is lost at the bottom of the distribution ([Raise the Floor Before Maxing the Benchmark](raise-the-floor-before-maxing-the-benchmark.md)).
 - Both gaps are presented as the reason the go-to-market organization is inefficient rather than as separate initiatives: "with these two problems with manual work as well as salespeople not having enough information... it really creates an inefficiency in the go-to-market organization." (04:17-04:35)
 - **Limit.** The two gaps are asserted from the speaker's experience, with no measurement of either — no preparation-time study, no ramp-time figure, no variance across reps before or after, and no definition of who counts as the expert whose level is being encoded.
+- **The context gap stated as a state-management problem rather than an assembly problem.** Berry's account of one account — signals arriving, data going stale, actions taken by reps and agents, meetings and feedback landing — is what the rep is holding in their head between calls: "we are relying on sales reps in a lot of cases to manually sort through this." Cloudflare's framing is the switching cost of gathering information before each conversation; this one is the cost of maintaining continuity across a months-long cycle. Retrieval on demand closes the first and not the second, which is an argument for the persistent per-account agent rather than for a better search over the same sources. ([Berry](../sources/20260826_UhCY231d0FQ.md), 09:59-10:38)
 
 Related topics:
 - [Go To Market](../topics/go-to-market.md)
@@ -28,6 +29,10 @@ Related concepts:
 - [Put the Business Question Set Inside the Skill File, Not Just the Schema](put-the-business-question-set-inside-the-skill-file-not-just-the-schema.md)
 - [Layer Ask, Push, and Self-Serve Because Teams Interface Differently](layer-ask-push-and-self-serve-because-teams-interface-differently.md)
 - [Environment Isolation Is What Lets Non-Engineers Trigger Real Work](environment-isolation-is-what-lets-non-engineers-trigger-real-work.md)
+- [Run One Dormant, Long-Lived Agent Per Account](run-one-dormant-long-lived-agent-per-account.md)
+- [The Human-Agent Handoff Is the Hard Part Once Agents Are the Decision Layer](the-human-agent-handoff-is-the-hard-part-once-agents-are-the-decision-layer.md)
+- [Ship Go-to-Market Changes on an Engineering Release Cadence](ship-go-to-market-changes-on-an-engineering-release-cadence.md)
 
 Sources:
 - [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md), 02:55-04:35, 05:03-05:26, 12:36-13:35
+- [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 09:59-10:38

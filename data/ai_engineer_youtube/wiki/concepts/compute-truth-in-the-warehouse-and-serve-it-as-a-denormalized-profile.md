@@ -16,6 +16,7 @@ Details:
 - It also answers the structured/unstructured problem, because the facts that change what a rep should do — "the champion just left," "don't contact this customer again," "they're blocked in legal" — arrive as notes; the normalized entities are brought into the shared workspace "so that we could work with structured and unstructured data at the same time." (05:00-05:27, 10:10-10:35)
 - **Limit.** "Milliseconds" is asserted, not measured, and no figure is given for freshness lag, entity count, write volume, or the cost of maintaining two stores. Which entities get real-time rather than daily transforms is not specified, so the staleness boundary that motivated the design is left undrawn. (09:11-09:49)
 - **The same split, with a different serve shape, when the reader is an analysis rather than an account agent.** Cloudflare pre-computes into tables organized by time, organizational slice, and metric — wide for snapshots, long for trends — because "a big part of this is simplifying the data so that the AI agents can actually analyze the data in a very consistent and clean way." Notion's serve layer is keyed by entity ID for millisecond per-account reads; this one is keyed by period and slice for aggregate reasoning. Both move the joins and the definitions into batch, and the choice of serve shape follows from the question the agent is being asked, not from the storage technology. ([Joyce](../sources/20260826_Qw_tC68KKes.md), 10:04-10:37)
+- **What the compute half has to do before it can produce a modeled entity, from a source that buys its inputs.** Berry lists the admission requirements for the data layer: waterfall multiple vendors because none covers a field, run evals to rank them, choose which fields to refresh because "it's incredibly expensive to update data all the time, especially if you're purchasing it," absorb pushed signal data alongside pulled data, and resolve entities because "the actual representation of a single account in those different sources is going to be different." Notion's "small set of modeled, versioned entities" is the output of exactly this work; naming the inputs is what makes the versioning and the timestamps load-bearing rather than tidy. ([Berry](../sources/20260826_UhCY231d0FQ.md), 04:42-06:19)
 
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
@@ -30,7 +31,14 @@ Related concepts:
 - [Treat Go-to-Market as a Live Model of Your World That Agents Act On](treat-go-to-market-as-a-live-model-of-your-world.md)
 - [Do Not Cache Context Engine Answers as Durable Truth](do-not-cache-context-engine-answers-as-durable-truth.md)
 - [Pre-Shape Analytics Data by Time, Slice, and Metric Before the Agent Reads It](pre-shape-analytics-data-by-time-slice-and-metric-before-the-agent-reads-it.md)
+- [Waterfall Data Vendors and Run Evals to Decide Which to Trust](waterfall-data-vendors-and-run-evals-to-decide-which-to-trust.md)
+- [Resolve Entities Across Vendors Before the Agent Reads the Record](resolve-entities-across-vendors-before-the-agent-reads-the-record.md)
+- [Refresh Record Fields Selectively by Volatility and Price](refresh-record-fields-selectively-by-volatility-and-price.md)
+- [Treat Tool-to-Tool Orchestration as a Data Engineering Problem](treat-tool-to-tool-orchestration-as-a-data-engineering-problem.md)
+- [Run One Dormant, Long-Lived Agent Per Account](run-one-dormant-long-lived-agent-per-account.md)
+- [Give Agents Their Own Fields in the System of Record](give-agents-their-own-fields-in-the-system-of-record.md)
 
 Sources:
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 04:49-04:59, 09:04-10:35
 - [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md), 10:04-10:37
+- [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 04:42-06:19

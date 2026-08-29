@@ -17,6 +17,7 @@ Details:
 - Volume discounts do not rescue it: token cost "doesn't shrink well over time. There's always some volume element in terms of the cost, but it's not the same as flatlining." (15:02-15:14)
 - Practical consequences: quote a rented-context path as *price × entities × refreshes per period over the horizon you actually intend to run*, not price × entities; and treat cadence as a first-class design parameter, because it is the term the vendor bill is most sensitive to and the one teams silently reduce under pressure (see [Cost Pressure Silently Shrinks Research Scope](cost-pressure-silently-shrinks-research-scope.md)).
 - This is the failure mode that inverts under ownership: once the pipeline is yours, the marginal query is effectively free, so re-asking becomes cheap exactly where it was most expensive. That is the argument for [finding the crossover point](find-the-crossover-point-between-renting-and-owning-context.md), and the reason the speaker's closing framing is "owned context compounds while rented decays." (19:46-20:16, 21:32-21:44)
+- **The same economics with a per-field rather than per-source granularity.** Purchased account data makes continuous refresh unaffordable — "it's incredibly expensive to update data all the time, especially if you're purchasing it. So, I can't just update all the fields" — and the ranking signal is how fast each field moves: "employee count change[s] all the time. Other data points like headquarters location change very rarely." Frequency drives the bill here too, but the unit that carries the frequency decision is the field, not the corpus, which makes the policy a table rather than a schedule. ([Berry](../sources/20260826_UhCY231d0FQ.md), 05:38-05:50, 07:44-07:54)
 
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
@@ -29,6 +30,8 @@ Related concepts:
 - [Context as a Service Is Vertical Search for Agents](context-as-a-service-is-vertical-search-for-agents.md)
 - [Do not cache context-engine answers as durable truth](do-not-cache-context-engine-answers-as-durable-truth.md)
 - [Agents Punish Bad Data and Need Question and Tracking Data Foundations](agents-punish-bad-data-and-need-question-and-tracking-data-foundations.md)
+- [Refresh Record Fields Selectively by Volatility and Price](refresh-record-fields-selectively-by-volatility-and-price.md)
 
 Sources:
 - [The Rise of CaaS: Context-as-a-Service for Agentic AI — Omer Primor, Bright Data](../sources/20260814_Ot4OPrPH4xY.md), 02:47-03:28, 14:05-15:14, 19:46-21:44
+- [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 05:38-05:50, 07:44-07:54

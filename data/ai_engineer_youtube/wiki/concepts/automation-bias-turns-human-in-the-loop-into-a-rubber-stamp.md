@@ -20,6 +20,7 @@ Details:
 
 - **The configuration past the rubber stamp, described as near-term by a team building toward it.** "We still have humans approving the code, uh but we see a short path in the near future to a percentage of our code landing automatically, having automatic approvals… The various parts of the industry are already moving there." A rubber stamp still leaves a human name on the approval and a person who could in principle have read it; automatic landing removes the position. Bond raises the cost and declines to price it: "are we going to kill the outer loop?… I'll let your imagination go there in terms of quality degradation, slop, and so forth." Uber's stated answer is to expand the outer loop instead, but the automatic-approval plan is left unbounded in the same talk. ([Bond and Ketkar](../sources/20260828_EL123UNokkI.md), 11:11-11:56, 13:08-13:44)
 - **A deployment whose stated value proposition is exactly the condition this page warns about.** Notion's rep "starts their day with an already prioritized task box" where "the email draft for an outreach task is already pre-researched and available for them to review," and the human is credited with adding "judgment and taste" on top. The design intent is genuine review, but nothing reported distinguishes review from approval: no edit rate, rejection rate, time-per-approval, or deliberation measure appears, and the throughput gain accrues precisely when the rep sends the draft unchanged. ([Liu](../sources/20260826_L4I7WgiEquo.md), 07:27-07:43, 16:14-16:41)
+- **The mirror-image failure, named by a practitioner as the hardest problem in his field.** Where automation bias is a human who reviews and defers, Berry describes a human who never entered the loop: with the agent acting as "the reasoning and decision layer for a lot of tasks that a sales rep was previously doing," "the rep might think that they should do something different or the rep might not know that the agent did something." Both are failures of the same handoff and neither is fixed by better model output — one needs the review to carry real friction, the other needs the decision to be visible at all. ([Berry](../sources/20260826_UhCY231d0FQ.md), 16:51-17:47)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -33,9 +34,11 @@ Related concepts:
 - [Ceding a Critical Decision Transfers Ownership of the Code](ceding-a-critical-decision-transfers-ownership-of-the-code.md)
 - [Review Comments Have Two Audiences With Inverted Error Costs](review-comments-have-two-audiences-with-inverted-error-costs.md)
 - [Keep Agents Off the Customer Channel and Treat Inbound Forms as Untrusted Input](keep-agents-off-the-customer-channel-and-treat-inbound-forms-as-untrusted-input.md)
+- [The Human-Agent Handoff Is the Hard Part Once Agents Are the Decision Layer](the-human-agent-handoff-is-the-hard-part-once-agents-are-the-decision-layer.md)
 
 Sources:
 - [Build AI Systems for Discernment, Not Approval - Angel Ortmann Lee, Duolingo](../sources/20260707_CDqzWpwkSls.md), 01:19-11:56
 - [Velocity Sickness: What Happens When Your Whole Team Gets 10x Faster — Matt Dailey, Ref.](../sources/20260809_Kz4QJmNrVXU.md), 10:55-11:35
 - [Building uReview, Uber's Multi-Agent Code Review Engine — Will Bond & Ameya Ketkar, Uber](../sources/20260828_EL123UNokkI.md), 11:11-11:56, 13:08-13:44
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 07:27-07:43, 16:14-16:41
+- [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 16:51-17:47

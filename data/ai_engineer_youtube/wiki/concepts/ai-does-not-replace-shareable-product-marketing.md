@@ -17,6 +17,7 @@ Details:
 - Melnikova corroboration and extension: attention is scarce because AI made inboxes/feeds "unnavigable" with generated slop, so it's "really hard to tell the real deal" — reinforcing that shareability must be *earned*, not generated. Two memorable-marketing levers: (1) fun/"crazy" stunts (fly a banner over a sub, open and brand a cafe, name an ice cream) because "whenever you have fun with your marketing, it really comes through"; (2) fail stories — "perfect is boring; people love a good fail story, especially with an elegant recovery," so treat failures as attention opportunities rather than things to hide. (03:03-03:20, 08:37-09:50)
 - **Restated as a refusal to choose.** Wang reports the same argument as a live public fight — "product is the only thing that matters" against "distribution is the only thing that matters," with people asking whether a competitor wins on distribution despite an unclear product — and treats it as settled by conjunction: "you got to build this thing, it's got to be good, and then you got to get it into people's hands. If you don't do both things, then you don't have a company." His added claim is that the second half is now engineerable rather than merely effortful, which is an argument about who does distribution work, not about whether generated content substitutes for a shareable idea. ([Wang](../sources/20260826_6pbQgnJ9Voc.md), 01:12-02:41)
 - **The specific thing generated copy costs you, and who else in the company is doing it.** Jarmak states the developer-facing prohibition bluntly — "you need to be earning credibility… like not using Claude's slop at them, right? Then tell your AEs to stop that as well. Nobody… everybody knows what it is and nobody likes it." The cost is charged on recognition, before the content is judged on merit, and the sales team is named as the bigger offender. The inverse holds on the agent side, which is why the two registers have to be kept separate — see [Human and Agent Credibility Reward Opposite Writing Styles](human-and-agent-credibility-reward-opposite-writing-styles.md). ([Jarmak](../sources/20260826_Lrw0jqBNaw0.md), 16:20-16:45)
+- **The base rates that make the volume strategy self-defeating, from someone selling the volume infrastructure.** "Cold email works less and less well as the years go on. This is a trend that's been true forever," and a cited Smartlead aggregate puts reply rates at "somewhere between a half a percent and 1%" across roughly 20 million emails. Generating more messages faster on a channel whose response rate is declining is the failure this page names, stated numerically; the argument for the agent has to be better decisions per contact, not more contacts. ([Berry](../sources/20260826_UhCY231d0FQ.md), 13:42-14:19)
 
 Related topics:
 - [Product Strategy](../topics/product-strategy.md)
@@ -31,6 +32,8 @@ Related concepts:
 - [Founder Personal Brand Is the GTM Moat](founder-personal-brand-is-the-gtm-moat.md)
 - [Treat Go-to-Market as a Live Model of Your World That Agents Act On](treat-go-to-market-as-a-live-model-of-your-world.md)
 - [Human and Agent Credibility Reward Opposite Writing Styles](human-and-agent-credibility-reward-opposite-writing-styles.md)
+- [Size Agent Quality Against the Channel's Reply Rate](size-agent-quality-against-the-channel-reply-rate.md)
+- [Protect Sender Reputation by Splitting Domains and Routing Replies Home](protect-sender-reputation-by-splitting-domains-and-routing-replies-home.md)
 
 Sources:
 - [AI changes *Nothing* — Dax Raad, OpenCode](../sources/20251123_o3gmwzo-Mik.md), 02:18-06:37
@@ -38,3 +41,4 @@ Sources:
 - [GTM Is You - Victoria Melnikova, Evil Martians](../sources/20260707_G6IlDzj8OjA.md), 03:03-03:20, 08:37-09:50
 - [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md), 01:12-02:41
 - [The Death of Developer Advocates — Stephanie Jarmak, Sourcegraph](../sources/20260826_Lrw0jqBNaw0.md), 16:20-16:45
+- [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 13:42-14:19

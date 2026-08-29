@@ -29,6 +29,7 @@ Related concepts:
 - [Optimize Judge Prompts With Diagnostic Feedback](optimize-judge-prompts-with-diagnostic-feedback.md)
 - [DSPy Programs Keep LLM Intent Separate From Prompt Strings](dspy-programs-keep-llm-intent-separate-from-prompt-strings.md)
 - [Split LLM Judges Into Narrow Binary Metrics](split-llm-judges-into-narrow-binary-metrics.md)
+- [Size Agent Quality Against the Channel's Reply Rate](size-agent-quality-against-the-channel-reply-rate.md)
 
 Sources:
 - [Shipping AI to a Million Patients Without an A/B Test — Jared Joselowitz, Ufonia](../sources/20260819_McknwOzbmyg.md), 11:05-15:18, 16:37-17:12
