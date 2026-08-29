@@ -22,6 +22,8 @@ Details:
 - **A deployment whose stated value proposition is exactly the condition this page warns about.** Notion's rep "starts their day with an already prioritized task box" where "the email draft for an outreach task is already pre-researched and available for them to review," and the human is credited with adding "judgment and taste" on top. The design intent is genuine review, but nothing reported distinguishes review from approval: no edit rate, rejection rate, time-per-approval, or deliberation measure appears, and the throughput gain accrues precisely when the rep sends the draft unchanged. ([Liu](../sources/20260826_L4I7WgiEquo.md), 07:27-07:43, 16:14-16:41)
 - **The mirror-image failure, named by a practitioner as the hardest problem in his field.** Where automation bias is a human who reviews and defers, Berry describes a human who never entered the loop: with the agent acting as "the reasoning and decision layer for a lot of tasks that a sales rep was previously doing," "the rep might think that they should do something different or the rep might not know that the agent did something." Both are failures of the same handoff and neither is fixed by better model output — one needs the review to carry real friction, the other needs the decision to be visible at all. ([Berry](../sources/20260826_UhCY231d0FQ.md), 16:51-17:47)
 
+- **The third failure of the same gate, and the one that is cheapest to instrument.** This page covers a human who defers and (via Berry) a human who never sees the decision. AIDAChip reports the agent-side version — a gate that is simply stepped over — and, unusually, proposes it as a standing metric rather than an anecdote: among their system-level measures is "are our agents overstepping human in the loop approval or not? Sometimes the agent goes out on that end." Overstep rate is the one of the three that needs no user survey and no interface study: the system already knows what the gate covered, so an action outside it is detectable in the trace. They report the metric and no number for it. ([Mohamed](../sources/20260822_0I6aoPSRzVc.md), 11:30-11:40)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -36,6 +38,7 @@ Related concepts:
 - [Keep Agents Off the Customer Channel and Treat Inbound Forms as Untrusted Input](keep-agents-off-the-customer-channel-and-treat-inbound-forms-as-untrusted-input.md)
 - [The Human-Agent Handoff Is the Hard Part Once Agents Are the Decision Layer](the-human-agent-handoff-is-the-hard-part-once-agents-are-the-decision-layer.md)
 - [Gate a Generated Multi-Channel Campaign on the Channel Owner](gate-a-generated-multi-channel-campaign-on-the-channel-owner.md)
+- [Grade the Alignment, Not the Agents](grade-the-alignment-not-the-agents.md)
 
 Sources:
 - [Build AI Systems for Discernment, Not Approval - Angel Ortmann Lee, Duolingo](../sources/20260707_CDqzWpwkSls.md), 01:19-11:56
@@ -43,3 +46,4 @@ Sources:
 - [Building uReview, Uber's Multi-Agent Code Review Engine — Will Bond & Ameya Ketkar, Uber](../sources/20260828_EL123UNokkI.md), 11:11-11:56, 13:08-13:44
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 07:27-07:43, 16:14-16:41
 - [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 16:51-17:47
+- [What If Your Chip Design Team Moved Like a Single Body? — Abduallah Mohamed, AIDAChip](../sources/20260822_0I6aoPSRzVc.md), 11:30-11:40

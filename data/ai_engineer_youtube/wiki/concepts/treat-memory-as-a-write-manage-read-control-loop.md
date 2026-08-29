@@ -29,6 +29,7 @@ Related concepts:
 - [Budget Memory Between Update Cost and Serving Cost](budget-memory-between-update-cost-and-serving-cost.md)
 - [Offload Long-Horizon Agent State Outside the Context Window](offload-long-horizon-agent-state-outside-the-context-window.md)
 - [Rewrite Agent Memory in a Periodic Batch Pass Over Session Logs](rewrite-agent-memory-in-a-periodic-batch-pass-over-session-logs.md)
+- [Institutional Memory Has No Benchmark the Way Graph Memory Does](institutional-memory-has-no-benchmark-the-way-graph-memory-does.md)
 
 Sources:
 - [Memory Harnesses for Long-Running Research Agents — Stefania Druga, Sakana.ai](../sources/20260812_R3-anFK1YM8.md), 03:36-04:28, 10:02-11:22

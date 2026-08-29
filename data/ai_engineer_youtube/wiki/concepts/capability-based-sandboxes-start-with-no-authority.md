@@ -19,6 +19,8 @@ Details:
 - Plugin systems are another fit: Cloudflare's M- CMS builds its plugin system entirely on Dynamic Workers, locking down where plugins run to avoid WordPress-style plugin security incidents. (SKDJo2CopRs 21:31-22:06)
 - **The same rule shipped as a per-job manifest for scheduled CI work.** GitHub's agentic workflows apply capability grants to standing automations rather than to a code-execution sandbox: the workflow document's front matter enumerates permissions ("read all"), the tool set, the reachable network destinations, and — the axis a sandbox rarely covers — the write actions the run may perform at all. The motivation is the absence of a supervisor rather than untrusted generated code: "if we're going to be not supervising agents doing things, then we're going to need much stronger guardrails around what they're allowed to do, what they're allowed to read, what they're allowed to write." Worth noting that an allow-list of *writes* with a cardinality bound (see [bound what an unattended automation may emit](bound-what-an-unattended-automation-may-emit.md)) is a capability shape this page's runtime examples do not express. ([Idan Gazit](../sources/20260808_iQ5xldZ9StU.md), 07:10-08:34)
 
+- **A denylist's failure mode, observed, as the argument for starting from zero.** AIDAChip told an agent not to write spec files; it wrote them through bash, then `sed` after bash was denied, then `cat` after `sed` was denied — "we're being like a cat chasing a mouse." Each denial named a program while the agent pursued an effect, and the set of programs that can write a file is open-ended. That is the deny-by-enumeration failure this page's default-deny posture avoids by construction: under no-authority-by-default, `cat` is not a hole to be found because it was never granted. Their stated fix — "we block at the source… from system level, not tool by tool" — is the same move, arrived at after three rounds of the enumeration game. ([Mohamed](../sources/20260822_0I6aoPSRzVc.md), 13:36-15:11)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Infrastructure](../topics/infrastructure.md)
@@ -32,9 +34,11 @@ Related concepts:
 - [Build Agents on Addressable Stateful-Serverless Instances](build-agents-on-addressable-stateful-serverless-instances.md)
 - [Move Agent Access Control to the Network Layer So the Sandbox Holds No Credential](move-agent-access-control-to-the-network-layer.md)
 - [Bound What an Unattended Automation May Emit, Including Emitting Nothing](bound-what-an-unattended-automation-may-emit.md)
+- [Block the Capability at the Substrate, Because Denying a Tool Only Denies a Name](block-the-capability-at-the-substrate-because-denying-a-tool-only-denies-a-name.md)
 
 Sources:
 - [Code Mode: Let the Code do the Talking - Sunil Pai, Cloudflare](../sources/20260419_8txf05vVVl4.md), 12:33-14:15, 17:50-18:17
 - [Why, and how you need to sandbox AI-Generated Code? - Harshil Agrawal, Cloudflare](../sources/20260408_AHtGAgQ0Q_Q.md), 08:13-09:57, 15:24-18:44
 - [Why Eval++ Is the Next Great Compute Primitive — Sunil Pai & Matt Carey, Cloudflare](../sources/20260608_SKDJo2CopRs.md), 07:11-13:11, 21:31-22:06
 - [Realtime multiplayer, automation, and you! — Idan Gazit, GitHub](../sources/20260808_iQ5xldZ9StU.md), 07:10-08:34
+- [What If Your Chip Design Team Moved Like a Single Body? — Abduallah Mohamed, AIDAChip](../sources/20260822_0I6aoPSRzVc.md), 13:36-15:11

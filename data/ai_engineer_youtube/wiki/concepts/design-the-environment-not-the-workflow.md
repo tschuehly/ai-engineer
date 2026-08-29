@@ -18,6 +18,8 @@ Details:
 - **Do not read this as an argument against scaffolding in general.** The wiki carries a large body of evidence that constraint buys reliability: [choosing autonomy level by task uncertainty and control needs](choose-autonomy-level-by-task-uncertainty-and-control-needs.md), [building harnesses incrementally up a capability ladder](build-agent-harnesses-incrementally-up-a-capability-ladder.md), and [constraining agent effects rather than expression](constrain-agent-effects-not-expression-with-a-typed-sdk.md). The reconciliation the source implies without stating: environments beat workflows where the *outcome* is checkable and the *path* is unknown, which is precisely the condition its two examples satisfy — a packing that a verifier can confirm, a kernel that a compiler and a stopwatch can confirm. Where the outcome is not mechanically checkable, deleting the procedure deletes your only control.
 - Provenance: this is a design thesis argued by two demonstrations from the group that built them, not a controlled comparison. No workflow-based baseline was run against either arena, so "workflows limit the agents" is supported by the ceiling never being tested rather than by two numbers.
 
+- **The same primacy claim reached from control rather than from capability, which is worth noting because the two agree on the mechanism and disagree on the motive.** Mohamed's closing lesson is that "if you have your agents which are intelligent, what matters is the substrate layer that they are living in. Like the world they [are] living in is more important than the agents itself. Like what they can do, what they cannot do, what you allow and what you don't allow." Zou designs the environment so a capable agent is not constrained; Mohamed designs it so a capable agent *is* — after discovering that instructions did not constrain it. Both conclude the environment dominates the agent, which is a stronger position than either talk alone: the environment is where you put the affordances you want the agent to find and the boundaries you need it to not cross, because both are the only things a sufficiently capable model cannot argue with. ([Mohamed](../sources/20260822_0I6aoPSRzVc.md), 14:47-15:11)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Workflows](../topics/workflows.md)
@@ -37,6 +39,8 @@ Related concepts:
 - [Prefer outcome verifiers over ground-truth path checks](prefer-outcome-verifiers-over-ground-truth-path-checks.md)
 - [Give Parallel Agents Complementary Optimization Personas](give-parallel-agents-complementary-optimization-personas.md)
 - [Gate an Environment to Agents Only](gate-an-environment-to-agents-only.md)
+- [Block the Capability at the Substrate, Because Denying a Tool Only Denies a Name](block-the-capability-at-the-substrate-because-denying-a-tool-only-denies-a-name.md)
 
 Sources:
 - [Einstein Arena: Harnessing Collective Agent Intelligence for Open Science — James Zou, Together AI](../sources/20260825_mMNkdYnIVC4.md), 00:39-01:40, 08:57-10:54, 15:39-16:31
+- [What If Your Chip Design Team Moved Like a Single Body? — Abduallah Mohamed, AIDAChip](../sources/20260822_0I6aoPSRzVc.md), 14:47-15:11

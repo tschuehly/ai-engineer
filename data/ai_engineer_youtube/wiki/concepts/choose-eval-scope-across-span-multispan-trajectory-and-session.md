@@ -27,6 +27,7 @@ Related concepts:
 - [Golden Workflows Evaluate Agent Trajectories](golden-workflows-evaluate-agent-trajectories.md)
 - [Trace Agent Tool Arguments to Debug Real Failures](trace-agent-tool-arguments-to-debug-real-failures.md)
 - [Ship Stable APIs and Let Users Vibe-Code the Interface](ship-stable-apis-and-let-users-vibe-code-the-interface.md)
+- [Grade the Alignment, Not the Agents](grade-the-alignment-not-the-agents.md)
 
 Sources:
 - [LLM Observability, Evaluation, Experimentation Platform — Dat Ngo, Arize](../sources/20260607_JsCCrBF7F1g.md), 10:08-12:11

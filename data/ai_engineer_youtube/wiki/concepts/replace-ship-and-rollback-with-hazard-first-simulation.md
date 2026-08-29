@@ -18,6 +18,8 @@ Details:
 - The deliverable is the audit trail, not the artifact: "every call, every data set, and every pinned prompt, every judge verdict traces back to the exact hazard that it addresses… you don't ship the model, you ship the evidence." Pinning prompt versions and keeping traces is listed as a portable practice for non-healthcare stacks. (16:37-17:12)
 - The framework survives modality changes even though the hazards do not. Voice adds backchannels and interruptions that break text-era assumptions — an agent cut off mid-safety-advice ("you must avoid bright lights") by an out-of-scope question, where "weak models usually just forget about the safety advice and just answer the next question" — but the response is the same: black-box the system, write down the new hazards, simulate and judge them as before. "Voice is just a new module in the same safety case." (17:14-18:44)
 
+- **A second no-rollback domain that reaches a different remedy, which is informative about what selects between them.** Chip design has this page's defining property — "in chips, you can't [patch]… it's fixed on silicon, it has been printed," with a respin averaging "about $50 million" — yet the response Mohamed describes is not hazard enumeration and simulation but organizational alignment: roughly 15 practitioners report "we spend 70% of our time doing alignment. Alignment to make sure that once we print the chip, nothing is there." The plausible discriminator is where the irreversible error originates. Ufonia's hazards are properties of a single output to a single patient, which simulation can rehearse; a chip's are properties of an agreement among fifty engineers about what is being built, which simulation cannot rehearse because the disagreement is upstream of any runnable artifact. Both are pre-act verification; they differ in what the act's inputs are. ([Mohamed](../sources/20260822_0I6aoPSRzVc.md), 03:30-04:40)
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Voice Agents](../topics/voice-agents.md)
@@ -31,6 +33,8 @@ Related concepts:
 - [Simulated Conversations Test Customer-Facing Agents Before Launch](simulated-conversations-test-customer-facing-agents-before-launch.md)
 - [Stage Regulated LLM Evals From Experts to Automated Judges](stage-regulated-llm-evals-from-experts-to-automated-judges.md)
 - [Treat Model and Prompt Upgrades as Regulated Migrations](treat-model-and-prompt-upgrades-as-regulated-migrations.md)
+- [Alignment Is the Quadratic Term That Per-Person Tooling Does Not Touch](alignment-is-the-quadratic-term-that-per-person-tooling-does-not-touch.md)
 
 Sources:
 - [Shipping AI to a Million Patients Without an A/B Test — Jared Joselowitz, Ufonia](../sources/20260819_McknwOzbmyg.md), 00:58-06:08, 14:28-18:44
+- [What If Your Chip Design Team Moved Like a Single Body? — Abduallah Mohamed, AIDAChip](../sources/20260822_0I6aoPSRzVc.md), 03:30-04:40

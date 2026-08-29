@@ -1,6 +1,7 @@
 # Concept Index
 
 ## Agents
+- [Scope Role Agents With a Spec Hierarchy and File Isolation](../concepts/scope-role-agents-with-a-spec-hierarchy-and-file-isolation.md) - specialist agents cross into each other's disciplines until the file surface, not the prompt, defines the role.
 - [Design the Environment, Not the Workflow](../concepts/design-the-environment-not-the-workflow.md) - specify where the agent works and what it is rewarded for, not the steps it takes.
 - [Open Agent Arenas Reach Solutions No Single Agent Reaches](../concepts/open-agent-arenas-reach-solutions-no-single-agent-reaches.md) - forum, live leaderboard, and downloadable submissions; 604 spheres in 11 dimensions against a prior best of 593.
 - [Gate an Environment to Agents Only](../concepts/gate-an-environment-to-agents-only.md) - a skills doc for machine entry plus a puzzle proving you are not a human.
@@ -971,6 +972,8 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Keep a Living Intent Graph That Agents Read but Cannot Write](../concepts/keep-a-living-intent-graph-that-agents-read-but-cannot-write.md) - constraints, decisions, and stakeholders in one graph, mutable only through human approval, with the approval echoing to everyone bound by the old value.
+- [Truth Drift Updates One Copy and Leaves the Rest Stale](../concepts/truth-drift-updates-one-copy-and-leaves-the-rest-stale.md) - the edit succeeds and nothing errors; single source of truth plus rule-based conflict detection is the answer.
 - [Hydrate a Trigger Event to Its Entity Once and Persist the Mapping](../concepts/hydrate-a-trigger-event-to-its-entity-once-and-persist-the-mapping.md) - the meeting-to-account fuzzy match resolved at ingest and stored, not re-derived per consumer.
 - [Put the Business Question Set Inside the Skill File, Not Just the Schema](../concepts/put-the-business-question-set-inside-the-skill-file-not-just-the-schema.md) - business semantics plus the questions people actually ask, shipped as context and reused as an app spec.
 - [Run a Submission-and-Review Alias for Shared Skills](../concepts/run-a-submission-and-review-alias-for-shared-skills.md) - central intake with two reviewer constituencies as the control on skill proliferation.
@@ -1813,6 +1816,8 @@
 - [Verify AI Call Summaries Before CRM Sync](../concepts/verify-ai-call-summaries-before-crm-sync.md) - the write path into the system of record needs a check, and agent tool access widens it.
 
 ## Evaluation
+- [Grade the Alignment, Not the Agents](../concepts/grade-the-alignment-not-the-agents.md) - move the unit of evaluation from the component to the coordination system: task completion, frustration, overstep rate, concurrency, token tax.
+- [Institutional Memory Has No Benchmark the Way Graph Memory Does](../concepts/institutional-memory-has-no-benchmark-the-way-graph-memory-does.md) - ~150 papers, datasets, and recall on one side; no definition and no measure on the other.
 - [Audit a Benchmark by Solving It Without the Data](../concepts/audit-a-benchmark-by-solving-it-without-the-data.md) - withhold the artifact the benchmark tests use of; 20-50% of tasks in three data-science benchmarks survived.
 - [Curate Tasks by Live Human Demand and a Deterministic Verifier](../concepts/curate-tasks-by-live-human-demand-and-a-deterministic-verifier.md) - a two-part admission rule: someone is already waiting for the answer, and a machine can score it.
 - [Validate Retrieved Content Before Spending Tokens on It](../concepts/validate-retrieved-content-before-spending-tokens-on-it.md) - a run that answers correctly from a blocked-truncated sample scores as a success.
@@ -2549,6 +2554,7 @@
 - [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md)
 
 ## Security
+- [Block the Capability at the Substrate, Because Denying a Tool Only Denies a Name](../concepts/block-the-capability-at-the-substrate-because-denying-a-tool-only-denies-a-name.md) - an agreed-to prohibition failed through bash, then `sed`, then `cat`; a denylist enumerates names while the agent pursues an effect.
 - [Read-Side Agents Scale First Because the Write Side Needs Approvals](../concepts/read-side-agents-scale-first-because-the-write-side-needs-approvals.md) - briefs and decks ship long before quoting, approvals, and CRM writes.
 - [Keep Agents Off the Customer Channel and Treat Inbound Forms as Untrusted Input](../concepts/keep-agents-off-the-customer-channel-and-treat-inbound-forms-as-untrusted-input.md) - the contact-sales form is attacker-controlled text aimed straight at the prompt that consumes it.
 - [Land the Data in One Governed Store So Agents Inherit Access Control](../concepts/land-the-data-in-one-governed-store-so-agents-inherit-access-control.md) - consolidation makes authorization a property agents inherit rather than implement.
@@ -2922,6 +2928,7 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Alignment Is the Quadratic Term That Per-Person Tooling Does Not Touch](../concepts/alignment-is-the-quadratic-term-that-per-person-tooling-does-not-touch.md) - per-seat agents raise the linear term while coordination cost grows with the square of headcount.
 - [Keep Geolocation Consistent Across Pipeline Stages](../concepts/keep-geolocation-consistent-across-pipeline-stages.md) - environment parameters held constant across runs but varying across stages produce reproducible pipelines that contradict themselves.
 - [Solve One Team, Then Mirror the Build Sideways](../concepts/solve-one-team-then-mirror-the-build-sideways.md) - the embedding pipeline and custom instructions port to the next team; the data sources and skills do not.
 - [Treat Tool-to-Tool Orchestration as a Data Engineering Problem](../concepts/treat-tool-to-tool-orchestration-as-a-data-engineering-problem.md) - 10-30 tools with disagreeing world views, heterogeneous cadences, fan-out, and constant partial failure.

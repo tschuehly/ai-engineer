@@ -22,6 +22,7 @@ Related concepts:
 - [Support-led coding agents exploit fresh customer context](support-led-coding-agents-exploit-fresh-customer-context.md)
 - [Non-technical collaborators can steer agents with natural work artifacts](non-technical-collaborators-can-steer-agents-with-natural-work-artifacts.md)
 - [Demo Culture Replaces Memo-First Product Persuasion](demo-culture-replaces-memo-first-product-persuasion.md)
+- [Alignment Is the Quadratic Term That Per-Person Tooling Does Not Touch](alignment-is-the-quadratic-term-that-per-person-tooling-does-not-touch.md)
 
 Sources:
 - [2026: The Year The IDE Died - Steve Yegge & Gene Kim, Authors, Vibe Coding](../sources/20251206_7Dtu2bilcFs.md), 14:27-16:01, 19:19-20:16

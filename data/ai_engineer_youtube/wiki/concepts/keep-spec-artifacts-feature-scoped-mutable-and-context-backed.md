@@ -13,6 +13,8 @@ Details:
 - MCP servers can provide context during requirements generation, design, or implementation; examples include task trackers, fetch/search tools, and an AWS documentation MCP server. (08:33-15:15, 53:04-53:26)
 - Steering files encode durable preferences such as latency, cost, commit attribution, code style, and coverage expectations, influencing both design and generated code. (01:01:34-01:03:05)
 
+- **Scoping the spec is also how you scope the agent, once several agents share one repository.** AIDAChip's answer to specialist agents wandering into each other's disciplines is "a spec hierarchy with agent scope and file isolation to allow them only to work on this specific task or specific domain." The spec's shape becomes the permission boundary: a role's authority is a level in the hierarchy, and file isolation is what makes that authority enforceable rather than described. Note the tension with the mutability this page recommends — in the same system, the layer holding constraints and decisions is deliberately *not* freely mutable, and agents may change it only through a human-approved request. Working specs stay mutable; the commitments they are derived from do not. ([Mohamed](../sources/20260822_0I6aoPSRzVc.md), 05:46-06:19, 14:00-14:25)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Context Engineering](../topics/context-engineering.md)
@@ -24,7 +26,9 @@ Related concepts:
 - [Fresh Markdown context mitigates model rot in codegen](fresh-markdown-context-mitigates-model-rot-in-codegen.md)
 - [Encode non-functional requirements as agent-visible context](encode-non-functional-requirements-as-agent-visible-context.md)
 - [Spec-Driven Development Without a Feedback Loop Is Waterfall](spec-driven-development-without-a-feedback-loop-is-waterfall.md)
+- [Scope Role Agents With a Spec Hierarchy and File Isolation](scope-role-agents-with-a-spec-hierarchy-and-file-isolation.md)
+- [Keep a Living Intent Graph That Agents Read but Cannot Write](keep-a-living-intent-graph-that-agents-read-but-cannot-write.md)
 
 Sources:
 - [Spec-Driven Development: Agentic Coding at FAANG Scale and Quality - Al Harris, Amazon Kiro](../sources/20260109_HY_JyxAZsiE.md), 08:33-15:15, 48:49-55:24, 01:01:34-01:03:05
-
+- [What If Your Chip Design Team Moved Like a Single Body? — Abduallah Mohamed, AIDAChip](../sources/20260822_0I6aoPSRzVc.md), 05:46-06:19, 14:00-14:25

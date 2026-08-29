@@ -15,6 +15,8 @@ Details:
 - This is the source-of-signal axis; it is orthogonal to *where* in the execution tree the eval runs (see the scope axis) and to *how* a judge is structured (binary metrics, calibration).
 - **Shipping into someone else's client adds a signal source this taxonomy does not have: the platform's own conformance verdict.** It behaves like a deterministic check whose oracle you do not own and whose specification moves without notice — "you want to make sure that the feeds are actually conforming, or else they will not support it," against schemas that are "similar, but still different" and a spec landscape where ACP-versus-UCP convergence is explicitly unsettled. It is free and binary, which makes it attractive by this page's cheapest-sufficient-signal rule, but its failure mode is silent de-listing rather than a bad score, so it needs its own alerting. ([Prio](../sources/20260827_G7cgLjZtmMU.md), 09:19-09:30, 17:55-18:12, 18:44-19:08)
 
+- **A case where the cheapest-sufficient-signal rule and the correctness requirement point the same way, stated as a deliberate choice against a judge.** AIDAChip's cross-artifact consistency check is "automatic conflict detection that is not LLM based but actually rule based." Internal contradiction is close to the ideal deterministic check: the comparison is an equality between declared references, it has to run on every write rather than on a sample, and a judge that misses one contradiction reintroduces the exact failure it was deployed to catch. The residual risk moves from scoring accuracy to rule coverage — the detector only sees cross-references someone declared, and their reported failure was five copies nobody had enumerated. ([Mohamed](../sources/20260822_0I6aoPSRzVc.md), 14:25-14:47)
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 
@@ -25,7 +27,10 @@ Related concepts:
 - [Calibrate LLM judges like binary classifiers](calibrate-llm-judges-like-binary-classifiers.md)
 - [AI Product Issues Need Signals and Intents](ai-product-issues-need-signals-and-intents.md)
 - [Eval an Agent Surface for Protocol Compliance, Not Just Behavior](eval-agent-surfaces-for-protocol-compliance-not-just-behavior.md)
+- [Truth Drift Updates One Copy and Leaves the Rest Stale](truth-drift-updates-one-copy-and-leaves-the-rest-stale.md)
+- [Grade the Alignment, Not the Agents](grade-the-alignment-not-the-agents.md)
 
 Sources:
 - [LLM Observability, Evaluation, Experimentation Platform — Dat Ngo, Arize](../sources/20260607_JsCCrBF7F1g.md), 07:06-08:44
 - [The Agentic Commerce Stack — Ahnaf Prio, Best Buy](../sources/20260827_G7cgLjZtmMU.md), 09:19-09:30, 17:55-19:08
+- [What If Your Chip Design Team Moved Like a Single Body? — Abduallah Mohamed, AIDAChip](../sources/20260822_0I6aoPSRzVc.md), 14:25-14:47

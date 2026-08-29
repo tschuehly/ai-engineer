@@ -26,6 +26,8 @@ Related concepts:
 - [Context window editing clears stale tool results](context-window-editing-clears-stale-tool-results.md)
 - [Context as a Service Is Vertical Search for Agents](context-as-a-service-is-vertical-search-for-agents.md)
 - [Treat ontology and triplet quality as GraphRAG bottlenecks](treat-ontology-and-triplet-quality-as-graphrag-bottlenecks.md)
+- [Keep a Living Intent Graph That Agents Read but Cannot Write](keep-a-living-intent-graph-that-agents-read-but-cannot-write.md)
+- [Institutional Memory Has No Benchmark the Way Graph Memory Does](institutional-memory-has-no-benchmark-the-way-graph-memory-does.md)
 
 Sources:
 - [Context Engineering: Connecting the Dots with Graphs - Stephen Chin, Neo4j](../sources/20251124_LLuKshphGOE.md), 00:58-11:05

@@ -17,6 +17,8 @@ Details:
 
 - **Building the wiki is not the finish line, because a store answers "where can I look" and never "have I looked enough."** Werry places organizational wikis at roughly the middle of an eight-stage adoption curve, ahead of autocomplete and IDE assistants but behind the stage most teams are actually stuck at — MCP servers and skills, "where people are today… the sort of stage four to five level" — and says the reason they are stuck is that "access to information doesn't equal understanding." "If you attach a wiki, it still doesn't tell the agent where the information is that it needs." Knowledge infrastructure is necessary and this is the argument that it is not sufficient: the missing piece is a selection layer over the store. ([Werry](../sources/20260827_qdAkxLoYNI8.md), 02:56-04:37)
 
+- **The build has two layers with different governance, and the distinction is the transferable part.** AIDAChip separates a write-gated "system of intent" — constraints, decisions, and stakeholders as a living graph that "we don't allow the agents to touch… except with human in the loop approval for specific changes" — from an ungated "tribal knowledge layer," "a memory that keeps evolving with day-to-day usage… from a project to project and keeping the best practice." Most knowledge-infrastructure proposals treat the store as one thing; this one splits it by whether the content *binds* future work. It also names the reason the second layer stays unevidenced: unlike graph memory, institutional memory has no metric and no dataset, so the compounding claim cannot currently be checked. ([Mohamed](../sources/20260822_0I6aoPSRzVc.md), 05:46-06:36, 11:59-12:49)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Context Engineering](../topics/context-engineering.md)
@@ -29,9 +31,13 @@ Related concepts:
 - [The Best Engineers Adopt Agents Last, and Their Objections Are the Roadmap](the-best-engineers-adopt-agents-last-and-their-objections-are-the-roadmap.md)
 - [Operational Outcomes Are Eval Labels You Only See If You Own the Operation](operational-outcomes-are-eval-labels-you-only-see-if-you-own-the-operation.md)
 - [Satisfaction of Search Stops Agents at the First Plausible Hit](satisfaction-of-search-stops-agents-at-the-first-plausible-hit.md)
+- [Institutional Memory Has No Benchmark the Way Graph Memory Does](institutional-memory-has-no-benchmark-the-way-graph-memory-does.md)
+- [Keep a Living Intent Graph That Agents Read but Cannot Write](keep-a-living-intent-graph-that-agents-read-but-cannot-write.md)
+- [Alignment Is the Quadratic Term That Per-Person Tooling Does Not Touch](alignment-is-the-quadratic-term-that-per-person-tooling-does-not-touch.md)
 
 Sources:
 - [Mentoring the Machine - Eric Hou, Augment Code](../sources/20250724_Zniw5c9_jx8.md), 09:27-14:48
 - [How to Get Your Org to Adopt Coding Agents (Without Shipping Garbage) — Eyal Blum, Figma](../sources/20260828_5Bn0xro2ol8.md), 03:25-04:07, 11:57-12:33
 - [How do you diffuse AI into the real world? — Varun Shenoy, Long Lake](../sources/20260828_B0fjR3yaZFU.md), 10:13-11:08
 - [How to Generate Mergeable Code with a Context Engine — Peter Werry, Unblocked](../sources/20260827_qdAkxLoYNI8.md), 02:56-04:37
+- [What If Your Chip Design Team Moved Like a Single Body? — Abduallah Mohamed, AIDAChip](../sources/20260822_0I6aoPSRzVc.md), 05:46-06:36, 11:59-12:49

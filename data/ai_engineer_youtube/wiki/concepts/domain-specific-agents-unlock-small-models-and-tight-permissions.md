@@ -14,6 +14,8 @@ Details:
 - Security via strict limits: rather than a big coding agent that "can do anything" and forces permission-bypassing, a domain-specific agent "can only do the things that are already explicitly approved for them to do" — a more controlled ecosystem that eases IT/security concerns without removing permission dialogs. ([Domain-Specific Agents](../sources/20260629_spNAUEgq_A8.md), 19:30-20:25)
 - Scaling: each agent is its own small execution environment, so specialists parallelize easily, deploy to the cloud "without needing a giant VPC," and can run thousands of instances across regions with no geographic co-location. Agents are also portable — "squeeze up" a Gmail agent and hand it to someone else — enabling a reuse ecosystem instead of rebuilding every skill per team. ([Domain-Specific Agents](../sources/20260629_spNAUEgq_A8.md), 16:53-17:28, 20:26-20:56)
 
+- **The security half of this page assumes a scoping mechanism, and a field report shows what happens without one.** The claim here is that a domain-specific agent "can only do the things that are already explicitly approved for them to do." AIDAChip built exactly this shape — role agents authored by subject matter experts, "digital design agent, analog design agent, and so on," one per engineer role — and still found "an analog agent that's specifically for analog design actually overstepping and doing RTL agent work. Which wasn't really great. Even we tried to enforce it, but it was a difficult problem." The specialization was real; the boundary was a description. Their fix moves it into the environment — "a spec hierarchy with agent scope and file isolation" — which is what makes this page's permission claim true rather than aspirational. ([Mohamed](../sources/20260822_0I6aoPSRzVc.md), 06:36-07:02, 12:49-13:14, 14:00-14:25)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Inference](../topics/inference.md)
@@ -23,6 +25,8 @@ Related concepts:
 - [Use small models as context-management tools before agent reasoning](use-small-models-as-context-management-tools-before-agent-reasoning.md)
 - [Post-train small models for narrow capabilities](post-train-small-models-for-narrow-capabilities.md)
 - [Agentic Workloads Turn Token Price Into Unit-Economics Pressure](agentic-workloads-turn-token-price-into-unit-economics-pressure.md)
+- [Scope Role Agents With a Spec Hierarchy and File Isolation](scope-role-agents-with-a-spec-hierarchy-and-file-isolation.md)
 
 Sources:
 - [The Future Is Domain-Specific Agents - Justin Schroeder, StandardAgents](../sources/20260629_spNAUEgq_A8.md), 16:44-20:56, 23:54-24:15
+- [What If Your Chip Design Team Moved Like a Single Body? — Abduallah Mohamed, AIDAChip](../sources/20260822_0I6aoPSRzVc.md), 06:36-07:02, 12:49-13:14, 14:00-14:25

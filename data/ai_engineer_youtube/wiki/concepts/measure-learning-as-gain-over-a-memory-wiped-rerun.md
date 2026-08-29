@@ -18,6 +18,8 @@ Details:
 - The prerequisite that is easy to miss: gain is only meaningful on a task sequence that *could* be learned from. On a benchmark of independent instances, the stateful and stateless runs are the same run by construction and gain is noise around zero — see [A Learning Benchmark Needs Headroom, Shared Structure, and a Signal](a-learning-benchmark-needs-headroom-shared-structure-and-a-signal.md).
 - Caveats: no gain values are reported anywhere in the talk, for any system, so this page carries a method and no measurements. The benchmark is academic work funded in part by Snorkel AI's open benchmarks grant program.
 
+- **The case this method is most needed for is the one with no benchmark at all.** Mohamed notes that graph memory and graph RAG have "around 150 papers… You can measure the recall, there is datasets," while "there is no work and research at the moment that targets tribal memory or institutional memory. Like what does it mean exactly? How do you measure tribal memory success?" Recall is unavailable there because the characteristic content — why a decision was made, which convention is real — often has no stored item to retrieve. A memory-wiped rerun sidesteps both gaps at once: it needs no dataset and no definition of what was remembered, only a task with a checkable outcome. ([Mohamed](../sources/20260822_0I6aoPSRzVc.md), 11:59-12:49)
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Agents](../topics/agents.md)
@@ -34,6 +36,8 @@ Related concepts:
 - [Select State of the Art on a Quality-Efficiency Pareto Front](select-state-of-the-art-on-a-quality-efficiency-pareto-front.md)
 - [Measure a Behavior Change With Three Metrics Including Their Intersection](measure-a-behavior-change-with-three-metrics-including-their-intersection.md)
 - [Define Continual Learning as Adaptive Compression of Experience](define-continual-learning-as-adaptive-compression-of-experience.md)
+- [Institutional Memory Has No Benchmark the Way Graph Memory Does](institutional-memory-has-no-benchmark-the-way-graph-memory-does.md)
 
 Sources:
 - [Beyond Static Intelligence: Evaluating Continual Learning — Parth Asawa, UC Berkeley](../sources/20260812_iqloyWCGYQQ.md), 08:05-10:39
+- [What If Your Chip Design Team Moved Like a Single Body? — Abduallah Mohamed, AIDAChip](../sources/20260822_0I6aoPSRzVc.md), 11:59-12:49

@@ -16,6 +16,8 @@ Details:
 - **Pruning presumes an owner, which is what an org-scale library lacks.** Every technique on this page — deduplicating, removing sediment, running the deletion test — needs someone with standing to delete other people's text. Touil's account of ungoverned libraries is that this is exactly the missing role: "if you don't have an owner, then no one will be able to maintain, scale those skills," and without a catalog "you cannot really discover it" in the first place. ([Touil](../sources/20260828_M05vON8i0aI.md), 11:56-12:23) His cheap substitute where no owner exists is structural rather than behavioural: statically check a skill against the published best practices, because "if the skill is not invoked properly, if the skill is not structured properly, there's a high chance that it's not going to be high quality" (19:13-19:37) — a screen, not a replacement for the deletion test, and offered with no accuracy figure.
 - **Pruning is the maintenance half; the intake half is a reviewed submission point.** Cloudflare controls library size before authoring lands: "we have a central alias where skills are presented to the central team, curated by the go-to-market team, as well as by operations team, and they're reviewed, so we can make sure that we're not having a proliferation of skills, and we have an expert-level knowledge skill at every level." The framing is a phase — "we're sort of reached the Cambrian stage of using agentic systems, which means there's an explosion of excitement and skills" — and the risk named is not oversized skills but divergent ones, since independently authored definitions of the same metric make "the source of truth in all the systems" stop aligning. ([Joyce](../sources/20260826_Qw_tC68KKes.md), 13:36-14:02, 18:19-18:49)
 
+- **The same rule outside skill files, with the failure it prevents named.** AIDAChip reaches single-source-of-truth from a different direction: not maintainability but consistency under agent edits. "An agent modifying something in the system not necessarily means it modifies it everywhere it should be modified… one agent was modifying a parameter, it updated it in one place, five other places were forgotten." Their answer pairs the rule with a detector — "a single source of truth with automatic conflict detection that is not LLM based but actually rule based" — which is the addition worth carrying back here. Deduplicating is a one-time act; agents recreate duplication continuously, so a repository that agents write to needs a standing check that the remaining copies still agree. ([Mohamed](../sources/20260822_0I6aoPSRzVc.md), 13:14-13:36, 14:25-14:47)
+
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
 - [Coding Agents](../topics/coding-agents.md)
@@ -28,8 +30,10 @@ Related concepts:
 - [Keep agent context small, fresh, and task-specific](keep-agent-context-small-fresh-and-task-specific.md)
 - [Auto-Evolving Skills Multiply Whatever Governance You Already Have](auto-evolving-skills-multiply-whatever-governance-you-already-have.md)
 - [Run a Submission-and-Review Alias for Shared Skills](run-a-submission-and-review-alias-for-shared-skills.md)
+- [Truth Drift Updates One Copy and Leaves the Rest Stale](truth-drift-updates-one-copy-and-leaves-the-rest-stale.md)
 
 Sources:
 - [Building Great Agent Skills: The Missing Manual - Matt Pocock](../sources/20260629_UNzCG3lw6O0.md), 16:48-19:05
 - [AI-Native Organisations Run on Skills: How to Structure and Scale Them — Imad Touil, QuantumBlack](../sources/20260828_M05vON8i0aI.md), 11:56-12:23, 19:13-19:37
 - [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md), 13:36-14:02, 18:19-18:49
+- [What If Your Chip Design Team Moved Like a Single Body? — Abduallah Mohamed, AIDAChip](../sources/20260822_0I6aoPSRzVc.md), 13:14-13:36, 14:25-14:47

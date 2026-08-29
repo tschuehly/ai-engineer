@@ -16,6 +16,8 @@ Details:
 - Design cues that follow: check new claims against existing ones at write time rather than at read time; treat a detected conflict as a task with a resolution source attached, not as a note; and prefer a source that records outcomes (bookings, calendar entries) over a source that records intent (conversations) when the two disagree.
 - Related but distinct from surfacing conflicts between *retrieved documents*: the contradiction here lives inside the memory store's own synthesized output, so a system that only reconciles external sources will never see it.
 
+- **A conflict class where the detector should not be a model, and the reason is structural.** AIDAChip's failure is an agent that "updated it in one place, five other places were forgotten," answered with "a single source of truth with automatic conflict detection that is not LLM based but actually rule based." The distinction against this page's harder case is what the conflict is *about*: two sincere accounts of a fact need judgment to reconcile, but two copies of a declared value that no longer match need only an equality check that runs on every write. Deciding which kind of conflict a system faces determines whether the detector can be deterministic — and the deterministic case should not be handed to a judge, because a judge that misses one contradiction reintroduces the failure it was hired to catch. ([Mohamed](../sources/20260822_0I6aoPSRzVc.md), 13:14-13:36, 14:25-14:47)
+
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
 - [Agents](../topics/agents.md)
@@ -27,6 +29,8 @@ Related concepts:
 - [Replace User-Managed Memory Lists With a Background-Synthesized Profile](replace-user-managed-memory-lists-with-a-background-profile.md)
 - [Make the Memory Profile Visible and Editable](make-the-memory-profile-visible-and-editable.md)
 - [Ambient Agents Need Self-Maintenance and Memory Hygiene](ambient-agents-need-self-maintenance-and-memory-hygiene.md)
+- [Truth Drift Updates One Copy and Leaves the Rest Stale](truth-drift-updates-one-copy-and-leaves-the-rest-stale.md)
 
 Sources:
 - [Lessons from Studying Every Memory System — Shlok Khemani, Independent](../sources/20260812_5ZGyKWjQDr0.md), 05:56-06:29, 16:03-17:34
+- [What If Your Chip Design Team Moved Like a Single Body? — Abduallah Mohamed, AIDAChip](../sources/20260822_0I6aoPSRzVc.md), 13:14-13:36, 14:25-14:47

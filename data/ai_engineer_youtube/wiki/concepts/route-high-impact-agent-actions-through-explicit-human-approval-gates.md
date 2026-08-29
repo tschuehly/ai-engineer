@@ -26,6 +26,8 @@ Details:
 - **A blanket gate defined by channel rather than by action.** Rather than enumerating sensitive operations, Notion draws the line at the customer boundary: "we deliberately chose not to let an agent talk directly to a customer. For sales-assist workflows, humans stay in the loop by default and approve anything the agents do." The generalizable takeaway is stated separately — "let humans stay in the loop where there are risky possibilities" — and the stance is explicitly temporary, with agents expected to move "from drafting to acting within guardrails" that the source does not describe. ([Liu](../sources/20260826_L4I7WgiEquo.md), 07:27-07:43, 19:55-20:01, 20:30-20:49)
 - **Two gate topologies from one go-to-market system, chosen by who owns the consequence.** For a CRM write the gate is the record's owner — the agent pre-fills the opportunity and "get[s] a thumbs up from my rep." For a campaign fanned out across outbound, ads, web, and in-app, the gate is per channel: "get the people who own these channels to review them and sign off," because an outbound sequence, a landing page, and paid creative carry different risks and no single reviewer holds all three judgments. The design rule visible across both is that the approver should be whoever already bears the cost of the action, not a designated reviewer role. Pause-and-resume for human input is provided by the durable-execution layer itself rather than built per workflow. ([Vaziri](../sources/20260826_VjEP0xqTUI0.md), 11:06-11:13, 13:25-13:28, 17:02-17:10)
 
+- **Two additions from a gate built around a constraint graph rather than around actions: routing by stakeholder, and an echo on approval.** AIDAChip's agents may not modify the "system of intent" — the graph holding all constraints and decisions — "except with human in the loop approval for specific changes." Because dependents are edges rather than prose, a proposal "captures all the values over there, all the stakeholders," fires a request that "goes to an architect or an owner of the system," and on approval "it actually goes and echoes in the whole system. Like everyone will know that this decision has been made." The echo is the part most gate designs omit: an approval that only unblocks the requester leaves every other holder of the old value silently stale, which is precisely the drift failure the same team reports. Two caveats — the enforcement layer for the write-gate is not stated, and the same talk's spec-file story is that an instruction-level prohibition did not hold; and they treat gate integrity as a metric, asking "are our agents overstepping human in the loop approval or not?", which no other source here measures. ([Mohamed](../sources/20260822_0I6aoPSRzVc.md), 05:46-06:19, 09:27-10:15, 11:30-11:40)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Tools](../topics/tools.md)
@@ -43,6 +45,8 @@ Related concepts:
 - [Read the Stop Reason Before You Read the Answer](read-the-stop-reason-before-you-read-the-answer.md)
 - [Keep Agents Off the Customer Channel and Treat Inbound Forms as Untrusted Input](keep-agents-off-the-customer-channel-and-treat-inbound-forms-as-untrusted-input.md)
 - [Gate a Generated Multi-Channel Campaign on the Channel Owner](gate-a-generated-multi-channel-campaign-on-the-channel-owner.md)
+- [Keep a Living Intent Graph That Agents Read but Cannot Write](keep-a-living-intent-graph-that-agents-read-but-cannot-write.md)
+- [Grade the Alignment, Not the Agents](grade-the-alignment-not-the-agents.md)
 
 Sources:
 - [Human-in-the-Loop Automation with n8n - Liam McGarrigle](../sources/20260502_tDArkCqjA-c.md), 01:10-01:25, 01:10:41-01:11:07, 01:13:56-01:16:08
@@ -57,3 +61,4 @@ Sources:
 - [Anthropic's CCA Exam as a Field-Guide for Agentic Engineering — Frank Coyle, UC Berkeley](../sources/20260808_Z-c11pV_uvU.md), 08:03-08:17, 10:36-10:49
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 07:27-07:43, 19:55-20:01, 20:30-20:49
 - [The Building Blocks of GTM Orchestration — Arman Vaziri, Ramp](../sources/20260826_VjEP0xqTUI0.md), 11:06-11:13, 13:25-13:28, 17:02-17:10
+- [What If Your Chip Design Team Moved Like a Single Body? — Abduallah Mohamed, AIDAChip](../sources/20260822_0I6aoPSRzVc.md), 05:46-06:19, 09:27-10:15, 11:30-11:40
