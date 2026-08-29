@@ -1,6 +1,10 @@
 # Concept Index
 
 ## Agents
+- [Make Delegation Multiplayer So People See Larger Asks](../concepts/make-delegation-multiplayer-so-people-see-larger-asks.md) - a shared channel publishes the org's best delegations; a private CLI hides them.
+- [Ask Size Lags Model Capability Because Early Products Boxed the Model In](../concepts/ask-size-lags-model-capability-because-early-products-boxed-the-model-in.md) - timid usage is a habit trained by products that could not run code, not a misjudgment of the model.
+- [Product Surface Fragmentation Makes the User the Integration Layer](../concepts/product-surface-fragmentation-makes-the-user-the-integration-layer.md) - agent surfaces that cannot delegate to each other push the handoff onto the user.
+- [Draw the Cut Line Between Verified Data and Free-Form Agent Analysis](../concepts/draw-the-cut-line-between-verified-data-and-free-form-agent-analysis.md) - in audited domains the agent generates over a verified substrate rather than over everything.
 - [An Agent Is an Expert Who Onboards Again on Every Task](../concepts/an-agent-is-an-expert-who-onboards-again-on-every-task.md) - the deficit is organizational, so it does not shrink as models improve.
 - [Satisfaction of Search Stops Agents at the First Plausible Hit](../concepts/satisfaction-of-search-stops-agents-at-the-first-plausible-hit.md) - the agent cannot observe its own coverage of a corpus it has not read.
 - [Replay Agentic Traces, Because Steady-State Benchmarks Hide the Workload](../concepts/replay-agentic-traces-because-steady-state-benchmarks-hide-the-workload.md) - public benchmarks report one sanitized steady-state run; agent traces span 1 to 3,000 turns, >90% cache hits, and >100:1 input-to-output.
@@ -574,6 +578,7 @@
 - [Embed architecture governance into developer workflows](../concepts/embed-architecture-governance-into-developer-workflows.md)
 
 ## Business Intelligence
+- [Draw the Cut Line Between Verified Data and Free-Form Agent Analysis](../concepts/draw-the-cut-line-between-verified-data-and-free-form-agent-analysis.md) - just-in-time dashboards and analyses on top, verifiability and provenance underneath.
 
 - [Preflight Agents Through a Business-Definitions Librarian](../concepts/preflight-agents-through-a-business-definitions-librarian.md)
 - [Run a Jury of Analysts and a Consensus Judge for No-Ground-Truth Questions](../concepts/run-a-jury-of-analysts-and-a-consensus-judge-for-no-ground-truth-questions.md)
@@ -587,6 +592,10 @@
 - [Learn risk scoring from audit feedback for predictive compliance](../concepts/learn-risk-scoring-from-audit-feedback-for-predictive-compliance.md)
 
 ## Coding Agents
+- [The Review Bottleneck Is Comprehension, Not Reviewer Time](../concepts/the-review-bottleneck-is-comprehension-not-reviewer-time.md) - more review hours cannot fix a change nobody can hold in their head.
+- [Validate a Cross-Language Port Against Production Runtime Data](../concepts/validate-a-cross-language-port-against-production-runtime-data.md) - captured production behavior is the oracle a model-driven port needs; the cutover boundary is still yours.
+- [Ask Size Lags Model Capability Because Early Products Boxed the Model In](../concepts/ask-size-lags-model-capability-because-early-products-boxed-the-model-in.md) - the ask shrank to fit a generation of products that could not run code or inspect their environment.
+- [Make Delegation Multiplayer So People See Larger Asks](../concepts/make-delegation-multiplayer-so-people-see-larger-asks.md) - a private CLI hides the org's best delegations; a shared channel demonstrates them.
 - [An Agent Is an Expert Who Onboards Again on Every Task](../concepts/an-agent-is-an-expert-who-onboards-again-on-every-task.md) - the reset is per task, so onboarding cost multiplies by task volume instead of amortizing.
 - [Weight Mined Review Guidance by the Author's Expertise](../concepts/weight-mined-review-guidance-by-the-authors-expertise.md) - rank mined PR history by who said it, using the review graph you already build.
 - [A Model Swap Moves Your Agent Product's Output Metrics, and the Explanation Lives in Chat](../concepts/a-model-swap-moves-agent-output-metrics-and-the-reason-lives-in-chat.md) - a version bump is a pipeline change, and the root cause is usually a human message.
@@ -1089,6 +1098,7 @@
 - [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md)
 
 ## Infrastructure
+- [Pre-Measure Everything and Build Runtime Knobs Before You Need Them](../concepts/pre-measure-everything-and-build-runtime-knobs-before-you-need-them.md) - a metric first recorded during an incident has no baseline, and the knobs must already be first-class.
 - [Measure Multi-GPU Headroom Against a Communication-Aware Roofline](../concepts/measure-multi-gpu-headroom-against-a-communication-aware-roofline.md) - compute outgrew the interconnect 7.2x to 3x from A100 to B200, and PyTorch+NCCL sits below half its analytic bound on most problems.
 - [Add Multi-GPU Primitives to a Single-GPU Kernel Instead of Orchestrating Bulk Collectives](../concepts/add-multi-gpu-primitives-to-a-single-gpu-kernel.md) - collective libraries, distributed DSLs, and hand-tuned operators each fail differently; roughly a dozen in-kernel lines did not.
 - [Choose the Inter-GPU Transfer Mechanism by Message Size and Resource Cost](../concepts/choose-the-inter-gpu-transfer-mechanism-by-message-size-and-resource-cost.md) - copy engine, TMA, and register-level `multimem` differ in message-size sweet spot, register and SM cost, and access to in-network reductions.
@@ -1548,6 +1558,11 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Ask Size Lags Model Capability Because Early Products Boxed the Model In](../concepts/ask-size-lags-model-capability-because-early-products-boxed-the-model-in.md) - granting apparently excessive degrees of freedom is what makes a large ask answerable.
+- [Product Surface Fragmentation Makes the User the Integration Layer](../concepts/product-surface-fragmentation-makes-the-user-the-integration-layer.md) - surfaces that cannot delegate to each other force copy-paste handoffs the product should perform.
+- [Run Two-Week Persevere-or-Pivot Bets With a Project-Independent Org Chart](../concepts/run-two-week-persevere-or-pivot-bets-with-a-project-independent-org-chart.md) - a fast kill cadence only survives if the org chart does not have to change when a bet dies.
+- [Draw the Cut Line Between Verified Data and Free-Form Agent Analysis](../concepts/draw-the-cut-line-between-verified-data-and-free-form-agent-analysis.md) - regulated buyers want free-form analysis over a verified substrate, not free-form everything.
+- [Pace Against the Cycle, Not the Day, in AI-Speed Teams](../concepts/pace-against-the-cycle-not-the-day-in-ai-speed-teams.md) - burnout is the default outcome of frontier-model cadence unless offline time is a stated rule.
 - [When Code Stops Being the Long Pole, Approvals Become It](../concepts/when-code-stops-being-the-long-pole-approvals-become-it.md) - governance overheads that were rounding errors against a 9-12 month build become the bottleneck against a two-month one.
 - [Stage Productivity Pilots to Strip One Confound at a Time](../concepts/stage-productivity-pilots-to-strip-one-confound-at-a-time.md) - staging pilots buys credible evidence and the local playbook that a broad simultaneous rollout destroys.
 - [Budget the Productivity Dip That Precedes the Agent Speedup](../concepts/budget-the-productivity-dip-that-precedes-the-agent-speedup.md) - a leader asking "why are you not going faster?" mid-investment gets the cost without the speedup.
@@ -1675,6 +1690,8 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Validate a Cross-Language Port Against Production Runtime Data](../concepts/validate-a-cross-language-port-against-production-runtime-data.md) - an unattended port loop makes its oracle load-bearing, and the source code is not it.
+- [Pre-Measure Everything and Build Runtime Knobs Before You Need Them](../concepts/pre-measure-everything-and-build-runtime-knobs-before-you-need-them.md) - offline eval loops depend on production history instrumented before the question existed.
 - [Measure a Context Layer on Compounding, Not on the First Task](../concepts/measure-a-context-layer-on-compounding-not-the-first-task.md) - a layer that injects tokens up front should lose on step one and win on avoided rework.
 - [A Model Swap Moves Your Agent Product's Output Metrics, and the Explanation Lives in Chat](../concepts/a-model-swap-moves-agent-output-metrics-and-the-reason-lives-in-chat.md) - output volume is uninterpretable on its own, since a better suppressor and a worse finder look alike.
 - [More Samples Buy Correctness, Not Speedups](../concepts/more-samples-buy-correctness-not-speedups.md) - pass@k rose from 28 to 36 of 87 while the correct-and-faster share stalled near 31%.
@@ -2447,6 +2464,7 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Product Surface Fragmentation Makes the User the Integration Layer](../concepts/product-surface-fragmentation-makes-the-user-the-integration-layer.md) - the tell for a missing delegation edge is a copy-paste handoff between your own surfaces.
 - [Map the Agentic Commerce Protocol Stack by Layer](../concepts/map-the-agentic-commerce-protocol-stack-by-layer.md) - five acronyms on four layers, with one canonical checkout model plus per-spec serializers as the implementation that follows.
 - [Push a Product Feed, Because Per-Merchant Catalog Search Does Not Scale](../concepts/push-a-product-feed-because-catalog-search-does-not-scale.md) - the aggregators want the index in their own hands, which inverts the usual advice to expose an API and hands merchants a schema tax plus a sync loop.
 - [Agent Protocols Must Encode the Distinctions the User Interface Collapses](../concepts/agent-protocols-must-encode-the-distinctions-the-ui-collapses.md) - the test for whether generic tool-calling suffices is which distinctions you removed for humans that the system on the other side still relies on.
@@ -2744,6 +2762,12 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Make Delegation Multiplayer So People See Larger Asks](../concepts/make-delegation-multiplayer-so-people-see-larger-asks.md) - ambition spreads by reading colleagues' prompts, which a per-developer CLI cannot do.
+- [The Review Bottleneck Is Comprehension, Not Reviewer Time](../concepts/the-review-bottleneck-is-comprehension-not-reviewer-time.md) - change the artifact, not the calendar: intent and tradeoffs alongside the diff.
+- [Run Two-Week Persevere-or-Pivot Bets With a Project-Independent Org Chart](../concepts/run-two-week-persevere-or-pivot-bets-with-a-project-independent-org-chart.md) - two-week persevere-or-pivot reviews, bet leads who manage nobody, structure only after traction.
+- [Pre-Measure Everything and Build Runtime Knobs Before You Need Them](../concepts/pre-measure-everything-and-build-runtime-knobs-before-you-need-them.md) - instrument ahead of the question and build runtime knobs before the degradation.
+- [Validate a Cross-Language Port Against Production Runtime Data](../concepts/validate-a-cross-language-port-against-production-runtime-data.md) - port, verify, double-check, read both codebases, churn — checked against production data.
+- [Pace Against the Cycle, Not the Day, in AI-Speed Teams](../concepts/pace-against-the-cycle-not-the-day-in-ai-speed-teams.md) - judge on the cycle rather than the day, and treat inability to go offline as a system defect.
 - [Attach Sources as Both a Correction Surface and a Continuation Pointer](../concepts/attach-sources-as-a-correction-surface-and-a-continuation-pointer.md) - design the response format for both the human who corrects and the agent who continues.
 - [Weight Mined Review Guidance by the Author's Expertise](../concepts/weight-mined-review-guidance-by-the-authors-expertise.md) - one review-relationship graph yields both a staffing risk map and an authority weight.
 - [A Model Swap Moves Your Agent Product's Output Metrics, and the Explanation Lives in Chat](../concepts/a-model-swap-moves-agent-output-metrics-and-the-reason-lives-in-chat.md) - index the org's conversation record, because "what changed" is answered by people.

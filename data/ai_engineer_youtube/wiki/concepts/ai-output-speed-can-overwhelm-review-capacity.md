@@ -33,6 +33,7 @@ Details:
 - **The overflow does not stop at the merge button.** Justin Smith (Resolve AI) reports the same volume arriving one stage later, in production: bigger PRs, more of them, "even from even non-developers that maybe don't actually know the code," and consequently "AI is creating a lot more issues in production as AI code sort of goes through. It's not clear we have the right sort of structures in place to deal with the amount of kind of changes that are coming through." Read against this page's other sources, review capacity is the first fixed denominator the wave hits and operational capacity is the second — and unlike review, the operational half has no queue to visibly back up. His framing of what that half already consumes is 70% of engineering time, uncited. ([Justin Smith](../sources/20260809_vSx5IULvBns.md), 01:15-01:35, 01:47-02:00, 02:37-02:49)
 
 - **One organization's own instrumentation of the bottleneck, on the metric the author feels.** Uber tracks time to first review on a pull request: "Back in 2024, we were seeing that engineers would get their first review within 3 hours. Now in 2026, that has grown to 9 hours uh in addition to all of the volume changes. So, in short, code review is now the bottleneck that we are running into" — across thousands of engineers, hundreds of teams, twelve sites, and six language-specific monorepos. Worth keeping distinct from the survey numbers above: this is one company measuring itself over its own history, which makes it a cleaner trend and a weaker generalization. The attribution is softer than it first reads — the talk does not separate agent-authored volume from headcount growth or from an in-progress Phabricator-to-GitHub migration — and no post-deployment figure for the same metric is reported, so the system built to relieve the bottleneck is never measured against it. ([Bond and Ketkar](../sources/20260828_EL123UNokkI.md), 00:33-01:22)
+- **The moment of overwhelm, in one reviewer sentence.** Krieger's description of what a saturated reviewer actually says about an agent-sized change: "this is like 2,000 lines of code. It looks like code to me." That is not a slow review or a missed bug — it is a review that produced no signal, which is the failure this page's pressure ends in. Anthropic's response was to change the artifact rather than the schedule, and to route cosmetic visual changes to fix-forward so scarce attention lands on architecture-touching diffs. ([Krieger](../sources/20260827_qqrk7CtkuIw.md), 10:36-10:44, 11:21-11:29)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -53,6 +54,7 @@ Related concepts:
 - [Turn Unfiled Conversation Into Concrete Prototypes](turn-unfiled-conversation-into-concrete-prototypes.md)
 - [Give Unowned Operational Work a Trigger](give-unowned-operational-work-a-trigger.md)
 - [Review Comments Have Two Audiences With Inverted Error Costs](review-comments-have-two-audiences-with-inverted-error-costs.md)
+- [The Review Bottleneck Is Comprehension, Not Reviewer Time](the-review-bottleneck-is-comprehension-not-reviewer-time.md)
 
 Sources:
 - [The Friction is Your Judgment - Armin Ronacher & Cristina Poncela Cubeiro, Earendil](../sources/20260418__Zcw_sVF6hU.md), 03:35-07:10
@@ -67,3 +69,4 @@ Sources:
 - [Multiplayer agentic engineering — Arjun Singh, Superconductor](../sources/20260809_OL7kfezynJM.md), 08:24-08:42, 16:00-16:16
 - [Always-on agents run production without the on-call tax — Justin Smith, Resolve AI](../sources/20260809_vSx5IULvBns.md), 01:15-02:00, 02:37-02:49
 - [Building uReview, Uber's Multi-Agent Code Review Engine — Will Bond & Ameya Ketkar, Uber](../sources/20260828_EL123UNokkI.md), 00:33-01:22
+- [How Anthropic Builds: Lessons from Labs — Mike Krieger, Anthropic](../sources/20260827_qqrk7CtkuIw.md), 10:11-11:29

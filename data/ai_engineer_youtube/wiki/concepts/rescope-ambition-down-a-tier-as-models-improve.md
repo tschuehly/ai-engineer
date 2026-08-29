@@ -14,6 +14,7 @@ Details:
 - Caveat: the old ceiling has genuinely blurred — "I don't know what too big means anymore" (training your own model? an OS? competing with NPM directly?) — so finding the new limit requires deliberately attempting projects that feel oversized. 12:22-13:05
 - The tier collapse rests on the orchestration-era model handling large implementations from a prompt with no custom "software factory" — see the model-eras framing in the related capability-tiers concept.
 - Thariq Shihipar (Anthropic) reaches the same "scale ambition up" conclusion from a mindset angle he calls *being unreasonable*: Anthropic's culture holds that "tradeoffs are not real," so instead of prioritizing one thing against another you "just do all of it… force reality to show you the tradeoff." Good/fast/cheap stops being "pick two" and becomes "pick three," and the durable move is to "reframe and make ourselves more ambitious… do the best work of our lives faster than ever" (he built a full keynote deck in ~4 hours with Fable). The Fable talk's caveat also sharpens the payoff: "building is easier, but generating value is still hard" — cheap implementation doesn't remove the many swings it takes to find the valuable thing, so scale ambition toward *value*, not just output. [Thariq Shihipar, 16:28-19:05]
+- **The missing half: why people still ask small.** Mike Krieger picks up Thariq Shihipar's "be unreasonable" from the same conference and supplies a diagnosis rather than an exhortation. The habit was trained by the products, not by the models: "the first generation of AI products, we put them too much in a box and constrain their access to tools or their degrees of freedom, which means it was much harder to be unreasonable" — "I can write code, but I can't really run it, or I can kind of introspect my environment, but not really." That makes rescoping a *product* problem as much as a personal one, with two levers: grant degrees of freedom that look excessive per user ("does every single knowledge worker need a virtual machine that can write bash? On the face of it, no" — until the PDF parser fails and the model writes a script), and teach the larger ask deliberately, because "as an industry or even as a product team, we have to teach people to be more unreasonable in their usage." ([Krieger](../sources/20260827_qqrk7CtkuIw.md), 03:04-04:16)
 
 Related topics:
 - [Product Strategy](../topics/product-strategy.md)
@@ -25,7 +26,9 @@ Related concepts:
 - [Coding-Agent Capability Tiers Change the Bottleneck](coding-agent-capability-tiers-change-the-bottleneck.md)
 - [Repo-Local Markdown Tasks Give Agents Durable Scoped Work Units](repo-local-markdown-tasks-give-agents-durable-scoped-work-units.md)
 - [Agentic Coding Collapses Coordination Tax for Small Valuable Changes](agentic-coding-collapses-coordination-tax-for-small-valuable-changes.md)
+- [Ask Size Lags Model Capability Because Early Products Boxed the Model In](ask-size-lags-model-capability-because-early-products-boxed-the-model-in.md)
 
 Sources:
 - [Everything we knew about software has changed — Theo Browne, @t3dotgg](../sources/20260708_xUnRQ9vLXxo.md), 02:59-13:05
 - [Field Guide to Fable — Thariq Shihipar, Anthropic](../sources/20260706_9fubhllmsBU.md), 16:28-19:05
+- [How Anthropic Builds: Lessons from Labs — Mike Krieger, Anthropic](../sources/20260827_qqrk7CtkuIw.md), 02:54-05:14

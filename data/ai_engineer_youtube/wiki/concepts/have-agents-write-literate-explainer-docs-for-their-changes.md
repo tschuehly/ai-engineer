@@ -15,6 +15,7 @@ Details:
 - **Interactive figures** where they help: e.g. drag rocks in a small simulation that shows coordinates and Z-layer ordering (using Notion HTML blocks). Caveat: interactivity can be a crutch and slop; use tastefully or it doesn't add understanding over static pictures. (08:54-09:38)
 - **Literate code diffs**: show the code, but with prose explaining files in the right order and what's going on before each file — much easier to follow than a raw ordered file list. (09:38-10:15)
 - Pairs with a comprehension quiz at the bottom of the doc as a self-check (see related concept). (11:05-11:40)
+- **The same practice at a frontier lab, with the motive stated as comprehension rather than pedagogy.** Anthropic replaced "here is a 2,000-line PR" with "here's a Claude Code artifact. Here's the explanation. Here's the intention of the change. Here's the trade-offs that were made," because the binding constraint was "human ability to even fully conceptualize what we're doing." Note the reduced ambition compared with this page: intent and tradeoffs, not a taught curriculum with figures — which is the cheaper end of the same spectrum and may be the version that survives contact with every PR rather than the important ones. ([Krieger](../sources/20260827_qqrk7CtkuIw.md), 10:19-11:08)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -25,6 +26,8 @@ Related concepts:
 - [Gate Agent Code on a Comprehension Quiz You Must Pass](gate-agent-code-on-a-comprehension-quiz-you-must-pass.md)
 - [Build Ephemeral Microworlds to Feel How Code Works](build-ephemeral-microworlds-to-feel-how-code-works.md)
 - [Dynamic artifacts make agent work reviewable and reusable](dynamic-artifacts-make-agent-work-reviewable-and-reusable.md)
+- [The Review Bottleneck Is Comprehension, Not Reviewer Time](the-review-bottleneck-is-comprehension-not-reviewer-time.md)
 
 Sources:
 - [Understanding is the new bottleneck — Geoffrey Litt, Notion](../sources/20260710_WkBPX-oDMnA.md), 07:00-10:15
+- [How Anthropic Builds: Lessons from Labs — Mike Krieger, Anthropic](../sources/20260827_qqrk7CtkuIw.md), 10:19-11:08

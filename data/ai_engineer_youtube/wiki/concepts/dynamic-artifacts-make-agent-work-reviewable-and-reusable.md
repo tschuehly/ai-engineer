@@ -17,6 +17,7 @@ Details:
 - Commenting on text or image artifacts gives the user a Google Docs/GitHub/Figma-like feedback surface that the agent can incorporate during execution without forcing the whole loop to stop. 17:37-19:20
 
 - **On a team, the artifact's second job is to be findable from wherever the reader is.** Superconductor treats screenshots and videos as the medium through which agent work becomes visible across surfaces: "it doesn't matter where the work started or where it's finishing, the agent can show you the work it's doing as screenshot or video or other. And you can see it from everywhere… you don't have to worry about like, 'Oh, where is that thing? I got to go to GitHub to see the image or got to go to Slack to see the image.'" The enabling design is that the artifact belongs to the session rather than to the tool that produced it ([make one agent session reachable from every interface](make-one-agent-session-reachable-from-every-interface.md)). It is also what closes the loop for a non-engineer who triggered the work: the reported flow is that they ask for a fix in Slack, "screenshots are shown," and an engineer merges — so the artifact is doing verification for someone with no way to run the code. ([Arjun Singh](../sources/20260809_OL7kfezynJM.md), 05:09-05:31, 12:26-12:45)
+- **The artifact as the thing that travels with a pull request.** Anthropic ships Claude Code artifacts and uses them internally in place of the raw diff — "here's the explanation. Here's the intention of the change. Here's the trade-offs that were made" — which is this page's reviewable-object idea applied at the one point where review actually blocks delivery. The stated reason it works is a division of labour rather than a preference: code is machine-verifiable, intent and tradeoffs are not, so the artifact carries the part a human must judge. ([Krieger](../sources/20260827_qqrk7CtkuIw.md), 10:30-11:08)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -30,7 +31,9 @@ Related concepts:
 - [Agent managers orchestrate editor, browser, and background agents](agent-managers-orchestrate-editor-browser-and-background-agents.md)
 - [Make One Agent Session Reachable From Every Interface](make-one-agent-session-reachable-from-every-interface.md)
 - [Environment Isolation Is What Lets Non-Engineers Trigger Real Work](environment-isolation-is-what-lets-non-engineers-trigger-real-work.md)
+- [The Review Bottleneck Is Comprehension, Not Reviewer Time](the-review-bottleneck-is-comprehension-not-reviewer-time.md)
 
 Sources:
 - [Defying Gravity - Kevin Hou, Google DeepMind](../sources/20251202_HN-F-OQe6j0.md), 12:48-19:20
 - [Multiplayer agentic engineering — Arjun Singh, Superconductor](../sources/20260809_OL7kfezynJM.md), 05:09-05:31, 12:26-12:45
+- [How Anthropic Builds: Lessons from Labs — Mike Krieger, Anthropic](../sources/20260827_qqrk7CtkuIw.md), 10:30-11:08

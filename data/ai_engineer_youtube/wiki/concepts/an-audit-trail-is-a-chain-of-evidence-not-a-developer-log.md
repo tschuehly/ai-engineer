@@ -15,6 +15,7 @@ Details:
 - **State the price.** With event sourcing, "writes become very easy. So, you just drop an event. Reads become more difficult because you have to read through all of the events in order to reconstruct a view of what happened." Caching and snapshots help, "but there always is more effort there." Choosing this model is choosing to pay on the read path forever. ([Lovejoy & Howard](../sources/20260819_mav15aW9lLM.md), 07:46-08:14)
 - **In domains where the past gets reinterpreted, the read cost buys something back.** "You're going to want different interpretations of the raw data that your agents recorded after the fact… more events happened and that changes the interpretation of the healthcare journey, and you want a different view of the … source of truth at that particular time. And this pattern makes that easy because all of your views of the data are ephemeral computed projections of the event log." A system that stored the derived view instead of the events cannot do this at all. ([Lovejoy & Howard](../sources/20260819_mav15aW9lLM.md), 08:14-08:46)
 - **Distinguish this from developer-facing replay.** Recording node-boundary inputs and outputs to [re-enter a failed run](record-and-replay-agent-runs-at-node-boundaries.md) serves debugging and is scoped to traces you chose to keep; the compliance ledger is the system's source of truth, covers every action including the successful ones, and carries the authorization for each. The same log can serve both, but only the second requirement forces completeness and immutability. ([Lovejoy & Howard](../sources/20260819_mav15aW9lLM.md), 05:23-07:44)
+- **Why the systems that already do this well are the ones agents cannot build on.** Krieger, on agentic products in financial services: "a lot of the systems that were built to do the verifiability, auditability are almost by design not super flexible in terms of agentic workloads on top. So there's opportunity at both sides of the stack." The rigidity is a design consequence of the evidence guarantee, not an implementation gap, so an agent layer generally cannot be bolted onto an existing audit system — the architecture question becomes where to draw the cut line between the verified substrate and the free-form analysis generated over it. ([Krieger](../sources/20260827_qqrk7CtkuIw.md), 20:42-21:41)
 
 Related topics:
 - [Security](../topics/security.md)
@@ -29,6 +30,8 @@ Related concepts:
 - [Use immutable versioned state for agent handoffs](use-immutable-versioned-state-for-agent-handoffs.md)
 - [First-Class Agent Users Need Identity, Scopes, and Audit Trails](first-class-agent-users-need-identity-scopes-and-audit-trails.md)
 - [Make Regulated-Data Failures Architecturally Impossible](make-regulated-data-failures-architecturally-impossible.md)
+- [Draw the Cut Line Between Verified Data and Free-Form Agent Analysis](draw-the-cut-line-between-verified-data-and-free-form-agent-analysis.md)
 
 Sources:
 - [Why Your Enterprise Tech Stack Isn't Ready for AI Agents — Christopher Lovejoy & Saul Howard](../sources/20260819_mav15aW9lLM.md), 05:23-08:46
+- [How Anthropic Builds: Lessons from Labs — Mike Krieger, Anthropic](../sources/20260827_qqrk7CtkuIw.md), 20:42-21:41

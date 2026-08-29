@@ -16,6 +16,7 @@ Details:
 - **The altitude the skill moves to, named by a team operating the automated layer beneath it.** Uber's position is that automation expands rather than replaces the outer loop: "Rather than removing humans from the code review process, we are moving their responsibilities up a layer… Instead of you worrying about the optimization of the performance and the API compatibility, you're going to be thinking more about architecture in your code reviews. You're going to have time to focus on the domain expertise that you have and product thinking." That reframes the scarce skill from reading diffs faster to judging structure and product fit, and it depends entirely on the lower tier actually being absorbed rather than dropped — the talk asserts the absorption and does not measure it. ([Bond and Ketkar](../sources/20260828_EL123UNokkI.md), 13:44-14:34)
 
 - **If review is the bottleneck skill, the people who have it are the ones who spent years building it — which is a training problem, not just a hiring filter.** "Reviewing AI output is often harder for some than actually writing it, especially early in career. Senior engineers have already spent a large portion of their career reviewing others code. But early career engineers don't have that muscle yet." The apprenticeship route that built the skill — reviewing colleagues' pull requests over years — is exactly the activity agent-written code is displacing, so the supply of the scarce skill is being drawn down at the same time demand for it rises. Liguori reports this as a cost of the transition rather than proposing a remedy, and gives no data behind it. ([Liguori](../sources/20260828_pqlWNihgdjI.md), 16:17-16:44)
+- **What the scarce skill actually is, named precisely.** This page's "reviewer who can explain whether a change is good or bad" gets a sharper definition from Krieger: the constraint is "human ability to even fully conceptualize what we're doing," not review throughput. The reviewer's irreducible contribution is the set of questions worth asking — he hands those to the model and lets it investigate — so the skill to hire and train for is holding a model of the system, not reading diffs faster. ([Krieger](../sources/20260827_qqrk7CtkuIw.md), 10:19-11:20)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -28,8 +29,10 @@ Related concepts:
 - [Do not report agent autonomy without quality accountability](do-not-report-agent-autonomy-without-quality-accountability.md)
 - [Review Comments Have Two Audiences With Inverted Error Costs](review-comments-have-two-audiences-with-inverted-error-costs.md)
 - [When Code Stops Being the Long Pole, Approvals Become It](when-code-stops-being-the-long-pole-approvals-become-it.md)
+- [The Review Bottleneck Is Comprehension, Not Reviewer Time](the-review-bottleneck-is-comprehension-not-reviewer-time.md)
 
 Sources:
 - [Vibes won't cut it - Chris Kelly, Augment Code](../sources/20250803_Dc3qOA9WOnE.md), 11:20-14:06
 - [Building uReview, Uber's Multi-Agent Code Review Engine — Will Bond & Ameya Ketkar, Uber](../sources/20260828_EL123UNokkI.md), 13:44-14:34
 - [From AI-Assisted to AI-Native: Building a Frontier Development Team — Clare Liguori, AWS](../sources/20260828_pqlWNihgdjI.md), 16:17-16:44
+- [How Anthropic Builds: Lessons from Labs — Mike Krieger, Anthropic](../sources/20260827_qqrk7CtkuIw.md), 10:19-11:20

@@ -12,6 +12,7 @@ Details:
 - Each fixer should return a small pull request with a useful summary, reviewer notes, and focused changes instead of one giant automated diff. (25:38-26:34)
 - For CVE remediation, one agent can scan a repository, choose a language-appropriate vulnerability tool such as Trivy or `npm audit`, then spawn one agent per vulnerability to research solvability, update dependencies, fix breaking API changes, and open PRs. (35:35-36:18)
 - Parallel fixers allow successful PRs to merge as they are ready while one stuck or unsolvable vulnerability does not block unrelated fixes. (36:25-36:39)
+- **The loop run without the human in it, and the oracle question that raises.** Krieger's weekend port ran port → verify → double-check → read both codebases → repeat, unattended until Monday. Removing the human from each cycle makes the loop's oracle load-bearing, and his answer is not the test suite: capture what the system actually does in production and check against that. Instagram's MonkeyType "captured runtime type... the types that were actually getting used in production and then map those back to the types in the code base," generalized as "if you're doing conversion or cross compiling using LLMs, you can also lean on production data a lot more or run sort of like segmented tests." ([Krieger](../sources/20260827_qqrk7CtkuIw.md), 04:52-06:19)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -21,6 +22,8 @@ Related concepts:
 - [Decompose large refactors into dependency-aware agent batches](decompose-large-refactors-into-dependency-aware-agent-batches.md)
 - [Run parallel issue agents in sandboxes with review and merge loops](run-parallel-issue-agents-in-sandboxes-with-review-and-merge-loops.md)
 - [Use human judgment gates for high-risk agent code changes](use-human-judgment-gates-for-high-risk-agent-code-changes.md)
+- [Validate a Cross-Language Port Against Production Runtime Data](validate-a-cross-language-port-against-production-runtime-data.md)
 
 Sources:
 - [Automating Large Scale Refactors with Parallel Agents - Robert Brennan, OpenHands](../sources/20260108_rcsliSIy_YU.md), 24:56-36:39
+- [How Anthropic Builds: Lessons from Labs — Mike Krieger, Anthropic](../sources/20260827_qqrk7CtkuIw.md), 04:52-06:19

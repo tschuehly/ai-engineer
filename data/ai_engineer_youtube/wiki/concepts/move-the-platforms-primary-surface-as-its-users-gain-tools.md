@@ -15,6 +15,7 @@ Details:
 - **The stages accumulate; they do not replace.** "We started with the UIs, we are now API and workflow first." The self-serve judge-calibration console is a first-party UI built *after* the API-first move, for exactly the workflow that was too intricate to leave to a generated app. So "API first" is a claim about which layer is guaranteed and owned, not a claim that the team stopped building screens. (11:35-11:47, 13:36-13:58)
 - **The other half of the stage-three move is reuse rather than new build.** "We're trying to reuse a lot of the existing infrastructure that already existed at DoorDash, and that's helped us get a long way." The eval platform is described as the fourth pillar next to an LLM gateway, an agent gateway, and open-weights model hosting — a layer added to an existing platform rather than a greenfield product, which is part of why the surface could keep moving without a rewrite. (01:20-02:11, 13:44-13:58)
 - **Limits, and the reason to treat this as a frame rather than a finding.** This is one team's retrospective on its own sequencing, with no counterfactual: there is no evidence that starting API-first would have been worse, and the "workflow first" stage is described in a single sentence with no artifact behind it beyond the calibration UI and the vibe-coded annotation apps. The transferable content is the diagnostic question — which class of user is currently blocked, and by what — not the specific three-stage path.
+- **The failure mode when surfaces accumulate without edges between them.** This page's surfaces accumulated *and* remained reachable; Krieger describes the version where they do not. Code, co-work, and chat "don't interoperate well and they can't delegate to each other," and "the average person off the street could not explain to you why those are all different" — with the tell being a copy-paste handoff the product asks the user to perform: "can you please create a paragraph that I can paste into Claude Code? That is some 2020 kind of workflow that really shouldn't exist anymore." He names the same constraint as the top limit on a specific product: what holds Claude Design back is "better interaction with our other surfaces." Adding a surface is only additive if the delegation edges are added with it. ([Krieger](../sources/20260827_qqrk7CtkuIw.md), 14:10-14:41, 16:33-17:16)
 
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
@@ -28,6 +29,8 @@ Related concepts:
 - [Scale AI Fluency With Self-Service Platforms](scale-ai-fluency-with-self-service-platforms.md)
 - [Gateway Platform Primitives Let Teams Focus on MCP Business Logic](gateway-platform-primitives-let-teams-focus-on-mcp-business-logic.md)
 - [Build Internal AI Engineering Platforms When Off-the-Shelf Tools Lack Enterprise Context](build-internal-ai-engineering-platforms-when-off-the-shelf-tools-lack-enterprise-context.md)
+- [Product Surface Fragmentation Makes the User the Integration Layer](product-surface-fragmentation-makes-the-user-the-integration-layer.md)
 
 Sources:
 - [AI Evals for Cross-Functional Teams — Nachiket Paranjape & Swaroop Chitlur Haridas, DoorDash](../sources/20260828_bMjlRrWjdT0.md), 01:20-03:45, 11:35-11:47, 13:36-13:58
+- [How Anthropic Builds: Lessons from Labs — Mike Krieger, Anthropic](../sources/20260827_qqrk7CtkuIw.md), 14:10-17:16

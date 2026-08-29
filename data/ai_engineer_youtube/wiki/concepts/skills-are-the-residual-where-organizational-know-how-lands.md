@@ -17,6 +17,7 @@ Details:
 - **Relation to the skills-versus-MCP split this wiki already holds.** [Use skills for workflow guidance and MCP for integrations](use-skills-for-workflow-guidance-and-mcp-for-integrations.md) draws the boundary by *function* — MCP reaches systems, skills describe how to use them well. This page draws it by *authorship*, and the two agree in a way worth stating: the functional split is why the authorship split follows. Integrations are commodities across companies and get shipped by whoever owns the system; the knowledge of how your company uses them is not a commodity and nobody will ship it to you.
 - **Where workflows sit relative to skills.** "Workflows, think about them as harness blueprints that actually shape the behavior of your coding harness, for example, in the runtime." (06:52-07:03) So a workflow is the composition and a skill is the composed unit — which is also why Touil later argues the same catalog-and-governance treatment has to be applied one level up, to the workflows themselves. (17:53-18:40)
 - Limits. Nothing in this talk is measured: no deployment, no A/B test, no client. The elimination is an argument from typical practice, and the portability claim ("it's going to just work" across harnesses) is asserted rather than demonstrated. See the source's [Provenance and Limits](../sources/20260828_M05vON8i0aI.md).
+- **The primitive that skills displaced, and the disposal rule behind it.** Krieger names a concrete retirement: styles were unshipped in favour of skills because styles were "very prescriptive in the way that it worked and skills [are a] very much better application." The general rule he draws is that "you have to be willing to take the primitives of one generation of AI and unship them or at least supplement them or supplant them with the next one." Skills are the residual partly because they are the *least* prescriptive container available — which also predicts what will displace them: a more general primitive, not a better-designed prescriptive one. ([Krieger](../sources/20260827_qqrk7CtkuIw.md), 16:11-16:32)
 
 Related topics:
 - [Workflows](../topics/workflows.md)
@@ -29,6 +30,8 @@ Related concepts:
 - [Package Reusable Context as Skills, Libraries, and Registries](package-reusable-context-as-skills-libraries-and-registries.md)
 - [Skill Composability Is Decided Before Authoring, Not in the Registry](skill-composability-is-decided-before-authoring-not-in-the-registry.md)
 - [General Agents Need Skills for Domain Expertise](general-agents-need-skills-for-domain-expertise.md)
+- [Product Surface Fragmentation Makes the User the Integration Layer](product-surface-fragmentation-makes-the-user-the-integration-layer.md)
 
 Sources:
 - [AI-Native Organisations Run on Skills: How to Structure and Scale Them — Imad Touil, QuantumBlack](../sources/20260828_M05vON8i0aI.md), 05:53-09:57, 17:53-18:40
+- [How Anthropic Builds: Lessons from Labs — Mike Krieger, Anthropic](../sources/20260827_qqrk7CtkuIw.md), 15:41-16:32

@@ -13,6 +13,7 @@ Details:
 - This pattern depends on visible artifacts and review surfaces; otherwise parallel agent output becomes another unmanaged queue.
 
 - The morning artifact does not have to be a task queue. Ben Holmes' overnight job enriches and re-generates a personal wiki from the previous day's notes, so what he reviews is a document rather than a work list: "when I come back to my computer in the morning, I wake up to a perfectly fresh wiki that I can review. It's like the daily paper, but it's your own." The reviewability property is the same one this page depends on — the run stays viewable in the browser afterward, so a silent failure is detectable rather than just an absent update. ([LLM Knowledge Bases](../sources/20260812_I3bpdgFJCUY.md), 16:35-17:25)
+- **The company-scale version of the same rhythm, and its precondition.** Anthropic's internal default is "much more this multiplayer async proactive way than it is... most people off in their own CLIs," with agents holding context and memory and taking on tasks between check-ins. The precondition that makes a review-and-dispatch rhythm work at that scale is that the delegations are visible to colleagues rather than private, which is what lets each person's check-in also raise their sense of what to dispatch. ([Krieger](../sources/20260827_qqrk7CtkuIw.md), 09:44-10:00)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -22,7 +23,9 @@ Related concepts:
 - [Treat long-horizon agents as asynchronous workers with evolving interfaces](treat-long-horizon-agents-as-asynchronous-workers-with-evolving-interfaces.md)
 - [Parallel coding-agent queues need focus-preserving review interfaces](parallel-coding-agent-queues-need-focus-preserving-review-interfaces.md)
 - [Run Recurring Knowledge Jobs in a Cloud Sandbox With Sync-Down/Sync-Back](run-recurring-knowledge-jobs-in-a-cloud-sandbox-with-sync-down-sync-back.md)
+- [Make Delegation Multiplayer So People See Larger Asks](make-delegation-multiplayer-so-people-see-larger-asks.md)
 
 Sources:
 - [The Agent Native Company — Rick Blalock, Agentuity](../sources/20250603_0ZPAvzhpGjw.md), 00:23-01:19, 10:51-12:42
 - [LLM Knowledge Bases: a practical guide — Ben Holmes, Warp](../sources/20260812_I3bpdgFJCUY.md), 16:35-17:25
+- [How Anthropic Builds: Lessons from Labs — Mike Krieger, Anthropic](../sources/20260827_qqrk7CtkuIw.md), 08:44-10:00
