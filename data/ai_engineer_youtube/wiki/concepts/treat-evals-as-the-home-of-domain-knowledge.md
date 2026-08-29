@@ -12,6 +12,7 @@ Details:
 - Good evals enable downstream automation: prompt optimizers such as DSPy, synthetic-data filtering for fine-tuning, reinforcement learning, and online scoring all depend on the scorer representing the intended behavior, 12:54-13:15.
 - Generic helpfulness, harmlessness, and hallucination checks can be useful guardrails, but they do not capture nuanced application quality such as whether a generated travel plan is compelling for the user, 14:10-15:04.
 - **If evals are where domain knowledge lives, the people who hold it need write access.** DoorDash draws the organizational consequence directly: "we needed to empower the people who are the domain experts, and in our case that was strategy and operations folks, it was product managers, it was even labeling partners, and not only engineers," because evals are "a cross functional effort… that actually helps us add all the domain specific knowledge into the quality of the AI itself." A scoring system that only engineers can author houses whatever domain knowledge the engineers happen to have, which is the failure this page's argument is meant to prevent. ([AI Evals for Cross-Functional Teams — Nachiket Paranjape & Swaroop Chitlur Haridas, DoorDash](../sources/20260828_bMjlRrWjdT0.md), 02:50-03:07, 04:01-04:33)
+- **What "the home of domain knowledge" cannot hold, if the knowledge is a materiality judgment.** Fox's argument is that the part of domain knowledge deciding whether an output is safe — which of several true differences mattered — is tacit, contextual, and moving, so writing it into an eval artifact captures "only the taste you could write down. The taste that matters is the part that you couldn't." His alternative keeps the eval as the home of the knowledge but changes its *form*: instead of a specification, the durable artifact is a growing corpus of judged cases and expert corrections that the judge retrieves against, where "add one and it's live on the next call." That preserves this page's principle — the eval, not the prompt, is where domain knowledge accumulates — while abandoning the assumption that it accumulates as written criteria. See [Keep a Moving Standard in Examples, Not in a Rubric or the Weights](keep-a-moving-standard-in-examples-not-in-a-rubric-or-the-weights.md). ([Fox](../sources/20260822_yqF6XhzbWBk.md), 07:15-07:34, 11:36-11:56, 13:19-13:36)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -22,7 +23,9 @@ Related concepts:
 - [Use evals as durable AI system specifications](use-evals-as-durable-ai-system-specifications.md)
 - [Optimize LLM programs with metrics and teacher feedback](optimize-llm-programs-with-metrics-and-teacher-feedback.md)
 - [Keep Judge-Prompt Ownership Configurable While the Org Is Still Learning](keep-judge-prompt-ownership-configurable-while-the-org-is-still-learning.md)
+- [Keep a Moving Standard in Examples, Not in a Rubric or the Weights](keep-a-moving-standard-in-examples-not-in-a-rubric-or-the-weights.md)
 
 Sources:
 - [[Full Workshop] Building Metrics that actually work - David Karam, Pi Labs (fmr Google Search)](../sources/20250729_jxrGodnopHo.md), 06:43-07:18, 12:29-15:04
 - [AI Evals for Cross-Functional Teams — Nachiket Paranjape & Swaroop Chitlur Haridas, DoorDash](../sources/20260828_bMjlRrWjdT0.md), 02:50-03:07, 04:01-04:33
+- [Inside 847 Production Clinical AI Notes — Sebastian Fox, Composo](../sources/20260822_yqF6XhzbWBk.md), 07:15-07:34, 11:36-11:56, 13:19-13:36

@@ -1141,6 +1141,9 @@
 - [Mine stuck-then-solved sessions for injectable fixes](../concepts/mine-stuck-then-solved-sessions-for-injectable-fixes.md)
 - [Give Browser Agents a Compact Whole-Page Representation](../concepts/give-browser-agents-a-compact-whole-page-representation.md)
 
+- [Keep a Moving Standard in Examples, Not in a Rubric or the Weights](../concepts/keep-a-moving-standard-in-examples-not-in-a-rubric-or-the-weights.md) - specification, weights, or retrievable examples as homes for judgment that cannot be written down.
+- [Assemble the Judging Standard Per Output From Retrieved Precedent](../concepts/assemble-the-judging-standard-per-output-from-retrieved-precedent.md) - per-output context assembly aimed at the evaluation path, supplying priority rather than facts.
+
 ## Edge Inference
 - [Local Deployment Inverts the Keep-Everything Context Strategy](../concepts/local-deployment-inverts-the-keep-everything-context-strategy.md) - the context window is a hardware constraint that parameter count cannot fix, so the cloud context strategy does not port.
 
@@ -1483,6 +1486,13 @@
 - [Replace Ship-and-Rollback With Hazard-First Simulation When Errors Are Irreversible](../concepts/replace-ship-and-rollback-with-hazard-first-simulation.md)
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
+
+- [Verification Is Cheap for Detection and Expensive for Materiality](../concepts/verification-is-cheap-for-detection-and-expensive-for-materiality.md) - spotting what changed between transcript and note is mechanical; deciding which change matters is not.
+- [A Judge Without Taste Is a Second Silent Failure](../concepts/a-judge-without-taste-is-a-second-silent-failure.md) - the strongest rubric judge cleared one in five notes that hid a serious error.
+- [An Output Faithful to the Source Can Be Wrong About the Decision](../concepts/an-output-faithful-to-the-source-can-be-wrong-about-the-decision.md) - the note records the plan the patient talked the doctor out of.
+- [A Transcript-to-Output Check Cannot See a Mishearing](../concepts/a-transcript-to-output-check-cannot-see-a-mishearing.md) - the scribe's error budget splits by stage, and the note-level check reaches only one of them.
+- [Keep a Moving Standard in Examples, Not in a Rubric or the Weights](../concepts/keep-a-moving-standard-in-examples-not-in-a-rubric-or-the-weights.md) - the counter-proposal to adjudicated clinical rubrics when the standard keeps moving.
+- [An Error Rate With No Incident Reports Is a Measurement Gap](../concepts/an-error-rate-with-no-incident-reports-is-a-measurement-gap.md) - ambient scribes run at scale with no adverse-event channel.
 
 ## Inference
 - [Declare Routing Preferences So a Bad Route Is Fixable](../concepts/declare-routing-preferences-so-a-bad-route-is-fixable.md) - answer the black-box objection by routing on a caller-owned artifact of named tasks, weights, and hard rules.
@@ -2265,6 +2275,15 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 
+- [Verification Is Cheap for Detection and Expensive for Materiality](../concepts/verification-is-cheap-for-detection-and-expensive-for-materiality.md) - verifier's law holds for spotting differences and inverts for ranking them.
+- [A Judge Without Taste Is a Second Silent Failure](../concepts/a-judge-without-taste-is-a-second-silent-failure.md) - a checker sharing the generator's blind spot converts unmeasured risk into a confident pass.
+- [Keep a Moving Standard in Examples, Not in a Rubric or the Weights](../concepts/keep-a-moving-standard-in-examples-not-in-a-rubric-or-the-weights.md) - three homes for tacit judgment, chosen on staleness, explainability, and update latency.
+- [Assemble the Judging Standard Per Output From Retrieved Precedent](../concepts/assemble-the-judging-standard-per-output-from-retrieved-precedent.md) - similar judged cases, applicable corrections, and guidelines retrieved for each output.
+- [Discover Failure Modes From Production Outputs, Not Synthetic Cases](../concepts/discover-failure-modes-from-production-outputs-not-synthetic-cases.md) - the ontology is clustered from real outputs and used as a retrieval index, not a checklist.
+- [Capture Expert Reasoning and Corrections, Not Just a Score](../concepts/capture-expert-reasoning-and-corrections-not-just-a-score.md) - a rating erases the part that says which difference mattered.
+- [An Output Faithful to the Source Can Be Wrong About the Decision](../concepts/an-output-faithful-to-the-source-can-be-wrong-about-the-decision.md) - rejected options are in the transcript, so a grounded summary can record the opposite outcome.
+- [An Error Rate With No Incident Reports Is a Measurement Gap](../concepts/an-error-rate-with-no-incident-reports-is-a-measurement-gap.md) - absence of reported harm measures attention, not safety.
+
 ## Models
 - [Stale Product Content Compounds Through Newer Models](../concepts/stale-product-content-compounds-through-newer-models.md) - a model upgrade is not a remediation plan for stale claims about your product.
 - [Models Solve the Parallelism Patterns the Internet Already Contains](../concepts/models-solve-the-parallelism-patterns-the-internet-already-contains.md) - a distribution-shifted held-out test where in-context principles did not close the gap.
@@ -2577,6 +2596,7 @@
 - [Adapt embedding dimensions with Matryoshka representation learning](../concepts/adapt-embedding-dimensions-with-matryoshka-representation-learning.md)
 - [Agents Punish Bad Data and Need Question and Tracking Data Foundations](../concepts/agents-punish-bad-data-and-need-question-and-tracking-data-foundations.md)
 - [Embed LLM-Generated Queries, Not Raw Heterogeneous Signals](../concepts/embed-llm-generated-queries-not-raw-heterogeneous-signals.md)
+- [Assemble the Judging Standard Per Output From Retrieved Precedent](../concepts/assemble-the-judging-standard-per-output-from-retrieved-precedent.md) - retrieval on the evaluation path, keyed on failure shape and supplying priority rather than facts.
 
 ## Robotics
 
@@ -2966,6 +2986,9 @@
 - [Run Parallel Specialist Models Behind a Speak-Up Gate](../concepts/run-parallel-specialist-models-with-a-speak-up-gate.md)
 - [Replace Ship-and-Rollback With Hazard-First Simulation When Errors Are Irreversible](../concepts/replace-ship-and-rollback-with-hazard-first-simulation.md)
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
+
+- [A Transcript-to-Output Check Cannot See a Mishearing](../concepts/a-transcript-to-output-check-cannot-see-a-mishearing.md) - a verifier anchored on the transcript can only score the stages after it.
+- [An Output Faithful to the Source Can Be Wrong About the Decision](../concepts/an-output-faithful-to-the-source-can-be-wrong-about-the-decision.md) - a conversation contains the options that were rejected, and a summary can keep the wrong one.
 
 ## Workflows
 - [Put an Agent Approval Gate in Front of Maintainer Attention](../concepts/put-an-agent-approval-gate-in-front-of-maintainer-attention.md) - agent review placed before human notification rather than before merge; an attention router whose failure is silent.
@@ -3402,3 +3425,5 @@
 - [Mine stuck-then-solved sessions for injectable fixes](../concepts/mine-stuck-then-solved-sessions-for-injectable-fixes.md)
 - [Give agents a vent tool to report platform friction](../concepts/give-agents-a-vent-tool-to-report-platform-friction.md)
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
+- [Discover Failure Modes From Production Outputs, Not Synthetic Cases](../concepts/discover-failure-modes-from-production-outputs-not-synthetic-cases.md) - clustering real outputs replaces the whiteboard taxonomy and decides what gets reviewed and retrieved.
+- [Capture Expert Reasoning and Corrections, Not Just a Score](../concepts/capture-expert-reasoning-and-corrections-not-just-a-score.md) - a few focused hours of free-form expert comments on real output is the cheapest starting artifact.

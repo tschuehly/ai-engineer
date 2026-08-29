@@ -205,6 +205,7 @@ Seller-facing agents show a product-specific version of retrieval as onboarding.
 Expert-domain RAG adds another layer of corpus and query modeling. Legal retrieval may need to work across on-demand uploads, project vaults, and global law or regulation corpora, while a single query can combine semantic intent, jurisdiction, dates, named directives, multiple provisions, and domain abbreviations. Dense retrieval alone is not the architecture; the system needs domain experts to shape representation, preprocessing, categorization, sparse and dense matching, filters, reranking, and evaluation.
 
 Tax explanation systems add a regulated consumer version of expert-domain retrieval. Static summary explanations can use prepared prompts over known user state, while dynamic tax Q&A may need RAG or GraphRAG over yearly IRS changes, proprietary tax knowledge, and internal tax engines. The retrieval layer is still subordinate to product usefulness and deterministic correctness: GraphRAG can improve response quality for relationship-heavy tax knowledge, but personalized answers and authoritative numbers matter more than adding graph traversal by default.
+- [Assemble the Judging Standard Per Output From Retrieved Precedent](../concepts/assemble-the-judging-standard-per-output-from-retrieved-precedent.md) - retrieval aimed at the evaluation path, keyed on failure shape and supplying a priority ordering rather than facts the model lacks.
 
 ## Open Questions
 
@@ -309,3 +310,4 @@ Tax explanation systems add a regulated consumer version of expert-domain retrie
 - [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md)
 - [The Building Blocks of GTM Orchestration — Arman Vaziri, Ramp](../sources/20260826_VjEP0xqTUI0.md)
 - [The Missing Layer in Agentic AI — Giedrius Šteimantas, Oxylabs](../sources/20260826_XsvUhpnHepE.md)
+- [Inside 847 Production Clinical AI Notes — Sebastian Fox, Composo](../sources/20260822_yqF6XhzbWBk.md)

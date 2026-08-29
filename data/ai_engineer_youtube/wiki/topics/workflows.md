@@ -804,6 +804,9 @@ A rollout pattern worth naming separately from the thing being rolled out: when 
 - [Put an Agent Approval Gate in Front of Maintainer Attention](../concepts/put-an-agent-approval-gate-in-front-of-maintainer-attention.md) - the absorb-the-inflow answer to contribution overload, and the counter-position to every channel-narrowing filter the wiki records.
 - [Make the Triage Agent Ask the Reporter for the Missing Context](../concepts/make-the-triage-agent-ask-the-reporter-for-the-missing-context.md) - clarify at intake while the reporter still has the context, instead of routing under-specified work away from the agent and into a queue.
 
+- [Discover Failure Modes From Production Outputs, Not Synthetic Cases](../concepts/discover-failure-modes-from-production-outputs-not-synthetic-cases.md) - a discovery pass over real outputs replaces the whiteboard taxonomy, and the resulting ontology decides what gets reviewed and what gets retrieved.
+- [Capture Expert Reasoning and Corrections, Not Just a Score](../concepts/capture-expert-reasoning-and-corrections-not-just-a-score.md) - the smallest useful expert-review increment is a few focused hours of free-form comments on real output, kept as reasoning rather than ratings.
+
 ## Open Questions
 
 - Does a shared coordination substrate actually convert the quadratic term to linear, and by how much? The claim is the product's whole premise and the evidence is one unqualified figure — "we think that this gives you four x leverage from our measurement at the moment" — with no unit, baseline, task set, or population, alongside a 70%-on-alignment figure that is self-report from roughly 15 interviews with no instrument. ([Mohamed](../sources/20260822_0I6aoPSRzVc.md), 04:08-04:31, 15:33-15:57)
@@ -1104,3 +1107,4 @@ A rollout pattern worth naming separately from the thing being rolled out: when 
 - [What If Your Chip Design Team Moved Like a Single Body? — Abduallah Mohamed, AIDAChip](../sources/20260822_0I6aoPSRzVc.md)
 - [FinOps for AI Agents: Who Spent All the Tokens? — Tisha Chawla & Susheem Koul, Microsoft](../sources/20260822_GJX19pNhmSw.md)
 - [The Agent Behind the Curtain: Building the Oz Cloud Agent Platform — Safia Abdalla, Warp](../sources/20260822_L173Z8DpaJg.md)
+- [Inside 847 Production Clinical AI Notes — Sebastian Fox, Composo](../sources/20260822_yqF6XhzbWBk.md)

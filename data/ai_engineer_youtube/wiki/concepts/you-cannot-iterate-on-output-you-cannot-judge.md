@@ -16,6 +16,7 @@ Details:
 - The generalizable boundary is the answer key: "reinforcement learning via verifiable rewards is really good at math and code because you have answer keys, you can verify your code is compiling or not… but in these fields, there is just no way to model it. And if any error gets in, it just compounds." Domains that self-verify are the exception, not the template. (09:42-10:10)
 - A corollary about the shipping bar: reaching production proves nothing. Against the Stanford AI Index claim that 89% of enterprise AI agents never reach production, the counter-framing is that "every AI reaches production, but it just fails to work or justify its own cost" — in finance and pharma, "if it does not make money, it's shown the door," with no credit for "maybe it'll work in 2 years." (16:22-17:05)
 - The unblock is staffing, not tooling: the sequencing rule is to build the first four steps and then *not* iterate until the domain expert is on the team (see the related concept). (17:06-17:42)
+- **The same gap named from inside a domain the team does practice.** Fox is a medical doctor working on clinical notes, so the missing mental model is not the one this page's remedy supplies — he already has it, and still cannot get it into a judge. His formulation is that the deciding property is "taste, effectively. Not aesthetic taste, but essentially judgment," and that it is tacit ("your domain experts have it, but they can't fully write it down"), contextual, and moving. That extends this page's diagnosis rather than contradicting it: hiring the practitioner puts the judgment in the building, and there is a second, separate transfer problem getting it out of their head and into a scoring system. His answer is to stop trying to state it and start collecting instances of it. See [Keep a Moving Standard in Examples, Not in a Rubric or the Weights](keep-a-moving-standard-in-examples-not-in-a-rubric-or-the-weights.md). ([Fox](../sources/20260822_yqF6XhzbWBk.md), 06:49-07:34, 11:36-11:56)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -27,6 +28,9 @@ Related concepts:
 - [Domain Evals Need Expert-Built Environments](domain-evals-need-expert-built-environments.md)
 - [Use Verifiable Rewards for Language-Model RL](use-verifiable-rewards-for-language-model-rl.md)
 - [Last-Mile Domain Context Beats Model Chasing](last-mile-domain-context-beats-model-chasing.md)
+- [Keep a Moving Standard in Examples, Not in a Rubric or the Weights](keep-a-moving-standard-in-examples-not-in-a-rubric-or-the-weights.md)
+- [Verification Is Cheap for Detection and Expensive for Materiality](verification-is-cheap-for-detection-and-expensive-for-materiality.md)
 
 Sources:
 - [Trading Desks to Clinical Trials: Parallels in Applied Vertical AI — Ayush Bhardwaj, Allos AI](../sources/20260819_Yphdry8ttAQ.md), 07:11-10:10, 16:22-17:42
+- [Inside 847 Production Clinical AI Notes — Sebastian Fox, Composo](../sources/20260822_yqF6XhzbWBk.md), 06:49-07:34, 11:36-11:56

@@ -20,6 +20,7 @@ Details:
 
 - Sizing has a second dimension this arithmetic does not cover: *where* the cases come from. D'Oro's coverage measurement shows that a sample spread only across repetitions of a fixed starting state produces confidence intervals containing the true performance ~20% of the time rather than 95%, because environment variance is missing from the estimate. Count of cases and spread across configurations are separate budgets, and only the first is set by detection statistics. See [computing intervals over both action and environment variance](compute-confidence-intervals-over-both-action-and-environment-variance.md). ([Computer Use at the Edge of the Statistical Precipice](../sources/20260814_CTLa_p6iOiY.md), 11:05-13:19)
 - **The eval as a commercial instrument, not only an engineering one.** Advising founders on how to answer a customer's request for a pilot, Rosenthal lists "an eval on part of their data" alongside a reference call and a seller-driven demo as ways to satisfy the objection without handing over product access. For an AI product these substitutes are not equivalent: only the eval addresses the buyer's actual uncertainty, which is behavior on their distribution rather than behavior in general. That makes the sizing question on this page a sales question too — a slice small enough to run in a week may not be large enough to say anything about the error rate the buyer's use case tolerates, and offering it anyway converts a pilot request into a stalled deal. See [Treat a Pilot as a Second Sales Process You Run for Free](treat-a-pilot-as-a-second-sales-process-you-run-for-free.md). ([Rosenthal](../sources/20260826_wdTRsfw0KG0.md), 07:27-08:15)
+- **The prior condition: you have to be able to observe the rate you are hitting.** Sizing a suite from a consequence presumes a measured deployed error rate. Fox's category has none — ambient scribes run in "about a third of US practices and climbing," and "for most of these systems, there's no adverse event reporting at all. The errors never show up as incidents, they just sit in the record," which he sums up as "it's not that we checked and it's fine, it's that we're flying blind." Where the affected party never reads the output, complaint-driven feedback samples only the loud failures, so the quiet high-consequence class contributes nothing to the observed rate. A suite sized in that condition is sized against an assumption, and the missing piece is a proactive sampling channel rather than a larger suite. See [An Error Rate With No Incident Reports Is a Measurement Gap](an-error-rate-with-no-incident-reports-is-a-measurement-gap.md). ([Fox](../sources/20260822_yqF6XhzbWBk.md), 02:03-03:09)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -35,9 +36,11 @@ Related concepts:
 - [Compute Confidence Intervals Over Both Action and Environment Variance](compute-confidence-intervals-over-both-action-and-environment-variance.md)
 - [Match the Quality Method to Your User Count](match-the-quality-method-to-your-user-count.md)
 - [Treat a Pilot as a Second Sales Process You Run for Free](treat-a-pilot-as-a-second-sales-process-you-run-for-free.md)
+- [An Error Rate With No Incident Reports Is a Measurement Gap](an-error-rate-with-no-incident-reports-is-a-measurement-gap.md)
 
 Sources:
 - [200 Million Patient Interactions Later — Vivek Muppalla, Hippocratic AI](../sources/20260819_AN65uc645mE.md), 06:47-19:14
 - [Designing Agents (The Floor Is the Frontier) — Ben Hylak, Raindrop](../sources/20260812_jHMiYtjoJfA.md), 14:27-15:26
 - [Computer Use at the Edge of the Statistical Precipice — Pierluca D'Oro, Programma Labs](../sources/20260814_CTLa_p6iOiY.md), 11:05-13:19
 - [Reverse-Engineering the AI Buyer — Aliisa Rosenthal, Acrew Capital](../sources/20260826_wdTRsfw0KG0.md), 07:27-08:15
+- [Inside 847 Production Clinical AI Notes — Sebastian Fox, Composo](../sources/20260822_yqF6XhzbWBk.md), 02:03-03:09
