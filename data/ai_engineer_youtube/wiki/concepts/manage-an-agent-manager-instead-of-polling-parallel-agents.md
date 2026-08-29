@@ -19,6 +19,7 @@ Details:
 - Independent field report of the same failure mode (Kyle Jaejun Lee, KRAFTON): a few tmux panes grew to six live contexts and "I'm not running agents anymore. I've become the scheduler, deciding who does what. I'm the memory, holding what every one of them is doing, and I'm the reviewer, checking all of it. One human, three roles, six contexts. It does not scale." ([I Run a Fleet of AI Agents Across Three Machines](../sources/20260708_4kYl2_mqmnQ.md), 00:45-01:28)
 - A concrete realization of the manager shape as a **scoped-context org hierarchy**: instead of a flat pile, structure agents as CEO/VP/manager/worker — "real entity types in the system. It is not a cute metaphor." Each is its own agent with its own scoped context and its own approval boundary; context flows down (each layer gets only the slice it needs), results flow back up, and the human reviews only what reaches the top — "instead of holding six contexts in my head, I hold exactly one." The design analogy is how a handful of executives run a company of thousands: they don't hold all of it, they separate context so each person sees only their slice. (20260708_4kYl2_mqmnQ, 01:28-02:12)
 - Relationship to the bottleneck: this delegation move is *why* attention becomes the binding constraint — see [Treat Human Attention as the Bottleneck for Agentic Work](treat-human-attention-as-the-agentic-bottleneck.md) (Steinberger frames the same tokens → compute → attention progression).
+- **The tolerance this whole shape requires is a professional habit, not a human default.** The manager pattern only pays if you accept work returning out of the order you dispatched it — the property Shenoy identifies as unique to engineers: "it's very commonplace to launch 10 jobs and be comfortable with the fact that job seven might finish before job three," against the counterexample that "people clean out their inbox one email by one email, not 10 emails at once." That is worth naming before porting the manager shape to a non-engineering team, because the failure it produces looks like a quality problem and is not. ([Shenoy](../sources/20260828_B0fjR3yaZFU.md), 08:16-08:35, 09:44-09:54)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -33,7 +34,9 @@ Related concepts:
 - [Manage AI agents like humans with commander's intent](manage-ai-agents-like-humans-with-commanders-intent.md)
 - [Converge agent fleets on cluster-scheduling primitives](converge-agent-fleets-on-cluster-scheduling-primitives.md)
 - [Externalize agent state to files and reset instead of compact](externalize-agent-state-to-files-and-reset-instead-of-compact.md)
+- [Async Agents Need a Forking Substrate and a User Who Tolerates Out-of-Order Completion](async-agents-need-a-forking-substrate-and-a-tolerant-user.md)
 
 Sources:
 - [The Golden Age of AI Engineering — Alexander Embiricos & Romain Huet & Peter Steinberger, OpenAI](../sources/20260709_pMggiOb18tc.md), 16:51-17:54, 18:56-24:57
 - [I Run a Fleet of AI Agents Across Three Machines. Here's What Broke. - Kyle Jaejun Lee, KRAFTON](../sources/20260708_4kYl2_mqmnQ.md), 00:45-02:12
+- [How do you diffuse AI into the real world? — Varun Shenoy, Long Lake](../sources/20260828_B0fjR3yaZFU.md), 08:16-09:54

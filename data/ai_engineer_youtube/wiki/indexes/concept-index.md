@@ -1,6 +1,8 @@
 # Concept Index
 
 ## Agents
+- [Async Agents Need a Forking Substrate and a User Who Tolerates Out-of-Order Completion](../concepts/async-agents-need-a-forking-substrate-and-a-tolerant-user.md) - background agents work for code because git supplies the fork-and-merge primitive and engineers already accept out-of-order completion.
+- [Continual Learning and Enablement Are One Loop With a Cold Start](../concepts/continual-learning-and-enablement-are-one-loop-with-a-cold-start.md) - an agent that learns from production improves only as fast as people use it, and initial usage never simply shows up.
 - [Bound What an Unattended Automation May Emit, Including Emitting Nothing](../concepts/bound-what-an-unattended-automation-may-emit.md) - declare the kinds and counts of artifact a scheduled run may produce, outside the prompt, and make silence a permitted outcome.
 - [Automate the Chores That Needed Judgment, Not the Ones That Needed Rules](../concepts/automate-the-chores-that-needed-judgment-not-rules.md) - the newly automatable set is the tasks no rule could decide but a human decides routinely in seconds from evidence already in the repo.
 - [Tell the Agent Only What Is Not Recoverable From the Code](../concepts/tell-the-agent-only-what-is-not-recoverable-from-the-code.md) - agents recover any fact that lives in the repository, so the human supplies the residue: constraints, deals, and preferences written nowhere.
@@ -1463,6 +1465,9 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Operational Outcomes Are Eval Labels You Only See If You Own the Operation](../concepts/operational-outcomes-are-eval-labels-you-only-see-if-you-own-the-operation.md) - owning the outcome is a data position: the world supplies the score, and only the operator is standing where it lands.
+- [Co-Design In Person Because Remote Channels Filter the Requirements](../concepts/co-design-in-person-because-remote-channels-filter-the-requirements.md) - Zoom and the ticket queue only carry needs someone already knew how to phrase as a request.
+- [Continual Learning and Enablement Are One Loop With a Cold Start](../concepts/continual-learning-and-enablement-are-one-loop-with-a-cold-start.md) - adoption is the input the improvement loop runs on, not a concern downstream of it.
 - [Commoditize the Layer You Do Not Win On](../concepts/commoditize-the-layer-you-do-not-win-on.md) - Open Compute as the template: publishing first sets the standard, and the industry adopts what it can build on even when it is not the best thing.
 - [Unimplemented Plans Signal a Working Decision Layer](../concepts/unimplemented-plans-signal-a-working-decision-layer.md) - code velocity is not idea velocity, and prototype gravity narrows the option set precisely because building got cheap.
 - [Decide the Agent Buy Boundary With Six Production Questions](../concepts/decide-the-agent-buy-boundary-with-six-production-questions.md) - what a hosted agent platform will and will not do for you, and where differentiation therefore has to live.
@@ -1581,6 +1586,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Operational Outcomes Are Eval Labels You Only See If You Own the Operation](../concepts/operational-outcomes-are-eval-labels-you-only-see-if-you-own-the-operation.md) - when a physical or financial event settles the score, eval construction loses its most expensive step, at the cost of a one-bit label that arrives weeks late.
 - [Write the Test First So the Agent Cannot Fit It to the Code](../concepts/write-the-test-first-so-the-agent-cannot-fit-it-to-the-code.md) - a test authored after the implementation describes the implementation; ordering is the one independence axis that is free.
 - [Withhold the Producer's Reasoning From the Critic](../concepts/withhold-the-producers-reasoning-from-the-critic.md) - a fourth independence axis for LLM review: change what the reviewer sees, not the model, the prompt, or the method class.
 - [Re-Run One Remembered Hard Task on Each New Model](../concepts/re-run-one-remembered-hard-task-on-each-new-model.md) - an N-of-1 longitudinal instrument measured in human intervention, which needs no scorer because you solved the task yourself.
@@ -2606,6 +2612,9 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Continual Learning and Enablement Are One Loop With a Cold Start](../concepts/continual-learning-and-enablement-are-one-loop-with-a-cold-start.md) - the improvement half and the adoption half are usually owned by different teams, and nothing seeds the first turn.
+- [Co-Design In Person Because Remote Channels Filter the Requirements](../concepts/co-design-in-person-because-remote-channels-filter-the-requirements.md) - go find the requirements where they are lived, because the remote channel selects for the ones already articulated.
+- [Async Agents Need a Forking Substrate and a User Who Tolerates Out-of-Order Completion](../concepts/async-agents-need-a-forking-substrate-and-a-tolerant-user.md) - the parallel-agent workflows here inherit two properties from software practice that do not port to other kinds of work.
 - [The Best Engineers Adopt Agents Last, and Their Objections Are the Roadmap](../concepts/the-best-engineers-adopt-agents-last-and-their-objections-are-the-roadmap.md) - hand the strongest skeptics ownership of the verification roadmap instead of trying to persuade them onto the tools.
 - [Reduced Developer Agency Is an Adoption Cost, and Planning Is Its Remedy](../concepts/reduced-developer-agency-is-an-adoption-cost-and-planning-is-its-remedy.md) - the adoption cost no throughput metric reports, and the relocation of craft offered against it.
 - [Mark Which Lines a Human Wrote So Readers Can Budget Attention](../concepts/mark-which-lines-a-human-wrote-so-readers-can-budget-attention.md) - a labelling convention that routes attention without becoming an acceptance gate.

@@ -17,6 +17,7 @@ Details:
 - The same asymmetry names what to curate. In finance the proprietary asset is the trade thesis, "what trade work and why it worked"; in pharma it is the data for *failed* experiments, since successful-experiment data is obtainable and failure data is not. Both are the private half of a publicly visible outcome. (05:58-06:18)
 - The cheap first move is internal rather than external: an organization three years old "already have a lot of data. It's just unstructured," and in the age of LLMs converting it to structured form is tractable — "an LLM workflow could do it overnight." Public sources everyone shares (news, sell-side reports from JP Morgan or Morgan Stanley, arXiv, PubChem) are explicitly not the differentiator. (05:06-05:57)
 - The strategic conclusion this supports: "Model, infra, ecosystem… is just commodity. Everyone has it… what is moat, and no one will come and sell it to you, you will have to curate it on your own, is the domain expertise. You need your data. You need other people's data. That is just not out there on the internet." (19:03-19:34)
+- **What an operator sees that a data buyer cannot: the outcome, not just the corpus.** Shenoy's version of the withheld-data problem is the same — "the most valuable tasks are not on the internet," and the knowledge lives "in people's heads, in 20-year-old software, in the way that one senior person on one of these teams just knows how to do it" — but his answer is positional rather than curatorial. Long Lake buys the businesses, so it observes whether the roof got repaired and whether the books got closed, which is an eval label the world produces for free and that no annotation budget can reconstruct. He reports post-training internally on operational data "completely out of distribution for most frontier labs." That extends this page's argument: the moat is not only the private reasoning corpus but the position from which outcomes are visible. ([Shenoy](../sources/20260828_B0fjR3yaZFU.md), 04:16-04:31, 10:13-12:40)
 
 Related topics:
 - [Product Strategy](../topics/product-strategy.md)
@@ -29,6 +30,8 @@ Related concepts:
 - [Target High-Value AI Verticals as Capability Matures](target-high-value-ai-verticals.md)
 - [Build domain-specific workflow wrappers around models](build-domain-specific-workflow-wrappers-around-models.md)
 - [Customize Open Benchmark Harnesses With Proprietary Task Data](customize-open-benchmark-harnesses-with-proprietary-task-data.md)
+- [Operational Outcomes Are Eval Labels You Only See If You Own the Operation](operational-outcomes-are-eval-labels-you-only-see-if-you-own-the-operation.md)
 
 Sources:
 - [Trading Desks to Clinical Trials: Parallels in Applied Vertical AI — Ayush Bhardwaj, Allos AI](../sources/20260819_Yphdry8ttAQ.md), 05:06-06:18, 10:27-11:41, 19:03-19:34
+- [How do you diffuse AI into the real world? — Varun Shenoy, Long Lake](../sources/20260828_B0fjR3yaZFU.md), 04:16-04:31, 10:13-12:40

@@ -13,6 +13,7 @@ Details:
 - Online evals can point scoring functions at observability traffic and trigger alerting, while offline evals can replay production-like behavior in a safer environment, 16:20-16:48.
 - Traces are useful product artifacts because they preserve input, output, metadata, and agent actions; PMs can inspect those traces, pull a traced prompt and variables into a playground, and turn observed behavior into an eval data set. 19:43-25:21
 - **Evals are not the only downstream consumer.** LangChain pushes the same loop one step further: the trace corpus also feeds distillation and SFT datasets, generated environments, and human-readable reports, and the improvement loop it drives is continual learning rather than regression testing — "if you're a continual learning company, you need traces." Under that reading, connecting observability to evals is one branch of a wider claim that [observability and continual learning are the same problem](observability-and-continual-learning-are-the-same-problem.md). ([LangChain](../sources/20260812_CvRngaQZQ3Y.md), 02:59-03:06, 11:08-12:46)
+- **The ratchet that turns this loop into a growing regression suite at no extra cost.** Shenoy describes the offline set as accumulating out of the optimization work rather than being budgeted separately: "this allows us to hill climb and build better agents… and what's really exciting is it ratchets up. Every week our hill climbing benchmarks become a regression test." The tasks used to chase improvement this week become the tasks that must not break next week. In his setting the scoring comes free because the label is a business outcome ("did the roof get repaired?"), which is the condition that makes the ratchet cheap; where scoring is manual, the same pattern converts an improvement budget into a permanent grading bill. ([Shenoy](../sources/20260828_B0fjR3yaZFU.md), 11:21-11:49)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -23,8 +24,10 @@ Related concepts:
 - [Replay production failures before promoting prompt fixes](replay-production-failures-before-promoting-prompt-fixes.md)
 - [Label LLM Judge Outputs Before Mapping Them to Scores](label-llm-judge-outputs-before-mapping-them-to-scores.md)
 - [Observability and Continual Learning Are the Same Problem](observability-and-continual-learning-are-the-same-problem.md)
+- [Operational Outcomes Are Eval Labels You Only See If You Own the Operation](operational-outcomes-are-eval-labels-you-only-see-if-you-own-the-operation.md)
 
 Sources:
 - [Why building eval platforms is hard - Phil Hetzel, Braintrust](../sources/20260428__fQ7Z_Wfouk.md), 03:33-04:20, 14:00-16:48
 - [Shipping AI That Works: An Evaluation Framework for PMs - Aman Khan, Arize](../sources/20251226_2HNSG990Ew8.md), 19:43-25:21
 - [Improving Agents is a Data Mining Problem — Vivek Trivedy, LangChain](../sources/20260812_CvRngaQZQ3Y.md), 02:59-03:06, 11:08-12:46
+- [How do you diffuse AI into the real world? — Varun Shenoy, Long Lake](../sources/20260828_B0fjR3yaZFU.md), 11:21-11:49

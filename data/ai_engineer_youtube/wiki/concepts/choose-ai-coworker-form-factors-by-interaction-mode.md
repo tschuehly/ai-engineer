@@ -12,6 +12,7 @@ Details:
 - Ambient AI can analyze dirty data in the workspace and mark columns where it sees opportunities to fix issues, while the user is not directly operating the agent. (02:46-03:06)
 - Inline AI can sit directly inside the data workflow, generate code, and run that code over large data sets such as many rows and columns. (03:08-03:28)
 - Conversational AI remains useful for no-code or low-code build mode, where the user directs an agentic system that writes application code. (03:30-03:52)
+- **A second axis for the same choice: the form factor is set by the industry, not only by the interaction mode.** Shenoy runs a parallel taxonomy by autonomy — copilot, synchronous agent, asynchronous agent, long-running agent, AI coworker — and reports that the asynchronous form is the one that does not transfer: "this varies dramatically from industry to industry. Just because you have one way of launching an async agent for code, doesn't mean that same way is going to work for architecture or property management." He also treats form-factor choice and user enablement as one problem rather than two, since a form the user will not adopt returns no signal. ([Shenoy](../sources/20260828_B0fjR3yaZFU.md), 05:23-06:47, 09:54-10:13)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -22,6 +23,8 @@ Related topics:
 Related concepts:
 - [Collaborate with complex agents through high-bandwidth artifacts](collaborate-with-complex-agents-through-high-bandwidth-artifacts.md)
 - [Agent experience prioritizes APIs, CLIs, and MCP over dashboards](agent-experience-prioritizes-apis-clis-and-mcp-over-dashboards.md)
+- [Async Agents Need a Forking Substrate and a User Who Tolerates Out-of-Order Completion](async-agents-need-a-forking-substrate-and-a-tolerant-user.md)
 
 Sources:
 - [Form factors for your new AI coworkers - Craig Wattrus, Flatfile](../sources/20250822_CiMVKnX-CNI.md), 01:29-03:52
+- [How do you diffuse AI into the real world? — Varun Shenoy, Long Lake](../sources/20260828_B0fjR3yaZFU.md), 05:23-10:13

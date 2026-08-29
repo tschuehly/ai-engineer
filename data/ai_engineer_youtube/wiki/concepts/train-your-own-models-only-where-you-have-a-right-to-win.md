@@ -15,6 +15,7 @@ Details:
 - Where the data comes from matters for durability. Abridge's corpus is a byproduct of a deployed product at scale, so it renews at ~100M conversations a year rather than being a fixed dump; the complementary case in this wiki is [high-value vertical data withheld by design](high-value-vertical-data-is-withheld-by-design.md), where the corpus is defensible because publishing it would destroy its value. Both produce the same structural result — the frontier labs cannot train on it — through different mechanisms.
 - The decision this gates in practice is section-level: see [decompose the deliverable and post-train a small model per section](decompose-the-deliverable-and-post-train-a-model-per-section.md) for how Abridge cashes the right to win into cheaper per-part models.
 - Caveat the source does not resolve: it reports no measurement of how the two curves actually compare. The claim is an insight and a bet ("potentially beat the rate of change"), not a demonstrated result, and nothing in the talk describes the trigger for abandoning a post-trained model when a frontier release closes the gap.
+- **An operator-owner's version of the right-to-win test, argued from data position rather than from capability.** Shenoy reports post-training models internally "on all of the data that these businesses operate on and produce," on the grounds that it is "completely out of distribution for most frontier labs" and that "a lot of the frontier models today just can't do these tasks yet." The asset is not merely private text: because the company owns the businesses, it also holds the outcome labels ("did the roof get repaired? Did the books get closed?") and the correction diffs between what the agent produced and what was submitted. That combination — an out-of-distribution corpus plus a free scorer — is a sharper right-to-win condition than owning documents alone. No results are reported. ([Shenoy](../sources/20260828_B0fjR3yaZFU.md), 11:08-12:40)
 
 Related topics:
 - [Models](../topics/models.md)
@@ -26,6 +27,8 @@ Related concepts:
 - [Post-Train Small Models for Narrow Capabilities](post-train-small-models-for-narrow-capabilities.md)
 - [Specialize Models Against Private Benchmarks With RL](specialize-models-against-private-benchmarks-with-rl.md)
 - [Last-Mile Domain Context Beats Model Chasing](last-mile-domain-context-beats-model-chasing.md)
+- [Operational Outcomes Are Eval Labels You Only See If You Own the Operation](operational-outcomes-are-eval-labels-you-only-see-if-you-own-the-operation.md)
 
 Sources:
 - [From Ambient Documentation to Clinical Intelligence — Chaitanya Asawa, Abridge](../sources/20260819_u6q-byPWUuo.md), 19:08-19:48
+- [How do you diffuse AI into the real world? — Varun Shenoy, Long Lake](../sources/20260828_B0fjR3yaZFU.md), 11:08-12:40

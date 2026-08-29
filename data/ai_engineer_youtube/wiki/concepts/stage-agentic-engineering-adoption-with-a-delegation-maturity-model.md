@@ -12,6 +12,7 @@ Details:
 - The ladder measures how engineers "think and delegate and orchestrate" (reorganized with help from Steve Yegge's "Gas Town" article): **Stage 0** no AI in the workflow; **Stage 1** AI autocomplete only, never agent mode; **Stage 2** chatting with agents but producing no PRs; **Stage 3** delegating tasks to agents and reviewing the output; **Stage 4** running multiple agents in parallel; **Stage 5** ("final boss") delegating complete tasks where the agent produces shippable results without the human needing to guide it. (03:03-04:10)
 - Placement is the planning tool: the bulk of 3,500 engineers sat at Stage 1–2, and the stated goal was to move them to Stage 5 — the ladder both locates the org and names the next rung to climb. (04:10-04:18)
 - The model is a *relationship/capability* axis, complementary to outcome dashboards: it explains why usage and token-bill metrics can look "all in on AI" while shipping velocity is flat, so it should be paired with outcome measurement rather than replacing it.
+- **The same ladder outside engineering, where the top rungs are not reachable yet.** Shenoy's autonomy ladder for services work — copilot, synchronous agent, asynchronous agent, long-running agent, AI coworker — matches this model's shape but reports the async rung as unbuilt outside code, because the forking substrate and the tolerance for out-of-order completion are both software-practice inheritances. Block's Stage 4 ("running multiple agents in parallel") is therefore not a generic maturity level: it is the stage that engineers can reach cheaply and that a property manager or an architect currently cannot, which is worth stating before this ladder is offered to a non-engineering function. ([Shenoy](../sources/20260828_B0fjR3yaZFU.md), 05:23-10:13)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -22,6 +23,8 @@ Related concepts:
 - [Measure Feature Adoption Not Shipping Velocity](measure-feature-adoption-not-shipping-velocity.md)
 - [Measure AI Transformation by Outcomes Instead of Adoption](measure-ai-transformation-by-outcomes-instead-of-adoption.md)
 - [Universal AI Adoption Changes Engineering Coordination](universal-ai-adoption-changes-engineering-coordination.md)
+- [Async Agents Need a Forking Substrate and a User Who Tolerates Out-of-Order Completion](async-agents-need-a-forking-substrate-and-a-tolerant-user.md)
 
 Sources:
 - [Building an Autonomous Engineering Org - Angie Jones, Agentic AI Foundation](../sources/20260628_whue9_YquGA.md), 00:57-04:18
+- [How do you diffuse AI into the real world? — Varun Shenoy, Long Lake](../sources/20260828_B0fjR3yaZFU.md), 05:23-10:13
