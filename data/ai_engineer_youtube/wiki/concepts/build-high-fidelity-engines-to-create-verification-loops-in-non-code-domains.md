@@ -30,6 +30,8 @@ Related concepts:
 - [Pair an LLM Narrator With a Domain Solver Via Tools](pair-an-llm-narrator-with-a-domain-solver-via-tools.md)
 - [Give Agents a Persistent-State REPL Instead of Many Tools](give-agents-a-persistent-state-repl-instead-of-many-tools.md)
 - [Ship a Proof a Small Kernel Can Recheck, Not a Claim You Must Trust](ship-a-proof-a-small-kernel-can-recheck.md)
+- [Curate Tasks by Live Human Demand and a Deterministic Verifier](curate-tasks-by-live-human-demand-and-a-deterministic-verifier.md)
+- [Swap the Verifier to Retarget an Agent Arena](swap-the-verifier-to-retarget-an-agent-arena.md)
 
 Sources:
 - [Teaching Coding Agents to do Spreadsheets - Nuno Campos, Witan Labs](../sources/20260708_HEFSExa0xl0.md), 09:28-12:37, 16:41-17:07

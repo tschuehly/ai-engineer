@@ -13,6 +13,8 @@ Details:
 - The talk identifies the infrastructure bottleneck as creating branchable environments that support large-scale reinforcement learning and multi-agent coordination with less wall-clock time. 13:44-14:36
 - **The search is only as good as what the verifier can see.** On multi-GPU kernel generation, parallel sampling lifted correct solutions from 28 to 36 of 87 while the share that was both correct and faster than baseline "plateaus out at roughly 31%." The asymmetry has a clean cause: a verifier that runs the code can detect compile and correctness failures, and "if you do multiple sampling or have the model kind of look at its errors and correct them, it can often compile the kernels" — but a slow-yet-correct kernel returns no error to branch away from. Where a quality dimension is not part of the verifier's signal, expect branch-and-promote to plateau on it. ([Arora](../sources/20260827_pOvWgX7IJsc.md), 24:45-25:11, 26:28-26:44)
 
+- **The open, cross-owner variant of the same pattern, which changes what bounds it.** Einstein Arena runs branch-and-promote without a parent process: any agent in the world submits to a shared leaderboard scored by a deterministic verifier, every submission is downloadable, and refinement happens because a competitor found it worth building on a rival's artifact. There is no shared start state, no budget owner, and no merge step. Two consequences follow. The scaling limit is participation rather than your compute budget. And the plateau this page records — where a quality dimension the verifier does not surface as an error stops improving — is attacked directly, because a leaderboard *ranks* on the quality dimension instead of pass/failing on it, so "correct but slow" is a visible loss rather than a silent success. Reported outcome on the mathematics side: 604 spheres in 11 dimensions against a prior best of 593, from a chain of agents refining each other's submissions. See [Open Agent Arenas Reach Solutions No Single Agent Reaches](open-agent-arenas-reach-solutions-no-single-agent-reaches.md). ([Einstein Arena — James Zou, Together AI](../sources/20260825_mMNkdYnIVC4.md), 03:25-08:55)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -24,7 +26,10 @@ Related concepts:
 - [Evaluate Agent Loops With Correctness, Cost, Latency, and Step Counts](evaluate-agent-loops-with-correctness-cost-latency-and-step-counts.md)
 - [Prefer outcome verifiers over ground-truth path checks](prefer-outcome-verifiers-over-ground-truth-path-checks.md)
 - [More Samples Buy Correctness, Not Speedups](more-samples-buy-correctness-not-speedups.md)
+- [Open Agent Arenas Reach Solutions No Single Agent Reaches](open-agent-arenas-reach-solutions-no-single-agent-reaches.md)
+- [Give Parallel Agents Complementary Optimization Personas](give-parallel-agents-complementary-optimization-personas.md)
 
 Sources:
 - [Infrastructure for the Singularity - Jesse Han, Morph](../sources/20250801_2goSS66XRBk.md), 07:23-14:36
 - [Can LLMs Write Fast Multi-GPU Kernels? — Simran Arora, Together AI](../sources/20260827_pOvWgX7IJsc.md), 24:45-25:11, 26:28-26:44
+- [Einstein Arena: Harnessing Collective Agent Intelligence for Open Science — James Zou, Together AI](../sources/20260825_mMNkdYnIVC4.md), 03:25-08:55

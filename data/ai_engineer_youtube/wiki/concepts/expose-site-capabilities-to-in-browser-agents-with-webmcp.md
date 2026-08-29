@@ -34,6 +34,7 @@ Related concepts:
 - [Generate Agent-Facing Docs Artifacts From One Markdown Source](generate-agent-facing-docs-artifacts-from-one-markdown-source.md)
 - [Hand-Write llms.txt and Index the Rest for Fetching](hand-write-llms-txt-and-index-the-rest-for-fetching.md)
 - [Serve Markdown Through Three Redundant Paths](serve-markdown-through-three-redundant-paths.md)
+- [Gate an Environment to Agents Only](gate-an-environment-to-agents-only.md)
 
 Sources:
 - [The agent-ready web: Simplify user actions with WebMCP — Tara Agyemang, Google](../sources/20260611_ghJmWQCIHRM.md), 02:08-20:01

@@ -22,6 +22,9 @@ Related concepts:
 - [Detect reward hacking in code optimization evals](detect-reward-hacking-in-code-optimization-evals.md)
 - [Use verifiable rewards for language-model RL](use-verifiable-rewards-for-language-model-rl.md)
 - [Operational Outcomes Are Eval Labels You Only See If You Own the Operation](operational-outcomes-are-eval-labels-you-only-see-if-you-own-the-operation.md)
+- [Curate Tasks by Live Human Demand and a Deterministic Verifier](curate-tasks-by-live-human-demand-and-a-deterministic-verifier.md)
+- [Design the Environment, Not the Workflow](design-the-environment-not-the-workflow.md)
+- [Open Agent Arenas Reach Solutions No Single Agent Reaches](open-agent-arenas-reach-solutions-no-single-agent-reaches.md)
 
 Sources:
 - [Hard Won Lessons from Building Effective AI Coding Agents - Nik Pash, Cline](../sources/20251212_I8fs4omN1no.md), 05:33-09:41

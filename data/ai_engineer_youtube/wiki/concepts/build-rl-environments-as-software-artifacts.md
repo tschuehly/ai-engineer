@@ -22,6 +22,9 @@ Details:
 
 - Amazon AGI Lab adds a fidelity requirement that changes what the artifact has to contain for computer use: the sandbox must reproduce the *misbehavior* of real software — layout shift, slow loads, missing labels, pop-ups, focus stealing, random account states, stale tabs — and it must stop resetting on infrastructure errors, because "that's not an option in real life"; the error is passed to the model as an observation it has to recover from ([Make Recovery a Native Model Action](make-recovery-a-native-model-action-not-an-infra-reset.md)). That makes the error path part of the environment's public interface rather than a harness implementation detail. ([From RL to IRL](../sources/20260814_Cc0_nyxROBA.md), 09:03-09:48)
 
+- DSGym adds the parallel-execution half of the artifact for data-science agents: one curated list of datasets and tasks reached "through a unified interface and through code execution," plus unified infrastructure where "the agents can actually spin up many different Docker containers to test their data science algorithms and actually run them in parallel." The container fan-out is part of the environment's contract rather than the trainer's, which is what lets the same artifact serve evaluation and trajectory generation without a second harness. ([Einstein Arena — James Zou, Together AI](../sources/20260825_mMNkdYnIVC4.md), 11:21-11:52)
+- Einstein Arena is the counter-shape worth holding beside all of these: an environment that is a *hosted, shared, multi-tenant service* rather than a runnable package. Participants are independently owned agents, the reward is a public leaderboard, and prior submissions are downloadable state. Nothing about it installs. It fits this page's definition — setup, state, rewards, evaluation hooks are all owned by the environment — while inverting the distribution model, and it makes the point that "environment" covers both a pip-installable gym and a place many parties compete in. See [Design the Environment, Not the Workflow](design-the-environment-not-the-workflow.md). ([Einstein Arena — James Zou, Together AI](../sources/20260825_mMNkdYnIVC4.md), 02:02-04:36)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -39,6 +42,9 @@ Related concepts:
 - [Generate Task Configurations by Compiling and Rejecting the Invalid Ones](generate-task-configurations-by-compiling-and-rejecting-invalid-combinations.md)
 - [Design Eval Environments to the PRISM Principles](design-eval-environments-to-the-prism-principles.md)
 - [Train Computer-Use Agents in a Flight Simulator, Not on Exams](train-computer-use-agents-in-a-flight-simulator-not-on-exams.md)
+- [Design the Environment, Not the Workflow](design-the-environment-not-the-workflow.md)
+- [Open Agent Arenas Reach Solutions No Single Agent Reaches](open-agent-arenas-reach-solutions-no-single-agent-reaches.md)
+- [Swap the Verifier to Retarget an Agent Arena](swap-the-verifier-to-retarget-an-agent-arena.md)
 
 Sources:
 - [Let LLMs Wander: Engineering RL Environments - Stefano Fiorucci](../sources/20260408_71V3fTaUp2Q.md), 00:45-20:52
@@ -48,3 +54,4 @@ Sources:
 - [Stop Making Models Bigger, Make Them Behave — Kobie Crawford, Snorkel](../sources/20260610_TNwJ1LMiENk.md), 12:10-13:30
 - [Computer Use at the Edge of the Statistical Precipice — Pierluca D'Oro, Programma Labs](../sources/20260814_CTLa_p6iOiY.md), 05:31-09:20
 - [From RL to IRL — Gaurav Mishra, Amazon AGI Lab](../sources/20260814_Cc0_nyxROBA.md), 09:03-09:48
+- [Einstein Arena: Harnessing Collective Agent Intelligence for Open Science — James Zou, Together AI](../sources/20260825_mMNkdYnIVC4.md), 02:02-04:36, 11:21-11:52

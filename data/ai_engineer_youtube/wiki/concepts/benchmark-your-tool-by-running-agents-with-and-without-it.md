@@ -33,6 +33,7 @@ Related concepts:
 - [Treat Agent Experience as a Curb Cut](treat-agent-experience-as-a-curb-cut.md)
 - [Ship Bundled Docs and an AGENTS.md Inside the Published Package](ship-bundled-docs-and-an-agents-md-inside-the-published-package.md)
 - [Score Agent-Readiness Against a Moving Baseline](score-agent-readiness-against-a-moving-baseline.md)
+- [Audit a Benchmark by Solving It Without the Data](audit-a-benchmark-by-solving-it-without-the-data.md)
 
 Sources:
 - [The Death of Developer Advocates — Stephanie Jarmak, Sourcegraph](../sources/20260826_Lrw0jqBNaw0.md), 05:36-07:38, 16:08-16:20

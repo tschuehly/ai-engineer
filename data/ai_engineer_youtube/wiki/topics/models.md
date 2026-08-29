@@ -134,8 +134,12 @@ A held-out test of where frontier competence comes from arrives from an unlikely
 
 A newer model is not automatically better informed about your product. Jarmak reran a generative-engine-optimization prompt set on a newer Claude release specifically expecting improvement, and the assistant recommended a retired Sourcegraph product *more* than the older model had. The mechanism proposed is compounding rather than lag: superseded models have been publishing text onto the internet, and later models read it, so an error about you can be better attested in a newer corpus than in an older one. The practical consequence is that model upgrades cannot be treated as a remediation plan for stale claims — the remedy is fresh, authoritative, retrievable content, plus a standing count of mentions per model version, measured through the agents' web-search path rather than through anything that would have to land in a pretraining run.
 
+An environment can be its own training factory when execution supplies the label. DSGym generates trajectories by running data-science agents against curated tasks and keeps only those verified by executing the agents' code, then fine-tunes small open-source models on the survivors — reported as best-in-class open-source performance on these tasks at sizes that run on a laptop. Execution verification is what supplies the target term a raw trace corpus lacks: the trajectory is kept because the code produced the right result, not because a judge liked the reasoning. The specifics are absent — no base model, parameter count, score, or comparison set — so treat the shape as transferable and the result as unverified. The prerequisite the same work makes explicit is that a defective task set is worse here than in evaluation alone, since an environment reused as a data generator writes its shortcuts into weights: the team found 20 to 50 percent of tasks in three popular data-science benchmarks solvable without the data, and rebuilt the set before using it for either purpose.
+
 ## Key Concepts
 
+- [Audit a Benchmark by Solving It Without the Data](../concepts/audit-a-benchmark-by-solving-it-without-the-data.md) - task defects propagate into weights when the eval set doubles as a data generator.
+- [Design the Environment, Not the Workflow](../concepts/design-the-environment-not-the-workflow.md) - the design stance behind treating a task environment as the primary artifact.
 - [Stale Product Content Compounds Through Newer Models](../concepts/stale-product-content-compounds-through-newer-models.md) - deprecation is a measured content campaign, not a changelog line.
 - [Models Solve the Parallelism Patterns the Internet Already Contains](../concepts/models-solve-the-parallelism-patterns-the-internet-already-contains.md) - a distribution-shifted held-out test where in-context principles did not close the gap.
 - [Commoditize the Layer You Do Not Win On](../concepts/commoditize-the-layer-you-do-not-win-on.md) - the releasing lab's case for open weights, with research disclosure held back and distillation claimed to close gaps but never open them.
@@ -326,6 +330,8 @@ A newer model is not automatically better informed about your product. Jarmak re
 
 ## Open Questions
 
+- What do execution-verified trajectories actually buy a small model? Zou reports fine-tuned open-source models that are "best in class" on DSGym tasks and laptop-runnable, naming no base model, size, score, or comparison, so the wiki has the recipe without any evidence of its magnitude. ([Zou](../sources/20260825_mMNkdYnIVC4.md), 14:26-15:06)
+
 - Is distributional competence on specialist engineering tasks a training-data property or a reasoning ceiling? Supplying the governing tradeoffs in context did not help on multi-GPU kernels, which rules out simple ignorance but not the possibility that the principles need to be trained in rather than read. No source in this wiki reports the experiment that would separate the two — post-training a model on an expert-derived primitive set and re-running the same benchmark. ([Arora](../sources/20260827_pOvWgX7IJsc.md), 21:42-22:05, 29:11-29:17)
 
 - Can a model distilled from released weights actually surpass its source? The argument for publishing weights leans on a bound — copycats get close, never ahead — and nothing in this wiki tests it. Every distillation result recorded here targets matching a teacher at lower cost, which is consistent with the bound but does not establish it, and the one path that would falsify it (distilled base plus independent post-training or RL on a domain the teacher was not optimized for) is not examined anywhere. The claim is load-bearing for a release decision and is currently held on the word of parties who benefit from it in both directions.
@@ -471,3 +477,4 @@ A newer model is not automatically better informed about your product. Jarmak re
 - [Open Source Is Dead. Long Live Open Source. — Saoud Rizwan, Cline](../sources/20260807_CoEIs6Xm8m8.md)
 - [Can LLMs Write Fast Multi-GPU Kernels? — Simran Arora, Together AI](../sources/20260827_pOvWgX7IJsc.md)
 - [The Death of Developer Advocates — Stephanie Jarmak, Sourcegraph](../sources/20260826_Lrw0jqBNaw0.md)
+- [Einstein Arena: Harnessing Collective Agent Intelligence for Open Science — James Zou, Together AI](../sources/20260825_mMNkdYnIVC4.md)

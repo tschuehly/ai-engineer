@@ -21,6 +21,7 @@ Related concepts:
 - [Pair next-token prediction with reinforcement learning for long-horizon work](pair-next-token-prediction-with-reinforcement-learning-for-long-horizon-work.md)
 - [Use Verifiable Rewards for Language-Model RL](use-verifiable-rewards-for-language-model-rl.md)
 - [Tune inference to the application Pareto point](tune-inference-to-the-application-pareto-point.md)
+- [Curate Tasks by Live Human Demand and a Deterministic Verifier](curate-tasks-by-live-human-demand-and-a-deterministic-verifier.md)
 
 Sources:
 - [Latent Space Paper Club: AIEWF Special Edition (Test of Time, DeepSeek R1/V3) — VIbhu Sapra](../sources/20250725_9k3xPh-40mo.md), 09:50-23:07

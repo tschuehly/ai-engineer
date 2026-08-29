@@ -16,6 +16,7 @@ Details:
 - Distinguish this from answer leakage. In [sealed eval environments](seal-eval-environments-against-answer-leaking-agents.md) the agent reaches outside the task boundary at runtime to read a solution that happens to be present; here nothing leaks and the agent reads nothing at all. Sealing network access, stripping future git history, and blocking `curl` do not touch this exploit, because the exploit is that the correct action sequence is a constant of the task.
 - The passing bar after a fix is not zero. On a benchmark rebuilt with variation, "the replay agent doesn't get a lot of performance. It gets a little bit of performance that is probably what you want. Sometimes some tasks maybe are repeatable by nature, but on average you shouldn't expect a replay agent to have good performance." Treat replay score as a *residual* to keep small, not an error to drive out. (09:21-09:57)
 - The reason to run the audit yourself rather than assume: D'Oro's counter to the common shrug ("this benchmark can be gamed but everybody's still using it") is that the cost lands on your own decisions before it lands on the field — "if you are deluding yourself on thinking that a score is confidently telling that your model is good, actually you are going to pay for those mistakes." (15:57-16:46)
+- **A sibling audit with the same spirit and a different target, worth running alongside this one.** The replay script attacks a benchmark whose *action sequence* is a constant. Zou's ablation attacks a benchmark whose *answer is inferable from the task statement*: withhold the dataset the benchmark exists to test the use of, re-run, and read the residual — 20-50% across three popular data-science benchmarks. Neither audit finds the other's defect, and the fixes do not overlap: varying the initial state does nothing about an over-specified prompt, and rewriting the prompt does nothing about a recorded tape. Both share the property that makes them worth doing — they are constructive, cheap, and produce a number rather than a suspicion. See [Audit a Benchmark by Solving It Without the Data](audit-a-benchmark-by-solving-it-without-the-data.md). ([Einstein Arena — James Zou, Together AI](../sources/20260825_mMNkdYnIVC4.md), 11:58-13:01)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -29,6 +30,8 @@ Related concepts:
 - [Detect reward hacking in code optimization evals](detect-reward-hacking-in-code-optimization-evals.md)
 - [Judge Benchmark Quality by Task Quality, Diversity, Headroom, and Methodology](judge-benchmark-quality-by-task-diversity-headroom-and-methodology.md)
 - [Inspect Rollouts Before Trusting RL Environment Scores](inspect-rollouts-before-trusting-rl-environment-scores.md)
+- [Audit a Benchmark by Solving It Without the Data](audit-a-benchmark-by-solving-it-without-the-data.md)
 
 Sources:
 - [Computer Use at the Edge of the Statistical Precipice — Pierluca D'Oro, Programma Labs](../sources/20260814_CTLa_p6iOiY.md), 00:36-02:19, 09:21-09:57, 15:57-16:46
+- [Einstein Arena: Harnessing Collective Agent Intelligence for Open Science — James Zou, Together AI](../sources/20260825_mMNkdYnIVC4.md), 11:58-13:01

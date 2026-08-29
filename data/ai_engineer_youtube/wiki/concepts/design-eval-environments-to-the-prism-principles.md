@@ -37,6 +37,7 @@ Related concepts:
 - [Control environment noise for group-based RL](control-environment-noise-for-group-based-rl.md)
 - [Seal Eval Environments Against Agents That Read the Leaked Answer](seal-eval-environments-against-answer-leaking-agents.md)
 - [Train Computer-Use Agents in a Flight Simulator, Not on Exams](train-computer-use-agents-in-a-flight-simulator-not-on-exams.md)
+- [Audit a Benchmark by Solving It Without the Data](audit-a-benchmark-by-solving-it-without-the-data.md)
 
 Sources:
 - [Computer Use at the Edge of the Statistical Precipice — Pierluca D'Oro, Programma Labs](../sources/20260814_CTLa_p6iOiY.md), 03:47-06:22, 15:16-15:30

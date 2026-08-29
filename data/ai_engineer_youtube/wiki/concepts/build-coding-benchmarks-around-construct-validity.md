@@ -23,6 +23,7 @@ Related concepts:
 - [Benchmark narrow slices separately from real expert work](benchmark-narrow-slices-separately-from-real-expert-work.md)
 - [Judge Benchmark Quality by Task Quality, Diversity, Headroom, and Methodology](judge-benchmark-quality-by-task-diversity-headroom-and-methodology.md)
 - [Specify a Generation Task as a Reference Implementation Plus a Topology Spec](specify-a-generation-task-as-a-reference-implementation-plus-a-topology-spec.md)
+- [Audit a Benchmark by Solving It Without the Data](audit-a-benchmark-by-solving-it-without-the-data.md)
 
 Sources:
 - [Coding Evals: From Code Snippets to Codebases - Naman Jain, Cursor](../sources/20251215_tHN44yJoeS8.md), 07:07-10:18

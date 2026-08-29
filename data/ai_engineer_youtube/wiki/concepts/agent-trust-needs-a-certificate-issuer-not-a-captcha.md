@@ -28,6 +28,7 @@ Related concepts:
 - [Authenticate Agents With URL-Based PKI Identities](authenticate-agents-with-url-based-pki-identities.md)
 - [The Open Web Is Adversarial to Agent Access](the-open-web-is-adversarial-to-agent-access.md)
 - [Design an Agent-First Signup and Login Flow](design-an-agent-first-signup-and-login-flow.md)
+- [Gate an Environment to Agents Only](gate-an-environment-to-agents-only.md)
 
 Sources:
 - [Bringing agents onto the world wide web — Paul Klein IV, Browserbase](../sources/20260814_GqoNrUz8hEU.md), 12:37-13:39, 14:24-14:35

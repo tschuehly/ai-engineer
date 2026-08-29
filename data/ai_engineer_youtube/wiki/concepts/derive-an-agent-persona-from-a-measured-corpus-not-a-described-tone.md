@@ -27,6 +27,7 @@ Related concepts:
 - [Prompt Voice Agents for Persona, Prosody, and Brand Fit](prompt-voice-agents-for-persona-prosody-and-brand-fit.md)
 - [Scope a Person-Cloned Agent by Caller, With Drafts as the Shared Capability](scope-a-person-cloned-agent-by-caller-with-drafts-as-the-shared-capability.md)
 - [Personal Knowledge Bases Become Agent Context Substrates](personal-knowledge-bases-become-agent-context-substrates.md)
+- [Give Parallel Agents Complementary Optimization Personas](give-parallel-agents-complementary-optimization-personas.md)
 
 Sources:
 - [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md), 08:23-09:47

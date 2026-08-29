@@ -24,6 +24,7 @@ Related concepts:
 - [Wrap Agent Completion in an Automatic Deterministic Verification Gate](wrap-agent-completion-in-an-automatic-deterministic-verification-gate.md)
 - [Give Agents a Persistent-State REPL Instead of Many Tools](give-agents-a-persistent-state-repl-instead-of-many-tools.md)
 - [Pre-Bind Tool Arguments to Give Agents Safe Autonomy](pre-bind-tool-arguments-to-give-agents-safe-autonomy.md)
+- [Design the Environment, Not the Workflow](design-the-environment-not-the-workflow.md)
 
 Sources:
 - [Respect The Process - Andrew Dumit, Watershed Technology Inc.](../sources/20260707_CLttOU7n6sI.md), 02:36-11:20, 12:17-13:10, 15:31-16:16

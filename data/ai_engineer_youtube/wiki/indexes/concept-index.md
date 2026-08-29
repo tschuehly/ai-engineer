@@ -1,6 +1,10 @@
 # Concept Index
 
 ## Agents
+- [Design the Environment, Not the Workflow](../concepts/design-the-environment-not-the-workflow.md) - specify where the agent works and what it is rewarded for, not the steps it takes.
+- [Open Agent Arenas Reach Solutions No Single Agent Reaches](../concepts/open-agent-arenas-reach-solutions-no-single-agent-reaches.md) - forum, live leaderboard, and downloadable submissions; 604 spheres in 11 dimensions against a prior best of 593.
+- [Gate an Environment to Agents Only](../concepts/gate-an-environment-to-agents-only.md) - a skills doc for machine entry plus a puzzle proving you are not a human.
+- [Give Parallel Agents Complementary Optimization Personas](../concepts/give-parallel-agents-complementary-optimization-personas.md) - profiling, memory, and precision priors as search diversity on a shared leaderboard.
 - [Keep Geolocation Consistent Across Pipeline Stages](../concepts/keep-geolocation-consistent-across-pipeline-stages.md) - location changes stock, sizes, and prices, so an unpinned locale fails at checkout after verifying a different world.
 - [Fan Out a Scheduled Per-Entity Agent Instead of Waiting for a Trigger](../concepts/fan-out-a-scheduled-per-entity-agent-instead-of-waiting-for-a-trigger.md) - a nightly per-account agent composing served context, vector search, system skills, and user instructions.
 - [Let Users Author the Output Format as a Skill](../concepts/let-users-author-the-output-format-as-a-skill.md) - users write their own format in text; the platform keeps the judgment, and adoption is the stated payoff.
@@ -1138,6 +1142,7 @@
 - [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md)
 
 ## Infrastructure
+- [Swap the Verifier to Retarget an Agent Arena](../concepts/swap-the-verifier-to-retarget-an-agent-arena.md) - the verifier is the only domain-specific part; same arena, kernels instead of mathematics.
 - [Assign a Web-Access Primitive Per Pipeline Stage](../concepts/assign-a-web-access-primitive-per-pipeline-stage.md) - the access layer below the agent runtime, chosen per stage rather than per agent.
 - [Back the Served Context Layer With a Transactional Store for Referential Integrity](../concepts/back-the-served-context-layer-with-a-transactional-store-for-referential-integrity.md) - Postgres over a denormalized key-value profile, for cross-system integrity and provenance rather than latency.
 - [Compute Truth in the Warehouse and Serve It as a Denormalized Profile](../concepts/compute-truth-in-the-warehouse-and-serve-it-as-a-denormalized-profile.md) - warehouse computes modeled versioned entities; a key-value store serves them join-free in milliseconds.
@@ -1808,6 +1813,8 @@
 - [Verify AI Call Summaries Before CRM Sync](../concepts/verify-ai-call-summaries-before-crm-sync.md) - the write path into the system of record needs a check, and agent tool access widens it.
 
 ## Evaluation
+- [Audit a Benchmark by Solving It Without the Data](../concepts/audit-a-benchmark-by-solving-it-without-the-data.md) - withhold the artifact the benchmark tests use of; 20-50% of tasks in three data-science benchmarks survived.
+- [Curate Tasks by Live Human Demand and a Deterministic Verifier](../concepts/curate-tasks-by-live-human-demand-and-a-deterministic-verifier.md) - a two-part admission rule: someone is already waiting for the answer, and a machine can score it.
 - [Validate Retrieved Content Before Spending Tokens on It](../concepts/validate-retrieved-content-before-spending-tokens-on-it.md) - a run that answers correctly from a blocked-truncated sample scores as a success.
 - [Read Every Run for Months Before Trusting an Unevaluatable Narrative](../concepts/read-every-run-for-months-before-trusting-an-unevaluatable-narrative.md) - exhaustive manual review as a burn-in when there is no ground-truth label, and what it fails to leave behind.
 - [Benchmark Your Own Tool by Running Agents With and Without It](../concepts/benchmark-your-tool-by-running-agents-with-and-without-it.md) - hundreds of lifecycle tasks in both conditions, with the traces as the deliverable rather than the score.

@@ -35,6 +35,7 @@ Related concepts:
 - [Per-Site Scaffolding Does Not Generalize: The Bitter Lesson for Web Agents](per-site-scaffolding-does-not-generalize-to-the-long-tail.md)
 - [Seed the Agent-Built Sandbox With Usage, Not Just Objects](seed-the-agent-built-sandbox-with-usage-not-just-objects.md)
 - [Ship Bundled Docs and an AGENTS.md Inside the Published Package](ship-bundled-docs-and-an-agents-md-inside-the-published-package.md)
+- [Gate an Environment to Agents Only](gate-an-environment-to-agents-only.md)
 
 Sources:
 - [Bringing agents onto the world wide web — Paul Klein IV, Browserbase](../sources/20260814_GqoNrUz8hEU.md), 07:59-08:54

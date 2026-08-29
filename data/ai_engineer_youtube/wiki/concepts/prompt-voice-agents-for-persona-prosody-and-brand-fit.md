@@ -19,6 +19,7 @@ Related concepts:
 - [Use tool names and descriptions as operational prompts](use-tool-names-and-descriptions-as-operational-prompts.md)
 - [Evaluate voice agents with traces, transcripts, audio checks, and simulations](evaluate-voice-agents-with-traces-transcripts-audio-checks-and-simulations.md)
 - [Direct TTS Voices With a Director's Note, Not a Voice Catalogue](direct-tts-voices-with-a-directors-note.md)
+- [Give Parallel Agents Complementary Optimization Personas](give-parallel-agents-complementary-optimization-personas.md)
 
 Sources:
 - [Building Effective Voice Agents - Toki Sherbakov + Anoop Kotha, OpenAI](../sources/20250720_-OXiljTJxQU.md), 09:55-11:35, 16:14-16:26

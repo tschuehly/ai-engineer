@@ -24,6 +24,7 @@ Related concepts:
 - [Evaluate Agent Trajectories With Backtests And Smell Metrics](evaluate-agent-trajectories-with-backtests-and-smell-metrics.md)
 - [Make Validation Fast, Local, Deterministic, And Actionable](make-validation-fast-local-deterministic-and-actionable.md)
 - [More Samples Buy Correctness, Not Speedups](more-samples-buy-correctness-not-speedups.md)
+- [Swap the Verifier to Retarget an Agent Arena](swap-the-verifier-to-retarget-an-agent-arena.md)
 
 Sources:
 - [AI Kernel Generation: What's working, what's not, what's next - Natalie Serrino, Gimlet Labs](../sources/20251217_6guQG_tGt0o.md), 05:30-06:34, 11:48-13:02, 14:49-15:05

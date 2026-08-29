@@ -33,6 +33,7 @@ Related concepts:
 - [Route agent optimization by task profile, not one fixed loop](route-agent-optimization-by-task-profile-not-one-fixed-loop.md)
 - [Decide the Agent Buy Boundary With Six Production Questions](decide-the-agent-buy-boundary-with-six-production-questions.md)
 - [A Harness Fix Becomes Overhead When the Model Outgrows It](a-harness-fix-becomes-overhead-when-the-model-outgrows-it.md)
+- [Design the Environment, Not the Workflow](design-the-environment-not-the-workflow.md)
 
 Sources:
 - [What if the harness mattered more than the model? - Aditya Bhargava, Etsy](../sources/20260707_2e9ANoOEn28.md), 06:01-28:51, 31:29-31:52

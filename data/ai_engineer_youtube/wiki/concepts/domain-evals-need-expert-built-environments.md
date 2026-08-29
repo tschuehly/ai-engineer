@@ -22,6 +22,7 @@ Related concepts:
 - [Mature Eval Platforms From Spreadsheets Into Experiment Systems](mature-eval-platforms-from-spreadsheets-into-experiment-systems.md)
 - [Task Quality Drives a 5x RL Training Uplift](task-quality-drives-rl-training-uplift.md)
 - [Accept Agentic Training Tasks by Clean Failures, Not Ambiguous Specs](accept-agentic-tasks-by-clean-failures-not-ambiguous-specs.md)
+- [Curate Tasks by Live Human Demand and a Deterministic Verifier](curate-tasks-by-live-human-demand-and-a-deterministic-verifier.md)
 
 Sources:
 - [2025 is the Year of Evals! Just like 2024, and 2023, and ... - John Dickerson, CEO Mozilla AI](../sources/20250806_CQGuvf6gSrM.md), 16:16-18:11, 18:13-19:01

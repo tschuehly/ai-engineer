@@ -24,6 +24,7 @@ Related concepts:
 - [AI output speed can overwhelm review capacity](ai-output-speed-can-overwhelm-review-capacity.md)
 - [Calibrate LLM judges like binary classifiers](calibrate-llm-judges-like-binary-classifiers.md)
 - [Hint Leakage Is the Reward Hacking of Self-Distillation](hint-leakage-is-the-reward-hacking-of-self-distillation.md)
+- [Audit a Benchmark by Solving It Without the Data](audit-a-benchmark-by-solving-it-without-the-data.md)
 
 Sources:
 - [Coding Evals: From Code Snippets to Codebases - Naman Jain, Cursor](../sources/20251215_tHN44yJoeS8.md), 10:19-12:50

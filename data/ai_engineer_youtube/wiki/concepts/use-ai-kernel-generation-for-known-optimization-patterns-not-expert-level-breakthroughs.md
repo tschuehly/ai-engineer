@@ -14,6 +14,8 @@ Details:
 - The strategic value is freeing scarce kernel experts to focus on the most interesting optimization problems while agents improve the long tail of workloads experts do not have time to hand-tune. (17:38-18:06)
 - **The same conclusion, measured, on multi-GPU kernels.** ParallelKernelBench gives this page's claim a number and a mechanism. The best frontier model solves 28 of 87 problems zero-shot with 22 faster than a PyTorch+NCCL baseline, and "the success patterns here are really concentrated into familiar patterns — collective primitives, tensor parallel GEMMs and Ulysses style context parallelism… patterns that we see heavily represented on the internet rather than necessarily patterns that the model has used its reasoning abilities to think through." The speedups also come from a single known substitution: "eliminating NCCL staging overhead in favor of direct NVLink loads and stores." ([Arora](../sources/20260827_pOvWgX7IJsc.md), 24:32-25:47)
 
+- **A claim that pushes against the ceiling this page draws, with weaker evidence than the claims that support it.** Together AI reports that agents competing on a leaderboard produced "sometimes over two-fold speed ups in some of these production kernels" versus "the previous state-of-the-art kernels for these problems," naming page attention, generalized "to many different shapes and different hardware types," and adopted into production. If accurate against genuinely hand-optimized references, that is closer to the expert-level territory this page says agents do not reach. But the claim arrives with no baseline definition, tolerance policy, timing protocol, hardware list, or aggregate — the exact gaps [Evaluate Generated Kernels](evaluate-generated-kernels-for-correctness-performance-and-benchmark-gaming.md) says make a large reported speedup suspect. What it does add that a benchmark number does not is adoption: someone put the kernels in a serving path. Hold it as a qualification with an open verification question rather than as a refutation. ([Einstein Arena — James Zou, Together AI](../sources/20260825_mMNkdYnIVC4.md), 10:14-10:54)
+
 Related topics:
 - [Inference](../topics/inference.md)
 - [Infrastructure](../topics/infrastructure.md)
@@ -24,7 +26,9 @@ Related concepts:
 - [Treat Quantization As A Memory-Bandwidth Lever](treat-quantization-as-a-memory-bandwidth-lever.md)
 - [Compare Models By Task, Thinking Budget, Cost, And Latency](compare-models-by-task-thinking-budget-cost-and-latency.md)
 - [Models Solve the Parallelism Patterns the Internet Already Contains](models-solve-the-parallelism-patterns-the-internet-already-contains.md)
+- [Swap the Verifier to Retarget an Agent Arena](swap-the-verifier-to-retarget-an-agent-arena.md)
 
 Sources:
 - [AI Kernel Generation: What's working, what's not, what's next - Natalie Serrino, Gimlet Labs](../sources/20251217_6guQG_tGt0o.md), 08:03-11:44, 16:02-18:06
 - [Can LLMs Write Fast Multi-GPU Kernels? — Simran Arora, Together AI](../sources/20260827_pOvWgX7IJsc.md), 24:32-25:47
+- [Einstein Arena: Harnessing Collective Agent Intelligence for Open Science — James Zou, Together AI](../sources/20260825_mMNkdYnIVC4.md), 10:14-10:54
