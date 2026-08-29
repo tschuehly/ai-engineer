@@ -16,6 +16,8 @@ Details:
 
 - **Staging at the organizational level, with the cost of skipping it named.** Amazon ran three studies in sequence rather than a company-wide launch, and Liguori lists going "too broad in the organization too fast" as a distinct failure mode: "if we had expected all teams in massive organizations to be frontier teams immediately, we would not have had the learnings that we had from the Pathfinder, from the sprint experiment, from the pilot teams." What early breadth destroys is specifically local knowledge — "you have a lot of teams who don't know what they're doing. You haven't had time to find the best practices for your own organizations, the context that your organization needs" — which is a different loss from a team being handed more autonomy than it can handle. The stated next step is scale, not depth: "how do we scale this out… to the next 2,000 teams instead of 50 teams." ([Liguori](../sources/20260828_pqlWNihgdjI.md), 17:54-18:46)
 
+- **A second ladder from the vendor side, and where it says teams are stuck.** Werry recounts a borrowed eight-stage curve running autocomplete (Copilot, GPT-3.5 era) → IDE agents (Cursor) → organizational wikis → MCP servers and skills → … → software factories, and places the field at "the sort of stage four to five level," adding that at that stage teams "understand that context is the bottleneck and they're trying to build solutions to solve it." The two ladders are measuring different axes and are worth keeping distinct: this page ranks an engineer's *delegation relationship* with agents, Werry's ranks the *infrastructure* the organization has built. A team can be high on one and low on the other, which is a more useful diagnosis than either alone. Attribution caveat: the slide is credited to a name that does not resolve from the audio, and no data supports the stage placement. ([Werry](../sources/20260827_qdAkxLoYNI8.md), 02:25-03:37)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Workflows](../topics/workflows.md)
@@ -32,3 +34,4 @@ Sources:
 - [Building an Autonomous Engineering Org - Angie Jones, Agentic AI Foundation](../sources/20260628_whue9_YquGA.md), 00:57-04:18
 - [How do you diffuse AI into the real world? — Varun Shenoy, Long Lake](../sources/20260828_B0fjR3yaZFU.md), 05:23-10:13
 - [From AI-Assisted to AI-Native: Building a Frontier Development Team — Clare Liguori, AWS](../sources/20260828_pqlWNihgdjI.md), 17:54-18:46
+- [How to Generate Mergeable Code with a Context Engine — Peter Werry, Unblocked](../sources/20260827_qdAkxLoYNI8.md), 02:25-03:37

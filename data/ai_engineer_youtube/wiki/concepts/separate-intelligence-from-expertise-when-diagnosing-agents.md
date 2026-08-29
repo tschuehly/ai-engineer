@@ -17,6 +17,8 @@ Details:
 
 - **An independent statement of the same split, from a different starting point and the same event.** Jack Morris opens with Terence Tao's account of using AI in mathematics: it "knows like every single public mathematical topic" and can "bridge gaps in the literature… in a way that no human even can know because it's read so much," yet it "lacks the depth that you would look for from… a graduate student who spent 5 years practicing in one area that gets this… almost like subconscious intuition for the problem space." Su's orthogonality claim and Tao's breadth-versus-depth observation name the same gap; the difference is what each blames it on. Su locates the cause in the structure of work ([Digital Work Is Millions of Microworlds With Local Physics](digital-work-is-millions-of-microworlds-with-local-physics.md)), while Morris locates it in the training data — every scaling axis runs on public material, so depth in anything private is unreachable by construction ([Post-Training Data Is Public by Construction](post-training-data-is-public-by-construction.md)). The two are compatible and suggest different fixes, which is the reason to keep both. ([Engram](../sources/20260812_WiqDvX6isc4.md), 01:14-02:28)
 
+- **The coding-agent instance of the same split, with the reset made explicit.** Werry's model is "an expert software engineer who's a new employee onboarding for the first time" — full general capability, zero situated knowledge — and the sharp part is the period: the reset happens "with each and every task," not once. That predicts what a model upgrade will and will not fix. A stronger model rediscovers how your organization builds, tests, and deploys faster; it still rediscovers it, because the missing thing was never in any model's training data. ([Werry](../sources/20260827_qdAkxLoYNI8.md), 01:52-02:18)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Models](../topics/models.md)
@@ -31,7 +33,9 @@ Related concepts:
 - [Last-Mile Domain Context Beats Model Chasing](last-mile-domain-context-beats-model-chasing.md)
 - [General Agents Need Skills for Domain Expertise](general-agents-need-skills-for-domain-expertise.md)
 - [Route Agent Repairs to the Right Layer With the Smallest Durable Change](route-agent-repairs-to-the-right-layer-smallest-durable-change.md)
+- [An Agent Is an Expert Who Onboards Again on Every Task](an-agent-is-an-expert-who-onboards-again-on-every-task.md)
 
 Sources:
 - [Intelligence + Continual Learning = Expertise — Yu Su, NeoCognition](../sources/20260812_I6aiEf3aEFQ.md), 06:33-09:20, 12:41-13:26
 - [Scaling Compute on Context — Jack Morris, Engram](../sources/20260812_WiqDvX6isc4.md), 01:14-02:28
+- [How to Generate Mergeable Code with a Context Engine — Peter Werry, Unblocked](../sources/20260827_qdAkxLoYNI8.md), 01:52-02:18

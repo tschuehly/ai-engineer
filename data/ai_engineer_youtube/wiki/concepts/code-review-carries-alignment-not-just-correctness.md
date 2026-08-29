@@ -21,6 +21,8 @@ Details:
 
 - **The cleanest available split between the two jobs, from the correctness side.** Pant's capacity argument is why the semantic half gets substituted at all — "human code review doesn't scale to match agent speed" — and a machine-checked proof is the strongest possible substitute for it, since "none of these can say for all inputs the code is correct" and a verifier can. It is also the starkest illustration of what substitution costs: a kernel accepting 32,000 lines of proof transfers no knowledge, no mentorship, and no architectural context to anyone. Correctness fully automated leaves the alignment job exactly where it was, and with less incidental reading to carry it. ([Pant](../sources/20260828_lRa9sPaMyy4.md), 00:33-00:42, 05:47-05:56)
 
+- **Surfacing what a specific senior engineer already said is the alignment half, delivered by machine.** Unblocked's review agent boosts mined comments by author seniority and expertise, and the demonstration is a recognition moment: the senior engineer's response to a bot comment was "that's something I would say," because it was. That transfers a team's accumulated judgment to whoever is reviewing now, which is the mentorship function this page says cannot be substituted by better bug-finding. What it does not transfer is the two-way part — the junior engineer who would have asked a follow-up question gets an answer without the conversation. ([Werry](../sources/20260827_qdAkxLoYNI8.md), 12:44-13:40)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Workflows](../topics/workflows.md)
@@ -35,9 +37,11 @@ Related concepts:
 - [Separate the Decision Layer From the Implementation Layer](separate-the-decision-layer-from-the-implementation-layer.md)
 - [Audit a Refactor Against Having Waited for Better Models](audit-a-refactor-against-having-waited-for-better-models.md)
 - [Ship a Proof a Small Kernel Can Recheck, Not a Claim You Must Trust](ship-a-proof-a-small-kernel-can-recheck.md)
+- [Weight Mined Review Guidance by the Author's Expertise](weight-mined-review-guidance-by-the-authors-expertise.md)
 
 Sources:
 - [How to Kill the Code Review — Ankit Jain, Aviator](../sources/20260817_YgEv7IQzGdM.md), 00:40-04:21, 09:33-10:10, 13:48-14:04
 - [Velocity Sickness: What Happens When Your Whole Team Gets 10x Faster — Matt Dailey, Ref.](../sources/20260809_Kz4QJmNrVXU.md), 16:03-16:54
 - [Benchmarking Coding Agents on New vs Legacy Codebases — Denys Linkov, Wisedocs](../sources/20260808_7vn4WpqNpck.md), 16:36-17:00
 - [Your Code Has Bugs. Lean4 Has Proofs: Formal Verification for Engineers — Varun Pant, AWS](../sources/20260828_lRa9sPaMyy4.md), 00:33-00:42, 05:47-05:56
+- [How to Generate Mergeable Code with a Context Engine — Peter Werry, Unblocked](../sources/20260827_qdAkxLoYNI8.md), 12:44-13:40

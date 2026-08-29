@@ -15,6 +15,8 @@ Details:
 - **The gap has a named owner, and they are usually the org's agent skeptics.** The undocumented institutional knowledge this page wants captured sits with the engineers "holding together with their mental duct tape all the places that agents are not working well" — the same people who "end up being slowest to adopt because they see all the problem[s] first hand." Blum's proposal turns that into an enrolment path rather than an extraction problem: give them ownership of the roadmap for making agents safe in the codebase, since "their feedback is basically the road map," and the knowledge lands in verification infrastructure as a by-product of work they wanted done anyway. ([Blum](../sources/20260828_5Bn0xro2ol8.md), 03:25-04:07, 11:57-12:33)
 - **The same gap, located in industries where nobody has ever been asked to write it down.** Shenoy's list is deliberately non-technical: how to close the books when receipts are missing, how to scope a building for construction from a blueprint, how to coordinate vendors to fix a broken roof. "All of this knowledge lives in people's heads, in 20-year-old software, in the way that one senior person on one of these teams just knows how to do it. How do you make this information explicit and create tasks that you can actually learn from?" His extraction mechanism is to run agents alongside employees on real work and keep the traces — "tool calls, the hiccups, the papercuts, everything that goes wrong" — which makes the knowledge infrastructure a byproduct of the work rather than a documentation project. ([Shenoy](../sources/20260828_B0fjR3yaZFU.md), 10:13-11:08)
 
+- **Building the wiki is not the finish line, because a store answers "where can I look" and never "have I looked enough."** Werry places organizational wikis at roughly the middle of an eight-stage adoption curve, ahead of autocomplete and IDE assistants but behind the stage most teams are actually stuck at — MCP servers and skills, "where people are today… the sort of stage four to five level" — and says the reason they are stuck is that "access to information doesn't equal understanding." "If you attach a wiki, it still doesn't tell the agent where the information is that it needs." Knowledge infrastructure is necessary and this is the argument that it is not sufficient: the missing piece is a selection layer over the store. ([Werry](../sources/20260827_qdAkxLoYNI8.md), 02:56-04:37)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Context Engineering](../topics/context-engineering.md)
@@ -26,8 +28,10 @@ Related concepts:
 - [Use Compounding Engineering Loops](use-compounding-engineering-loops.md)
 - [The Best Engineers Adopt Agents Last, and Their Objections Are the Roadmap](the-best-engineers-adopt-agents-last-and-their-objections-are-the-roadmap.md)
 - [Operational Outcomes Are Eval Labels You Only See If You Own the Operation](operational-outcomes-are-eval-labels-you-only-see-if-you-own-the-operation.md)
+- [Satisfaction of Search Stops Agents at the First Plausible Hit](satisfaction-of-search-stops-agents-at-the-first-plausible-hit.md)
 
 Sources:
 - [Mentoring the Machine - Eric Hou, Augment Code](../sources/20250724_Zniw5c9_jx8.md), 09:27-14:48
 - [How to Get Your Org to Adopt Coding Agents (Without Shipping Garbage) — Eyal Blum, Figma](../sources/20260828_5Bn0xro2ol8.md), 03:25-04:07, 11:57-12:33
 - [How do you diffuse AI into the real world? — Varun Shenoy, Long Lake](../sources/20260828_B0fjR3yaZFU.md), 10:13-11:08
+- [How to Generate Mergeable Code with a Context Engine — Peter Werry, Unblocked](../sources/20260827_qdAkxLoYNI8.md), 02:56-04:37

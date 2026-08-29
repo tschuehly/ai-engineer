@@ -16,6 +16,8 @@ Details:
 - Consequence for review: pointer comments are load-bearing context, so moving or renaming the file they reference silently breaks the retrieval path with no test failure. This is a maintenance cost the talk does not price, and it is the obvious thing to lint for (do referenced paths exist?).
 - Caveat: the whole mechanism is described in two sentences with no example file, no convention for the comment's format, and no measurement of whether agents followed the pointers. It rests on the agent choosing to read and act on a comment it happened to load, which is probabilistic; nothing here is enforcement.
 
+- **The other place an agent reliably lands is the answer it just received.** This page puts pointers in the code an agent will grep into; a context service can put them in its own responses. In Werry's demo the returned plan carries the PRs, Slack threads, Notion pages, and architecture documents it drew on, "and then Claude knows exactly where to jump to next if it needs to elaborate on that context." Same mechanism — a pointer waiting at a location the agent is guaranteed to visit — applied to the response channel rather than the repository. The two compose: repository breadcrumbs cover cold starts, response citations cover continuations. ([Werry](../sources/20260827_qdAkxLoYNI8.md), 10:35-11:13)
+
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
 - [Coding Agents](../topics/coding-agents.md)
@@ -27,6 +29,8 @@ Related concepts:
 - [Model-Shaped Codebase Architecture for Coding Agents](model-shaped-codebase-architecture-for-coding-agents.md)
 - [Use Repository Instructions To Ground Coding Agents](use-repository-instructions-to-ground-coding-agents.md)
 - [Own Agent Adoption at the Leadership Layer Because the Fixes Are Shared](own-agent-adoption-at-the-leadership-layer-because-the-fixes-are-shared.md)
+- [Attach Sources as Both a Correction Surface and a Continuation Pointer](attach-sources-as-a-correction-surface-and-a-continuation-pointer.md)
 
 Sources:
 - [Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab](../sources/20260811_aeTb5BdmTTc.md), 07:25-08:01, 15:09-15:27
+- [How to Generate Mergeable Code with a Context Engine — Peter Werry, Unblocked](../sources/20260827_qdAkxLoYNI8.md), 10:35-11:13

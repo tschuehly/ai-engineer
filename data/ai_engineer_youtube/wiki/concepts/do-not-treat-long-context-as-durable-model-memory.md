@@ -21,6 +21,8 @@ Details:
 
 - **The strongest qualification yet, and it is about the alternatives rather than about long context.** On a benchmark built to require learning across instances, "vanilla in context learning where you just put the experience in the context and you don't do any of the fancy context management" topped the leaderboard on reward *and* on gain — that is, growing context learned more from experience than the memory and context-management systems it was compared against, at lower cost. This does not make the window durable memory; the same talk's whole argument is that state has to be carried deliberately, and simply growing the context is counted as one legitimate way to carry it. What it does is set the bar: an architecture that externalizes memory has to beat "keep appending" on a gain-versus-cost plot, and on medium-horizon tasks it did not. See [Plain In-Context Learning Topped a Continual-Learning Benchmark](plain-in-context-learning-topped-a-continual-learning-benchmark.md). ([Evaluating Continual Learning](../sources/20260812_iqloyWCGYQQ.md), 09:36-09:46, 13:52-14:52)
 
+- **The organizational-corpus version of the same point, with the size claim made explicit.** Asked why not load the codebase and every architecture document at once, Werry gives a capacity answer and a behavioural one: "you've got way more organizational context than can fit into a context window, even one that's a million tokens in size," and even where it fits, "it causes the agent to get distracted." The durable framing is that a window is a working set chosen per task, not a place to keep what the organization knows. ([Werry](../sources/20260827_qdAkxLoYNI8.md), 05:34-06:20)
+
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
 - [Inference](../topics/inference.md)
@@ -45,3 +47,4 @@ Sources:
 - [Memory Harnesses for Long-Running Research Agents — Stefania Druga, Sakana.ai](../sources/20260812_R3-anFK1YM8.md), 05:29-07:33
 - [Scaling Compute on Context — Jack Morris, Engram](../sources/20260812_WiqDvX6isc4.md), 07:26-08:11, 13:00-13:10, 16:23-16:57
 - [Beyond Static Intelligence: Evaluating Continual Learning — Parth Asawa, UC Berkeley](../sources/20260812_iqloyWCGYQQ.md), 09:36-09:46, 13:52-14:52
+- [How to Generate Mergeable Code with a Context Engine — Peter Werry, Unblocked](../sources/20260827_qdAkxLoYNI8.md), 05:34-06:20

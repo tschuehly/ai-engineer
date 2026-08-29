@@ -15,6 +15,8 @@ Details:
 - The precision/recall split exposed a behavior a task score would miss: raw Claude Code actually *wins* file recall (it explores every file it can) but its line recall drops sharply, because it read many files without golden context lines — it "explored a lot" but "explored the wrong things a lot." High exploration is not the same as good retrieval. (07:33-08:25)
 - Trajectory scoring also let the analysis break results down by where each tool won, turning an aggregate that looked flat ("semantic search didn't help") into the real finding that different task types need different tools (see related concept). (08:25-08:54)
 
+- **The specific defect trajectory scoring catches that outcome scoring cannot.** An agent that finds one correct document and stops produces a plausible answer from real evidence — no error, no empty result, nothing for an outcome metric to fail. Against a golden set of targets the agent *should* have read, the same run scores high precision and low recall, which is the signature of early termination rather than bad ranking. That distinction changes the fix: a stopping failure is not repaired by a better embedding model. See [Satisfaction of Search Stops Agents at the First Plausible Hit](satisfaction-of-search-stops-agents-at-the-first-plausible-hit.md). ([Werry](../sources/20260827_qdAkxLoYNI8.md), 04:37-05:12)
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Retrieval](../topics/retrieval.md)
@@ -25,6 +27,8 @@ Related concepts:
 - [Choose Eval Scope Across Span, Multispan, Trajectory, and Session](choose-eval-scope-across-span-multispan-trajectory-and-session.md)
 - [Evaluate retrieval and MCP layers by task value, not only response availability](evaluate-retrieval-and-mcp-layers-by-task-value.md)
 - [Native Tool Integration Beats a Bolted-On Tool the Model Can't Time](native-tool-integration-beats-a-bolted-on-tool.md)
+- [Satisfaction of Search Stops Agents at the First Plausible Hit](satisfaction-of-search-stops-agents-at-the-first-plausible-hit.md)
 
 Sources:
 - [Benchmarking semantic code retrieval on Claude Code — Kuba Rogut, Turbopuffer](../sources/20260603_zKk7sDMGDEQ.md), 05:10-08:54
+- [How to Generate Mergeable Code with a Context Engine — Peter Werry, Unblocked](../sources/20260827_qdAkxLoYNI8.md), 04:37-05:12

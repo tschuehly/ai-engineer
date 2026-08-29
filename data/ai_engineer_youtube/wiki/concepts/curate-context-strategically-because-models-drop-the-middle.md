@@ -16,6 +16,8 @@ Details:
 - Self-correction: a critic node checks whether output is still relevant to the initial goal and triggers a retry when context is lost. Adds latency from re-running the agent but needs little initial developer input. (07:57-08:30)
 - Decision shape: pick the strategy by developer-input cost versus scaling and whether you are a product company — knowledge graphs and context engines pay off only when dependencies or corpus messiness justify the build, while iterative retrieval and self-correction win when you want low setup cost.
 
+- **A second, non-attentional reason to curate — and it is the one that holds when the window is not full.** The U-curve argument says the model attends poorly to a long prompt's middle. Werry adds a task-level version that does not depend on attention mechanics at all: irrelevant-but-real organizational context makes the agent "get distracted… if you give them things that cause them to look this way in that way," spending tokens and turns chasing threads that belong to another task. Both arguments point at selection, but they predict different failures — dropped facts versus pursued digressions — and a fix that solves one need not solve the other. ([Werry](../sources/20260827_qdAkxLoYNI8.md), 05:52-06:20)
+
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
 - [Retrieval](../topics/retrieval.md)
@@ -29,3 +31,4 @@ Related concepts:
 
 Sources:
 - [Why More Context Makes Your Agent Dumber and What to Do About It — Nupur Sharma, Qodo](../sources/20260608_EcqMYoIV57A.md), 02:57-08:30
+- [How to Generate Mergeable Code with a Context Engine — Peter Werry, Unblocked](../sources/20260827_qdAkxLoYNI8.md), 05:52-06:20

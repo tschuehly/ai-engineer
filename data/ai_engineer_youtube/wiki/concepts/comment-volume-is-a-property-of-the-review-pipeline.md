@@ -20,6 +20,8 @@ Details:
 - The right threshold for the filter is not one number, because the comment stream has two consumers with opposite tolerances for noise and for error. See [Review Comments Have Two Audiences With Inverted Error Costs](review-comments-have-two-audiences-with-inverted-error-costs.md).
 - Limits. The architecture is described from a slide with no measurement of the post-processing stage itself — no duplicate rate, no share of comments filtered out, no cost of the filtering pass, and no evaluation of whether the filter drops true findings. ([Provenance and Limits](../sources/20260828_EL123UNokkI.md))
 
+- **The model version is one more input to that emergent number, and it changes without a deploy of yours.** At Unblocked "the number of code review issues that were being surfaced dropped precipitously," and the cause was neither a generator nor the post-processing waist: "after this PR, we switched to Claude 4.8 and it dropped a ton in issues because the behavior is quite a bit different." A version bump under any generator moves the volume the waist is tuned against, which argues for stamping the model version on generated comments and re-baselining the filter after an upgrade rather than treating the thresholds as fixed. Note also that the direction is uninterpretable on its own — fewer comments is what both a worse finder and a better false-positive suppressor look like. See [A Model Swap Moves Your Agent Product's Output Metrics, and the Explanation Lives in Chat](a-model-swap-moves-agent-output-metrics-and-the-reason-lives-in-chat.md). ([Werry](../sources/20260827_qdAkxLoYNI8.md), 13:40-14:50)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Coding Agents](../topics/coding-agents.md)
@@ -32,6 +34,8 @@ Related concepts:
 - [Low-false-positive bug finding is required for coding-agent trust](low-false-positive-bug-finding-is-required-for-coding-agent-trust.md)
 - [Choose Verification Layers by Defect-Class Coverage](choose-verification-layers-by-defect-class-coverage.md)
 - [Decide the Agent Buy Boundary With Six Production Questions](decide-the-agent-buy-boundary-with-six-production-questions.md)
+- [A Model Swap Moves Your Agent Product's Output Metrics, and the Explanation Lives in Chat](a-model-swap-moves-agent-output-metrics-and-the-reason-lives-in-chat.md)
 
 Sources:
 - [Building uReview, Uber's Multi-Agent Code Review Engine — Will Bond & Ameya Ketkar, Uber](../sources/20260828_EL123UNokkI.md), 02:25-04:10, 10:47-11:02
+- [How to Generate Mergeable Code with a Context Engine — Peter Werry, Unblocked](../sources/20260827_qdAkxLoYNI8.md), 13:40-14:50

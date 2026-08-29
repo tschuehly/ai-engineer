@@ -16,6 +16,8 @@ Details:
 - One shared index + memory: each tool (Claude Code for hard problems, Cursor for quick edits, Copilot for completions) normally "starts fresh every time" and shares nothing; a single shared index all tools connect to, plus a memory layer, lets a lesson persist across tools/sessions — "explain the code base once."
 - Results and honest limits: on FastAPI (53 files, 20 questions) tokens fell 83K→4.9K/question (94%, or 523/question with compression) at ~90% right-code accuracy; across 247 real queries, 12.4M tokens (~$186) saved, 84% from the search layer and the rest from compression. But 94% is the **worst case** measured against a full-file baseline — real tools "are already smarter than that," so real savings are lower — and the approach breaks on **big mixed codebases**: on a 396-file project recall "dropped almost zero." It works when files each do one thing and struggles when files do many. Open-sourced as Code Context Engine (`CCE`).
 
+- **The cost the index removes is paid once per task, not once per repository.** Werry's framing of why rediscovery is expensive is the demand-side argument for this layer: an agent is "an expert software engineer who's a new employee onboarding for the first time. Every time they have to rediscover your codebase, how your organization builds tests and how they deploy software with each and every task." His measured version is a single unreplicated pair — the same plan generated in Claude Code took about a minute and under a dollar with a context layer and about two minutes and more cost without — but the argument he attaches to it is the transferable part: the searching is not the main cost, the wrong discoveries are, because they propagate into the plan and force later loops. See [Measure a Context Layer on Compounding, Not on the First Task](measure-a-context-layer-on-compounding-not-the-first-task.md). ([Werry](../sources/20260827_qdAkxLoYNI8.md), 01:52-02:18, 11:13-12:27)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Retrieval](../topics/retrieval.md)
@@ -26,6 +28,9 @@ Related concepts:
 - [Treat Embeddings as Cached Compute Decided by Query Volume](treat-embeddings-as-cached-compute-decided-by-query-volume.md)
 - [Share Codebase Indexes Across a Team With Merkle-Tree Diffing](share-codebase-indexes-across-a-team-with-merkle-tree-diffing.md)
 - [Codebase Intelligence Needs Structural and Historical Signals](codebase-intelligence-needs-structural-and-historical-signals.md)
+- [Measure a Context Layer on Compounding, Not on the First Task](measure-a-context-layer-on-compounding-not-the-first-task.md)
+- [An Agent Is an Expert Who Onboards Again on Every Task](an-agent-is-an-expert-who-onboards-again-on-every-task.md)
 
 Sources:
 - [We Cut 94% of AI Coding Tokens With a Local Code Index - Rajkumar Sakthivel, Tesco](../sources/20260628_dRmWYHuIJxM.md), 03:20-10:05
+- [How to Generate Mergeable Code with a Context Engine — Peter Werry, Unblocked](../sources/20260827_qdAkxLoYNI8.md), 01:52-02:18, 11:13-12:27

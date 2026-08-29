@@ -19,6 +19,8 @@ Details:
 
 - **Independent confirmation that the mining is cheap, and that the cost sits immediately after it.** At Uber "writing the skill was very easy. Like teams just very quickly wrote a skill by asking Claude to write one, go over my previous PR reviews and write me a skill" — the same retrospective corpus this page recommends, harvested by a model in minutes rather than as a project. What replaced the authoring cost was operating cost: "the hard part was how to run these skills at scale with consistent quality and low cost. And that required a lot of iterations not only from the uReview team side, but also like for each team who was trying to write these rules." Read against the J-curve warning above, the pain may be relocating rather than disappearing — from writing the registry to running it — and neither source measures the second half. See [Distributed Rule Authoring Is a Platform Problem, Not an Authoring Problem](distributed-rule-authoring-is-a-platform-problem.md). ([Bond and Ketkar](../sources/20260828_EL123UNokkI.md), 09:43-10:12)
 
+- **A flat mine has no tiebreak, and the review graph already contains one.** Unblocked mines the same corpus — "it looks at pull request data… and it generates a series of best practices that help align agents to your codebase" — and then ranks the surfaced results by author: "we use the sort of seniority or expertise as a signal to boost comments that are important." That addresses a gap this page leaves open, since a bulk mine of years of comments contains settled conventions and one-off opinions side by side with no way to order them. The cost is that seniority is a proxy that calcifies, so a boosted corpus needs its own decay pass. See [Weight Mined Review Guidance by the Author's Expertise](weight-mined-review-guidance-by-the-authors-expertise.md). ([Werry](../sources/20260827_qdAkxLoYNI8.md), 12:44-13:40)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -33,7 +35,9 @@ Related concepts:
 - [Encode non-functional requirements as agent-visible context](encode-non-functional-requirements-as-agent-visible-context.md)
 - [Use agent logs and review feedback as context observability signals](use-agent-logs-and-review-feedback-as-context-observability-signals.md)
 - [Distributed Rule Authoring Is a Platform Problem, Not an Authoring Problem](distributed-rule-authoring-is-a-platform-problem.md)
+- [Weight Mined Review Guidance by the Author's Expertise](weight-mined-review-guidance-by-the-authors-expertise.md)
 
 Sources:
 - [How to Kill the Code Review — Ankit Jain, Aviator](../sources/20260817_YgEv7IQzGdM.md), 06:53-07:57, 08:30-08:39, 10:30-10:35, 14:12-15:08
 - [Building uReview, Uber's Multi-Agent Code Review Engine — Will Bond & Ameya Ketkar, Uber](../sources/20260828_EL123UNokkI.md), 09:43-10:12
+- [How to Generate Mergeable Code with a Context Engine — Peter Werry, Unblocked](../sources/20260827_qdAkxLoYNI8.md), 12:44-13:40

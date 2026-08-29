@@ -26,6 +26,8 @@ Details:
 - **The task-shape trap here has an exact analogue on the learning axis.** Single-turn tasks cannot distinguish context presets because no state accumulates; chained instances from an existing benchmark cannot distinguish learning systems because benchmark instances "are designed to be independent" and so share nothing to transfer. Both produce a confident null result about the mechanism when the defect is in the eval. See [Chained Independent Benchmarks Cannot Measure Learning](chained-independent-benchmarks-cannot-measure-learning.md). ([Evaluating Continual Learning](../sources/20260812_iqloyWCGYQQ.md), 05:13-05:51)
 - **A third independent team reaches the same verdict about elaborate context management, on a benchmark designed to defeat it.** Continual Learning Bench 1.0 builds sequences that *require* improvement across instances — headroom, shared latent structure, and injected concept drift — and still "vanilla in context learning where you just put the experience in the context and you don't do any of the fancy context management" tops the leaderboard, holding on both the reward-versus-cost and gain-versus-cost frontiers. The speaker's own limit on the finding is the one to carry: the tasks were "medium horizon" and "didn't push the frontiers of the in-context learning systems enough," which he calls fair. See [Plain In-Context Learning Topped a Continual-Learning Benchmark](plain-in-context-learning-topped-a-continual-learning-benchmark.md). ([Evaluating Continual Learning](../sources/20260812_iqloyWCGYQQ.md), 13:52-14:52)
 
+- **Pick the outcome variable as carefully as the control, because a single-task comparison can measure the wrong thing entirely.** Werry runs the paired design this page recommends — same plan, same harness, context layer on and off — and then argues against his own headline: "the real value of a context engine is not the upfront cost on these short tasks. It's the compounding effect," because the agent without context "doesn't discover the right things" and later "has to go back and loop over and over again." A context layer that injects tokens up front should be expected to *lose* on first-task cost and win on rework across a long run, so an eval whose outcome variable is single-task tokens can invert the ranking. His own numbers are one run per arm with the wall clock explicitly disclaimed — which is what this page's discipline exists to prevent. See [Measure a Context Layer on Compounding, Not on the First Task](measure-a-context-layer-on-compounding-not-the-first-task.md). ([Werry](../sources/20260827_qdAkxLoYNI8.md), 09:55-12:27)
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Context Engineering](../topics/context-engineering.md)
@@ -42,8 +44,10 @@ Related concepts:
 - [Evaluate context changes with lint, task scenarios, and probabilistic budgets](evaluate-context-changes-with-lint-task-scenarios-and-probabilistic-budgets.md)
 - [Frequent intentional compaction keeps coding agents in the smart zone](frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md)
 - [Context window editing clears stale tool results](context-window-editing-clears-stale-tool-results.md)
+- [Measure a Context Layer on Compounding, Not on the First Task](measure-a-context-layer-on-compounding-not-the-first-task.md)
 
 Sources:
 - [Context Engineering in 2026 — Louis-François Bouchard, Omar Solano & Samridhi Vaid, Towards AI](../sources/20260817_WP3hjUXd918.md), 32:19-33:30, 36:23-47:35, 61:34-61:47
 - [Memory Harnesses for Long-Running Research Agents — Stefania Druga, Sakana.ai](../sources/20260812_R3-anFK1YM8.md), 04:28-05:27, 06:14-06:39, 08:05-09:36
 - [Beyond Static Intelligence: Evaluating Continual Learning — Parth Asawa, UC Berkeley](../sources/20260812_iqloyWCGYQQ.md), 05:13-05:51, 08:05-10:19, 13:52-14:52
+- [How to Generate Mergeable Code with a Context Engine — Peter Werry, Unblocked](../sources/20260827_qdAkxLoYNI8.md), 09:55-12:27

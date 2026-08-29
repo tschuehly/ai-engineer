@@ -20,6 +20,8 @@ Details:
 - The proxy also degrades when the reader is an agent rather than a person, because an agent addresses nearly everything put in front of it — so the metric must be segmented by surface before it means anything. See [Review Comments Have Two Audiences With Inverted Error Costs](review-comments-have-two-audiences-with-inverted-error-costs.md).
 - Limits. All figures are self-reported from slides with no methodology. The headline improvement — "our costs were down by 60% and our quality and our accuracy was up by around 70%" — is measured against their own naive first build, and "quality and accuracy" is never defined or attached to an instrument. ([Provenance and Limits](../sources/20260828_EL123UNokkI.md), 10:47-11:02)
 
+- **Two weaker signals that look like quality evidence and are not.** The first is recognition: a senior engineer replying "Oh, that's cool. That's something I would say" to a surfaced comment confirms the mining recovered his voice, not that the comment helped on this PR. The second is volume: when Unblocked's flagged-issue count "dropped precipitously" after a model swap, the number alone could not say whether the reviewer got worse at finding problems or better at suppressing false ones. Both are attractive because they are cheap to collect and both are silent on the question this page asks. ([Werry](../sources/20260827_qdAkxLoYNI8.md), 13:10-13:40, 13:40-14:50)
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Coding Agents](../topics/coding-agents.md)
@@ -32,6 +34,9 @@ Related concepts:
 - [Connect Production Observability to Offline Eval Loops](connect-production-observability-to-offline-eval-loops.md)
 - [Review Comments Have Two Audiences With Inverted Error Costs](review-comments-have-two-audiences-with-inverted-error-costs.md)
 - [Distributed Rule Authoring Is a Platform Problem, Not an Authoring Problem](distributed-rule-authoring-is-a-platform-problem.md)
+- [Weight Mined Review Guidance by the Author's Expertise](weight-mined-review-guidance-by-the-authors-expertise.md)
+- [A Model Swap Moves Your Agent Product's Output Metrics, and the Explanation Lives in Chat](a-model-swap-moves-agent-output-metrics-and-the-reason-lives-in-chat.md)
 
 Sources:
 - [Building uReview, Uber's Multi-Agent Code Review Engine — Will Bond & Ameya Ketkar, Uber](../sources/20260828_EL123UNokkI.md), 04:48-07:01, 10:12-11:02
+- [How to Generate Mergeable Code with a Context Engine — Peter Werry, Unblocked](../sources/20260827_qdAkxLoYNI8.md), 13:10-14:50

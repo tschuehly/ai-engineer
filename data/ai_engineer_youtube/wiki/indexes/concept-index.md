@@ -1,6 +1,8 @@
 # Concept Index
 
 ## Agents
+- [An Agent Is an Expert Who Onboards Again on Every Task](../concepts/an-agent-is-an-expert-who-onboards-again-on-every-task.md) - the deficit is organizational, so it does not shrink as models improve.
+- [Satisfaction of Search Stops Agents at the First Plausible Hit](../concepts/satisfaction-of-search-stops-agents-at-the-first-plausible-hit.md) - the agent cannot observe its own coverage of a corpus it has not read.
 - [Replay Agentic Traces, Because Steady-State Benchmarks Hide the Workload](../concepts/replay-agentic-traces-because-steady-state-benchmarks-hide-the-workload.md) - public benchmarks report one sanitized steady-state run; agent traces span 1 to 3,000 turns, >90% cache hits, and >100:1 input-to-output.
 - [Client-Controlled Context Makes the Server's KV Cache Volatile](../concepts/client-controlled-context-makes-the-servers-kv-cache-volatile.md) - the client owns the prompt lifecycle, so the server must route for locality, tier storage, and pin sessions instead of predicting reuse.
 - [Map the Agentic Commerce Protocol Stack by Layer](../concepts/map-the-agentic-commerce-protocol-stack-by-layer.md) - MCP names capabilities, A2A carries the cross-org envelope, ACP and UCP supply commerce vocabulary, AP2 carries payment authority; only ACP and UCP compete, and even they share a call shape.
@@ -585,6 +587,10 @@
 - [Learn risk scoring from audit feedback for predictive compliance](../concepts/learn-risk-scoring-from-audit-feedback-for-predictive-compliance.md)
 
 ## Coding Agents
+- [An Agent Is an Expert Who Onboards Again on Every Task](../concepts/an-agent-is-an-expert-who-onboards-again-on-every-task.md) - the reset is per task, so onboarding cost multiplies by task volume instead of amortizing.
+- [Weight Mined Review Guidance by the Author's Expertise](../concepts/weight-mined-review-guidance-by-the-authors-expertise.md) - rank mined PR history by who said it, using the review graph you already build.
+- [A Model Swap Moves Your Agent Product's Output Metrics, and the Explanation Lives in Chat](../concepts/a-model-swap-moves-agent-output-metrics-and-the-reason-lives-in-chat.md) - a version bump is a pipeline change, and the root cause is usually a human message.
+- [Distillation Is a Separate Step From Retrieval, and the Task Agent Will Not Do It](../concepts/distillation-is-a-separate-step-from-retrieval.md) - the architecture picture that constrains the next change is not in any single file.
 - [Models Solve the Parallelism Patterns the Internet Already Contains](../concepts/models-solve-the-parallelism-patterns-the-internet-already-contains.md) - successes cluster in well-represented patterns, and supplying the missing principles in context did not close the gap.
 - [More Samples Buy Correctness, Not Speedups](../concepts/more-samples-buy-correctness-not-speedups.md) - a bash-environment agent loop lifted solved problems from 24 to 35 of 87, then plateaued on quality.
 - [Derive the Principles by Hand Before Testing Whether Models Can Apply Them](../concepts/derive-the-principles-by-hand-before-testing-whether-models-can-apply-them.md) - build the expert artifact first so model failures land on named decisions rather than a score.
@@ -921,6 +927,10 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Satisfaction of Search Stops Agents at the First Plausible Hit](../concepts/satisfaction-of-search-stops-agents-at-the-first-plausible-hit.md) - the radiology error, applied to an agent handed a searchable wiki: it finds one plausible hit and stops.
+- [Distillation Is a Separate Step From Retrieval, and the Task Agent Will Not Do It](../concepts/distillation-is-a-separate-step-from-retrieval.md) - understanding is the relation between the pieces, and a task-time search loop will not assemble it.
+- [An Agent Is an Expert Who Onboards Again on Every Task](../concepts/an-agent-is-an-expert-who-onboards-again-on-every-task.md) - full capability, zero situated knowledge, reset per invocation rather than per hire.
+- [Attach Sources as Both a Correction Surface and a Continuation Pointer](../concepts/attach-sources-as-a-correction-surface-and-a-continuation-pointer.md) - citations serve a human fixing the knowledge base and an agent deciding where to dig next.
 - [Return a Pointer to the Reader's Own Component Instead of a Faithful Copy](../concepts/return-a-pointer-to-the-readers-own-component-instead-of-a-copy.md) - pixel-perfect generated markup is "only half the story" because it drops the accessibility and internationalization properties of the consumer's real component, so Code Connect returns "use button component" instead — higher fidelity and less context in one move, bounded by mapping coverage.
 - [Pick the Serialization the Models Have Seen Most, Not the One Native to Your System](../concepts/pick-the-serialization-the-models-have-seen-most.md) - Figma had three textual serializations of its own C++ scene graph and chose React and Tailwind over its purpose-built internal representation, on the stated hunch that models had seen the most of it; the image rides along as a supplement, never inlined as base64.
 - [Structure an Agent Plan With a Frozen Why and Reviewer-Sized Phases](../concepts/structure-an-agent-plan-with-a-frozen-why-and-reviewer-sized-phases.md) - the plan as agent context: an immutable goal section, per-phase validation gates, and detail sized to a subagent that will see nothing else.
@@ -1665,6 +1675,8 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Measure a Context Layer on Compounding, Not on the First Task](../concepts/measure-a-context-layer-on-compounding-not-the-first-task.md) - a layer that injects tokens up front should lose on step one and win on avoided rework.
+- [A Model Swap Moves Your Agent Product's Output Metrics, and the Explanation Lives in Chat](../concepts/a-model-swap-moves-agent-output-metrics-and-the-reason-lives-in-chat.md) - output volume is uninterpretable on its own, since a better suppressor and a worse finder look alike.
 - [More Samples Buy Correctness, Not Speedups](../concepts/more-samples-buy-correctness-not-speedups.md) - pass@k rose from 28 to 36 of 87 while the correct-and-faster share stalled near 31%.
 - [Specify a Generation Task as a Reference Implementation Plus a Topology Spec](../concepts/specify-a-generation-task-as-a-reference-implementation-plus-a-topology-spec.md) - the reference doubles as baseline, and taxonomy-first sampling gets coverage of a combinatorial space.
 - [Derive the Principles by Hand Before Testing Whether Models Can Apply Them](../concepts/derive-the-principles-by-hand-before-testing-whether-models-can-apply-them.md) - the manual phase yields the in-context material, the failure rubric, and the proof the task is learnable.
@@ -2251,6 +2263,9 @@
 - [Condition ASR on Conversation Context and Domain Vocabulary](../concepts/condition-asr-on-conversation-context-and-domain-vocabulary.md)
 
 ## Retrieval
+- [Satisfaction of Search Stops Agents at the First Plausible Hit](../concepts/satisfaction-of-search-stops-agents-at-the-first-plausible-hit.md) - a stopping failure rather than a ranking failure, invisible to recall over what was returned.
+- [Attach Sources as Both a Correction Surface and a Continuation Pointer](../concepts/attach-sources-as-a-correction-surface-and-a-continuation-pointer.md) - the returned sources are a next-hop address, and the machine consumer is the one that can act on them.
+- [Distillation Is a Separate Step From Retrieval, and the Task Agent Will Not Do It](../concepts/distillation-is-a-separate-step-from-retrieval.md) - the needed artifact is often a relation over documents that no document contains.
 - [Treat the Corpus Boundary as Negotiable, Not Fixed](../concepts/treat-the-corpus-boundary-as-negotiable-not-fixed.md) - adjacent material and elicited answers add information no reorganization of an index can.
 - [Post-Training Data Is Public by Construction](../concepts/post-training-data-is-public-by-construction.md) - the structural reason a frontier model will not eventually cover your private domain.
 - [Rank a Decisions Ledger Instead of Retrieving Memories by Similarity](../concepts/rank-a-decisions-ledger-instead-of-retrieving-memories-by-similarity.md) - over an agent's own history the retrieval unit should be a decision with a priority, not a chunk with an embedding.
@@ -2729,6 +2744,9 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Attach Sources as Both a Correction Surface and a Continuation Pointer](../concepts/attach-sources-as-a-correction-surface-and-a-continuation-pointer.md) - design the response format for both the human who corrects and the agent who continues.
+- [Weight Mined Review Guidance by the Author's Expertise](../concepts/weight-mined-review-guidance-by-the-authors-expertise.md) - one review-relationship graph yields both a staffing risk map and an authority weight.
+- [A Model Swap Moves Your Agent Product's Output Metrics, and the Explanation Lives in Chat](../concepts/a-model-swap-moves-agent-output-metrics-and-the-reason-lives-in-chat.md) - index the org's conversation record, because "what changed" is answered by people.
 - [Being in the Loop Is the Ceiling on Agent Parallelism](../concepts/being-in-the-loop-is-the-ceiling-on-agent-parallelism.md) - feeding means the task plus its acceptance criteria, promoted into the steering file so they recur without prompting.
 - [When Code Stops Being the Long Pole, Approvals Become It](../concepts/when-code-stops-being-the-long-pole-approvals-become-it.md) - once the build takes one to two months, a two-month decision and a two-month launch review are the critical path.
 - [Budget the Productivity Dip That Precedes the Agent Speedup](../concepts/budget-the-productivity-dip-that-precedes-the-agent-speedup.md) - the brownfield pre-work costs output before it returns any, so the dip has to be agreed in advance.

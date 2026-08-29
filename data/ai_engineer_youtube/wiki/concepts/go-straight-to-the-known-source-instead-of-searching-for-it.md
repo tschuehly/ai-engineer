@@ -17,6 +17,8 @@ Details:
 - Two costs the source is candid about. The known-source path is where the maintenance burden moves — hence the self-healing scraper, and the wiki's separate page on [letting an agent build and maintain scrapers](let-agents-build-and-maintain-self-healing-scrapers.md). And the demonstration is deliberately small: "very specific task, very limited context, very limited situation… tread lightly," with the speaker also granting "this is not the most complicated of scenarios" about the already-structured ontology. (17:00-17:16, 17:45-17:58, 18:25-18:29)
 - Access is the unstated prerequisite: the named sources are among the most aggressively bot-defended sites on the web, so "straight to the source" presumes the access layer in [Ground Agents With Managed Web-Access Infrastructure](ground-agents-with-managed-web-access-infrastructure.md). Removing the search middleman does not remove the access middleman.
 
+- **The failure that makes this more than a cost optimization.** Routing through search is not only a wasted discovery step; it is a step with a bad stopping rule. An agent searching a store "finds something that they think is correct and then they stop" — so the search path can return a true answer built on one of the three documents that mattered, while a direct fetch of a known location returns the whole thing. Where the location is known, skipping search removes an error mode, not just a latency. The corollary is that answers should hand back their sources so the *next* hop is also a known location. See [Satisfaction of Search Stops Agents at the First Plausible Hit](satisfaction-of-search-stops-agents-at-the-first-plausible-hit.md) and [Attach Sources as Both a Correction Surface and a Continuation Pointer](attach-sources-as-a-correction-surface-and-a-continuation-pointer.md). ([Werry](../sources/20260827_qdAkxLoYNI8.md), 04:37-05:12, 10:35-11:13)
+
 Related topics:
 - [Retrieval](../topics/retrieval.md)
 - [Tools](../topics/tools.md)
@@ -28,6 +30,9 @@ Related concepts:
 - [Ground Agents With Managed Web-Access Infrastructure](ground-agents-with-managed-web-access-infrastructure.md)
 - [Context as a Service Is Vertical Search for Agents](context-as-a-service-is-vertical-search-for-agents.md)
 - [Move Mandatory Brittle Tool Steps Outside the Agent Loop](move-mandatory-brittle-tool-steps-outside-the-agent-loop.md)
+- [Satisfaction of Search Stops Agents at the First Plausible Hit](satisfaction-of-search-stops-agents-at-the-first-plausible-hit.md)
+- [Attach Sources as Both a Correction Surface and a Continuation Pointer](attach-sources-as-a-correction-surface-and-a-continuation-pointer.md)
 
 Sources:
 - [The Rise of CaaS: Context-as-a-Service for Agentic AI — Omer Primor, Bright Data](../sources/20260814_Ot4OPrPH4xY.md), 12:42-12:57, 16:37-18:29, 19:25-19:46
+- [How to Generate Mergeable Code with a Context Engine — Peter Werry, Unblocked](../sources/20260827_qdAkxLoYNI8.md), 04:37-05:12, 10:35-11:13

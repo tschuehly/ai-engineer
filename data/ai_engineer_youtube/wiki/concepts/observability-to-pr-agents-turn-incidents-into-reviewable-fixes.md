@@ -21,6 +21,8 @@ Details:
 
 - **A fourth variant stops before the diff on purpose, and its input is the change rather than the failure.** Resolve AI triggers on a release, a feature flag flip, or an infra change instead of on a symptom, derives which telemetry would expose trouble for that specific change, follows the causal chain outward ("the checkout replaces currency service… let's take a look at the Kafka pipeline cuz that's sort of involved"), and re-checks on a schedule it chooses — an hour, three days. The output is a judgment about whether the change is healthy, not a pull request. That inverts this page's ordering: here a signal fires and the pipeline reconstructs what caused it, there the cause is known first and the question is which signals to watch. It also covers the paths this page's inputs never see, since a feature flag emits no error until it does harm ([Watch the Change Paths That Bypass Your Deployment Pipeline](watch-the-change-paths-that-bypass-your-deployment-pipeline.md)). ([Justin Smith](../sources/20260809_vSx5IULvBns.md), 14:35-14:52, 17:57-19:53)
 
+- **The same chain with a conversation corpus in place of the telemetry.** Unblocked's internal cloud agent takes a human-diagnosed regression and produces a PR that "not only generates the fix, it also is able to relate it to all the conversations that were happening" — including the Slack thread that identified the cause. The evidence bundle is what makes it reviewable: the reviewer can check the causal story, not just the diff. Two differences from the observability version worth keeping: the diagnosis was reached by a human first and handed to the agent, and the evidence is unstructured discussion rather than grouped signals, which is easier to retrieve and harder to verify. ([Werry](../sources/20260827_qdAkxLoYNI8.md), 13:40-15:08)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Coding Agents](../topics/coding-agents.md)
@@ -38,6 +40,7 @@ Related concepts:
 - [Turn Unfiled Conversation Into Concrete Prototypes](turn-unfiled-conversation-into-concrete-prototypes.md)
 - [Derive the Post-Deploy Check Plan From What Actually Changed](derive-the-post-deploy-check-plan-from-what-changed.md)
 - [Watch the Change Paths That Bypass Your Deployment Pipeline](watch-the-change-paths-that-bypass-your-deployment-pipeline.md)
+- [A Model Swap Moves Your Agent Product's Output Metrics, and the Explanation Lives in Chat](a-model-swap-moves-agent-output-metrics-and-the-reason-lives-in-chat.md)
 
 Sources:
 - [Infra that fixes itself, thanks to coding agents - Mahmoud Abdelwahab, Railway](../sources/20251124_Q5IVm_CxN2w.md), 02:33-06:55, 17:24-17:47
@@ -45,3 +48,4 @@ Sources:
 - [How Lovable self-improves every hour — Benjamin Verbeek, Lovable](../sources/20260602_KA5kPbdkK2E.md), 16:44-18:43
 - [Multiplayer agentic engineering — Arjun Singh, Superconductor](../sources/20260809_OL7kfezynJM.md), 05:51-08:14
 - [Always-on agents run production without the on-call tax — Justin Smith, Resolve AI](../sources/20260809_vSx5IULvBns.md), 14:35-14:52, 17:57-19:53
+- [How to Generate Mergeable Code with a Context Engine — Peter Werry, Unblocked](../sources/20260827_qdAkxLoYNI8.md), 13:40-15:08
