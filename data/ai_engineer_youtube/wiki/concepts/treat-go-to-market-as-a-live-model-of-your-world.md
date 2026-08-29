@@ -40,6 +40,7 @@ Related concepts:
 - [Ship Go-to-Market Changes on an Engineering Release Cadence](ship-go-to-market-changes-on-an-engineering-release-cadence.md)
 - [Back the Served Context Layer With a Transactional Store for Referential Integrity](back-the-served-context-layer-with-a-transactional-store-for-referential-integrity.md)
 - [Distribution Is the Bottleneck, Not the Idea](distribution-is-the-bottleneck-not-the-idea.md)
+- [Build the Automated Motion First and Hire Into Its Bottlenecks](build-the-automated-motion-first-and-hire-into-its-bottlenecks.md)
 
 Sources:
 - [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md), 02:56-05:16, 08:00-08:20, 10:08-10:12

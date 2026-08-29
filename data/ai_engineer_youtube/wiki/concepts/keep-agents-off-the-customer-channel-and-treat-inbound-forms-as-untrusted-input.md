@@ -34,6 +34,7 @@ Related concepts:
 - [Protect Sender Reputation by Splitting Domains and Routing Replies Home](protect-sender-reputation-by-splitting-domains-and-routing-replies-home.md)
 - [Size Agent Quality Against the Channel's Reply Rate](size-agent-quality-against-the-channel-reply-rate.md)
 - [Gate a Generated Multi-Channel Campaign on the Channel Owner](gate-a-generated-multi-channel-campaign-on-the-channel-owner.md)
+- [Reply to Every Inbound and Over-Capture at Signup](reply-to-every-inbound-and-over-capture-at-signup.md)
 
 Sources:
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 07:23-07:58, 16:14-16:41, 19:55-20:01, 20:30-20:49

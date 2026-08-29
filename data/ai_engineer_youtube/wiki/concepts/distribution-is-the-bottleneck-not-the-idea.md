@@ -14,6 +14,7 @@ Details:
 - **The target interface is a description, not a workflow.** The goal is "the ability to just describe a motion" — playbook, experiment, or evergreen campaign — and have it distributed "across the channels through which you actually execute your go-to-market, whether it's outbound or ads or web or whatever." One sentence about golfers at East Coast construction companies should produce an audience, an incentive, outbound sequences, ad and web creative, and in-app notifications. (00:29-00:59, 02:00-02:39)
 - **Note what is being automated away: persuasion, not typing.** The enablement document and the internal campaign pitch exist because a human has to convince channel owners to change what they do. Generating the artifacts for each channel directly removes the need to persuade anyone to build them, which is a different lever from making any single artifact better.
 - **Limit.** The coordination cost is asserted at "on the order of months" with no baseline, and no after-figure is given; the orchestration layer that would compress it is described in the future tense throughout ("what we're building towards"). The verticals underneath it are built; the distribution layer on top is the open frontier of the talk that names it. (00:31, 16:32)
+- **The same word, a different bottleneck, and both are coordination costs.** This page's distribution problem is internal: getting the channel owners inside your company to run the motion. Rosenthal names the external twin — the coordination cost inside the *buyer's* organization, which is why she treats every handed-off task as a stall ("you lose total control of the sales cycle and it makes everything take longer") and why security review, where deals "stall out and die," is worth automating end to end. A go-to-market platform that removes internal coordination cost and leaves the buyer's untouched has moved the bottleneck rather than removed it. See [Never Send the Buyer Away With Homework](never-send-the-buyer-away-with-homework.md) and [Automate the Security Review Path Because Deals Stall There](automate-the-security-review-path-because-deals-stall-there.md). ([Rosenthal](../sources/20260826_wdTRsfw0KG0.md), 05:52-06:31, 08:15-09:06)
 
 Related topics:
 - [Go To Market](../topics/go-to-market.md)
@@ -29,6 +30,10 @@ Related concepts:
 - [Separate the Did-Not-Try Problem From the Did-Not-Return Problem](separate-the-did-not-try-problem-from-the-did-not-return-problem.md)
 - [Distribution Is the New Bottleneck for Developer Tools](distribution-is-the-new-bottleneck-for-devtools.md)
 - [Treat Tool-to-Tool Orchestration as a Data Engineering Problem](treat-tool-to-tool-orchestration-as-a-data-engineering-problem.md)
+- [Never Send the Buyer Away With Homework](never-send-the-buyer-away-with-homework.md)
+- [Automate the Security Review Path Because Deals Stall There](automate-the-security-review-path-because-deals-stall-there.md)
+- [Build the Automated Motion First and Hire Into Its Bottlenecks](build-the-automated-motion-first-and-hire-into-its-bottlenecks.md)
 
 Sources:
 - [The Building Blocks of GTM Orchestration — Arman Vaziri, Ramp](../sources/20260826_VjEP0xqTUI0.md), 00:29-03:52, 16:32
+- [Reverse-Engineering the AI Buyer — Aliisa Rosenthal, Acrew Capital](../sources/20260826_wdTRsfw0KG0.md), 05:52-06:31, 08:15-09:06

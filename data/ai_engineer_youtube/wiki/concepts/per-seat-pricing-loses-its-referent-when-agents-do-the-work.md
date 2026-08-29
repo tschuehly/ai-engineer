@@ -17,6 +17,7 @@ Details:
 - Enterprise contracts are following the cloud-provider playbook rather than inventing one: "Cognition or Cursor or OpenAI, Anthropic themselves… are starting to adopt more commit structures like the CSPs have done for the past 10 years. Think having prepaid commitments, postpaid commitments, and specific types of offers for specific types of customers." (12:22-12:44)
 - Counter-reading worth holding, which the source does not raise: an agent acts on behalf of some accountable party, so seats may be relocating to a different unit — an operator, a workflow, a team — rather than disappearing. The honest claim is that the *human login* has stopped being the right unit, not that consumption is the only remaining candidate. A hybrid base-plus-usage structure is the wiki's existing answer to the same pressure.
 - Limit: the HubSpot transition is second-hand, in progress, geographically scoped ("starting in EMEA"), and reported with no revenue, retention, or customer-reaction outcome. It is a strategic direction chosen by a company with the same information you have, not a validated result.
+- **An earlier and simpler way seats fail, recorded here so the two are not conflated.** Before any agent was operating anything, ChatGPT Enterprise's $60 per user per month broke for a purely human reason: the price sat above what a buyer would authorize company-wide, so "organizations would come in and say, well, I'm only buying this for a subset of my team or only for my developers… It's too expensive," and "once we lowered the threshold, it spread like wildfire" (09:56-10:19). That is a level problem, fixable by lowering the number; the headlessness argument on this page is a referent problem, which lowering the number does not fix. Rosenthal also reports the next objection already arriving — "usage is also getting pushed back on as companies are seeing cost of usage skyrocket" — with caps as the answer, which matches this page's credit-and-commit direction rather than contradicting it. See [Price Under the Department Threshold So Adoption Can Spread](price-under-the-department-threshold-so-adoption-can-spread.md). ([Rosenthal](../sources/20260826_wdTRsfw0KG0.md), 09:56-10:51)
 
 Related topics:
 - [AI Monetization](../topics/ai-monetization.md)
@@ -28,6 +29,8 @@ Related concepts:
 - [Use Hybrid AI Pricing to Balance Predictable Revenue and Margin Protection](use-hybrid-ai-pricing-to-balance-predictable-revenue-and-margin-protection.md)
 - [Treat AI Pricing as a Fast-Moving Product Hypothesis](treat-ai-pricing-as-a-fast-moving-product-hypothesis.md)
 - [Prevent AI Billing Surprises With Caps, Notifications, and Rate Limits](prevent-ai-billing-surprises-with-caps-notifications-and-rate-limits.md)
+- [Price Under the Department Threshold So Adoption Can Spread](price-under-the-department-threshold-so-adoption-can-spread.md)
 
 Sources:
 - [How to avoid disaster when vibe-coding a billing engine — Andrew Garvin, Stripe](../sources/20260828_mJqwmmOx4WA.md), 10:36-11:52, 12:03-12:44, 14:33-15:41
+- [Reverse-Engineering the AI Buyer — Aliisa Rosenthal, Acrew Capital](../sources/20260826_wdTRsfw0KG0.md), 09:56-10:51

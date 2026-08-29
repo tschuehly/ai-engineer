@@ -16,6 +16,7 @@ Details:
 - **Known biases, since this is self-report.** Only users who complete onboarding answer, so it measures converted inbound rather than reach; free-text answers require grouping, and the grouping is a judgment; naming an assistant is more memorable than "I saw it in a blog post," which plausibly inflates the assistant category relative to diffuse channels. The wiki's own caution about vendor-reported numbers applies — treat "number one source" as a ranking one team observed, not a share.
 - **Context for the size of the claim.** The library reports 3 million npm downloads, 45% month-on-month growth, and 2,800 production sites, from 1,200 downloads at an earlier conference talk (01:20-01:53). None of that growth is attributed to the channel with a method; the attribution field establishes that the channel exists and leads, not how much of the curve it explains.
 - **Limit.** One vendor, one product category — consent banners, which a coding agent is unusually likely to be asked for by name — one free-text field, no volumes, no time window, and no comparison against other channels beyond the ranking.
+- **The general form of the lesson: capture fields before you can use them.** This field worked because it was already on the form when the channel appeared. Rosenthal reports the inverse from OpenAI's inbound wave — "I would have added way more fields to our sign-up form, like phone number, because eventually when we did catch up and we built all the automation… I didn't have a lot of information to go follow up with people" — with the mitigation that extra fields can be optional so they cost little. A signup form is the one place where an uncollected field is permanently unrecoverable, which argues for over-capturing against uses that do not exist yet, including attribution. See [Reply to Every Inbound and Over-Capture at Signup](reply-to-every-inbound-and-over-capture-at-signup.md). ([Rosenthal](../sources/20260826_wdTRsfw0KG0.md), 04:31-05:04)
 
 Related topics:
 - [Go To Market](../topics/go-to-market.md)
@@ -30,6 +31,8 @@ Related concepts:
 - [Score Agent-Readiness Against a Moving Baseline](score-agent-readiness-against-a-moving-baseline.md)
 - [Treat Agent Experience as a Curb Cut](treat-agent-experience-as-a-curb-cut.md)
 - [Ship Bundled Docs and an AGENTS.md Inside the Published Package](ship-bundled-docs-and-an-agents-md-inside-the-published-package.md)
+- [Reply to Every Inbound and Over-Capture at Signup](reply-to-every-inbound-and-over-capture-at-signup.md)
 
 Sources:
 - [How We Got LLMs to Recommend Our Open Source Library — Christopher Burns, Inth](../sources/20260826_V_5bn4q-vAI.md), 01:20-02:39
+- [Reverse-Engineering the AI Buyer — Aliisa Rosenthal, Acrew Capital](../sources/20260826_wdTRsfw0KG0.md), 04:31-05:04

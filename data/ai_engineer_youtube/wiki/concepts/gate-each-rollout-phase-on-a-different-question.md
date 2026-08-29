@@ -16,6 +16,7 @@ Details:
 - Only then GA — which introduces a problem none of the earlier stages can detect, because every earlier cohort either volunteered or was small enough to reach personally ([Separate the Did-Not-Try Problem From the Did-Not-Return Problem](separate-the-did-not-try-problem-from-the-did-not-return-problem.md)). (06:59-07:12)
 - **What each stage's population buys you is different, and that is the actual design.** Pilot users are unrepresentative on purpose (they forgive), so they can only validate correctness. Beta users are representative enough to reveal workflow fit and to produce a retention number that means something. GA is the first cohort that includes people with no interest in the product, which is why activation only becomes visible there.
 - Limits: the 10% / 600-person size and the 70% weekly-active retention bar are this organization's chosen numbers, given without derivation, and the retention denominator is not defined (of beta invitees, or of those who tried). No pilot-stage accuracy threshold is stated at all — "prove the quality" is left qualitative. ([Provenance and Limits](../sources/20260826_DrTdD-ttjCY.md))
+- **Do not carry the word "pilot" across the internal/external boundary.** The pilot on this page is an internal accuracy stage with a self-selected, tolerant cohort and no counterparty. A customer pilot is a different object with different economics — sold, then staffed by your sales engineers, then sold again on conversion — and Rosenthal's rule for it is the opposite of a default stage: "use pilots sparingly. They should be not the default, but the option for your most valuable, highest paying, biggest revenue opportunities." She also draws the distinction this page's vocabulary blurs, between free self-serve access (a funnel, gateable by "consumption, time box, or feature gate") and "handheld services-oriented POCs that require a sales engineer or salesperson to supervise." Three objects, one word. See [Treat a Pilot as a Second Sales Process You Run for Free](treat-a-pilot-as-a-second-sales-process-you-run-for-free.md). ([Rosenthal](../sources/20260826_wdTRsfw0KG0.md), 06:48-07:27, 15:03-16:00)
 
 Related topics:
 - [Product Strategy](../topics/product-strategy.md)
@@ -31,6 +32,9 @@ Related concepts:
 - [Earn AI Product Trust Before Asking for Delight](earn-ai-product-trust-before-asking-for-delight.md)
 - [Move enterprise AI adoption beyond spot experiments](move-enterprise-ai-adoption-beyond-spot-experiments.md)
 - [Solve One Team, Then Mirror the Build Sideways](solve-one-team-then-mirror-the-build-sideways.md)
+- [Treat a Pilot as a Second Sales Process You Run for Free](treat-a-pilot-as-a-second-sales-process-you-run-for-free.md)
+- [Ship Self-Serve Before the Enterprise Tier](ship-self-serve-before-the-enterprise-tier.md)
 
 Sources:
 - [Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 05:33-07:12
+- [Reverse-Engineering the AI Buyer — Aliisa Rosenthal, Acrew Capital](../sources/20260826_wdTRsfw0KG0.md), 06:48-07:27, 15:03-16:00

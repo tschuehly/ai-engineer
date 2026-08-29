@@ -25,6 +25,7 @@ Related concepts:
 - [AI Does Not Replace Shareable Product Marketing](ai-does-not-replace-shareable-product-marketing.md)
 - [Treat Investor Outreach Like Specific Go-To-Market](treat-investor-outreach-like-specific-go-to-market.md)
 - [Treat Go-to-Market as a Live Model of Your World That Agents Act On](treat-go-to-market-as-a-live-model-of-your-world.md)
+- [Scarce Human Contact Appreciates as the Funnel Automates](scarce-human-contact-appreciates-as-the-funnel-automates.md)
 
 Sources:
 - [GTM Is You - Victoria Melnikova, Evil Martians](../sources/20260707_G6IlDzj8OjA.md), 00:30-01:19, 09:50-12:09

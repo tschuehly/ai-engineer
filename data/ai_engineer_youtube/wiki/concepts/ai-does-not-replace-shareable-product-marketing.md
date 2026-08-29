@@ -34,6 +34,7 @@ Related concepts:
 - [Human and Agent Credibility Reward Opposite Writing Styles](human-and-agent-credibility-reward-opposite-writing-styles.md)
 - [Size Agent Quality Against the Channel's Reply Rate](size-agent-quality-against-the-channel-reply-rate.md)
 - [Protect Sender Reputation by Splitting Domains and Routing Replies Home](protect-sender-reputation-by-splitting-domains-and-routing-replies-home.md)
+- [Scarce Human Contact Appreciates as the Funnel Automates](scarce-human-contact-appreciates-as-the-funnel-automates.md)
 
 Sources:
 - [AI changes *Nothing* — Dax Raad, OpenCode](../sources/20251123_o3gmwzo-Mik.md), 02:18-06:37

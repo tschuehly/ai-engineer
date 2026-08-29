@@ -21,6 +21,7 @@ Related concepts:
 - [Identify the human subject behind agent actions](identify-the-human-subject-behind-agent-actions.md)
 - [Treat Agents As Users For Authorization](treat-agents-as-users-for-authorization.md)
 - [Record Workflow History for Agent Debugging and Compliance](record-workflow-history-for-agent-debugging-and-compliance.md)
+- [Automate the Security Review Path Because Deals Stall There](automate-the-security-review-path-because-deals-stall-there.md)
 
 Sources:
 - [Building the platform for agent coordination - Tom Moor, Linear](../sources/20250728_UG9IAdmi2Dg.md), 14:39-15:40

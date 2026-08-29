@@ -15,6 +15,7 @@ Details:
 - **What it implies operationally.** If the handoff is a prompt, the prompt is a product surface: it is versioned, it goes stale, and it can be tested by running it. It is also the *shortest* path you control end to end — unlike a docs page, you write both the instruction and the environment it lands in. Pair it with the two surfaces that determine whether the prompt succeeds: the docs the agent will actually read ([Ship Bundled Docs and an AGENTS.md Inside the Published Package](ship-bundled-docs-and-an-agents-md-inside-the-published-package.md)) and an adoption path with no human gate in it ([Self-Serve Onboarding Is a Precondition for Agent Recommendation](self-serve-onboarding-is-a-precondition-for-agent-recommendation.md)).
 - **The asymmetry to keep in view.** A handed-over prompt is a channel you control; an assistant recommending you unprompted is not. The first is distribution you can author, the second is distribution you can only earn — and only the second showed up as this library's largest inbound source ([Attribute LLM-Sourced Inbound With a How-Did-You-Hear Field](attribute-llm-sourced-inbound-with-a-how-did-you-hear-field.md)).
 - **Limit.** This is an anecdote about founder practice at one accelerator plus a show of hands at a conference, with no data on prompt-handoff conversion versus any other install path. The durable part is the framing — the install artifact is now text an agent executes — not any claim about its effectiveness.
+- **The same principle applied to a buyer who is not a developer, and it goes the other way.** Rosenthal's rule for enterprise deals is that no work crosses to the counterparty: "Never say, 'Hey, go do these five things and then come back to me'… don't send your buyer away to do something and wait for them to come back because you lose total control of the sales cycle." Where the agent channel removes the human from the install path, the enterprise motion inserts one — "maybe that means you have to set up hackathons and come in their office and do it with them in person." Same invariant, opposite implementation: a pasted prompt and a hands-on integration session are both refusals to hand the work over. See [Never Send the Buyer Away With Homework](never-send-the-buyer-away-with-homework.md). ([Rosenthal](../sources/20260826_wdTRsfw0KG0.md), 05:52-06:31)
 
 Related topics:
 - [Product Strategy](../topics/product-strategy.md)
@@ -29,7 +30,9 @@ Related concepts:
 - [Optimize Onboarding Around One Aha Moment](optimize-onboarding-around-one-aha-moment.md)
 - [Ship Bundled Docs and an AGENTS.md Inside the Published Package](ship-bundled-docs-and-an-agents-md-inside-the-published-package.md)
 - [Agent Experience Means Autonomous Access, Understanding, and Operation](agent-experience-means-autonomous-access-understanding-and-operation.md)
+- [Never Send the Buyer Away With Homework](never-send-the-buyer-away-with-homework.md)
 
 Sources:
 - [How We Got LLMs to Recommend Our Open Source Library — Christopher Burns, Inth](../sources/20260826_V_5bn4q-vAI.md), 02:07-04:20
 - [The Death of Developer Advocates — Stephanie Jarmak, Sourcegraph](../sources/20260826_Lrw0jqBNaw0.md), 04:44-05:22
+- [Reverse-Engineering the AI Buyer — Aliisa Rosenthal, Acrew Capital](../sources/20260826_wdTRsfw0KG0.md), 05:52-06:31

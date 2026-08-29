@@ -23,6 +23,7 @@ Related concepts:
 - [Model MCP Servers as OAuth Resource Servers](model-mcp-servers-as-oauth-resource-servers.md)
 - [Govern MCP Tool Calls With Tool-Level Policy and End-to-End Traces](govern-mcp-tool-calls-with-tool-level-policy-and-end-to-end-traces.md)
 - [An Installed Desktop App Is an Auth and Filesystem Beachhead](an-installed-desktop-app-is-an-auth-and-filesystem-beachhead.md)
+- [Automate the Security Review Path Because Deals Stall There](automate-the-security-review-path-because-deals-stall-there.md)
 
 Sources:
 - [(possible dupe but better sound) What does Enterprise Ready MCP mean? - Tobin South, WorkOS](../sources/20250627_0MqYA52iWQU.md), 04:19-09:28

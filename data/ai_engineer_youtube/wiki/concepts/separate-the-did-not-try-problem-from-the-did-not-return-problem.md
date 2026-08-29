@@ -18,6 +18,7 @@ Details:
 - Limits: 20% is one measurement, two weeks after one GA, at one company; no trial curve over time and no eventual ceiling is reported. "Half of where we are today" is a counterfactual with no control. The tactics listed (executive sponsorship, manager-level comparison dashboards) assume a hierarchical sales organization and may not transfer to populations without that structure. ([Provenance and Limits](../sources/20260826_DrTdD-ttjCY.md))
 - **A comparable internal deployment that reports neither number, which is the common case.** Cloudflare's talk describes a weekly pushed summary and a self-serve agentic workspace across a go-to-market organization and gives no user count, trial rate, return rate, or usage figure — its single outcome claim is "we've really been able to 2x our efficiency," a productivity assertion that is silent on how many people the tooling reached. The distinction this page draws is invisible in that framing: an efficiency multiple computed over adopters says nothing about the population that never opened the tool. ([Joyce](../sources/20260826_Qw_tC68KKes.md), 16:56-17:08)
 - **A reported fix aimed squarely at the did-not-return half.** Ramp credits its skill library — letting each person write their own brief format and content preferences in text — as "very valuable for getting adoption," not as a quality improvement. For an artifact consumed under time pressure between meetings, a format that does not match how someone scans is abandoned regardless of how accurate it is, and on a usage dashboard that looks identical to the artifact being wrong. ([Vaziri](../sources/20260826_VjEP0xqTUI0.md), 12:11-12:32)
+- **The external analogue, where the did-not-try population is invisible by construction.** An internal rollout can at least enumerate the people who never opened the tool. On the buying side there is no such roster: OpenAI's five-person team against "10,000 inbound a day" triaged to the qualified leads, and the population it never answered only surfaced nine months later as "you never got back to me. And I went out and I bought Microsoft Copilot." The corresponding instrument is an automated acknowledgment to everyone, which both keeps the option open and — with a "tell us what you're looking for" prompt attached — samples the segment that was too quiet to reach you. See [Reply to Every Inbound and Over-Capture at Signup](reply-to-every-inbound-and-over-capture-at-signup.md). ([Rosenthal](../sources/20260826_wdTRsfw0KG0.md), 04:14-05:36)
 
 Related topics:
 - [Product Strategy](../topics/product-strategy.md)
@@ -34,8 +35,10 @@ Related concepts:
 - [Layer Ask, Push, and Self-Serve Because Teams Interface Differently](layer-ask-push-and-self-serve-because-teams-interface-differently.md)
 - [Let Users Author the Output Format as a Skill](let-users-author-the-output-format-as-a-skill.md)
 - [Distribution Is the Bottleneck, Not the Idea](distribution-is-the-bottleneck-not-the-idea.md)
+- [Reply to Every Inbound and Over-Capture at Signup](reply-to-every-inbound-and-over-capture-at-signup.md)
 
 Sources:
 - [Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 07:13-08:50
 - [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md), 16:56-17:08
 - [The Building Blocks of GTM Orchestration — Arman Vaziri, Ramp](../sources/20260826_VjEP0xqTUI0.md), 12:11-12:32
+- [Reverse-Engineering the AI Buyer — Aliisa Rosenthal, Acrew Capital](../sources/20260826_wdTRsfw0KG0.md), 04:14-05:36

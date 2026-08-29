@@ -31,6 +31,7 @@ Related concepts:
 - [Separate the Context Gap From the Expert Gap](separate-the-context-gap-from-the-expert-gap.md)
 - [Layer Ask, Push, and Self-Serve Because Teams Interface Differently](layer-ask-push-and-self-serve-because-teams-interface-differently.md)
 - [Distribution Is the Bottleneck, Not the Idea](distribution-is-the-bottleneck-not-the-idea.md)
+- [Build the Automated Motion First and Hire Into Its Bottlenecks](build-the-automated-motion-first-and-hire-into-its-bottlenecks.md)
 
 Sources:
 - [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 00:32-01:58, 17:47-18:14

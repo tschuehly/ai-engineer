@@ -568,6 +568,7 @@
 
 ## AI Monetization
 
+- [Price Under the Department Threshold So Adoption Can Spread](../concepts/price-under-the-department-threshold-so-adoption-can-spread.md) - $60 a seat made buyers scope the purchase to a subset; a low base fee plus usage removed the scoping decision.
 - [Push a Product Feed, Because Per-Merchant Catalog Search Does Not Scale](../concepts/push-a-product-feed-because-catalog-search-does-not-scale.md) - "sponsored products, retail media related things, ranking" is named as the reason the aggregator wants the index, and then dropped.
 - [Map the Agentic Commerce Protocol Stack by Layer](../concepts/map-the-agentic-commerce-protocol-stack-by-layer.md) - each assistant surface is a separate integration with its own feed schema and its own accepted payment instrument, so distribution is priced per destination.
 - [Per-Seat Pricing Loses Its Referent When One Agent Does the Work of Many Logins](../concepts/per-seat-pricing-loses-its-referent-when-agents-do-the-work.md) - HubSpot cuts seat price and adds credits in one move, because the metric stopped tracking value rather than being priced wrongly.
@@ -1752,6 +1753,13 @@
 
 ## Go To Market
 - [Distribution Is the Bottleneck, Not the Idea](../concepts/distribution-is-the-bottleneck-not-the-idea.md) - good ideas are abundant; pulling the audience, writing the enablement, and persuading channel owners is what takes months.
+- [Ship Self-Serve Before the Enterprise Tier](../concepts/ship-self-serve-before-the-enterprise-tier.md) - enterprise requirements sampled from whoever could reach one person, and the self-serve tier four months later cannibalized the result.
+- [Build the Automated Motion First and Hire Into Its Bottlenecks](../concepts/build-the-automated-motion-first-and-hire-into-its-bottlenecks.md) - automate, observe the breaks, staff the breaks; the seniority that makes a functional leader credible is what makes them staff the old shape.
+- [Reply to Every Inbound and Over-Capture at Signup](../concepts/reply-to-every-inbound-and-over-capture-at-signup.md) - an uncollected form field is unrecoverable, and the leads you triage away buy something else while they wait.
+- [Never Send the Buyer Away With Homework](../concepts/never-send-the-buyer-away-with-homework.md) - a handed-off task stops the clock somewhere you cannot see it.
+- [Treat a Pilot as a Second Sales Process You Run for Free](../concepts/treat-a-pilot-as-a-second-sales-process-you-run-for-free.md) - sold, staffed, then sold again — with a self-serve trial and an internal accuracy pilot separated out as different objects.
+- [Automate the Security Review Path Because Deals Stall There](../concepts/automate-the-security-review-path-because-deals-stall-there.md) - trust portal, auto-signed NDA, questionnaire autofill, and an inverted default on the two-hour call.
+- [Scarce Human Contact Appreciates as the Funnel Automates](../concepts/scarce-human-contact-appreciates-as-the-funnel-automates.md) - the revenge of the steak dinner, and value selling as the named residual.
 - [Gate a Generated Multi-Channel Campaign on the Channel Owner](../concepts/gate-a-generated-multi-channel-campaign-on-the-channel-owner.md) - one intent fans out into outbound, ads, web, and in-app, each signed off by whoever owns that surface.
 - [Attribute LLM-Sourced Inbound With a How-Did-You-Hear Field](../concepts/attribute-llm-sourced-inbound-with-a-how-did-you-hear-field.md) - the only place a referrer-less assistant recommendation shows up is a signup form.
 

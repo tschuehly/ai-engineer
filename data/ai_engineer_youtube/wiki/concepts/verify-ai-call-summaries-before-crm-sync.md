@@ -17,6 +17,7 @@ Details:
 - **A deployment that has not reached the write path yet, and says so.** Cloudflare's go-to-market agents produce briefs, decks, plans, and a weekly summary, and nothing writes back: "harder problems around quoting and approvals and updating the CRM itself. Uh we use Salesforce and we're just in the midst of building the connections and the ability for us to update Salesforce with these agentic systems." The intended control is the pipeline that already earned trust on the read side — "I see that being set up in a way that I set up with that automated analysis where you have workflows to just make sure that everything is getting done right" — which is this page's verification step generalized from an operator's screen to a drafter/checker chain. ([Joyce](../sources/20260826_Qw_tC68KKes.md), 17:51-18:11)
 - **A structural complement to the content check.** Berry routes agent writes into agent-owned CRM fields, separate from those written by people or deterministic jobs. Verification and separation guard different things: the check asks whether this value is right before it lands, while the separation guarantees that if it is wrong it did not destroy a value that was right. Neither substitutes for the other, and the separation is the one that survives a reviewer who stops reading carefully. ([Berry](../sources/20260826_UhCY231d0FQ.md), 12:23-12:43)
 - **The pre-fill pattern names exactly what the human is being asked to check.** Ramp's planned CRM write has the agent "pull in the transcript" and "pre-fill all the information needed to create that opportunity, get a thumbs up from my rep, and just make it happen." The reviewer sees a completed object, not the evidence for it, so the check they can realistically perform is a plausibility scan of field values rather than a verification against what was said — which is the failure mode this page exists to flag. ([Vaziri](../sources/20260826_VjEP0xqTUI0.md), 13:14-13:28)
+- **A higher-consequence instance of the same write path: the security questionnaire.** Rosenthal recommends automating the procurement bottleneck with trust portals, auto-signed NDAs, and "AI products that can auto fill out your security questionnaires." The generated artifact there is not an internal record but a set of representations to a counterparty, so a wrong answer is a contractual exposure rather than a dirty field. Nothing in that talk addresses review of the generated answers, which is exactly the gap this page names on the CRM side — treat autofill as a drafting stage with a named human approver. See [Automate the Security Review Path Because Deals Stall There](automate-the-security-review-path-because-deals-stall-there.md). ([Rosenthal](../sources/20260826_wdTRsfw0KG0.md), 08:33-08:51)
 
 Related topics:
 - [Voice Agents](../topics/voice-agents.md)
@@ -31,6 +32,7 @@ Related concepts:
 - [Emit Owner-Assigned Tasks From Signals, With a Marketing Default When None Fire](emit-owner-assigned-tasks-from-signals-with-a-marketing-default-when-none-fire.md)
 - [Read-Side Agents Scale First Because the Write Side Needs Approvals](read-side-agents-scale-first-because-the-write-side-needs-approvals.md)
 - [Give Agents Their Own Fields in the System of Record](give-agents-their-own-fields-in-the-system-of-record.md)
+- [Automate the Security Review Path Because Deals Stall There](automate-the-security-review-path-because-deals-stall-there.md)
 
 Sources:
 - [Contact Center Voice AI: Low-Latency Intelligence Extraction from Messy Audio Streams - Dippu Singh](../sources/20260408_IEF842ZEU5A.md), 12:58-21:38
@@ -39,3 +41,4 @@ Sources:
 - [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md), 17:51-18:11
 - [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 12:23-12:43
 - [The Building Blocks of GTM Orchestration — Arman Vaziri, Ramp](../sources/20260826_VjEP0xqTUI0.md), 13:14-13:28
+- [Reverse-Engineering the AI Buyer — Aliisa Rosenthal, Acrew Capital](../sources/20260826_wdTRsfw0KG0.md), 08:33-08:51
