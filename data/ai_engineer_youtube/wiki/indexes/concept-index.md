@@ -1,6 +1,8 @@
 # Concept Index
 
 ## Agents
+- [Replay Agentic Traces, Because Steady-State Benchmarks Hide the Workload](../concepts/replay-agentic-traces-because-steady-state-benchmarks-hide-the-workload.md) - public benchmarks report one sanitized steady-state run; agent traces span 1 to 3,000 turns, >90% cache hits, and >100:1 input-to-output.
+- [Client-Controlled Context Makes the Server's KV Cache Volatile](../concepts/client-controlled-context-makes-the-servers-kv-cache-volatile.md) - the client owns the prompt lifecycle, so the server must route for locality, tier storage, and pin sessions instead of predicting reuse.
 - [Map the Agentic Commerce Protocol Stack by Layer](../concepts/map-the-agentic-commerce-protocol-stack-by-layer.md) - MCP names capabilities, A2A carries the cross-org envelope, ACP and UCP supply commerce vocabulary, AP2 carries payment authority; only ACP and UCP compete, and even they share a call shape.
 - [Agent Protocols Must Encode the Distinctions the User Interface Collapses](../concepts/agent-protocols-must-encode-the-distinctions-the-ui-collapses.md) - a second unit is one gesture to a shopper and a second line item to a merchant, so a UI-shaped integration passes its own tests and corrupts the counterparty's state.
 - [Model Agentic Checkout as an Explicit Session State Machine](../concepts/model-agentic-checkout-as-an-explicit-session-state-machine.md) - not-ready-for-payment, ready-for-payment, completed, with payment-method selection as the arming transition and the same sequence under both specs.
@@ -1073,6 +1075,10 @@
 - [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md)
 
 ## Infrastructure
+- [Disaggregation Needs a Fabric, and Pays Off in the Middle Concurrency Band](../concepts/disaggregation-needs-a-fabric-and-pays-off-in-the-middle-band.md) - RDMA or RoCE is a hard prerequisite, and the payoff ties aggregated serving at both ends of the concurrency curve.
+- [Set the Prefill-to-Decode Ratio From the Workload's Input-to-Output Ratio](../concepts/set-the-prefill-to-decode-ratio-from-the-workloads-input-output-ratio.md) - derive the pool split from measured ISL:OSL, then let the autoscaler re-derive it as traffic shifts.
+- [Match the Inference Lever to the Latency Metric It Moves](../concepts/match-the-inference-lever-to-the-latency-metric-it-moves.md) - KV-cache-aware routing buys time-to-first-token; prefill/decode disaggregation buys inter-token latency.
+- [Client-Controlled Context Makes the Server's KV Cache Volatile](../concepts/client-controlled-context-makes-the-servers-kv-cache-volatile.md) - the client owns the prompt lifecycle, so the server must route for locality, tier storage, and pin sessions instead of predicting reuse.
 - [Streaming Forecloses the Provider Fallback](../concepts/streaming-forecloses-the-provider-fallback.md) - the first token commits you to a provider, which is what the generic "something went wrong" message actually costs.
 - [Track Latency and Timeouts Per Model Class Per Route](../concepts/track-latency-and-timeouts-per-model-class-per-route.md) - aggregate latency over mixed workloads is a lie, and a missing timeout is the named number-one cause of silent outages.
 - [Treat Guardrails as a Failable Dependency With Its Own Time Budget](../concepts/treat-guardrails-as-a-failable-dependency-with-a-time-budget.md) - guardrails are services that go down, so fail-open versus fail-closed, timeouts, fallbacks, and placement are all decisions to take in advance.
@@ -1365,6 +1371,11 @@
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 
 ## Inference
+- [Client-Controlled Context Makes the Server's KV Cache Volatile](../concepts/client-controlled-context-makes-the-servers-kv-cache-volatile.md) - the client owns the prompt lifecycle, so the server must route for locality, tier storage, and pin sessions instead of predicting reuse.
+- [Match the Inference Lever to the Latency Metric It Moves](../concepts/match-the-inference-lever-to-the-latency-metric-it-moves.md) - KV-cache-aware routing buys time-to-first-token; prefill/decode disaggregation buys inter-token latency.
+- [Disaggregation Needs a Fabric, and Pays Off in the Middle Concurrency Band](../concepts/disaggregation-needs-a-fabric-and-pays-off-in-the-middle-band.md) - RDMA or RoCE is a hard prerequisite, and the payoff ties aggregated serving at both ends of the concurrency curve.
+- [Set the Prefill-to-Decode Ratio From the Workload's Input-to-Output Ratio](../concepts/set-the-prefill-to-decode-ratio-from-the-workloads-input-output-ratio.md) - derive the pool split from measured ISL:OSL, then let the autoscaler re-derive it as traffic shifts.
+- [Replay Agentic Traces, Because Steady-State Benchmarks Hide the Workload](../concepts/replay-agentic-traces-because-steady-state-benchmarks-hide-the-workload.md) - public benchmarks report one sanitized steady-state run; agent traces span 1 to 3,000 turns, >90% cache hits, and >100:1 input-to-output.
 - [An LLM Gateway Cannot Maximize Availability, Latency, Guardrails, and Cost at Once](../concepts/an-llm-gateway-cannot-maximize-availability-latency-guardrails-and-cost.md) - degradation forces the four apart, and a gateway's job is to expose the choice to callers rather than hard-code one answer.
 - [Prefer Per-Request Fallback to Retries and Circuit Breakers for LLM Calls](../concepts/prefer-per-request-fallback-to-retries-and-circuit-breakers-for-llm-calls.md) - three reasons the standard unreliable-dependency remedy misfires on slow, expensive, substitutable model calls.
 - [Your Fallback Provider Is Under-Tested and Under-Provisioned](../concepts/your-fallback-provider-is-under-tested-and-under-provisioned.md) - the backup absorbs the whole load at the worst moment, so it needs more headroom than the primary and a normalization layer for API differences.
@@ -1641,6 +1652,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Replay Agentic Traces, Because Steady-State Benchmarks Hide the Workload](../concepts/replay-agentic-traces-because-steady-state-benchmarks-hide-the-workload.md) - public benchmarks report one sanitized steady-state run; agent traces span 1 to 3,000 turns, >90% cache hits, and >100:1 input-to-output.
 - [Eval an Agent Surface for Protocol Compliance, Not Just Behavior](../concepts/eval-agent-surfaces-for-protocol-compliance-not-just-behavior.md) - an oracle you do not own, versioned without notice, whose failure mode is silent de-listing; plus latency as a revenue metric and a deliberately cheap judge.
 - [Public Agent Surfaces Get Repurposed as Free General-Purpose Compute](../concepts/public-agent-surfaces-get-repurposed-as-free-general-compute.md) - the out-of-scope cases worth testing are the domain's commercial concessions and cross-customer state, not generic toxicity.
 - [Stage Productivity Pilots to Strip One Confound at a Time](../concepts/stage-productivity-pilots-to-strip-one-confound-at-a-time.md) - write the sentence a skeptic would say about your last result, then design the next study so it is false.

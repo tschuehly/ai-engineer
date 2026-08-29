@@ -11,6 +11,7 @@ Details:
 - The workshop uses GuideLLM with a vLLM-served IBM Granite model to benchmark latency, throughput, inter-token latency, time to first token, and request-rate sweeps. (14:53-15:33, 20:51-22:15)
 - GuideLLM benchmarks should be configured with input and output token levels that match the use case, such as chatbot or RAG traffic profiles. (15:45-16:07)
 - Benchmark interpretation is use-case-dependent: mean, median, and P99 matter differently by SLO, hardware, concurrency, model size, and production deployment target. (22:21-23:08)
+- **Where synthetic token profiles stop being enough.** Red Hat's complaint is aimed one level past this page's advice: public benchmarks report "very steady state isolated highly sanitized numbers" and hide "the chaotic reality of multi-turn interactions, massive context fluctuations." A chatbot or RAG token profile is still a *shape*; an agentic workload's turn count spans 1 to 3,000 in the same trace set, so "we can't just simply take the average and oftentimes we need to look at the distributions and the P90 numbers especially when you do capacity planning." Their answer is replay rather than parameterization — a trace-replay tool contributed to `inference-perf` with Google and IBM. ([Fama](../sources/20260827_YXowceUKYJI.md), 00:43-01:10, 03:48-04:58)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -21,6 +22,8 @@ Related concepts:
 - [Make local inference benchmarks reproducible artifacts](make-local-inference-benchmarks-reproducible-artifacts.md)
 - [Tune inference to the application Pareto point](tune-inference-to-the-application-pareto-point.md)
 - [Size KV-cache memory tiers with workload-shaped benchmarks](size-kv-cache-memory-tiers-with-workload-shaped-benchmarks.md)
+- [Replay Agentic Traces, Because Steady-State Benchmarks Hide the Workload](replay-agentic-traces-because-steady-state-benchmarks-hide-the-workload.md)
 
 Sources:
 - [Strategies for LLM Evals (GuideLLM, lm-eval-harness, OpenAI Evals Workshop) - Taylor Jordan Smith](../sources/20250727_89NuzmKokIk.md), 05:01-05:59, 14:53-16:07, 20:51-23:08
+- [KV Cache-Aware Routing and P/D Disaggregation on Kubernetes — Yuchen Fama & Ashish Kamra, Red Hat](../sources/20260827_YXowceUKYJI.md), 00:43-01:10, 03:48-04:58

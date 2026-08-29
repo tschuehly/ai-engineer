@@ -13,6 +13,7 @@ Details:
 - Order-of-magnitude growth is an operating-model change, not a growth number: going from 400 million to almost 6 billion daily requests "is not just a change, not just a growth. It's a change in operating model. It changes how you think about costs, observability, and failure domains." (11:24-12:00)
 - The moving-target caveat: while scaling to 60,000 rps under the internal name "Project 60," the demand had already moved and it became "Project 150." "Scale is never a finish line… when you reach one target number, the next one will appear," so architecture should be chosen against the next target, not the current one. (15:31-16:10)
 - The scaling window was aggressive — roughly 10,000 to 60,000 requests per second in under two months — which is why the constraint surfaced as architecture and measurement rather than procurement. (12:33-12:56)
+- **An inference-side instance: "60% more requests" is a number about a workload, not a service.** Red Hat's disaggregated GLM 5.2 result is quoted as "4x faster TTFT and also 60% more requests" — which is only interpretable alongside the workload it was measured on, an agentic dataset with a 45:1 input-to-output ratio where "prefill is really the constraint." A request in that workload is a long prompt and a short completion; the same figure on a 1:1 workload would describe different hardware behaviour entirely. The same caution applies to this source's other headline: a 9x P99 inter-token-latency improvement is reported at one operating point on a workload defined by a 10,000-token prefix and 128 tokens per turn. ([Kamra](../sources/20260827_YXowceUKYJI.md), 12:59-13:52, 19:52-20:20)
 
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
@@ -23,6 +24,8 @@ Related concepts:
 - [Separate Agentic Workflow Design From Scale Infrastructure](separate-agentic-workflow-design-from-scale-infrastructure.md)
 - [Benchmark Inference With Use-Case-Shaped Token Loads](benchmark-inference-with-use-case-shaped-token-loads.md)
 - [Evaluate Agent Loops With Correctness, Cost, Latency, and Step Counts](evaluate-agent-loops-with-correctness-cost-latency-and-step-counts.md)
+- [Replay Agentic Traces, Because Steady-State Benchmarks Hide the Workload](replay-agentic-traces-because-steady-state-benchmarks-hide-the-workload.md)
 
 Sources:
 - [How Web Data Infrastructure Powers the Next Generation of AI — Patricija Žemaitytė, Oxylabs](../sources/20260814_1UmZHb_E_SM.md), 11:24-13:47, 15:31-16:10
+- [KV Cache-Aware Routing and P/D Disaggregation on Kubernetes — Yuchen Fama & Ashish Kamra, Red Hat](../sources/20260827_YXowceUKYJI.md), 12:59-13:52, 19:52-20:20

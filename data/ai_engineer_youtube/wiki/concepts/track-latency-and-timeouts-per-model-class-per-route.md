@@ -16,6 +16,7 @@ Details:
 - **Reasoning and router models are where this gets genuinely hard, and the talk is honest that there is no fix.** They are nondeterministic — "you cannot set the temperature to zero in many cases and the same prompt can take somewhere from 2 seconds to 60 seconds and we've seen that in production where P99 suddenly popped to 60 seconds for no good reason." Router models add a second layer, since "they hide that abstraction behind you. Like they pick which models to run." Two partial answers: "at least start with fixing the reasoning level per route," and pin down whatever the router leaves free, making "requests as deterministic as possible with an undeterministic system." (08:17-09:22)
 - **Hedging is the tail mitigation, and it is priced in duplicate requests.** "You can fire another request if your primary request actually consumed let's say P90 of your latency budget. This can really hedge the P99 tail." The trigger is a fraction of the budget you have already defined per route — which is another reason the per-route budget has to exist first. (09:24-09:43)
 - **Caveats.** The 2-to-60-second range and the P99 spike are a symptom report with no root cause identified, and "number one root cause of your silent outage" is a ranking asserted from memory without a sample, period, or organization. "Fix the reasoning level per route" is the entire method offered for reasoning-latency variance, with no guidance on choosing the level, and hedging is proposed with no measurement of the extra spend it creates.
+- **Inter-token latency is the percentile an agentic route needs, and it is not TTFT.** Red Hat separates the two by which lever moves them: KV-cache-aware routing "helps you solve the TTFT problem," but "for agentic workload it's not just a TTFT… it's about your inter-token latency," which is what prefill/decode disaggregation defends — measured at P99 ITL of ~900 ms aggregated versus ~100 ms disaggregated, with the aggregated curve also visibly noisier. The reason a P99 on the wrong metric hides the problem is mechanical: a long prefill arriving on a shared pod "will completely stall the ongoing decode token generation process causing… jitter in user streaming latency," which a first-token percentile never sees. ([Kamra](../sources/20260827_YXowceUKYJI.md), 08:53-09:19, 11:25-11:56, 12:59-13:52)
 
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
@@ -29,6 +30,8 @@ Related concepts:
 - [Hit Soft-Realtime Latency With a Fast Model, Eager Inference, and Prefix Caching](hit-realtime-latency-with-fast-models-eager-inference-and-prefix-caching.md)
 - [Evaluate Agent Loops With Correctness, Cost, Latency, and Step Counts](evaluate-agent-loops-with-correctness-cost-latency-and-step-counts.md)
 - [Decentralize the Gateway, Centralize the Governance](decentralize-the-gateway-centralize-the-governance.md)
+- [Match the Inference Lever to the Latency Metric It Moves](match-the-inference-lever-to-the-latency-metric-it-moves.md)
 
 Sources:
 - [Productionizing LLM Gateways: Architecture, Tradeoffs and Hard Lessons — Kanish Manuja, Twilio](../sources/20260828_zrZ1amZBSPw.md), 06:30-09:43
+- [KV Cache-Aware Routing and P/D Disaggregation on Kubernetes — Yuchen Fama & Ashish Kamra, Red Hat](../sources/20260827_YXowceUKYJI.md), 08:53-09:19, 11:25-13:52

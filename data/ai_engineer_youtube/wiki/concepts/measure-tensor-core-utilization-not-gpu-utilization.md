@@ -19,6 +19,7 @@ Details:
 - Temperature belongs in the same set and is the cheapest of all: one GPU running warmer than its neighbors "is going to start throttling and slow down and… the training's going to be unstable and you have weird problems" — a single card degrading a synchronous collective run. Their rule is to pull anything above 78 °C rather than investigate it. (04:46-05:17)
 - Overall verdict on the metric set: "without this we would not be able to to train at all." (07:45-07:52)
 - Caveat on transfer: these are single-cluster observations from an image-diffusion pre-training workload on an all-InfiniBand fabric, and the speaker allows that the crash rate itself may be "maybe skill issue on our part, maybe our cluster." The metric argument is about instrumentation defaults, not about a universal failure profile.
+- **Why a busy serving GPU can also be the wrong kind of busy.** The serving-side analogue of this page's argument is phase interference: prefill "utilizes GPUs at high FLOPs and thrives on large batch parallelism" while decode is "more memory bandwidth hungry," so a pod running both keeps the GPU occupied while one phase stalls the other — "a sudden influx of a long prefill prompt… will completely stall the ongoing decode token generation process." The symptom appears only in a metric that is neither utilization nor throughput: P99 inter-token latency, ~900 ms aggregated against ~100 ms once the phases are on separate pods, with the aggregated curve visibly fluctuating. Utilization is silent about it in both the training and serving cases, for the same reason. ([Kamra](../sources/20260827_YXowceUKYJI.md), 10:20-11:56, 12:59-13:52)
 
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
@@ -31,6 +32,8 @@ Related concepts:
 - [Pipeline RL trades policy staleness for GPU throughput](pipeline-rl-trades-policy-staleness-for-gpu-throughput.md)
 - [Layer AI application metrics from guardrail compliance to system health](layer-ai-application-metrics-from-guardrail-compliance-to-system-health.md)
 - [Run the LLM Post-Training Ladder on Diffusion Models](run-the-llm-post-training-ladder-on-diffusion-models.md)
+- [Disaggregate prefill and decode workers by workload shape](disaggregate-prefill-and-decode-workers-by-workload-shape.md)
 
 Sources:
 - [Infra behind Krea 2: How to train and serve at scale — Gabriel Jorge Menezes, Krea.ai](../sources/20260818_byn9PURoBNY.md), 03:25-07:52
+- [KV Cache-Aware Routing and P/D Disaggregation on Kubernetes — Yuchen Fama & Ashish Kamra, Red Hat](../sources/20260827_YXowceUKYJI.md), 10:20-11:56, 12:59-13:52

@@ -14,6 +14,7 @@ Details:
 - Scaling work includes reducing replica startup time during traffic bursts; the talk cites an enterprise where a new model replica took about eight minutes to come up, which made burst handling unacceptable. (14:30-14:59)
 - The platform layer also includes lifecycle management, observability beyond basic logs and metrics, controls, and audits that enterprises care about. (15:00-15:29)
 - **What the P99 line on this checklist actually has to mean.** Manuja is blunt that a service-wide latency number over mixed workloads "doesn't make sense. It's a lie," because one platform carries embeddings and classification under a second, chat around three seconds, and reasoning far longer: "you should be tracking your P99 per model per route, not a gateway wide number," and "a reasoning model's normal is actually a chat model's outage." He gives the same granularity to timeouts and calls their absence "the number one root cause of your silent outage. If you don't have a timeout, your gateway thinks your request is being happily served while it is not." Add load shedding to the reliability column too, since "you cannot simply scale out services that is under a retry storm." ([Manuja](../sources/20260828_zrZ1amZBSPw.md), 06:54-08:16, 13:49-14:20)
+- **A named open-source instance of the platform layer this page says you need.** llm-d is a CNCF-hosted, Kubernetes-native (and now also non-Kubernetes) distributed inference framework whose pieces map onto this checklist: a router with pluggable endpoint-picker plugins for KV-cache-aware routing; LeaderWorkerSet and DisaggregatedSet workload APIs "that orchestrate complex multi-node model execution"; autoscalers that "monitor capacity bounds and real-time traffic mixes to independently scale up and scale down your pods"; and a cache layer with NVMe/XFS offload tiers and session-aware eviction. It also sharpens one line on the checklist: disaggregated serving is not a runtime switch but a hardware commitment, since "you must possess an advanced high-speed network fabric like RDMA or RoCE" for the KV transfer. ([Kamra](../sources/20260827_YXowceUKYJI.md), 09:28-10:20, 16:22-16:45)
 
 Related topics:
 - [Inference](../topics/inference.md)
@@ -25,7 +26,9 @@ Related concepts:
 - [Disaggregate prefill and decode workers by workload shape](disaggregate-prefill-and-decode-workers-by-workload-shape.md)
 - [Route inference requests by KV locality and worker load](route-inference-requests-by-kv-locality-and-worker-load.md)
 - [Track Latency and Timeouts Per Model Class Per Route](track-latency-and-timeouts-per-model-class-per-route.md)
+- [Disaggregation Needs a Fabric, and Pays Off in the Middle Concurrency Band](disaggregation-needs-a-fabric-and-pays-off-in-the-middle-band.md)
 
 Sources:
 - [The Rise of Open Models in the Enterprise — Amir Haghighat, Baseten](../sources/20250724_3WV1vT0B0cg.md), 11:17-15:29
 - [Productionizing LLM Gateways: Architecture, Tradeoffs and Hard Lessons — Kanish Manuja, Twilio](../sources/20260828_zrZ1amZBSPw.md), 06:54-08:16, 13:49-14:20
+- [KV Cache-Aware Routing and P/D Disaggregation on Kubernetes — Yuchen Fama & Ashish Kamra, Red Hat](../sources/20260827_YXowceUKYJI.md), 09:28-10:20, 16:22-16:45
