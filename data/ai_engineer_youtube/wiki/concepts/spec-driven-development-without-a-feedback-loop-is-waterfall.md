@@ -18,6 +18,8 @@ Details:
 
 - **A mechanical verifier closes the third failure and leaves the first two open.** The objection that "LLM is not deterministic. It's going to make decisions itself" is answered when a tool "proves that the implementation matches the specification" on every change: the link between document and code stops depending on a human noticing drift. Discovery-order and staleness are untouched, and Pant's own remedy is the same discipline this page asks for, stated as a property of the artifact rather than of the process — the specification is "a living, breathing artifact that the builder interacts with." The waterfall reading fails only where the spec is re-checked automatically *and* kept alive by hand. ([Pant](../sources/20260828_lRa9sPaMyy4.md), 01:41-01:52, 01:52-02:04)
 
+- **The argument for the document as an iteration surface, not a handoff artifact.** Liguori's fourth habit separates frontier work from vibe coding by where the correction loop runs: the vibe-coding pattern is "giving a very high-level prompt, letting the agent generate a ton of code, and then having a back-and-forth conversation saying, 'Oh, that's not really what I meant… Here's a technical design,'" and the verdict is that "it is less productive to iterate with the agent on code when the intent itself was incorrect." The spec earns its place because it is cheaper to argue with — "it's a lot easier to iterate with the model in kind of a back and forth conversation about a document than it is about code that's… spread across a code base" — and the agent can draft it, so the human cost is review rather than authorship. She scopes it to "ambiguous complex features" rather than to all work. ([Liguori](../sources/20260828_pqlWNihgdjI.md), 12:48-13:53)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Workflows](../topics/workflows.md)
@@ -30,8 +32,10 @@ Related concepts:
 - [Collaborative plans become executable agent context](collaborative-plans-become-executable-agent-context.md)
 - [Retire completed planning docs before they become agent doc rot](retire-completed-planning-docs-before-they-become-agent-doc-rot.md)
 - [Validate the Specification, Because the Proof Cannot](validate-the-specification-because-the-proof-cannot.md)
+- [Being in the Loop Is the Ceiling on Agent Parallelism](being-in-the-loop-is-the-ceiling-on-agent-parallelism.md)
 
 Sources:
 - [How to Kill the Code Review — Ankit Jain, Aviator](../sources/20260817_YgEv7IQzGdM.md), 04:36-05:56
 - [Spec-Driven Development: Agentic Coding at FAANG Scale and Quality - Al Harris, Amazon Kiro](../sources/20260109_HY_JyxAZsiE.md), 48:49-55:24
 - [Your Code Has Bugs. Lean4 Has Proofs: Formal Verification for Engineers — Varun Pant, AWS](../sources/20260828_lRa9sPaMyy4.md), 01:41-01:52, 01:52-02:04
+- [From AI-Assisted to AI-Native: Building a Frontier Development Team — Clare Liguori, AWS](../sources/20260828_pqlWNihgdjI.md), 12:48-13:53

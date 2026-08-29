@@ -18,6 +18,8 @@ Details:
 - Relationship to the wiki's existing displacement claim. [Coding Agents Shift Engineering Work Toward Planning and Review](coding-agents-shift-engineering-work-toward-planning-and-review.md) establishes that human time moves *into* planning and review. This page adds the consequence that follows: displaced time inherits the wrong tools, and the two remaining phases have different requirements from each other — planning is exploratory and shared, polish is evaluative and local — so "plan and review" is two gears, not one new job.
 - Caveat: the layer separation is argued, not measured, and it is argued by a vendor selling a decision-layer tool. No comparison of a decision-layer tool against plan mode or a spec-driven toolchain is offered anywhere in the talk, and the gear-drift claim rests on the speaker's observation of users rather than on any instrumentation.
 
+- **What happens to the ratio between the two layers once implementation is cheap.** "Often I find that frontier engineering teams spend more time making decisions than they do writing code," which inverts the proportion most engineering processes were sized for and makes the decision layer's own latency the thing worth optimizing: "the more that you can make fast decisions, especially ones that are easy to be reversed, the better." The reversibility qualifier is the operative part — the argument is for sorting decisions by cost-to-undo and refusing a heavyweight review on the cheap ones, not for removing governance. Liguori's evidence is the arithmetic of Amazon's own timelines rather than any measurement of decision latency. ([Liguori](../sources/20260828_pqlWNihgdjI.md), 19:37-19:56)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Workflows](../topics/workflows.md)
@@ -29,6 +31,8 @@ Related concepts:
 - [Choose Plan-Heavy or Review-Heavy Agent Workflows by Task Shape](choose-plan-heavy-or-review-heavy-agent-workflows-by-task-shape.md)
 - [Collaborate With Complex Agents Through High-Bandwidth Artifacts](collaborate-with-complex-agents-through-high-bandwidth-artifacts.md)
 - [Spec-driven development is a tool-portable pattern, not a single product](spec-driven-development-is-a-tool-portable-pattern.md)
+- [When Code Stops Being the Long Pole, Approvals Become It](when-code-stops-being-the-long-pole-approvals-become-it.md)
 
 Sources:
 - [Velocity Sickness: What Happens When Your Whole Team Gets 10x Faster — Matt Dailey, Ref.](../sources/20260809_Kz4QJmNrVXU.md), 06:39-09:55, 12:03-12:52, 18:43-19:16
+- [From AI-Assisted to AI-Native: Building a Frontier Development Team — Clare Liguori, AWS](../sources/20260828_pqlWNihgdjI.md), 19:37-19:56

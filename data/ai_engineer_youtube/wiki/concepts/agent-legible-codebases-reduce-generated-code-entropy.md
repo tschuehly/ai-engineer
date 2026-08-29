@@ -19,6 +19,8 @@ Details:
 - **Legibility for reading is now the cheaper half; legibility for running is not.** Denys Linkov reports that cross-repository *navigation* stopped being the constraint — "models are much better at navigating multiple repos. So, if you put it into a higher-level folder, right, they could navigate the file directory" — while "end-to-end testing and verification and deployment… is still much harder to do with multiple repos." As models improve, arguments for repository structure that rest on comprehension weaken every release, and arguments that rest on the agent being able to run and prove its change do not. See [Multi-Repo Cost Has Moved From Navigation to Verification](multi-repo-cost-has-moved-from-navigation-to-verification.md). ([Denys Linkov](../sources/20260808_7vn4WpqNpck.md), 15:15-15:44)
 - **Legibility can be an authored index rather than a property of the source.** Figma's Code Connect links design components to codebase components, and that mapping is what lets an external tool emit "use button component" instead of a fresh implementation — entropy falls because the generator was given a name to use, not because the codebase reads better. The limit is coverage: unmapped components get full generated markup with all the divergence that implies, which is why the team wanted a workflow to scan a repository and create mappings in bulk. ([Lumarie](../sources/20260828_ZIYYsAzaLlA.md), 07:17-08:37)
 
+- **Legibility work as a scheduled, output-costing project rather than a byproduct.** Amazon's pilot teams treated this as up-front investment with a visible price: "in almost every team that was interviewed, they reported that their productivity actually went down as they intentionally adopted a new way of working," because "we have to do real work in our code base first for agents to be successful there, especially in brownfield existing code bases." The listed work runs from context files through "improv[ing] existing tools error messages so that the model knew what was going on when it failed" and building "new tools, new MCP servers," to "restructuring their code base so that agents could actually navigate it more easily." The extreme end is a language change — away from Python and JavaScript because "there's no compiler errors. So the model kind of guesses and gives it back to you" — toward TypeScript and Rust, where "the compiler gives great error messages," hedged with "you don't have to do that." The unifying criterion across every item is the quality of the failure signal the agent gets back. ([Liguori](../sources/20260828_pqlWNihgdjI.md), 09:39-11:08)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -33,6 +35,7 @@ Related concepts:
 - [Make validation fast, local, deterministic, and actionable](make-validation-fast-local-deterministic-and-actionable.md)
 - [Multi-Repo Cost Has Moved From Navigation to Verification](multi-repo-cost-has-moved-from-navigation-to-verification.md)
 - [Return a Pointer to the Reader's Own Component Instead of a Faithful Copy](return-a-pointer-to-the-readers-own-component-instead-of-a-copy.md)
+- [Budget the Productivity Dip That Precedes the Agent Speedup](budget-the-productivity-dip-that-precedes-the-agent-speedup.md)
 
 Sources:
 - [The Friction is Your Judgment - Armin Ronacher & Cristina Poncela Cubeiro, Earendil](../sources/20260418__Zcw_sVF6hU.md), 07:13-14:08
@@ -40,3 +43,4 @@ Sources:
 - [Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab](../sources/20260811_aeTb5BdmTTc.md), 07:25-08:01, 15:09-15:27
 - [Benchmarking Coding Agents on New vs Legacy Codebases — Denys Linkov, Wisedocs](../sources/20260808_7vn4WpqNpck.md), 15:15-15:44
 - [Building the Engine While Flying the Plane: Launching the Figma MCP Server — Jesse Lumarie, Figma](../sources/20260828_ZIYYsAzaLlA.md), 07:17-08:37
+- [From AI-Assisted to AI-Native: Building a Frontier Development Team — Clare Liguori, AWS](../sources/20260828_pqlWNihgdjI.md), 09:39-11:08

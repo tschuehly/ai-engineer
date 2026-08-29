@@ -16,6 +16,8 @@ Details:
 - Caveat on evidence: the 10-versus-1-to-2 PR contrast is an illustration of a pattern from one team of about ten, not a reported measurement. Khandelwal gives no throughput or review-latency numbers anywhere in the talk. The mechanism is plausible and checkable locally (compare review load against PR authorship per engineer); the magnitudes are not established.
 - **Figma reports the same unevenness with the identity of the slow adopters filled in, and it is not the low-throughput engineer.** "It's actually our best engineer, the one that hold all their [context] in their brain… they are like holding together with their mental duct tape all the places that agents are not working well… So, they actually end up being slowest to adopt because they see all the problem[s] first hand." That is a different population from the one this page describes — not the engineer shipping one to two PRs, but the engineer the codebase depends on. Both mechanisms can run in the same org at once, and if they do, the review load concentrates on exactly the person whose objections are most worth acting on. ([Blum](../sources/20260828_5Bn0xro2ol8.md), 03:25-04:07)
 
+- **A third axis the load can fall along: career stage, independent of throughput.** "We do see that reviewing AI output is often harder for some than actually writing it, especially early in career. Senior engineers have already spent a large portion of their career reviewing others code. But early career engineers don't have that muscle yet and so reviewing it can feel like a lot more cognitive load than they're used to and actually writing it." This is not the same population as the low-throughput engineer or as Figma's indispensable senior: it is the person whose review skill has not been built yet, and the mechanism is skill formation rather than time displacement or accumulated context. The three axes can coincide — an early-career engineer is often also slower to adopt and more available for review — which would concentrate the load on the reader least equipped to catch what matters. Stated as an observation with no review-latency, defect-escape, or survey data. ([Liguori](../sources/20260828_pqlWNihgdjI.md), 16:17-16:44)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Workflows](../topics/workflows.md)
@@ -28,7 +30,9 @@ Related concepts:
 - [Drive Org-Wide Agentic Adoption Through Champions and AI-Ready Repos](drive-org-wide-agentic-adoption-through-champions-and-ai-ready-repos.md)
 - [Create Psychological Safety for AI Adoption](create-psychological-safety-for-ai-adoption.md)
 - [The Best Engineers Adopt Agents Last, and Their Objections Are the Roadmap](the-best-engineers-adopt-agents-last-and-their-objections-are-the-roadmap.md)
+- [Budget the Productivity Dip That Precedes the Agent Speedup](budget-the-productivity-dip-that-precedes-the-agent-speedup.md)
 
 Sources:
 - [Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab](../sources/20260811_aeTb5BdmTTc.md), 06:06-06:36
 - [How to Get Your Org to Adopt Coding Agents (Without Shipping Garbage) — Eyal Blum, Figma](../sources/20260828_5Bn0xro2ol8.md), 03:25-04:07
+- [From AI-Assisted to AI-Native: Building a Frontier Development Team — Clare Liguori, AWS](../sources/20260828_pqlWNihgdjI.md), 16:17-16:44

@@ -19,6 +19,8 @@ Details:
 - Caveat on evidence: this is one leader's account of one team of about ten over a few months, with no measurements of any kind. The ownership argument is structural and holds on its own logic; the claim that this is "the most impactful thing you could do as an organization" is an assertion.
 - **Coexistence is what makes this an org-level problem rather than a team-by-team one.** Figma's teams sit in different acts simultaneously — "very AI forward and have already transformed their entire workflows" beside teams "still experimenting in the earlier act and/or have lost confidence" — and "they all need to work together in order to ship our product." The scope limit matters as much as the mandate: Blum finds "diminishing return[s] in trying to centralize everybody on one thing, but as long as it works for their flow and other people can iterate with them, I find that it generally works very well." Leadership owns the shared substrate (verification, encoded criteria, deterministic flows) because every team's agents hit it; the personal loop stays personal. ([Blum](../sources/20260828_5Bn0xro2ol8.md), 02:09-02:44, 10:26-11:00)
 
+- **A leader naming her own layer's failure mode, which is refusing to fund the dip.** "I've been guilty of this myself. My fellow leaders have been guilty of… saying, 'Well, you have the AI tools now and the models are so amazing now. Why are you not going faster?' And that's because you have to take those two months to invest in your code base, to figure out the best practices for your team, to make hard habit changes on your team." She names the external pressure feeding it — "we're seeing all of these companies on X saying how they're shipping 20 PRs a day" — which matters because it is what makes the demand feel reasonable to the person making it. This is a specific obligation that only the leadership layer can discharge: a team cannot grant itself a delivery holiday, and an unfunded dip is abandoned halfway, leaving the team with the investment cost and the old workflow. See [Budget the Productivity Dip That Precedes the Agent Speedup](budget-the-productivity-dip-that-precedes-the-agent-speedup.md). ([Liguori](../sources/20260828_pqlWNihgdjI.md), 17:02-17:54)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Workflows](../topics/workflows.md)
@@ -33,7 +35,9 @@ Related concepts:
 - [Institutionalize Knowledge Infrastructure for AI Adoption](institutionalize-knowledge-infrastructure-for-ai-adoption.md)
 - [Harness Engineering Shifts Scarcity From Code Production to Control Surfaces](harness-engineering-shifts-scarcity-from-code-production-to-control-surfaces.md)
 - [The Best Engineers Adopt Agents Last, and Their Objections Are the Roadmap](the-best-engineers-adopt-agents-last-and-their-objections-are-the-roadmap.md)
+- [Budget the Productivity Dip That Precedes the Agent Speedup](budget-the-productivity-dip-that-precedes-the-agent-speedup.md)
 
 Sources:
 - [Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab](../sources/20260811_aeTb5BdmTTc.md), 01:04-02:01, 05:44-06:56, 08:19-08:50, 09:14-09:37, 10:56-11:42, 13:34-13:51
 - [How to Get Your Org to Adopt Coding Agents (Without Shipping Garbage) — Eyal Blum, Figma](../sources/20260828_5Bn0xro2ol8.md), 02:09-02:44, 10:26-11:00
+- [From AI-Assisted to AI-Native: Building a Frontier Development Team — Clare Liguori, AWS](../sources/20260828_pqlWNihgdjI.md), 17:02-17:54

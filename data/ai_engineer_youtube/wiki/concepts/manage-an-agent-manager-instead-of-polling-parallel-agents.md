@@ -21,6 +21,8 @@ Details:
 - Relationship to the bottleneck: this delegation move is *why* attention becomes the binding constraint — see [Treat Human Attention as the Bottleneck for Agentic Work](treat-human-attention-as-the-agentic-bottleneck.md) (Steinberger frames the same tokens → compute → attention progression).
 - **The tolerance this whole shape requires is a professional habit, not a human default.** The manager pattern only pays if you accept work returning out of the order you dispatched it — the property Shenoy identifies as unique to engineers: "it's very commonplace to launch 10 jobs and be comfortable with the fact that job seven might finish before job three," against the counterexample that "people clean out their inbox one email by one email, not 10 emails at once." That is worth naming before porting the manager shape to a non-engineering team, because the failure it produces looks like a quality problem and is not. ([Shenoy](../sources/20260828_B0fjR3yaZFU.md), 08:16-08:35, 09:44-09:54)
 
+- **Why polling is not merely inefficient but self-defeating.** Liguori's framing is that waiting on an agent is what prevents parallelism in the first place — "it's really difficult to run agents in parallel. It's very difficult to clone yourself into multiple agents" — so a workflow that keeps the human polling has already forfeited the thing the extra agents were for. Her precondition for stepping back is a return contract rather than a supervisor process: the agent "only come[s] back to you when it meets a certain quality bar, when it actually runs and compiles and passes tests, when it's testable, when it actually has high coverage." She also names the cost of succeeding at this: "the cognitive load increases as you run these multiple agents in parallel. You're constantly shifting between terminal tabs" — which is the demand a manager layer exists to absorb. ([Liguori](../sources/20260828_pqlWNihgdjI.md), 11:44-12:24, 16:08-16:17)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Workflows](../topics/workflows.md)
@@ -35,8 +37,10 @@ Related concepts:
 - [Converge agent fleets on cluster-scheduling primitives](converge-agent-fleets-on-cluster-scheduling-primitives.md)
 - [Externalize agent state to files and reset instead of compact](externalize-agent-state-to-files-and-reset-instead-of-compact.md)
 - [Async Agents Need a Forking Substrate and a User Who Tolerates Out-of-Order Completion](async-agents-need-a-forking-substrate-and-a-tolerant-user.md)
+- [Being in the Loop Is the Ceiling on Agent Parallelism](being-in-the-loop-is-the-ceiling-on-agent-parallelism.md)
 
 Sources:
 - [The Golden Age of AI Engineering — Alexander Embiricos & Romain Huet & Peter Steinberger, OpenAI](../sources/20260709_pMggiOb18tc.md), 16:51-17:54, 18:56-24:57
 - [I Run a Fleet of AI Agents Across Three Machines. Here's What Broke. - Kyle Jaejun Lee, KRAFTON](../sources/20260708_4kYl2_mqmnQ.md), 00:45-02:12
 - [How do you diffuse AI into the real world? — Varun Shenoy, Long Lake](../sources/20260828_B0fjR3yaZFU.md), 08:16-09:54
+- [From AI-Assisted to AI-Native: Building a Frontier Development Team — Clare Liguori, AWS](../sources/20260828_pqlWNihgdjI.md), 11:44-12:24, 16:08-16:17

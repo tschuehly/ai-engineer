@@ -575,6 +575,9 @@
 - [Learn risk scoring from audit feedback for predictive compliance](../concepts/learn-risk-scoring-from-audit-feedback-for-predictive-compliance.md)
 
 ## Coding Agents
+- [Stage Productivity Pilots to Strip One Confound at a Time](../concepts/stage-productivity-pilots-to-strip-one-confound-at-a-time.md) - three internal studies in sequence, each designed so the objection that invalidated the last one is false; the final one holds the tool constant and the outcome still splits in half.
+- [Being in the Loop Is the Ceiling on Agent Parallelism](../concepts/being-in-the-loop-is-the-ceiling-on-agent-parallelism.md) - a human waiting out 30-second turns is serialized and cannot occupy a second loop, so send the task plus the criteria the agent can check itself against.
+- [Budget the Productivity Dip That Precedes the Agent Speedup](../concepts/budget-the-productivity-dip-that-precedes-the-agent-speedup.md) - almost every team interviewed got slower first while rebuilding error messages, tools, and structure for agents.
 - [Let the Agent Reach a Test Environment, Not Production, When the Domain Carries Money](../concepts/let-the-agent-reach-a-test-environment-not-production.md) - a billing vendor gives the agent full autonomy inside a sandbox and none outside it, and says so publicly about its own product.
 - [Seed the Agent-Built Sandbox With Usage, Not Just Objects](../concepts/seed-the-agent-built-sandbox-with-usage-not-just-objects.md) - a provisioned customer proves nothing; the skill directs the agent to flow usage so a draft invoice appears and can be read.
 - [Ship a Proof a Small Kernel Can Recheck, Not a Claim You Must Trust](../concepts/ship-a-proof-a-small-kernel-can-recheck.md) - the one check whose cost does not grow with agent output: a week of search and 32,000 lines of proof, adjudicated by a kernel small enough to reimplement yourself.
@@ -1491,6 +1494,9 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [When Code Stops Being the Long Pole, Approvals Become It](../concepts/when-code-stops-being-the-long-pole-approvals-become-it.md) - governance overheads that were rounding errors against a 9-12 month build become the bottleneck against a two-month one.
+- [Stage Productivity Pilots to Strip One Confound at a Time](../concepts/stage-productivity-pilots-to-strip-one-confound-at-a-time.md) - staging pilots buys credible evidence and the local playbook that a broad simultaneous rollout destroys.
+- [Budget the Productivity Dip That Precedes the Agent Speedup](../concepts/budget-the-productivity-dip-that-precedes-the-agent-speedup.md) - a leader asking "why are you not going faster?" mid-investment gets the cost without the speedup.
 - [Separate Agent as Product, Agent as Buyer, and Agent as User](../concepts/separate-agent-as-product-buyer-and-user.md) - a disambiguation checklist for any roadmap line that says "support agents" without saying whose, or doing what.
 - [Per-Seat Pricing Loses Its Referent When One Agent Does the Work of Many Logins](../concepts/per-seat-pricing-loses-its-referent-when-agents-do-the-work.md) - a competitor's irrational-looking price cut is legible once you see what was added alongside it.
 - [Move the Platform's Primary Surface as Its Users Gain Tools](../concepts/move-the-platforms-primary-surface-as-its-users-gain-tools.md) - roadmap by who is currently blocked, not by an architectural ideal, because coding agents changed the answer from outside.
@@ -1615,6 +1621,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Stage Productivity Pilots to Strip One Confound at a Time](../concepts/stage-productivity-pilots-to-strip-one-confound-at-a-time.md) - write the sentence a skeptic would say about your last result, then design the next study so it is false.
 - [Ship a Proof a Small Kernel Can Recheck, Not a Claim You Must Trust](../concepts/ship-a-proof-a-small-kernel-can-recheck.md) - the only evidence in this wiki that covers every input rather than a sample, plus an audit of why judged, sampled, and human checks each fall short differently.
 - [Gate Releases on Agreement Between an Executable Spec and the Shipping Code](../concepts/gate-releases-on-agreement-between-an-executable-spec-and-the-shipping-code.md) - differential random testing against an executable specification, run at release cadence with the authority to block the release.
 - [Validate the Specification, Because the Proof Cannot](../concepts/validate-the-specification-because-the-proof-cannot.md) - the check nothing downstream can perform, and the one place sampled testing is the right instrument rather than the weak one.
@@ -2662,6 +2669,9 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Being in the Loop Is the Ceiling on Agent Parallelism](../concepts/being-in-the-loop-is-the-ceiling-on-agent-parallelism.md) - feeding means the task plus its acceptance criteria, promoted into the steering file so they recur without prompting.
+- [When Code Stops Being the Long Pole, Approvals Become It](../concepts/when-code-stops-being-the-long-pole-approvals-become-it.md) - once the build takes one to two months, a two-month decision and a two-month launch review are the critical path.
+- [Budget the Productivity Dip That Precedes the Agent Speedup](../concepts/budget-the-productivity-dip-that-precedes-the-agent-speedup.md) - the brownfield pre-work costs output before it returns any, so the dip has to be agreed in advance.
 - [Let the Agent Reach a Test Environment, Not Production, When the Domain Carries Money](../concepts/let-the-agent-reach-a-test-environment-not-production.md) - supervision concentrated at one handoff instead of distributed through the loop, and the preconditions that make that safe.
 - [Seed the Agent-Built Sandbox With Usage, Not Just Objects](../concepts/seed-the-agent-built-sandbox-with-usage-not-just-objects.md) - manufacture the reviewable artifact during setup, because correctness that only appears downstream cannot be read off the configuration.
 - [Validate the Specification, Because the Proof Cannot](../concepts/validate-the-specification-because-the-proof-cannot.md) - the step a verifier adds to spec-driven development rather than removes, plus the second unproved gap that auto-formalization opens.

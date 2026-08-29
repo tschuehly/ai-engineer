@@ -20,6 +20,8 @@ Details:
 - A second symptom checklist exists in this wiki with **no overlapping entries**, and the disjointness is the useful part. Matt Dailey's four velocity-sickness symptoms — PR backlog breaking the merge queue, work sprinting in incompatible directions, agent bankruptcy each morning, and critical decisions made by agents — describe a team whose setup may be entirely healthy and whose *direction* is unowned. Khandelwal's list indicts the harness and the codebase; Dailey's indicts what the working agents are pointed at. Running both is cheap, and a team that passes one can fail the other outright. See [Velocity Sickness Is Output Without Impact](velocity-sickness-is-output-without-impact.md). ([Dailey](../sources/20260809_Kz4QJmNrVXU.md), 01:36-04:26)
 - **An attribution step for the context-burn symptom.** Burn spread evenly across a team's work points at the harness; burn concentrated on one recurring class of task — the compliance review, the migration, the release write-up — points at a missing skill for that class, because the knowledge is being re-derived conversationally by each engineer who needs it. Touil's case is a regulation skill that does not exist, producing "vibe coding back and forth" that burns tokens and time "rather than giving in one shot the right answer." ([Touil](../sources/20260828_M05vON8i0aI.md), 16:18-16:42) The distinguishing question is whether different engineers' transcripts converge on re-explaining the same constraints. Nothing in the talk is measured.
 
+- **The mechanism behind the load-bearing symptom, stated as arithmetic.** Khandelwal treats babysitting as a signal that something is wrong; Liguori explains why it caps the number: "if you are having a back-and-forth conversation with your agent all day long, of course you're not going to see four to five x productivity improvements because you are in the loop the entire time. You're probably sitting there for 30 seconds to a minute waiting for it to generate code." The consequence is that the human is serialized — "if you're sitting there waiting for it, then you can't go off and do other stuff… It's very difficult to clone yourself into multiple agents" — so a babysat setup has a ceiling of roughly one regardless of model quality, and faster models only shorten the wait. Her fix is a payload change rather than a harness change: send "what it needs to do and how it can self-validate," then promote those criteria into the steering file. See [Being in the Loop Is the Ceiling on Agent Parallelism](being-in-the-loop-is-the-ceiling-on-agent-parallelism.md). ([Liguori](../sources/20260828_pqlWNihgdjI.md), 11:21-12:31)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Context Engineering](../topics/context-engineering.md)
@@ -34,8 +36,10 @@ Related concepts:
 - [Treat slop as a quality failure, not an AI provenance label](treat-slop-as-a-quality-failure-not-an-ai-provenance-label.md)
 - [Velocity Sickness Is Output Without Impact](velocity-sickness-is-output-without-impact.md)
 - [A Missing Skill Is Billed as Tokens, Not Recorded as a Gap](a-missing-skill-is-billed-as-tokens-not-recorded-as-a-gap.md)
+- [Being in the Loop Is the Ceiling on Agent Parallelism](being-in-the-loop-is-the-ceiling-on-agent-parallelism.md)
 
 Sources:
 - [Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab](../sources/20260811_aeTb5BdmTTc.md), 04:22-05:34, 13:15-13:34
 - [Velocity Sickness: What Happens When Your Whole Team Gets 10x Faster — Matt Dailey, Ref.](../sources/20260809_Kz4QJmNrVXU.md), 01:36-04:26
 - [AI-Native Organisations Run on Skills: How to Structure and Scale Them — Imad Touil, QuantumBlack](../sources/20260828_M05vON8i0aI.md), 16:18-16:42
+- [From AI-Assisted to AI-Native: Building a Frontier Development Team — Clare Liguori, AWS](../sources/20260828_pqlWNihgdjI.md), 11:21-12:31

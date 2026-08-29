@@ -14,6 +14,8 @@ Details:
 - The model is a *relationship/capability* axis, complementary to outcome dashboards: it explains why usage and token-bill metrics can look "all in on AI" while shipping velocity is flat, so it should be paired with outcome measurement rather than replacing it.
 - **The same ladder outside engineering, where the top rungs are not reachable yet.** Shenoy's autonomy ladder for services work — copilot, synchronous agent, asynchronous agent, long-running agent, AI coworker — matches this model's shape but reports the async rung as unbuilt outside code, because the forking substrate and the tolerance for out-of-order completion are both software-practice inheritances. Block's Stage 4 ("running multiple agents in parallel") is therefore not a generic maturity level: it is the stage that engineers can reach cheaply and that a property manager or an architect currently cannot, which is worth stating before this ladder is offered to a non-engineering function. ([Shenoy](../sources/20260828_B0fjR3yaZFU.md), 05:23-10:13)
 
+- **Staging at the organizational level, with the cost of skipping it named.** Amazon ran three studies in sequence rather than a company-wide launch, and Liguori lists going "too broad in the organization too fast" as a distinct failure mode: "if we had expected all teams in massive organizations to be frontier teams immediately, we would not have had the learnings that we had from the Pathfinder, from the sprint experiment, from the pilot teams." What early breadth destroys is specifically local knowledge — "you have a lot of teams who don't know what they're doing. You haven't had time to find the best practices for your own organizations, the context that your organization needs" — which is a different loss from a team being handed more autonomy than it can handle. The stated next step is scale, not depth: "how do we scale this out… to the next 2,000 teams instead of 50 teams." ([Liguori](../sources/20260828_pqlWNihgdjI.md), 17:54-18:46)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Workflows](../topics/workflows.md)
@@ -24,7 +26,9 @@ Related concepts:
 - [Measure AI Transformation by Outcomes Instead of Adoption](measure-ai-transformation-by-outcomes-instead-of-adoption.md)
 - [Universal AI Adoption Changes Engineering Coordination](universal-ai-adoption-changes-engineering-coordination.md)
 - [Async Agents Need a Forking Substrate and a User Who Tolerates Out-of-Order Completion](async-agents-need-a-forking-substrate-and-a-tolerant-user.md)
+- [Stage Productivity Pilots to Strip One Confound at a Time](stage-productivity-pilots-to-strip-one-confound-at-a-time.md)
 
 Sources:
 - [Building an Autonomous Engineering Org - Angie Jones, Agentic AI Foundation](../sources/20260628_whue9_YquGA.md), 00:57-04:18
 - [How do you diffuse AI into the real world? — Varun Shenoy, Long Lake](../sources/20260828_B0fjR3yaZFU.md), 05:23-10:13
+- [From AI-Assisted to AI-Native: Building a Frontier Development Team — Clare Liguori, AWS](../sources/20260828_pqlWNihgdjI.md), 17:54-18:46

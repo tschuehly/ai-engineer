@@ -12,6 +12,8 @@ Details:
 - The reusable payoff is the agency, not the AI: the sprint let people "own the entire process," experiment, and find a personal workflow "without a lot of time in negotiations and handover," which "is very hard to do" in large organizations with 5–20-year-old software and thousands of people, versus small 0→1 teams where velocity looks entirely different. (12:44-13:20, 02:35-03:05)
 - To implement even at team level: changing tools or process in a large org "requires shifting the human behavior behind them," so provide access to the new tools, find your enablers and champions, create space for experimentation, and give people agency to break out of their habits. (17:15-17:42)
 
+- **The same intervention run as an experiment, with its confounds priced.** Prime Video put "six engineers in a room" for a 10-day sprint and "let them go wild with Kiro," cutting a project delivery estimate "from what was going to be 90 weeks down to 24." Liguori then discounts her own result on two grounds a roadmap pause should plan around: the participants "had no on-call duties, limited meetings, very few distractions, which we all know are regular in the lives of an engineer," and "the senior engineer on the team had spent the previous 3 weeks creating very detailed, small, well-scoped tasks with detailed requirements" — three weeks of setup that the ten-day headline does not include. Her conclusion is that a sprint is not the deliverable: the pilot findings are called *habits* "very specifically because… it's not about that one sprint. It's about doing this day-to-day." ([Liguori](../sources/20260828_pqlWNihgdjI.md), 04:05-05:47, 08:00-08:24)
+
 Related topics:
 - [Product Strategy](../topics/product-strategy.md)
 - [Coding Agents](../topics/coding-agents.md)
@@ -22,6 +24,8 @@ Related concepts:
 - [Institutionalize Knowledge Infrastructure for AI Adoption](institutionalize-knowledge-infrastructure-for-ai-adoption.md)
 - [Measure AI Transformation by Outcomes Instead of Adoption](measure-ai-transformation-by-outcomes-instead-of-adoption.md)
 - [On Mixed-Ability AI Teams, Specialists Should Enable Not Do](on-mixed-ability-ai-teams-specialists-should-enable-not-do.md)
+- [Stage Productivity Pilots to Strip One Confound at a Time](stage-productivity-pilots-to-strip-one-confound-at-a-time.md)
 
 Sources:
 - [500 people vibe-coded for 30 days. I was one of them. - Sanja Grbic, Automattic](../sources/20260707_UcYoMg-8-L8.md), 00:15-04:48, 12:44-13:20, 17:15-17:42
+- [From AI-Assisted to AI-Native: Building a Frontier Development Team — Clare Liguori, AWS](../sources/20260828_pqlWNihgdjI.md), 04:05-05:47, 08:00-08:24

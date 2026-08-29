@@ -16,6 +16,8 @@ Details:
 
 - **The four properties do not move together, and verification routes trade among them.** Proof checking is the extreme of *deterministic* and does well on *local* — Lean runs in the browser, the kernel runs on your machine — but it is weakest on *actionable*: a failed proof reports a goal that would not close, not an input that breaks. The solver route is the counterexample-producing sibling, since a solver "is a calculator… you feed in a formula and it returns an output. In this case, satisfiable or unsatisfiable," which is what Verus builds on with Z3. Worth carrying: the route you pick changes the quality of the feedback, not only the strength of the guarantee. ([Pant](../sources/20260828_lRa9sPaMyy4.md), 03:16-03:53, 07:07-07:39, 09:17-09:35)
 
+- **All four properties in one investment, with actionability treated as an engineering task in its own right.** Amazon's teams built "mock services that run entirely locally with deterministic responses because it lets the agent do everything locally" — fast, local, and deterministic in a single move — and separately worked on the actionable half, listing "improve existing tools error messages so that the model knew what was going on when it failed" as part of the brownfield pre-work rather than as an incidental fix. The same criterion drives the most drastic change she reports, moving off untyped languages because "there's no compiler errors. So the model kind of guesses," toward Rust and TypeScript, where "the compiler gives great error messages." The stated payoff for all of it is loops: "the more that your agent can get fast feedback means the more loops that it can do." ([Liguori](../sources/20260828_pqlWNihgdjI.md), 10:10-11:08, 14:36-15:19)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -29,8 +31,10 @@ Related concepts:
 - [Limit agent change size by feedback speed](limit-agent-change-size-by-feedback-speed.md)
 - [Use deep modules to make agent work testable](use-deep-modules-to-make-agent-work-testable.md)
 - [Pick a Verification Route by Which Translation You Can Afford](pick-a-verification-route-by-which-translation-you-can-afford.md)
+- [Being in the Loop Is the Ceiling on Agent Parallelism](being-in-the-loop-is-the-ceiling-on-agent-parallelism.md)
 
 Sources:
 - [Developer Experience in the Age of AI Coding Agents - Max Kanat-Alexander, Capital One](../sources/20251223_rT2Del5pwg4.md), 05:07-06:40, 16:37-17:18
 - [Making Codebases Agent Ready - Eno Reyes, Factory AI](../sources/20251222_ShuJ_CN6zr4.md), 01:23-10:08
 - [Your Code Has Bugs. Lean4 Has Proofs: Formal Verification for Engineers — Varun Pant, AWS](../sources/20260828_lRa9sPaMyy4.md), 03:16-03:53, 07:07-07:39, 09:17-09:35
+- [From AI-Assisted to AI-Native: Building a Frontier Development Team — Clare Liguori, AWS](../sources/20260828_pqlWNihgdjI.md), 10:10-11:08, 14:36-15:19

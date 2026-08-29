@@ -21,6 +21,8 @@ Details:
   - No count, rate, or timeline is given for how many skeptics "came along," or how long it took, or whether any did not.
   - The strategy assumes the complaints are addressable. A skeptic whose objection is that the work fundamentally requires taste has produced a roadmap item nobody can close, and the talk does not cover the case where the roadmap does not converge.
 
+- **The opposite end of the same population, where the difficulty is missing skill rather than accumulated context.** Liguori reports the cost landing hardest on the least experienced: "reviewing AI output is often harder for some than actually writing it, especially early in career," because senior engineers "have already spent a large portion of their career reviewing others code" while "early career engineers don't have that muscle yet." Read alongside this page, the two describe different resistances that should be handled differently: the senior holdout's objections are a defect list worth working through, while the junior's difficulty is a training gap that no amount of harness improvement resolves. Treating both as "slow adopters" and applying the same enablement to each would miss on both. ([Liguori](../sources/20260828_pqlWNihgdjI.md), 16:17-16:44)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Workflows](../topics/workflows.md)
@@ -34,6 +36,8 @@ Related concepts:
 - [Treat Agent Readiness as Verification Infrastructure](treat-agent-readiness-as-verification-infrastructure.md)
 - [Demand-Driven Context Pulls Knowledge From Failed Work](demand-driven-context-pulls-knowledge-from-failed-work.md)
 - [Reduced Developer Agency Is an Adoption Cost, and Planning Is Its Remedy](reduced-developer-agency-is-an-adoption-cost-and-planning-is-its-remedy.md)
+- [Budget the Productivity Dip That Precedes the Agent Speedup](budget-the-productivity-dip-that-precedes-the-agent-speedup.md)
 
 Sources:
 - [How to Get Your Org to Adopt Coding Agents (Without Shipping Garbage) — Eyal Blum, Figma](../sources/20260828_5Bn0xro2ol8.md), 03:25-04:07, 11:45-12:45
+- [From AI-Assisted to AI-Native: Building a Frontier Development Team — Clare Liguori, AWS](../sources/20260828_pqlWNihgdjI.md), 16:17-16:44

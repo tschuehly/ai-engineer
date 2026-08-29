@@ -14,6 +14,8 @@ Details:
 - Mean time to resolve priority bugs is given as one proxy for software resilience in an AI engineering measurement system. (19:38-19:51)
 - **Where the outcome is a physical event, the measurement problem largely dissolves — and that is unusual.** Shenoy's outcome metrics for operated services businesses are "did the roof get repaired? Did the books get closed?" — settled by the world rather than by a dashboard definition, which is why he can treat the same signal as an eval label and as a transformation metric at once. The transferable point is diagnostic: if you cannot name the physical or financial event that settles whether the agent's work succeeded, you are probably about to measure adoption instead. The costs are coarseness and delay, not ambiguity. ([Shenoy](../sources/20260828_B0fjR3yaZFU.md), 11:08-11:49)
 
+- **A case where an adoption metric would have shown nothing at all.** In Amazon's 50-team pilot "90% of these teams used Kiro, among other internal tools that we have" — tool adoption was near-uniform — while deployment-velocity outcomes split in half, under 3x versus a median of 4.5x. Any dashboard counting licenses, seats, or active users would have reported a successful rollout across both halves. Liguori's substitute for an adoption metric is a *behavioural* target state, which is a leading indicator an outcome metric cannot give you: frontier developers "write maybe 1 to 2% of the code that they produce," get their assistant "to run for up to hours at a time without their intervention," and "run multiple agents in parallel churning through a backlog of tasks." Those are observable without a survey, though the talk gives no method for measuring the 1-2% figure. ([Liguori](../sources/20260828_pqlWNihgdjI.md), 01:43-02:20, 06:50-07:34)
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Workflows](../topics/workflows.md)
@@ -23,7 +25,9 @@ Related concepts:
 - [Do not use token volume as a developer productivity metric](do-not-use-token-volume-as-a-developer-productivity-metric.md)
 - [Move enterprise AI adoption beyond spot experiments](move-enterprise-ai-adoption-beyond-spot-experiments.md)
 - [Operational Outcomes Are Eval Labels You Only See If You Own the Operation](operational-outcomes-are-eval-labels-you-only-see-if-you-own-the-operation.md)
+- [Stage Productivity Pilots to Strip One Confound at a Time](stage-productivity-pilots-to-strip-one-confound-at-a-time.md)
 
 Sources:
 - [Moving away from Agile: What's Next - Martin Harrysson & Natasha Maniar, McKinsey & Company](../sources/20251212_SZStlIhyTCY.md), 16:32-17:48, 18:31-20:24
 - [How do you diffuse AI into the real world? — Varun Shenoy, Long Lake](../sources/20260828_B0fjR3yaZFU.md), 11:08-11:49
+- [From AI-Assisted to AI-Native: Building a Frontier Development Team — Clare Liguori, AWS](../sources/20260828_pqlWNihgdjI.md), 01:43-02:20, 06:50-07:34
