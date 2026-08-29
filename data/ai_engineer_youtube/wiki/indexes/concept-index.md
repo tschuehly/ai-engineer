@@ -585,6 +585,10 @@
 - [Learn risk scoring from audit feedback for predictive compliance](../concepts/learn-risk-scoring-from-audit-feedback-for-predictive-compliance.md)
 
 ## Coding Agents
+- [Models Solve the Parallelism Patterns the Internet Already Contains](../concepts/models-solve-the-parallelism-patterns-the-internet-already-contains.md) - successes cluster in well-represented patterns, and supplying the missing principles in context did not close the gap.
+- [More Samples Buy Correctness, Not Speedups](../concepts/more-samples-buy-correctness-not-speedups.md) - a bash-environment agent loop lifted solved problems from 24 to 35 of 87, then plateaued on quality.
+- [Derive the Principles by Hand Before Testing Whether Models Can Apply Them](../concepts/derive-the-principles-by-hand-before-testing-whether-models-can-apply-them.md) - build the expert artifact first so model failures land on named decisions rather than a score.
+- [Specify a Generation Task as a Reference Implementation Plus a Topology Spec](../concepts/specify-a-generation-task-as-a-reference-implementation-plus-a-topology-spec.md) - how to pose an optimization task so correctness, baseline, and environment are all pinned.
 - [Stage Productivity Pilots to Strip One Confound at a Time](../concepts/stage-productivity-pilots-to-strip-one-confound-at-a-time.md) - three internal studies in sequence, each designed so the objection that invalidated the last one is false; the final one holds the tool constant and the outcome still splits in half.
 - [Being in the Loop Is the Ceiling on Agent Parallelism](../concepts/being-in-the-loop-is-the-ceiling-on-agent-parallelism.md) - a human waiting out 30-second turns is serialized and cannot occupy a second loop, so send the task plus the criteria the agent can check itself against.
 - [Budget the Productivity Dip That Precedes the Agent Speedup](../concepts/budget-the-productivity-dip-that-precedes-the-agent-speedup.md) - almost every team interviewed got slower first while rebuilding error messages, tools, and structure for agents.
@@ -1075,6 +1079,11 @@
 - [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md)
 
 ## Infrastructure
+- [Measure Multi-GPU Headroom Against a Communication-Aware Roofline](../concepts/measure-multi-gpu-headroom-against-a-communication-aware-roofline.md) - compute outgrew the interconnect 7.2x to 3x from A100 to B200, and PyTorch+NCCL sits below half its analytic bound on most problems.
+- [Add Multi-GPU Primitives to a Single-GPU Kernel Instead of Orchestrating Bulk Collectives](../concepts/add-multi-gpu-primitives-to-a-single-gpu-kernel.md) - collective libraries, distributed DSLs, and hand-tuned operators each fail differently; roughly a dozen in-kernel lines did not.
+- [Choose the Inter-GPU Transfer Mechanism by Message Size and Resource Cost](../concepts/choose-the-inter-gpu-transfer-mechanism-by-message-size-and-resource-cost.md) - copy engine, TMA, and register-level `multimem` differ in message-size sweet spot, register and SM cost, and access to in-network reductions.
+- [Overlap Communication With Compute Intra-SM or Inter-SM by Data Alignment](../concepts/overlap-communication-with-compute-intra-sm-or-inter-sm.md) - warp specialization when compute and communication share inputs, whole-SM specialization when they do not.
+- [Specify a Generation Task as a Reference Implementation Plus a Topology Spec](../concepts/specify-a-generation-task-as-a-reference-implementation-plus-a-topology-spec.md) - put rank count and intra-node hardware in the problem statement when the right answer depends on the deployment environment.
 - [Disaggregation Needs a Fabric, and Pays Off in the Middle Concurrency Band](../concepts/disaggregation-needs-a-fabric-and-pays-off-in-the-middle-band.md) - RDMA or RoCE is a hard prerequisite, and the payoff ties aggregated serving at both ends of the concurrency curve.
 - [Set the Prefill-to-Decode Ratio From the Workload's Input-to-Output Ratio](../concepts/set-the-prefill-to-decode-ratio-from-the-workloads-input-output-ratio.md) - derive the pool split from measured ISL:OSL, then let the autoscaler re-derive it as traffic shifts.
 - [Match the Inference Lever to the Latency Metric It Moves](../concepts/match-the-inference-lever-to-the-latency-metric-it-moves.md) - KV-cache-aware routing buys time-to-first-token; prefill/decode disaggregation buys inter-token latency.
@@ -1371,6 +1380,10 @@
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 
 ## Inference
+- [Measure Multi-GPU Headroom Against a Communication-Aware Roofline](../concepts/measure-multi-gpu-headroom-against-a-communication-aware-roofline.md) - low model FLOP utilization at scale is usually a communication result, and the roofline says how much is available.
+- [Add Multi-GPU Primitives to a Single-GPU Kernel Instead of Orchestrating Bulk Collectives](../concepts/add-multi-gpu-primitives-to-a-single-gpu-kernel.md) - NCCL is tuned for bulk contiguous transfers and breaks down on fused or fine-grained collectives.
+- [Choose the Inter-GPU Transfer Mechanism by Message Size and Resource Cost](../concepts/choose-the-inter-gpu-transfer-mechanism-by-message-size-and-resource-cost.md) - the mechanism decides whether a reduction can reach NVSwitch's in-network hardware at all.
+- [Overlap Communication With Compute Intra-SM or Inter-SM by Data Alignment](../concepts/overlap-communication-with-compute-intra-sm-or-inter-sm.md) - the two schedules for hiding a transfer behind a GEMM, and the data condition that picks between them.
 - [Client-Controlled Context Makes the Server's KV Cache Volatile](../concepts/client-controlled-context-makes-the-servers-kv-cache-volatile.md) - the client owns the prompt lifecycle, so the server must route for locality, tier storage, and pin sessions instead of predicting reuse.
 - [Match the Inference Lever to the Latency Metric It Moves](../concepts/match-the-inference-lever-to-the-latency-metric-it-moves.md) - KV-cache-aware routing buys time-to-first-token; prefill/decode disaggregation buys inter-token latency.
 - [Disaggregation Needs a Fabric, and Pays Off in the Middle Concurrency Band](../concepts/disaggregation-needs-a-fabric-and-pays-off-in-the-middle-band.md) - RDMA or RoCE is a hard prerequisite, and the payoff ties aggregated serving at both ends of the concurrency curve.
@@ -1652,6 +1665,10 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [More Samples Buy Correctness, Not Speedups](../concepts/more-samples-buy-correctness-not-speedups.md) - pass@k rose from 28 to 36 of 87 while the correct-and-faster share stalled near 31%.
+- [Specify a Generation Task as a Reference Implementation Plus a Topology Spec](../concepts/specify-a-generation-task-as-a-reference-implementation-plus-a-topology-spec.md) - the reference doubles as baseline, and taxonomy-first sampling gets coverage of a combinatorial space.
+- [Derive the Principles by Hand Before Testing Whether Models Can Apply Them](../concepts/derive-the-principles-by-hand-before-testing-whether-models-can-apply-them.md) - the manual phase yields the in-context material, the failure rubric, and the proof the task is learnable.
+- [Models Solve the Parallelism Patterns the Internet Already Contains](../concepts/models-solve-the-parallelism-patterns-the-internet-already-contains.md) - split candidate tasks by how much public code exists for them and score both halves.
 - [Replay Agentic Traces, Because Steady-State Benchmarks Hide the Workload](../concepts/replay-agentic-traces-because-steady-state-benchmarks-hide-the-workload.md) - public benchmarks report one sanitized steady-state run; agent traces span 1 to 3,000 turns, >90% cache hits, and >100:1 input-to-output.
 - [Eval an Agent Surface for Protocol Compliance, Not Just Behavior](../concepts/eval-agent-surfaces-for-protocol-compliance-not-just-behavior.md) - an oracle you do not own, versioned without notice, whose failure mode is silent de-listing; plus latency as a revenue metric and a deliberately cheap judge.
 - [Public Agent Surfaces Get Repurposed as Free General-Purpose Compute](../concepts/public-agent-surfaces-get-repurposed-as-free-general-compute.md) - the out-of-scope cases worth testing are the domain's commercial concessions and cross-customer state, not generic toxicity.
@@ -2041,6 +2058,7 @@
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 
 ## Models
+- [Models Solve the Parallelism Patterns the Internet Already Contains](../concepts/models-solve-the-parallelism-patterns-the-internet-already-contains.md) - a distribution-shifted held-out test where in-context principles did not close the gap.
 - [Commoditize the Layer You Do Not Win On](../concepts/commoditize-the-layer-you-do-not-win-on.md) - the releasing lab's case for open weights: publish the weights, keep the research, and claim distillation closes gaps without opening them.
 - [Re-Run One Remembered Hard Task on Each New Model](../concepts/re-run-one-remembered-hard-task-on-each-new-model.md) - three hours and ten mistakes on o3 down to a one-shot on Opus 4.8, priced in hours saved against tokens spent — and confounded by harness drift.
 - [Route Between Model Tiers by Quality Dimension, Not Only Cost](../concepts/route-between-model-tiers-by-quality-dimension-not-only-cost.md) - Sonnet 4.6 leads on correctness and solve rate while Opus 4.6 is the pick for maintainability, security, or lower complexity.

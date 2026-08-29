@@ -20,6 +20,7 @@ Details:
 - Overall verdict on the metric set: "without this we would not be able to to train at all." (07:45-07:52)
 - Caveat on transfer: these are single-cluster observations from an image-diffusion pre-training workload on an all-InfiniBand fabric, and the speaker allows that the crash rate itself may be "maybe skill issue on our part, maybe our cluster." The metric argument is about instrumentation defaults, not about a universal failure profile.
 - **Why a busy serving GPU can also be the wrong kind of busy.** The serving-side analogue of this page's argument is phase interference: prefill "utilizes GPUs at high FLOPs and thrives on large batch parallelism" while decode is "more memory bandwidth hungry," so a pod running both keeps the GPU occupied while one phase stalls the other — "a sudden influx of a long prefill prompt… will completely stall the ongoing decode token generation process." The symptom appears only in a metric that is neither utilization nor throughput: P99 inter-token latency, ~900 ms aggregated against ~100 ms once the phases are on separate pods, with the aggregated curve visibly fluctuating. Utilization is silent about it in both the training and serving cases, for the same reason. ([Kamra](../sources/20260827_YXowceUKYJI.md), 10:20-11:56, 12:59-13:52)
+- **The arithmetic reason the fabric counters matter more every generation.** Arora gives the divergence a number: from the A100 (2020) to the B200 (2024), "BF16 tensor core speeds improved by 7.2x, while intra node communication by just 3x and inter node communication by just 2x," with the consequence that "on many production distributed training and inference workloads, communication is increasingly consuming the majority of the runtime and yields low model FLOP utilization at scale." This page's argument that InfiniBand and NVLink counters are load-bearing is not a preference about dashboards — it follows from where the time actually goes, and the gap widens with each hardware generation. ([Arora](../sources/20260827_pOvWgX7IJsc.md), 06:45-07:04, 10:30-10:46)
 
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
@@ -33,7 +34,9 @@ Related concepts:
 - [Layer AI application metrics from guardrail compliance to system health](layer-ai-application-metrics-from-guardrail-compliance-to-system-health.md)
 - [Run the LLM Post-Training Ladder on Diffusion Models](run-the-llm-post-training-ladder-on-diffusion-models.md)
 - [Disaggregate prefill and decode workers by workload shape](disaggregate-prefill-and-decode-workers-by-workload-shape.md)
+- [Measure Multi-GPU Headroom Against a Communication-Aware Roofline](measure-multi-gpu-headroom-against-a-communication-aware-roofline.md)
 
 Sources:
 - [Infra behind Krea 2: How to train and serve at scale — Gabriel Jorge Menezes, Krea.ai](../sources/20260818_byn9PURoBNY.md), 03:25-07:52
 - [KV Cache-Aware Routing and P/D Disaggregation on Kubernetes — Yuchen Fama & Ashish Kamra, Red Hat](../sources/20260827_YXowceUKYJI.md), 10:20-11:56, 12:59-13:52
+- [Can LLMs Write Fast Multi-GPU Kernels? — Simran Arora, Together AI](../sources/20260827_pOvWgX7IJsc.md), 06:45-07:04, 10:30-10:46

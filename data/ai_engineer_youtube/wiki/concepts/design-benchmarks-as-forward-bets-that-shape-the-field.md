@@ -14,6 +14,7 @@ Details:
 - The motivating asymmetry that makes this matter: capability is outpacing measurement (ARC-AGI 3 launched with every task human-solvable but frontier models under 1%), so the path to safe, trustworthy agents depends on more benchmarks that *guide* where capability goes, not just record where it was. (01:52-04:11)
 - **A worked instance of the forward bet, where the thesis is that an entire capability is currently unmeasured.** Continual Learning Bench 1.0's premise is not that existing benchmarks are too easy but that they assume the capability away: independent per-task scoring tells the model "imagine that every time you do something, you completely forget your memory." The bet is stated in the same terms this page uses — "continual learning doesn't look like point capabilities. We need to measure it the right way to optimize for the right objective as a field because that's a history of how machine learning has progressed." That is the sharpest version of the forward-bet argument in this wiki: the benchmark is proposed as the thing that makes the field optimize for a different objective, and its contribution is a metric ([gain](measure-learning-as-gain-over-a-memory-wiped-rerun.md)) rather than a harder task set. ([Evaluating Continual Learning](../sources/20260812_iqloyWCGYQQ.md), 00:56-01:31, 19:53-20:04)
 - This is "the art" of benchmarking — the special-sauce differentiators of benchmarks that are real research contributions — distinct from "the science" of building a sound measuring stick. (12:55-13:23)
+- **A worked example of the bet, with the thesis stated before the scores.** ParallelKernelBench is introduced as a generalization test rather than a leaderboard: "do they generalize well to these problems, or are we benchmaxed on benchmarks of the past which are more single GPU centric?" The bet behind it is a hardware trend — compute outgrowing interconnect 7.2x to 3x across one generation gap, and scale-up domains headed to 72 and then 576 GPUs — so the benchmark is aimed at where the workload is going rather than at where model scores currently sit. Its problems are drawn from real repositories precisely so that hill-climbing it produces artifacts worth having. ([Arora](../sources/20260827_pOvWgX7IJsc.md), 09:02-09:15, 10:30-10:46, 21:42-22:05, 23:15-23:49)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -25,7 +26,9 @@ Related concepts:
 - [Update coding eval sets dynamically as model capability changes](update-coding-eval-sets-dynamically-as-model-capability-changes.md)
 - [Measure Learning as Gain Over a Memory-Wiped Rerun](measure-learning-as-gain-over-a-memory-wiped-rerun.md)
 - [A Learning Benchmark Needs Headroom, Shared Structure, and a Signal](a-learning-benchmark-needs-headroom-shared-structure-and-a-signal.md)
+- [Specify a Generation Task as a Reference Implementation Plus a Topology Spec](specify-a-generation-task-as-a-reference-implementation-plus-a-topology-spec.md)
 
 Sources:
 - [The Art & Science of Benchmarking Agents — Vincent Chen, Snorkel AI](../sources/20260604_iNkFlCiij0U.md), 01:52-04:11, 12:55-15:55
 - [Beyond Static Intelligence: Evaluating Continual Learning — Parth Asawa, UC Berkeley](../sources/20260812_iqloyWCGYQQ.md), 00:56-01:31, 19:53-20:04
+- [Can LLMs Write Fast Multi-GPU Kernels? — Simran Arora, Together AI](../sources/20260827_pOvWgX7IJsc.md), 09:02-09:15, 10:30-10:46, 21:42-22:05, 23:15-23:49

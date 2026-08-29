@@ -15,6 +15,7 @@ Details:
 - The source reports a roughly 60% simulated speedup over the synchronous baseline when compute is optimally allocated between training and sampling under their assumptions. (18:58-19:12)
 
 - **The simulator assumes one budget of homogeneous, co-located GPUs to allocate between training and sampling; a cross-datacenter design breaks that assumption in a useful direction.** If rollout engines can autoscale globally at other providers, sampling capacity stops being drawn from the same fixed pool as training capacity, and the allocation sweep this page describes becomes a sweep over trainer size against an elastic — and differently priced — sampling tier ([The Rollout Serving Island Is the Movable Unit of an RL Run](the-rollout-serving-island-is-the-movable-unit-of-an-rl-run.md)). Two model inputs change with it: weight-sync latency stops being negligible, and per-GPU sampling cost stops being a single number. Modal reports no simulation of its own, so this is a stated implication rather than a modeled result. ([Modal](../sources/20260810_maRzp4kImJ4.md), 03:37-04:18, 17:26-18:43)
+- **Why the layout space is large enough to need a method at all.** Arora enumerates it: "a standard transformer layer can be parallelized across data, sequence, tensor, context, layer, pipeline and expert dimensions, and each composition induces a different communication pattern," so the space "expands combinatorially beyond single GPU cases." Each composition is a different communication pattern, not just a different memory split — which is the part a layout simulator has to model if its prediction is to hold, and the reason these patterns recur "from inference to RL to post-training." ([Arora](../sources/20260827_pOvWgX7IJsc.md), 22:37-23:20)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -26,7 +27,9 @@ Related concepts:
 - [The Rollout Serving Island Is the Movable Unit of an RL Run](the-rollout-serving-island-is-the-movable-unit-of-an-rl-run.md)
 - [Make local inference benchmarks reproducible artifacts](make-local-inference-benchmarks-reproducible-artifacts.md)
 - [Use hardware-in-the-loop search for AI kernel generation](use-hardware-in-the-loop-search-for-ai-kernel-generation.md)
+- [Overlap Communication With Compute Intra-SM or Inter-SM by Data Alignment](overlap-communication-with-compute-intra-sm-or-inter-sm.md)
 
 Sources:
 - [Efficient Reinforcement Learning - Rhythm Garg & Linden Li, Applied Compute](../sources/20251209_o15AaYl7Wu0.md), 09:00-19:57
 - [Taking Reinforcement Learning Cross Datacenter — Nan Jiang, Modal](../sources/20260810_maRzp4kImJ4.md), 03:37-04:18, 17:26-18:43
+- [Can LLMs Write Fast Multi-GPU Kernels? — Simran Arora, Together AI](../sources/20260827_pOvWgX7IJsc.md), 22:37-23:20

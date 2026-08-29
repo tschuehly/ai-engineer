@@ -18,6 +18,7 @@ Details:
 - These four are "the science" — the empirically meaningful measuring-stick properties — and are necessary but not sufficient; the field-shaping differentiators ("the art") sit on top. (12:55-13:23)
 - **"Headroom" means something stricter once the benchmark is meant to measure learning rather than capability, and a fifth property appears.** For a sequential benchmark, unsaturated is not enough: "if the model can improve on your tasks by just training offline and not actually require any online learning, then it's not a good task for measuring continual learning" — a benchmark can have plenty of room at the top and still be worthless here. The fifth property is **shared latent structure**, which is a property of the *sequence* rather than of any instance and which conventional benchmark design deliberately removes, since instances "are designed to be independent." The third requirement, a learning signal in the environment ("scalar reward… error messages… textual feedback"), overlaps this checklist's methodology axis but sets a much lower bar than a verifiable grader. See [A Learning Benchmark Needs Headroom, Shared Structure, and a Signal](a-learning-benchmark-needs-headroom-shared-structure-and-a-signal.md). Worth reading alongside the fact that this benchmark was funded in part by Snorkel AI's open benchmarks grant program. ([Evaluating Continual Learning](../sources/20260812_iqloyWCGYQQ.md), 05:13-07:34, 19:14-19:31)
 - The "task quality" axis is not just hygiene for the measuring stick — a separate Snorkel controlled experiment (Crawford) shows it is a real training lever: holding model, compute, and task count fixed, high-quality agentic tasks produced ~5x the RL uplift of low-quality ones (6% vs 1%), because "task quality and data quality are largely the same thing." ([Task Fidelity Scaling Laws](../sources/20260602_YYH0DMQr30A.md), 09:09-10:21)
+- **How to get distributional diversity when the space is combinatorial: build the taxonomy first.** "A standard transformer layer can be parallelized across data, sequence, tensor, context, layer, pipeline and expert dimensions, and each composition induces a different communication pattern," so ParallelKernelBench's authors "created this taxonomy… and then picked representative problems for each part of the taxonomy" rather than collecting whatever was available. On the headroom axis it passes at introduction — 28 of 87 zero-shot, 35 of 87 under an agent harness — and on methodology it separates correctness (`pass@k`) from the axis that actually matters (`fast_1@k`, correct *and* faster than the reference). ([Arora](../sources/20260827_pOvWgX7IJsc.md), 22:37-23:12, 24:00-24:44, 27:29-27:41)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -35,6 +36,7 @@ Related concepts:
 - [pass@k on a Deterministic Environment Measures Replay, Not Capability](passk-on-a-deterministic-environment-measures-replay.md)
 - [A Learning Benchmark Needs Headroom, Shared Structure, and a Signal](a-learning-benchmark-needs-headroom-shared-structure-and-a-signal.md)
 - [Chained Independent Benchmarks Cannot Measure Learning](chained-independent-benchmarks-cannot-measure-learning.md)
+- [Specify a Generation Task as a Reference Implementation Plus a Topology Spec](specify-a-generation-task-as-a-reference-implementation-plus-a-topology-spec.md)
 
 Sources:
 - [The Art & Science of Benchmarking Agents — Vincent Chen, Snorkel AI](../sources/20260604_iNkFlCiij0U.md), 06:34-12:52
@@ -42,3 +44,4 @@ Sources:
 - [Computer Use at the Edge of the Statistical Precipice — Pierluca D'Oro, Programma Labs](../sources/20260814_CTLa_p6iOiY.md), 00:36-02:19, 12:26-15:30
 - [Computer-use models will agentify the web, not APIs — Dhruv Batra, Yutori](../sources/20260814_Ki980nV0__0.md), 15:51-16:56
 - [Beyond Static Intelligence: Evaluating Continual Learning — Parth Asawa, UC Berkeley](../sources/20260812_iqloyWCGYQQ.md), 05:13-07:34, 19:14-19:31
+- [Can LLMs Write Fast Multi-GPU Kernels? — Simran Arora, Together AI](../sources/20260827_pOvWgX7IJsc.md), 22:37-23:12, 24:00-24:44, 27:29-27:41

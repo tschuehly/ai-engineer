@@ -12,6 +12,7 @@ Details:
 - pi follows this pattern by stripping the harness down to provider abstraction, a simple agent loop with tool calling, compact tool definitions, and small system-prompt guidance rather than large default prompt payloads. (05:47-07:26)
 - Pash makes the same argument from Cline's model-agnostic perspective: Terminus is described as a generic terminal harness with no graph search, RAG, indexing, or context-engineering layer, yet strong frontier models performed well in it. 01:35-02:03
 - The practical caveat is that a minimal harness does not improve the base model; durable progress comes from better benchmarks and RL environments, not from endlessly retuning scaffolds around each new model release. 03:46-05:04
+- **A minimal harness as a research instrument, with its gain measured.** To test whether an agent loop helps on multi-GPU kernel generation, the setup was deliberately plain: "the mini-SWE-agent multi-turn harness and one of the best performing models, Gemini 3 Pro," given "access to a local bash environment to sort of mimic the standard Claude Code setup." It moved that model from 24 to 35 of 87 problems solved, with 26 beating the reference — a large gain from a multi-turn loop plus a shell, and it then plateaued. When the question is how much the loop itself is worth, the minimal surface is what makes the answer attributable. ([Arora](../sources/20260827_pOvWgX7IJsc.md), 27:07-27:56)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -21,7 +22,9 @@ Related topics:
 Related concepts:
 - [Agent tool loops turn model-required actions into executable results](agent-tool-loops-turn-model-required-actions-into-executable-results.md)
 - [MCP tool surfaces need default context budgets](mcp-tool-surfaces-need-default-context-budgets.md)
+- [More Samples Buy Correctness, Not Speedups](more-samples-buy-correctness-not-speedups.md)
 
 Sources:
 - [Building pi in a World of Slop - Mario Zechner](../sources/20260416_RjfbvDXpFls.md), 04:46-07:26
 - [Hard Won Lessons from Building Effective AI Coding Agents - Nik Pash, Cline](../sources/20251212_I8fs4omN1no.md), 01:35-05:04
+- [Can LLMs Write Fast Multi-GPU Kernels? — Simran Arora, Together AI](../sources/20260827_pOvWgX7IJsc.md), 27:07-27:56

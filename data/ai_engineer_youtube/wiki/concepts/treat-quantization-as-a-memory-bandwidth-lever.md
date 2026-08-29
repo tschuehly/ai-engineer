@@ -15,6 +15,7 @@ Details:
 - **Inside an RL loop, precision acquires a third axis beyond memory and throughput: how much of the model changes per training step.** For a fixed float format the visibility floor is roughly θ/2^(mantissa+1), so a coarser serving dtype rounds away more of each optimizer step and fewer served weights differ between versions — "in even lower precision there will be less weight changed" — which shrinks the trainer→rollout sync payload ([Lower Serving Precision Shrinks the Weight-Sync Patch](lower-serving-precision-shrinks-the-weight-sync-patch.md)). The accuracy cost is unchanged and this argument says nothing about it. ([Modal](../sources/20260810_maRzp4kImJ4.md), 13:25-13:42)
 - The group-scaled formats this page benchmarks (NVFP4) behave differently under that lens than plain floats do: "plain floats are easy to reason about — each element has its own rounding," whereas with a shared group scale the same rationale is asserted to apply but the encoding and decoding differ, and a scale-factor change re-encodes a whole group at once. The talk works through neither, and its one measured run is FP8. ([Modal](../sources/20260810_maRzp4kImJ4.md), 13:42-14:43)
 - **A counterexample worth measuring before assuming the quantized path is faster: KV-cache precision.** From a GLM 5.2 deployment on H200s, offered as a days-old finding and explicitly still under investigation, BF16 KV cache "actually is faster than using FP8 KV cache for longer prefill." Nothing accompanies it — no workload definition, no measurement, no explanation — so its only use is as a prompt: KV-cache precision is a separate dial from weight precision, it is exercised hardest during prefill rather than decode, and this page's memory-bandwidth argument does not obviously predict its sign on a prefill-bound workload. ([Fama](../sources/20260827_YXowceUKYJI.md), 19:28-19:52)
+- **The engineering cost of a precision change, at the kernel level.** Pulling the quantization lever is cheap in a framework and expensive underneath it. Arora's objection to hand-tuned distributed operators is exactly this: they "achieve peak performance, but some of these methods have been designed in one precision and it takes five or six months to scale it to another precision." If your throughput plan depends on a format change reaching a hand-written kernel path, price the port, and prefer abstractions that make precision a parameter rather than a rewrite. ([Arora](../sources/20260827_pOvWgX7IJsc.md), 13:27-14:07)
 
 Related topics:
 - [Inference](../topics/inference.md)
@@ -28,8 +29,10 @@ Related concepts:
 - [Treat edge models as their own architecture class](treat-edge-models-as-their-own-architecture-class.md)
 - [Text Diffusion Trades Serving Throughput for Low Latency](text-diffusion-trades-serving-throughput-for-low-latency.md)
 - [Set the Prefill-to-Decode Ratio From the Workload's Input-to-Output Ratio](set-the-prefill-to-decode-ratio-from-the-workloads-input-output-ratio.md)
+- [Add Multi-GPU Primitives to a Single-GPU Kernel Instead of Orchestrating Bulk Collectives](add-multi-gpu-primitives-to-a-single-gpu-kernel.md)
 
 Sources:
 - [Running LLMs locally: Practical LLM Performance on DGX Spark - Mozhgan Kabiri chimeh, NVIDIA](../sources/20260410_c5-kx2bwoCk.md), 05:34-09:18
 - [Taking Reinforcement Learning Cross Datacenter — Nan Jiang, Modal](../sources/20260810_maRzp4kImJ4.md), 13:25-14:43
 - [KV Cache-Aware Routing and P/D Disaggregation on Kubernetes — Yuchen Fama & Ashish Kamra, Red Hat](../sources/20260827_YXowceUKYJI.md), 19:28-19:52
+- [Can LLMs Write Fast Multi-GPU Kernels? — Simran Arora, Together AI](../sources/20260827_pOvWgX7IJsc.md), 13:27-14:07
