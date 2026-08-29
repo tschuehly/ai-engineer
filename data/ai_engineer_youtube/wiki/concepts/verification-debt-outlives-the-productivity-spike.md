@@ -17,6 +17,8 @@ Details:
 - **Caveats, and they are substantial.** The study is cited with no link, cohort size, control for project type, or definition of "productivity"; the measurement instrument was SonarQube, cited by a Sonar speaker as evidence for adopting Sonar; and the three-month figure is quoted as "about 3 months" with no confidence interval. Treat the *shape* — transient gain, persistent residue — as the reusable claim and the numbers as unverified. ([Chatterjee](../sources/20260809_03l29gJXpCE.md), 02:16-02:34)
 - **A third independent observer of the same divergence, from the operations end.** Denys Linkov polls a room on whether technical products improved over twenty years, five years, and the past year, then argues "we're going faster and faster through the technology life cycle, but we've lost something. The product focused on customers in some way has degraded, the maintainability of the code and the reliability has degraded" — illustrated with deliberately anonymized uptime dashboards from two leading companies sitting "below a three-nine or even four-nine reliability." The conclusion matches this page's shape: "even though we're shipping faster and faster, the code quality and the product quality has not necessarily gone up." His mechanism is comprehension rather than defect count: AI-native development "starts looking like some of the legacy code we've seen in the past… and the broader problem is people don't actually understand what's happening there," which is what makes later change against customer requirements expensive. Note the evidentiary weight — screenshots with the causal link asserted, not measured. ([Denys Linkov](../sources/20260808_7vn4WpqNpck.md), 02:43-03:31, 13:03-13:32)
 
+- **Proof converts verification debt into a different liability, and the talk is silent on its size.** A machine-checked property is the one form of verification that does not decay quietly: it either still closes or it does not. What replaces the debt is proof maintenance, since a proof breaks whenever the code or the specification moves — and the zlib example reports "32,000 lines of proof" from "a week or so" of machine work with no maintenance cost, retry rate, or change-frequency data attached anywhere in the talk. That silence is the finding worth recording here: the cost that persists after the spike is precisely the one this source leaves unmeasured. ([Pant](../sources/20260828_lRa9sPaMyy4.md), 04:41-05:56)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -29,7 +31,9 @@ Related concepts:
 - [Keep critical code inside human understanding and review capacity](keep-critical-code-inside-human-understanding-and-review-capacity.md)
 - [Treat slop as a quality failure, not an AI provenance label](treat-slop-as-a-quality-failure-not-an-ai-provenance-label.md)
 - [Audit a Refactor Against Having Waited for Better Models](audit-a-refactor-against-having-waited-for-better-models.md)
+- [Pick a Verification Route by Which Translation You Can Afford](pick-a-verification-route-by-which-translation-you-can-afford.md)
 
 Sources:
 - [Guide, Verify, Solve — Anirban Chatterjee, Sonar](../sources/20260809_03l29gJXpCE.md), 01:45-04:46
 - [Benchmarking Coding Agents on New vs Legacy Codebases — Denys Linkov, Wisedocs](../sources/20260808_7vn4WpqNpck.md), 02:43-03:31, 13:03-13:32
+- [Your Code Has Bugs. Lean4 Has Proofs: Formal Verification for Engineers — Varun Pant, AWS](../sources/20260828_lRa9sPaMyy4.md), 04:41-05:56

@@ -571,6 +571,10 @@
 - [Learn risk scoring from audit feedback for predictive compliance](../concepts/learn-risk-scoring-from-audit-feedback-for-predictive-compliance.md)
 
 ## Coding Agents
+- [Ship a Proof a Small Kernel Can Recheck, Not a Claim You Must Trust](../concepts/ship-a-proof-a-small-kernel-can-recheck.md) - the one check whose cost does not grow with agent output: a week of search and 32,000 lines of proof, adjudicated by a kernel small enough to reimplement yourself.
+- [Validate the Specification, Because the Proof Cannot](../concepts/validate-the-specification-because-the-proof-cannot.md) - once machines own the code and the proof, the specification is the only place an error can still hide, and it comes out of the pipeline certified.
+- [Pick a Verification Route by Which Translation You Can Afford](../concepts/pick-a-verification-route-by-which-translation-you-can-afford.md) - rewrite in the prover's language, keep a model beside the code, annotate in place for a solver, or translate the compiler IR: similar guarantees, very different disruption.
+- [Gate Releases on Agreement Between an Executable Spec and the Shipping Code](../concepts/gate-releases-on-agreement-between-an-executable-spec-and-the-shipping-code.md) - AWS's Cedar ships no version until its Lean specification and its Rust implementation agree on about 100 million random inputs, run nightly.
 - [A Missing Skill Is Billed as Tokens, Not Recorded as a Gap](../concepts/a-missing-skill-is-billed-as-tokens-not-recorded-as-a-gap.md) - an unwritten skill produces no defect and no ticket, so a library gap surfaces as spend and steering iterations on a recurring task class.
 - [Skill Composability Is Decided Before Authoring, Not in the Registry](../concepts/skill-composability-is-decided-before-authoring-not-in-the-registry.md) - a catalog makes skills findable and owned but cannot make independently authored ones compose; the domain carve and named human owners come first.
 - [Review Comments Have Two Audiences With Inverted Error Costs](../concepts/review-comments-have-two-audiences-with-inverted-error-costs.md) - a wrong comment is cheap for a human and expensive for an agent; a nit is the reverse, so one filter cannot serve both surfaces.
@@ -1052,6 +1056,8 @@
 - [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md)
 
 ## Infrastructure
+- [Gate Releases on Agreement Between an Executable Spec and the Shipping Code](../concepts/gate-releases-on-agreement-between-an-executable-spec-and-the-shipping-code.md) - a shipped system that keeps an executable Lean specification beside its Rust production code and blocks releases on their nightly agreement.
+- [Pick a Verification Route by Which Translation You Can Afford](../concepts/pick-a-verification-route-by-which-translation-you-can-afford.md) - where the translation into the prover's logic happens — your rewrite, the verifier, the compiler IR, or a shared verification IR — decides how much of your stack has to move.
 - [Ship Stable APIs and Let Users Vibe-Code the Interface](../concepts/ship-stable-apis-and-let-users-vibe-code-the-interface.md) - the platform team's product becomes the endpoint rather than the screen, with API stability as the load-bearing promise.
 - [Move the Platform's Primary Surface as Its Users Gain Tools](../concepts/move-the-platforms-primary-surface-as-its-users-gain-tools.md) - which surface an internal platform guarantees first is a function of what its current users can build for themselves.
 - [An Installed Desktop App Is an Auth and Filesystem Beachhead](../concepts/an-installed-desktop-app-is-an-auth-and-filesystem-beachhead.md) - the Electron app already held the session and the file permissions, so Figma shipped a local MCP server before the protocol had an auth story, and built the remote one afterwards.
@@ -1601,6 +1607,9 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Ship a Proof a Small Kernel Can Recheck, Not a Claim You Must Trust](../concepts/ship-a-proof-a-small-kernel-can-recheck.md) - the only evidence in this wiki that covers every input rather than a sample, plus an audit of why judged, sampled, and human checks each fall short differently.
+- [Gate Releases on Agreement Between an Executable Spec and the Shipping Code](../concepts/gate-releases-on-agreement-between-an-executable-spec-and-the-shipping-code.md) - differential random testing against an executable specification, run at release cadence with the authority to block the release.
+- [Validate the Specification, Because the Proof Cannot](../concepts/validate-the-specification-because-the-proof-cannot.md) - the check nothing downstream can perform, and the one place sampled testing is the right instrument rather than the weak one.
 - [Show the Prompt Diff So a Non-Engineer Can Promote an Optimized Judge](../concepts/show-the-prompt-diff-so-a-non-engineer-can-promote-an-optimized-judge.md) - an optimized judge prompt has an adoption gate separate from its accuracy: the owner has to be able to see what changed, so render the original and calibrated prompts side by side and keep promotion an explicit human act.
 - [Keep Judge-Prompt Ownership Configurable While the Org Is Still Learning](../concepts/keep-judge-prompt-ownership-configurable-while-the-org-is-still-learning.md) - strategy-and-operations owns the judge prompt in some teams, the PM in others, engineering in others, and the platform permits all three because the org design has not converged.
 - [Ship Stable APIs and Let Users Vibe-Code the Interface](../concepts/ship-stable-apis-and-let-users-vibe-code-the-interface.md) - annotation tooling stops being a platform backlog when the use-case variation sits above the API line and the operators hold coding agents.
@@ -2354,6 +2363,7 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Pick a Verification Route by Which Translation You Can Afford](../concepts/pick-a-verification-route-by-which-translation-you-can-afford.md) - Lean, Verus on Z3, Aeneas over Rust's MIR, and AWS's work-in-progress Strata, arranged by which translation each one performs on your behalf.
 - [Tools Are the Only Primitive Every Client Implements](../concepts/tools-are-the-only-primitive-every-client-implements.md) - a client compatibility matrix as a maintained artifact; server instructions, elicitation, and sampling all reimplemented through tool results, and a primitive that was implemented but wired to the wrong model was worse than one that was absent.
 - [Pick the Serialization the Models Have Seen Most, Not the One Native to Your System](../concepts/pick-the-serialization-the-models-have-seen-most.md) - Figma had three textual serializations of its own C++ scene graph and chose React and Tailwind over its purpose-built internal representation, on the stated hunch that models had seen the most of it; the image rides along as a supplement, never inlined as base64.
 - [Return a Pointer to the Reader's Own Component Instead of a Faithful Copy](../concepts/return-a-pointer-to-the-readers-own-component-instead-of-a-copy.md) - pixel-perfect generated markup is "only half the story" because it drops the accessibility and internationalization properties of the consumer's real component, so Code Connect returns "use button component" instead — higher fidelity and less context in one move, bounded by mapping coverage.
@@ -2644,6 +2654,8 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Validate the Specification, Because the Proof Cannot](../concepts/validate-the-specification-because-the-proof-cannot.md) - the step a verifier adds to spec-driven development rather than removes, plus the second unproved gap that auto-formalization opens.
+- [Ship a Proof a Small Kernel Can Recheck, Not a Claim You Must Trust](../concepts/ship-a-proof-a-small-kernel-can-recheck.md) - what a workflow looks like when the reviewer of the implementation is a program small enough to reimplement, and the search is what the agent does.
 - [Ship Stable APIs and Let Users Vibe-Code the Interface](../concepts/ship-stable-apis-and-let-users-vibe-code-the-interface.md) - stop anticipating every internal UI and ship the endpoints instead, but only after checking that the use cases differ in presentation rather than in the data model.
 - [Move the Platform's Primary Surface as Its Users Gain Tools](../concepts/move-the-platforms-primary-surface-as-its-users-gain-tools.md) - UI first, API first, workflow first: each move answers a different bottleneck, and the last one was triggered from outside the platform.
 - [Show the Prompt Diff So a Non-Engineer Can Promote an Optimized Judge](../concepts/show-the-prompt-diff-so-a-non-engineer-can-promote-an-optimized-judge.md) - self-serve calibration stalls at trust, not accuracy, so the surface has to show the diff and the score movement together.

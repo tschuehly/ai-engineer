@@ -23,6 +23,8 @@ Details:
 
 - **The same rule applied to review depth at Uber's scale, with the selection layer deliberately kept deterministic.** "We need the ability to take factors like the risk profile and the complexity of a code change and factor that in when deciding how we're going to run a code review. Not all code gets the exact same review." The implementation is "a smart deterministic routing so that we could route which team gets what kind of review with which model, what kind of generators, and so on" — the choice of proof is computed from ownership and risk, and only the proof itself is a model. That split is what keeps cost and latency predictable across hundreds of team configurations, and it is the part a router built as an LLM classifier gives up. ([Bond and Ketkar](../sources/20260828_EL123UNokkI.md), 02:25-02:43, 09:05-09:16)
 
+- **A literal top rung for this page's metaphor, priced.** "Pick your most critical code, write what correct means, which is the specification… and then you can let your coding agent implement it and your formal verification tool prove it" is the same routing rule stated by someone whose top rung is a machine-checked proof — and Cedar, an authorization policy engine, sits squarely on this page's read-every-line list of authentication, permissions, and irreversible actions. The reason it stays a routing decision rather than a default is cost: converting zlib, one C compression library, took "a week or so" and produced "32,000 lines of proof." ([Pant](../sources/20260828_lRa9sPaMyy4.md), 04:41-05:56, 09:17-09:35)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Workflows](../topics/workflows.md)
@@ -34,8 +36,10 @@ Related concepts:
 - [Self-verifying agent loops hide review rather than remove it](self-verifying-agent-loops-hide-review-rather-than-remove-it.md)
 - [Coding agents shift engineering work toward planning and review](coding-agents-shift-engineering-work-toward-planning-and-review.md)
 - [Comment Volume Is a Property of the Review Pipeline, Not the Model](comment-volume-is-a-property-of-the-review-pipeline.md)
+- [Pick a Verification Route by Which Translation You Can Afford](pick-a-verification-route-by-which-translation-you-can-afford.md)
 
 Sources:
 - [Should AI Engineers Still Read Code in 2026? The Z/L Continuum — Alex Volkov, ThursdAI](../sources/20260710_ZpK5PWX2YRM.md), 12:17-21:13
 - [How to build an AI-Native Health Company — Dan Feng, Maven Clinic](../sources/20260819_WJRdLNhrsLQ.md), 11:43-12:32
 - [Building uReview, Uber's Multi-Agent Code Review Engine — Will Bond & Ameya Ketkar, Uber](../sources/20260828_EL123UNokkI.md), 02:25-02:43, 09:05-09:16
+- [Your Code Has Bugs. Lean4 Has Proofs: Formal Verification for Engineers — Varun Pant, AWS](../sources/20260828_lRa9sPaMyy4.md), 04:41-05:56, 09:17-09:35

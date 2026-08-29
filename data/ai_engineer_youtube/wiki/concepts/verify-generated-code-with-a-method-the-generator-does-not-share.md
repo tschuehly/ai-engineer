@@ -19,6 +19,8 @@ Details:
 - **The method-independence argument has a context-independence twin that costs nothing.** Coyle attacks the same shared-blind-spot problem from inside the LLM layer, by redacting the producer's reasoning from the critic: pass "the claim and the evidence" but not "the thought processes that went in to creating this claim," because collaborating agents "devolve into one idea." That does not give you provability — only the computational layer does — but it is available on every LLM review, including the ones where a deterministic checker has nothing to say, and it is the missing control on any pipeline that hands a reviewer the full transcript. See [Withhold the Producer's Reasoning From the Critic](withhold-the-producers-reasoning-from-the-critic.md). ([Coyle](../sources/20260808_Z-c11pV_uvU.md), 13:44-15:12)
 - **The cheapest independence axis is temporal, and it costs nothing.** An agent that writes the implementation and then its test authors the check with the answer already in hand: "it will fit the test to the code rather than fit the code to pass the verification criteria." Reversing the order fixes that with the same model, the same prompt, and the same method — only the sequence changes. It is strictly weaker than method independence, since a test written first still carries the generator's blind spots about what is worth testing, so it belongs underneath this page's rule rather than instead of it. ([Blum](../sources/20260828_5Bn0xro2ol8.md), 06:12-06:42)
 
+- **The strongest available form of the rule changes the artifact, not just the method.** A proof-carrying pipeline does not ask a different technique to re-derive the answer; it makes the generator emit evidence and leaves the checker with one job — re-deriving that the evidence closes. "You only need to trust the small kernel," an incorrect proof "is rejected immediately," and independence is available at the level of the checking rule itself, since multiple open-source kernels exist "in C++, Rust, Lean" and "you yourself can actually go write one." That also maximizes the auditability payoff this page prizes: a proof re-checks identically by construction, so "verification was run the same way every single time" is a property of the artifact rather than a claim about the pipeline. The limit is scope — the kernel certifies exactly the theorem stated and nothing wider. ([Pant](../sources/20260828_lRa9sPaMyy4.md), 02:20-02:30, 04:03-04:30)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -34,8 +36,10 @@ Related concepts:
 - [Automation Bias Turns Human-in-the-Loop Into a Rubber Stamp](automation-bias-turns-human-in-the-loop-into-a-rubber-stamp.md)
 - [Withhold the Producer's Reasoning From the Critic](withhold-the-producers-reasoning-from-the-critic.md)
 - [Write the Test First So the Agent Cannot Fit It to the Code](write-the-test-first-so-the-agent-cannot-fit-it-to-the-code.md)
+- [Ship a Proof a Small Kernel Can Recheck, Not a Claim You Must Trust](ship-a-proof-a-small-kernel-can-recheck.md)
 
 Sources:
 - [Guide, Verify, Solve — Anirban Chatterjee, Sonar](../sources/20260809_03l29gJXpCE.md), 09:23-10:13, 13:18-13:32, 14:20-14:49
 - [Anthropic's CCA Exam as a Field-Guide for Agentic Engineering — Frank Coyle, UC Berkeley](../sources/20260808_Z-c11pV_uvU.md), 13:44-15:12
 - [How to Get Your Org to Adopt Coding Agents (Without Shipping Garbage) — Eyal Blum, Figma](../sources/20260828_5Bn0xro2ol8.md), 06:12-06:42
+- [Your Code Has Bugs. Lean4 Has Proofs: Formal Verification for Engineers — Varun Pant, AWS](../sources/20260828_lRa9sPaMyy4.md), 02:20-02:30, 04:03-04:30

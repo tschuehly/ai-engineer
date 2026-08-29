@@ -15,6 +15,8 @@ Details:
 - The verification loop is the durable part; the interface is transient: a REPL is the best interface today because coding is what models are best at and may be superseded by computer use, but "what won't change is the need for that verification loop… the more durable part," and across four or five model releases "the more capable the model is, the more they can get out of that verification loop." (HEFSExa0xl0 11:21-12:37)
 - Generalization: "if you're in a domain where those feedback loops don't actually exist, I think it's actually really worth spending the time to build that rendering engine or calculation engine or whatever applies to your particular domain." (HEFSExa0xl0 16:41-17:07)
 
+- **What a maximally good oracle buys the loop, seen in the code domain.** Lean's proof search is a tree the agent walks with "tactics which are your moves" toward the theorem, backtracking whenever "for some goals, you're not able to prove it" — a loop that is only viable because rejection is immediate, cheap, and unarguable: "the kernel catches the mistake." That is the property to aim for when building an engine for a domain that has none. A partially faithful engine gives an agent something to fit itself to; an oracle that rejects without negotiation gives it something to search against. ([Pant](../sources/20260828_lRa9sPaMyy4.md), 03:16-04:14)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -27,6 +29,8 @@ Related concepts:
 - [Make validation fast, local, deterministic, and actionable](make-validation-fast-local-deterministic-and-actionable.md)
 - [Pair an LLM Narrator With a Domain Solver Via Tools](pair-an-llm-narrator-with-a-domain-solver-via-tools.md)
 - [Give Agents a Persistent-State REPL Instead of Many Tools](give-agents-a-persistent-state-repl-instead-of-many-tools.md)
+- [Ship a Proof a Small Kernel Can Recheck, Not a Claim You Must Trust](ship-a-proof-a-small-kernel-can-recheck.md)
 
 Sources:
 - [Teaching Coding Agents to do Spreadsheets - Nuno Campos, Witan Labs](../sources/20260708_HEFSExa0xl0.md), 09:28-12:37, 16:41-17:07
+- [Your Code Has Bugs. Lean4 Has Proofs: Formal Verification for Engineers — Varun Pant, AWS](../sources/20260828_lRa9sPaMyy4.md), 03:16-04:14

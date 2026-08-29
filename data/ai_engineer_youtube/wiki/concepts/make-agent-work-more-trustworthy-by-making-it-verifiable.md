@@ -15,6 +15,8 @@ Details:
 - The trust problem is why verifiability matters: hallucination "grew up" into a subtler failure where an agent asked to report revenue never says "I'm not sure" — it returns "a wrong answer that looks exactly like being right," so trust has to come from checkable structure, not confident prose. ([Upside](../sources/20260711_YZQsWVeN3rE.md), 07:39-07:57)
 - Concrete verifiable scaffolding for analytics work: AI-compiled product-capability cards that carry a "track record" of citations across every connected system, so a human can follow the sources back and confirm the agent "didn't hallucinate the important parts"; and scaffolding the agent with maintained business context before turning it loose, because a bare "YOLO mode" website rebuild (even with plan mode) failed. ([Upside](../sources/20260711_YZQsWVeN3rE.md), 09:28-11:13)
 
+- **The asymmetry this page warns about, inverted by construction.** Normally a task can be easy to solve and hard to verify, so humans keep the judgment. Formal verification builds a setting where checking is the cheap side — "you only need to trust the small kernel," and an incorrect proof "is rejected immediately" — while the expensive search is exactly what an agent can absorb. The human keeps the one judgment that stays judgment: "humans own the specification and machines own the code and proof." Where a property can be stated, the decomposition this page recommends stops being a workaround and becomes the architecture. ([Pant](../sources/20260828_lRa9sPaMyy4.md), 02:04-02:10, 04:03-04:14)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Workflows](../topics/workflows.md)
@@ -25,7 +27,9 @@ Related concepts:
 - [Route high-impact agent actions through explicit human approval gates](route-high-impact-agent-actions-through-explicit-human-approval-gates.md)
 - [Manage AI agents like humans with commander's intent](manage-ai-agents-like-humans-with-commanders-intent.md)
 - [Run a jury of analysts and a consensus judge for no-ground-truth questions](run-a-jury-of-analysts-and-a-consensus-judge-for-no-ground-truth-questions.md)
+- [Ship a Proof a Small Kernel Can Recheck, Not a Claim You Must Trust](ship-a-proof-a-small-kernel-can-recheck.md)
 
 Sources:
 - [Agents need more than a chat - Jacob Lauritzen, CTO Legora](../sources/20260422_XNtkiQJ49Ps.md), 03:20-07:49
 - [Design Patterns for AI Trust: Juries, Libraries, and Agent Tiers — Alex Bauer, Upside.tech](../sources/20260711_YZQsWVeN3rE.md), 07:39-11:13
+- [Your Code Has Bugs. Lean4 Has Proofs: Formal Verification for Engineers — Varun Pant, AWS](../sources/20260828_lRa9sPaMyy4.md), 02:04-02:10, 04:03-04:14

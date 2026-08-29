@@ -17,6 +17,8 @@ Details:
 - What this discipline is buying, named generally: reliability and plasticity are "inherently conflicting with each other. Reliable systems or stable systems, they resist the change. But the plastic systems likes change" ([NeoCognition](../sources/20260812_I6aiEf3aEFQ.md), 15:46-16:12). Verifiable continual learning does not dissolve that conflict — it prices each unit of plasticity against the stability it might cost, which is why replayability comes first: a system that cannot re-run its past has no way to charge a change for what it breaks.
 - The limit of the framing: RELAI's loop verifies *repairs* to known failures. Su's target is the accumulation of *competence* in an environment, and he flags the missing instrument for it — "how do you even define and measure expertise? And this is probably environment-specific" ([NeoCognition](../sources/20260812_I6aiEf3aEFQ.md), 15:35-15:46). A regression suite proves nothing was lost; it does not measure how much was gained.
 
+- **Two senses of "prove" worth keeping apart.** A measured before/after plus a regression test proves the cases it encodes; a machine-checked theorem covers every input, which is the gap Pant uses to disqualify the alternatives — tests "only check some inputs, not all," and "none of these can say for all inputs the code is correct." Where a fix can be stated as a property rather than a case, re-establishing the proof after the change is a strictly stronger regression guarantee than adding a test, since it constrains the whole input space rather than the failure someone happened to observe. Most agent fixes cannot be stated that way, which is why the empirical loop on this page remains the default. ([Pant](../sources/20260828_lRa9sPaMyy4.md), 00:29-00:42, 04:03-04:14)
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Agents](../topics/agents.md)
@@ -28,7 +30,9 @@ Related concepts:
 - [Replay Production Failures Before Promoting Prompt Fixes](replay-production-failures-before-promoting-prompt-fixes.md)
 - [Reliability and Plasticity Conflict in Continually Learning Agents](reliability-and-plasticity-conflict-in-continually-learning-agents.md)
 - [Define Continual Learning as Adaptive Compression of Experience](define-continual-learning-as-adaptive-compression-of-experience.md)
+- [Ship a Proof a Small Kernel Can Recheck, Not a Claim You Must Trust](ship-a-proof-a-small-kernel-can-recheck.md)
 
 Sources:
 - [Continual Learning for AI Agents: From Failures to Durable Improvements - Soheil Feizi, RELAI](../sources/20260705_2IxD9OB3XuQ.md), 00:30-02:26, 11:04-15:44, 21:35-22:26
 - [Intelligence + Continual Learning = Expertise — Yu Su, NeoCognition](../sources/20260812_I6aiEf3aEFQ.md), 15:35-16:12
+- [Your Code Has Bugs. Lean4 Has Proofs: Formal Verification for Engineers — Varun Pant, AWS](../sources/20260828_lRa9sPaMyy4.md), 00:29-00:42, 04:03-04:14

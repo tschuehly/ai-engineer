@@ -16,6 +16,8 @@ Details:
 - Enabler: minimalism and simplicity are the finish line, not the starting point (three years shrinking the protocol to two objects — a durable promise and a durable task) — a small protocol is what makes repeatable agent synthesis tractable. (08:29-09:24)
 - Slogan: "The prompt is a platform and the specification is a product." (17:18-17:24)
 
+- **A shipped instance of "repeatedly synthesize *trusted* implementations," with the trust mechanism named.** AWS's Cedar keeps its authorization semantics as a Lean specification while "the production code runs in Rust," and the two are held together by "about 100 million differential random tests run nightly. No version ships until this is satisfied." The abstractness requirement this page insists on is what makes it work: the spec states properties over behaviour — "for any forbid policy being satisfied, the request is always denied" — not storage or schema, so it constrains any implementation rather than one. It also shows the recurring bill: the specification is a maintained second artifact plus a nightly reconciliation job, not a document you write once and derive from. ([Pant](../sources/20260828_lRa9sPaMyy4.md), 02:04-02:10, 06:06-06:58)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Infrastructure](../topics/infrastructure.md)
@@ -25,6 +27,8 @@ Related concepts:
 - [Spec-driven development turns prompts into requirements, design, and tasks](spec-driven-development-turns-prompts-into-requirements-design-and-tasks.md)
 - [Use evals as durable AI system specifications](use-evals-as-durable-ai-system-specifications.md)
 - [Use durable execution for production agent loops](use-durable-execution-for-production-agent-loops.md)
+- [Gate Releases on Agreement Between an Executable Spec and the Shipping Code](gate-releases-on-agreement-between-an-executable-spec-and-the-shipping-code.md)
 
 Sources:
 - [The Prompt is the Platform - Dominik Tornow, Resonate HQ](../sources/20260629_DqtmZE6Hl0g.md), 00:02-02:52, 03:53-05:11, 08:29-09:24, 17:18-17:24
+- [Your Code Has Bugs. Lean4 Has Proofs: Formal Verification for Engineers — Varun Pant, AWS](../sources/20260828_lRa9sPaMyy4.md), 02:04-02:10, 06:06-06:58

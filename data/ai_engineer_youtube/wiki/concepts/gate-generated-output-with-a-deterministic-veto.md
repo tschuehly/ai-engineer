@@ -16,6 +16,8 @@ Details:
 
 - **The same determinism-over-coverage trade, made in code review, adds a third reason to prefer the deterministic layer: it can be proved to have run.** Sonar's argument for a computational checker beside an LLM reviewer is not a better detection rate but provability — it is "completely auditable, completely explainable, so you can prove that verification was run the same way every single time, and it's algorithmic and repeatable and consistent no matter how you run it" — and compliance is named as one of four customer-reported drivers for adopting verification at all: teams "need to be able to prove that verification is run constantly and consistently across the board." That reframes this page's choice: determinism buys not just correctness on covered patterns but evidence, which a probabilistic classifier cannot supply no matter how good its coverage gets. It also gives the classifier a place to live rather than a veto — advise where it is broad, block where you can prove it. See [Verify Generated Code With a Method the Generator Does Not Share](verify-generated-code-with-a-method-the-generator-does-not-share.md). ([Chatterjee](../sources/20260809_03l29gJXpCE.md), 10:03-10:13, 13:18-13:32)
 
+- **The veto in its purest form, plus an instance running at release cadence.** A proof kernel reads only what was produced — the exported proof term — and returns a binary verdict with no room for persuasion: "an incorrect proof is rejected immediately. And you only need to trust the small kernel." AWS's Cedar runs the same idea as a ship gate rather than a per-output check: the Lean specification and the Rust production code are compared by "about 100 million differential random tests run nightly. No version ships until this is satisfied." Both illustrate the page's distinction — the instruction is a request, the checker is permission — with the checker's verdict wired to something that can actually stop the release. ([Pant](../sources/20260828_lRa9sPaMyy4.md), 04:03-04:14, 06:50-06:58)
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Context Engineering](../topics/context-engineering.md)
@@ -27,7 +29,9 @@ Related concepts:
 - [Separate generation and verification prompts or models](separate-generation-and-verification-prompts-or-models.md)
 - [LLM Guardrails Need Checkpoints at Every Untrusted Boundary](llm-guardrails-need-checkpoints-at-every-untrusted-boundary.md)
 - [Verify Generated Code With a Method the Generator Does Not Share](verify-generated-code-with-a-method-the-generator-does-not-share.md)
+- [Gate Releases on Agreement Between an Executable Spec and the Shipping Code](gate-releases-on-agreement-between-an-executable-spec-and-the-shipping-code.md)
 
 Sources:
 - [Stop Writing Tone Instructions. Layer Them. - Isadora Martin-Dye, Isadora & Co](../sources/20260626_ij-AU9dpJjc.md), 13:36-20:53
 - [Guide, Verify, Solve — Anirban Chatterjee, Sonar](../sources/20260809_03l29gJXpCE.md), 10:03-10:13, 13:18-13:32
+- [Your Code Has Bugs. Lean4 Has Proofs: Formal Verification for Engineers — Varun Pant, AWS](../sources/20260828_lRa9sPaMyy4.md), 04:03-04:14, 06:50-06:58

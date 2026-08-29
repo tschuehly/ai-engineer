@@ -18,6 +18,8 @@ Details:
 - **The same failure at the frontier, plus the two cheapest manual tells.** Handed a whole ten-repository consolidation, GPT 5.5 extra high "completed its goal in 10 minutes and 22 seconds" — and "only wrote 2,000 lines of code, which was a little bit fishy. So I dug deeper. Um and it actually just implemented a bunch of scaffolding and didn't implement the models." Two things are worth extracting before you have a gate wired: output volume against what the job plausibly requires is a free sanity check, and the agent had already written the disclaimer nobody read — "I did not add a Ray Serve deployment or bootstrap command yet." Self-declared completion coexisting with a self-declared omission in the same output is the strongest available argument that the completion event, not the human, is the right place to attach the check. ([Denys Linkov](../sources/20260808_7vn4WpqNpck.md), 11:44-12:27)
 - **A case where the check was inside the weights, which is the version of this you cannot rely on.** On one real bug in Cline's repository, GLM "cleaned up dead code and verified that the build compiled before completing," while Opus "left a bunch of type errors and it broke the production build" — Rizwan's reading is that GLM "was trained to spend more tokens verifying its output." Read against this page's argument, the result cuts the way the page already claims: whether the build gets compiled before "done" was a property of which model you happened to route to, unstated in either model's card, invisible on the benchmark that ranked them, and not something the operator chose. A trained-in verification habit is a lucky default, not a gate — nothing enforces it, nothing reports when it lapses, and here the *more* capable model was the one that skipped it. It is also the direct counterexample to "you won't need enforcement once the models are better." One bug, one run per model, from a founder who had launched a GLM-based subscription three days earlier. ([Rizwan](../sources/20260807_CoEIs6Xm8m8.md), 09:28-10:17)
 
+- **Two upgrades to the gate from the formal-methods side: a stronger verdict, and a second cadence.** The gates on this page check expected outcomes someone configured; a verifier checks a property over the whole input space, and in the Verus form the criteria live inside the source as `requires` and `ensures` pre- and post-conditions — "a static check… enforced by the verifier and erased at runtime. So, almost like ghost code" — so the gate cannot drift away from the code it guards and costs nothing in production. Cedar shows the same gate at release rather than task cadence: "about 100 million differential random tests run nightly. No version ships until this is satisfied." ([Pant](../sources/20260828_lRa9sPaMyy4.md), 06:50-06:58, 07:39-08:07)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Workflows](../topics/workflows.md)
@@ -35,9 +37,11 @@ Related concepts:
 - [Choose Verification Layers by Defect-Class Coverage](choose-verification-layers-by-defect-class-coverage.md)
 - [Validate a Research Report by Building the Thing It Recommends](validate-a-research-report-by-building-the-thing-it-recommends.md)
 - [Invest in the Harness to Run Weaker and Local Models](invest-in-the-harness-to-run-weaker-and-local-models.md)
+- [Gate Releases on Agreement Between an Executable Spec and the Shipping Code](gate-releases-on-agreement-between-an-executable-spec-and-the-shipping-code.md)
 
 Sources:
 - [Your coding agent doesn't always follow your rules — Talha Sheikh, Checkout.com](../sources/20260708_MpZzWMdmQCE.md), 00:15-08:51
 - [Guide, Verify, Solve — Anirban Chatterjee, Sonar](../sources/20260809_03l29gJXpCE.md), 18:58-19:57
 - [Benchmarking Coding Agents on New vs Legacy Codebases — Denys Linkov, Wisedocs](../sources/20260808_7vn4WpqNpck.md), 11:44-12:27
 - [Open Source Is Dead. Long Live Open Source. — Saoud Rizwan, Cline](../sources/20260807_CoEIs6Xm8m8.md), 09:28-10:17
+- [Your Code Has Bugs. Lean4 Has Proofs: Formal Verification for Engineers — Varun Pant, AWS](../sources/20260828_lRa9sPaMyy4.md), 06:50-06:58, 07:39-08:07

@@ -17,6 +17,8 @@ Details:
 - **The surrounding argument this sits inside** is a left-shift of verification generally: "anytime that we can left shift anything in our workflow from a human needing to do it to an agent being able to verify it," with the further step of freezing anything that proved useful into a deterministic flow, because "you also know that you're using the LLM when it needs to reason, but when you have something that is already known and basically can be encoded into a test, spending that time always pays dividends." (05:00-06:11)
 - **Caveats.** "Almost always gives you better results" is an unquantified impression from one practitioner — no pass rate, defect rate, or comparison is offered, and the wiki has no measurement anywhere of how much fitting actually occurs in test-after agent runs. The rule also assumes the criterion is expressible before the code exists, which is exactly the condition that fails for exploratory, visual, and stateful work; where a task cannot be specified up front, test-first is unavailable and the other independence axes have to carry the load.
 
+- **The order rule at its limit, and where the fitting risk moves.** In a verification workflow the criterion is written first by construction and cannot be bent afterwards, because the kernel checks the proof against the stated theorem and "an incorrect proof is rejected immediately." The fitting pressure does not disappear, though — it relocates to whoever writes the property, which is why Pant makes spec authorship a separate step with its own check: the specification is written directly in Lean or auto-formalized from natural language, and then "you validate the specification. So, either the human reviews it, or you test that it holds on some inputs." An agent that writes both the property and the proof has recreated the problem one level up. ([Pant](../sources/20260828_lRa9sPaMyy4.md), 01:23-01:52, 04:03-04:14)
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Coding Agents](../topics/coding-agents.md)
@@ -29,6 +31,8 @@ Related concepts:
 - [Self-verifying agent loops hide review rather than remove it](self-verifying-agent-loops-hide-review-rather-than-remove-it.md)
 - [Detect reward hacking in code optimization evals](detect-reward-hacking-in-code-optimization-evals.md)
 - [Structure an Agent Plan With a Frozen Why and Reviewer-Sized Phases](structure-an-agent-plan-with-a-frozen-why-and-reviewer-sized-phases.md)
+- [Validate the Specification, Because the Proof Cannot](validate-the-specification-because-the-proof-cannot.md)
 
 Sources:
 - [How to Get Your Org to Adopt Coding Agents (Without Shipping Garbage) — Eyal Blum, Figma](../sources/20260828_5Bn0xro2ol8.md), 05:00-06:42
+- [Your Code Has Bugs. Lean4 Has Proofs: Formal Verification for Engineers — Varun Pant, AWS](../sources/20260828_lRa9sPaMyy4.md), 01:23-01:52, 04:03-04:14

@@ -16,6 +16,8 @@ Details:
 - Matt Dailey (Ref) names a loss this control does not cover. Reading every line of critical code protects against code you do not understand; it does not protect against code whose *approach* someone else chose — "if you as an engineer are letting an agent make a critical decision, you are [ceding] control of your code. You are no longer the owner of that code." You can read every line of a design you never picked. Treat the two as complementary controls with different failure modes, and note that only the decision control keeps working as the diff gets larger. See [Ceding a Critical Decision Transfers Ownership of the Code](ceding-a-critical-decision-transfers-ownership-of-the-code.md). ([Dailey](../sources/20260809_Kz4QJmNrVXU.md), 03:16-03:43, 17:10-17:27)
 - **Why the comprehension boundary is a schedule problem, not only a risk one.** Denys Linkov names the same loss and prices it in change cost: AI-native development produces "a lot of code written… with low performance or quality, and the broader problem is people don't actually understand what's happening there. So, if you have some issues within the code base or you want to adjust based on customer requirements, it's actually much harder to do so." Code that has drifted outside human understanding does not merely carry latent risk — it becomes the code you cannot modify on a customer's timeline, which is the specific way it eventually forces a refactor. ([Denys Linkov](../sources/20260808_7vn4WpqNpck.md), 13:03-13:32)
 
+- **The direct challenge to this constraint, and the form in which it survives.** A proof-carrying pipeline deliberately produces an artifact no human will read — "this particular example had 32,000 lines of proof" from about a week of machine work on a single C library — and asks you to understand the checker instead: "you only need to trust the small kernel." Human understanding is not abandoned but relocated to the property, which stays one sentence long, and the scoping instinct is unchanged: "pick your most critical code, write what correct means." The reconciled version of this page's rule is that critical code must stay inside human understanding *at the specification level*, with review capacity spent there rather than on the implementation. ([Pant](../sources/20260828_lRa9sPaMyy4.md), 04:41-05:56, 09:17-09:35)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -28,9 +30,11 @@ Related concepts:
 - [Route each change to the proof it needs](route-each-change-to-the-proof-it-needs.md)
 - [Ceding a Critical Decision Transfers Ownership of the Code](ceding-a-critical-decision-transfers-ownership-of-the-code.md)
 - [Audit a Refactor Against Having Waited for Better Models](audit-a-refactor-against-having-waited-for-better-models.md)
+- [Ship a Proof a Small Kernel Can Recheck, Not a Claim You Must Trust](ship-a-proof-a-small-kernel-can-recheck.md)
 
 Sources:
 - [Building pi in a World of Slop - Mario Zechner](../sources/20260416_RjfbvDXpFls.md), 12:59-17:58
 - [Should AI Engineers Still Read Code in 2026? The Z/L Continuum — Alex Volkov, ThursdAI](../sources/20260710_ZpK5PWX2YRM.md), 13:18-14:44
 - [Velocity Sickness: What Happens When Your Whole Team Gets 10x Faster — Matt Dailey, Ref.](../sources/20260809_Kz4QJmNrVXU.md), 03:16-03:43, 17:10-17:27
 - [Benchmarking Coding Agents on New vs Legacy Codebases — Denys Linkov, Wisedocs](../sources/20260808_7vn4WpqNpck.md), 13:03-13:32
+- [Your Code Has Bugs. Lean4 Has Proofs: Formal Verification for Engineers — Varun Pant, AWS](../sources/20260828_lRa9sPaMyy4.md), 04:41-05:56, 09:17-09:35

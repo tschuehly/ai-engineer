@@ -15,6 +15,8 @@ Details:
 
 - **Two different senses of "untrusted" are in circulation, and they prescribe different things.** This page's sense is *runtime containment*: the code may execute, so remove its capabilities. Sonar's "zero trust" is a *verification* claim about the same code before it runs — "the code could really have come from anywhere. It could still be written by a human, it could be written by an AI," so apply "a similar comprehensive regime to verify that code that works the same no matter how that code was written." The prescriptions diverge on provenance: sandboxing exists precisely because the code is generated and about to run unreviewed, while the verification sense argues *against* an AI-specific path and for one regime over all code. They are complementary rather than competing — a sandbox does not tell you whether the code is right, and static analysis does not stop a hallucinated import from opening a socket — but a policy that says "we treat AI code as untrusted" should say which one it means. See [Verify Generated Code With a Method the Generator Does Not Share](verify-generated-code-with-a-method-the-generator-does-not-share.md). ([Chatterjee](../sources/20260809_03l29gJXpCE.md), 09:23-10:00)
 
+- **The doctrine's logical endpoint: stop trusting the code and require it to arrive with a certificate.** Pant's framing makes untrustedness structural rather than a policy choice — "humans own the specification and machines own the code and proof" — and answers the throughput problem this page's manual precautions cannot: "none of these can say for all inputs the code is correct," whereas a machine-checked proof does, with "you only need to trust the small kernel" as the entire remaining trust assumption. What it does not buy is a blanket clearance: the certificate covers exactly the property stated, so untrusted-by-default still applies to everything the specification did not say. ([Pant](../sources/20260828_lRa9sPaMyy4.md), 00:37-00:42, 02:04-02:10, 04:03-04:14)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Infrastructure](../topics/infrastructure.md)
@@ -25,7 +27,9 @@ Related concepts:
 - [Capability-Based Sandboxes Start With No Authority](capability-based-sandboxes-start-with-no-authority.md)
 - [LLM Attack Surfaces Span Prompts, Context, Retrieval, Tools, and Actions](llm-attack-surfaces-span-prompts-context-retrieval-tools-and-actions.md)
 - [Verify Generated Code With a Method the Generator Does Not Share](verify-generated-code-with-a-method-the-generator-does-not-share.md)
+- [Ship a Proof a Small Kernel Can Recheck, Not a Claim You Must Trust](ship-a-proof-a-small-kernel-can-recheck.md)
 
 Sources:
 - [Why, and how you need to sandbox AI-Generated Code? - Harshil Agrawal, Cloudflare](../sources/20260408_AHtGAgQ0Q_Q.md), 01:45-06:48, 33:00-35:24
 - [Guide, Verify, Solve — Anirban Chatterjee, Sonar](../sources/20260809_03l29gJXpCE.md), 09:23-10:00
+- [Your Code Has Bugs. Lean4 Has Proofs: Formal Verification for Engineers — Varun Pant, AWS](../sources/20260828_lRa9sPaMyy4.md), 00:37-00:42, 02:04-02:10, 04:03-04:14

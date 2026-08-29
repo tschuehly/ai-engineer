@@ -15,6 +15,8 @@ Details:
 - The Kiro requirements phase asks clarifying questions before generating (with a "quick plan" mode to generate all documents at once from the Q&A), the design phase carries mermaid/ASCII diagrams and can be started before requirements, and the human should stop and edit each doc with their own taste before code because "it's only as good as what you put in." (IddXPepIAS4 10:49-12:12)
 - **The specify-plan-task-implement loop is one step of an organization's lifecycle, not the lifecycle.** "I think this is how most of our coding agents actually are kind of shaped today. In reality that is not how it is composed, and at scale when you look at the organization complexity, this is just one step in the journey. This is like building a product increment." ([Touil](../sources/20260828_M05vON8i0aI.md), 02:32-03:20) The surrounding steps Touil enumerates — product strategy, discovery, data preparation and data-product delivery, platform engineering ops, launch, performance optimization and incident resolution — are where spec-driven tooling currently has no counterpart, and he adds that organizations run many such lifecycles rather than one: "it is not like a one workflow that can actually build anything you want for your organization" (04:43-05:09), with the whole diagram covering "probably 10, 20% of what it is." A framing argument, not a measurement.
 
+- **The same flow with a formal endpoint, and one step this version does not have.** Pant names spec-driven development "for example, with Kiro" as the entry point to verification, where the spec is either written "directly in Lean" or written in natural language and auto-formalized, after which "the AI coding agent then goes and implements from the specification. And the formal verification tool proves that the implementation matches the specification" — the review of the implementation becomes mechanical. The added step is upstream and explicit: "you then validate the specification. So, either the human reviews it, or you test that it holds on some inputs," because "everything else is downstream from this." A requirements chain that ends in a machine-checkable property needs its own validation in a way a prose requirements document never made obvious. ([Pant](../sources/20260828_lRa9sPaMyy4.md), 01:11-01:52, 01:52-02:10)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Context Engineering](../topics/context-engineering.md)
@@ -28,9 +30,11 @@ Related concepts:
 - [Reorder the generated task list to ship an MVP first](reorder-the-generated-task-list-to-ship-an-mvp-first.md)
 - [Spec-Driven Development Without a Feedback Loop Is Waterfall](spec-driven-development-without-a-feedback-loop-is-waterfall.md)
 - [Skills Are the Residual Where Organizational Know-How Lands](skills-are-the-residual-where-organizational-know-how-lands.md)
+- [Validate the Specification, Because the Proof Cannot](validate-the-specification-because-the-proof-cannot.md)
 
 Sources:
 - [Spec-Driven Development: Agentic Coding at FAANG Scale and Quality - Al Harris, Amazon Kiro](../sources/20260109_HY_JyxAZsiE.md), 03:32-06:26
 - [Using Spec-Driven Development for Production Workflows - Erik Hanchett, AWS](../sources/20260628_IddXPepIAS4.md), 10:49-12:12
 - [AI-Native Organisations Run on Skills: How to Structure and Scale Them — Imad Touil, QuantumBlack](../sources/20260828_M05vON8i0aI.md), 02:32-05:37
+- [Your Code Has Bugs. Lean4 Has Proofs: Formal Verification for Engineers — Varun Pant, AWS](../sources/20260828_lRa9sPaMyy4.md), 01:11-01:52, 01:52-02:10
 

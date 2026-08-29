@@ -16,6 +16,8 @@ Details:
 - **A third axis, orthogonal to both and cheaper than either: vary what the verifier is shown.** Coyle's critic subagent gets "the claim and the evidence, but we're not giving it the thought processes that went in to creating this claim," because "when you get a bunch of agents together collaborating and talking to each other, there's a tendency to have group think. And all the agents seem to kind of devolve into one idea." This works even when the verifier is the same model behind the same prompt, and it also says something uncomfortable about the patterns on this page: a second provider handed the first one's full reasoning trace has had part of its independence spent before it starts. See [Withhold the Producer's Reasoning From the Critic](withhold-the-producers-reasoning-from-the-critic.md). Asserted by analogy, with no agreement-rate measurement. ([Coyle](../sources/20260808_Z-c11pV_uvU.md), 13:44-15:12)
 - **Ordering is a fourth separation, available when a second prompt or model is not.** Where this page separates the generator from the verifier by prompt or by model, the same independence can be bought by sequence alone: have the agent commit the test before the implementation exists, because otherwise "it will fit the test to the code rather than fit the code to pass the verification criteria." Nothing has to be duplicated, so it applies inside a single-agent loop where a second verifier would be too expensive — and it is correspondingly weaker, removing the fitting failure without touching the shared blind spots. ([Blum](../sources/20260828_5Bn0xro2ol8.md), 06:12-06:42)
 
+- **Separation can be structural instead of procedural.** Varying prompt, context, or provider still leaves two systems drawn from similar training distributions. In a proof-carrying setup the verifier is not a model at all — it is a fixed program small enough that "you yourself can actually go write one," with open-source kernels "in C++, Rust, Lean" — so there is no shared prior for assumptions to leak through, and "you only need to trust the small kernel." This is available only where the property can be formalized, so it complements rather than replaces the prompt- and model-level separation described above. ([Pant](../sources/20260828_lRa9sPaMyy4.md), 02:20-02:30, 04:14-04:30)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -29,11 +31,13 @@ Related concepts:
 - [Verify Generated Code With a Method the Generator Does Not Share](verify-generated-code-with-a-method-the-generator-does-not-share.md)
 - [Withhold the Producer's Reasoning From the Critic](withhold-the-producers-reasoning-from-the-critic.md)
 - [Write the Test First So the Agent Cannot Fit It to the Code](write-the-test-first-so-the-agent-cannot-fit-it-to-the-code.md)
+- [Ship a Proof a Small Kernel Can Recheck, Not a Claim You Must Trust](ship-a-proof-a-small-kernel-can-recheck.md)
 
 Sources:
 - [Vision: Zero Bugs — Johann Schleier-Smith, Temporal](../sources/20251124_qLqttdO33UM.md), 26:37-27:43, 33:46-33:59
 - [Should AI Engineers Still Read Code in 2026? The Z/L Continuum — Alex Volkov, ThursdAI](../sources/20260710_ZpK5PWX2YRM.md), 15:33-19:45
 - [Guide, Verify, Solve — Anirban Chatterjee, Sonar](../sources/20260809_03l29gJXpCE.md), 09:35-10:13
 - [Anthropic's CCA Exam as a Field-Guide for Agentic Engineering — Frank Coyle, UC Berkeley](../sources/20260808_Z-c11pV_uvU.md), 13:44-15:12
+- [Your Code Has Bugs. Lean4 Has Proofs: Formal Verification for Engineers — Varun Pant, AWS](../sources/20260828_lRa9sPaMyy4.md), 02:20-02:30, 04:14-04:30
 
 - [How to Get Your Org to Adopt Coding Agents (Without Shipping Garbage) — Eyal Blum, Figma](../sources/20260828_5Bn0xro2ol8.md), 06:12-06:42

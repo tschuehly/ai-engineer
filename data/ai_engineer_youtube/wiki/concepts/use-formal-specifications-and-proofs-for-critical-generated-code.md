@@ -12,6 +12,8 @@ Details:
 - Verification is only as good as the specification: omitted requirements leave space for bugs even when the verifier succeeds. 22:24-22:33
 - The source distinguishes static verification, richer type-system checks, proof-carrying languages such as Dafny and SPARK, theorem provers such as Lean, and model checking over finite state machines. 24:39-25:46
 
+- **A second worked account, with the trust argument made explicit rather than left implicit.** Where the Dafny material above treats the verifier as a better checker, Pant's Lean framing treats it as a smaller *trust base*: Lean is "a programming language and a proof assistant… the same language for the definitions and proofs. There's no translation layer," and it "has a small trusted kernel. Proofs can be exported and independently checked," with open-source kernels in "C++, Rust, Lean" and the invitation that "you yourself can actually go write one." The scale it supports is the point: an AI converted zlib to Lean "over a week or so," producing "32,000 lines of proof" that no human reads and the kernel checks. This page's own caveat — verification is only as good as the specification — is given a workflow step there rather than left as a warning, and the scoping advice is unchanged: "pick your most critical code, write what correct means." ([Pant](../sources/20260828_lRa9sPaMyy4.md), 00:42-01:08, 02:10-02:30, 04:03-05:56, 09:17-09:35)
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Coding Agents](../topics/coding-agents.md)
@@ -21,7 +23,9 @@ Related concepts:
 - [Use LLMs to generate compiler lowerings under verification](use-llms-to-generate-compiler-lowerings-under-verification.md)
 - [Prefer outcome verifiers over ground-truth path checks](prefer-outcome-verifiers-over-ground-truth-path-checks.md)
 - [Make validation fast, local, deterministic, and actionable](make-validation-fast-local-deterministic-and-actionable.md)
+- [Ship a Proof a Small Kernel Can Recheck, Not a Claim You Must Trust](ship-a-proof-a-small-kernel-can-recheck.md)
 
 Sources:
 - [Vision: Zero Bugs — Johann Schleier-Smith, Temporal](../sources/20251124_qLqttdO33UM.md), 20:02-25:46
+- [Your Code Has Bugs. Lean4 Has Proofs: Formal Verification for Engineers — Varun Pant, AWS](../sources/20260828_lRa9sPaMyy4.md), 00:42-01:08, 02:10-02:30, 04:03-05:56, 09:17-09:35
 

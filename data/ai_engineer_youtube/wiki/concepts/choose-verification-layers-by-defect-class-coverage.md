@@ -20,6 +20,8 @@ Details:
 
 - **A production layer stack for review specifically, with a routing rule sitting above it.** Uber runs single-file and multi-file reviewers, a general "find me all logic bugs per file" pass, a deep multi-file review carrying each monorepo's anti-pattern style guides, few-shot AI linters for "systematic and mechanical issues," and team-authored custom agents linked to a knowledge base and past PRs. Above the stack, which layers run at all is decided per change: "we need the ability to take factors like the risk profile and the complexity of a code change and factor that in when deciding how we're going to run a code review. Not all code gets the exact same review." That makes coverage a per-change budget rather than a fixed pipeline — a defect class can be covered by an expensive layer that only high-risk diffs are routed to. No per-layer defect-class measurement is reported. ([Bond and Ketkar](../sources/20260828_EL123UNokkI.md), 02:25-02:43, 07:37-08:41)
 
+- **A layer with an unusual coverage shape: total inside its stated property, empty outside it.** Proof is the only layer here whose guarantee is universal over inputs — which is exactly why it does not subsume the others. Pant's own opening audit gives each existing layer a distinct failure: an LLM judge on code "is probabilistic," tests "only check some inputs, not all," human review "doesn't scale to match agent speed" — a confidence failure, a coverage failure, and a capacity failure that call for different remedies. And his own map keeps sampling next to proof rather than replacing it: Cedar's Lean model is proved, while its agreement with the shipping Rust code is established by "about 100 million differential random tests run nightly." A coverage audit should record which layer covers the properties nobody wrote down. ([Pant](../sources/20260828_lRa9sPaMyy4.md), 00:24-00:42, 06:36-06:58)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -34,8 +36,10 @@ Related concepts:
 - [Make Validation Fast, Local, Deterministic, and Actionable](make-validation-fast-local-deterministic-and-actionable.md)
 - [Write the Test First So the Agent Cannot Fit It to the Code](write-the-test-first-so-the-agent-cannot-fit-it-to-the-code.md)
 - [Comment Volume Is a Property of the Review Pipeline, Not the Model](comment-volume-is-a-property-of-the-review-pipeline.md)
+- [Pick a Verification Route by Which Translation You Can Afford](pick-a-verification-route-by-which-translation-you-can-afford.md)
 
 Sources:
 - [Guide, Verify, Solve — Anirban Chatterjee, Sonar](../sources/20260809_03l29gJXpCE.md), 07:43-08:41, 10:13-10:35, 11:12-11:20, 12:49-13:49, 18:25-18:47, 21:48-22:03
 - [How to Get Your Org to Adopt Coding Agents (Without Shipping Garbage) — Eyal Blum, Figma](../sources/20260828_5Bn0xro2ol8.md), 06:42-07:34
 - [Building uReview, Uber's Multi-Agent Code Review Engine — Will Bond & Ameya Ketkar, Uber](../sources/20260828_EL123UNokkI.md), 02:25-02:43, 07:37-08:41
+- [Your Code Has Bugs. Lean4 Has Proofs: Formal Verification for Engineers — Varun Pant, AWS](../sources/20260828_lRa9sPaMyy4.md), 00:24-00:42, 06:36-06:58

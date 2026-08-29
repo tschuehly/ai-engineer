@@ -17,6 +17,8 @@ Details:
 
 - **The share of work this technique does not reach is the argument for the next phase.** Sara Hooker names non-verifiable tasks as a day-one scope decision for her company's training system, on the grounds that they are "really the bulk of… everyday tasks that people do" and "where the meat of… what is interesting for progress is going to be over the next year," alongside covering 242 languages from the start ([Adaption](../sources/20260812_XEd_SRVHBgU.md), 08:53-09:21). This is a claim about workload composition, not a method — no non-verifiable training approach is described or measured — but it is worth carrying next to the verifier ladder above, because that ladder's rungs (string equality, compiler, linter, unit tests, database lookups) all assume the task ends in something checkable, and the wiki's [modern Moravec's paradox](a-modern-moravecs-paradox-explains-the-coding-agent-gap.md) page gives the structural reason coding is where verifiable-reward RL has landed first.
 
+- **A reference for what a maximally clean verifier looks like, from a source that is not about RL.** Formal verification supplies two checkers with no partial-credit surface: a proof kernel that accepts or rejects an exported proof, and a solver that is "a calculator, a very powerful one. You feed in a formula and it returns an output. In this case, satisfiable or unsatisfiable." There is nothing to talk into passing and no judge to game, which is the property this page's reward design is reaching for. The transferable caution is scope rather than mechanism: a verifier certifies exactly the property stated, so the quality of any signal derived from it is bounded by the specification, not by the checker. ([Pant](../sources/20260828_lRa9sPaMyy4.md), 03:53-04:14, 07:07-07:27)
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Models](../topics/models.md)
@@ -27,8 +29,10 @@ Related concepts:
 - [Split LLM Judges Into Narrow Binary Metrics](split-llm-judges-into-narrow-binary-metrics.md)
 - [Build RL environments as software artifacts](build-rl-environments-as-software-artifacts.md)
 - [Penalize Dangerous Steps With a Process Reward Model](penalize-dangerous-steps-with-a-process-reward-model.md)
+- [Ship a Proof a Small Kernel Can Recheck, Not a Claim You Must Trust](ship-a-proof-a-small-kernel-can-recheck.md)
 
 Sources:
 - [Let LLMs Wander: Engineering RL Environments - Stefano Fiorucci](../sources/20260408_71V3fTaUp2Q.md), 06:22-23:40
 - [From RL to IRL — Gaurav Mishra, Amazon AGI Lab](../sources/20260814_Cc0_nyxROBA.md), 01:26-03:16, 07:48-10:07
 - [Adaption Labs: Gradient-Free Continual Learning — Sara Hooker, Adaption](../sources/20260812_XEd_SRVHBgU.md), 08:53-09:21
+- [Your Code Has Bugs. Lean4 Has Proofs: Formal Verification for Engineers — Varun Pant, AWS](../sources/20260828_lRa9sPaMyy4.md), 03:53-04:14, 07:07-07:27

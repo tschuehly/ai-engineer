@@ -16,6 +16,8 @@ Details:
 - The simulated dependency must reproduce legal target behavior, not convenient behavior: a Python simulated KV store keeps full version history, on get usually returns the latest version but sometimes (deterministic RNG) returns an older version, and on update enforces optimistic concurrency (write succeeds only if the read version is still latest, else raises). It behaves like the real store where correctness matters but is deterministic, repeatable, and inspectable, so a broken run can be reproduced exactly and the agent can repair the algorithm against that trace. (10:52-13:53)
 - Outcome: from a single abstract spec the agent built a simulator proof of concept (verified by first testing), derived a concrete spec where the algorithm was already known correct, then derived the implementation — deterministic simulation let the agent participate in design, not just implementation. (16:16-17:18)
 
+- **The deployed sibling of the executable-design step, kept alive instead of consumed.** Cedar's Lean specification plays the same role as a simulated implementation — an executable artifact that pins down the intended behaviour before and beside the production code — but it does not end when the real implementation exists: "the specification of Cedar is written in Lean. The production code runs in Rust," reconciled by "about 100 million differential random tests run nightly. No version ships until this is satisfied." The design decision worth borrowing is whether your executable model is a phase or a permanent second artifact; keeping it makes it an oracle forever, at the cost of maintaining two implementations. ([Pant](../sources/20260828_lRa9sPaMyy4.md), 06:06-06:58)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -26,6 +28,8 @@ Related concepts:
 - [Understand Agent Work to Participate, Not Just to Verify](understand-agent-work-to-participate-not-just-to-verify.md)
 - [Use neural debugging to fill code by simulated execution](use-neural-debugging-to-fill-code-by-simulated-execution.md)
 - [Ground agent simulation and evaluation in production logs](ground-agent-simulation-and-evaluation-in-production-logs.md)
+- [Gate Releases on Agreement Between an Executable Spec and the Shipping Code](gate-releases-on-agreement-between-an-executable-spec-and-the-shipping-code.md)
 
 Sources:
 - [The Prompt is the Platform - Dominik Tornow, Resonate HQ](../sources/20260629_DqtmZE6Hl0g.md), 05:11-08:29, 09:24-13:53, 16:16-17:18
+- [Your Code Has Bugs. Lean4 Has Proofs: Formal Verification for Engineers — Varun Pant, AWS](../sources/20260828_lRa9sPaMyy4.md), 06:06-06:58
