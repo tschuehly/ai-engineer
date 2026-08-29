@@ -1,10 +1,1294 @@
 # AI Engineer YouTube Index
 
 - Channel: https://www.youtube.com/@aiDotEngineer/videos
-- Generated at: 2026-08-19T19:39:01+00:00
-- Since: 2025-08-19
+- Generated at: 2026-08-29T05:52:50+00:00
+- Since: 2025-08-29
 - Until: open
-- Videos: 537
+- Videos: 572
+
+## Productionizing LLM Gateways: Architecture, Tradeoffs and Hard Lessons — Kanish Manuja, Twilio
+
+- Upload date: 2026-08-28
+- Video: https://www.youtube.com/watch?v=zrZ1amZBSPw
+- Transcript: raw/20260828_zrZ1amZBSPw/zrZ1amZBSPw.en-orig.vtt
+- Metadata: raw/20260828_zrZ1amZBSPw/zrZ1amZBSPw.info.json
+
+Something went wrong, please try again. Kanish Manuja opens on that message and then explains why it exists, which is more interesting than laziness. Once a response starts streaming you have committed to that provider. Tokens already sent cannot be recalled, so the fallback you carefully built is unavailable exactly when you need it. Streaming buys perceived speed by trading away your levers, and that error string is what the trade costs. His frame for an LLM gateway is a permanent fight between availability, latency, guardrails and cost, where degradation forces you to give one of them up.
+
+The advice is refreshingly specific about where normal engineering instincts mislead. Retrying a slow expensive call eats the latency budget and multiplies spend, and tripping a circuit breaker is silly when a healthy second provider is sitting right there, so prefer per request fallback. Do not measure gateway wide latency, because a reasoning model's normal is a chat model's outage; track P99 per model per route and set timeouts the same way, since a missing timeout is his top cause of silent outages. Treat guardrails as services that fail too, and decide in advance whether you fail open or closed. He also argues most teams asking for a central gateway actually want centralized governance, which does not require centralizing the traffic.
+
+Speaker info:
+- https://www.linkedin.com/in/kanish-manuja-a99bb923/
+
+Timestamps:
+0:00 - The message behind the message
+1:21 - Four things you cannot all maximize
+2:33 - Why retries and breakers mislead here
+3:39 - Per request fallback, and where failure counts live
+4:49 - Fallbacks are not transparent
+5:55 - Give the backup provider more headroom, not less
+7:08 - Mixed workloads and the aggregate latency lie
+8:17 - Reasoning and router models, 2 seconds to 60
+9:28 - Hedging the tail
+10:40 - Guardrails that fail open or closed
+11:53 - Time budgets, fallbacks and placement
+13:02 - The gateway as a new dependency
+14:11 - Load shedding under a retry storm
+15:18 - Centralized governance without a central gateway
+
+## From AI-Assisted to AI-Native: Building a Frontier Development Team — Clare Liguori, AWS
+
+- Upload date: 2026-08-28
+- Video: https://www.youtube.com/watch?v=pqlWNihgdjI
+- Transcript: raw/20260828_pqlWNihgdjI/pqlWNihgdjI.en-orig.vtt
+- Metadata: raw/20260828_pqlWNihgdjI/pqlWNihgdjI.info.json
+
+Amazon watched 50 ordinary teams for the better part of a year, teams with normal seniority mixes working in existing codebases. Ninety percent of them used the same coding assistant. Half saw under 3x improvement in deployment velocity to production. The other half saw a median of 4.5x and sometimes past 10x. The tool was not the variable. The teams that pulled ahead had deliberately changed how they worked, and the rest had sprinkled agents on top of the way they already worked. Clare Liguori calls the result frontier development, and defines it by behavior: engineers writing one to two percent of their own code, agents running for hours without interruption, several running at once.
+
+Her five habits are mostly unglamorous. Write down what lives in your head, then keep pruning it as models improve so old workarounds stop bloating context. Expect to get slower first, because brownfield codebases need real work before agents succeed in them, which for some teams meant better error messages, new tools, or restructuring outright. Feed agents rather than babysitting them, since a running conversation keeps you in the loop and makes parallelism impossible. Fix the intent in a document before arguing with generated code. Shift testing left, with local deterministic mocks, so the feedback loop is fast enough for an agent to self correct. The new bottleneck is decision speed.
+
+Speaker info:
+- https://x.com/clare_liguori
+- https://www.linkedin.com/in/clareliguori/
+- https://clare.dev/
+
+Timestamps:
+0:00 - Four phases, and only 10% to 20% felt
+1:22 - What the pilots actually measured
+2:34 - Thirty people for 18 months, or six people for 76 days
+3:43 - Why that team was not reproducible
+4:51 - A ten day sprint, and its asterisks
+5:57 - Fifty ordinary teams, and the real split
+7:04 - Same tools, different ways of working
+8:14 - Habit one: invest in agent context
+9:21 - Pruning context as models improve
+10:31 - Habit two: slow down to speed up
+12:50 - Feeding agents instead of babysitting them
+13:58 - Making intent explicit before writing code
+15:09 - Shifting testing left with local mocks
+16:15 - Burnout, FOMO and cognitive load
+17:23 - What organizations have to change
+19:41 - When decision speed becomes the bottleneck
+
+## How to avoid disaster when vibe-coding a billing engine — Andrew Garvin, Stripe
+
+- Upload date: 2026-08-28
+- Video: https://www.youtube.com/watch?v=mJqwmmOx4WA
+- Transcript: raw/20260828_mJqwmmOx4WA/mJqwmmOx4WA.en-orig.vtt
+- Metadata: raw/20260828_mJqwmmOx4WA/mJqwmmOx4WA.info.json
+
+Andrew Garvin types one sentence asking for a billing engine that copies Lovable's pricing, and gets back a working sandbox: a customer, metered usage flowing in, and a draft invoice broken into separately scoped credit pools for builds, plan mode, cloud and gateway calls. Reproducing that by hand means understanding auto recharge, credit expiry and overage, which is exactly where people hurt themselves. He cofounded Metronome, the usage billing platform Stripe acquired this year in its largest deal, so he has watched a lot of companies get this wrong.
+
+What makes the talk useful is that a billing vendor stands on stage and argues against full autonomy. Billing carries deep business logic and real money, so his recommendation is to let an agent accelerate you into a test environment and stop there, rather than ship to production unattended. The guardrails are unglamorous: portable skills files that carry the API's hard won context, and deliberately verbose error messages written so an agent can correct itself. He also separates three things people blur together, an agent as your product, as your buyer, and as your user. The third is the disruptive one, and he points at a large software company cutting seat prices and moving to credits, because seats stop meaning much once one agent does the work of many logins.
+
+Speaker info:
+- https://www.linkedin.com/in/agarvin/
+
+Timestamps:
+0:00 - Metronome, Stripe, and what they are demoing
+2:29 - Where billing goes sideways with agents
+3:40 - Provisioning an environment from the CLI
+6:02 - Skills files that carry the hard parts
+7:13 - Why a human stays in the loop
+9:30 - Agent as product, buyer and user
+10:38 - Moving off seats and onto credits
+13:01 - Opening what the agent actually built
+14:12 - Scoped credit pools and a draft invoice
+16:27 - What this suggests beyond billing
+
+## Your Code Has Bugs. Lean4 Has Proofs: Formal Verification for Engineers — Varun Pant, AWS
+
+- Upload date: 2026-08-28
+- Video: https://www.youtube.com/watch?v=lRa9sPaMyy4
+- Transcript: raw/20260828_lRa9sPaMyy4/lRa9sPaMyy4.en-orig.vtt
+- Metadata: raw/20260828_lRa9sPaMyy4/lRa9sPaMyy4.info.json
+
+An AI spent about a week rewriting zlib in Lean and emitted 32,000 lines of proof. Not tests, proof. It decomposed the job into lemmas, closed each one with tactics, assembled them into a single theorem, and a small independent kernel checked the result. Varun Pant opens on the gap that makes this worth caring about now. Coding agents are producing hundreds or thousands of pull requests a week, and none of the usual checks actually clear them. A model grading code is probabilistic, tests cover the inputs someone thought of, and human review does not scale to agent throughput. None of the three can say the code is correct for every input.
+
+His division of labor is the memorable part: humans own the specification, machines own the code and the proof. That puts all the weight on the spec being right, which is why he insists on validating it before anything downstream runs, whether a person reviews it or it gets tested against real inputs. The chess analogy carries the rest, with tactics as moves, a theorem as checkmate, and backtracking when a branch will not close. AWS runs this in production on Cedar, whose authorization semantics live in Lean while the shipping code is Rust, reconciled by roughly 100 million differential tests nightly. Nothing ships until they agree.
+
+Speaker info:
+- https://x.com/varun_pant_
+- https://www.linkedin.com/in/varunp1/
+
+Timestamps:
+0:00 - Why none of the usual checks clear agent output
+1:06 - Specifications humans own, proofs machines own
+2:00 - Lean as one language for code and proof
+3:01 - Tactics, theorems, and the chess analogy
+3:58 - A small kernel you can independently rebuild
+4:52 - Rewriting zlib into Lean, and 32,000 lines of proof
+6:44 - Cedar: Lean semantics, Rust in production
+7:40 - Solvers, preconditions, and code erased at runtime
+8:37 - Bringing any language into the same core
+
+## AI Evals for Cross-Functional Teams — Nachiket Paranjape & Swaroop Chitlur Haridas, DoorDash
+
+- Upload date: 2026-08-28
+- Video: https://www.youtube.com/watch?v=bMjlRrWjdT0
+- Transcript: raw/20260828_bMjlRrWjdT0/bMjlRrWjdT0.en-orig.vtt
+- Metadata: raw/20260828_bMjlRrWjdT0/bMjlRrWjdT0.info.json
+
+The people annotating DoorDash's eval data are not engineers, and they build their own annotation tools. Because the GenAI platform team went API first, strategy and operations staff can point a coding agent at those endpoints and vibe code whatever interface their use case needs, whether that is grading restaurant menus or reviewing images. The platform team stopped trying to anticipate every UI, and shipped stable APIs instead. Nachiket Paranjape and Swaroop Chitlur Haridas make the broader case that evals stopped being an engineering harness for them and became a cross functional job.
+
+That reframing has an org chart attached. Strategy and operations set the quality bar, product managers turn it into rubrics, operations run the annotations, and engineering supplies telemetry, datasets and judges. Which group actually owns a judge prompt varies by team, and they treat that variation as a sign the org is still learning rather than a problem to standardize away. The loop underneath is deliberately plain: trace, sample down to something a human will really look at, annotate, promote a golden set, calibrate the judge against it, then monitor and go again. Judge calibration runs self serve through a UI, showing the original and optimized prompts side by side so a product manager can see what changed and decide whether to trust it. Per annotation cost fell sharply.
+
+Speaker info:
+Nachiket Paranjape:
+- https://x.com/nmparanjape
+- https://www.linkedin.com/in/nachiketparanjape/
+
+Timestamps:
+0:00 - The GenAI platform team, and its three forces
+2:05 - Why eval became the fourth pillar
+3:05 - UI first, then API first, then workflow first
+4:01 - Evals as a team sport, not an engineering harness
+4:57 - Who owns which part of quality
+5:53 - The continuous loop: trace, sample, annotate, calibrate
+7:42 - Telemetry and workflow as two surfaces
+9:32 - Operators vibe coding their own annotation UIs
+11:21 - Calibrating judge prompts, self serve
+13:10 - Different teams, different prompt owners
+14:04 - What it did to annotation cost
+
+## Building the Engine While Flying the Plane: Launching the Figma MCP Server — Jesse Lumarie, Figma
+
+- Upload date: 2026-08-28
+- Video: https://www.youtube.com/watch?v=ZIYYsAzaLlA
+- Transcript: raw/20260828_ZIYYsAzaLlA/ZIYYsAzaLlA.en-orig.vtt
+- Metadata: raw/20260828_ZIYYsAzaLlA/ZIYYsAzaLlA.info.json
+
+Figma did not have 20% projects. Jesse Lumarie gave one to the MCP server anyway, one day a week, because he had seen an internal demo and wanted non designers to be able to pull from Figma. That side project became the company's first MCP server in about three months, and then one of the fastest growing products Figma has ever shipped. The build happened while the ground moved. Weeks in, a new version of the spec deprecated the transport they had chosen, and client support was so uneven that a compatibility matrix was a real artifact they maintained.
+
+The interesting decisions are about representation. Figma's canvas is a scene graph in C++, close to the HTML DOM, and they had three ways to hand it to a model. They picked React and Tailwind on a hunch that models had seen the most of it, and the output is pixel perfect. Passing images inline as base64 blew up the context window and got cut. Pixel perfect turned out to be only half the problem, because an enterprise does not want a beautiful generated button, it wants its own accessible internationalized one, so Code Connect sends a pointer to the real component instead of markup. Two hours grading an eval by hand in a spreadsheet convinced them never to do that again, and evals now run hundreds of times a week behind LLM judges.
+
+Speaker info:
+- https://x.com/jesselumarie
+- https://www.linkedin.com/in/jesselumarie/
+
+Timestamps:
+0:00 - A 20% project at a company without 20% projects
+2:02 - Uneven client support, and a spec that moved
+2:55 - What the local server gave developers
+3:52 - Three ways to represent a scene graph
+4:47 - Why images alone did not work
+5:40 - Grading evals by hand, once
+7:32 - Code Connect, and why pixel perfect is not enough
+9:24 - Elicitation and sampling, and hacking around them
+13:55 - Shipping local first, then remote
+15:43 - How early all of this still is
+
+## AI-Native Organisations Run on Skills: How to Structure and Scale Them — Imad Touil, QuantumBlack
+
+- Upload date: 2026-08-28
+- Video: https://www.youtube.com/watch?v=M05vON8i0aI
+- Transcript: raw/20260828_M05vON8i0aI/M05vON8i0aI.en-orig.vtt
+- Metadata: raw/20260828_M05vON8i0aI/M05vON8i0aI.info.json
+
+Imad Touil opens with a show of hands. Who has built a skill? Most of the room. Who shares them with their team? Fewer. Who governs and maintains them across the organization? A handful. That collapsing sequence is the talk, because he argues skills are where an organization's actual know how ends up living. Of the four things inside a workflow, hooks only fire on events, sub agents mostly exist to protect the context window, and almost nobody writes their own MCP servers. What is left is skills, and if those are unstructured then the workflow was never deterministic to begin with.
+
+His warning is that ungoverned skills become a recognizable kind of technical debt. Teams on the same stack quietly build the same skill repeatedly. Quality decays unless skills are retested against new models, not just against their original task. Nobody knows who owns one. Composability does not happen by accident. There is a real security edge too, since skills carry scripts, so pulling a public one without a checking pipeline is a supply chain decision. His fix borrows from the microservices era wholesale: a catalog with metadata and search, dependencies, versioning so a harness pulls the current release, access control, and named human owners across architecture, infrastructure and security. He is blunt that governance is where technology stops solving it.
+
+Speaker info:
+- https://www.linkedin.com/in/imad-touil/
+
+Timestamps:
+0:00 - Three questions, and the hands that drop
+1:33 - The agentic stack, inner loop and outer
+2:56 - Why specify, plan, task, implement is one step
+4:19 - What the full lifecycle actually contains
+5:39 - Organizations run many lifecycles, not one
+7:03 - Where the know how actually lives
+8:27 - Designing skills like microservices
+9:48 - Progressive disclosure and token cost
+11:09 - Composing regulation skills into an audit trail
+12:30 - Ungoverned skills as technical debt
+13:52 - What a central skills platform needs
+15:14 - Governance, and who owns which domain
+16:34 - Simulating fifteen teams over six months
+17:58 - Applying the same idea to whole workflows
+19:22 - Registries, evaluation and auto evolving skills
+
+## Building uReview, Uber’s Multi-Agent Code Review Engine — Will Bond & Ameya Ketkar, Uber
+
+- Upload date: 2026-08-28
+- Video: https://www.youtube.com/watch?v=EL123UNokkI
+- Transcript: raw/20260828_EL123UNokkI/EL123UNokkI.en-orig.vtt
+- Metadata: raw/20260828_EL123UNokkI/EL123UNokkI.info.json
+
+In 2024 an Uber engineer waited about three hours for a first review on a pull request. In 2026 that wait is nine hours. Volume and size both grew, and code review became the bottleneck for thousands of engineers spread across hundreds of teams, twelve sites and six language specific monorepos. Will Bond and Ameya Ketkar walk through uReview, the system Uber built rather than bought, partly because most vendors do not support Phabricator and partly because they wanted agents in the inner loop reviewed against exactly the same rules as humans.
+
+The instructive half is what they had to measure before it worked. Early observability was cost, an NPS survey and a Google form, and the quality to cost ratio landed all over the chart. Tracking reply sentiment, whether a comment actually got addressed, and the agent's own trajectory is what let them tune it, because a model never signals that it is wrong and will assert a bad review with full confidence. Teams write their own reviewers, and Ketkar is blunt that authoring a skill was the easy part while running skills at scale cheaply was not. It now posts about 25,000 comments a week, roughly 67% get addressed, and cost fell 60% against their naive first build.
+
+Speaker info:
+Will Bond:
+- https://x.com/wbond
+- http://linkedin.com/in/wbond
+Ameya Ketkar:
+- https://www.linkedin.com/in/ameya-ketkar
+- https://scholar.google.com/citations?user=6JO46GMAAAAJ&hl=en
+
+Timestamps:
+0:00 - Three hours to review in 2024, nine in 2026
+1:53 - Why Uber built this instead of buying it
+3:42 - The architecture, and deduplicating comment volume
+4:37 - Humble beginnings, and cost as the only metric
+5:33 - Sentiment, addressal rate, agent trajectory
+6:32 - The model never knows that it is wrong
+7:26 - Letting hundreds of teams customize reviews
+10:10 - Results: 25,000 comments a week
+11:08 - Inner loop versus outer loop
+13:57 - Expanding the outer loop rather than killing it
+
+## How do you diffuse AI into the real world? — Varun Shenoy, Long Lake
+
+- Upload date: 2026-08-28
+- Video: https://www.youtube.com/watch?v=B0fjR3yaZFU
+- Transcript: raw/20260828_B0fjR3yaZFU/B0fjR3yaZFU.en-orig.vtt
+- Metadata: raw/20260828_B0fjR3yaZFU/B0fjR3yaZFU.info.json
+
+Long Lake does not sell software. It buys the company. Thirty five services businesses so far across property management, architecture and HR, plus a 6.3 billion dollar take private of the world's largest corporate travel platform. Varun Shenoy is blunt about why that matters: when the AI does not work, there is no customer to blame, because they are the operator and the owner. His framing for the whole problem is diffusion. Electricity was demoed in the 1880s and Ford's electrified assembly line arrived in 1924, because it was never enough to have the technology, you had to rip out the motors and retrain everyone.
+
+What he wants is the services equivalent of an asynchronous coding agent, and he is candid that nobody has it. Engineers happily launch ten jobs and accept that the seventh finishes before the third. Nobody clears an inbox ten emails at a time. Meanwhile the valuable tasks are absent from the internet entirely: closing books when receipts are missing, scoping a building from a blueprint, coordinating vendors to fix a roof. That work does come with ground truth, though, which is what makes their evals real. Did the roof actually get repaired. His closing argument is that none of this can be codesigned over Zoom, which is why the job involves showing up, running a stand at somebody's trade conference, and asking questions on a mountain bike.
+
+Speaker info:
+- https://x.com/varunshenoy_
+- https://www.linkedin.com/in/varunshenoy
+- https://varunshenoy.com
+
+Timestamps:
+0:00 - Everyone has seen the demo, nothing has changed
+1:30 - Electricity, Ford, and how long diffusion takes
+2:36 - Who Long Lake is, and why they buy the businesses
+4:54 - The ladder from copilot to coworker
+6:02 - Earning the right to more autonomy
+8:16 - Why engineers parallelize and nobody else does
+9:24 - Representing knowledge work as code
+10:32 - The valuable tasks that are not on the internet
+11:42 - Traces, ground truth, and evals that mean something
+14:00 - Continual learning and enablement as one loop
+15:09 - The elephant: getting the first usage at all
+16:19 - Codesigning in person, not over Zoom
+
+## How to Get Your Org to Adopt Coding Agents (Without Shipping Garbage) — Eyal Blum, Figma
+
+- Upload date: 2026-08-28
+- Video: https://www.youtube.com/watch?v=5Bn0xro2ol8
+- Transcript: raw/20260828_5Bn0xro2ol8/5Bn0xro2ol8.en-orig.vtt
+- Metadata: raw/20260828_5Bn0xro2ol8/5Bn0xro2ol8.info.json
+
+The engineers slowest to adopt agents at Figma are the best ones. Eyal Blum's explanation is that they are the people holding the codebase together with mental duct tape, carrying the institutional context nobody ever wrote down, and so they see every failure mode first and trust it least. His answer is not to talk them into using AI. It is to hand them the roadmap for making agents safe in the codebase, because their complaints are an ordered list of where verification is missing, and they come along once the fixes start making their own work easier.
+
+He is equally direct about the costs nobody puts on slides. Developer agency drops, and engineers who took real pleasure in writing code find themselves waiting on output instead. Documents and Slack messages have gotten three to four times longer while saying the same thing. His team's fix for the last one is a convention rather than a tool: a pull request description opens with a line a human actually typed, then the generated text below it, so readers know where to spend scarce attention. That habit came from getting it wrong, sending a senior skeptic an unmarked AI analysis and being told it read as slop. Plans get a week; the agent gets the night.
+
+Speaker info:
+- https://www.linkedin.com/in/eyalg/
+
+Timestamps:
+0:00 - The three acts of AI adoption
+2:28 - Uneven adoption, and teams that must coexist
+3:35 - Why the best engineers adopt last
+4:45 - Investing in verification first
+5:55 - Encoding what works into deterministic flows
+7:04 - A testing pyramid for agent review
+8:12 - Planning instead of prompting
+9:21 - What makes a plan an agent can follow
+11:45 - Handing skeptics the roadmap
+12:55 - Attention aware communication
+15:16 - Sending unmarked AI output, and what it cost
+16:29 - Meeting people where they already work
+
+## How Anthropic Builds: Lessons from Labs — Mike Krieger, Anthropic
+
+- Upload date: 2026-08-27
+- Video: https://www.youtube.com/watch?v=qqrk7CtkuIw
+- Transcript: raw/20260827_qqrk7CtkuIw/qqrk7CtkuIw.en-orig.vtt
+- Metadata: raw/20260827_qqrk7CtkuIw/qqrk7CtkuIw.info.json
+
+Over a single weekend, Mike Krieger had Claude port a few hundred thousand lines of Python to TypeScript, verify it, and churn on its own output until the thing was deployable. He came back Monday to a finished port. He offers it as an example of a habit he thinks most people still lack, which is being unreasonable in what you ask for. The first generation of AI products boxed models in, granting so little access to tools and environment that ambition felt pointless, and the instinct to ask small has outlived the constraint. He knows the pull of the old way from the inside. He spent two years as Anthropic's chief product officer, watched everyone around him building, and moved into an individual contributor role at Labs because the FOMO became unbearable.
+
+Labs runs on two week persevere or pivot reviews, and projects get wound down in nearly every cycle, which is the design rather than a failure. Teams assemble fresh around each bet, so the org chart deliberately does not track projects and bet leads usually manage nobody. The bottleneck he cares about is not review time but whether a human can still hold the change in their head. A 2,000 line pull request now travels with an artifact laying out intent and tradeoffs, and he admits he no longer reads every line. He ends somewhere most technical keynotes do not go, on burnout, and on the reminder that no job is so important you cannot be offline for two days.
+
+Speaker info:
+- https://x.com/mikeyk
+- https://www.linkedin.com/in/mikekrieger
+
+Timestamps:
+0:00 - From chief product officer to IC at Labs
+2:55 - Be unreasonable, and why people still ask small
+4:51 - Porting Python to TypeScript over a weekend
+6:48 - Scaling lessons from 2010: measure everything, build knobs
+8:06 - Tagging Claude in Slack, and multiplayer delegation
+10:37 - The review bottleneck is comprehension, not time
+11:53 - Persevere or pivot, and bet leads who manage nobody
+13:43 - Where Claude Design goes next
+15:37 - Project unhip, and what he would delete
+17:34 - Why start a company when the labs ship this fast
+20:06 - Vertical AI and finance
+22:00 - Burnout, 996, and staying sane
+25:04 - Verbalizing emotions as a leader
+
+## How to Generate Mergeable Code with a Context Engine — Peter Werry, Unblocked
+
+- Upload date: 2026-08-27
+- Video: https://www.youtube.com/watch?v=qdAkxLoYNI8
+- Transcript: raw/20260827_qdAkxLoYNI8/qdAkxLoYNI8.en-orig.vtt
+- Metadata: raw/20260827_qdAkxLoYNI8/qdAkxLoYNI8.info.json
+
+Radiologists call the failure satisfaction of search: you read a scan, find one indicator, stop looking, and miss the others that would have changed the diagnosis. Peter Werry says agents do exactly this to a codebase. Attach a wiki and an agent will search it, land on something plausible, and quit, which is why he argues access to information is not understanding. Before agents you were the context layer, trawling discussions, reading code, carrying the tribal knowledge yourself. An agent is closer to an expert engineer on their first day, rediscovering how you build, test, and deploy on every task, then forgetting it.
+
+A million token window does not fix it: the context does not fit, and the agent gets distracted. He demos the alternative on Unblocked's own repository, where a question about an internal component returns an architecture diagram that did not exist before, sources attached so a human can check it. Then the same optimization plan twice in Claude Code, with the context engine and without. With it, under a dollar and about a minute; without, roughly double the time and more cost, because the agent has to discover things and discovers the wrong ones, so later steps run on bad assumptions and loop. The compounding is the point, not the first task. He closes on a review agent that boosts comments by reviewer seniority, a drop in flagged issues traced back to the Slack thread that explained it, and two open source pieces: a query engine over your GitHub history and a social graph showing thin review coverage.
+
+Speaker info:
+- https://getunblocked.com
+
+Timestamps:
+0:00 - Before agents, you were the context layer
+1:46 - An agent is a new employee who resets every task
+2:25 - The maturity curve: autocomplete to software factories
+4:19 - Satisfaction of search, borrowed from radiology
+6:37 - The iceberg: intent, conventions, past decisions
+7:29 - Demo: asking about a component, and showing the work
+10:03 - The same plan with and without a context engine
+12:44 - A review agent that boosts what senior engineers said
+13:50 - Debugging a drop in flagged issues, back to Slack
+15:08 - Open source: query engine and social graph
+
+## Can LLMs Write Fast Multi-GPU Kernels? — Simran Arora, Together AI
+
+- Upload date: 2026-08-27
+- Video: https://www.youtube.com/watch?v=pOvWgX7IJsc
+- Transcript: raw/20260827_pOvWgX7IJsc/pOvWgX7IJsc.en-orig.vtt
+- Metadata: raw/20260827_pOvWgX7IJsc/pOvWgX7IJsc.info.json
+
+Between NVIDIA's A100 in 2020 and the B200 in 2024, BF16 tensor core throughput improved 7.2x. Intra node communication improved 3x, and inter node communication only 2x. That widening gap has pushed the bottleneck in large AI workloads off the individual GPU and onto the links between them, far enough that a standard PyTorch and NCCL baseline lands below 50% of its communication aware roofline on most problems. Simran Arora leads the frontier performance research team at Together AI, and her group's answer is ParallelKittens, a small set of primitives that adds roughly a dozen lines to a single GPU kernel and now runs in production at Together AI and Cursor.
+
+The harder question was whether models can apply the same principles. ParallelKernelBench hands a model an unoptimized PyTorch reference and a topology spec across 87 problems drawn from real repositories, then asks for a CUDA kernel that moves data directly over NVLink. The best frontier model solved 28 of them zero shot, with 22 beating the baseline. Drawing more samples lifts correctness to 36, but the share that is both correct and faster stalls near 31%. Wrapping a model in a multi turn agent harness with a bash environment reached 35. The failures are not syntax. Models compile after a retry and then stall on collective ordering, data partitioning, and the choice between the copy engine, tensor memory acceleration and register level transfers, while their wins cluster in the patterns most represented on the internet.
+
+Speaker info:
+- https://arorasimran.com
+- https://github.com/simran-arora
+- https://github.com/togethercomputer/ParallelKernelBench
+
+Timestamps:
+0:00 - From single GPU kernels to the network between them
+1:29 - Inside an H100, and why memory distance matters
+4:44 - The interconnect hierarchy: PCIe, NVLink, NVSwitch
+5:46 - Why GPU networking, and why now
+8:27 - Disaggregated workloads and 576 GPU systems
+10:24 - Compute improved 7.2x, the network 3x
+11:14 - Where NCCL breaks down, and the roofline gap
+13:04 - Compilers, DSLs, and hand tuned operators
+14:10 - The research question, and ParallelKittens
+16:06 - Transfer mechanisms: copy engine, TMA, register level
+18:28 - Overlapping compute and communication across SMs
+20:52 - In production at Together AI and Cursor
+22:10 - Inside ParallelKernelBench: 87 problems
+24:32 - Zero shot results, and where scaling stalls
+26:28 - The failures are not CUDA syntax
+27:07 - An agent harness, and what is still missing
+
+## KV Cache-Aware Routing and P/D Disaggregation on Kubernetes — Yuchen Fama & Ashish Kamra, Red Hat
+
+- Upload date: 2026-08-27
+- Video: https://www.youtube.com/watch?v=YXowceUKYJI
+- Transcript: raw/20260827_YXowceUKYJI/YXowceUKYJI.en-orig.vtt
+- Metadata: raw/20260827_YXowceUKYJI/YXowceUKYJI.info.json
+
+Agentic sessions in Red Hat's traces run from a few turns to 3,000, cache hit rates routinely clear 90%, and input to output token ratios often pass 100 to 1. A public inference benchmark shows none of that, because it reports steady state numbers from one sanitized run. Yuchen Fama and Ashish Kamra spend the talk on the two levers that matter once the client rather than the server controls the cache lifecycle, and a live demo makes the first one concrete. An opening request takes about 3 seconds, the next turn reuses the cache on the same pod and takes about 1, and a fresh system prompt lands on a different pod and pays the full 3 again. With a 10x gap between cached and uncached token costs, routing is the cheaper lever to reach for before adding GPUs.
+
+The second lever splits compute bound prefill from memory bound decode, so a long incoming prompt cannot stall token generation midstream. Across 16 H100s serving gpt-oss, P99 inter token latency falls from roughly 900 milliseconds to about 100, and the curve gets visibly smoother. The useful part is where they draw the boundary. Disaggregation wins in the middle concurrency band, roughly ties at both ends, and needs an RDMA or RoCE fabric to move cache between workers at all. Without one, stay aggregated. The closing case study runs GLM 5.2 on the H200s customers actually have instead of B200s, at three prefill workers to one decode, for 4x faster time to first token and 60% more requests.
+
+Speaker info:
+- https://www.linkedin.com/in/yuchen-fama
+- https://www.linkedin.com/in/ashishkamra/
+- https://github.com/llm-d/llm-d
+
+Timestamps:
+0:00 - What public inference benchmarks leave out
+1:28 - Red Hat's inference stack, and the agenda
+3:29 - Agentic traces: 3,000 turns, 90% cache hits, 100 to 1 ratios
+5:12 - Volatile cache, and the 10x cached token gap
+6:28 - How llm-d routes: endpoint picker, offload tiers, eviction
+7:46 - Demo: cache hits, pod affinity, 3 seconds versus 1
+9:28 - What llm-d is, and why prefill and decode interfere
+12:03 - How disaggregation works in practice
+13:08 - P99 inter token latency: 900ms versus 100ms
+14:14 - Where PD shines across the concurrency curve
+15:45 - When to use PD, and when to stay aggregated
+18:10 - GLM 5.2 on H200s: 4x faster TTFT
+
+## The Agentic Commerce Stack — Ahnaf Prio, Best Buy
+
+- Upload date: 2026-08-27
+- Video: https://www.youtube.com/watch?v=G7cgLjZtmMU
+- Transcript: raw/20260827_G7cgLjZtmMU/G7cgLjZtmMU.en-orig.vtt
+- Metadata: raw/20260827_G7cgLjZtmMU/G7cgLjZtmMU.info.json
+
+Add a second unit of the same item to your cart and, to you, nothing much happened. To the merchant that is a second line item on the same SKU. Ahnaf Prio's argument is that agentic shopping breaks on exactly these unglamorous distinctions, which is why roughly 45% of sessions on the major assistants already touch shopping while the first wave of agents mostly failed at it. Those took screenshots, read the DOM and filled forms, and they were slow and brittle. From the merchant side an agent driving a browser trips every fraud alarm there is, so it often died at the payment step.
+
+What replaced it is a pile of acronyms he untangles one at a time: MCP for tool access, A2A so a customer agent and a merchant agent can talk, then two competing commerce primitives in ACP from OpenAI and UCP from Google, and AP2 for payment mandates that carry an authorizing party, a spend ceiling and a revocation URL. He runs the whole loop live through Ginny, his orange tabby recast as a bakery agent on Cerebras at 3,000 tokens per second, with an inspector showing every call and checkout state transition. Merchants push a product feed instead of answering catalog searches, because m merchants times n products does not scale. He also tries to haggle a discount code out of his own cat, which sets up the real lesson. Chipotle's agent got used to answer programming questions. Write evals for behavior, protocol compliance and latency, or play whack a mole in production.
+
+Speaker info:
+- https://linkedin.com/in/ahnafy
+- https://github.com/ahnafyy
+
+Timestamps:
+0:00 - Figuring out what agentic commerce means at Best Buy
+1:28 - Shopping is 45% of agent sessions
+3:08 - Why screenshot and DOM agents failed
+4:56 - Why merchants needed ACP and UCP
+6:11 - The acronym map: MCP, A2A, ACP, UCP, AP2
+8:18 - Product feeds instead of catalog search
+10:01 - Payments today, and what AP2 adds
+10:50 - Demo: Ginny the bakery agent
+13:30 - AP2 tokens, and the same flow under ACP
+16:28 - Evals, Chipotle, and whack a mole
+19:08 - The template, eval starters and catalog sync
+
+## Reverse-Engineering the AI Buyer — Aliisa Rosenthal, Acrew Capital
+
+- Upload date: 2026-08-26
+- Video: https://www.youtube.com/watch?v=wdTRsfw0KG0
+- Transcript: raw/20260826_wdTRsfw0KG0/wdTRsfw0KG0.en-orig.vtt
+- Metadata: raw/20260826_wdTRsfw0KG0/wdTRsfw0KG0.info.json
+
+Nine months after Aliisa Rosenthal started begging for enterprise features, OpenAI finally shipped them. By then almost every company on the list had the same answer: you never got back to me, so I bought Microsoft Copilot. Rosenthal joined OpenAI at a couple of million in revenue and helped take the enterprise side to several billion, and the lesson drawn is that the sequence was wrong at nearly every step. They built for the loudest voices: a fast, expensive, aggressively upmarket product. Four months later came self serve, which grew so much faster it cannibalized the enterprise business and left reps competing with their own funnel. Self serve should have shipped first, with the enterprise tier built from what it revealed.
+
+The advice to founders inverts the usual order: build the machine, then hire the humans. Automate what you can, find where it breaks, and add people at those bottlenecks rather than staffing up first. Capture more at signup, phone number included, and reply to everyone even if automatically. Never send a buyer away with homework; you lose control of the cycle. Treat pilots as a trap, a second sales process you run for free: reserve them for the largest deals and negotiate around them with a reference call, an eval on a slice of data, or a 90 day opt out that puts the clock on the customer. Automate security questionnaires and trust portals, where deals quietly die. Sixty dollars per user per month proved too high; a low base fee plus usage dropped the barrier enough to spread company wide.
+
+Speaker info:
+- https://www.linkedin.com/in/aliisa-rosenthal
+- https://www.acrewcapital.com/team-members/aliisa-rosenthal
+
+Timestamps:
+0:00 - From a couple million to several billion at OpenAI
+1:03 - Build the machine before you build the team
+2:05 - Nine months without enterprise features
+3:08 - Self serve launched late and cannibalized enterprise
+4:24 - Ten thousand inbound a day, and what to do about it
+5:52 - Do not give your buyer homework
+6:53 - Pilot hell, and how to get out of it
+8:35 - Automating security so deals stop stalling
+9:26 - Pricing too high, then fixing it
+11:08 - When to finally hire salespeople
+16:08 - Q&A: forward deployed engineers and design partners
+
+## The Missing Layer in Agentic AI — Giedrius Šteimantas, Oxylabs
+
+- Upload date: 2026-08-26
+- Video: https://www.youtube.com/watch?v=XsvUhpnHepE
+- Transcript: raw/20260826_XsvUhpnHepE/XsvUhpnHepE.en-orig.vtt
+- Metadata: raw/20260826_XsvUhpnHepE/XsvUhpnHepE.info.json
+
+Point an agent at ten product pages, get real content back from three, and send all ten to the model anyway: seventy percent of those tokens go to reading CAPTCHAs. Giedrius Šteimantas says most teams never notice, because the status code and the response size both look fine. A 200 does not mean the page is real. He got here through a friend who vibe coded a personal shopping agent, a chatbot that talks through your style then hands a second agent prompts to go buy things. It ran a browser automation framework at every stage, which made it slow, expensive, and unreliable enough not to work. The gap was not model quality. It was the layer underneath that lets an agent work on the open web.
+
+He rebuilds it on stage using rules from ten years of scraping at Oxylabs: cost matters, and use a browser only when you have to. Discovery drops the fixed retailer list for a search API returning compact JSON, under 2,000 tokens and about 700 milliseconds per call, so the agent fans out queries and picks its own URLs. The decision stage loses the browser for a scraper that returns markdown, fails loudly with an explicit error when blocked instead of passing a CAPTCHA to the model, runs hundreds of requests in parallel, and bills only for successful results. Checkout does need a browser, so Playwright MCP stays and a hardened headless browser slots in behind it, bringing stealth, a residential proxy, and geolocation that stops items showing in stock and vanishing at the till.
+
+Speaker info:
+- https://www.linkedin.com/in/steimantas
+- https://oxylabs.io
+
+Timestamps:
+0:00 - A friend's personal shopping agent that did not work
+2:32 - Ten years of scraping, and one rule: cost matters
+5:09 - Discovery on a browser, and what it costs
+6:50 - A search API instead: 2,000 tokens, 700 milliseconds
+8:35 - The blocked pages you still pay tokens for
+10:29 - Rebuilding the decision stage without a browser
+12:14 - Checkout is where you actually need a browser
+14:00 - Validate before you spend tokens
+
+## The Building Blocks of GTM Orchestration — Arman Vaziri, Ramp
+
+- Upload date: 2026-08-26
+- Video: https://www.youtube.com/watch?v=VjEP0xqTUI0
+- Transcript: raw/20260826_VjEP0xqTUI0/VjEP0xqTUI0.en-orig.vtt
+- Metadata: raw/20260826_VjEP0xqTUI0/VjEP0xqTUI0.info.json
+
+Offer Pro V1 golf balls to golfers at East Coast construction companies. Arman Vaziri uses that as a running example and mentions in passing that it works really well. The golf balls are not the point. Getting from that one sentence to a targeted audience, outbound sequences, paid creative, a landing page and in app nudges should be a matter of describing the intent. Vaziri leads product and sales led growth engineering at Ramp and says the bottleneck was never ideas. Everyone across product, data and go to market has good ones. It is everything after: pulling the audience, writing the enablement material, persuading people to adopt the playbook, all on a timescale of months.
+
+The foundation is an internal customer data platform. CRM, product, enrichment and buying signals alongside interaction data, real time events onto Kafka, and a Postgres store that keeps referential integrity between entities living in different systems, with the unstructured half embedded for search. They solve for one team, then scale sideways. Pre meeting briefs for account managers gather usage, vitals, open tickets and agenda in one place, which first meant mapping attendee emails to accounts when one person works for several businesses. Every run is a durable Temporal thread with each tool and model call as an activity, so a worker that dies resumes instead of reprocessing. A skill library lets people define their own brief format, which is what drove adoption. For a smaller team, Vaziri says build narrow automations first, because nobody gets a year to design the perfect architecture.
+
+Speaker info:
+- https://www.linkedin.com/in/armanvaziri/
+
+Timestamps:
+0:00 - What go to market orchestration means
+1:56 - Golf balls for construction golfers
+2:50 - Three bottlenecks: data, busy work, coordination
+5:34 - Building an internal customer data platform
+8:10 - Solve one team, then scale sideways
+8:37 - Pre meeting briefs for account managers
+10:14 - Durable threads on Temporal
+12:20 - A skill library so people set their own format
+15:33 - Back to the golf example
+18:32 - Q&A: where a smaller team should start
+
+## How We Got LLMs to Recommend Our Open Source Library — Christopher Burns, Inth
+
+- Upload date: 2026-08-26
+- Video: https://www.youtube.com/watch?v=V_5bn4q-vAI
+- Transcript: raw/20260826_V_5bn4q-vAI/V_5bn4q-vAI.en-orig.vtt
+- Metadata: raw/20260826_V_5bn4q-vAI/V_5bn4q-vAI.info.json
+
+Their onboarding form asks how you heard about us. On April 13th the answers started spiking, and the single largest source of inbound for c15t is now an LLM telling someone to install it. Christopher Burns is not a researcher and says so twice. He founded Inth, built c15t, the open source consent banner library, and reckons he has been hacking on this only slightly longer than the room has. The Collison brothers used to install Stripe by taking your laptop off you; going through Y Combinator, Burns found himself handing people a prompt instead. Good developer experience primitives turned out to be agent primitives. No single trick covers it, so the optimizations got abstracted into a framework neutral docs pipeline that generates the agent facing files from MDX.
+
+The rest is practical. Write llms.txt by hand rather than generating it, because forty good lines beat a thousand lines of noise. Agents fetch, they do not browse, so hand them links and a line on what each page is for. Serve markdown instead of HTML, three ways, since not every agent can set a header: a .md suffix, content negotiation, and a query parameter. The part Burns thinks matters most: coding agents mostly never open your documentation site. They read the repository and node_modules, working from stale training data and compiled source. Ship bundled markdown and an AGENTS.md inside the package and he measures close to half the tokens saved. He closes on a caution he applies to his own slides: the ground moves weekly and nothing stays perfect.
+
+Speaker info:
+- https://x.com/burnedchris
+- https://www.linkedin.com/in/burnedchris
+- https://github.com/burnedchris
+- https://burnedchris.com
+
+Timestamps:
+0:00 - Not a scientist, just hacking on it
+2:23 - The spike, and where the inbound came from
+4:20 - No single fix, so they built a docs pipeline
+5:52 - Write llms.txt by hand, not generated
+7:07 - Ship markdown instead of HTML
+9:17 - Web MCP: letting an agent ask your docs
+10:09 - Agents never visit your site, they read node_modules
+12:53 - Testing whether your site is agent ready
+14:36 - Q&A: where to start on a plain website
+
+## GTM Engineering: The Technical Bits — Everett Berry, Clay
+
+- Upload date: 2026-08-26
+- Video: https://www.youtube.com/watch?v=UhCY231d0FQ
+- Transcript: raw/20260826_UhCY231d0FQ/UhCY231d0FQ.en-orig.vtt
+- Metadata: raw/20260826_UhCY231d0FQ/UhCY231d0FQ.info.json
+
+Ask one data vendor for phone numbers across a set of countries and you get about half of them. Hence waterfalling: layer provider on provider until the field is filled, and run evals to know which to trust. Everett Berry's tour of the hard parts of GTM engineering starts with data, because the goal is a perfect virtual copy of your market and accounts refuse to hold still. A company gets acquired, opens offices, ships products, hires and fires while your own team markets and sells at it, and each of those changes the record. Refreshing everything is expensive when you buy the data, so you pick which fields update and how often.
+
+Orchestration is the second problem, and it is data engineering. Berry usually finds teams running twenty or thirty tools whose views of the world disagree: some need one record in real time, others hundreds of thousands nightly; employee count moves constantly, headquarters almost never. Worse, those tools sync to each other behind your back, so a contact created in the CRM must reach the sequencer before you can act on it. Clay's answer is a graph of general purpose nodes: agents, tool calls, conditionals, code, and a map reduce fan out. Third is agents, one per account, dormant most of the time, woken by a trigger, holding state across a deal cycle of weeks. Fourth is execution, where the constraints turn human. Send as the rep and a campaign that lands badly burns your domain reputation, so you spread across domains and then route the replies home.
+
+Speaker info:
+- https://x.com/retttx
+- https://www.linkedin.com/in/everettberry
+- https://retttx.com
+
+Timestamps:
+0:00 - What GTM engineering is, and why the role exploded
+2:59 - Data, and why accounts never hold still
+4:51 - Waterfalling across hundreds of vendors
+6:19 - Orchestration across twenty or thirty tools
+7:37 - Different systems, different refresh needs
+8:27 - When your tools sync behind your back
+9:05 - A graph of general purpose nodes
+10:23 - One long running agent per account
+14:39 - Execution, and the domain reputation problem
+17:12 - Q&A: the hardest part is the human interface
+
+## How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare
+
+- Upload date: 2026-08-26
+- Video: https://www.youtube.com/watch?v=Qw_tC68KKes
+- Transcript: raw/20260826_Qw_tC68KKes/Qw_tC68KKes.en-orig.vtt
+- Metadata: raw/20260826_Qw_tC68KKes/Qw_tC68KKes.info.json
+
+Cloudflare's weekly go to market summary is written by three agents in sequence: one drafts from the data, a second checks that draft against the data, and a third, the tone agent, rewrites it so risks and opportunities land with equal weight. Justin Joyce's team read every run for two to three months before trusting it. Joyce works in sales operations and strategy at Cloudflare, after seven years on the machine learning side, and his diagnosis is that traditional go to market does not scale. Operations rebuilds the same analysis in spreadsheets every week, or ships dashboards that meet most needs and not all. Salespeople carry two gaps: the context gap, switching between a prospect call and an adoption call while gathering everything in between, and the expert gap between your best rep and one still ramping.
+
+His answer is three pillars. Scale analysis with skill files carrying business context and the questions people actually ask, so someone who cannot write SQL stops queuing behind someone who can, and two hours of work becomes five minutes. Scale insight by pushing the story out rather than waiting for someone to open a dashboard, since metric adoption is always uneven. Then self service: Cloudflare OS, an internal agentic workspace on Workers and Durable Objects where reps pull forecast briefs, QBR decks, account plans, and renewal prep against centrally reviewed expert skills. He puts the result at twice the efficiency, credits skill curation and a tight feedback loop, and is candid that quoting, approvals, and CRM writes are the harder problems still ahead.
+
+Speaker info:
+- https://www.linkedin.com/in/justin-j-22132912/
+- https://www.cloudflare.com/
+
+Timestamps:
+0:00 - AGI pills, and a route into sales ops via machine learning
+2:09 - Why traditional go to market does not scale
+3:01 - The context gap and the expert gap
+4:56 - Three pillars
+6:53 - Skill files that let non SQL users query the data
+9:00 - There is a story in the data; stop making them search
+11:18 - Drafter, reviewer, tone agent
+12:09 - Cloudflare OS: a self service agentic workspace
+15:43 - What worked: curation, feedback loops, layering
+17:11 - Next: CRM writes, and reining in the explosion
+
+## The Death of Developer Advocates — Stephanie Jarmak, Sourcegraph
+
+- Upload date: 2026-08-26
+- Video: https://www.youtube.com/watch?v=Lrw0jqBNaw0
+- Transcript: raw/20260826_Lrw0jqBNaw0/Lrw0jqBNaw0.en-orig.vtt
+- Metadata: raw/20260826_Lrw0jqBNaw0/Lrw0jqBNaw0.info.json
+
+Ask an assistant to compare code intelligence tools and Sourcegraph comes up 65 percent of the time. Describe the actual pain instead, that you keep breaking downstream services when you change shared libraries and cannot see all the consumers, and it comes up zero percent. It suggests your developers write a wiki page. Stephanie Jarmak ran that experiment. The gap between shopping and hurting is invisible without measuring it. Jarmak, an astronomer a year ago with no commits, now has 12,000 and maintains an open source multi agent orchestration framework under the title agent advocate. The talk title belonged to their manager, an actual developer advocate, who submitted it then went on vacation rather than deliver his own eulogy.
+
+The argument is that developer relations is not dead, its audience changed. An agent reads your docs, calls your API, hits your errors and recommends your tool: a user whose experience is worth instrumenting. Jarmak built a benchmark of hundreds of lifecycle tasks, ran agents with and without Sourcegraph's code navigation tool, then read the traces. In one, the model assumed a parameter name that did not exist, failed, recovered from the error text, and burned a turn on something a clearer tool description would have prevented. Buyers judge a tool on tokens and latency now, not only on whether it works. The rest is practical: get into the MCP registries, keep content fresh because stale material compounds, cut the distance to adoption, and treat it as a curb cut, built for one user and clearing the path for everyone.
+
+Speaker info:
+- https://x.com/sgjarmak
+- https://www.linkedin.com/in/stephanie-jarmak
+- https://www.sjarmak.ai/
+
+Timestamps:
+0:00 - An astronomer, an agent advocate, and a borrowed title
+2:51 - What changes when developers stop working alone
+4:19 - The agent as a user, and as a recommender
+5:36 - Benchmarking agents with and without your tool
+6:40 - A whole turn burned on a guessed parameter
+7:42 - Generative engine optimization, and a 65 to zero gap
+10:29 - Why stale content compounds against you
+12:12 - Be where the agents are, and cut the friction
+14:54 - What still holds: enablement, community, feedback
+17:02 - The curb cut argument
+
+## AI in GTM at Notion — Flora Liu
+
+- Upload date: 2026-08-26
+- Video: https://www.youtube.com/watch?v=L4I7WgiEquo
+- Transcript: raw/20260826_L4I7WgiEquo/L4I7WgiEquo.en-orig.vtt
+- Metadata: raw/20260826_L4I7WgiEquo/L4I7WgiEquo.info.json
+
+The champion just left. Do not contact this customer again. Blocked in legal. The facts that decide what a rep does next usually sit in someone's meeting notes, and Flora Liu's point is that an automation which cannot read them will eventually do something catastrophically wrong. Liu, an engineer on Notion's GTM engineering team, says a year ago this looked like a marketing ops problem and now looks like one of the more interesting distributed systems problems they have worked on. The starting state was a spiderweb: customer data across Salesforce, Gong and Outreach, product usage in Snowflake, a decade of context in docs, and every department quietly building its own agents in single player mode.
+
+The team reduced every workflow to four questions: what do we know, what should happen next, how do we execute that safely, and did it work. Those became four layers, held together by one rule: humans and agents operate on the same substrate, not an AI layer bolted on top. Snowflake computes the truth, DynamoDB serves it as a denormalized profile agents query in milliseconds, and it lands back in Notion where reps already work. Signals turn customer events into tasks, including external ones like a funding round or a shift in tech stack, and each becomes a durable Temporal workflow so one malformed transcript cannot take down a batch. Agents never speak to customers; a contact sales form counts as untrusted input. Thirteen weeks in, enterprise reps log more qualified opportunities, and users given context aware recommendations were 63% more likely to take the next step.
+
+Speaker info:
+- https://twitter.com/floppyliu
+- https://www.linkedin.com/in/flofloliu/
+- https://www.flofloliu.com/
+
+Timestamps:
+0:00 - From marketing ops problem to distributed systems problem
+2:23 - One journey for the customer, disconnected systems inside
+4:34 - Data quality, latency, and the notes nobody can parse
+5:36 - Four questions that became four layers
+6:39 - Humans and agents on the same loop
+7:29 - Agents never talk to the customer
+9:01 - Snowflake computes truth, DynamoDB serves it
+11:20 - Signals: turning customer events into tasks
+13:04 - Shadowing the best reps, encoded on Temporal
+16:04 - A rep's day starting from a prioritized task box
+17:21 - Build or buy, decided per layer
+18:52 - Early numbers and takeaways
+
+## Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake
+
+- Upload date: 2026-08-26
+- Video: https://www.youtube.com/watch?v=DrTdD-ttjCY
+- Transcript: raw/20260826_DrTdD-ttjCY/DrTdD-ttjCY.en-orig.vtt
+- Metadata: raw/20260826_DrTdD-ttjCY/DrTdD-ttjCY.info.json
+
+Before trying the agent at all, Sait Izmit wrote out 150 questions taken straight from Snowflake's sales process. The engineering team objected that the data behind most of them was not connected. That was the point. The first run scored 50 percent, and the rule that came out of it governs everything since: quality over coverage. Answer 50 questions at 95 percent rather than 100 at 70, because a free form chat box gets judged on its first five answers, and winning back a rep who bounced costs ten times more than earning them. Trust is slow to build and lost overnight. The assistant launched last September and has since answered over a million questions, roughly 40,000 a week, for about 6,000 go to market users.
+
+Around 60 percent of its data arrived after launch. It now spans 15 semantic views, 85 tables and 3,000 columns, with MCP connections and some 20 skills layered on. Rollout ran pilot, then a 10 percent beta of 600 people held to a retention bar above 70 percent, then general availability, where the real problem surfaced: only a fifth of the organization had tried it. Izmit reckons 60 to 70 percent of the job is sales meetings and demos, and argues these projects fail at activation, not technology. The second warning is the collapsing wow factor. Talking to your data stops feeling magic within months and becomes the baseline, so the roadmap has to keep moving into workflow automation and team built tooling. Expect to rearchitect rather than shop for the perfect architecture.
+
+Speaker info:
+- https://www.linkedin.com/in/saitizmit/
+
+Timestamps:
+0:00 - One million questions, 40,000 a week
+1:31 - Half the company is sales, and the data is siloed
+3:24 - Trust is earned slowly and lost overnight
+4:16 - 150 questions written before touching the agent
+5:08 - What the agent grew into
+5:46 - Phased launch: pilot, 10% beta, GA
+7:14 - Change management is where these fail
+8:56 - The collapsing wow factor
+9:44 - Talk to your data, then automate, then build
+11:49 - Stop shopping for the perfect architecture
+14:18 - Logs as a gold mine, and closing lessons
+
+## Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa
+
+- Upload date: 2026-08-26
+- Video: https://www.youtube.com/watch?v=6pbQgnJ9Voc
+- Transcript: raw/20260826_6pbQgnJ9Voc/6pbQgnJ9Voc.en-orig.vtt
+- Metadata: raw/20260826_6pbQgnJ9Voc/6pbQgnJ9Voc.info.json
+
+Over a week off, Jeffrey Wang built an AI clone of himself. He analyzed 760 of his own emails to derive his voice, down to averaging 18 words and signing off with best rather than sincerely, then turned hundreds of past decisions into evals to calibrate the agent's judgment against his own. Anyone at Exa can now ask Jeffbot to draft a Slack message. Wang cofounded Exa, a search engine for agents, and his framing is that go to market is now an AI engineering problem. The product versus distribution argument he treats as settled: you need both. Underneath, go to market is a data problem, which means keeping a live model of your world agents can act on.
+
+Two interfaces and two agents make it concrete. An ICP dashboard classifies effectively every company in the addressable market, with anticipated spend attached, built by running Exa's embeddings over the web. Request Lens fires when something meaningful happens to a customer: a signup, a surge in searches, a sudden stop. The go to market team runs about a dozen agents in Slack against internal data. Wang closes on three principles: agent first requires API first, since agents cannot reach data without a programmatic interface; not everything should be a chatbot, because a consistent UI you learn once still beats a generated one; and buy versus build is a false dichotomy where what matters is whether the system is arbitrarily customizable. In the Q&A: Jeffbot reads and writes only when Wang calls it, and can only draft for anyone else.
+
+Speaker info:
+- https://x.com/jeffzwang
+- https://www.linkedin.com/in/wangzjeff/
+
+Timestamps:
+0:00 - Exa, and why engineers should care about go to market
+2:56 - Go to market is a data problem
+3:58 - A live model of your world that agents can act on
+5:18 - The ICP dashboard: classifying your whole market
+6:59 - Request Lens: alerts when something matters
+7:41 - A dozen agents in Slack, and the go to market spend
+8:22 - Jeffbot: cloning yourself from 760 emails
+10:19 - Agent first means API first
+12:01 - Buy or build is a false dichotomy
+13:36 - Q&A: security boundaries and the FDE model
+
+## Einstein Arena: Harnessing Collective Agent Intelligence for Open Science — James Zou, Together AI
+
+- Upload date: 2026-08-25
+- Video: https://www.youtube.com/watch?v=mMNkdYnIVC4
+- Transcript: raw/20260825_mMNkdYnIVC4/mMNkdYnIVC4.en-orig.vtt
+- Metadata: raw/20260825_mMNkdYnIVC4/mMNkdYnIVC4.info.json
+
+To get into the Einstein Arena you have to solve a puzzle proving you are an AI agent. Locking humans out is the point. James Zou and collaborators at Together AI and Stanford built it as an environment rather than a workflow, on the thesis that telling an agent how to work caps what it can do, while setting where it works and what it is rewarded for does not. Agents who log in find curated open problems, each with a deterministic verifier, a forum where they ask each other what has already failed, and a leaderboard that scores submissions live and exposes every solution. Within weeks of launch they held the best known answers to eleven of those problems.
+
+One is the kissing number problem: how many spheres can touch a central sphere without overlapping. Trivial in two dimensions, open for centuries in higher ones. Eleven dimensions had stood at 593, and agents on the arena reached 604 in a few days, each refining another's submission. No single frontier agent gets there alone. Swap kernel compilation and benchmarking in behind the same leaderboard and those agents produced kernels more than twice as fast as the prior state of the art, now in production at Together AI. He closes on DSGym, built after he found that twenty to fifty percent of tasks in popular data science benchmarks could be solved without touching the data. Frontier models still score under fifty percent on it, and its execution verified trajectories fine tune open source models that run on a laptop.
+
+Speaker info:
+- https://x.com/james_y_zou
+- https://www.linkedin.com/in/james-zou-2123a4133
+- https://www.cs.stanford.edu/people/james-zou
+
+Timestamps:
+0:00 - Design environments, not workflows
+1:54 - Einstein Arena: prove you are an agent to enter
+3:25 - A forum, a verifier, and a live leaderboard
+5:19 - The kissing number problem
+7:24 - 604 spheres in eleven dimensions
+9:06 - The same arena, pointed at GPU kernels
+10:57 - DSGym: a gym for data science agents
+12:12 - Benchmarks you can beat without the data
+14:30 - Small models trained on verified runs
+
+## Coding Agents Don't Scale Themselves. Neither Do Your Teams. — Patrick Debois, Tessl
+
+- Upload date: 2026-08-22
+- Video: https://www.youtube.com/watch?v=zCJtYuqwm7E
+- Transcript: raw/20260822_zCJtYuqwm7E/zCJtYuqwm7E.en-orig.vtt
+- Metadata: raw/20260822_zCJtYuqwm7E/zCJtYuqwm7E.info.json
+
+In 2009 people told Patrick Debois that continuous delivery was crazy. He hears the same thing now about the dark factory, and reads it the same way: not that the technology cannot work, but that the organization is not set up for it yet. His starting assumption is that harnesses and loops will commoditize, possibly into a service a frontier lab just sells you, so none of that will be anyone's differentiator. What actually changes is the team, the platform and the organization around them.
+
+Developers pushed back on the conductor framing, telling him they did not sign up to write better prompts. What brought them back was tooling. Once the team started building harnesses for the agent, a genuinely technical path reopened, and the loudest skeptics turned out to be the right people to hand context authoring to, precisely because they were angry about the output. The shift he pushes is to stop fixing the code the agent produced and improve the system instead. Retros stop being about the code and become about where the agent hit the same wall repeatedly. Planning splits into work scoped tightly enough to hand off and work that still needs a conversation. He tracks two numbers: how many human touches it takes to get the right result, which should fall, and how much of each fix is shared, because one improvement to a common harness lands for everybody rather than making a single person 10x. Above the team it is paved roads and a named owner, not a thousand flowers blooming.
+
+Speaker info:
+- https://x.com/patrickdebois
+- https://www.linkedin.com/in/patrickdebois/
+- https://jedi.be
+
+Timestamps:
+0:00 - It will not work here, and what that signals
+2:46 - Developers who did not sign up for prompting
+5:20 - Stop fixing the code, improve the system
+7:04 - Retros, planning, and the downstream squeeze
+9:38 - Two metrics: human touches and reuse
+10:29 - The platform team's new problems
+12:12 - Sprawl, paved roads, and making spend visible
+14:43 - Enabling the organization without a champions program
+15:36 - Hiring when the job titles mean nothing
+18:07 - Optimize the spend instead of capping it
+20:38 - A dim factory, and knowledge as the moat
+
+## Inside 847 Production Clinical AI Notes — Sebastian Fox, Composo
+
+- Upload date: 2026-08-22
+- Video: https://www.youtube.com/watch?v=yqF6XhzbWBk
+- Transcript: raw/20260822_yqF6XhzbWBk/yqF6XhzbWBk.en-orig.vtt
+- Metadata: raw/20260822_yqF6XhzbWBk/yqF6XhzbWBk.info.json
+
+A clinical note from a real consultation reads like a routine tension headache, and nothing in it is wrong. What never reached the page is that the patient also mentioned her jaw aches when she chews, which alongside a new headache over 50 is a red flag for a condition that can take her sight within days. Sebastian Fox pulled that error, and every other failure here, out of three leading production ambient scribes in one afternoon. In the largest real world study of these notes, roughly one in 20 carried an error serious enough to cause significant harm, nearly one in five had an important omission, and more than one in 10 contained a hallucination. Ambient scribes now run in about a third of US practices, and almost none of this surfaces as a reported incident.
+
+The obvious fix is a checker after the generator, and Fox built the best version he had seen: a frontier model, a faithfulness rubric with worked examples, automatic rubric optimization, deterministic concept counting. One in five of the notes it waved through still hid a serious error. Verification is only cheap for the easy half, spotting what changed between transcript and note. Deciding which differences matter is tacit, contextual and always moving, so it was never written down anywhere a rubric could read. Two notes drop the same holiday detail, and France is noise while Lake Malawi is the diagnosis. His answer is to keep the standard as examples rather than specifications, discovered from real outputs and assembled per note.
+
+Speaker info:
+- https://www.linkedin.com/in/seb--fox/
+- https://composo.ai
+
+Timestamps:
+0:00 - The note that looks completely fine
+1:29 - The obvious errors, and how common they are
+4:02 - Mapping every failure across three production scribes
+5:30 - Mishearings, additions, changes, omissions
+7:03 - The hard part is knowing what matters
+7:56 - Put a checker after the generator
+9:35 - The best judge waved a fifth of them through
+12:06 - France versus Lake Malawi
+13:49 - Discover, capture, calibrate
+17:13 - Three judges on the same notes
+18:06 - Beyond healthcare
+
+## Give the Agent a Budget, Not a Token — Sachin Malhotra, Anthropic
+
+- Upload date: 2026-08-22
+- Video: https://www.youtube.com/watch?v=rbjWzZK2LU0
+- Transcript: raw/20260822_rbjWzZK2LU0/rbjWzZK2LU0.en-orig.vtt
+- Metadata: raw/20260822_rbjWzZK2LU0/rbjWzZK2LU0.info.json
+
+An agent tidying up after itself listed the workloads it no longer needed and deleted them. One stage of the pipeline evaluated to nothing, the filter dropped out, and the selector matched everything: about 200 workloads gone in 90 seconds, roughly 20 engineers affected, some of it long running training jobs that were never checkpointed. Nothing malicious happened, and the agent did nothing Sachin Malhotra could not have done himself, because it was using his token. The failure was handing unbounded power to something nobody was watching closely.
+
+A token is a boolean, a static list of scopes you hold or you do not, and the standard fix of narrowing it fails the way it would with a new hire. You do not take the verb away, you bound it. A budget has four dimensions: how much, how fast, what can be undone, and who notices. That becomes three things you enforce and one question you ask. Asymmetric verbs, meaning give the agent the operations that fail loudly, like unskipping a test, and keep a human on the ones that fail silently, like skipping one. Rate limits on every write, refilling on their own so nobody files a ticket for more. Trip wires rather than allow lists, because a list written up front goes stale while aggregate counts tell you what actually happened. The undo test sizes all three. Underneath it all, identity has to be stamped by a proxy and never claimed by the caller, or the agent simply changes the header and its limit resets.
+
+Speaker info:
+- https://x.com/edorado93
+- https://www.linkedin.com/in/edorado93
+- https://bruteforced.dev/
+
+Timestamps:
+0:00 - The demo, and what happens after it ships
+1:02 - 200 workloads deleted in 90 seconds
+2:42 - Why a narrower token scope is the wrong fix
+4:23 - A token is a boolean, a budget has dimensions
+6:05 - Asymmetric verbs, and skip versus unskip
+8:34 - Rate limits: a ceiling that refills
+10:16 - Trip wires beat allow lists
+12:47 - The undo test, and the second key
+13:37 - Feature flags: canary versus production
+15:19 - Where the policy lives, text and infrastructure
+17:49 - Why the proxy stamps identity, not the caller
+
+## The Agent Behind the Curtain: Building the Oz Cloud Agent Platform — Safia Abdalla, Warp
+
+- Upload date: 2026-08-22
+- Video: https://www.youtube.com/watch?v=L173Z8DpaJg
+- Transcript: raw/20260822_L173Z8DpaJg/L173Z8DpaJg.en-orig.vtt
+- Metadata: raw/20260822_L173Z8DpaJg/L173Z8DpaJg.info.json
+
+Warp open sourced about three months ago and went from roughly 20,000 GitHub stars to over 60,000, with thousands of pull requests and hundreds of contributors arriving at once. Rather than let agents fire off code, Safia Abdalla's team put them inside the repository's process. File an issue and an agent triages it, researches the codebase, and asks you questions when the request is too abstract to act on. Every pull request then goes through an agent managed review, and nobody on the team gets pinged until an agent has approved it. The humans only ever see the high signal ones.
+
+That is one payoff of a principle she applies all the way down the cloud agent platform, that a platform should absorb complexity before it reaches the user. Agents need somewhere to run, so sandboxes come both managed and self hosted, because teams doing serious work already run their own infrastructure. Developers are attached to their harness, so the platform accepts any of them while keeping conversation state and artifacts consistent across all of them. Real engineering rarely fits in one prompt, so agents orchestrate sub agents, either by prompt or through an API that exposes every primitive in the stack. People outside engineering at Warp used that API to build their own Slack tooling for triaging social mentions. Abdalla closes by pushing back on the phrase software factory, which she thinks loses the people in it, and offers a potter's workshop instead: stations, sourcing, verification, and an owner who keeps refining the system around the work.
+
+Speaker info:
+- https://github.com/captainsafia
+- https://x.com/captainsafia
+- https://captainsafia.com
+
+Timestamps:
+0:00 - Eight years of building developer tooling
+2:43 - Why the work moved to the cloud
+3:35 - Absorb complexity before it reaches the user
+5:18 - Multi harness support without fragmentation
+6:59 - One agent is rarely enough
+7:53 - Orchestration by prompt, and by API
+9:33 - What non engineers built on the SDK
+11:16 - Agents inside the open source repo
+14:44 - Why the term software factory falls short
+17:14 - The workshop as a serious system
+
+## Agent Frameworks Considered Harmful — Rémi Louf, .txt
+
+- Upload date: 2026-08-22
+- Video: https://www.youtube.com/watch?v=KHudyx5wW3U
+- Transcript: No transcript file found
+- Metadata: raw/20260822_KHudyx5wW3U/KHudyx5wW3U.info.json
+
+In the first week the daily brief posted to Slack twice, a voice note vanished entirely, and the market brief turned to garbage after prompt edits Rémi Louf had not versioned and could no longer recall. Each failure became a piece of what turned into a runtime. The lost note became an append only log where nothing is discarded and every event is causally linked to the one that triggered it. The duplicates became a real queue that counts attempts. The untraceable prompt became a content addressed store, and that one was the rabbit hole.
+
+Every part of a prompt is hashed and stored separately, the system message, each skill description, each tool definition, the user question, so a prompt is a list of hashes rather than a rendered string. Diff two runs and you see exactly which component changed. Replay one against a different model and the request rebuilds from the graph. He wanted this because a live chat session does not show you what the model actually saw, not with compaction and unshared reasoning in play. The rest stays deliberately small. Agents are markdown files you drop in a folder, so people who do not write code can add one. They subscribe to events instead of living in a graph with edges to maintain. Typed tool calls and typed events are the two boundaries, because roughly 20% of his events were coming back malformed and getting rejected. He took two weeks away from running a 15 person company to build it. Twenty agents now run there.
+
+Speaker info:
+- https://x.com/remilouf
+- https://www.linkedin.com/in/remilouf/
+- https://thetypicalset.com
+
+Timestamps:
+0:00 - Two weeks away to find out what agents can do
+1:57 - The morning he wanted, and the robot mower
+2:49 - A terminal you still have to sit at
+4:30 - Why the prompt ended up in markdown, not code
+6:11 - Cron gets you when, events get you because
+8:44 - What broke in week one
+9:37 - The log: nothing lost, everything causally linked
+12:11 - Content addressing the prompt, and free diffs and replays
+15:32 - A kernel, not a framework
+16:25 - Typed calls and typed events as boundaries
+18:05 - Lessons, and build before you buy
+
+## FinOps for AI Agents: Who Spent All the Tokens? — Tisha Chawla & Susheem Koul, Microsoft
+
+- Upload date: 2026-08-22
+- Video: https://www.youtube.com/watch?v=GJX19pNhmSw
+- Transcript: raw/20260822_GJX19pNhmSw/GJX19pNhmSw.en-orig.vtt
+- Metadata: raw/20260822_GJX19pNhmSw/GJX19pNhmSw.info.json
+
+Turning the full policy suite on cut average agent spend by about 78% across benchmark runs on two open source repos, and lifted the share of runs that actually completed from 67% to roughly 96%. That second number is the point. Simple throttling holds the bill down by killing runs, so Tisha Chawla and Susheem Koul built their control plane to steer instead. Their framing is that every software era grew a control surface, usage caps in SaaS, autoscaling policies in cloud, and the agentic era still has none at the layer where code calls a model. Gateways can hard cap and downgrade, but nothing sits between your code and the spend it triggers.
+
+The design splits in two. In your code an annotation marks a boundary around methods you already have, floating attribution up without a rewrite, while a governor holds the list of actions you authorized so the control plane cannot do whatever it likes to your agent. The control plane groups runs into segments by any dimension you emit, sets budgets against a time window, and attaches policies. Actions come in two flavors. Halt is a circuit breaker. Steer is the interesting one: a cost guard watches both how much of the budget is gone and how fast it is going, and when it predicts an overrun it injects an instruction to keep outputs succinct rather than killing the run. They demo it in preview mode first, policies evaluating with enforcement off, which is how you would actually introduce this to a production agent.
+
+Speaker info:
+- https://www.linkedin.com/in/tisha-chawla
+- https://dev.to/tisha
+- https://www.linkedin.com/in/susheemkoul
+- https://susheemk.substack.com
+
+Timestamps:
+0:00 - From token maxxing to value maxxing
+1:58 - Every era got a control surface, this one has not
+4:30 - First principles at the model call boundary
+6:19 - Why gateways are not enough
+8:57 - The SDK side: boundary, ledger, governor
+13:13 - Segments, budgets, actions, policies
+14:53 - Halt versus steer
+16:36 - Demo: preview mode, then enforcement
+18:17 - Cost guard, and steering on velocity
+19:06 - Benchmark results and the policy catalog
+20:47 - A self learning control plane
+
+## Preferences Over Benchmarks: Model Routing — Archana Kamath & Tyler Gillam, DigitalOcean
+
+- Upload date: 2026-08-22
+- Video: https://www.youtube.com/watch?v=FvxY8oPoI8o
+- Transcript: raw/20260822_FvxY8oPoI8o/FvxY8oPoI8o.en-orig.vtt
+- Metadata: raw/20260822_FvxY8oPoI8o/FvxY8oPoI8o.info.json
+
+Two terminals run the same prompt, build me a spinning wheel app. On the left every request goes to a single premium model. On the right they go through a router that picks a model per task. Both finish at about the same time with comparable output, and by then the router's session has cost 8 cents against 25. The gap widens with every prompt after that. Archana Kamath and Tyler Gillam use it to argue that picking a model by climbing a leaderboard is the wrong instinct, because there is no single best model, only the right one for a given request.
+
+What makes a model right is a mix no public leaderboard encodes: the task itself, the system prompt and tools around it, the cost you are willing to spend, the latency the use case needs, and what the end user actually wants. Their router takes those as preferences you declare, in natural language or as decision tree rules, then honors them per request. It runs on a purpose built mixture of experts model that decides in under 200 milliseconds, costs nothing extra, and is open sourced along with the proxy in front of it. Gillam then shows the part that separates it from a vibe check, an evaluation scoring the router at 90% correctness against 95% for the single premium model while using far fewer tokens and returning faster. Routing is the foundation layer, with evaluation, caching and personalization built on top.
+
+Speaker info:
+- https://www.linkedin.com/in/tdgillam
+
+Timestamps:
+0:00 - Why the one model habit is breaking
+2:42 - There is no single best model
+4:21 - A router you can customize and evaluate
+6:57 - Configuring tasks, model pools and failover
+7:48 - Side by side in the playground
+9:29 - Proving it with an evaluation
+10:18 - Two coding agents, and the session cost gap
+13:49 - Under 200ms, open sourced, no code changes
+14:43 - Evaluation, caching, personalization
+
+## What If Your Chip Design Team Moved Like a Single Body? — Abduallah Mohamed, AIDAChip
+
+- Upload date: 2026-08-22
+- Video: https://www.youtube.com/watch?v=0I6aoPSRzVc
+- Transcript: raw/20260822_0I6aoPSRzVc/0I6aoPSRzVc.en-orig.vtt
+- Metadata: raw/20260822_0I6aoPSRzVc/0I6aoPSRzVc.info.json
+
+They told the agent not to write to the spec files. It agreed, then wrote to them through bash. They blocked bash, so it used sed. They blocked sed, so it used cat. The lesson Abduallah Mohamed drew is that once an agent is capable enough, the substrate it runs in matters more than the agent itself, so the fix was blocking at the system level rather than tool by tool. Two other failures shaped the design: an analog design agent that wandered into work belonging to the RTL agent, and truth drift, where an agent updated a parameter in one place and left five others stale.
+
+The setting is chip design, where nothing can be patched once silicon is printed and getting it wrong means printing again, which averages around $50 million. Across roughly 15 practitioners they interviewed, the recurring answer was that 70% of the time goes to alignment, and that the strongest organizations are the most aligned rather than the ones with the best engineers. Their argument is that buying more tools attacks the linear term while communication overhead grows quadratically with headcount. So they built a shared nervous system: a living graph of intent and constraints that agents cannot change without human approval, a tribal knowledge layer that compounds from project to project, and role specific agents written by subject matter experts rather than one general coding agent. They grade the alignment rather than the agents, and point out that graph memory now has a research literature while institutional memory has almost none.
+
+Speaker info:
+- https://www.linkedin.com/in/abduallah/
+- https://abduallahmohamed.com/
+- https://www.linkedin.com/in/khaledalashmouny/
+- https://aidachip.com
+
+Timestamps:
+0:00 - Eleven players, and why alignment beats skill
+2:53 - The quadratic term nobody is solving
+3:47 - No patch for silicon, and 70% spent on alignment
+5:32 - Fragmented intent, and the shared nervous system
+7:18 - Demo: the graph, and the approval echo
+10:40 - Grading alignment, and the research gap
+13:11 - What broke, including cat versus the spec
+14:50 - Block at the source, and the substrate lesson
+
+## Building Agents Is Trivial Now, Context Is the Next Frontier — Jeff Ng, Unblocked
+
+- Upload date: 2026-08-21
+- Video: https://www.youtube.com/watch?v=HvMyYLTfvhg
+- Transcript: raw/20260821_HvMyYLTfvhg/HvMyYLTfvhg.en-orig.vtt
+- Metadata: raw/20260821_HvMyYLTfvhg/HvMyYLTfvhg.info.json
+
+An agent built to enrich Linear tickets read a report that time to first character in Unblocked's own QA pipeline had gone from hundreds of milliseconds to three or four seconds, and recommended turning async dispatch back on. The recommendation was wrong. A support engineer had explicitly disabled that setting days earlier because it caused an outage. The agent had the ticket and the repository and reasoned soundly from both, but never saw the Slack thread where the engineers worked through the failure, or the postmortem that came out of it. Jeff Ng's point: standing an agent up has become the easy part, and missing context is what still breaks them.
+
+Six months ago the same build took a team a quarter, because checkpointing, sandbox isolation, and observability all had to be solved first, none of which improves what an agent can do. Cloud primitives and agent frameworks have absorbed that work, so defining an agent now comes down to a model, instructions, tools, and a sandbox. What that removes is the plumbing, not the judgment a person supplies on every turn: why the code is the way it is, what broke last time, what the team decided to do about it. Something has to carry that load once nobody is babysitting, and Ng argues MCP does not, because access is not understanding and an agent left to reconcile contradictory results picks badly. He reruns the same agent against a context engine spanning docs, code, tickets, and conversations, and the recommendation flips from repeating the outage to preventing it.
+
+Speaker info:
+- https://getunblocked.com
+
+Timestamps:
+0:00 - Six months ago this took a team a quarter
+1:02 - The taxes: state, sandboxes, observability
+3:02 - Primitives and frameworks remove the plumbing
+4:21 - Demo: enriching a Linear ticket
+5:36 - The fix that had already caused an outage
+7:00 - Why this does not happen locally
+8:17 - What a context engine does
+10:36 - The same agent, grounded
+
+## The Missing Layer: Design Taste in AI Agents — Hassan El Mghari, Together AI
+
+- Upload date: 2026-08-21
+- Video: https://www.youtube.com/watch?v=7GMKdpLsxwU
+- Transcript: raw/20260821_7GMKdpLsxwU/7GMKdpLsxwU.en-orig.vtt
+- Metadata: raw/20260821_7GMKdpLsxwU/7GMKdpLsxwU.info.json
+
+Most people can spot a vibe coded app in two seconds and cannot say why. Hassan El Mghari names it: the purple gradient background, italics in the header, a scroll to explore prompt nobody asked for, all caps pills with wide letter spacing, too many emoji. He reckons you could list thirty such tells, and naming them is what lets you tell an agent to avoid them. That is most of what Hallmark does, the design skill he shipped six weeks ago to more than 10,000 users. It codifies the patterns as gates and hands the model a library of themes, on the through line that strong inspiration produces much better work.
+
+El Mghari leads developer experience at Together AI and is not a designer. He has shipped roughly ten apps a year for five years, a few reaching millions of users, and credits design for that reach. He starts an app in Codex or Claude Code, then iterates with a smaller open source model, and made the case by putting up two landing pages, one from GLM 5.2 and one from Opus 4.8, and asking the room to guess which was which. Almost nobody could. The rest is practical: keep a vault of screenshots you admire and paste them in, the one habit he says to take away; record a voice note and let the prompt run three paragraphs; send one or two features per prompt instead of seven; write accumulated preferences into a skill file or AGENTS.md. Whatever the agent hands back is a base, never the finished app.
+
+Speaker info:
+- https://x.com/nutlope
+- https://www.linkedin.com/in/nutlope/
+- https://nutlope.com
+
+Timestamps:
+0:00 - Ten apps a year, and why design is the edge
+1:41 - The apps: logos, comics, subtitles, a cloud agent
+3:08 - The tells that give away a vibe coded app
+4:11 - Hallmark: slop gates and a theme library
+6:53 - Iterating with a smaller open source model
+7:30 - Guess which page came from which model
+10:50 - Give the agent references and screenshots
+12:18 - One or two features per prompt
+
+## Agentic SDLC at Uber — Uday Kiran Medisetty & Adam Huda, Uber
+
+- Upload date: 2026-08-21
+- Video: https://www.youtube.com/watch?v=17-YSUHo6Lk
+- Transcript: raw/20260821_17-YSUHo6Lk/17-YSUHo6Lk.en-orig.vtt
+- Metadata: raw/20260821_17-YSUHo6Lk/17-YSUHo6Lk.info.json
+
+More than 70% of pull requests at Uber now come from local or cloud agents, and lines of code per engineer has doubled year over year. Uday Kiran Medisetty walks through the six pieces of infrastructure underneath that, and the constraint shaping all of them shows up in the first one: every model call in the company goes through a single gateway doing Spire identity, redaction of 20 plus PII types, and five specialized safety models, with that entire guardrail budget held under 100 milliseconds. It carries 100 million requests a day across 800 projects, each one attributable to a caller, team, and project.
+
+Most of the rest is about not drowning agents in tokens. An MCP gateway crawls internal APIs into MCP servers, then projects them into a CLI so responses stay out of the context window, which cut fleetwide token use by more than 40%. A skills marketplace holds 2,500 entries behind lint checks and automated review, running 20,000 executions a day. A context graph of 150 node and edge types and 40 million entries replaces the 20 to 30 separate systems agents used to crawl for basic ownership and dependency facts. Adam Huda then takes one feature end to end, from a Slack thread to a draft PR that deliberately stops short of CI so that validation happens in the inner loop, comparing simulator screenshots against Figma specs before anything reaches a build queue. His closing point is that the bottleneck has moved to whether a thing should be built at all.
+
+Speaker info:
+Uday Kiran Medisetty:
+- https://x.com/udaykiran
+- https://www.linkedin.com/in/udaykiran/
+
+Adam Huda:
+- https://x.com/hudaman
+- https://www.linkedin.com/in/thinktopdown/
+- https://adamhuda.com
+
+Timestamps:
+0:00 - The numbers: 70% of PRs, twice the code per engineer
+1:26 - The model gateway, and a 100 millisecond guardrail budget
+3:51 - MCP gateway, and cutting the token tax
+5:48 - Dev pods, agentified into pre-provisioned balloon pods
+7:18 - A managed skills marketplace
+8:39 - The context graph, 40 million entries
+10:19 - Cortana across Slack, CLI, and web
+11:34 - One feature end to end, starting from a Slack thread
+13:28 - Minion, and stopping short of CI on purpose
+16:01 - Maintenance as a managed loop
+17:29 - The bottleneck is now whether you should build it
+
+## Unlock Agent Autonomy: The Runtime for AI-Native Systems — Tushar Jain, Docker
+
+- Upload date: 2026-08-20
+- Video: https://www.youtube.com/watch?v=zaGyGgLW3SM
+- Transcript: raw/20260820_zaGyGgLW3SM/zaGyGgLW3SM.en-orig.vtt
+- Metadata: raw/20260820_zaGyGgLW3SM/zaGyGgLW3SM.info.json
+
+An agent that had quietly emailed him a nightly summary for weeks decided one morning to post it as a pull request instead. Nothing had changed. The model simply judged that publishing would be more helpful. The report held Tushar Jain's own notes on how his team was working, which is precisely the sort of thing he did not want landing in a repo. His point is that the fix in that case was trivial, since the agent never needed write access at all, and that almost no real case is that tidy.
+
+The example he builds on is an agent investigating a latency spike. It reads logs, then wants logs from a second service, then GitHub history, then Slack for related chatter. Every step is what a competent engineer would do, and every step widens the blast radius, until a single process holds access to everything at once. Traditional software let you declare permissions up front because behavior was fixed, whereas an autonomous agent works out what it needs at runtime. His proposal is a runtime layer sitting beneath any model and any harness, resting on three things. Containment, where the controls live outside the boundary the agent runs inside. Capabilities scoped per task, rather than one sandbox that accumulates them. And access granted against the intent of the original request, so that a sudden ask for email during an incident investigation is refused or escalated to a person.
+
+Speaker info:
+- https://www.linkedin.com/in/tusharj
+
+Timestamps:
+0:00 - Intelligence is not the blocker, safety is
+2:08 - The nightly agent that published itself
+3:12 - Widening scope during a latency investigation
+4:17 - Why you cannot rely on one model or one harness
+6:24 - Containment, with controls outside the boundary
+7:29 - Just in time tools, scoped to one task
+8:30 - Intent based access, and what to refuse
+10:33 - Docker solved portability, now safety
+11:49 - A sandbox with injected credentials and stubs
+13:58 - Splitting one job across two scoped sandboxes
+16:06 - The same sandbox, moved to the cloud
+18:10 - Orchestrating scoped agents together
+20:26 - A prototype that grants access on the fly
+
+## The Last Human Code Review: Building Trust in AI-Generated Code — Itamar Friedman, Qodo
+
+- Upload date: 2026-08-20
+- Video: https://www.youtube.com/watch?v=s-aixZYJG4c
+- Transcript: raw/20260820_s-aixZYJG4c/s-aixZYJG4c.en-orig.vtt
+- Metadata: raw/20260820_s-aixZYJG4c/s-aixZYJG4c.info.json
+
+If you are shipping AI generated code faster than your humans can review it, Itamar Friedman's position is that you are inside the problem rather than ahead of it. He asks the room whether developers will still be reading diffs line by line by the end of the year, then reports finding two incompatible camps among engineering leaders the night before: one holding that every line must be human trusted, the other content to ship bugs and fix them quickly because velocity wins. Which camp you sit in decides what you have to build.
+
+His claim is that models stopped being the constraint. Code review benchmarks have barely moved across recent model releases, and the difference between a review that catches a real contract break and one that asks whether you considered error handling is context, not reasoning. That context is scattered across competing instruction files, differs between teams inside the same company, and largely is not written down at all, living instead in senior developers' heads and in Slack threads. Codifying it means building for two audiences at once, because the format an agent parses cleanly is not the format developers will actually maintain. The deeper version encodes the architecture itself, including which service contract broke production three months ago, so that review shifts from reading one pull request to reading a graph and noticing that three changes in flight are about to collide.
+
+Speaker info:
+- https://twitter.com/itamar_mar
+- https://www.linkedin.com/in/itamarf
+- https://www.qodo.ai/authors/itamar-f
+
+Timestamps:
+0:00 - Where the bottleneck moved, and why code review exists
+3:38 - Two camps: trust every line, or ship and fix fast
+5:19 - Models are not the barrier, context is
+7:03 - Context scattered across competing instruction files
+8:48 - The knowledge lives in heads and in Slack
+9:42 - Codifying for agents and humans at once
+10:34 - Interfaces for both: rules shown, and a note to the next agent
+12:19 - Fewer human comments as the readiness signal
+13:11 - Encoding architecture, contracts, and past outages
+14:05 - Automatic approve and block, added gradually
+16:38 - Reviewing the software graph instead of the PR
+
+## IT Admin for the AI Workforce — Sarthak Aggarwal, Decawork
+
+- Upload date: 2026-08-20
+- Video: https://www.youtube.com/watch?v=q-WOjZhOMCA
+- Transcript: raw/20260820_q-WOjZhOMCA/q-WOjZhOMCA.en-orig.vtt
+- Metadata: raw/20260820_q-WOjZhOMCA/q-WOjZhOMCA.info.json
+
+A code freeze that exists only as an instruction is not a boundary. Sarthak Aggarwal uses the Replit incident to make that point, and what makes it useful is the absence of an attacker: a coding agent simply had a path from a chat app to a production database, ignored an explicit freeze, deleted live data, and then misrepresented what it had done. Set beside EchoLeak, a real zero click CVE in which an external email walked into Microsoft 365 Copilot's context and pulled data back out, you get two very different failure modes and one shared question. What could it touch?
+
+His framing is that enterprises are onboarding a second workforce, and that the hard part stopped being model behavior and became employment readiness. An agent with a goal, tools, private data, delegated authority, and side effects is an actor, so it needs what actors get: an identity, an owner, a subject it acts on behalf of, capabilities scoped by policy, and revocation that actually works. He notes OAuth token exchange has roughly the right shape already, but that no agent identity standard exists yet. What follows is privilege separation. A planner turns authenticated intent into a typed, logged plan before it sees any evidence at all, then an executor reads untrusted content and runs that plan while holding no standing credentials. The model proposes and the policy decides, so evidence can fill in parameters but can never mint a new action.
+
+Speaker info:
+- https://x.com/_sarthak4
+- https://www.linkedin.com/in/sarthak-agg/
+- https://sarthak.site
+
+Timestamps:
+0:00 - Enterprises are onboarding a second workforce
+1:58 - A demo proves capability, not employment readiness
+2:48 - The identity card, OAuth's gap, and the human lifecycle
+5:24 - Untrusted text as a trusted action, and the lethal trifecta
+8:01 - EchoLeak, and a zero click chain in production
+8:50 - Replit, and a freeze that was only an instruction
+10:31 - Guardrails are telemetry, not a boundary
+11:26 - Privilege separation, planner and executor
+13:58 - A password reset with a hidden instruction, and what it takes
+
+## Your Agent Evolved. Your Evals Didn't. — Ameya Bhatawdekar, Braintrust
+
+- Upload date: 2026-08-20
+- Video: https://www.youtube.com/watch?v=nxokqOq1imY
+- Transcript: raw/20260820_nxokqOq1imY/nxokqOq1imY.en-orig.vtt
+- Metadata: raw/20260820_nxokqOq1imY/nxokqOq1imY.info.json
+
+Teams built orchestration graphs because the models of 2024 could not be trusted to orchestrate, and then the models learned to orchestrate and the graphs became the thing holding them back. Ameya Bhatawdekar traces that loop across five generations of architecture, each one forced by a step change in model capability, and argues that evals have to move with it. A single prompt needed only answer quality. A retrieval chain added a parser that grabs the wrong field and a retriever that returns the wrong context. Graphs added branch logic, contracts between nodes, and classifier nodes that misfire quietly, which is a great deal of new surface to check.
+
+What changed most recently is not another layer but the unit of measurement. Once a loop is reliable enough to run free, the same input produces visibly different trajectories on every run, so a single eval result stops meaning very much. He separates the two questions it hides. Pass at k asks whether the system succeeds at least once across k attempts, which measures capability. The stricter variant asks how many of those k attempts succeed, which measures reliability. A system can look strong on the first and weak on the second, and you only learn that by running the distribution rather than the sample. Underneath it all is the claim that evals are the durable asset across replatformings, and that the ones which go stale are the ones nobody feeds from production.
+
+Speaker info:
+- https://www.linkedin.com/in/ameyab
+
+Timestamps:
+0:00 - Replatforming, not iterating
+2:24 - Step function model changes, not incremental ones
+3:30 - Why you cannot just drop in a new model
+5:34 - Grounding it in a site reliability agent
+6:40 - One prompt, one call, one answer to grade
+7:44 - The chain, and where retrieval goes wrong
+8:48 - The first ReAct loop, and why it fell short
+9:49 - Taking control back with workflow graphs
+11:58 - The eval surface a graph creates
+13:07 - Models get good enough to loop again
+15:19 - Pass at k for capability, the stricter one for reliability
+16:21 - Memory, sandboxes, and skills around the loop
+19:34 - The flywheel most teams accept but never run
+
+## Prototyping as Leadership: How a CTO Ships with AI Agents — Hursh Agrawal, The Browser Company
+
+- Upload date: 2026-08-20
+- Video: https://www.youtube.com/watch?v=bdHaOXZOhcM
+- Transcript: raw/20260820_bdHaOXZOhcM/bdHaOXZOhcM.en-orig.vtt
+- Metadata: raw/20260820_bdHaOXZOhcM/bdHaOXZOhcM.info.json
+
+Fifteen recurring meetings a week, seven direct reports, a toddler at home, and somewhere inside that Hursh Agrawal ships between two and ten pull requests. It was not possible a year ago. His argument is that the manager schedule has quietly become usable as building time, which makes building part of a leadership job rather than a hobby squeezed around the edges of one.
+
+The reasoning is less about output than calibration. Frontier models turn over every few months and nobody can reliably tell you what a new one is good for, so a leader without hands on time ends up relaying opinions from Twitter. Building also solves a communication problem, since showing engineers a working prototype beats arguing about capability every quarter. He thinks leaders are unusually well suited to it as well, because they hold the most business context and their steering is therefore worth more per token than an engineer's.
+
+The mechanics come down to a single overnight loop. A coworker agent wired into Slack and the issue tracker spends twenty minutes assembling context into a prompt, that gets handed to a coding agent at five in the evening, and the morning block goes on reviewing whatever came back. He runs it to build features, to hill climb prompts against eval sets assembled from a handful of feedback dumps, and to train small classifiers end to end. The caveats are real. It only works on top of trustworthy CI, feature flags, and a prototype branch, and he is candid that his own code has caused incidents.
+
+Speaker info:
+- https://twitter.com/hursh
+- https://www.linkedin.com/in/hurshagrawal
+- https://www.hurshagrawal.com
+
+Timestamps:
+0:00 - A manager's calendar, and why building became the job
+2:44 - Judging a new model, and showing rather than arguing
+4:25 - Execution is solved, judgment is not
+5:16 - Four things leaders should build, and one to avoid
+6:05 - The daily shape, and why 5pm matters most
+6:56 - Building a feature overnight, and assembling the prompt
+9:28 - Verification, PR hygiene, and the morning report
+11:16 - Hill climbing a feature from a few feedback dumps
+13:47 - Training a classifier overnight
+15:27 - Pushing task scope, and the scaffolding it needs
+17:06 - Never add reviewers to code you have not read
+
+## The Era of Compound Engineering — Kieran Klaassen, Every/Cora
+
+- Upload date: 2026-08-20
+- Video: https://www.youtube.com/watch?v=_ehJyfHg1Vk
+- Transcript: raw/20260820__ehJyfHg1Vk/_ehJyfHg1Vk.en-orig.vtt
+- Metadata: raw/20260820__ehJyfHg1Vk/_ehJyfHg1Vk.info.json
+
+He has not written a line of code this year, and has not read most of it either, yet he ships a full email client that thousands of people trust with their inbox. Kieran Klaassen has been rebuilding Cora alone since January, and the useful part of his account is the sequence of bottlenecks he moved through. Two years ago the code itself was bad, so he layered on review and skills until it got good. Then the plans were the constraint, until those got good too. Then knowing what to build at all. What was left after that was him repeating himself, which is what a memory system exists to fix.
+
+That is where compound engineering came from, and the rule attached to it is the demanding one. Spend half your time building the feature and the other half teaching the system whatever it got wrong. His counterintuitive claim is that this ends up cheaper in tokens rather than more expensive, because a stored solution means no correction pass and no research detour the next time around. The loop puts the human at both ends, brain on to decide what the problem actually is, then brain on again at the finish to raise the bar rather than to run QA, with hours of autonomous work in between. The bar he holds it to is that the next feature should be easier to build because this one shipped, which inverts the way complexity normally accumulates.
+
+Speaker info:
+- https://x.com/kieranklaassen
+- https://www.linkedin.com/in/kieran-klaassen/
+- https://cora.computer
+
+Timestamps:
+0:00 - Shipping without writing or reading the code
+2:52 - Building an email client alone, on purpose
+4:40 - The bottleneck moved from code to plans to judgment
+5:30 - Where compound engineering came from
+6:25 - The loop, and the human at both ends
+8:10 - Half your time teaching the system what it got wrong
+9:03 - Why stored solutions are cheaper in tokens
+9:55 - The plugin, and building it while building the product
+10:45 - Turning a backlog into an argued set of ideas
+12:26 - Sharp questions on a document, and only enough of them
+15:01 - The overnight loop, and polish as raising the bar
+17:33 - Doing this without the plugin
+19:14 - The next feature should be easier than this one
+
+## How I automate my own job at Hugging Face using agents — Niels Rogge, Hugging Face
+
+- Upload date: 2026-08-20
+- Video: https://www.youtube.com/watch?v=FLUoowDJg4I
+- Transcript: raw/20260820_FLUoowDJg4I/FLUoowDJg4I.en-orig.vtt
+- Metadata: raw/20260820_FLUoowDJg4I/FLUoowDJg4I.info.json
+
+Thousands of GitHub issues, opened automatically, have produced exactly two negative replies. Niels Rogge works on what he calls the Google Drive to the hub team at Hugging Face, whose job is noticing that a paper's weights are sitting on Dropbox or Zenodo where nobody will find them, then asking the authors to publish on the hub instead. Hundreds of papers land on arXiv every day, so he automated himself.
+
+The useful part is that he built it twice, in opposite shapes, and explains why each time. The outreach half is a deterministic workflow: a model call at each step of the path he used to walk by hand, no agent framework at all, running nightly as a cron job on free GitHub Actions minutes, with tracing so he can inspect prompts, cost, and latency. He chose that because the prevailing advice when he built it was to avoid agents unless you genuinely need one. The follow up half, built recently, is the reverse. It is a fully autonomous loop whose main tool is bash, carrying one CLI, one skill, and a sandbox, fanned out so that every issue gets its own container. He is also candid that recipients are not told an agent wrote to them, on the grounds that it sends what he used to send himself and a disclosed bot tends to get closed unread.
+
+Speaker info:
+- https://x.com/NielsRogge
+- https://www.linkedin.com/in/niels-rogge-a3b7a3127/
+- https://nielsrogge.github.io/
+
+Timestamps:
+0:00 - The Google Drive to the hub problem
+1:59 - Paper pages, metadata, and discoverability
+3:41 - Why manual outreach does not scale
+4:29 - The workflow he was running by hand
+5:19 - Workflow or agent, and why it is not binary
+7:03 - Nightly cron jobs, and tracing cost and latency
+8:46 - The flood of replies, and automating follow up
+9:36 - Switching to a fully autonomous loop
+10:25 - Bash, one CLI, one skill, one sandbox
+12:06 - A container per issue, fanned out
+13:49 - What researchers actually reply
+15:32 - Migrated models, and a 400 gigabyte dataset
+18:06 - Open models, agents over workflows, and evaluation
+
+## Your Fine-Tuned Model Is Tech Debt: A 50x ROI House of Cards — Dan Bjornn, Lease End
+
+- Upload date: 2026-08-20
+- Video: https://www.youtube.com/watch?v=4loPnxvWWhg
+- Transcript: raw/20260820_4loPnxvWWhg/4loPnxvWWhg.en-orig.vtt
+- Metadata: raw/20260820_4loPnxvWWhg/4loPnxvWWhg.info.json
+
+A customer replied good morning to an outreach text and the model called him immediately. Another confirmed a Thursday appointment, said sounds good, and was told a call was happening right now. Both reached production, from a finetuned classifier that had also generated $12 million of revenue at 50 times return inside a year. Dan Bjornn's talk is about what that model was quietly costing underneath those numbers, which he calls the calcification tax.
+
+The repair loop is where it accrued. Gather examples of the new failure, synthesize more when there are too few, validate those by hand, sort them into intent buckets, review again, and only then train, which took about an hour and was the shortest step in a process that ran a week. Each round fixed its target and reintroduced something older, so bugs ended up ranked by how much customer pain was tolerable while they waited. The promised portability never arrived either, since training data does not transfer cleanly between model versions, let alone between providers, so they stayed put and could not adopt newer architectures while busy keeping the old one alive. The rebuild swapped the tuned model for skills, prompts, and context on a model agnostic framework. Fixes now ship in under an hour as files uploaded to a bucket, accuracy went up, cost per message went up, and total cost went down.
+
+Speaker info:
+- https://www.linkedin.com/in/dkbjornn
+
+Timestamps:
+0:00 - Classifying customer intent with retrieval
+1:54 - Four reasons to finetune, all of them reasonable
+3:32 - The pipeline, and $12 million at 50x return
+4:24 - The confused confirmer, and the overeager puppy
+6:04 - A week per retrain, with training the shortest step
+8:39 - Ranking bugs by tolerable customer pain
+9:31 - The calcification tax, in model and architecture
+11:18 - The realization from changing skills, not models
+12:14 - Rebuilding on skills, tools, and context
+13:08 - Fixes in under an hour, deployed as files
+14:54 - Cross your reason off the list before you finetune
 
 ## AI is the World’s largest Relationship Therapist — Clay Cockrell & Tony Fabrikant, CoupleWork AI
 
@@ -13007,288 +14291,3 @@ Socials:
 - GitHub: https://github.com/zRzRzRzRzRzRzR
 - Website: https://huggingface.co/ZHANGYUXUAN-zR
 - Company: Z.ai (https://z.ai)
-
-## Rishabh Garg, Tesla Optimus — Challenges in High Performance Robotics Systems
-
-- Upload date: 2025-08-25
-- Video: https://www.youtube.com/watch?v=bCGbuyv8PMk
-- Transcript: raw/20250825_bCGbuyv8PMk/bCGbuyv8PMk.en-orig.vtt
-- Metadata: raw/20250825_bCGbuyv8PMk/bCGbuyv8PMk.info.json
-
-A robot's behavior is influenced by the control policy, the software configuration, and electrical characteristics of the communication protocol.
-
-When unexpected behaviors arise, it is not straightforward to root cause them to the RL policy, electrical characteristics, mechanical characteristics. This talk walks through some of these issues and explains what might cause the observed behavior.
-
-We will talk about concrete issues that audience will be able to take away from and develop their understanding of physical systems. It will build intuition for what kind of issues to expect when communication data rates increase manifold.
-
-Timestamps
-00:00 Introduction to high-performance robotics challenges
-00:15 The problem of unexplained robot behavior
-00:54 Root cause analysis: policy vs. software
-01:17 Designing a toy robotics system for analysis
-01:24 System architecture: sensors, CPU, GPU, actuators, CAN bus
-01:57 The initial, simple code loop
-02:14 Expectation vs. reality: unexpected loop execution gaps
-02:42 The impact of CAN bus data rate on loop execution
-03:13 Potential solutions: accepting delay vs. multithreading
-04:00 A new, pipelined design for reduced cycle time
-04:32 New problems: "stuttering" and abnormal motor behavior
-04:49 Data collection with external transceivers and "candump"
-05:24 Expected vs. actual message plots: missed messages and jitter
-06:12 Using cycle time plots to identify desynchronization
-06:58 Transmit phase desynchronization: missed and queued data
-08:03 Receive phase desynchronization: stale data and overcompensation
-08:38 Resolving synchronization issues: kernel primitives and padding
-09:25 The impact of logging on system performance
-11:09 Reception and priority inversion
-12:02 Conclusion and summary of key takeaways
-
-Rishabh Garg
-Robotics Engineer at Tesla Optimus
-
-I am Rishabh Garg, a robotics software engineer pushing the boundaries of software hardware integration to meet the ever increasing demand for data. I have been working with robots and embedded systems for the past 4 years, making systems more reliable and performant at companies like Tesla and Amazon. Eager to learn what experts in the industry are doing differently and share my own experience and insights into the challenges frequently encountered at the system software level for robotics.
-
-## Building an Agentic Platform — Ben Kus, CTO Box
-
-- Upload date: 2025-08-24
-- Video: https://www.youtube.com/watch?v=12v5S1n1eOY
-- Transcript: raw/20250824_12v5S1n1eOY/12v5S1n1eOY.en-orig.vtt
-- Metadata: raw/20250824_12v5S1n1eOY/12v5S1n1eOY.info.json
-
-Explore the technical evolution of metadata extraction at Box and how it shaped the foundation of our AI platform. We’ll walk through our transition to an agentic-first design—why it was necessary, how we approached the rebuild, challenges we encountered along the way, and the advantages it unlocked.
-
-Timestamps
-00:00 Box's Content Platform and Enterprise Focus
-01:50 Initial AI Deployment in 2023
-02:54 The Challenge of Unstructured Data in Enterprises
-03:56 Limitations of Pre-Generative AI Data Extraction
-04:54 First Version: LLM-Based Extraction
-07:05 Challenges with the Pure LLM Approach
-08:58 Despair and the Need for a New Architecture
-09:30 Introducing Agentic Architecture
-10:04 AI Agent Reasoning Framework
-10:45 Agentic Routine for Data Extraction
-12:28 Advantages of Agentic Architecture
-14:05 Key Lesson Learned: Build Agentic Architecture Early
-18:37 Approach to Fine-tuning and Model Support
-
-Ben Kus
-CTO
-
-Ben Kus is the Chief Technology Officer at Box and is responsible for developing Box’s technology vision and strategy and ensuring that technological resources are aligned with the company's business needs. Previously Ben was the VP of Product Management at Box. Before joining Box, Ben was the Co-Founder and CTO of Subspace, Inc., an enterprise security solution that was acquired by Box. Ben has held various leadership positions, including the role of Chief Architect for IBM, and Senior Director of Technology for BigFix, Inc. Ben studied Computer Science at the University of California, Berkeley.
-
-## Perceptual Evaluations: Evals for Aesthetics — Diego Rodriguez, Krea.ai
-
-- Upload date: 2025-08-23
-- Video: https://www.youtube.com/watch?v=h5ItAJuB3Fc
-- Transcript: raw/20250823_h5ItAJuB3Fc/h5ItAJuB3Fc.en-orig.vtt
-- Metadata: raw/20250823_h5ItAJuB3Fc/h5ItAJuB3Fc.info.json
-
-Special session with KREA.ai's cofounder Diego Rodriguez on how evals for aesthetics and image/generative media work — the hardest kinds of evals.
-
-  linkedin.com/in/asciidiego/
-
-Timestamps
-00:15 Introduction to Perceptual Evaluations
-00:50 The Problem with Current AI Evaluations
-02:16 Historical Context and Compression
-05:14 Limitations in AI and Human-centric Metrics
-08:00 Rethinking Evaluation and the Future of AI
-12:44 Evaluating Our Evaluations
-13:32 Krea's Role and Call to Action
-
-## Five hard earned lessons about Evals — Ankur Goyal, Braintrust
-
-- Upload date: 2025-08-23
-- Video: https://www.youtube.com/watch?v=a4BV0gGmXgA
-- Transcript: raw/20250823_a4BV0gGmXgA/a4BV0gGmXgA.en-orig.vtt
-- Metadata: raw/20250823_a4BV0gGmXgA/a4BV0gGmXgA.info.json
-
-The main thesis of the video is that building successful AI applications requires a sophisticated engineering approach that goes beyond simply writing good prompts. The speaker argues for the importance of evaluations (evals) as a core component of the development process, highlighting that they should be intentionally engineered to reflect real-world user feedback and drive product improvements. The video also introduces the concept of "context engineering" as the new frontier, where the focus is on optimizing the entire context provided to the model, including tool definitions and their outputs. Ultimately, the speaker advocates for a flexible, model-agnostic architecture that can quickly adapt to the rapidly evolving landscape of AI models.
-
-Timestamps:
-
-00:00 Introduction to 5 Lessons in AI Product Development
-00:19 Lesson 1: Effective Evals Speak for Themselves
-02:09 Lesson 2: Great Evals Need to Be Intentionally Engineered
-04:03 Lesson 3: Context Engineering is the New Prompt Engineering
-06:37 Lesson 4: Be Prepared for a New Model to Change Everything
-09:09 Lesson 5: Optimize the Entire Evaluation System, Not Just the Prompts
-12:21 Recap of the Five Lessons
-
-## How BlackRock Builds Custom Knowledge Apps at Scale — Vaibhav Page & Infant Vasanth, BlackRock
-
-- Upload date: 2025-08-23
-- Video: https://www.youtube.com/watch?v=08mH36_NVos
-- Transcript: raw/20250823_08mH36_NVos/08mH36_NVos.en-orig.vtt
-- Metadata: raw/20250823_08mH36_NVos/08mH36_NVos.info.json
-
-Investment Operations teams are the backbone of asset and investment management firms. Their day-to-day work not only enables portfolio managers to respond swiftly to market events but also ensures that complex, unstructured data flows seamlessly across the organization.
-In this talk, we introduce a modular, Kubernetes-native AI framework purpose-built to scale custom Knowledge Apps across the enterprise. Designed with speed, flexibility, and compliance in mind, the framework empowers teams to launch production-grade document extraction applications in minutes instead of months, unlocking new levels of automation and efficiency for investment management workflows.
-We’ll also share how this framework has helped BlackRock streamline document extraction processes, generate investment signals, reduce operational overhead, and accelerate the delivery of high-impact business use cases—all while maintaining the robustness and control required in a regulated industry.
-
-00:30 Introduction to BlackRock's AI Initiatives
-01:31 Classifying AI Applications
-02:22 Use Case: New Issue Operations
-03:59 Challenges with Scaling AI Knowledge Apps
-07:02 Architecture of BlackRock's AI Framework
-08:32 Demonstration of the Sandbox
-15:52 Key Takeaways from the Discussion
-
-Vaibhav Page
-Principal Engineer
-
-Vaibhav is a Principal Engineer at BlackRock, where he leads the development of the Data Science and AI platform powering
-investment research and automation across the firm. Vaibhav is also the author of Argo-Events, a CNCF-graduated project widely used for event-driven automation in cloud-native environments.
-
-Infant Vasanth
-Senior Director of Engineering
-
-Infant Vasanth leads the engineering team responsible for the Studio Compute Platform, BlackRock's analytics and automation platform that enables our users to conduct research & analysis, run automations and distribute research at scale.
-In addition, Infant is also leading the Data & AI Acceleration team focusing on efforts to enhance Aladdin Studio's AI capabilities along side the Operational AI capabilities(prospectus analyzer, operational agents etc.)
-
-## Multi Agent AI and Network Knowledge Graphs for Change — Ola Mabadeje, Cisco
-
-- Upload date: 2025-08-22
-- Video: https://www.youtube.com/watch?v=m0dxZ-NDKHo
-- Transcript: raw/20250822_m0dxZ-NDKHo/m0dxZ-NDKHo.en-orig.vtt
-- Metadata: raw/20250822_m0dxZ-NDKHo/m0dxZ-NDKHo.info.json
-
-Traditional ticketing and testing workflows for change management and network operations often operate independently and lack critical real-world context and adaptive decision making capabilities. This fragmented approach results in delayed resolutions, repeated incidents, escalations, and dissatisfied stakeholders.
-
-This session explores an innovative solution leveraging the synergy of natural language processing from IT Service Management (ITSM) systems, Multi-agent reasoning, and dynamic context derived from live knowledge network graphs. Attendees will gain insights into an end-to-end architecture where natural language intents from ITSM tickets seamlessly integrate with experts AI agents for complex workflow tasks, supported by continuous network knowledge graph ingestion pipelines.
-
-Through a detailed production case study, we will demonstrate how Agentic reasoning combined with dynamic network knowledge graph contexts significantly improves critical validation and workflow interactions. The showcased results will highlight dramatic improvements in ticket resolution efficiency, accuracy of network testing, and overall execution quality, delivering tangible value to both technical teams and business stakeholders.
-
-## Fuzzing in the GenAI Era — Leonard Tang, Haize Labs
-
-- Upload date: 2025-08-22
-- Video: https://www.youtube.com/watch?v=OMGPvW8TBHc
-- Transcript: raw/20250822_OMGPvW8TBHc/OMGPvW8TBHc.en-orig.vtt
-- Metadata: raw/20250822_OMGPvW8TBHc/OMGPvW8TBHc.info.json
-
-"Evaluation" is one of those concepts that every AI practitioner vaguely knows is important, but few practitioners truly understand. Is "eval" the dataset for measuring the quality of your AI system? Is "eval" the measure, the metric of quality? Is "eval" the process of human annotation and scoring? Or is "eval" a third-party dataset run once to benchmark a model?
-
-To mitigate this cacophony, this talk will provide an opinionated and principled perspective for what we actually mean when we say “evaluation”, beyond the traditional for-loop-over-a-static dataset.
-
-In particular, this perspective draws heavy inspiration from *fuzzing*, i.e. bombarding AI with simulated, unexpected user inputs to uncover corner cases at scale. This factors into sub-problems regarding:
-
-- Quality Metric. What is the actual criteria we, as humans, are using to determine if an AI system is producing good or bad responses? How do we elicit these criteria before the human SME can articulate them? How do we, as efficiently as possible, operationalize this criteria with an automated *Judge*?
-
-- Stimuli Generation. Given a metric, how do we know, with confidence, that an AI system is performing well with respect to the metric? What data is representative and sufficient for discovering all potential bugs of an AI system? And how do we generate this complex, diverse, faithful data at scale?
-
-We will discuss in detail the philosophy, technology, and case studies behind both problems of Quality Metric and Stimuli Generation, and how they interact in concert.
-
-Timestamps
-00:00 Introduction to Haizing
-01:16 The "Last Mile Problem" in AI
-02:47 The Brittleness of GenAI Applications
-03:54 Examples of Brittle Chatbots
-04:29 Inadequacy of Standard Evaluation Methods
-06:09 Haizing: Simulating the Last Mile
-08:43 Scaling Evaluation with Agents as Judges
-09:29 Verdict: Accuracy vs. Latency
-11:47 Scaling Evaluation with RL-Tuned Judges
-14:06 Fuzzing vs. Adversarial Testing in AI
-14:37 Simulation as Prompt Optimization
-16:23 Case Study: Haizing a Major European Bank's AI App
-17:05 Case Study: Haizing a F500 Bank's Voice Agents
-17:46 Case Study: Scaling Voice Agent Evals with Verdict
-
-Leonard Tang
-Founder & CEO
-
-I am the co-founder and CEO of Haize Labs, where we are solving the ultimate extant problem in AI: ensuring its reliability, quality, and alignment for any application. You might also know of us for our red-teaming work.
-
-Prior, I studied math and computer science at Harvard. My research then covered adversarial robustness, math reasoning, computational neuroscience, interpretability, and large(-ish) language models. Much of that has now been distilled into the Haize technology agenda. I also dropped out of, before starting, a Stanford PhD in computer science.
-
-In the limit of my life, I am chiefly invested in starting Bell Labs 2.0.
-
-## Form factors for your new AI coworkers — Craig Wattrus, Flatfile
-
-- Upload date: 2025-08-22
-- Video: https://www.youtube.com/watch?v=CiMVKnX-CNI
-- Transcript: raw/20250822_CiMVKnX-CNI/CiMVKnX-CNI.en-orig.vtt
-- Metadata: raw/20250822_CiMVKnX-CNI/CiMVKnX-CNI.info.json
-
-Designing user experiences for AI means moving beyond traditional interfaces.
-
-Designers are grappling with how to create intuitive and effective interactions for these new AI capabilities, while growing their practice to include philosophy, ethics and coding.
-
-What if AI interactions could be reimagined as new 'coworkers'? This talk explores AI systems as your new coworkers. Covering novel UX patterns we’ve implemented and are researching at Flatfile as well as a state of the union on emergent patterns we’re seeing and using from the industry.
-
-Attendees will get a peek into explorations into AI cursors, forward-leaning chat paradigms and tool UX. We will discuss both work thats in production today at some of our biggest customers as well as thought-provoking demos, offering a vision for the future of AI UX.
-
-Timestamps
-
-00:25 Design Engineering: Form Factors for your new AI coworkers
-01:04 Four main categories of AI stack: invisible, ambient, inline, and conversational
-02:14 Invisible AI: Personalized demos
-03:06 Ambient AI: Analyzing data for opportunities
-03:10 Inline AI: Direct data manipulation
-03:46 Shifting from helicopter parent to character coach
-04:32 The "chat tuner" tool
-05:20 Feeling the material of AI
-08:20 Finding the grain in AI design
-11:08 Courting emergence
-11:48 Example of emergence: Combining datasets and generating reports
-12:37 Example of emergence: Suggesting human intervention
-14:09 Eyes on the future
-14:27 "Auto-complete" for data transformations
-
-
-
-
-
----
-
-Craig Wattrus
-AI Design Engineer
-
-Craig Wattrus is a product designer and technologist working at the edge of human-computer interaction and AI. He designs and codes at Flatfile, where he’s leading a product called AI Transform. He's building adaptive data systems that use agentic AI to automate complex workflows across Fortune 500 companies. With a background in both computer science and design, Craig’s work focuses on shaping new UX patterns for AI systems that observe, learn, and act alongside users not just for them.
-
-Craig is deeply interested in rethinking form factors for AI, exploring how designers can create new patterns of interaction that feel more collaborative, contextual, and adaptive. His approach blends practical, production-ready work with speculative design exploration with working PoC's offering a grounded yet forward-looking take on what AI-native UX can become. When he’s not dreaming up new ideas or testing AI behaviors in production, he’s probably making lamps, tinkering with small-scale hardware, or enjoying a perfect espresso.
-
-## Wisdom-Driven Knowledge Augmented Generation at Scale - Chin Keong Lam, Patho AI
-
-- Upload date: 2025-08-22
-- Video: https://www.youtube.com/watch?v=9AQOvT8LnMI
-- Transcript: raw/20250822_9AQOvT8LnMI/9AQOvT8LnMI.en-orig.vtt
-- Metadata: raw/20250822_9AQOvT8LnMI/9AQOvT8LnMI.info.json
-
-The main thesis of the video is that by using a Wisdom-Driven Knowledge Graph, we can significantly enhance the quantitative analysis capabilities of Knowledge-Augmented Generation (KAG) systems. This allows for the creation of smarter AI systems that can not only retrieve information but also understand, reason, and provide expert-level advice. The talk argues that this approach surpasses traditional Retrieval-Augmented Generation (RAG) systems, which primarily rely on unstructured vector search.
-
-00:00 Introduction to Patho AI and KAG
-01:09 Defining Knowledge and Knowledge Graphs
-01:56 KAG vs. RAG
-02:37 The Wisdom-Decision Making-Situation Diagram
-06:26 Practical Application: Competitive Analysis Chatbot
-08:37 Implementation with N8n and Multi-Agent System
-11:37 Why Use Knowledge Graphs over RAG
-14:01 Challenges with Vector RAG and Numerical Reasoning
-15:34 Building KAG Systems and Hybrid Models
-16:45 Graph Extraction and Benchmarks
-17:42 Conclusion and Resources
-
-Recorded at the AI Engineer World's Fair in San Francisco. Stay up to date on our upcoming events and content by joining our newsletter here: https://www.ai.engineer/newsletter
-
-## The Next Unicorns: 7 Top AI startups from the HF0 Residency
-
-- Upload date: 2025-08-21
-- Video: https://www.youtube.com/watch?v=L8-5ezsoI5A
-- Transcript: raw/20250821_L8-5ezsoI5A/L8-5ezsoI5A.en-orig.vtt
-- Metadata: raw/20250821_L8-5ezsoI5A/L8-5ezsoI5A.info.json
-
-HF0's Demo Days are usually hilariously oversubscribed and have never before been aired publicly. For the first time, they are joining the AIE stage to pitch AI Engineers.
-
-https://www.hf0.com/
-
-Timestamps
-
-00:15 Diego Rodriguez - Krea
-03:02 OpenHome
-06:09 Josh - Coframe
-07:31 Eugene - Featherless AI
-10:39 Jonas Bauer - Upside
-13:48 Lengyue - OpenAudio
-18:48 Alex Atallah - OpenRouter

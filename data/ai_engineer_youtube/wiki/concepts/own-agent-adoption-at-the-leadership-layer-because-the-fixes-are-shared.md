@@ -17,6 +17,7 @@ Details:
 - Mandates are ruled out on the same grounds as in the wiki's earlier adoption material: "people will figure it out. Let's just mandate our way through life. Like, that's just not going to work… Fear is real. Human emotions are real." His own account of the industry arc has mandates and "token maxing" raising usage without raising confidence, followed by shipped slop and SEV-2s. (01:04-02:01, 08:33-08:50)
 - Relationship to the champions pattern: [Drive Org-Wide Agentic Adoption Through Champions and AI-Ready Repos](drive-org-wide-agentic-adoption-through-champions-and-ai-ready-repos.md) is a rollout *mechanism* built on the same premise — the repo is the leverage point because it is shared. Khandelwal adds the constraint that mechanism has to satisfy: the champions' practices must actually replace personal setups, not sit alongside them, or the codebase never converges.
 - Caveat on evidence: this is one leader's account of one team of about ten over a few months, with no measurements of any kind. The ownership argument is structural and holds on its own logic; the claim that this is "the most impactful thing you could do as an organization" is an assertion.
+- **Coexistence is what makes this an org-level problem rather than a team-by-team one.** Figma's teams sit in different acts simultaneously — "very AI forward and have already transformed their entire workflows" beside teams "still experimenting in the earlier act and/or have lost confidence" — and "they all need to work together in order to ship our product." The scope limit matters as much as the mandate: Blum finds "diminishing return[s] in trying to centralize everybody on one thing, but as long as it works for their flow and other people can iterate with them, I find that it generally works very well." Leadership owns the shared substrate (verification, encoded criteria, deterministic flows) because every team's agents hit it; the personal loop stays personal. ([Blum](../sources/20260828_5Bn0xro2ol8.md), 02:09-02:44, 10:26-11:00)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -31,6 +32,8 @@ Related concepts:
 - [AI adoption depends on incentive design as much as tool access](ai-adoption-depends-on-incentive-design-as-much-as-tool-access.md)
 - [Institutionalize Knowledge Infrastructure for AI Adoption](institutionalize-knowledge-infrastructure-for-ai-adoption.md)
 - [Harness Engineering Shifts Scarcity From Code Production to Control Surfaces](harness-engineering-shifts-scarcity-from-code-production-to-control-surfaces.md)
+- [The Best Engineers Adopt Agents Last, and Their Objections Are the Roadmap](the-best-engineers-adopt-agents-last-and-their-objections-are-the-roadmap.md)
 
 Sources:
 - [Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab](../sources/20260811_aeTb5BdmTTc.md), 01:04-02:01, 05:44-06:56, 08:19-08:50, 09:14-09:37, 10:56-11:42, 13:34-13:51
+- [How to Get Your Org to Adopt Coding Agents (Without Shipping Garbage) — Eyal Blum, Figma](../sources/20260828_5Bn0xro2ol8.md), 02:09-02:44, 10:26-11:00

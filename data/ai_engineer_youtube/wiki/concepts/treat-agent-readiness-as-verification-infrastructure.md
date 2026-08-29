@@ -12,6 +12,7 @@ Details:
 - Human teams can tolerate partial test coverage, manual testing, and flaky builds because people compensate with tacit judgment; those same gaps reduce agent capability when agents participate in coding, review, documentation, and testing workflows (04:32-06:04).
 - Spec and plan modes become more useful when the team specifies both what should be built and how it should be validated, then lets the agent generate candidates, verify mechanically, incorporate human intuition, and iterate (06:05-07:05).
 - Scaled workflows such as parallel agents or large modernization decomposition require reliable single-task execution first; if a simple validated task does not work nearly all the time, parallelizing the workflow only multiplies failure (07:35-08:24).
+- **Where the readiness backlog comes from, and how it gets ordered.** Blum ranks this investment first — "investing in verification is probably the highest value thing we can do in our code base" — and frames each item as a left shift: "anytime that we can left shift anything in our workflow from a human needing to do it to an agent being able to verify it." What this page lacks is a source for the ordering, and he supplies one: the org's agent skeptics are "seeing the way you are lacking validation, where your tools fail," so "their feedback is basically the road map of how to improve your agent[s] interacting with the code base." Readiness work then has a prioritized backlog written by the people currently absorbing the failures rather than by whoever owns the rollout. ([Blum](../sources/20260828_5Bn0xro2ol8.md), 05:00-05:20, 11:57-12:33)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -22,6 +23,8 @@ Related concepts:
 - [Make validation fast, local, deterministic, and actionable](make-validation-fast-local-deterministic-and-actionable.md)
 - [Agent software factories need runnable, contextual, and verifiable primitives](agent-software-factories-need-runnable-contextual-and-verifiable-primitives.md)
 - [Agent-legible codebases reduce generated-code entropy](agent-legible-codebases-reduce-generated-code-entropy.md)
+- [The Best Engineers Adopt Agents Last, and Their Objections Are the Roadmap](the-best-engineers-adopt-agents-last-and-their-objections-are-the-roadmap.md)
 
 Sources:
 - [Making Codebases Agent Ready - Eno Reyes, Factory AI](../sources/20251222_ShuJ_CN6zr4.md), 01:23-08:24
+- [How to Get Your Org to Adopt Coding Agents (Without Shipping Garbage) — Eyal Blum, Figma](../sources/20260828_5Bn0xro2ol8.md), 05:00-05:20, 11:57-12:33

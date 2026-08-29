@@ -13,6 +13,7 @@ Details:
 - The final checkpoint is code review against the task's acceptance criteria and definition of done. (08:21-08:49, 12:36-12:41)
 - The transcript presents acceptance criteria as testable and easily verifiable so unit tests and review can check the intended behavior rather than merely whether the agent produced code. (04:04-04:22, 12:08-12:20)
 - Multiple tasks can run in parallel using Git worktrees when they have no dependencies, but this assumes the task and plan checkpoints have made the independent work boundaries explicit. (12:41-12:48)
+- **Checkpoints have to be per phase rather than per plan, or the later phases inherit unchecked assumptions.** "What I don't want to have is… five stages and then the first one is written but not validated, and then everything else is built on top of all the assumptions. So, having… a validation gate or an ex[it] criteria for each phase really helps and make[s] the plan resilient to drift." The failure is compounding rather than local: one unvalidated phase does not produce one bad phase, it produces every phase after it resting on something nobody checked — which is why a single review at the end of a multi-phase agent run is the wrong checkpoint even when the reviewer is thorough. ([Blum](../sources/20260828_5Bn0xro2ol8.md), 09:27-09:52)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -23,6 +24,8 @@ Related concepts:
 - [Review research and plans before they multiply into code](review-research-and-plans-before-they-multiply-into-code.md)
 - [Choose plan-heavy or review-heavy agent workflows by task shape](choose-plan-heavy-or-review-heavy-agent-workflows-by-task-shape.md)
 - [Translate structured requirements into property-based tests](translate-structured-requirements-into-property-based-tests.md)
+- [Structure an Agent Plan With a Frozen Why and Reviewer-Sized Phases](structure-an-agent-plan-with-a-frozen-why-and-reviewer-sized-phases.md)
 
 Sources:
 - [Backlog.md: Terminal Kanban Board for Managing Tasks with AI Agents - Alex Gavrilescu, Funstage](../sources/20251124_zMXKhhwiCIc.md), 04:04-05:08, 07:36-08:49, 12:08-12:48
+- [How to Get Your Org to Adopt Coding Agents (Without Shipping Garbage) — Eyal Blum, Figma](../sources/20260828_5Bn0xro2ol8.md), 09:27-09:52

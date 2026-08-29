@@ -566,6 +566,11 @@
 - [Learn risk scoring from audit feedback for predictive compliance](../concepts/learn-risk-scoring-from-audit-feedback-for-predictive-compliance.md)
 
 ## Coding Agents
+- [The Best Engineers Adopt Agents Last, and Their Objections Are the Roadmap](../concepts/the-best-engineers-adopt-agents-last-and-their-objections-are-the-roadmap.md) - the slowest adopters at Figma hold the undocumented institutional context and meet every failure first, so their complaints are a prioritized verification backlog rather than resistance to be argued with.
+- [Structure an Agent Plan With a Frozen Why and Reviewer-Sized Phases](../concepts/structure-an-agent-plan-with-a-frozen-why-and-reviewer-sized-phases.md) - an immutable why, phases sized to a one-sitting PR review, a validation gate per phase, and subagent-sized detail; loop-agnostic by design.
+- [Write the Test First So the Agent Cannot Fit It to the Code](../concepts/write-the-test-first-so-the-agent-cannot-fit-it-to-the-code.md) - the cheapest independence axis between a generator and its verifier is temporal, and it costs nothing to adopt.
+- [Reduced Developer Agency Is an Adoption Cost, and Planning Is Its Remedy](../concepts/reduced-developer-agency-is-an-adoption-cost-and-planning-is-its-remedy.md) - waiting on output in a prompt cycle removes the flow engineers valued; the proposed replacement craft is making the decisions in advance.
+- [Mark Which Lines a Human Wrote So Readers Can Budget Attention](../concepts/mark-which-lines-a-human-wrote-so-readers-can-budget-attention.md) - open the PR description with a line a human typed, so readers know where to spend attention once every artifact is three times longer.
 - [A Subsidized Coding-Agent Subscription Is a Lock-In Ramp](../concepts/a-subsidized-coding-agent-subscription-is-a-lock-in-ramp.md) - a $200 plan estimated at $8,000-$14,000 of API value buys adoption; the switching cost accrues in your harness, not your invoice.
 - [Closing the Contribution Channel Is Where Slop Filtering Ends](../concepts/closing-the-contribution-channel-is-where-slop-filtering-ends.md) - Zig's ban, curl's bug bounty, tldraw's closed PRs: effort filters escalate one way, and the apprenticeship path is what they cost.
 - [Tell the Agent Only What Is Not Recoverable From the Code](../concepts/tell-the-agent-only-what-is-not-recoverable-from-the-code.md) - define the human's context contribution by exclusion, and expect it to shrink as retrieval improves.
@@ -878,6 +883,7 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Structure an Agent Plan With a Frozen Why and Reviewer-Sized Phases](../concepts/structure-an-agent-plan-with-a-frozen-why-and-reviewer-sized-phases.md) - the plan as agent context: an immutable goal section, per-phase validation gates, and detail sized to a subagent that will see nothing else.
 - [Tell the Agent Only What Is Not Recoverable From the Code](../concepts/tell-the-agent-only-what-is-not-recoverable-from-the-code.md) - "what's left are the things that are not in code" as a subtraction rule for instruction files and shared sessions.
 - [Bound Context Twice: Fork the Subtask, Then Compact on a Token Threshold](../concepts/bound-context-twice-fork-the-subtask-then-compact-on-a-token-threshold.md) - two bounds catching different traffic, because forking cannot stop the parent conversation from growing and compaction cannot refund a subtask's spend.
 - [Withhold the Producer's Reasoning From the Critic](../concepts/withhold-the-producers-reasoning-from-the-critic.md) - a deliberate omission rather than a budget decision: the reviewer is denied context it could technically be given.
@@ -1575,6 +1581,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Write the Test First So the Agent Cannot Fit It to the Code](../concepts/write-the-test-first-so-the-agent-cannot-fit-it-to-the-code.md) - a test authored after the implementation describes the implementation; ordering is the one independence axis that is free.
 - [Withhold the Producer's Reasoning From the Critic](../concepts/withhold-the-producers-reasoning-from-the-critic.md) - a fourth independence axis for LLM review: change what the reviewer sees, not the model, the prompt, or the method class.
 - [Re-Run One Remembered Hard Task on Each New Model](../concepts/re-run-one-remembered-hard-task-on-each-new-model.md) - an N-of-1 longitudinal instrument measured in human intervention, which needs no scorer because you solved the task yourself.
 - [Read the Task-Length Curve at the Success Rate You Would Actually Delegate At](../concepts/read-the-task-length-curve-at-the-success-rate-you-would-delegate-at.md) - the exponential trend survives at 80/90/99% while the headline duration collapses to a number you can plan against.
@@ -2599,6 +2606,9 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [The Best Engineers Adopt Agents Last, and Their Objections Are the Roadmap](../concepts/the-best-engineers-adopt-agents-last-and-their-objections-are-the-roadmap.md) - hand the strongest skeptics ownership of the verification roadmap instead of trying to persuade them onto the tools.
+- [Reduced Developer Agency Is an Adoption Cost, and Planning Is Its Remedy](../concepts/reduced-developer-agency-is-an-adoption-cost-and-planning-is-its-remedy.md) - the adoption cost no throughput metric reports, and the relocation of craft offered against it.
+- [Mark Which Lines a Human Wrote So Readers Can Budget Attention](../concepts/mark-which-lines-a-human-wrote-so-readers-can-budget-attention.md) - a labelling convention that routes attention without becoming an acceptance gate.
 - [Closing the Contribution Channel Is Where Slop Filtering Ends](../concepts/closing-the-contribution-channel-is-where-slop-filtering-ends.md) - every filter raises the cost for careful contributors too, and the terminal state accepts nothing from outside.
 - [The Markdown Workflow Is the Source; the YAML Is a Compiled Artifact](../concepts/the-markdown-workflow-is-source-the-yaml-is-a-compiled-artifact.md) - one document holds the prose instructions and the front-matter capability manifest; the CI config is regenerated, never edited.
 - [Bound What an Unattended Automation May Emit, Including Emitting Nothing](../concepts/bound-what-an-unattended-automation-may-emit.md) - cap a scheduled run's artifacts by kind and by count, and let it finish silently rather than manufacture output.

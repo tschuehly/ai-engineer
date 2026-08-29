@@ -17,6 +17,7 @@ Details:
 - **An unresolved tension worth carrying with this page.** The same product line offered as the independent zero-trust check is also offered as the thing that "can write fixes and… approve those fixes and merge those PRs completely automatically if you wanted to." Once the checker authors and merges its own remediation, the independence that made it a zero-trust layer is gone for that change, and the talk does not address who verifies the verifier. The autonomy ramp it describes — findings and dialogue by default, more automation "as you use it more and more and gain confidence" — is offered without any criterion for when a team has earned the next step. ([Chatterjee](../sources/20260809_03l29gJXpCE.md), 14:20-14:49)
 - Caveat on evidence: this is a vendor talk and the zero-trust argument is asserted, not measured. No comparison of what a computational layer catches versus what an LLM layer catches appears anywhere in it, and no false-positive rate is given for either.
 - **The method-independence argument has a context-independence twin that costs nothing.** Coyle attacks the same shared-blind-spot problem from inside the LLM layer, by redacting the producer's reasoning from the critic: pass "the claim and the evidence" but not "the thought processes that went in to creating this claim," because collaborating agents "devolve into one idea." That does not give you provability — only the computational layer does — but it is available on every LLM review, including the ones where a deterministic checker has nothing to say, and it is the missing control on any pipeline that hands a reviewer the full transcript. See [Withhold the Producer's Reasoning From the Critic](withhold-the-producers-reasoning-from-the-critic.md). ([Coyle](../sources/20260808_Z-c11pV_uvU.md), 13:44-15:12)
+- **The cheapest independence axis is temporal, and it costs nothing.** An agent that writes the implementation and then its test authors the check with the answer already in hand: "it will fit the test to the code rather than fit the code to pass the verification criteria." Reversing the order fixes that with the same model, the same prompt, and the same method — only the sequence changes. It is strictly weaker than method independence, since a test written first still carries the generator's blind spots about what is worth testing, so it belongs underneath this page's rule rather than instead of it. ([Blum](../sources/20260828_5Bn0xro2ol8.md), 06:12-06:42)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -32,7 +33,9 @@ Related concepts:
 - [Treat slop as a quality failure, not an AI provenance label](treat-slop-as-a-quality-failure-not-an-ai-provenance-label.md)
 - [Automation Bias Turns Human-in-the-Loop Into a Rubber Stamp](automation-bias-turns-human-in-the-loop-into-a-rubber-stamp.md)
 - [Withhold the Producer's Reasoning From the Critic](withhold-the-producers-reasoning-from-the-critic.md)
+- [Write the Test First So the Agent Cannot Fit It to the Code](write-the-test-first-so-the-agent-cannot-fit-it-to-the-code.md)
 
 Sources:
 - [Guide, Verify, Solve — Anirban Chatterjee, Sonar](../sources/20260809_03l29gJXpCE.md), 09:23-10:13, 13:18-13:32, 14:20-14:49
 - [Anthropic's CCA Exam as a Field-Guide for Agentic Engineering — Frank Coyle, UC Berkeley](../sources/20260808_Z-c11pV_uvU.md), 13:44-15:12
+- [How to Get Your Org to Adopt Coding Agents (Without Shipping Garbage) — Eyal Blum, Figma](../sources/20260828_5Bn0xro2ol8.md), 06:12-06:42

@@ -18,6 +18,7 @@ Details:
   - The skill is described only by what it does. No prompt, no file layout, no tool set, no error handling, no cost per run, and no measure of how often its PRs needed human rework. Nothing establishes that the hour of runtime bought output worth an hour.
   - The generalization Khandelwal offers for long runtimes — "the moment we hit this reasoning paradigm, the longer the agent like thought, the better its output," extended to "a similar mindset for your entire code base and for your skills" — is an analogy with no measurement behind it, and it is the most attractive unsupported claim in the talk. Longer runs are not uniformly better; the trust argument stands on its own without this one.
   - A single high-value skill is also a single point of failure and a governance surface: everyone's PRs flow through it, so a regression in it is a team-wide outage, and the ~100-line cap that keeps it maintainable becomes load-bearing (see [Keep the Repo Context File a Thin Index and Cap Skill Files](keep-the-repo-context-file-a-thin-index-and-cap-skill-files.md)).
+- **A competing answer to the same problem: hand skeptics the roadmap instead of a wedge.** This page converts skeptics by building one thing so useful they adopt it. Blum inverts the direction — "just make sure to bring them in rather than trying to figure out how to make them use the AI. Just… let's have them be in charge of the road map to make AI safe [in] your organization, and they will come along once they see that the improvement that they're making [is] actually making their life better." Both sources agree on the channel — the complaint is the improvement signal — and differ on who owns the backlog it feeds. They compose in sequence: the skeptics' roadmap tells you which wedge is worth building. ([Blum](../sources/20260828_5Bn0xro2ol8.md), 11:45-12:33)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -31,6 +32,8 @@ Related concepts:
 - [Feedback turns coding-agent loops into prompt and skill improvement cycles](feedback-turns-coding-agent-loops-into-prompt-and-skill-improvement-cycles.md)
 - [Treat Complex Skills Like Software Artifacts](treat-complex-skills-like-software-artifacts.md)
 - [Human Ownership Keeps Agent Pull Requests From Bypassing Review](human-ownership-keeps-agent-pull-requests-from-bypassing-review.md)
+- [The Best Engineers Adopt Agents Last, and Their Objections Are the Roadmap](the-best-engineers-adopt-agents-last-and-their-objections-are-the-roadmap.md)
 
 Sources:
 - [Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab](../sources/20260811_aeTb5BdmTTc.md), 09:47-10:32, 12:11-12:51
+- [How to Get Your Org to Adopt Coding Agents (Without Shipping Garbage) — Eyal Blum, Figma](../sources/20260828_5Bn0xro2ol8.md), 11:45-12:33

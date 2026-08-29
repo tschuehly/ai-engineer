@@ -17,6 +17,7 @@ Details:
 - For heavily tangled systems, the research phase may need a manually produced migration seed before agents can plan safely, because hidden invariants and service dependencies may only appear when a human changes the code and sees what breaks. (14:29-16:09)
 - Frequent intentional compaction adds a context-management rationale for the same loop: research compresses codebase truth, planning compresses human intent, and implementation can start from a reviewed low-context plan rather than a noisy long conversation. (07:31-08:25, 14:10-14:56)
 - The loop should scale with task complexity. Small edits may only need direct prompting, medium multi-repo features may need research plus a plan, and harder brownfield work needs more deliberate context compaction and human review. (17:48-18:29)
+- **Four rules for the plan document itself, independent of whichever loop runs it.** Blum is explicit that the artifact and the process are separable: "once you have the plan, you can use whatever loop you want or whatever workflow you want in order to implement it." The rules are a "why" at the top the agent may not rewrite, phases sized to a PR the author would review in one sitting, a validation gate or exit criterion on every phase so later work never rests on unvalidated earlier work, and enough detail per phase to hand it to a subagent that will see nothing else. Where this page specifies what the workflow passes through, those specify what the document must contain for an unattended run to survive. ([Blum](../sources/20260828_5Bn0xro2ol8.md), 08:38-10:26)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -31,8 +32,10 @@ Related concepts:
 - [Manual migration seeds teach agents the hidden constraints](manual-migration-seeds-teach-agents-the-hidden-constraints.md)
 - [Frequent intentional compaction keeps coding agents in the smart zone](frequent-intentional-compaction-keeps-coding-agents-in-the-smart-zone.md)
 - [Review research and plans before they multiply into code](review-research-and-plans-before-they-multiply-into-code.md)
+- [Structure an Agent Plan With a Frozen Why and Reviewer-Sized Phases](structure-an-agent-plan-with-a-frozen-why-and-reviewer-sized-phases.md)
 
 Sources:
 - [Agentic Engineering: Working With AI, Not Just Using It - Brendan O'Leary](../sources/20260407_BEKc4P87XKo.md), 11:36-16:40
 - [The Infinite Software Crisis - Jake Nations, Netflix](../sources/20251220_eIoohUmYpGI.md), 10:32-16:09
 - [No Vibes Allowed: Solving Hard Problems in Complex Codebases - Dex Horthy, HumanLayer](../sources/20251202_rmvDxxNubIg.md), 07:31-08:25, 14:10-18:29
+- [How to Get Your Org to Adopt Coding Agents (Without Shipping Garbage) — Eyal Blum, Figma](../sources/20260828_5Bn0xro2ol8.md), 08:38-10:26

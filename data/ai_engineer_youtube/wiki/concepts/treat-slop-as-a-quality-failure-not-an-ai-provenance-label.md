@@ -13,6 +13,7 @@ Details:
 - For AI engineering, this means "AI-assisted" should not be used as either an automatic dismissal or an automatic excuse; the output still needs direct evaluation against accuracy, authenticity, security, and product quality.
 
 - If provenance is not the test, gatekeeping is not the remedy either, and Khandelwal draws that conclusion explicitly: "You got to make a self-healing system cuz slop is inevitable. There is going to be some slop that's going to seep in. But you need to have a pipeline and a way to close the loop to remove the slop, to detect it, and to be able to like self-heal the system." Two consequences follow that a pure quality-bar framing leaves open. Slop is treated as a steady-state inflow to be drained rather than an incident to be prevented, so the investment goes into detection and removal capacity — his team's examples are a nightly code gardener and agents that file issues against what they find. And because some code is not meant to meet the bar at all, the pipeline needs a declared exemption for experiments rather than a uniform standard; see [Let Prototypes Opt Out of Codebase Standards](let-prototypes-opt-out-of-codebase-standards.md). No detection precision, false-positive rate, or drain-versus-inflow measurement is offered. ([Khandelwal](../sources/20260811_aeTb5BdmTTc.md), 08:03-08:19, 10:32-10:53, 12:57-13:15)
+- **A use for the provenance label that this page's argument does not rule out.** Blum marks AI-generated text so readers can allocate effort — "to know how much time you need to spend reading this, and how much slop can you expect in this part of the communication" — which is a routing hint rather than an acceptance verdict. His own failure shows both sides at once: an unmarked generated analysis was dismissed as slop by a reader who had not evaluated it, which is exactly the error this page rejects; had it been marked, that reader would have known which half deserved their effort, which is not. The line worth holding is that a label may direct attention and may never grant acceptance. ([Blum](../sources/20260828_5Bn0xro2ol8.md), 13:13-13:37, 14:22-15:28)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -24,7 +25,9 @@ Related concepts:
 - [Read a Broken Agent Setup From Babysitting, Context Burn, and Slop](read-a-broken-agent-setup-from-babysitting-context-burn-and-slop.md)
 - [AI-amplified shipping speed needs stronger product taste](ai-amplified-shipping-speed-needs-stronger-product-taste.md)
 - [AI output speed can overwhelm review capacity](ai-output-speed-can-overwhelm-review-capacity.md)
+- [Mark Which Lines a Human Wrote So Readers Can Budget Attention](mark-which-lines-a-human-wrote-so-readers-can-budget-attention.md)
 
 Sources:
 - [No More Slop - swyx](../sources/20251222_IoiHI7p12Ao.md), 02:15-04:24
 - [Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab](../sources/20260811_aeTb5BdmTTc.md), 08:03-08:19, 10:32-10:53, 12:57-13:15
+- [How to Get Your Org to Adopt Coding Agents (Without Shipping Garbage) — Eyal Blum, Figma](../sources/20260828_5Bn0xro2ol8.md), 13:13-13:37, 14:22-15:28
