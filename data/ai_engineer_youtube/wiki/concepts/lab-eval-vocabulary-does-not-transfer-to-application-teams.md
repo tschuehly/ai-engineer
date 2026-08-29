@@ -17,6 +17,7 @@ Details:
 - Practical consequence: the transferable part of a lab's eval work is methodology (controls, sample sizing, contamination hygiene), not the tasks or the score. Copying the task set imports a measurement of general capability into a place where the question was whether *this* system, holding *your* data model, does the right thing for *your* users.
 - The wiki carries the positive form of the same idea from several directions: evals are where domain knowledge should live ([Treat Evals as the Home of Domain Knowledge](treat-evals-as-the-home-of-domain-knowledge.md)), domain evals need expert-built environments ([Domain Evals Need Expert-Built Environments](domain-evals-need-expert-built-environments.md)), and a single leaderboard is not a model-selection instrument ([Do Not Trust a Single Leaderboard for Model Selection](do-not-trust-a-single-leaderboard-for-model-selection.md)). This page names why the borrowing happens anyway: one word covers both activities.
 - Caveat: the argument is asserted rather than demonstrated, with no example of a company that copied a lab benchmark and was misled. It is also self-serving for a vendor selling production issue detection rather than benchmarks — though the responsibility-spectrum observation stands independently of that.
+- **What the application-team vocabulary actually looks like when written down.** DoorDash's account of evals contains no benchmark, no leaderboard, and no held-out score. It is a list of roles and handoffs: who sets the quality bar, who turns it into rubrics, who runs annotations, who supplies telemetry and judges — "this is all basically a team sport." That is concrete evidence for this page's claim that the two activities share only a name, and a useful diagnostic: if a team's eval discussion is mostly about org roles and annotation throughput, importing a lab's methodology will answer a question nobody asked. ([AI Evals for Cross-Functional Teams — Nachiket Paranjape & Swaroop Chitlur Haridas, DoorDash](../sources/20260828_bMjlRrWjdT0.md), 04:01-05:19)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -30,6 +31,8 @@ Related concepts:
 - [Do Not Trust a Single Leaderboard for Model Selection](do-not-trust-a-single-leaderboard-for-model-selection.md)
 - [Match the Quality Method to Your User Count](match-the-quality-method-to-your-user-count.md)
 - [Map Application Evals to the Product Court](map-application-evals-to-the-product-court.md)
+- [Keep Judge-Prompt Ownership Configurable While the Org Is Still Learning](keep-judge-prompt-ownership-configurable-while-the-org-is-still-learning.md)
 
 Sources:
 - [Designing Agents (The Floor Is the Frontier) — Ben Hylak, Raindrop](../sources/20260812_jHMiYtjoJfA.md), 08:08-10:23
+- [AI Evals for Cross-Functional Teams — Nachiket Paranjape & Swaroop Chitlur Haridas, DoorDash](../sources/20260828_bMjlRrWjdT0.md), 04:01-05:19

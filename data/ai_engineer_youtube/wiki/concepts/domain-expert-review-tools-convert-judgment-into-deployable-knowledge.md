@@ -12,6 +12,7 @@ Details:
 - Domain experts can suggest new domain knowledge, such as how to interpret a clinically loaded phrase or when a missing scoring system should be available to the model, 12:04-13:59.
 - Suggested expert knowledge can be routed through evals automatically or through a human-in-the-loop gate before production deployment, 14:05-14:23.
 - The speaker argues bespoke tooling often makes sense when review outputs feed directly into the platform and multiple downstream improvement loops, 15:35-16:03.
+- **Same conclusion about bespoke tooling, opposite conclusion about who builds it.** DoorDash's platform team agrees a generic screen fails — "it's almost hard for a platform team to build like a UI specific for each use case" — and resolves it by moving the builder rather than the design: operators generate their own annotation apps against stable APIs. The reconciling variable is the number of distinct expert workflows. One high-stakes clinical review surface justifies engineering-built bespoke tooling; a dozen unlike annotation workflows spread across product teams does not, and the platform team's product becomes the API instead of the screen. ([AI Evals for Cross-Functional Teams — Nachiket Paranjape & Swaroop Chitlur Haridas, DoorDash](../sources/20260828_bMjlRrWjdT0.md), 08:39-10:29)
 
 Related topics:
 - [Workflows](../topics/workflows.md)
@@ -20,6 +21,8 @@ Related topics:
 Related concepts:
 - [Domain-Expert Sandboxes Accelerate Knowledge-App Iteration](domain-expert-sandboxes-accelerate-knowledge-app-iteration.md)
 - [Build AI Product Iteration Tools Into the Product Context](build-ai-product-iteration-tools-into-the-product-context.md)
+- [Ship Stable APIs and Let Users Vibe-Code the Interface](ship-stable-apis-and-let-users-vibe-code-the-interface.md)
 
 Sources:
 - [Make your LLM app a Domain Expert: How to Build an Expert System - Christopher Lovejoy, Anterior](../sources/20250728_MRM7oA3JsFs.md), 09:15-16:03
+- [AI Evals for Cross-Functional Teams — Nachiket Paranjape & Swaroop Chitlur Haridas, DoorDash](../sources/20260828_bMjlRrWjdT0.md), 08:39-10:29

@@ -14,6 +14,7 @@ Details:
 - Picking an eval is therefore two questions at once: which *flavor* of signal, and at what *scope and depth* — you can get very granular or zoom out. (11:42-11:49)
 - Minimal-set caveat: "just because you can eval something doesn't mean you always should." Find the minimal set of evals that tells you whether the application works as intended, because there is a recurring cost to running them. (11:52-12:11)
 - The scope axis sits on top of observability: an agent should be viewed distributionally across all runs (paths, branches, loops), and the trajectory/session scopes are where that view becomes an eval rather than just a dashboard. (05:00-05:45)
+- **Scope is a per-team requirement, which is what makes it a platform problem.** DoorDash's three founding customers each needed a different scope: the consumer discovery and shopping assistant team needed "session level quality judgments," personalization ML needed "a way to scale up human judgment," and "with multi-agent systems we needed trajectory based evals" — leading to the question "how do you cater to all these different needs under a common platform." Treating scope as an axis rather than a choice is what lets one telemetry layer serve all three; a platform that hardcodes one scope forces the other teams to build their own. ([AI Evals for Cross-Functional Teams — Nachiket Paranjape & Swaroop Chitlur Haridas, DoorDash](../sources/20260828_bMjlRrWjdT0.md), 02:11-02:50)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -25,6 +26,8 @@ Related concepts:
 - [Evaluate Agent Loops With Correctness, Cost, Latency, and Step Counts](evaluate-agent-loops-with-correctness-cost-latency-and-step-counts.md)
 - [Golden Workflows Evaluate Agent Trajectories](golden-workflows-evaluate-agent-trajectories.md)
 - [Trace Agent Tool Arguments to Debug Real Failures](trace-agent-tool-arguments-to-debug-real-failures.md)
+- [Ship Stable APIs and Let Users Vibe-Code the Interface](ship-stable-apis-and-let-users-vibe-code-the-interface.md)
 
 Sources:
 - [LLM Observability, Evaluation, Experimentation Platform — Dat Ngo, Arize](../sources/20260607_JsCCrBF7F1g.md), 10:08-12:11
+- [AI Evals for Cross-Functional Teams — Nachiket Paranjape & Swaroop Chitlur Haridas, DoorDash](../sources/20260828_bMjlRrWjdT0.md), 02:11-02:50

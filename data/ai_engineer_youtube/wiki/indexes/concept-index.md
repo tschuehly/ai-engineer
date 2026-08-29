@@ -1052,6 +1052,8 @@
 - [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md)
 
 ## Infrastructure
+- [Ship Stable APIs and Let Users Vibe-Code the Interface](../concepts/ship-stable-apis-and-let-users-vibe-code-the-interface.md) - the platform team's product becomes the endpoint rather than the screen, with API stability as the load-bearing promise.
+- [Move the Platform's Primary Surface as Its Users Gain Tools](../concepts/move-the-platforms-primary-surface-as-its-users-gain-tools.md) - which surface an internal platform guarantees first is a function of what its current users can build for themselves.
 - [An Installed Desktop App Is an Auth and Filesystem Beachhead](../concepts/an-installed-desktop-app-is-an-auth-and-filesystem-beachhead.md) - the Electron app already held the session and the file permissions, so Figma shipped a local MCP server before the protocol had an auth story, and built the remote one afterwards.
 - [An AI-Infrastructure Package Is a High-Yield Credential Target](../concepts/an-ai-infrastructure-package-is-a-high-yield-credential-target.md) - self-hosting a gateway concentrates the keys you meant to control, and a three-hour LiteLLM compromise harvested exactly those machines.
 - [Multi-Repo Cost Has Moved From Navigation to Verification](../concepts/multi-repo-cost-has-moved-from-navigation-to-verification.md) - every isolated agent environment pays clone-and-provision again, so repository layout is a per-task infrastructure cost.
@@ -1477,6 +1479,7 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Move the Platform's Primary Surface as Its Users Gain Tools](../concepts/move-the-platforms-primary-surface-as-its-users-gain-tools.md) - roadmap by who is currently blocked, not by an architectural ideal, because coding agents changed the answer from outside.
 - [Operational Outcomes Are Eval Labels You Only See If You Own the Operation](../concepts/operational-outcomes-are-eval-labels-you-only-see-if-you-own-the-operation.md) - owning the outcome is a data position: the world supplies the score, and only the operator is standing where it lands.
 - [Co-Design In Person Because Remote Channels Filter the Requirements](../concepts/co-design-in-person-because-remote-channels-filter-the-requirements.md) - Zoom and the ticket queue only carry needs someone already knew how to phrase as a request.
 - [Continual Learning and Enablement Are One Loop With a Cold Start](../concepts/continual-learning-and-enablement-are-one-loop-with-a-cold-start.md) - adoption is the input the improvement loop runs on, not a concern downstream of it.
@@ -1598,6 +1601,9 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Show the Prompt Diff So a Non-Engineer Can Promote an Optimized Judge](../concepts/show-the-prompt-diff-so-a-non-engineer-can-promote-an-optimized-judge.md) - an optimized judge prompt has an adoption gate separate from its accuracy: the owner has to be able to see what changed, so render the original and calibrated prompts side by side and keep promotion an explicit human act.
+- [Keep Judge-Prompt Ownership Configurable While the Org Is Still Learning](../concepts/keep-judge-prompt-ownership-configurable-while-the-org-is-still-learning.md) - strategy-and-operations owns the judge prompt in some teams, the PM in others, engineering in others, and the platform permits all three because the org design has not converged.
+- [Ship Stable APIs and Let Users Vibe-Code the Interface](../concepts/ship-stable-apis-and-let-users-vibe-code-the-interface.md) - annotation tooling stops being a platform backlog when the use-case variation sits above the API line and the operators hold coding agents.
 - [Optional Self-Reported Tool Arguments Are Segmentation Signal, Not Ground Truth](../concepts/optional-self-reported-tool-arguments-are-segmentation-signal.md) - an optional argument added to the tool schema purely to be logged — "agents lie, but it was at least a signal" — usable for comparing cohorts, not for judging a call.
 - [A Missing Skill Is Billed as Tokens, Not Recorded as a Gap](../concepts/a-missing-skill-is-billed-as-tokens-not-recorded-as-a-gap.md) - an unwritten skill produces no defect and no ticket, so a library gap surfaces as spend and steering iterations on a recurring task class.
 - [Auto-Evolving Skills Multiply Whatever Governance You Already Have](../concepts/auto-evolving-skills-multiply-whatever-governance-you-already-have.md) - a self-improving skill loop writes into whichever library already exists, so it multiplies the governance regime rather than supplying one.
@@ -2638,6 +2644,10 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Ship Stable APIs and Let Users Vibe-Code the Interface](../concepts/ship-stable-apis-and-let-users-vibe-code-the-interface.md) - stop anticipating every internal UI and ship the endpoints instead, but only after checking that the use cases differ in presentation rather than in the data model.
+- [Move the Platform's Primary Surface as Its Users Gain Tools](../concepts/move-the-platforms-primary-surface-as-its-users-gain-tools.md) - UI first, API first, workflow first: each move answers a different bottleneck, and the last one was triggered from outside the platform.
+- [Show the Prompt Diff So a Non-Engineer Can Promote an Optimized Judge](../concepts/show-the-prompt-diff-so-a-non-engineer-can-promote-an-optimized-judge.md) - self-serve calibration stalls at trust, not accuracy, so the surface has to show the diff and the score movement together.
+- [Keep Judge-Prompt Ownership Configurable While the Org Is Still Learning](../concepts/keep-judge-prompt-ownership-configurable-while-the-org-is-still-learning.md) - a platform that only engineers can run has already decided who owns the prompt, whatever its documentation says.
 - [Skills Are the Residual Where Organizational Know-How Lands](../concepts/skills-are-the-residual-where-organizational-know-how-lands.md) - hooks fire on events, MCP servers are consumed not authored, and sub agents manage the context window, so skills are the only authorable home left for org-specific knowledge.
 - [A Missing Skill Is Billed as Tokens, Not Recorded as a Gap](../concepts/a-missing-skill-is-billed-as-tokens-not-recorded-as-a-gap.md) - an unwritten skill produces no defect and no ticket, so a library gap surfaces as spend and steering iterations on a recurring task class.
 - [Skill Composability Is Decided Before Authoring, Not in the Registry](../concepts/skill-composability-is-decided-before-authoring-not-in-the-registry.md) - a catalog makes skills findable and owned but cannot make independently authored ones compose; the domain carve and named human owners come first.

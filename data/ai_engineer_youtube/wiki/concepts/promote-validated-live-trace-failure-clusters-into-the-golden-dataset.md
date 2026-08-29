@@ -17,6 +17,7 @@ Details:
 - Given enough context and the ability to test its changes against those regression traces, a coding agent has fixed an entire suite of issues with a single prompt; complex clusters can be handed to the [branch-per-hypothesis optimization loop](optimize-an-agent-with-a-branch-per-hypothesis-coding-agent-loop.md) to build draft PRs. 27:00-27:51
 
 - **The promotion step is what makes this survive the standing objection to clustering.** Ben Hylak argues that clusters cannot function as issues — you do not control their boundaries, "it's very, very hard to reliably track over time," and "what you consider to be like the same issue or not is actually very, very unique to every company" ([Clusters Are Not Issues](clusters-are-not-issues.md)). This pipeline escapes all three because the cluster is not the artifact: an SME validates it, names it, and it becomes a golden-dataset entry and a scorer with a stable identity that can be re-run and trended. Stated as a rule, a cluster is a discovery output that has to be promoted into something you named before anything can be tracked against it — and the corollary is that the SME triage step is load-bearing, not administrative overhead to automate away. ([Hylak](../sources/20260812_jHMiYtjoJfA.md), 17:03-18:08)
+- **The sampling step is bounded by human attention, and DoorDash says so out loud.** Their loop is the same shape — trace, sample, annotate, promote a golden set, calibrate, monitor, repeat — but the sizing rule is stated as a comfort threshold rather than a statistical one: sample "down to a very small set that you actually want to look at," or in the closing recap, "sample it down to a size which you are comfortable with." That is an honest description of what actually determines N in a manual-annotation loop, and it is the constraint that makes the promotion step worth the effort: whatever survives into the golden set is the only part of the trace corpus a human ever validated. ([AI Evals for Cross-Functional Teams — Nachiket Paranjape & Swaroop Chitlur Haridas, DoorDash](../sources/20260828_bMjlRrWjdT0.md), 05:19-06:12, 14:54-15:35)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -29,7 +30,9 @@ Related concepts:
 - [Replay Production Failures Before Promoting Prompt Fixes](replay-production-failures-before-promoting-prompt-fixes.md)
 - [Use golden data sets and mixed scoring functions for AI application confidence](use-golden-data-sets-and-mixed-scoring-functions-for-ai-application-confidence.md)
 - [Clusters Are Not Issues](clusters-are-not-issues.md)
+- [Show the Prompt Diff So a Non-Engineer Can Promote an Optimized Judge](show-the-prompt-diff-so-a-non-engineer-can-promote-an-optimized-judge.md)
 
 Sources:
 - [Agents Building Agents - Alfonso Graziano, Nearform](../sources/20260628_aHhB3sjGjkI.md), 21:00-27:51
 - [Designing Agents (The Floor Is the Frontier) — Ben Hylak, Raindrop](../sources/20260812_jHMiYtjoJfA.md), 17:03-18:08
+- [AI Evals for Cross-Functional Teams — Nachiket Paranjape & Swaroop Chitlur Haridas, DoorDash](../sources/20260828_bMjlRrWjdT0.md), 05:19-06:12, 14:54-15:35

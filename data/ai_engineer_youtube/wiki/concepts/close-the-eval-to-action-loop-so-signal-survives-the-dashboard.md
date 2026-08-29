@@ -14,6 +14,7 @@ Details:
 - Contrast with **compile-time** approaches "like DSPy" that bake all lessons into the prompt up front; here the lessons are applied and re-ranked at runtime instead, 05:01-05:14.
 - Once enough outcome-labeled memories accumulate for a task (~10 memories / ~5 reviews), **bake the stabilized reasoning into a skill** the agent always calls, without changing the existing prompt — e.g. a product SQL agent whose system prompt still names a column that is no longer useful, which no system updates today, 06:44-08:02, 14:34-15:10.
 - The retrieval side of this loop uses outcome-weighted ranking; see the companion concept for the mechanism that turns each run's pass/fail into a per-memory utility score.
+- **A loop that closes through people rather than through runtime memory.** DoorDash's answer to signal dying in a dashboard is a human circuit: sample traces down, annotate them, promote a golden dataset, recalibrate the judge against it, and have the owning team "elevate that judge prompt as their LLM as a judge" before monitoring and repeating. The action taken is a promoted judge and a grown golden set rather than retrieval guidance injected at run time — slower, and it changes what the system is measured against rather than what it does. Worth reading as the complementary case: this page moves the lesson into the agent's execution path, that one moves it into the specification. ([AI Evals for Cross-Functional Teams — Nachiket Paranjape & Swaroop Chitlur Haridas, DoorDash](../sources/20260828_bMjlRrWjdT0.md), 05:19-06:12, 11:14-11:24)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -24,6 +25,8 @@ Related concepts:
 - [Replace Anecdotal Agent Tuning With Eval and Observability Loops](replace-anecdotal-agent-tuning-with-eval-and-observability-loops.md)
 - [Skills Turn Procedural Feedback Into Transferable Agent Memory](skills-turn-procedural-feedback-into-transferable-agent-memory.md)
 - [Automate the Agent-Building Loop With an Agentic AI Engineer](automate-the-agent-building-loop-with-an-agentic-ai-engineer.md)
+- [Show the Prompt Diff So a Non-Engineer Can Promote an Optimized Judge](show-the-prompt-diff-so-a-non-engineer-can-promote-an-optimized-judge.md)
 
 Sources:
 - [User Signal Dies at the Retrieval Boundary - Sonam Pankaj, StarlightSearch](../sources/20260628_Jx4ZFEAq6bY.md), 02:16-15:10
+- [AI Evals for Cross-Functional Teams — Nachiket Paranjape & Swaroop Chitlur Haridas, DoorDash](../sources/20260828_bMjlRrWjdT0.md), 05:19-06:12, 11:14-11:24

@@ -16,6 +16,7 @@ Details:
 - The generalization the speaker offers is about the artifact, not the domain: "skills are really an amazing interface between AI engineers and domain experts, especially in vertical AI," and the pattern is reused across their other internal and production workflows. A skill file is legible to a non-engineer, versionable like code, and executable by the same harness — which is why it works as a handoff format. (13:47-14:02)
 - The claimed payoff is compounding rather than throughput: give domain experts the keys "because these are the people who know about your data and … they will help you drive towards a recursive self-improvement and not the AI engineers." (15:53-16:11)
 - This is a stronger position than expert review tooling, and worth distinguishing from it. Anterior's earlier talk described clinicians inspecting evidence, labelling failure modes, and *suggesting* domain knowledge through a bespoke review surface; here the same population writes the pipeline stages. Review tooling routes expert judgment through an engineering-owned system; skills remove the routing step for a class of changes.
+- **The same ownership-boundary move applied to the tool rather than the pipeline.** Anterior pushes the expert past reviewing outputs to authoring pipeline stages as skills. DoorDash pushes a different boundary with the same logic: the operator authors the interface they work in, generating it with a coding agent against platform APIs. Both replace "file a request with engineering" with "write the artifact yourself," and both depend on the engineering team having produced a stable substrate — a skill-loading harness in one case, an owned API surface in the other. ([AI Evals for Cross-Functional Teams — Nachiket Paranjape & Swaroop Chitlur Haridas, DoorDash](../sources/20260828_bMjlRrWjdT0.md), 09:18-10:29)
 
 Related topics:
 - [Workflows](../topics/workflows.md)
@@ -30,7 +31,9 @@ Related concepts:
 - [Encode Domain Judgment in Node-Level Agent Skills](encode-domain-judgment-in-node-level-agent-skills.md)
 - [General Agents Need Skills for Domain Expertise](general-agents-need-skills-for-domain-expertise.md)
 - [Treat Complex Skills Like Software Artifacts](treat-complex-skills-like-software-artifacts.md)
+- [Ship Stable APIs and Let Users Vibe-Code the Interface](ship-stable-apis-and-let-users-vibe-code-the-interface.md)
 
 Sources:
 - [Don't be data poor — Anuj Iravane, Anterior](../sources/20260819_XAsb7MIAzm8.md), 11:34-14:02, 15:53-16:11
 - [Make your LLM app a Domain Expert: How to Build an Expert System - Christopher Lovejoy, Anterior](../sources/20250728_MRM7oA3JsFs.md), 09:15-16:03
+- [AI Evals for Cross-Functional Teams — Nachiket Paranjape & Swaroop Chitlur Haridas, DoorDash](../sources/20260828_bMjlRrWjdT0.md), 09:18-10:29

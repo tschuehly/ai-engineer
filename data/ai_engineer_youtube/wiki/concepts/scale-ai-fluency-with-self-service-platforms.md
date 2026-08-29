@@ -12,6 +12,7 @@ Details:
 - Company-wide AI fluency is needed because marketers, designers, PMs, and care agents all touch AI even if they are not training models or building agents. (15:08-15:59)
 - Enablement mechanisms include newsletters, podcasts, cross-functional AI show-and-tells, flexible tool use, and self-service platforms that let product and engineering teams prototype and ship AI-powered features with less deep involvement from the AI team. (16:01-16:43)
 - **A three-rung ladder with the discontinuity named.** Individual (create, test, improve and use — "it shouldn't be random, it should be structured way," with the org agreeing which tool), then team (share on creation; because teams share a stack and products "it's going to evolve really quickly"), then a centralized platform. ([Touil](../sources/20260828_M05vON8i0aI.md), 13:13-13:44) The first two rungs differ from the third in kind rather than in size: rungs one and two need tooling and a convention, and rung three additionally needs a domain carve and named human owners, which is where Touil says "technology stop solving the problem" (14:47-15:17). A programme that scales rung two and calls it rung three gets a larger unowned library. Nothing in the talk is measured.
+- **What the self-service rung looks like when non-engineers cross it.** At DoorDash the strategy-and-operations staff who set the quality bar also build the tools they annotate in, generating their own interfaces against the platform's APIs with Codex or Claude Code. Fluency here is not "marketers and PMs touch AI" but a specific capability — an operator who can point a coding agent at an internal API — and the enablement work it requires is API stability and access, not newsletters and show-and-tells. ([AI Evals for Cross-Functional Teams — Nachiket Paranjape & Swaroop Chitlur Haridas, DoorDash](../sources/20260828_bMjlRrWjdT0.md), 09:18-09:39, 13:23-13:36)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -23,7 +24,9 @@ Related concepts:
 - [Prefer Generalist AI Engineers Before Narrow Specialists](prefer-generalist-ai-engineers-before-narrow-specialists.md)
 - [Upskill AI Teams Through Build, Domain, and Customer Loops](upskill-ai-teams-through-build-domain-and-customer-loops.md)
 - [Skill Composability Is Decided Before Authoring, Not in the Registry](skill-composability-is-decided-before-authoring-not-in-the-registry.md)
+- [Move the Platform's Primary Surface as Its Users Gain Tools](move-the-platforms-primary-surface-as-its-users-gain-tools.md)
 
 Sources:
 - [From Hype to Habit: How We're Building an AI-First SaaS Company-While Still Shipping the Roadmap](../sources/20250723_3YGRcgZJ3yc.md), 12:27-16:43
 - [AI-Native Organisations Run on Skills: How to Structure and Scale Them — Imad Touil, QuantumBlack](../sources/20260828_M05vON8i0aI.md), 13:13-13:44, 14:47-15:17
+- [AI Evals for Cross-Functional Teams — Nachiket Paranjape & Swaroop Chitlur Haridas, DoorDash](../sources/20260828_bMjlRrWjdT0.md), 09:18-09:39, 13:23-13:36

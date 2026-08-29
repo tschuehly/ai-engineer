@@ -17,6 +17,7 @@ Details:
 - For PM-facing product evals, the judge prompt should produce categorical labels that can be mapped to scores, rather than raw numeric ratings, because numeric prompts produce unreliable model behavior. 10:38-11:28
 - Off-the-shelf LLM judges can hallucinate, shift under ordering or rubric changes, and produce uncalibrated numeric scores; judge-time compute can improve reliability through structured judge agents, debate, self-verification, ensembling, or task-tuned reward models. 07:10-13:56
 - LLM-as-judge systems can reduce dataset-creation and judging cost, but they still behave as imperfect substitutes for human evaluators and can carry biases around traits such as conciseness or helpfulness. 18:13-19:01
+- **What a self-serve calibration surface does and does not carry.** DoorDash hands judge calibration to product managers and operators through a UI that runs the optimization loop on any model they pick and renders the original and calibrated prompts side by side, explicitly because "prompt calibration… is still like a pretty new and evolving field" and the alternative is a queue at the engineering team. What that surface shows is the prompt diff and the score movement; what it does not show is whether a dev/test split was held out, whether the annotation set was balanced, or whether F1 moved because the rubric learned the criterion or the label distribution. The discipline on this page is exactly the part that becomes invisible when the loop is made self-serve. ([AI Evals for Cross-Functional Teams — Nachiket Paranjape & Swaroop Chitlur Haridas, DoorDash](../sources/20260828_bMjlRrWjdT0.md), 11:24-12:58)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -30,6 +31,7 @@ Related concepts:
 - [Label LLM Judge Outputs Before Mapping Them to Scores](label-llm-judge-outputs-before-mapping-them-to-scores.md)
 - [Search natural-language input space as an optimization problem](search-natural-language-input-space-as-an-optimization-problem.md)
 - [Domain Evals Need Expert-Built Environments](domain-evals-need-expert-built-environments.md)
+- [Show the Prompt Diff So a Non-Engineer Can Promote an Optimized Judge](show-the-prompt-diff-so-a-non-engineer-can-promote-an-optimized-judge.md)
 
 Sources:
 - [Full Workshop: Build Your Own Deep Research Agents - Louis-François Bouchard, Paul Iusztin, Samridhi](../sources/20260420_mYSRn6PC1mc.md), 01:43:43-01:45:45
@@ -37,3 +39,4 @@ Sources:
 - [Shipping AI That Works: An Evaluation Framework for PMs - Aman Khan, Arize](../sources/20251226_2HNSG990Ew8.md), 09:19-11:28
 - [Fuzzing in the GenAI Era — Leonard Tang, Haize Labs](../sources/20250822_OMGPvW8TBHc.md), 07:10-13:56
 - [2025 is the Year of Evals! Just like 2024, and 2023, and ... - John Dickerson, CEO Mozilla AI](../sources/20250806_CQGuvf6gSrM.md), 18:13-19:01
+- [AI Evals for Cross-Functional Teams — Nachiket Paranjape & Swaroop Chitlur Haridas, DoorDash](../sources/20260828_bMjlRrWjdT0.md), 11:24-12:58
