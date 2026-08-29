@@ -14,6 +14,7 @@ Details:
 - Failure mode 2 — weak descriptions: weak tool descriptions produce weak embeddings and poor retrieval. Write descriptions in the words users actually use, encoding intent, action, and key entities. (24:50-25:15)
 - Failure mode 3 — rare tools: some tools never score high unless their descriptions include the right language; monitor misses and rewrite those descriptions; re-embed tools when descriptions or schema change. (25:15-25:40)
 - Production checklist: lock tools in one place (name, description, schema, owner, version); build the index; write the router (embed query → search → top-K → fetch schema); wire the agent's tool list to the router, not a hard-coded full catalog; evaluate at K=3/5/10; and monitor production by logging selected tools, final tool calls, failures, and fallback usage. "Not a 6-month platform rewrite… for most teams it is a focused sprint." (20:40-22:00)
+- **The same component one level up, routing customers instead of tools, and reported without any of these guards.** Notion consolidated scattered eligibility checks into one rule set and put "a single classifier [that] will route what the customer should do" in front of it, credited with preventing double sends across marketing and sales. No model, feature set, accuracy figure, K-equivalent, or uncertainty fallback is given — a useful contrast, since the failure modes this page enumerates (router miss, weak descriptions, rare cases) all have direct analogues in a segment router. ([Liu](../sources/20260826_L4I7WgiEquo.md), 07:59-08:37)
 
 Related topics:
 - [Tools](../topics/tools.md)
@@ -24,6 +25,8 @@ Related concepts:
 - [The Fat-Agent Tool Overload Collapses Accuracy and Inflates Latency](fat-agent-tool-overload-collapses-accuracy-and-latency.md)
 - [Use tool names and descriptions as operational prompts](use-tool-names-and-descriptions-as-operational-prompts.md)
 - [Evaluate tool definitions and outputs as context](evaluate-tool-definitions-and-outputs-as-context.md)
+- [Make Routing and Eligibility a Shared First-Class Primitive](make-routing-and-eligibility-a-shared-first-class-primitive.md)
 
 Sources:
 - [The 100-Tool Agent Is a Trap - Sohail Shaikh & Ankush Rastogi, Prosodica](../sources/20260628_vh2VGuQ3zhY.md), 13:14-14:20, 20:40-25:40
+- [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 07:59-08:37

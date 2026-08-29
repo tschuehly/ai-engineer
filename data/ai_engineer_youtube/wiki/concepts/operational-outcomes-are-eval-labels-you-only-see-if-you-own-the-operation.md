@@ -19,6 +19,7 @@ Details:
 - Limits. Nothing in this talk is measured; no eval result, pass rate, or task count is given, and the automatically scored evals are described as underway rather than as results. ([Provenance and Limits](../sources/20260828_B0fjR3yaZFU.md))
 
 - **A software-internal instance of the same idea, and a demonstration of how much weaker the label gets when the outcome is not physical.** Uber grades review comments by whether the developer addressed them, which is settled by the existing workflow at no annotation cost — the same structural move as letting the roof repair settle the score. But a repaired roof is the outcome; an addressed comment is a human's reaction to advice, and the human may comply with a wrong comment or reject a right one. So the free label is available much more widely than the operator framing suggests, and its validity degrades as the distance grows between the recorded action and the thing you actually wanted to know. Uber reports 67% addressal with no labelled sample behind it. ([Bond and Ketkar](../sources/20260828_EL123UNokkI.md), 05:47-06:07, 10:29-10:47)
+- **The plumbing that makes the free label usable: attribution back to the decision.** Notion's fourth layer requires that "every action is a decision log and every outcome threads back to the decision that caused it," which is what lets engagement history re-enter the decision layer and drive continue / advance / pivot. The position argument is the same as this page's — the outcomes accrue to the operator running its own go-to-market — and the addition is that owning the operation is necessary but not sufficient: without decision-level attribution the label lands on a dashboard and an analyst reads it. ([Liu](../sources/20260826_L4I7WgiEquo.md), 14:53-15:37)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -31,7 +32,9 @@ Related concepts:
 - [High-Value Vertical Data Is Withheld by Design](high-value-vertical-data-is-withheld-by-design.md)
 - [Continual Learning and Enablement Are One Loop With a Cold Start](continual-learning-and-enablement-are-one-loop-with-a-cold-start.md)
 - [Measure a Review Bot by Whether the Comment Changed the Code](measure-a-review-bot-by-whether-the-comment-changed-the-code.md)
+- [Thread Every Outcome Back to the Decision That Caused It](thread-every-outcome-back-to-the-decision-that-caused-it.md)
 
 Sources:
 - [How do you diffuse AI into the real world? — Varun Shenoy, Long Lake](../sources/20260828_B0fjR3yaZFU.md), 04:16-04:31, 10:13-12:14
 - [Building uReview, Uber's Multi-Agent Code Review Engine — Will Bond & Ameya Ketkar, Uber](../sources/20260828_EL123UNokkI.md), 05:47-06:07, 10:29-10:47
+- [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 14:53-15:37

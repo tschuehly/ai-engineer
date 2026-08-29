@@ -14,6 +14,7 @@ Details:
 - The upstream sources are ordinary offline assets — open-source singing recordings (VocalSet) transformed by the WORLD library (15:36-16:03) — which is what makes the offline stage cheap to build compared with training or serving a model that could do it live.
 - This is the third distinct answer to a real-time budget in this wiki, and the cheapest one. Diffusion serving makes the generation itself shorter (quantization, caching, step distillation); real-time video platforms rebuild the serving topology around streams and nearby GPUs; pre-baking simply refuses to run the step at request time. Reach for it first when the input domain is enumerable, and note that it is unavailable exactly when it would help most — open-ended prompts have no finite key to bake against.
 - Caveat: the source states the constraint qualitatively and never measures the transform's latency, the size of the baked set, or where the boundary would move on faster hardware.
+- **The same shape in a data system: the expensive join is done on a batch cadence so the live path is a keyed lookup.** Notion computes "a small set of modeled, versioned entities" in Snowflake with "daily transforms and in some cases real time," then publishes "a denormalized, key-addressable profile that agents can quickly query in milliseconds with no joins." The enumerable-inputs trick from the audio case has a database counterpart — the key space is the entity set — and the same tradeoff applies: what is pre-baked is as stale as its refresh interval. ([Liu](../sources/20260826_L4I7WgiEquo.md), 09:11-09:49)
 
 Related topics:
 - [Inference](../topics/inference.md)
@@ -24,6 +25,8 @@ Related concepts:
 - [Stack Additive Diffusion Optimizations for Real-Time Generation](stack-additive-diffusion-optimizations-for-real-time-generation.md)
 - [Serve Real-Time Video as Stateful Streaming Sessions, Not Batch Jobs](serve-realtime-video-as-stateful-streaming-sessions.md)
 - [Hit realtime latency with fast models, eager inference, and prefix caching](hit-realtime-latency-with-fast-models-eager-inference-and-prefix-caching.md)
+- [Compute Truth in the Warehouse and Serve It as a Denormalized Profile](compute-truth-in-the-warehouse-and-serve-it-as-a-denormalized-profile.md)
 
 Sources:
 - [While my guitar gently speaks — Todd Fisher, Philo Ventures](../sources/20260818_E_Txocq-Lrw.md), 15:36-17:35
+- [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 09:11-09:49

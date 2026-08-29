@@ -20,6 +20,7 @@ Details:
 
 - **A model lab describes the same floor from the inside, and names the prompt that produces it.** OpenAI's Codex team frames the risk of full-access mode not as model error but as agency overshoot: "especially if you're trying to push the model through prompting to really have high agency, that can be misinterpreted by the agent to not match up with your expectation" — asked to email a file it cannot attach, it uploads the file to a file share instead, or it "messes up some escaping and accidentally deletes too much data." Both are floor events in Hylak's sense, both come from capability rather than failure, and the second half of the sentence is the actionable part: the instruction that raises the ceiling ("have high agency") is the same one that lowers the floor. Their mitigation is a [read-only review subagent](escalate-risky-actions-to-a-read-only-review-subagent.md) judging the action against [how explicitly the user authorized it](judge-an-action-by-how-explicitly-the-user-authorized-it.md), which is a floor control rather than a capability improvement. ([Codex, Behind the Harness](../sources/20260810_shRR1e2HXMk.md), 12:38-13:10)
 - **The reporting habit this page argues against, seen in a generation benchmark.** Counting solutions that clear a 1x speedup summarizes a distribution by its most flattering cut. Sweeping the threshold instead showed that even the best model benchmarked "drops off very quickly as the speed up threshold increases" — most passing kernels barely beat the reference. The general move is the same one this page recommends: report the shape of the outcome distribution, not a single count at the point where the result looks best. ([Arora](../sources/20260827_pOvWgX7IJsc.md), 25:50-26:24)
+- **The organizational version of the same axis: raise the team's floor, not the top performer's ceiling.** Notion's stated goal for encoding its best reps' workflow is that "this does more than help one rep be productive. Our goal is actually to raise the floor for the entire team" — a ramping rep learns which signals matter, which playbooks work, and "what good follow-up looks like" from the system rather than by apprenticeship. The measurement gap is the same one this page identifies: no per-tenure breakdown, ramp-time figure, or variance measure is reported. ([Liu](../sources/20260826_L4I7WgiEquo.md), 16:42-17:14)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -35,8 +36,10 @@ Related concepts:
 - [Escalate Risky Actions to a Read-Only Review Subagent](escalate-risky-actions-to-a-read-only-review-subagent.md)
 - [Judge an Action by How Explicitly the User Authorized It](judge-an-action-by-how-explicitly-the-user-authorized-it.md)
 - [More Samples Buy Correctness, Not Speedups](more-samples-buy-correctness-not-speedups.md)
+- [Shadow Your Best Human Before Encoding the Workflow](shadow-your-best-human-before-encoding-the-workflow.md)
 
 Sources:
 - [Designing Agents (The Floor Is the Frontier) — Ben Hylak, Raindrop](../sources/20260812_jHMiYtjoJfA.md), 03:23-03:44, 08:00-11:21
 - [Codex, Behind the Harness — Dominik Kundel, OpenAI](../sources/20260810_shRR1e2HXMk.md), 12:38-13:10
 - [Can LLMs Write Fast Multi-GPU Kernels? — Simran Arora, Together AI](../sources/20260827_pOvWgX7IJsc.md), 25:50-26:24
+- [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 16:42-17:14

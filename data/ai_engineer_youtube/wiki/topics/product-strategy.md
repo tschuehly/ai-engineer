@@ -128,8 +128,11 @@ Two interface decisions recur as agents spread through a company's own tooling. 
 
 Two failure modes recur once an AI product is live rather than launching, and both are invisible on a usage total. The first is that adoption is really two numbers: whether people tried it and whether they came back. Only the second is a product defect, and confusing them sends the next sprint to the wrong team — Snowflake's internal assistant was tried by 20% of its organization two weeks after general availability, which no feature work could have moved. The second is habituation: a capability that made the team look like rockstars becomes a habit, a habit becomes the floor, and four to six months later the same users arrive with complaints and comparisons, without anything having regressed. Both push in the same direction as the wiki's existing trust material — earn the first impression narrowly, because a bounced user costs multiples of a new one — and both argue that a roadmap of refinements on a delivered capability is a decay curve rather than a plateau.
 
+Build-versus-buy is sharper as a per-layer question than as a per-system one. Notion's lean go-to-market engineering team rents orchestration, email, CRM, and enrichment because "vendors do that really well," and refuses to outsource only the context layer — for a strategic reason (that is where the edge is, and a generic tool cannot capture the esoteric data model) and an operational one that generalizes further: an outsourced context layer is one you cannot debug. The build-order heuristic that follows is about information rather than ambition — build first where you hold the most data on your own model, since "internal agents are actually cheaper and faster to build than most people assume," and rent the generalizable parts afterwards.
+
 ## Key Concepts
 
+- [Own the Context Layer and Rent Every Other Layer](../concepts/own-the-context-layer-and-rent-every-other-layer.md) - decide build-versus-buy per architectural layer, and keep the one that must stay debuggable.
 - [Separate the Did-Not-Try Problem From the Did-Not-Return Problem](../concepts/separate-the-did-not-try-problem-from-the-did-not-return-problem.md) - split the adoption funnel at first use, because trial and return failures have different owners.
 - [The Wow Factor Collapses Into a Baseline Within Months](../concepts/the-wow-factor-collapses-into-a-baseline-within-months.md) - success resets the user's reference point, so delivered capability decays without regressing.
 - [Choose Quality Over Coverage Because the First Five Answers Decide Adoption](../concepts/choose-quality-over-coverage-because-the-first-five-answers-decide-adoption.md) - narrow and reliable beats broad and passable when users choose whether to return.
@@ -372,3 +375,4 @@ Two failure modes recur once an AI product is live rather than launching, and bo
 - [How Anthropic Builds: Lessons from Labs — Mike Krieger, Anthropic](../sources/20260827_qqrk7CtkuIw.md)
 - [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md)
 - [Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md)
+- [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md)

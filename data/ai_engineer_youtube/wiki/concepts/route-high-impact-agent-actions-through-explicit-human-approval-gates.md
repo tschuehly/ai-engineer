@@ -23,6 +23,7 @@ Details:
 
 - **The gate has a failure mode of its own: users turn it off.** OpenAI reports that Codex's approval prompts produced measurable fatigue — "in our own testing… we saw people would just start clicking yes" and "in polls that we did… people started to just use full access mode more" — so the approval count is itself a metric to watch, not just a safety dial to turn up. Their response was not a better prompt but a different reviewer: an automatic [read-only review subagent](escalate-risky-actions-to-a-read-only-review-subagent.md) that judges the action and only escalates to the human when it disagrees, with the criterion being [how explicitly the user authorized it](judge-an-action-by-how-explicitly-the-user-authorized-it.md). That inverts this page's default — the human gate stops being per-action and becomes the exception path — and it moves the risk from "human approves without reading" to "model approves wrongly," for which the source offers no false-approval rate. ([Codex, Behind the Harness](../sources/20260810_shRR1e2HXMk.md), 11:59-12:22, 13:15-15:32)
 - **A placement rule that reduces the approval count without weakening the gate.** Coyle puts the human check at the agent loop's *exit* — reached only once the stop reason says the model is finished rather than requesting a tool — where "you check the confidence. If it looks good, you keep it. If you don't, then you escalate to a human." That is one judgment per completed task rather than one per tool call, which attacks the fatigue mechanism above from a third direction: not a better prompt (this page), not a model reviewer (Codex), but fewer occasions. It only covers tasks whose intermediate steps are all reversible, so it composes with rather than replaces a hard gate on irreversible actions. ([Coyle](../sources/20260808_Z-c11pV_uvU.md), 08:03-08:17, 10:36-10:49)
+- **A blanket gate defined by channel rather than by action.** Rather than enumerating sensitive operations, Notion draws the line at the customer boundary: "we deliberately chose not to let an agent talk directly to a customer. For sales-assist workflows, humans stay in the loop by default and approve anything the agents do." The generalizable takeaway is stated separately — "let humans stay in the loop where there are risky possibilities" — and the stance is explicitly temporary, with agents expected to move "from drafting to acting within guardrails" that the source does not describe. ([Liu](../sources/20260826_L4I7WgiEquo.md), 07:27-07:43, 19:55-20:01, 20:30-20:49)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -39,6 +40,7 @@ Related concepts:
 - [Escalate Risky Actions to a Read-Only Review Subagent](escalate-risky-actions-to-a-read-only-review-subagent.md)
 - [Judge an Action by How Explicitly the User Authorized It](judge-an-action-by-how-explicitly-the-user-authorized-it.md)
 - [Read the Stop Reason Before You Read the Answer](read-the-stop-reason-before-you-read-the-answer.md)
+- [Keep Agents Off the Customer Channel and Treat Inbound Forms as Untrusted Input](keep-agents-off-the-customer-channel-and-treat-inbound-forms-as-untrusted-input.md)
 
 Sources:
 - [Human-in-the-Loop Automation with n8n - Liam McGarrigle](../sources/20260502_tDArkCqjA-c.md), 01:10-01:25, 01:10:41-01:11:07, 01:13:56-01:16:08
@@ -51,3 +53,4 @@ Sources:
 - [From RL to IRL — Gaurav Mishra, Amazon AGI Lab](../sources/20260814_Cc0_nyxROBA.md), 10:09-10:34, 13:44-13:55
 - [Codex, Behind the Harness — Dominik Kundel, OpenAI](../sources/20260810_shRR1e2HXMk.md), 11:59-12:22, 13:15-15:32
 - [Anthropic's CCA Exam as a Field-Guide for Agentic Engineering — Frank Coyle, UC Berkeley](../sources/20260808_Z-c11pV_uvU.md), 08:03-08:17, 10:36-10:49
+- [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 07:27-07:43, 19:55-20:01, 20:30-20:49

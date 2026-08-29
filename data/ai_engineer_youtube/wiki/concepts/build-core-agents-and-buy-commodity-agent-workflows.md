@@ -13,6 +13,7 @@ Details:
 - Regulated or sensitive data and hard SLAs do not automatically decide the choice; they require a risk assessment of both build and buy paths, 09:04-09:29.
 - Hruska expects businesses to keep a few purpose-built agents for strategic use cases and a long tail of business agents on managed platforms, analogous to handbuilt core software plus bought internal-tooling platforms, 10:41-11:16.
 - **A different cut of the same decision: not what it is, but whether you can change it.** Wang rejects the framing outright for internal systems — "we don't live in a world where the choice is between purchasing SaaS and building things yourself… you should just be using something that is arbitrarily customizable" — and keeps Salesforce because it supplies domain decisions worth inheriting ("it's made a lot of amazing choices around what sales should look like, choices that we don't want to make ourselves") *and* an MCP server through which agents can bend it. Criticality tells you where to spend; customizability tells you whether buying forecloses the spend later. ([Wang](../sources/20260826_6pbQgnJ9Voc.md), 11:56-13:16)
+- **Applied per architectural layer rather than per agent, with two reasons for the one thing kept.** Notion rents orchestration, email, CRM, and enrichment — "vendors do that really well" — and refuses to outsource the context layer because "a generic tool can't capture all of our esoteric data models or workflows, and we do not want that context layer to be something we can't debug." The build-order heuristic that follows is information-based: internal agents are "cheaper and faster to build than most people assume," so build where you hold the most data on your own model and rent "the generalizable parts later." ([Liu](../sources/20260826_L4I7WgiEquo.md), 17:25-18:17)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -24,7 +25,9 @@ Related concepts:
 - [Agent Experience Means Autonomous Access, Understanding, and Operation](agent-experience-means-autonomous-access-understanding-and-operation.md)
 - [Keep Fixed Business Logic Outside the Model](keep-fixed-business-logic-outside-the-model.md)
 - [Replace Buy-Versus-Build With Arbitrary Customizability](replace-buy-versus-build-with-arbitrary-customizability.md)
+- [Own the Context Layer and Rent Every Other Layer](own-the-context-layer-and-rent-every-other-layer.md)
 
 Sources:
 - [How agents will unlock the $500B promise of AI - Donald Hruska, Retool](../sources/20250723_Lqq_LcBaJCc.md), 07:26-11:16
 - [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md), 11:56-13:16
+- [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 17:25-18:17

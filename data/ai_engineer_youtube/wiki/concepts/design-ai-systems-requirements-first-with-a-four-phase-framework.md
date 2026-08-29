@@ -13,6 +13,7 @@ Details:
 - **Phase 3 — evaluation and monitoring.** Evaluation is before ship, monitoring is after; you need both. Define input/output **guardrails** (LLM systems are probabilistic and can produce unexpected/harmful output) and a [layered metric ladder that carries into production monitoring](layer-ai-application-metrics-from-guardrail-compliance-to-system-health.md). "You can't improve what you can't measure," so build evaluation in from the start. (20:56-25:10)
 - **Phase 4 — optimize.** Accuracy looking good is not shippable; cost, latency, and reliability become non-negotiable in production, so expect more iterations between "accuracy is good" and ship. Optimize accuracy by controlling what enters the context window (prompt engineering, reranking, memory/persistence); optimize cost/latency (semantic caching, batch processing); optimize reliability (API-failure handling, structured outputs that guarantee decision + citations). (25:10-27:15)
 - **Core discipline:** start with the simplest design, evaluate it, find gaps, and iterate — the most common failure is over-engineering before knowing what is actually failing, or not evaluating at all. (12:12-12:41, 28:00-28:22)
+- **A domain-level analogue: reduce the workflows themselves to four questions before choosing an architecture.** A cross-functional Notion team (CX, RevOps, product, engineering, sales) found that "every workflow could be reduced to four questions. What do we know about the customer? What should happen next? How do we execute that safely? And did it work? That became our architecture" — requirements-first at the level of the business process, with safety and measurement written into the decomposition rather than added after the build. ([Liu](../sources/20260826_L4I7WgiEquo.md), 05:29-06:25)
 
 Related topics:
 - [Workflows](../topics/workflows.md)
@@ -24,6 +25,8 @@ Related concepts:
 - [Spec-driven development turns prompts into requirements, design, and tasks](spec-driven-development-turns-prompts-into-requirements-design-and-tasks.md)
 - [Choose Autonomy Level by Task Uncertainty and Control Needs](choose-autonomy-level-by-task-uncertainty-and-control-needs.md)
 - [Layer AI application metrics from guardrail compliance to system health](layer-ai-application-metrics-from-guardrail-compliance-to-system-health.md)
+- [Reduce Every Workflow to Know, Decide, Act, and Learn](reduce-every-workflow-to-know-decide-act-and-learn.md)
 
 Sources:
 - [AI System Design: From Idea to Production - Apoorva Joshi, MongoDB](../sources/20260628_T0HhO4YtTfE.md), 01:49-28:40
+- [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 05:29-06:25

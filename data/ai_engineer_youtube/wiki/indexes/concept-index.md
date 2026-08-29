@@ -1,6 +1,8 @@
 # Concept Index
 
 ## Agents
+- [Put Humans and Agents on the Same Substrate Instead of an AI Layer on Top](../concepts/put-humans-and-agents-on-the-same-substrate-instead-of-an-ai-layer-on-top.md) - two substrates become two systems that drift apart.
+- [Emit Owner-Assigned Tasks From Signals, With a Marketing Default When None Fire](../concepts/emit-owner-assigned-tasks-from-signals-with-a-marketing-default-when-none-fire.md) - work arrives as an owner-assigned task for a human or an agent, in the assignee's own surface.
 - [Budget a Third of Sprint Capacity for Re-Architecture](../concepts/budget-a-third-of-sprint-capacity-for-re-architecture.md) - 30-40% of sprints spent rebuilding onto new platform primitives, planned rather than resented.
 - [Stage the Internal Agent Roadmap From Answers to Automation to Team-Built Tooling](../concepts/stage-the-internal-agent-roadmap-from-answers-to-automation-to-team-built-tooling.md) - four rungs, each changing what the user does and each consuming the previous rung's substrate.
 - [Treat Go-to-Market as a Live Model of Your World That Agents Act On](../concepts/treat-go-to-market-as-a-live-model-of-your-world.md) - the substrate an internal agent fleet reads, built before any of the agents.
@@ -945,6 +947,8 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Put Humans and Agents on the Same Substrate Instead of an AI Layer on Top](../concepts/put-humans-and-agents-on-the-same-substrate-instead-of-an-ai-layer-on-top.md) - markdown plus databases as one representation both readers can use.
+- [Own the Context Layer and Rent Every Other Layer](../concepts/own-the-context-layer-and-rent-every-other-layer.md) - the layer to keep, because a generic tool cannot hold the data model and you cannot debug what you rent.
 - [Budget a Third of Sprint Capacity for Re-Architecture](../concepts/budget-a-third-of-sprint-capacity-for-re-architecture.md) - 30-40% of sprints spent rebuilding onto new platform primitives, planned rather than resented.
 - [Derive an Agent Persona From a Measured Corpus, Not a Described Tone](../concepts/derive-an-agent-persona-from-a-measured-corpus-not-a-described-tone.md) - persona context extracted from the person's own archive rather than asserted.
 - [Satisfaction of Search Stops Agents at the First Plausible Hit](../concepts/satisfaction-of-search-stops-agents-at-the-first-plausible-hit.md) - the radiology error, applied to an agent handed a searchable wiki: it finds one plausible hit and stops.
@@ -1109,6 +1113,7 @@
 - [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md)
 
 ## Infrastructure
+- [Compute Truth in the Warehouse and Serve It as a Denormalized Profile](../concepts/compute-truth-in-the-warehouse-and-serve-it-as-a-denormalized-profile.md) - warehouse computes modeled versioned entities; a key-value store serves them join-free in milliseconds.
 - [Land the Data in One Governed Store So Agents Inherit Access Control](../concepts/land-the-data-in-one-governed-store-so-agents-inherit-access-control.md) - consolidation makes authorization a property agents inherit rather than implement.
 - [Budget a Third of Sprint Capacity for Re-Architecture](../concepts/budget-a-third-of-sprint-capacity-for-re-architecture.md) - 30-40% of sprints spent rebuilding onto new platform primitives, planned rather than resented.
 - [Pre-Measure Everything and Build Runtime Knobs Before You Need Them](../concepts/pre-measure-everything-and-build-runtime-knobs-before-you-need-them.md) - a metric first recorded during an incident has no baseline, and the knobs must already be first-class.
@@ -1571,6 +1576,7 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Own the Context Layer and Rent Every Other Layer](../concepts/own-the-context-layer-and-rent-every-other-layer.md) - rent orchestration, email, CRM, and enrichment; keep the layer that carries the edge.
 - [Separate the Did-Not-Try Problem From the Did-Not-Return Problem](../concepts/separate-the-did-not-try-problem-from-the-did-not-return-problem.md) - trial rate and return rate fail differently and have different owners.
 - [The Wow Factor Collapses Into a Baseline Within Months](../concepts/the-wow-factor-collapses-into-a-baseline-within-months.md) - success turns a capability into a habit and then into the floor you are judged against.
 - [Choose Quality Over Coverage Because the First Five Answers Decide Adoption](../concepts/choose-quality-over-coverage-because-the-first-five-answers-decide-adoption.md) - a free-form box is judged per user on its first five answers, so 50 questions at 95% beats 100 at 70%.
@@ -1711,6 +1717,15 @@
 
 ## Go To Market
 
+- [Reduce Every Workflow to Know, Decide, Act, and Learn](../concepts/reduce-every-workflow-to-know-decide-act-and-learn.md) - what do we know, what should happen next, how do we execute safely, did it work — four questions that become four layers.
+- [Put Humans and Agents on the Same Substrate Instead of an AI Layer on Top](../concepts/put-humans-and-agents-on-the-same-substrate-instead-of-an-ai-layer-on-top.md) - the agent as another operator in the human system, with context displayed rather than merely queryable.
+- [Compute Truth in the Warehouse and Serve It as a Denormalized Profile](../concepts/compute-truth-in-the-warehouse-and-serve-it-as-a-denormalized-profile.md) - batch compute of modeled versioned entities, join-free key-addressable serving for agent reads.
+- [Emit Owner-Assigned Tasks From Signals, With a Marketing Default When None Fire](../concepts/emit-owner-assigned-tasks-from-signals-with-a-marketing-default-when-none-fire.md) - a signal service that decides availability, ownership, and the task, and routes the no-signal case too.
+- [Make Routing and Eligibility a Shared First-Class Primitive](../concepts/make-routing-and-eligibility-a-shared-first-class-primitive.md) - one rule set across product, sales, and engineering, with a single classifier preventing double sends.
+- [Keep Agents Off the Customer Channel and Treat Inbound Forms as Untrusted Input](../concepts/keep-agents-off-the-customer-channel-and-treat-inbound-forms-as-untrusted-input.md) - a quality policy that is also the trust boundary, because an agent sits in the middle.
+- [Shadow Your Best Human Before Encoding the Workflow](../concepts/shadow-your-best-human-before-encoding-the-workflow.md) - the top performer's tab chaos is the spec; encoding it raises the whole team's floor.
+- [Own the Context Layer and Rent Every Other Layer](../concepts/own-the-context-layer-and-rent-every-other-layer.md) - build-versus-buy per architectural layer, kept where the data model is esoteric and debuggability matters.
+- [Thread Every Outcome Back to the Decision That Caused It](../concepts/thread-every-outcome-back-to-the-decision-that-caused-it.md) - decision logs plus outcome attribution replace the analyst reading a dashboard.
 - [Separate the Did-Not-Try Problem From the Did-Not-Return Problem](../concepts/separate-the-did-not-try-problem-from-the-did-not-return-problem.md) - trial rate and return rate fail differently and have different owners.
 - [Gate Each Rollout Phase on a Different Question](../concepts/gate-each-rollout-phase-on-a-different-question.md) - pilot proves accuracy, a 10% beta proves viability through request concentration and a retention bar, then GA.
 - [The Wow Factor Collapses Into a Baseline Within Months](../concepts/the-wow-factor-collapses-into-a-baseline-within-months.md) - success turns a capability into a habit and then into the floor you are judged against.
@@ -1731,6 +1746,7 @@
 - [Verify AI Call Summaries Before CRM Sync](../concepts/verify-ai-call-summaries-before-crm-sync.md) - the write path into the system of record needs a check, and agent tool access widens it.
 
 ## Evaluation
+- [Thread Every Outcome Back to the Decision That Caused It](../concepts/thread-every-outcome-back-to-the-decision-that-caused-it.md) - outcome attribution is what lets business results re-enter the decision layer instead of dying in a report.
 - [Write the Question Set From the Business Process Before the Data Is Connected](../concepts/write-the-question-set-from-the-business-process-before-the-data-is-connected.md) - 150 questions taken from the sales process, including the ones the system could not answer, as the pre-traffic eval set.
 - [Classify the Assistant Question Log to Find Feature and Content Gaps](../concepts/classify-the-assistant-question-log-to-find-feature-and-content-gaps.md) - LLM classification over 40,000 questions a week, with repeats and profanity as free negative labels.
 - [Choose Quality Over Coverage Because the First Five Answers Decide Adoption](../concepts/choose-quality-over-coverage-because-the-first-five-answers-decide-adoption.md) - a free-form box is judged per user on its first five answers, so 50 questions at 95% beats 100 at 70%.
@@ -2327,6 +2343,7 @@
 - [Condition ASR on Conversation Context and Domain Vocabulary](../concepts/condition-asr-on-conversation-context-and-domain-vocabulary.md)
 
 ## Retrieval
+- [Compute Truth in the Warehouse and Serve It as a Denormalized Profile](../concepts/compute-truth-in-the-warehouse-and-serve-it-as-a-denormalized-profile.md) - key-addressable context beats search when the entity set is known and enumerable.
 - [Classify the Assistant Question Log to Find Feature and Content Gaps](../concepts/classify-the-assistant-question-log-to-find-feature-and-content-gaps.md) - LLM classification over 40,000 questions a week, with repeats and profanity as free negative labels.
 - [Classify the Whole Addressable Market Instead of Searching It Account by Account](../concepts/classify-the-whole-addressable-market-instead-of-searching-it.md) - ranked retrieval answers a query; the same embeddings can partition the corpus.
 - [Treat Go-to-Market as a Live Model of Your World That Agents Act On](../concepts/treat-go-to-market-as-a-live-model-of-your-world.md) - a joined internal/external model as the retrieval substrate for operational agents.
@@ -2455,6 +2472,7 @@
 - [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md)
 
 ## Security
+- [Keep Agents Off the Customer Channel and Treat Inbound Forms as Untrusted Input](../concepts/keep-agents-off-the-customer-channel-and-treat-inbound-forms-as-untrusted-input.md) - the contact-sales form is attacker-controlled text aimed straight at the prompt that consumes it.
 - [Land the Data in One Governed Store So Agents Inherit Access Control](../concepts/land-the-data-in-one-governed-store-so-agents-inherit-access-control.md) - consolidation makes authorization a property agents inherit rather than implement.
 - [Scope a Person-Cloned Agent by Caller, With Drafts as the Shared Capability](../concepts/scope-a-person-cloned-agent-by-caller-with-drafts-as-the-shared-capability.md) - drafting bounds delegated authority and leaves the read side of the exposure open.
 - [Public Agent Surfaces Get Repurposed as Free General-Purpose Compute](../concepts/public-agent-surfaces-get-repurposed-as-free-general-compute.md) - discount codes and "who else is checking out this product" are legitimate merchant knowledge, so a generic PII and toxicity stack passes them through.
@@ -2815,6 +2833,9 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Reduce Every Workflow to Know, Decide, Act, and Learn](../concepts/reduce-every-workflow-to-know-decide-act-and-learn.md) - the decomposition that turns departmental automations into one decisioning system.
+- [Shadow Your Best Human Before Encoding the Workflow](../concepts/shadow-your-best-human-before-encoding-the-workflow.md) - encode a mediocre process and you get a mediocre agent; start with the most legible workflow.
+- [Make Routing and Eligibility a Shared First-Class Primitive](../concepts/make-routing-and-eligibility-a-shared-first-class-primitive.md) - eligibility leaves the individual tools and becomes a versioned entity with one router in front.
 - [Gate Each Rollout Phase on a Different Question](../concepts/gate-each-rollout-phase-on-a-different-question.md) - pilot proves accuracy, a 10% beta proves viability through request concentration and a retention bar, then GA.
 - [Separate the Did-Not-Try Problem From the Did-Not-Return Problem](../concepts/separate-the-did-not-try-problem-from-the-did-not-return-problem.md) - trial rate and return rate fail differently and have different owners.
 - [Budget a Third of Sprint Capacity for Re-Architecture](../concepts/budget-a-third-of-sprint-capacity-for-re-architecture.md) - 30-40% of sprints spent rebuilding onto new platform primitives, planned rather than resented.

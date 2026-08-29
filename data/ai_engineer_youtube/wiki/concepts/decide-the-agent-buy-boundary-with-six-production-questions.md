@@ -17,6 +17,7 @@ Details:
 
 - **A boundary question this list does not ask, and a way to stop the answer from going stale.** Uber's decisive constraint was neither differentiation nor data: it was that their code-review host is Phabricator and "most of the solutions do not provide support for Phabricator." A legacy or unusual substrate can force a build for reasons that have nothing to do with whether the capability is core, which is worth adding to any buy checklist. Their hedge against the resulting lock-in is cheap and portable: keep the vendors wired into the pipeline as alternative generators "so that we can compare ourselves to what's available more broadly," so the decision stays measured on your own traffic rather than being reopened from scratch later. ([Bond and Ketkar](../sources/20260828_EL123UNokkI.md), 01:22-01:46, 03:33-03:43)
 - **A seventh question for bought systems of record: can your agents change it?** Wang's criterion for any purchased system is that it be "arbitrarily customizable" on your behalf, satisfied in practice by a programmatic surface — "it exposes MCP. So all of our agents have access to Salesforce MCP." The six questions here scope what you own operationally; this one scopes what you can still alter after the purchase, and it fails vendors whose only extension point is a UI configuration screen. ([Wang](../sources/20260826_6pbQgnJ9Voc.md), 12:18-13:16)
+- **A worked answer that hands the durability concerns to a vendor and keeps the data model.** Notion rents Temporal for orchestration — retries, dedupes, resume-at-failure, and the property that "one malformed transcript can't take down the whole batch" — along with email, CRM, and enrichment, while owning the context layer for representational fit and debuggability. Debuggability is worth adding to the checklist as a concern that does not fit neatly under observability: it is about whether you can inspect and change the thing at all, not whether you can watch it run. ([Liu](../sources/20260826_L4I7WgiEquo.md), 13:16-13:52, 17:52-18:17)
 
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
@@ -32,8 +33,10 @@ Related concepts:
 - [Harness Engineering Shifts Scarcity From Code Production to Control Surfaces](harness-engineering-shifts-scarcity-from-code-production-to-control-surfaces.md)
 - [Comment Volume Is a Property of the Review Pipeline, Not the Model](comment-volume-is-a-property-of-the-review-pipeline.md)
 - [Replace Buy-Versus-Build With Arbitrary Customizability](replace-buy-versus-build-with-arbitrary-customizability.md)
+- [Own the Context Layer and Rent Every Other Layer](own-the-context-layer-and-rent-every-other-layer.md)
 
 Sources:
 - [Anthropic's Applied AI team on the Evolution of Agentic Surfaces](../sources/20260811_K0X9QDRkIdg.md), 01:41-05:14, 15:50-16:47
 - [Building uReview, Uber's Multi-Agent Code Review Engine — Will Bond & Ameya Ketkar, Uber](../sources/20260828_EL123UNokkI.md), 01:22-01:46, 03:33-03:43
 - [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md), 12:18-13:16
+- [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 13:16-13:52, 17:52-18:17

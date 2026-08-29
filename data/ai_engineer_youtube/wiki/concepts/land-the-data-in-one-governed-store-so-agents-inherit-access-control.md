@@ -16,6 +16,7 @@ Details:
 - **The cost of this design is the consolidation itself, and it is the part that is invisible in the talk.** Sixty percent of the system's data arrived after launch, over six to seven months, which is a fair estimate of how long the pipeline work actually takes even at a company whose business is the store. Nothing here removes that work; it relocates it upstream of the agent so that the agent layer stays thin. (05:06-05:11)
 - Contrast with the alternative shape the wiki already carries: an agent-first stack built over programmatic access to systems that stay where they are ([Replace Buy-Versus-Build With Arbitrary Customizability](replace-buy-versus-build-with-arbitrary-customizability.md)) keeps each system's own permission model and pays per integration; consolidation pays once at ingestion and then inherits. The discriminator is whether you can move the data at all — this team could, because their employer sells the store.
 - Limits: this is the vendor describing its own platform, and every affordance praised (inherited RBAC, no-code deployment, out-of-the-box chat UI, curation and guardrails) is a product feature of the speaker's employer. No mechanism is given for how permissions propagate through semantic views, skills, or MCP connections, and no failure, leak, or over-permission incident is discussed. Whether the agent's retrieval layer respects the same controls as direct SQL is not addressed. ([Provenance and Limits](../sources/20260826_DrTdD-ttjCY.md))
+- **A neighbouring design that consolidates computation but splits serving, and says nothing about inherited authorization.** Notion lands every GTM vendor feed in one warehouse to compute modeled, versioned entities, then publishes a denormalized profile to a key-value store for agent reads in milliseconds. Consolidation there is justified by data quality, latency, and joinability rather than by access control — no role-based inheritance is claimed — which makes the pair worth reading together: one governed store buys authorization, a compute/serve split buys read latency, and neither buys the other automatically. ([Liu](../sources/20260826_L4I7WgiEquo.md), 04:36-04:59, 09:04-10:07)
 
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
@@ -29,6 +30,8 @@ Related concepts:
 - [Replace Buy-Versus-Build With Arbitrary Customizability](replace-buy-versus-build-with-arbitrary-customizability.md)
 - [Draw the Cut Line Between Verified Data and Free-Form Agent Analysis](draw-the-cut-line-between-verified-data-and-free-form-agent-analysis.md)
 - [Scope a Person-Cloned Agent by Caller, With Drafts as the Shared Capability](scope-a-person-cloned-agent-by-caller-with-drafts-as-the-shared-capability.md)
+- [Compute Truth in the Warehouse and Serve It as a Denormalized Profile](compute-truth-in-the-warehouse-and-serve-it-as-a-denormalized-profile.md)
 
 Sources:
 - [Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 05:06-05:11, 19:04-20:19
+- [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 04:36-04:59, 09:04-10:07

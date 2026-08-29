@@ -17,6 +17,7 @@ Details:
 - **That source adds a trigger taxonomy this page leaves implicit.** "When does it work?" resolves to a schedule, an event stream, or a message — the three ways observation turns into an actual run — which is the concrete version of "notice work opportunities." See [Give Unowned Operational Work a Trigger](give-unowned-operational-work-a-trigger.md). ([Justin Smith](../sources/20260809_vSx5IULvBns.md), 11:15-12:18)
 - **And it supplies a failure mode for the timing slot beyond too-early/too-late: not interrupting at all.** A channel-watching agent decides per message "whether it has enough sort of confidence to answer the question or not," and the instruction makes silence the default — "if you see something that you think you have an answer for… go ahead and respond. Otherwise don't." Proactivity that can decline is a different control surface from proactivity tuned by when it fires. ([Justin Smith](../sources/20260809_vSx5IULvBns.md), 16:44-16:52, 21:14-21:28)
 - **The observation layer, with an event class that is an absence.** Exa's Request Lens fires "anytime something significant happens with any of our customers": a signup, a usage surge, a usage stop, or the arrival of a watched account. Three of those appear as rows in a log; "someone stopped using searches" does not, so the observation layer has to run over expected activity as well as observed activity. The timing and workflow-embedding halves are thin here — the output is a notification "that our team can act on," with no personalization, batching, or handoff described. ([Wang](../sources/20260826_6pbQgnJ9Voc.md), 07:02-07:27)
+- **A go-to-market instance where the four elements are separable components.** Observation is a signal service watching the customer profile; personalization comes from a predictive engine that picks the most relevant product features when no signal fires; timing comes from the signal definition itself — "a single customer event that's important enough to change what should happen next"; and workflow embedding is literal, since the emitted task lands in the rep's own task database beside the account view they already open each morning. The proactive half is specifically the external, non-user-initiated signals — funding rounds, hiring, tech-stack shifts — which "allowed us to be proactive instead of reactive." ([Liu](../sources/20260826_L4I7WgiEquo.md), 11:26-12:53, 16:14-16:41)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -31,8 +32,10 @@ Related concepts:
 - [Give Unowned Operational Work a Trigger](give-unowned-operational-work-a-trigger.md)
 - [Answer Unaddressed Questions Behind a Confidence Gate](answer-unaddressed-questions-behind-a-confidence-gate.md)
 - [Alert on Account Change Events, Including the Ones That Are Absences](alert-on-account-change-events-including-absences.md)
+- [Emit Owner-Assigned Tasks From Signals, With a Marketing Default When None Fire](emit-owner-assigned-tasks-from-signals-with-a-marketing-default-when-none-fire.md)
 
 Sources:
 - [Proactive Agents - Kath Korevec, Google Labs](../sources/20251213_v3u8xc0zLec.md), 00:39-05:20
 - [Always-on agents run production without the on-call tax — Justin Smith, Resolve AI](../sources/20260809_vSx5IULvBns.md), 11:15-12:18, 16:44-16:52, 19:10-19:45, 21:14-22:11, 23:09-23:28
 - [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md), 07:02-07:27
+- [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 11:26-12:53, 16:14-16:41

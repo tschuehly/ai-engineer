@@ -14,6 +14,7 @@ Details:
 - Practical starting advice: pick the single highest-cost context switch for you (often Slack or Linear) and plug it into your preferred pane of glass first, rather than wiring every integration. (16:50-17:02)
 - This is the inbound counterpart to delegating outbound work: the same Claude Code session that triages comms can act on the deduplicated ticket (e.g. fix a bug and verify its own work) and fire status back into the originating Slack channel via its MCP connection. (01:09-02:49)
 - **The same pattern pointed at accounts rather than at messages.** Request Lens is a signal layer over customer state: it watches a joined model of internal and external data and surfaces only transitions — signup, surge, stop, watchlist arrival — so the team reads events rather than dashboards. The reusable structure is identical to comms triage (a noisy stream, a definition of significance, a human queue), applied to a domain where the most valuable signal is something ceasing to happen. ([Wang](../sources/20260826_6pbQgnJ9Voc.md), 03:53-04:42, 07:02-07:27)
+- **The customer-facing counterpart, where the layer assigns rather than merely surfaces.** Notion defines a signal by its consequence — "a single customer event that's important enough to change what should happen next for a customer" — and its signal service "decides whether a single action is available, decides who should own that action, and then it emits a concrete task." Ownership assignment is the step that separates a work-routing layer from an attention facade, and the reported payoff is the same one this page names: the rep stops opening seven tabs and starts the day from a prioritized box. ([Liu](../sources/20260826_L4I7WgiEquo.md), 11:26-12:27, 10:56-11:03, 16:14-16:24)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -26,7 +27,9 @@ Related concepts:
 - [Proactive agent systems need observation, personalization, timing, and workflow embedding](proactive-agent-systems-need-observation-personalization-timing-and-workflow-embedding.md)
 - [Embed agent tools in existing work surfaces](embed-agent-tools-in-existing-work-surfaces.md)
 - [Alert on Account Change Events, Including the Ones That Are Absences](alert-on-account-change-events-including-absences.md)
+- [Emit Owner-Assigned Tasks From Signals, With a Marketing Default When None Fire](emit-owner-assigned-tasks-from-signals-with-a-marketing-default-when-none-fire.md)
 
 Sources:
 - [Your Attention Is the Bottleneck, Not Your Agents — Zack Proser, WorkOS](../sources/20260611_so9l_MwS2yg.md), 01:09-02:49, 06:01-06:49, 16:50-17:02
 - [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md), 03:53-04:42, 07:02-07:27
+- [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 10:56-11:03, 11:26-12:27, 16:14-16:24

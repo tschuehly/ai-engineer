@@ -14,6 +14,7 @@ Details:
 - The stated blocker is a capability claim, not a policy one: "for the models to actually make good decisions, they don't need to do correlation, they need to do causation," and, citing Yann LeCun, "these are text statistics, not real-world models. You cannot just pattern match with past and use future to predict." He names the crossing point "the AGI line" — past it, "you will have vibe coded drugs." (18:32-19:02)
 - This composes with the judgment gap rather than restating it: an expert who cannot be replaced as the decider is the same expert the team had to hire in order to evaluate anything at all, so AITL is the deployed form of the internal learning loop.
 - The contrast worth holding is with the automation-bias failure mode. That literature warns that a human placed *after* a confident model becomes a rubber stamp; this position avoids the problem by keeping the human's decision upstream and unautomated, with the model supplying options rather than a recommendation to accept or reject.
+- **The same inversion stated as a role split inside a shared system.** Notion's agents do "the repetitive work at scale — gathering context, researching, drafting recommendations, and writing artifacts"; the rep keeps "judgment, adding nuance, deciding what to do next, and if a recommendation is correct, and owning the customer relationship." What the assistant delivers is the removal of the blank page — the rep "still adds their own judgment and taste and sales secret sauce, but they're no longer starting from a blank slate" — with the relationship, not just the decision, named as the human's to own. ([Liu](../sources/20260826_L4I7WgiEquo.md), 06:49-07:08, 16:31-16:41)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -24,6 +25,8 @@ Related concepts:
 - [You Cannot Iterate on Output You Cannot Judge](you-cannot-iterate-on-output-you-cannot-judge.md)
 - [Automation Bias Turns Human-in-the-Loop Into a Rubber Stamp](automation-bias-turns-human-in-the-loop-into-a-rubber-stamp.md)
 - [Start with augmentation when autonomous reliability is not ready](start-with-augmentation-when-autonomous-reliability-is-not-ready.md)
+- [Shadow Your Best Human Before Encoding the Workflow](shadow-your-best-human-before-encoding-the-workflow.md)
 
 Sources:
 - [Trading Desks to Clinical Trials: Parallels in Applied Vertical AI — Ayush Bhardwaj, Allos AI](../sources/20260819_Yphdry8ttAQ.md), 17:45-19:02
+- [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 06:49-07:08, 16:31-16:41

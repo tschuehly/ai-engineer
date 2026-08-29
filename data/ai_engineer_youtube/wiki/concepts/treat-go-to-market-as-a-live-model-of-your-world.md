@@ -15,6 +15,7 @@ Details:
 - The claim is undated only in the sense that the speaker traces it back: he built GTM this way from Exa's mid-2023 launch because even GPT-4 "could actually just automate entire parts of go-to-market," so the pattern is not presented as newly enabled by frontier models. (04:53-05:16)
 - **Limit.** This is one company's self-report with no measurement attached — the only outcome claim is "our go-to-market team is very lean, but very productive," with no numbers on either side, and no comparison to a team that did not build a world model. (10:08-10:12)
 - **The same substrate argument from inside a 10,000-person sales organization, where the missing model is felt as tool sprawl.** Izmit's account of what reps actually do is the failure state of not having the joined model: "we have reps who are using 15 different tools, not because they love the UI of those tools, because every tool has a different data point, and then they end up stitching all of that together in spreadsheets," with 1,000 accounts each whose news, consumption, support tickets, and earnings must be tracked "30 times, 40 times a day." The human is the join. His answer is consolidation into one governed store so agents inherit access control, versus Exa's answer of programmatic access to systems that stay put — the same live-model goal reached from opposite directions, and the discriminator is whether you can move the data at all. ([Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 01:46-02:29, 19:26-19:55)
+- **A second worked instance of the artifact, built by an engineering team rather than a founder, and it splits the model into a compute half and a serve half.** At Notion the warehouse ingests every GTM vendor feed and produces "a small set of modeled, versioned entities" — accounts, contacts, workspaces, eligibility, facts — while a key-value store publishes "a denormalized, key-addressable profile that agents can quickly query in milliseconds with no joins," with agent-generated research and rolling summaries keyed to the same IDs. The reframe is stated as a reclassification of the discipline: "a year ago, I would have told you that building a GTM system was a marketing ops problem. And today, I think it's one of the most interesting distributed systems problems that I've worked on." ([Liu](../sources/20260826_L4I7WgiEquo.md), 00:20-00:31, 09:04-10:07)
 
 Related topics:
 - [Go To Market](../topics/go-to-market.md)
@@ -28,7 +29,10 @@ Related concepts:
 - [Personal Knowledge Bases Become Agent Context Substrates](personal-knowledge-bases-become-agent-context-substrates.md)
 - [Context as a Service Is Vertical Search for Agents](context-as-a-service-is-vertical-search-for-agents.md)
 - [Land the Data in One Governed Store So Agents Inherit Access Control](land-the-data-in-one-governed-store-so-agents-inherit-access-control.md)
+- [Compute Truth in the Warehouse and Serve It as a Denormalized Profile](compute-truth-in-the-warehouse-and-serve-it-as-a-denormalized-profile.md)
+- [Reduce Every Workflow to Know, Decide, Act, and Learn](reduce-every-workflow-to-know-decide-act-and-learn.md)
 
 Sources:
 - [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md), 02:56-05:16, 08:00-08:20, 10:08-10:12
 - [Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 01:46-02:29, 19:26-19:55
+- [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 00:20-00:31, 03:43-05:27, 09:04-10:07
