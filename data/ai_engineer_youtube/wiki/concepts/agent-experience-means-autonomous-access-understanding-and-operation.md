@@ -13,6 +13,7 @@ Details:
 - He cautions that API-first and readable docs are necessary but not sufficient; the stronger question is whether the agent can complete the task end to end without a human acting as an operational adapter. 05:23-06:29, 14:30-15:02
 - Lajili (Poolside) frames this as the engineer's new job — the "AIX engineer": "focus less on the product and more on trying to make the AI work on the product" by building tools, improving the codebase so it is easier to work on, and improving knowledge bases, in whatever form fits (CLI, skill, or MCP). ([Your agent is blindfolded](../sources/20260708_iRcX54EO5g8.md), 05:51-07:02)
 - His oxygen-mask investment argument: "put the mask on the AI first" — make it self-served *before* you build features, because "even if it slows you down right now, it's an investment that pays off as soon as you start multiplying agents and running things over time"; velocity without this "self-serve" scaffolding just compounds errors. ([Your agent is blindfolded](../sources/20260708_iRcX54EO5g8.md), 06:38-07:29)
+- **The three layers, filled in by a billing vendor.** Access is the CLI, through which Stripe Projects "provisions a Stripe account for you as well as backend services… think like Vercel, Postgres, and in this case, a Metronome billing agent." Understanding is "an extensible set of skills files that can provide context to the agent that's implementing Metronome and working with our API," portable and installable on the customer's side. Operation is the verbose-error channel that lets the agent self-correct mid-run. The instructive part is that all three are shipped by the vendor rather than assembled by the user, and the understanding layer carries domain hazards — "a lot of different ways to hit foot guns" — that no amount of API polish removes. ([Garvin](../sources/20260828_mJqwmmOx4WA.md), 00:59-01:22, 06:13-07:12)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -24,7 +25,9 @@ Related concepts:
 - [Treat agents as embodied action systems](treat-agents-as-embodied-action-systems.md)
 - [Give Your Agent Eyes With a Product-Specific Observation Tool](give-your-agent-eyes-with-a-product-specific-observation-tool.md)
 - [Harness Engineering Shifts Scarcity From Code Production to Control Surfaces](harness-engineering-shifts-scarcity-from-code-production-to-control-surfaces.md)
+- [Separate Agent as Product, Agent as Buyer, and Agent as User](separate-agent-as-product-buyer-and-user.md)
 
 Sources:
 - [AX is the only Experience that Matters - Ivan Burazin, Daytona](../sources/20250724_e9sLVMN76qU.md), 02:04-06:29, 14:00-15:02
 - [Your agent is blindfolded — Johan Lajili, Poolside AI](../sources/20260708_iRcX54EO5g8.md), 05:51-07:29
+- [How to avoid disaster when vibe-coding a billing engine — Andrew Garvin, Stripe](../sources/20260828_mJqwmmOx4WA.md), 00:59-01:22, 06:13-07:12

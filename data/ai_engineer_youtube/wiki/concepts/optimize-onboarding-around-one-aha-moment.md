@@ -11,6 +11,7 @@ Details:
 - Teams should identify the singular moment that matters most and deprioritize other features during onboarding, then inspect every step required to reach it. (07:09-07:46)
 - Upfront questions such as company size, employee count, or title can be harmful when they appear before the user knows whether they want the product. (08:17-08:36)
 - If only a tiny fraction of attracted users reaches the aha moment, top-of-funnel work is wasted; if no aha moment exists, the team should revisit what it is building. (08:43-09:03)
+- **When the driver is an agent, keep the aha moment and discard the flow that led to it.** Metronome's aha moment is seeing a draft invoice against your own pricing model with usage drawn down against a credit balance. The wizard that used to walk a human there is skipped — "we don't need this now because we had an agent set up this environment" — while the destination is preserved and even enriched, since the agent also generates the usage that makes the invoice appear. The transferable rule: identify the moment, then ask separately whether the path to it is a human-sequencing artifact you no longer need. ([Garvin](../sources/20260828_mJqwmmOx4WA.md), 13:49-13:59, 14:22-15:41)
 
 Related topics:
 - [Product Strategy](../topics/product-strategy.md)
@@ -20,6 +21,8 @@ Related topics:
 Related concepts:
 - [Reverse-engineer AI app evals from user outcomes](reverse-engineer-ai-app-evals-from-user-outcomes.md)
 - [Treat model behavior as a product craft](treat-model-behavior-as-a-product-craft.md)
+- [Seed the Agent-Built Sandbox With Usage, Not Just Objects](seed-the-agent-built-sandbox-with-usage-not-just-objects.md)
 
 Sources:
 - [AI changes *Nothing* — Dax Raad, OpenCode](../sources/20251123_o3gmwzo-Mik.md), 06:39-09:03
+- [How to avoid disaster when vibe-coding a billing engine — Andrew Garvin, Stripe](../sources/20260828_mJqwmmOx4WA.md), 13:49-13:59, 14:22-15:41

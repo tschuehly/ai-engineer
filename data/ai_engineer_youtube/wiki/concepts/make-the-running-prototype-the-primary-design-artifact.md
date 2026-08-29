@@ -11,6 +11,7 @@ Details:
 - Owning the entire process — plan, design, build, deploy — not just designing, is what moved the speaker from designer to "design engineer"; the enabler was "less AI than agency" plus no time lost to negotiations and handovers, which "is very hard to do" in large organizations. (12:40-13:20)
 - Recording all chats and ideas into a Cloud Code project folder / file system as the exploration surface "significantly sped up collaboration as well as build," and became a retained daily practice. (14:56-15:20)
 - Concrete range with this workflow: a solo designer built a design-system status tracker as a proof of concept in ~2.5 weeks (pulls links from GitHub, Storybook, and Figma; sorts by status; tags by library; live component previews; search; deployed internal and as a curated public site), and a two-designer pair took an iOS WooCommerce merchant-chat POC from 0 to working in 6 days (wordpress.com auth, a Jetpack connection, a site-theming visitor widget, and an AI agent that scans the site, answers visitor questions in real time, and discerns whether it can answer). (10:27-11:52, 13:36-14:35)
+- **The artifact can be a business document rather than a screen.** What Garvin's agent produces for inspection is a draft invoice split into build, plan mode, cloud, and AI gateway credit pools — the level at which someone can recognize whether a pricing model was replicated correctly, and the level at which a pricing argument can actually be settled. Generalization worth keeping: for a system whose output is a document, the running prototype is that document rendered against representative data, not a UI mock of the configuration that produced it. ([Garvin](../sources/20260828_mJqwmmOx4WA.md), 14:22-14:31, 15:34-15:41)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -21,6 +22,8 @@ Related concepts:
 - [Non-technical collaborators can steer agents with natural work artifacts](non-technical-collaborators-can-steer-agents-with-natural-work-artifacts.md)
 - [Prototype AI UX by feeling the model material](prototype-ai-ux-by-feeling-the-model-material.md)
 - [On Mixed-Ability AI Teams, Specialists Should Enable Not Do](on-mixed-ability-ai-teams-specialists-should-enable-not-do.md)
+- [Seed the Agent-Built Sandbox With Usage, Not Just Objects](seed-the-agent-built-sandbox-with-usage-not-just-objects.md)
 
 Sources:
 - [500 people vibe-coded for 30 days. I was one of them. - Sanja Grbic, Automattic](../sources/20260707_UcYoMg-8-L8.md), 10:27-16:07
+- [How to avoid disaster when vibe-coding a billing engine — Andrew Garvin, Stripe](../sources/20260828_mJqwmmOx4WA.md), 14:22-14:31, 15:34-15:41

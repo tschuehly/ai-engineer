@@ -12,6 +12,7 @@ Details:
 - PostHog implements this as a three-way actionability gate before code execution: not-actionable (often just insufficient data) is returned to the pool to gather more evidence; needs-human-input (a product decision the agent can't make a good call on) goes to a morning inbox for review; immediately-actionable is the only branch where the agent writes a fix (08:46-09:31).
 - The gate is upstream of the coding agent on purpose: specificity is assessed from the grouped report and research summary, not discovered by letting the agent flail on the codebase.
 - Implication for signal design: enrich or wait for vague signals (replay/chat) until they correlate with a specific, reproducible artifact (an error) before dispatching an autonomous fix, rather than dispatching on the vague signal alone.
+- **A gate on the target rather than on the problem statement.** Garvin's instruction is maximally under-specified — one sentence asking to replicate a named competitor's pricing model, "nothing more difficult than that" — and it is allowed to run anyway, because the write target is a sandbox. Specificity gates and environment gates substitute for each other: a vague ask into a disposable environment is cheap, and a precise ask into production still is not. When neither gate is present, the combination is the dangerous one. ([Garvin](../sources/20260828_mJqwmmOx4WA.md), 07:33-07:47, 15:41-15:51)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -23,6 +24,8 @@ Related concepts:
 - [Choose autonomy level by task uncertainty and control needs](choose-autonomy-level-by-task-uncertainty-and-control-needs.md)
 - [Use human judgment gates for high-risk agent code changes](use-human-judgment-gates-for-high-risk-agent-code-changes.md)
 - [Start Coding Agents With Small Verifiable Chores](start-coding-agents-with-small-verifiable-chores.md)
+- [Let the Agent Reach a Test Environment, Not Production, When the Domain Carries Money](let-the-agent-reach-a-test-environment-not-production.md)
 
 Sources:
 - [Self Driving Products: Product Signals to Pull Requests — Joshua Snyder, PostHog](../sources/20260610_zMiSRliEzv4.md), 08:46-09:57, 12:04-12:35
+- [How to avoid disaster when vibe-coding a billing engine — Andrew Garvin, Stripe](../sources/20260828_mJqwmmOx4WA.md), 07:33-07:47, 15:41-15:51

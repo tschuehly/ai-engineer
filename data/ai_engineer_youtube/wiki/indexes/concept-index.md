@@ -1,6 +1,8 @@
 # Concept Index
 
 ## Agents
+- [Let the Agent Reach a Test Environment, Not Production, When the Domain Carries Money](../concepts/let-the-agent-reach-a-test-environment-not-production.md) - bound autonomy by the environment the agent may write to, not by a confidence threshold, because a domain's blast radius does not shrink as models improve.
+- [Separate Agent as Product, Agent as Buyer, and Agent as User](../concepts/separate-agent-as-product-buyer-and-user.md) - "building for agents" is three projects with three obligations: meter your own agent, be purchasable by someone else's, reprice when an agent replaces your users.
 - [Tools Are the Only Primitive Every Client Implements](../concepts/tools-are-the-only-primitive-every-client-implements.md) - a client compatibility matrix as a maintained artifact; server instructions, elicitation, and sampling all reimplemented through tool results, and a primitive that was implemented but wired to the wrong model was worse than one that was absent.
 - [Comment Volume Is a Property of the Review Pipeline, Not the Model](../concepts/comment-volume-is-a-property-of-the-review-pipeline.md) - several generators over one diff make volume emergent, so one filtering waist decides what a reviewer actually sees.
 - [Review Comments Have Two Audiences With Inverted Error Costs](../concepts/review-comments-have-two-audiences-with-inverted-error-costs.md) - a wrong comment is cheap for a human and expensive for an agent; a nit is the reverse, so one filter cannot serve both surfaces.
@@ -535,6 +537,8 @@
 
 ## AI Monetization
 
+- [Per-Seat Pricing Loses Its Referent When One Agent Does the Work of Many Logins](../concepts/per-seat-pricing-loses-its-referent-when-agents-do-the-work.md) - HubSpot cuts seat price and adds credits in one move, because the metric stopped tracking value rather than being priced wrongly.
+- [Separate Agent as Product, Agent as Buyer, and Agent as User](../concepts/separate-agent-as-product-buyer-and-user.md) - the pricing problem belongs to exactly one of the three roles, and it arrives at companies that never shipped an agent.
 - [Treat AI pricing as a fast-moving product hypothesis](../concepts/treat-ai-pricing-as-a-fast-moving-product-hypothesis.md)
 - [Map AI charge metrics to customer-perceived value](../concepts/map-ai-charge-metrics-to-customer-perceived-value.md)
 - [Choose Direct or Indirect AI Monetization](../concepts/choose-direct-or-indirect-ai-monetization.md)
@@ -571,6 +575,8 @@
 - [Learn risk scoring from audit feedback for predictive compliance](../concepts/learn-risk-scoring-from-audit-feedback-for-predictive-compliance.md)
 
 ## Coding Agents
+- [Let the Agent Reach a Test Environment, Not Production, When the Domain Carries Money](../concepts/let-the-agent-reach-a-test-environment-not-production.md) - a billing vendor gives the agent full autonomy inside a sandbox and none outside it, and says so publicly about its own product.
+- [Seed the Agent-Built Sandbox With Usage, Not Just Objects](../concepts/seed-the-agent-built-sandbox-with-usage-not-just-objects.md) - a provisioned customer proves nothing; the skill directs the agent to flow usage so a draft invoice appears and can be read.
 - [Ship a Proof a Small Kernel Can Recheck, Not a Claim You Must Trust](../concepts/ship-a-proof-a-small-kernel-can-recheck.md) - the one check whose cost does not grow with agent output: a week of search and 32,000 lines of proof, adjudicated by a kernel small enough to reimplement yourself.
 - [Validate the Specification, Because the Proof Cannot](../concepts/validate-the-specification-because-the-proof-cannot.md) - once machines own the code and the proof, the specification is the only place an error can still hide, and it comes out of the pipeline certified.
 - [Pick a Verification Route by Which Translation You Can Afford](../concepts/pick-a-verification-route-by-which-translation-you-can-afford.md) - rewrite in the prover's language, keep a model beside the code, annotate in place for a solver, or translate the compiler IR: similar guarantees, very different disruption.
@@ -1485,6 +1491,8 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Separate Agent as Product, Agent as Buyer, and Agent as User](../concepts/separate-agent-as-product-buyer-and-user.md) - a disambiguation checklist for any roadmap line that says "support agents" without saying whose, or doing what.
+- [Per-Seat Pricing Loses Its Referent When One Agent Does the Work of Many Logins](../concepts/per-seat-pricing-loses-its-referent-when-agents-do-the-work.md) - a competitor's irrational-looking price cut is legible once you see what was added alongside it.
 - [Move the Platform's Primary Surface as Its Users Gain Tools](../concepts/move-the-platforms-primary-surface-as-its-users-gain-tools.md) - roadmap by who is currently blocked, not by an architectural ideal, because coding agents changed the answer from outside.
 - [Operational Outcomes Are Eval Labels You Only See If You Own the Operation](../concepts/operational-outcomes-are-eval-labels-you-only-see-if-you-own-the-operation.md) - owning the outcome is a data position: the world supplies the score, and only the operator is standing where it lands.
 - [Co-Design In Person Because Remote Channels Filter the Requirements](../concepts/co-design-in-person-because-remote-channels-filter-the-requirements.md) - Zoom and the ticket queue only carry needs someone already knew how to phrase as a request.
@@ -2654,6 +2662,8 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Let the Agent Reach a Test Environment, Not Production, When the Domain Carries Money](../concepts/let-the-agent-reach-a-test-environment-not-production.md) - supervision concentrated at one handoff instead of distributed through the loop, and the preconditions that make that safe.
+- [Seed the Agent-Built Sandbox With Usage, Not Just Objects](../concepts/seed-the-agent-built-sandbox-with-usage-not-just-objects.md) - manufacture the reviewable artifact during setup, because correctness that only appears downstream cannot be read off the configuration.
 - [Validate the Specification, Because the Proof Cannot](../concepts/validate-the-specification-because-the-proof-cannot.md) - the step a verifier adds to spec-driven development rather than removes, plus the second unproved gap that auto-formalization opens.
 - [Ship a Proof a Small Kernel Can Recheck, Not a Claim You Must Trust](../concepts/ship-a-proof-a-small-kernel-can-recheck.md) - what a workflow looks like when the reviewer of the implementation is a program small enough to reimplement, and the search is what the agent does.
 - [Ship Stable APIs and Let Users Vibe-Code the Interface](../concepts/ship-stable-apis-and-let-users-vibe-code-the-interface.md) - stop anticipating every internal UI and ship the endpoints instead, but only after checking that the use cases differ in presentation rather than in the data model.

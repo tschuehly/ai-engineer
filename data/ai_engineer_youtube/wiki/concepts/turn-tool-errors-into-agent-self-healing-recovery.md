@@ -14,6 +14,7 @@ Details:
 - Diagnostic-playbook skills handle recurring setup failures: a `troubleshooting` skill kicks in to help both the human and the agent fix common mistakes (e.g. misconfiguring the Chrome DevTools MCP server), increasing the resilience of the whole harness. (14:50-15:16)
 - This is the recovery side of interface design; the prevention side is discoverability (clear tool descriptions and the right tool set) so the agent doesn't error in the first place.
 - **A trained recovery policy is the other half.** Amazon AGI Lab reports that standard RL practice resets the environment on an infra error, which produces a model that has never recovered from one; their change is to "pass it to the model and… expect the model to recover from it using native tool use, native actions like… refresh, backtrack, compare, wait, abandon, escalate to the user." Good error messages help a model that knows what to do with them; a trained recovery policy still needs the error to reach the context window instead of being swallowed by infrastructure. See [Make Recovery a Native Model Action, Not an Infra Reset](make-recovery-a-native-model-action-not-an-infra-reset.md). ([From RL to IRL](../sources/20260814_Cc0_nyxROBA.md), 09:22-09:48)
+- **The same principle stated as a vendor's product-development policy, with an org consequence.** Garvin: "this is nothing new but our perspective is to have much more verbose and clear errors so that the agent can self-correct" — and then the part that is not obvious, which is who does the work. "Our developer experience teams are working on finding more failure cases like that and being able to help guide especially in the initialization and setup." Error-surface quality becomes a staffed, ongoing discovery activity aimed at a specific phase, rather than a property you get right once when the endpoint is written. Note that no recovery-rate measurement is offered; a single error code is shown on screen. ([Garvin](../sources/20260828_mJqwmmOx4WA.md), 06:47-07:12)
 
 Related topics:
 - [Tools](../topics/tools.md)
@@ -26,7 +27,9 @@ Related concepts:
 - [Expose task workflow guidance through MCP resources and tools](expose-task-workflow-guidance-through-mcp-resources-and-tools.md)
 - [Let an Agent Build and Maintain Self-Healing Scrapers](let-agents-build-and-maintain-self-healing-scrapers.md)
 - [Make Recovery a Native Model Action, Not an Infra Reset](make-recovery-a-native-model-action-not-an-infra-reset.md)
+- [Seed the Agent-Built Sandbox With Usage, Not Just Objects](seed-the-agent-built-sandbox-with-usage-not-just-objects.md)
 
 Sources:
 - [Building Agent Interfaces: Lessons from Chrome DevTools (MCP) for Agents — Michael Hablich, Google](../sources/20260605__B4Pv9ttFgY.md), 13:14-15:16
 - [From RL to IRL — Gaurav Mishra, Amazon AGI Lab](../sources/20260814_Cc0_nyxROBA.md), 09:22-09:48
+- [How to avoid disaster when vibe-coding a billing engine — Andrew Garvin, Stripe](../sources/20260828_mJqwmmOx4WA.md), 06:47-07:12

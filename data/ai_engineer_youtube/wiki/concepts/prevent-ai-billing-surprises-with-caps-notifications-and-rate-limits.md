@@ -12,6 +12,7 @@ Details:
 - Automated notifications at thresholds such as 50%, 70%, and 90% of limits help customers stay in control before billing or service behavior changes.
 - Rate limiting protects both customer and provider when bad code or unexpected automation would otherwise burn through usage limits.
 - **The same controls apply inward, and the failure mode is that nobody sets them.** These guardrails are usually discussed as things a vendor offers its customers; the buyer side of the identical problem is a company deploying a coding agent across its own staff. Rizwan relays an anonymous CFO report of a company that "accidentally spent $500 million on Claude in a single month because they didn't set the usage limits on their thousands of employees on their Anthropic dashboard" — the cap existed, on a dashboard, unset. Uber's CTO is cited reporting monthly spend of $2,000 per user and the entire 2026 budget consumed in four months. Treat per-seat caps and threshold alerts on an internal AI rollout as launch blockers rather than follow-ups, and set them before the seats are granted, because the observability that would tell you the spend is abnormal arrives with the invoice. Both figures are relayed second-hand. ([Rizwan](../sources/20260807_CoEIs6Xm8m8.md), 05:46-06:27)
+- **A third position for the same controls: the vendor's vendor, and a per-agent spending primitive.** Metronome sells metering and credit infrastructure to companies that resell to their own customers, and Garvin reports the pressure arriving from below: "in the last 6 months especially the impact of failures here is growing in importance in particular because agents can run away with spend and so we're thinking about how to give more controls to our customers that they can offer to theirs." The primitive he names is narrower than a customer-level cap — "having agents have a wallet that only they can spend from" — which makes the spending boundary the agent identity rather than the account, so a runaway loop exhausts its own allocation instead of the organization's. ([Garvin](../sources/20260828_mJqwmmOx4WA.md), 03:13-03:37)
 
 Related topics:
 - [AI Monetization](../topics/ai-monetization.md)
@@ -20,7 +21,9 @@ Related topics:
 Related concepts:
 - [Use hybrid AI pricing to balance predictable revenue and margin protection](use-hybrid-ai-pricing-to-balance-predictable-revenue-and-margin-protection.md)
 - [A Subsidized Coding-Agent Subscription Is a Lock-In Ramp](a-subsidized-coding-agent-subscription-is-a-lock-in-ramp.md)
+- [Per-Seat Pricing Loses Its Referent When One Agent Does the Work of Many Logins](per-seat-pricing-loses-its-referent-when-agents-do-the-work.md)
 
 Sources:
 - [Mastering AI Pricing: Flexible & Agile Monetization - Mayank Pant, Stripe](../sources/20260501_CrqPcIZOOXA.md), 13:10-15:06, 23:06-23:52
 - [Open Source Is Dead. Long Live Open Source. — Saoud Rizwan, Cline](../sources/20260807_CoEIs6Xm8m8.md), 05:46-06:27
+- [How to avoid disaster when vibe-coding a billing engine — Andrew Garvin, Stripe](../sources/20260828_mJqwmmOx4WA.md), 03:13-03:37
