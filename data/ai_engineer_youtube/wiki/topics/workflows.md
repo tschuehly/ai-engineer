@@ -800,6 +800,9 @@ A rollout pattern worth naming separately from the thing being rolled out: when 
 - [Mine stuck-then-solved sessions for injectable fixes](../concepts/mine-stuck-then-solved-sessions-for-injectable-fixes.md) - a continuous-improvement workflow that turns stuck→solved sessions into clustered, eval-verified, just-in-time-injected fixes ranked by holdout A/B.
 - [Give agents a vent tool to report platform friction](../concepts/give-agents-a-vent-tool-to-report-platform-friction.md) - an agent-authored incident-to-PR loop where the agent reports platform friction and a monitoring agent dedupes and opens PRs.
 - [Automate a Nightly Generate-and-Publish Media Pipeline With Sampled QA](../concepts/automate-a-nightly-generate-and-publish-media-pipeline-with-sampled-qa.md) - an unattended source-to-video-to-upload loop whose low, recoverable error rate is managed by publish-then-take-down sampling rather than pre-review.
+- [Design the Agent Workspace as a Workshop, Not a Factory](../concepts/design-the-agent-workspace-as-a-workshop-not-a-factory.md) - a rejection of the software-factory framing and four properties to build instead: event-reactive automations, inspectability, self-modification, and defect rate priced jointly with token spend.
+- [Put an Agent Approval Gate in Front of Maintainer Attention](../concepts/put-an-agent-approval-gate-in-front-of-maintainer-attention.md) - the absorb-the-inflow answer to contribution overload, and the counter-position to every channel-narrowing filter the wiki records.
+- [Make the Triage Agent Ask the Reporter for the Missing Context](../concepts/make-the-triage-agent-ask-the-reporter-for-the-missing-context.md) - clarify at intake while the reporter still has the context, instead of routing under-specified work away from the agent and into a queue.
 
 ## Open Questions
 
@@ -1100,3 +1103,4 @@ A rollout pattern worth naming separately from the thing being rolled out: when 
 - [Einstein Arena: Harnessing Collective Agent Intelligence for Open Science — James Zou, Together AI](../sources/20260825_mMNkdYnIVC4.md)
 - [What If Your Chip Design Team Moved Like a Single Body? — Abduallah Mohamed, AIDAChip](../sources/20260822_0I6aoPSRzVc.md)
 - [FinOps for AI Agents: Who Spent All the Tokens? — Tisha Chawla & Susheem Koul, Microsoft](../sources/20260822_GJX19pNhmSw.md)
+- [The Agent Behind the Curtain: Building the Oz Cloud Agent Platform — Safia Abdalla, Warp](../sources/20260822_L173Z8DpaJg.md)

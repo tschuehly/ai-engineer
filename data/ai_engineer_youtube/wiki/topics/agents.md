@@ -850,6 +850,9 @@ Two smaller mechanisms from the same design are worth separating from the produc
 - [Give agents a vent tool to report platform friction](../concepts/give-agents-a-vent-tool-to-report-platform-friction.md) - a frustration-gated channel for the agent to report tooling/docs/platform limitations surfaces silent failures and doubles as an incident detector.
 - [Co-Design Agents to Write Natural-Language Queries for Strong Retrieval](../concepts/co-design-agents-to-write-natural-language-queries-for-strong-retrieval.md) - an agent's default tool-use behavior reflects its training distribution, so a harness must steer keyword-biased models into sentence-shaped queries and the right tool per intent.
 - [Run Parallel Specialist Models Behind a Speak-Up Gate](../concepts/run-parallel-specialist-models-with-a-speak-up-gate.md) - concurrent always-on specialists with a cheap relevance short-circuit give redundancy without routing latency, backed by async and offline verifiers.
+- [Ship Managed and Self-Hosted Sandboxes Because Serious Teams Bring Their Own Infrastructure](../concepts/ship-managed-and-self-hosted-sandboxes-because-serious-teams-bring-their-own-infrastructure.md) - who operates the agent's compute is a second axis from whether you build the isolation; teams doing serious work already run their own infrastructure, and their objection is about fit with an existing operating model rather than about sandbox technology.
+- [Expose Orchestration Through Both a Prompt and an API](../concepts/expose-orchestration-through-both-a-prompt-and-an-api.md) - ship subagent orchestration twice, as a slash command for work you cannot decompose in advance and as a parent-child configuration API for work someone wants to wrap in a program you did not write.
+- [Make the Triage Agent Ask the Reporter for the Missing Context](../concepts/make-the-triage-agent-ask-the-reporter-for-the-missing-context.md) - research the repo first, then ask the filer questions when the request is still too abstract; under-specification becomes a resolvable state rather than a dispatch filter.
 
 ## Open Questions
 
@@ -962,6 +965,8 @@ Two smaller mechanisms from the same design are worth separating from the produc
 
 
 - How should a steering action interact with an agent that is mid-plan? Capping a retrieval tool's output or injecting a brevity instruction changes the inputs a plan was formed against, and no source describes whether the agent is told, whether the change is reversible, or how a governor decides that an application is "non-destructive."
+
+- What is the authorization model when an agent platform's orchestration API is handed to non-engineers? Warp reports developer-relations staff building Slack bots that spawn agents against external feeds, with nothing said about who may attach a subagent to whose parent, what such a bot may spend, or which environments it may touch. Every other cost- and permission-control page in this wiki assumes the caller is an engineer. ([Abdalla](../sources/20260822_L173Z8DpaJg.md), 08:04-10:06)
 
 ## Sources
 
@@ -1200,3 +1205,4 @@ Two smaller mechanisms from the same design are worth separating from the produc
 - [Einstein Arena: Harnessing Collective Agent Intelligence for Open Science — James Zou, Together AI](../sources/20260825_mMNkdYnIVC4.md)
 - [What If Your Chip Design Team Moved Like a Single Body? — Abduallah Mohamed, AIDAChip](../sources/20260822_0I6aoPSRzVc.md)
 - [FinOps for AI Agents: Who Spent All the Tokens? — Tisha Chawla & Susheem Koul, Microsoft](../sources/20260822_GJX19pNhmSw.md)
+- [The Agent Behind the Curtain: Building the Oz Cloud Agent Platform — Safia Abdalla, Warp](../sources/20260822_L173Z8DpaJg.md)

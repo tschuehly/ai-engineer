@@ -1,6 +1,9 @@
 # Concept Index
 
 ## Agents
+- [Ship Managed and Self-Hosted Sandboxes Because Serious Teams Bring Their Own Infrastructure](../concepts/ship-managed-and-self-hosted-sandboxes-because-serious-teams-bring-their-own-infrastructure.md) - who operates the compute is a separate axis from who builds the isolation.
+- [Expose Orchestration Through Both a Prompt and an API](../concepts/expose-orchestration-through-both-a-prompt-and-an-api.md) - the same subagent capability as a slash command and as a parent-child configuration API, because they answer different questions.
+- [Make the Triage Agent Ask the Reporter for the Missing Context](../concepts/make-the-triage-agent-ask-the-reporter-for-the-missing-context.md) - resolve under-specification at intake by asking the filer, instead of routing vague work away from the agent.
 - [Steer an Over-Budget Run Before You Kill It](../concepts/steer-an-over-budget-run-before-you-kill-it.md) - the enforcement action between letting a run go and killing it.
 - [Put the Cost Control at the Agent Run, Not the Model Request](../concepts/put-the-cost-control-at-the-agent-run-not-the-model-request.md) - budget, attribute, and enforce at the run boundary; treat the per-request cap as the outer backstop.
 - [Predict Budget Overrun From Burn Velocity, Not Consumption Alone](../concepts/predict-budget-overrun-from-burn-velocity-not-consumption-alone.md) - act on a predicted overrun while there is still budget to spend differently.
@@ -631,6 +634,9 @@
 - [Learn risk scoring from audit feedback for predictive compliance](../concepts/learn-risk-scoring-from-audit-feedback-for-predictive-compliance.md)
 
 ## Coding Agents
+- [Support Many Harnesses by Owning Conversation State and Artifacts](../concepts/support-many-harnesses-by-owning-conversation-state-and-artifacts.md) - own rehydratable conversation state and uniform artifacts below the harness line; behavior above it stays heterogeneous.
+- [Put an Agent Approval Gate in Front of Maintainer Attention](../concepts/put-an-agent-approval-gate-in-front-of-maintainer-attention.md) - agent review placed before human notification rather than before merge; an attention router whose failure is silent.
+- [Design the Agent Workspace as a Workshop, Not a Factory](../concepts/design-the-agent-workspace-as-a-workshop-not-a-factory.md) - event-reactive automations, inspectability, self-modification, and defects priced jointly with tokens.
 - [Routing Savings Compound Across an Agent Session](../concepts/routing-savings-compound-across-an-agent-session.md) - 8¢ against 25¢ after one feature, 14¢ against 44¢ after three: the session is the unit, not the request.
 - [Ship Bundled Docs and an AGENTS.md Inside the Published Package](../concepts/ship-bundled-docs-and-an-agents-md-inside-the-published-package.md) - coding agents read `node_modules` and compiled source, so put version-pinned docs there.
 - [Agents Widen the Dev-Tool ICP Beyond Engineers](../concepts/agents-widen-the-dev-tool-icp-beyond-engineers.md) - a second reader profile for developer-tool docs, with caveats on generalizing from one trajectory.
@@ -1152,6 +1158,8 @@
 - [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md)
 
 ## Infrastructure
+- [Ship Managed and Self-Hosted Sandboxes Because Serious Teams Bring Their Own Infrastructure](../concepts/ship-managed-and-self-hosted-sandboxes-because-serious-teams-bring-their-own-infrastructure.md) - who operates the compute is a separate axis from who builds the isolation.
+- [Support Many Harnesses by Owning Conversation State and Artifacts](../concepts/support-many-harnesses-by-owning-conversation-state-and-artifacts.md) - own rehydratable conversation state and uniform artifacts below the harness line; behavior above it stays heterogeneous.
 - [Put the Cost Control at the Agent Run, Not the Model Request](../concepts/put-the-cost-control-at-the-agent-run-not-the-model-request.md) - a gateway governs one request; the loop, the sub-agents, and the growing context are run properties.
 - [Steer an Over-Budget Run Before You Kill It](../concepts/steer-an-over-budget-run-before-you-kill-it.md) - halt versus steer, with in-place policies ordered ahead of the budget cap.
 - [Make the Instrumentation Boundary Two-Way and Gate It With a Governor](../concepts/make-the-instrumentation-boundary-two-way-and-gate-it-with-a-governor.md) - the cost-reporting annotation doubles as the action downlink, bounded by a developer-authored allowlist.
@@ -2637,6 +2645,7 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Expose Orchestration Through Both a Prompt and an API](../concepts/expose-orchestration-through-both-a-prompt-and-an-api.md) - the same subagent capability as a slash command and as a parent-child configuration API, because they answer different questions.
 - [Fail Loudly and Bill Only for Successful Results](../concepts/fail-loudly-and-bill-only-for-successful-results.md) - an explicit error beats a plausible payload, and per-success billing is what makes the classification credible.
 - [Keep a Protocol Boundary So the Browser Backend Stays Swappable](../concepts/keep-a-protocol-boundary-so-the-browser-backend-stays-swappable.md) - driving the browser through MCP turns a blocked automation into a procurement decision, not a rewrite.
 - [Expose the Background Agents' Tool Surface to Employees Over MCP](../concepts/expose-the-background-agents-tool-surface-to-employees-over-mcp.md) - one internal server, used by production automations and by every employee's own client.
@@ -2947,6 +2956,9 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Put an Agent Approval Gate in Front of Maintainer Attention](../concepts/put-an-agent-approval-gate-in-front-of-maintainer-attention.md) - agent review placed before human notification rather than before merge; an attention router whose failure is silent.
+- [Make the Triage Agent Ask the Reporter for the Missing Context](../concepts/make-the-triage-agent-ask-the-reporter-for-the-missing-context.md) - resolve under-specification at intake by asking the filer, instead of routing vague work away from the agent.
+- [Design the Agent Workspace as a Workshop, Not a Factory](../concepts/design-the-agent-workspace-as-a-workshop-not-a-factory.md) - event-reactive automations, inspectability, self-modification, and defects priced jointly with tokens.
 - [Ship Enforcement Policies in Preview Mode Before Enabling Them](../concepts/ship-enforcement-policies-in-preview-mode-before-enabling-them.md) - shadow-deploy discipline for any component that can terminate work.
 - [Alignment Is the Quadratic Term That Per-Person Tooling Does Not Touch](../concepts/alignment-is-the-quadratic-term-that-per-person-tooling-does-not-touch.md) - per-seat agents raise the linear term while coordination cost grows with the square of headcount.
 - [Keep Geolocation Consistent Across Pipeline Stages](../concepts/keep-geolocation-consistent-across-pipeline-stages.md) - environment parameters held constant across runs but varying across stages produce reproducible pipelines that contradict themselves.

@@ -14,6 +14,7 @@ Details:
 - External tool access should be role-specific: the source gives examples such as Sentry access for vulnerability/report inspection and Linear access for backlog triage. 43:14-43:46
 - Amp adds context isolation as another reason to specialize subagents: finder, oracle, librarian, and codemod agents each do context-heavy work in their own window and return compact results to the main agent. 06:42-09:06
 - **A fifth dimension this page does not name: what the subagent is allowed to see.** Coyle configures a critic subagent by its input rather than its model or permissions — it receives the claim and the evidence and is deliberately denied "the thought processes that went in to creating this claim," because agents that read each other's reasoning "devolve into one idea" ([Withhold the Producer's Reasoning From the Critic](withhold-the-producers-reasoning-from-the-critic.md)). He also puts a tighter number on the tool axis than most sources here — one thing, "with maybe one or two tools available to it" — on the functional-programming grounds that specialization beats a generalist carrying every toolkit. ([Coyle](../sources/20260808_Z-c11pV_uvU.md), 12:42-13:05, 13:44-15:12)
+- **A sixth dimension, and the reason given for varying it.** Warp's platform lets each agent in a chain run a different *harness* as well as a different model: "you might need one agent to go research a problem and plan a solution… another agent to implement it… a third to validate it. And you might want each of these agents to use different harnesses and different models in order to have a real adversarial and robust approach." The argument is the same one behind [withholding the producer's reasoning from the critic](withhold-the-producers-reasoning-from-the-critic.md) — a validator that shares the implementer's machinery shares its blind spots — pushed one layer down from context to runtime. It is asserted rather than tested: no comparison of same-harness against cross-harness validation is offered, and the cost is real, since a heterogeneous chain needs whatever normalizes state and artifacts between the harnesses. See [Support Many Harnesses by Owning Conversation State and Artifacts](support-many-harnesses-by-owning-conversation-state-and-artifacts.md). ([Abdalla](../sources/20260822_L173Z8DpaJg.md), 06:24-07:03)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -28,8 +29,11 @@ Related concepts:
 - [Use subagents to isolate context-heavy subtasks](use-subagents-to-isolate-context-heavy-subtasks.md)
 - [Withhold the Producer's Reasoning From the Critic](withhold-the-producers-reasoning-from-the-critic.md)
 - [Give Parallel Agents Complementary Optimization Personas](give-parallel-agents-complementary-optimization-personas.md)
+- [Support Many Harnesses by Owning Conversation State and Artifacts](support-many-harnesses-by-owning-conversation-state-and-artifacts.md)
+- [Expose Orchestration Through Both a Prompt and an API](expose-orchestration-through-both-a-prompt-and-an-api.md)
 
 Sources:
 - [OpenAI Codex Masterclass  - Vaibhav Srivastav & Katia Gil Guzman](../sources/20260429_MhHEGMFCEB0.md), 32:39-35:24, 41:40-43:58
 - [Amp Code: Next Generation AI Coding - Beyang Liu, Amp Code](../sources/20251222_gvIAkmZUEZY.md), 06:42-09:06
 - [Anthropic's CCA Exam as a Field-Guide for Agentic Engineering — Frank Coyle, UC Berkeley](../sources/20260808_Z-c11pV_uvU.md), 12:42-13:05, 13:44-15:12
+- [The Agent Behind the Curtain: Building the Oz Cloud Agent Platform — Safia Abdalla, Warp](../sources/20260822_L173Z8DpaJg.md), 06:24-07:03

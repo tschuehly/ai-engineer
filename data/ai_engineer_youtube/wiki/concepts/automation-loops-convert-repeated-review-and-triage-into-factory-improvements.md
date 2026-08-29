@@ -13,6 +13,7 @@ Details:
 - In the Q&A, the speaker emphasizes observability, monitoring, and human review around the factory so automated work stays inspectable and accountable (58:48-01:04:35).
 
 - A field report adds one loop this page did not name and one cost it did not price. Khandelwal's team closed the loop with "issues and boards into the repo… CICD… [agentic] reviews" plus "a code gardener that… every night it'll run and look at the code and check if something like not organized correctly," where "what does correct organization mean will depend on your code base" — a scheduled hygiene pass whose rubric is repo-specific rather than a generic linter. The cost is that every automated loop writes to the same queue: wiring the tracker in without scoping which agents may file took the repo to hundreds of open issues in a couple of weeks. Automating the loop and bounding its output are one decision, not two. See [Wire Issue-Filing Authority Before Giving Agents a Tracker](wire-issue-filing-authority-before-giving-agents-a-tracker.md). ([Khandelwal](../sources/20260811_aeTb5BdmTTc.md), 10:32-10:53, 11:54-12:11)
+- **A pushback on the word, and an ordering this page leaves implicit.** Abdalla rejects "software factory" outright — "I kind of actually hate it cuz I don't think it gets the point across and it feels a little — Where's the people in this?" — and substitutes a potter's workshop, which she is careful to present as an equally serious production system: stations per component, clay sourced and prepared ahead, verification with named restart points, "dozens of apprentices" and "hundreds of mugs handcrafted per day." The four properties she carries over are event-reactive automations, inspectability, self-modification, and cost. The useful correction to this page is the dependency between the middle two: the potter "watched the way people worked in his space and refined the process over time. That doesn't come for free. Your system has to actually be something that you can inspect and look into." Observability is not one improvement loop among several — it is the precondition for the loop, and what it observes is how people work in the system, not only what the system emitted. See [Design the Agent Workspace as a Workshop, Not a Factory](design-the-agent-workspace-as-a-workshop-not-a-factory.md). Framing argument, nothing measured. ([Abdalla](../sources/20260822_L173Z8DpaJg.md), 14:21-19:29)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -24,7 +25,9 @@ Related concepts:
 - [Use agent logs and review feedback as context observability signals](use-agent-logs-and-review-feedback-as-context-observability-signals.md)
 - [Feedback turns coding-agent loops into prompt and skill improvement cycles](feedback-turns-coding-agent-loops-into-prompt-and-skill-improvement-cycles.md)
 - [Context development lifecycle treats context as an engineered artifact](context-development-lifecycle-treats-context-as-an-engineered-artifact.md)
+- [Design the Agent Workspace as a Workshop, Not a Factory](design-the-agent-workspace-as-a-workshop-not-a-factory.md)
 
 Sources:
 - [Building your own software factory — Eric Zakariasson, Cursor](../sources/20260428_rnDm57Py54A.md), 14:37-15:23, 22:49-27:04, 58:48-01:04:35
 - [Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab](../sources/20260811_aeTb5BdmTTc.md), 10:32-10:53, 11:54-12:11
+- [The Agent Behind the Curtain: Building the Oz Cloud Agent Platform — Safia Abdalla, Warp](../sources/20260822_L173Z8DpaJg.md), 14:21-19:29

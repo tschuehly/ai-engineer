@@ -469,6 +469,7 @@ A web-access vendor's rebuild of a failing shopping agent contributes two contra
 - [Spec-driven development is a tool-portable pattern, not a single product](../concepts/spec-driven-development-is-a-tool-portable-pattern.md) - the requirements→design→tasks pattern is delivered by several tools (Kiro's spec/plan modes, GitHub's open-source Spec Kit) or none at all, so it is not vendor-locked.
 - [Match the Agent's Output Medium to Its Native Representation](../concepts/match-agent-output-medium-to-its-native-representation.md) - give agents artifact tools that match how they think (language/structure like HTML) instead of human pixel/coordinate canvases, so the renderer places pixels and the model never guesses coordinates.
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md) - HTML/CSS is the universal editing substrate for agent-authored slides, docs, and video; the delivery format (PowerPoint deck, PDF) is just presentation mode rendered later.
+- [Expose Orchestration Through Both a Prompt and an API](../concepts/expose-orchestration-through-both-a-prompt-and-an-api.md) - cover the run, the place it runs, and its artifacts with APIs, and expect the unanticipated builds to be event-driven triggers into the agent system rather than screens over its data.
 
 ## Open Questions
 
@@ -682,3 +683,4 @@ A web-access vendor's rebuild of a failing shopping agent contributes two contra
 - [How We Got LLMs to Recommend Our Open Source Library — Christopher Burns, Inth](../sources/20260826_V_5bn4q-vAI.md)
 - [The Building Blocks of GTM Orchestration — Arman Vaziri, Ramp](../sources/20260826_VjEP0xqTUI0.md)
 - [The Missing Layer in Agentic AI — Giedrius Šteimantas, Oxylabs](../sources/20260826_XsvUhpnHepE.md)
+- [The Agent Behind the Curtain: Building the Oz Cloud Agent Platform — Safia Abdalla, Warp](../sources/20260822_L173Z8DpaJg.md)

@@ -533,6 +533,8 @@ Two design consequences follow, and both are operational rather than architectur
 - [Guard AI-assisted platform contributions with policy and context](../concepts/guard-ai-assisted-platform-contributions-with-policy-and-context.md) - platform contribution paths need both hard policy and agent-readable conventions.
 - [Standardize development environments around common model priors](../concepts/standardize-development-environments-around-common-model-priors.md) - standardized local toolchains are infrastructure for both human and agent productivity.
 - [Make validation fast, local, deterministic, and actionable](../concepts/make-validation-fast-local-deterministic-and-actionable.md) - fast local validation gives agents useful repair feedback before CI.
+- [Ship Managed and Self-Hosted Sandboxes Because Serious Teams Bring Their Own Infrastructure](../concepts/ship-managed-and-self-hosted-sandboxes-because-serious-teams-bring-their-own-infrastructure.md) - managed sandboxes are the on-ramp, not the destination; supporting customer-operated compute is a separate axis from buy-versus-build, and the reasons given are security posture, deployment practice, and existing dev boxes rather than cost.
+- [Support Many Harnesses by Owning Conversation State and Artifacts](../concepts/support-many-harnesses-by-owning-conversation-state-and-artifacts.md) - the minimum a platform must own when it hosts other people's agent harnesses, and why the consistency it can promise covers the record of the work rather than the work itself.
 
 ## Open Questions
 
@@ -620,6 +622,8 @@ Two design consequences follow, and both are operational rather than architectur
 
 - What does a steering action cost in output quality? A control plane that injects "keep outputs succinct" or caps a retrieval tool at five chunks is making a quality decision, and the only outcome reported for it anywhere in this wiki is a completion counter (67% to roughly 96%). No source pairs a steering policy with a judge, a rubric, or a human grade, so the wiki cannot say whether steered runs finish or merely stop early with a thinner answer.
 - What happens to a run when the control plane is unreachable? An in-process action downlink is a dependency in the call path, and the wiki's standing fail-open/fail-closed question applies to it — but no source states whether steering actions are ordered, idempotent, or replayable, or what a "non-destructive" application of one actually guarantees.
+
+- Which managed-runtime guarantees survive a move to customer-operated infrastructure? The wiki's sandbox pages assume tens-of-milliseconds startup, egress policy inherited from an environment definition, and mid-run sandbox replacement — all properties of compute the platform controls. Warp ships both managed and self-hosted sandboxes and says nothing about which of these hold in the second case. ([Abdalla](../sources/20260822_L173Z8DpaJg.md), 04:12-05:07)
 
 ## Sources
 
@@ -775,3 +779,4 @@ Two design consequences follow, and both are operational rather than architectur
 - [Einstein Arena: Harnessing Collective Agent Intelligence for Open Science — James Zou, Together AI](../sources/20260825_mMNkdYnIVC4.md)
 - [Preferences Over Benchmarks: Model Routing — Archana Kamath & Tyler Gillam, DigitalOcean](../sources/20260822_FvxY8oPoI8o.md)
 - [FinOps for AI Agents: Who Spent All the Tokens? — Tisha Chawla & Susheem Koul, Microsoft](../sources/20260822_GJX19pNhmSw.md)
+- [The Agent Behind the Curtain: Building the Oz Cloud Agent Platform — Safia Abdalla, Warp](../sources/20260822_L173Z8DpaJg.md)

@@ -596,6 +596,8 @@ Model cost in a coding agent is a session-level property, not a per-request one,
 - [Build High-Fidelity Engines to Create Verification Loops in Non-Code Domains](../concepts/build-high-fidelity-engines-to-create-verification-loops-in-non-code-domains.md) - to give a non-code domain the compile/lint/test loop coding agents thrive on, build the calculation/render engine yourself, high fidelity.
 - [Match the Agent's Output Medium to Its Native Representation](../concepts/match-agent-output-medium-to-its-native-representation.md) - agents "can't do graphics" is a medium problem, not a model limit; give them language/structure tools (HTML) instead of pixel/coordinate canvases so the renderer places pixels and the model never guesses coordinates.
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md) - HTML/CSS is the universal editing substrate for agent-authored slides, docs, and video; the delivery format (PowerPoint deck, PDF) is just presentation mode rendered later.
+- [Support Many Harnesses by Owning Conversation State and Artifacts](../concepts/support-many-harnesses-by-owning-conversation-state-and-artifacts.md) - accepting several harnesses fragments a platform unless it owns two things below the harness line — rehydratable conversation state and uniformly structured artifacts — while behavior stays deliberately heterogeneous.
+- [Put an Agent Approval Gate in Front of Maintainer Attention](../concepts/put-an-agent-approval-gate-in-front-of-maintainer-attention.md) - place agent review between the pull request and the *reviewer* rather than the merge, so humans are notified only after an agent approves; an attention router, with a wrongly approved change as its silent failure.
 
 ## Open Questions
 
@@ -672,6 +674,8 @@ Model cost in a coding agent is a session-level property, not a per-request one,
 - Which attention-conserving layers (comms triage, voice, remote control, history mining) give the most sustainability benefit before they add their own monitoring overhead?
 
 - Does per-task model routing survive a hard task, or does repair spend eat the saving? Every reported routing comparison in this wiki is measured on work the cheap tier completed successfully; no source reports a session where a mis-routed edit cost extra turns. Since a coding agent's repair loop is itself billed, the interesting number is cost per *accepted* change under routing, not cost per session. ([Kamath & Gillam](../sources/20260822_FvxY8oPoI8o.md), 09:36-13:25)
+
+- Does an agent approval gate ahead of human notification let bad changes through silently, and at what rate? Warp reports that no human reviewer is pinged until an agent approves, with no approval rate, false-approval rate, or account of what happens to pull requests the agent never approves. The failure this design produces is invisible by construction, which is exactly why it needs a number. ([Abdalla](../sources/20260822_L173Z8DpaJg.md), 12:25-12:45)
 
 ## Sources
 
@@ -817,3 +821,4 @@ Model cost in a coding agent is a session-level property, not a per-request one,
 - [The Death of Developer Advocates — Stephanie Jarmak, Sourcegraph](../sources/20260826_Lrw0jqBNaw0.md)
 - [How We Got LLMs to Recommend Our Open Source Library — Christopher Burns, Inth](../sources/20260826_V_5bn4q-vAI.md)
 - [Preferences Over Benchmarks: Model Routing — Archana Kamath & Tyler Gillam, DigitalOcean](../sources/20260822_FvxY8oPoI8o.md)
+- [The Agent Behind the Curtain: Building the Oz Cloud Agent Platform — Safia Abdalla, Warp](../sources/20260822_L173Z8DpaJg.md)
