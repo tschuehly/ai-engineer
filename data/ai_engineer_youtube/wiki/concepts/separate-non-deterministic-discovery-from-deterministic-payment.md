@@ -14,6 +14,8 @@ Details:
 - Make a business agent-friendly by exposing programmatic deterministic flows rather than only web UIs, because UI-only surfaces increase the non-determinism of agent interactions and the chance of mis-parsed details. (14:56-15:20)
 - **The commerce specs implement this split as a named session state rather than as an integrator convention.** In UCP and ACP "the checkout APIs will have state, and the three different states are not ready for payment, ready for payment, and then completed," with payment-method selection as the transition that arms the session — "it's added to cart, but it's not ready for payment. I have to pick what I want to pay with." The deterministic leg is therefore enforced by an API that refuses to leave a state until its conditions are met, which is a stronger guarantee than asking the planner to stop being creative at the right moment. ([Prio](../sources/20260827_G7cgLjZtmMU.md), 13:04-14:07)
 
+- **The same split arrived at from the access layer, and it lands in the same place for a different reason.** Šteimantas decomposes a shopping agent into discovery, decision, and execution and gives each a different web-access primitive, keeping a real browser only for checkout because "we need to process inputs and the content is highly dynamic." He is optimizing cost and reliability, not blast radius, yet the boundary falls exactly where this page draws it — which is some evidence the seam is structural rather than an artifact of a payments perspective. Two additions for the transaction side. The wrong-amount failure mode above has a concrete cause and a concrete fix: prices and stock vary by visitor location, so pinning the exit location identically at the verification and checkout stages removes a class of price and availability mismatch ([Keep Geolocation Consistent Across Pipeline Stages](keep-geolocation-consistent-across-pipeline-stages.md)). And the "letting the robot operate the browser like a human is finicky, slow, and hard to observe" objection is narrower than it looks — it is an argument against doing so in *every* stage, which is the actual failure Šteimantas diagnoses; a browser confined to the one irreducible stage is a much smaller surface than a browser-driven pipeline. ([Šteimantas](../sources/20260826_XsvUhpnHepE.md), 03:45-04:47, 11:54-13:20)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Workflows](../topics/workflows.md)
@@ -25,7 +27,10 @@ Related concepts:
 - [Move Mandatory Brittle Tool Steps Outside the Agent Loop](move-mandatory-brittle-tool-steps-outside-the-agent-loop.md)
 - [Bound Agent Payments With Processor-Enforced Mandate Tokens](bound-agent-payments-with-processor-enforced-mandate-tokens.md)
 - [Model Agentic Checkout as an Explicit Session State Machine](model-agentic-checkout-as-an-explicit-session-state-machine.md)
+- [Assign a Web-Access Primitive Per Pipeline Stage](assign-a-web-access-primitive-per-pipeline-stage.md)
+- [Keep Geolocation Consistent Across Pipeline Stages](keep-geolocation-consistent-across-pipeline-stages.md)
 
 Sources:
 - [Building safe Payment Infrastructure for the autonomous economy — Steve Kaliski, Stripe](../sources/20260606_KLSuFPj2ld0.md), 00:50-04:50, 14:56-15:55
 - [The Agentic Commerce Stack — Ahnaf Prio, Best Buy](../sources/20260827_G7cgLjZtmMU.md), 13:04-14:07
+- [The Missing Layer in Agentic AI — Giedrius Šteimantas, Oxylabs](../sources/20260826_XsvUhpnHepE.md), 03:45-04:47, 11:54-13:20

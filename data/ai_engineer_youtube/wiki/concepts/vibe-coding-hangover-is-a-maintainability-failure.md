@@ -14,6 +14,8 @@ Details:
 - **The team-scale version, and why it is an argument against deferring cleanup.** Denys Linkov reports the same failure at organizational scale rather than on a single prototype: "when you build a lot of code and you do this kind of development in an AI-native world, it starts looking like some of the legacy code we've seen in the past. There's a lot of code written. It's written with low performance or quality, and the broader problem is people don't actually understand what's happening there. So, if you have some issues within the code base or you want to adjust based on customer requirements, it's actually much harder to do so." The consequence he draws is a scheduling one: the pile of un-understood code grows while a team waits for models good enough to clean it up, so "you do have to make sure that there are appropriate guardrails, whether or not you do a full refactor or only a partial one." ([Denys Linkov](../sources/20260808_7vn4WpqNpck.md), 13:03-13:32)
 - **In a money domain the hangover arrives as a wrong invoice, not as unmaintainable code.** Garvin has watched "all sorts of crazy things happen" in billing for years and says it is "getting crazier now that people are expecting to operate Metronome, a very complicated and deep product, with a coding agent." The failure mode is not that the generated configuration is hard to maintain later; it is that it charged a customer incorrectly on day one, which no amount of subsequent refactoring undoes. That inverts the mitigation: not better structure, but a hard environment boundary before the first real charge. ([Garvin](../sources/20260828_mJqwmmOx4WA.md), 02:01-02:14, 07:19-07:47)
 
+- **A second hangover shape, and it is not about the code.** Šteimantas' friend "vibe coded the whole thing while having a[n after]thought about infrastructure and underlying layers and how it should work. I didn't at all," and the result "was slow, expensive and unreliable" — "a product that does not work and is expensive to run." Nothing here is a comprehension or maintenance problem; the code was fine and the author understood it. What was skipped was an architectural decision the agent could not make for him: which access primitive each stage of the system should use. The generalizable version is that generation defaults to the most capable primitive available — a browser automation framework at every stage, because it can do everything — and that default is invisible in a working prototype and expensive in production. Worth carrying alongside the maintainability framing: the artifact a fast build most often lacks is not documentation but a cost model. ([Šteimantas](../sources/20260826_XsvUhpnHepE.md), 01:33-02:32)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Workflows](../topics/workflows.md)
@@ -24,8 +26,10 @@ Related concepts:
 - [Long AI coding conversations compound accidental complexity](long-ai-coding-conversations-compound-accidental-complexity.md)
 - [Audit a Refactor Against Having Waited for Better Models](audit-a-refactor-against-having-waited-for-better-models.md)
 - [Let the Agent Reach a Test Environment, Not Production, When the Domain Carries Money](let-the-agent-reach-a-test-environment-not-production.md)
+- [Assign a Web-Access Primitive Per Pipeline Stage](assign-a-web-access-primitive-per-pipeline-stage.md)
 
 Sources:
 - [The Cure for the Vibe Coding Hangover - Corey J. Gallon, Rexmore](../sources/20251124_JsKTQbT58BY.md), 00:47-01:24, 05:20-07:00
 - [Benchmarking Coding Agents on New vs Legacy Codebases — Denys Linkov, Wisedocs](../sources/20260808_7vn4WpqNpck.md), 13:03-13:32
 - [How to avoid disaster when vibe-coding a billing engine — Andrew Garvin, Stripe](../sources/20260828_mJqwmmOx4WA.md), 02:01-02:14, 07:19-07:47
+- [The Missing Layer in Agentic AI — Giedrius Šteimantas, Oxylabs](../sources/20260826_XsvUhpnHepE.md), 01:33-02:32

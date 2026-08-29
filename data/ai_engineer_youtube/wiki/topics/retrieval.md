@@ -74,8 +74,12 @@ A commercial data layer shows what coverage costs when the corpus is bought rath
 
 Attribute filtering is the load-bearing half of hybrid retrieval when the corpus is multi-tenant in fact if not in architecture. A go-to-market agent stack chunks and embeds call transcripts, emails, enablement material, product knowledge, and playbooks, then combines vector, attribute, and keyword search "to pull information scoped to a specific account… without having to pull in the full raw corpus into agent context." Two things are being bought at once and they are usually conflated: the vector and keyword components decide what is relevant, and the attribute filter decides what is permissible to see. Without the second, a semantically excellent retrieval can hand an agent a passage about a different customer — a correctness and confidentiality failure that no reranker will catch, because the passage really is about the same topic. The same design pushes the expensive work to ingest, where the entity each document belongs to is decided once and stored, which is what makes the filter enforceable at query time.
 
+The hostile-web cluster in this topic has been about whether an agent can reach a page. A vendor rebuild of one failing shopping agent adds the question of what a failed reach costs when nobody checks. A block arrives as HTTP 200 with a plausible body, so a fetch layer that gates on status code and size forwards the challenge page to the model as if it were content — and the model's competence is what hides the loss, because it can tell a CAPTCHA from a product page and simply bills you input tokens to do it. The arithmetic offered is ten pages fetched, three valid, all ten forwarded: seventy percent of the tokens spent reading blocks. Two things follow that this topic did not previously state. The wasted spend is the smaller half; the larger half is that the agent then decides among only the sites that let it through, so a correct answer is drawn from a silently truncated sample. And the intuitive fix is the wrong one — compressing the payload produces a cheaper block page, so validity has to be established before compression, ideally by the fetch layer asserting what it already knows rather than by the model re-deriving it. The same rebuild is a counterweight to this topic's known-source argument: replacing a hardcoded retailer list with a search call was not a cost decision but a reach one, because when the source set *is* the answer, fixing it in advance answers the question before asking it. All of it is a vendor demonstrating its own products, with the token figure computed from a hypothetical rather than measured.
+
 ## Key Concepts
 
+- [Validate Retrieved Content Before Spending Tokens on It](../concepts/validate-retrieved-content-before-spending-tokens-on-it.md) - a blocked page passes status and size checks, so the validity gate belongs in the fetch layer and before any compression.
+- [Assign a Web-Access Primitive Per Pipeline Stage](../concepts/assign-a-web-access-primitive-per-pipeline-stage.md) - search API to find URLs, scrape-to-markdown to read them, a browser only where inputs must be filled.
 - [Hydrate a Trigger Event to Its Entity Once and Persist the Mapping](../concepts/hydrate-a-trigger-event-to-its-entity-once-and-persist-the-mapping.md) - the ingest-side decision that makes an account-scoped retrieval filter possible.
 - [Waterfall Data Vendors and Run Evals to Decide Which to Trust](../concepts/waterfall-data-vendors-and-run-evals-to-decide-which-to-trust.md) - layering providers for coverage without mistaking agreement for confirmation.
 - [Compute Truth in the Warehouse and Serve It as a Denormalized Profile](../concepts/compute-truth-in-the-warehouse-and-serve-it-as-a-denormalized-profile.md) - key-addressable context beats search when the entity set is known, with staleness as the price.
@@ -204,6 +208,10 @@ Tax explanation systems add a regulated consumer version of expert-domain retrie
 
 ## Open Questions
 
+- Does the fixed-list-versus-search choice have a test better than intuition? The reconciliation offered here — a fixed source list is fine when it is a lookup path and a ceiling when it is a hypothesis — is a rule of thumb with no measured comparison of recall or answer quality behind it on either side.
+
+- What is the real block rate for an ordinary agent fetching ordinary commercial pages? Every source in this cluster asserts the problem is large and none reports a rate for a specific workload, which is the one number that would decide whether a managed access layer pays for itself.
+
 - Does supplying multiple sources with an answer actually reduce early stopping, or only make the stop recoverable? Werry's mitigation is plausible and unmeasured; the experiment is a trajectory-scored comparison of single-source against multi-source responses on multi-hop tasks.
 
 - If the corpus boundary is negotiable, what decides *which* outside material to go get? The talk names the moves — other textbooks, search, ask the experts — and gives no targeting mechanism, which is the part a retrieval pipeline would have to supply.
@@ -300,3 +308,4 @@ Tax explanation systems add a regulated consumer version of expert-domain retrie
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md)
 - [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md)
 - [The Building Blocks of GTM Orchestration — Arman Vaziri, Ramp](../sources/20260826_VjEP0xqTUI0.md)
+- [The Missing Layer in Agentic AI — Giedrius Šteimantas, Oxylabs](../sources/20260826_XsvUhpnHepE.md)

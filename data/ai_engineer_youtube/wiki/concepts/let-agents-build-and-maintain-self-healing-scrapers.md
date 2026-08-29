@@ -18,6 +18,8 @@ Details:
 
 - A colleague at the same company puts a build-time figure and a business case on the same loop: an AI scraper builder ("Scraper Studio") that "lets you build a scraper for any website in less than 5 minutes," with the self-healing function stated the same way — "if the website changes, it fixes itself and keeps on going." In his test, two such scrapers over LinkedIn companies, LinkedIn jobs, and Crunchbase plus "basic heuristics" for field conflicts produced a 100-company enrichment dataset at "zero AI cost involved. There's no tokens," which is what made an owned pipeline beat per-query context vendors past ~15,000 entities. The scraper-maintenance loop is therefore not only a reliability practice but the mechanism that makes the [rent-versus-own crossover](find-the-crossover-point-between-renting-and-owning-context.md) reachable at all. (Ot4OPrPH4xY, 16:53-17:33)
 
+- **What the repair loop keys on, and why the validation cannot be a size check.** This page's loop depends on "always set a data validation so the loop knows when to repair." A second scraping source names the check that a naive implementation gets wrong: teams "end up checking only the content size and HTTP response code," and a challenge page passes both, so the self-healing loop concludes the scraper is fine and the site changed nothing. A validity signal has to distinguish *this is not the page* from *this page moved its selectors*, and the two failures want opposite responses — re-explore and rewrite for the second, back off and change access path for the first. A fetch layer that returns an explicit error on a block gives the loop that distinction for free. ([Šteimantas](../sources/20260826_XsvUhpnHepE.md), 08:39-09:22, 10:29-10:49)
+
 Related topics:
 - [Tools](../topics/tools.md)
 - [Agents](../topics/agents.md)
@@ -31,7 +33,10 @@ Related concepts:
 - [Move Mandatory Brittle Tool Steps Outside the Agent Loop](move-mandatory-brittle-tool-steps-outside-the-agent-loop.md)
 - [Go Straight to the Known Source Instead of Searching for It](go-straight-to-the-known-source-instead-of-searching-for-it.md)
 - [Find the Crossover Point Between Renting and Owning Context](find-the-crossover-point-between-renting-and-owning-context.md)
+- [Validate Retrieved Content Before Spending Tokens on It](validate-retrieved-content-before-spending-tokens-on-it.md)
+- [Fail Loudly and Bill Only for Successful Results](fail-loudly-and-bill-only-for-successful-results.md)
 
 Sources:
 - [From MCP to Scale: Pipelines That Build Themselves — Rafael Levi, Bright Data](../sources/20260607_zTZ0qunQXnM.md), 01:25-02:27, 04:08-05:23, 14:43-15:08, 17:23-22:55
 - [The Rise of CaaS: Context-as-a-Service for Agentic AI — Omer Primor, Bright Data](../sources/20260814_Ot4OPrPH4xY.md), 16:53-17:33
+- [The Missing Layer in Agentic AI — Giedrius Šteimantas, Oxylabs](../sources/20260826_XsvUhpnHepE.md), 08:39-09:22, 10:29-10:49

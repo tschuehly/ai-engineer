@@ -19,6 +19,8 @@ Details:
 
 - **The failure that makes this more than a cost optimization.** Routing through search is not only a wasted discovery step; it is a step with a bad stopping rule. An agent searching a store "finds something that they think is correct and then they stop" — so the search path can return a true answer built on one of the three documents that mattered, while a direct fetch of a known location returns the whole thing. Where the location is known, skipping search removes an error mode, not just a latency. The corollary is that answers should hand back their sources so the *next* hop is also a known location. See [Satisfaction of Search Stops Agents at the First Plausible Hit](satisfaction-of-search-stops-agents-at-the-first-plausible-hit.md) and [Attach Sources as Both a Correction Surface and a Continuation Pointer](attach-sources-as-a-correction-surface-and-a-continuation-pointer.md). ([Werry](../sources/20260827_qdAkxLoYNI8.md), 04:37-05:12, 10:35-11:13)
 
+- **The counter-case, from a source that removed a fixed source list on purpose.** Šteimantas' shopping agent started where this page ends — a hardcoded set of major retailers, queried directly — and the defect was not cost but reach: "selection of items would only be limited to the few choices he put in." Replacing the list with a search call let the agent "formulate fan out queries and select the relevant URLs from search results," with the economics that make that affordable stated as under 2,000 tokens and under 700 milliseconds per call. The two positions are consistent once the question is separated from the answer: enrichment asks a *known* question of a known entity, so the location of the answer is fixed and searching for it is a wasted hop; "where can I buy this" has the source set *as* its answer, so fixing the list in advance is answering the question before asking it. The test to apply is whether your source list is a lookup path or a hypothesis — if a better source would change the result, a fixed list is a ceiling no model improvement removes. ([Šteimantas](../sources/20260826_XsvUhpnHepE.md), 05:28-07:56)
+
 Related topics:
 - [Retrieval](../topics/retrieval.md)
 - [Tools](../topics/tools.md)
@@ -32,7 +34,9 @@ Related concepts:
 - [Move Mandatory Brittle Tool Steps Outside the Agent Loop](move-mandatory-brittle-tool-steps-outside-the-agent-loop.md)
 - [Satisfaction of Search Stops Agents at the First Plausible Hit](satisfaction-of-search-stops-agents-at-the-first-plausible-hit.md)
 - [Attach Sources as Both a Correction Surface and a Continuation Pointer](attach-sources-as-a-correction-surface-and-a-continuation-pointer.md)
+- [Assign a Web-Access Primitive Per Pipeline Stage](assign-a-web-access-primitive-per-pipeline-stage.md)
 
 Sources:
 - [The Rise of CaaS: Context-as-a-Service for Agentic AI — Omer Primor, Bright Data](../sources/20260814_Ot4OPrPH4xY.md), 12:42-12:57, 16:37-18:29, 19:25-19:46
 - [How to Generate Mergeable Code with a Context Engine — Peter Werry, Unblocked](../sources/20260827_qdAkxLoYNI8.md), 04:37-05:12, 10:35-11:13
+- [The Missing Layer in Agentic AI — Giedrius Šteimantas, Oxylabs](../sources/20260826_XsvUhpnHepE.md), 05:28-07:56

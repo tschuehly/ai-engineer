@@ -20,6 +20,8 @@ Details:
 
 - **A four-item checklist for evaluating this layer as a platform**, from a browser-agent provider rather than a data provider: (1) *scale range* — "you can want to run one agent, but also thousands of agents," and serving both ends is the hard part; (2) *model agnosticism* — "as a developer, I don't want to be locked into a single model provider. As models continually change and get better, I want to be able to move my agent around"; (3) *agent identity* — "somebody who's going to go out and negotiate with the anti-bot providers of the world and say, we are the platform for trusted agents and we are the ones that can help broker the access," which is the commercial stand-in for the [certificate authority that does not exist](agent-trust-needs-a-certificate-issuer-not-a-captcha.md); and (4) *observability* — "screen recordings, logs, network activity… feed that back into your agent so it can self-improve." Add [render consistency](hold-the-browser-environment-constant-across-runs.md) as the precondition that makes items 1 and 4 meaningful. ([Paul Klein IV](../sources/20260814_GqoNrUz8hEU.md), 14:01-15:10)
 
+- **A second provider's version of the same stack, with the selection rule made explicit.** Oxylabs offers the same primitive set — a search API, a scrape-to-markdown API that runs a browser under the hood when a site is dynamic, and a hardened headless browser with source-level stealth, a residential proxy, and geolocation — but the talk's contribution is the discipline for choosing among them rather than the catalog. "Use a browser when you absolutely have to," applied per pipeline stage, so discovery gets the search call, page reading gets the parallel REST scraper, and only checkout gets the browser ([Assign a Web-Access Primitive Per Pipeline Stage](assign-a-web-access-primitive-per-pipeline-stage.md)). Two contract details are worth carrying into any vendor comparison on this page: a blocked request returns "an explicit error message" rather than the block page, and "customers only pay for successful results… no cure or no pay," which is what makes the error classification credible ([Fail Loudly and Bill Only for Successful Results](fail-loudly-and-bill-only-for-successful-results.md)). ([Šteimantas](../sources/20260826_XsvUhpnHepE.md), 02:59-03:45, 06:30-07:37, 10:29-11:54, 12:58-13:20)
+
 Related topics:
 - [Retrieval](../topics/retrieval.md)
 - [Tools](../topics/tools.md)
@@ -35,8 +37,14 @@ Related concepts:
 - [Let an Agent Build and Maintain Self-Healing Scrapers](let-agents-build-and-maintain-self-healing-scrapers.md)
 - [Hold the Browser Environment Constant Across Runs](hold-the-browser-environment-constant-across-runs.md)
 - [Agent Trust Needs a Certificate Issuer, Not a CAPTCHA](agent-trust-needs-a-certificate-issuer-not-a-captcha.md)
+- [Assign a Web-Access Primitive Per Pipeline Stage](assign-a-web-access-primitive-per-pipeline-stage.md)
+- [Fail Loudly and Bill Only for Successful Results](fail-loudly-and-bill-only-for-successful-results.md)
+- [Validate Retrieved Content Before Spending Tokens on It](validate-retrieved-content-before-spending-tokens-on-it.md)
+- [Keep Geolocation Consistent Across Pipeline Stages](keep-geolocation-consistent-across-pipeline-stages.md)
+- [Keep a Protocol Boundary So the Browser Backend Stays Swappable](keep-a-protocol-boundary-so-the-browser-backend-stays-swappable.md)
 
 Sources:
 - [Your Agent's Biggest Lie: "I Searched the Web" — Rafael Levi, Bright Data](../sources/20260617_btxGmN8RvNU.md), 04:56-09:44, 10:51-14:03
 - [From MCP to Scale: Pipelines That Build Themselves — Rafael Levi, Bright Data](../sources/20260607_zTZ0qunQXnM.md), 09:28-11:23, 16:03-24:24
 - [Bringing agents onto the world wide web — Paul Klein IV, Browserbase](../sources/20260814_GqoNrUz8hEU.md), 14:01-15:10
+- [The Missing Layer in Agentic AI — Giedrius Šteimantas, Oxylabs](../sources/20260826_XsvUhpnHepE.md), 02:59-03:45, 06:30-07:37, 10:29-11:54, 12:58-13:20

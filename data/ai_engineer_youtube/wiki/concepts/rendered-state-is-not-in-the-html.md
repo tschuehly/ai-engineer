@@ -17,6 +17,8 @@ Details:
 - **The same failure seen from a training lab.** Gaurav Mishra reports partial observability from both directions in real trajectories: "the DOM missed the ad text because it was baked into an image; the screenshot missed what needed scrolling" — see [Map RL Assumptions to Deployment Realities for Computer-Use Agents](map-rl-assumptions-to-deployment-realities-for-computer-use-agents.md). Neither channel is complete, which is why [multi-source reconciliation is trained as a perception primitive](train-screen-perception-primitives-beyond-coding-ability.md).
 - **Operational corollary.** Because the DOM reader returns *something*, this is a silent-wrong-answer failure rather than an error, which puts it in the same class as [silent web-access failure producing confident hallucination](silent-web-access-failure-produces-confident-hallucination.md) and argues for [verifying through a channel other than the one that acted](verify-an-action-through-a-different-channel-than-the-one-that-acted.md).
 
+- **A partial escape hatch, and its blind spot.** A managed scraper can absorb this problem rather than hand it to the agent: the fetch "runs a full browser under the hood" when a site is dynamic and returns rendered markdown, so the caller gets computed state without operating a browser. That covers the general case of JavaScript-produced content. What it does not give you is any account of *what was computed* — no screenshot, no per-fact provenance, and no way to tell a genuinely absent value from one the provider's render missed. Sourcing rendered state through a third party converts a visible limitation into an invisible dependency on someone else's render fidelity, which is the same reason [Hold the Browser Environment Constant Across Runs](hold-the-browser-environment-constant-across-runs.md) matters for the agent-side path. ([Šteimantas](../sources/20260826_XsvUhpnHepE.md), 10:49-11:30)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Tools](../topics/tools.md)
@@ -28,6 +30,9 @@ Related concepts:
 - [Map RL Assumptions to Deployment Realities for Computer-Use Agents](map-rl-assumptions-to-deployment-realities-for-computer-use-agents.md)
 - [Train Screen-Perception Primitives Beyond Coding Ability](train-screen-perception-primitives-beyond-coding-ability.md)
 - [Let an Agent Build and Maintain Self-Healing Scrapers](let-agents-build-and-maintain-self-healing-scrapers.md)
+- [Assign a Web-Access Primitive Per Pipeline Stage](assign-a-web-access-primitive-per-pipeline-stage.md)
+- [Keep Geolocation Consistent Across Pipeline Stages](keep-geolocation-consistent-across-pipeline-stages.md)
 
 Sources:
 - [Computer-use models will agentify the web, not APIs — Dhruv Batra, Yutori](../sources/20260814_Ki980nV0__0.md), 08:33-12:24
+- [The Missing Layer in Agentic AI — Giedrius Šteimantas, Oxylabs](../sources/20260826_XsvUhpnHepE.md), 10:49-11:30

@@ -15,6 +15,8 @@ Details:
 
 - **Handing the model the stopping decision is the cost of handing it the search plan.** Fixed top-k is brittle, but it terminates predictably. A planning agent decides for itself when it has enough, and the radiology analogy names how that goes wrong: it "finds something that it thinks is correct and then stops." So agentic retrieval trades a recall ceiling you can measure for a coverage decision you cannot observe from inside the loop. Two mitigations keep the flexibility without the blind spot: return multiple sources with each answer so continuation does not require a fresh search, and score trajectories against the targets the agent should have read. See [Satisfaction of Search Stops Agents at the First Plausible Hit](satisfaction-of-search-stops-agents-at-the-first-plausible-hit.md). ([Werry](../sources/20260827_qdAkxLoYNI8.md), 04:16-05:12)
 
+- **The cheapest version of this: let the agent choose its own URLs instead of inheriting a list.** In a shopping agent, replacing a hardcoded set of retailers with a search tool moved one decision from the developer to the model — the agent "formulates fan out queries and selects the relevant URLs from search results" — and the defect it fixed was reach rather than relevance: "selection of items would only be limited to the few choices he put in." This is planning at its smallest useful scale, and it is worth noting what made it affordable rather than a token risk: sub-2,000-token responses at sub-700-millisecond latency, small enough that fanning out several queries is cheaper than one browser page load. ([Šteimantas](../sources/20260826_XsvUhpnHepE.md), 05:28-07:56)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Retrieval](../topics/retrieval.md)
@@ -26,8 +28,10 @@ Related concepts:
 - [Redefine RAG as Iterative Multi-Tool Retrieval, Not Vector Search](redefine-rag-as-iterative-multi-tool-retrieval.md)
 - [Treat Embeddings as Cached Compute Decided by Query Volume](treat-embeddings-as-cached-compute-decided-by-query-volume.md)
 - [Satisfaction of Search Stops Agents at the First Plausible Hit](satisfaction-of-search-stops-agents-at-the-first-plausible-hit.md)
+- [Assign a Web-Access Primitive Per Pipeline Stage](assign-a-web-access-primitive-per-pipeline-stage.md)
 
 Sources:
 - [OpenRAG: An open-source stack for RAG - Phil Nash](../sources/20260408_4TxOBhDRRCM.md), 07:24-08:15, 12:20-13:04
 - [RAG is dead, right?? - Kuba Rogut, Turbopuffer](../sources/20260609_UM6sFg_jdlE.md), 02:46-09:42
 - [How to Generate Mergeable Code with a Context Engine — Peter Werry, Unblocked](../sources/20260827_qdAkxLoYNI8.md), 04:16-05:12
+- [The Missing Layer in Agentic AI — Giedrius Šteimantas, Oxylabs](../sources/20260826_XsvUhpnHepE.md), 05:28-07:56

@@ -15,6 +15,8 @@ Details:
 - Boundary against eval-side advice, which asks for the opposite. [PRISM-style environments](design-eval-environments-to-the-prism-principles.md) deliberately vary data, theme, and starting screen, and [flight-simulator training](train-computer-use-agents-in-a-flight-simulator-not-on-exams.md) deliberately injects layout shift and focus stealing, because an agent that only works on one rendering has memorized a path. Both are compatible with this page: vary the *task and the site's behavior* as a designed input you record, and hold the *substrate* fixed so it does not inject variance you never chose. An unrecorded viewport flip is not robustness testing — it is noise that inflates the environment variance term in any [confidence interval you compute](compute-confidence-intervals-over-both-action-and-environment-variance.md).
 - Practical consequence for observability: run-to-run comparison is only meaningful once the substrate is pinned, which is what makes screen recordings, logs, and network captures diagnostic rather than merely descriptive. See [Expose Observability As Agent-Readable Feedback](expose-observability-as-agent-readable-feedback.md). (14:35-15:10)
 
+- **The constancy requirement extends across pipeline stages, not just across runs.** Šteimantas' shopping agent verified stock and sizes with one fetch path and transacted with another, and because only the second was geolocated, "items ended up being unavailable at checkout." Nothing was non-deterministic in the sense this page addresses; the two stages were simply pinned differently. The generalization worth carrying: an environment is a set of parameters — exit location, fingerprint, proxy pool, render engine — and holding them constant across *runs* while letting them vary across *stages within a run* produces reproducible pipelines that still contradict themselves. It is also the cost of the swappability argued for in [Keep a Protocol Boundary So the Browser Backend Stays Swappable](keep-a-protocol-boundary-so-the-browser-backend-stays-swappable.md): a drop-in replacement is wiring-compatible, not environment-equivalent. ([Šteimantas](../sources/20260826_XsvUhpnHepE.md), 06:08-06:30, 11:07-13:20)
+
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
 - [Agents](../topics/agents.md)
@@ -26,6 +28,9 @@ Related concepts:
 - [Train Computer-Use Agents in a Flight Simulator, Not on Exams](train-computer-use-agents-in-a-flight-simulator-not-on-exams.md)
 - [Compute Confidence Intervals Over Both Action and Environment Variance](compute-confidence-intervals-over-both-action-and-environment-variance.md)
 - [Measure Agent Robustness per Variation Axis, Not Just Average Success](measure-agent-robustness-per-variation-axis-not-just-average-success.md)
+- [Keep Geolocation Consistent Across Pipeline Stages](keep-geolocation-consistent-across-pipeline-stages.md)
+- [Keep a Protocol Boundary So the Browser Backend Stays Swappable](keep-a-protocol-boundary-so-the-browser-backend-stays-swappable.md)
 
 Sources:
 - [Bringing agents onto the world wide web — Paul Klein IV, Browserbase](../sources/20260814_GqoNrUz8hEU.md), 08:54-10:09, 14:35-15:10
+- [The Missing Layer in Agentic AI — Giedrius Šteimantas, Oxylabs](../sources/20260826_XsvUhpnHepE.md), 06:08-06:30, 11:07-13:20

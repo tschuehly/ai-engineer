@@ -14,6 +14,8 @@ Details:
 - Tool curation trades context reduction against capability: some adaptations remove context, while other adaptations add longer descriptions or new tools when that improves task fit. 17:39-18:02, 39:35-40:17
 - **The same adaptation problem seen from the server author's side of the boundary.** Figma could not assume any client behaviour it had not verified, so it reimplemented three spec features through tool results: server instructions became text appended to every tool call, elicitation became a returned prompt asking the user's permission, and sampling became a returned prompt telling the agent to scan the codebase and report matches "in a specified format… in bulk." Both sides end up writing adapters, and the cost is symmetrical — the server gives up a protocol guarantee in exchange for model compliance, exactly as an adapting client gives up the server's intended semantics. ([Lumarie](../sources/20260828_ZIYYsAzaLlA.md), 09:48-12:03)
 
+- **The other thing a stable MCP surface buys: a replaceable implementation underneath it.** Adapting a third-party server is the usual reason to care about this boundary; Šteimantas' checkout stage shows the inverse benefit. Keeping Playwright MCP as the interface let a hardened remote browser replace the local one "as a drop in replacement," with the agent, prompts, and tool definitions untouched, which turned "our browser keeps getting blocked" from a rewrite into a procurement decision. See [Keep a Protocol Boundary So the Browser Backend Stays Swappable](keep-a-protocol-boundary-so-the-browser-backend-stays-swappable.md). ([Šteimantas](../sources/20260826_XsvUhpnHepE.md), 11:54-13:20)
+
 Related topics:
 - [Tools](../topics/tools.md)
 - [Infrastructure](../topics/infrastructure.md)
@@ -23,7 +25,9 @@ Related concepts:
 - [MCP Tool Surfaces Need Default Context Budgets](mcp-tool-surfaces-need-default-context-budgets.md)
 - [Wrap Generic Tool Descriptions With Use-Case Guidance](wrap-generic-tool-descriptions-with-use-case-guidance.md)
 - [Tools Are the Only Primitive Every Client Implements](tools-are-the-only-primitive-every-client-implements.md)
+- [Keep a Protocol Boundary So the Browser Backend Stays Swappable](keep-a-protocol-boundary-so-the-browser-backend-stays-swappable.md)
 
 Sources:
 - [Bending a Public MCP Server Without Breaking It — Nimrod Hauser, Baz](../sources/20260408_U00AOI1eJUE.md), 02:07-18:02
 - [Building the Engine While Flying the Plane: Launching the Figma MCP Server — Jesse Lumarie, Figma](../sources/20260828_ZIYYsAzaLlA.md), 09:48-12:03
+- [The Missing Layer in Agentic AI — Giedrius Šteimantas, Oxylabs](../sources/20260826_XsvUhpnHepE.md), 11:54-13:20

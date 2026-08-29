@@ -17,6 +17,8 @@ Details:
 - **Explore by hand, then write it down.** "First, you explore, you run the loop by hand, you climb rungs until the thing actually works, and then you automate. You write the solution down so you never have to figure it out again… as code or as an agent skill or very often as both." This is what converts a hostile page from a per-run reasoning problem into a programmed sequence — the same capture-once-replay-forever move that makes a CLI cheaper than a model in the loop. ([Corey Gallon](../sources/20260814_26RtyAm9y_Q.md), 08:01-08:26)
 - **Caveat — this is adversarial ground with terms-of-service and account risk attached.** Preparing this material got the speaker a ban threat from OpenAI "for cyber abuse with a web browser" (later rescinded), and every demonstration was restricted, on legal advice, to "infrastructure that I own and accounts that I operate." Techniques that defeat bot challenges sit against the defensive posture documented in [Treat CAPTCHA and Proof of Work as Economic Friction](treat-captcha-and-proof-of-work-as-economic-friction.md) and [Layer Bot Detection Signals Instead of Trusting One Header](layer-bot-detection-signals-instead-of-trusting-one-header.md); the transferable engineering is the escalation discipline, not the specific challenge bypasses. ([Corey Gallon](../sources/20260814_26RtyAm9y_Q.md), 00:01-01:09, 08:26-08:48, 19:36-20:22)
 
+- **The same stopping rule, one level up.** Šteimantas applies an identical discipline to a different unit: not how human an action must look on a given page, but which access primitive a given *pipeline stage* needs — a search API to find URLs, a scrape-to-markdown call to read them, a browser only where "we need to process inputs and the content is highly dynamic." His phrasing of the rule is nearly Gallon's ("use a browser when you absolutely have to"), and the two are complementary rather than competing: choose the primitive per stage first, then, inside whatever stage still holds a browser, climb only as high as the page forces. The costs they are minimizing differ, which is why both are worth running — the ladder saves latency and fragility on one interaction, the stage selection removes an entire class of interaction from the pipeline. See [Assign a Web-Access Primitive Per Pipeline Stage](assign-a-web-access-primitive-per-pipeline-stage.md). ([Šteimantas](../sources/20260826_XsvUhpnHepE.md), 02:59-03:45, 10:29-12:37)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Tools](../topics/tools.md)
@@ -29,6 +31,8 @@ Related concepts:
 - [Use Browser UI Control When APIs Are Absent](use-browser-ui-control-when-apis-are-absent.md)
 - [Fix the Browser-Agent Runtime Interface Before Reaching for a Better Model](fix-the-browser-agent-runtime-interface-before-reaching-for-a-better-model.md)
 - [Skills Turn Procedural Feedback Into Transferable Agent Memory](skills-turn-procedural-feedback-into-transferable-agent-memory.md)
+- [Assign a Web-Access Primitive Per Pipeline Stage](assign-a-web-access-primitive-per-pipeline-stage.md)
 
 Sources:
 - [The Dark Arts of Web Automation — Corey Gallon, Rexmore](../sources/20260814_26RtyAm9y_Q.md), 01:35-08:26, 08:48-16:30, 19:36-20:22
+- [The Missing Layer in Agentic AI — Giedrius Šteimantas, Oxylabs](../sources/20260826_XsvUhpnHepE.md), 02:59-03:45, 10:29-12:37

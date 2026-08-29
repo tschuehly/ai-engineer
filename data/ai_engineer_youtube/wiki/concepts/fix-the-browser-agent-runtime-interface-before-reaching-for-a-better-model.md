@@ -19,6 +19,8 @@ Details:
 - **A third source names the gap and says who can close it.** Paul Klein IV's argument is that the model bottleneck is already gone — "the models one year ago really weren't good at long context horizon tasks. But that's clearly been solved in a major way," and the last six months put as much investment into RL environments for computer use as the prior year put into coding — so what remains is "a huge model capabilities overhang" that engineering, not training, closes: "solving overhang is an engineering problem… you can actually solve this today." He widens the three levers into three properties of browser agents that work in production: they are [multimodal and write code alongside clicking](pair-clicking-with-generated-code-and-replayed-network-requests.md), they carry [skills and memory so a site is not rediscovered every run](publish-per-site-skills-so-agents-do-not-rediscover-a-website.md), and they sit on [infrastructure that renders the page identically every time](hold-the-browser-environment-constant-across-runs.md). The consequential half is who is allowed to do this work: "you don't have to be a lab to build a good harness… Your company can make a great harness for your domain and actually improve model results. You don't just have to wait for the models to catch up." ([Paul Klein IV](../sources/20260814_GqoNrUz8hEU.md), 02:13-03:13, 04:53-05:28, 06:44-07:01)
 - Contrast with the site-side approach: WebMCP and agent-readable web surfaces ask *sites* to publish clean action surfaces; this is the *agent-side* runtime that works on unmodified, hostile pages when no such surface exists.
 
+- **A fifth source names the same gap and locates it below the runtime.** Šteimantas' verdict on a failing shopping agent is this page's thesis verbatim — "the gap was not model quality. It was the layer underneath" — but the layer he means is not the observation format or the action vocabulary. It is web access itself: stealth, exit location, block detection, and the choice of whether a browser is in the loop at all. That is worth holding as a fourth lever beside what the agent sees, does, and learns from, because it fails differently: the other three degrade an agent that is at least receiving the page, while this one decides whether a real page arrives. It is also the lever most often bought rather than built. See [Assign a Web-Access Primitive Per Pipeline Stage](assign-a-web-access-primitive-per-pipeline-stage.md) and [Ground Agents With Managed Web-Access Infrastructure](ground-agents-with-managed-web-access-infrastructure.md). Caveat: unlike Raj's before/after on a fixed task set, no measurement accompanies the rebuild. ([Šteimantas](../sources/20260826_XsvUhpnHepE.md), 01:33-02:32, 14:03-14:35)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Infrastructure](../topics/infrastructure.md)
@@ -36,9 +38,13 @@ Related concepts:
 - [Pair Clicking With Generated Code and Replayed Network Requests](pair-clicking-with-generated-code-and-replayed-network-requests.md)
 - [Hold the Browser Environment Constant Across Runs](hold-the-browser-environment-constant-across-runs.md)
 - [Publish Per-Site Skills So Agents Do Not Rediscover a Website](publish-per-site-skills-so-agents-do-not-rediscover-a-website.md)
+- [Assign a Web-Access Primitive Per Pipeline Stage](assign-a-web-access-primitive-per-pipeline-stage.md)
+- [Validate Retrieved Content Before Spending Tokens on It](validate-retrieved-content-before-spending-tokens-on-it.md)
+- [Keep a Protocol Boundary So the Browser Backend Stays Swappable](keep-a-protocol-boundary-so-the-browser-backend-stays-swappable.md)
 
 Sources:
 - [Browser Agents Don't Need Better Models. They Need Better Eyes. - Kushan Raj, ARK](../sources/20260628_JnubYCYunk8.md), 00:30-04:23
 - [The Dark Arts of Web Automation — Corey Gallon, Rexmore](../sources/20260814_26RtyAm9y_Q.md), 04:28-06:47, 10:43-12:41, 19:36-20:22
 - [From RL to IRL — Gaurav Mishra, Amazon AGI Lab](../sources/20260814_Cc0_nyxROBA.md), 11:04-12:20, 16:49-17:12
 - [Bringing agents onto the world wide web — Paul Klein IV, Browserbase](../sources/20260814_GqoNrUz8hEU.md), 02:13-03:13, 04:53-07:01
+- [The Missing Layer in Agentic AI — Giedrius Šteimantas, Oxylabs](../sources/20260826_XsvUhpnHepE.md), 01:33-02:32, 14:03-14:35

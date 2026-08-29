@@ -15,6 +15,8 @@ Details:
 - **Caveat on what the compressed representation cannot carry.** Any document-derived format inherits the fact that a page's displayed state is often computed rather than written: a variant that is grayed out and unclickable because a fetched `quantity` is zero has no text saying "sold out" anywhere in the source, and a score that arrives in a later asynchronous fetch is absent from the initial HTML entirely. "It is calculated. It is rendered." That is an argument for keeping the screenshot in the pair for the specific facts being extracted, not just for visual grounding of clicks — see [Rendered State Is Not in the HTML](rendered-state-is-not-in-the-html.md). ([Dhruv Batra](../sources/20260814_Ki980nV0__0.md), 09:01-11:33)
 - **A second independent instance of the structure-plus-screenshot pairing, in design-to-code.** Figma passes an image of the node alongside the serialized scene graph for the same reason this page pairs markdown with a screenshot: "While the image by itself did not do a good job of converting to uh code, having the code context plus the image actually had better agentic output." The transport detail is the transferable part — inlining the image was the failure mode, since "passing B 64 data into the code… just blew up the context window and was bad all around. um don't do that" — so images are abstracted out of the structure and hoisted to the top level as links. Scope caveat: the speaker dates image-only weakness to "early 2025" models rather than claiming it as durable. ([Lumarie](../sources/20260828_ZIYYsAzaLlA.md), 04:41-05:39)
 
+- **The same representation without a browser in the agent's process.** A scrape-to-markdown API produces this page's format as its output — "the API supports markdown. So no need to submit raw HTML to LLMs" — while running "a full browser under the hood" only when the site is dynamic. That is a useful reframing of the observation-format decision: markdown-versus-DOM is a question about what reaches the model, and it can be answered by a fetch call rather than by an agent-side browser runtime, which also makes hundreds of pages fetchable in parallel. The tradeoff against the pairing argued for above is direct — this path returns no screenshot, so the computed-state facts flagged in [Rendered State Is Not in the HTML](rendered-state-is-not-in-the-html.md) are only as recoverable as the provider's own rendering makes them, and you cannot inspect what it decided to drop. ([Šteimantas](../sources/20260826_XsvUhpnHepE.md), 10:49-11:30)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Context Engineering](../topics/context-engineering.md)
@@ -26,8 +28,10 @@ Related concepts:
 - [Measure Agent Interface Efficiency With Tokens Per Successful Outcome](measure-agent-interface-efficiency-with-tokens-per-successful-outcome.md)
 - [Rendered State Is Not in the HTML](rendered-state-is-not-in-the-html.md)
 - [Pick the Serialization the Models Have Seen Most, Not the One Native to Your System](pick-the-serialization-the-models-have-seen-most.md)
+- [Assign a Web-Access Primitive Per Pipeline Stage](assign-a-web-access-primitive-per-pipeline-stage.md)
 
 Sources:
 - [Browser Agents Don't Need Better Models. They Need Better Eyes. - Kushan Raj, ARK](../sources/20260628_JnubYCYunk8.md), 01:18-04:23
 - [Computer-use models will agentify the web, not APIs — Dhruv Batra, Yutori](../sources/20260814_Ki980nV0__0.md), 09:01-11:33
 - [Building the Engine While Flying the Plane: Launching the Figma MCP Server — Jesse Lumarie, Figma](../sources/20260828_ZIYYsAzaLlA.md), 04:41-05:39
+- [The Missing Layer in Agentic AI — Giedrius Šteimantas, Oxylabs](../sources/20260826_XsvUhpnHepE.md), 10:49-11:30

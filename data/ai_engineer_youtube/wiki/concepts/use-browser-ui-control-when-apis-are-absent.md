@@ -19,6 +19,9 @@ Details:
 - **How the control surface itself is changing, from the API side.** OpenAI's original computer-use tool "only allowed you to do one action at a time," and required the harness author to implement each exposed action type; recent models and API shapes let the agent script the environment instead — Codex drives Playwright against a persistent Node REPL, so the action vocabulary becomes whatever the library exposes and page handles survive across turns ([Drive Computer Use Through a Persistent Scripting Session](drive-computer-use-through-a-persistent-scripting-session.md)). This changes the economics of the fallback path on this page in a specific way: the agent can inspect one page by hand and then write a loop for the remaining hundred, so the per-page cost of UI control stops being flat. It does not touch the perception problem — the script still has to name the right element — nor the terms-of-service exposure. ([Codex, Behind the Harness](../sources/20260810_shRR1e2HXMk.md), 08:12-10:07)
 - **In commerce the counterparty actively defends against it, and the failure lands at the step that matters.** The usual account of browser-agent brittleness is client-side; Prio supplies the other half from inside a retailer: "any engineering department of that merchant will tell you an AI impersonating your browser is just firing up all the alarm bells. So, a lot of times, you will probably be even stuck on the payment flow." Anti-fraud tooling is built to detect exactly the signature a browsing agent produces, so the agent gets furthest through the cheap steps — search, browse, add to cart — and fails at checkout. Where the site has an adversarial stake in identifying automation, "no API available" understates the problem. ([Prio](../sources/20260827_G7cgLjZtmMU.md), 03:08-03:49)
 
+- **The negative discipline: absent is not the same as needed, and the test is per stage.** A source arguing from the scraping side supplies the stopping rule this page lacks — "use a browser when you absolutely have to" — and the criterion for "absolutely": you must process inputs *and* the content is highly dynamic. A stage that only reads a page meets neither, even when the site has no API, so the fallback for it is a scrape-to-markdown call rather than a driven browser. In the worked case only the checkout stage kept a browser; discovery moved to a search API and page reading to a parallel REST scraper. This does not contradict the long-tail argument above — the API is still absent everywhere — it separates "no API" from "must drive the UI." See [Assign a Web-Access Primitive Per Pipeline Stage](assign-a-web-access-primitive-per-pipeline-stage.md). ([Šteimantas](../sources/20260826_XsvUhpnHepE.md), 02:59-03:45, 10:29-12:37)
+- **It corroborates the checkout-failure finding above from the opposite side of the counter.** Prio's account from inside a retailer is that browsing agents get furthest through search and browse and fail at payment. Šteimantas independently arrives at checkout as the stage that needs the most hardening — source-level stealth, a residential proxy, and a pinned exit location — having watched a shopping agent "getting captured into oblivion" there. Two sources with opposite commercial interests agree on where the wall is. ([Šteimantas](../sources/20260826_XsvUhpnHepE.md), 12:37-13:20)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Tools](../topics/tools.md)
@@ -33,6 +36,8 @@ Related concepts:
 - [Chrome Stamps Every Input Trusted or Untrusted](chrome-stamps-every-input-trusted-or-untrusted.md)
 - [Drive Computer Use Through a Persistent Scripting Session](drive-computer-use-through-a-persistent-scripting-session.md)
 - [Agent Protocols Must Encode the Distinctions the User Interface Collapses](agent-protocols-must-encode-the-distinctions-the-ui-collapses.md)
+- [Assign a Web-Access Primitive Per Pipeline Stage](assign-a-web-access-primitive-per-pipeline-stage.md)
+- [Keep a Protocol Boundary So the Browser Backend Stays Swappable](keep-a-protocol-boundary-so-the-browser-backend-stays-swappable.md)
 
 Sources:
 - [Useful General Intelligence - Danielle Perszyk, Amazon AGI](../sources/20250802_Dj0b_cEBHBI.md), 03:17-03:27, 07:48-08:31
@@ -40,3 +45,4 @@ Sources:
 - [Computer-use models will agentify the web, not APIs — Dhruv Batra, Yutori](../sources/20260814_Ki980nV0__0.md), 01:12-12:24
 - [Codex, Behind the Harness — Dominik Kundel, OpenAI](../sources/20260810_shRR1e2HXMk.md), 08:12-10:07
 - [The Agentic Commerce Stack — Ahnaf Prio, Best Buy](../sources/20260827_G7cgLjZtmMU.md), 03:08-03:49
+- [The Missing Layer in Agentic AI — Giedrius Šteimantas, Oxylabs](../sources/20260826_XsvUhpnHepE.md), 02:59-03:45, 10:29-13:20

@@ -27,6 +27,7 @@ Related concepts:
 - [Wrap Agent Completion in an Automatic Deterministic Verification Gate](wrap-agent-completion-in-an-automatic-deterministic-verification-gate.md)
 - [Choose agent observation and action spaces explicitly](choose-agent-observation-and-action-spaces-explicitly.md)
 - [Pair Clicking With Generated Code and Replayed Network Requests](pair-clicking-with-generated-code-and-replayed-network-requests.md)
+- [Validate Retrieved Content Before Spending Tokens on It](validate-retrieved-content-before-spending-tokens-on-it.md)
 
 Sources:
 - [The Dark Arts of Web Automation — Corey Gallon, Rexmore](../sources/20260814_26RtyAm9y_Q.md), 04:28-06:47, 10:43-11:32

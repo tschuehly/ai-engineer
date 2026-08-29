@@ -312,8 +312,11 @@ A long-horizon agent pattern arrives from go-to-market with an unusual identity 
 
 Scheduling is a first-class design choice for per-entity agents, and the wiki now holds three answers to it. A dormant long-lived agent wakes on a smart trigger or heartbeat because deal-cycle work is sparse and unpredictable. A signal service fires a workflow when a customer event changes what should happen next. And a scheduled fan-out ignores both, computing for every entity in scope on a clock — Ramp generates per-account meeting prep nightly, because the demand itself is scheduled and tomorrow's fan-out set is already on the calendar. The deciding question is not the agent's lifetime but whether the work has a deadline or a cause; cost follows from that, since a clock spends on the whole population while dormancy spends only on activity. The composition of such an agent is also worth copying: four inputs, two owned by the platform (the served entity store and the vector index, plus system-owned skills) and one owned by the user (their own format and content instructions), which is what lets a single nightly job produce differently shaped output per person and is credited directly with adoption rather than with quality.
 
+One vendor rebuild sharpens a distinction this topic keeps implicit: which web-access primitive a stage of an agent needs is a design decision separate from what the agent reasons about. A vibe-coded shopping agent ran a browser automation framework at every stage and came out "slow, expensive and unreliable" — not because the model was weak or the plan was wrong, but because generation defaults to the most capable primitive available and a browser can do everything. Re-derived stage by stage under the rule "use a browser when you absolutely have to," discovery becomes a search call returning compact JSON so the agent picks its own URLs, page reading becomes a parallel scrape-to-markdown call, and only checkout — where inputs must be filled and state is genuinely dynamic — keeps a browser. That is the wiki's per-page humanness ladder applied one level up, at design time and across stages rather than at run time and within one page, and the two compose. The failure it prevents is specific and unglamorous: the expensive primitive is not merely slower, it is the one whose per-transaction cost has an unbounded retry tail against anti-bot defenses. A fourth point belongs with the topic's browser-agent material. Location is a correctness parameter, not only an anti-blocking one — an ungeolocated discovery stage feeding a geolocated checkout produced items that were in stock during verification and gone at the till, a mismatch no validity check catches because both pages are real.
+
 ## Key Concepts
 
+- [Keep Geolocation Consistent Across Pipeline Stages](../concepts/keep-geolocation-consistent-across-pipeline-stages.md) - stock, sizes, and prices vary by visitor location, so an unpinned locale fails at the last and most expensive step.
 - [Fan Out a Scheduled Per-Entity Agent Instead of Waiting for a Trigger](../concepts/fan-out-a-scheduled-per-entity-agent-instead-of-waiting-for-a-trigger.md) - the third scheduling discipline for per-entity agents, and when a clock beats a trigger.
 - [Let Users Author the Output Format as a Skill](../concepts/let-users-author-the-output-format-as-a-skill.md) - user-owned presentation composed with platform-owned judgment, as an adoption lever.
 - [Run One Dormant, Long-Lived Agent Per Account](../concepts/run-one-dormant-long-lived-agent-per-account.md) - per-entity rather than per-session agents, asleep by default and rehydrated on wake.
@@ -827,6 +830,8 @@ Scheduling is a first-class design choice for per-entity agents, and the wiki no
 
 ## Open Questions
 
+- Do two web-access providers that both advertise geolocation resolve the same nominal region to the same exit behaviour? If not, splitting pipeline stages across vendors reintroduces the locale mismatch that pinning was meant to remove, and nothing in this wiki tests it.
+
 - What are the norms for agents in developer community spaces? Jarmak raises the case of members bringing recording agents into a shared Discord as a privacy and data-handling problem community builders now have, without proposing a policy. ([Jarmak](../sources/20260826_Lrw0jqBNaw0.md), 15:20-16:08)
 - How would an agent know it has searched enough? Every mitigation in the wiki works around the stopping decision — precomputed synthesis, multiple returned sources, direct fetch of known locations — and none gives the agent a coverage estimate it could act on itself.
 
@@ -1158,3 +1163,4 @@ Scheduling is a first-class design choice for per-entity agents, and the wiki no
 - [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md)
 - [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md)
 - [The Building Blocks of GTM Orchestration — Arman Vaziri, Ramp](../sources/20260826_VjEP0xqTUI0.md)
+- [The Missing Layer in Agentic AI — Giedrius Šteimantas, Oxylabs](../sources/20260826_XsvUhpnHepE.md)

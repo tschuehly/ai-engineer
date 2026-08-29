@@ -1,6 +1,7 @@
 # Concept Index
 
 ## Agents
+- [Keep Geolocation Consistent Across Pipeline Stages](../concepts/keep-geolocation-consistent-across-pipeline-stages.md) - location changes stock, sizes, and prices, so an unpinned locale fails at checkout after verifying a different world.
 - [Fan Out a Scheduled Per-Entity Agent Instead of Waiting for a Trigger](../concepts/fan-out-a-scheduled-per-entity-agent-instead-of-waiting-for-a-trigger.md) - a nightly per-account agent composing served context, vector search, system skills, and user instructions.
 - [Let Users Author the Output Format as a Skill](../concepts/let-users-author-the-output-format-as-a-skill.md) - users write their own format in text; the platform keeps the judgment, and adoption is the stated payoff.
 - [Run One Dormant, Long-Lived Agent Per Account](../concepts/run-one-dormant-long-lived-agent-per-account.md) - one agent per entity, dormant by default, woken by trigger or heartbeat and rehydrated from the shared substrate.
@@ -1136,6 +1137,7 @@
 - [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md)
 
 ## Infrastructure
+- [Assign a Web-Access Primitive Per Pipeline Stage](../concepts/assign-a-web-access-primitive-per-pipeline-stage.md) - the access layer below the agent runtime, chosen per stage rather than per agent.
 - [Back the Served Context Layer With a Transactional Store for Referential Integrity](../concepts/back-the-served-context-layer-with-a-transactional-store-for-referential-integrity.md) - Postgres over a denormalized key-value profile, for cross-system integrity and provenance rather than latency.
 - [Compute Truth in the Warehouse and Serve It as a Denormalized Profile](../concepts/compute-truth-in-the-warehouse-and-serve-it-as-a-denormalized-profile.md) - warehouse computes modeled versioned entities; a key-value store serves them join-free in milliseconds.
 - [Land the Data in One Governed Store So Agents Inherit Access Control](../concepts/land-the-data-in-one-governed-store-so-agents-inherit-access-control.md) - consolidation makes authorization a property agents inherit rather than implement.
@@ -1798,6 +1800,7 @@
 - [Verify AI Call Summaries Before CRM Sync](../concepts/verify-ai-call-summaries-before-crm-sync.md) - the write path into the system of record needs a check, and agent tool access widens it.
 
 ## Evaluation
+- [Validate Retrieved Content Before Spending Tokens on It](../concepts/validate-retrieved-content-before-spending-tokens-on-it.md) - a run that answers correctly from a blocked-truncated sample scores as a success.
 - [Read Every Run for Months Before Trusting an Unevaluatable Narrative](../concepts/read-every-run-for-months-before-trusting-an-unevaluatable-narrative.md) - exhaustive manual review as a burn-in when there is no ground-truth label, and what it fails to leave behind.
 - [Benchmark Your Own Tool by Running Agents With and Without It](../concepts/benchmark-your-tool-by-running-agents-with-and-without-it.md) - hundreds of lifecycle tasks in both conditions, with the traces as the deliverable rather than the score.
 - [Count Burned Turns, Because Agent Self-Recovery Hides Tool Defects](../concepts/count-burned-turns-because-agent-self-recovery-hides-tool-defects.md) - recovered tool errors are waste that no success rate reports.
@@ -2400,6 +2403,8 @@
 - [Condition ASR on Conversation Context and Domain Vocabulary](../concepts/condition-asr-on-conversation-context-and-domain-vocabulary.md)
 
 ## Retrieval
+- [Validate Retrieved Content Before Spending Tokens on It](../concepts/validate-retrieved-content-before-spending-tokens-on-it.md) - a block arrives as a 200, so status and size checks forward CAPTCHA pages to the model at input-token rates.
+- [Assign a Web-Access Primitive Per Pipeline Stage](../concepts/assign-a-web-access-primitive-per-pipeline-stage.md) - a search call to find URLs, a scrape-to-markdown call to read them, a browser only where inputs must be filled.
 - [Compute Truth in the Warehouse and Serve It as a Denormalized Profile](../concepts/compute-truth-in-the-warehouse-and-serve-it-as-a-denormalized-profile.md) - key-addressable context beats search when the entity set is known and enumerable.
 - [Classify the Assistant Question Log to Find Feature and Content Gaps](../concepts/classify-the-assistant-question-log-to-find-feature-and-content-gaps.md) - LLM classification over 40,000 questions a week, with repeats and profanity as free negative labels.
 - [Classify the Whole Addressable Market Instead of Searching It Account by Account](../concepts/classify-the-whole-addressable-market-instead-of-searching-it.md) - ranked retrieval answers a query; the same embeddings can partition the corpus.
@@ -2592,6 +2597,8 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Fail Loudly and Bill Only for Successful Results](../concepts/fail-loudly-and-bill-only-for-successful-results.md) - an explicit error beats a plausible payload, and per-success billing is what makes the classification credible.
+- [Keep a Protocol Boundary So the Browser Backend Stays Swappable](../concepts/keep-a-protocol-boundary-so-the-browser-backend-stays-swappable.md) - driving the browser through MCP turns a blocked automation into a procurement decision, not a rewrite.
 - [Expose the Background Agents' Tool Surface to Employees Over MCP](../concepts/expose-the-background-agents-tool-surface-to-employees-over-mcp.md) - one internal server, used by production automations and by every employee's own client.
 - [Read Employee-Built Automations as the Productionization Backlog](../concepts/read-employee-built-automations-as-the-productionization-backlog.md) - a connection states the problem and the attempted solution, and hands over the prototype.
 - [Serve Markdown Through Three Redundant Paths](../concepts/serve-markdown-through-three-redundant-paths.md) - `.md` suffix, `Accept` negotiation, and `?mode=agent`, ordered by the client capability each one assumes.
@@ -2900,6 +2907,7 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Keep Geolocation Consistent Across Pipeline Stages](../concepts/keep-geolocation-consistent-across-pipeline-stages.md) - environment parameters held constant across runs but varying across stages produce reproducible pipelines that contradict themselves.
 - [Solve One Team, Then Mirror the Build Sideways](../concepts/solve-one-team-then-mirror-the-build-sideways.md) - the embedding pipeline and custom instructions port to the next team; the data sources and skills do not.
 - [Treat Tool-to-Tool Orchestration as a Data Engineering Problem](../concepts/treat-tool-to-tool-orchestration-as-a-data-engineering-problem.md) - 10-30 tools with disagreeing world views, heterogeneous cadences, fan-out, and constant partial failure.
 - [Wait for the Background Sync Before Acting on a Record You Just Created](../concepts/wait-for-the-background-sync-before-acting-on-a-record-you-just-created.md) - pre-integrated vendors sync outside your orchestrator, so poll for readiness instead of retrying.

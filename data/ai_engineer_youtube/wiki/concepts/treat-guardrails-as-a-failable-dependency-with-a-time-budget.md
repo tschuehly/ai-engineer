@@ -29,6 +29,7 @@ Related concepts:
 - [An LLM Gateway Cannot Maximize Availability, Latency, Guardrails, and Cost at Once](an-llm-gateway-cannot-maximize-availability-latency-guardrails-and-cost.md)
 - [Streaming Forecloses the Provider Fallback](streaming-forecloses-the-provider-fallback.md)
 - [Layer AI Application Metrics From Guardrail Compliance to System Health](layer-ai-application-metrics-from-guardrail-compliance-to-system-health.md)
+- [Fail Loudly and Bill Only for Successful Results](fail-loudly-and-bill-only-for-successful-results.md)
 
 Sources:
 - [Productionizing LLM Gateways: Architecture, Tradeoffs and Hard Lessons — Kanish Manuja, Twilio](../sources/20260828_zrZ1amZBSPw.md), 09:45-12:47

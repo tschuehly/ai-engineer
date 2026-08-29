@@ -25,6 +25,7 @@ Related concepts:
 - [Map RL Assumptions to Deployment Realities for Computer-Use Agents](map-rl-assumptions-to-deployment-realities-for-computer-use-agents.md)
 - [Teach Calibrated Confidence So an Agent Knows When to Hand Off](teach-calibrated-confidence-so-an-agent-knows-when-to-hand-off.md)
 - [Close agent loops around live action feedback](close-agent-loops-around-live-action-feedback.md)
+- [Fail Loudly and Bill Only for Successful Results](fail-loudly-and-bill-only-for-successful-results.md)
 
 Sources:
 - [From RL to IRL — Gaurav Mishra, Amazon AGI Lab](../sources/20260814_Cc0_nyxROBA.md), 04:47-05:38, 09:22-09:48, 14:37-14:45, 15:34-15:49

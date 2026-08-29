@@ -14,6 +14,8 @@ Details:
 - Poisoned content makes it worse: an anti-bot "labyrinth" can feed the agent fake data instead of blocking it, so the model produces bigger, more plausible hallucinations from confidently wrong inputs. (10:04-10:18)
 - The practical mitigation is to keep the agent from getting blocked in the first place so real content reaches the model, rather than trying to detect fabrication after the fact. (10:18-10:25)
 
+- **A second source qualifies the failure mode in two useful directions.** First, it is detectable if anyone looks: the builder in Šteimantas' account "did well with observability. So he actually noticed when it happened" — the invisibility is a property of the instrumentation, not of the phenomenon, and the specific gap is checking "only the content size and HTTP response code," both of which a challenge page passes. Second, the model is not the weak link at the detection step: "a large language model of course can distinguish between valid shop content and a capture. But we need to spend tokens in order to do that." That produces a different failure than the one on this page — not fabrication but expense and a truncated choice set, since the agent decides among only the sites that let it through. The two cases separate on how much valid content survives: with none, the model falls back on training data and invents; with some, it answers correctly from a biased sample and bills you for reading the rest. The mitigation is identical either way — keep the block out of the context window. See [Validate Retrieved Content Before Spending Tokens on It](validate-retrieved-content-before-spending-tokens-on-it.md). ([Šteimantas](../sources/20260826_XsvUhpnHepE.md), 08:39-09:44)
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Retrieval](../topics/retrieval.md)
@@ -25,6 +27,9 @@ Related concepts:
 - [AI Search Providers Should Return Grounding Documents](ai-search-providers-should-return-grounding-documents.md)
 - [Harden Third-Party MCP Tools Against Silent Failure and Endpoint Risk](harden-third-party-mcp-tools-against-silent-failure-and-endpoint-risk.md)
 - [Evaluate whether models reject impossible or nonsensical premises](evaluate-whether-models-reject-impossible-or-nonsensical-premises.md)
+- [Validate Retrieved Content Before Spending Tokens on It](validate-retrieved-content-before-spending-tokens-on-it.md)
+- [Fail Loudly and Bill Only for Successful Results](fail-loudly-and-bill-only-for-successful-results.md)
 
 Sources:
 - [Your Agent's Biggest Lie: "I Searched the Web" — Rafael Levi, Bright Data](../sources/20260617_btxGmN8RvNU.md), 00:48-03:01, 10:04-10:25
+- [The Missing Layer in Agentic AI — Giedrius Šteimantas, Oxylabs](../sources/20260826_XsvUhpnHepE.md), 08:39-09:44
