@@ -17,6 +17,9 @@ Details:
 - **Caveat.** This is practitioner experience with no numbers attached: no failover incident, no saturation event, and no measured provider difference is reported, and the "even higher" headroom recommendation comes with no ratio. It also has an unpriced cost the talk does not mention — reserved capacity or committed spend with a second provider that normally serves zero traffic — which is exactly the availability-versus-cost trade in [An LLM Gateway Cannot Maximize Availability, Latency, Guardrails, and Cost at Once](an-llm-gateway-cannot-maximize-availability-latency-guardrails-and-cost.md).
 - **The same hazard in a data waterfall, where the fallback rungs exist by design rather than for outages.** Layering data vendors until a field fills means "if I was just using Forager to get phone numbers for this set of countries, I'd only get halfway there," so providers two through N serve exactly the records the earlier rungs missed — a biased, low-volume slice that is rarely monitored. The remedy Berry names is the one this page implies: "either you or the vendor that you're using needs to run evals against these data providers," which means evaluating the fallbacks on the population they actually serve rather than on the whole set. ([Berry](../sources/20260826_UhCY231d0FQ.md), 04:42-05:28)
 
+
+- **One structural remedy for the attention asymmetry: put the backup in the same config line as the primary.** A router that binds each task to an ordered model pool — "I really want to always route to GLM 5.2 unless it's down… If GLM fails, it'll fail over to GPT-5.2" — makes the fallback a declared, reviewable field beside the model it protects, rather than a global setting nobody opens ([Kamath & Gillam](../sources/20260822_FvxY8oPoI8o.md), 07:10-07:32). That does not test or provision anything, which is this page's actual demand, but it removes the most common precondition for neglect: not knowing what the backup is. It also makes the backup *per task*, so the question "can this provider serve this workload" is asked once per task class instead of once for the whole gateway. See [Give Each Task a Model Pool With an Explicit Selection Policy](give-each-task-a-model-pool-with-an-explicit-selection-policy.md). Note what the source does not supply: no failover event is demonstrated, no failure predicate is defined, and the talk names single-model risk as its "most important" reason for routing and then spends the entire demo on cost.
+
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
 - [Inference](../topics/inference.md)
@@ -29,7 +32,9 @@ Related concepts:
 - [Read the Stop Reason Before You Read the Answer](read-the-stop-reason-before-you-read-the-answer.md)
 - [Open Model Families Need Ecosystem-Compatible Tooling](open-model-families-need-ecosystem-compatible-tooling.md)
 - [Waterfall Data Vendors and Run Evals to Decide Which to Trust](waterfall-data-vendors-and-run-evals-to-decide-which-to-trust.md)
+- [Give Each Task a Model Pool With an Explicit Selection Policy](give-each-task-a-model-pool-with-an-explicit-selection-policy.md)
 
 Sources:
 - [Productionizing LLM Gateways: Architecture, Tradeoffs and Hard Lessons — Kanish Manuja, Twilio](../sources/20260828_zrZ1amZBSPw.md), 04:35-05:07, 05:55-06:29
 - [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 04:42-05:28
+- [Preferences Over Benchmarks: Model Routing — Archana Kamath & Tyler Gillam, DigitalOcean](../sources/20260822_FvxY8oPoI8o.md), 01:50-02:10, 07:10-07:32

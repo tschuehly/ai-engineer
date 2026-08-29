@@ -13,6 +13,9 @@ Details:
 - Anthropic describes thinking as an API-controlled budget: developers can decide whether Claude should spend more tokens reasoning for complex debugging or answer quickly for simpler work. 02:20-03:09
 - **A reasoning model's latency is a distribution with a very long tail, not a number to put in a comparison table.** From production: "you cannot set the temperature to zero in many cases and the same prompt can take somewhere from 2 seconds to 60 seconds and we've seen that in production where P99 suddenly popped to 60 seconds for no good reason." Router models compound it by hiding which model ran — "they pick which models to run" — so the comparison you recorded may not describe what served the request. The partial mitigations are to fix the reasoning level per route and to pin whatever the router leaves free, making "requests as deterministic as possible with an undeterministic system." ([Manuja](../sources/20260828_zrZ1amZBSPw.md), 08:17-09:22)
 
+
+- **The same comparison axes argued as a reason the comparison cannot be published by anyone else.** DigitalOcean's routing talk lists what actually decides fit — the task, "the system prompts and tools around it," the cost you will spend, "the latency the use case needs," and end-user preference — and concludes it is "a mix that no public leaderboard can actually encode for you" ([Kamath & Gillam](../sources/20260822_FvxY8oPoI8o.md), 03:19-04:01). Four of the five are properties of the caller's system rather than of the model, which is why a comparison table like this one is something a team maintains for its own harness and budget rather than something it downloads. Their operational consequence is to turn the comparison into runtime configuration: named tasks, each with a model pool and a cost/latency/quality weighting, re-evaluated in a loop ([Declare Routing Preferences So a Bad Route Is Fixable](declare-routing-preferences-so-a-bad-route-is-fixable.md)).
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Models](../topics/models.md)
@@ -22,8 +25,10 @@ Related concepts:
 - [Use hybrid AI pricing to balance predictable revenue and margin protection](use-hybrid-ai-pricing-to-balance-predictable-revenue-and-margin-protection.md)
 - [Use golden data sets and mixed scoring functions for AI application confidence](use-golden-data-sets-and-mixed-scoring-functions-for-ai-application-confidence.md)
 - [Track Latency and Timeouts Per Model Class Per Route](track-latency-and-timeouts-per-model-class-per-route.md)
+- [Declare Routing Preferences So a Bad Route Is Fixable](declare-routing-preferences-so-a-bad-route-is-fixable.md)
 
 Sources:
 - [Build & deploy AI-powered apps - Paige Bailey, Google DeepMind](../sources/20260429_G_bHFmEAarM.md), 12:25-14:08, 18:35-19:11
 - [Katelyn Lesse - Evolving Claude APIs for Agents, Anthropic](../sources/20251204_aqW68Is_Kj4.md), 02:20-03:09
 - [Productionizing LLM Gateways: Architecture, Tradeoffs and Hard Lessons — Kanish Manuja, Twilio](../sources/20260828_zrZ1amZBSPw.md), 08:17-09:22
+- [Preferences Over Benchmarks: Model Routing — Archana Kamath & Tyler Gillam, DigitalOcean](../sources/20260822_FvxY8oPoI8o.md), 03:19-04:01

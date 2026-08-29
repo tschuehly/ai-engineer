@@ -16,6 +16,10 @@ Details:
 - **Why per-use-case matters more here than in ordinary service design.** The traffic behind one gateway is not homogeneous: embeddings and classification under a second, chat around three seconds, reasoning far longer (06:54-07:15). A policy tuned for the chat route is wrong for the reasoning route on every one of the four axes simultaneously, which is the same argument that forces per-route metrics in [Track Latency and Timeouts Per Model Class Per Route](track-latency-and-timeouts-per-model-class-per-route.md).
 - **Caveat.** The four-way framing is asserted as a framing device, not derived, and the talk works through only one of the six pairwise trades explicitly (availability against security, in the fail-open decision). No measurement of any trade appears anywhere in sixteen minutes; treat the axes as a checklist for finding unexamined decisions rather than as a model that predicts anything.
 
+
+- **A vendor shipping the levers this page asks for, which is useful as a check on whether the framing survives implementation.** Manuja's ask of gateway designers is to "provide those levers to your callers and customers" instead of hard-coding one answer. DigitalOcean's router is one concrete form of that: "you describe what matters for your workload, costs, latency, quality, preferred models or hard rules. Then the router uses that context to pick the right model per request," expressed as natural-language task descriptions plus decision-tree rules over them, with presets as starting points ([Kamath & Gillam](../sources/20260822_FvxY8oPoI8o.md), 04:42-05:07, 05:48-06:08). Three of this page's four axes appear literally as fields — cost, latency, and quality — which is corroboration that the tradeoff is real enough for a product to expose it. The fourth, guardrails, is absent from the surface entirely, and the talk never mentions guardrails, safety filters, or governance; the router is presented as an optimization layer, not a policy layer. See [Declare Routing Preferences So a Bad Route Is Fixable](declare-routing-preferences-so-a-bad-route-is-fixable.md).
+- **The exposed lever is a preference, not a guarantee, which is where the framing gets tested.** Declaring "latency matters most" for a task does not bound latency; it biases a per-request model choice whose own matching step is nondeterministic. A degradation still forces the four-way choice this page describes, and the router's answer to an outage is a pool ordering rather than an axis to sacrifice. Preference declaration is therefore best read as a way to state your position on the tradeoff *in advance*, not as a mechanism that enforces it.
+
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
 - [Inference](../topics/inference.md)
@@ -28,6 +32,9 @@ Related concepts:
 - [Decentralize the Gateway, Centralize the Governance](decentralize-the-gateway-centralize-the-governance.md)
 - [Abstract LLM Inference Behind One Routing API](abstract-llm-inference-behind-one-routing-api.md)
 - [Evaluate Agent Loops With Correctness, Cost, Latency, and Step Counts](evaluate-agent-loops-with-correctness-cost-latency-and-step-counts.md)
+- [Declare Routing Preferences So a Bad Route Is Fixable](declare-routing-preferences-so-a-bad-route-is-fixable.md)
+- [Give Each Task a Model Pool With an Explicit Selection Policy](give-each-task-a-model-pool-with-an-explicit-selection-policy.md)
 
 Sources:
 - [Productionizing LLM Gateways: Architecture, Tradeoffs and Hard Lessons — Kanish Manuja, Twilio](../sources/20260828_zrZ1amZBSPw.md), 01:08-01:43, 03:16-03:27, 06:54-07:15, 09:24-09:43, 10:12-11:00, 12:04-12:28
+- [Preferences Over Benchmarks: Model Routing — Archana Kamath & Tyler Gillam, DigitalOcean](../sources/20260822_FvxY8oPoI8o.md), 04:42-05:07, 05:48-06:08

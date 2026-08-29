@@ -16,6 +16,9 @@ Details:
 
 - **The strongest version of the claim, and a case where the cheaper model brought its own guardrail.** Rizwan states the general principle without hedging: "to get the best output from these models, it's more a problem of what context and tools you give the agent access to and less about its raw intelligence. With the right AI native development infrastructure, with project skills and rules, systems of verification and quality gates, even a mediocre model can produce similar results as a more intelligent model. It just might take more tokens… the intelligence is better placed in the system and guard rails around the model so that you don't have to be as reliant on the model or your end developer's responsible use of the model itself." His N-of-1 test then lands on the opposite side of the usual framing: on a real bug in Cline's own repository, GLM spent twice the tokens at half the cost, "cleaned up dead code and verified that the build compiled before completing," while Opus finished faster with half the tool calls but "left a bunch of type errors and it broke the production build" — the *cheaper* model was the one that verified. The inference he draws is that GLM "was trained to spend more tokens verifying its output," which reframes the downshift decision: some of the verification you would have to build may already be in the weaker model's post-training, and the way to find out is to run the comparison rather than assume the frontier model is the careful one. It is one bug, one run per model, self-described as anecdotal. ([Rizwan](../sources/20260807_CoEIs6Xm8m8.md), 08:50-10:17)
 
+
+- **A downshift path that does not use a harness at all, and what it gives up.** Per-task routing reaches the same destination as this page — cheaper models doing most of the work — by classifying the request instead of by catching failures afterwards ([Route Each Request to the Cheapest Sufficient Model by Difficulty](route-each-request-to-the-cheapest-sufficient-model-by-difficulty.md), [Declare Routing Preferences So a Bad Route Is Fixable](declare-routing-preferences-so-a-bad-route-is-fixable.md)). The trade is visible in the cost structure: a verification harness pays for the failed attempt plus the retry when it guesses wrong, while a router pays a sub-second classification and then lives with the choice. That makes routing cheaper per request and blinder — nothing in DigitalOcean's demo detects that a cheap model produced a bad answer, and the aggregate correctness they report (90% against 95% for the always-premium arm) is measured offline rather than enforced at runtime ([Kamath & Gillam](../sources/20260822_FvxY8oPoI8o.md), 09:15-09:36). The two compose: route to pick the tier, verify to catch the tier being wrong, and use the verifier's failure rate per task as the signal for re-tiering that task.
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Inference](../topics/inference.md)
@@ -29,8 +32,11 @@ Related concepts:
 - [Harness Engineering Shifts Scarcity From Code Production to Control Surfaces](harness-engineering-shifts-scarcity-from-code-production-to-control-surfaces.md)
 - [Treat token spend as a strategic axis](treat-token-spend-as-a-strategic-axis.md)
 - [A Subsidized Coding-Agent Subscription Is a Lock-In Ramp](a-subsidized-coding-agent-subscription-is-a-lock-in-ramp.md)
+- [Declare Routing Preferences So a Bad Route Is Fixable](declare-routing-preferences-so-a-bad-route-is-fixable.md)
+- [Evaluate a Router Against the Always-Frontier Arm](evaluate-a-router-against-the-always-frontier-arm.md)
 
 Sources:
 - [Your coding agent doesn't always follow your rules — Talha Sheikh, Checkout.com](../sources/20260708_MpZzWMdmQCE.md), 04:24-05:03, 09:08-09:43
 - [Guide, Verify, Solve — Anirban Chatterjee, Sonar](../sources/20260809_03l29gJXpCE.md), 04:51-06:27
 - [Open Source Is Dead. Long Live Open Source. — Saoud Rizwan, Cline](../sources/20260807_CoEIs6Xm8m8.md), 08:50-10:17
+- [Preferences Over Benchmarks: Model Routing — Archana Kamath & Tyler Gillam, DigitalOcean](../sources/20260822_FvxY8oPoI8o.md), 09:15-09:36

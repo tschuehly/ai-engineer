@@ -626,6 +626,7 @@
 - [Learn risk scoring from audit feedback for predictive compliance](../concepts/learn-risk-scoring-from-audit-feedback-for-predictive-compliance.md)
 
 ## Coding Agents
+- [Routing Savings Compound Across an Agent Session](../concepts/routing-savings-compound-across-an-agent-session.md) - 8¢ against 25¢ after one feature, 14¢ against 44¢ after three: the session is the unit, not the request.
 - [Ship Bundled Docs and an AGENTS.md Inside the Published Package](../concepts/ship-bundled-docs-and-an-agents-md-inside-the-published-package.md) - coding agents read `node_modules` and compiled source, so put version-pinned docs there.
 - [Agents Widen the Dev-Tool ICP Beyond Engineers](../concepts/agents-widen-the-dev-tool-icp-beyond-engineers.md) - a second reader profile for developer-tool docs, with caveats on generalizing from one trajectory.
 - [The Review Bottleneck Is Comprehension, Not Reviewer Time](../concepts/the-review-bottleneck-is-comprehension-not-reviewer-time.md) - more review hours cannot fix a change nobody can hold in their head.
@@ -1453,6 +1454,9 @@
 - [Optimize Prompts Against an Asymmetric Cost Matrix, Not Flat Accuracy](../concepts/optimize-prompts-against-an-asymmetric-cost-matrix.md)
 
 ## Inference
+- [Declare Routing Preferences So a Bad Route Is Fixable](../concepts/declare-routing-preferences-so-a-bad-route-is-fixable.md) - answer the black-box objection by routing on a caller-owned artifact of named tasks, weights, and hard rules.
+- [Give Each Task a Model Pool With an Explicit Selection Policy](../concepts/give-each-task-a-model-pool-with-an-explicit-selection-policy.md) - manual ranking pins and fails over; fastest-wins re-ranks on recent latency; both live beside the task.
+- [A Router Must Be Cheap and Fast Enough to Disappear](../concepts/a-router-must-be-cheap-and-fast-enough-to-disappear.md) - the routing decision is a fixed tax on every request, which is why it runs on a small purpose-built model.
 - [Measure Multi-GPU Headroom Against a Communication-Aware Roofline](../concepts/measure-multi-gpu-headroom-against-a-communication-aware-roofline.md) - low model FLOP utilization at scale is usually a communication result, and the roofline says how much is available.
 - [Add Multi-GPU Primitives to a Single-GPU Kernel Instead of Orchestrating Bulk Collectives](../concepts/add-multi-gpu-primitives-to-a-single-gpu-kernel.md) - NCCL is tuned for bulk contiguous transfers and breaks down on fused or fine-grained collectives.
 - [Choose the Inter-GPU Transfer Mechanism by Message Size and Resource Cost](../concepts/choose-the-inter-gpu-transfer-mechanism-by-message-size-and-resource-cost.md) - the mechanism decides whether a reduction can reach NVSwitch's in-network hardware at all.
@@ -1816,6 +1820,7 @@
 - [Verify AI Call Summaries Before CRM Sync](../concepts/verify-ai-call-summaries-before-crm-sync.md) - the write path into the system of record needs a check, and agent tool access widens it.
 
 ## Evaluation
+- [Evaluate a Router Against the Always-Frontier Arm](../concepts/evaluate-a-router-against-the-always-frontier-arm.md) - two arms, three metrics, asymmetric acceptance — and a "within judge margin of error" claim with no measured margin.
 - [Grade the Alignment, Not the Agents](../concepts/grade-the-alignment-not-the-agents.md) - move the unit of evaluation from the component to the coordination system: task completion, frustration, overstep rate, concurrency, token tax.
 - [Institutional Memory Has No Benchmark the Way Graph Memory Does](../concepts/institutional-memory-has-no-benchmark-the-way-graph-memory-does.md) - ~150 papers, datasets, and recall on one side; no definition and no measure on the other.
 - [Audit a Benchmark by Solving It Without the Data](../concepts/audit-a-benchmark-by-solving-it-without-the-data.md) - withhold the artifact the benchmark tests use of; 20-50% of tasks in three data-science benchmarks survived.

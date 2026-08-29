@@ -47,6 +47,7 @@ Related concepts:
 - [Context window editing clears stale tool results](context-window-editing-clears-stale-tool-results.md)
 - [Measure a Context Layer on Compounding, Not on the First Task](measure-a-context-layer-on-compounding-not-the-first-task.md)
 - [Benchmark Your Own Tool by Running Agents With and Without It](benchmark-your-tool-by-running-agents-with-and-without-it.md)
+- [Evaluate a Router Against the Always-Frontier Arm](evaluate-a-router-against-the-always-frontier-arm.md)
 
 Sources:
 - [Context Engineering in 2026 — Louis-François Bouchard, Omar Solano & Samridhi Vaid, Towards AI](../sources/20260817_WP3hjUXd918.md), 32:19-33:30, 36:23-47:35, 61:34-61:47

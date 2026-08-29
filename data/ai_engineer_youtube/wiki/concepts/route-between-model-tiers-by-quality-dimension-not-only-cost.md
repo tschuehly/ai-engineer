@@ -18,6 +18,9 @@ Details:
 
 - **The dimensions worth routing on are the ones your own repository separates, which argues for measuring the split yourself.** Superconductor's private benchmark produces two plots rather than one ranking — quality against cost and quality against time — and the families separate differently on each: Anthropic's agents are "consistently getting better, but not really any faster" and "clearly just so much more expensive for us," while Codex and Cursor come out "pretty fast and quite good" and open models are improving but "kind of slow." Latency and price are cruder dimensions than maintainability or security, but the structural point is the same one this page makes: a single ordering hides the tradeoff you are actually making, and the ordering that matters is the one measured on your codebase ([replay your own merged PRs as the coding-agent benchmark](replay-your-own-merged-prs-as-the-agent-benchmark.md)). ([Arjun Singh](../sources/20260809_OL7kfezynJM.md), 13:46-14:51)
 
+
+- **A router built on task labels rather than dimensions, which is the version most likely to ship — and where this page's correction applies.** DigitalOcean's inference router routes on named tasks (bug fixing, code generation, test writing, code snippets, performance optimization) with a declared model pool per task ([Kamath & Gillam](../sources/20260822_FvxY8oPoI8o.md), 06:29-07:52). Its own task-to-tier guidance puts "accuracy critical tasks like code review and security" on a frontier model while sending code generation to a mid open-weight model (02:45-03:19), which is a dimension-aware split smuggled inside a task taxonomy — "code review and security" is not a harder task than code generation so much as a task whose failure mode is different. Read with this page: a task label is a usable proxy for the dimension *when the task name already implies which failure you fear*, and it silently fails when it does not, because "write this endpoint" carries a security dimension that its label does not mention. The practical fix is available in the same product — the declared config takes hard rules alongside task descriptions, so a dimension-driven route can be written as a rule rather than hoped for from a match ([Declare Routing Preferences So a Bad Route Is Fixable](declare-routing-preferences-so-a-bad-route-is-fixable.md)).
+
 Related topics:
 - [Models](../topics/models.md)
 - [Evaluation](../topics/evaluation.md)
@@ -31,7 +34,10 @@ Related concepts:
 - [Select State of the Art on a Quality-Efficiency Pareto Front](select-state-of-the-art-on-a-quality-efficiency-pareto-front.md)
 - [Verification Debt Outlives the Productivity Spike](verification-debt-outlives-the-productivity-spike.md)
 - [Replay Your Own Merged PRs as the Coding-Agent Benchmark](replay-your-own-merged-prs-as-the-agent-benchmark.md)
+- [Declare Routing Preferences So a Bad Route Is Fixable](declare-routing-preferences-so-a-bad-route-is-fixable.md)
+- [Give Each Task a Model Pool With an Explicit Selection Policy](give-each-task-a-model-pool-with-an-explicit-selection-policy.md)
 
 Sources:
 - [Guide, Verify, Solve — Anirban Chatterjee, Sonar](../sources/20260809_03l29gJXpCE.md), 04:51-06:27
 - [Multiplayer agentic engineering — Arjun Singh, Superconductor](../sources/20260809_OL7kfezynJM.md), 13:46-14:51
+- [Preferences Over Benchmarks: Model Routing — Archana Kamath & Tyler Gillam, DigitalOcean](../sources/20260822_FvxY8oPoI8o.md), 02:45-03:19, 06:29-07:52

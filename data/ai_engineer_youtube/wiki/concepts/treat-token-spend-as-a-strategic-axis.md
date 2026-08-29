@@ -18,6 +18,10 @@ Details:
 - **When the agent is the product, token spend crosses from internal cost to a metered customer boundary.** Garvin's framing makes the same expense two different objects depending on role: consumed by your own agent it is cost of goods, and passed to a customer it is the thing you must meter — "if the agent can be the product and run up a token bill it's important for you to be able to meter on that." The infrastructure claim behind it is that this has been production reality for years rather than an emerging need: Metronome has "for many years now taken in all of the API calls to OpenAI and Anthropic and metered that for those companies… since before they had any revenue." ([Garvin](../sources/20260828_mJqwmmOx4WA.md), 02:42-02:59, 09:53-10:07)
 - **Reliability tactics are token-spend decisions in disguise.** Two of the standard availability and latency levers duplicate whole requests: firing both providers in parallel is available "only if you're highly highly obsessed with latencies because that's just going to double your cost," and hedging the tail fires a second request whenever the first crosses P90 of its budget. Blind retries do the same thing accidentally — they "multiply your cost and your tail latencies." Any spend model built only from expected traffic and model prices will miss the multiplier that reliability engineering adds on the worst days. ([Manuja](../sources/20260828_zrZ1amZBSPw.md), 02:51-02:58, 03:16-03:27, 09:24-09:43)
 
+
+- **The crude lever the strategic framing is meant to replace: a usage cap.** DigitalOcean opens its routing talk on cost with "spend is exploding and even companies like Walmart, Uber, Microsoft, they're actively capping usage to control the inference bills" ([Kamath & Gillam](../sources/20260822_FvxY8oPoI8o.md), 01:20-01:34). A cap is neither of this page's two postures — it does not spend more in smarter ways and it does not reduce spend for the same outcome; it reduces the outcome. It is what a team does when it has no per-request policy, and it is the strongest argument for building one. The three companies are named without a source, so treat the examples as illustration rather than evidence.
+- **The talk's own framing of the discipline's timeline, which is a claim about how fast the axis has to be managed.** "Cloud cost optimization took us about 15 years for it to actually become a real good discipline and for companies to get it right. This one actually is arriving in months and not years" (02:16-02:32). Read with the token-maxing/reduction split above, that is an argument that the choice cannot be deferred until practice matures, because the spend curve of agentic workloads outruns the learning curve — see [Routing Savings Compound Across an Agent Session](routing-savings-compound-across-an-agent-session.md) for the mechanism that makes the curve steep.
+
 Related topics:
 - [AI Monetization](../topics/ai-monetization.md)
 - [Infrastructure](../topics/infrastructure.md)
@@ -30,6 +34,8 @@ Related concepts:
 - [A Subsidized Coding-Agent Subscription Is a Lock-In Ramp](a-subsidized-coding-agent-subscription-is-a-lock-in-ramp.md)
 - [Separate Agent as Product, Agent as Buyer, and Agent as User](separate-agent-as-product-buyer-and-user.md)
 - [An LLM Gateway Cannot Maximize Availability, Latency, Guardrails, and Cost at Once](an-llm-gateway-cannot-maximize-availability-latency-guardrails-and-cost.md)
+- [Routing Savings Compound Across an Agent Session](routing-savings-compound-across-an-agent-session.md)
+- [Route Each Request to the Cheapest Sufficient Model by Difficulty](route-each-request-to-the-cheapest-sufficient-model-by-difficulty.md)
 
 Sources:
 - [6 Things to Know about AIE World's Fair 2026](../sources/20260621_0S8xe9ftGTM.md), 09:50-11:00
@@ -38,3 +44,4 @@ Sources:
 - [Open Source Is Dead. Long Live Open Source. — Saoud Rizwan, Cline](../sources/20260807_CoEIs6Xm8m8.md), 09:45-10:43
 - [How to avoid disaster when vibe-coding a billing engine — Andrew Garvin, Stripe](../sources/20260828_mJqwmmOx4WA.md), 02:42-02:59, 09:53-10:07
 - [Productionizing LLM Gateways: Architecture, Tradeoffs and Hard Lessons — Kanish Manuja, Twilio](../sources/20260828_zrZ1amZBSPw.md), 02:51-02:58, 03:16-03:27, 09:24-09:43
+- [Preferences Over Benchmarks: Model Routing — Archana Kamath & Tyler Gillam, DigitalOcean](../sources/20260822_FvxY8oPoI8o.md), 01:20-02:32

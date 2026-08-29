@@ -34,6 +34,7 @@ Related concepts:
 - [Serve Markdown Through Three Redundant Paths](serve-markdown-through-three-redundant-paths.md)
 - [Score Agent-Readiness Against a Moving Baseline](score-agent-readiness-against-a-moving-baseline.md)
 - [Validate Retrieved Content Before Spending Tokens on It](validate-retrieved-content-before-spending-tokens-on-it.md)
+- [Routing Savings Compound Across an Agent Session](routing-savings-compound-across-an-agent-session.md)
 
 Sources:
 - [Building Agent Interfaces: Lessons from Chrome DevTools (MCP) for Agents — Michael Hablich, Google](../sources/20260605__B4Pv9ttFgY.md), 05:25-11:03, 21:32-22:15

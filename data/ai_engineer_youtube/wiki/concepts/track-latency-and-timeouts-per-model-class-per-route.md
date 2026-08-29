@@ -18,6 +18,10 @@ Details:
 - **Caveats.** The 2-to-60-second range and the P99 spike are a symptom report with no root cause identified, and "number one root cause of your silent outage" is a ranking asserted from memory without a sample, period, or organization. "Fix the reasoning level per route" is the entire method offered for reasoning-latency variance, with no guidance on choosing the level, and hedging is proposed with no measurement of the extra spend it creates.
 - **Inter-token latency is the percentile an agentic route needs, and it is not TTFT.** Red Hat separates the two by which lever moves them: KV-cache-aware routing "helps you solve the TTFT problem," but "for agentic workload it's not just a TTFT… it's about your inter-token latency," which is what prefill/decode disaggregation defends — measured at P99 ITL of ~900 ms aggregated versus ~100 ms disaggregated, with the aggregated curve also visibly noisier. The reason a P99 on the wrong metric hides the problem is mechanical: a long prefill arriving on a shared pod "will completely stall the ongoing decode token generation process causing… jitter in user streaming latency," which a first-token percentile never sees. ([Kamra](../sources/20260827_YXowceUKYJI.md), 08:53-09:19, 11:25-11:56, 12:59-13:52)
 
+
+- **The wiki now holds both sides of the router argument, and they should be read together.** Manuja's position is that router models are a top source of unexplained tail latency because they "hide that abstraction behind you… they pick which models to run," with the remedy being to pin whatever the router leaves free. DigitalOcean sells the router as the fix for cost and fit, and its own configuration surface supplies exactly the pinning Manuja asks for — a "manual ranking" policy that always routes a task to one model unless it is down, plus decision-tree rules layered over the natural-language matching ([Kamath & Gillam](../sources/20260822_FvxY8oPoI8o.md), 05:48-06:08, 07:10-07:32). The reconciliation is that a router is not one thing: the *rule* layer is deterministic and safe to depend on under an incident, while the *match* layer is a model decision on the critical path and is what makes the endpoint's aggregate latency meaningless. The observability the demo shows — a live panel reporting which model was selected and which task it matched, per request (10:04-10:16) — is the minimum required to keep this page's per-model-per-route measurement possible once a router exists; without it, "which model answered" is not even recoverable after the fact.
+- **A router also creates the mixed-workload problem deliberately rather than by accident.** The failure this page describes usually arises because one gateway happens to carry embeddings, chat and reasoning traffic. A router manufactures it inside a single logical route: the same task can be served by a fast Maverick-class model on one request and a frontier model on the next, so the route's P99 is a mixture whose weights change with traffic. Percentiles have to be cut by *selected* model, not by requested model, because the requested model is now a preference rather than a fact.
+
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
 - [Inference](../topics/inference.md)
@@ -31,7 +35,11 @@ Related concepts:
 - [Evaluate Agent Loops With Correctness, Cost, Latency, and Step Counts](evaluate-agent-loops-with-correctness-cost-latency-and-step-counts.md)
 - [Decentralize the Gateway, Centralize the Governance](decentralize-the-gateway-centralize-the-governance.md)
 - [Match the Inference Lever to the Latency Metric It Moves](match-the-inference-lever-to-the-latency-metric-it-moves.md)
+- [Declare Routing Preferences So a Bad Route Is Fixable](declare-routing-preferences-so-a-bad-route-is-fixable.md)
+- [A Router Must Be Cheap and Fast Enough to Disappear](a-router-must-be-cheap-and-fast-enough-to-disappear.md)
+- [Give Each Task a Model Pool With an Explicit Selection Policy](give-each-task-a-model-pool-with-an-explicit-selection-policy.md)
 
 Sources:
 - [Productionizing LLM Gateways: Architecture, Tradeoffs and Hard Lessons — Kanish Manuja, Twilio](../sources/20260828_zrZ1amZBSPw.md), 06:30-09:43
 - [KV Cache-Aware Routing and P/D Disaggregation on Kubernetes — Yuchen Fama & Ashish Kamra, Red Hat](../sources/20260827_YXowceUKYJI.md), 08:53-09:19, 11:25-13:52
+- [Preferences Over Benchmarks: Model Routing — Archana Kamath & Tyler Gillam, DigitalOcean](../sources/20260822_FvxY8oPoI8o.md), 05:48-06:08, 07:10-07:32, 10:04-10:16

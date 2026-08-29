@@ -27,6 +27,7 @@ Related concepts:
 - [Use Resumable Streams as the UI Boundary for Durable Agents](use-resumable-streams-as-the-ui-boundary-for-durable-agents.md)
 - [Sort Failures by Whether the User Can Retry](sort-failures-by-whether-the-user-can-retry.md)
 - [Read the Stop Reason Before You Read the Answer](read-the-stop-reason-before-you-read-the-answer.md)
+- [Give Each Task a Model Pool With an Explicit Selection Policy](give-each-task-a-model-pool-with-an-explicit-selection-policy.md)
 
 Sources:
 - [Productionizing LLM Gateways: Architecture, Tradeoffs and Hard Lessons — Kanish Manuja, Twilio](../sources/20260828_zrZ1amZBSPw.md), 00:20-00:48, 05:16-05:55, 12:28-12:47

@@ -13,6 +13,9 @@ Details:
 - Narrow SFT data is recommended for small-model fine-tuning, especially when the product needs a particular function call or similarly constrained behavior. (08:33-09:12)
 - For RL, small models benefit from many focused environments and tasks; missing cold-start SFT examples for a target RL task can cause training to fail or stall. (09:39-10:37)
 
+
+- **Routing is a good example of the narrow-capability profile, and it comes with a latency argument this page does not otherwise make.** DigitalOcean serves model routing from "a custom mixture of experts model purpose-built for routing" and claims it beats "frontier models like the GPT-5 series models at routing task itself with a fraction of the latency," deciding in "under 200 milliseconds" ([Kamath & Gillam](../sources/20260822_FvxY8oPoI8o.md), 05:07-05:35, 13:47-14:28). The task fits the profile exactly — high-frequency classification over a fixed, caller-declared label set — but the deciding constraint is not accuracy: a router sits on every request's critical path, so its own latency is subtracted from the saving it produces, which rules out a general-purpose model regardless of how well that model routes. Narrow post-training is sometimes chosen for capability and sometimes, as here, because nothing large is allowed on the path at all. See [A Router Must Be Cheap and Fast Enough to Disappear](a-router-must-be-cheap-and-fast-enough-to-disappear.md). Vendor claim with no accuracy figure, no routing benchmark named, no model size, and no description of the training data or label set.
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Models](../topics/models.md)
@@ -20,6 +23,8 @@ Related topics:
 Related concepts:
 - [Use small models as context-management tools before agent reasoning](use-small-models-as-context-management-tools-before-agent-reasoning.md)
 - [Constrained decoding makes small-model tool calls production-usable](constrained-decoding-makes-small-model-tool-calls-production-usable.md)
+- [A Router Must Be Cheap and Fast Enough to Disappear](a-router-must-be-cheap-and-fast-enough-to-disappear.md)
 
 Sources:
 - [Everything I Learned Training Frontier Small Models - Maxime Labonne, Liquid AI](../sources/20260429_fLUtUkqYHnQ.md), 01:25-10:37
+- [Preferences Over Benchmarks: Model Routing — Archana Kamath & Tyler Gillam, DigitalOcean](../sources/20260822_FvxY8oPoI8o.md), 05:07-05:35, 13:47-14:28

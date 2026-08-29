@@ -17,6 +17,9 @@ Details:
 - **The precondition this pattern rests on is that streaming has not started.** Once tokens are on the wire the fallback is gone regardless of how it is configured; see [Streaming Forecloses the Provider Fallback](streaming-forecloses-the-provider-fallback.md). (05:35-05:55)
 - **Caveats.** Nothing here is measured — no failover rate, latency impact, or incident count is reported, and the three reasons are argued from the properties of LLM calls rather than from observed outcomes. The pattern also assumes the second provider can actually serve the request, which is a separate piece of work: see [Your Fallback Provider Is Under-Tested and Under-Provisioned](your-fallback-provider-is-under-tested-and-under-provisioned.md). And per-request fallback does nothing about the failure class where the provider responds successfully but slowly, which is handled by timeouts and hedging instead.
 
+
+- **A product-level instance of the same pattern, with the ordering pinned per task rather than globally.** DigitalOcean's router gives each named task a model pool and a selection policy. "Manual ranking" pins a preferred model and degrades into a failover chain — "I really want to always route to GLM 5.2 unless it's down… If GLM fails, it'll fail over to GPT-5.2" — while a "fastest" policy picks "whichever one's been fastest" over a recent window, which is this page's demoted circuit breaker stated as a positive selection rule instead of a cool-down ([Kamath & Gillam](../sources/20260822_FvxY8oPoI8o.md), 07:10-07:52). The addition worth taking is that the fallback list is *per task*, so the substitute for a code-generation call is a peer coding model rather than whatever the gateway's global second provider happens to be; see [Give Each Task a Model Pool With an Explicit Selection Policy](give-each-task-a-model-pool-with-an-explicit-selection-policy.md). The addition worth distrusting is that "if GLM fails" is never defined — no timeout, no error class, no behaviour on a partially streamed response.
+
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
 - [Inference](../topics/inference.md)
@@ -29,6 +32,8 @@ Related concepts:
 - [Contain Retry Amplification Before It Becomes a Compute Incident](contain-retry-amplification-in-agent-loops.md)
 - [Abstract LLM Inference Behind One Routing API](abstract-llm-inference-behind-one-routing-api.md)
 - [An LLM Gateway Cannot Maximize Availability, Latency, Guardrails, and Cost at Once](an-llm-gateway-cannot-maximize-availability-latency-guardrails-and-cost.md)
+- [Give Each Task a Model Pool With an Explicit Selection Policy](give-each-task-a-model-pool-with-an-explicit-selection-policy.md)
 
 Sources:
 - [Productionizing LLM Gateways: Architecture, Tradeoffs and Hard Lessons — Kanish Manuja, Twilio](../sources/20260828_zrZ1amZBSPw.md), 01:46-01:57, 02:03-04:35, 05:35-05:55
+- [Preferences Over Benchmarks: Model Routing — Archana Kamath & Tyler Gillam, DigitalOcean](../sources/20260822_FvxY8oPoI8o.md), 07:10-07:52

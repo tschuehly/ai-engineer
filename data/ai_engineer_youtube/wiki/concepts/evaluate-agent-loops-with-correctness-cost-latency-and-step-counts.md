@@ -18,6 +18,10 @@ Details:
 - **In a channel where the assistant can substitute a competitor mid-conversation, latency is inventory rather than experience.** Prio's justification for putting latency benchmarks in a commerce agent's eval suite: "every second in retail on the shopping journey where you're actually not selling, there are chances that the other website's going to be faster, and people are just going to move away, or they just don't feel like it anymore." That converts this page's latency term from a comfort metric into a revenue metric and changes who sets the threshold — though Prio reports no latency figure of his own anywhere in the talk. ([Prio](../sources/20260827_G7cgLjZtmMU.md), 18:12-18:29)
 - **The subclass of steps that is unambiguous waste, and the buyer who counts it.** The Cline example above warns that fewer steps can mean skipped verification. Jarmak names the complement: a step that ended in a tool error the agent then corrected is waste with no verification value. In one Sourcegraph trace the model guessed a parameter name from training priors, failed, read the error, and repaired itself — "but then it's burning right an entire turn just failing." Scoping the step-count metric to recovered tool errors avoids penalizing the verification steps you want. The reason to bother is external: buyers of a third-party agent tool now evaluate "not just is it working well, but like how many tokens is the agent dealing with to work with your tool? And how fast is it?" See [Count Burned Turns, Because Agent Self-Recovery Hides Tool Defects](count-burned-turns-because-agent-self-recovery-hides-tool-defects.md). ([Jarmak](../sources/20260826_Lrw0jqBNaw0.md), 06:33-07:38)
 
+
+- **The router case, where the joint report is not optional but definitional.** A model router can trivially win any single metric — route everything to the frontier model and quality is preserved with no saving; route everything to the cheapest and the saving is total. DigitalOcean's router evaluation therefore reports correctness, tokens, and latency against an always-premium arm together: 90% for the router against 95% for Opus, with "significantly less tokens" and "significantly faster" ([Kamath & Gillam](../sources/20260822_FvxY8oPoI8o.md), 09:15-09:36). The acceptance shape is asymmetric in a way worth reusing — quality within noise of the baseline, cost and latency strictly better — and the presenter names what the report replaces: "it's still vibes, though. How you actually prove it is working it through" an evaluation (08:54-09:15). See [Evaluate a Router Against the Always-Frontier Arm](evaluate-a-router-against-the-always-frontier-arm.md).
+- **The gap in that report is the one this page's metrics do not close on their own: the noise floor.** "That's pretty much within a judge margin of error" is asserted for a five-point difference with no margin ever measured. Whenever a cost or latency win is being bought with an apparently small quality loss, the margin is the number that decides whether the trade happened, and it is obtainable by repeating the judge or bootstrapping the task set.
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Agents](../topics/agents.md)
@@ -35,6 +39,7 @@ Related concepts:
 - [Count Burned Turns, Because Agent Self-Recovery Hides Tool Defects](count-burned-turns-because-agent-self-recovery-hides-tool-defects.md)
 - [Benchmark Your Own Tool by Running Agents With and Without It](benchmark-your-tool-by-running-agents-with-and-without-it.md)
 - [Grade the Alignment, Not the Agents](grade-the-alignment-not-the-agents.md)
+- [Evaluate a Router Against the Always-Frontier Arm](evaluate-a-router-against-the-always-frontier-arm.md)
 
 Sources:
 - [From Stateless Nightmares to Durable Agents - Samuel Colvin, Pydantic](../sources/20251124_flf_IKnFYnE.md), 02:55-03:24, 11:05-12:20
@@ -44,3 +49,4 @@ Sources:
 - [Productionizing LLM Gateways: Architecture, Tradeoffs and Hard Lessons — Kanish Manuja, Twilio](../sources/20260828_zrZ1amZBSPw.md), 06:54-08:16
 - [The Agentic Commerce Stack — Ahnaf Prio, Best Buy](../sources/20260827_G7cgLjZtmMU.md), 18:12-18:29
 - [The Death of Developer Advocates — Stephanie Jarmak, Sourcegraph](../sources/20260826_Lrw0jqBNaw0.md), 06:33-07:38
+- [Preferences Over Benchmarks: Model Routing — Archana Kamath & Tyler Gillam, DigitalOcean](../sources/20260822_FvxY8oPoI8o.md), 08:54-09:36
