@@ -23,6 +23,8 @@ Details:
 
 - **The opposite end of the same population, where the difficulty is missing skill rather than accumulated context.** Liguori reports the cost landing hardest on the least experienced: "reviewing AI output is often harder for some than actually writing it, especially early in career," because senior engineers "have already spent a large portion of their career reviewing others code" while "early career engineers don't have that muscle yet." Read alongside this page, the two describe different resistances that should be handled differently: the senior holdout's objections are a defect list worth working through, while the junior's difficulty is a training gap that no amount of harness improvement resolves. Treating both as "slow adopters" and applying the same enablement to each would miss on both. ([Liguori](../sources/20260828_pqlWNihgdjI.md), 16:17-16:44)
 
+- **Hand them the work, not just the roadmap.** Debois independently reaches the same conclusion about who to engage and differs on what to give them. Where Blum hands skeptics the *specification* of what to fix, Debois hands them the *authoring*: "these are really great people to engage in creating better context for the agent because you tell them, 'Please improve. Please put all your knowledge to improve the result of the agent.' And the same with the harness… if you have those kind of more resistant people that complain about the quality that things were produced by just the vanilla coding agent, use almost that anger, use that skepticism to make it better." The two compose into a sequence rather than competing — their complaints say what to build, and building it is the assignment. Debois also names a payoff Blum does not, that harness work makes the job technical again for people who rejected prompting ([Building the Harness Is the Engineering Path That Prompting Took Away](building-the-harness-is-the-engineering-path-that-prompting-took-away.md)). Neither account reports how many skeptics this converted. ([Debois](../sources/20260822_zCJtYuqwm7E.md), 04:24-05:08)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Workflows](../topics/workflows.md)
@@ -37,7 +39,9 @@ Related concepts:
 - [Demand-Driven Context Pulls Knowledge From Failed Work](demand-driven-context-pulls-knowledge-from-failed-work.md)
 - [Reduced Developer Agency Is an Adoption Cost, and Planning Is Its Remedy](reduced-developer-agency-is-an-adoption-cost-and-planning-is-its-remedy.md)
 - [Budget the Productivity Dip That Precedes the Agent Speedup](budget-the-productivity-dip-that-precedes-the-agent-speedup.md)
+- [Building the Harness Is the Engineering Path That Prompting Took Away](building-the-harness-is-the-engineering-path-that-prompting-took-away.md)
 
 Sources:
 - [How to Get Your Org to Adopt Coding Agents (Without Shipping Garbage) — Eyal Blum, Figma](../sources/20260828_5Bn0xro2ol8.md), 03:25-04:07, 11:45-12:45
 - [From AI-Assisted to AI-Native: Building a Frontier Development Team — Clare Liguori, AWS](../sources/20260828_pqlWNihgdjI.md), 16:17-16:44
+- [Coding Agents Don't Scale Themselves. Neither Do Your Teams. — Patrick Debois, Tessl](../sources/20260822_zCJtYuqwm7E.md), 04:24-05:08

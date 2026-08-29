@@ -21,6 +21,8 @@ Details:
 - **A production instance of the residual arriving on schedule, and where it came from.** In Izmit's assistant the know-how started inside the prompt and was evicted by growth: "we were creating all these business processes and workflows. We couldn't fit them into the agent instructions anymore. And then the skills came… let's build a skill library." The content is sales-process procedure, not code convention, which supports the claim that the residual is organizational rather than technical — and the later rung of his roadmap has go-to-market teams authoring their own team skills, so the residual ends up owned by the departments that hold the know-how rather than by the platform team. ([Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 10:27-11:01, 12:45-12:57)
 - **The residual outside engineering is business semantics plus the question set.** In a revenue-operations org the know-how that lands in skill files is "the context of the business information tying it to the data" together with the questions people actually ask, authored for both SQL-writing and non-SQL users. The organization treats that residual as load-bearing rather than incidental: "skill curation is the basis for all of this agentic workforce... you're really able to give them the ability to use the agentic systems in a more predictable and deterministic way so that they can execute evenly across the board" — the same claim this page makes about structure and determinism, reached from a non-engineering workflow. ([Joyce](../sources/20260826_Qw_tC68KKes.md), 06:47-07:53, 15:34-16:09)
 
+- **The same residual, argued as the only durable asset.** Debois builds a whole organizational talk on the premise that harnesses and loops commoditize, and lands on this page's object as what survives: "I think your moat is capturing the knowledge. The knowledge you're putting now into skills, in your context, and maybe in your harness, the way you restrain this, your business context." The useful distinction inside that sentence is that the harness appears on both sides — the machinery commoditizes, the constraints encoded in it do not. His consequence is an objective rather than an artifact: continuous delivery becoming continuous learning, where the question is "can I keep it reliable while changing more of the system" ([Target Swap Speed, Not Stability, as the Reliability Goal](target-swap-speed-not-stability-as-the-reliability-goal.md)). The moat claim is asserted without an account of what defends it, since skills and context files are as copyable and as portable as any other artifact. ([Debois](../sources/20260822_zCJtYuqwm7E.md), 20:24-21:07)
+
 Related topics:
 - [Workflows](../topics/workflows.md)
 - [Tools](../topics/tools.md)
@@ -37,9 +39,12 @@ Related concepts:
 - [Put the Business Question Set Inside the Skill File, Not Just the Schema](put-the-business-question-set-inside-the-skill-file-not-just-the-schema.md)
 - [Run a Submission-and-Review Alias for Shared Skills](run-a-submission-and-review-alias-for-shared-skills.md)
 - [Read Employee-Built Automations as the Productionization Backlog](read-employee-built-automations-as-the-productionization-backlog.md)
+- [Target Swap Speed, Not Stability, as the Reliability Goal](target-swap-speed-not-stability-as-the-reliability-goal.md)
+- [Assume the Harness Commoditizes and Differentiate on the Organization](assume-the-harness-commoditizes-and-differentiate-on-the-organization.md)
 
 Sources:
 - [AI-Native Organisations Run on Skills: How to Structure and Scale Them — Imad Touil, QuantumBlack](../sources/20260828_M05vON8i0aI.md), 05:53-09:57, 17:53-18:40
 - [How Anthropic Builds: Lessons from Labs — Mike Krieger, Anthropic](../sources/20260827_qqrk7CtkuIw.md), 15:41-16:32
 - [Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 10:27-11:01, 12:45-12:57
 - [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md), 06:47-07:53, 15:34-16:09
+- [Coding Agents Don't Scale Themselves. Neither Do Your Teams. — Patrick Debois, Tessl](../sources/20260822_zCJtYuqwm7E.md), 20:24-21:07

@@ -18,6 +18,8 @@ Details:
 - **A second remedy appears elsewhere in the same talk, unlabelled**: giving the strongest skeptics ownership of the verification roadmap is also an agency restoration, aimed at a different population. See [The Best Engineers Adopt Agents Last, and Their Objections Are the Roadmap](the-best-engineers-adopt-agents-last-and-their-objections-are-the-roadmap.md).
 - **Caveats.** This is self-report from one engineer about one org, with no survey, retention figure, or before/after satisfaction measure. "Burned out" is used colloquially. The claim that planning restores joy is offered as the speaker's experience and his team's, and it is worth noticing that the person reporting it is the one who writes the plans — the engineers who receive a week-old plan and review its 20 resulting PRs may be in a different position, which the talk does not examine.
 
+- **A second remedy for the same injury, aimed at the people the planning answer does not reach.** Debois reports the identical complaint in different words — "we didn't sign up for better prompting, writing better specs. We're engineers. We're technical" — and adds that context engineering, the wiki's usual reply, did not close it: developers "felt empty just working with a prompt and a specification as such." What worked was building the harness. "All of a sudden, we were helping the agent with tooling, building tooling for the agent, and that kind of reignited some of the developers who kind of felt that it wasn't for them." That is a different relocation of the craft from this page's: planning restores authorship over the product, harness work restores programming as an activity. The distinction matters operationally, because an engineer whose objection is that spec-writing is not engineering has already declined the planning remedy — a plan is a document. See [Building the Harness Is the Engineering Path That Prompting Took Away](building-the-harness-is-the-engineering-path-that-prompting-took-away.md). ([Debois](../sources/20260822_zCJtYuqwm7E.md), 02:39-04:24)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Workflows](../topics/workflows.md)
@@ -29,6 +31,8 @@ Related concepts:
 - [Coding Agents Shift Engineering Work Toward Planning and Review](coding-agents-shift-engineering-work-toward-planning-and-review.md)
 - [The Best Engineers Adopt Agents Last, and Their Objections Are the Roadmap](the-best-engineers-adopt-agents-last-and-their-objections-are-the-roadmap.md)
 - [Create Psychological Safety for AI Adoption](create-psychological-safety-for-ai-adoption.md)
+- [Building the Harness Is the Engineering Path That Prompting Took Away](building-the-harness-is-the-engineering-path-that-prompting-took-away.md)
 
 Sources:
 - [How to Get Your Org to Adopt Coding Agents (Without Shipping Garbage) — Eyal Blum, Figma](../sources/20260828_5Bn0xro2ol8.md), 02:53-03:25, 07:34-08:26
+- [Coding Agents Don't Scale Themselves. Neither Do Your Teams. — Patrick Debois, Tessl](../sources/20260822_zCJtYuqwm7E.md), 02:39-04:24

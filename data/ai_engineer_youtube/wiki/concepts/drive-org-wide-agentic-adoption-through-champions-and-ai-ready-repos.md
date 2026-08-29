@@ -20,6 +20,8 @@ Details:
 - **The organizational version of the same failure: the improvement loop and the adoption loop are usually owned by different teams.** Shenoy reports the standard split — continual learning owned by "your research team, your platform engineering team," enablement owned by "growth or deployment or customer experience," and "usually pretty siloed, not much interaction between the two" — and argues they are one loop, because a champion program that produces no usage produces no traces, and an improvement program with no traces has nothing to compound. Champions and AI-ready repositories are the seeding mechanism for a loop that otherwise never starts. ([Shenoy](../sources/20260828_B0fjR3yaZFU.md), 13:43-14:49)
 - **What a champion cohort can and cannot tell you, stated as a rollout-stage constraint.** Izmit staffs his pilot the way this page staffs champions — "your top AI-native folks in the organization who are eager to work with you, give you feedback" — but limits what that cohort is allowed to certify: the pilot proves accuracy and quality only. Workflow fit needs a representative 10% beta, and trial rate cannot be observed until GA, because every earlier cohort either volunteered or was small enough to reach in person. The warning for a champions program is that its success is not evidence about the 90%: enthusiasm is the selection criterion, so the cohort has ~100% trial by construction. ([Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 05:49-07:53)
 
+- **The objection worth answering: this shape is content-free.** Debois lists the champions program alongside the rest of the standard enablement kit and dismisses the set: "Hackathon, a lunch and learn, let's share the successes, have a shared Slack channel, have a champions program. That's all generic transformation. It could have been Agile that transformed like that. It could have been DevOps. It doesn't matter." He rejects the opposite too — "let a thousand flowers bloom, it doesn't work" — and lands on giving team leads and the platform an explicit mandate. The criticism is not that the mechanism fails; it is that running it tells you nothing about whether the agent-specific infrastructure (skill registries, context evals, coding-agent guardrails, agent identities) is being built, because a champion cohort has no standing budget and no operational ownership. Both can run: champions seed practice, a named owner is accountable for the shared surface. ([Debois](../sources/20260822_zCJtYuqwm7E.md), 14:22-15:09)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Workflows](../topics/workflows.md)
@@ -34,6 +36,8 @@ Related concepts:
 - [Structure an Agent Plan With a Frozen Why and Reviewer-Sized Phases](structure-an-agent-plan-with-a-frozen-why-and-reviewer-sized-phases.md)
 - [Continual Learning and Enablement Are One Loop With a Cold Start](continual-learning-and-enablement-are-one-loop-with-a-cold-start.md)
 - [Gate Each Rollout Phase on a Different Question](gate-each-rollout-phase-on-a-different-question.md)
+- [Agent Enablement Falls Between Platform and Developer Experience, So Name an Owner](agent-enablement-falls-between-platform-and-developer-experience-so-name-an-owner.md)
+- [Ship a Catalog of Paved Roads, Not One Standard](ship-a-catalog-of-paved-roads-not-one-standard.md)
 
 Sources:
 - [Building an Autonomous Engineering Org - Angie Jones, Agentic AI Foundation](../sources/20260628_whue9_YquGA.md), 04:40-12:20
@@ -42,3 +46,4 @@ Sources:
 - [How to Get Your Org to Adopt Coding Agents (Without Shipping Garbage) — Eyal Blum, Figma](../sources/20260828_5Bn0xro2ol8.md), 10:26-11:00
 - [How do you diffuse AI into the real world? — Varun Shenoy, Long Lake](../sources/20260828_B0fjR3yaZFU.md), 13:43-14:49
 - [Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 05:49-07:53
+- [Coding Agents Don't Scale Themselves. Neither Do Your Teams. — Patrick Debois, Tessl](../sources/20260822_zCJtYuqwm7E.md), 14:22-15:09

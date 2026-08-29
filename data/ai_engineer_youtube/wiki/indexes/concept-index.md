@@ -639,6 +639,9 @@
 - [Learn risk scoring from audit feedback for predictive compliance](../concepts/learn-risk-scoring-from-audit-feedback-for-predictive-compliance.md)
 
 ## Coding Agents
+- [Building the Harness Is the Engineering Path That Prompting Took Away](../concepts/building-the-harness-is-the-engineering-path-that-prompting-took-away.md) - tooling for the agent, not planning, is what re-engaged developers who rejected the conductor role.
+- [Run the Retro Against the System and Split Planning by Scopedness](../concepts/run-the-retro-against-the-system-and-split-planning-by-scopedness.md) - the retro becomes a harness backlog; planning sorts work by whether it can be handed off.
+- [Measure Enablement by Human Touches and Share of Fixes Reused](../concepts/measure-enablement-by-human-touches-and-share-of-fixes-reused.md) - two process metrics chosen for attributability, not importance.
 - [Support Many Harnesses by Owning Conversation State and Artifacts](../concepts/support-many-harnesses-by-owning-conversation-state-and-artifacts.md) - own rehydratable conversation state and uniform artifacts below the harness line; behavior above it stays heterogeneous.
 - [Put an Agent Approval Gate in Front of Maintainer Attention](../concepts/put-an-agent-approval-gate-in-front-of-maintainer-attention.md) - agent review placed before human notification rather than before merge; an attention router whose failure is silent.
 - [Design the Agent Workspace as a Workshop, Not a Factory](../concepts/design-the-agent-workspace-as-a-workshop-not-a-factory.md) - event-reactive automations, inspectability, self-modification, and defects priced jointly with tokens.
@@ -1169,6 +1172,8 @@
 - [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md)
 
 ## Infrastructure
+- [Agent Enablement Falls Between Platform and Developer Experience, So Name an Owner](../concepts/agent-enablement-falls-between-platform-and-developer-experience-so-name-an-owner.md) - skill registries, context evals, coding-agent guardrails, and agent identities land on a team that owns only half the job.
+- [Ship a Catalog of Paved Roads, Not One Standard](../concepts/ship-a-catalog-of-paved-roads-not-one-standard.md) - coordination cost caps the number of shared paths; off-road is allowed on the team's own budget.
 - [Ship Managed and Self-Hosted Sandboxes Because Serious Teams Bring Their Own Infrastructure](../concepts/ship-managed-and-self-hosted-sandboxes-because-serious-teams-bring-their-own-infrastructure.md) - who operates the compute is a separate axis from who builds the isolation.
 - [Support Many Harnesses by Owning Conversation State and Artifacts](../concepts/support-many-harnesses-by-owning-conversation-state-and-artifacts.md) - own rehydratable conversation state and uniform artifacts below the harness line; behavior above it stays heterogeneous.
 - [Put the Cost Control at the Agent Run, Not the Model Request](../concepts/put-the-cost-control-at-the-agent-run-not-the-model-request.md) - a gateway governs one request; the loop, the sub-agents, and the growing context are run properties.
@@ -1656,6 +1661,8 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Assume the Harness Commoditizes and Differentiate on the Organization](../concepts/assume-the-harness-commoditizes-and-differentiate-on-the-organization.md) - the loop layer as table stakes, with the organization and captured knowledge as the residual.
+- [Target Swap Speed, Not Stability, as the Reliability Goal](../concepts/target-swap-speed-not-stability-as-the-reliability-goal.md) - keep reliability constant while changing more of the system.
 - [The Install Handoff Is Now a Prompt](../concepts/the-install-handoff-is-now-a-prompt.md) - the Collison laptop install became a paste, which is why DX primitives are agent primitives.
 - [Score Agent-Readiness Against a Moving Baseline](../concepts/score-agent-readiness-against-a-moving-baseline.md) - a grader whose rubric changes weekly measures a delta, not a level.
 - [Layer Ask, Push, and Self-Serve Because Teams Interface Differently](../concepts/layer-ask-push-and-self-serve-because-teams-interface-differently.md) - a request queue, a digest, and a workspace running concurrently over one substrate.
@@ -2991,6 +2998,8 @@
 - [An Output Faithful to the Source Can Be Wrong About the Decision](../concepts/an-output-faithful-to-the-source-can-be-wrong-about-the-decision.md) - a conversation contains the options that were rejected, and a summary can keep the wrong one.
 
 ## Workflows
+- [A Faster Team Relocates the Bottleneck Downstream](../concepts/a-faster-team-relocates-the-bottleneck-downstream.md) - go-to-market, users, and requirements intake become the constraint once engineering stops being one.
+- [Score Hires on AI Leverage, Taste, and Sharing as Three Separate Axes](../concepts/score-hires-on-ai-leverage-taste-and-sharing-as-three-separate-axes.md) - an AI-max exercise, a walkthrough, and a sharing signal, deliberately not averaged into a level.
 - [Put an Agent Approval Gate in Front of Maintainer Attention](../concepts/put-an-agent-approval-gate-in-front-of-maintainer-attention.md) - agent review placed before human notification rather than before merge; an attention router whose failure is silent.
 - [Make the Triage Agent Ask the Reporter for the Missing Context](../concepts/make-the-triage-agent-ask-the-reporter-for-the-missing-context.md) - resolve under-specification at intake by asking the filer, instead of routing vague work away from the agent.
 - [Design the Agent Workspace as a Workshop, Not a Factory](../concepts/design-the-agent-workspace-as-a-workshop-not-a-factory.md) - event-reactive automations, inspectability, self-modification, and defects priced jointly with tokens.

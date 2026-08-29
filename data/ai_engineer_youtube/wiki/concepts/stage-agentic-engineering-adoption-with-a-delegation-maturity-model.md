@@ -19,6 +19,8 @@ Details:
 - **A second ladder from the vendor side, and where it says teams are stuck.** Werry recounts a borrowed eight-stage curve running autocomplete (Copilot, GPT-3.5 era) → IDE agents (Cursor) → organizational wikis → MCP servers and skills → … → software factories, and places the field at "the sort of stage four to five level," adding that at that stage teams "understand that context is the bottleneck and they're trying to build solutions to solve it." The two ladders are measuring different axes and are worth keeping distinct: this page ranks an engineer's *delegation relationship* with agents, Werry's ranks the *infrastructure* the organization has built. A team can be high on one and low on the other, which is a more useful diagnosis than either alone. Attribution caveat: the slide is credited to a name that does not resolve from the audio, and no data supports the stage placement. ([Werry](../sources/20260827_qdAkxLoYNI8.md), 02:25-03:37)
 - **The rung above "agent in the chat client," described by someone who found himself below it.** Krieger's ladder jump was not a bigger task but a *standing* one: a colleague told the agent "don't just fix this bug, but now you are responsible for this part of the code base and I want you to monitor this feedback channel and proactively take on tasks and then fix them and then also, if this API changes, do that." His reaction — "I've totally underutilized this thing. I've just been using it as a glorified Claude Code in Slack" — is a useful diagnostic for a stage boundary: the same surface and the same model, with per-task invocation on one side and durable ownership plus a monitored input channel on the other. ([Krieger](../sources/20260827_qqrk7CtkuIw.md), 09:13-09:39, 09:44-10:00)
 
+- **Who moves people up the ladder, and the ritual that does it.** Debois describes the same progression informally — "prompting, they get better, specs, context, harness loop" — and assigns the pacing to the team lead as a directive rather than to a measurement program: "the lead of the team can say, 'Well, stop prompting. Make the context reusable.' Now, we got that. Now, we jump to the next. So, part of the team lead is putting that pace and almost that constraint and that directive in the team, where it does[n't] work where you just say, 'Go figure it out and do something on your own.'" He supplies the recurring mechanism this ladder lacks: a retro that asks where the agent repeatedly hit the same wall, and a planning split that sorts work by whether it is scoped enough to hand off. That boundary moves as the harness improves, which makes it a per-cycle re-measurement of the same capability this ladder measures per engineer. See [Run the Retro Against the System and Split Planning by Scopedness](run-the-retro-against-the-system-and-split-planning-by-scopedness.md). ([Debois](../sources/20260822_zCJtYuqwm7E.md), 06:54-08:48)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Workflows](../topics/workflows.md)
@@ -31,6 +33,8 @@ Related concepts:
 - [Async Agents Need a Forking Substrate and a User Who Tolerates Out-of-Order Completion](async-agents-need-a-forking-substrate-and-a-tolerant-user.md)
 - [Stage Productivity Pilots to Strip One Confound at a Time](stage-productivity-pilots-to-strip-one-confound-at-a-time.md)
 - [Make Delegation Multiplayer So People See Larger Asks](make-delegation-multiplayer-so-people-see-larger-asks.md)
+- [Run the Retro Against the System and Split Planning by Scopedness](run-the-retro-against-the-system-and-split-planning-by-scopedness.md)
+- [Measure Enablement by Human Touches and Share of Fixes Reused](measure-enablement-by-human-touches-and-share-of-fixes-reused.md)
 
 Sources:
 - [Building an Autonomous Engineering Org - Angie Jones, Agentic AI Foundation](../sources/20260628_whue9_YquGA.md), 00:57-04:18
@@ -38,3 +42,4 @@ Sources:
 - [From AI-Assisted to AI-Native: Building a Frontier Development Team — Clare Liguori, AWS](../sources/20260828_pqlWNihgdjI.md), 17:54-18:46
 - [How to Generate Mergeable Code with a Context Engine — Peter Werry, Unblocked](../sources/20260827_qdAkxLoYNI8.md), 02:25-03:37
 - [How Anthropic Builds: Lessons from Labs — Mike Krieger, Anthropic](../sources/20260827_qqrk7CtkuIw.md), 09:13-10:00
+- [Coding Agents Don't Scale Themselves. Neither Do Your Teams. — Patrick Debois, Tessl](../sources/20260822_zCJtYuqwm7E.md), 06:54-08:48

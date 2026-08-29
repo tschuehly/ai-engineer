@@ -14,6 +14,8 @@ Details:
 - Consequence: "the answer was not a better model. The answer was sending less… fix the input, the model choice matters less than you think." This reframes the Opus-vs-Sonnet debate as second-order and points optimization effort at retrieval/context selection.
 - Corroborates the broader "keep context small" thread from the cost side rather than the quality side (context rot, the U-curve, attention limits): here the argument is purely economic — you pay for every irrelevant token on every query.
 
+- **The organizational version: make the cost visible per team and optimize it rather than capping it.** Debois's answer to a vendor bill is not a spend limit — "you shouldn't say 'let's limit all the spends.' Your reflection should be, let's optimize the spend… pick the right model, educate them on the model, but also giving them better context and harnesses because that will make your cost go down there as well." The precondition is visibility: "if we visualize the cost, they might be eager to do some optimization… If I can reduce the number of iterations the agent has to run through, that is an optimization that I can run. But if I don't visualize that and I just see the end result, then we don't know." That makes iteration count the shared unit between this page's quality argument and the budget argument, since fewer turns to the right answer is simultaneously less human attention and fewer tokens. Neither the cost reduction nor the iteration reduction is measured anywhere in the talk. ([Debois](../sources/20260822_zCJtYuqwm7E.md), 13:26-13:58, 18:19-18:46)
+
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
 - [Coding Agents](../topics/coding-agents.md)
@@ -23,6 +25,9 @@ Related concepts:
 - [Treat Embeddings as Cached Compute Decided by Query Volume](treat-embeddings-as-cached-compute-decided-by-query-volume.md)
 - [Curate Context Strategically Because Models Drop the Middle](curate-context-strategically-because-models-drop-the-middle.md)
 - [Keep agent context small, fresh, and task-specific](keep-agent-context-small-fresh-and-task-specific.md)
+- [Ship a Catalog of Paved Roads, Not One Standard](ship-a-catalog-of-paved-roads-not-one-standard.md)
+- [Measure Enablement by Human Touches and Share of Fixes Reused](measure-enablement-by-human-touches-and-share-of-fixes-reused.md)
 
 Sources:
 - [We Cut 94% of AI Coding Tokens With a Local Code Index - Rajkumar Sakthivel, Tesco](../sources/20260628_dRmWYHuIJxM.md), 00:15-03:20, 10:05-10:40
+- [Coding Agents Don't Scale Themselves. Neither Do Your Teams. — Patrick Debois, Tessl](../sources/20260822_zCJtYuqwm7E.md), 13:26-13:58, 18:19-18:46

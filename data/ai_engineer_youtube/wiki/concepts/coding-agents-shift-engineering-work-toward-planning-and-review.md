@@ -19,6 +19,8 @@ Details:
 - **The same shift reported by the platform team that has to serve the resulting workload, with a tension left standing inside one talk.** Bond describes engineers "interacting with the code less… often times not as involved in authoring the code," with humans still approving today but "a short path in the near future to a percentage of our code landing automatically, having automatic approvals." Alongside that he argues the human role expands upward into architecture, domain expertise, and product thinking. Both are presented as the destination, and no criterion is given for which changes fall into the automatically-landed population and which get the expanded review — which is the question the plan turns on. ([Bond and Ketkar](../sources/20260828_EL123UNokkI.md), 11:11-11:56, 13:44-14:34)
 - **The displacement described from the inside, as a change in what you write down.** Krieger's account of his own shift: from "I have an idea, I'm going to break it down in my head much more how I would do engineering normally, and then iterate through these different steps" to "I'm going to describe the goal, like go off and work on it," with tradeoffs and questions surfaced along the way — summarized as "moving from that task delegation to express the end state and then have it go and cook on it." The review half then lands on comprehension rather than time, so the freed capacity is not free: it is spent building a model of work you did not decompose yourself. ([Krieger](../sources/20260827_qqrk7CtkuIw.md), 01:55-02:39, 10:19-10:30)
 
+- **The triage step upstream of the plan, and where the residue goes.** Debois reports teams splitting planning by scopedness rather than by importance: "things that were sufficiently scoped enough were easy to pick up by agents because they were well-defined, and what still was left for the humans were the things that weren't scoped out well… these things can straight go into agents, well-defined, and the harness is getting better, and this is conversational things that we need to decide as a team." That names the human residue as genuinely undecided work rather than as under-specified tickets to be fixed, and makes the boundary a property of the current harness — it moves every cycle, which is why he pairs it with a retro pointed at the system instead of the code. See [Run the Retro Against the System and Split Planning by Scopedness](run-the-retro-against-the-system-and-split-planning-by-scopedness.md). ([Debois](../sources/20260822_zCJtYuqwm7E.md), 06:54-08:00)
+
 Related topics:
 - [Agents](../topics/agents.md)
 - [Coding Agents](../topics/coding-agents.md)
@@ -32,6 +34,8 @@ Related concepts:
 - [Reduced Developer Agency Is an Adoption Cost, and Planning Is Its Remedy](reduced-developer-agency-is-an-adoption-cost-and-planning-is-its-remedy.md)
 - [Review Comments Have Two Audiences With Inverted Error Costs](review-comments-have-two-audiences-with-inverted-error-costs.md)
 - [The Review Bottleneck Is Comprehension, Not Reviewer Time](the-review-bottleneck-is-comprehension-not-reviewer-time.md)
+- [Run the Retro Against the System and Split Planning by Scopedness](run-the-retro-against-the-system-and-split-planning-by-scopedness.md)
+- [A Faster Team Relocates the Bottleneck Downstream](a-faster-team-relocates-the-bottleneck-downstream.md)
 
 Sources:
 - [Software Engineering Is Becoming Plan and Review - Louis Knight-Webb, Vibe Kanban](../sources/20260502_W76woOYHlvY.md), 02:04-03:30, 12:14-14:01
@@ -40,3 +44,4 @@ Sources:
 - [How to Get Your Org to Adopt Coding Agents (Without Shipping Garbage) — Eyal Blum, Figma](../sources/20260828_5Bn0xro2ol8.md), 02:53-03:25, 07:34-08:07
 - [Building uReview, Uber's Multi-Agent Code Review Engine — Will Bond & Ameya Ketkar, Uber](../sources/20260828_EL123UNokkI.md), 11:11-11:56, 13:44-14:34
 - [How Anthropic Builds: Lessons from Labs — Mike Krieger, Anthropic](../sources/20260827_qqrk7CtkuIw.md), 01:55-02:39, 10:19-10:30
+- [Coding Agents Don't Scale Themselves. Neither Do Your Teams. — Patrick Debois, Tessl](../sources/20260822_zCJtYuqwm7E.md), 06:54-08:00

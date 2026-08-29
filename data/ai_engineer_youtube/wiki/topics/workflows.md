@@ -305,7 +305,10 @@ One source reframes where agent investment should go at org scale, and its argum
 
 A rollout pattern worth naming separately from the thing being rolled out: when the component you are introducing can terminate work, ship it with evaluation on and enforcement off first. A Microsoft team introducing a spend control plane makes preview mode scenario one of three — policies "run as is, but the enforcement doesn't happen," the run completes, and the dashboard still shows which policies fired and what they would have done — before demonstrating halt and then steer. Their stated purpose is calibration rather than reassurance: "test the guardrails, tweak the guardrail, see what's the policies are doing and then finalize the thresholds." The reason this matters more here than in an ordinary shadow deploy is that a budget threshold has no principled value. It is a quantile of your own workload's run-cost distribution, which is workload-specific, drifts with prices and prompt changes, and has a long tail — so the output of the preview period *is* the number, and shipping enforcement first means the policy's first lesson is which legitimate runs it killed. The same suppressed-action data is also the cleanest counterfactual for evaluating the control: how often each policy would have fired, on which segments, at what point in the run.
 
+Once agents do the implementation, two ordinary team ceremonies change subject rather than disappearing. Debois reports the more advanced teams running retros against the system instead of the code — "the agent went over and over hit this problem. Can we fix the system?" — which makes the retro a standing generator of harness and context work, and repetition the signal, since repetition is only visible across a period and across people. Planning splits by scopedness: work defined tightly enough goes straight to agents and what is left for humans is the work that was never scoped and still needs a conversation. That split names the human residue as genuinely undecided work rather than as under-specified tickets to be repaired, and the boundary between the piles is a property of the harness on that date, so planning re-measures it every cycle. Engineering practice does not relax on the way through: the agent is instructed to write tests and update documentation for two reasons, the second being that those artifacts are inputs to its next run. He also flags a second-order effect that scopes the whole program — relieving the engineering constraint moves it. Go-to-market and support cannot keep up, "even users have a hard time keeping up," and upstream the requirements stop arriving fast enough, so a team that removed its implementation bottleneck becomes starved rather than saturated and "your harness doesn't stop at your coding." Finding the constraint once is not enough when your own success invalidates the answer.
+
 ## Key Concepts
+- [Building the Harness Is the Engineering Path That Prompting Took Away](../concepts/building-the-harness-is-the-engineering-path-that-prompting-took-away.md) - the remedy for engineers who reject the conductor role is tooling, not a better spec.
 
 - [Ship Enforcement Policies in Preview Mode Before Enabling Them](../concepts/ship-enforcement-policies-in-preview-mode-before-enabling-them.md) - run policies against production traffic with actions suppressed, because the threshold is a measurement, not a guess.
 
@@ -806,6 +809,10 @@ A rollout pattern worth naming separately from the thing being rolled out: when 
 
 - [Discover Failure Modes From Production Outputs, Not Synthetic Cases](../concepts/discover-failure-modes-from-production-outputs-not-synthetic-cases.md) - a discovery pass over real outputs replaces the whiteboard taxonomy, and the resulting ontology decides what gets reviewed and what gets retrieved.
 - [Capture Expert Reasoning and Corrections, Not Just a Score](../concepts/capture-expert-reasoning-and-corrections-not-just-a-score.md) - the smallest useful expert-review increment is a few focused hours of free-form comments on real output, kept as reasoning rather than ratings.
+- [Run the Retro Against the System and Split Planning by Scopedness](../concepts/run-the-retro-against-the-system-and-split-planning-by-scopedness.md) - the retro becomes a harness backlog and planning sorts by whether an item can be handed off.
+- [A Faster Team Relocates the Bottleneck Downstream](../concepts/a-faster-team-relocates-the-bottleneck-downstream.md) - GTM, users, and requirements intake become the constraint once engineering stops being one.
+- [Score Hires on AI Leverage, Taste, and Sharing as Three Separate Axes](../concepts/score-hires-on-ai-leverage-taste-and-sharing-as-three-separate-axes.md) - an AI-max exercise, then a walkthrough, then a collaboration signal, deliberately not averaged into a level.
+- [Target Swap Speed, Not Stability, as the Reliability Goal](../concepts/target-swap-speed-not-stability-as-the-reliability-goal.md) - keep reliability constant while changing more of the system, and treat captured knowledge as what persists across swaps.
 
 ## Open Questions
 
@@ -893,6 +900,8 @@ A rollout pattern worth naming separately from the thing being rolled out: when 
 
 
 - How long should a preview period run before a policy is promoted to enforcement? No source gives guidance on sizing the observation window against the tail of a run-cost distribution, on whether preview should be per-policy or per-environment, or on how to promote one policy while the rest stay suppressed.
+
+- When engineering throughput rises, which downstream function actually becomes the binding constraint, and is it automatable in the same way coding was? Debois names go-to-market, support, users, and requirements intake in one breath, but contractual review and user retraining are not obviously the same kind of problem as writing code, and no source in the wiki reports measuring a downstream queue before and after an agent rollout. ([Debois](../sources/20260822_zCJtYuqwm7E.md), 08:27-09:09)
 
 ## Sources
 
@@ -1108,3 +1117,4 @@ A rollout pattern worth naming separately from the thing being rolled out: when 
 - [FinOps for AI Agents: Who Spent All the Tokens? — Tisha Chawla & Susheem Koul, Microsoft](../sources/20260822_GJX19pNhmSw.md)
 - [The Agent Behind the Curtain: Building the Oz Cloud Agent Platform — Safia Abdalla, Warp](../sources/20260822_L173Z8DpaJg.md)
 - [Inside 847 Production Clinical AI Notes — Sebastian Fox, Composo](../sources/20260822_yqF6XhzbWBk.md)
+- [Coding Agents Don't Scale Themselves. Neither Do Your Teams. — Patrick Debois, Tessl](../sources/20260822_zCJtYuqwm7E.md)

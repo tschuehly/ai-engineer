@@ -21,6 +21,8 @@ Details:
 
 - **A leader naming her own layer's failure mode, which is refusing to fund the dip.** "I've been guilty of this myself. My fellow leaders have been guilty of… saying, 'Well, you have the AI tools now and the models are so amazing now. Why are you not going faster?' And that's because you have to take those two months to invest in your code base, to figure out the best practices for your team, to make hard habit changes on your team." She names the external pressure feeding it — "we're seeing all of these companies on X saying how they're shipping 20 PRs a day" — which matters because it is what makes the demand feel reasonable to the person making it. This is a specific obligation that only the leadership layer can discharge: a team cannot grant itself a delivery holiday, and an unfunded dip is abandoned halfway, leaving the team with the investment cost and the old workflow. See [Budget the Productivity Dip That Precedes the Agent Speedup](budget-the-productivity-dip-that-precedes-the-agent-speedup.md). ([Liguori](../sources/20260828_pqlWNihgdjI.md), 17:02-17:54)
 
+- **The same argument applied one level up, plus the number that makes it visible.** Debois runs this page's reasoning at the team-versus-organization boundary rather than the IC-versus-leadership one: a team can build its own harness, but it cannot make that harness the one other teams find and extend, so "you need to make sure that there's an owner driving this centralized piece and not just within your team. Because you won't have paved roads." That suggests the rule generalizes — whoever owns a shared surface sits one level above the people who benefit from it ([Agent Enablement Falls Between Platform and Developer Experience, So Name an Owner](agent-enablement-falls-between-platform-and-developer-experience-so-name-an-owner.md)). He also supplies a metric for the property this page is named after: track how much of each fix is shared, because "this is not the multiplier from the one person becoming the 10x person, but the one change that optimized the agents has an impact on all the people." A program where individual efficiency rises and reuse stays flat has produced power users rather than a platform, and until reuse is measured that failure is invisible ([Measure Enablement by Human Touches and Share of Fixes Reused](measure-enablement-by-human-touches-and-share-of-fixes-reused.md)). ([Debois](../sources/20260822_zCJtYuqwm7E.md), 09:52-11:26)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Workflows](../topics/workflows.md)
@@ -36,8 +38,11 @@ Related concepts:
 - [Harness Engineering Shifts Scarcity From Code Production to Control Surfaces](harness-engineering-shifts-scarcity-from-code-production-to-control-surfaces.md)
 - [The Best Engineers Adopt Agents Last, and Their Objections Are the Roadmap](the-best-engineers-adopt-agents-last-and-their-objections-are-the-roadmap.md)
 - [Budget the Productivity Dip That Precedes the Agent Speedup](budget-the-productivity-dip-that-precedes-the-agent-speedup.md)
+- [Agent Enablement Falls Between Platform and Developer Experience, So Name an Owner](agent-enablement-falls-between-platform-and-developer-experience-so-name-an-owner.md)
+- [Measure Enablement by Human Touches and Share of Fixes Reused](measure-enablement-by-human-touches-and-share-of-fixes-reused.md)
 
 Sources:
 - [Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab](../sources/20260811_aeTb5BdmTTc.md), 01:04-02:01, 05:44-06:56, 08:19-08:50, 09:14-09:37, 10:56-11:42, 13:34-13:51
 - [How to Get Your Org to Adopt Coding Agents (Without Shipping Garbage) — Eyal Blum, Figma](../sources/20260828_5Bn0xro2ol8.md), 02:09-02:44, 10:26-11:00
 - [From AI-Assisted to AI-Native: Building a Frontier Development Team — Clare Liguori, AWS](../sources/20260828_pqlWNihgdjI.md), 17:02-17:54
+- [Coding Agents Don't Scale Themselves. Neither Do Your Teams. — Patrick Debois, Tessl](../sources/20260822_zCJtYuqwm7E.md), 09:52-11:26

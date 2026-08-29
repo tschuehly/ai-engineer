@@ -13,6 +13,8 @@ Details:
 - Zapier's onboarding agents are framed as a throughput lever because reducing time-to-effectiveness changes hiring and scaling economics, not merely individual code speed. (16:10-16:55)
 - Spotify's incident workflow shows an operations bottleneck: collecting runbook steps, context, and documentation into incident channels can reduce critical minutes during response. (16:55-17:25)
 
+- **Finding the constraint once is not enough, because relieving it moves it.** Debois reports the second-order effect of a successful engineering rollout: "if you start producing as a team more, the people downstream — GTM, people like that — they have a hard time keeping up. Even users have a hard time keeping up… So, your harness doesn't stop at your coding." And the upstream half, which is easier to miss: "the input might not come fast enough for your team," so a team that removed its implementation constraint becomes starved rather than saturated. The planning consequence is that an enablement program scoped to engineering is scoped to one station on the line. See [A Faster Team Relocates the Bottleneck Downstream](a-faster-team-relocates-the-bottleneck-downstream.md). ([Debois](../sources/20260822_zCJtYuqwm7E.md), 08:27-09:09)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Workflows](../topics/workflows.md)
@@ -20,6 +22,8 @@ Related topics:
 Related concepts:
 - [AI pushes software engineers toward broader product and operations ownership](ai-pushes-software-engineers-toward-broader-product-and-operations-ownership.md)
 - [Agents reduce dependency-chain chores through parallel execution](agents-reduce-dependency-chain-chores-through-parallel-execution.md)
+- [A Faster Team Relocates the Bottleneck Downstream](a-faster-team-relocates-the-bottleneck-downstream.md)
 
 Sources:
 - [Leadership in AI Assisted Engineering - Justin Reock, DX (acq. Atlassian)](../sources/20251219_PmZDupFP3UM.md), 04:56-05:13, 15:01-17:25
+- [Coding Agents Don't Scale Themselves. Neither Do Your Teams. — Patrick Debois, Tessl](../sources/20260822_zCJtYuqwm7E.md), 08:27-09:09

@@ -19,6 +19,8 @@ Details:
 - Provenance: a founder keynote three days after launching an open-weights subscription plan, so the conclusion is the speaker's commercial position. The Open Compute history and the 2014 cloud price cuts are checkable; the 2030 projections are unattributed "estimates"; the geopolitical framing around keeping a national lead is advocacy rather than a finding.
 - **The buyer-side corollary: rent the layers you do not win on, and keep exactly the one you do.** Notion's lean GTM engineering team names orchestration, email, CRM, and enrichment as bought — "vendors do that really well" — and the context layer as non-negotiable, "because that's where our edge is." The same reasoning that makes a supplier publish a design it cannot win with makes a customer decline to build a mail sender: the decision is about where the differentiation lives, not about capability. ([Liu](../sources/20260826_L4I7WgiEquo.md), 08:44-09:00, 17:52-18:17)
 
+- **The same argument applied to agent harnesses, as a planning premise rather than a release decision.** Debois assumes the loop-and-harness layer commoditizes — "maybe even going into one of the frontier labs that just offers this as a service" — and concludes it "is not going to be the differentiator for your organization," so the differentiation relocates to the team, the platform, the organization, and the knowledge captured in context and skills. That is this page's relocation rule read forward instead of backward: rather than deciding what to open, he is deciding where to invest given that a layer will commoditize whether or not he participates. The path-dependence caution transfers intact — an internally-built harness gets expensive to leave once the commodity version arrives. ([Debois](../sources/20260822_zCJtYuqwm7E.md), 00:56-01:38, 20:24-20:43)
+
 Related topics:
 - [Product Strategy](../topics/product-strategy.md)
 - [Models](../topics/models.md)
@@ -31,7 +33,9 @@ Related concepts:
 - [A Subsidized Coding-Agent Subscription Is a Lock-In Ramp](a-subsidized-coding-agent-subscription-is-a-lock-in-ramp.md)
 - [Decide Open-Model Ownership by Capability, Hardware, Latency, and Cost Thresholds](decide-open-model-ownership-by-capability-hardware-latency-and-cost-thresholds.md)
 - [Own the Context Layer and Rent Every Other Layer](own-the-context-layer-and-rent-every-other-layer.md)
+- [Assume the Harness Commoditizes and Differentiate on the Organization](assume-the-harness-commoditizes-and-differentiate-on-the-organization.md)
 
 Sources:
 - [Open Source Is Dead. Long Live Open Source. — Saoud Rizwan, Cline](../sources/20260807_CoEIs6Xm8m8.md), 11:06-13:58, 14:31-15:45
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 08:44-09:00, 17:52-18:17
+- [Coding Agents Don't Scale Themselves. Neither Do Your Teams. — Patrick Debois, Tessl](../sources/20260822_zCJtYuqwm7E.md), 00:56-01:38, 20:24-20:43
