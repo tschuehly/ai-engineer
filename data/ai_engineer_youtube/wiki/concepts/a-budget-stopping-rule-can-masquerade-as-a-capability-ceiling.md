@@ -22,6 +22,7 @@ Related topics:
 - [Models](../topics/models.md)
 
 Related concepts:
+- [A Cost Control Must Report Completion Rate or It Is Just Throttling](a-cost-control-must-report-completion-rate-or-it-is-just-throttling.md)
 - [Automated Training Search Beats Staff by Not Carrying Architecture Priors](automated-training-search-beats-staff-by-not-carrying-architecture-priors.md)
 - [Co-Optimize Data With the Model or the Search Does Not Pay](co-optimize-data-with-the-model-or-the-search-does-not-pay.md)
 - [Benchmark Context-Management Presets Against a Do-Nothing Baseline](benchmark-context-management-presets-against-a-do-nothing-baseline.md)

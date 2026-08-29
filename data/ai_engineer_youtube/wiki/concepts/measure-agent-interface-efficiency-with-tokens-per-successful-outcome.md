@@ -19,12 +19,15 @@ Details:
 
 - **A worked instance where the denominator is doing the work.** Šteimantas' arithmetic — ten pages fetched, three valid, all ten sent to the model, "we waste 70% of the tokens" — is exactly what this page's ratio is built to expose, and it is invisible to a tokens-per-*outcome* measure because the outcome is fine. The agent answers, correctly, from the three real pages; the seven blocked ones are billed as input and contribute nothing. Two lessons for anyone instrumenting this metric. The cheapest improvement was not compression of the payload but a validity filter in front of it — "the problem is not the compression. The problem is that the content is not valid" — which is the retrieval-layer analogue of Burns' finding that the largest saving came from moving the artifact rather than shrinking it. And the effectiveness term needs a coverage component here, since the blocked fetches also shrink the choice set the agent decides from: a run that succeeds on a truncated sample scores as a success. See [Validate Retrieved Content Before Spending Tokens on It](validate-retrieved-content-before-spending-tokens-on-it.md). Caveat: the 70% is arithmetic over a hypothetical, not a measured workload. ([Šteimantas](../sources/20260826_XsvUhpnHepE.md), 08:39-10:29)
 
+- **The clearest demonstration of why the numerator alone is unusable comes from the cost-control side.** Chawla and Koul benchmark a spend governor and refuse to report savings on their own: simple throttling "is going to kill your agent runs no matter what," so they publish average spend down "almost 78%" beside completion up "from 67% to roughly 96%." That is this page's ratio with the denominator made explicit as a competing arm rather than a divisor — and it generalizes the discipline past interface design to any intervention that is allowed to abandon work. Their own gap is instructive too: the steering action injects "make sure that the LM outputs are more succinct," which changes what a completed run produces, and completion is a binary that a thinner answer still satisfies. Even a tokens-per-*successful*-outcome measure needs its success predicate to be sensitive to quality, not just to finishing. See [A Cost Control Must Report Completion Rate or It Is Just Throttling](a-cost-control-must-report-completion-rate-or-it-is-just-throttling.md). ([FinOps for AI Agents: Who Spent All the Tokens? — Tisha Chawla & Susheem Koul, Microsoft](../sources/20260822_GJX19pNhmSw.md), 18:17-18:39, 19:00-19:26)
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Tools](../topics/tools.md)
 - [Agents](../topics/agents.md)
 
 Related concepts:
+- [Steer an Over-Budget Run Before You Kill It](steer-an-over-budget-run-before-you-kill-it.md)
+- [A Cost Control Must Report Completion Rate or It Is Just Throttling](a-cost-control-must-report-completion-rate-or-it-is-just-throttling.md)
 - [Evaluate Agent Loops With Correctness, Cost, Latency, and Step Counts](evaluate-agent-loops-with-correctness-cost-latency-and-step-counts.md)
 - [MCP Tool Surfaces Need Default Context Budgets](mcp-tool-surfaces-need-default-context-budgets.md)
 - [Design MCP Servers as Agent Products](design-mcp-servers-as-agent-products.md)
@@ -41,3 +44,4 @@ Sources:
 - [Building the Engine While Flying the Plane: Launching the Figma MCP Server — Jesse Lumarie, Figma](../sources/20260828_ZIYYsAzaLlA.md), 08:12-08:37, 09:28-09:47
 - [How We Got LLMs to Recommend Our Open Source Library — Christopher Burns, Inth](../sources/20260826_V_5bn4q-vAI.md), 11:16-11:45
 - [The Missing Layer in Agentic AI — Giedrius Šteimantas, Oxylabs](../sources/20260826_XsvUhpnHepE.md), 08:39-10:29
+- [FinOps for AI Agents: Who Spent All the Tokens? — Tisha Chawla & Susheem Koul, Microsoft](../sources/20260822_GJX19pNhmSw.md), 18:17-18:39, 19:00-19:26

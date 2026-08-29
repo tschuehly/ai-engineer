@@ -1,6 +1,11 @@
 # Concept Index
 
 ## Agents
+- [Steer an Over-Budget Run Before You Kill It](../concepts/steer-an-over-budget-run-before-you-kill-it.md) - the enforcement action between letting a run go and killing it.
+- [Put the Cost Control at the Agent Run, Not the Model Request](../concepts/put-the-cost-control-at-the-agent-run-not-the-model-request.md) - budget, attribute, and enforce at the run boundary; treat the per-request cap as the outer backstop.
+- [Predict Budget Overrun From Burn Velocity, Not Consumption Alone](../concepts/predict-budget-overrun-from-burn-velocity-not-consumption-alone.md) - act on a predicted overrun while there is still budget to spend differently.
+- [Make the Instrumentation Boundary Two-Way and Gate It With a Governor](../concepts/make-the-instrumentation-boundary-two-way-and-gate-it-with-a-governor.md) - an external plane that can mutate a running agent needs an allowlist the code owner writes.
+- [Emit Attribution Dimensions So Budgets Can Target Any Cohort](../concepts/emit-attribution-dimensions-so-budgets-can-target-any-cohort.md) - attribution is a precondition for control, not a reporting feature.
 - [Scope Role Agents With a Spec Hierarchy and File Isolation](../concepts/scope-role-agents-with-a-spec-hierarchy-and-file-isolation.md) - specialist agents cross into each other's disciplines until the file surface, not the prompt, defines the role.
 - [Design the Environment, Not the Workflow](../concepts/design-the-environment-not-the-workflow.md) - specify where the agent works and what it is rewarded for, not the steps it takes.
 - [Open Agent Arenas Reach Solutions No Single Agent Reaches](../concepts/open-agent-arenas-reach-solutions-no-single-agent-reaches.md) - forum, live leaderboard, and downloadable submissions; 604 spheres in 11 dimensions against a prior best of 593.
@@ -973,6 +978,7 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Steer an Over-Budget Run Before You Kill It](../concepts/steer-an-over-budget-run-before-you-kill-it.md) - compaction and tool-output reduction fired by a budget forecast rather than a token threshold.
 - [Keep a Living Intent Graph That Agents Read but Cannot Write](../concepts/keep-a-living-intent-graph-that-agents-read-but-cannot-write.md) - constraints, decisions, and stakeholders in one graph, mutable only through human approval, with the approval echoing to everyone bound by the old value.
 - [Truth Drift Updates One Copy and Leaves the Rest Stale](../concepts/truth-drift-updates-one-copy-and-leaves-the-rest-stale.md) - the edit succeeds and nothing errors; single source of truth plus rule-based conflict detection is the answer.
 - [Hydrate a Trigger Event to Its Entity Once and Persist the Mapping](../concepts/hydrate-a-trigger-event-to-its-entity-once-and-persist-the-mapping.md) - the meeting-to-account fuzzy match resolved at ingest and stored, not re-derived per consumer.
@@ -1146,6 +1152,13 @@
 - [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md)
 
 ## Infrastructure
+- [Put the Cost Control at the Agent Run, Not the Model Request](../concepts/put-the-cost-control-at-the-agent-run-not-the-model-request.md) - a gateway governs one request; the loop, the sub-agents, and the growing context are run properties.
+- [Steer an Over-Budget Run Before You Kill It](../concepts/steer-an-over-budget-run-before-you-kill-it.md) - halt versus steer, with in-place policies ordered ahead of the budget cap.
+- [Make the Instrumentation Boundary Two-Way and Gate It With a Governor](../concepts/make-the-instrumentation-boundary-two-way-and-gate-it-with-a-governor.md) - the cost-reporting annotation doubles as the action downlink, bounded by a developer-authored allowlist.
+- [Predict Budget Overrun From Burn Velocity, Not Consumption Alone](../concepts/predict-budget-overrun-from-burn-velocity-not-consumption-alone.md) - fraction spent plus rate of spend makes the check a forecast instead of a post-mortem.
+- [Emit Attribution Dimensions So Budgets Can Target Any Cohort](../concepts/emit-attribution-dimensions-so-budgets-can-target-any-cohort.md) - dimensions to segments to budgets, so the spending boundary is configuration rather than a fixed grain.
+- [Ship Enforcement Policies in Preview Mode Before Enabling Them](../concepts/ship-enforcement-policies-in-preview-mode-before-enabling-them.md) - policies evaluate on production traffic with actions suppressed; the preview period produces the threshold.
+- [A Cost Control Must Report Completion Rate or It Is Just Throttling](../concepts/a-cost-control-must-report-completion-rate-or-it-is-just-throttling.md) - killing runs wins any spend-only comparison, so publish the completion column beside the saving.
 - [Swap the Verifier to Retarget an Agent Arena](../concepts/swap-the-verifier-to-retarget-an-agent-arena.md) - the verifier is the only domain-specific part; same arena, kernels instead of mathematics.
 - [Assign a Web-Access Primitive Per Pipeline Stage](../concepts/assign-a-web-access-primitive-per-pipeline-stage.md) - the access layer below the agent runtime, chosen per stage rather than per agent.
 - [Back the Served Context Layer With a Transactional Store for Referential Integrity](../concepts/back-the-served-context-layer-with-a-transactional-store-for-referential-integrity.md) - Postgres over a denormalized key-value profile, for cross-system integrity and provenance rather than latency.
@@ -1820,6 +1833,7 @@
 - [Verify AI Call Summaries Before CRM Sync](../concepts/verify-ai-call-summaries-before-crm-sync.md) - the write path into the system of record needs a check, and agent tool access widens it.
 
 ## Evaluation
+- [A Cost Control Must Report Completion Rate or It Is Just Throttling](../concepts/a-cost-control-must-report-completion-rate-or-it-is-just-throttling.md) - include the arm that wins your headline metric by doing less work.
 - [Evaluate a Router Against the Always-Frontier Arm](../concepts/evaluate-a-router-against-the-always-frontier-arm.md) - two arms, three metrics, asymmetric acceptance — and a "within judge margin of error" claim with no measured margin.
 - [Grade the Alignment, Not the Agents](../concepts/grade-the-alignment-not-the-agents.md) - move the unit of evaluation from the component to the coordination system: task completion, frustration, overstep rate, concurrency, token tax.
 - [Institutional Memory Has No Benchmark the Way Graph Memory Does](../concepts/institutional-memory-has-no-benchmark-the-way-graph-memory-does.md) - ~150 papers, datasets, and recall on one side; no definition and no measure on the other.
@@ -2933,6 +2947,7 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Ship Enforcement Policies in Preview Mode Before Enabling Them](../concepts/ship-enforcement-policies-in-preview-mode-before-enabling-them.md) - shadow-deploy discipline for any component that can terminate work.
 - [Alignment Is the Quadratic Term That Per-Person Tooling Does Not Touch](../concepts/alignment-is-the-quadratic-term-that-per-person-tooling-does-not-touch.md) - per-seat agents raise the linear term while coordination cost grows with the square of headcount.
 - [Keep Geolocation Consistent Across Pipeline Stages](../concepts/keep-geolocation-consistent-across-pipeline-stages.md) - environment parameters held constant across runs but varying across stages produce reproducible pipelines that contradict themselves.
 - [Solve One Team, Then Mirror the Build Sideways](../concepts/solve-one-team-then-mirror-the-build-sideways.md) - the embedding pipeline and custom instructions port to the next team; the data sources and skills do not.

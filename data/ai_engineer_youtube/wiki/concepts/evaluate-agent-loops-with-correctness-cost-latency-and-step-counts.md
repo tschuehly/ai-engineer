@@ -22,11 +22,13 @@ Details:
 - **The router case, where the joint report is not optional but definitional.** A model router can trivially win any single metric — route everything to the frontier model and quality is preserved with no saving; route everything to the cheapest and the saving is total. DigitalOcean's router evaluation therefore reports correctness, tokens, and latency against an always-premium arm together: 90% for the router against 95% for Opus, with "significantly less tokens" and "significantly faster" ([Kamath & Gillam](../sources/20260822_FvxY8oPoI8o.md), 09:15-09:36). The acceptance shape is asymmetric in a way worth reusing — quality within noise of the baseline, cost and latency strictly better — and the presenter names what the report replaces: "it's still vibes, though. How you actually prove it is working it through" an evaluation (08:54-09:15). See [Evaluate a Router Against the Always-Frontier Arm](evaluate-a-router-against-the-always-frontier-arm.md).
 - **The gap in that report is the one this page's metrics do not close on their own: the noise floor.** "That's pretty much within a judge margin of error" is asserted for a five-point difference with no margin ever measured. Whenever a cost or latency win is being bought with an apparently small quality loss, the margin is the number that decides whether the trade happened, and it is obtainable by repeating the judge or bootstrapping the task set.
 
+- **Add completion rate as a separate axis whenever the intervention under test is allowed to abandon the run.** Correctness conditioned on runs that finished says nothing about the runs that did not, and a cost control, a timeout policy, or a hard cap can improve every other metric on this list by producing fewer finished runs. Chawla and Koul make the pairing explicit for spend governance — throttling "is going to kill your agent runs no matter what," so they report average spend down "almost 78%" beside a completion uplift "from 67% to roughly 96%" — which is the same logic as scoring guessed answers wrong, applied to runs that never produced an answer at all. See [A Cost Control Must Report Completion Rate or It Is Just Throttling](a-cost-control-must-report-completion-rate-or-it-is-just-throttling.md). ([FinOps for AI Agents: Who Spent All the Tokens? — Tisha Chawla & Susheem Koul, Microsoft](../sources/20260822_GJX19pNhmSw.md), 19:00-19:26)
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Agents](../topics/agents.md)
 
 Related concepts:
+- [A Cost Control Must Report Completion Rate or It Is Just Throttling](a-cost-control-must-report-completion-rate-or-it-is-just-throttling.md)
 - [Compare Models by Task, Thinking Budget, Cost, and Latency](compare-models-by-task-thinking-budget-cost-and-latency.md)
 - [Calibrate LLM Judges Like Binary Classifiers](calibrate-llm-judges-like-binary-classifiers.md)
 - [Evaluate Agent Trajectories With Backtests and Smell Metrics](evaluate-agent-trajectories-with-backtests-and-smell-metrics.md)
@@ -50,3 +52,4 @@ Sources:
 - [The Agentic Commerce Stack — Ahnaf Prio, Best Buy](../sources/20260827_G7cgLjZtmMU.md), 18:12-18:29
 - [The Death of Developer Advocates — Stephanie Jarmak, Sourcegraph](../sources/20260826_Lrw0jqBNaw0.md), 06:33-07:38
 - [Preferences Over Benchmarks: Model Routing — Archana Kamath & Tyler Gillam, DigitalOcean](../sources/20260822_FvxY8oPoI8o.md), 08:54-09:36
+- [FinOps for AI Agents: Who Spent All the Tokens? — Tisha Chawla & Susheem Koul, Microsoft](../sources/20260822_GJX19pNhmSw.md), 19:00-19:26

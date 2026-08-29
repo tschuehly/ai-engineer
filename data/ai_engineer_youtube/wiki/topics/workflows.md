@@ -302,7 +302,12 @@ The wiki's accumulated case for scaffolding now has an explicit counter-position
 
 One source reframes where agent investment should go at org scale, and its argument is arithmetic rather than anecdotal: per-person AI tooling raises the linear term while [the coordination cost grows with the square of headcount](../concepts/alignment-is-the-quadratic-term-that-per-person-tooling-does-not-touch.md), so past some team size the second term dominates and throughput falls even as individuals get faster. The complaint that follows is the actionable half — "everyone [is] trying to solve this linear problem of more tools and more stuff but nobody actually [is] tackling the quadratic term." Chip design is offered as the extreme case because the artifact cannot be patched: a respin averages a reported $50 million, roughly 15 practitioners report spending 70% of their time on alignment, and the inversion drawn from it is that the strongest organizations are the most aligned rather than the ones with the best engineers. This sits usefully beside the wiki's hazard-first-simulation material, another no-rollback domain that reaches a different remedy — the plausible discriminator is where the irreversible error originates, since a single harmful output can be rehearsed in simulation and a disagreement among fifty engineers about what is being built is upstream of any runnable artifact. The proposed substrate is a shared graph of intent plus a compounding knowledge layer plus role-specific agents, with three development-time failures behind it that all resolve the same way: when an agent agrees to a rule and violates it, the rule moves out of the prompt and into the world. None of it is measured; the only outcome claim is "we think that this gives you four x leverage," with no unit, baseline, or population.
 
+
+A rollout pattern worth naming separately from the thing being rolled out: when the component you are introducing can terminate work, ship it with evaluation on and enforcement off first. A Microsoft team introducing a spend control plane makes preview mode scenario one of three — policies "run as is, but the enforcement doesn't happen," the run completes, and the dashboard still shows which policies fired and what they would have done — before demonstrating halt and then steer. Their stated purpose is calibration rather than reassurance: "test the guardrails, tweak the guardrail, see what's the policies are doing and then finalize the thresholds." The reason this matters more here than in an ordinary shadow deploy is that a budget threshold has no principled value. It is a quantile of your own workload's run-cost distribution, which is workload-specific, drifts with prices and prompt changes, and has a long tail — so the output of the preview period *is* the number, and shipping enforcement first means the policy's first lesson is which legitimate runs it killed. The same suppressed-action data is also the cleanest counterfactual for evaluating the control: how often each policy would have fired, on which segments, at what point in the run.
+
 ## Key Concepts
+
+- [Ship Enforcement Policies in Preview Mode Before Enabling Them](../concepts/ship-enforcement-policies-in-preview-mode-before-enabling-them.md) - run policies against production traffic with actions suppressed, because the threshold is a measurement, not a guess.
 
 - [Alignment Is the Quadratic Term That Per-Person Tooling Does Not Touch](../concepts/alignment-is-the-quadratic-term-that-per-person-tooling-does-not-touch.md) - why per-seat agent rollouts can show individual wins and flat delivery.
 - [Grade the Alignment, Not the Agents](../concepts/grade-the-alignment-not-the-agents.md) - the evaluation counterpart, including concurrency and token tax as system-level axes.
@@ -880,6 +885,9 @@ One source reframes where agent investment should go at org scale, and its argum
 - Which AI-intensive workflows should use a SPADE-style batch pipeline instead of a conversational or agent-loop interface?
 - Which attention-conserving layers earn their keep in a solo workflow before the monitoring they add costs more focus than it saves?
 
+
+- How long should a preview period run before a policy is promoted to enforcement? No source gives guidance on sizing the observation window against the tail of a run-cost distribution, on whether preview should be per-policy or per-environment, or on how to promote one policy while the rest stay suppressed.
+
 ## Sources
 
 - [AI Evals for Cross-Functional Teams — Nachiket Paranjape & Swaroop Chitlur Haridas, DoorDash](../sources/20260828_bMjlRrWjdT0.md)
@@ -1091,3 +1099,4 @@ One source reframes where agent investment should go at org scale, and its argum
 - [Reverse-Engineering the AI Buyer — Aliisa Rosenthal, Acrew Capital](../sources/20260826_wdTRsfw0KG0.md)
 - [Einstein Arena: Harnessing Collective Agent Intelligence for Open Science — James Zou, Together AI](../sources/20260825_mMNkdYnIVC4.md)
 - [What If Your Chip Design Team Moved Like a Single Body? — Abduallah Mohamed, AIDAChip](../sources/20260822_0I6aoPSRzVc.md)
+- [FinOps for AI Agents: Who Spent All the Tokens? — Tisha Chawla & Susheem Koul, Microsoft](../sources/20260822_GJX19pNhmSw.md)

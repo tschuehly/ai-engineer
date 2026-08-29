@@ -23,6 +23,7 @@ Related topics:
 - [Infrastructure](../topics/infrastructure.md)
 
 Related concepts:
+- [Make the Instrumentation Boundary Two-Way and Gate It With a Governor](make-the-instrumentation-boundary-two-way-and-gate-it-with-a-governor.md)
 - [LLM Guardrails Need Checkpoints at Every Untrusted Boundary](llm-guardrails-need-checkpoints-at-every-untrusted-boundary.md)
 - [Fine-Tuned Encoder Discriminators Make Low-Latency Guardrails Practical](fine-tuned-encoder-discriminators-make-low-latency-guardrails-practical.md)
 - [Enforce Deterministic Guardrails Around Sensitive Tool Calls](enforce-deterministic-guardrails-around-sensitive-tool-calls.md)

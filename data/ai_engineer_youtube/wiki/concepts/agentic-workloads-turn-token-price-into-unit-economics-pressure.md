@@ -17,12 +17,15 @@ Details:
 
 - **A measured instance of the multiplication, taken at two points in the same session.** Two coding-agent terminals given identical prompts — one always calling Claude Opus, one behind a per-task router — diverge as the session lengthens: 8 cents against 25 after one feature request, 14 against 44 after three ([Kamath & Gillam](../sources/20260822_FvxY8oPoI8o.md), 09:36-13:25). The reason is exactly this page's premise: one user action becomes many model calls with different requirements, so an always-premium policy pays its worst-case rate on every internal call while a routed policy pays each call's own tier. The pressure this page describes is therefore not evenly distributed across a product — it concentrates in whichever surfaces have the longest agent loops. See [Routing Savings Compound Across an Agent Session](routing-savings-compound-across-an-agent-session.md). Single live demo of one small app, with an impure baseline (the harness sometimes chose a cheap model on its own), so the direction is sound and the 3x ratio is one sample.
 
+- **If one user action triggers many model calls, then the run — not the call — is the unit the economics live in.** That is the operational corollary of this page, and it is the argument Chawla and Koul build a control plane on: a per-request cap cannot see the tool loop, the sub-agents one agent spawns, or the context that grows across the whole run, which is where the multiplication happens. Their motivating examples of the multiplication going unbounded are relayed from news rather than measured — "the AI budget for Uber getting exhausted within 4 months," companies reaching "hundreds of millions of dollars within just months or days" through "runaway loops" — but the structural point stands: fan-out is a property of the run, so budgeting, attribution, and enforcement have to be too. See [Put the Cost Control at the Agent Run, Not the Model Request](put-the-cost-control-at-the-agent-run-not-the-model-request.md). ([FinOps for AI Agents: Who Spent All the Tokens? — Tisha Chawla & Susheem Koul, Microsoft](../sources/20260822_GJX19pNhmSw.md), 03:00-03:42, 05:56-07:05)
 Related topics:
 - [Inference](../topics/inference.md)
 - [Infrastructure](../topics/infrastructure.md)
 - [AI Monetization](../topics/ai-monetization.md)
 
 Related concepts:
+- [Put the Cost Control at the Agent Run, Not the Model Request](put-the-cost-control-at-the-agent-run-not-the-model-request.md)
+- [Steer an Over-Budget Run Before You Kill It](steer-an-over-budget-run-before-you-kill-it.md)
 - [Prevent AI billing surprises with caps, notifications, and rate limits](prevent-ai-billing-surprises-with-caps-notifications-and-rate-limits.md)
 - [Tune inference to the application Pareto point](tune-inference-to-the-application-pareto-point.md)
 - [Compare models by task, thinking budget, cost, and latency](compare-models-by-task-thinking-budget-cost-and-latency.md)
@@ -35,3 +38,4 @@ Sources:
 - [The Future Is Domain-Specific Agents - Justin Schroeder, StandardAgents](../sources/20260629_spNAUEgq_A8.md), 22:37-24:13
 - [Open Source Is Dead. Long Live Open Source. — Saoud Rizwan, Cline](../sources/20260807_CoEIs6Xm8m8.md), 05:46-06:27, 10:27-10:55
 - [Preferences Over Benchmarks: Model Routing — Archana Kamath & Tyler Gillam, DigitalOcean](../sources/20260822_FvxY8oPoI8o.md), 09:36-13:25
+- [FinOps for AI Agents: Who Spent All the Tokens? — Tisha Chawla & Susheem Koul, Microsoft](../sources/20260822_GJX19pNhmSw.md), 03:00-03:42, 05:56-07:05

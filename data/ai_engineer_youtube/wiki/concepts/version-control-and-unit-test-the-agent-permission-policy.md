@@ -22,6 +22,7 @@ Related topics:
 - [Agents](../topics/agents.md)
 
 Related concepts:
+- [Make the Instrumentation Boundary Two-Way and Gate It With a Governor](make-the-instrumentation-boundary-two-way-and-gate-it-with-a-governor.md)
 - [Enforce Agent Egress Policy at the Wire Protocol, Below HTTP](enforce-agent-egress-policy-below-the-http-layer.md)
 - [Composed Access Defeats Per-System Credential Scoping](composed-access-defeats-per-system-credential-scoping.md)
 - [Enforce Deterministic Guardrails Around Sensitive Tool Calls](enforce-deterministic-guardrails-around-sensitive-tool-calls.md)
