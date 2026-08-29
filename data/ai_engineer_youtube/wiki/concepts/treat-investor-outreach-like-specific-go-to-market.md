@@ -16,6 +16,7 @@ Details:
 Related topics:
 - [Product Strategy](../topics/product-strategy.md)
 - [Workflows](../topics/workflows.md)
+- [Go To Market](../topics/go-to-market.md)
 
 Related concepts:
 - [Run Named-Customer Feedback Loops Daily](run-named-customer-feedback-loops-daily.md)

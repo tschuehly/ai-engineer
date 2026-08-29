@@ -15,15 +15,20 @@ Details:
 - Out-of-home tactic — get loud with banners: SF billboards do two jobs, *signaling* (you exist; you may have invented a category) and earning *mind share* (subconscious memorization). Jason Bosco (Typesense) used billboards as a credibility proxy precisely because, as a non-VC-backed company, they had no funding milestones to signal a "good trajectory"; feedback was "I didn't realize you were this big." (05:52-07:11)
 - Events tactic: organize or attend events in any format (meetups, launch parties, breakfasts/dinners, padel/poker/boba, user conferences). Learn from the best — Supabase Select ran a second year; earlier-stage startups increasingly host their own user conferences (Paul Copplestone/Supabase describes an internal "no conference policy" giving way to hosting one). (07:11-08:33)
 - Stunt/fun tactic: do fun, "crazy" memorable marketing — "whenever you have fun with your marketing, it really comes through." (See also embracing fail stories in [AI Does Not Replace Shareable Product Marketing](ai-does-not-replace-shareable-product-marketing.md).) (08:37-09:00)
+- **The flame war refused from the other side, by a founder who was bad at the second half.** Wang describes the public argument — "product is the only thing that matters" versus "distribution is the only thing that matters," with Glean as the contested example — and rejects the choice: "you just kind of have to do both… If you don't do both things, then you don't have a company." He names the engineer's version of the failure as his own: the bias is "I'm going to just build the thing… make it really really freaking good," which is "the bias we had when we started [Exa] and we were honestly pretty bad at go-to-market. We were not doing enough marketing, we were not doing enough sales." His fix is not more distribution effort but treating distribution as an engineering surface: "you can treat go-to-market like an engineering problem and particularly an AI engineering problem… you can do so much as one person." ([Wang](../sources/20260826_6pbQgnJ9Voc.md), 01:12-02:41)
 
 Related topics:
 - [Product Strategy](../topics/product-strategy.md)
+- [Go To Market](../topics/go-to-market.md)
 
 Related concepts:
 - [Founder Personal Brand Is the GTM Moat](founder-personal-brand-is-the-gtm-moat.md)
 - [AI Does Not Replace Shareable Product Marketing](ai-does-not-replace-shareable-product-marketing.md)
 - [Compete on Glue and Distribution When Building on Managed APIs](compete-on-glue-and-distribution-when-building-on-managed-apis.md)
 - [Treat Investor Outreach Like Specific Go-To-Market](treat-investor-outreach-like-specific-go-to-market.md)
+- [Treat Go-to-Market as a Live Model of Your World That Agents Act On](treat-go-to-market-as-a-live-model-of-your-world.md)
+- [Staff Forward-Deployed Engineers Who Run Deals and Build the Deal Tooling](staff-forward-deployed-engineers-who-run-deals-and-build-the-deal-tooling.md)
 
 Sources:
 - [GTM Is You - Victoria Melnikova, Evil Martians](../sources/20260707_G6IlDzj8OjA.md), 01:43-09:00
+- [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md), 01:12-02:41

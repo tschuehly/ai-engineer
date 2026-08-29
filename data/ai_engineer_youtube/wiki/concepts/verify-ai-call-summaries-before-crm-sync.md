@@ -12,14 +12,18 @@ Details:
 - Verified structured call data can feed business-intelligence models, voice-of-customer dashboards, and candidate FAQ entries. (13:53-14:12)
 - In the reported deployment, after-call work fell from 6.3 minutes to 3.1 minutes, while data entry and call reason tagging became more standardized than memory-dependent manual notes. (15:50-17:08)
 - The same structured intent data can later support predictive staffing and abuse-detection workflows, but those phases still inherit STT accuracy, token cost, and security constraints. (17:53-21:38)
+- **The CRM as an agent surface, which raises the volume of writes needing verification.** Exa keeps Salesforce specifically because "it exposes MCP. So all of our agents have access to Salesforce MCP. Works really well. Our team uses it every day," alongside a dozen shared agents with broad internal data access. A verification step before sync was designed for a human-reviewed pipeline; when every agent in the company can write to the system of record through a tool call, the same requirement has to be enforced at the tool boundary rather than at an operator's screen. Neither source describes such a control. ([Wang](../sources/20260826_6pbQgnJ9Voc.md), 07:57-08:20, 12:52-13:16)
 
 Related topics:
 - [Voice Agents](../topics/voice-agents.md)
 - [Workflows](../topics/workflows.md)
+- [Go To Market](../topics/go-to-market.md)
 
 Related concepts:
 - [Route High-Impact Agent Actions Through Explicit Human Approval Gates](route-high-impact-agent-actions-through-explicit-human-approval-gates.md)
 - [Apply Online Scoring to Production Traces with Cost-Aware Sampling](apply-online-scoring-to-production-traces-with-cost-aware-sampling.md)
+- [Replace Buy-Versus-Build With Arbitrary Customizability](replace-buy-versus-build-with-arbitrary-customizability.md)
 
 Sources:
 - [Contact Center Voice AI: Low-Latency Intelligence Extraction from Messy Audio Streams - Dippu Singh](../sources/20260408_IEF842ZEU5A.md), 12:58-21:38
+- [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md), 07:57-08:20, 12:52-13:16

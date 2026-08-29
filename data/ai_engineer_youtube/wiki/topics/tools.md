@@ -164,8 +164,11 @@ Agentic commerce is the clearest current case of a domain deciding that generic 
 
 Tool and surface proliferation has a cost that shows up in the user rather than in the architecture diagram. When a vendor ships a coding CLI, a general workspace, and a chat app that cannot delegate to each other, the user becomes the transport between them — and the diagnostic Krieger offers is a copy-paste handoff the product asks for: "can you please create a paragraph that I can paste into Claude Code? That is some 2020 kind of workflow that really shouldn't exist anymore." The companion test is explicability, since surfaces split along implementation boundaries are also the ones an ordinary user cannot tell apart. The same argument applies to tool primitives over time: a more general primitive is grounds for retiring the specific one it subsumes, which is how prescriptive styles gave way to skills.
 
+The buying side of tool design gets a sharp criterion from a company that kept its CRM rather than replacing it: choose systems that are arbitrarily customizable, which in practice means the vendor ships a programmatic surface an agent can drive. Salesforce survives at an agent-first company because "it exposes MCP. So all of our agents have access to Salesforce MCP," and because the domain decisions embedded in it are ones the buyer did not want to make. That reframes an MCP server from an integration nicety into a procurement requirement, and it applies inward as well: a company's own internal data needs the same treatment before an internal agent fleet can do anything, with the interface itself left deliberately unspecified — MCP, CLI, or plain API, as long as it is programmatic.
+
 ## Key Concepts
 
+- [Replace Buy-Versus-Build With Arbitrary Customizability](../concepts/replace-buy-versus-build-with-arbitrary-customizability.md) - a vendor MCP server turns a bought system into a customizable one, which is the whole procurement test.
 - [Product Surface Fragmentation Makes the User the Integration Layer](../concepts/product-surface-fragmentation-makes-the-user-the-integration-layer.md) - the tell for a missing delegation edge is a copy-paste handoff between your own surfaces.
 - [Map the Agentic Commerce Protocol Stack by Layer](../concepts/map-the-agentic-commerce-protocol-stack-by-layer.md) - five acronyms, four layers, one real fork; MCP advertises capabilities and A2A carries the cross-org envelope.
 - [Push a Product Feed, Because Per-Merchant Catalog Search Does Not Scale](../concepts/push-a-product-feed-because-catalog-search-does-not-scale.md) - the major specs require push, not pull, which moves freshness and schema translation onto the merchant.
@@ -641,3 +644,4 @@ Tool and surface proliferation has a cost that shows up in the user rather than 
 - [Productionizing LLM Gateways: Architecture, Tradeoffs and Hard Lessons — Kanish Manuja, Twilio](../sources/20260828_zrZ1amZBSPw.md)
 - [The Agentic Commerce Stack — Ahnaf Prio, Best Buy](../sources/20260827_G7cgLjZtmMU.md)
 - [How Anthropic Builds: Lessons from Labs — Mike Krieger, Anthropic](../sources/20260827_qqrk7CtkuIw.md)
+- [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md)

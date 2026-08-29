@@ -14,6 +14,7 @@ Details:
 - **Layer 3 — example-anchored voice:** the tone guide, phrase list, and dials — "the induction pack" — and "where most teams start and stop" because it reads as a marketing problem, not a technical one. It teaches "what good looks like on the happy path" but has "nothing to say" on the uncovered turn; "examples are not the right tool for guarantees, they were never designed to be." ([Isadora Martin-Dye](../sources/20260626_ij-AU9dpJjc.md), 11:44-13:20)
 - **Layer 4 — post-generation veto:** the deterministic check that reads the actual output; see [Gate Generated Output With a Deterministic Post-Generation Veto](gate-generated-output-with-a-deterministic-veto.md). Ordering is the load-bearing property of the whole stack ("hard rules first, task to last"), analogized to Google Maps routing: constraints → real-time conditions → journey preferences → a check before you pull away, because "you don't check for roadworks after you've already taken the wrong turn." ([Isadora Martin-Dye](../sources/20260626_ij-AU9dpJjc.md), 03:54-04:47, 13:16-16:15)
 - **Multi-tenant seam:** "one architecture with completely different voices," where "the seam is calling one function" — Layer 1 identical for every tenant, Layers 2-3 per-tenant. A concrete failure: brand-identity fields defaulted silently, so "every venue shipped as sage@hawthornemanner.com… a critical white label leak." The principle: "in a multi-tenant system, identity must never have a default. A missing brand identity is a crash, not a fallback. It must fail loud," because the quiet failure is a tenant speaking in a stranger's voice and trust eroding before anyone notices. ([Isadora Martin-Dye](../sources/20260626_ij-AU9dpJjc.md), 16:15-17:52)
+- **Measure the tier instead of writing it, when the voice belongs to one person.** Wang derived his own email voice from his archive rather than describing it: "analyze like 760 of my emails to figure out what my email voice is. Like, oh, I use 18 words on average per email and I like to end emails with best and not sincerely." A brand tier is usually authored; an individual tier can be extracted, and the extracted features (length statistic, sign-off convention) are checkable on generated output without a judge. No claim is made that matching them improves anything. ([Wang](../sources/20260826_6pbQgnJ9Voc.md), 08:52-09:09)
 
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
@@ -24,6 +25,8 @@ Related concepts:
 - [Prompt Voice Agents for Persona, Prosody, and Brand Fit](prompt-voice-agents-for-persona-prosody-and-brand-fit.md)
 - [Treat prompts as distributed harness surfaces](treat-prompts-as-distributed-harness-surfaces.md)
 - [Prompt-coded product behavior reduces code but weakens hard guarantees](prompt-coded-product-behavior-reduces-code-but-weakens-hard-guarantees.md)
+- [Derive an Agent Persona From a Measured Corpus, Not a Described Tone](derive-an-agent-persona-from-a-measured-corpus-not-a-described-tone.md)
 
 Sources:
 - [Stop Writing Tone Instructions. Layer Them. - Isadora Martin-Dye, Isadora & Co](../sources/20260626_ij-AU9dpJjc.md), 01:04-17:52
+- [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md), 08:52-09:09

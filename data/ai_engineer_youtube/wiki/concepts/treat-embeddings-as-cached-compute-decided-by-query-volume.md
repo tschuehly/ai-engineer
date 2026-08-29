@@ -16,6 +16,7 @@ Details:
 - An earlier benchmark talk by the same speaker is where this cached-compute frame was first articulated, and it adds direct evidence that the cache improves retrieval quality, not just speed: adding a Turbopuffer semantic-search tool to Claude Code raised file precision from a 65% baseline to 87% — cutting wasted file reads from 1-in-3 to 1-in-8 — on a 50-task ContextBench run. The caveat is that the cache only pays off if the model knows when to query it (see "Native Tool Integration Beats a Bolted-On Tool the Model Can't Time"). (zKk7sDMGDEQ, 06:26-07:30, 09:55-10:36)
 
 - The same cached-compute argument reaches its economic conclusion in a completely different corpus — the live web instead of a codebase — and there the crossover was actually computed. Bright Data's Omer Primor priced a week of pipeline setup at $5,000 against per-query context vendors and found the build path cheaper "just over 15,000 entities or queries," with the range left explicitly open ("maybe it's 30, maybe it's 100,000, maybe it's 10,000. Really depends on the use case"). Two adjustments transfer back to the codebase case. First, the volume term that matters is not corpus size but *re-query frequency*, because "every repeated query costs the same as the first. Even if it brought back the exact same answers" — the same reason rediscovering a codebase question across 10 developers and 10 days is the real cost. Second, a decaying corpus adds a maintenance term the index side of the ledger must carry, which is the web analogue of re-embedding changed files. (Ot4OPrPH4xY, 14:38-15:14, 18:32-19:22)
+- **The extreme of the amortization argument: index once, then classify everything.** Exa's internal market dashboard is built by running its web embeddings over the whole addressable market at once — "arbitrarily powerful semantic filtering and slicing and dicing of any type of data that you want" — rather than by issuing a query per account. When the index already exists for another reason, the marginal cost of an exhaustive pass is low enough that whole-corpus labelling becomes a reasonable product, which is the opposite end of the volume spectrum from the one-off discovery case. ([Wang](../sources/20260826_6pbQgnJ9Voc.md), 05:44-06:58)
 
 Related topics:
 - [Retrieval](../topics/retrieval.md)
@@ -30,8 +31,10 @@ Related concepts:
 - [Native Tool Integration Beats a Bolted-On Tool the Model Can't Time](native-tool-integration-beats-a-bolted-on-tool.md)
 - [Find the Crossover Point Between Renting and Owning Context](find-the-crossover-point-between-renting-and-owning-context.md)
 - [Frequency, Not Volume, Drives Web-Context Cost](frequency-not-volume-drives-web-context-cost.md)
+- [Classify the Whole Addressable Market Instead of Searching It Account by Account](classify-the-whole-addressable-market-instead-of-searching-it.md)
 
 Sources:
 - [RAG is dead, right?? - Kuba Rogut, Turbopuffer](../sources/20260609_UM6sFg_jdlE.md), 06:08-08:36
 - [Benchmarking semantic code retrieval on Claude Code — Kuba Rogut, Turbopuffer](../sources/20260603_zKk7sDMGDEQ.md), 02:34-04:08, 06:26-07:30
 - [The Rise of CaaS: Context-as-a-Service for Agentic AI — Omer Primor, Bright Data](../sources/20260814_Ot4OPrPH4xY.md), 14:38-15:14, 18:32-19:22
+- [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md), 05:44-06:58

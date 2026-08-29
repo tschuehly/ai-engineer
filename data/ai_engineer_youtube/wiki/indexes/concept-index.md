@@ -1,6 +1,8 @@
 # Concept Index
 
 ## Agents
+- [Treat Go-to-Market as a Live Model of Your World That Agents Act On](../concepts/treat-go-to-market-as-a-live-model-of-your-world.md) - the substrate an internal agent fleet reads, built before any of the agents.
+- [Scope a Person-Cloned Agent by Caller, With Drafts as the Shared Capability](../concepts/scope-a-person-cloned-agent-by-caller-with-drafts-as-the-shared-capability.md) - invocation identity selects the permission set, so a founder-level agent can still be shared.
 - [Make Delegation Multiplayer So People See Larger Asks](../concepts/make-delegation-multiplayer-so-people-see-larger-asks.md) - a shared channel publishes the org's best delegations; a private CLI hides them.
 - [Ask Size Lags Model Capability Because Early Products Boxed the Model In](../concepts/ask-size-lags-model-capability-because-early-products-boxed-the-model-in.md) - timid usage is a habit trained by products that could not run code, not a misjudgment of the model.
 - [Product Surface Fragmentation Makes the User the Integration Layer](../concepts/product-surface-fragmentation-makes-the-user-the-integration-layer.md) - agent surfaces that cannot delegate to each other push the handoff onto the user.
@@ -936,6 +938,7 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Derive an Agent Persona From a Measured Corpus, Not a Described Tone](../concepts/derive-an-agent-persona-from-a-measured-corpus-not-a-described-tone.md) - persona context extracted from the person's own archive rather than asserted.
 - [Satisfaction of Search Stops Agents at the First Plausible Hit](../concepts/satisfaction-of-search-stops-agents-at-the-first-plausible-hit.md) - the radiology error, applied to an agent handed a searchable wiki: it finds one plausible hit and stops.
 - [Distillation Is a Separate Step From Retrieval, and the Task Agent Will Not Do It](../concepts/distillation-is-a-separate-step-from-retrieval.md) - understanding is the relation between the pieces, and a task-time search loop will not assemble it.
 - [An Agent Is an Expert Who Onboards Again on Every Task](../concepts/an-agent-is-an-expert-who-onboards-again-on-every-task.md) - full capability, zero situated knowledge, reset per invocation rather than per hire.
@@ -1558,6 +1561,9 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Crystallize the UI for Repeated Use Cases and Generate It for Novel Ones](../concepts/crystallize-the-ui-for-repeated-use-cases-and-generate-it-for-novel-ones.md) - user learning, not token cost, is the argument against generating every interface.
+- [Replace Buy-Versus-Build With Arbitrary Customizability](../concepts/replace-buy-versus-build-with-arbitrary-customizability.md) - the axis is whether agents can change the system, not whether you wrote it.
+- [Staff Forward-Deployed Engineers Who Run Deals and Build the Deal Tooling](../concepts/staff-forward-deployed-engineers-who-run-deals-and-build-the-deal-tooling.md) - a role that exists because AI merged supporting revenue with building the tools revenue runs on.
 - [Ask Size Lags Model Capability Because Early Products Boxed the Model In](../concepts/ask-size-lags-model-capability-because-early-products-boxed-the-model-in.md) - granting apparently excessive degrees of freedom is what makes a large ask answerable.
 - [Product Surface Fragmentation Makes the User the Integration Layer](../concepts/product-surface-fragmentation-makes-the-user-the-integration-layer.md) - surfaces that cannot delegate to each other force copy-paste handoffs the product should perform.
 - [Run Two-Week Persevere-or-Pivot Bets With a Project-Independent Org Chart](../concepts/run-two-week-persevere-or-pivot-bets-with-a-project-independent-org-chart.md) - a fast kill cadence only survives if the org chart does not have to change when a bet dies.
@@ -1689,7 +1695,26 @@
 - [Treat Investor Outreach Like Specific Go-To-Market](../concepts/treat-investor-outreach-like-specific-go-to-market.md)
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
+## Go To Market
+
+- [Treat Go-to-Market as a Live Model of Your World That Agents Act On](../concepts/treat-go-to-market-as-a-live-model-of-your-world.md) - go-to-market is a data problem, and the deliverable is a joined internal/external model agents can act on.
+- [Classify the Whole Addressable Market Instead of Searching It Account by Account](../concepts/classify-the-whole-addressable-market-instead-of-searching-it.md) - embeddings over a corpus make exhaustive labelling of the market a different, cheaper operation than per-account search.
+- [Alert on Account Change Events, Including the Ones That Are Absences](../concepts/alert-on-account-change-events-including-absences.md) - signup, surge, stop, watchlist arrival — and the stop produces no rows to threshold on.
+- [Derive an Agent Persona From a Measured Corpus, Not a Described Tone](../concepts/derive-an-agent-persona-from-a-measured-corpus-not-a-described-tone.md) - 760 emails yield an 18-word average and a sign-off convention, which are checkable where adjectives are not.
+- [Mine Chat History for Past Decisions and Turn Them Into Judgment Evals](../concepts/mine-chat-history-for-past-decisions-and-turn-them-into-judgment-evals.md) - hundreds of decisions recoverable from Slack and email become the calibration set for an agent's judgment.
+- [Scope a Person-Cloned Agent by Caller, With Drafts as the Shared Capability](../concepts/scope-a-person-cloned-agent-by-caller-with-drafts-as-the-shared-capability.md) - owner gets reads, writes, and full tools; everyone else gets drafts and fewer tools.
+- [Replace Buy-Versus-Build With Arbitrary Customizability](../concepts/replace-buy-versus-build-with-arbitrary-customizability.md) - a bought system of record with an MCP server passes the only test that matters.
+- [Crystallize the UI for Repeated Use Cases and Generate It for Novel Ones](../concepts/crystallize-the-ui-for-repeated-use-cases-and-generate-it-for-novel-ones.md) - a surface someone returns to should be learnable, which generation-per-invocation prevents.
+- [Staff Forward-Deployed Engineers Who Run Deals and Build the Deal Tooling](../concepts/staff-forward-deployed-engineers-who-run-deals-and-build-the-deal-tooling.md) - AI collapsed two roles into one, while everyone else is trained to operate the tools rather than build them.
+- [Distribution Is the New Bottleneck for Developer Tools](../concepts/distribution-is-the-new-bottleneck-for-devtools.md) - the diagnosis behind treating go-to-market as engineering work.
+- [Founder Personal Brand Is the GTM Moat](../concepts/founder-personal-brand-is-the-gtm-moat.md) - the personal complement to an engineered stack.
+- [AI Does Not Replace Shareable Product Marketing](../concepts/ai-does-not-replace-shareable-product-marketing.md) - generated content is not an attention strategy.
+- [Treat Investor Outreach Like Specific Go-To-Market](../concepts/treat-investor-outreach-like-specific-go-to-market.md) - the same targeting discipline pointed at a different counterparty.
+- [Verify AI Call Summaries Before CRM Sync](../concepts/verify-ai-call-summaries-before-crm-sync.md) - the write path into the system of record needs a check, and agent tool access widens it.
+
 ## Evaluation
+- [Mine Chat History for Past Decisions and Turn Them Into Judgment Evals](../concepts/mine-chat-history-for-past-decisions-and-turn-them-into-judgment-evals.md) - the archive supplies eval items with real inputs and the choice actually made.
+- [Derive an Agent Persona From a Measured Corpus, Not a Described Tone](../concepts/derive-an-agent-persona-from-a-measured-corpus-not-a-described-tone.md) - measured voice features are checkable on generated output without a judge model.
 - [Validate a Cross-Language Port Against Production Runtime Data](../concepts/validate-a-cross-language-port-against-production-runtime-data.md) - an unattended port loop makes its oracle load-bearing, and the source code is not it.
 - [Pre-Measure Everything and Build Runtime Knobs Before You Need Them](../concepts/pre-measure-everything-and-build-runtime-knobs-before-you-need-them.md) - offline eval loops depend on production history instrumented before the question existed.
 - [Measure a Context Layer on Compounding, Not on the First Task](../concepts/measure-a-context-layer-on-compounding-not-the-first-task.md) - a layer that injects tokens up front should lose on step one and win on avoided rework.
@@ -2280,6 +2305,8 @@
 - [Condition ASR on Conversation Context and Domain Vocabulary](../concepts/condition-asr-on-conversation-context-and-domain-vocabulary.md)
 
 ## Retrieval
+- [Classify the Whole Addressable Market Instead of Searching It Account by Account](../concepts/classify-the-whole-addressable-market-instead-of-searching-it.md) - ranked retrieval answers a query; the same embeddings can partition the corpus.
+- [Treat Go-to-Market as a Live Model of Your World That Agents Act On](../concepts/treat-go-to-market-as-a-live-model-of-your-world.md) - a joined internal/external model as the retrieval substrate for operational agents.
 - [Satisfaction of Search Stops Agents at the First Plausible Hit](../concepts/satisfaction-of-search-stops-agents-at-the-first-plausible-hit.md) - a stopping failure rather than a ranking failure, invisible to recall over what was returned.
 - [Attach Sources as Both a Correction Surface and a Continuation Pointer](../concepts/attach-sources-as-a-correction-surface-and-a-continuation-pointer.md) - the returned sources are a next-hop address, and the machine consumer is the one that can act on them.
 - [Distillation Is a Separate Step From Retrieval, and the Task Agent Will Not Do It](../concepts/distillation-is-a-separate-step-from-retrieval.md) - the needed artifact is often a relation over documents that no document contains.
@@ -2405,6 +2432,7 @@
 - [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md)
 
 ## Security
+- [Scope a Person-Cloned Agent by Caller, With Drafts as the Shared Capability](../concepts/scope-a-person-cloned-agent-by-caller-with-drafts-as-the-shared-capability.md) - drafting bounds delegated authority and leaves the read side of the exposure open.
 - [Public Agent Surfaces Get Repurposed as Free General-Purpose Compute](../concepts/public-agent-surfaces-get-repurposed-as-free-general-compute.md) - discount codes and "who else is checking out this product" are legitimate merchant knowledge, so a generic PII and toxicity stack passes them through.
 - [Treat Guardrails as a Failable Dependency With Its Own Time Budget](../concepts/treat-guardrails-as-a-failable-dependency-with-a-time-budget.md) - guardrails are services that go down, so fail-open versus fail-closed, timeouts, fallbacks, and placement are all decisions to take in advance.
 - [An AI-Infrastructure Package Is a High-Yield Credential Target](../concepts/an-ai-infrastructure-package-is-a-high-yield-credential-target.md) - a backdoored release of a 3.5M-downloads-a-day LLM proxy, found only because the payload crashed an editor.
@@ -2464,6 +2492,7 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Replace Buy-Versus-Build With Arbitrary Customizability](../concepts/replace-buy-versus-build-with-arbitrary-customizability.md) - an MCP server turns a procurement question into a customizability question.
 - [Product Surface Fragmentation Makes the User the Integration Layer](../concepts/product-surface-fragmentation-makes-the-user-the-integration-layer.md) - the tell for a missing delegation edge is a copy-paste handoff between your own surfaces.
 - [Map the Agentic Commerce Protocol Stack by Layer](../concepts/map-the-agentic-commerce-protocol-stack-by-layer.md) - five acronyms on four layers, with one canonical checkout model plus per-spec serializers as the implementation that follows.
 - [Push a Product Feed, Because Per-Merchant Catalog Search Does Not Scale](../concepts/push-a-product-feed-because-catalog-search-does-not-scale.md) - the aggregators want the index in their own hands, which inverts the usual advice to expose an API and hands merchants a schema tax plus a sync loop.
@@ -2762,6 +2791,8 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Alert on Account Change Events, Including the Ones That Are Absences](../concepts/alert-on-account-change-events-including-absences.md) - route attention on state transitions, including the transition that produces no data.
+- [Staff Forward-Deployed Engineers Who Run Deals and Build the Deal Tooling](../concepts/staff-forward-deployed-engineers-who-run-deals-and-build-the-deal-tooling.md) - the operators of a workflow also maintaining it.
 - [Make Delegation Multiplayer So People See Larger Asks](../concepts/make-delegation-multiplayer-so-people-see-larger-asks.md) - ambition spreads by reading colleagues' prompts, which a per-developer CLI cannot do.
 - [The Review Bottleneck Is Comprehension, Not Reviewer Time](../concepts/the-review-bottleneck-is-comprehension-not-reviewer-time.md) - change the artifact, not the calendar: intent and tradeoffs alongside the diff.
 - [Run Two-Week Persevere-or-Pivot Bets With a Project-Independent Org Chart](../concepts/run-two-week-persevere-or-pivot-bets-with-a-project-independent-org-chart.md) - two-week persevere-or-pivot reviews, bet leads who manage nobody, structure only after traction.

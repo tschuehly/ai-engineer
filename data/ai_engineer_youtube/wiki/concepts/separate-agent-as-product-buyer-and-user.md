@@ -17,6 +17,7 @@ Details:
 - The roles compose rather than exclude. Metronome is simultaneously being bought by an agent (Stripe Projects provisions it), operated by an agent (the coding agent configures the pricing model), and used to meter someone else's agent product. Asking which role applies is a question per surface, not per company.
 - Limit: this is a framework offered by a vendor whose product sits under all three roles, presented without any data on how commonly each role is confused for another. Its value is as a disambiguation checklist, not as a claim about the market's composition.
 - **Agent-as-buyer arrives as someone else's protocol, not as your API design.** In commerce, being purchasable by another company's agent means conforming to ACP, UCP, and Meta's feed schemas — three specifications you do not control — and the enforcement is exclusion rather than a support ticket: "you want to make sure that the feeds are actually conforming, or else they will not support it." The obligation in this bucket is therefore set by the channel and re-set whenever the channel's spec moves, which makes it an ongoing conformance cost rather than an integration project. ([Prio](../sources/20260827_G7cgLjZtmMU.md), 09:19-09:30, 17:55-18:12)
+- **Agent as user, from the seller's side of the transaction.** Exa is described as "a search engine for agents… this web MCP web tool that agents can access," sold to companies (Cursor and Cognition are named) whose agents are the actual consumers. The role split shows up in the company's own go-to-market: the buyer is an engineering org that has to be reached with conventional distribution work, while the product surface is built for a caller that never sees a dashboard. ([Wang](../sources/20260826_6pbQgnJ9Voc.md), 00:40-00:58)
 
 Related topics:
 - [Product Strategy](../topics/product-strategy.md)
@@ -30,7 +31,9 @@ Related concepts:
 - [Choose Direct or Indirect AI Monetization](choose-direct-or-indirect-ai-monetization.md)
 - [Delegate Agentic Commerce Transactions With Explicit Payment Authority](delegate-agentic-commerce-transactions-with-explicit-payment-authority.md)
 - [Eval an Agent Surface for Protocol Compliance, Not Just Behavior](eval-agent-surfaces-for-protocol-compliance-not-just-behavior.md)
+- [Treat Go-to-Market as a Live Model of Your World That Agents Act On](treat-go-to-market-as-a-live-model-of-your-world.md)
 
 Sources:
 - [How to avoid disaster when vibe-coding a billing engine — Andrew Garvin, Stripe](../sources/20260828_mJqwmmOx4WA.md), 09:33-11:23, 16:42-16:54, 17:14-17:31
 - [The Agentic Commerce Stack — Ahnaf Prio, Best Buy](../sources/20260827_G7cgLjZtmMU.md), 09:19-09:30, 17:55-18:12
+- [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md), 00:40-00:58

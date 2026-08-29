@@ -19,6 +19,7 @@ Details:
 - The pattern now shows up in infrastructure categories far from web hosting. Keegan McCallum, launching a real-time generative-video inference platform, treats the agent surface as a launch requirement rather than a later port: "in 2026, [we] don't just need platforms, we need software factories and ways for agents [to] interact with these. And so we've actually built one that will let folks hook into a CLI or an MCP server and build these kinds of applications," shipped next to the human-facing React component and Python runtime (Xln-On3syJk 06:53-07:58).
 - **The same investment, justified by a human consumer rather than an agent one.** DoorDash's eval platform ships APIs not because agents are its users but because its human users now hold coding agents: "everybody has access to coding agents, and we actually doubled down on that API first approach. So because we had these APIs we were actually able to enable our stat ops teams to use something like a Codex or a Claude Code and vibe code their own annotation UIs." The dashboards-versus-APIs framing gets a third option — the API plus a generated interface per user — which only holds where the use cases differ in presentation and agree on the data model. ([AI Evals for Cross-Functional Teams — Nachiket Paranjape & Swaroop Chitlur Haridas, DoorDash](../sources/20260828_bMjlRrWjdT0.md), 09:18-10:01)
 - **The sharpest version of the claim: a human onboarding surface becomes dead weight.** Metronome's setup path is "an onboarding wizard meant for a human that needs to set up their environment," and the demo's line about it is "we don't need this now because we had an agent set up this environment." This is stronger than dashboards mattering less — a wizard is a sequenced, validating, state-carrying flow, and it is precisely the kind of surface an agent with an API and a skills file renders redundant. Stripe's supporting datum is unquantified: "the use of Stripe's CLI has exponentially increased over the course of the past five six months." ([Garvin](../sources/20260828_mJqwmmOx4WA.md), 01:40-01:46, 13:49-13:59)
+- **Stated as a precondition, and then extended to procurement.** Wang's first principle for an agent-first company is that "to be agent-first you must be API-first": the internal dashboards and the internal agents both die without it, because "if you don't have really good APIs your agents are not going to be able to have data access. So you can think about this as MCP, CLI, whatever, right? Like it doesn't really matter. You just need some interface that's programmatic." The extension is what is new here — the same requirement applies to systems you *buy*, which is why Salesforce survives at a company that could have built its own CRM: "it exposes MCP. So all of our agents have access to Salesforce MCP." A vendor without a programmatic surface fails the criterion no matter what its feature list says. ([Wang](../sources/20260826_6pbQgnJ9Voc.md), 10:25-10:56, 12:52-13:16)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -34,6 +35,8 @@ Related concepts:
 - [Make validation fast, local, deterministic, and actionable](make-validation-fast-local-deterministic-and-actionable.md)
 - [Ship Stable APIs and Let Users Vibe-Code the Interface](ship-stable-apis-and-let-users-vibe-code-the-interface.md)
 - [Separate Agent as Product, Agent as Buyer, and Agent as User](separate-agent-as-product-buyer-and-user.md)
+- [Replace Buy-Versus-Build With Arbitrary Customizability](replace-buy-versus-build-with-arbitrary-customizability.md)
+- [Crystallize the UI for Repeated Use Cases and Generate It for Novel Ones](crystallize-the-ui-for-repeated-use-cases-and-generate-it-for-novel-ones.md)
 
 Sources:
 - [Agents for Everything Else - swyx](../sources/20260501_zepu8Kk6FBQ.md), 12:48-13:38
@@ -44,3 +47,4 @@ Sources:
 - [Generative Video at the Speed of Light — Keegan McCallum, uRun](../sources/20260818_Xln-On3syJk.md), 06:53-07:58
 - [AI Evals for Cross-Functional Teams — Nachiket Paranjape & Swaroop Chitlur Haridas, DoorDash](../sources/20260828_bMjlRrWjdT0.md), 09:18-10:01
 - [How to avoid disaster when vibe-coding a billing engine — Andrew Garvin, Stripe](../sources/20260828_mJqwmmOx4WA.md), 01:40-01:46, 13:49-13:59
+- [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md), 10:25-10:56, 12:52-13:16

@@ -14,6 +14,7 @@ Details:
 
 - A second shipped instance gives the substrate a full pipeline shape, and its ordering is the lesson: capture → enrich → generate → visualize, with the human doing only the first step. Ben Holmes dictates raw notes, an `enrich note` skill adds tags, a researched source URL, an enrichment timestamp, and key-term backlinks, a second pass generates an entity wiki of people, concepts, organizations, and sources over a stated focus area, and an agent-written HTML graph view sits on top. The whole thing runs nightly in a cloud sandbox that syncs the Markdown down and back. His justification for generating every layer above capture: "all I have time to do is generate the raw ingredients not connecting it all together myself." ([LLM Knowledge Bases](../sources/20260812_I3bpdgFJCUY.md), 01:29-02:39, 11:27-11:37)
 - The reason a user-owned substrate is worth the effort is that vendor memory does not accumulate across the stack. Shlok Khemani's personal stack of chatbots, assistants, vertical applications, agents, and hardware devices each builds a private memory of him, shares none of it, and forces him to "rebuild context within every single product from scratch" and update all of them by hand whenever his life changes — while email, calendar, and photos stay unread by all of them. A personal knowledge base is the one copy of that context the user controls. ([Lessons from Studying Every Memory System](../sources/20260812_5ZGyKWjQDr0.md), 17:34-18:21)
+- **The corporate substrate is the chat archive, and it is richer than people assume.** Asked what artifacts a decision-making agent could possibly be built from, since "usually people don't save their decisions," Wang answers Slack and email: "a surprisingly large amount of everything that goes on a company is on Slack… if you just read like a ton of Slack history, you can definitely find hundreds of decisions that you made in the past." The personal-knowledge-base pattern therefore has an organizational twin that requires no new note-taking discipline — the substrate already exists as a byproduct of working, and it carries situations as they arrived rather than as they were later summarized. ([Wang](../sources/20260826_6pbQgnJ9Voc.md), 09:10-09:27, 13:36-14:08)
 
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
@@ -27,8 +28,11 @@ Related concepts:
 - [Optimize Capture Bandwidth Before Note Organization](optimize-capture-bandwidth-before-note-organization.md)
 - [Materialize Backlinks at Ingest With Key-Term Search](materialize-backlinks-at-ingest-with-key-term-search.md)
 - [Generate an Entity Wiki Over Your Own Notes](generate-an-entity-wiki-over-your-own-notes.md)
+- [Mine Chat History for Past Decisions and Turn Them Into Judgment Evals](mine-chat-history-for-past-decisions-and-turn-them-into-judgment-evals.md)
+- [Derive an Agent Persona From a Measured Corpus, Not a Described Tone](derive-an-agent-persona-from-a-measured-corpus-not-a-described-tone.md)
 
 Sources:
 - [I Gave an AI Agent the Keys to My Life (Here's What Happened) - Radek Sienkiewicz (@velvetshark-com)](../sources/20260502_sJ2jc7leKBk.md), 04:53-08:45
 - [Lessons from Studying Every Memory System — Shlok Khemani, Independent](../sources/20260812_5ZGyKWjQDr0.md), 17:34-18:21
 - [LLM Knowledge Bases: a practical guide — Ben Holmes, Warp](../sources/20260812_I3bpdgFJCUY.md), 01:29-02:39, 11:27-11:37
+- [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md), 09:10-09:27, 13:36-14:08

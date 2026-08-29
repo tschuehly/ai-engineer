@@ -15,6 +15,7 @@ Details:
 - This is the descriptive inverse of the wiki's existing prescriptive framing. [Use evals as durable AI system specifications](use-evals-as-durable-ai-system-specifications.md) argues you should write evals to state what the system must do so that models, prompts, and optimizers can churn beneath them; this observes that whether or not you intended it, the suite is already functioning as that specification, because it is what the improvement loop optimizes against.
 - Practical uses of the claim: when evaluating a vendor or an open agent, ask for the eval suite before asking for the architecture; when writing your own, treat adding an eval as adding a behavioral requirement rather than adding a measurement.
 - The reward-hacking hazard sits directly on this claim. In the same talk: "if you have some sort of score that you can make number go up, agents are pretty good at making that number go up. They might cheat a little bit and you need to like check them on some stuff." An eval suite describes behavior only to the extent that passing it requires the behavior you meant ([Detect reward hacking in code optimization evals](detect-reward-hacking-in-code-optimization-evals.md)). ([LangChain](../sources/20260812_CvRngaQZQ3Y.md), 14:33-14:51)
+- **The clearest case: an eval suite built to *be* the behavior.** Wang's clone of himself is calibrated against evals derived from his own history — "I analyzed hundreds of decisions I've made in the past… I actually created evals from those decisions and calibrated this agent system to behave like myself." Here the suite is not a proxy for a specification, it is the specification, which sharpens the inherited-bias problem: decisions recoverable from Slack are the ones that were contested enough to be typed out, so the suite systematically over-represents deliberated calls and under-represents routine ones. No pass rate or held-out split is reported. ([Wang](../sources/20260826_6pbQgnJ9Voc.md), 09:10-09:27, 13:36-14:08)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -27,6 +28,8 @@ Related concepts:
 - [Detect reward hacking in code optimization evals](detect-reward-hacking-in-code-optimization-evals.md)
 - [Treat evals as the home of domain knowledge](treat-evals-as-the-home-of-domain-knowledge.md)
 - [Densify Agent Feedback Because Pass/Fail Is Not Actionable](densify-agent-feedback-because-pass-fail-is-not-actionable.md)
+- [Mine Chat History for Past Decisions and Turn Them Into Judgment Evals](mine-chat-history-for-past-decisions-and-turn-them-into-judgment-evals.md)
 
 Sources:
 - [Improving Agents is a Data Mining Problem — Vivek Trivedy, LangChain](../sources/20260812_CvRngaQZQ3Y.md), 11:08-12:46, 14:33-14:51
+- [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md), 09:10-09:27, 13:36-14:08

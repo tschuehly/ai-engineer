@@ -11,6 +11,7 @@ Details:
 - The practical loop is to see a need, solve it simply, add more steps, and roll back one small step when something breaks (04:02-04:47).
 - The source argues against installing a personal agent and immediately letting it control everything; that expectation is unsafe and unrealistic for a system with many permissions (01:23-01:38).
 - Permission growth should follow trust growth: start with one recurring pain, grow trust incrementally, and expand the knowledge base as the agent proves useful (17:20-17:42).
+- **The opposite approach, from someone who could afford it.** Wang built his personal agent the other way round — a week of work granting "read and write access to all the data that I personally have" up front, with no incremental ladder — which is available only because the owner already held company-wide access and accepted the blast radius personally. What he did stage was *other people's* use of it: drafts only, reduced tool set. Incremental permission growth and full-grant-then-restrict-by-caller are two different answers to the same risk, and the second one moves the staging from the permission timeline to the caller identity. ([Wang](../sources/20260826_6pbQgnJ9Voc.md), 09:29-09:47, 16:22-16:52)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -19,6 +20,8 @@ Related topics:
 Related concepts:
 - [Ambient agents need self-maintenance and memory hygiene](ambient-agents-need-self-maintenance-and-memory-hygiene.md)
 - [Context development lifecycle treats context as an engineered artifact](context-development-lifecycle-treats-context-as-an-engineered-artifact.md)
+- [Scope a Person-Cloned Agent by Caller, With Drafts as the Shared Capability](scope-a-person-cloned-agent-by-caller-with-drafts-as-the-shared-capability.md)
 
 Sources:
 - [I Gave an AI Agent the Keys to My Life (Here's What Happened) - Radek Sienkiewicz (@velvetshark-com)](../sources/20260502_sJ2jc7leKBk.md), 00:32-04:47
+- [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md), 09:29-09:47, 16:22-16:52

@@ -16,6 +16,7 @@ Details:
 - The consumption decision is per task, not per organization: "If I'm an AI engineer, I need to serve different teams. They may have different needs. It's very tempting to throw AI search at all of them, but maybe that's not optimal. Maybe I need a combination of both." He calls the discipline of choosing "web context engineering." (09:10-09:52)
 - The category exists because the market that spawned it is crowding: the AI-search cohort (Perplexity, You.com, Tavily and others) indexes the web "especially for agents, not even looking at the humans involved anymore," Amazon shipped its own index for retrieving agent context on AgentCore, and Microsoft repackaged search into its agentic development and orchestration suite two weeks earlier. (04:28-05:35)
 - Caveat before adopting the framing wholesale: the speaker leads product marketing at a web-data company, and the vertical examples he lists are all members of his employer's startup program — a disclosure he makes himself. The structural description of the pipeline survives that; the market sizing is not independently supported here. (07:45-08:06)
+- **A vendor in this category describing what it uses its own index for internally.** Exa — "a search engine for agents… this web MCP web tool that agents can access" — runs its own crawl and embeddings to classify every company in its addressable market and attach anticipated spend, rather than to answer a query. That is a use case worth asking any context vendor about: whether the surface supports enumeration and filtering over the whole corpus, or only ranked retrieval per query, because market mapping needs the former and account research needs the latter. ([Wang](../sources/20260826_6pbQgnJ9Voc.md), 00:40-00:58, 05:22-06:58)
 
 Related topics:
 - [Retrieval](../topics/retrieval.md)
@@ -28,6 +29,9 @@ Related concepts:
 - [AI-Native Search APIs Serve Agent Query Shapes](ai-native-search-apis-serve-agent-query-shapes.md)
 - [Ground Agents With Managed Web-Access Infrastructure](ground-agents-with-managed-web-access-infrastructure.md)
 - [Knowledge graphs make agent memory traversable and explainable](knowledge-graphs-make-agent-memory-traversable-and-explainable.md)
+- [Classify the Whole Addressable Market Instead of Searching It Account by Account](classify-the-whole-addressable-market-instead-of-searching-it.md)
+- [Treat Go-to-Market as a Live Model of Your World That Agents Act On](treat-go-to-market-as-a-live-model-of-your-world.md)
 
 Sources:
 - [The Rise of CaaS: Context-as-a-Service for Agentic AI — Omer Primor, Bright Data](../sources/20260814_Ot4OPrPH4xY.md), 04:28-09:52, 13:02-13:38
+- [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md), 00:40-00:58, 05:22-06:58

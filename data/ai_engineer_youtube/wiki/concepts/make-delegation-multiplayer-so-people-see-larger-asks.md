@@ -14,6 +14,7 @@ Details:
 - The end state is a standing participant rather than a per-task invocation: "thinking of it as a teammate that actually holds context, has memory, and can be proactive," which he says made the internal default "multiplayer async proactive" instead of "most people off in their own CLIs." ([How Anthropic Builds: Lessons from Labs — Mike Krieger, Anthropic](../sources/20260827_qqrk7CtkuIw.md), 09:44-10:00)
 - Design implication worth extracting: the value here is the *readable prompt*, not the chat client. Any surface that makes delegations visible and quotable to colleagues — a shared task queue, PR-attached prompts, a public transcript archive — captures the same effect, and any surface that keeps them per-user does not.
 - Limits: entirely self-reported, with no usage data and no evidence separating the multiplayer effect from the ordinary effect of Anthropic employees building on their own models. The costs of a public delegation surface — channel noise, and the visibility pressure that makes people delegate performatively — are not discussed.
+- **The same shared-channel property, in a non-engineering org.** Exa's go-to-market team runs "maybe a dozen different agents inside of our Slack and anybody can use any of them," and the most person-specific of them — a clone of the founder — is deliberately callable by the whole company in draft-only mode. Shared invocation is what lets a colleague see what a founder-level agent is asked for and copy the ask; the same design also forces the permission question, answered here by scoping capability to the caller rather than to the agent. ([Wang](../sources/20260826_6pbQgnJ9Voc.md), 07:57-08:20, 09:47-10:00, 16:22-16:52)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -26,6 +27,8 @@ Related concepts:
 - [Ask Size Lags Model Capability Because Early Products Boxed the Model In](ask-size-lags-model-capability-because-early-products-boxed-the-model-in.md)
 - [Stage Agentic-Engineering Adoption With a Delegation Maturity Model](stage-agentic-engineering-adoption-with-a-delegation-maturity-model.md)
 - [Start the workday by reviewing and dispatching agent work](start-the-workday-by-reviewing-and-dispatching-agent-work.md)
+- [Scope a Person-Cloned Agent by Caller, With Drafts as the Shared Capability](scope-a-person-cloned-agent-by-caller-with-drafts-as-the-shared-capability.md)
 
 Sources:
 - [How Anthropic Builds: Lessons from Labs — Mike Krieger, Anthropic](../sources/20260827_qqrk7CtkuIw.md), 08:44-10:00
+- [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md), 07:57-08:20, 09:47-10:00, 16:22-16:52
