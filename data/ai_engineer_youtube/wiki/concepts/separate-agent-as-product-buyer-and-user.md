@@ -16,6 +16,7 @@ Details:
 - The practical value of the taxonomy is that each role has a different owner and a different failure. Metering is a billing-infrastructure problem, discoverability is a distribution and interface problem, and repricing is a go-to-market problem — and the third can be true of a company that has never built an agent at all.
 - The roles compose rather than exclude. Metronome is simultaneously being bought by an agent (Stripe Projects provisions it), operated by an agent (the coding agent configures the pricing model), and used to meter someone else's agent product. Asking which role applies is a question per surface, not per company.
 - Limit: this is a framework offered by a vendor whose product sits under all three roles, presented without any data on how commonly each role is confused for another. Its value is as a disambiguation checklist, not as a claim about the market's composition.
+- **Agent-as-buyer arrives as someone else's protocol, not as your API design.** In commerce, being purchasable by another company's agent means conforming to ACP, UCP, and Meta's feed schemas — three specifications you do not control — and the enforcement is exclusion rather than a support ticket: "you want to make sure that the feeds are actually conforming, or else they will not support it." The obligation in this bucket is therefore set by the channel and re-set whenever the channel's spec moves, which makes it an ongoing conformance cost rather than an integration project. ([Prio](../sources/20260827_G7cgLjZtmMU.md), 09:19-09:30, 17:55-18:12)
 
 Related topics:
 - [Product Strategy](../topics/product-strategy.md)
@@ -28,6 +29,8 @@ Related concepts:
 - [Agentic Commerce Moves From Static Stores to Intent Infrastructure](agentic-commerce-moves-from-static-stores-to-intent-infrastructure.md)
 - [Choose Direct or Indirect AI Monetization](choose-direct-or-indirect-ai-monetization.md)
 - [Delegate Agentic Commerce Transactions With Explicit Payment Authority](delegate-agentic-commerce-transactions-with-explicit-payment-authority.md)
+- [Eval an Agent Surface for Protocol Compliance, Not Just Behavior](eval-agent-surfaces-for-protocol-compliance-not-just-behavior.md)
 
 Sources:
 - [How to avoid disaster when vibe-coding a billing engine — Andrew Garvin, Stripe](../sources/20260828_mJqwmmOx4WA.md), 09:33-11:23, 16:42-16:54, 17:14-17:31
+- [The Agentic Commerce Stack — Ahnaf Prio, Best Buy](../sources/20260827_G7cgLjZtmMU.md), 09:19-09:30, 17:55-18:12

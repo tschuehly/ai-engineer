@@ -14,6 +14,7 @@ Details:
 - The mechanism is scoped-to-seller, processor-enforced, payment-method-agnostic, and auditable. (05:54-06:01)
 - Recurring or subscription spend works like giving a business a card permitted to spend a periodic amount on the same credential, modeled on an OAuth-style access/refresh flow for subsequent usage; for larger budgets you raise the number or mint many seller-scoped tokens. (16:37-17:30)
 - Stripe Projects is described as a product built on shared payment tokens plus product expression and the recurring/monthly layer. (17:37-17:58)
+- **The same primitive arriving as an open specification, with revocation added.** The AP2 mandate rendered to a user in Prio's demo carries "the max amount…, the currency…," a revocation path ("if you want to revoke it, you can"), and "it's also a single time usage." Against Stripe's shared payment tokens the field set is close — amount, currency, scope, time — with one addition worth noting: an explicit revocation URL, so authority can be withdrawn after issuance rather than only expiring. AP2 is also the layer Prio flags as least settled: "what's still forming though is AP2 and actual usage of it." ([Prio](../sources/20260827_G7cgLjZtmMU.md), 10:14-10:40, 14:37-14:52, 18:44-19:08)
 
 Related topics:
 - [Security](../topics/security.md)
@@ -25,6 +26,8 @@ Related concepts:
 - [Authorize High-Impact Agent Actions Transactionally](authorize-high-impact-agent-actions-transactionally.md)
 - [Prevent AI Billing Surprises With Caps, Notifications, and Rate Limits](prevent-ai-billing-surprises-with-caps-notifications-and-rate-limits.md)
 - [Separate Non-Deterministic Discovery From Deterministic Payment Execution](separate-non-deterministic-discovery-from-deterministic-payment.md)
+- [Map the Agentic Commerce Protocol Stack by Layer](map-the-agentic-commerce-protocol-stack-by-layer.md)
 
 Sources:
 - [Building safe Payment Infrastructure for the autonomous economy — Steve Kaliski, Stripe](../sources/20260606_KLSuFPj2ld0.md), 04:51-08:39, 16:37-17:58
+- [The Agentic Commerce Stack — Ahnaf Prio, Best Buy](../sources/20260827_G7cgLjZtmMU.md), 10:14-10:40, 14:37-14:52, 18:44-19:08

@@ -12,6 +12,7 @@ Details:
 - The generated commerce interface is not only text; the talk calls for conversations that include images, products, and content. (14:11-14:20)
 - Agentic transactions invert the usual website posture by making payment flows work on a new surface for bot traffic rather than treating bots only as unwanted visitors. (14:23-14:36)
 - In Q&A, Behrens says brands still want to own a surface, but that surface should be transportable so shopping data and components can be brought into chat products without rebuilding the commerce stack. (16:43-17:12)
+- **The destinations are multiplying faster than the specifications are converging, so portability is priced per surface.** Prio's list at the time of the talk: ChatGPT and Gemini in browser and app, Instagram and Facebook ("Meta wants to do meta commerce now"), a GoPuff and Grok app, and "Microsoft Copilot just yesterday announced in the UK that you can buy Ray-Bans now inside Microsoft Copilot." Each destination brings its own product-feed schema — ACP, UCP, and Meta's are "similar, but still different" — and its own accepted payment instrument, so meeting users inside AI workflows currently costs one integration per surface rather than one transportable component. ([Prio](../sources/20260827_G7cgLjZtmMU.md), 04:17-04:53, 09:19-09:30, 10:03-10:11)
 
 Related topics:
 - [Product Strategy](../topics/product-strategy.md)
@@ -22,6 +23,8 @@ Related concepts:
 - [Pivot AI Product Interfaces When Platform Defaults Shift](pivot-ai-product-interfaces-when-platform-defaults-shift.md)
 - [Agent-readable web surfaces guide browsing agents](agent-readable-web-surfaces-guide-browsing-agents.md)
 - [Build domain-specific workflow wrappers around models](build-domain-specific-workflow-wrappers-around-models.md)
+- [Push a Product Feed, Because Per-Merchant Catalog Search Does Not Scale](push-a-product-feed-because-catalog-search-does-not-scale.md)
 
 Sources:
 - [Machines of Buying and Selling Grace - Adam Behrens, New Generation](../sources/20250723_zlZz0mDF2eg.md), 03:33-03:52, 13:21-14:36, 16:43-17:12
+- [The Agentic Commerce Stack — Ahnaf Prio, Best Buy](../sources/20260827_G7cgLjZtmMU.md), 04:17-04:53, 09:19-09:30, 10:03-10:11

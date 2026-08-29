@@ -12,6 +12,7 @@ Details:
 - The naive baselines are both bad: handing over a raw card number gives no spend controls, and letting the robot operate the browser like a human is finicky, slow, and hard to observe — the same monetary-risk problem any web app has, which is why APIs exist ("dashboard is for a human; robots prefer code"). (02:52-04:31)
 - The target shape is a non-deterministic planner plus constraints with verifiable parties and structured negotiation, yielding a small radius of risk: bind to a merchant, enforce spend policies, drive it by API, and use verifiable identities. (04:31-04:50, 15:36-15:55)
 - Make a business agent-friendly by exposing programmatic deterministic flows rather than only web UIs, because UI-only surfaces increase the non-determinism of agent interactions and the chance of mis-parsed details. (14:56-15:20)
+- **The commerce specs implement this split as a named session state rather than as an integrator convention.** In UCP and ACP "the checkout APIs will have state, and the three different states are not ready for payment, ready for payment, and then completed," with payment-method selection as the transition that arms the session — "it's added to cart, but it's not ready for payment. I have to pick what I want to pay with." The deterministic leg is therefore enforced by an API that refuses to leave a state until its conditions are met, which is a stronger guarantee than asking the planner to stop being creative at the right moment. ([Prio](../sources/20260827_G7cgLjZtmMU.md), 13:04-14:07)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -23,6 +24,8 @@ Related concepts:
 - [Keep Workflow Orchestration Deterministic and Put Side Effects in Steps](keep-workflow-orchestration-deterministic-and-put-side-effects-in-steps.md)
 - [Move Mandatory Brittle Tool Steps Outside the Agent Loop](move-mandatory-brittle-tool-steps-outside-the-agent-loop.md)
 - [Bound Agent Payments With Processor-Enforced Mandate Tokens](bound-agent-payments-with-processor-enforced-mandate-tokens.md)
+- [Model Agentic Checkout as an Explicit Session State Machine](model-agentic-checkout-as-an-explicit-session-state-machine.md)
 
 Sources:
 - [Building safe Payment Infrastructure for the autonomous economy — Steve Kaliski, Stripe](../sources/20260606_KLSuFPj2ld0.md), 00:50-04:50, 14:56-15:55
+- [The Agentic Commerce Stack — Ahnaf Prio, Best Buy](../sources/20260827_G7cgLjZtmMU.md), 13:04-14:07

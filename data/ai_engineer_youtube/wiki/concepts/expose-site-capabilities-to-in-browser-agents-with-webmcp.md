@@ -16,6 +16,7 @@ Details:
 - Status and tooling (as of the talk): experimental early preview, API changing weekly; enabled in Chrome 146+ (Chrome Canary recommended, else an experimental URL flag). The Model Context Tool Inspector is a Chrome Web Store extension that lists every tool found on a page and lets you prompt or call tools directly for debugging; a GitHub repo ships ~6-7 demos and an eval CLI for testing WebMCP tools on your own sites. (04:53-05:54, 17:46-20:01)
 
 - **The agent-side reading of the same feature**, from a browser-agent platform: "Chrome just added WebMCP… Websites can now publish MCP servers within their page that your agent can take advantage of without pre-installing the actual MCP. It can now issue tool calls to a website like submit the registration form in a way that's not only context-efficient, but is website approved and blessed." Two things in that sentence matter beyond the Chrome-team framing above — no client-side installation step (the tool surface arrives with the page, so an agent visiting an unfamiliar site gets it for free), and *blessed*, meaning the action is one the site chose to expose rather than one the agent inferred. Klein also treats WebMCP as a supply of pre-visit site knowledge, which is the same job as a [per-site skill](publish-per-site-skills-so-agents-do-not-rediscover-a-website.md): "your agent doesn't have to discover something in the first place if it's done it before." ([Paul Klein IV](../sources/20260814_GqoNrUz8hEU.md), 08:18-08:26, 10:46-11:25)
+- **A commerce data point about where in-page tools stop being enough.** Agentic shopping reached the same conclusion WebMCP does — stop guessing at the DOM, declare capabilities as tools — and then went one step further by moving the transaction off the page: "agent calls the merchant checkout API. No browser." The reason is specific to money rather than to ergonomics: an in-page tool still executes inside a browser session the merchant's fraud stack is actively trying to identify, and that is where browsing agents died, "stuck on the payment flow." Page-scoped tools serve discovery and interaction; the checkout leg still wants a server-to-server protocol. ([Prio](../sources/20260827_G7cgLjZtmMU.md), 03:30-03:49, 05:26-06:05)
 
 Related topics:
 - [Tools](../topics/tools.md)
@@ -28,7 +29,9 @@ Related concepts:
 - [MCP applications ship UI and tools together](mcp-applications-ship-ui-and-tools-together.md)
 - [Group Agent Tools by Human-Facing Actions](group-agent-tools-by-human-facing-actions.md)
 - [Publish Per-Site Skills So Agents Do Not Rediscover a Website](publish-per-site-skills-so-agents-do-not-rediscover-a-website.md)
+- [Map the Agentic Commerce Protocol Stack by Layer](map-the-agentic-commerce-protocol-stack-by-layer.md)
 
 Sources:
 - [The agent-ready web: Simplify user actions with WebMCP — Tara Agyemang, Google](../sources/20260611_ghJmWQCIHRM.md), 02:08-20:01
 - [Bringing agents onto the world wide web — Paul Klein IV, Browserbase](../sources/20260814_GqoNrUz8hEU.md), 08:18-08:26, 10:46-11:25
+- [The Agentic Commerce Stack — Ahnaf Prio, Best Buy](../sources/20260827_G7cgLjZtmMU.md), 03:30-03:49, 05:26-06:05

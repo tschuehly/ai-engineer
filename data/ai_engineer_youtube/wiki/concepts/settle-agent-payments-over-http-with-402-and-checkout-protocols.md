@@ -13,6 +13,7 @@ Details:
 - In ACP the seller expresses a product catalog as JSON (images, descriptions, pricing) so the agent picks an item and initiates checkout instead of stumbling through links; each create-checkout / update-quantity / pick-shipping turn has the seller relay the latest cart state (line items, base price, applicable tax, fulfillment options) like a tool-call response, ending in payment via a shared payment token or otherwise. (12:16-14:33)
 - The seller stays in control: it keeps the customer relationship and receives the signals and risk data needed to safely transact with agents, supporting crypto, cards, or any of hundreds of payment methods. (14:33-14:54)
 - Stripe supports multiple networks (Base and Tempo): transaction data lives on the chain, and Stripe replicates a product view of it in its own system. (16:15-16:31)
+- **The autonomous settlement path is on hold by choice, and liability is the stated reason.** Prio, from the merchant side: "none of them are supporting that more autonomous form of, you know, x402 or some other kind of payments. We're just not there yet. We're just not confident yet. We want more human in the loop, a merchant to be talking to a payment processor who will take the responsibility, or in this case, liability, to actually initiate the payments." The 402-style flow described here is technically available and commercially unadopted on the two largest assistant surfaces; what blocks it is who is answerable when the agent buys wrong, not whether the mechanism works. He also confirms the ACP checkout shape from the merchant side and reports Google's UCP as its direct and separately-specified competitor. ([Prio](../sources/20260827_G7cgLjZtmMU.md), 04:53-05:00, 09:36-10:11)
 
 Related topics:
 - [Tools](../topics/tools.md)
@@ -24,6 +25,8 @@ Related concepts:
 - [Agentic Commerce Moves From Static Stores to Intent Infrastructure](agentic-commerce-moves-from-static-stores-to-intent-infrastructure.md)
 - [Bound Agent Payments With Processor-Enforced Mandate Tokens](bound-agent-payments-with-processor-enforced-mandate-tokens.md)
 - [Separate Non-Deterministic Discovery From Deterministic Payment Execution](separate-non-deterministic-discovery-from-deterministic-payment.md)
+- [Model Agentic Checkout as an Explicit Session State Machine](model-agentic-checkout-as-an-explicit-session-state-machine.md)
 
 Sources:
 - [Building safe Payment Infrastructure for the autonomous economy — Steve Kaliski, Stripe](../sources/20260606_KLSuFPj2ld0.md), 08:54-14:54, 16:15-16:31
+- [The Agentic Commerce Stack — Ahnaf Prio, Best Buy](../sources/20260827_G7cgLjZtmMU.md), 04:53-05:00, 09:36-10:11

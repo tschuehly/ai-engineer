@@ -1,6 +1,12 @@
 # Concept Index
 
 ## Agents
+- [Map the Agentic Commerce Protocol Stack by Layer](../concepts/map-the-agentic-commerce-protocol-stack-by-layer.md) - MCP names capabilities, A2A carries the cross-org envelope, ACP and UCP supply commerce vocabulary, AP2 carries payment authority; only ACP and UCP compete, and even they share a call shape.
+- [Agent Protocols Must Encode the Distinctions the User Interface Collapses](../concepts/agent-protocols-must-encode-the-distinctions-the-ui-collapses.md) - a second unit is one gesture to a shopper and a second line item to a merchant, so a UI-shaped integration passes its own tests and corrupts the counterparty's state.
+- [Model Agentic Checkout as an Explicit Session State Machine](../concepts/model-agentic-checkout-as-an-explicit-session-state-machine.md) - not-ready-for-payment, ready-for-payment, completed, with payment-method selection as the arming transition and the same sequence under both specs.
+- [Push a Product Feed, Because Per-Merchant Catalog Search Does Not Scale](../concepts/push-a-product-feed-because-catalog-search-does-not-scale.md) - ACP and UCP require merchants to push a feed rather than answer search calls, for an M×N fan-out reason and a retail-media reason.
+- [Eval an Agent Surface for Protocol Compliance, Not Just Behavior](../concepts/eval-agent-surfaces-for-protocol-compliance-not-just-behavior.md) - when a platform is your distribution channel, non-conformance is silent de-listing rather than a bug report.
+- [Public Agent Surfaces Get Repurposed as Free General-Purpose Compute](../concepts/public-agent-surfaces-get-repurposed-as-free-general-compute.md) - a public agent's capability surface is the model's minus what you explicitly removed, and the absence of a scope rule is permission.
 - [Let the Agent Reach a Test Environment, Not Production, When the Domain Carries Money](../concepts/let-the-agent-reach-a-test-environment-not-production.md) - bound autonomy by the environment the agent may write to, not by a confidence threshold, because a domain's blast radius does not shrink as models improve.
 - [Separate Agent as Product, Agent as Buyer, and Agent as User](../concepts/separate-agent-as-product-buyer-and-user.md) - "building for agents" is three projects with three obligations: meter your own agent, be purchasable by someone else's, reprice when an agent replaces your users.
 - [Tools Are the Only Primitive Every Client Implements](../concepts/tools-are-the-only-primitive-every-client-implements.md) - a client compatibility matrix as a maintained artifact; server instructions, elicitation, and sampling all reimplemented through tool results, and a primitive that was implemented but wired to the wrong model was worse than one that was absent.
@@ -537,6 +543,8 @@
 
 ## AI Monetization
 
+- [Push a Product Feed, Because Per-Merchant Catalog Search Does Not Scale](../concepts/push-a-product-feed-because-catalog-search-does-not-scale.md) - "sponsored products, retail media related things, ranking" is named as the reason the aggregator wants the index, and then dropped.
+- [Map the Agentic Commerce Protocol Stack by Layer](../concepts/map-the-agentic-commerce-protocol-stack-by-layer.md) - each assistant surface is a separate integration with its own feed schema and its own accepted payment instrument, so distribution is priced per destination.
 - [Per-Seat Pricing Loses Its Referent When One Agent Does the Work of Many Logins](../concepts/per-seat-pricing-loses-its-referent-when-agents-do-the-work.md) - HubSpot cuts seat price and adds credits in one move, because the metric stopped tracking value rather than being priced wrongly.
 - [Separate Agent as Product, Agent as Buyer, and Agent as User](../concepts/separate-agent-as-product-buyer-and-user.md) - the pricing problem belongs to exactly one of the three roles, and it arrives at companies that never shipped an agent.
 - [Treat AI pricing as a fast-moving product hypothesis](../concepts/treat-ai-pricing-as-a-fast-moving-product-hypothesis.md)
@@ -1633,6 +1641,8 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Eval an Agent Surface for Protocol Compliance, Not Just Behavior](../concepts/eval-agent-surfaces-for-protocol-compliance-not-just-behavior.md) - an oracle you do not own, versioned without notice, whose failure mode is silent de-listing; plus latency as a revenue metric and a deliberately cheap judge.
+- [Public Agent Surfaces Get Repurposed as Free General-Purpose Compute](../concepts/public-agent-surfaces-get-repurposed-as-free-general-compute.md) - the out-of-scope cases worth testing are the domain's commercial concessions and cross-customer state, not generic toxicity.
 - [Stage Productivity Pilots to Strip One Confound at a Time](../concepts/stage-productivity-pilots-to-strip-one-confound-at-a-time.md) - write the sentence a skeptic would say about your last result, then design the next study so it is false.
 - [Ship a Proof a Small Kernel Can Recheck, Not a Claim You Must Trust](../concepts/ship-a-proof-a-small-kernel-can-recheck.md) - the only evidence in this wiki that covers every input rather than a sample, plus an audit of why judged, sampled, and human checks each fall short differently.
 - [Gate Releases on Agreement Between an Executable Spec and the Shipping Code](../concepts/gate-releases-on-agreement-between-an-executable-spec-and-the-shipping-code.md) - differential random testing against an executable specification, run at release cadence with the authority to block the release.
@@ -2333,6 +2343,7 @@
 - [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md)
 
 ## Security
+- [Public Agent Surfaces Get Repurposed as Free General-Purpose Compute](../concepts/public-agent-surfaces-get-repurposed-as-free-general-compute.md) - discount codes and "who else is checking out this product" are legitimate merchant knowledge, so a generic PII and toxicity stack passes them through.
 - [Treat Guardrails as a Failable Dependency With Its Own Time Budget](../concepts/treat-guardrails-as-a-failable-dependency-with-a-time-budget.md) - guardrails are services that go down, so fail-open versus fail-closed, timeouts, fallbacks, and placement are all decisions to take in advance.
 - [An AI-Infrastructure Package Is a High-Yield Credential Target](../concepts/an-ai-infrastructure-package-is-a-high-yield-credential-target.md) - a backdoored release of a 3.5M-downloads-a-day LLM proxy, found only because the payload crashed an editor.
 - [Bound What an Unattended Automation May Emit, Including Emitting Nothing](../concepts/bound-what-an-unattended-automation-may-emit.md) - an output allow-list with cardinality caps turns a prompt-injected flood into one artifact, and closes the availability hole of manufactured noise.
@@ -2391,6 +2402,11 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Map the Agentic Commerce Protocol Stack by Layer](../concepts/map-the-agentic-commerce-protocol-stack-by-layer.md) - five acronyms on four layers, with one canonical checkout model plus per-spec serializers as the implementation that follows.
+- [Push a Product Feed, Because Per-Merchant Catalog Search Does Not Scale](../concepts/push-a-product-feed-because-catalog-search-does-not-scale.md) - the aggregators want the index in their own hands, which inverts the usual advice to expose an API and hands merchants a schema tax plus a sync loop.
+- [Agent Protocols Must Encode the Distinctions the User Interface Collapses](../concepts/agent-protocols-must-encode-the-distinctions-the-ui-collapses.md) - the test for whether generic tool-calling suffices is which distinctions you removed for humans that the system on the other side still relies on.
+- [Model Agentic Checkout as an Explicit Session State Machine](../concepts/model-agentic-checkout-as-an-explicit-session-state-machine.md) - named states beat inferred progress for an agent, because a wrong guess is rejected by the API rather than silently charged.
+- [Eval an Agent Surface for Protocol Compliance, Not Just Behavior](../concepts/eval-agent-surfaces-for-protocol-compliance-not-just-behavior.md) - conformance against a spec someone else versions is a continuous test, not an integration milestone.
 - [Decentralize the Gateway, Centralize the Governance](../concepts/decentralize-the-gateway-centralize-the-governance.md) - a company-wide gateway is a single point of failure, and the requirement behind it is usually cost tracking and rate limits.
 - [Pick a Verification Route by Which Translation You Can Afford](../concepts/pick-a-verification-route-by-which-translation-you-can-afford.md) - Lean, Verus on Z3, Aeneas over Rust's MIR, and AWS's work-in-progress Strata, arranged by which translation each one performs on your behalf.
 - [Tools Are the Only Primitive Every Client Implements](../concepts/tools-are-the-only-primitive-every-client-implements.md) - a client compatibility matrix as a maintained artifact; server instructions, elicitation, and sampling all reimplemented through tool results, and a primitive that was implemented but wired to the wrong model was worse than one that was absent.

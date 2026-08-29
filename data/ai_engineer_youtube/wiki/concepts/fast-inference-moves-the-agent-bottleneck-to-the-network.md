@@ -16,6 +16,7 @@ Details:
 - **This generalizes the split the wiki already draws for voice.** [Separate Engine Latency From Network Latency in Voice Pipelines](separate-engine-latency-from-network-latency-in-voice-pipelines.md) makes the same argument in a domain where the budget was always tight enough to force the distinction; coding agents reach it later because they were slow enough for the network to hide behind generation. The instrument transfers: measure the two independently before optimizing either.
 - Note the direction this points relative to a nearby wiki page. [Use WebRTC Instead Of WebSockets For Realtime Media Streams](use-webrtc-instead-of-websockets-for-realtime-media-streams.md) argues against WebSockets for realtime *media*, where jitter and loss recovery matter; the workload here is reliable, ordered, text-shaped tool traffic, where a persistent WebSocket is the cheap win. The two are not in conflict — the transport follows the payload.
 - **No measurement is offered.** The reported effect is "speeds up things quite significantly" and "a pretty drastic impact on the performance," with no latency figures, workload, or baseline; the nine-versus-one comparison is a payload item count. The live demo of this feature crashed on stage and was replaced with a pre-recorded backup. ([Codex, Behind the Harness](../sources/20260810_shRR1e2HXMk.md), 16:31-17:25, Provenance and Caveats)
+- **Retail is a domain where paying for a high token rate has a direct revenue justification.** Prio runs his commerce demo on a Cerebras-hosted model at "3,000 tokens per second," and argues separately that "every second in retail on the shopping journey where you're actually not selling, there are chances that the other website's going to be faster, and people are just going to move away." The figure is a demo configuration rather than a measurement and no end-to-end checkout latency is reported, but it names a use case where the ceiling this page describes — the point past which further generation speed buys nothing — would be worth locating precisely. ([Prio](../sources/20260827_G7cgLjZtmMU.md), 11:09-11:14, 18:12-18:29)
 
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
@@ -28,6 +29,8 @@ Related concepts:
 - [Evaluate Agent Loops With Correctness, Cost, Latency, and Step Counts](evaluate-agent-loops-with-correctness-cost-latency-and-step-counts.md)
 - [Match Agent Tooling to the Model's Training Distribution](match-agent-tooling-to-the-models-training-distribution.md)
 - [Latency Shapes Coding-Agent Interaction Mode](latency-shapes-coding-agent-interaction-mode.md)
+- [Eval an Agent Surface for Protocol Compliance, Not Just Behavior](eval-agent-surfaces-for-protocol-compliance-not-just-behavior.md)
 
 Sources:
 - [Codex, Behind the Harness — Dominik Kundel, OpenAI](../sources/20260810_shRR1e2HXMk.md), 15:32-17:25
+- [The Agentic Commerce Stack — Ahnaf Prio, Best Buy](../sources/20260827_G7cgLjZtmMU.md), 11:09-11:14, 18:12-18:29

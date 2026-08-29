@@ -13,6 +13,7 @@ Details:
 - The hard product problem is resolving fuzzy intent such as "running shoes" into SKU-level inventory and transaction-ready options without forcing the user to provide a product-detail-page URL first. (06:57-07:18)
 - Seller intent also becomes dynamic: merchants may expose realtime availability, contextual pricing, inline discounts, and bundles across merchants instead of only static product detail pages. (07:49-08:20)
 - **The B2B mirror, where the agent procures infrastructure rather than goods.** Garvin separates the two markets explicitly — B2C is "agentic commerce," while in the Metronome case "we're talking about in a B2B context" — and the B2B transaction shown is an agent "literally procuring their initial Stripe instance as well as additional backend services" through a CLI. The seller-side obligation is the same discoverability problem in a different medium: "make your services discoverable to agents that may be building an application or working in the open web," with Vercel and Hugging Face named as providers onboarding into that environment. ([Garvin](../sources/20260828_mJqwmmOx4WA.md), 10:07-10:33, 17:14-17:31)
+- **Autonomy is staged, and the industry is deliberately parked at the first stage for a liability reason.** Prio describes the present as "human in the loop" with autonomous shopping — an agent that "goes around, talks to different merchants… negotiate, does the payment" — as the ideal end state, and names what holds the gap open: "we're just not confident yet. We want more human in the loop, a merchant to be talking to a payment processor who will take the responsibility, or in this case, liability, to actually initiate the payments." The blocker is who is answerable for a wrong purchase, not model capability. His sizing — "about 45% of all agent sessions… are related to shopping" and "$7 billion… might go up to $65 billion by 2030" — is stated without a source. ([Prio](../sources/20260827_G7cgLjZtmMU.md), 01:43-02:35, 04:11-04:17, 09:36-10:03)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -24,7 +25,9 @@ Related concepts:
 - [Agent Experience Means Autonomous Access, Understanding, and Operation](agent-experience-means-autonomous-access-understanding-and-operation.md)
 - [Turn AI Product Intents Into Contained Workflows](turn-ai-product-intents-into-contained-workflows.md)
 - [Separate Agent as Product, Agent as Buyer, and Agent as User](separate-agent-as-product-buyer-and-user.md)
+- [Map the Agentic Commerce Protocol Stack by Layer](map-the-agentic-commerce-protocol-stack-by-layer.md)
 
 Sources:
 - [Machines of Buying and Selling Grace - Adam Behrens, New Generation](../sources/20250723_zlZz0mDF2eg.md), 01:58-02:47, 06:23-08:20
 - [How to avoid disaster when vibe-coding a billing engine — Andrew Garvin, Stripe](../sources/20260828_mJqwmmOx4WA.md), 10:07-10:33, 17:14-17:31
+- [The Agentic Commerce Stack — Ahnaf Prio, Best Buy](../sources/20260827_G7cgLjZtmMU.md), 01:43-02:35, 04:11-04:17, 09:36-10:03
