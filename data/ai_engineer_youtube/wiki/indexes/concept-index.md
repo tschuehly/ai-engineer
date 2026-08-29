@@ -1,6 +1,8 @@
 # Concept Index
 
 ## Agents
+- [Comment Volume Is a Property of the Review Pipeline, Not the Model](../concepts/comment-volume-is-a-property-of-the-review-pipeline.md) - several generators over one diff make volume emergent, so one filtering waist decides what a reviewer actually sees.
+- [Review Comments Have Two Audiences With Inverted Error Costs](../concepts/review-comments-have-two-audiences-with-inverted-error-costs.md) - a wrong comment is cheap for a human and expensive for an agent; a nit is the reverse, so one filter cannot serve both surfaces.
 - [Async Agents Need a Forking Substrate and a User Who Tolerates Out-of-Order Completion](../concepts/async-agents-need-a-forking-substrate-and-a-tolerant-user.md) - background agents work for code because git supplies the fork-and-merge primitive and engineers already accept out-of-order completion.
 - [Continual Learning and Enablement Are One Loop With a Cold Start](../concepts/continual-learning-and-enablement-are-one-loop-with-a-cold-start.md) - an agent that learns from production improves only as fast as people use it, and initial usage never simply shows up.
 - [Bound What an Unattended Automation May Emit, Including Emitting Nothing](../concepts/bound-what-an-unattended-automation-may-emit.md) - declare the kinds and counts of artifact a scheduled run may produce, outside the prompt, and make silence a permitted outcome.
@@ -568,6 +570,10 @@
 - [Learn risk scoring from audit feedback for predictive compliance](../concepts/learn-risk-scoring-from-audit-feedback-for-predictive-compliance.md)
 
 ## Coding Agents
+- [Review Comments Have Two Audiences With Inverted Error Costs](../concepts/review-comments-have-two-audiences-with-inverted-error-costs.md) - a wrong comment is cheap for a human and expensive for an agent; a nit is the reverse, so one filter cannot serve both surfaces.
+- [Measure a Review Bot by Whether the Comment Changed the Code](../concepts/measure-a-review-bot-by-whether-the-comment-changed-the-code.md) - the model asserts every finding at full confidence, so the signal is behavioural, and addressal covers every comment where a survey covers a tenth.
+- [Distributed Rule Authoring Is a Platform Problem, Not an Authoring Problem](../concepts/distributed-rule-authoring-is-a-platform-problem.md) - writing a review skill takes minutes; ownership binding, co-location, deterministic routing, and per-rule telemetry are the real cost.
+- [Comment Volume Is a Property of the Review Pipeline, Not the Model](../concepts/comment-volume-is-a-property-of-the-review-pipeline.md) - several generators over one diff make volume emergent, so one filtering waist decides what a reviewer actually sees.
 - [The Best Engineers Adopt Agents Last, and Their Objections Are the Roadmap](../concepts/the-best-engineers-adopt-agents-last-and-their-objections-are-the-roadmap.md) - the slowest adopters at Figma hold the undocumented institutional context and meet every failure first, so their complaints are a prioritized verification backlog rather than resistance to be argued with.
 - [Structure an Agent Plan With a Frozen Why and Reviewer-Sized Phases](../concepts/structure-an-agent-plan-with-a-frozen-why-and-reviewer-sized-phases.md) - an immutable why, phases sized to a one-sitting PR review, a validation gate per phase, and subagent-sized detail; loop-agnostic by design.
 - [Write the Test First So the Agent Cannot Fit It to the Code](../concepts/write-the-test-first-so-the-agent-cannot-fit-it-to-the-code.md) - the cheapest independence axis between a generator and its verifier is temporal, and it costs nothing to adopt.
@@ -1586,6 +1592,9 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Measure a Review Bot by Whether the Comment Changed the Code](../concepts/measure-a-review-bot-by-whether-the-comment-changed-the-code.md) - the model asserts every finding at full confidence, so the signal is behavioural, and addressal covers every comment where a survey covers a tenth.
+- [Review Comments Have Two Audiences With Inverted Error Costs](../concepts/review-comments-have-two-audiences-with-inverted-error-costs.md) - a wrong comment is cheap for a human and expensive for an agent; a nit is the reverse, so one filter cannot serve both surfaces.
+- [Distributed Rule Authoring Is a Platform Problem, Not an Authoring Problem](../concepts/distributed-rule-authoring-is-a-platform-problem.md) - writing a review skill takes minutes; ownership binding, co-location, deterministic routing, and per-rule telemetry are the real cost.
 - [Operational Outcomes Are Eval Labels You Only See If You Own the Operation](../concepts/operational-outcomes-are-eval-labels-you-only-see-if-you-own-the-operation.md) - when a physical or financial event settles the score, eval construction loses its most expensive step, at the cost of a one-bit label that arrives weeks late.
 - [Write the Test First So the Agent Cannot Fit It to the Code](../concepts/write-the-test-first-so-the-agent-cannot-fit-it-to-the-code.md) - a test authored after the implementation describes the implementation; ordering is the one independence axis that is free.
 - [Withhold the Producer's Reasoning From the Critic](../concepts/withhold-the-producers-reasoning-from-the-critic.md) - a fourth independence axis for LLM review: change what the reviewer sees, not the model, the prompt, or the method class.
@@ -2612,6 +2621,9 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Distributed Rule Authoring Is a Platform Problem, Not an Authoring Problem](../concepts/distributed-rule-authoring-is-a-platform-problem.md) - writing a review skill takes minutes; ownership binding, co-location, deterministic routing, and per-rule telemetry are the real cost.
+- [Comment Volume Is a Property of the Review Pipeline, Not the Model](../concepts/comment-volume-is-a-property-of-the-review-pipeline.md) - several generators over one diff make volume emergent, so one filtering waist decides what a reviewer actually sees.
+- [Measure a Review Bot by Whether the Comment Changed the Code](../concepts/measure-a-review-bot-by-whether-the-comment-changed-the-code.md) - the model asserts every finding at full confidence, so the signal is behavioural, and addressal covers every comment where a survey covers a tenth.
 - [Continual Learning and Enablement Are One Loop With a Cold Start](../concepts/continual-learning-and-enablement-are-one-loop-with-a-cold-start.md) - the improvement half and the adoption half are usually owned by different teams, and nothing seeds the first turn.
 - [Co-Design In Person Because Remote Channels Filter the Requirements](../concepts/co-design-in-person-because-remote-channels-filter-the-requirements.md) - go find the requirements where they are lived, because the remote channel selects for the ones already articulated.
 - [Async Agents Need a Forking Substrate and a User Who Tolerates Out-of-Order Completion](../concepts/async-agents-need-a-forking-substrate-and-a-tolerant-user.md) - the parallel-agent workflows here inherit two properties from software practice that do not port to other kinds of work.

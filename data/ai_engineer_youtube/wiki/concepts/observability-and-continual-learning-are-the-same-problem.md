@@ -23,6 +23,8 @@ Details:
 - Provenance: the speaker leads applied research at LangChain and the talk ends on a trace-mining product pitch, so the claim that traces are the necessary substrate runs in his employer's commercial direction. The reasoning stands independently of the product. The Applied Compute additions above come from a different vendor whose product is the weight-update step, which is a convergence of interest as much as of evidence — both sell something downstream of traces.
 - **The upstream dependency this page's argument does not name: traces require adoption.** Shenoy runs the same loop — agents collaborating with employees produce "rich traces of data and information. Tool calls, the hiccups, the papercuts, everything that goes wrong with doing real work" — and then states the rate limiter: "the agent only improves if people actually use it. And people only use the agent if it's worth adopting." His elephant is the seed: "everyone assumes the usage just shows up… It never does." A continual-learning program in a low-adoption deployment is starved by construction, and the remedy is enablement rather than more learning machinery. See [Continual Learning and Enablement Are One Loop With a Cold Start](continual-learning-and-enablement-are-one-loop-with-a-cold-start.md). ([Shenoy](../sources/20260828_B0fjR3yaZFU.md), 10:52-11:08, 14:29-15:17)
 
+- **Two consumers of the same telemetry, and the second is the one most systems omit.** Uber uses agent trajectory internally — "what tools calls it made… what thinking process it had. And then with that insight, we were able to actually tune our runtime, tune our performance" — and then pushes the same signals outward: "we had to actually surface all of this observability… like the agent trajectory, addressal rate, sentiment analysis back to the teams. So that the teams could actually understand that 'Oh, I wrote this rule, but maybe not a lot of developers are liking it in my team, so let me go and update it.'" When the behaviour being improved was authored by hundreds of teams rather than by the platform, observability that only reaches the platform team cannot close the loop, because the platform team is not the one who can edit the rule. ([Bond and Ketkar](../sources/20260828_EL123UNokkI.md), 06:07-06:35, 09:16-09:43)
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Agents](../topics/agents.md)
@@ -43,6 +45,7 @@ Related concepts:
 - [Today's Continual Learning Is Batch Updates and a Model Re-Upload](todays-continual-learning-is-batch-updates-and-a-model-reupload.md)
 - [Separate Execution From the Production Context That Judges It](separate-execution-from-the-production-context-that-judges-it.md)
 - [Continual Learning and Enablement Are One Loop With a Cold Start](continual-learning-and-enablement-are-one-loop-with-a-cold-start.md)
+- [Distributed Rule Authoring Is a Platform Problem, Not an Authoring Problem](distributed-rule-authoring-is-a-platform-problem.md)
 
 Sources:
 - [Improving Agents is a Data Mining Problem — Vivek Trivedy, LangChain](../sources/20260812_CvRngaQZQ3Y.md), 02:21-04:40, 18:49-19:06
@@ -51,3 +54,4 @@ Sources:
 - [Bringing Continual Learning into Enterprises — Samuel Denton, Applied Compute](../sources/20260812_ZTA0GwpAUak.md), 03:43-04:07, 07:44-08:35, 17:40-18:26
 - [Always-on agents run production without the on-call tax — Justin Smith, Resolve AI](../sources/20260809_vSx5IULvBns.md), 06:36-07:32, 12:34-12:58
 - [How do you diffuse AI into the real world? — Varun Shenoy, Long Lake](../sources/20260828_B0fjR3yaZFU.md), 10:52-11:08, 14:29-15:17
+- [Building uReview, Uber's Multi-Agent Code Review Engine — Will Bond & Ameya Ketkar, Uber](../sources/20260828_EL123UNokkI.md), 06:07-06:35, 09:16-09:43

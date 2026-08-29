@@ -18,6 +18,8 @@ Details:
 - **Caveat: the coverage argument is a taxonomy, not a measurement.** No data appears in the talk on what each layer catches that the other misses, no marginal return is estimated for the third method, and the defect-class list is the vendor's own analyzer's feature set. It is a useful checklist for finding holes; it is not evidence that these four classes are exhaustive. The talk's closing recommendation — "standardize on a single independent multi-layered verification platform" — also sits in mild tension with its own diversity argument, since one supplier providing every layer is method diversity without supplier diversity. (21:48-22:03)
 - **A second ordering principle for the same stack: cost of the checker.** Blum's pyramid pushes work downward rather than outward: "Move as much as you can down to the deterministic analysis where that's linting, the compiler, the unit test themselves. Whatever [cannot] be covered easily, you can have [an] agent do reviews on it based on criteria, so… architectural standards that have been easily encoded into the code base, you can move into the agent. And then only at the very top you need to have some sort of human review, which is usually around the functionality and[:] this is the right thing to build." The two orderings answer different questions and can conflict — pushing a check to the cheapest layer that can run it is not the same as ensuring some layer reaches each defect class — and the apex here is reserved for the one judgment no layer reaches at all, whether the thing is worth building. ([Blum](../sources/20260828_5Bn0xro2ol8.md), 06:42-07:34)
 
+- **A production layer stack for review specifically, with a routing rule sitting above it.** Uber runs single-file and multi-file reviewers, a general "find me all logic bugs per file" pass, a deep multi-file review carrying each monorepo's anti-pattern style guides, few-shot AI linters for "systematic and mechanical issues," and team-authored custom agents linked to a knowledge base and past PRs. Above the stack, which layers run at all is decided per change: "we need the ability to take factors like the risk profile and the complexity of a code change and factor that in when deciding how we're going to run a code review. Not all code gets the exact same review." That makes coverage a per-change budget rather than a fixed pipeline — a defect class can be covered by an expensive layer that only high-risk diffs are routed to. No per-layer defect-class measurement is reported. ([Bond and Ketkar](../sources/20260828_EL123UNokkI.md), 02:25-02:43, 07:37-08:41)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -31,7 +33,9 @@ Related concepts:
 - [AI Code Quality Needs Full-SDLC Workflows](ai-code-quality-needs-full-sdlc-workflows.md)
 - [Make Validation Fast, Local, Deterministic, and Actionable](make-validation-fast-local-deterministic-and-actionable.md)
 - [Write the Test First So the Agent Cannot Fit It to the Code](write-the-test-first-so-the-agent-cannot-fit-it-to-the-code.md)
+- [Comment Volume Is a Property of the Review Pipeline, Not the Model](comment-volume-is-a-property-of-the-review-pipeline.md)
 
 Sources:
 - [Guide, Verify, Solve — Anirban Chatterjee, Sonar](../sources/20260809_03l29gJXpCE.md), 07:43-08:41, 10:13-10:35, 11:12-11:20, 12:49-13:49, 18:25-18:47, 21:48-22:03
 - [How to Get Your Org to Adopt Coding Agents (Without Shipping Garbage) — Eyal Blum, Figma](../sources/20260828_5Bn0xro2ol8.md), 06:42-07:34
+- [Building uReview, Uber's Multi-Agent Code Review Engine — Will Bond & Ameya Ketkar, Uber](../sources/20260828_EL123UNokkI.md), 02:25-02:43, 07:37-08:41

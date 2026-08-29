@@ -15,6 +15,8 @@ Details:
 - Design the interaction *for the label you'll need*: stop asking how to evaluate the model after building it. Proactively define what success means, what concrete metrics measure it, and what data you need — and let those decisions shape the interaction so you have hard evidence for the next iteration. Collect explicit feedback at the correct touch points with nuance, not a global thumbs up/down. (22:58-23:40, 25:41-25:51)
 - Structured surfaces make richer labels: a coding agent that acts like a junior partner (plans, states assumptions, breaks work into reviewable PRs) captures nuanced structured decisions — bad assumptions, tradeoffs made, stylistic preferences — about specific parts of the development cycle, versus a giant-diff or ping-per-file agent that only yields skewed binary accept/reject on a code block. (15:41-18:50)
 
+- **The coverage argument for preferring behaviour over solicited response, with numbers.** Uber posts about 25,000 review comments a week; "we get 10% of them actually get some feedback. And only 4% of the PRs actually get some negative feedback." A survey, a form, or a thumbs-up widget therefore labels roughly a tenth of the interactions and a self-selected tenth at that, while the label already sitting in the workflow — did the developer change the code — is available on all of them. Two cautions carry with it: the two figures quoted have different denominators (comments versus PRs) and cannot be converted into each other, and a behavioural label is a proxy whose validity the source never checks. ([Bond and Ketkar](../sources/20260828_EL123UNokkI.md), 10:12-10:47)
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Product Strategy](../topics/product-strategy.md)
@@ -24,6 +26,8 @@ Related concepts:
 - [Engineer the Interaction, Not the Model, for Discernment](engineer-the-interaction-not-the-model-for-discernment.md)
 - [Connect Production Observability to Offline Eval Loops](connect-production-observability-to-offline-eval-loops.md)
 - [Domain Expert Review Tools Convert Judgment Into Deployable Knowledge](domain-expert-review-tools-convert-judgment-into-deployable-knowledge.md)
+- [Measure a Review Bot by Whether the Comment Changed the Code](measure-a-review-bot-by-whether-the-comment-changed-the-code.md)
 
 Sources:
 - [Build AI Systems for Discernment, Not Approval - Angel Ortmann Lee, Duolingo](../sources/20260707_CDqzWpwkSls.md), 09:11-25:51
+- [Building uReview, Uber's Multi-Agent Code Review Engine — Will Bond & Ameya Ketkar, Uber](../sources/20260828_EL123UNokkI.md), 10:12-10:47

@@ -15,6 +15,8 @@ Details:
 - **The two questions most often underestimated.** *Session management* and *observability* are the ones a prototype never has and production always needs — the first because a demo runs to completion in one process (see [keeping the session log separate from the context window](keep-the-session-log-separate-from-the-context-window.md) for what it costs to have skipped it), the second because agent failures are diagnosed from traces rather than stack traces.
 - Provenance: an Anthropic vendor talk. Both the ladder and the checklist are Anthropic's, and the ladder terminates at Anthropic's own product, so the framing is structurally favorable to buying. No competing platform is compared, no pricing appears anywhere in the talk, and no cost is given for any rung — which means the checklist can tell you what you would be taking on but not what it would be worth to hand over.
 
+- **A boundary question this list does not ask, and a way to stop the answer from going stale.** Uber's decisive constraint was neither differentiation nor data: it was that their code-review host is Phabricator and "most of the solutions do not provide support for Phabricator." A legacy or unusual substrate can force a build for reasons that have nothing to do with whether the capability is core, which is worth adding to any buy checklist. Their hedge against the resulting lock-in is cheap and portable: keep the vendors wired into the pipeline as alternative generators "so that we can compare ourselves to what's available more broadly," so the decision stays measured on your own traffic rather than being reopened from scratch later. ([Bond and Ketkar](../sources/20260828_EL123UNokkI.md), 01:22-01:46, 03:33-03:43)
+
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
 - [Product Strategy](../topics/product-strategy.md)
@@ -27,6 +29,8 @@ Related concepts:
 - [Decouple the Agent Loop From the Tool Execution Environment](decouple-the-agent-loop-from-the-tool-execution-environment.md)
 - [Keep the Session Log Separate From the Context Window](keep-the-session-log-separate-from-the-context-window.md)
 - [Harness Engineering Shifts Scarcity From Code Production to Control Surfaces](harness-engineering-shifts-scarcity-from-code-production-to-control-surfaces.md)
+- [Comment Volume Is a Property of the Review Pipeline, Not the Model](comment-volume-is-a-property-of-the-review-pipeline.md)
 
 Sources:
 - [Anthropic's Applied AI team on the Evolution of Agentic Surfaces](../sources/20260811_K0X9QDRkIdg.md), 01:41-05:14, 15:50-16:47
+- [Building uReview, Uber's Multi-Agent Code Review Engine — Will Bond & Ameya Ketkar, Uber](../sources/20260828_EL123UNokkI.md), 01:22-01:46, 03:33-03:43

@@ -32,6 +32,8 @@ Details:
 
 - **The overflow does not stop at the merge button.** Justin Smith (Resolve AI) reports the same volume arriving one stage later, in production: bigger PRs, more of them, "even from even non-developers that maybe don't actually know the code," and consequently "AI is creating a lot more issues in production as AI code sort of goes through. It's not clear we have the right sort of structures in place to deal with the amount of kind of changes that are coming through." Read against this page's other sources, review capacity is the first fixed denominator the wave hits and operational capacity is the second — and unlike review, the operational half has no queue to visibly back up. His framing of what that half already consumes is 70% of engineering time, uncited. ([Justin Smith](../sources/20260809_vSx5IULvBns.md), 01:15-01:35, 01:47-02:00, 02:37-02:49)
 
+- **One organization's own instrumentation of the bottleneck, on the metric the author feels.** Uber tracks time to first review on a pull request: "Back in 2024, we were seeing that engineers would get their first review within 3 hours. Now in 2026, that has grown to 9 hours uh in addition to all of the volume changes. So, in short, code review is now the bottleneck that we are running into" — across thousands of engineers, hundreds of teams, twelve sites, and six language-specific monorepos. Worth keeping distinct from the survey numbers above: this is one company measuring itself over its own history, which makes it a cleaner trend and a weaker generalization. The attribution is softer than it first reads — the talk does not separate agent-authored volume from headcount growth or from an in-progress Phabricator-to-GitHub migration — and no post-deployment figure for the same metric is reported, so the system built to relieve the bottleneck is never measured against it. ([Bond and Ketkar](../sources/20260828_EL123UNokkI.md), 00:33-01:22)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -50,6 +52,7 @@ Related concepts:
 - [Environment Isolation Is What Lets Non-Engineers Trigger Real Work](environment-isolation-is-what-lets-non-engineers-trigger-real-work.md)
 - [Turn Unfiled Conversation Into Concrete Prototypes](turn-unfiled-conversation-into-concrete-prototypes.md)
 - [Give Unowned Operational Work a Trigger](give-unowned-operational-work-a-trigger.md)
+- [Review Comments Have Two Audiences With Inverted Error Costs](review-comments-have-two-audiences-with-inverted-error-costs.md)
 
 Sources:
 - [The Friction is Your Judgment - Armin Ronacher & Cristina Poncela Cubeiro, Earendil](../sources/20260418__Zcw_sVF6hU.md), 03:35-07:10
@@ -63,3 +66,4 @@ Sources:
 - [Velocity Sickness: What Happens When Your Whole Team Gets 10x Faster — Matt Dailey, Ref.](../sources/20260809_Kz4QJmNrVXU.md), 01:36-01:55, 16:03-16:54
 - [Multiplayer agentic engineering — Arjun Singh, Superconductor](../sources/20260809_OL7kfezynJM.md), 08:24-08:42, 16:00-16:16
 - [Always-on agents run production without the on-call tax — Justin Smith, Resolve AI](../sources/20260809_vSx5IULvBns.md), 01:15-02:00, 02:37-02:49
+- [Building uReview, Uber's Multi-Agent Code Review Engine — Will Bond & Ameya Ketkar, Uber](../sources/20260828_EL123UNokkI.md), 00:33-01:22

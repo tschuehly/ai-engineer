@@ -17,6 +17,8 @@ Details:
 - Difference from the wiki's existing lesson-to-guardrail pattern: Lopopolo's version converts each newly caught incident into a bespoke lint or reviewer prompt going forward. This version is retrospective and bulk — the corpus of past comments already contains the rules, so the first move is mining rather than waiting for the next incident. The two compose: mine the backlog once, then keep appending.
 - Boundary worth keeping in view: a registry only absorbs the *repeatable* comments. The talk's own argument is that the non-repeatable ones — architectural feedback, mentorship, what was tried and rejected — are the alignment half that must stay human, so a growing registry should shrink review volume without being expected to reach zero.
 
+- **Independent confirmation that the mining is cheap, and that the cost sits immediately after it.** At Uber "writing the skill was very easy. Like teams just very quickly wrote a skill by asking Claude to write one, go over my previous PR reviews and write me a skill" — the same retrospective corpus this page recommends, harvested by a model in minutes rather than as a project. What replaced the authoring cost was operating cost: "the hard part was how to run these skills at scale with consistent quality and low cost. And that required a lot of iterations not only from the uReview team side, but also like for each team who was trying to write these rules." Read against the J-curve warning above, the pain may be relocating rather than disappearing — from writing the registry to running it — and neither source measures the second half. See [Distributed Rule Authoring Is a Platform Problem, Not an Authoring Problem](distributed-rule-authoring-is-a-platform-problem.md). ([Bond and Ketkar](../sources/20260828_EL123UNokkI.md), 09:43-10:12)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Evaluation](../topics/evaluation.md)
@@ -30,6 +32,8 @@ Related concepts:
 - [Automation loops convert repeated review and triage into factory improvements](automation-loops-convert-repeated-review-and-triage-into-factory-improvements.md)
 - [Encode non-functional requirements as agent-visible context](encode-non-functional-requirements-as-agent-visible-context.md)
 - [Use agent logs and review feedback as context observability signals](use-agent-logs-and-review-feedback-as-context-observability-signals.md)
+- [Distributed Rule Authoring Is a Platform Problem, Not an Authoring Problem](distributed-rule-authoring-is-a-platform-problem.md)
 
 Sources:
 - [How to Kill the Code Review — Ankit Jain, Aviator](../sources/20260817_YgEv7IQzGdM.md), 06:53-07:57, 08:30-08:39, 10:30-10:35, 14:12-15:08
+- [Building uReview, Uber's Multi-Agent Code Review Engine — Will Bond & Ameya Ketkar, Uber](../sources/20260828_EL123UNokkI.md), 09:43-10:12

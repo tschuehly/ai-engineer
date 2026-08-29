@@ -21,6 +21,8 @@ Details:
 - Capability drift makes this framing time-dependent: rising model capability pushes everyone toward the Lopopolo end, and the review layer moves — yesterday inspect outputs and read code, today inspect task direction, maybe tomorrow inspect the loops. "Capability drift changes where proof belongs; it doesn't remove the requirement of proof." (17:42-17:57) The Anthropic Fable-5 framing echoes it: "we used to check if Claude is doing the work right; now I check if Claude is doing the right work," and Karpathy: "it's never felt so tempting to stop looking at code at all — but don't do this in production." (16:28)
 - The closing rule of thumb: "Not every line in 2026 needs your eyes. Every system still needs your judgment." (21:13)
 
+- **The same rule applied to review depth at Uber's scale, with the selection layer deliberately kept deterministic.** "We need the ability to take factors like the risk profile and the complexity of a code change and factor that in when deciding how we're going to run a code review. Not all code gets the exact same review." The implementation is "a smart deterministic routing so that we could route which team gets what kind of review with which model, what kind of generators, and so on" — the choice of proof is computed from ownership and risk, and only the proof itself is a model. That split is what keeps cost and latency predictable across hundreds of team configurations, and it is the part a router built as an LLM classifier gives up. ([Bond and Ketkar](../sources/20260828_EL123UNokkI.md), 02:25-02:43, 09:05-09:16)
+
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
 - [Workflows](../topics/workflows.md)
@@ -31,7 +33,9 @@ Related concepts:
 - [Route high-impact agent actions through explicit human approval gates](route-high-impact-agent-actions-through-explicit-human-approval-gates.md)
 - [Self-verifying agent loops hide review rather than remove it](self-verifying-agent-loops-hide-review-rather-than-remove-it.md)
 - [Coding agents shift engineering work toward planning and review](coding-agents-shift-engineering-work-toward-planning-and-review.md)
+- [Comment Volume Is a Property of the Review Pipeline, Not the Model](comment-volume-is-a-property-of-the-review-pipeline.md)
 
 Sources:
 - [Should AI Engineers Still Read Code in 2026? The Z/L Continuum — Alex Volkov, ThursdAI](../sources/20260710_ZpK5PWX2YRM.md), 12:17-21:13
 - [How to build an AI-Native Health Company — Dan Feng, Maven Clinic](../sources/20260819_WJRdLNhrsLQ.md), 11:43-12:32
+- [Building uReview, Uber's Multi-Agent Code Review Engine — Will Bond & Ameya Ketkar, Uber](../sources/20260828_EL123UNokkI.md), 02:25-02:43, 09:05-09:16

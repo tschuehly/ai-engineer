@@ -15,6 +15,8 @@ Details:
 - **Evals are not the only downstream consumer.** LangChain pushes the same loop one step further: the trace corpus also feeds distillation and SFT datasets, generated environments, and human-readable reports, and the improvement loop it drives is continual learning rather than regression testing — "if you're a continual learning company, you need traces." Under that reading, connecting observability to evals is one branch of a wider claim that [observability and continual learning are the same problem](observability-and-continual-learning-are-the-same-problem.md). ([LangChain](../sources/20260812_CvRngaQZQ3Y.md), 02:59-03:06, 11:08-12:46)
 - **The ratchet that turns this loop into a growing regression suite at no extra cost.** Shenoy describes the offline set as accumulating out of the optimization work rather than being budgeted separately: "this allows us to hill climb and build better agents… and what's really exciting is it ratchets up. Every week our hill climbing benchmarks become a regression test." The tasks used to chase improvement this week become the tasks that must not break next week. In his setting the scoring comes free because the label is a business outcome ("did the roof get repaired?"), which is the condition that makes the ratchet cheap; where scoring is manual, the same pattern converts an improvement budget into a permanent grading bill. ([Shenoy](../sources/20260828_B0fjR3yaZFU.md), 11:21-11:49)
 
+- **A four-rung ladder from what a system cost to what its users did, built in that order and for a stated reason.** Uber's first instrumentation was "very surface-level. We used to collect cost. We used to run an NPS survey, have Google Forms being filled, Slack support. And with all of this, we saw that our quality to cost ratio was like all over the place" — a well-measured denominator against a guessed numerator. They then added classified sentiment on developer replies, then addressal rate ("when a uReview comment is made, does the developer go and actually address the comment?"), then agent trajectory for diagnosis. The sequencing is the transferable part: outcome metrics first so you know which runs are worth opening, trajectory storage second so you can find out why. ([Bond and Ketkar](../sources/20260828_EL123UNokkI.md), 04:48-06:35)
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Infrastructure](../topics/infrastructure.md)
@@ -25,9 +27,11 @@ Related concepts:
 - [Label LLM Judge Outputs Before Mapping Them to Scores](label-llm-judge-outputs-before-mapping-them-to-scores.md)
 - [Observability and Continual Learning Are the Same Problem](observability-and-continual-learning-are-the-same-problem.md)
 - [Operational Outcomes Are Eval Labels You Only See If You Own the Operation](operational-outcomes-are-eval-labels-you-only-see-if-you-own-the-operation.md)
+- [Measure a Review Bot by Whether the Comment Changed the Code](measure-a-review-bot-by-whether-the-comment-changed-the-code.md)
 
 Sources:
 - [Why building eval platforms is hard - Phil Hetzel, Braintrust](../sources/20260428__fQ7Z_Wfouk.md), 03:33-04:20, 14:00-16:48
 - [Shipping AI That Works: An Evaluation Framework for PMs - Aman Khan, Arize](../sources/20251226_2HNSG990Ew8.md), 19:43-25:21
 - [Improving Agents is a Data Mining Problem — Vivek Trivedy, LangChain](../sources/20260812_CvRngaQZQ3Y.md), 02:59-03:06, 11:08-12:46
 - [How do you diffuse AI into the real world? — Varun Shenoy, Long Lake](../sources/20260828_B0fjR3yaZFU.md), 11:21-11:49
+- [Building uReview, Uber's Multi-Agent Code Review Engine — Will Bond & Ameya Ketkar, Uber](../sources/20260828_EL123UNokkI.md), 04:48-06:35

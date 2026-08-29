@@ -18,6 +18,8 @@ Details:
 - Where this stops. An outcome label is coarse and slow: "did the roof get repaired" arrives days or weeks after the agent's decision, is a single bit, and does not attribute the failure to a step. It answers whether to ship, not what to fix — for which the traces, not the labels, are the substrate. Nothing in the source reports how many tasks are under evaluation, what any of them score, or how the delay is handled.
 - Limits. Nothing in this talk is measured; no eval result, pass rate, or task count is given, and the automatically scored evals are described as underway rather than as results. ([Provenance and Limits](../sources/20260828_B0fjR3yaZFU.md))
 
+- **A software-internal instance of the same idea, and a demonstration of how much weaker the label gets when the outcome is not physical.** Uber grades review comments by whether the developer addressed them, which is settled by the existing workflow at no annotation cost — the same structural move as letting the roof repair settle the score. But a repaired roof is the outcome; an addressed comment is a human's reaction to advice, and the human may comply with a wrong comment or reject a right one. So the free label is available much more widely than the operator framing suggests, and its validity degrades as the distance grows between the recorded action and the thing you actually wanted to know. Uber reports 67% addressal with no labelled sample behind it. ([Bond and Ketkar](../sources/20260828_EL123UNokkI.md), 05:47-06:07, 10:29-10:47)
+
 Related topics:
 - [Evaluation](../topics/evaluation.md)
 - [Product Strategy](../topics/product-strategy.md)
@@ -28,6 +30,8 @@ Related concepts:
 - [Learn coding preferences from implicit edit feedback](learn-coding-preferences-from-implicit-edit-feedback.md)
 - [High-Value Vertical Data Is Withheld by Design](high-value-vertical-data-is-withheld-by-design.md)
 - [Continual Learning and Enablement Are One Loop With a Cold Start](continual-learning-and-enablement-are-one-loop-with-a-cold-start.md)
+- [Measure a Review Bot by Whether the Comment Changed the Code](measure-a-review-bot-by-whether-the-comment-changed-the-code.md)
 
 Sources:
 - [How do you diffuse AI into the real world? — Varun Shenoy, Long Lake](../sources/20260828_B0fjR3yaZFU.md), 04:16-04:31, 10:13-12:14
+- [Building uReview, Uber's Multi-Agent Code Review Engine — Will Bond & Ameya Ketkar, Uber](../sources/20260828_EL123UNokkI.md), 05:47-06:07, 10:29-10:47
