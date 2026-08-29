@@ -15,6 +15,7 @@ Details:
 - Caveat: raw JSONL is "not really meant for AI consumption" — it gets long and full of junk. Pointing the model straight at it works, but a more robust path uses hooks that fire at session-end or PR-merge to extract the key bits (especially where you struggled) into a separate store (Obsidian, a flat weekly markdown file, or an archive) before the periodic analysis runs. (20:07-21:30)
 - This is a different cadence from per-run loop feedback: it is a periodic batch retrospective across many stored sessions, aimed at discovering missing capabilities rather than fixing the current run.
 - A continuous, agent-driven variant runs the same idea per skill rather than as a backlog-wide pass: at OpenClaw, skills live as `.skills` (open-sourced on GitHub, analogous to dotfiles), and a "Go Codex" skill goes through the agent's own Codex session logs, reads them, and edits that skill to make it better, after which the improved skill is redeployed into the open core or personal environment — so the agent maintains its own skills from real usage instead of a human authoring each revision (tooling named, auto-caption approximate: a skills "gem" like Geppetto, `vercel.skills.sh`). (Koc, 13:20-14:21)
+- **The same signal read from the billing ledger instead of the transcript.** The back-and-forth this page mines for is the same event Touil prices: without a skill, "someone is vibe coding back and forth and trying to figure out exactly how to steer the agent to implement it properly… burning more tokens from one side cost-wise" and losing the one-shot answer. ([Touil](../sources/20260828_M05vON8i0aI.md), 16:18-16:42) Two ledgers, one signal — which matters where transcript access is restricted or fragmented across teams, since spend per task class survives when session logs are not centrally readable. He also supplies the caution for the automated end of this pattern: a loop that evolves skills without ownership, versioning, and an admission gate is "just maintaining auto-evolving skills" at higher rate (19:37-20:03). Nothing in the talk is measured.
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -29,7 +30,9 @@ Related concepts:
 - [Use agent hooks to automate session rituals](use-agent-hooks-to-automate-session-rituals.md)
 - [Treat Human Attention as the Bottleneck for Agentic Work](treat-human-attention-as-the-agentic-bottleneck.md)
 - [Run Parallel Coding Sessions as Typed Swim Lanes](run-parallel-coding-sessions-as-typed-swim-lanes.md)
+- [Auto-Evolving Skills Multiply Whatever Governance You Already Have](auto-evolving-skills-multiply-whatever-governance-you-already-have.md)
 
 Sources:
 - [Your Attention Is the Bottleneck, Not Your Agents — Zack Proser, WorkOS](../sources/20260611_so9l_MwS2yg.md), 13:22-15:31, 20:07-21:30
 - [Dark Factory: OpenClaw Ships Faster Than You Can Read the Diff — Vincent Koc, OpenClaw](../sources/20260605_pmoDeA3RBZY.md), 13:20-14:21
+- [AI-Native Organisations Run on Skills: How to Structure and Scale Them — Imad Touil, QuantumBlack](../sources/20260828_M05vON8i0aI.md), 16:18-16:42, 19:37-20:03

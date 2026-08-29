@@ -13,6 +13,7 @@ Details:
 - No-ops: instructions that appear to do something but don't actually influence the agent's behavior in context — a very common artifact when an agent writes your skills. Example: a paragraph telling the agent to write a long detailed commit message, which the agent would write anyway. 18:35-19:00
 - Deletion test: to find no-ops, delete the instruction and see whether behavior changes; if it doesn't, the instruction was inert and should stay deleted. This deletion discipline, plus compacting text into leading words and removing sediment, is how Matt Pocock keeps his skills small. 18:50-19:05
 - Small skills pay off twice: easier to maintain and audit, and every word shaved is a token shaved off every use — so pruning is both a maintenance and a runtime-cost practice.
+- **Pruning presumes an owner, which is what an org-scale library lacks.** Every technique on this page — deduplicating, removing sediment, running the deletion test — needs someone with standing to delete other people's text. Touil's account of ungoverned libraries is that this is exactly the missing role: "if you don't have an owner, then no one will be able to maintain, scale those skills," and without a catalog "you cannot really discover it" in the first place. ([Touil](../sources/20260828_M05vON8i0aI.md), 11:56-12:23) His cheap substitute where no owner exists is structural rather than behavioural: statically check a skill against the published best practices, because "if the skill is not invoked properly, if the skill is not structured properly, there's a high chance that it's not going to be high quality" (19:13-19:37) — a screen, not a replacement for the deletion test, and offered with no accuracy figure.
 
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
@@ -24,6 +25,8 @@ Related concepts:
 - [Choose a skill's trigger by trading context load against cognitive load](choose-skill-trigger-by-trading-context-load-against-cognitive-load.md)
 - [Retire completed planning docs before they become agent doc rot](retire-completed-planning-docs-before-they-become-agent-doc-rot.md)
 - [Keep agent context small, fresh, and task-specific](keep-agent-context-small-fresh-and-task-specific.md)
+- [Auto-Evolving Skills Multiply Whatever Governance You Already Have](auto-evolving-skills-multiply-whatever-governance-you-already-have.md)
 
 Sources:
 - [Building Great Agent Skills: The Missing Manual - Matt Pocock](../sources/20260629_UNzCG3lw6O0.md), 16:48-19:05
+- [AI-Native Organisations Run on Skills: How to Structure and Scale Them — Imad Touil, QuantumBlack](../sources/20260828_M05vON8i0aI.md), 11:56-12:23, 19:13-19:37

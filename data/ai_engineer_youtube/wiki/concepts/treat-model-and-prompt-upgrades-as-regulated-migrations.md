@@ -16,6 +16,7 @@ Details:
 - The same playbook treats prompt versioning as enterprise change management ("prompt as code"): commits cannot be terse, and should document why a prompt changed, which failure caused it, and what it is expected to correct, so later versions remain traceable. (`ObTPqBGsEbA`, 23:02-23:30, 33:50-34:45)
 - Onlay states the same rule from the system-design side: "you can't just replace the model and assume it's going to be better. It's different." A model that is better "on certain evals … as measured by these different metrics" is not necessarily better for the situations you need it to be better at, "because of the way you've designed your system" — so you "really have to redo everything from scratch" and confirm evals, testing, and validation are in place before a new model can be introduced without breaking the system. The cost side is part of the decision too: an overpowered, over-expensive model on "routine things that need to be done a thousand times a day" defeats the cost-reduction goal the deployment exists to serve. (`UyyOoJmuATU`, 07:40-08:23, 19:40-20:02)
 - Meta's gaming team generalizes the risk to the whole agentic stack: nondeterminism runs from front-end user prompting through runtime-LLM decisions to platform ranking/serving, so engineers who used to get stability and scalability by writing code, writing tests, and debugging against a *known* code base find that a model upgrade or a changed prompt "can entirely throw off your system," and how to debug that at scale is still an open challenge. (`grdoOC1BT1s`, 14:14-15:07)
+- **Skills belong in the migration scope, and usually are not in it.** Touil's ungoverned-library failure mode is a model upgrade nobody re-tested the skills against: validate them "not against your task but also against the latest models that comes," or "the quality starts degrading over time." ([Touil](../sources/20260828_M05vON8i0aI.md), 11:43-11:55) A migration checklist built around models and prompts will miss this, because a skill is neither — it is instruction text and scripts held in a separate library, frequently owned by a different team from the one running the upgrade, and often with no owner at all. Nothing in the talk is measured; the claim is a design warning, not a reported incident.
 
 Related topics:
 - [Models](../topics/models.md)
@@ -26,9 +27,11 @@ Related concepts:
 - [Plan AI Products for a Multimodel Market](plan-ai-products-for-a-multimodel-market.md)
 - [Compare Models by Task, Thinking Budget, Cost, and Latency](compare-models-by-task-thinking-budget-cost-and-latency.md)
 - [Prompt Management Lags Prompt Iteration](prompt-management-lags-prompt-iteration.md)
+- [Auto-Evolving Skills Multiply Whatever Governance You Already Have](auto-evolving-skills-multiply-whatever-governance-you-already-have.md)
 
 Sources:
 - [How Intuit uses LLMs to explain taxes to millions of taxpayers - Jaspreet Singh, Intuit](../sources/20250723__zl_zimMRak.md), 07:20-08:04, 09:25-10:49, 10:52-12:10
 - [The Production AI Playbook: Deploying Agents at Enterprise Scale — Sandipan Bhaumik, Databricks](../sources/20260618_ObTPqBGsEbA.md), 23:02-23:56, 33:50-34:45
 - [Think You Can Build a Game with AI? Think Again! - Danielle An & David Hoe, Meta](../sources/20260708_grdoOC1BT1s.md), 14:14-15:07
 - [Healthcare's Agent Bytecode: X12 as the Harness for AI Agents — Vasant Kearney, Onlay](../sources/20260819_UyyOoJmuATU.md), 07:40-08:23, 19:40-20:02
+- [AI-Native Organisations Run on Skills: How to Structure and Scale Them — Imad Touil, QuantumBlack](../sources/20260828_M05vON8i0aI.md), 11:43-11:55

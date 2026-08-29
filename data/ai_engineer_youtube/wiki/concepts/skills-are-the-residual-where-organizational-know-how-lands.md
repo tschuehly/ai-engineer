@@ -1,0 +1,34 @@
+# Skills Are the Residual Where Organizational Know-How Lands
+
+Summary: A workflow contains four authorable things — hooks, MCP servers, sub agents, and skills — and three of them cannot hold organization-specific knowledge. Hooks fire on events, MCP servers are overwhelmingly consumed from vendors rather than written, and sub agents exist to protect the context window. Skills are what is left, which is why an org's know-how accumulates there whether or not anyone decided it should, and why an unstructured skill layer makes a workflow non-deterministic no matter how well the other three are built.
+
+Use when:
+- Choosing where to invest first when standing up agent infrastructure across an organization, and deciding whether that is a skills catalog, an MCP platform, or a sub-agent library.
+- Explaining to a platform team why "we already have an MCP gateway" does not mean org knowledge has a home.
+- Auditing a workflow that behaves inconsistently across teams, and looking for the layer where the variation actually lives.
+- Justifying governance effort on skills specifically rather than on the agent stack in general.
+
+Details:
+- **The elimination, stated as the argument.** Of the four components in a workflow: "Hooks basically what it does, it just kind of like pre kind of like trigger on events to do something along your workflow. The MCP servers we all know that you may need an MCP tool, but tell me like who actually build a lot of MCPs? We just use MCP tools that is actually provided by the tool that we used to use before, right? So we don't really own. The sub agents is just to minimize the context window. We just delegate to sub agent to execute a specific task what is needed. So at the end of the day you will find all of your know-how is actually at the skills level." ([Touil](../sources/20260828_M05vON8i0aI.md), 05:53-06:45)
+- **The consequence that makes this operational.** "And if you don't have the right structure of your skills, then you're not really having a deterministic workflow." (06:45-06:52) Read as a diagnostic: when the same workflow produces different results in different teams, the variation is unlikely to be in the hooks (they are triggers), the MCP servers (they are shared and vendor-supplied), or the sub agents (they partition context). It is in what each team's skills say.
+- **Why each of the other three is disqualified, restated.** A hook is a *when*, not a *what* — it can enforce that something runs, but the something has to be written somewhere else. An MCP server bought or installed encodes the *vendor's* model of its own system, not your organization's practice around it. A sub agent is a context-management device; the knowledge it applies still has to come from its instructions. Only skills are simultaneously authored in-house, loaded on relevance, and portable between harnesses.
+- **The elimination is contingent, and the contingency is worth checking.** "Who actually build a lot of MCPs?" is an inference from a conference room's reaction, not a survey. An organization that *does* author its own MCP servers has a second home for know-how, and this wiki carries the case for exactly that — see [Gateway Platform Primitives Let Teams Focus on MCP Business Logic](gateway-platform-primitives-let-teams-focus-on-mcp-business-logic.md) and [Expose the Domain's Vocabulary to Agents, Not the Platform's Primitives](expose-domain-vocabulary-to-agents-not-platform-primitives.md), both of which describe in-house servers carrying domain semantics. The argument holds where MCP is consumed and weakens where it is produced; the useful version of the question is not "are skills the residual" but "in *our* org, which of the four do we actually write?"
+- **What the residual is made of, and why that shape suits knowledge.** The design principles Touil imports from the microservices era — reusable, modular, discoverable, portable across workflows *and* across harnesses ("if I'm having a skill on Claude Code and I want to move it to Cursor, it's going to just work"), specialized rather than "one skill like a monolith," composable, consistent, cost-efficient — are the properties that let a unit of knowledge survive being moved. The resulting claim is that a skill makes know-how "executable, portable and cheap," where cheap comes from progressive disclosure: "the right skills, the right amount of skills in the right time to solve the right problem, and that's reduce the token usage." (08:25-09:57)
+- **Relation to the skills-versus-MCP split this wiki already holds.** [Use skills for workflow guidance and MCP for integrations](use-skills-for-workflow-guidance-and-mcp-for-integrations.md) draws the boundary by *function* — MCP reaches systems, skills describe how to use them well. This page draws it by *authorship*, and the two agree in a way worth stating: the functional split is why the authorship split follows. Integrations are commodities across companies and get shipped by whoever owns the system; the knowledge of how your company uses them is not a commodity and nobody will ship it to you.
+- **Where workflows sit relative to skills.** "Workflows, think about them as harness blueprints that actually shape the behavior of your coding harness, for example, in the runtime." (06:52-07:03) So a workflow is the composition and a skill is the composed unit — which is also why Touil later argues the same catalog-and-governance treatment has to be applied one level up, to the workflows themselves. (17:53-18:40)
+- Limits. Nothing in this talk is measured: no deployment, no A/B test, no client. The elimination is an argument from typical practice, and the portability claim ("it's going to just work" across harnesses) is asserted rather than demonstrated. See the source's [Provenance and Limits](../sources/20260828_M05vON8i0aI.md).
+
+Related topics:
+- [Workflows](../topics/workflows.md)
+- [Tools](../topics/tools.md)
+
+Related concepts:
+- [Use skills for workflow guidance and MCP for integrations](use-skills-for-workflow-guidance-and-mcp-for-integrations.md)
+- [Agent harnesses combine model, tools, prompts, filesystem, skills, hooks, and memory](agent-harnesses-combine-model-tools-prompts-filesystem-skills-hooks-and-memory.md)
+- [Agent skills package progressive-disclosure context for repeatable workflows](agent-skills-package-progressive-disclosure-context-for-repeatable-workflows.md)
+- [Package Reusable Context as Skills, Libraries, and Registries](package-reusable-context-as-skills-libraries-and-registries.md)
+- [Skill Composability Is Decided Before Authoring, Not in the Registry](skill-composability-is-decided-before-authoring-not-in-the-registry.md)
+- [General Agents Need Skills for Domain Expertise](general-agents-need-skills-for-domain-expertise.md)
+
+Sources:
+- [AI-Native Organisations Run on Skills: How to Structure and Scale Them — Imad Touil, QuantumBlack](../sources/20260828_M05vON8i0aI.md), 05:53-09:57, 17:53-18:40

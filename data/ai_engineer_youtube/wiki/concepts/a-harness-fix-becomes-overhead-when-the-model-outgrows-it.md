@@ -16,6 +16,7 @@ Details:
 - Provenance: an Anthropic vendor talk for its managed-agent product. The context-anxiety story is anecdotal — no eval, no frequency, no task distribution for the original behavior, no measurement that the fix helped, and no quantification of the overhead it later imposed. The dynamic is credible and specific; its magnitude is unreported. The captions render the newer model as "Claude Opus 48," most likely 4.5, and nothing here depends on which release it is.
 
 - **The other direction of the same misattribution, from the application side.** Aditya Khandelwal (Amazon AGI Lab) reports the complaint a team lead actually hears — "insert whatever latest model there is being really dumb today" — and gives the correction: "The model didn't change, right? The [harness] may have changed underneath." He then adds a fragility test this page's framing does not supply: "if… that's acceptable to like small changes in the [harness], clearly your own code base isn't set up well." So the pairing is *model moved, harness didn't* (this page) versus *harness moved, model didn't* (his), and his triage question covers both — "if the model changed, the [harness] changed, again you need to go revisit something." One team's anecdote with no measurement, but it names the observable that sends you looking. ([Khandelwal](../sources/20260811_aeTb5BdmTTc.md), 04:34-04:54, 13:15-13:34)
+- **The same decay applied to a skill library, where nobody owns the re-test.** Touil states the skills version directly: validate "not against your task but also against the latest models that comes… then the quality starts degrading over time." ([Touil](../sources/20260828_M05vON8i0aI.md), 11:43-11:55) The shape matches this page — a skill encodes a belief about what the model needs told — but the failure differs in an important way. A harness workaround is owned by a harness team that ships a new version; an org's skills are written by hundreds of engineers, so the re-test after a model change has no natural owner, and the decay shows up as a slow, distributed quality drift with no failing test attached. Asserted from experience with no measurement behind it.
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -28,7 +29,9 @@ Related concepts:
 - [A Harness Switch Invalidates Most of an Eval Suite](a-harness-switch-invalidates-most-of-an-eval-suite.md)
 - [Harness Engineering Shifts Scarcity From Code Production to Control Surfaces](harness-engineering-shifts-scarcity-from-code-production-to-control-surfaces.md)
 - [Build Agent Harnesses Incrementally Up a Capability Ladder](build-agent-harnesses-incrementally-up-a-capability-ladder.md)
+- [Auto-Evolving Skills Multiply Whatever Governance You Already Have](auto-evolving-skills-multiply-whatever-governance-you-already-have.md)
 
 Sources:
 - [Anthropic's Applied AI team on the Evolution of Agentic Surfaces](../sources/20260811_K0X9QDRkIdg.md), 07:36-10:13
 - [Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab](../sources/20260811_aeTb5BdmTTc.md), 04:34-04:54, 13:15-13:34
+- [AI-Native Organisations Run on Skills: How to Structure and Scale Them — Imad Touil, QuantumBlack](../sources/20260828_M05vON8i0aI.md), 11:43-11:55

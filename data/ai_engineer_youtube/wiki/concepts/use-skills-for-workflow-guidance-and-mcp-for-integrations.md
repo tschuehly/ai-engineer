@@ -14,6 +14,7 @@ Details:
 - Anthropic's MCP framing makes the same split explicit at the connectivity-stack level: skills capture reusable domain knowledge, while MCP provides richer remote semantics such as resources, tasks, authorization, governance, and MCP applications. (05:28-07:12)
 - Anthropic's skills talk applies the split to domain deployment: MCP servers connect the agent to external data and systems, while skills provide expertise and can orchestrate multi-tool workflows across those MCP connections. 08:08-08:33, 09:34-10:31
 - Anthropic's Claude API talk gives the platform version of the same boundary: MCP gives an agent access to external tools and context, while skills provide domain expertise about how to use those tools and context well. 10:35-10:47
+- **The authorship corollary of the same split.** Touil reaches the boundary from who writes each side rather than what each side does: "tell me like who actually build a lot of MCPs? We just use MCP tools that is actually provided by the tool that we used to use before, right? So we don't really own," whereas skills are where "all of your know-how is actually at the skills level." ([Touil](../sources/20260828_M05vON8i0aI.md), 06:20-06:45) The two framings reinforce each other — integrations are commodities across companies and get shipped by whoever owns the system, while the knowledge of how your company uses them is not a commodity and nobody will ship it to you. The claim is contingent on an org consuming rather than producing MCP servers, and is drawn from a room's reaction rather than a survey.
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -24,9 +25,11 @@ Related concepts:
 - [Agent skills package progressive-disclosure context for repeatable workflows](agent-skills-package-progressive-disclosure-context-for-repeatable-workflows.md)
 - [Ship Skills Over MCP for Server-Authored Tool Guidance](ship-skills-over-mcp-for-server-authored-tool-guidance.md)
 - [General agents need skills for domain expertise](general-agents-need-skills-for-domain-expertise.md)
+- [Skills Are the Residual Where Organizational Know-How Lands](skills-are-the-residual-where-organizational-know-how-lands.md)
 
 Sources:
 - [Skill Issue: How We Used AI to Make Agents Actually Good at Supabase - Pedro Rodrigues, Supabase](../sources/20260504_GmAQKINjv1E.md), 07:19-08:36, 25:19-26:21, 58:23-01:00:06
 - [The Future of MCP - David Soria Parra, Anthropic](../sources/20260419_v3Fr2JR47KA.md), 05:28-07:12, 16:33-17:15
 - [Don't Build Agents, Build Skills Instead - Barry Zhang & Mahesh Murag, Anthropic](../sources/20251208_CEvIs9y1uog.md), 08:08-08:33, 09:34-10:31
 - [Katelyn Lesse - Evolving Claude APIs for Agents, Anthropic](../sources/20251204_aqW68Is_Kj4.md), 10:35-10:47
+- [AI-Native Organisations Run on Skills: How to Structure and Scale Them — Imad Touil, QuantumBlack](../sources/20260828_M05vON8i0aI.md), 06:20-06:45

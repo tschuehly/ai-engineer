@@ -17,6 +17,7 @@ Details:
 - **Why the surrounding agent controls do not help.** Egress allowlists, sandboxes, capability grants, and credential brokering all constrain the agent process. A malicious `setup.py` or postinstall hook runs before any of that, as the developer or the CI runner, with the ambient credentials of the host — which is exactly the surface [A Developer Laptop Is an Ambient-Credential Surface](a-developer-laptop-is-an-ambient-credential-surface.md) describes. The mitigations that do apply are ordinary and unglamorous: version pinning with hash verification, an internal mirror with a quarantine delay on new releases, running installs in a container that holds no keys, and keeping provider credentials short-lived rather than long-lived files on disk.
 - **The broader framing Rizwan puts it under:** "it's become more dangerous than ever to depend on third party software where it takes a single compromise and a massive chain of contributors to get pwned" (03:57-04:15). He uses this as half of his argument that the *community* side of open source is no longer worth cultivating — see [Closing the Contribution Channel Is Where Slop Filtering Ends](closing-the-contribution-channel-is-where-slop-filtering-ends.md) for the other half.
 - Provenance: the incident is recounted second-hand in a keynote, not investigated here. The download figure, the three-hour window, and the attack path are as the speaker reports them; the durable content is the shape of the attack and the accidental detection, not the specific numbers.
+- **Skills are the same intake shape at the individual level.** Touil flags public skills as an unchecked supply-chain path because "skills actually does have scripts because that is the deterministic part of it," and pairs it with an access-control point: "not every skill is actually something that anyone in the organization should access. Some skills may have some business logic that is very sensitive." ([Touil](../sources/20260828_M05vON8i0aI.md), 12:37-13:13) The exposure differs from an infrastructure package in distribution rather than in kind — no package manager, no lockfile, no version pin by default — which removes most of the tooling a supply-chain review would normally hook into. Asserted as a risk; no incident or measurement is offered.
 
 Related topics:
 - [Security](../topics/security.md)
@@ -28,6 +29,8 @@ Related concepts:
 - [Treat Code-Executing Agents as RCE-Risk Surfaces](treat-code-executing-agents-as-rce-risk-surfaces.md)
 - [Decrypt Agent Credentials Only at Tool Execution Time](decrypt-agent-credentials-only-at-tool-execution-time.md)
 - [Closing the Contribution Channel Is Where Slop Filtering Ends](closing-the-contribution-channel-is-where-slop-filtering-ends.md)
+- [Auto-Evolving Skills Multiply Whatever Governance You Already Have](auto-evolving-skills-multiply-whatever-governance-you-already-have.md)
 
 Sources:
 - [Open Source Is Dead. Long Live Open Source. — Saoud Rizwan, Cline](../sources/20260807_CoEIs6Xm8m8.md), 03:57-05:19
+- [AI-Native Organisations Run on Skills: How to Structure and Scale Them — Imad Touil, QuantumBlack](../sources/20260828_M05vON8i0aI.md), 12:37-13:13

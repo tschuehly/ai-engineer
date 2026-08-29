@@ -570,6 +570,8 @@
 - [Learn risk scoring from audit feedback for predictive compliance](../concepts/learn-risk-scoring-from-audit-feedback-for-predictive-compliance.md)
 
 ## Coding Agents
+- [A Missing Skill Is Billed as Tokens, Not Recorded as a Gap](../concepts/a-missing-skill-is-billed-as-tokens-not-recorded-as-a-gap.md) - an unwritten skill produces no defect and no ticket, so a library gap surfaces as spend and steering iterations on a recurring task class.
+- [Skill Composability Is Decided Before Authoring, Not in the Registry](../concepts/skill-composability-is-decided-before-authoring-not-in-the-registry.md) - a catalog makes skills findable and owned but cannot make independently authored ones compose; the domain carve and named human owners come first.
 - [Review Comments Have Two Audiences With Inverted Error Costs](../concepts/review-comments-have-two-audiences-with-inverted-error-costs.md) - a wrong comment is cheap for a human and expensive for an agent; a nit is the reverse, so one filter cannot serve both surfaces.
 - [Measure a Review Bot by Whether the Comment Changed the Code](../concepts/measure-a-review-bot-by-whether-the-comment-changed-the-code.md) - the model asserts every finding at full confidence, so the signal is behavioural, and addressal covers every comment where a survey covers a tenth.
 - [Distributed Rule Authoring Is a Platform Problem, Not an Authoring Problem](../concepts/distributed-rule-authoring-is-a-platform-problem.md) - writing a review skill takes minutes; ownership binding, co-location, deterministic routing, and per-rule telemetry are the real cost.
@@ -1592,6 +1594,8 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [A Missing Skill Is Billed as Tokens, Not Recorded as a Gap](../concepts/a-missing-skill-is-billed-as-tokens-not-recorded-as-a-gap.md) - an unwritten skill produces no defect and no ticket, so a library gap surfaces as spend and steering iterations on a recurring task class.
+- [Auto-Evolving Skills Multiply Whatever Governance You Already Have](../concepts/auto-evolving-skills-multiply-whatever-governance-you-already-have.md) - a self-improving skill loop writes into whichever library already exists, so it multiplies the governance regime rather than supplying one.
 - [Measure a Review Bot by Whether the Comment Changed the Code](../concepts/measure-a-review-bot-by-whether-the-comment-changed-the-code.md) - the model asserts every finding at full confidence, so the signal is behavioural, and addressal covers every comment where a survey covers a tenth.
 - [Review Comments Have Two Audiences With Inverted Error Costs](../concepts/review-comments-have-two-audiences-with-inverted-error-costs.md) - a wrong comment is cheap for a human and expensive for an agent; a nit is the reverse, so one filter cannot serve both surfaces.
 - [Distributed Rule Authoring Is a Platform Problem, Not an Authoring Problem](../concepts/distributed-rule-authoring-is-a-platform-problem.md) - writing a review skill takes minutes; ownership binding, co-location, deterministic routing, and per-rule telemetry are the real cost.
@@ -2339,6 +2343,9 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Skills Are the Residual Where Organizational Know-How Lands](../concepts/skills-are-the-residual-where-organizational-know-how-lands.md) - hooks fire on events, MCP servers are consumed not authored, and sub agents manage the context window, so skills are the only authorable home left for org-specific knowledge.
+- [Skill Composability Is Decided Before Authoring, Not in the Registry](../concepts/skill-composability-is-decided-before-authoring-not-in-the-registry.md) - a catalog makes skills findable and owned but cannot make independently authored ones compose; the domain carve and named human owners come first.
+- [Auto-Evolving Skills Multiply Whatever Governance You Already Have](../concepts/auto-evolving-skills-multiply-whatever-governance-you-already-have.md) - a self-improving skill loop writes into whichever library already exists, so it multiplies the governance regime rather than supplying one.
 - [Read the Stop Reason Before You Read the Answer](../concepts/read-the-stop-reason-before-you-read-the-answer.md) - `tool_use` drives the loop, and `max_tokens` means the tool call you are about to parse may be cut off mid-argument.
 - [Defer Tool Definitions Out of Context and Let the Model Search for Them](../concepts/defer-tool-definitions-out-of-context-and-let-the-model-search-for-them.md) - a per-tool deferred flag plus a tool-search call, so definitions cost nothing until wanted.
 - [Cap the Skills List as a Share of the Context Window](../concepts/cap-the-skills-list-as-a-share-of-the-context-window.md) - 2% of the window, with descriptions trimmed rather than skills dropped as the catalog grows.
@@ -2621,6 +2628,10 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Skills Are the Residual Where Organizational Know-How Lands](../concepts/skills-are-the-residual-where-organizational-know-how-lands.md) - hooks fire on events, MCP servers are consumed not authored, and sub agents manage the context window, so skills are the only authorable home left for org-specific knowledge.
+- [A Missing Skill Is Billed as Tokens, Not Recorded as a Gap](../concepts/a-missing-skill-is-billed-as-tokens-not-recorded-as-a-gap.md) - an unwritten skill produces no defect and no ticket, so a library gap surfaces as spend and steering iterations on a recurring task class.
+- [Skill Composability Is Decided Before Authoring, Not in the Registry](../concepts/skill-composability-is-decided-before-authoring-not-in-the-registry.md) - a catalog makes skills findable and owned but cannot make independently authored ones compose; the domain carve and named human owners come first.
+- [Auto-Evolving Skills Multiply Whatever Governance You Already Have](../concepts/auto-evolving-skills-multiply-whatever-governance-you-already-have.md) - a self-improving skill loop writes into whichever library already exists, so it multiplies the governance regime rather than supplying one.
 - [Distributed Rule Authoring Is a Platform Problem, Not an Authoring Problem](../concepts/distributed-rule-authoring-is-a-platform-problem.md) - writing a review skill takes minutes; ownership binding, co-location, deterministic routing, and per-rule telemetry are the real cost.
 - [Comment Volume Is a Property of the Review Pipeline, Not the Model](../concepts/comment-volume-is-a-property-of-the-review-pipeline.md) - several generators over one diff make volume emergent, so one filtering waist decides what a reviewer actually sees.
 - [Measure a Review Bot by Whether the Comment Changed the Code](../concepts/measure-a-review-bot-by-whether-the-comment-changed-the-code.md) - the model asserts every finding at full confidence, so the signal is behavioural, and addressal covers every comment where a survey covers a tenth.
