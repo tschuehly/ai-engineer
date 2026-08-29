@@ -12,6 +12,7 @@ Details:
 - Dependency additions deserve scrutiny because a model may install a lesser-known, vulnerable, malicious, or typo-squatted package that later runs in a privileged environment. 10:16-10:33
 - Dependency-security tools such as Socket's MCP server can be exposed to the agent or run as a post-rollout system check before dependency changes are trusted. 11:47-12:15
 - LLM-based monitors in the loop are valuable but not as certain as deterministic controls, so review design should combine monitors with system-level enforcement. 13:02-13:17
+- **Scope can do the work of review, and often does in year one.** Cloudflare's entire go-to-market agent surface is read-only by construction — every named use case is a query or a generated artifact — so no approval gate exists because no agent can change a record. The asymmetry that justifies the sequencing is failure visibility: a wrong answer is caught by the person who asked for it, while a wrong CRM write propagates into forecasts, routing, and compensation before anyone reads it. Quoting and approvals are named as the harder class precisely because they already have human authorization chains an agent would have to enter rather than precede. ([Joyce](../sources/20260826_Qw_tC68KKes.md), 12:36-14:28, 17:51-18:04)
 
 Related topics:
 - [Coding Agents](../topics/coding-agents.md)
@@ -22,6 +23,8 @@ Related concepts:
 - [AI output speed can overwhelm review capacity](ai-output-speed-can-overwhelm-review-capacity.md)
 - [Use reviewer agents and lints to turn review lessons into guardrails](use-reviewer-agents-and-lints-to-turn-review-lessons-into-guardrails.md)
 - [Human approval can hide tool-description and parameter risk](human-approval-can-hide-tool-description-and-parameter-risk.md)
+- [Read-Side Agents Scale First Because the Write Side Needs Approvals](read-side-agents-scale-first-because-the-write-side-needs-approvals.md)
 
 Sources:
 - [OpenAI on Securing Code-Executing AI Agents - Fouad Matin (Codex, Agent Robustness)](../sources/20250730_w7IMuYsBNr8.md), 05:34-06:04, 09:49-13:17
+- [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md), 12:36-14:28, 17:51-18:04

@@ -1,6 +1,8 @@
 # Concept Index
 
 ## Agents
+- [Separate the Context Gap From the Expert Gap](../concepts/separate-the-context-gap-from-the-expert-gap.md) - assembly cost and judgment variance are different deficits with different fixes.
+- [Read-Side Agents Scale First Because the Write Side Needs Approvals](../concepts/read-side-agents-scale-first-because-the-write-side-needs-approvals.md) - briefs and decks ship long before quoting, approvals, and CRM writes.
 - [Treat Agent Experience as a Curb Cut](../concepts/treat-agent-experience-as-a-curb-cut.md) - serving the agent clears the human path; one more user in the room, still serving the human on the other end.
 - [Split Agent Advocacy Into Engineering, Product, and Marketing Flavors](../concepts/split-agent-advocacy-into-engineering-product-and-marketing-flavors.md) - the MCP interface and its instrumentation, the end-to-end agent experience, and the agent funnel are three different jobs.
 - [Count Burned Turns, Because Agent Self-Recovery Hides Tool Defects](../concepts/count-burned-turns-because-agent-self-recovery-hides-tool-defects.md) - a guessed parameter the error message repaired still cost a full turn, and the run still passed.
@@ -587,6 +589,12 @@
 - [Embed architecture governance into developer workflows](../concepts/embed-architecture-governance-into-developer-workflows.md)
 
 ## Business Intelligence
+- [Pre-Shape Analytics Data by Time, Slice, and Metric Before the Agent Reads It](../concepts/pre-shape-analytics-data-by-time-slice-and-metric-before-the-agent-reads-it.md) - engineer the filters, aggregations, and trend detection up front so the model reads a small clean table.
+- [Split a Generated Narrative Into Drafter, Fact-Checker, and Tone Agents](../concepts/split-generated-narrative-into-drafter-checker-and-tone-agents.md) - drafter, veracity checker, and a tone agent whose objective is framing balance rather than correctness.
+- [Read Every Run for Months Before Trusting an Unevaluatable Narrative](../concepts/read-every-run-for-months-before-trusting-an-unevaluatable-narrative.md) - exhaustive manual review as a burn-in when there is no ground-truth label, and what it fails to leave behind.
+- [Push the Narrative Because Dashboard Adoption Is Always Uneven](../concepts/push-the-narrative-because-dashboard-adoption-is-always-uneven.md) - metric adoption is a distribution, so deliver the story and demote the dashboard to drill-down.
+- [Put the Business Question Set Inside the Skill File, Not Just the Schema](../concepts/put-the-business-question-set-inside-the-skill-file-not-just-the-schema.md) - business semantics plus the questions people actually ask, shipped as context and reused as an app spec.
+- [Layer Ask, Push, and Self-Serve Because Teams Interface Differently](../concepts/layer-ask-push-and-self-serve-because-teams-interface-differently.md) - a request queue, a digest, and a workspace running concurrently over one substrate.
 - [Choose Quality Over Coverage Because the First Five Answers Decide Adoption](../concepts/choose-quality-over-coverage-because-the-first-five-answers-decide-adoption.md) - a free-form box is judged per user on its first five answers, so 50 questions at 95% beats 100 at 70%.
 - [Write the Question Set From the Business Process Before the Data Is Connected](../concepts/write-the-question-set-from-the-business-process-before-the-data-is-connected.md) - 150 questions taken from the sales process, including the ones the system could not answer, as the pre-traffic eval set.
 - [Stage the Internal Agent Roadmap From Answers to Automation to Team-Built Tooling](../concepts/stage-the-internal-agent-roadmap-from-answers-to-automation-to-team-built-tooling.md) - four rungs, each changing what the user does and each consuming the previous rung's substrate.
@@ -951,6 +959,9 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Put the Business Question Set Inside the Skill File, Not Just the Schema](../concepts/put-the-business-question-set-inside-the-skill-file-not-just-the-schema.md) - business semantics plus the questions people actually ask, shipped as context and reused as an app spec.
+- [Run a Submission-and-Review Alias for Shared Skills](../concepts/run-a-submission-and-review-alias-for-shared-skills.md) - central intake with two reviewer constituencies as the control on skill proliferation.
+- [Pre-Shape Analytics Data by Time, Slice, and Metric Before the Agent Reads It](../concepts/pre-shape-analytics-data-by-time-slice-and-metric-before-the-agent-reads-it.md) - engineer the filters, aggregations, and trend detection up front so the model reads a small clean table.
 - [Human and Agent Credibility Reward Opposite Writing Styles](../concepts/human-and-agent-credibility-reward-opposite-writing-styles.md) - two registers with inverted rules; the agent-side permission is for structure, not length.
 - [Put Humans and Agents on the Same Substrate Instead of an AI Layer on Top](../concepts/put-humans-and-agents-on-the-same-substrate-instead-of-an-ai-layer-on-top.md) - markdown plus databases as one representation both readers can use.
 - [Own the Context Layer and Rent Every Other Layer](../concepts/own-the-context-layer-and-rent-every-other-layer.md) - the layer to keep, because a generic tool cannot hold the data model and you cannot debug what you rent.
@@ -1581,6 +1592,9 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Layer Ask, Push, and Self-Serve Because Teams Interface Differently](../concepts/layer-ask-push-and-self-serve-because-teams-interface-differently.md) - a request queue, a digest, and a workspace running concurrently over one substrate.
+- [Push the Narrative Because Dashboard Adoption Is Always Uneven](../concepts/push-the-narrative-because-dashboard-adoption-is-always-uneven.md) - metric adoption is a distribution, so deliver the story and demote the dashboard to drill-down.
+- [Separate the Context Gap From the Expert Gap](../concepts/separate-the-context-gap-from-the-expert-gap.md) - assembly cost and judgment variance are different deficits with different fixes.
 - [Treat Agent Experience as a Curb Cut](../concepts/treat-agent-experience-as-a-curb-cut.md) - agent-facing work upgrades the human surface, with two starter actions and one limit the analogy hides.
 - [Split Agent Advocacy Into Engineering, Product, and Marketing Flavors](../concepts/split-agent-advocacy-into-engineering-product-and-marketing-flavors.md) - a decomposition for assigning ownership, usable as a gap check on agent-experience work.
 - [Agents Widen the Dev-Tool ICP Beyond Engineers](../concepts/agents-widen-the-dev-tool-icp-beyond-engineers.md) - zero GitHub commits to 12,000 and an OSS maintainership in a year, from a research scientist.
@@ -1726,6 +1740,12 @@
 
 ## Go To Market
 
+- [Separate the Context Gap From the Expert Gap](../concepts/separate-the-context-gap-from-the-expert-gap.md) - assembly cost and judgment variance are different deficits with different fixes.
+- [Layer Ask, Push, and Self-Serve Because Teams Interface Differently](../concepts/layer-ask-push-and-self-serve-because-teams-interface-differently.md) - a request queue, a digest, and a workspace running concurrently over one substrate.
+- [Push the Narrative Because Dashboard Adoption Is Always Uneven](../concepts/push-the-narrative-because-dashboard-adoption-is-always-uneven.md) - metric adoption is a distribution, so deliver the story and demote the dashboard to drill-down.
+- [Read-Side Agents Scale First Because the Write Side Needs Approvals](../concepts/read-side-agents-scale-first-because-the-write-side-needs-approvals.md) - briefs and decks ship long before quoting, approvals, and CRM writes.
+- [Run a Submission-and-Review Alias for Shared Skills](../concepts/run-a-submission-and-review-alias-for-shared-skills.md) - central intake with two reviewer constituencies as the control on skill proliferation.
+- [Split a Generated Narrative Into Drafter, Fact-Checker, and Tone Agents](../concepts/split-generated-narrative-into-drafter-checker-and-tone-agents.md) - drafter, veracity checker, and a tone agent whose objective is framing balance rather than correctness.
 - [Measure Agent Recommendations on Pain Prompts, Not Comparison Prompts](../concepts/measure-agent-recommendations-on-pain-prompts-not-comparison-prompts.md) - 65% when the prompt is a tool comparison, zero when it describes the pain the product solves.
 - [Stale Product Content Compounds Through Newer Models](../concepts/stale-product-content-compounds-through-newer-models.md) - the newer model pitched the retired product more, because superseded models publish what later ones read.
 - [Self-Serve Onboarding Is a Precondition for Agent Recommendation](../concepts/self-serve-onboarding-is-a-precondition-for-agent-recommendation.md) - go to agent market — registries plus an adoption path with no sales conversation in it.
@@ -1759,6 +1779,7 @@
 - [Verify AI Call Summaries Before CRM Sync](../concepts/verify-ai-call-summaries-before-crm-sync.md) - the write path into the system of record needs a check, and agent tool access widens it.
 
 ## Evaluation
+- [Read Every Run for Months Before Trusting an Unevaluatable Narrative](../concepts/read-every-run-for-months-before-trusting-an-unevaluatable-narrative.md) - exhaustive manual review as a burn-in when there is no ground-truth label, and what it fails to leave behind.
 - [Benchmark Your Own Tool by Running Agents With and Without It](../concepts/benchmark-your-tool-by-running-agents-with-and-without-it.md) - hundreds of lifecycle tasks in both conditions, with the traces as the deliverable rather than the score.
 - [Count Burned Turns, Because Agent Self-Recovery Hides Tool Defects](../concepts/count-burned-turns-because-agent-self-recovery-hides-tool-defects.md) - recovered tool errors are waste that no success rate reports.
 - [Measure Agent Recommendations on Pain Prompts, Not Comparison Prompts](../concepts/measure-agent-recommendations-on-pain-prompts-not-comparison-prompts.md) - a prompt set partitioned by intent, rerun per model release.
@@ -2489,6 +2510,7 @@
 - [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md)
 
 ## Security
+- [Read-Side Agents Scale First Because the Write Side Needs Approvals](../concepts/read-side-agents-scale-first-because-the-write-side-needs-approvals.md) - briefs and decks ship long before quoting, approvals, and CRM writes.
 - [Keep Agents Off the Customer Channel and Treat Inbound Forms as Untrusted Input](../concepts/keep-agents-off-the-customer-channel-and-treat-inbound-forms-as-untrusted-input.md) - the contact-sales form is attacker-controlled text aimed straight at the prompt that consumes it.
 - [Land the Data in One Governed Store So Agents Inherit Access Control](../concepts/land-the-data-in-one-governed-store-so-agents-inherit-access-control.md) - consolidation makes authorization a property agents inherit rather than implement.
 - [Scope a Person-Cloned Agent by Caller, With Drafts as the Shared Capability](../concepts/scope-a-person-cloned-agent-by-caller-with-drafts-as-the-shared-capability.md) - drafting bounds delegated authority and leaves the read side of the exposure open.
@@ -2551,6 +2573,8 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Run a Submission-and-Review Alias for Shared Skills](../concepts/run-a-submission-and-review-alias-for-shared-skills.md) - central intake with two reviewer constituencies as the control on skill proliferation.
+- [Put the Business Question Set Inside the Skill File, Not Just the Schema](../concepts/put-the-business-question-set-inside-the-skill-file-not-just-the-schema.md) - business semantics plus the questions people actually ask, shipped as context and reused as an app spec.
 - [Count Burned Turns, Because Agent Self-Recovery Hides Tool Defects](../concepts/count-burned-turns-because-agent-self-recovery-hides-tool-defects.md) - a silent description lets the model's training prior win, and a good error message hides the cost.
 - [Benchmark Your Own Tool by Running Agents With and Without It](../concepts/benchmark-your-tool-by-running-agents-with-and-without-it.md) - the vendor-side method for producing the traces that expose those defects.
 - [Replace Buy-Versus-Build With Arbitrary Customizability](../concepts/replace-buy-versus-build-with-arbitrary-customizability.md) - an MCP server turns a procurement question into a customizability question.
@@ -2852,6 +2876,9 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Split a Generated Narrative Into Drafter, Fact-Checker, and Tone Agents](../concepts/split-generated-narrative-into-drafter-checker-and-tone-agents.md) - drafter, veracity checker, and a tone agent whose objective is framing balance rather than correctness.
+- [Pre-Shape Analytics Data by Time, Slice, and Metric Before the Agent Reads It](../concepts/pre-shape-analytics-data-by-time-slice-and-metric-before-the-agent-reads-it.md) - engineer the filters, aggregations, and trend detection up front so the model reads a small clean table.
+- [Read Every Run for Months Before Trusting an Unevaluatable Narrative](../concepts/read-every-run-for-months-before-trusting-an-unevaluatable-narrative.md) - exhaustive manual review as a burn-in when there is no ground-truth label, and what it fails to leave behind.
 - [Reduce Every Workflow to Know, Decide, Act, and Learn](../concepts/reduce-every-workflow-to-know-decide-act-and-learn.md) - the decomposition that turns departmental automations into one decisioning system.
 - [Shadow Your Best Human Before Encoding the Workflow](../concepts/shadow-your-best-human-before-encoding-the-workflow.md) - encode a mediocre process and you get a mediocre agent; start with the most legible workflow.
 - [Make Routing and Eligibility a Shared First-Class Primitive](../concepts/make-routing-and-eligibility-a-shared-first-class-primitive.md) - eligibility leaves the individual tools and becomes a versioned entity with one router in front.

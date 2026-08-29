@@ -16,6 +16,7 @@ Details:
 - **This is the pre-launch counterpart to trace mining, and it solves the cold start that trace mining has.** Promoting clustered production failures into a golden dataset ([Promote Validated Live-Trace Failure Clusters Into the Golden Dataset](promote-validated-live-trace-failure-clusters-into-the-golden-dataset.md)) needs traffic; a process-derived question set needs only the process. Once traffic exists, the same team reads demand off the log instead ([Classify the Assistant Question Log to Find Feature and Content Gaps](classify-the-assistant-question-log-to-find-feature-and-content-gaps.md)), and the two are the same instrument at different stages.
 - Limits: what "accuracy" means over 150 free-form business questions is never defined in the source — no rubric, grader, or partial-credit scheme is described, and no later score against the same set is reported, so the set's value as a tracked regression suite is asserted rather than shown. ([Provenance and Limits](../sources/20260826_DrTdD-ttjCY.md))
 - **A sibling pre-build method that captures the process by observation rather than by enumeration.** Where Izmit writes 150 questions off the sales process before the data is connected, Liu watches the reps run it: "before you build, shadow your best human… I saw how many tabs and tools they were navigating between, and that was chaos, but it was also the spec." The two produce different artifacts from the same commitment — the eval set comes from what people ask, the workflow spec from what they do — and both refuse to let the current system's reach define the requirement. ([Liu](../sources/20260826_L4I7WgiEquo.md), 19:26-20:01)
+- **The same list has a second use: ship it as context, not only as a test.** Cloudflare's role-specific skill files contain "the types of questions that the business would ask of the data" — closed-date changes, opportunity amount changes — discovered "through testing" and embedded so the agent can "answer essentially 80% or more of the questions, where the other 20% might be more complex strategic questions." Izmit's 150 questions grade the system; Joyce's question set primes it. The two uses compose from one artifact, and the difference in provenance matters: a list written before traffic measures the gap honestly, while a list refined against the system risks teaching it only what it already answers. ([Joyce](../sources/20260826_Qw_tC68KKes.md), 07:27-07:53)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -30,7 +31,9 @@ Related concepts:
 - [Evaluate BI agents with real metadata and expert feedback](evaluate-bi-agents-with-real-metadata-and-expert-feedback.md)
 - [Mine Chat History for Past Decisions and Turn Them Into Judgment Evals](mine-chat-history-for-past-decisions-and-turn-them-into-judgment-evals.md)
 - [Shadow Your Best Human Before Encoding the Workflow](shadow-your-best-human-before-encoding-the-workflow.md)
+- [Put the Business Question Set Inside the Skill File, Not Just the Schema](put-the-business-question-set-inside-the-skill-file-not-just-the-schema.md)
 
 Sources:
 - [Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 04:08-04:42
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 19:26-20:01
+- [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md), 07:27-07:53

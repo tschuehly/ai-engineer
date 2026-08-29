@@ -20,6 +20,7 @@ Details:
 - **What a wrong verifier costs once no human sits between it and the fixer.** Uber wires the agent loop into the same review service as its pull requests, and reports the failure that follows: "with the inner loop, our accuracy needs actually need to go up, or else we can result in… cavitation of an agent where it fixes something, goes back, gets another code review, and has to kind of like fix backwards because the quality of the comment was low." The hidden review this page describes is not merely unaudited, it is obeyed — the agent has no mechanism for disbelieving its reviewer, so an inaccurate verifier converts directly into rework rather than into a comment somebody skips. Reported as an operating observation with no incidence rate attached. ([Bond and Ketkar](../sources/20260828_EL123UNokkI.md), 12:14-12:36)
 
 - **The one shape where a loop grading itself is legitimate — and it confirms this page rather than contradicting it.** In a proof-carrying loop the grader is not the agent: it is a fixed kernel orders of magnitude smaller than the search, and it "catches the mistake… an incorrect proof is rejected immediately." But the review has not vanished, it has moved: "humans own the specification and machines own the code and proof," and the human step that remains is explicit — "you then validate the specification. So, either the human reviews it, or you test that it holds on some inputs." Judgment relocates upstream to what correct means; it is not removed. ([Pant](../sources/20260828_lRa9sPaMyy4.md), 01:32-01:52, 04:03-04:14)
+- **Where the hidden review actually went, in one case: a burn-in.** Cloudflare's summary pipeline contains its own reviewer agent, and the humans still "tested for about 2-3 months and, you know, looking every single run to see what is going wrong" before trusting it. The self-check did not remove the review; it front-loaded it into a fixed-length period of exhaustive manual reading. The unanswered question is the same one this page raises — no exit criterion, replacement monitoring, or re-burn-in policy after a model or prompt change is described, so the accumulated confidence has no stated expiry. ([Joyce](../sources/20260826_Qw_tC68KKes.md), 11:41-11:55)
 
 Related topics:
 - [Workflows](../topics/workflows.md)
@@ -36,6 +37,7 @@ Related concepts:
 - [Write the Test First So the Agent Cannot Fit It to the Code](write-the-test-first-so-the-agent-cannot-fit-it-to-the-code.md)
 - [Review Comments Have Two Audiences With Inverted Error Costs](review-comments-have-two-audiences-with-inverted-error-costs.md)
 - [Validate the Specification, Because the Proof Cannot](validate-the-specification-because-the-proof-cannot.md)
+- [Read Every Run for Months Before Trusting an Unevaluatable Narrative](read-every-run-for-months-before-trusting-an-unevaluatable-narrative.md)
 
 Sources:
 - [Should AI Engineers Still Read Code in 2026? The Z/L Continuum — Alex Volkov, ThursdAI](../sources/20260710_ZpK5PWX2YRM.md), 18:36-20:13
@@ -43,3 +45,4 @@ Sources:
 - [How to Get Your Org to Adopt Coding Agents (Without Shipping Garbage) — Eyal Blum, Figma](../sources/20260828_5Bn0xro2ol8.md), 06:12-06:42
 - [Building uReview, Uber's Multi-Agent Code Review Engine — Will Bond & Ameya Ketkar, Uber](../sources/20260828_EL123UNokkI.md), 12:14-12:36
 - [Your Code Has Bugs. Lean4 Has Proofs: Formal Verification for Engineers — Varun Pant, AWS](../sources/20260828_lRa9sPaMyy4.md), 01:32-01:52, 04:03-04:14
+- [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md), 11:41-11:55

@@ -16,6 +16,7 @@ Details:
 - The ladder exists to answer a specific decay, not to be comprehensive: each rung is a new *kind* of thing the user can do, which is what resets the reference point that habituation keeps lowering ([The Wow Factor Collapses Into a Baseline Within Months](the-wow-factor-collapses-into-a-baseline-within-months.md)). "If you just do the first stage, and if you just wait there, you will get disrupted in a month or two." (11:14-11:35)
 - **Read as a dependency chain rather than a maturity model, it explains its own ordering.** Rung two needs write-capable integrations, which need the trust earned at rung one. Rung three needs both a skill mechanism and governance that makes user-built artifacts safe to run, which is what rungs one and two put in place. The rungs are not interchangeable phases of ambition; each consumes the previous one's output.
 - Limits: this is one company's observed sequence, presented as what "we usually see with the sales teams," with no adoption or value data attached to any rung and no report of what fraction of users reached rungs two or three. The team-built-tooling rung in particular assumes a governed platform where non-engineers can deploy safely; nothing is said about review, ownership, or sprawl of team-built skills. ([Provenance and Limits](../sources/20260826_DrTdD-ttjCY.md))
+- **A second internal deployment whose three modes run concurrently rather than as rungs.** Cloudflare layers a request queue, a pushed weekly narrative, and a self-serve agentic workspace at the same time, segmented by user preference — "the layering of those three pillars... being able to answer questions where the team comes to you... and then the pushing of information and then self-serviceability." And its next step is not personalization but the write path: "harder problems around quoting and approvals and updating the CRM itself." Read together, the two accounts suggest the ladder describes capability depth while the layering describes delivery breadth, and a roadmap needs both axes. ([Joyce](../sources/20260826_Qw_tC68KKes.md), 16:30-17:08, 17:51-18:11)
 
 Related topics:
 - [Business Intelligence](../topics/business-intelligence.md)
@@ -30,6 +31,9 @@ Related concepts:
 - [Use skills for workflow guidance and MCP for integrations](use-skills-for-workflow-guidance-and-mcp-for-integrations.md)
 - [Treat Go-to-Market as a Live Model of Your World That Agents Act On](treat-go-to-market-as-a-live-model-of-your-world.md)
 - [Crystallize the UI for Repeated Use Cases and Generate It for Novel Ones](crystallize-the-ui-for-repeated-use-cases-and-generate-it-for-novel-ones.md)
+- [Layer Ask, Push, and Self-Serve Because Teams Interface Differently](layer-ask-push-and-self-serve-because-teams-interface-differently.md)
+- [Read-Side Agents Scale First Because the Write Side Needs Approvals](read-side-agents-scale-first-because-the-write-side-needs-approvals.md)
 
 Sources:
 - [Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 05:14-05:31, 09:38-11:35
+- [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md), 16:30-17:08, 17:51-18:11

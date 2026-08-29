@@ -15,6 +15,7 @@ Details:
 - The event layer sits on top of the same joined data as the market classification and the internal agents, which is what makes "something significant happens" computable at all — the alert is a diff against a model, not a metric on a single source. (03:53-04:42, 05:22-07:27)
 - **Limit.** No definition of "significant," no thresholds, no volume, no false-positive rate, and no evidence about what the team did with the alerts. The tool is named (Request Lens) and demonstrated only as a concept slide. (07:02-07:27)
 - **A second account-event layer that carries the design one step further: it assigns the work instead of notifying.** Notion defines the unit by consequence — "a signal is a single customer event that's important enough to change what should happen next for a customer" — and its service "decides whether a single action is available, decides who should own that action, and then it emits a concrete task" for a human or an agent. Its trigger set is user-driven events (an AI limit hit, a contact-sales submission) plus external ones nobody at the company can observe in a log — funding rounds, hiring, tech-stack shifts — which are credited with making the system "proactive instead of reactive." The absence case is handled differently than in Wang's set: rather than detecting a stop, the no-signal path falls through to a predictive engine that picks relevant features and sends lifecycle messages. ([Liu](../sources/20260826_L4I7WgiEquo.md), 11:20-12:53)
+- **The aggregate-performance precursor, and the stated path from it to the account level.** Cloudflare pushes a weekly narrative about how teams are pacing — "trends, standouts, as well as watches" — before pushing anything about individual customers, and names the account-level version as the next step: extending the pipeline "beyond just what I've shown you for multiple teams, but also down to the customer level." The generalization is not free. A performance summary is computed from a fixed slice grid where every cell exists; an account event stream has to notice that a cell stopped producing rows, which is the failure this page is about. ([Joyce](../sources/20260826_Qw_tC68KKes.md), 09:04-09:18, 11:55-12:03)
 
 Related topics:
 - [Go To Market](../topics/go-to-market.md)
@@ -27,7 +28,9 @@ Related concepts:
 - [Run a Signal Layer to Triage Comms and Protect Focus](run-a-signal-layer-to-triage-comms-and-protect-focus.md)
 - [Incident Agents Turn Alerts Into RCA and Operational Memory](incident-agents-turn-alerts-into-rca-and-operational-memory.md)
 - [Emit Owner-Assigned Tasks From Signals, With a Marketing Default When None Fire](emit-owner-assigned-tasks-from-signals-with-a-marketing-default-when-none-fire.md)
+- [Push the Narrative Because Dashboard Adoption Is Always Uneven](push-the-narrative-because-dashboard-adoption-is-always-uneven.md)
 
 Sources:
 - [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md), 03:53-04:42, 07:02-07:27
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 11:20-12:53
+- [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md), 09:04-09:18, 11:55-12:03

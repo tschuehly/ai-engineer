@@ -16,6 +16,7 @@ Details:
 - The librarian ("radiant librarian") is a shipped feature inside Upside's product, presented as a design pattern any agent should consult before acting. (12:12-12:23)
 - This is a preflight / just-in-time context-injection pattern applied to *definitions*: it is the human analogue of onboarding a new hire so they understand your business before they answer, and it complements execution-based query validation that catches valid-but-wrong queries after the fact.
 - **Where the definitions live when the store is the governed layer, and what happens when they outgrow the prompt.** Snowflake's internal assistant encodes business meaning in 15 semantic views over 85 tables and 3,000 columns rather than in a retrieval-time librarian, and started with the process knowledge inline: "a nine-page long agent instructions." That does not hold — "we were creating all these business processes and workflows. We couldn't fit them into the agent instructions anymore. And then the skills came, and we were like, perfect, let's build a skill library" — and when orchestration instructions for five to six MCP connections pushed past the instruction limit, the answer was progressive disclosure. The durable point for a definitions layer: it grows monotonically with the business, so it needs a retrieval mechanism rather than a prompt slot, whichever artifact holds it. ([Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 05:14-05:31, 12:11-13:08)
+- **The static alternative, and what it trades away.** Cloudflare puts the same class of knowledge — business definitions tied to the data, plus the recurring question shapes — inside role-specific skill files loaded up front, and moves the riskiest definitions (which rows count, how they roll up) out of the model entirely into pre-engineered transforms. That removes the librarian service and its latency, at the cost of the librarian's two live properties: just-in-time selection of only the relevant definitions, and accumulated knowledge of prior failed queries. A static file cannot learn from the query that just went wrong. ([Joyce](../sources/20260826_Qw_tC68KKes.md), 06:47-07:53, 10:37-10:49)
 
 Related topics:
 - [Business Intelligence](../topics/business-intelligence.md)
@@ -30,7 +31,10 @@ Related concepts:
 - [Validate generated SQL by execution before trusting it](validate-generated-sql-by-execution-before-trusting-it.md)
 - [Compile natural-language analytics into reusable deterministic widgets](compile-natural-language-analytics-into-reusable-deterministic-widgets.md)
 - [Stage the Internal Agent Roadmap From Answers to Automation to Team-Built Tooling](stage-the-internal-agent-roadmap-from-answers-to-automation-to-team-built-tooling.md)
+- [Put the Business Question Set Inside the Skill File, Not Just the Schema](put-the-business-question-set-inside-the-skill-file-not-just-the-schema.md)
+- [Pre-Shape Analytics Data by Time, Slice, and Metric Before the Agent Reads It](pre-shape-analytics-data-by-time-slice-and-metric-before-the-agent-reads-it.md)
 
 Sources:
 - [Design Patterns for AI Trust: Juries, Libraries, and Agent Tiers — Alex Bauer, Upside.tech](../sources/20260711_YZQsWVeN3rE.md), 12:12-13:10
 - [Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 05:14-05:31, 12:11-13:08
+- [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md), 06:47-07:53, 10:37-10:49

@@ -15,6 +15,7 @@ Details:
 - The design answers a specific named failure: "every vendor added a hop and this lag was causing us to act on stale data, and that meant we were automating on yesterday's world." Consolidating ingestion and publishing a served profile removes the per-vendor hop from the decision path. (04:49-04:59)
 - It also answers the structured/unstructured problem, because the facts that change what a rep should do — "the champion just left," "don't contact this customer again," "they're blocked in legal" — arrive as notes; the normalized entities are brought into the shared workspace "so that we could work with structured and unstructured data at the same time." (05:00-05:27, 10:10-10:35)
 - **Limit.** "Milliseconds" is asserted, not measured, and no figure is given for freshness lag, entity count, write volume, or the cost of maintaining two stores. Which entities get real-time rather than daily transforms is not specified, so the staleness boundary that motivated the design is left undrawn. (09:11-09:49)
+- **The same split, with a different serve shape, when the reader is an analysis rather than an account agent.** Cloudflare pre-computes into tables organized by time, organizational slice, and metric — wide for snapshots, long for trends — because "a big part of this is simplifying the data so that the AI agents can actually analyze the data in a very consistent and clean way." Notion's serve layer is keyed by entity ID for millisecond per-account reads; this one is keyed by period and slice for aggregate reasoning. Both move the joins and the definitions into batch, and the choice of serve shape follows from the question the agent is being asked, not from the storage technology. ([Joyce](../sources/20260826_Qw_tC68KKes.md), 10:04-10:37)
 
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
@@ -28,6 +29,8 @@ Related concepts:
 - [Pre-Bake Transforms Too Heavy for the Real-Time Path](pre-bake-transforms-too-heavy-for-the-realtime-path.md)
 - [Treat Go-to-Market as a Live Model of Your World That Agents Act On](treat-go-to-market-as-a-live-model-of-your-world.md)
 - [Do Not Cache Context Engine Answers as Durable Truth](do-not-cache-context-engine-answers-as-durable-truth.md)
+- [Pre-Shape Analytics Data by Time, Slice, and Metric Before the Agent Reads It](pre-shape-analytics-data-by-time-slice-and-metric-before-the-agent-reads-it.md)
 
 Sources:
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 04:49-04:59, 09:04-10:35
+- [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md), 10:04-10:37

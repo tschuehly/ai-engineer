@@ -16,6 +16,7 @@ Details:
 - **Why the earlier stages cannot warn you about this.** Pilot and beta cohorts either volunteered or were small enough to be reached in person ([Gate Each Rollout Phase on a Different Question](gate-each-rollout-phase-on-a-different-question.md)), so trial rate is ~100% by construction and only return rate varies. General availability is the first cohort containing people with no interest, which is exactly when the trial-rate denominator becomes the binding constraint — and it arrives at the moment leadership starts reading the dashboard.
 - This is the operational form of the cold-start problem in [Continual Learning and Enablement Are One Loop With a Cold Start](continual-learning-and-enablement-are-one-loop-with-a-cold-start.md): traces come from usage, usage does not appear on its own, and a log-mining improvement loop in a 20%-trial deployment is starved by construction ([Classify the Assistant Question Log to Find Feature and Content Gaps](classify-the-assistant-question-log-to-find-feature-and-content-gaps.md)).
 - Limits: 20% is one measurement, two weeks after one GA, at one company; no trial curve over time and no eventual ceiling is reported. "Half of where we are today" is a counterfactual with no control. The tactics listed (executive sponsorship, manager-level comparison dashboards) assume a hierarchical sales organization and may not transfer to populations without that structure. ([Provenance and Limits](../sources/20260826_DrTdD-ttjCY.md))
+- **A comparable internal deployment that reports neither number, which is the common case.** Cloudflare's talk describes a weekly pushed summary and a self-serve agentic workspace across a go-to-market organization and gives no user count, trial rate, return rate, or usage figure — its single outcome claim is "we've really been able to 2x our efficiency," a productivity assertion that is silent on how many people the tooling reached. The distinction this page draws is invisible in that framing: an efficiency multiple computed over adopters says nothing about the population that never opened the tool. ([Joyce](../sources/20260826_Qw_tC68KKes.md), 16:56-17:08)
 
 Related topics:
 - [Product Strategy](../topics/product-strategy.md)
@@ -29,6 +30,8 @@ Related concepts:
 - [Drive Org-Wide Agentic Adoption Through Champions and AI-Ready Repos](drive-org-wide-agentic-adoption-through-champions-and-ai-ready-repos.md)
 - [Measure feature adoption, not shipping velocity](measure-feature-adoption-not-shipping-velocity.md)
 - [Optimize Onboarding Around One Aha Moment](optimize-onboarding-around-one-aha-moment.md)
+- [Layer Ask, Push, and Self-Serve Because Teams Interface Differently](layer-ask-push-and-self-serve-because-teams-interface-differently.md)
 
 Sources:
 - [Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 07:13-08:50
+- [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md), 16:56-17:08

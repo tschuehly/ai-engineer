@@ -17,6 +17,7 @@ Details:
 - He restates it as the first of his closing takeaways and as a hard rule rather than a tradeoff to tune: "quality over coverage. I'm very, very religious about this. If you go for the coverage, you are going to shoot yourself in the foot." (16:38-16:47)
 - Scope note: this is an argument about *open-input* surfaces with a population of repeat users who choose whether to return. A fixed-workflow feature with no free-form box does not have a first-five-questions problem, and a one-shot consumer surface with no retention need does not carry the ten-times reacquisition cost.
 - Limits: the "first five questions" threshold and the "10 times" reacquisition multiplier are asserted from operating experience, not measured; no churn or reactivation study is offered. The 95%/70% figures are illustrative targets, not observed accuracies — the only measured accuracy in the source is the 50% first run against a 150-question set. ([Provenance and Limits](../sources/20260826_DrTdD-ttjCY.md))
+- **The other way to bound coverage: give the residual an owner instead of a bad answer.** Cloudflare's skill files are built to "answer essentially 80% or more of the questions, where the other 20% might be more complex strategic questions" — and the 20% is not refused, it routes to the operations team, which remains a first-class interface alongside push and self-serve. Izmit narrows the question set and accepts that some questions go unanswered; Joyce narrows what the automated surface claims and keeps a human queue behind it. Both protect the first five answers; the second costs headcount rather than coverage. ([Joyce](../sources/20260826_Qw_tC68KKes.md), 07:27-07:53, 16:30-16:55)
 
 Related topics:
 - [Product Strategy](../topics/product-strategy.md)
@@ -30,6 +31,9 @@ Related concepts:
 - [Start GenBI with certified assets before autonomous SQL](start-genbi-with-certified-assets-before-autonomous-sql.md)
 - [Nail Deterministic UX Before Probabilistic Delight](nail-deterministic-ux-before-probabilistic-delight.md)
 - [Optimize Onboarding Around One Aha Moment](optimize-onboarding-around-one-aha-moment.md)
+- [Put the Business Question Set Inside the Skill File, Not Just the Schema](put-the-business-question-set-inside-the-skill-file-not-just-the-schema.md)
+- [Layer Ask, Push, and Self-Serve Because Teams Interface Differently](layer-ask-push-and-self-serve-because-teams-interface-differently.md)
 
 Sources:
 - [Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 03:16-05:31, 16:38-16:47
+- [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md), 07:27-07:53, 16:30-16:55

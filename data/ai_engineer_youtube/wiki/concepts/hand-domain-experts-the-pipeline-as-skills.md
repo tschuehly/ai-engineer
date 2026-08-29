@@ -17,6 +17,7 @@ Details:
 - The claimed payoff is compounding rather than throughput: give domain experts the keys "because these are the people who know about your data and … they will help you drive towards a recursive self-improvement and not the AI engineers." (15:53-16:11)
 - This is a stronger position than expert review tooling, and worth distinguishing from it. Anterior's earlier talk described clinicians inspecting evidence, labelling failure modes, and *suggesting* domain knowledge through a bespoke review surface; here the same population writes the pipeline stages. Review tooling routes expert judgment through an engineering-owned system; skills remove the routing step for a class of changes.
 - **The same ownership-boundary move applied to the tool rather than the pipeline.** Anterior pushes the expert past reviewing outputs to authoring pipeline stages as skills. DoorDash pushes a different boundary with the same logic: the operator authors the interface they work in, generating it with a coding agent against platform APIs. Both replace "file a request with engineering" with "write the artifact yourself," and both depend on the engineering team having produced a stable substrate — a skill-loading harness in one case, an owned API surface in the other. ([AI Evals for Cross-Functional Teams — Nachiket Paranjape & Swaroop Chitlur Haridas, DoorDash](../sources/20260828_bMjlRrWjdT0.md), 09:18-10:29)
+- **A weaker ownership boundary that is still worth the name: experts as reviewers of the skill, not authors of it.** Cloudflare routes skills through "a central alias where skills are presented to the central team, curated by the go-to-market team, as well as by operations team, and they're reviewed." Two constituencies sign off because two things can be wrong independently — the encoded procedure may not be what an expert would do, and the query underneath may not be right. That is one step short of this page's "expert adds a stage," and it buys a property expert authoring does not: consistency across an organization large enough that skill proliferation is the stated risk. ([Joyce](../sources/20260826_Qw_tC68KKes.md), 13:36-14:02)
 
 Related topics:
 - [Workflows](../topics/workflows.md)
@@ -32,8 +33,10 @@ Related concepts:
 - [General Agents Need Skills for Domain Expertise](general-agents-need-skills-for-domain-expertise.md)
 - [Treat Complex Skills Like Software Artifacts](treat-complex-skills-like-software-artifacts.md)
 - [Ship Stable APIs and Let Users Vibe-Code the Interface](ship-stable-apis-and-let-users-vibe-code-the-interface.md)
+- [Run a Submission-and-Review Alias for Shared Skills](run-a-submission-and-review-alias-for-shared-skills.md)
 
 Sources:
 - [Don't be data poor — Anuj Iravane, Anterior](../sources/20260819_XAsb7MIAzm8.md), 11:34-14:02, 15:53-16:11
 - [Make your LLM app a Domain Expert: How to Build an Expert System - Christopher Lovejoy, Anterior](../sources/20250728_MRM7oA3JsFs.md), 09:15-16:03
 - [AI Evals for Cross-Functional Teams — Nachiket Paranjape & Swaroop Chitlur Haridas, DoorDash](../sources/20260828_bMjlRrWjdT0.md), 09:18-10:29
+- [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md), 13:36-14:02

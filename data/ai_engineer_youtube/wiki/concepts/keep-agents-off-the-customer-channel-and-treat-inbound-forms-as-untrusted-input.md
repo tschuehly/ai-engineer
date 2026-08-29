@@ -14,6 +14,7 @@ Details:
 - Human approval is scoped by risk rather than applied uniformly. The takeaway is "let humans stay in the loop where there are risky possibilities," and the paired implementation is the reactive workflow, where a Gong transcript is parsed into a grounded follow-up draft that lands in a rep's task box for review. (14:24-14:52, 16:14-16:41, 19:55-20:01)
 - The stance is explicitly a current position on a trajectory, not a permanent one: "right now, humans are the primary consumer of GTM data and agents are helping at the edges. Soon, agents will become primary first-class consumers within the system, moving from drafting to acting within guardrails." The guardrails that would replace the human are not described. (20:30-20:49)
 - **Limit.** This is a design decision with a rationale, not a tested control. No injection attempt, filter, classifier, sanitization step, or incident is described, and nothing is said about what the agent may still do with untrusted text on the read side — research, enrichment, and scoring all consume it before a human sees the draft. (07:43-07:58)
+- **The same boundary arrived at by sequencing rather than by policy.** Cloudflare's go-to-market agents also never touch a customer, but because the outbound and write paths simply have not been built: quoting, approvals, and CRM updates are named as "harder problems" still in progress, and even the modest integration of embedding generated artifacts into meetings is gated on "some security setup." Notion decided not to let agents talk to customers; Cloudflare has not yet had to decide. The distinction matters when the connections land, because a boundary that exists only as an unbuilt feature offers no guidance about what to allow through it. ([Joyce](../sources/20260826_Qw_tC68KKes.md), 17:08-18:11)
 
 Related topics:
 - [Security](../topics/security.md)
@@ -28,6 +29,8 @@ Related concepts:
 - [Human Approval Can Hide Tool Description and Parameter Risk](human-approval-can-hide-tool-description-and-parameter-risk.md)
 - [Reduce Every Workflow to Know, Decide, Act, and Learn](reduce-every-workflow-to-know-decide-act-and-learn.md)
 - [Scope a Person-Cloned Agent by Caller, With Drafts as the Shared Capability](scope-a-person-cloned-agent-by-caller-with-drafts-as-the-shared-capability.md)
+- [Read-Side Agents Scale First Because the Write Side Needs Approvals](read-side-agents-scale-first-because-the-write-side-needs-approvals.md)
 
 Sources:
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 07:23-07:58, 16:14-16:41, 19:55-20:01, 20:30-20:49
+- [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md), 17:08-18:11
