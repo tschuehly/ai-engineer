@@ -1,6 +1,8 @@
 # Concept Index
 
 ## Agents
+- [Fan Out a Scheduled Per-Entity Agent Instead of Waiting for a Trigger](../concepts/fan-out-a-scheduled-per-entity-agent-instead-of-waiting-for-a-trigger.md) - a nightly per-account agent composing served context, vector search, system skills, and user instructions.
+- [Let Users Author the Output Format as a Skill](../concepts/let-users-author-the-output-format-as-a-skill.md) - users write their own format in text; the platform keeps the judgment, and adoption is the stated payoff.
 - [Run One Dormant, Long-Lived Agent Per Account](../concepts/run-one-dormant-long-lived-agent-per-account.md) - one agent per entity, dormant by default, woken by trigger or heartbeat and rehydrated from the shared substrate.
 - [Give Agents Their Own Fields in the System of Record](../concepts/give-agents-their-own-fields-in-the-system-of-record.md) - separate agent-written columns from human and pipeline ones: containment instead of approval.
 - [The Human-Agent Handoff Is the Hard Part Once Agents Are the Decision Layer](../concepts/the-human-agent-handoff-is-the-hard-part-once-agents-are-the-decision-layer.md) - the rep disagrees with the decision, or never learns it was made.
@@ -963,6 +965,7 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Hydrate a Trigger Event to Its Entity Once and Persist the Mapping](../concepts/hydrate-a-trigger-event-to-its-entity-once-and-persist-the-mapping.md) - the meeting-to-account fuzzy match resolved at ingest and stored, not re-derived per consumer.
 - [Put the Business Question Set Inside the Skill File, Not Just the Schema](../concepts/put-the-business-question-set-inside-the-skill-file-not-just-the-schema.md) - business semantics plus the questions people actually ask, shipped as context and reused as an app spec.
 - [Run a Submission-and-Review Alias for Shared Skills](../concepts/run-a-submission-and-review-alias-for-shared-skills.md) - central intake with two reviewer constituencies as the control on skill proliferation.
 - [Pre-Shape Analytics Data by Time, Slice, and Metric Before the Agent Reads It](../concepts/pre-shape-analytics-data-by-time-slice-and-metric-before-the-agent-reads-it.md) - engineer the filters, aggregations, and trend detection up front so the model reads a small clean table.
@@ -1133,6 +1136,7 @@
 - [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md)
 
 ## Infrastructure
+- [Back the Served Context Layer With a Transactional Store for Referential Integrity](../concepts/back-the-served-context-layer-with-a-transactional-store-for-referential-integrity.md) - Postgres over a denormalized key-value profile, for cross-system integrity and provenance rather than latency.
 - [Compute Truth in the Warehouse and Serve It as a Denormalized Profile](../concepts/compute-truth-in-the-warehouse-and-serve-it-as-a-denormalized-profile.md) - warehouse computes modeled versioned entities; a key-value store serves them join-free in milliseconds.
 - [Land the Data in One Governed Store So Agents Inherit Access Control](../concepts/land-the-data-in-one-governed-store-so-agents-inherit-access-control.md) - consolidation makes authorization a property agents inherit rather than implement.
 - [Budget a Third of Sprint Capacity for Re-Architecture](../concepts/budget-a-third-of-sprint-capacity-for-re-architecture.md) - 30-40% of sprints spent rebuilding onto new platform primitives, planned rather than resented.
@@ -1745,6 +1749,8 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Go To Market
+- [Distribution Is the Bottleneck, Not the Idea](../concepts/distribution-is-the-bottleneck-not-the-idea.md) - good ideas are abundant; pulling the audience, writing the enablement, and persuading channel owners is what takes months.
+- [Gate a Generated Multi-Channel Campaign on the Channel Owner](../concepts/gate-a-generated-multi-channel-campaign-on-the-channel-owner.md) - one intent fans out into outbound, ads, web, and in-app, each signed off by whoever owns that surface.
 - [Attribute LLM-Sourced Inbound With a How-Did-You-Hear Field](../concepts/attribute-llm-sourced-inbound-with-a-how-did-you-hear-field.md) - the only place a referrer-less assistant recommendation shows up is a signup form.
 
 - [Ship Go-to-Market Changes on an Engineering Release Cadence](../concepts/ship-go-to-market-changes-on-an-engineering-release-cadence.md) - data, automations, and campaigns pushed every two weeks, and the role defined as removing shipping constraints.
@@ -2586,6 +2592,8 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Expose the Background Agents' Tool Surface to Employees Over MCP](../concepts/expose-the-background-agents-tool-surface-to-employees-over-mcp.md) - one internal server, used by production automations and by every employee's own client.
+- [Read Employee-Built Automations as the Productionization Backlog](../concepts/read-employee-built-automations-as-the-productionization-backlog.md) - a connection states the problem and the attempted solution, and hands over the prototype.
 - [Serve Markdown Through Three Redundant Paths](../concepts/serve-markdown-through-three-redundant-paths.md) - `.md` suffix, `Accept` negotiation, and `?mode=agent`, ordered by the client capability each one assumes.
 - [Hand-Write llms.txt and Index the Rest for Fetching](../concepts/hand-write-llms-txt-and-index-the-rest-for-fetching.md) - forty authored lines beat a thousand generated ones, and agents fetch rather than browse.
 - [Generate Agent-Facing Docs Artifacts From One Markdown Source](../concepts/generate-agent-facing-docs-artifacts-from-one-markdown-source.md) - the agent-readability checklist as a build step over `.mdx`, not files someone keeps in sync.
@@ -2892,6 +2900,7 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Solve One Team, Then Mirror the Build Sideways](../concepts/solve-one-team-then-mirror-the-build-sideways.md) - the embedding pipeline and custom instructions port to the next team; the data sources and skills do not.
 - [Treat Tool-to-Tool Orchestration as a Data Engineering Problem](../concepts/treat-tool-to-tool-orchestration-as-a-data-engineering-problem.md) - 10-30 tools with disagreeing world views, heterogeneous cadences, fan-out, and constant partial failure.
 - [Wait for the Background Sync Before Acting on a Record You Just Created](../concepts/wait-for-the-background-sync-before-acting-on-a-record-you-just-created.md) - pre-integrated vendors sync outside your orchestrator, so poll for readiness instead of retrying.
 - [Build Orchestration From a Few General-Purpose Node Types](../concepts/build-orchestration-from-a-few-general-purpose-node-types.md) - agent, tool call, conditional, code, and map-reduce as the whole execution vocabulary.

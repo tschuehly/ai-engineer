@@ -15,6 +15,7 @@ Details:
 - It is also the precondition for the per-account agent architecture. [Run One Dormant, Long-Lived Agent Per Account](run-one-dormant-long-lived-agent-per-account.md) instantiates one persistent agent per account; a duplicate account is a duplicate agent working the same customer with half the state each, and a merge mid-cycle has no defined semantics in the talk.
 - Notion's version of the same requirement is architectural rather than procedural: the warehouse produces "a small set of modeled, versioned entities" from every vendor feed, and the serve store publishes profiles "keyed by the same IDs," so resolution is the thing that produces the ID everything else addresses. ([Liu](../sources/20260826_L4I7WgiEquo.md), 09:11-10:07)
 - **Limit.** No method at all — no matching strategy, blocking scheme, survivorship rule, confidence threshold, human review path, or error rate. The requirement is named in one sentence and dropped, which leaves the hardest part of the data layer as an assertion. (05:57-06:19)
+- **A second resolution problem that vendor merging does not touch.** Even with one clean account record per company, the *events* that trigger workflows arrive keyed by attendee emails and meeting titles, and mapping them back is "a sneaky hard problem… because you have the same emails that can work on behalf of multiple businesses, so it's kind of like a fuzzy match." One person legitimately belonging to several accounts is a many-to-many relationship no survivorship rule resolves; the fix is to decide per event and persist the answer ([Hydrate a Trigger Event to Its Entity Once and Persist the Mapping](hydrate-a-trigger-event-to-its-entity-once-and-persist-the-mapping.md)). ([Vaziri](../sources/20260826_VjEP0xqTUI0.md), 09:41-10:11)
 
 Related topics:
 - [Go To Market](../topics/go-to-market.md)
@@ -29,7 +30,10 @@ Related concepts:
 - [Treat Every External System of Record as Non-Authoritative](treat-every-external-system-of-record-as-non-authoritative.md)
 - [Land the Data in One Governed Store So Agents Inherit Access Control](land-the-data-in-one-governed-store-so-agents-inherit-access-control.md)
 - [Wait for the Background Sync Before Acting on a Record You Just Created](wait-for-the-background-sync-before-acting-on-a-record-you-just-created.md)
+- [Hydrate a Trigger Event to Its Entity Once and Persist the Mapping](hydrate-a-trigger-event-to-its-entity-once-and-persist-the-mapping.md)
+- [Back the Served Context Layer With a Transactional Store for Referential Integrity](back-the-served-context-layer-with-a-transactional-store-for-referential-integrity.md)
 
 Sources:
 - [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 03:00-03:42, 05:57-06:19
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 09:11-10:07
+- [The Building Blocks of GTM Orchestration — Arman Vaziri, Ramp](../sources/20260826_VjEP0xqTUI0.md), 09:41-10:11

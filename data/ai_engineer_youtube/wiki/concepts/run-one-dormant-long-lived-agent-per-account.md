@@ -17,6 +17,7 @@ Details:
 - **The learning half is explicitly unbuilt.** "The cutting edge of doing this is the learning phase where as the agent works on an account or a series of accounts, it updates its own view of what's working. Today in GTM, this is not fully solved yet. And in fact, the continual learning effort and the next best action suggestions are kind of one of the cutting edge problems that we're working on." Read the architecture as trigger-plus-rehydrate-plus-act; the improvement loop is aspiration in this source, and the wiki's other GTM sources report the same gap ([Thread Every Outcome Back to the Decision That Caused It](thread-every-outcome-back-to-the-decision-that-caused-it.md)). (11:47-12:10)
 - The per-entity fan-out is the cost model. One agent per account means the population, not the traffic, sets the upper bound on concurrent state, which is why dormancy is load-bearing rather than incidental — and why the heartbeat interval is a spend decision across the whole book of accounts.
 - **Limit.** No implementation is given: no state store, no wake latency, no heartbeat interval, no cost per account, no bound on how many agents run, and no account of what happens when two accounts merge or an entity is de-duplicated mid-cycle. The "high bar for error" is asserted and never measured, and no evaluation method for a months-long trajectory is offered. (10:38-13:03)
+- **The alternative scheduling discipline, from a source that chose it.** Ramp runs per-account agents too, but on a clock: "every night we're going to go and generate these things, fan out a set of agents that are going to go and compute per account meeting prep." The deciding question is whether the *demand* is scheduled. A meeting brief has a known deadline and a fan-out set knowable in advance, so waiting for a trigger buys nothing; a deal-cycle intervention has neither, so dormancy plus a wake signal is what keeps the cost bounded. Both designs rehydrate from the shared substrate rather than carrying state. See [Fan Out a Scheduled Per-Entity Agent Instead of Waiting for a Trigger](fan-out-a-scheduled-per-entity-agent-instead-of-waiting-for-a-trigger.md). ([Vaziri](../sources/20260826_VjEP0xqTUI0.md), 12:33-13:00)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -34,6 +35,8 @@ Related concepts:
 - [Use Durable Execution for Production Agent Loops](use-durable-execution-for-production-agent-loops.md)
 - [Size Agent Quality Against the Channel's Reply Rate](size-agent-quality-against-the-channel-reply-rate.md)
 - [The Human-Agent Handoff Is the Hard Part Once Agents Are the Decision Layer](the-human-agent-handoff-is-the-hard-part-once-agents-are-the-decision-layer.md)
+- [Fan Out a Scheduled Per-Entity Agent Instead of Waiting for a Trigger](fan-out-a-scheduled-per-entity-agent-instead-of-waiting-for-a-trigger.md)
 
 Sources:
 - [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 09:59-13:03
+- [The Building Blocks of GTM Orchestration — Arman Vaziri, Ramp](../sources/20260826_VjEP0xqTUI0.md), 12:33-13:00

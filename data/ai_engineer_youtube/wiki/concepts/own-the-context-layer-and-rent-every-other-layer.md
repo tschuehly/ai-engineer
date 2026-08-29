@@ -16,6 +16,7 @@ Details:
 - The owned layer is a shared substrate rather than a private store, which is what makes owning it worth the cost: markdown plus databases and hierarchies, navigable by agents and designed for humans. (18:18-18:44)
 - **Limit.** No vendor was evaluated on the record — no selection criteria, cost, migration experience, or failure with any of the rented systems is reported — and the "cheaper and faster than most people assume" claim carries no build cost, headcount, or timeline. (17:35-18:07)
 - **The same conclusion with the ownership line drawn one notch differently, and an argument for renting the evals.** Berry agrees the data layer is where the work is, but treats the underlying facts as unavoidably rented — "there is literally hundreds of vendors… but none of those vendors is going to have a complete picture" — and locates the ownable part in the assembly: which providers to waterfall, which fields to refresh, and how entities resolve. He then makes the sharper concession: "either you or the vendor that you're using needs to run evals against these data providers," which allows renting the judgment about provider quality, not just the data. On orchestration he is explicitly indifferent — "whether you buy it or build it, I think this is like fundamentally the modern way to set this up" — which agrees with renting that layer while insisting on its shape. ([Berry](../sources/20260826_UhCY231d0FQ.md), 04:42-05:28, 09:24-09:32)
+- **A third company drawing the line in the same place, without arguing for it.** Ramp rents Temporal, Kafka, Snowflake, dbt, and Turbopuffer, and builds the customer data platform that sits between them: "we effectively went and built an internal customer data platform at Ramp." The pattern across the cluster is now consistent enough to state as a default — orchestration, storage, and messaging are bought; the joined entity model and the rules over it are not — though this source gives no rationale, which makes it corroboration of the choice rather than of the reasoning. ([Vaziri](../sources/20260826_VjEP0xqTUI0.md), 05:44-08:05)
 
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
@@ -31,7 +32,9 @@ Related concepts:
 - [Commoditize the Layer You Do Not Win On](commoditize-the-layer-you-do-not-win-on.md)
 - [Waterfall Data Vendors and Run Evals to Decide Which to Trust](waterfall-data-vendors-and-run-evals-to-decide-which-to-trust.md)
 - [Build Orchestration From a Few General-Purpose Node Types](build-orchestration-from-a-few-general-purpose-node-types.md)
+- [Back the Served Context Layer With a Transactional Store for Referential Integrity](back-the-served-context-layer-with-a-transactional-store-for-referential-integrity.md)
 
 Sources:
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 08:37-09:00, 13:16-13:20, 17:16-18:44
 - [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 04:42-05:28, 09:24-09:32
+- [The Building Blocks of GTM Orchestration — Arman Vaziri, Ramp](../sources/20260826_VjEP0xqTUI0.md), 05:44-08:05

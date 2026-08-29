@@ -41,6 +41,7 @@ Related concepts:
 - [Split skills to hide future steps and force more leg work per step](split-skills-to-hide-future-steps-and-force-leg-work.md)
 - [Skills Are the Residual Where Organizational Know-How Lands](skills-are-the-residual-where-organizational-know-how-lands.md)
 - [Budget a Third of Sprint Capacity for Re-Architecture](budget-a-third-of-sprint-capacity-for-re-architecture.md)
+- [Let Users Author the Output Format as a Skill](let-users-author-the-output-format-as-a-skill.md)
 
 Sources:
 - [Skill Issue: How We Used AI to Make Agents Actually Good at Supabase - Pedro Rodrigues, Supabase](../sources/20260504_GmAQKINjv1E.md), 03:17-06:24

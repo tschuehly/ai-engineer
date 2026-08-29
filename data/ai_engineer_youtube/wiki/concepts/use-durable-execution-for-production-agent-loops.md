@@ -15,6 +15,7 @@ Details:
 - Somal makes the production framing explicit: agentic AI applications are complex distributed systems that coordinate unreliable LLMs, tool calls, long-lived state, human approvals, parallelism, tracing, and visibility, so reliability belongs in the workflow substrate rather than in ad hoc agent-loop code, 01:14-03:15.
 - **A non-engineering workload on the same substrate, where the deciding property is batch isolation.** At Notion "every signal becomes a workflow on Temporal," and a single run touches enrichment, web search, and draft generation — "each of these is a network call that could fail or rate limit" — so the framework handles "the retries, dedupes, and going back to exactly where failures left off." The requirement stated as decisive is per-item isolation: "one malformed transcript can't take down the whole batch," which is what mass-processing customer events demands beyond crash recovery for a single long-running agent. ([Liu](../sources/20260826_L4I7WgiEquo.md), 13:04-13:52)
 - **A failure class that makes durability structural rather than nice to have.** In a stack of pre-integrated SaaS tools, the tools sync to each other outside your orchestrator, so "if you create contacts in your CRM, you actually need to wait for that contact to sync to the sequencer before you can then take action on it," which "creates some difficult problems where you actually need to introduce things like [waits] and loops to check if information is ready." A workflow that can suspend, poll, and resume handles this natively; a stateless script has to choose between a fixed sleep and a retry that misdiagnoses a success as a failure. Berry also names constant partial failure as the steady state of the distributed setup — "I also have failures that are happening all the time." ([Berry](../sources/20260826_UhCY231d0FQ.md), 08:08-08:55)
+- **Trigger-agnostic is itself a design goal.** Ramp "built a system around durable execution… that's pretty agnostic to the trigger that comes in," so a nightly scheduled fan-out, an inbound event, and a human request all produce the same durable thread. That decoupling is what lets one reliability substrate serve scheduled per-account jobs and event-driven workflows at once, instead of each trigger class growing its own retry and resume logic. ([Vaziri](../sources/20260826_VjEP0xqTUI0.md), 10:12-10:22)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -32,6 +33,7 @@ Related concepts:
 - [Treat Tool-to-Tool Orchestration as a Data Engineering Problem](treat-tool-to-tool-orchestration-as-a-data-engineering-problem.md)
 - [Build Orchestration From a Few General-Purpose Node Types](build-orchestration-from-a-few-general-purpose-node-types.md)
 - [Run One Dormant, Long-Lived Agent Per Account](run-one-dormant-long-lived-agent-per-account.md)
+- [Fan Out a Scheduled Per-Entity Agent Instead of Waiting for a Trigger](fan-out-a-scheduled-per-entity-agent-instead-of-waiting-for-a-trigger.md)
 
 Sources:
 - [OpenAI + @Temporalio : Building Durable, Production Ready Agents - Cornelia Davis, Temporal](../sources/20260112_k8cnVCMYmNc.md), 07:46-11:35, 50:05-51:44
@@ -40,3 +42,4 @@ Sources:
 - [Scaling AI Agents Without Breaking Reliability - Preeti Somal, Temporal](../sources/20250728_1izYWsokr9s.md), 01:14-03:15
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 13:04-13:52
 - [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 08:08-08:55
+- [The Building Blocks of GTM Orchestration — Arman Vaziri, Ramp](../sources/20260826_VjEP0xqTUI0.md), 10:12-10:22

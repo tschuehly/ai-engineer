@@ -30,6 +30,7 @@ Related concepts:
 - [Reorder the Generated Task List to Ship an MVP First](reorder-the-generated-task-list-to-ship-an-mvp-first.md)
 - [Earn AI Product Trust Before Asking for Delight](earn-ai-product-trust-before-asking-for-delight.md)
 - [Move enterprise AI adoption beyond spot experiments](move-enterprise-ai-adoption-beyond-spot-experiments.md)
+- [Solve One Team, Then Mirror the Build Sideways](solve-one-team-then-mirror-the-build-sideways.md)
 
 Sources:
 - [Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 05:33-07:12

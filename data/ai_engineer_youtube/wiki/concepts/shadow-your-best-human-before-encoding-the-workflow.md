@@ -17,6 +17,7 @@ Details:
 - **Limit.** No measurement supports the floor-raising claim — no ramp-time, per-rep variance, or new-hire comparison is reported, and the two figures given (increased qualified opportunities over 13 weeks, 63% more likely to take the next step) are system-level and not broken out by rep tenure. Nor is any method described for choosing which reps count as best. (18:48-19:14)
 - **The gap this closes, named independently, and a cheaper encoding vehicle.** Cloudflare calls it the expert gap — the distance between how an expert rep "would approach a situation... how he would handle a customer satisfaction issue" and how someone ramping would — and encodes expert behavior as curated skill files reviewed by the go-to-market and operations teams rather than by shadowing and building a durable workflow. The tradeoff is fidelity for reach: shadowing captures what the expert does including the parts they cannot articulate, while a reviewed skill file captures only what somebody could write down, and scales to every situation a rep meets rather than to the one workflow that was encoded. ([Joyce](../sources/20260826_Qw_tC68KKes.md), 03:37-04:17, 13:36-14:02)
 - **What the shadowing has to capture beyond the steps: the state the rep was holding.** Berry's picture of a single account — "multiple signals that are occurring, data that needs to be updated, actions that my agents or reps are taking, and then meetings that are happening and feedback that's occurring" — is called "one of the simplest views," and today "we are relying on sales reps in a lot of cases to manually sort through this." The rep is not only executing a sequence; they are the working memory for an account over a months-long cycle. An encoded workflow that reproduces the actions without reproducing that state produces a system that does the right things in the wrong order. ([Berry](../sources/20260826_UhCY231d0FQ.md), 09:59-10:38)
+- **The same starting move, applied to an assembly task rather than a judgment task.** Ramp's brief was designed by enumerating what an account manager actually needs before a call — "what are we talking about? Who are we meeting with? What is the AM trying to do? What are the product usage information? What are the account vitals? What's the agenda?" — alongside the customer's side, including open tickets and anything they emailed about. Where Notion shadowed reps to capture *decisions*, this captures a *checklist*, which is the easier half and the one that transfers between teams; the judgment half stays in the platform-owned skills. ([Vaziri](../sources/20260826_VjEP0xqTUI0.md), 08:55-09:33)
 
 Related topics:
 - [Workflows](../topics/workflows.md)
@@ -33,8 +34,10 @@ Related concepts:
 - [Separate the Context Gap From the Expert Gap](separate-the-context-gap-from-the-expert-gap.md)
 - [Run One Dormant, Long-Lived Agent Per Account](run-one-dormant-long-lived-agent-per-account.md)
 - [The Human-Agent Handoff Is the Hard Part Once Agents Are the Decision Layer](the-human-agent-handoff-is-the-hard-part-once-agents-are-the-decision-layer.md)
+- [Solve One Team, Then Mirror the Build Sideways](solve-one-team-then-mirror-the-build-sideways.md)
 
 Sources:
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 02:42-03:01, 13:04-13:12, 16:31-17:14, 19:26-20:01
 - [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md), 03:37-04:17, 13:36-14:02
 - [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 09:59-10:38
+- [The Building Blocks of GTM Orchestration — Arman Vaziri, Ramp](../sources/20260826_VjEP0xqTUI0.md), 08:55-09:33

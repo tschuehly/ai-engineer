@@ -17,6 +17,7 @@ Details:
 - The problem is symmetric across motion: asked whether this is outbound-only, the answer is that "the orchestration problem is pretty acute in inbound. You have to get the routing right. You have to qualify the account properly. There's usually historical context on inbound that comes in that needs to be understood." (18:14-18:33)
 - **This is the tool-sprawl problem from the other side of the buy decision.** Snowflake's reps "using 15 different tools… and then they end up stitching all of that together in spreadsheets" describes the human paying the orchestration cost manually; the response there was consolidation into one governed store ([Land the Data in One Governed Store So Agents Inherit Access Control](land-the-data-in-one-governed-store-so-agents-inherit-access-control.md)). Berry assumes the tools stay put and the orchestrator absorbs the difference, which is the realistic assumption when the tools belong to other departments. Both accounts agree the disagreement is the problem; they disagree about whether you are allowed to delete it. ([Izmit](../sources/20260826_DrTdD-ttjCY.md), 01:46-02:29)
 - **Limit.** No numbers of any kind: no failure rate, no volume, no latency, no cost, and no description of how failures are detected, retried, or reconciled. The claim that this is "a fairly complex data engineering problem" is argued by enumeration, and the enumerated list comes from a vendor whose product sells against it. (06:19-08:18)
+- **The consequence stated from the campaign side rather than the pipeline side.** Disagreeing tools are not merely untidy: "everybody's operating off of a different source of truth, and that makes it effectively impossible to go and distribute some coordinated action across these different go-to-market teams and channels." A multi-channel action cannot be defined over audiences that four systems compute differently, which is why the reconciliation work has to land before any orchestration layer above it is meaningful. ([Vaziri](../sources/20260826_VjEP0xqTUI0.md), 02:41-03:04)
 
 Related topics:
 - [Workflows](../topics/workflows.md)
@@ -33,7 +34,10 @@ Related concepts:
 - [Treat Go-to-Market as a Live Model of Your World That Agents Act On](treat-go-to-market-as-a-live-model-of-your-world.md)
 - [Protect Sender Reputation by Splitting Domains and Routing Replies Home](protect-sender-reputation-by-splitting-domains-and-routing-replies-home.md)
 - [Ship Go-to-Market Changes on an Engineering Release Cadence](ship-go-to-market-changes-on-an-engineering-release-cadence.md)
+- [Distribution Is the Bottleneck, Not the Idea](distribution-is-the-bottleneck-not-the-idea.md)
+- [Back the Served Context Layer With a Transactional Store for Referential Integrity](back-the-served-context-layer-with-a-transactional-store-for-referential-integrity.md)
 
 Sources:
 - [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 06:19-08:18, 18:14-18:33
 - [Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 01:46-02:29
+- [The Building Blocks of GTM Orchestration — Arman Vaziri, Ramp](../sources/20260826_VjEP0xqTUI0.md), 02:41-03:04

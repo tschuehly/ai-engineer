@@ -29,6 +29,7 @@ Related concepts:
 - [Benchmark Your Own Tool by Running Agents With and Without It](benchmark-your-tool-by-running-agents-with-and-without-it.md)
 - [Split Agent Advocacy Into Engineering, Product, and Marketing Flavors](split-agent-advocacy-into-engineering-product-and-marketing-flavors.md)
 - [Count Burned Turns, Because Agent Self-Recovery Hides Tool Defects](count-burned-turns-because-agent-self-recovery-hides-tool-defects.md)
+- [Expose the Background Agents' Tool Surface to Employees Over MCP](expose-the-background-agents-tool-surface-to-employees-over-mcp.md)
 
 Sources:
 - [Your MCP Server is Bad (and you should feel bad) - Jeremiah Lowin, Prefect](../sources/20260112_96G7FLab8xc.md), 04:24-07:37, 14:47-15:18, 34:24-34:43

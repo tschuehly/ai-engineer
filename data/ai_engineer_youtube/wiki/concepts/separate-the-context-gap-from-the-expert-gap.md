@@ -16,6 +16,7 @@ Details:
 - Both gaps are presented as the reason the go-to-market organization is inefficient rather than as separate initiatives: "with these two problems with manual work as well as salespeople not having enough information... it really creates an inefficiency in the go-to-market organization." (04:17-04:35)
 - **Limit.** The two gaps are asserted from the speaker's experience, with no measurement of either — no preparation-time study, no ramp-time figure, no variance across reps before or after, and no definition of who counts as the expert whose level is being encoded.
 - **The context gap stated as a state-management problem rather than an assembly problem.** Berry's account of one account — signals arriving, data going stale, actions taken by reps and agents, meetings and feedback landing — is what the rep is holding in their head between calls: "we are relying on sales reps in a lot of cases to manually sort through this." Cloudflare's framing is the switching cost of gathering information before each conversation; this one is the cost of maintaining continuity across a months-long cycle. Retrieval on demand closes the first and not the second, which is an argument for the persistent per-account agent rather than for a better search over the same sources. ([Berry](../sources/20260826_UhCY231d0FQ.md), 09:59-10:38)
+- **The two gaps appearing as two separate builds inside one system.** Ramp's pre-meeting brief is a pure context-gap fix: usage, account vitals, open tickets, and the customer's own emailed agenda gathered into one place so an account manager in back-to-back meetings "can go in prepared." The expert-gap half is the platform-owned skill library — "meeting prep skills that we own at the system level" — which encodes what a good brief must contain regardless of who is reading it. Users then layer their own format instructions on top. The three-layer split (assembled context, system-owned judgment, personal presentation) is a usable decomposition of what a generated internal artifact is actually made of. ([Vaziri](../sources/20260826_VjEP0xqTUI0.md), 08:37-09:33, 12:11-13:00)
 
 Related topics:
 - [Go To Market](../topics/go-to-market.md)
@@ -32,7 +33,10 @@ Related concepts:
 - [Run One Dormant, Long-Lived Agent Per Account](run-one-dormant-long-lived-agent-per-account.md)
 - [The Human-Agent Handoff Is the Hard Part Once Agents Are the Decision Layer](the-human-agent-handoff-is-the-hard-part-once-agents-are-the-decision-layer.md)
 - [Ship Go-to-Market Changes on an Engineering Release Cadence](ship-go-to-market-changes-on-an-engineering-release-cadence.md)
+- [Let Users Author the Output Format as a Skill](let-users-author-the-output-format-as-a-skill.md)
+- [Distribution Is the Bottleneck, Not the Idea](distribution-is-the-bottleneck-not-the-idea.md)
 
 Sources:
 - [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md), 02:55-04:35, 05:03-05:26, 12:36-13:35
 - [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 09:59-10:38
+- [The Building Blocks of GTM Orchestration — Arman Vaziri, Ramp](../sources/20260826_VjEP0xqTUI0.md), 08:37-09:33, 12:11-13:00

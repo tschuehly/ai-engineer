@@ -14,6 +14,7 @@ Details:
 - Colvin argues that Temporal-backed agent support is not very useful unless tool calls are activities too, because agent loops depend on tool use; his demo records both LLM IO and tool calls so failed or killed runs can retry only the unfinished activity, 05:40-06:03, 19:25-20:18.
 - Somal's agent architecture maps tools to activities and uses workflow signals and queries for interaction, while keeping the LLM provider interchangeable and letting the workflow layer handle failures, 10:57-11:41.
 - **A worked activity list from a go-to-market pipeline.** One Temporal run for a single signal touches "enrichment, web search, draft generation and more," each modeled as a step that can fail or be rate-limited, which lets the team "focus on writing the sequential logic for our GTM use cases" while retries, dedupes, and resume-at-failure are handled by the engine. Dedupe is worth noting alongside retries: when the same customer event can arrive more than once, at-most-once side effects matter as much as recovery. ([Liu](../sources/20260826_L4I7WgiEquo.md), 13:16-13:52)
+- **The granularity, and the reason resumption is cheap.** A second go-to-market team states the rule at the same level: "everything is represented as a durable thread built around Temporal, representing each tool call and model call as an activity. That way, if a worker goes [down] for some reason, it can resume execution from where it left off, pulling together all the state that had accumulated at that point in time, instead of starting back from the beginning of the thread and trying to reprocess everything, which would be very inefficient and slow." Note what the activity boundary buys beyond retries: accumulated state is reloaded rather than recomputed, so the cost of a mid-thread failure is one activity, not the whole conversation. Two capabilities are described as arriving with the substrate rather than being built on it — "config-scoped tool calls," where "different agents are going to have access to different sets of tools, which give them access to different information, different integrations, and different skills," and "human-in-the-loop tooling to just pause execution, get input, resume." ([Vaziri](../sources/20260826_VjEP0xqTUI0.md), 10:12-11:13)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -26,9 +27,11 @@ Related concepts:
 - [Enforce deterministic guardrails around sensitive tool calls](enforce-deterministic-guardrails-around-sensitive-tool-calls.md)
 - [Move mandatory brittle tool steps outside the agent loop](move-mandatory-brittle-tool-steps-outside-the-agent-loop.md)
 - [Emit Owner-Assigned Tasks From Signals, With a Marketing Default When None Fire](emit-owner-assigned-tasks-from-signals-with-a-marketing-default-when-none-fire.md)
+- [Fan Out a Scheduled Per-Entity Agent Instead of Waiting for a Trigger](fan-out-a-scheduled-per-entity-agent-instead-of-waiting-for-a-trigger.md)
 
 Sources:
 - [OpenAI + @Temporalio : Building Durable, Production Ready Agents - Cornelia Davis, Temporal](../sources/20260112_k8cnVCMYmNc.md), 12:46-15:43, 50:05-54:21
 - [From Stateless Nightmares to Durable Agents - Samuel Colvin, Pydantic](../sources/20251124_flf_IKnFYnE.md), 05:40-06:03, 19:25-20:18
 - [Scaling AI Agents Without Breaking Reliability - Preeti Somal, Temporal](../sources/20250728_1izYWsokr9s.md), 10:57-11:41
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 13:16-13:52
+- [The Building Blocks of GTM Orchestration — Arman Vaziri, Ramp](../sources/20260826_VjEP0xqTUI0.md), 10:12-11:13

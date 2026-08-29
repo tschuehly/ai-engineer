@@ -17,6 +17,7 @@ Details:
 - The strongest reported number belongs to the default branch, not the signal branch: "users who received context-aware recommendations were 63% more likely to take the next step," with no absolute rates, control description, sample size, or definition of the step. (19:07-19:14)
 - **Limit.** No signal taxonomy, volume, precision, or threshold definition is given; the predictive engine is named only by its output; and how a signal's owner is chosen is not described. (11:20-12:53)
 - **A third disposition for a signal, between notify and emit-a-task: wake a standing agent that already holds the entity's state.** Berry's decision layer is not a task queue but a per-account agent, "dormant for most of the time," woken by "smart triggers or a heartbeat," that re-reads the account and decides what to do. The difference matters for the no-signal case this page is about: a task-emitting service has to decide ownership at emission time, while a heartbeat-woken agent can act on the *absence* of events — the closed-lost re-awaken agent fires on elapsed time precisely because nothing happened. ([Berry](../sources/20260826_UhCY231d0FQ.md), 11:21-13:03)
+- **The ingest side of a signal layer, from a source that names the transport.** Real-time events "like emails, you can go and pipe them onto a Kafka topic, consume them, and then funnel them back" into the served entity store; signals themselves span internally modeled propensities ("we think that this customer has a high propensity to attach to procurement or treasury") and external events ("funding announcements"). The consumer of those signals is deliberately decoupled from them — the durable-execution layer is "pretty agnostic to the trigger that comes in" — so a signal, a schedule, and a human request all enter the same workflow machinery. ([Vaziri](../sources/20260826_VjEP0xqTUI0.md), 06:02-06:39, 10:12-10:22)
 
 Related topics:
 - [Go To Market](../topics/go-to-market.md)
@@ -31,7 +32,10 @@ Related concepts:
 - [Repo-Local Markdown Tasks Give Agents Durable Scoped Work Units](repo-local-markdown-tasks-give-agents-durable-scoped-work-units.md)
 - [Run a Signal Layer to Triage Comms and Protect Focus](run-a-signal-layer-to-triage-comms-and-protect-focus.md)
 - [Run One Dormant, Long-Lived Agent Per Account](run-one-dormant-long-lived-agent-per-account.md)
+- [Hydrate a Trigger Event to Its Entity Once and Persist the Mapping](hydrate-a-trigger-event-to-its-entity-once-and-persist-the-mapping.md)
+- [Fan Out a Scheduled Per-Entity Agent Instead of Waiting for a Trigger](fan-out-a-scheduled-per-entity-agent-instead-of-waiting-for-a-trigger.md)
 
 Sources:
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 08:26-08:37, 11:20-12:53, 16:14-16:41, 19:07-19:14
 - [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 11:21-13:03
+- [The Building Blocks of GTM Orchestration — Arman Vaziri, Ramp](../sources/20260826_VjEP0xqTUI0.md), 06:02-06:39, 10:12-10:22

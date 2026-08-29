@@ -17,6 +17,7 @@ Details:
 - This is the operational form of the cold-start problem in [Continual Learning and Enablement Are One Loop With a Cold Start](continual-learning-and-enablement-are-one-loop-with-a-cold-start.md): traces come from usage, usage does not appear on its own, and a log-mining improvement loop in a 20%-trial deployment is starved by construction ([Classify the Assistant Question Log to Find Feature and Content Gaps](classify-the-assistant-question-log-to-find-feature-and-content-gaps.md)).
 - Limits: 20% is one measurement, two weeks after one GA, at one company; no trial curve over time and no eventual ceiling is reported. "Half of where we are today" is a counterfactual with no control. The tactics listed (executive sponsorship, manager-level comparison dashboards) assume a hierarchical sales organization and may not transfer to populations without that structure. ([Provenance and Limits](../sources/20260826_DrTdD-ttjCY.md))
 - **A comparable internal deployment that reports neither number, which is the common case.** Cloudflare's talk describes a weekly pushed summary and a self-serve agentic workspace across a go-to-market organization and gives no user count, trial rate, return rate, or usage figure — its single outcome claim is "we've really been able to 2x our efficiency," a productivity assertion that is silent on how many people the tooling reached. The distinction this page draws is invisible in that framing: an efficiency multiple computed over adopters says nothing about the population that never opened the tool. ([Joyce](../sources/20260826_Qw_tC68KKes.md), 16:56-17:08)
+- **A reported fix aimed squarely at the did-not-return half.** Ramp credits its skill library — letting each person write their own brief format and content preferences in text — as "very valuable for getting adoption," not as a quality improvement. For an artifact consumed under time pressure between meetings, a format that does not match how someone scans is abandoned regardless of how accurate it is, and on a usage dashboard that looks identical to the artifact being wrong. ([Vaziri](../sources/20260826_VjEP0xqTUI0.md), 12:11-12:32)
 
 Related topics:
 - [Product Strategy](../topics/product-strategy.md)
@@ -31,7 +32,10 @@ Related concepts:
 - [Measure feature adoption, not shipping velocity](measure-feature-adoption-not-shipping-velocity.md)
 - [Optimize Onboarding Around One Aha Moment](optimize-onboarding-around-one-aha-moment.md)
 - [Layer Ask, Push, and Self-Serve Because Teams Interface Differently](layer-ask-push-and-self-serve-because-teams-interface-differently.md)
+- [Let Users Author the Output Format as a Skill](let-users-author-the-output-format-as-a-skill.md)
+- [Distribution Is the Bottleneck, Not the Idea](distribution-is-the-bottleneck-not-the-idea.md)
 
 Sources:
 - [Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 07:13-08:50
 - [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md), 16:56-17:08
+- [The Building Blocks of GTM Orchestration — Arman Vaziri, Ramp](../sources/20260826_VjEP0xqTUI0.md), 12:11-12:32

@@ -27,6 +27,7 @@ Related concepts:
 - [Connect Production Observability to Offline Eval Loops](connect-production-observability-to-offline-eval-loops.md)
 - [Tools Are the Only Primitive Every Client Implements](tools-are-the-only-primitive-every-client-implements.md)
 - [Pick the Serialization the Models Have Seen Most, Not the One Native to Your System](pick-the-serialization-the-models-have-seen-most.md)
+- [Read Employee-Built Automations as the Productionization Backlog](read-employee-built-automations-as-the-productionization-backlog.md)
 
 Sources:
 - [Building the Engine While Flying the Plane: Launching the Figma MCP Server — Jesse Lumarie, Figma](../sources/20260828_ZIYYsAzaLlA.md), 12:29-13:09

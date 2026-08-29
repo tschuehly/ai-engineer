@@ -72,8 +72,11 @@ Retrieval for an internal agent is sometimes better solved as a serving problem 
 
 A commercial data layer shows what coverage costs when the corpus is bought rather than crawled. No go-to-market vendor holds a complete picture of any field, so values are assembled by waterfalling providers until one returns, and the ordering is decided by running evals against them rather than by reputation — a fallback chain whose later rungs serve exactly the records the earlier ones missed. Coverage and correctness stay separate: a value returned by the third provider is still one external system's claim, and two vendors agreeing may not be independent evidence if both resold the same upstream file.
 
+Attribute filtering is the load-bearing half of hybrid retrieval when the corpus is multi-tenant in fact if not in architecture. A go-to-market agent stack chunks and embeds call transcripts, emails, enablement material, product knowledge, and playbooks, then combines vector, attribute, and keyword search "to pull information scoped to a specific account… without having to pull in the full raw corpus into agent context." Two things are being bought at once and they are usually conflated: the vector and keyword components decide what is relevant, and the attribute filter decides what is permissible to see. Without the second, a semantically excellent retrieval can hand an agent a passage about a different customer — a correctness and confidentiality failure that no reranker will catch, because the passage really is about the same topic. The same design pushes the expensive work to ingest, where the entity each document belongs to is decided once and stored, which is what makes the filter enforceable at query time.
+
 ## Key Concepts
 
+- [Hydrate a Trigger Event to Its Entity Once and Persist the Mapping](../concepts/hydrate-a-trigger-event-to-its-entity-once-and-persist-the-mapping.md) - the ingest-side decision that makes an account-scoped retrieval filter possible.
 - [Waterfall Data Vendors and Run Evals to Decide Which to Trust](../concepts/waterfall-data-vendors-and-run-evals-to-decide-which-to-trust.md) - layering providers for coverage without mistaking agreement for confirmation.
 - [Compute Truth in the Warehouse and Serve It as a Denormalized Profile](../concepts/compute-truth-in-the-warehouse-and-serve-it-as-a-denormalized-profile.md) - key-addressable context beats search when the entity set is known, with staleness as the price.
 - [Classify the Whole Addressable Market Instead of Searching It Account by Account](../concepts/classify-the-whole-addressable-market-instead-of-searching-it.md) - exhaustive classification is a distinct use of an embedding index from ranked retrieval.
@@ -296,3 +299,4 @@ Tax explanation systems add a regulated consumer version of expert-domain retrie
 - [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md)
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md)
 - [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md)
+- [The Building Blocks of GTM Orchestration — Arman Vaziri, Ramp](../sources/20260826_VjEP0xqTUI0.md)

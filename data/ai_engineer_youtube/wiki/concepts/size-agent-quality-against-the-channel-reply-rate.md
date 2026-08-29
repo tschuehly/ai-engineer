@@ -29,6 +29,7 @@ Related concepts:
 - [Choose Quality Over Coverage Because the First Five Answers Decide Adoption](choose-quality-over-coverage-because-the-first-five-answers-decide-adoption.md)
 - [Optimize Prompts Against an Asymmetric Cost Matrix](optimize-prompts-against-an-asymmetric-cost-matrix.md)
 - [AI Does Not Replace Shareable Product Marketing](ai-does-not-replace-shareable-product-marketing.md)
+- [Gate a Generated Multi-Channel Campaign on the Channel Owner](gate-a-generated-multi-channel-campaign-on-the-channel-owner.md)
 
 Sources:
 - [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 13:42-14:39

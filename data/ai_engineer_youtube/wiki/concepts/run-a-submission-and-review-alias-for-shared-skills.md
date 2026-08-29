@@ -16,6 +16,7 @@ Details:
 - Source-of-truth alignment is the concrete risk being managed. Independently authored skills that each define a metric or a filter slightly differently produce divergent answers from one warehouse, which is the spreadsheet problem the platform existed to remove.
 - This is the intake half of skill governance; the maintenance half is pruning stale and no-op material from the skills that survive ([Prune skills with single source of truth, sediment removal, and no-op deletion tests](prune-skills-with-single-source-of-truth-sediment-and-no-op-deletion-tests.md)), and the amplification risk is that any loop which authors skills automatically inherits whichever regime is in place ([Auto-Evolving Skills Multiply Whatever Governance You Already Have](auto-evolving-skills-multiply-whatever-governance-you-already-have.md)).
 - **Limit.** No throughput, rejection rate, review latency, or skill count is reported, and human review at an alias is the first thing to become a bottleneck if submissions scale — a risk the talk names as a coming problem rather than a solved one.
+- **The counter-position, and the scope line that reconciles them.** Ramp's skill library is deliberately ungoverned in the opposite direction: users write their own brief formats in text, and that permissiveness is credited with adoption ([Let Users Author the Output Format as a Skill](let-users-author-the-output-format-as-a-skill.md)). The two are not in conflict once the object is distinguished. A skill others will execute is a shared liability and earns review; a personal instruction that shapes only its author's own artifact does not, and reviewing it costs more than it saves. Proliferation is a problem in the shared namespace, not in the personal one. ([Vaziri](../sources/20260826_VjEP0xqTUI0.md), 12:11-12:32)
 
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
@@ -31,6 +32,9 @@ Related concepts:
 - [Hand Domain Experts the Pipeline as Skills](hand-domain-experts-the-pipeline-as-skills.md)
 - [Domain Expert Review Tools Convert Judgment Into Deployable Knowledge](domain-expert-review-tools-convert-judgment-into-deployable-knowledge.md)
 - [Skills Are the Residual Where Organizational Know-How Lands](skills-are-the-residual-where-organizational-know-how-lands.md)
+- [Let Users Author the Output Format as a Skill](let-users-author-the-output-format-as-a-skill.md)
+- [Read Employee-Built Automations as the Productionization Backlog](read-employee-built-automations-as-the-productionization-backlog.md)
 
 Sources:
 - [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md), 13:01-14:02, 15:34-16:09, 18:19-18:49
+- [The Building Blocks of GTM Orchestration — Arman Vaziri, Ramp](../sources/20260826_VjEP0xqTUI0.md), 12:11-12:32

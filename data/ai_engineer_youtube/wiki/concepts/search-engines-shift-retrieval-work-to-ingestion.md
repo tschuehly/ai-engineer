@@ -19,6 +19,7 @@ Related topics:
 Related concepts:
 - [BM25 Scores Lexical Retrieval With Frequency, Rarity, and Field Length](bm25-scores-lexical-retrieval-with-frequency-rarity-and-field-length.md)
 - [Structure-Aware Document Parsing Improves RAG Chunk Quality](structure-aware-document-parsing-improves-rag-chunk-quality.md)
+- [Hydrate a Trigger Event to Its Entity Once and Persist the Mapping](hydrate-a-trigger-event-to-its-entity-once-and-persist-the-mapping.md)
 
 Sources:
 - [Information Retrieval from the Ground Up - Philipp Krenn, Elastic](../sources/20250727_4Xe_iMYxBQc.md), 07:17-08:41, 22:14-23:24

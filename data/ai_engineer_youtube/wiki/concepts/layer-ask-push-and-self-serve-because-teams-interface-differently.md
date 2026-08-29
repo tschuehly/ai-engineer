@@ -15,6 +15,7 @@ Details:
 - The three modes share one substrate: the same role-specific skill files back the analyst's queries, the automated summary's data preparation, and the reps' self-serve workspace, which is what makes maintaining three surfaces affordable. (08:15-08:29)
 - **The staging is not a maturity ladder.** This differs from the four-rung roadmap in [Stage the Internal Agent Roadmap From Answers to Automation to Team-Built Tooling](stage-the-internal-agent-roadmap-from-answers-to-automation-to-team-built-tooling.md), where each rung changes what the user does and supersedes the previous one's sufficiency; here the three modes run concurrently and permanently, because they are segmented by user preference rather than by system capability.
 - **Limit.** No usage split across the three modes is reported, so the claim that all three are needed rests on the speaker's judgment rather than on evidence that any population would have gone unserved. The only outcome figure attached to the whole framework is an unmethodized "2x our efficiency." (16:56-17:08)
+- **A self-serve tier implemented as a protocol rather than an application.** Ramp exposes "the same exact tools" its background agents use through an internal MCP server, so employees connect their own clients and "build their own automations," and every capability the platform ships is "automatically federated out" without a distribution step. The tradeoff against a hosted workspace is discoverability for reach: a workspace can guide a non-technical user through what is available, while an endpoint assumes the user already has an agent and knows what to ask for — so the two self-serve designs reach different halves of the same organization. ([Vaziri](../sources/20260826_VjEP0xqTUI0.md), 14:11-14:40)
 
 Related topics:
 - [Go To Market](../topics/go-to-market.md)
@@ -30,6 +31,9 @@ Related concepts:
 - [Separate the Context Gap From the Expert Gap](separate-the-context-gap-from-the-expert-gap.md)
 - [Choose Quality Over Coverage Because the First Five Answers Decide Adoption](choose-quality-over-coverage-because-the-first-five-answers-decide-adoption.md)
 - [Ship Go-to-Market Changes on an Engineering Release Cadence](ship-go-to-market-changes-on-an-engineering-release-cadence.md)
+- [Expose the Background Agents' Tool Surface to Employees Over MCP](expose-the-background-agents-tool-surface-to-employees-over-mcp.md)
+- [Solve One Team, Then Mirror the Build Sideways](solve-one-team-then-mirror-the-build-sideways.md)
 
 Sources:
 - [How AI Agents Let GTM Teams Scale — Justin Joyce, Cloudflare](../sources/20260826_Qw_tC68KKes.md), 04:56-06:45, 14:39-15:33, 16:30-17:08
+- [The Building Blocks of GTM Orchestration — Arman Vaziri, Ramp](../sources/20260826_VjEP0xqTUI0.md), 14:11-14:40

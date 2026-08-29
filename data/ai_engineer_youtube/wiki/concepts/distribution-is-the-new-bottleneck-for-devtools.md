@@ -36,6 +36,7 @@ Related concepts:
 - [Ship Go-to-Market Changes on an Engineering Release Cadence](ship-go-to-market-changes-on-an-engineering-release-cadence.md)
 - [Attribute LLM-Sourced Inbound With a How-Did-You-Hear Field](attribute-llm-sourced-inbound-with-a-how-did-you-hear-field.md)
 - [The Install Handoff Is Now a Prompt](the-install-handoff-is-now-a-prompt.md)
+- [Distribution Is the Bottleneck, Not the Idea](distribution-is-the-bottleneck-not-the-idea.md)
 
 Sources:
 - [GTM Is You - Victoria Melnikova, Evil Martians](../sources/20260707_G6IlDzj8OjA.md), 01:43-09:00

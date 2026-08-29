@@ -17,6 +17,7 @@ Details:
 - The human-side payoff is measured in tabs rather than in accuracy: GTM staff "didn't need to jump between many tools anymore," exploring context, investigating accounts, and dispatching to outbound tools from the surface they already used. (10:36-11:03)
 - **Limit.** The substrate here is the speaker's own product, and no alternative substrate is compared. The claim that a shared markdown-and-database surface prevents drift is an architectural argument, not a measured result; nothing in the talk reports a drift incident avoided. (11:15-11:17, 18:18-18:44)
 - **The shared substrate is necessary and not sufficient, per a vendor who ranks the remaining gap first.** Asked for the hardest problem in GTM engineering, Berry names neither data nor orchestration nor agents but "the interface between the human and the agent," because with the agent acting as "the reasoning and decision layer for a lot of tasks that a sales rep was previously doing," "the rep might think that they should do something different or the rep might not know that the agent did something." A common substrate makes the second knowable; it does not make it known, and it says nothing about the first. See [The Human-Agent Handoff Is the Hard Part Once Agents Are the Decision Layer](the-human-agent-handoff-is-the-hard-part-once-agents-are-the-decision-layer.md). ([Berry](../sources/20260826_UhCY231d0FQ.md), 16:51-17:47)
+- **The stronger form of the rule: share the tool surface, not only the data.** Ramp gives employees "access to the same tools and skills that are being used for the background agents," exposed as one internal MCP server that is "basically just a window into the same exact tools." Sharing data prevents the two populations from disagreeing about facts; sharing tools additionally prevents them from disagreeing about capabilities, because there is a single definition of what can be read and done. It also makes drift impossible to introduce accidentally — a new tool cannot ship to one side only. ([Vaziri](../sources/20260826_VjEP0xqTUI0.md), 14:11-14:40)
 
 Related topics:
 - [Context Engineering](../topics/context-engineering.md)
@@ -32,7 +33,9 @@ Related concepts:
 - [Keep Humans Aligned With Proactive Agent Work](keep-humans-aligned-with-proactive-agent-work.md)
 - [The Human-Agent Handoff Is the Hard Part Once Agents Are the Decision Layer](the-human-agent-handoff-is-the-hard-part-once-agents-are-the-decision-layer.md)
 - [Give Agents Their Own Fields in the System of Record](give-agents-their-own-fields-in-the-system-of-record.md)
+- [Expose the Background Agents' Tool Surface to Employees Over MCP](expose-the-background-agents-tool-surface-to-employees-over-mcp.md)
 
 Sources:
 - [AI in GTM at Notion — Flora Liu](../sources/20260826_L4I7WgiEquo.md), 06:25-07:20, 10:36-11:17, 18:18-18:44, 20:13-20:27
 - [GTM Engineering: The Technical Bits — Everett Berry, Clay](../sources/20260826_UhCY231d0FQ.md), 16:51-17:47
+- [The Building Blocks of GTM Orchestration — Arman Vaziri, Ramp](../sources/20260826_VjEP0xqTUI0.md), 14:11-14:40
