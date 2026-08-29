@@ -15,6 +15,7 @@ Details:
 - Output is "a nice trustworthy answer with citations back rather than something that you discovered for the first time." (13:03-13:10)
 - The librarian ("radiant librarian") is a shipped feature inside Upside's product, presented as a design pattern any agent should consult before acting. (12:12-12:23)
 - This is a preflight / just-in-time context-injection pattern applied to *definitions*: it is the human analogue of onboarding a new hire so they understand your business before they answer, and it complements execution-based query validation that catches valid-but-wrong queries after the fact.
+- **Where the definitions live when the store is the governed layer, and what happens when they outgrow the prompt.** Snowflake's internal assistant encodes business meaning in 15 semantic views over 85 tables and 3,000 columns rather than in a retrieval-time librarian, and started with the process knowledge inline: "a nine-page long agent instructions." That does not hold — "we were creating all these business processes and workflows. We couldn't fit them into the agent instructions anymore. And then the skills came, and we were like, perfect, let's build a skill library" — and when orchestration instructions for five to six MCP connections pushed past the instruction limit, the answer was progressive disclosure. The durable point for a definitions layer: it grows monotonically with the business, so it needs a retrieval mechanism rather than a prompt slot, whichever artifact holds it. ([Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 05:14-05:31, 12:11-13:08)
 
 Related topics:
 - [Business Intelligence](../topics/business-intelligence.md)
@@ -28,6 +29,8 @@ Related concepts:
 - [Demand-driven context pulls knowledge from failed work](demand-driven-context-pulls-knowledge-from-failed-work.md)
 - [Validate generated SQL by execution before trusting it](validate-generated-sql-by-execution-before-trusting-it.md)
 - [Compile natural-language analytics into reusable deterministic widgets](compile-natural-language-analytics-into-reusable-deterministic-widgets.md)
+- [Stage the Internal Agent Roadmap From Answers to Automation to Team-Built Tooling](stage-the-internal-agent-roadmap-from-answers-to-automation-to-team-built-tooling.md)
 
 Sources:
 - [Design Patterns for AI Trust: Juries, Libraries, and Agent Tiers — Alex Bauer, Upside.tech](../sources/20260711_YZQsWVeN3rE.md), 12:12-13:10
+- [Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 05:14-05:31, 12:11-13:08

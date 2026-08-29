@@ -14,6 +14,7 @@ Details:
 - Finished ≠ helpful: the agent built a trip itinerary and the answer "looks successful," but it used the wrong service and mispriced it — "technically successful but still failing the task." (05:07-05:37)
 - Normal safety nets are only "one slice": unit tests, regex, and simulated-customer scripts help but customers "always do something different," so "green CI means nothing for a non-deterministic agent," and "production is the place where you learn what you need to test in the first place." (02:41-03:06, 05:37-05:48)
 - The differentiator is not the model or the harness everyone can copy — it is the internal operations system that closes the loop, detects problems, and gives you a felt sense of the system's health. (19:00-19:31)
+- **The post-launch layer is wider than observability: it includes activation, and it consumes most of the owner's time.** Izmit, running an internal assistant at ~40,000 questions a week, spends "60-70% of my time in sales meetings, giving demos, building dashboards, which teams adopted… getting sponsorship from sales leaders," and estimates that without it the product would be at half its usage. The second half of his loop is the one this page describes — LLM classification of the whole question log into a topic taxonomy, with "swearing at the agent or repeating their question" as the free negative labels — but it only produces signal in proportion to adoption, so the two halves are ordered. An operations layer built before the activation work has little to observe. ([Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 07:53-08:41, 14:11-15:20)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -25,6 +26,8 @@ Related concepts:
 - [Score Every Production Conversation to Judge Agent Health](score-every-production-conversation-to-judge-agent-health.md)
 - [Wrap Agent Completion in an Automatic Deterministic Verification Gate](wrap-agent-completion-in-an-automatic-deterministic-verification-gate.md)
 - [Ground agent simulation and evaluation in production logs](ground-agent-simulation-and-evaluation-in-production-logs.md)
+- [Classify the Assistant Question Log to Find Feature and Content Gaps](classify-the-assistant-question-log-to-find-feature-and-content-gaps.md)
 
 Sources:
 - [The Missing Layer After Launch - Raphael Kalandadze, Wandero AI](../sources/20260705_kZsf_Sfm7RU.md), 00:31-05:48, 19:00-19:31
+- [Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 07:53-08:41, 14:11-15:20

@@ -16,6 +16,7 @@ Details:
 - How this qualifies the trace-substrate argument. The case that traces are the substrate for improvement is well supported elsewhere in this wiki, but it assumes the traces exist. This page names the upstream dependency: trace volume is a function of adoption, adoption is a function of perceived worth, and perceived worth at time zero cannot come from the loop because the loop has not run. A continual-learning program in a low-adoption deployment is starved by construction, and the fix is enablement work, not more learning machinery.
 - Where the seed comes from, on this account: co-design rather than distribution — reduce the activation energy by putting the agent inside the tools people already use, and go find the requirements in person ([Co-Design In Person](co-design-in-person-because-remote-channels-filter-the-requirements.md)). That is an argument for what to do first, not evidence that it works.
 - Limits. No adoption rate, usage curve, or improvement measurement is given anywhere in the talk; the snowball is a slide. The speaker's organization owns the businesses it deploys into, which removes the procurement barrier that most teams face and makes his cold-start claim, if anything, an understatement of the problem elsewhere. ([Provenance and Limits](../sources/20260828_B0fjR3yaZFU.md))
+- **A measured instance of the cold start, and an account of what the seeding work actually is.** Izmit reports the number this page's argument predicts: two weeks after GA, 20% of the organization had tried the assistant, with management already frustrated at flat usage. His seeding work is not co-design but sustained distribution — 60-70% of his time in "sales meetings, giving demos, building dashboards, which teams adopted, shaming the managers whose team is actually doing good, getting sponsorship from sales leaders" over a couple of months — and he attributes roughly half of current usage to it. The far end of the loop is what the traffic then buys: 40,000 questions a week classified into a topic taxonomy that shows feature gaps in real time. Snowflake is an unusually favorable case (technical staff, executive reach, its own platform), which makes 20% a floor estimate for how hard the cold start is elsewhere. ([Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 07:13-08:41, 14:17-15:20)
 
 Related topics:
 - [Workflows](../topics/workflows.md)
@@ -29,6 +30,8 @@ Related concepts:
 - [AI adoption depends on incentive design as much as tool access](ai-adoption-depends-on-incentive-design-as-much-as-tool-access.md)
 - [Embed Agent Tools in Existing Work Surfaces](embed-agent-tools-in-existing-work-surfaces.md)
 - [Operational Outcomes Are Eval Labels You Only See If You Own the Operation](operational-outcomes-are-eval-labels-you-only-see-if-you-own-the-operation.md)
+- [Separate the Did-Not-Try Problem From the Did-Not-Return Problem](separate-the-did-not-try-problem-from-the-did-not-return-problem.md)
 
 Sources:
 - [How do you diffuse AI into the real world? — Varun Shenoy, Long Lake](../sources/20260828_B0fjR3yaZFU.md), 13:43-15:32
+- [Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 07:13-08:41, 14:17-15:20

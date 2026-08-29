@@ -1,6 +1,8 @@
 # Concept Index
 
 ## Agents
+- [Budget a Third of Sprint Capacity for Re-Architecture](../concepts/budget-a-third-of-sprint-capacity-for-re-architecture.md) - 30-40% of sprints spent rebuilding onto new platform primitives, planned rather than resented.
+- [Stage the Internal Agent Roadmap From Answers to Automation to Team-Built Tooling](../concepts/stage-the-internal-agent-roadmap-from-answers-to-automation-to-team-built-tooling.md) - four rungs, each changing what the user does and each consuming the previous rung's substrate.
 - [Treat Go-to-Market as a Live Model of Your World That Agents Act On](../concepts/treat-go-to-market-as-a-live-model-of-your-world.md) - the substrate an internal agent fleet reads, built before any of the agents.
 - [Scope a Person-Cloned Agent by Caller, With Drafts as the Shared Capability](../concepts/scope-a-person-cloned-agent-by-caller-with-drafts-as-the-shared-capability.md) - invocation identity selects the permission set, so a founder-level agent can still be shared.
 - [Make Delegation Multiplayer So People See Larger Asks](../concepts/make-delegation-multiplayer-so-people-see-larger-asks.md) - a shared channel publishes the org's best delegations; a private CLI hides them.
@@ -580,6 +582,11 @@
 - [Embed architecture governance into developer workflows](../concepts/embed-architecture-governance-into-developer-workflows.md)
 
 ## Business Intelligence
+- [Choose Quality Over Coverage Because the First Five Answers Decide Adoption](../concepts/choose-quality-over-coverage-because-the-first-five-answers-decide-adoption.md) - a free-form box is judged per user on its first five answers, so 50 questions at 95% beats 100 at 70%.
+- [Write the Question Set From the Business Process Before the Data Is Connected](../concepts/write-the-question-set-from-the-business-process-before-the-data-is-connected.md) - 150 questions taken from the sales process, including the ones the system could not answer, as the pre-traffic eval set.
+- [Stage the Internal Agent Roadmap From Answers to Automation to Team-Built Tooling](../concepts/stage-the-internal-agent-roadmap-from-answers-to-automation-to-team-built-tooling.md) - four rungs, each changing what the user does and each consuming the previous rung's substrate.
+- [Classify the Assistant Question Log to Find Feature and Content Gaps](../concepts/classify-the-assistant-question-log-to-find-feature-and-content-gaps.md) - LLM classification over 40,000 questions a week, with repeats and profanity as free negative labels.
+- [Land the Data in One Governed Store So Agents Inherit Access Control](../concepts/land-the-data-in-one-governed-store-so-agents-inherit-access-control.md) - consolidation makes authorization a property agents inherit rather than implement.
 - [Draw the Cut Line Between Verified Data and Free-Form Agent Analysis](../concepts/draw-the-cut-line-between-verified-data-and-free-form-agent-analysis.md) - just-in-time dashboards and analyses on top, verifiability and provenance underneath.
 
 - [Preflight Agents Through a Business-Definitions Librarian](../concepts/preflight-agents-through-a-business-definitions-librarian.md)
@@ -938,6 +945,7 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Budget a Third of Sprint Capacity for Re-Architecture](../concepts/budget-a-third-of-sprint-capacity-for-re-architecture.md) - 30-40% of sprints spent rebuilding onto new platform primitives, planned rather than resented.
 - [Derive an Agent Persona From a Measured Corpus, Not a Described Tone](../concepts/derive-an-agent-persona-from-a-measured-corpus-not-a-described-tone.md) - persona context extracted from the person's own archive rather than asserted.
 - [Satisfaction of Search Stops Agents at the First Plausible Hit](../concepts/satisfaction-of-search-stops-agents-at-the-first-plausible-hit.md) - the radiology error, applied to an agent handed a searchable wiki: it finds one plausible hit and stops.
 - [Distillation Is a Separate Step From Retrieval, and the Task Agent Will Not Do It](../concepts/distillation-is-a-separate-step-from-retrieval.md) - understanding is the relation between the pieces, and a task-time search loop will not assemble it.
@@ -1101,6 +1109,8 @@
 - [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md)
 
 ## Infrastructure
+- [Land the Data in One Governed Store So Agents Inherit Access Control](../concepts/land-the-data-in-one-governed-store-so-agents-inherit-access-control.md) - consolidation makes authorization a property agents inherit rather than implement.
+- [Budget a Third of Sprint Capacity for Re-Architecture](../concepts/budget-a-third-of-sprint-capacity-for-re-architecture.md) - 30-40% of sprints spent rebuilding onto new platform primitives, planned rather than resented.
 - [Pre-Measure Everything and Build Runtime Knobs Before You Need Them](../concepts/pre-measure-everything-and-build-runtime-knobs-before-you-need-them.md) - a metric first recorded during an incident has no baseline, and the knobs must already be first-class.
 - [Measure Multi-GPU Headroom Against a Communication-Aware Roofline](../concepts/measure-multi-gpu-headroom-against-a-communication-aware-roofline.md) - compute outgrew the interconnect 7.2x to 3x from A100 to B200, and PyTorch+NCCL sits below half its analytic bound on most problems.
 - [Add Multi-GPU Primitives to a Single-GPU Kernel Instead of Orchestrating Bulk Collectives](../concepts/add-multi-gpu-primitives-to-a-single-gpu-kernel.md) - collective libraries, distributed DSLs, and hand-tuned operators each fail differently; roughly a dozen in-kernel lines did not.
@@ -1561,6 +1571,10 @@
 - [Keep visual inputs at native shape for GUI and video agents](../concepts/keep-visual-inputs-at-native-shape-for-gui-and-video-agents.md)
 
 ## Product Strategy
+- [Separate the Did-Not-Try Problem From the Did-Not-Return Problem](../concepts/separate-the-did-not-try-problem-from-the-did-not-return-problem.md) - trial rate and return rate fail differently and have different owners.
+- [The Wow Factor Collapses Into a Baseline Within Months](../concepts/the-wow-factor-collapses-into-a-baseline-within-months.md) - success turns a capability into a habit and then into the floor you are judged against.
+- [Choose Quality Over Coverage Because the First Five Answers Decide Adoption](../concepts/choose-quality-over-coverage-because-the-first-five-answers-decide-adoption.md) - a free-form box is judged per user on its first five answers, so 50 questions at 95% beats 100 at 70%.
+- [Gate Each Rollout Phase on a Different Question](../concepts/gate-each-rollout-phase-on-a-different-question.md) - pilot proves accuracy, a 10% beta proves viability through request concentration and a retention bar, then GA.
 - [Crystallize the UI for Repeated Use Cases and Generate It for Novel Ones](../concepts/crystallize-the-ui-for-repeated-use-cases-and-generate-it-for-novel-ones.md) - user learning, not token cost, is the argument against generating every interface.
 - [Replace Buy-Versus-Build With Arbitrary Customizability](../concepts/replace-buy-versus-build-with-arbitrary-customizability.md) - the axis is whether agents can change the system, not whether you wrote it.
 - [Staff Forward-Deployed Engineers Who Run Deals and Build the Deal Tooling](../concepts/staff-forward-deployed-engineers-who-run-deals-and-build-the-deal-tooling.md) - a role that exists because AI merged supporting revenue with building the tools revenue runs on.
@@ -1697,6 +1711,10 @@
 
 ## Go To Market
 
+- [Separate the Did-Not-Try Problem From the Did-Not-Return Problem](../concepts/separate-the-did-not-try-problem-from-the-did-not-return-problem.md) - trial rate and return rate fail differently and have different owners.
+- [Gate Each Rollout Phase on a Different Question](../concepts/gate-each-rollout-phase-on-a-different-question.md) - pilot proves accuracy, a 10% beta proves viability through request concentration and a retention bar, then GA.
+- [The Wow Factor Collapses Into a Baseline Within Months](../concepts/the-wow-factor-collapses-into-a-baseline-within-months.md) - success turns a capability into a habit and then into the floor you are judged against.
+- [Stage the Internal Agent Roadmap From Answers to Automation to Team-Built Tooling](../concepts/stage-the-internal-agent-roadmap-from-answers-to-automation-to-team-built-tooling.md) - four rungs, each changing what the user does and each consuming the previous rung's substrate.
 - [Treat Go-to-Market as a Live Model of Your World That Agents Act On](../concepts/treat-go-to-market-as-a-live-model-of-your-world.md) - go-to-market is a data problem, and the deliverable is a joined internal/external model agents can act on.
 - [Classify the Whole Addressable Market Instead of Searching It Account by Account](../concepts/classify-the-whole-addressable-market-instead-of-searching-it.md) - embeddings over a corpus make exhaustive labelling of the market a different, cheaper operation than per-account search.
 - [Alert on Account Change Events, Including the Ones That Are Absences](../concepts/alert-on-account-change-events-including-absences.md) - signup, surge, stop, watchlist arrival — and the stop produces no rows to threshold on.
@@ -1713,6 +1731,10 @@
 - [Verify AI Call Summaries Before CRM Sync](../concepts/verify-ai-call-summaries-before-crm-sync.md) - the write path into the system of record needs a check, and agent tool access widens it.
 
 ## Evaluation
+- [Write the Question Set From the Business Process Before the Data Is Connected](../concepts/write-the-question-set-from-the-business-process-before-the-data-is-connected.md) - 150 questions taken from the sales process, including the ones the system could not answer, as the pre-traffic eval set.
+- [Classify the Assistant Question Log to Find Feature and Content Gaps](../concepts/classify-the-assistant-question-log-to-find-feature-and-content-gaps.md) - LLM classification over 40,000 questions a week, with repeats and profanity as free negative labels.
+- [Choose Quality Over Coverage Because the First Five Answers Decide Adoption](../concepts/choose-quality-over-coverage-because-the-first-five-answers-decide-adoption.md) - a free-form box is judged per user on its first five answers, so 50 questions at 95% beats 100 at 70%.
+- [Gate Each Rollout Phase on a Different Question](../concepts/gate-each-rollout-phase-on-a-different-question.md) - pilot proves accuracy, a 10% beta proves viability through request concentration and a retention bar, then GA.
 - [Mine Chat History for Past Decisions and Turn Them Into Judgment Evals](../concepts/mine-chat-history-for-past-decisions-and-turn-them-into-judgment-evals.md) - the archive supplies eval items with real inputs and the choice actually made.
 - [Derive an Agent Persona From a Measured Corpus, Not a Described Tone](../concepts/derive-an-agent-persona-from-a-measured-corpus-not-a-described-tone.md) - measured voice features are checkable on generated output without a judge model.
 - [Validate a Cross-Language Port Against Production Runtime Data](../concepts/validate-a-cross-language-port-against-production-runtime-data.md) - an unattended port loop makes its oracle load-bearing, and the source code is not it.
@@ -2305,6 +2327,7 @@
 - [Condition ASR on Conversation Context and Domain Vocabulary](../concepts/condition-asr-on-conversation-context-and-domain-vocabulary.md)
 
 ## Retrieval
+- [Classify the Assistant Question Log to Find Feature and Content Gaps](../concepts/classify-the-assistant-question-log-to-find-feature-and-content-gaps.md) - LLM classification over 40,000 questions a week, with repeats and profanity as free negative labels.
 - [Classify the Whole Addressable Market Instead of Searching It Account by Account](../concepts/classify-the-whole-addressable-market-instead-of-searching-it.md) - ranked retrieval answers a query; the same embeddings can partition the corpus.
 - [Treat Go-to-Market as a Live Model of Your World That Agents Act On](../concepts/treat-go-to-market-as-a-live-model-of-your-world.md) - a joined internal/external model as the retrieval substrate for operational agents.
 - [Satisfaction of Search Stops Agents at the First Plausible Hit](../concepts/satisfaction-of-search-stops-agents-at-the-first-plausible-hit.md) - a stopping failure rather than a ranking failure, invisible to recall over what was returned.
@@ -2432,6 +2455,7 @@
 - [Treat agents as embodied action systems](../concepts/treat-agents-as-embodied-action-systems.md)
 
 ## Security
+- [Land the Data in One Governed Store So Agents Inherit Access Control](../concepts/land-the-data-in-one-governed-store-so-agents-inherit-access-control.md) - consolidation makes authorization a property agents inherit rather than implement.
 - [Scope a Person-Cloned Agent by Caller, With Drafts as the Shared Capability](../concepts/scope-a-person-cloned-agent-by-caller-with-drafts-as-the-shared-capability.md) - drafting bounds delegated authority and leaves the read side of the exposure open.
 - [Public Agent Surfaces Get Repurposed as Free General-Purpose Compute](../concepts/public-agent-surfaces-get-repurposed-as-free-general-compute.md) - discount codes and "who else is checking out this product" are legitimate merchant knowledge, so a generic PII and toxicity stack passes them through.
 - [Treat Guardrails as a Failable Dependency With Its Own Time Budget](../concepts/treat-guardrails-as-a-failable-dependency-with-a-time-budget.md) - guardrails are services that go down, so fail-open versus fail-closed, timeouts, fallbacks, and placement are all decisions to take in advance.
@@ -2791,6 +2815,10 @@
 - [Validate the Simulated User and the Judge Before Trusting a Simulation](../concepts/validate-the-simulated-user-and-the-judge.md)
 
 ## Workflows
+- [Gate Each Rollout Phase on a Different Question](../concepts/gate-each-rollout-phase-on-a-different-question.md) - pilot proves accuracy, a 10% beta proves viability through request concentration and a retention bar, then GA.
+- [Separate the Did-Not-Try Problem From the Did-Not-Return Problem](../concepts/separate-the-did-not-try-problem-from-the-did-not-return-problem.md) - trial rate and return rate fail differently and have different owners.
+- [Budget a Third of Sprint Capacity for Re-Architecture](../concepts/budget-a-third-of-sprint-capacity-for-re-architecture.md) - 30-40% of sprints spent rebuilding onto new platform primitives, planned rather than resented.
+- [Write the Question Set From the Business Process Before the Data Is Connected](../concepts/write-the-question-set-from-the-business-process-before-the-data-is-connected.md) - 150 questions taken from the sales process, including the ones the system could not answer, as the pre-traffic eval set.
 - [Alert on Account Change Events, Including the Ones That Are Absences](../concepts/alert-on-account-change-events-including-absences.md) - route attention on state transitions, including the transition that produces no data.
 - [Staff Forward-Deployed Engineers Who Run Deals and Build the Deal Tooling](../concepts/staff-forward-deployed-engineers-who-run-deals-and-build-the-deal-tooling.md) - the operators of a workflow also maintaining it.
 - [Make Delegation Multiplayer So People See Larger Asks](../concepts/make-delegation-multiplayer-so-people-see-larger-asks.md) - ambition spreads by reading colleagues' prompts, which a per-developer CLI cannot do.

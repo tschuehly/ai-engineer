@@ -126,8 +126,11 @@ Peter Werry's conference version of the Unblocked argument gives this topic a na
 
 Context for an agent that speaks as a specific person can be measured rather than described. Instead of writing adjectives about tone, run statistics over that person's own archive — average message length, sign-off convention, recurring constructions — which yields facts checkable on generated output rather than aspirations, and which people rarely report accurately about themselves. The organizational counterpart is that the substrate usually already exists: chat and email accumulate not just style but hundreds of decisions with their original context attached, so a company's history can supply both how someone writes and how they decide, without any new note-taking discipline. The two are separable and fail differently, and neither is measured in the one source that reports building them.
 
+A production account of how an agent's instruction context evolves under growth: an internal assistant launched on nine pages of agent instructions version-managed in a Google Doc, then hit two separate size limits. The first was business process and workflow content, which no longer fit and became a skill library; the second was orchestration text for five to six MCP connections, which pushed past the instruction limit and forced progressive disclosure. Both moves were reactions to a symptom rather than design decisions, and the ordering is informative — procedural knowledge outgrows the prompt before tool guidance does, and the business semantics themselves live further down, in a semantic layer of 15 views over 85 tables and 3,000 columns rather than in the prompt at all.
+
 ## Key Concepts
 
+- [Budget a Third of Sprint Capacity for Re-Architecture](../concepts/budget-a-third-of-sprint-capacity-for-re-architecture.md) - instruction-size limits, skills, and progressive disclosure arrive as forced responses, and the rebuilding is continuous.
 - [Derive an Agent Persona From a Measured Corpus, Not a Described Tone](../concepts/derive-an-agent-persona-from-a-measured-corpus-not-a-described-tone.md) - persona features extracted from an archive instead of asserted in a prompt.
 - [Satisfaction of Search Stops Agents at the First Plausible Hit](../concepts/satisfaction-of-search-stops-agents-at-the-first-plausible-hit.md) - the named failure mode of handing an agent a searchable store instead of a selection layer.
 - [Distillation Is a Separate Step From Retrieval, and the Task Agent Will Not Do It](../concepts/distillation-is-a-separate-step-from-retrieval.md) - finding the pieces is not knowing how they fit, and the task agent is the wrong place to assemble them.
@@ -395,3 +398,4 @@ Context for an agent that speaks as a specific person can be measured rather tha
 - [Velocity Sickness: What Happens When Your Whole Team Gets 10x Faster — Matt Dailey, Ref.](../sources/20260809_Kz4QJmNrVXU.md)
 - [How to Generate Mergeable Code with a Context Engine — Peter Werry, Unblocked](../sources/20260827_qdAkxLoYNI8.md)
 - [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md)
+- [Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md)

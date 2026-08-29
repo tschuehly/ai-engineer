@@ -16,6 +16,7 @@ Details:
 - It also qualifies the stronger form of "ship APIs and let users generate the interface": that pattern is well suited to a use case run once by one person, and pays a re-learning cost each time the same interface is regenerated for the same recurring job. See [Ship Stable APIs and Let Users Vibe-Code the Interface](ship-stable-apis-and-let-users-vibe-code-the-interface.md).
 - The speaker's own internal stack is the worked example: two crystallized interfaces (a market classification dashboard and an alerting surface) alongside about a dozen chat agents. (05:18-08:20)
 - **Limit.** This is an assertion about user learning with no study, usage data, or A/B behind it, from a company reporting its own internal tooling choices. (10:57-11:51)
+- **Who crystallizes it, once the platform is self-service.** Izmit's roadmap ends with the teams doing it themselves: go-to-market teams that were "always in the backlog of someone… or trying to get a SaaS budget" now "build the custom dashboards that are fully optimized for what their team needs" plus team skills, applications, automations, and alerts. That is this page's crystallization step relocated from the platform team to the users, and it changes the criterion from "is this use case repeated enough to justify our building a UI" to "is it repeated enough for the team that has it to build one" — a much lower bar, which is the point. The precondition is that the platform makes it safe: inherited access control and curation of which data sources an agent may reach. ([Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 10:27-11:01, 19:39-20:19)
 
 Related topics:
 - [Product Strategy](../topics/product-strategy.md)
@@ -27,6 +28,8 @@ Related concepts:
 - [Ship Stable APIs and Let Users Vibe-Code the Interface](ship-stable-apis-and-let-users-vibe-code-the-interface.md)
 - [Agent experience prioritizes APIs, CLIs, and MCP over dashboards](agent-experience-prioritizes-apis-clis-and-mcp-over-dashboards.md)
 - [Replace Buy-Versus-Build With Arbitrary Customizability](replace-buy-versus-build-with-arbitrary-customizability.md)
+- [Stage the Internal Agent Roadmap From Answers to Automation to Team-Built Tooling](stage-the-internal-agent-roadmap-from-answers-to-automation-to-team-built-tooling.md)
 
 Sources:
 - [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md), 05:18-08:20, 10:57-11:51
+- [Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 10:27-11:01, 19:39-20:19

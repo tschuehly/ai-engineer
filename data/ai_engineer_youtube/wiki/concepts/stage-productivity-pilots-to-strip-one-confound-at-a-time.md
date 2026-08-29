@@ -16,6 +16,7 @@ Details:
 - **How to apply the pattern rather than the numbers.** For each result you want to propagate, write the sentence a skeptical team would say ("sure, but they had X"), then design the next study so that sentence is false. Amazon's sequence eliminated, in order: elite staffing, greenfield scope, protected conditions, a pre-decomposed backlog, and small-n. What it never eliminated is the tool itself, and the vocabulary should follow — this is evidence about *practice under a tool*, not about the tool.
 - **Where the ladder stops short.** Every rung is measured on an output proxy — commits, then deployments — with no defect rate, rework, revert, incident, or review-cost adjustment anywhere, so the escalating rigour is entirely about *who and where*, not about *what counts as a gain*. A fourth rung would fix the metric. The first two comparators are also estimates rather than observed alternatives: "30 people over 18 months" and "90 weeks" are what the projects were *forecast* to take.
 - Provenance: self-reported internal Amazon figures presented on slides, from a speaker who works on the tool used in all three studies. No sample sizes per group, no distribution, no baseline window, no variance, and no reported case of a team that changed how it worked and did not improve.
+- **The rollout-side version of the same discipline: one question per stage, with an exit bar attached.** Izmit's three stages each answer something the previous cannot — pilot proves accuracy using self-selected AI-native volunteers, a 10% beta of 600 people proves an MVP exists by reading where feature requests concentrate and exits above 70% weekly-active retention, and only GA exposes trial rate, because every earlier cohort volunteered. The shared principle is that a stage whose population or measurement cannot answer the next question should not be asked to. ([Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 05:33-07:53)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -29,6 +30,8 @@ Related concepts:
 - [Measure AI Transformation by Outcomes Instead of Adoption](measure-ai-transformation-by-outcomes-instead-of-adoption.md)
 - [Move enterprise AI adoption beyond spot experiments](move-enterprise-ai-adoption-beyond-spot-experiments.md)
 - [Do Not Use Token Volume as a Developer Productivity Metric](do-not-use-token-volume-as-a-developer-productivity-metric.md)
+- [Gate Each Rollout Phase on a Different Question](gate-each-rollout-phase-on-a-different-question.md)
 
 Sources:
 - [From AI-Assisted to AI-Native: Building a Frontier Development Team — Clare Liguori, AWS](../sources/20260828_pqlWNihgdjI.md), 02:22-07:34, 17:54-18:46
+- [Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 05:33-07:53

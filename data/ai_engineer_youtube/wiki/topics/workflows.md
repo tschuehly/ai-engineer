@@ -284,8 +284,12 @@ Delegation surfaces have a social property that is easy to miss when comparing t
 
 A workflow layer over customer or account data is best modelled as an event stream on state transitions rather than as a report anyone reads on a schedule. The transition set worth encoding includes an entity event, a positive rate change, a watchlist match, and — the one most alerting systems cannot express — a stop, which produces no rows and therefore has to be detected against expected activity instead of observed activity. The output contract stays modest: the system routes attention to a human or an agent and does not decide. The staffing analogue is a group that both runs the operational work and builds the systems it runs on, which shortens the loop between noticing a workflow gap and closing it, and which is reported as working at small scale without a claim that it survives growth.
 
+Rolling an agent out to a large population is itself a workflow with stages that answer different questions. A pilot staffed with self-selected enthusiasts can only certify that the answers are right; a 10% beta reveals workflow fit by where feature requests concentrate and exits on weekly-active retention rather than satisfaction; general availability is the first cohort containing people with no interest in the product, which is why trial rate only becomes measurable — and binding — there. What follows GA is not a maintenance phase but two ongoing workloads: months of activation work that can consume most of the owner's time, and a standing share of engineering capacity spent rebuilding onto platform primitives that did not exist at launch.
+
 ## Key Concepts
 
+- [Gate Each Rollout Phase on a Different Question](../concepts/gate-each-rollout-phase-on-a-different-question.md) - pilot, 10% beta, GA — each stage's population can only answer one thing.
+- [Separate the Did-Not-Try Problem From the Did-Not-Return Problem](../concepts/separate-the-did-not-try-problem-from-the-did-not-return-problem.md) - the post-GA diagnostic that assigns the next sprint to product or to activation.
 - [Alert on Account Change Events, Including the Ones That Are Absences](../concepts/alert-on-account-change-events-including-absences.md) - a stop is a state transition with no data behind it, so it needs a different detector from a threshold.
 - [Staff Forward-Deployed Engineers Who Run Deals and Build the Deal Tooling](../concepts/staff-forward-deployed-engineers-who-run-deals-and-build-the-deal-tooling.md) - the operators of a workflow also maintaining it, with everyone else trained to use the tools rather than build them.
 - [Make Delegation Multiplayer So People See Larger Asks](../concepts/make-delegation-multiplayer-so-people-see-larger-asks.md) - ambition spreads by reading colleagues' prompts, which a per-developer CLI cannot do.
@@ -1034,3 +1038,4 @@ A workflow layer over customer or account data is best modelled as an event stre
 - [How to Generate Mergeable Code with a Context Engine — Peter Werry, Unblocked](../sources/20260827_qdAkxLoYNI8.md)
 - [How Anthropic Builds: Lessons from Labs — Mike Krieger, Anthropic](../sources/20260827_qqrk7CtkuIw.md)
 - [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md)
+- [Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md)

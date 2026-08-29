@@ -14,6 +14,7 @@ Details:
 - The owner's grant is what makes the asymmetry necessary rather than merely tidy: "I gave it read and write access to all the data that I personally have… I basically have access to every single system at the company… so this thing has access to like everything." An agent cloned from a founder is by construction a maximal-privilege principal. (09:29-09:47)
 - This is the caller dimension of agent scoping, complementary to the reachability dimension in [Scope Personal and Team Agents By Reachable Authority](scope-personal-and-team-agents-by-reachable-authority.md): that page says a personal agent should not sit in a shared channel, this one says it can, if identity determines the capability set at invocation time.
 - **Limit.** This is a description of configuration and intent, not of enforcement. No mechanism is named for how caller identity is established or how the tool set is swapped, and no injection, exfiltration, or misuse scenario is discussed anywhere in the talk. "It's pretty well defined or we do pay some care to the security" is the strongest assurance offered. (16:52-16:58)
+- **The other place authorization can live: below the agent, in the store.** Izmit's deployment binds permissions neither to the agent nor to the caller at the agent layer but to the data platform, where consolidating first-party, third-party, CRM, and call-transcript data means "these agents can basically inherit a lot of the role-based access controls." That answers a different question than caller-scoping — who may read what, rather than what a delegated agent may do on someone's behalf — and the two compose: inherited RBAC bounds reads, drafting bounds writes. Notably, Izmit's automation rung also converges on drafts-plus-review as the write pattern, with sellers having the agent "draft responses, save that in Gmail, review them afterwards, send those things out." ([Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 09:54-10:26, 19:26-19:55)
 
 Related topics:
 - [Security](../topics/security.md)
@@ -25,6 +26,8 @@ Related concepts:
 - [Aggregated personal context creates mosaic and exfiltration risk](aggregated-personal-context-creates-mosaic-and-exfiltration-risk.md)
 - [Grow Personal-Agent Permissions Incrementally From Recurring Pain](grow-personal-agent-permissions-incrementally-from-recurring-pain.md)
 - [Derive an Agent Persona From a Measured Corpus, Not a Described Tone](derive-an-agent-persona-from-a-measured-corpus-not-a-described-tone.md)
+- [Land the Data in One Governed Store So Agents Inherit Access Control](land-the-data-in-one-governed-store-so-agents-inherit-access-control.md)
 
 Sources:
 - [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md), 09:29-10:00, 15:58-16:58
+- [Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 09:54-10:26, 19:26-19:55

@@ -18,6 +18,7 @@ Details:
 
 - One team turns the authoring judgment into an enforceable number. Khandelwal: "even in your [SKILL.md] files, don't overload it. Like, we've kind of set a hard limit for like 100 lines in your [SKILL.md] cuz your skill is really a folder." The reasoning clause is the same one Pocock gives, but a stated cap survives many contributors in a way a principle does not — each addition becomes a trade against an existing line, and review has something to point at. He pairs it with the same rule one level up for the repo context file ("a thin index that can point through the right files") and with a verification test at the first prompt. See [Keep the Repo Context File a Thin Index and Cap Skill Files](keep-the-repo-context-file-a-thin-index-and-cap-skill-files.md). Note that line count is a crude proxy for tokens, and no derivation is offered for 100. ([Khandelwal](../sources/20260811_aeTb5BdmTTc.md), 14:54-15:04, 15:36-15:50)
 - **Progressive disclosure stated as the cost mechanism, and the unit it produces.** "The skills comes to solve a key problem around the context window… with the progressive disclosure pattern — the right skills, the right amount of skills in the right time to solve the right problem, and that's reduce the token usage." The unit this yields is know-how that is "executable, portable and cheap," with cheap being the disclosure property specifically. ([Touil](../sources/20260828_M05vON8i0aI.md), 09:35-09:57) Worth noting which of the three each design principle buys: specialization and composability buy executability, the open standard buys portability across harnesses, and only progressive disclosure buys cheapness. Nothing in the talk is measured.
+- **The forcing function observed in a production system, in order.** Izmit's assistant launched with "a nine-page long agent instructions" and hit each limit in turn: business processes and workflows "couldn't fit them into the agent instructions anymore. And then the skills came… let's build a skill library"; then MCP servers arrived and needed orchestration instructions of their own, "we hit the limits on the agent instructions. What do we do? Okay, let's do the progressive disclosures." The system now carries close to 20 skills and five to six MCP connections. Two things are worth taking from the sequence: skills entered as an overflow mechanism for procedural knowledge rather than as a design choice, and progressive disclosure was forced a second time by tool orchestration text, not by the workflow content itself. ([Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 05:14-05:31, 12:11-13:08)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -39,6 +40,7 @@ Related concepts:
 - [Choose a skill's trigger by trading context load against cognitive load](choose-skill-trigger-by-trading-context-load-against-cognitive-load.md)
 - [Split skills to hide future steps and force more leg work per step](split-skills-to-hide-future-steps-and-force-leg-work.md)
 - [Skills Are the Residual Where Organizational Know-How Lands](skills-are-the-residual-where-organizational-know-how-lands.md)
+- [Budget a Third of Sprint Capacity for Re-Architecture](budget-a-third-of-sprint-capacity-for-re-architecture.md)
 
 Sources:
 - [Skill Issue: How We Used AI to Make Agents Actually Good at Supabase - Pedro Rodrigues, Supabase](../sources/20260504_GmAQKINjv1E.md), 03:17-06:24
@@ -49,3 +51,4 @@ Sources:
 - [LLM Knowledge Bases: a practical guide — Ben Holmes, Warp](../sources/20260812_I3bpdgFJCUY.md), 06:29-07:53, 15:44-16:47
 - [Agents, codebases, and teams — Aditya Khandelwal, Amazon AGI Lab](../sources/20260811_aeTb5BdmTTc.md), 14:54-15:04, 15:36-15:50
 - [AI-Native Organisations Run on Skills: How to Structure and Scale Them — Imad Touil, QuantumBlack](../sources/20260828_M05vON8i0aI.md), 09:35-09:57
+- [Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 05:14-05:31, 12:11-13:08

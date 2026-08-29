@@ -316,8 +316,12 @@ Two evaluation notes from the Anthropic Labs interview are worth separating from
 
 Judgment is the hardest thing to evaluate and the least likely to have labelled data, and one practical answer is that the data already exists as a byproduct of work. Chat and email hold hundreds of decisions with their original context attached — the situation as it actually arrived, in someone else's words, and the call that was actually made — which is a better eval substrate than a rubric written after the fact, and requires no new note-taking discipline. The caveats are real: recoverable decisions skew toward the contested ones that were worth typing out, the archive supplies items but not a scoring function, and the one reported use of this method calibrated an agent against its owner's past decisions without publishing a pass rate, a baseline, or a held-out split. Persona is the separable half: voice can be measured off the same person's corpus as concrete statistics that are checkable on generated output, and an agent that sounds exactly right can still decide wrong.
 
+Two instruments from a large internal deployment fill gaps at opposite ends of a product's life. Before any traffic exists, the cheapest usable eval set is written from the documented business process rather than from what the system can currently reach — 150 questions taken from a sales process, scoring 50% on the first run, where the unanswerable ones become the data backlog ranked by demand. Once traffic exists at scale, the log replaces both interviews and solicited feedback: LLM classification into a topic taxonomy shows which capabilities are missing rather than which are broken, and two behavioral signals — a user repeating a question, or swearing at the agent — supply negative labels for free, over the whole population rather than a sample. Neither instrument is an A/B test, which is notable for a deployment sitting in the several-thousand-user range where experiments are underpowered and per-trace review no longer scales.
+
 ## Key Concepts
 
+- [Write the Question Set From the Business Process Before the Data Is Connected](../concepts/write-the-question-set-from-the-business-process-before-the-data-is-connected.md) - the pre-traffic eval set, derived from the job rather than the system.
+- [Classify the Assistant Question Log to Find Feature and Content Gaps](../concepts/classify-the-assistant-question-log-to-find-feature-and-content-gaps.md) - census methods over the full question log, with repeats and profanity as free negative labels.
 - [Mine Chat History for Past Decisions and Turn Them Into Judgment Evals](../concepts/mine-chat-history-for-past-decisions-and-turn-them-into-judgment-evals.md) - the decision log nobody kept is already in Slack, and it is pre-labelled with the choice actually made.
 - [Derive an Agent Persona From a Measured Corpus, Not a Described Tone](../concepts/derive-an-agent-persona-from-a-measured-corpus-not-a-described-tone.md) - measured voice features are checkable without a judge, and they say nothing about judgment.
 - [Validate a Cross-Language Port Against Production Runtime Data](../concepts/validate-a-cross-language-port-against-production-runtime-data.md) - captured runtime types and values supply the behavior the source code underdetermines.
@@ -727,6 +731,7 @@ Judgment is the hardest thing to evaluate and the least likely to have labelled 
 
 ## Open Questions
 
+- Are LLM-assigned log categories accurate enough to steer a roadmap? A topic taxonomy over 1.2 million questions is used to rank feature work and detect content gaps, with no validation that assigned labels match user intent, no sampling or spot-check method, and no cost figure — despite cost at scale being named as the hard part. ([Izmit](../sources/20260826_DrTdD-ttjCY.md), 14:17-15:00)
 - How do you score a generated decision against a historical one? Mining Slack and email yields eval items with real inputs and a real chosen answer, but the matching criterion is never described, and "behaves like myself" is not a metric. ([Wang](../sources/20260826_6pbQgnJ9Voc.md), 09:10-09:27)
 - What does a compounding measurement actually look like? Every source that argues context pays off downstream reports a single-task number instead, so the wiki still has no worked example of a multi-step run scored on re-planning events and recovered rework rather than on tokens.
 
@@ -1047,3 +1052,4 @@ Judgment is the hardest thing to evaluate and the least likely to have labelled 
 - [How to Generate Mergeable Code with a Context Engine — Peter Werry, Unblocked](../sources/20260827_qdAkxLoYNI8.md)
 - [How Anthropic Builds: Lessons from Labs — Mike Krieger, Anthropic](../sources/20260827_qqrk7CtkuIw.md)
 - [Knowledge Systems: The New GTM Stack — Jeffrey Wang, Exa](../sources/20260826_6pbQgnJ9Voc.md)
+- [Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md)

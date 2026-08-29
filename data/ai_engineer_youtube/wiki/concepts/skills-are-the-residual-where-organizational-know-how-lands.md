@@ -18,6 +18,7 @@ Details:
 - **Where workflows sit relative to skills.** "Workflows, think about them as harness blueprints that actually shape the behavior of your coding harness, for example, in the runtime." (06:52-07:03) So a workflow is the composition and a skill is the composed unit — which is also why Touil later argues the same catalog-and-governance treatment has to be applied one level up, to the workflows themselves. (17:53-18:40)
 - Limits. Nothing in this talk is measured: no deployment, no A/B test, no client. The elimination is an argument from typical practice, and the portability claim ("it's going to just work" across harnesses) is asserted rather than demonstrated. See the source's [Provenance and Limits](../sources/20260828_M05vON8i0aI.md).
 - **The primitive that skills displaced, and the disposal rule behind it.** Krieger names a concrete retirement: styles were unshipped in favour of skills because styles were "very prescriptive in the way that it worked and skills [are a] very much better application." The general rule he draws is that "you have to be willing to take the primitives of one generation of AI and unship them or at least supplement them or supplant them with the next one." Skills are the residual partly because they are the *least* prescriptive container available — which also predicts what will displace them: a more general primitive, not a better-designed prescriptive one. ([Krieger](../sources/20260827_qqrk7CtkuIw.md), 16:11-16:32)
+- **A production instance of the residual arriving on schedule, and where it came from.** In Izmit's assistant the know-how started inside the prompt and was evicted by growth: "we were creating all these business processes and workflows. We couldn't fit them into the agent instructions anymore. And then the skills came… let's build a skill library." The content is sales-process procedure, not code convention, which supports the claim that the residual is organizational rather than technical — and the later rung of his roadmap has go-to-market teams authoring their own team skills, so the residual ends up owned by the departments that hold the know-how rather than by the platform team. ([Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 10:27-11:01, 12:45-12:57)
 
 Related topics:
 - [Workflows](../topics/workflows.md)
@@ -31,7 +32,9 @@ Related concepts:
 - [Skill Composability Is Decided Before Authoring, Not in the Registry](skill-composability-is-decided-before-authoring-not-in-the-registry.md)
 - [General Agents Need Skills for Domain Expertise](general-agents-need-skills-for-domain-expertise.md)
 - [Product Surface Fragmentation Makes the User the Integration Layer](product-surface-fragmentation-makes-the-user-the-integration-layer.md)
+- [Stage the Internal Agent Roadmap From Answers to Automation to Team-Built Tooling](stage-the-internal-agent-roadmap-from-answers-to-automation-to-team-built-tooling.md)
 
 Sources:
 - [AI-Native Organisations Run on Skills: How to Structure and Scale Them — Imad Touil, QuantumBlack](../sources/20260828_M05vON8i0aI.md), 05:53-09:57, 17:53-18:40
 - [How Anthropic Builds: Lessons from Labs — Mike Krieger, Anthropic](../sources/20260827_qqrk7CtkuIw.md), 15:41-16:32
+- [Building GTM AI Agents: Lessons from Deploying to 6,000 Users — Sait Izmit, Snowflake](../sources/20260826_DrTdD-ttjCY.md), 10:27-11:01, 12:45-12:57
