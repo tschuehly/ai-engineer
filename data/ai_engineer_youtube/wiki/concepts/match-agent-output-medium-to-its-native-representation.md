@@ -17,6 +17,7 @@ Details:
 - Generalization: this is a special case of the broader tool-design lesson that a text-native surface (CLI, API, structured markup) is usually a better agent tool than a spatial/GUI surface — the model's leverage comes from operating in tokens and structure, and the renderer or execution layer supplies the human-facing pixels. Preferring a CLI/API over browser automation is a sibling instance of the same rule, applied to acting on a system rather than authoring an artifact.
 - Takeaway framing: "Stop thinking like a user. Think like the model. Give it the right language." 06:45-06:56
 - **The inverse move, offered as an open question rather than a practice: change the representation to match what the model is best at.** Shenoy's proposal is to route non-engineering knowledge work through the medium the models are strongest in — "the models are trained on code, they want to write code, they're incredibly good at writing code… Rather than wait for the models to catch up on doing services knowledge work, what if we just use that code knowledge and represent knowledge work as code?" The side benefit is structural: a task expressed as code inherits diffs, branches, tests, and review, which is the forking substrate that background agents outside software currently lack. No mechanism, example, or result is given — it is posed as a question the speaker is working on. ([Shenoy](../sources/20260828_B0fjR3yaZFU.md), 09:24-09:44)
+- **The Figma MCP's own account, which runs one level below this rule.** This page names "Figma MCPs" among the tools that approach the problem "like a human." Jesse Lumarie, who built Figma's, describes a choice among three serializations of the same C++ scene graph — an internal representation "kind of akin to JSX or XML" that was "abstract and sparse, but it didn't have super rigorous fidelity"; a React and Tailwind representation that already existed for Figma Sites; and a plain image — and two of the three were already structured text. The deciding variable was not text-versus-pixels but *which* text, resolved by pretraining mass: "we had a hunch that this representation would be the best one because lots of the models were sort of [trained] on this React Tailwind type of code." That can point against this page's instinct, because the most semantically precise representation of a domain is usually the one models have seen least. ([Lumarie](../sources/20260828_ZIYYsAzaLlA.md), 03:33-04:40)
 
 Related topics:
 - [Tools](../topics/tools.md)
@@ -29,8 +30,10 @@ Related concepts:
 - [Reuse the Agentic App-Builder Architecture for Non-Code Artifacts](reuse-the-agentic-app-builder-shape-for-non-code-artifacts.md)
 - [Make Agent Edits Declarative Tags Instead of Generated Code](make-agent-edits-declarative-tags-instead-of-generated-code.md)
 - [Async Agents Need a Forking Substrate and a User Who Tolerates Out-of-Order Completion](async-agents-need-a-forking-substrate-and-a-tolerant-user.md)
+- [Pick the Serialization the Models Have Seen Most, Not the One Native to Your System](pick-the-serialization-the-models-have-seen-most.md)
 
 Sources:
 - [HTML is All You Need (for Agents to Make Graphics) - Amol Kapoor, Nori](../sources/20260628_JRTAtZ5iBkU.md), 01:29-06:56
 - [Building an Agentic Video Editor for Mass Consumer — Ekaterina Deyneka, Reelful](../sources/20260818_pPj_tjlvYjA.md), 07:12-08:19
 - [How do you diffuse AI into the real world? — Varun Shenoy, Long Lake](../sources/20260828_B0fjR3yaZFU.md), 09:24-09:44
+- [Building the Engine While Flying the Plane: Launching the Figma MCP Server — Jesse Lumarie, Figma](../sources/20260828_ZIYYsAzaLlA.md), 03:33-04:40

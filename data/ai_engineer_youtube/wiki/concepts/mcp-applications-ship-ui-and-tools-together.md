@@ -20,6 +20,7 @@ Details:
 - Adopters span commerce and design surfaces: Shopify renders in-chat checkout that preserves its on-site brand experience, Excalidraw renders interactive architecture diagrams (and Claude Code uses its MCP app), and Figma generates components on the fly. ([GitHub] 08:10-09:30)
 - Independent confirmation of the lineage and mechanics (Manufact/`mcp-use`): MCP UI began ~May 2025 (Manufact co-founder Ido Solomon), OpenAI shipped the Apps SDK, and in January 2026 MCP UI converged into MCP Apps as "the official extension of the Model Context Protocol" for returning UI; the tool returns a `ui://` widget in a sandboxed iframe, declared at initialization and populated with the tool's arguments, with a bidirectional channel back to the host. ([Zullo] 03:00-07:32)
 - Beyond the initial render, the App is a stateful two-way interaction layer with a distinct set of primitives — see [Use MCP App Primitives for Bidirectional Model–UI State](use-mcp-app-primitives-for-bidirectional-model-ui-state.md); and store submission plus dynamic discovery make it a distribution channel — see [Distribute MCP Apps Through Stores and Dynamic Discovery](distribute-mcp-apps-through-stores-and-dynamic-discovery.md). ([Zullo] 06:01-26:07)
+- **What server authors did before interaction primitives were dependable.** Figma wanted elicitation to ask the user for permission to map their codebase, and "most of the clients didn't implement these features," so the interaction was faked through tool results: return a prompt asking the user, and on yes return another prompt directing the agent to do the work. The user experience the team wanted — a consent step with a typed answer — was reconstructed out of strings the agent might reword or answer on the user's behalf, which is the gap a real UI primitive closes. ([Lumarie](../sources/20260828_ZIYYsAzaLlA.md), 10:16-12:03)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -34,9 +35,11 @@ Related concepts:
 - [Agent Experience Prioritizes APIs, CLIs, and MCP Over Dashboards](agent-experience-prioritizes-apis-clis-and-mcp-over-dashboards.md)
 - [Collaborate with Complex Agents Through High-Bandwidth Artifacts](collaborate-with-complex-agents-through-high-bandwidth-artifacts.md)
 - [Agent Tool Loops Turn Model-Required Actions Into Executable Results](agent-tool-loops-turn-model-required-actions-into-executable-results.md)
+- [Tools Are the Only Primitive Every Client Implements](tools-are-the-only-primitive-every-client-implements.md)
 
 Sources:
 - [The Future of MCP - David Soria Parra, Anthropic](../sources/20260419_v3Fr2JR47KA.md), 00:22-01:32, 16:16-16:32
 - [Why MCP and ChatGPT Apps Use Double Iframes — Frédéric Barthelet, Alpic](../sources/20260615_c-2eEv2ou7Y.md), 01:43-13:39
 - [Building Interactive UIs in VS Code with MCP Apps — Marlene Mhangami & Liam Hampton, GitHub](../sources/20260606__xIwFcnHqp4.md), 05:15-15:10
 - [MCP Apps: Primitives, discovery, and the Future of Software - Pietro Zullo, Manufact, Inc](../sources/20260705_sAOBXCDiDOs.md), 03:00-26:07
+- [Building the Engine While Flying the Plane: Launching the Figma MCP Server — Jesse Lumarie, Figma](../sources/20260828_ZIYYsAzaLlA.md), 10:16-12:03

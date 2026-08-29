@@ -14,6 +14,7 @@ Details:
 - Do not compare globally. Token usage differs enormously by user journey / task class — web scraping is relatively cheap, while debugging why a responsive layout breaks is intricate and uses more tokens, and that's fine — so compare within a journey. (09:10-10:00)
 - Operationalize with a per-use-case view (e.g. a bar per tool or journey where shorter bars = less effective for that case); the short bars are where to focus optimization next. Even an imperfect measurement beats gut-driven decisions because it enables data-informed ones. (10:02-11:03)
 - This is the design-time counterpart to model-comparison loop metrics: where loop evals rank models by correctness + cost + latency + steps, tokens per successful outcome ranks the *interface* the model is calling, per journey.
+- **Two moves from one MCP server that improve both terms of the ratio at once.** Replacing generated markup with a pointer to the consumer's component cuts tokens and raises output quality together, because the referenced component is the accessible, internationalized one. Separately, Figma moved server usage guidance out of error responses and into resources, because with errors "the agent would have to call uh wasting inference and sort of reasoning to sort of figure out what is actually going wrong" — reactive discovery is billed in round trips, and the same information placed where the agent already looks is billed once. Neither change is quantified in the talk. ([Lumarie](../sources/20260828_ZIYYsAzaLlA.md), 08:12-08:37, 09:28-09:47)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -25,6 +26,8 @@ Related concepts:
 - [MCP Tool Surfaces Need Default Context Budgets](mcp-tool-surfaces-need-default-context-budgets.md)
 - [Design MCP Servers as Agent Products](design-mcp-servers-as-agent-products.md)
 - [Turn Tool Errors Into Agent Self-Healing Recovery](turn-tool-errors-into-agent-self-healing-recovery.md)
+- [Return a Pointer to the Reader's Own Component Instead of a Faithful Copy](return-a-pointer-to-the-readers-own-component-instead-of-a-copy.md)
 
 Sources:
 - [Building Agent Interfaces: Lessons from Chrome DevTools (MCP) for Agents — Michael Hablich, Google](../sources/20260605__B4Pv9ttFgY.md), 05:25-11:03, 21:32-22:15
+- [Building the Engine While Flying the Plane: Launching the Figma MCP Server — Jesse Lumarie, Figma](../sources/20260828_ZIYYsAzaLlA.md), 08:12-08:37, 09:28-09:47

@@ -13,6 +13,7 @@ Details:
 - The task-creation guide tells agents how to create tasks and which fields are required or optional. (06:15-06:24)
 - The task-execution guide tells an implementing agent to put a task in progress and assign it to itself, while the completion guide tells it to check acceptance criteria and the definition of done. (06:24-06:53)
 - The MCP tools expose task operations such as search, view details, create, and update tasks so agents can check for duplicates and mutate task state through the intended interface. (06:54-07:29)
+- **Two operational notes from a server that shipped before clients supported either half.** First, resources replaced errors as the guidance channel: Figma exposes how-to-use-the-server material plus help articles, "whereas before we would send that information down with like an [error]… and the agent would have to call uh wasting inference and sort of reasoning to sort of figure out what is actually going wrong." Second, server-level instructions were "in the spec, but no clients implemented it… and it wasn't really highlighted in the docs until Anthropic added a nice blog post," so Figma pushed "additional instructions into each tool call" instead — guidance that this page would place in resources ends up riding on every tool result when the resource channel is not there yet. ([Lumarie](../sources/20260828_ZIYYsAzaLlA.md), 09:28-10:14)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -23,6 +24,8 @@ Related concepts:
 - [Design MCP servers as agent products](design-mcp-servers-as-agent-products.md)
 - [Agent skills should point to current docs instead of embedding every API detail](agent-skills-should-point-to-current-docs-instead-of-embedding-every-api-detail.md)
 - [Agent experience prioritizes APIs, CLIs, and MCP over dashboards](agent-experience-prioritizes-apis-clis-and-mcp-over-dashboards.md)
+- [Tools Are the Only Primitive Every Client Implements](tools-are-the-only-primitive-every-client-implements.md)
 
 Sources:
 - [Backlog.md: Terminal Kanban Board for Managing Tasks with AI Agents - Alex Gavrilescu, Funstage](../sources/20251124_zMXKhhwiCIc.md), 05:40-07:29
+- [Building the Engine While Flying the Plane: Launching the Figma MCP Server — Jesse Lumarie, Figma](../sources/20260828_ZIYYsAzaLlA.md), 09:28-10:14

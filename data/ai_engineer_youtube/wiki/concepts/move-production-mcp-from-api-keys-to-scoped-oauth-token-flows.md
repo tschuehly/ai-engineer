@@ -17,6 +17,7 @@ Details:
 - Token exchange lets the MCP server trade a delegation token for a session token for the upstream API, so upstream calls do not depend on forwarding the original authorization header. 17:58-18:55
 - Dynamic Client Registration handles unbounded client registration, but creates non-portable registrations and phishing risk because clients self-assert metadata at `/register`. 18:55-19:54
 - CIMD uses a client-ID metadata document hosted at a client-controlled URL; this avoids a growing registration database, binds redirect URIs to client metadata, and lets authorization servers selectively allow or deny clients. 20:00-22:35
+- **A third option that precedes both, available only to products that already ship a desktop client.** Rather than choosing between API keys and OAuth, Figma inherited an existing authenticated session: the Electron desktop app runs figma.com in its front end, an IPC bridge reaches a Node process with the user's file permissions, and a local server-events endpoint lets clients connect on the machine. "We punted so until [the March 2025 spec revision] there wasn't this [auth] spec to to build from and we could easily relay [auth] from our web app to our desktop app." This buys time on authorization and pays for it in reach — nothing running in CI, a cloud sandbox, or on a phone can connect. ([Lumarie](../sources/20260828_ZIYYsAzaLlA.md), 13:28-14:12)
 
 Related topics:
 - [Infrastructure](../topics/infrastructure.md)
@@ -28,7 +29,9 @@ Related concepts:
 - [Cross-app access does not replace authorization policy](cross-app-access-does-not-replace-authorization-policy.md)
 - [Stateless remote MCP servers rebuild allowed tools per request](stateless-remote-mcp-servers-rebuild-allowed-tools-per-request.md)
 - [Model MCP Servers as OAuth Resource Servers](model-mcp-servers-as-oauth-resource-servers.md)
+- [An Installed Desktop App Is an Auth and Filesystem Beachhead](an-installed-desktop-app-is-an-auth-and-filesystem-beachhead.md)
 
 Sources:
 - [How to Secure Agents using OAuth - Jared Hanson (Keycard, Passport.js)](../sources/20250730_blmAkayzE8M.md), 01:21-03:18, 10:54-11:07
 - [Your Insecure MCP Server Won't Survive Production - Tun Shwe, Lenses](../sources/20260408_BurJvbqFr4c.md), 08:11-22:35
+- [Building the Engine While Flying the Plane: Launching the Figma MCP Server — Jesse Lumarie, Figma](../sources/20260828_ZIYYsAzaLlA.md), 13:28-14:12

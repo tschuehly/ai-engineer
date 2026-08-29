@@ -16,6 +16,7 @@ Details:
 - Integration is config, not code: Zed runs an ACP agent by being told it exists and is launchable as `node <path>/agent.js`. (06:46-07:00)
 - Transport is stdio today; remote transport (JetBrains) is in progress, so the same protocol can later cross process/machine boundaries. (17:51-18:03)
 - **A second protocol occupies the same boundary, shipped by a model lab rather than an editor — and the difference in origin shows.** Codex names two protocols that bracket its harness: "the first one is what happens when you send it off in the UI and it goes to the harness. We call that the app server… the second part is the responses API, which… handles the communication between the harness and the inference." The app server sits exactly where ACP sits, and it is a public build surface — "if you're building your own UI… you can actually build on top of the Codex… harness using the app server protocol. We use that same app server to power the Codex app," with third-party clients named and a plugin that puts Codex inside Claude Code. But the asymmetry is the finding: ACP is one protocol many agents implement, while the app server is one agent many clients implement. Both remove an N×M matrix; they remove opposite halves of it, and an app-server client is not portable to a different agent the way an ACP client is. Note also which side each takes as fixed — Zed's clients are editors, OpenAI's is the harness itself. ([Codex, Behind the Harness](../sources/20260810_shRR1e2HXMk.md), 02:00-03:12)
+- **A standard is only as real as the intersection of what its clients shipped, and a primitive can be present without being useful.** Figma's MCP client landscape diverged for most of a year — Claude Desktop had early support while Claude Code lacked "the complete set of features," OpenAI and VS Code had none until a spec update, and VS Code, "truly like the golden client," only reached general availability in July. Worse than absence was hollow presence: "for sampling even when VS code supported it you could only really query it as a general agent not specific to the codebase" — the server could reach a model but not the model that could see the repository, which was the entire point. Protocol conformance says nothing about what the implementation is wired to. ([Lumarie](../sources/20260828_ZIYYsAzaLlA.md), 01:58-02:37, 11:23-11:33)
 
 Related topics:
 - [Tools](../topics/tools.md)
@@ -27,7 +28,9 @@ Related concepts:
 - [Agent Clients Can Be Custom or Existing MCP Surfaces](agent-clients-can-be-custom-or-existing-mcp-surfaces.md)
 - [Design Coding-Agent Editors as Review Surfaces](design-coding-agent-editors-as-review-surfaces.md)
 - [Match Agent Tooling to the Model's Training Distribution](match-agent-tooling-to-the-models-training-distribution.md)
+- [Tools Are the Only Primitive Every Client Implements](tools-are-the-only-primitive-every-client-implements.md)
 
 Sources:
 - [Building an ACP-Compatible Agent Live — Bennet Fenner, Zed](../sources/20260708_HsxQICTLF84.md), 00:14-07:00, 17:51-18:03
 - [Codex, Behind the Harness — Dominik Kundel, OpenAI](../sources/20260810_shRR1e2HXMk.md), 02:00-03:12
+- [Building the Engine While Flying the Plane: Launching the Figma MCP Server — Jesse Lumarie, Figma](../sources/20260828_ZIYYsAzaLlA.md), 01:58-02:37, 11:23-11:33

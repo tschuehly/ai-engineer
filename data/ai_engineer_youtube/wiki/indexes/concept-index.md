@@ -1,6 +1,7 @@
 # Concept Index
 
 ## Agents
+- [Tools Are the Only Primitive Every Client Implements](../concepts/tools-are-the-only-primitive-every-client-implements.md) - a client compatibility matrix as a maintained artifact; server instructions, elicitation, and sampling all reimplemented through tool results, and a primitive that was implemented but wired to the wrong model was worse than one that was absent.
 - [Comment Volume Is a Property of the Review Pipeline, Not the Model](../concepts/comment-volume-is-a-property-of-the-review-pipeline.md) - several generators over one diff make volume emergent, so one filtering waist decides what a reviewer actually sees.
 - [Review Comments Have Two Audiences With Inverted Error Costs](../concepts/review-comments-have-two-audiences-with-inverted-error-costs.md) - a wrong comment is cheap for a human and expensive for an agent; a nit is the reverse, so one filter cannot serve both surfaces.
 - [Async Agents Need a Forking Substrate and a User Who Tolerates Out-of-Order Completion](../concepts/async-agents-need-a-forking-substrate-and-a-tolerant-user.md) - background agents work for code because git supplies the fork-and-merge primitive and engineers already accept out-of-order completion.
@@ -893,6 +894,8 @@
 - [Author Visual Artifacts as HTML and Decouple the Editing Format from Delivery](../concepts/author-visual-artifacts-as-html-decoupled-from-delivery-format.md)
 
 ## Context Engineering
+- [Return a Pointer to the Reader's Own Component Instead of a Faithful Copy](../concepts/return-a-pointer-to-the-readers-own-component-instead-of-a-copy.md) - pixel-perfect generated markup is "only half the story" because it drops the accessibility and internationalization properties of the consumer's real component, so Code Connect returns "use button component" instead — higher fidelity and less context in one move, bounded by mapping coverage.
+- [Pick the Serialization the Models Have Seen Most, Not the One Native to Your System](../concepts/pick-the-serialization-the-models-have-seen-most.md) - Figma had three textual serializations of its own C++ scene graph and chose React and Tailwind over its purpose-built internal representation, on the stated hunch that models had seen the most of it; the image rides along as a supplement, never inlined as base64.
 - [Structure an Agent Plan With a Frozen Why and Reviewer-Sized Phases](../concepts/structure-an-agent-plan-with-a-frozen-why-and-reviewer-sized-phases.md) - the plan as agent context: an immutable goal section, per-phase validation gates, and detail sized to a subagent that will see nothing else.
 - [Tell the Agent Only What Is Not Recoverable From the Code](../concepts/tell-the-agent-only-what-is-not-recoverable-from-the-code.md) - "what's left are the things that are not in code" as a subtraction rule for instruction files and shared sessions.
 - [Bound Context Twice: Fork the Subtask, Then Compact on a Token Threshold](../concepts/bound-context-twice-fork-the-subtask-then-compact-on-a-token-threshold.md) - two bounds catching different traffic, because forking cannot stop the parent conversation from growing and compaction cannot refund a subtask's spend.
@@ -1049,6 +1052,7 @@
 - [Text Diffusion Trades Serving Throughput for Low Latency](../concepts/text-diffusion-trades-serving-throughput-for-low-latency.md)
 
 ## Infrastructure
+- [An Installed Desktop App Is an Auth and Filesystem Beachhead](../concepts/an-installed-desktop-app-is-an-auth-and-filesystem-beachhead.md) - the Electron app already held the session and the file permissions, so Figma shipped a local MCP server before the protocol had an auth story, and built the remote one afterwards.
 - [An AI-Infrastructure Package Is a High-Yield Credential Target](../concepts/an-ai-infrastructure-package-is-a-high-yield-credential-target.md) - self-hosting a gateway concentrates the keys you meant to control, and a three-hour LiteLLM compromise harvested exactly those machines.
 - [Multi-Repo Cost Has Moved From Navigation to Verification](../concepts/multi-repo-cost-has-moved-from-navigation-to-verification.md) - every isolated agent environment pays clone-and-provision again, so repository layout is a per-task infrastructure cost.
 - [Watch the Change Paths That Bypass Your Deployment Pipeline](../concepts/watch-the-change-paths-that-bypass-your-deployment-pipeline.md) - feature flags and infra changes never enter CI/CD, so they get no verification and are found after impact.
@@ -1594,6 +1598,7 @@
 - [Use Design Partner Evidence To Support Early AI Startup Scale](../concepts/use-design-partner-evidence-to-support-early-ai-startup-scale.md)
 
 ## Evaluation
+- [Optional Self-Reported Tool Arguments Are Segmentation Signal, Not Ground Truth](../concepts/optional-self-reported-tool-arguments-are-segmentation-signal.md) - an optional argument added to the tool schema purely to be logged — "agents lie, but it was at least a signal" — usable for comparing cohorts, not for judging a call.
 - [A Missing Skill Is Billed as Tokens, Not Recorded as a Gap](../concepts/a-missing-skill-is-billed-as-tokens-not-recorded-as-a-gap.md) - an unwritten skill produces no defect and no ticket, so a library gap surfaces as spend and steering iterations on a recurring task class.
 - [Auto-Evolving Skills Multiply Whatever Governance You Already Have](../concepts/auto-evolving-skills-multiply-whatever-governance-you-already-have.md) - a self-improving skill loop writes into whichever library already exists, so it multiplies the governance regime rather than supplying one.
 - [Measure a Review Bot by Whether the Comment Changed the Code](../concepts/measure-a-review-bot-by-whether-the-comment-changed-the-code.md) - the model asserts every finding at full confidence, so the signal is behavioural, and addressal covers every comment where a survey covers a tenth.
@@ -2343,6 +2348,11 @@
 - [Make the LLM Gateway the Agent Observability Chokepoint](../concepts/make-the-llm-gateway-the-agent-observability-chokepoint.md)
 
 ## Tools
+- [Tools Are the Only Primitive Every Client Implements](../concepts/tools-are-the-only-primitive-every-client-implements.md) - a client compatibility matrix as a maintained artifact; server instructions, elicitation, and sampling all reimplemented through tool results, and a primitive that was implemented but wired to the wrong model was worse than one that was absent.
+- [Pick the Serialization the Models Have Seen Most, Not the One Native to Your System](../concepts/pick-the-serialization-the-models-have-seen-most.md) - Figma had three textual serializations of its own C++ scene graph and chose React and Tailwind over its purpose-built internal representation, on the stated hunch that models had seen the most of it; the image rides along as a supplement, never inlined as base64.
+- [Return a Pointer to the Reader's Own Component Instead of a Faithful Copy](../concepts/return-a-pointer-to-the-readers-own-component-instead-of-a-copy.md) - pixel-perfect generated markup is "only half the story" because it drops the accessibility and internationalization properties of the consumer's real component, so Code Connect returns "use button component" instead — higher fidelity and less context in one move, bounded by mapping coverage.
+- [Optional Self-Reported Tool Arguments Are Segmentation Signal, Not Ground Truth](../concepts/optional-self-reported-tool-arguments-are-segmentation-signal.md) - an optional argument added to the tool schema purely to be logged — "agents lie, but it was at least a signal" — usable for comparing cohorts, not for judging a call.
+- [An Installed Desktop App Is an Auth and Filesystem Beachhead](../concepts/an-installed-desktop-app-is-an-auth-and-filesystem-beachhead.md) - the Electron app already held the session and the file permissions, so Figma shipped a local MCP server before the protocol had an auth story, and built the remote one afterwards.
 - [Skills Are the Residual Where Organizational Know-How Lands](../concepts/skills-are-the-residual-where-organizational-know-how-lands.md) - hooks fire on events, MCP servers are consumed not authored, and sub agents manage the context window, so skills are the only authorable home left for org-specific knowledge.
 - [Skill Composability Is Decided Before Authoring, Not in the Registry](../concepts/skill-composability-is-decided-before-authoring-not-in-the-registry.md) - a catalog makes skills findable and owned but cannot make independently authored ones compose; the domain carve and named human owners come first.
 - [Auto-Evolving Skills Multiply Whatever Governance You Already Have](../concepts/auto-evolving-skills-multiply-whatever-governance-you-already-have.md) - a self-improving skill loop writes into whichever library already exists, so it multiplies the governance regime rather than supplying one.

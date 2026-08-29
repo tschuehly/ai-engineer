@@ -11,6 +11,7 @@ Details:
 - Tool descriptions can hold full prompts for tool-specific behavior, making reusable nodes more modular than putting every instruction in the agent's system prompt. 30:00-30:47
 - If a tool is not being called or expected behavior is missing, the recommended debugging loop is to adjust the relevant prompt or description and retest. 31:48-32:14
 - Tool descriptions are also an attack surface: Carpentero describes an MCP exploit where the model reads hidden instructions in a full tool description that the human approval summary does not show. 10:53-12:04
+- **When the description channel is unavailable, the tool *result* becomes the prompt.** MCP's server-instructions field existed in the spec but "no clients implemented it," so Figma added "additional instructions into each tool call. Basically instructing the LLM how to use our server um even though server descriptions weren't necessarily written out yet." This is the same lever moved one layer later in the call: it costs tokens on every invocation rather than once at handshake, and it only reaches a model that has already decided to call the tool. ([Lumarie](../sources/20260828_ZIYYsAzaLlA.md), 09:48-10:14)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -22,7 +23,9 @@ Related concepts:
 - [Visual agent workflows make tool use observable and adjustable](visual-agent-workflows-make-tool-use-observable-and-adjustable.md)
 - [Human approval can hide tool-description and parameter risk](human-approval-can-hide-tool-description-and-parameter-risk.md)
 - [Turn Tool Errors Into Agent Self-Healing Recovery](turn-tool-errors-into-agent-self-healing-recovery.md)
+- [Tools Are the Only Primitive Every Client Implements](tools-are-the-only-primitive-every-client-implements.md)
 
 Sources:
 - [Human-in-the-Loop Automation with n8n - Liam McGarrigle](../sources/20260502_tDArkCqjA-c.md), 29:06-32:14
 - [$1 AI Guardrails: The Unreasonable Effectiveness of Finetuned ModernBERTs - Diego Carpentero](../sources/20260416_YZHPEkfy2kc.md), 10:53-12:04
+- [Building the Engine While Flying the Plane: Launching the Figma MCP Server — Jesse Lumarie, Figma](../sources/20260828_ZIYYsAzaLlA.md), 09:48-10:14

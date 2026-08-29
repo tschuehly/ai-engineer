@@ -17,6 +17,7 @@ Details:
 - The purpose is explicitly confidence under known imperfection rather than elimination of it: the whole process exists so "we are really confident whenever we release something, although we know hallucination is there." (16:41-16:50)
 - Caveat on what repetition buys, from the computer-use side: repeating a *fixed* scenario narrows the interval around performance on that scenario, which is exactly the procedure D'Oro measures at ~17-20% real coverage against a nominal 95%. Repetition addresses variance in the model's actions; it does not address variance in the environment the task starts in, so a 90%-across-many-runs gate on a fixed set of cases can still be confidently wrong about deployment. The complement is to vary the configuration, not only the seed — see [computing intervals over both action and environment variance](compute-confidence-intervals-over-both-action-and-environment-variance.md). ([Computer Use at the Edge of the Statistical Precipice](../sources/20260814_CTLa_p6iOiY.md), 11:05-13:19)
 - The same team pairs this with a pre-release decision about which failures matter at all — see the retryability sort — so the pass-rate bar and the sampling rate are applied hardest where a failure cannot be undone by a second click.
+- **The same two-sided shape on a design-to-code MCP server: a high-frequency pre-release harness plus a deliberately weak post-launch signal.** Before release, "an eval that sort of runs like hundreds of times a week. Engineers can kick this off and sort of grade against prompt changes um, with LLM judges." After release, the only production signal available was self-reported: optional tool arguments through which the agent volunteers the user's language and framework, described as "imperfect uh agents lie but it was at least a signal" and used to segment which cohorts had a worse experience rather than to judge any single run. ([Lumarie](../sources/20260828_ZIYYsAzaLlA.md), 06:45-06:58, 12:45-13:09)
 
 Related topics:
 - [Evaluation](../topics/evaluation.md)
@@ -31,7 +32,9 @@ Related concepts:
 - [Size Eval Suites to the Error Rate the Consequence Demands](size-eval-suites-to-the-error-rate-the-consequence-demands.md)
 - [Compute Confidence Intervals Over Both Action and Environment Variance](compute-confidence-intervals-over-both-action-and-environment-variance.md)
 - [Simulated Conversations Test Customer-Facing Agents Before Launch](simulated-conversations-test-customer-facing-agents-before-launch.md)
+- [Optional Self-Reported Tool Arguments Are Segmentation Signal, Not Ground Truth](optional-self-reported-tool-arguments-are-segmentation-signal.md)
 
 Sources:
 - [How to build an AI-Native Health Company — Dan Feng, Maven Clinic](../sources/20260819_WJRdLNhrsLQ.md), 15:17-16:50
 - [Computer Use at the Edge of the Statistical Precipice — Pierluca D'Oro, Programma Labs](../sources/20260814_CTLa_p6iOiY.md), 11:05-13:19
+- [Building the Engine While Flying the Plane: Launching the Figma MCP Server — Jesse Lumarie, Figma](../sources/20260828_ZIYYsAzaLlA.md), 06:45-06:58, 12:45-13:09

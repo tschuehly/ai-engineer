@@ -13,6 +13,7 @@ Details:
 - Outcome-oriented product thinking should decide what goes into the server; a tool should not be added unless it is expected to produce a useful agent workflow result. 14:47-15:18
 - The talk frames future MCP work as "context products" rather than only MCP servers, emphasizing the product layer above the transport. 34:24-34:43
 - **A vendor describing its MCP surface in exactly those terms.** Resolve AI sells a production-context and learning layer, and its integration story is that the layer is available to someone else's agent: "if you have an agent harness, if you're… building your own, everything that I showed is accessible through kind of MCP servers, etc. So you can really graft resolve into kind of any system that you have as just kind of an extension of learning to kind of do deeper work or to sort of pull production context a bit more efficiently." The complement follows the same logic in reverse — "bring your own skills along for the ride. Um, don't go duplicate a bunch of stuff" — which is a product boundary claim: the server supplies what the host harness cannot derive, and declines to re-supply what it already has. ([Justin Smith](../sources/20260809_vSx5IULvBns.md), 13:02-13:12, 23:28-23:58)
+- **The product surface you actually ship against is the intersection of what your clients have implemented, not the spec.** Figma maintained a client compatibility matrix as a real artifact ("This is the client compatibility matrix from March 2025") because "many clients only implemented a subset of the spec, and many features were very experimental," and "it was hard to kind of understand what you were building towards because clients supported so many different things." Product decisions that assume a spec feature — server instructions, elicitation, sampling — become emulation work expressed through tool results, which is the one primitive everybody had built. ([Lumarie](../sources/20260828_ZIYYsAzaLlA.md), 09:06-09:28)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -23,7 +24,9 @@ Related concepts:
 - [Secure MCP Servers by Shrinking the Agent-Visible Surface](secure-mcp-servers-by-shrinking-the-agent-visible-surface.md)
 - [Agent Experience Prioritizes APIs, CLIs, and MCP Over Dashboards](agent-experience-prioritizes-apis-clis-and-mcp-over-dashboards.md)
 - [Separate Execution From the Production Context That Judges It](separate-execution-from-the-production-context-that-judges-it.md)
+- [Tools Are the Only Primitive Every Client Implements](tools-are-the-only-primitive-every-client-implements.md)
 
 Sources:
 - [Your MCP Server is Bad (and you should feel bad) - Jeremiah Lowin, Prefect](../sources/20260112_96G7FLab8xc.md), 04:24-07:37, 14:47-15:18, 34:24-34:43
 - [Always-on agents run production without the on-call tax — Justin Smith, Resolve AI](../sources/20260809_vSx5IULvBns.md), 13:02-13:12, 23:28-23:58
+- [Building the Engine While Flying the Plane: Launching the Figma MCP Server — Jesse Lumarie, Figma](../sources/20260828_ZIYYsAzaLlA.md), 09:06-09:28

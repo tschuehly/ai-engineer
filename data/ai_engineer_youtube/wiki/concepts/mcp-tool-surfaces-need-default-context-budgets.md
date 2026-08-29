@@ -21,6 +21,7 @@ Details:
 - Chrome DevTools manages the budget with three levers: tool categorization (hide niche tools such as Chrome-extension debugging behind command-line parameters instead of the default context), a "slim mode" that exposes only ~3 tools (select page, navigate page, evaluate script) at the cost of extra turns or a missing capability, and a CLI alongside the MCP server so the agent chains commands and does post-processing locally (grep the accessibility tree, pipe the control ID into a click) to keep tokens off the model. (Chrome DevTools, 11:10-13:12)
 - Output payloads are the other half of the budget: a performance-tracing tool that returned a ~50,000-line JSON trace blew through the context window, so it returns markdown plus a semantic summary instead — "point the agent at the right sentence, not the whole book" — while still allowing raw output for separate post-processing. (Chrome DevTools, 03:58-05:20)
 - **The client side of the budget, from a harness that enforces one numerically.** Codex treats the growth term explicitly — model instructions "are fairly structured and don't really change in size," while "the tool registry, where especially if you install MCPs… you might have additional context that is like growing as you're installing more MCPs" — and answers it with two different mechanisms for two different surfaces. Tools are [deferred out of the window entirely and retrieved by tool search](defer-tool-definitions-out-of-context-and-let-the-model-search-for-them.md); the skills list gets a hard budget of [2% of the maximum context window with descriptions trimmed as it grows](cap-the-skills-list-as-a-share-of-the-context-window.md). This page's guidance is aimed at server authors who cannot control the client; the mirror finding is that a client can defend its own budget regardless of what servers expose, and that a percentage of the window is a defensible way to express it. ([Codex, Behind the Harness](../sources/20260810_shRR1e2HXMk.md), 05:29-06:35)
+- **A third lever alongside fewer tools and trimmed payloads: reference what the reader already has.** Figma's MCP server replaces generated React and Tailwind markup with a pointer to the consumer's own component wherever Code Connect supplies a mapping, collapsing "this big old thing of uh react [tailwind]" into "the small react component that just says use button component." This is the rare compression that does not lose information, because the omitted detail lives in the reader's codebase — but the compression ratio is a property of the reader's library rather than of the server, and every unmapped element falls back to full markup. ([Lumarie](../sources/20260828_ZIYYsAzaLlA.md), 07:36-08:37)
 
 Related topics:
 - [Agents](../topics/agents.md)
@@ -35,6 +36,7 @@ Related concepts:
 - [Retrieve Tool Descriptions Before Loading Large Tool Catalogs](retrieve-tool-descriptions-before-loading-large-tool-catalogs.md)
 - [Defer Tool Definitions Out of Context and Let the Model Search for Them](defer-tool-definitions-out-of-context-and-let-the-model-search-for-them.md)
 - [Cap the Skills List as a Share of the Context Window](cap-the-skills-list-as-a-share-of-the-context-window.md)
+- [Return a Pointer to the Reader's Own Component Instead of a Faithful Copy](return-a-pointer-to-the-readers-own-component-instead-of-a-copy.md)
 
 Sources:
 - [Scaling GitHub for your Agents — Sam Morrow, GitHub](../sources/20260427_0n3MKk7r60w.md), 02:06-06:13
@@ -45,3 +47,4 @@ Sources:
 - [Your Agent's Biggest Lie: "I Searched the Web" — Rafael Levi, Bright Data](../sources/20260617_btxGmN8RvNU.md), 13:41-14:03
 - [Building Agent Interfaces: Lessons from Chrome DevTools (MCP) for Agents — Michael Hablich, Google](../sources/20260605__B4Pv9ttFgY.md), 03:58-18:00
 - [Codex, Behind the Harness — Dominik Kundel, OpenAI](../sources/20260810_shRR1e2HXMk.md), 05:29-06:35
+- [Building the Engine While Flying the Plane: Launching the Figma MCP Server — Jesse Lumarie, Figma](../sources/20260828_ZIYYsAzaLlA.md), 07:36-08:37
